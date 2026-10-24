@@ -33,8 +33,6 @@ In each test both arms use the same model, budget and questions, and the score i
 | 61 reasoning and audit items (Claude agents, 5 and 6 Oct 2026) | tools only: 41 | full brain package: 52 (15 to 4, p = 0.019) |
 | 80 questions about files kept in GitHub repositories (Codex agents, 12 Oct 2026) | git alone: 68 | git and the brain: 73 (9 to 4, p = 0.27) |
 | 20 recall items, one Claude agent answering first without and then with the brain (23 Oct 2026) | 9 | 19 (10 to 0, p = 0.002) |
-| 880 items, Claude agents at 600 seconds an item (23 and 24 Oct 2026) | model alone: 19.5%; the research repositories: 80.6% | 94.9% (140 to 14 against the repositories, p = 2.6e-27) |
-| 200 items, Codex agents at 900 seconds an item (23 and 24 Oct 2026) | model alone: 31.5%; the research repositories: 97.5% | 93.5% (3 to 11, p = 0.06) |
 
 The 1,000-item result holds where the answer has to be recalled; on items a strong solver can derive for itself, the brain changes nothing. On the 61 items the gain sits in the 26 that name a known result (22 against 13).
 
@@ -125,7 +123,7 @@ python agent_tools/math_walk.py <card id> --toward "mixing time lower bound"
 
 Every row in the store carries a digest of its content, and the reader refuses a row that no longer matches its digest. In this copy a file path on the machine that built the store is replaced by an opaque identifier of the form `urn:mb-local:<hash>`, a link into a private repository by `urn:mb-private:<hash>`, and the name of a private repository by the words "a private repository". The digest of every row changed this way is recomputed, and every row that refers to it by digest is updated to match, so every row in `export/population/` reproduces its digest on any machine. Thirty-four cards and seven links did not match their stored digest in the working store either; their digests are recomputed from their content as it stands. A row's identifier never changes, so a card cited by id elsewhere is the same card here.
 
-[agent_tools/README.md](agent_tools/README.md) describes each tool, and [AGENTS_GUIDE.md](AGENTS_GUIDE.md) says how to connect an agent to the store and what each choice was worth in the tests.
+[agent_tools/README.md](agent_tools/README.md) describes each tool. [docs/agents.md](docs/agents.md) shows how to connect your own Claude Code or Codex agents to the store, as an MCP tool or from a shell, and what to tell them so they search it well.
 
 
 ## Sources
