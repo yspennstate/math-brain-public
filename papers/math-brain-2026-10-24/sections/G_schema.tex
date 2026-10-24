@@ -1,0 +1,45 @@
+\section{The data model}\label{app:schema}
+
+Section~\ref{sec:store} describes the store abstractly. This appendix gives the tables that implement it, so that a reader of the released code can match each definition to the place where it lives. The store is a single SQLite database; its text export (Appendix~\ref{app:tools}) has one JSON-lines file per table.
+
+\subsection{Tables}
+Every content table carries an identifier, a digest and a creation time; the tables of cards, links and link retractions also carry a JSON metadata column. The digest is SHA-256 of the canonical JSON of the row's content (keys sorted, no insignificant whitespace), and it is declared unique, so two rows with the same content cannot both exist. Table~\ref{tab:schema} lists the tables and what each holds.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{p{4.9cm}p{3.7cm}p{5.7cm}}
+\toprule
+Table & Key & Holds\\
+\midrule
+\texttt{nodes} & \texttt{id} & every card: kind, title, body, metadata, digest\\
+\texttt{claims} & \texttt{id} $\to$ \texttt{nodes} & the mathematical content of a claim card: statement, conditions, status, scope\\
+\texttt{evidence} & \texttt{id} $\to$ \texttt{nodes}; \texttt{claim\_id} & one piece of support or refutation of a claim\\
+\texttt{evidence\_attestations} & \texttt{evidence\_id}; unique nonce & the signed statement of who produced the evidence and in what role\\
+\texttt{evidence\_receipts} & \texttt{evidence\_id}; unique nonce & the authentication tag that lets the evidence move a status\\
+\texttt{verification\_events} & \texttt{id}; \texttt{claim\_id} & one change of a claim's status, with its time\\
+\texttt{verification\_event\_evidence} & (\texttt{event\_id}, \texttt{evidence\_id}) & the receipted evidence an event rests on, in order\\
+\texttt{mistakes} & \texttt{id} $\to$ \texttt{nodes}; \texttt{claim\_id} & a recorded error attached to the claim it concerns\\
+\texttt{reflexes} & \texttt{id} $\to$ \texttt{nodes} & activation cues and ordered actions drawn from mistakes\\
+\texttt{reflex\_sources} & (\texttt{reflex\_id}, \texttt{mistake\_id}) & which mistakes a reflex was drawn from\\
+\texttt{edges} & \texttt{id}; unique (source, target, kind) & a typed link with its rationale and a weight in $(0,1]$\\
+\texttt{edge\_retractions} & \texttt{edge\_id} $\to$ \texttt{edges} & the retraction of a link, with its reason\\
+\texttt{claim\_provenance} & \texttt{claim\_id} & the class of a claim's evidence, its source and its last recorded status\\
+\texttt{bundle\_manifests} & \texttt{id}; unique digest & a sealed packet: its manifest and release digest\\
+\texttt{bundle\_members} & (\texttt{bundle\_id}, \texttt{entry\_key}) & the cards a packet carries, each once\\
+\texttt{schema\_meta} & \texttt{version} & the schema versions applied\\
+\bottomrule
+\end{tabular}
+\caption{The sixteen tables of the store. An arrow marks a foreign key whose target is the row of the same identifier in the table named. \texttt{edge\_retractions} is created at the first retraction.}
+\label{tab:schema}
+\end{table}
+
+\subsection{How the definitions map to the tables}
+A \emph{card} of Section~\ref{sec:store} is a row of \texttt{nodes}; its kind is the column \texttt{kind}. A claim, a piece of evidence, a mistake and a reflex are cards with a second row in the table of that name, sharing the identifier, so that every object the agents read has a title and a body in one place and the structured part of the object lives beside it. A \emph{link} is a row of \texttt{edges}. The uniqueness of (source, target, kind) means a pair of cards carries at most one link of each kind. A retracted link stays in \texttt{edges}; its retraction, with the reason, is a row of \texttt{edge\_retractions}, and the walk along links skips it. This is why the counts of Section~\ref{sec:store} distinguish links from retracted links.
+
+A \emph{revision} chain is carried by supersession: a card that replaces another carries a \texttt{supersedes} link to it. The current revision of an object is the head of that chain, and the invariants of Section~\ref{sec:store}, that supersession has no cycle and that an object has at most one head, are properties of the rows of \texttt{edges} of that kind. A \emph{bundle} is a row of \texttt{bundle\_manifests} with its members in \texttt{bundle\_members}. The member table makes each card appear at most once in a bundle and gives it a key within the bundle; the order-independence of the bundle digest (Appendix~\ref{app:proofs}) comes from computing the digest over the sorted lists of revision identifiers and link digests, never over the order in which the members were written.
+
+\subsection{How a status changes}
+A claim's status is never a column that anyone may set. It is the result of replaying the rows of \texttt{verification\_events} for that claim in time order. Each event names, through \texttt{verification\_event\_evidence}, the evidence it rests on, and the replay accepts an event only if every such piece of evidence has an attestation and a receipt whose tag verifies under a key held outside the database. The nonces of attestations and receipts are unique, so a receipt cannot be replayed onto a second piece of evidence. Evidence, its attestation and its receipt are written in one transaction, so a crash cannot leave evidence that looks receipted and is not. This is the mechanism behind Proposition~\ref{prop:assoc}: an association, a strength or a retrieval score has no row in these tables and therefore no way to enter the replay.
+
+\subsection{What is not in the database}
+Three things the system uses are kept outside the store, by design. The link strengths of Section~\ref{sec:strength} live in a separate log of uses, because they change with every session and the store changes only through the gate. The sentence vectors of the meaning channel live in a separate file beside the store, rebuilt from the cards, so that a lost or stale vector file costs only the meaning channel and never a card. The question banks of the tests and their answer keys are kept outside the store's directory tree and never enter the store, the export or the release.

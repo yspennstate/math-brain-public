@@ -1,0 +1,54 @@
+\section{Links that grow with use}\label{sec:strength}
+
+Stated links say how results relate mathematically. They do not say which links agents actually find useful, and in a store of thirteen thousand cards that is valuable information: when an agent stands on a hub with a hundred links, the one that earlier agents followed next is a good first guess. We record co-use and turn it into a strength on each pair of cards. A strength never changes what a link says, and never changes which cards a search returns.
+
+\subsection{Use and co-use}
+\emph{Using} a card means opening it on purpose: opening it by identifier, walking from it, or writing a note on it. Two cards $x,y$ are \emph{used together} in a session $\sigma$ on a day $\delta$ if both are used in $\sigma$ on $\delta$ within $30$ minutes of each other. A search result counts as a use only if the next card the agent opens is linked to it and was not itself a result (the agent followed the link); two results of one search never count together, since the words, not the agent, put them side by side. A pair counts at most once per session per day. Sessions are identified by the runtime's session identifier, so that the parallel subagents of one session, which interleave unrelated uses, count once.
+
+\subsection{The strength}
+For a pair $\{x,y\}$ let $T_{xy}$ be the set of session-days on which they were used together and $T_x$, $T_y$ the session-days on which each was used at all. Let $\Delta(\tau)$ be the age in days of a session-day $\tau$ at the time of reading. Define the decayed mass
+\[
+m_{xy}=\simil(x,y)\sum_{\tau\in T_{xy}}\bigl(1+\Delta(\tau)\bigr)^{-1/2},
+\]
+where $\simil(x,y)\in[1/4,1]$ is a similarity factor computed from the cosine $c$ of the cards' embeddings: $\simil=1/4$ for $c\le 0.67$, $\simil=1$ for $c\ge0.83$, linear in between, and $\simil=1/2$ if either card lacks a vector. The strength is
+\begin{equation}\label{eq:strength}
+\str(x,y)=\frac{|T_{xy}|}{\sqrt{|T_x|\,|T_y|}}\cdot\frac{m_{xy}}{m_{xy}+1}.
+\end{equation}
+The first factor is a cosine of co-use counts: a card used with everything, a hub, has a large $|T_x|$ and is discounted, so that it does not tie itself to every card. The second factor saturates the decayed mass. With $\simil=1$, one fresh session-day gives at most $1/2$ and three give at most $3/4$; a session-day counts $1$ on its day, $0.35$ a week later and $0.18$ after a month. The decay $(1+\Delta)^{-1/2}$ follows the power law of human forgetting \cite{WixtedEbbesen1991,AndersonSchooler1991}; an exponential decay would forget a useful but seasonal link too fast.
+
+\begin{definition}
+A \emph{learned link} joins two cards with no stated link between them whose strength is at least $1/4$ and whose co-use comes from at least two distinct sessions.
+\end{definition}
+
+The formula has the elementary properties one would ask of it.
+
+\begin{proposition}\label{prop:strength-bounds}
+For every pair of cards $x,y$ with $T_{xy}\ne\emptyset$:
+\begin{enumerate}[label=(\alph*)]
+\item $0<\str(x,y)<1$, and $\str(x,y)\le\simil(x,y)\,|T_{xy}|/(1+\simil(x,y)\,|T_{xy}|)$;
+\item \emph{(hub discount)} $\str(x,y)\le\sqrt{\min(|T_x|,|T_y|)/\max(|T_x|,|T_y|)}$; a card used on $u$ session-days has strength at most $\sqrt{u/v}$ to a card used on $v\ge u$ session-days;
+\item \emph{(monotonicity)} a new session-day on which $x$ and $y$ are used together raises the strength; a new session-day on which only $x$ is used lowers it;
+\item \emph{(forgetting)} if the last joint use is $\Delta$ days old, then $\str(x,y)\le|T_{xy}|\,(1+\Delta)^{-1/2}$; in particular a pair used together on $j$ session-days stops being a learned link once $\Delta\ge16j^2$;
+\item \emph{(saturation)} with $\simil=1$, one session-day gives strength at most $1/2$ and $j$ session-days at most $j/(j+1)$.
+\end{enumerate}
+\proofbutton{prop:strength-bounds}
+\end{proposition}
+
+Part (b) is what keeps a hub from tying itself to everything, and part (d) is what makes an unused learned link fade: a pair used together on one session-day falls below the learned-link threshold within sixteen days, whatever its other counts.
+
+\subsection{Guards}
+Two rules govern learned links. First, the two-session requirement: a single long session, however much it uses two cards together, cannot create a learned link. Second, \emph{a printed lead earns nothing}: if an agent opens a card because a tool printed it as a strong or learned neighbour, that use adds nothing to the pair for the rest of the session-day and does not count as a use of the card. A learned link must therefore be earned by use that the printout did not suggest, and one that stops being earned fades in a few weeks. Without this rule the strengths would feed on their own display.
+
+Test and evaluation sessions are not logged: sessions run in test folders, sessions on frozen copies of the store, and any session with logging switched off. This matters more than it seems. When the logs were first examined, the great majority of logged searches came from automated test workers, not from agents doing research, and a weight tuned on them would have been tuned on the test.
+
+\subsection{What a strength changes}
+Strengths change three things: within each kind, links are printed strongest first, with a tag such as \texttt{[strength 0.68: used together 3 times, last 2 h ago]}; under a result the tool prints a line \texttt{used together} for a learned link; and the spreading and walking tools weight links by $1+\str$. Strengths do not change the word search.
+
+\begin{proposition}\label{prop:strength-search}
+The set and order of the eight cards returned by a search without spreading do not depend on the strengths. \proofbutton{prop:strength-search}
+\end{proposition}
+
+This was checked as well as proved. On $584$ held-out questions, strengths grown from simulated use of other questions (up to $2{,}700$ logged calls and $83$ learned links) or from random noise ($5{,}000$ pairs) left the word search identical on every question and lost no answer from any printout of the search, the depth-two spreading, the walk or the map. Noise aimed directly at the questions' own results dropped the answer from one walk printout in $584$. Where agents had used an answer before, it appeared slightly more often: on $190$ such questions, one more printout, four better depth-two ranks and one more map. Strengths are a guide to where earlier agents went, not a better search.
+
+\subsection{What a strength is not}
+A strength says that agents found two cards useful side by side. It never says that one proves, uses or implies the other; it never changes a link's kind or sign; and a strong link into a conjecture does not make the conjecture settled. By Proposition~\ref{prop:assoc}, no strength can reach a truth status.

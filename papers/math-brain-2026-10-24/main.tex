@@ -1,0 +1,123 @@
+\PassOptionsToPackage{hyphens}{url}
+\documentclass[11pt,reqno]{amsart}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.17}
+\usetikzlibrary{positioning,arrows.meta}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{claim}[theorem]{Claim}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{protocol}[theorem]{Protocol}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Store}{\mathfrak{S}}
+\newcommand{\Kinds}{\mathcal{K}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\cQ}{\mathcal{Q}}
+\newcommand{\cP}{\mathcal{P}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\tool}[1]{\texttt{#1}}
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Inf}{Inf}
+\DeclareMathOperator{\idf}{idf}
+\DeclareMathOperator{\BM}{BM25}
+\DeclareMathOperator{\str}{str}
+\DeclareMathOperator{\simil}{sim}
+\DeclareMathOperator{\KL}{D}
+
+% hyperlinked statement/proof cross-references
+\newcommand{\proofbutton}[1]{\hyperref[proof:#1]{\textnormal{\footnotesize\textsf{[proof $\to$]}}}}
+\newcommand{\stmtbutton}[1]{\hyperref[#1]{\textnormal{\footnotesize\textsf{[$\leftarrow$ statement]}}}}
+
+\title[Shared memory for multi-agent mathematical research]{Math Brain: Shared, Auditable Memory for Multi-Agent Mathematical Research}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Givat Ram, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{October 22, 2026}
+\subjclass[2020]{Primary 68T05, 68T20; Secondary 68P20, 03B35, 42C10, 60K35}
+\keywords{AI for mathematics, agent memory, retrieval, knowledge graphs, Hebbian learning, BM25, paired evaluation, McNemar test, Fourier entropy-influence conjecture, Ising perceptron}
+\hypersetup{
+  pdftitle={Math Brain: Shared, Auditable Memory for Multi-Agent Mathematical Research},
+  pdfauthor={Yitzchak Shmalo},
+  pdfkeywords={AI for mathematics, agent memory, retrieval, knowledge graph, paired evaluation, Fourier entropy-influence}
+}
+
+\emergencystretch=3em
+\begin{document}
+
+\begin{abstract}
+Language-model agents now do a good deal of research mathematics, but what one session establishes is lost to the next: a counterexample found at noon is unknown to the agent that takes up the same problem at one o'clock, and corrected statements and failed routes vanish with the session that found them. We describe Math Brain, a shared memory built to keep them. It is a store of mathematical cards (definitions, theorems with their exact hypotheses, sources, and the agents' own proofs, counterexamples, computations and corrected statements) joined by typed links; on 22 October 2026 it held $13{,}306$ cards and $19{,}362$ links, $231$ of them retracted and kept in the record. Agents reach it through a hook that serves a few cards on each prompt and stays silent on weak matches, a recall tool that prints whole cards with their identifiers and links, link strengths that grow with joint use, and a write-back gate that lands a packet of new cards only when a held-out recall test shows that it costs no answer. We give the structure and the ranking in full and prove the invariants on which safe sharing rests: append-only revision, order-independent bundle digests, acyclic supersession and dependency closure, and the separation of association from evidence.
+
+In paired tests with the same model, budget and questions, the memory supplied what the agents could not otherwise know. On $1{,}000$ items whose answers are cards in the store, scores rose from $538$ to $1{,}000$, with no harm observed. On a second bank of $1{,}000$ items run in three arms, the brain, the research repositories without the brain, and the model alone, Claude agents scored $94.3\%$, $78.1\%$ and $21.7\%$ on the $755$ items run in all three arms; on the items that the first two arms both finished in time they scored the same ($99.2\%$ and $99.3\%$), so the brain's lead over the repositories is time, and it came at a quarter of the input and under three fifths of the session time and price. Codex agents, given more time, scored $93.4\%$ with the brain and $97.3\%$ with the repositories ($p=0.09$). On $100$ questions about results held in the store, agents scored $0$ with no tools, $75$ with text search and $83$ with the recall tool, and adding the hook and the link walk gave $82$ while cutting uncached input by a factor of $1.8$. A ranking change raised held-out hits from $298$ to $317$ of $584$ (exact McNemar $p=0.0019$). On $61$ reasoning and audit items the full package, which also adds a clock and a hint, beat tools alone $52$ to $41$ ($p=0.019$, not significant after correction for the paper's nineteen comparisons). We report the nulls and losses with the same care: no significant gain over agents given the documents and a recall tool, none on thirteen new open problems, and a significant loss by an early version to agents given the documents, on $300$ hard items. The question banks are private, so every test can be repeated on later versions.
+
+The paper also records mathematics from the same program, including a reduction of the Fourier entropy-influence conjecture: for every Boolean function $H(f)\le 2(I(f)-\Var f)+2U(f)$, where $U$ compares each Fourier weight with the weight above it, so the conjecture is equivalent to $\sup U/I<\infty$. We prove this and a summed restriction criterion that would give the conjecture with an explicit constant.
+\end{abstract}
+
+\maketitle
+
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+\input{sections/01_intro}
+\input{sections/02_related}
+\input{sections/03_store}
+\input{sections/04_retrieval}
+\input{sections/05_hook}
+\input{sections/06_strength}
+\input{sections/07_writeback}
+\input{sections/08_collective}
+\input{sections/09_tests}
+\input{sections/10_new_campaign}
+\input{sections/11_math}
+\input{sections/12_usage}
+\input{sections/13_limits}
+
+\appendix
+\input{sections/A_proofs}
+\input{sections/B_tables}
+\input{sections/C_tools}
+\input{sections/D_papers}
+\input{sections/E_fei}
+\input{sections/F_stats}
+\input{sections/G_schema}
+\input{sections/H_posted}
+
+\section*{Acknowledgments and funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The system described here is itself an AI system, and AI systems did most of the engineering, the experiments and the mathematics reported. The store, its tools and its tests were built by Claude (Anthropic) and Codex (OpenAI) agents working under the author's direction; the scheduled campaigns ran on ChatGPT scheduled tasks; the tests were run on Claude and Codex agents as stated in each table. The manuscript was drafted by Claude Opus 5.5 from the system's records and test logs. The author directed the work, chose the problems and the tests, reviewed the results, and takes responsibility for the content.
+
+\section*{Data and code availability}
+The code, a complete export of the store, the campaign records and the aggregate test results are prepared for release as the public repository \url{https://github.com/yspennstate/math-brain}. The question banks and answer keys of the tests are kept private so that the tests can be repeated on later versions of the system; anchors for the blinded experiments are public at \url{https://github.com/yspennstate/brain-benefit-experiment-anchors}. The scripts that compute the store statistics and the exact test statistics quoted in this paper are in the paper's source package.
+
+\input{sections/biblio}
+
+\end{document}

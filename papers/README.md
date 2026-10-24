@@ -1,5 +1,7 @@
 # Papers
 
+The paper on the brain itself, with the tests described in `../TESTS.md`, is in `math-brain-2026-10-24/` (PDF and LaTeX source).
+
 Papers that came out of this work. Each has its own public repository; a copy of each is in `public/`, under the repository's name.
 
 | Paper | Repository |

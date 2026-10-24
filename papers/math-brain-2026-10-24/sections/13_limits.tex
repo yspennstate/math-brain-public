@@ -1,0 +1,29 @@
+\section{Limitations and the public release}\label{sec:limits}
+
+\subsection{What the tests do not show}
+The tests measure one agent answering one question. The case the brain was built for, many agents extending one body of work over weeks, is supported by the record of Section~\ref{sec:collective} but has not been measured by a controlled comparison; the one comparison on new problems did not favour the brain, and the store held almost nothing on those problems. Section~\ref{sec:campaign} describes the comparison that will settle this.
+
+Every test used agents of two vendors at particular model versions. Models change every few months, and a stronger model may need the store less for material it can derive and as much for material it cannot know. The measured effects are therefore statements about these agents and this store, and the reason for keeping the question banks private is that they can be run again.
+
+The no-brain arm may know published results from its training. For literature cards this makes the measured gains conservative. Once the store is public, its own cards may enter the training data of later models, and a later no-brain arm may then know the agents' own results as well; a test of a later model against this store will understate the brain's effect for a reason that has nothing to do with the brain. The release notes say so, and future banks should be drawn from material written after the model's training data.
+
+\subsection{What the store does not guarantee}
+Most cards are \textsf{unverified} or \textsf{provisional}. The store records what was claimed, by what route and with what support; it does not certify that the claims are true. The curated secondary cards were written by agents from textbooks and surveys, and a card can misstate a hypothesis of its source; the fidelity of statement to source has been reviewed for many cards but not all. A reader who uses a card in a proof should read its source.
+
+The store is unevenly distributed. It is dense in probability theory, Boolean functions and the theory of deep learning, where the campaigns were, and thin elsewhere; $2{,}878$ cards have no link and can be found only by their words.
+
+The retrieval is a word search with a meaning channel. It does well when the question can be worded the way a card is, and poorly when it cannot: the hook was silent on all $60$ reworded questions of the store test. A whole-card embedding that does better on reworded questions has been built and not yet switched on.
+
+\subsection{Cost}
+A search prints about $11{,}000$ characters, and an agent that searches many times pays for every printout again at each later turn of its session. The measured savings of Section~\ref{sec:tests} come from walking instead of searching again; an agent that ignores the advice of Section~\ref{sec:usage} can spend more with the brain than without it. On the repository test the brain arm read $14\%$ more tokens per question for a gain that was not significant.
+
+\subsection{Conditions of the public release}
+The code, the store export, the campaign records and the aggregate test results are prepared for release. The licence is not yet chosen; cards derived from Wikipedia and ProofWiki carry the Creative Commons Attribution-ShareAlike licence of their sources, so at least that part of the data must be released under it. The release is a separate repository with a single history, built from the store by an export tool and passed through a scanner that opens every file, every archive and every PDF and rejects local paths, credentials, private labels and material outside mathematics. Before the release the following must be settled.
+\begin{enumerate}[label=(\roman*)]
+\item The export must be rebuilt from the current store and scanned again. The edition scanned on 13 October holds the $11{,}979$ cards of the 12 October export; the store has since grown to $13{,}306$.
+\item In that edition $201$ cards and $153$ bundle manifests had digests computed while they still named a directory of the building machine or a private repository; the export replaces those names with tokens, so their digests do not reproduce elsewhere and the importer reports them as failures. Thirty-four older rows fail their digest in the original store as well. These rows must be re-sealed as new revisions before the release.
+\item Cards that quote books at length must be cut to short quotations with citations or removed.
+\item Test items answerable from the released files must be retired from the private banks before the release, so that later tests stay valid; seventeen have been retired already.
+\item The papers included in the release must be limited to mathematics.
+\item A licence must be chosen for the code and for the data.
+\end{enumerate}

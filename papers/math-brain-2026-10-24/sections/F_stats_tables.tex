@@ -1,0 +1,83 @@
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{p{6.3cm}ccc}
+\toprule
+Comparison & Split & $p$& Smallest significant split\\
+\midrule
+100 store questions, full stack against text search & 10 to 3 & 0.0923 & 11 to 2\\
+100 store questions, full stack against recall tool & 2 to 3 & 1 & ---\\
+1{,}000 recall items, brain against none & 462 to 0 & $1.7\cdot10^{-139}$ & 253 to 209\\
+61 solving items, full package against tools only & 15 to 4 & 0.0192 & 15 to 4\\
+the same, 54 items with unambiguous keys & 12 to 3 & 0.0352 & 12 to 3\\
+26 items naming a known result & 10 to 1 & 0.0117 & 10 to 1\\
+35 items naming none & 5 to 3 & 0.727 & 8 to 0\\
+61 items, full package against documents and recall & 10 to 4 & 0.18 & 12 to 2\\
+80 repository questions, git and brain against git & 9 to 4 & 0.267 & 11 to 2\\
+584 held-out ranking questions, after against before & 27 to 8 & 0.00188 & 24 to 11\\
+1{,}070 further ranking questions & 143 to 16 & $1.1\cdot10^{-26}$ & 93 to 66\\
+13 open problems, pairwise preference & 3 to 8 & 0.227 & 10 to 1\\
+60 store questions, next-card line against current printout & 0 to 3 & 0.25 & ---\\
+60 store questions, current printout against earlier & 2 to 2 & 1 & ---\\
+755 store items, Claude, brain against repositories & 134 to 12 & $3.0\cdot10^{-27}$ & 86 to 60\\
+the same, 593 items both answered in time & 2 to 3 & 1 & ---\\
+755 store items, Claude, brain against the model alone & 549 to 1 & $3.0\cdot10^{-163}$ & 299 to 251\\
+182 store items, Codex, brain against repositories & 3 to 10 & 0.0923 & 11 to 2\\
+182 store items, Codex, brain against the model alone & 112 to 0 & $3.9\cdot10^{-34}$ & 67 to 45\\
+300 hard items, version 1 against documents & 14 to 40 & 0.000535 & 19 to 35\\
+110 store problems, version 4 against documents and recall & 6 to 8 & 0.791 & 12 to 2\\
+\bottomrule
+\end{tabular}
+\caption{The paired comparisons of the paper, recomputed. ``Split'' is the number of items won by each arm among those on which the arms disagree; $p$ is the exact two-sided McNemar value; the next column gives, for the same number of disagreements, the least lopsided split that would give $p<0.05$, and a dash means that no split of so few disagreements can. The last two rows concern earlier versions of the system, on item sets and baselines of their own.}
+\label{tab:mcnemar-recomputed}
+\end{table}
+
+% fewest disagreements that can be significant: 6 (split 6 to 0)
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{cccccc}
+\toprule
+Items $N$ & Disagreement rate $\psi$ & $\theta=0.6$ & $\theta=0.7$ & $\theta=0.8$ & $\theta=0.9$\\
+\midrule
+26 & 0.1 & 0.00 & 0.00 & 0.01 & 0.02\\
+ & 0.2 & 0.02 & 0.04 & 0.11 & 0.22\\
+ & 0.3 & 0.04 & 0.10 & 0.25 & 0.51\\
+\addlinespace
+61 & 0.1 & 0.02 & 0.07 & 0.16 & 0.32\\
+ & 0.2 & 0.06 & 0.20 & 0.46 & 0.79\\
+ & 0.3 & 0.09 & 0.32 & 0.69 & 0.95\\
+\addlinespace
+100 & 0.1 & 0.05 & 0.15 & 0.36 & 0.67\\
+ & 0.2 & 0.10 & 0.35 & 0.74 & 0.97\\
+ & 0.3 & 0.14 & 0.52 & 0.90 & 1.00\\
+\addlinespace
+584 & 0.1 & 0.29 & 0.85 & 1.00 & 1.00\\
+ & 0.2 & 0.55 & 0.99 & 1.00 & 1.00\\
+ & 0.3 & 0.73 & 1.00 & 1.00 & 1.00\\
+\addlinespace
+1000 & 0.1 & 0.48 & 0.98 & 1.00 & 1.00\\
+ & 0.2 & 0.79 & 1.00 & 1.00 & 1.00\\
+ & 0.3 & 0.93 & 1.00 & 1.00 & 1.00\\
+\bottomrule
+\end{tabular}
+\caption{Power of the exact two-sided McNemar test at level $0.05$ when each item is a disagreement with probability $\psi$ and a disagreement favours the better arm with probability $\theta$. The expected net gain is $N\psi(2\theta-1)$ items.}
+\label{tab:mcnemar-power}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{ccccccc}
+\toprule
+Items $N$ & \multicolumn{2}{c}{$\psi=0.1$} & \multicolumn{2}{c}{$\psi=0.2$} & \multicolumn{2}{c}{$\psi=0.3$}\\
+ & $\theta$ & net & $\theta$ & net & $\theta$ & net\\
+\midrule
+26 & --- & --- & --- & --- & 0.99 & 7.6\\
+61 & --- & --- & 0.90 & 9.8 & 0.83 & 12.1\\
+100 & 0.94 & 8.8 & 0.82 & 12.8 & 0.76 & 15.9\\
+584 & 0.69 & 22.0 & 0.63 & 31.0 & 0.61 & 37.9\\
+1000 & 0.64 & 28.7 & 0.60 & 40.4 & 0.58 & 49.3\\
+\bottomrule
+\end{tabular}
+\caption{Smallest effect detected with power $0.8$: the share $\theta$ of disagreements the better arm must win, and the corresponding expected net gain $N\psi(2\theta-1)$ in items. A dash means that even $\theta=1$ gives power below $0.8$.}
+\label{tab:mcnemar-mdd}
+\end{table}
+

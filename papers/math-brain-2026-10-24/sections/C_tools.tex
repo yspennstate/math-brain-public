@@ -1,0 +1,110 @@
+\section{The tools}\label{app:tools}
+
+The tools are command-line programs in two folders of the release: \path{agent_tools/}, which agents call while they work, and \path{tools/}, which build, export and audit the store. Most tools that read the store take \texttt{--store PATH}, and every one of them, without it, reads the path in the environment variable \texttt{MATHBRAIN\_STORE}; the hook, \texttt{math\_sense.py}, reads only the variable, since it is run with no arguments on every prompt. No tool in \path{agent_tools/} writes to the store; the only path by which content enters is the packet gate of Section~\ref{sec:writeback}.
+
+\subsection{Tools for agents}
+
+\subsubsection*{\texttt{math\_recall.py}: deliberate recall}
+The recall tool of Section~\ref{sec:retrieval}. It takes one wording as its positional argument and further wordings after \texttt{--or}, runs the recall profile on each, merges the lists by best rank (Section~\ref{sec:retrieval}), and prints whole cards.
+\begin{center}\small
+\begin{tabular}{p{3.6cm}p{10.4cm}}
+\toprule
+Option & Effect\\
+\midrule
+\texttt{WORDS} & the first wording\\
+\texttt{--or WORDS} & a further wording; may be repeated\\
+\texttt{--id ID [ID \dots]} & print the named cards whole, with every link; takes a unique prefix of an identifier and prints the full identifier\\
+\texttt{--limit N} & number of cards printed (default $8$)\\
+\texttt{--chars N} & characters printed per card (default $4{,}000$)\\
+\texttt{--depth N} & steps of spreading activation (default $0$, off)\\
+\texttt{--list} & a compact listing: each card's title, identifier and the line of its text that matched\\
+\texttt{--full} & print full identifiers in every link line, with every link's reason, in stored order\\
+\bottomrule
+\end{tabular}
+\end{center}
+A search shortens identifiers to the shortest unique prefix; when an identifier is itself an answer or is copied into a record, it should be taken from the \texttt{--id} printout, which gives it in full. When the best score falls below the weak-match threshold the printout begins with a \texttt{WEAK MATCH} line (Section~\ref{sec:retrieval}).
+
+\subsubsection*{\texttt{math\_walk.py}: moving along links}
+Starting from one or more cards, the walk maps the cards within two links of them; when a target is given it ranks those cards by their closeness to the target words.
+\begin{center}\small
+\begin{tabular}{p{3.6cm}p{10.4cm}}
+\toprule
+Option & Effect\\
+\midrule
+\texttt{ID [ID \dots]} & the starting cards\\
+\texttt{--toward WORDS} & what the agent is looking for: ranks the cards within two links\\
+\texttt{--words WORDS} & with no starting card: search by these words, then map what lies within two links of the hits\\
+\texttt{--chars N} & characters printed per card (default $4{,}000$)\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection*{\texttt{math\_strength.py}: the strength of a link}
+Prints the strength of Section~\ref{sec:strength} for two cards, with its parts.
+\begin{center}\small
+\begin{tabular}{p{3.6cm}p{10.4cm}}
+\toprule
+Option & Effect\\
+\midrule
+\texttt{ID ID} & the two cards\\
+\texttt{--card ID} & the cards most used together with this one\\
+\texttt{--top [N]} & the $N$ strongest pairs (default $20$)\\
+\texttt{--stats} & summary statistics of the strengths\\
+\texttt{--explain} & print how the strengths are made and what they mean\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection*{\texttt{math\_note.py}: one current note}
+Takes a source identifier and prints the complete current revision of that note. It refuses a note whose content fails its digest, and an object with more than one head (Definition~\ref{def:store}); it never writes. The text it prints is reference material, not instructions to the agent.
+
+\subsubsection*{\texttt{math\_sense.py}: the hook}
+The hook of Section~\ref{sec:hook}. It reads the prompt from standard input, applies the lexical gate (two distinct mathematical anchors), runs the base profile, applies the abstention thresholds, and prints at most a few cards, each with its trust line, or nothing. It is installed as a command run on every prompt in the agent runtime. On any error it prints nothing, so that a fault in the memory never interrupts a session.
+
+\subsubsection*{\texttt{math\_prefilter.py}: a candidate index for the hook}
+The hook scores every card on every prompt, which is fast at a few thousand cards and slow at tens of thousands. The prefilter keeps an inverted index beside the store and returns the $K$ best cards for a prompt by BM25; the hook then loads only those cards and runs its unchanged ranking on them. Without an index file the full path is used, and any error falls back to it. The index leaves out every card whose stored digest fails the reader's check, so the hook cannot serve a card the reader would refuse.
+
+\subsubsection*{\texttt{fastrecall.py}: a cache for recall}
+About four fifths of a cold call of the recall tool is spent on work that does not depend on the question: reading every card and link, computing index terms, title tokens and phrase pairs, and loading the query encoder. This module keeps that work in a file per state of the store, version of the code and setting of the environment, and runs the search from it. The scores are the ones the recall tool computes, by the same functions in the same order, and the printout is identical to the byte; the cache refuses to run against any other version of the ranking code.
+
+\subsubsection*{\texttt{query\_embed.py}: the query vector}
+Embeds a query with the model that built the store's sentence vectors (a $384$-dimensional English sentence encoder, CLS pooling, unit norm) through a portable inference runtime, in about a second. It returns nothing when a file is missing, and the caller then ranks without the meaning channel. \texttt{--selftest} checks the vectors against the reference implementation.
+
+\subsubsection*{\texttt{property\_order.py}: an ordering aid}
+For a question that asks to prove or disprove monotonicity, convexity or concavity, this aid moves cards that state the same property of the same object ahead of cards that do not. It acts only on cards already eligible, never adds a card, and is never evidence of truth.
+
+\subsubsection*{\texttt{brain\_switch.py}: turning the brain off}
+A per-session switch. A prompt that consists of \texttt{/dont} (or \texttt{/brain off}) sets a flag for the session; \texttt{/connect} (or \texttt{/brain on}) clears it. While the flag is set every hook of the brain is silent. The switch is what makes the arm \emph{without the brain} of a test possible in an ordinary session; \texttt{--session} and \texttt{--global} set it from the command line.
+
+\subsection{Tools for the store}
+
+\subsubsection*{\texttt{import\_store.py}: building the database}
+Builds the database from the text export, checking every digest, and refuses a row whose content does not match its digest.
+\begin{center}\small
+\begin{tabular}{p{3.6cm}p{10.4cm}}
+\toprule
+Option & Effect\\
+\midrule
+\texttt{--out PATH} & the database to write\\
+\texttt{--roundtrip} & export the new database again and compare the result with the input, file by file\\
+\texttt{--force} & overwrite an existing database\\
+\texttt{--home PATH} & the directory against which relative paths in the export are resolved\\
+\texttt{--private-names FILE} & a list of names that must not appear in the imported text; the import stops on the first\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\subsubsection*{\texttt{export\_store.py}: the text export}
+Writes the store as one JSON-lines file per table, rows sorted by primary key and keys sorted within each row, so that the difference between two exports is the difference between two states of the store. It is read-only on the store. The release's \path{export/population/} folder is its output. With \texttt{--check} it writes nothing and exits with status $1$ if the export on disk no longer matches the store.
+
+\subsubsection*{\texttt{corpus\_audit.py}: an integrity audit}
+Checks every current card: that its statement is not a stub; that a theorem or lemma carries a proof text; that no link other than \texttt{supersedes} touches a retired card; that the \texttt{depends\_on} graph has no cycle; that fixed probes on each shelf of the store return their expected cards; and the latency of the hook at the current size. It writes a report and a list of flagged cards. It is read-only on the store.
+
+\subsubsection*{\texttt{record\_review.py}: recording a read of a claim}
+Records an agent's reading of a claim as evidence the store can show. With \texttt{--role agent}, the default, the read is stored as a discovery report: it is unauthenticated, it is linked to the claim by an association, and by construction it never moves the claim's status (Proposition~\ref{prop:assoc}). Options: \texttt{--claim}, \texttt{--reviewer}, \texttt{--verdict}, \texttt{--summary}, \texttt{--scope}, \texttt{--limitation}, \texttt{--role}.
+
+\subsubsection*{\texttt{harvest\_proofwiki.py} and \texttt{harvest\_wikipedia.py}: literature harvests}
+The harvesters fetch a curated list of pages through the public interfaces of ProofWiki and Wikipedia, at about one request a second, and write draft bundles that enter the store only after a sample has been read by hand. From ProofWiki they take the statement and, for a theorem, the proof; a theorem whose proof does not extract cleanly enters as a concept, not as a theorem with a missing proof. From Wikipedia they take the lead paragraph, and every such card enters as a concept, because a lead paragraph rarely states a result with all its hypotheses. Each card carries the attribution its source's licence requires.
+
+\subsubsection*{\texttt{mathbrain\_status.py}}
+A one-screen summary of the store and of the packets waiting at the gate. It reads and never writes.

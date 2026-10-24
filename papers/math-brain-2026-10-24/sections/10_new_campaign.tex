@@ -1,0 +1,18 @@
+\section{The ensemble and long-horizon campaign}\label{sec:campaign}
+
+The tests of Section~\ref{sec:tests} ask what the brain does for one agent answering one question. The case for which the brain was built is different: many agents, over many days, on problems where each agent's work is supposed to become the next agent's starting point. A campaign to measure that case directly began on 22 October 2026 and is not complete. We give its design, because the design is what makes such a comparison informative, and because it can be repeated by anyone with the released store.
+
+\subsection{Design}
+Each arm is a fleet: a fixed number of agents of one model, working in rounds on a fixed set of problems for a fixed number of days, with the same work orders and the same compute and token budgets. The arms differ in what persists between rounds.
+\begin{enumerate}[label=(\alph*)]
+\item \emph{No memory.} Each round starts from the problem statements only.
+\item \emph{Shared notes.} Each round reads a shared folder of the previous rounds' reports, with text search over it.
+\item \emph{The brain.} Each round reads the store and lands its results through the write-back path of Section~\ref{sec:writeback}; the next round recalls them.
+\end{enumerate}
+Arm (b) is the control that matters. A brain that beats arm (a) but not arm (b) adds nothing over writing things down.
+
+\subsection{What is measured}
+For each problem and each round, a grader that does not know the arm scores the best current result on a fixed rubric (proved, verified by computer, refuted, partial, nothing). The primary measures are the score at the last round and the area under the score curve over rounds, compared between arms by paired tests over problems. Secondary measures are the number of times an arm re-derives a result an earlier round had already established, the number of times it repeats a route an earlier round had recorded as refuted, and the cost per point of score in input tokens, uncached input tokens and session time. A cost ledger records every session of every arm.
+
+\subsection{Controls}
+Problems are drawn from rows of the problem list on which the store holds little, so that the brain arm has no head start from material written before the campaign; a second stratum uses rows on which the store holds a great deal, to measure the head start itself. The question banks of Section~\ref{sec:tests} are not used. The campaign's own records enter the store only after the campaign ends.

@@ -1,0 +1,108 @@
+\section{The store}\label{sec:store}
+
+We treat the store as a mathematical object: a record, a link, the way new material enters, and the invariants that make it safe for many agents to write to at once. The implementation is a single SQLite database with an immutable object store beside it; we mention it only where it matters.
+
+\subsection{Records and revisions}
+
+\begin{definition}[Record]\label{def:record}
+A \emph{record} is a tuple $r=(\lambda,\kappa,\sigma,\tau,\mu)$, where $\lambda$ is a \emph{logical identifier}, $\kappa$ a \emph{kind}, $\sigma$ a \emph{statement} (a UTF-8 text, possibly with formulas), $\tau\in\mathcal{T}$ a \emph{truth status}, and $\mu$ a finite map of metadata (title, domain, conditions, proof text, source, evidence identifiers, trust class). The \emph{revision identifier} of $r$ is $\rho(r)=h(\mathrm{canon}(r))$, where $h$ is SHA-256 and $\mathrm{canon}$ is a fixed canonical serialization (sorted keys, normalized Unicode, no insignificant whitespace).
+\end{definition}
+
+The kinds of nodes in the store are claims, sources, evidence and external references; a claim carries a further \emph{claim kind}, one of definition, theorem, lemma, conjecture, technique, example, counterexample, proof attempt, open question and error pattern. The truth statuses are
+\[
+\mathcal{T}=\{\textsf{unverified},\textsf{provisional},\textsf{conditional},\textsf{verified},\textsf{gap\_found},\textsf{refuted},\textsf{retracted}\}.
+\]
+A logical object is a mathematical object, say a lemma; a revision is one version of what the store says about it. Changing anything that matters (a hypothesis, a quantifier, the scope, the source, the evidence, the status) produces a new revision with a new identifier; nothing is edited in place.
+
+\begin{definition}[Store]\label{def:store}
+A \emph{store} is a triple $\Store=(\cV,\cE,\cR)$, where $\cV$ is a finite set of revisions, $\cE$ a finite set of links, and $\cR\subseteq\cE$ the set of \emph{retracted} links. A link is a tuple $e=(u,v,k,w,\varsigma)$ with endpoints $u,v\in\cV$, a kind $k\in\Kinds$, a weight $w\in(0,1]$, and a polarity $\varsigma\in\{+1,-1\}$ determined by $k$. The \emph{live} links are $\cE\setminus\cR$.
+\end{definition}
+
+The link kinds and their polarities are given in Table~\ref{tab:kinds}, with their counts on 22 October 2026. Two kinds are negative: \texttt{refutes}, which joins a counterexample or a refuted route to what it refutes, and \texttt{fails\_under}, which joins a result to a pitfall it must avoid. Negative links are kept apart from positive ones in every computation that uses links, so that a warning near a result can never be averaged into support for it.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{llrl}
+\toprule
+Kind & Polarity & Count & Reading from $u$ to $v$ \\
+\midrule
+\texttt{depends\_on} & $+$ & 9{,}129 & $u$ uses $v$ in its proof or statement \\
+\texttt{cites} & $+$ & 5{,}040 & $u$ is taken from the source $v$ \\
+\texttt{semantic\_association} & $+$ & 2{,}136 & shared vocabulary; never a proof relation \\
+\texttt{supersedes} & $+$ & 1{,}242 & $u$ is a later revision of the object of $v$ \\
+\texttt{analogous\_to} & $+$ & 604 & companions: neither implies the other \\
+\texttt{specializes} & $+$ & 300 & $u$ is a special case of $v$ \\
+\texttt{defines} & $+$ & 234 & $u$ defines a term used by $v$ \\
+\texttt{generalizes} & $+$ & 209 & $u$ generalizes $v$ \\
+\texttt{fails\_under} & $-$ & 160 & $u$ fails under the pitfall $v$ \\
+\texttt{proves} & $+$ & 139 & $u$ is a proof of $v$ \\
+\texttt{refutes} & $-$ & 138 & $u$ refutes $v$ \\
+\texttt{bridges\_to} & $+$ & 31 & $u$ points to a record in another memory \\
+\midrule
+total & & 19{,}362 & (including 231 retracted links) \\
+\bottomrule
+\end{tabular}
+\caption{Link kinds in the store on 22 October 2026. The kinds \texttt{verified\_by} and \texttt{triggers} exist in the schema and are produced only by the authenticated evidence path and the mistake records; neither occurs among the links counted here. The counts include the $231$ retracted links, which are kept in the record with their retractions.}
+\label{tab:kinds}
+\end{table}
+
+On 22 October the store held $13{,}306$ revisions: $11{,}628$ claims, $879$ sources, $622$ evidence records and $177$ external references. The degree distribution is heavy-tailed. $2{,}878$ revisions have no link at all and can be reached only through their words; $3{,}510$ have one link, $2{,}251$ two and $1{,}439$ three; five hubs have more than a hundred. Appendix~\ref{app:tables} gives the whole histogram.
+
+\subsection{Supersession and the current revision}
+
+For a logical identifier $\lambda$, let $\cV_\lambda$ be its revisions. The \texttt{supersedes} links among them define a relation $u\succ v$ ($u$ supersedes $v$).
+
+\begin{definition}
+A store is \emph{well-formed} if (i) every \texttt{supersedes} link joins two revisions of the same logical object, and (ii) the relation $\succ$ restricted to each $\cV_\lambda$ is acyclic. A revision of $\cV_\lambda$ that no other revision supersedes is a \emph{head} of $\lambda$. If $\lambda$ has exactly one head, that head is its \emph{current revision} $\mathrm{cur}(\lambda)$; if it has more than one, $\lambda$ is \emph{contested} and has no current revision.
+\end{definition}
+
+A contested object arises when two agents correct the same card independently. The store accepts both corrections, because refusing the second would lose work, but it does not choose between them: the reader refuses to print a current revision of a contested object, the search leaves its heads out of the ranking, and the path tools name the competing heads with a warning. Which head is current is a review decision, recorded by a new revision that supersedes all of them.
+
+The tools print current revisions by default and show the chain of earlier ones on request. A wrong card is never deleted: the corrected card supersedes it, and an agent that finds the old card through an old identifier is shown the correction.
+
+\subsection{Bundles}
+
+New material enters the store only as a \emph{bundle}.
+
+\begin{definition}[Bundle]\label{def:bundle}
+A \emph{bundle} is a pair $B=(R,L)$ of a finite set $R$ of revisions, at most one for each logical identifier, and a finite set $L$ of links each of whose endpoints lies in $R$ or in the current store. Its \emph{digest} is
+\[
+\delta(B)=h\Bigl(\mathrm{canon}\bigl(\mathrm{sort}\{\rho(r):r\in R\},\ \mathrm{sort}\{h(\mathrm{canon}(e)):e\in L\}\bigr)\Bigr),
+\]
+where $\mathrm{sort}$ orders a finite set of strings lexicographically.
+\end{definition}
+
+The digest binds every revision payload and every link with its rationale and weight; it does not depend on the order in which the author listed the entries or on the time of ingestion. A bundle lands only if all of the following hold, checked before anything is written: every link endpoint exists; every \texttt{supersedes} target is a revision of the same logical object already in the store, whose release the bundle names as retired; adding $L$ creates no cycle in \texttt{supersedes} or in \texttt{depends\_on}; every revision enters with status \textsf{unverified}; and every \texttt{external\_reference} node is the target only of \texttt{bridges\_to} links. The rendered Markdown of each revision is then written to an object store keyed by its SHA-256, which is idempotent, and all rows enter the database in one transaction. A failure in the transaction can leave only orphaned immutable objects, which are harmless, never a partial graph. Replaying a bundle that has already landed is refused.
+
+On 22 October the store held $1{,}052$ bundle manifests; the largest days were 21 October ($463$) and 10 October ($231$).
+
+\subsection{Content integrity}
+
+Every revision row stores the digest of its rendered artifact and every manifest stores the digests of its members. The reader recomputes the digest of each artifact it opens and refuses a mismatch. This has a cost for portability. Of the $11{,}979$ revisions in the 12 October export, $201$ have artifact digests that were computed on text with Windows line endings and that fail on a machine that normalizes line endings; the public release must either re-seal them as new revisions or ship the artifacts byte for byte. Section~\ref{sec:limits} returns to this.
+
+\subsection{Four invariants}
+
+The following statements are the reason the store can be shared. Their proofs are in Appendix~\ref{app:proofs}.
+
+\begin{proposition}[Order independence]\label{prop:order}
+If two bundles have the same set of revisions and the same set of links, they have the same digest, whatever the order of their entries. If two bundles differ in any revision payload or in any link (endpoint, kind, weight, rationale or metadata), their digests differ unless SHA-256 has a collision. \proofbutton{prop:order}
+\end{proposition}
+
+\begin{proposition}[Well-formedness is preserved]\label{prop:wellformed}
+If $\Store$ is well-formed and a bundle $B$ passes the landing checks, then the store after $B$ lands is well-formed. For each logical identifier $\lambda$, every head of $\lambda$ after the landing is a head before it or a revision of $B$; in particular, if $B$ contains no revision of $\lambda$, the heads of $\lambda$, and so its current revision, are unchanged. \proofbutton{prop:wellformed}
+\end{proposition}
+
+For a claim $c$, the \emph{exact dependency closure} $D(c)$ is the set of revisions reachable from $c$ by directed \texttt{depends\_on} links, computed on current revisions. The closure is what an agent reads when it wants to know everything a result rests on.
+
+\begin{proposition}[Exact closure]\label{prop:closure}
+The closure procedure returns $D(c)$ if and only if the subgraph of \texttt{depends\_on} links reachable from $c$ is acyclic and every node it reaches exists; otherwise it refuses and names the first cycle or missing node. No link of any other kind, and no learned strength, can enter $D(c)$. \proofbutton{prop:closure}
+\end{proposition}
+
+\begin{proposition}[Association is not evidence]\label{prop:assoc}
+No operation that uses only links of kinds \texttt{semantic\_association}, \texttt{analogous\_to}, \texttt{bridges\_to} or \texttt{supersedes}, link strengths, retrieval scores or consolidation proposals can change the truth status of any revision. \proofbutton{prop:assoc}
+\end{proposition}
+
+The last proposition is a statement about the code paths, and its proof is an inspection of them: the only function that writes a status is the one described in Section~\ref{sec:writeback}, and it reads only authenticated evidence. We state it because it is the property most often lost in practice by systems of this kind: once a similarity score is allowed to look like support, an agent will eventually cite it as support.
+
+\subsection{Privacy and provenance}
+Ingestion is deny-by-default. A run-local manifest grants individual source roots, never a home directory; the reader rejects symbolic links, junctions and hard links, opens a stable descriptor, compares the file identity before reading and checks containment again afterwards. Publication is a second gate: every public artifact has a sidecar recording its hash, licence, public source identifiers and review, and a scanner rejects local paths, credential patterns and forbidden categories without echoing what it matched. These gates matter for a store that agents write to from a working machine; Section~\ref{sec:limits} reports what the scanner found when the store was prepared for release.

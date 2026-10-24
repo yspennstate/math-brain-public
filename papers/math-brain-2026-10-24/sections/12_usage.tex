@@ -1,0 +1,60 @@
+\section{Using the brain}\label{sec:usage}
+
+This section is for a reader who wants to use the store, add to it, or repeat the tests. Appendix~\ref{app:tools} lists every tool with its options.
+
+\subsection{Installing}
+The release is a Python package with the store exported as text, one file per bundle, so that it can be read, diffed and reviewed without the database. Installing builds the database from the export and checks every digest:
+\begin{verbatim}
+pip install -e .
+python tools/import_store.py --out local/population/brain.sqlite3
+export MATHBRAIN_STORE=local/population/brain.sqlite3 MATHBRAIN_BUILD_SRC=src
+\end{verbatim}
+The import refuses any row whose content does not match its digest. The meaning channel needs the sentence vectors, which the import builds on first use; without them the tools fall back to the word and formula channels and say so.
+
+\subsection{Asking}
+A question is asked in words, the way a card would state the answer:
+\begin{verbatim}
+python agent_tools/math_recall.py \
+    "spectral gap of the random transposition walk" \
+    --or "relaxation time of random transpositions on S_n"
+\end{verbatim}
+The tool prints eight whole cards with their identifiers and the identifiers of their links. Three habits account for most of the measured gains.
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Give two or three wordings in one call}, each after its own \texttt{--or}, and word them the way a card would: the object, the theorem or method by name, the symbol, the author. This raised the score from $76$ to $86$ of $100$.
+\item \emph{Walk instead of searching again.} When a printed card is on the right topic but is not the answer, open its neighbours with \texttt{--id} or walk from it with \texttt{math\_walk.py <id> --toward "<what you need>"}. Walking reached the same answers as searching again at about half the uncached tokens.
+\item \emph{Stop when a card answers, and reword on a weak match.} A \texttt{WEAK MATCH} line means the words are wrong, not that the store is empty; after three rounds of wordings with nothing, report that the card was not found by this search, which is weaker than saying the store does not hold it.
+\end{enumerate}
+Leave spreading off. It re-orders what the words found and costs about half again as many tokens.
+
+\subsection{An example}
+The following call was made on 23 October 2026 against the store of that day; it returned in $14$ seconds.
+\begin{verbatim}
+python agent_tools/math_recall.py \
+    "Fourier entropy influence conjecture constant" \
+    --or "read-once formula entropy influence bound" \
+    --or "FEI gate potential inequality"
+\end{verbatim}
+It printed eight cards. The first is the statement that every read-once formula $f$ over AND, OR and NOT satisfies $H(f)\le 6.4573\,I(f)$, with the identifier \texttt{claim\_415d9ba1b7f745a2a442da84ef6836ef}. Its header says that the second wording ranked it first and the first wording eighth, and lists the words it matched. Among the links printed below the statement: it specializes the open problem on Fourier entropy and total influence, it depends on the cards for influence and Shannon entropy, and an evidence card records the interval-arithmetic certificate behind the constant, cross-checked at $40$ digits. The second card, ranked first by the third wording, is the reformulation of FEI as a single inequality over Boolean gates (Section~\ref{sec:math}), whose evidence card records the sweep in which the two-input AND is the binding gate. The remaining six are the conjecture's definition card, the threshold-function result, the restriction-induction floor of $7.05$, a question card on the biased form, an attempt record, and the Kahn--Kalai--Linial card.
+
+For a reader who wanted the constant and its proof, the first card answers, and the search stops there. One link was not printed; \texttt{--id claim\_415d9ba1} prints the card with all of them.
+
+\subsection{The hook}
+The hook is installed in the agent runtime as a command that runs on each prompt. It reads the prompt, runs the base-profile search, and prints at most a few cards with a trust line under each, or nothing. Section~\ref{sec:hook} gives its gates. An agent should treat a served card as a lead to open with \texttt{--id}, not as an answer; the hook is silent on most questions and is not the recall path.
+
+\subsection{Writing back}
+A result is added as a packet: a folder with one file per new card (statement, conditions, proof text or certificate, source, kind) and one file of links into the store by identifier. The packet tool validates it, computes its digest, runs the held-out recall gate on a copy of the store, and lands it in one transaction if every check passes. Four rules keep the store useful.
+\begin{enumerate}[label=(\alph*)]
+\item State hypotheses exactly. A card that drops a hypothesis is worse than no card, because the next agent will use it.
+\item Record failures. A refuted route with its counterexample, joined by \texttt{refutes} or \texttt{fails\_under} to what it concerns, is among the most read cards in the store.
+\item Link to what the result uses. A card with no links can be found only through its words; a card with \texttt{depends\_on} links appears in the exact closure of everything built on it.
+\item Never edit; supersede. A corrected statement is a new revision with a \texttt{supersedes} link to the old one.
+\end{enumerate}
+A new card enters as \textsf{unverified}. Changing its status requires evidence through the verification router of Section~\ref{sec:writeback}.
+
+\subsection{Repeating the tests}
+The tests of Section~\ref{sec:tests} can be repeated on a later version of the store, or on a different store, without the question banks becoming public. The harness takes a bank, a list of arms and a model, runs each item in a fresh session per arm, applies the contamination guard, grades blind against the keys, and writes per-arm scores, the discordant counts, the exact McNemar $p$-values and a cost ledger. An arm is a configuration: which tools the agent may call, whether the hook runs, which copy of the store it reads, and the budget. The two arms of a comparison must differ only in the brain.
+
+The banks are kept by the authors and are not in the release. A researcher who wants a test run on a new version may send the version; a researcher who wants to build a bank of their own should follow three rules. Write items whose answers are cards and audit each key twice before admitting it; remove from the bank any item answerable from the public files; and before reporting a null result, compute whether the test had room to show the effect.
+
+\subsection{Several agents}
+For several agents on one problem, the arrangement that worked was a work order that names the target, the cards already known (by identifier), what is ruled out and what counts as progress; a shared folder for reports; and one agent whose job is to turn reports into packets. Agents that write to the store directly in parallel are safe, because a bundle either lands whole or not at all and the landing checks are made inside the transaction, but they duplicate each other's work unless the work order divides it.

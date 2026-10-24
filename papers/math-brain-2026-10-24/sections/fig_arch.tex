@@ -1,0 +1,23 @@
+\begin{figure}[ht]
+\centering
+\begin{tikzpicture}[
+  box/.style={draw, rounded corners=2pt, align=center, font=\footnotesize, minimum height=0.9cm, inner sep=4pt},
+  arr/.style={-{Stealth[length=2mm]}, semithick},
+  lab/.style={font=\scriptsize, align=center}]
+\node[box, minimum width=4.0cm] (store) at (4,0) {\textbf{Store}\\ cards (revisions), typed links,\\ retracted links, digests};
+\node[box] (read) at (-0.6,0) {Hook (served cards),\\ recall tool, walk};
+\node[box] (gate) at (9.0,0) {Write-back gate:\\ held-out recall test};
+\node[box] (agent) at (-0.6,2.6) {Agent at work};
+\node[box] (sched) at (9.0,2.6) {Scheduled agents\\ (shared board)};
+\node[box] (str) at (4,-2.1) {Link strengths\\ (co-use, forgetting)};
+\draw[arr] (store) -- (read);
+\draw[arr] (read) -- node[lab, right] {cards with\\ trust lines} (agent);
+\draw[arr] (agent.east) -- node[lab, above, sloped] {packet of cards and links} (gate.north west);
+\draw[arr] (sched) -- node[lab, right] {reports via\\ repository} (gate);
+\draw[arr] (gate) -- node[lab, below] {lands or\\ held back} (store);
+\draw[arr] (agent.west) -- ++(-0.8,0) |- node[lab, pos=0.75, below] {joint use} (str.west);
+\draw[arr] (str) -- node[lab, right] {orders the printed links} (store);
+\end{tikzpicture}
+\caption{The loop. Agents read the store through the hook, the recall tool and the walk, and write to it only through the gate, which lands a packet of new cards and links when a held-out recall test on a copy of the store shows that it costs no answer. Joint use of two cards strengthens the link between them; the strengths order the printed links and weight the walk, but cannot change which cards a search without spreading returns (Proposition~\ref{prop:strength-search}).}
+\label{fig:arch}
+\end{figure}

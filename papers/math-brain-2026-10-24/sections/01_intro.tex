@@ -1,0 +1,94 @@
+\section{Introduction}\label{sec:intro}
+
+A language-model agent working on a mathematical problem is, in one respect, a very strange collaborator: it forgets everything when its session ends. It may have spent three hours establishing that a natural route to a conjecture fails, with an explicit counterexample checked to sixty digits, and the next agent asked about the same conjecture will walk into the same route the next morning. The waste is larger when many agents work at once. In the work reported here, up to a hundred agents worked one conjecture in parallel, and several hundred scheduled tasks ran around the clock on a list of four hundred open problems; without a common memory, each of them would rediscover the same definitions, the same failed reductions and the same known counterexamples, and none could build on what another had settled an hour before.
+
+Math Brain is a shared memory built to remove that limitation. It is a store of short mathematical records, which we call \emph{cards}, joined by typed \emph{links}, together with the tools agents use to search it, to move along its links and to write back to it while they work. The cards are of the kinds a mathematician keeps in a notebook: definitions, theorems with their exact hypotheses, proof techniques, sources, conjectures, and, most importantly, the agents' own results: proofs, counterexamples, verified computations, refuted routes and corrected statements. The links say how two cards relate. One result depends on another, generalizes it, specializes it, is analogous to it, cites it, refutes it, or fails under its hypotheses. On 22 October 2026 the store held $13{,}306$ cards and $19{,}362$ links, $231$ of them retracted and kept in the record, and it had grown from $800$ cards on 2 August.
+
+The agents that use the brain are the agents that build it. An agent reads the store before it works and writes to it when it finds something; the next agent then starts where the previous one stopped. Below we set out that loop in full, measure what it does for an agent, and record the mathematics that came out of the work.
+
+\subsection{The loop}
+
+The memory is surrounded by five mechanisms; each is treated in its own section.
+
+\begin{enumerate}[label=(\roman*)]
+\item \emph{Served cards} (Section~\ref{sec:hook}). A hook runs on every prompt an agent receives, in both of the agent runtimes we used, and places a few cards in front of the agent, each with a line saying how far to trust it. When nothing in the store matches well, the hook stays silent.
+\item \emph{Deliberate recall} (Section~\ref{sec:retrieval}). When an agent needs something, it searches the store and receives whole cards, with their identifiers and the identifiers of their links. From any card it can step along the links.
+\item \emph{Links that grow with use} (Section~\ref{sec:strength}). When an agent uses two cards together, the link between them strengthens; strengths fade by a power law, so the links agents actually rely on are printed first and weigh more in a walk.
+\item \emph{Writing back} (Section~\ref{sec:writeback}). An agent writes its results as a sealed \emph{packet} of new cards and links with their sources. Before a packet lands, a held-out recall test is run on a copy of the store with the packet added, and a packet that costs an answer is held back. Wrong cards are never deleted; a corrected revision supersedes them and the supersession is recorded.
+\item \emph{Shared work orders} (Section~\ref{sec:collective}). Scheduled agents read a common board and a common work order and commit their reports to a shared repository, from which their results enter the store through the same gate.
+\end{enumerate}
+Figure~\ref{fig:arch} shows how the parts fit together.
+
+\input{sections/fig_arch}
+
+\subsection{What we measured}
+
+Every test in this paper compares two arms that use the same model, the same budget and the same questions, and differ only in access to the brain; the one exception, a solving test whose full package also adds a clock and a hint, is marked where it occurs. Scores are counts of correct answers; $p$-values are exact two-sided McNemar tests on the items where the arms disagree. The question banks and their answer keys are kept private, so the same tests can be run on later versions of the system without the answers having been seen. Table~\ref{tab:intro-summary} collects the main comparisons; Section~\ref{sec:tests} gives each one in detail.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{p{6.2cm}ccc}
+\toprule
+Test & Without the brain & With the brain & $p$ \\
+\midrule
+100 questions about results held in the store (11 Oct) & 75 (text search) & 82 (full stack)$^{a}$ & 0.09 \\
+1{,}000 items whose answers are cards in the store (13 Sep) & 538 & 1{,}000 & $1.7\cdot 10^{-139}$ \\
+61 reasoning and audit items (5--6 Oct) & 41 & 52 & 0.019 \\
+\quad of which, 26 items naming a known result & 13 & 22 & 0.012 \\
+80 questions about files in GitHub repositories (12 Oct) & 68 & 73 & 0.27 \\
+584 held-out ranking questions, before and after (12 Oct) & 298 & 317 & 0.0019 \\
+13 new open problems, graded blind (11 Oct) & 26 of 39 & 24 of 39 & 0.23$^{b}$ \\
+755 store items, three arms: repositories against brain, Claude (24 Oct) & $78.1\%$ & $94.3\%$ & $3.0\cdot 10^{-27}$ \\
+\quad of which, 593 items both arms answered in time & $99.3\%$ & $99.2\%$ & 1 \\
+182 store items, three arms: repositories against brain, Codex (24 Oct) & $97.3\%$ & $93.4\%$ & 0.09 \\
+300 hard items, early version against documents & 264 & 238 & 0.0005 \\
+\bottomrule
+\end{tabular}
+\caption{The main paired comparisons. $^{a}$The full stack is the hook, the recall tool and the link walk; it went $10$ to $3$ against text search on the disagreeing items. The recall tool alone scored $83$. $^{b}$Each attempt was graded blind at up to $3$ points, so $39$ is the maximum over $13$ problems; the $p$-value is for a referee's pairwise preference, $8$ to $3$ for the arm without the brain, with $2$ even. The last two rows are tests the brain did not pass. The three-arm rows give the percentage correct on the items run in all three arms; the model alone scored $21.7\%$ and $31.9\%$. The recall and ranking comparisons and the Claude three-arm comparisons survive a Holm correction over all nineteen paired comparisons of the current system (Appendix~\ref{app:stats}); the early version's loss survives it too.}
+\label{tab:intro-summary}
+\end{table}
+
+Three findings deserve to be stated in the introduction, because they determine how the system should be used.
+
+First, \emph{the brain helps where an answer has to be recalled, and not where it can be derived}. On the $1{,}000$ recall items the brain helped on $462$ and no harm was observed. On the $61$ reasoning items the gain lies mostly in the $26$ items that name a known result ($22$ against $13$); on the $35$ that name none the difference is small ($30$ against $28$, $p=0.73$), which bounds the effect on such items only loosely.
+
+Second, \emph{how results are printed matters as much as how they are found}. The same retrieval engine, printing titles and $700$-character snippets without identifiers, scored $34$ of $100$; printing whole cards with their identifiers and the identifiers of their links scored $83$. Two or three wordings of a question in one search call raised the score from $76$ to $86$ of $100$ held-out questions.
+
+Third, \emph{following links saves cost more than it adds accuracy}. On the $100$ store questions, adding the hook and the link walk to the recall tool changed accuracy by one question ($82$ against $83$, a test that could detect only a large difference), reduced the uncached input by a factor of $1.8$, and cut the session time from $666$ to $78$ minutes.
+
+Fourth, \emph{against an agent that can read the repositories, the brain wins on time, not on knowledge}. In the three-arm test (Section~\ref{subsec:threearm}) Claude agents with the brain scored $94.3\%$ and agents with the repositories $78.1\%$, but on the $593$ items both finished within the time they were tied, $99.2\%$ against $99.3\%$. The repositories hold the same records; the brain reaches them with fewer searches, at a quarter of the input. Codex agents, with half again as much time, did slightly better with the repositories, and their losses with the brain were abstentions after a search that missed.
+
+We also report what did not work. The hook by itself answers little ($7$ of the $100$ store questions); it was silent on $85$ of them, including all $60$ that had been reworded to share no words with their card. Spreading activation along links only re-ranks cards the words have already found. On thirteen new open problems on which the store held only a first attempt, the arm with the brain did not beat the arm without it, and an early version of the system lost, on a hard set of $300$ items, to agents that were simply given the documents.
+
+\subsection{The structure in brief}
+
+Section~\ref{sec:store} gives the store formally. Its records are immutable revisions of logical objects; every row carries a digest of its content and the reader refuses a row whose content no longer matches its digest; new material enters only as content-addressed bundles whose digest does not depend on the order of their entries. Three invariants make the store safe to share among many writers: the supersession relation is acyclic, so every logical object has a well-defined set of heads; an object with one head has a current revision, and an object with two is contested and has none until a review supersedes both; the exact dependency closure of a claim uses only directed \texttt{depends\_on} links and refuses cycles and missing nodes; and no association, however strong, can become evidence. We state and prove these in Section~\ref{sec:store} and Appendix~\ref{app:proofs}.
+
+Section~\ref{sec:retrieval} gives the ranking. Cards are ranked by BM25 \cite{RobertsonZaragoza2009} with length normalization $b=0.4$, $k_1=1.2$, title words counted twice, and a channel of sentence embeddings; several wordings are merged by best rank. The decision to print the answering card in full, with its links, is part of the design and is measured. Section~\ref{sec:strength} gives the strength of a link as an explicit function of co-use with power-law forgetting, a hub discount and a similarity factor, and shows that the strengths cannot change which cards a search returns.
+
+\subsection{The mathematics}
+
+The memory was built for research, and it was used for research while it was built. Section~\ref{sec:math} describes the results, separating what is proved, what is computer-verified, and what is evidence. Two of them are proved in this paper.
+
+\begin{theorem}[Granularity bound]\label{thm:intro-G}
+For every Boolean function $f:\{-1,1\}^n\to\{-1,1\}$ with Fourier weights $p(S)=\hat f(S)^2$, let $\pi(S)=\sum_{T\supseteq S}p(T)$ and $U(f)=\sum_S p(S)\log_2(\pi(S)/p(S))$. Then
+\[
+H(f)\;\le\;2\bigl(I(f)-\Var f\bigr)+2U(f)-(1-\Var f)\log_2\frac{1}{1-\Var f}\;\le\;2I(f)+2U(f),
+\]
+where $H(f)$ is the Fourier entropy and $I(f)$ the total influence. In particular, the Fourier entropy-influence conjecture holds if and only if $\sup_f U(f)/I(f)<\infty$. \proofbutton{thm:intro-G}
+\end{theorem}
+
+\begin{theorem}[Summed restriction criterion]\label{thm:intro-GU}
+For a coordinate $i$ let $\Delta_iU(f)=U(f)-\tfrac12\bigl(U(f_{i,+})+U(f_{i,-})\bigr)$, where $f_{i,\pm}$ are the restrictions $x_i=\pm1$, and let $G(f)=\sum_i\Delta_iU(f)$. If there are constants $a\ge0$ and $0\le b<1$ such that $G(f)\le a\,I(f)+b\,U(f)$ for every Boolean function, then every Boolean function satisfies $U(f)\le\frac{a}{1-b}I(f)$ and
+\[
+H(f)\le\Bigl(2+\frac{2a}{1-b}\Bigr)I(f).
+\]
+\proofbutton{thm:intro-GU}
+\end{theorem}
+
+The largest value of $G/I$ found in exhaustive, annealed and compositional searches is $3.2265$; if $G\le 3.2265\,I$ held in general, the conjecture would follow with constant $8.45$. Section~\ref{sec:math} also describes an interval-arithmetic verification, made in July before the store held the relevant material and therefore not evidence of its benefit, of the Krauth--M\'ezard capacity of the Ising perceptron \cite{KrauthMezard1989,DingSun2019,Huang2024}, the classes of Boolean functions on which the entropy-influence inequality was proved with explicit constants, and the thirty-one papers written in this work (Appendix~\ref{app:papers}).
+
+\subsection{Organization}
+
+Section~\ref{sec:related} places the system among earlier work. Sections~\ref{sec:store}--\ref{sec:collective} describe the store and the five mechanisms. Section~\ref{sec:tests} gives the tests, including those that failed, with their costs. Section~\ref{sec:campaign} gives the design of a controlled test of agents working together over time. Section~\ref{sec:math} describes the mathematics. Section~\ref{sec:usage} explains how to install the store, use the tools, write back to it, and repeat the tests with and without the brain. Section~\ref{sec:limits} states the limitations and the conditions of the public release. The proofs are in Appendix~\ref{app:proofs}; the statistics of the store are tabulated in Appendix~\ref{app:tables}; Appendix~\ref{app:tools} is a reference for the tools and Appendix~\ref{app:papers} lists the papers.

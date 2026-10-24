@@ -1,0 +1,440 @@
+\section{The entropy-influence reduction in detail}\label{app:fei}
+
+This appendix gives the mathematics of Section~\ref{subsec:fei} in full. Every statement labelled a theorem, proposition, lemma or corollary is proved here; numerical findings are collected in Section~\ref{subsec:fei-numerics} and are labelled as such.
+
+\subsection{Notation and three identities}
+Throughout, $f:\{-1,1\}^n\to\{-1,1\}$, $p(S)=\hat f(S)^2$, and $S$ denotes a random subset of $[n]$ with law $p$. Logarithms are to base $2$ unless written $\ln$, and $h(q)=q\log\frac1q+(1-q)\log\frac1{1-q}$ is the binary entropy. We write $S_i=\mathbf 1[i\in S]$, so that $\Inf_i(f)=\PP(S_i=1)$, and for a set $A$ of coordinates $S_A=(S_i)_{i\in A}$ and $I_A(f)=\sum_{i\in A}\Inf_i(f)$. Define
+\[
+B_i(f)=H(S_i\mid S_{[n]\setminus\{i\}}),\qquad B(f)=\sum_iB_i(f),\qquad \mathrm{DTC}(f)=H(f)-B(f),
+\]
+the last being the dual total correlation of the law $p$; it is nonnegative, since by the chain rule $H(S)=\sum_iH(S_i\mid S_{<i})\ge\sum_iH(S_i\mid S_{[n]\setminus\{i\}})$. For a coordinate $i$ let $f_{i,\pm}$ be the restrictions $x_i=\pm1$, viewed as functions of the remaining $n-1$ variables, and for any functional $\Phi$ put $\Delta_i\Phi(f)=\Phi(f)-\frac12\bigl(\Phi(f_{i,+})+\Phi(f_{i,-})\bigr)$.
+
+Fix $i$. For $T\subseteq[n]\setminus\{i\}$ write $u_T=\hat f(T)$, $v_T=\hat f(T\cup\{i\})$, $m_T=u_T^2+v_T^2$, and, when $m_T>0$, $s_T=v_T^2/m_T$ and $\eta_T=2u_Tv_T/m_T\in[-1,1]$. Since $f(x)=\sum_T(u_T+x_iv_T)\chi_T(x)$, the restrictions have coefficients
+\begin{equation}\label{eq:restr-coef}
+\widehat{f_{i,\pm}}(T)=u_T\pm v_T,\qquad \widehat{f_{i,\pm}}(T)^2=m_T(1\pm\eta_T).
+\end{equation}
+Under $p$, the set $S\setminus\{i\}$ has law $(m_T)_T$, and given $S\setminus\{i\}=T$ the coordinate $i$ belongs to $S$ with probability $s_T$. Hence $B_i=\sum_Tm_T\,h(s_T)$.
+
+\begin{lemma}[Restriction identities]\label{lem:restr}
+For every Boolean $f$ and every coordinate $i$:
+\begin{enumerate}[label=(\alph*)]
+\item $\frac12\bigl(I(f_{i,+})+I(f_{i,-})\bigr)=I(f)-\Inf_i(f)$;
+\item $\Delta_iH(f)=B_i(f)+J_i(f)$, where $J_i(f)=\sum_Tm_T\bigl(1-h(\tfrac{1+\eta_T}2)\bigr)\ge0$;
+\item $J_i(f)\le4\sum_T\min\bigl(p(T),p(T\cup\{i\})\bigr)\le4\min\bigl(\Inf_i(f),1-\Inf_i(f)\bigr)$.
+\end{enumerate}
+In particular $0\le\Delta_iH(f)\le B_i(f)+4\Inf_i(f)$.
+\end{lemma}
+
+\begin{proof}
+(a) For $j\ne i$, by \eqref{eq:restr-coef}, $\frac12\sum_\pm\Inf_j(f_{i,\pm})=\frac12\sum_\pm\sum_{T\ni j}(u_T\pm v_T)^2=\sum_{T\ni j}m_T=\Inf_j(f)$. Summing over $j\ne i$ gives $I(f)-\Inf_i(f)$.
+
+(b) Splitting $H(f)$ over the pairs $\{T,T\cup\{i\}\}$, $u_T^2\log\frac1{u_T^2}+v_T^2\log\frac1{v_T^2}=m_T\log\frac1{m_T}+m_T\,h(s_T)$, so $H(f)=\sum_Tm_T\log\frac1{m_T}+B_i$. By \eqref{eq:restr-coef}, with $q_\pm=(1\pm\eta_T)/2$,
+\[
+\tfrac12\sum_\pm m_T(1\pm\eta_T)\log\frac1{m_T(1\pm\eta_T)}=m_T\log\frac1{m_T}+m_T\sum_\pm q_\pm\log\frac1{2q_\pm}=m_T\log\frac1{m_T}+m_T\bigl(h(q_+)-1\bigr).
+\]
+Summing over $T$ and subtracting gives the identity. Each term of $J_i$ is nonnegative because $h\le1$.
+
+(c) From $h(q)\ge4q(1-q)$ we get $1-h(\frac{1+\eta}2)\le\eta^2$, so $m_T(1-h(q_+))\le m_T\eta_T^2=4u_T^2v_T^2/m_T\le4\min(u_T^2,v_T^2)$. Finally $\sum_T\min(u_T^2,v_T^2)$ is at most $\sum_Tv_T^2=\Inf_i(f)$ and at most $\sum_Tu_T^2=1-\Inf_i(f)$.
+\end{proof}
+
+\begin{remark}
+A series estimate of the divergence $1-h(\frac{1+\eta}2)$ improves the constant $4$ in (c) to $2/\ln2\approx2.885$, the value quoted in Section~\ref{subsec:fei}. Nothing below depends on the value of this constant beyond its finiteness, and we keep $4$.
+\end{remark}
+
+\begin{lemma}[Block identity and channel bound]\label{lem:block}
+Let $A\subseteq[n]$, $C=[n]\setminus A$, let $X$ be uniform on $\{-1,1\}^A$ and let $f_X$ be the restriction of $f$ to $C$ obtained by fixing the coordinates in $A$ to $X$. Let $D$ be a random subset of $C$ whose conditional law given $X$ is the spectral law of $f_X$. Then
+\begin{enumerate}[label=(\alph*)]
+\item $\EE_X I(f_X)=I(f)-I_A(f)$;
+\item $H(f)-\EE_XH(f_X)=H(S_A\mid S_C)+I(X;D)$, where $I(X;D)$ is the mutual information;
+\item $0\le I(X;D)\le\frac{2}{\ln2}\,I_A(f)$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+For $T\subseteq C$ put $g_T(x)=\sum_{R\subseteq A}\hat f(R\cup T)\chi_R(x)$ for $x\in\{-1,1\}^A$; then $\widehat{f_x}(T)=g_T(x)$. By Parseval in $x$, $\PP(D=T)=\EE_Xg_T(X)^2=\sum_{R\subseteq A}p(R\cup T)=\PP(S_C=T)$, so $D$ and $S_C$ have the same law.
+
+(a) For $j\in C$, $\EE_X\Inf_j(f_X)=\sum_{T\ni j}\EE_Xg_T(X)^2=\sum_{T\ni j}\PP(S_C=T)=\Inf_j(f)$; sum over $j\in C$.
+
+(b) $H(D)=H(S_C)$ and $H(D\mid X)=\EE_XH(f_X)$, so $H(S_C)=\EE_XH(f_X)+I(X;D)$. Add $H(S_A\mid S_C)$ to both sides and use $H(f)=H(S_C)+H(S_A\mid S_C)$.
+
+(c) Given $D=T$, the law of $X$ has density $g_T^2/\EE g_T^2$ with respect to the uniform measure, so in natural units $I(X;D)=\sum_T\mathrm{Ent}(g_T^2)$, where $\mathrm{Ent}(\phi)=\EE\phi\ln\phi-\EE\phi\ln\EE\phi$. The logarithmic Sobolev inequality on the discrete cube \cite{Gross1975} gives $\mathrm{Ent}(g^2)\le2\sum_R|R|\,\hat g(R)^2$. Hence
+\[
+I(X;D)\le2\sum_{T\subseteq C}\sum_{R\subseteq A}|R|\,p(R\cup T)=2\sum_Sp(S)\,|S\cap A|=2\,I_A(f)
+\]
+nats, which is $(2/\ln2)I_A(f)$ bits.
+\end{proof}
+
+\subsection{The constant sandwich}
+Let
+\begin{gather*}
+C_{\mathrm{FEI}}=\sup_f\frac{H(f)}{I(f)},\qquad K_E=\sup_f\frac{B(f)}{I(f)},\\
+K_{\mathrm{loc}}=\sup_f\min_{i:\Inf_i(f)>0}\frac{B_i(f)}{\Inf_i(f)},\qquad K_\Delta=\sup_f\min_{i:\Inf_i(f)>0}\frac{\Delta_iH(f)}{\Inf_i(f)},
+\end{gather*}
+the suprema over all $n$ and all nonconstant Boolean $f$, in the extended reals.
+
+\begin{theorem}\label{thm:sandwich}
+$K_{\mathrm{loc}}\le K_E\le C_{\mathrm{FEI}}\le K_\Delta\le K_{\mathrm{loc}}+4$. In particular the four constants are finite together, and the conjecture is equivalent to each of the following: (GEI) $B\le K\,I$ for all $f$; (LEI) every nonconstant $f$ has a coordinate with $B_i\le K\Inf_i$; (LDI) every nonconstant $f$ has a coordinate with $\Delta_iH\le K\Inf_i$.
+\end{theorem}
+
+\begin{proof}
+If $\Inf_i=0$ then $S_i=0$ almost surely and $B_i=0$. The minimum of the ratios $B_i/\Inf_i$ over the coordinates with $\Inf_i>0$ is at most the mediant $B/I$, so $K_{\mathrm{loc}}\le K_E$. $K_E\le C_{\mathrm{FEI}}$ because $\mathrm{DTC}\ge0$. For $C_{\mathrm{FEI}}\le K_\Delta$ we may assume $K_\Delta<\infty$ and argue by induction on $n$: constants have $H=I=0$, and for nonconstant $f$ choose $i$ with $\Inf_i>0$ and $\Delta_iH\le K_\Delta\Inf_i$; the restrictions are Boolean on $n-1$ variables, so by induction and Lemma~\ref{lem:restr}(a)
+\[
+H(f)=\Delta_iH+\tfrac12\textstyle\sum_\pm H(f_{i,\pm})\le K_\Delta\Inf_i+K_\Delta\bigl(I(f)-\Inf_i\bigr)=K_\Delta I(f).
+\]
+Finally, for the coordinate attaining $\min_iB_i/\Inf_i$, Lemma~\ref{lem:restr}(b),(c) gives $\Delta_iH\le B_i+4\Inf_i$, so $K_\Delta\le K_{\mathrm{loc}}+4$.
+\end{proof}
+
+By Hod's construction \cite{Hod2017}, $C_{\mathrm{FEI}}\ge6.4548$, so $K_\Delta\ge6.4548$ and $K_{\mathrm{loc}}\ge K_\Delta-4\ge2.45$. On all functions with $n\le4$ the four ratios reach at most $3.4025$, $2.7042$, $2.6725$ and $4.8677$ (Table~\ref{tab:fei-exhaustive}).
+
+\begin{proposition}[Tensor reduction]\label{prop:tensor}
+Let $\Psi\ge0$ be a functional on Boolean functions such that $\Psi(f^{\otimes t})/t\to0$ as $t\to\infty$ for every $f$, where $f^{\otimes t}$ is the product of $t$ copies of $f$ on disjoint sets of variables. If $H(f)\le C\,I(f)+\Psi(f)$ for every Boolean $f$, then $H(f)\le C\,I(f)$ for every Boolean $f$. The same holds with $B$ or $U$ in place of $H$.
+\end{proposition}
+
+\begin{proof}
+If $f$ and $g$ depend on disjoint variables, the spectral law of $fg$ is the product of the two laws, so $H$, $I$, $B$ and $U$ (whose upper-set masses also factor) are additive. Apply the hypothesis to $f^{\otimes t}$, divide by $t$, and let $t\to\infty$.
+\end{proof}
+
+Admissible choices of $\Psi$ include $o(n)$, any $o(I)$ function of $I$, $A\log(2+I+n)$ and $A\,\Var f\log(1/\Var f)$. The conjecture is therefore equivalent to $H\le C\,I+o(n)$: only the behaviour linear in the dimension matters. The device goes back to \cite{OWZ2011}. Losses that grow under tensor powers, such as the factor $\log(|S|+1)$ of \cite{KKLMS2020}, cannot be removed this way.
+
+\subsection{Extremizers}
+For $n\ge2$ let $c_n=\max\{H(f)/I(f):f\text{ nonconstant on }n\text{ variables}\}$. Adding a dummy variable changes nothing, so $c_n$ is nondecreasing and $C_{\mathrm{FEI}}=\lim_nc_n$. Call $f$ \emph{ratio-critical} if $H(g)/I(g)\le H(f)/I(f)$ for every nonconstant restriction $g$ of $f$. For $0\le t\le1$ let $A_t$ be a random subset of $[n]$ containing each coordinate independently with probability $t$, let $X$ be a uniform assignment of the coordinates outside $A_t$, and let $f_{A_t,X}$ be the resulting restriction. Put $\psi(t)=\EE H(S_{A_t})$ and
+\[
+\beta(t)=\sum_i\EE\,H\bigl(S_i\mid S_{A_t\setminus\{i\}}\bigr).
+\]
+
+\begin{theorem}\label{thm:extremizer}
+Let $n\ge2$ and let $f$ on $n$ variables attain $c=c_n$. Then:
+\begin{enumerate}[label=(\roman*)]
+\item $f$ is ratio-critical, and every restriction $g$ of $f$ satisfies $H(g)\le c\,I(g)$;
+\item $\Inf_i(f)\le\frac12$ for every $i$;
+\item $\Delta_iH(f)\ge c\Inf_i(f)$ for every $i$, hence $B_i(f)\ge(c-4)\Inf_i(f)$;
+\item $\mathrm{DTC}(f)\le\sum_iJ_i(f)\le4\sum_i\min(\Inf_i,1-\Inf_i)\le4\,I(f)$;
+\item for every block $A$ with complement $C$, $H(S_A\mid S_C)\ge(c-\frac2{\ln2})I_A(f)$ and $H(S_C)\le c\,I_C(f)+\frac2{\ln2}I_A(f)$;
+\item $\deg f\ge1+c\,I(f)/2$;
+\item for every $t\in(0,1]$, $\bigl(c-\frac2{\ln2}\bigr)I(f)\le\beta(t)\le c\,I(f)+\frac{2}{\ln2}\cdot\frac{1-t}{t}\,I(f)$;
+\item for every $t\in[0,1]$, $\EE\bigl[c\,I(f_{A_t,X})-H(f_{A_t,X})\bigr]\le\frac2{\ln2}(1-t)\,I(f)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+(i) A restriction is a Boolean function on at most $n$ variables, so its ratio is at most $c_n$.
+
+(ii) Multiplying $f$ by $\chi_{\{i\}}$ translates the spectrum by $S\mapsto S\triangle\{i\}$, which preserves $H$, leaves $\Inf_j$ unchanged for $j\ne i$ and replaces $\Inf_i$ by $1-\Inf_i$. If $\Inf_i>\frac12$ the product would have the same entropy and smaller total influence, hence a ratio larger than $c$; here $c>0$, which needs $n\ge2$ (for $n=1$ the function $x_1$ has $c_1=0$ and $\Inf_1=1$).
+
+(iii) By (i) and Lemma~\ref{lem:restr}(a), $\frac12\sum_\pm H(f_{i,\pm})\le c\,(I(f)-\Inf_i)$, and $H(f)=c\,I(f)$, so $\Delta_iH\ge c\Inf_i$. Then $B_i=\Delta_iH-J_i\ge(c-4)\Inf_i$ by Lemma~\ref{lem:restr}(c).
+
+(iv) Summing (iii) and using Lemma~\ref{lem:restr}(b), $B+\sum_iJ_i=\sum_i\Delta_iH\ge c\,I=H$, so $\mathrm{DTC}=H-B\le\sum_iJ_i$; then use Lemma~\ref{lem:restr}(c).
+
+(v) By Lemma~\ref{lem:block} and (i), $H(S_A\mid S_C)=H(f)-\EE_XH(f_X)-I(X;D)\ge c\,I-c\,(I-I_A)-\frac{2}{\ln2}I_A$. The second inequality is $H(S_C)=H(f)-H(S_A\mid S_C)$ rearranged.
+
+(vi) If $\deg f=d$ then every $\hat f(S)$ lies in $2^{1-d}\Z$ \cite[Exercise~1.11]{ODonnell2014}, so every nonzero weight is at least $4^{1-d}$, the spectrum has at most $4^{d-1}$ sets, and $H(f)\le2(d-1)$. Combine with $H=c\,I$.
+
+(vii) $\psi(t)=\sum_At^{|A|}(1-t)^{n-|A|}H(S_A)$ is a polynomial with $\psi(0)=0$ and $\psi(1)=H(f)$. Differentiating the product weights coordinate by coordinate (the Margulis--Russo formula) gives $\psi'(t)=\sum_i\EE[H(S_{A_t\cup\{i\}})-H(S_{A_t\setminus\{i\}})]=\beta(t)$. Coupling $A_t\subseteq A_{t'}$ for $t<t'$ shows that $\beta$ is nonincreasing, since conditioning on more variables lowers entropy; so $\psi$ is concave. Hence $H=\psi(t)+\int_t^1\beta\le\psi(t)+(1-t)\beta(t)$. By Lemma~\ref{lem:block}(b),(c) with live block $A_t$, $\psi(t)\le\EE H(f_{A_t,X})+\frac2{\ln2}(1-t)I$, and by (i) and Lemma~\ref{lem:block}(a), $\EE H(f_{A_t,X})\le c\,\EE I(f_{A_t,X})=c\,t\,I$. Therefore $c\,I\le c\,t\,I+\frac2{\ln2}(1-t)I+(1-t)\beta(t)$, which is the lower bound for $t<1$; the case $t=1$ follows by continuity, $\beta$ being a polynomial. For the upper bound, $\int_0^1\beta=H=c\,I$, and monotonicity together with the lower bound on $[t,1]$ give $t\,\beta(t)\le\int_0^t\beta=c\,I-\int_t^1\beta\le c\,I-(1-t)\bigl(c-\frac2{\ln2}\bigr)I$; divide by $t$.
+
+(viii) Concavity and $\psi(0)=0$ give $\psi(t)\ge t\,H=c\,t\,I$. By Lemma~\ref{lem:block}, $\EE H(f_{A_t,X})=\psi(t)-\EE I(X;D)\ge c\,t\,I-\frac2{\ln2}(1-t)I$, while $\EE\,c\,I(f_{A_t,X})=c\,t\,I$.
+\end{proof}
+
+Items (iii), (iv) and (v) use only ratio-criticality, not extremality, and so hold for every ratio-critical function with $c$ replaced by its own ratio. We checked them on all $14$, $54$ and $1{,}358$ ratio-critical functions with $n=2,3,4$; as a negative control, (iii) fails at $62{,}080$ pairs $(f,i)$ among the $64{,}176$ functions with $n=4$ that are not ratio-critical.
+
+\begin{corollary}\label{cor:dtc}
+The conjecture holds if and only if there is $A<\infty$ with $H(f)\le A\bigl(I(f)+\mathrm{DTC}(f)\bigr)$ for every Boolean $f$.
+\end{corollary}
+
+\begin{proof}
+If the inequality holds, apply it to an extremizer of $c_n$: by Theorem~\ref{thm:extremizer}(iv), $c_nI\le A(I+4I)$, so $c_n\le5A$ for every $n$. The converse is trivial.
+\end{proof}
+
+$\mathrm{DTC}$ vanishes exactly on product laws. Corollary~\ref{cor:dtc} therefore says that the conjecture can fail only through spectra that are locally close to product laws, though possibly mixtures of a few product laws globally.
+
+\begin{corollary}\label{cor:critical}
+The conjecture holds if and only if there is $K$ such that every ratio-critical $f$ on $n\ge2$ variables with all influences at most $\frac12$ has a coordinate with $\Inf_i>0$ and $B_i\le K\Inf_i$.
+\end{corollary}
+
+\begin{proof}
+If the conjecture holds, Theorem~\ref{thm:sandwich} gives such a coordinate for every nonconstant $f$, with $K=K_{\mathrm{loc}}$. If it fails, $c_n\to\infty$; take $n$ with $c_n>K+4$ and an extremizer $f$. It is ratio-critical with all influences at most $\frac12$ by Theorem~\ref{thm:extremizer}(i),(ii), and by (iii) every coordinate with $\Inf_i>0$ has $B_i\ge(c_n-4)\Inf_i>K\Inf_i$.
+\end{proof}
+
+\subsection{The upward functional}
+Recall $\pi(S)=\sum_{T\supseteq S}p(T)$ and $U(f)=\sum_Sp(S)\log(\pi(S)/p(S))$, the sum over the support, the empty set included. The identity
+\begin{equation}\label{eq:H-U}
+H(f)=\sum_Sp(S)\log\frac1{\pi(S)}+U(f)
+\end{equation}
+is immediate, and Theorem~\ref{thm:intro-G} follows from it and Lemma~\ref{lem:Gkey}. Since $\pi\le1$, $U\le H$; together with Theorem~\ref{thm:intro-G} this gives $\sup U/I\le C_{\mathrm{FEI}}\le2+2\sup U/I$, and Hod's bound gives $\sup U/I\ge(6.4548-2)/2=2.2274$.
+
+\subsubsection*{When Theorem~\ref{thm:intro-G} is an equality}
+For $S\subseteq[n]$ and an assignment $z$ of the coordinates outside $S$, let $d_Sf(z)=\EE_x[f(x,z)\chi_S(x)]$ be the top Fourier coefficient of the restriction of $f$ to $S$. Then $\EE_zd_Sf=\hat f(S)$ and, by Parseval, $\EE_z(d_Sf)^2=\pi(S)$. The proof of Theorem~\ref{thm:intro-G} applies Lemma~\ref{lem:Gkey} at every set of the spectrum, and the lemma is an equality at $S$ exactly when $d_Sf$ takes only the values $0$ and one fixed value $\pm2^{1-|S|}$. This happens on a large class.
+
+\begin{proposition}\label{prop:readonce-eq}
+Let $f$ be computed by a read-once formula whose gates have two inputs and are of AND type, that is $g(a,b)=s_0\,\mathrm{AND}(s_1a,s_2b)$ for signs $s_0,s_1,s_2$, with each variable used at most once. Then for every nonempty $S$ there is a sign $e_S$ such that $d_Sf$ takes only the values $0$ and $e_S2^{1-|S|}$; consequently $|\hat f(S)|=2^{|S|-1}\pi(S)$ for every nonempty $S$ in the support and
+\[
+H(f)=2\bigl(I(f)-\Var f\bigr)+2U(f)-(1-\Var f)\log\frac1{1-\Var f}.
+\]
+\end{proposition}
+
+\begin{proof}
+Fix $S$ and an assignment $z$ of the variables outside $S$. The restriction $g_z=f(\cdot,z)$ is computed by the same tree with the leaves outside $S$ replaced by constants. If some variable of $S$ is irrelevant for $g_z$, then $d_Sf(z)=0$. Otherwise every gate on a path from a leaf of $S$ to the root whose other input carries no leaf of $S$ receives on that input a constant, and it must be the constant that does not fix the gate's output, or the leaves of $S$ below it would be irrelevant; such a gate passes its live input through with a sign fixed by the gate's signs and not by $z$. The gates whose two inputs both carry leaves of $S$ keep their type. Hence $g_z$ is, for every such $z$, one and the same read-once AND-type formula on $S$, and $d_Sf(z)$ is its top coefficient.
+
+That top coefficient is $\pm2^{1-|S|}$. A single variable has top coefficient $1$. If $F_1,F_2$ are functions of disjoint sets $A,B$ and $g(a,b)=c_0+c_1a+c_2b+\gamma ab$, the top coefficient of $g(F_1,F_2)$ on $A\cup B$ comes only from $\gamma F_1F_2$ and equals $\gamma\hat F_1(A)\hat F_2(B)$; an AND-type gate has $\gamma=\pm\frac12$, and induction on the tree gives $\pm\frac12\cdot2^{1-|A|}\cdot2^{1-|B|}=\pm2^{1-|A\cup B|}$.
+
+So $d_Sf(z)\in\{0,e_S2^{1-|S|}\}$, whence $|\EE d_Sf|=\EE|d_Sf|=2^{|S|-1}\EE(d_Sf)^2$, that is $|\hat f(S)|=2^{|S|-1}\pi(S)$, and every inequality in the proof of Theorem~\ref{thm:intro-G} is an equality.
+\end{proof}
+
+Gates with more inputs are trees of two-input gates, so the proposition covers all read-once AND/OR formulas with negated literals, among them the lexicographic functions of \cite{Hod2017} and the near-extremal formulas of Table~\ref{tab:fei-readonce}. Point defects, the addressing functions and the bent function on two variables also satisfy the equality condition. On all of these families the conjecture is exactly the statement that $U/I$ is bounded. We checked the proposition on $200$ random read-once formulas with $n\le12$, every set of every spectrum an exact integer equality; as a control, allowing XOR gates made $167$ of the $200$ formulas strict.
+
+\subsubsection*{Composition}
+\begin{proposition}\label{prop:compose}
+Suppose the variables are split into blocks $V_1,\dots,V_k$ and the spectral law of $f$ has the product form
+\[
+p\Bigl(\bigcup_{j\in J}T_j\Bigr)=P(J)\prod_{j\in J}q_j(T_j)\qquad(J\subseteq[k],\ \emptyset\ne T_j\subseteq V_j),
+\]
+where $P$ is a probability law on subsets of $[k]$ and each $q_j$ is a probability law on the nonempty subsets of $V_j$. Then
+\begin{gather*}
+U(f)=U(P)+\sum_j\PP_P(j\in J)\,U(q_j),\qquad H(f)=H(P)+\sum_j\PP_P(j\in J)\,H(q_j),\\
+I(f)=\sum_j\PP_P(j\in J)\,\EE_{q_j}|T|,
+\end{gather*}
+where $U$ and $H$ of a law are defined by the same formulas as for a spectrum.
+\end{proposition}
+
+\begin{proof}
+For $S=\bigcup_{j\in J}T_j$, the sets above $S$ are the sets $\bigcup_{j\in J'}T'_j$ with $J'\supseteq J$, $T'_j\supseteq T_j$ for $j\in J$, and $T'_j$ arbitrary nonempty for $j\in J'\setminus J$. Summing the product form over them, each free factor sums to $1$, so $\pi(S)=\pi_P(J)\prod_{j\in J}\pi_{q_j}(T_j)$. Under the product form, given $J$ the sets $T_j$ are independent with laws $q_j$. Taking logarithms of $\pi(S)/p(S)$ and of $1/p(S)$ and averaging gives the first two formulas; the third is the expectation of $|S|=\sum_{j\in J}|T_j|$.
+\end{proof}
+
+A read-once composition $f=g(h_1,\dots,h_k)$ with $h_j$ Boolean on disjoint blocks has this product form \cite{OT2013}: if $\mu_j=\EE h_j$ and $\sigma_j^2=1-\mu_j^2$, expanding $g$ in the orthonormal basis $\prod_{j\in J}(y_j-\mu_j)/\sigma_j$ of the $\mu$-biased cube and substituting $(h_j-\mu_j)/\sigma_j=\sum_{T\ne\emptyset}\hat h_j(T)\chi_T/\sigma_j$ shows that $P$ is the squared $\mu$-biased Fourier law of $g$ and $q_j(T)=\hat h_j(T)^2/\sigma_j^2$. Proposition~\ref{prop:compose} is the recursion behind the beam search of Table~\ref{tab:fei-readonce}; it agrees with brute force on $110$ compositions to within $2\cdot10^{-15}$.
+
+\subsubsection*{Bounds that depend only on the level law}
+Let $W_k=\PP(|S|=k)$ and $m_k=\EE\binom{|S|}{k}$.
+
+\begin{corollary}\label{cor:G1}
+For every Boolean $f$, $U(f)\le H(W)+\sum_{k\ge1}W_k\log m_k$, and therefore
+\[
+H(f)\le2\bigl(I(f)-\Var f\bigr)+2H(W)+2\sum_{k\ge1}W_k\log\EE\binom{|S|}{k}.
+\]
+\end{corollary}
+
+\begin{proof}
+On the sets of size $k$, Jensen's inequality gives $\sum_{|S|=k}p(S)\log\frac{\pi(S)}{p(S)}\le W_k\log\frac{\sum_{|S|=k}\pi(S)}{W_k}$, and $\sum_{|S|=k}\pi(S)=\sum_Tp(T)\binom{|T|}{k}=m_k$. Sum over $k$ ($m_0=1$) and apply Theorem~\ref{thm:intro-G}.
+\end{proof}
+
+This bound replaces the dimension in the trivial level count $H\le H(W)+\sum_kW_k\log\binom nk$ by the random spectral size. For a function homogeneous of degree $d$ it gives $U\le0$ and so recovers $H\le2(d-1)$. For a symmetric function $p$ and $\pi$ are constant on each level, Jensen's inequality is an equality, and the bound coincides with Theorem~\ref{thm:intro-G}; since $U\le H$ and the conjecture holds for symmetric functions \cite{OWZ2011}, it is then $O(I)$. It is not stable under tensor products: for $f=(x_1x_2)\otimes g_D$, with $g_D$ a parity on $D$ bits activated with probability $1/D$, the right side grows like $2\log D$ while $I$ stays near $3$ and $U$ stays bounded.
+
+\begin{corollary}\label{cor:G2}
+For every $\lambda>0$, $U(f)\le\log\EE(1+\lambda)^{|S|}-I(f)\log\lambda$, and therefore
+\[
+H(f)\le2\bigl(I(f)-\Var f\bigr)+2\inf_{\lambda>0}\Bigl[\log\EE(1+\lambda)^{|S|}-I(f)\log\lambda\Bigr].
+\]
+\end{corollary}
+
+\begin{proof}
+With the weights $c(S)=\pi(S)\lambda^{|S|}$, Gibbs' inequality gives $\sum_Sp(S)\log\frac{c(S)}{p(S)}\le\log\sum_Sc(S)$, and $\sum_S\pi(S)\lambda^{|S|}=\sum_Tp(T)\sum_{S\subseteq T}\lambda^{|S|}=\EE(1+\lambda)^{|S|}$. The left side is $U(f)+I(f)\log\lambda$.
+\end{proof}
+
+For fixed $\lambda$ both terms of Corollary~\ref{cor:G2} are additive under tensor products. With $\lambda=1$ it reads $H\le2I+2\log\EE2^{|S|}$. It gives $O(I)$ when $|S|$ has light upper tails relative to its mean, and it is weak for majority. Corollaries~\ref{cor:G1} and~\ref{cor:G2} are incomparable, and both are weaker than Theorem~\ref{thm:intro-G} itself.
+
+\subsubsection*{Chain rules and restriction}
+The next two statements hold for every probability law $P$ on the subsets of $[n]$, not only for spectra of Boolean functions, with $H$, $U$, $\pi$ and $B_i$ defined by the same formulas. Merging the coordinate $i$ means passing to the law $P^{(i)}$ of $S\setminus\{i\}$.
+
+\begin{proposition}[Chain rules]\label{prop:chain}
+Let $\Gamma_i(P)=\sum_{S\ni i}P(S)\log\frac{\pi_P(S\setminus\{i\})}{\pi_P(S)}\ge0$. Then
+\[
+H(P)=B_i(P)+H(P^{(i)}),\qquad U(P)=B_i(P)-\Gamma_i(P)+U(P^{(i)}).
+\]
+Consequently, for any order $i_1,\dots,i_n$ of the coordinates, with $P_k$ the law of $S\cap\{i_k,\dots,i_n\}$,
+\[
+H(P)=\sum_kB_{i_k}(P_k),\qquad U(P)=\sum_k\bigl(B_{i_k}(P_k)-\Gamma_{i_k}(P_k)\bigr),\qquad \sum_SP(S)\log\frac1{\pi_P(S)}=\sum_k\Gamma_{i_k}(P_k).
+\]
+\end{proposition}
+
+\begin{proof}
+The first identity is the chain rule for entropy. For $T\not\ni i$, $\pi_P(T)=\sum_{T'\supseteq T,\,T'\not\ni i}\bigl(P(T')+P(T'\cup\{i\})\bigr)=\pi_{P^{(i)}}(T)$. Writing $U(P)=H(P)+\sum_SP(S)\log\pi_P(S)$ and likewise for $P^{(i)}$, and splitting $S$ according to whether it contains $i$,
+\[
+U(P)-U(P^{(i)})-B_i(P)=\sum_{T\not\ni i}P(T\cup\{i\})\bigl(\log\pi_P(T\cup\{i\})-\log\pi_P(T)\bigr)=-\Gamma_i(P).
+\]
+Iterate, and subtract the two sums to obtain the last identity, which is also \eqref{eq:H-U}.
+\end{proof}
+
+For a set $T\not\ni i$ put $r_T=\pi(T\cup\{i\})/\pi(T)$, the probability that a set above $T$ contains $i$. Since $\Gamma_i=\sum_Tm_Ts_T\log(1/r_T)$,
+\begin{equation}\label{eq:BminusGamma}
+B_i-\Gamma_i=\sum_Tm_T\Bigl[s_T\log\frac{r_T}{s_T}+(1-s_T)\log\frac1{1-s_T}\Bigr].
+\end{equation}
+The logarithm $\log(1/s_T)$ in $B_i$, which makes $B_i/\Inf_i$ grow like $\log(1/\Inf_i)$ on sparse selector functions, is cancelled by $\Gamma_i$ whenever the exact conditional probability $s_T$ is comparable to the upper-set probability $r_T$.
+
+\begin{proposition}[Lift bound]\label{prop:lift}
+Let $\Lambda_i(P)=\sum_Tm_Tr_T$. For every order of the coordinates,
+\[
+U(P)\le I(P)\log e+\sum_k\Inf_{i_k}(P)\log\frac{\Lambda_{i_k}(P_k)}{\Inf_{i_k}(P)}.
+\]
+\end{proposition}
+
+\begin{proof}
+In \eqref{eq:BminusGamma}, $(1-s)\ln\frac1{1-s}\le s$ because $\ln y\ge1-\frac1y$, and by Jensen's inequality $\sum_Tm_Ts_T\log\frac{r_T}{s_T}\le\Inf_i\log\frac{\Lambda_i}{\Inf_i}$, since $\sum_Tm_Ts_T=\Inf_i$. Apply this at each step of Proposition~\ref{prop:chain}; merging other coordinates does not change the marginal $\PP(i_k\in S)$, so $\Inf_{i_k}(P_k)=\Inf_{i_k}(P)$ and the terms $s\log e$ sum to $I(P)\log e$.
+\end{proof}
+
+The ratio $\Lambda_i/\Inf_i$ is an average lift: by Bayes' rule it is the expectation, over $T$ distributed as $S\setminus\{i\}$, of $\PP(S\setminus\{i\}\supseteq T\mid i\in S)/\PP(S\setminus\{i\}\supseteq T)$.
+
+\begin{proposition}[Restriction identity for $U$]\label{prop:Uloc}
+For a Boolean $f$, a coordinate $i$ and $T\subseteq[n]\setminus\{i\}$, let $C(T)=\sum_{T'\supseteq T,\,T'\not\ni i}u_{T'}v_{T'}$ and, when $\pi(T)>0$, $x_T=2C(T)/\pi(T)$. Then
+\[
+\Delta_iU(f)=B_i-\Gamma_i+K_i,\qquad K_i=\sum_Tm_T\,D\Bigl(\tfrac{1+\eta_T}{2}\Bigm\|\tfrac{1+x_T}{2}\Bigr)\ge0,
+\]
+where $D(a\|b)=a\log\frac ab+(1-a)\log\frac{1-a}{1-b}$ is the binary divergence in bits and the terms with $m_T=0$ are omitted.
+\end{proposition}
+
+\begin{proof}
+Splitting $U(f)$ over the pairs $\{T,T\cup\{i\}\}$, with $p(T)=m_T(1-s_T)$, $p(T\cup\{i\})=m_Ts_T$ and $\pi(T\cup\{i\})=r_T\pi(T)$,
+\[
+p(T)\log\frac{\pi(T)}{p(T)}+p(T\cup\{i\})\log\frac{\pi(T\cup\{i\})}{p(T\cup\{i\})}=m_T\log\frac{\pi(T)}{m_T}+m_T\Bigl[(1-s_T)\log\frac1{1-s_T}+s_T\log\frac{r_T}{s_T}\Bigr].
+\]
+For the restrictions, \eqref{eq:restr-coef} gives the weights $m_T(1\pm\eta_T)$ and, summing them over $T'\supseteq T$ with $T'\not\ni i$, the upper-set masses $\pi(T)(1\pm x_T)$, where $\pi(T)$ is the mass of $f$ above $T$, sets containing $i$ included. Hence
+\[
+\tfrac12\textstyle\sum_\pm U(f_{i,\pm})=\sum_Tm_T\log\frac{\pi(T)}{m_T}+\sum_Tm_T\cdot\frac12\sum_\pm(1\pm\eta_T)\log\frac{1\pm x_T}{1\pm\eta_T},
+\]
+and the last inner sum is $-D(\frac{1+\eta_T}2\|\frac{1+x_T}2)$. Subtract and use \eqref{eq:BminusGamma}. A weight $m_T(1\pm\eta_T)>0$ forces $\pi(T)(1\pm x_T)>0$, so every divergence that occurs is finite.
+\end{proof}
+
+Proposition~\ref{prop:Uloc} is the identity stated in Section~\ref{subsec:fei}; it agrees with direct computation of the restrictions to $50$ digits on random tables. Its two parts behave very differently. The part $B_i-\Gamma_i$ is local and, by Proposition~\ref{prop:lift}, controlled on average. The divergence $K_i$ measures how differently the two restrictions distribute weight between a coefficient and the mass above it, and it drives the failure of the coordinatewise bound recorded in Table~\ref{tab:fei-local}.
+
+\subsection{An obstruction from quantum Boolean functions}
+A \emph{quantum Boolean function} is a Hermitian operator $A$ on $(\mathbb C^2)^{\otimes N}$ with $A^2=I$; its Pauli expansion $A=\sum_P\hat A(P)P$ defines a law $\hat A(P)^2$ on Pauli strings, with entropy and influence defined as in the classical case, $|P|$ being the number of non-identity letters. Slote \cite{Slote2026} constructed, for each $d$, such an operator, homogeneous of degree $d$, with $3^{d^2/4+\Theta(d)}$ terms of equal weight. Its Pauli entropy is $\Theta(d^2)$ and its influence is $d$, so the quantum analogue of the conjecture fails. The mechanism is elementary.
+
+\begin{proposition}\label{prop:anticommute}
+Let $P_1,\dots,P_L$ be pairwise anticommuting Hermitian unitaries and $B_1,\dots,B_L$ commuting Hermitian operators with $\sum_lB_l^2=I$. Then $A=\sum_lP_l\otimes B_l$ satisfies $A^2=I$.
+\end{proposition}
+
+\begin{proof}
+$A^2=\sum_lP_l^2\otimes B_l^2+\sum_{a<b}(P_aP_b+P_bP_a)\otimes B_aB_b=I\otimes\sum_lB_l^2=I$.
+\end{proof}
+
+The anticommuting labels let a coherent sum of flat functions square to the identity with no interference cost. A classical function has no such labels, and granularity forbids the classical analogue of the growth: a classical Boolean function of degree $d$ has $H\le2(d-1)$. The consequence is a test for candidate proofs. An argument each of whose steps remains true when a classical Boolean function and its Walsh law are replaced by a quantum Boolean function and its Pauli law proves a statement that Slote's operators violate. Hypercontractivity, the logarithmic Sobolev inequality, the theorems of Kahn--Kalai--Linial, Talagrand and Friedgut, Parseval and the identity $A^2=I$ all have quantum versions, so together they cannot prove the conjecture. A proof must use a property special to classical functions, such as the Booleanity of restrictions to subcubes or the integrality of Walsh coefficients on which Lemma~\ref{lem:Gkey} rests. With the order on Pauli strings taken letter by letter, $U$ vanishes on Slote's homogeneous operators, so this example does not contradict \eqref{eq:MU}.
+
+\subsection{Numerical record}\label{subsec:fei-numerics}
+The values below are computed in floating point, except the exhaustive values for $n\le4$, which were also computed in exact arithmetic.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lc}
+\toprule
+Quantity, maximized over nonconstant $f$ with $n\le4$ & value\\
+\midrule
+$H/I$ ($=c_4$) & $3.4025$\\
+$B/I$ & $2.7042$\\
+$\min_iB_i/\Inf_i$ & $2.6725$\\
+$\min_i\Delta_iH/\Inf_i$ & $4.8677$\\
+$U/I$ & $1.465$\\
+$G/I$ & $2.75$\\
+\midrule
+ratio-critical functions, $n=2,3,4$ & $14$, $54$, $1{,}358$\\
+\bottomrule
+\end{tabular}
+\caption{Exhaustive values for $n\le4$. The maximum of $H/I$ is attained by the point defect on four variables.}
+\label{tab:fei-exhaustive}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{ccc}
+\toprule
+round & $H/I$ & $H/\bigl(2(I-\Var f)+2U\bigr)$ \\
+\midrule
+1 & 3.40 & 0.852\\
+2 & 3.89 & 0.893\\
+3 & 4.40 & 0.921\\
+4 & 4.74 & 0.942\\
+5 & 5.08 & 0.953\\
+6 & 5.29 & 0.963\\
+7 & 5.51 & 0.971\\
+8 & 5.66 & 0.978\\
+9 & 5.81 & 0.982\\
+10 & 5.91 & 0.986\\
+\bottomrule
+\end{tabular}
+\qquad
+\begin{tabular}{cc}
+\toprule
+$H/I$ & $G/I$\\
+\midrule
+4.40 & 1.94\\
+4.74 & 2.00\\
+5.08 & 2.20\\
+5.29 & 2.20\\
+5.51 & 2.26\\
+5.66 & 2.26\\
+5.81 & 2.285\\
+5.91 & 2.285\\
+\bottomrule
+\end{tabular}
+\caption{The best read-once AND/OR formula found in each round of a beam search built on Proposition~\ref{prop:compose}, with $16$ to $2{,}048$ variables. The third column of the left table uses the weak form of the bound, without the term $(1-\Var f)\log\frac1{1-\Var f}$; with that term the bound is an equality on every row, by Proposition~\ref{prop:readonce-eq}. Over the ten rounds $U/I$ rises from $1.47$ to $2.06$. The right table gives $G/I$ for the formulas of rounds $3$ to $10$, computed by the exact recursion.}
+\label{tab:fei-readonce}
+\end{table}
+
+Table~\ref{tab:fei-readonce} is the strongest evidence that $U$ is the right object. On the family that comes closest to Hod's constant, $H$ equals the bound of Theorem~\ref{thm:intro-G}, $U/I$ grows slowly, and $G/I$ levels off near $2.29$, below the value $3.2265$ found on compositions of majorities with five-variable functions (Table~\ref{tab:GU}). Annealing over all functions with $5\le n\le8$ finds $G/I$ at most $2.8203$, attained by a function of five variables.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lcc}
+\toprule
+Function & $\Delta_yH/\Inf_y$ & $\Delta_yU/\Inf_y$\\
+\midrule
+selector variant, $k=r=4$ & 8.33 & 3.69\\
+selector variant, $k=r=6$ & 10.35 & 4.10\\
+selector variant, $k=r=8$ & 12.34 & 4.25\\
+selector variant, $k=r=10$ & 14.33 & 4.30\\
+selector, $k=4$, $r=8$ & 8.300 & 3.664\\
+selector, $k=6$, $r=12$ & 10.351 & 4.099\\
+second sparse family, $m=4,\dots,12$ & 8.0 to 16.3 & 3.57 to 4.31\\
+\midrule
+annealed selector pairs $y\,?\,g:h$, $n=6,7,8,9$ & & 4.78, 5.11, 5.48, 6.15\\
+\bottomrule
+\end{tabular}
+\caption{Local ratios at the coordinate $y$ that switches a sparse function on and off. In the selector family a block of $r$ coordinates activates, on a set of small measure, a function of $k$ further coordinates. Over the sizes computed, the ratio for $H$ grows with $k$ and the ratio for $U$ stays below $4.31$; finitely many sizes cannot show that the second stays bounded. The last row maximizes the coordinatewise ratio for $U$ directly, over functions $y\,?\,g:h$ that read $g$ or $h$ according to $y$; its growth from $n=6$ to $n=9$ is evidence, not proof, that this ratio is not bounded coordinate by coordinate.}
+\label{tab:fei-local}
+\end{table}
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lcc}
+\toprule
+Function & $H/I$ & bound of Corollary~\ref{cor:G1}, divided by $I$\\
+\midrule
+tribes $3\times4$ & 3.13 & 3.51\\
+tribes $4\times4$ & 3.44 & 4.14\\
+tribes $2\times8$ & 4.33 & 4.85\\
+majority of $13$ & & 4.05\\
+point defect on $12$ variables & & 4.15\\
+\bottomrule
+\end{tabular}
+\qquad
+\begin{tabular}{lc}
+\toprule
+Function & $\sum_i\Lambda_i/I$\\
+\midrule
+bent on $8$ variables & 1.00\\
+$g_5$ & 1.16\\
+tribes $2\times4$ & 1.16\\
+selector, $n=9$ & 1.49\\
+$\mathrm{maj}_3\circ g_5$ & 1.77\\
+point defect on $10$ variables & 1.99\\
+selector variant, $k=r=6$ & 2.11\\
+majority of $9$ & 2.26\\
+\bottomrule
+\end{tabular}
+\caption{Left: the level-only bound of Corollary~\ref{cor:G1} on standard families. Right: the summed lift $\sum_i\Lambda_i/I$ of the law of $f$ itself. On eight test families the full bound of Proposition~\ref{prop:lift} stays below $2.21\,I$ and depends little on the order of the coordinates.}
+\label{tab:fei-level}
+\end{table}
+
+\subsection{Routes that fail}
+Each failed route is recorded in the store with the example that defeats it. The examples are the most reusable part of the record.
+\begin{enumerate}[label=(F\arabic*)]
+\item \emph{Random restrictions with entropy accounting.} Concavity of $\psi$ and Lemma~\ref{lem:block} give the valid inequality $H(f)\le\frac1t\EE H(f_{A_t,X})+\frac2{\ln2}\cdot\frac{1-t}{t}I(f)$. Used inductively it yields only $c_n\le c_m+\frac2{\ln2}(\frac nm-1)$, which is weaker than the trivial level count. The channel term is paid at rate $1/t$ per surviving coordinate; as $t\to1$ the induction becomes Theorem~\ref{thm:sandwich} and needs $B\le K\,I$.
+\item \emph{Taking the minimum of known references set by set} (the marginal product bound, the level count, the buckets of \cite{KKLMS2020}). Valid, but it still loses $\log\log n$ on tribes and $\log n$ on the product of majority and tribes.
+\item \emph{Beating subadditivity by a constant factor}, $H\le\theta\sum_ih(\Inf_i)+K\,I$ with $\theta<1$. It follows from the conjecture but is not equivalent to it, since critical functions have large total correlation; it is known only with an extra factor $\log(1+I)$.
+\item \emph{Transport-entropy lower bounds on the total correlation.} They are quadratic, about $I/2$ on tribes, where $I\log n$ is needed.
+\item \emph{Log-Sobolev inequalities on each derivative.} They give $H\le\frac2{\ln2}\EE[|S|(|S|-1)]+I\log e$, quadratic in the level; the coordinatewise version cannot beat $\log(1/\Inf_i)$ because of the selector functions of Table~\ref{tab:fei-local}.
+\item \emph{R\'enyi entropies of order $\alpha<1$, normalized by the variance.} False for every $\alpha<1$ on tensor powers of point defects.
+\item \emph{Entropy of the pivotal set}, $H(\mathrm{Piv}(x))\le C\,I$. False: for the point defect on $r$ variables $H(\mathrm{Piv})\approx r^22^{-r}$ while $I=2r2^{-r}$.
+\item \emph{The level-only bound of Corollary~\ref{cor:G1}} as a route to the conjecture. It is not stable under tensor products; the witness is the activated parity described after the corollary.
+\item \emph{The coordinatewise inequality} $\Delta_iU\le K\Inf_i$ for every $i$. Not supported by the selector pairs of Table~\ref{tab:fei-local}, whose ratio grows from $4.78$ to $6.15$ over $n=6,\dots,9$; no finite computation refutes a constant, so this is evidence of growth, not a counterexample. The existential and summed forms remain open.
+\item \emph{Sign coherence of derivatives.} If every $d_Sf$ has constant sign, the Paley--Zygmund inequality and granularity give $\log(\pi/p)\le2(|S|-1)+\log(1/\pi(S))$, which only returns $U\le(I-\Var f)+H/2$ and, combined with Theorem~\ref{thm:intro-G}, nothing.
+\end{enumerate}
+
+\subsection{What remains}
+By Theorem~\ref{thm:intro-G} the single missing step is \eqref{eq:MU}, $U\le K\,I$. Three sufficient forms have numerical support and no known counterexample: the summed lift inequality, that for some order of the coordinates $\sum_k\Inf_{i_k}\log(\Lambda_{i_k}(P_k)/\Inf_{i_k})\le K\,I$, which suffices by Proposition~\ref{prop:lift}; the existential form, that every nonconstant $f$ has a coordinate with $\Delta_iU\le K\Inf_i$, which suffices by induction on restrictions; and $G\le K\,I$ (Conjecture~\ref{conj:GU}), which implies the existential form and whose largest observed value is $3.2265$. By Proposition~\ref{prop:Uloc}, the summed form reduces to bounding $\sum_iK_i$ by $a\,I+b\,U$ with $b<1$, up to the part $B_i-\Gamma_i$ already controlled on average. The upper-set correlations $C(T)$ that enter $K_i$ satisfy $C(T)=\bigl(\pi_{f_{i,+}}(T)-\pi_{f_{i,-}}(T)\bigr)/4$, and $C(\emptyset)=0$ is a Booleanity identity. Whether \eqref{eq:MU} has a proof that uses no property special to classical functions is open.

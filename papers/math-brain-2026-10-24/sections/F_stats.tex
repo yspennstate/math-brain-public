@@ -1,0 +1,69 @@
+\section{Statistics of the paired tests}\label{app:stats}
+
+Every comparison in Section~\ref{sec:tests} is paired: both arms answer the same items, and each item is scored right or wrong in each arm. This appendix states the test we use, recomputes every $p$-value in the paper from the counts, and gives the power of tests of the sizes we ran, so that a reader can judge which differences these tests could have detected and which they could not. The script that produces the three tables is in the paper's source package; it uses exact rational arithmetic for the $p$-values and needs nothing beyond the Python standard library.
+
+\subsection{The exact test}
+For a paired comparison of arms $A$ and $B$ on $N$ items, let $b$ be the number of items that $A$ answers and $B$ misses, $c$ the number that $B$ answers and $A$ misses, and $d=b+c$ the number of disagreements. Items on which the arms agree carry no information about which arm is better, and the test ignores them. Under the null hypothesis that the arms are exchangeable on every item, $b$ given $d$ is binomial with parameters $d$ and $1/2$, and the exact two-sided McNemar value \cite{McNemar1947} is
+\begin{equation}\label{eq:mcnemar}
+p(b,c)=\min\Bigl(1,\ 2^{1-d}\sum_{i=0}^{\min(b,c)}\binom{d}{i}\Bigr).
+\end{equation}
+We use the exact value throughout rather than the $\chi^2$ approximation, because several of our tests have fewer than twenty disagreements.
+
+\begin{lemma}\label{lem:mcnemar-floor}
+With $d\ge1$ disagreements, $p(b,c)\ge 2^{1-d}$, with equality exactly when one arm wins every disagreement; with $d=0$, $p=1$. In particular no paired test with fewer than six disagreements can reach $p<0.05$, whatever the number of items.
+\end{lemma}
+
+\begin{proof}
+The sum in \eqref{eq:mcnemar} contains the term $i=0$, which equals $1$, so $p\ge 2^{1-d}$, with equality if and only if $\min(b,c)=0$. Since $2^{1-5}=0.0625$ and $2^{1-6}=0.03125$, the bound falls below $0.05$ first at $d=6$.
+\end{proof}
+
+The lemma is why a score difference alone says little. The solving test of Table~\ref{tab:solve61} reports $52$ against $41$ correct, but the evidence is the split $15$ to $4$ of its nineteen disagreements. A score difference never exceeds the number of disagreements, and a small number of them is weak evidence however lopsided: a difference of three items from a split of $3$ to $0$ gives $p=0.25$.
+
+\input{sections/F_stats_tables}
+
+\subsection{The recomputed values}
+Table~\ref{tab:mcnemar-recomputed} lists every paired comparison in the paper with its split and its exact value. Development comparisons that were not paired item by item (the several-wordings test, the whole-card embedding, the walk against extra search results and the fixed $64$-question check) are reported where they occur in the text and are not in the table. All agree with the values quoted in the text. The last column shows how far each result is from the boundary: the solving test at $15$ to $4$, its two subsets and the ranking test at $27$ to $8$ are close to the least lopsided significant split for their number of disagreements, so one item moved from the winning side to the losing side would change the verdict of the smaller ones. The store-questions test at $10$ to $3$ needed one more win; the open-problems test, at $3$ to $8$ in the direction against the brain, would have needed $10$ to $1$ either way.
+
+The $1{,}000$-item recall test is different in kind. The arm with the brain answered every item, so $c=0$ was observed. The design did not exclude harm; none was observed on this bank, and once the brain's arm is perfect the test has no further room to show it. Its value of $1.7\cdot10^{-139}$ measures how far the arm without the store falls short on material that the store holds; it is not evidence that the brain never costs an answer elsewhere. That question is what the recall gate of Section~\ref{sec:writeback} and the solving tests answer.
+
+\subsection{Where each result is recorded}
+Table~\ref{tab:ledger} gives, for each comparison of Table~\ref{tab:mcnemar-recomputed}, its date, the agents that ran it and the section of the release file \texttt{TESTS.md} that records its counts. A blank in the agents column means that the record does not name the model. The per-item records stay private with the banks.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{p{5.2cm}lp{3.3cm}p{3.6cm}}
+\toprule
+Comparison & Date & Agents & \texttt{TESTS.md} section\\
+\midrule
+100 store questions (both rows) & 11 Oct & Codex, gpt-6.1-sol, high reasoning & Recall of results held in the store\\
+1{,}000 recall items & 13 Sep & & One thousand items\\
+61 solving items and its four subsets and variants & 5--6 Oct & Claude Sonnet & Solving and auditing\\
+80 repository questions & 12 Oct & Codex, gpt-6.1-sol, medium reasoning & Files kept in GitHub repositories\\
+584 and 1{,}070 ranking questions & 12 Oct & none (engine only) & Ranking on held-out questions\\
+13 open problems & 11 Oct & Codex & What did not help\\
+60 store questions, three printouts & 15 Oct & Codex, gpt-6.1-sol, medium reasoning & What did not help\\
+300 hard items, version 1 & & & What did not help\\
+110 store problems, version 4 & 4 Oct & Claude Sonnet & What did not help\\
+\bottomrule
+\end{tabular}
+\caption{The record behind each comparison. The $p$-values, the Holm procedure and the power tables are recomputed from these counts by the script in the paper's source package.}
+\label{tab:ledger}
+\end{table}
+
+\subsection{Power}
+To plan a test, and to read a negative one, we model a comparison of $N$ items as follows: items are independent; each is a disagreement with probability $\psi$; and a disagreement is won by the better arm with probability $\theta$. Then $d$ is binomial $(N,\psi)$, $b$ given $d$ is binomial $(d,\theta)$, and the probability that the exact test rejects at level $0.05$ is
+\[
+\pi(N,\psi,\theta)=\sum_{d=0}^{N}\binom{N}{d}\psi^d(1-\psi)^{N-d}\,\PP\bigl(p(b,d-b)<0.05\mid d\bigr).
+\]
+The expected net gain of the better arm is $N\psi(2\theta-1)$ items. The model ignores that items differ in difficulty, so it is a planning approximation, not a description of any one test. Tables~\ref{tab:mcnemar-power} and~\ref{tab:mcnemar-mdd} give $\pi$ and the smallest $\theta$ that reaches power $0.8$.
+
+Three readings follow.
+
+\emph{The small tests could only detect large effects.} At $100$ items and a disagreement rate of $0.2$, a test has power $0.8$ only when the better arm wins about $82$ percent of disagreements, a net gain of about $13$ items. The store-questions test observed a disagreement rate of $0.13$ and a winning share of $0.77$; a repetition of the same size with those true rates would reach significance with probability about $0.40$. Its $p=0.092$ is therefore what one should expect from a real gain of that size about half the time, and it is reported as an estimate, not as a confirmed difference. The same model gives probability about $0.67$ for the solving test at its observed rates, about $0.20$ for the repository test and about $0.23$ for the open-problems test.
+
+\emph{The open-problems test was too small to show a gain of plausible size.} With thirteen problems, eleven disagreements and a split of $3$ to $8$, even a perfect sweep in the other direction would have given $p\approx0.001$, but any split less lopsided than $10$ to $1$ would have been inconclusive. The test shows that the brain did not help much on problems about which it held almost nothing; it cannot show that it did not help a little.
+
+\emph{The ranking tests are large enough to settle small effects.} At $584$ questions and a disagreement rate of $0.06$, the observed winning share of $0.77$ gives power about $0.88$, and the six further sets, with $1{,}070$ questions and $159$ disagreements, would have detected a net gain far smaller than the one observed.
+
+\subsection{Several comparisons}
+The table holds twenty-one comparisons, four of them subsets of another; the last two concern earlier versions of the system. The family was not fixed in advance of the runs, so we give the correction for the whole table rather than for a chosen subset. The Holm procedure at family level $0.05$ keeps seven comparisons: the recall test, the two ranking tests, the three three-arm comparisons with $p$ below $10^{-25}$, and the early version's loss to plain documents, whose values are all below $0.0019$; it stops at the next, $0.0117$ for the items that name a known result. Restricted to the nineteen comparisons of the current system, it keeps the same six positive results and stops at the same place. The Codex comparison of the brain with the repositories, $3$ to $10$, is not kept, and neither is its subset of store lookups, $1$ to $10$ at $p=0.0117$. The solving comparison at $p=0.019$ is therefore evidence of a gain, not a result that survives correction, and the subset analysis that places the gain in items naming a known result is one of several ways to divide the items, reported as an observation. The comparisons that matter most for the claims of the paper, that the store supplies facts the agent cannot supply itself and that the ranking change generalizes to questions it was not tuned on, survive the correction by a wide margin.
