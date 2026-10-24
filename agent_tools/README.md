@@ -17,7 +17,7 @@ The tools have no defaults that work outside the machine they were written on.
 | `math_note.py` | Prints one complete current note. |
 | `math_sense.py` | The hook. It runs on every prompt, decides whether the prompt is mathematical, and serves at most a few cards, each with a line saying how far to trust it. |
 | `math_subagent_adapter.py`, `math_subagent_receipt.py` | Give a subagent the same recall and record what it was served. |
-| `mcp_recall_server.py` | Serves `math_recall` as an MCP tool, so an agent without a shell can search the store and read cards by id. [docs/agents.md](../docs/agents.md) shows how to connect it. |
+| `mcp_math_recall.py` | Serves `math_recall.py` to an agent as an MCP tool over stdio, so the agent needs no shell. This is how the brain arm of the three-arm test was connected. |
 | `fastrecall.py` | Prepares, once per state of the store, the parsing and term tables a recall needs, so a call takes under two seconds instead of five or six. `MATH_RECALL_FAST=0` turns it off. |
 | `query_embed.py`, `math_prefilter.py`, `property_order.py`, `brain_switch.py` | Helpers imported by the scripts above. |
 
