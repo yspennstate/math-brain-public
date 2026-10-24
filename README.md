@@ -33,8 +33,8 @@ In each test both arms use the same model, budget and questions, and the score i
 | 61 reasoning and audit items (Claude agents, 5 and 6 Oct 2026) | tools only: 41 | full brain package: 52 (15 to 4, p = 0.019) |
 | 80 questions about files kept in GitHub repositories (Codex agents, 12 Oct 2026) | git alone: 68 | git and the brain: 73 (9 to 4, p = 0.27) |
 | 20 recall items, one Claude agent answering first without and then with the brain (23 Oct 2026) | 9 | 19 (10 to 0, p = 0.002) |
-| 880 items, Claude agents at 600 seconds an item (23 and 24 Oct 2026) | model alone: 19.5%; the research repositories: 80.6% | 94.9% (140 to 14 against the repositories, p = 2.6e-27) |
-| 200 items, Codex agents at 900 seconds an item (23 and 24 Oct 2026) | model alone: 31.5%; the research repositories: 97.5% | 93.5% (3 to 11, p = 0.06) |
+| 988 items, Claude agents at 600 seconds an item (23 and 24 Oct 2026) | model alone: 18.9%; the research repositories: 82.0% | 95.4% (146 to 13 against the repositories, p = 1.2e-29) |
+| 214 items, Codex agents at 900 seconds an item (23 and 24 Oct 2026) | model alone: 29.9%; the research repositories: 97.7% | 93.5% (3 to 12, p = 0.035) |
 
 The 1,000-item result holds where the answer has to be recalled; on items a strong solver can derive for itself, the brain changes nothing. On the 61 items the gain sits in the 26 that name a known result (22 against 13).
 
