@@ -107,6 +107,7 @@ Earlier papers from the same work, from July to 12 October, are in `papers/publi
 | `results/scheduled-tasks/` | mathematics campaigns run by scheduled tasks |
 | `results/proofnet24-brain/` | work on a probability correlation problem, three collective rounds and a quadratic-form density problem |
 | `papers/` | papers that came out of this work, and copies of their public repositories |
+| `framework/` | the machinery around the store: shared memory and its nightly consolidation, the prompt hooks, the coordination layer that keeps agents from editing the same files, the supervised fleet |
 
 ## The FEI conjecture
 
@@ -125,7 +126,7 @@ python agent_tools/math_walk.py <card id> --toward "mixing time lower bound"
 
 Every row in the store carries a digest of its content, and the reader refuses a row that no longer matches its digest. In this copy a file path on the machine that built the store is replaced by an opaque identifier of the form `urn:mb-local:<hash>`, a link into a private repository by `urn:mb-private:<hash>`, and the name of a private repository by the words "a private repository". The digest of every row changed this way is recomputed, and every row that refers to it by digest is updated to match, so every row in `export/population/` reproduces its digest on any machine. Thirty-four cards and seven links did not match their stored digest in the working store either; their digests are recomputed from their content as it stands. A row's identifier never changes, so a card cited by id elsewhere is the same card here.
 
-[agent_tools/README.md](agent_tools/README.md) describes each tool, and [AGENTS_GUIDE.md](AGENTS_GUIDE.md) says how to connect an agent to the store and what each choice was worth in the tests.
+[agent_tools/README.md](agent_tools/README.md) describes each tool, and [AGENTS_GUIDE.md](AGENTS_GUIDE.md) says how to connect an agent to the store and what each choice was worth in the tests. [docs/agency.md](docs/agency.md) describes the working habits that turn faster recall into progress on long tasks, and [docs/build-your-own-brain.md](docs/build-your-own-brain.md) explains how to build the same kind of store for another field with the code in [framework/](framework/).
 
 
 ## Sources
