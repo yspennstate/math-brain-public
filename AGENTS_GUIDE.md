@@ -1,0 +1,80 @@
+# Giving an agent the store
+
+This note says how to connect a coding agent (Claude Code, Codex, or any client that speaks MCP) to the store in this repository, what to tell it, and how it should search. Each recommendation comes with the measurement behind it. The tests themselves are in [TESTS.md](TESTS.md).
+
+The short version: an agent with the store answers questions about past work faster and with less reading than an agent that has to search the same records as files, and when it cannot find something it says so instead of guessing. On 880 lookup and audit items with 600 seconds an item, Claude agents with the store answered 94.9 percent, agents with read access to the same repositories 80.6 percent, and the model alone 19.5 percent. Where both of the first two finished in time they were tied (99.2 against 99.4 percent on 713 items). The store's lead is speed: the agents with it took 128 seconds an item on average against 223, and timed out on 4.3 percent of items against 18.9.
+
+## 1. Build the store
+
+```
+pip install -e .
+python tools/import_store.py --out local/population/brain.sqlite3
+export MATHBRAIN_STORE=$PWD/local/population/brain.sqlite3 MATHBRAIN_BUILD_SRC=$PWD/src
+python agent_tools/math_recall.py spectral gap of the random transposition walk
+```
+
+If the last line prints cards with ids, the store works. The meaning channel needs an ONNX export of the encoder (see [agent_tools/README.md](agent_tools/README.md)); without it recall runs on words and links and is still usable.
+
+## 2. Connect the agent
+
+There are two ways, and either is enough.
+
+**As a shell command.** An agent that has a shell can call `agent_tools/math_recall.py` directly. Put the commands in its instructions (section 3).
+
+**As an MCP tool.** `agent_tools/mcp_math_recall.py` serves the same search as a tool named `math_recall`, with two inputs: `wordings` (one to three) and `ids`. The agent then needs no shell at all. This is how the brain arm of the three-arm test was connected, for both Claude and Codex.
+
+For Claude Code, a `.mcp.json` in the project (or the same object passed with `--mcp-config`):
+
+```json
+{"mcpServers": {"mathbrain": {
+  "command": "python",
+  "args": ["-X", "utf8", "/path/to/repo/agent_tools/mcp_math_recall.py"],
+  "env": {"MATHBRAIN_STORE": "/path/to/repo/local/population/brain.sqlite3",
+          "MATHBRAIN_BUILD_SRC": "/path/to/repo/src"}}}}
+```
+
+The tool then appears to the agent as `mcp__mathbrain__math_recall`; allow it with `--allowedTools mcp__mathbrain__math_recall`.
+
+For Codex, in `~/.codex/config.toml`:
+
+```toml
+[mcp_servers.mathbrain]
+command = "python"
+args = ["-X", "utf8", "/path/to/repo/agent_tools/mcp_math_recall.py"]
+env = { MATHBRAIN_STORE = "/path/to/repo/local/population/brain.sqlite3", MATHBRAIN_BUILD_SRC = "/path/to/repo/src" }
+```
+
+`agent_tools/math_sense.py` is a prompt hook that serves a few cards when a prompt reads as mathematics. It is optional. In an earlier test it stayed silent on 85 of 100 recall questions, so it is a source of leads, not the way to search; the agent should still call recall.
+
+## 3. What to tell the agent
+
+The brain arm of the test gave every agent this note, word for word apart from the last sentence:
+
+> You are connected to the math brain: the store of mathematical results, proofs, open problems, attempts and notes. Search it with the math_recall tool - give two or three wordings in one call (the object, the theorem or problem by name, the author), then pass card ids to read cards whole. Stop when a card answers; a WEAK MATCH line means reword. Notes from the brain may also appear with the question. A note is a hint, not a verdict: it can point right or wrong, so weigh it against the question in front of you.
+
+Each clause is there for a reason measured on held-out recall questions (100 a configuration, Codex agents, 10 to 15 October 2026):
+
+| Choice | Result |
+|---|---|
+| print whole cards with their ids, not titles and snippets | 83 of 100 against 34 |
+| two or three wordings in one call, not one wording a call | 86 against 76 |
+| word the search as the card would (the object, a theorem or method by name, a symbol, an author), not as the question is phrased | the main lever behind the row above |
+| after the first search, read cards by id and follow their links instead of searching again | 82 against 83, at about half the uncached tokens |
+| treat a WEAK MATCH line as a signal to reword | with that line showing, the answering card had been printed for 4 of 21 questions; without it, for 49 of 79 |
+| leave spreading through the links (`--depth`) at 0 | 79 against 80, with 46 percent more tokens |
+
+Two more instructions are worth adding. First, after three rounds of wordings with nothing useful, the agent should say that the store does not hold the answer rather than reach for one. In the three-arm test this is what the agents with the store did: every miss by a Codex agent with the store among the first 100 items was an abstention, not a wrong value. Second, when the agent quotes a card's id in its answer, it should copy the full id from the card printed by `--id`, since search output shortens ids to a prefix.
+
+## 4. Where search falls short
+
+Recall ranks cards by the words they share with the query, by meaning, and by links. It does poorly on records made mostly of digits and punctuation, such as a table of walk counts, where words give it little to match. In the Codex runs, three of the store-arm misses were records that a plain text search over the exported files found. If an agent is likely to need such records, give it read access to `export/population/` as well, so it can fall back on a text search. We have not tested this combined setup.
+
+The store also adds nothing to a task the model can do on its own. On proof audits, where the answer is stored nowhere, all three arms scored between 92 and 99 percent.
+
+## 5. What it costs
+
+Per Claude Sonnet session in the three-arm test, at list price: 0.053 USD with the store, 0.092 USD with the repositories, and 0.010 USD for the model alone. The agents with the store read about a quarter as many input tokens as those searching the repositories and wrote about two fifths as many output tokens. Most of an agent's input tokens are re-reads of the session on every turn, so fewer and better calls save more than shorter answers.
+
+## 6. Writing back
+
+The store grows from packets: a result, an attempt or a mistake written as a card with its links and its provenance, then checked and imported. The packets, cards, links and mistakes in `export/population/` show what an accepted contribution looks like, and the `PACKET_DELTA.json` files under `results/fei/` are packets as agents wrote them during a campaign. An agent that writes one should state how sure it is (verified or provisional) and what the claim rests on, so that the next agent reading the card knows how far to trust it.
