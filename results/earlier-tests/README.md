@@ -106,3 +106,11 @@ the pre-registered replication succeeds. Against no notes at all (77.4%) the bra
 about half of the gap is the placebo pulling the solver below the no-notes arm. What the run shows is that the right
 notes beat wrong ones; it does not show that an agent with the brain beats one without it. `METRIC_CARD.md` is the
 one-page statement; `audit_regrade.json` holds the primary and sensitivity contrasts.
+
+## locate-and-proof-banks-2026-09-11: questions only the store can answer, and two proof-bank reruns
+
+Three banks whose answer is a value recorded only in the store (60 walk counts and campaign constants, 40 ledger
+pages, 30 two-fact differences), run in rounds after each repair of the hook: with the store 57 of 60, 40 of 40 and
+30 of 30 in the last rounds, against 3, 0 and 0 without it, and no wrong value in any round. Beside them, the 100- and
+35-item proof-audit banks rerun with a Sonnet auditor on two days: 87 / 90, 32 / 31, 91 / 94 and 29 / 33 without and
+with the served block, none significant. Verdict rows only; `python recompute.py` checks all sixteen runs.
