@@ -97,6 +97,13 @@ The math hook's marks on the same 218 prompts for each of 51 runs of the nightly
 run. The unnamed form went from 66 to 72 of 89 served and the named form from 81 to 87; wrong cards on unanswerable
 prompts fell from 30 to 16 of 40. Both breaches are traced to their causes. `python recompute.py` rebuilds every count.
 
+## frontier-digest-t16-t17-2026-09-24: does the store's frontier on a program improve a research plan?
+
+Planning agents on FEI and the quadratic-form conjecture, with and without the digest of what the store held at a
+cut-off, scored by a blind judge against what the next twelve hours established. The first digest was preferred 5 of
+8 but missed the on-target bar after carrying a later-refuted house claim as a theorem; the rewritten digest, which
+marks house results as unrefereed and lists withdrawn ones, was preferred 7 of 8 with on-target 10 against 6.
+
 ## locate-four-arms-2026-09-25: the locate banks with the brain, with files, with both, with neither
 
 The 130 locate questions put to Sonnet 5 four ways: the served block plus file tools (130 right), file tools alone

@@ -1,0 +1,436 @@
+{
+ "tests": {
+  "T16": "frontier digest version 1, cut-offs 22-23 Sep",
+  "T17": "frontier digest version 2, cut-offs 23-24 Sep"
+ },
+ "arms": {
+  "DIGEST": "goal and statement plus the digest",
+  "NONE": "goal and statement only"
+ },
+ "rows": [
+  {
+   "test": "T16",
+   "situation": "FEI_0922_2200",
+   "program": "FEI",
+   "cutoff": "2026-09-22 22:00",
+   "preferred": "DIGEST",
+   "judge_reason": "Q builds correctly on four frontier results (the gate reformulation as a restatement of FEI rather than a reduction, the numerical read-once constant 6.4548, the region-1 certificate, sup rho_0 >= C_FEI), adds a sound Han-based restriction-step reduction and tries to push past Hod's bound (which the next hours found already beaten at 6.52), while P uses none of the frontier and aims at a peeling potential and the monotone case, which the next hours did not touch; Q's one waste is re-running the fan-in 3-4 NPN sweep that the frontier already measured.",
+   "NONE": {
+    "built_on": 0,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 0,
+    "plan_words": 683
+   },
+   "DIGEST": {
+    "built_on": 4,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 695
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "FEI_0923_0600",
+   "program": "FEI",
+   "cutoff": "2026-09-23 06:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P builds on five frontier results, audits the provisional LTF and rho_0 notes, and points at the FEI+ composition extension, the rho_0 comparison and a beat of Hod's bound, all of which the next hours pursued, while Q uses none of the frontier and its LTF step sets out to prove what the frontier already holds; P's one waste is re-running the arity-3/4 gate sweep that was already measured.",
+   "DIGEST": {
+    "built_on": 5,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 701
+   },
+   "NONE": {
+    "built_on": 0,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 690
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "FEI_0923_1200",
+   "program": "FEI",
+   "cutoff": "2026-09-23 12:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P builds on the 6.5218 record, the rho_0 bound, the read-once constant and the limits of the gate reformulation, audits the two class proofs, and aims its pivot-potential search and rho_0 testbed at the restriction-induction obstruction certified next, while Q reaches the small-influence reduction found next on its own but treats the GMP restriction step as new and ignores the record and the LTF and read-k results.",
+   "DIGEST": {
+    "built_on": 4,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 680
+   },
+   "NONE": {
+    "built_on": 0,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 674
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "FEI_0923_1800",
+   "program": "FEI",
+   "cutoff": "2026-09-23 18:00",
+   "preferred": "DIGEST",
+   "judge_reason": "Q builds on the rho_0 lemma, the 6.52 record and Numaro's K_{3,3} function, the read-once constant and the gate reformulation, audits the new percolation, LTF and read-k claims, and aims its step-constant numerics on record families at the restriction-induction bound certified next, while P ignores the frontier, calibrates against the outdated 6.278/6.45 bar and lists LTFs as a fallback although the frontier already holds them.",
+   "NONE": {
+    "built_on": 0,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 691
+   },
+   "DIGEST": {
+    "built_on": 5,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 681
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "QFORM_0922_2200",
+   "program": "QFORM",
+   "cutoff": "2026-09-22 22:00",
+   "preferred": "NONE",
+   "judge_reason": "P's main line (condition on a bounded set of heavy coordinates, then bound the characteristic function of spread forms with one Cauchy-Schwarz and Brascamp-Lieb) aims at both kinds of result the next hours produced and argues from the product structure that the rank-three shortcut lacked, whereas Q, though right to doubt the rank-three proof, sets the Fourier route aside and leaves the delocalized case as an unspecified local-limit bound.",
+   "NONE": {
+    "built_on": 2,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 708
+   },
+   "DIGEST": {
+    "built_on": 5,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 692
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "QFORM_0923_0600",
+   "program": "QFORM",
+   "cutoff": "2026-09-23 06:00",
+   "preferred": "NONE",
+   "judge_reason": "P anticipates both corrections the next hours made (its thin-shell example is why bounded projection densities cannot carry the rank-three step, and its exponents p_i = 1/c_i >= 2 are the spread-direction bounds the hub theorems then used) and its leverage split is the hub decomposition, while Q leans on the rank-three claim, spends hours 2-3 on a k >= 5 decoupling that cannot reach three eigenvalues, and makes its key lemma a sup-inside mixed norm of the kind Example 5.2 showed can be unbounded.",
+   "NONE": {
+    "built_on": 3,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 699
+   },
+   "DIGEST": {
+    "built_on": 10,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 696
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "QFORM_0923_1200",
+   "program": "QFORM",
+   "cutoff": "2026-09-23 12:00",
+   "preferred": "NONE",
+   "judge_reason": "Q's Fresnel-plus-Brascamp-Lieb proof of rank three is the product-structure argument the flawed rank-three claim needed and the technique the next hours used for the curved marginal, and the twisted integral it names as the missing lemma is the one the numerics then found to grow, whereas P's Schur-complement induction moves the difficulty to small-ball bounds of the same strength and treats full delocalization, not the single hub, as the hard case.",
+   "DIGEST": {
+    "built_on": 6,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 697
+   },
+   "NONE": {
+    "built_on": 3,
+    "redundant": 2,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 672
+   }
+  },
+  {
+   "test": "T16",
+   "situation": "QFORM_0923_1800",
+   "program": "QFORM",
+   "cutoff": "2026-09-23 18:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P puts the open core where the frontier and the next hours put it, a zero-diagonal hub coupled to spread forms, builds on the recorded hub theorems and curved-marginal bounds, and keeps clear of the refuted maximal-functional and localized-Fourier routes, while Q re-treats the no-hub regime the frontier had already settled, does not use the hub results, and places the core in the spread case.",
+   "DIGEST": {
+    "built_on": 11,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 693
+   },
+   "NONE": {
+    "built_on": 6,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 694
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "FEI_0923_2200",
+   "program": "FEI",
+   "cutoff": "2026-09-23 22:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P builds on the house's small-influence reduction, gate potential, threshold-gate split and rho_0 bound to set up a fast, falsifiable restriction-step test that matches the step-constant and cut-rule questions answered in the next 12 hours, whereas Q ignores the frontier and its chain-rule reformulation has no mechanism yet, with monotone functions only an alternative.",
+   "reference_store_section_empty": false,
+   "DIGEST": {
+    "built_on": 7,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 688,
+    "turns": 4,
+    "usd": 2.828532,
+    "seconds": 898.8,
+    "max_context_tokens": 105674
+   },
+   "NONE": {
+    "built_on": 1,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 680,
+    "turns": 4,
+    "usd": 5.460645399999999,
+    "seconds": 2081.0,
+    "max_context_tokens": 106594
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "FEI_0924_0200",
+   "program": "FEI",
+   "cutoff": "2026-09-24 02:00",
+   "preferred": "NONE",
+   "judge_reason": "Both start from the same exact one-coordinate split, but Q tests it and then attacks monotone functions first while recording obstructions, which is where the next 12 hours went, whereas P spends steps re-deriving frontier claims and re-running the arity <= 4 gate-potential search the frontier already measured, and aims its attack at the regular case.",
+   "reference_store_section_empty": false,
+   "DIGEST": {
+    "built_on": 6,
+    "redundant": 2,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 882,
+    "turns": 5,
+    "usd": 4.2440582000000004,
+    "seconds": 1748.5,
+    "max_context_tokens": 64366
+   },
+   "NONE": {
+    "built_on": 1,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 676,
+    "turns": 3,
+    "usd": 2.3330698,
+    "seconds": 1748.5,
+    "max_context_tokens": 86668
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "FEI_0924_0600",
+   "program": "FEI",
+   "cutoff": "2026-09-24 06:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P goes straight at the open monotone case with a split-and-potential induction shaped by the recorded monotone obstructions and the rho_0 bound, which is what the next 12 hours pursued, whereas Q ignores the house results, uses an outdated lower bound and falls back on LTFs, which the frontier already covers.",
+   "reference_store_section_empty": false,
+   "DIGEST": {
+    "built_on": 7,
+    "redundant": 2,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 673,
+    "turns": 4,
+    "usd": 3.0312234,
+    "seconds": 991.6,
+    "max_context_tokens": 113291
+   },
+   "NONE": {
+    "built_on": 0,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 0,
+    "plan_words": 658,
+    "turns": 3,
+    "usd": 2.9238258,
+    "seconds": 991.6,
+    "max_context_tokens": 107770
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "FEI_0924_1000",
+   "program": "FEI",
+   "cutoff": "2026-09-24 10:00",
+   "preferred": "DIGEST",
+   "judge_reason": "Both aim at the edge-local reformulation and monotone attack pursued next, but Q is anchored in the frontier (sup rho_0 >= C_FEI, the all-arity gate inequality only restating FEI, Numaro's record as a stress test) and adds a cheap falsifiable sharpening, whereas P ignores the house results and falls back on LTFs, which the frontier already covers.",
+   "reference_store_section_empty": false,
+   "NONE": {
+    "built_on": 0,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 636,
+    "turns": 3,
+    "usd": 3.3417497999999997,
+    "seconds": 1057.5,
+    "max_context_tokens": 122693
+   },
+   "DIGEST": {
+    "built_on": 6,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 2,
+    "plan_words": 723,
+    "turns": 4,
+    "usd": 2.1338794,
+    "seconds": 712.7,
+    "max_context_tokens": 81243
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "QFORM_0923_2200",
+   "program": "QFORM",
+   "cutoff": "2026-09-23 22:00",
+   "preferred": "DIGEST",
+   "judge_reason": "Q starts from the house's single-hub core and its record of dead routes, and its Schur-pivot line is the same elimination the house used next for the hub diagonal, while P spends its opening steps re-proving the diagonal, localized and spread cases the frontier already holds.",
+   "reference_store_section_empty": false,
+   "NONE": {
+    "built_on": 5,
+    "redundant": 4,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 744,
+    "turns": 4,
+    "usd": 4.534967399999999,
+    "seconds": 1873.2,
+    "max_context_tokens": 73596
+   },
+   "DIGEST": {
+    "built_on": 13,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 756,
+    "turns": 4,
+    "usd": 3.0241518,
+    "seconds": 975.9,
+    "max_context_tokens": 112028
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "QFORM_0924_0200",
+   "program": "QFORM",
+   "cutoff": "2026-09-24 02:00",
+   "preferred": "DIGEST",
+   "judge_reason": "Q goes straight at the open single-hub gaps (the log m factor and the hub-diagonal twist) and steers clear of the recorded dead routes, despite misreading the 0-hub and 2-hub status, while P re-proves the diagonal case and rests its crux on a Lindeberg comparison with no moment control.",
+   "reference_store_section_empty": true,
+   "NONE": {
+    "built_on": 5,
+    "redundant": 2,
+    "dead_end": 0,
+    "on_target": 0,
+    "plan_words": 678,
+    "turns": 4,
+    "usd": 4.5895364,
+    "seconds": 1817.0,
+    "max_context_tokens": 75741
+   },
+   "DIGEST": {
+    "built_on": 14,
+    "redundant": 2,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 764,
+    "turns": 4,
+    "usd": 2.4389933999999998,
+    "seconds": 777.5,
+    "max_context_tokens": 92618
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "QFORM_0924_0600",
+   "program": "QFORM",
+   "cutoff": "2026-09-24 06:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P attacks the quantified open gap (the log m in Prop 3.17) with the house's own tools (cross-term absorption, Prop 5.6, Prop 5.1(a)) plus a falsification check, while Q's calibration steps and delocalized model case redo the diagonal, localized and spread cases the frontier already holds.",
+   "reference_store_section_empty": true,
+   "DIGEST": {
+    "built_on": 15,
+    "redundant": 1,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 687,
+    "turns": 5,
+    "usd": 4.725153199999999,
+    "seconds": 1813.3,
+    "max_context_tokens": 81875
+   },
+   "NONE": {
+    "built_on": 5,
+    "redundant": 5,
+    "dead_end": 0,
+    "on_target": 0,
+    "plan_words": 699,
+    "turns": 4,
+    "usd": 5.0708684,
+    "seconds": 2037.1,
+    "max_context_tokens": 92867
+   }
+  },
+  {
+   "test": "T17",
+   "situation": "QFORM_0924_1000",
+   "program": "QFORM",
+   "cutoff": "2026-09-24 10:00",
+   "preferred": "DIGEST",
+   "judge_reason": "P targets removing the log from the single-hub bound with a concrete scale lemma built on house results plus Weyl and LPP, and adds a falsification test, while Q's k-block theorem and Hadamard counterexample hunt are already covered by the fixed-n and spread results, and its delocalized crux relies on pointwise Fourier decay that the frontier records as non-uniform.",
+   "reference_store_section_empty": true,
+   "DIGEST": {
+    "built_on": 10,
+    "redundant": 0,
+    "dead_end": 0,
+    "on_target": 1,
+    "plan_words": 697,
+    "turns": 4,
+    "usd": 2.5242294000000003,
+    "seconds": 777.9,
+    "max_context_tokens": 95660
+   },
+   "NONE": {
+    "built_on": 6,
+    "redundant": 3,
+    "dead_end": 1,
+    "on_target": 0,
+    "plan_words": 676,
+    "turns": 4,
+    "usd": 5.5515884,
+    "seconds": 2387.8,
+    "max_context_tokens": 110100
+   }
+  }
+ ]
+}
