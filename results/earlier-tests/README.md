@@ -71,6 +71,12 @@ Files against nothing: +43.8 points (p = 2.8e-9). The full brain against files a
 n = 80 (p = 0.29); recall on top of files +11.2 points (p = 0.064). The served block on its own, without any search,
 lifted full credit from 27 to 53. It carried the right card unasked on 36 of the 60 store and conjecture problems.
 
+## two-opus-2026-09-22: 27 results new to the store that month, Opus 5 with and without the brain
+
+With the brain 27 of 27 correct, without it 1 (25 abstentions), 26 helped and 0 harmed, graded blind. The run also
+found three questions the math hook's anchor gate refused and widened the anchors to admit them, measured against
+the archive of refused prompts. Marks only; `python recompute.py` checks the table.
+
 ## w7-first-run-2026-09-23: the same 80 problems, Opus 5.5 with the brain against Opus 5.5 alone
 
 The first run of the bank above, with two arms. With the brain 79 of 79 had full credit after adjudication, without
