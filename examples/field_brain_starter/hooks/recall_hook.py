@@ -10,6 +10,7 @@ See docs/codex-hooks-quickstart.md. Standard library only. Any error prints noth
 """
 import io
 import json
+import math
 import os
 import sys
 
@@ -17,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 MEM = os.environ.get("BRAIN_MEM_DIR", os.path.join(os.path.dirname(HERE), "memory"))
 TOP = 3            # records handed to the model
-MIN_SCORE = 2.0    # below this the best match is too weak to be worth the reader's attention
+MIN_WORDS = 0.75   # a record must score at least three quarters of one rare word's worth to be shown
 MAX_CHARS = 6000   # stay well under the runtimes' ~10,000-character cut
 BODY_CHARS = 700
 
@@ -26,7 +27,11 @@ def context_for(prompt):
     import recall
     recs = recall.load(MEM)
     scores = recall.bm25(recs, prompt)
-    ranked = [(s, slug) for slug, s in scores.items() if s >= MIN_SCORE]
+    # A word found in one record only is worth log(1 + (n - 0.5) / 1.5) in a store of n records: 1.2 at four
+    # records, 2.6 at twenty, 6.5 at a thousand. A fixed cut would hide every hit in a new store, so scale it.
+    n = max(len(recs), 1)
+    min_score = MIN_WORDS * math.log(1 + (n - 0.5) / 1.5)
+    ranked = [(s, slug) for slug, s in scores.items() if s >= min_score]
     ranked.sort(reverse=True)
     if not ranked:
         return ""

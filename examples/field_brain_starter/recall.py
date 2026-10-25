@@ -22,8 +22,15 @@ STOP = set("a an and are as at be by for from has have in is it its of on or tha
            "which who why with does did do how".split())
 
 
+def fold(w):
+    # a plural and its singular are one word here ("refunds", "refund"); nothing heavier than that
+    if len(w) > 3 and w.endswith("s") and not w.endswith("ss") and not w.endswith("us"):
+        return w[:-1]
+    return w
+
+
 def words(text):
-    return [w for w in WORD.findall(text.lower()) if w not in STOP]
+    return [fold(w) for w in WORD.findall(text.lower()) if w not in STOP]
 
 
 def load(folder):
@@ -103,7 +110,16 @@ def main():
         if r["meta"].get("superseded_by") or r["meta"].get("status") == "superseded":
             best[slug] *= 0.5
     ranked = sorted((s, k) for k, s in best.items() if s > 0)[::-1][: a.n]
-    if not ranked or ranked[0][0] < 3.0:
+    # BM25 scores shrink with the store (idf is a log of its size), so a fixed cut alone calls every hit in a
+    # new ten-record store weak. A top record that holds at least half the words of one wording is not weak.
+    cover = 0.0
+    if ranked:
+        top = set(recs[ranked[0][1]]["terms"])
+        for q in [a.query] + a.more:
+            qt = set(words(q))
+            if qt:
+                cover = max(cover, len(qt & top) / len(qt))
+    if not ranked or (ranked[0][0] < 3.0 and cover < 0.5):
         print("WEAK MATCH: nothing here fits the question well. Reword it, or answer that the store does not have it.\n")
     for s, k in ranked:
         print("(score %.1f)" % s)

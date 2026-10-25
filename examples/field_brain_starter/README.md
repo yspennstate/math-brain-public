@@ -96,4 +96,5 @@ own sentences, or the test measures copying.
 5. Re-run the three-arm test whenever you change recall. If the brain arm stops beating the none arm, the change
    made the brain worse.
 
-`docs/build-your-own-brain.md` walks through each step in full.
+`docs/build-your-own-brain.md` walks through each step in full, and `docs/brain-in-an-afternoon.md` takes a company
+from an empty copy of this folder to a measured brain in its first day.
