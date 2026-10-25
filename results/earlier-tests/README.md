@@ -84,6 +84,13 @@ it 32 of 79 (47 helped, 0 harmed): 49 against 8 on stored results, 10 against 4 
 on ordinary mathematics. Three of the keys came from store cards that were wrong or out of date, and the brain arm
 answered past them; those cards are now superseded. Marks only; `python recompute.py` checks both tables.
 
+## hook-path-ablations-2026-09-23: two selection changes to the math hook, off against on
+
+Two changes measured on the hook's own path before they were switched on, on 218 prompts (89 results in two wordings
+and 40 the store did not hold). Treating a named family as one family moved four items from silence to the right
+theorem and none back (named wording 83 -> 86 of 89 served); expanding the store's acronyms changed no count on the
+bank. False fires stayed at 28 of 40. Marks only; `python recompute.py` checks all four runs.
+
 ## agents100-2026-09-07: 100 proof-audit items, an agent that queries the store against one that cannot
 
 One hundred items drawn with a fixed seed from a bank of 12,193 arXiv probability results whose proofs were rewritten
