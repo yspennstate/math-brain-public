@@ -1,0 +1,27 @@
+== the family, general L ==
+  P_11 = [1 - 2*L, L, L]
+  P_12 = [L, L, 1 - 2*L]
+  P_13 = [L, 1 - 2*L, L]
+  P_22 = [L, L, 1 - 2*L]
+  P_23 = [1 - 2*L, L, L]
+  P_33 = [L, 1 - 2*L, L]
+
+discriminant 48L^2-16L+1 factors / roots: [1/12, 1/4]
+2-cycle point x = (3*L/(1 - 3*L), (-6*L + sqrt(48*L**2 - 16*L + 1) + 1)/(2 - 6*L), (-6*L - sqrt(48*L**2 - 16*L + 1) + 1)/(2 - 6*L))
+sum - 1 = 0
+(1-6L)^2 - D = -4*L*(3*L - 1)  (positive on 0<L<1/3 => x3>0)
+
+== exact certificate, L = 1/13 ==
+  min matrix entry = 1/13 = 1/13
+  x      = (3/10, 1/2, 1/5)
+  V(x)   = [3/10, 1/5, 1/2]
+  V^2(x) = [3/10, 1/2, 1/5]
+  V^2(x) == x : True
+  V(x)   != x : True
+  x in open simplex: True  sum = 1
+
+== second rational sample, L = 1/20 (irrational cycle) ==
+  x      = [3/17, 4*sqrt(2)/17 + 7/17, 7/17 - 4*sqrt(2)/17] [0.17647058823529413, 0.7445208382054341, 0.07900857355927175]
+  V(x)   = [3/17, 7/17 - 4*sqrt(2)/17, 4*sqrt(2)/17 + 7/17] [0.17647058823529413, 0.07900857355927175, 0.7445208382054341]
+  V^2(x)-x = [0, 0, 0]
+  V(x)-x   = [0, -8*sqrt(2)/17, 8*sqrt(2)/17]
