@@ -13,6 +13,7 @@ production, a lab or a support desk.
 | `memory/*.md` | twenty records, one fact per file, in the format of `framework/docs/MEMORY_CONVENTIONS.md` |
 | `memory/MEMORY.md` | the index: one line per record, newest first, loaded into every agent session |
 | `memory/MISTAKES.md` | dated corrections; the dream cycle turns a mistake that recurs into a reflex |
+| `new_record.py` | write one record with its frontmatter, add its index line, and mark the record it supersedes |
 | `recall.py` | search the records (BM25 over description and body; standard library only) |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
@@ -83,7 +84,8 @@ own sentences, or the test measures copying.
 ## Growing it into a full brain
 
 1. Keep writing records as the work happens: one fact, its reason, its date, links to related records. The index line
-   carries the finding, not a description of it.
+   carries the finding, not a description of it. `new_record.py` writes the file and the index line for you and
+   refuses a link to a record that does not exist.
 2. Install the hooks (`framework/bootstrap/`) so every agent session starts by reading the index and a few seed
    records, and so recall runs before work instead of after a mistake.
 3. Run the dream cycle (`framework/dreaming/`) at night: it reads the day's records and transcripts, merges
