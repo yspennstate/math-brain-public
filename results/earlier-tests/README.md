@@ -97,6 +97,12 @@ The math hook's marks on the same 218 prompts for each of 51 runs of the nightly
 run. The unnamed form went from 66 to 72 of 89 served and the named form from 81 to 87; wrong cards on unanswerable
 prompts fell from 30 to 16 of 40. Both breaches are traced to their causes. `python recompute.py` rebuilds every count.
 
+## locate-four-arms-2026-09-25: the locate banks with the brain, with files, with both, with neither
+
+The 130 locate questions put to Sonnet 5 four ways: the served block plus file tools (130 right), file tools alone
+(100), the served block alone (129), nothing (3). Paired, both against files is 30 to 0 (p = 1.9e-9); the files arm
+lost by searching the wrong place, at three times the cost. `python recompute.py` rebuilds the table.
+
 ## mathbrain-10d-landings-2026-09-24: twenty landings of the math hook in five days
 
 The twenty packages of the 24-28 September campaign that changed the live math hook, in the order the file hashes fix:
