@@ -97,6 +97,13 @@ The math hook's marks on the same 218 prompts for each of 51 runs of the nightly
 run. The unnamed form went from 66 to 72 of 89 served and the named form from 81 to 87; wrong cards on unanswerable
 prompts fell from 30 to 16 of 40. Both breaches are traced to their causes. `python recompute.py` rebuilds every count.
 
+## mathbrain-10d-landings-2026-09-24: twenty landings of the math hook in five days
+
+The twenty packages of the 24-28 September campaign that changed the live math hook, in the order the file hashes fix:
+what each changed, which files and how many lines, and the hook's counts on the fixed 218-prompt bank before each
+landing. That bank held (unnamed 71 of 89 served throughout, named 86 -> 87); the changes were aimed at long prompts,
+named sub-queries, accented names and caching faults. `python check.py` walks the hash chain.
+
 ## agents100-2026-09-07: 100 proof-audit items, an agent that queries the store against one that cannot
 
 One hundred items drawn with a fixed seed from a bank of 12,193 arXiv probability results whose proofs were rewritten
