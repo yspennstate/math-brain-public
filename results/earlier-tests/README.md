@@ -129,3 +129,10 @@ Personalised PageRank over a graph of 4.8 million agent touches (test sessions r
 the memory notes behind one dial. On 948 reworded questions no blend beat BM25 alone (hit@1 257, MRR 0.352; the best
 blend 258 and 0.352, moving 16 answers up and 73 down), and a second bank of 968 gave the same. The graph predicts
 where work goes next rather than which note answers a question. Aggregate numbers only; `python best_arm.py` checks them.
+
+## math-transport-2026-09-22: carrying results from the notes into the math store
+
+A job that scans the working notes every 15 minutes and writes recognised results into the store as claims. Of 16,998
+notes, 54 were taken and 13 queued for review. The first run wrote 54 claims that the hook could not serve (its
+integrity check binds a claim to its node by exact statement, and the node body carried extra text); after the repair
+the hook's reader accepted 54 of 54 and served the proved result ahead of the open-problem card. Counts only.
