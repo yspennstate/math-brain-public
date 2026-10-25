@@ -61,8 +61,9 @@ the first faulty step, and an uncertain answer scores zero. The block was captur
 | 35 items | 11 Sep | 32 | 31 | 0 / 1 | 1.0 |
 | 100 items | 12 Sep | 91 | 94 | 4 / 1 | 0.38 |
 | 35 items | 12 Sep | 29 | 33 | 5 / 1 | 0.22 |
+| 35 items | 22 Sep | 34 | 34 | 0 / 0 | 1.0 |
 
-None of the four separates from zero. On 11 September all five items the block helped carried both the retrieved
+None of the five separates from zero. On 11 September all five items the block helped carried both the retrieved
 cards and the proof-checking prompt, and the 41 items with cards only moved 37 to 36; between the two days the gate
 of that prompt was widened to plain-ASCII mathematics (50 to 89 of the 100 items). Blind judges rated the 167 cards
 served on the 100-item bank on 11 September: 86 bear on a step of the argument, 66 are the right field only, 15 are
@@ -71,6 +72,15 @@ bound written in two forms that differ by a factor of n; the store now carries t
 judge's error, and one was an excerpt that dropped the card's opening hypothesis, after which excerpts keep it. In
 each 12 September run the one harm is a clean argument that same-area cards led the auditor to doubt.
 
+The 35 items were run a third time on 22 September, with the block captured again from the hooks and one Opus 5
+agent at its highest thinking setting answering every item without the block before any item with it. Both arms
+read 34 of 35 and the block changed no verdict. Against 12 September the arm without the block rose from 29 to 34
+(five items newly right, none newly wrong) and the arm with it from 33 to 34, so the gain of 12 September was room
+the solver had and no longer has. The bank is at its ceiling and now measures the solver, not the store. The cards
+were read for harm as well: on one item a card on the Wedderburn-Artin theorem (the endomorphism ring of a simple
+module is a division ring), read across to indecomposable summands, supports the planted false step, and the three
+proof-checking cues served on that run all flagged steps that were correct.
+
 Read together: retrieving a stated result helps when the answer has to be found (L1-L3); it does not by itself turn
 a wrong verdict on an argument into a right one.
 
@@ -78,5 +88,5 @@ a wrong verdict on an argument into a right one.
 
 `rows/` holds one file per run with each item's id and verdict per arm (`L*`: correct / unknown / wrong, and whether
 the source node or both rows were served; proof banks: right or not per arm, and whether cards were served).
-`python recompute.py` derives every number in the two tables from them and checks it; all sixteen runs match. The
+`python recompute.py` derives every number in the two tables from them and checks it; all seventeen runs match. The
 questions, keys, served blocks and answers are not included, so that the banks stay usable.
