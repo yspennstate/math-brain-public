@@ -1,0 +1,22 @@
+# Memory Index
+
+- [method_a_note_is_a_hint_not_an_order_2026_04_02](method_a_note_is_a_hint_not_an_order_2026_04_02.md) - A recalled note says 'this looks like something we saw before' - check that it applies before acting on it
+- [partner_the_director_decides_cuts_agent_proposes_2026_04_01](partner_the_director_decides_cuts_agent_proposes_2026_04_01.md) - Agents propose edit cuts with timecodes and reasons; only the director approves a cut
+- [reference_delivery_spec_festival_2026_03_31](reference_delivery_spec_festival_2026_03_31.md) - The festival wants a ProRes master, stereo and 5.1 mixes, and English subtitles as a separate file
+- [state_open_question_festival_or_online_first_2026_03_30](state_open_question_festival_or_online_first_2026_03_30.md) - Open - should the lighthouse film go to festivals first or online first? Most festivals refuse films already online
+- [mistake_interview_audio_clipped_2026_03_29](mistake_interview_audio_clipped_2026_03_29.md) - [VERIFIED] The second keeper interview clipped when he laughed - the recorder gain was set on his quiet speaking voice
+- [project_next_film_lighthouse_keepers_2026_03_28](project_next_film_lighthouse_keepers_2026_03_28.md) - Next film is about the last lighthouse keepers on the coast; two retired keepers agreed to interviews in April
+- [feedback_ask_before_deleting_raw_footage_2026_03_27](feedback_ask_before_deleting_raw_footage_2026_03_27.md) - Raw camera footage is deleted only after two verified copies exist and the director says yes
+- [method_watch_where_viewers_leave_2026_03_26](method_watch_where_viewers_leave_2026_03_26.md) - Read the audience-retention graph for the moment viewers leave and look at what is on screen there - it names the fix
+- [project_bakery_short_released_online_2026_03_25](project_bakery_short_released_online_2026_03_25.md) - [VERIFIED] The bakery short went online 25 March; 1,900 views in its first week, viewers left at the two-minute mark
+- [feedback_dates_are_absolute_2026_03_23](feedback_dates_are_absolute_2026_03_23.md) - Write dates as dates (24 March), never 'tomorrow' or 'next week' - notes are read days later
+- [reference_archive_footage_source_terms_2026_03_22](reference_archive_footage_source_terms_2026_03_22.md) - The town archive's footage is free for non-commercial films with a fixed credit line in the end credits
+- [project_client_prefers_warm_colour_grade_2026_03_21](project_client_prefers_warm_colour_grade_2026_03_21.md) - The harbour client asked for a warmer grade on the interviews and left the exteriors as shot
+- [method_one_test_shot_before_any_long_render_2026_03_19](method_one_test_shot_before_any_long_render_2026_03_19.md) - Before a render longer than an hour, render ten seconds of the hardest shot and check it - it catches settings drift cheaply
+- [mistake_render_settings_reset_after_update_2026_03_18](mistake_render_settings_reset_after_update_2026_03_18.md) - [VERIFIED] An editor update reset the export preset to 8-bit; three masters went out with banding in the sky shots
+- [feedback_check_music_rights_before_the_edit_locks_2026_03_14](feedback_check_music_rights_before_the_edit_locks_2026_03_14.md) - Clear every music cue's licence before picture lock; a cue cleared after lock forced a re-edit of two scenes
+- [reference_music_library_terms_2026_03_14](reference_music_library_terms_2026_03_14.md) - The studio's music library licence covers online release but not festival or broadcast screenings - those need a per-cue upgrade
+- [project_harbour_film_cut_to_twelve_minutes_2026_03_10](project_harbour_film_cut_to_twelve_minutes_2026_03_10.md) - [VERIFIED] The harbour documentary is delivered at 12 minutes, not 18 - the festival slot is 12:30 including titles
+- [feedback_say_which_request_a_report_answers_2026_03_09](feedback_say_which_request_a_report_answers_2026_03_09.md) - Several agents work for the director at once - end every report naming the request it answers and when it was made
+- [partner_the_director_prefers_short_answers_2026_03_02](partner_the_director_prefers_short_answers_2026_03_02.md) - The director reads reports on a phone between shoots - lead with the result in one sentence, details after
+- [project_harbour_film_runs_eighteen_minutes_2026_02_20](project_harbour_film_runs_eighteen_minutes_2026_02_20.md) - [SUPERSEDED] The harbour documentary was planned at 18 minutes for a 20-minute festival slot
