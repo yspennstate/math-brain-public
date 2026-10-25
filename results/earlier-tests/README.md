@@ -122,3 +122,10 @@ audits, each answered by an Opus 5 agent at maximum effort with nothing and with
 Without the brain 538 of 1,000, with it 1,000 of 1,000: 462 helped, 0 harmed (exact McNemar p = 1.7e-139), every
 gain on the items whose answer is held only in the store. The walk counts, the odd-source letters and the proof
 audits were at 100% in both arms. Verdict rows only; `python recompute.py` checks the table.
+
+## graph-lane-2026-09-26: a diffusion lane over the use-grown graph, blended into recall
+
+Personalised PageRank over a graph of 4.8 million agent touches (test sessions removed), blended into BM25 recall of
+the memory notes behind one dial. On 948 reworded questions no blend beat BM25 alone (hit@1 257, MRR 0.352; the best
+blend 258 and 0.352, moving 16 answers up and 73 down), and a second bank of 968 gave the same. The graph predicts
+where work goes next rather than which note answers a question. Aggregate numbers only; `python best_arm.py` checks them.
