@@ -91,6 +91,12 @@ and 40 the store did not hold). Treating a named family as one family moved four
 theorem and none back (named wording 83 -> 86 of 89 served); expanding the store's acronyms changed no count on the
 bank. False fires stayed at 28 of 40. Marks only; `python recompute.py` checks all four runs.
 
+## nightly-math-gate-2026-09-11-to-10-25: six weeks of the nightly gate on one fixed bank
+
+The math hook's marks on the same 218 prompts for each of 51 runs of the nightly gate, with the verdict of every gate
+run. The unnamed form went from 66 to 72 of 89 served and the named form from 81 to 87; wrong cards on unanswerable
+prompts fell from 30 to 16 of 40. Both breaches are traced to their causes. `python recompute.py` rebuilds every count.
+
 ## agents100-2026-09-07: 100 proof-audit items, an agent that queries the store against one that cannot
 
 One hundred items drawn with a fixed seed from a bank of 12,193 arXiv probability results whose proofs were rewritten
