@@ -15,6 +15,7 @@ The tools have no defaults that work outside the machine they were written on.
 | `math_walk.py` | Gives a compact map of what lies around a card. `--toward WORDS` ranks the cards within two links by what you are looking for. |
 | `math_strength.py` | Reports link strengths that grow from use. Two cards used together in one session within 30 minutes strengthen their link, and strengths fade by a power law. `--card`, `--top` and `--explain` are available. |
 | `math_note.py` | Prints one complete current note. |
+| `frontier_digest.py` | The frontier of one research program: the store's results on it, newest first, each tagged literature or unrefereed house result, then what was withdrawn and the failed routes. `--digest PROGRAM [--at TIME]`, `--delta PROGRAM --since TIME`. |
 | `math_sense.py` | The hook. It runs on every prompt, decides whether the prompt is mathematical, and serves at most a few cards, each with a line saying how far to trust it. |
 | `math_subagent_adapter.py`, `math_subagent_receipt.py` | Give a subagent the same recall and record what it was served. |
 | `mcp_math_recall.py` | Serves `math_recall.py` to an agent as an MCP tool over stdio, so the agent needs no shell. This is how the brain arm of the three-arm test was connected. |
