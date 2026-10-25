@@ -71,6 +71,13 @@ Files against nothing: +43.8 points (p = 2.8e-9). The full brain against files a
 n = 80 (p = 0.29); recall on top of files +11.2 points (p = 0.064). The served block on its own, without any search,
 lifted full credit from 27 to 53. It carried the right card unasked on 36 of the 60 store and conjecture problems.
 
+## w7-first-run-2026-09-23: the same 80 problems, Opus 5.5 with the brain against Opus 5.5 alone
+
+The first run of the bank above, with two arms. With the brain 79 of 79 had full credit after adjudication, without
+it 32 of 79 (47 helped, 0 harmed): 49 against 8 on stored results, 10 against 4 on the conjectures, and 20 against 20
+on ordinary mathematics. Three of the keys came from store cards that were wrong or out of date, and the brain arm
+answered past them; those cards are now superseded. Marks only; `python recompute.py` checks both tables.
+
 ## agents100-2026-09-07: 100 proof-audit items, an agent that queries the store against one that cannot
 
 One hundred items drawn with a fixed seed from a bank of 12,193 arXiv probability results whose proofs were rewritten
@@ -113,7 +120,8 @@ Three banks whose answer is a value recorded only in the store (60 walk counts a
 pages, 30 two-fact differences), run in rounds after each repair of the hook: with the store 57 of 60, 40 of 40 and
 30 of 30 in the last rounds, against 3, 0 and 0 without it, and no wrong value in any round. Beside them, the 100- and
 35-item proof-audit banks rerun with a Sonnet auditor on two days: 87 / 90, 32 / 31, 91 / 94 and 29 / 33 without and
-with the served block, none significant. Verdict rows only; `python recompute.py` checks all sixteen runs.
+with the served block, none significant. A third run of the 35 items on 22 September, with an Opus 5 auditor, read
+34 / 34: the bank is at its ceiling. Verdict rows only; `python recompute.py` checks all seventeen runs.
 
 ## hard1k-ab-2026-09-12: 1,000 items, Opus 5 with and without the served block
 
