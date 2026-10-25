@@ -1,0 +1,99 @@
+# Wiring a brain into Codex with hooks
+
+A brain helps only if the agent reads it at the right moment. Asking the agent to "check the memory first" works
+some of the time. A hook works every time: the runtime runs your script at a fixed point in the turn and puts what
+the script prints in front of the model. Below are the Codex CLI format, a recall hook you can copy, and at the end
+the differences in Claude Code, where the scripts are the same apart from the output format.
+
+Tested with Codex CLI 0.160.
+
+## Where hooks live
+
+Codex reads `~/.codex/hooks.json`. One file holds every hook, grouped by event:
+
+```json
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/recall_hook.py", "timeout": 60 } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Bash|apply_patch",
+        "hooks": [ { "type": "command", "command": "python3 /path/to/scar_hook.py", "timeout": 30 } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/write_back_hook.py", "timeout": 60 } ] }
+    ]
+  }
+}
+```
+
+- `UserPromptSubmit` runs before the model sees a new request. Recall goes here.
+- `PreToolUse` and `PostToolUse` run around a tool call. `matcher` is a regular expression over the tool name
+  (`*` for every tool). Use them for warnings that should fire when the agent is about to act, such as "the last
+  time someone ran this export, the preset had reset to 8-bit".
+- `Stop` runs when the turn ends. Use it to remind the agent to write back what it learned.
+- On Windows, add `"commandWindows"` next to `"command"`; Codex runs that one there.
+
+## What the script receives
+
+The hook gets one JSON object on stdin. The fields you will use:
+
+| field | events | what it holds |
+|---|---|---|
+| `hook_event_name` | all | `UserPromptSubmit`, `PreToolUse`, ... |
+| `prompt` | UserPromptSubmit | the user's text |
+| `tool_name`, `tool_input` | Pre/PostToolUse | the tool and its arguments |
+| `session_id`, `cwd` | all | which session, which directory |
+
+## What the script must print
+
+Codex passes a hook's output to the model only as JSON in this shape:
+
+```json
+{"hookSpecificOutput": {"hookEventName": "UserPromptSubmit", "additionalContext": "the text the model should see"}}
+```
+
+Plain text on stdout is discarded without an error. A hook that prints plain text runs, exits 0, writes its log,
+and the model never sees a word of it. Check delivery in the session's rollout file, where the context appears as
+a developer message, not in the hook's own log.
+
+Keep `additionalContext` under about 10,000 characters. Longer text is cut wherever the limit falls. Put the most
+useful lines first: five short, ranked records do more than fifty.
+
+## Trusting a hook
+
+Codex runs a new or changed hook only after you approve it. Run `/hooks` in a Codex session to review and trust
+them. The approval is stored in `~/.codex/config.toml` under `[hooks.state]`, keyed by the hook's position and a
+hash of its definition, so editing the command means approving it again. If a hook stops firing after an edit,
+look there first.
+
+## A recall hook you can copy
+
+`examples/field_brain_starter/hooks/recall_hook.py` searches the starter brain's records with `recall.py` and hands
+the top matches to the model before it answers.
+
+```
+python3 examples/field_brain_starter/hooks/recall_hook.py --selftest
+```
+
+prints what the model would receive for a sample request. To wire it in, add it under `UserPromptSubmit` in
+`~/.codex/hooks.json` with its absolute path, approve it with `/hooks`, and ask Codex something the records answer
+("what does the festival want for delivery?"). The answer should quote the 31 March delivery record.
+
+Three rules from running hooks like this every day:
+
+1. **Fail silent.** A hook that crashes or hangs blocks every turn. Catch every exception, print nothing on error,
+   and finish well inside the timeout.
+2. **Say how far to trust each record.** Print its status (`verified`, `provisional`, `superseded`) next to it. A
+   recalled note says that something similar happened before; it is not an instruction, and an agent given no
+   status tends to obey it.
+3. **Fire less.** A hook that injects records on every prompt teaches the agent to skip them. Return nothing when
+   the best match is weak.
+
+## The same hook in Claude Code
+
+Claude Code reads hooks from `settings.json` (`~/.claude/settings.json` applies to every project). The events have
+the same names and the stdin fields are the same. The output differs: for `UserPromptSubmit`, Claude Code gives
+the model plain stdout, so the script prints its lines directly. `recall_hook.py --runtime claude` does that.
+Claude Code also cuts one hook's output at about 10,000 characters, so the ordering advice holds for both.

@@ -16,6 +16,8 @@ production, a lab or a support desk.
 | `recall.py` | search the records (BM25 over description and body; standard library only) |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
+| `dream/make_agenda.py` | builds the agenda a dreaming agent works from: mistakes without a rule, fresh records, superseded pairs, unchecked claims, open questions, unlinked records (see `dream/README.md`) |
+| `hooks/recall_hook.py` | a prompt hook for Codex or Claude Code that hands the matching records to the model before it answers (see `docs/codex-hooks-quickstart.md`) |
 
 Everything in the records is invented. The studio, its films and its director do not exist.
 
