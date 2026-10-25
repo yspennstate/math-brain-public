@@ -3078,7 +3078,7 @@ def _recall_body(query, n=8):
         # POLICY ROUTES STAY ON TOP (2026-09-23). A policy seed enters at bm_peak + 2 + strength, an ADDITIVE margin,
         # while the name- and question-coverage boosts above MULTIPLY a bm25 score by up to 2x; after the re-sort a
         # well-named bm25 hit could outrank a policy route. recall_policy_regression read three canonical positives
-        # at rank 2 on 09-23 ("port ... vanilla brain safely" under vanilla_brain_what_works). Each policy seed
+        # at rank 2 on 09-23 ("port ... upstream brain safely" under <memory>). Each policy seed
         # is lifted back above the best other score, in its own strength order.
         _pol = {}
         for _raw, _st in policy_seed_hits:

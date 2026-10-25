@@ -60,7 +60,7 @@ POSITIVES = [
     "fix the maht brain functionality",
     "Please improve the AI math brain and its mistake detection",
     "build an AI brain dashboard",
-    "port Elazar's vanilla brain safely",
+    "port the upstream brain safely",
     "Overhaul Codex's longitudinal self-correction substrate",
     # His own idiom, added 2026-09-05 with the "work" action term: on the 200-prompt ledger the
     # gate routed 38 of 200 before it and 66 after, because he says "keep working on the brain",
