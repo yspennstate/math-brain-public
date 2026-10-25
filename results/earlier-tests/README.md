@@ -136,3 +136,10 @@ A job that scans the working notes every 15 minutes and writes recognised result
 notes, 54 were taken and 13 queued for review. The first run wrote 54 claims that the hook could not serve (its
 integrity check binds a claim to its node by exact statement, and the node body carried extra text); after the repair
 the hook's reader accepted 54 of 54 and served the proved result ahead of the open-problem card. Counts only.
+
+## proof-sense-posture-2026-09-12: rewording the proof-audit posture, and the batch size
+
+On 103 proof-audit items (67 flawed, 36 clean), two rewordings of the posture the hook serves with proof items,
+each naming the fault the auditor kept missing, against the live wording: 94, 94 and 94 correct (2 helped and 2
+harmed; 5 and 5), so the live wording stayed. Five items per solver instead of fifteen: 97 against 94, 3 helped and
+0 harmed (p = 0.25). Counts only.
