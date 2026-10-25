@@ -114,3 +114,11 @@ pages, 30 two-fact differences), run in rounds after each repair of the hook: wi
 30 of 30 in the last rounds, against 3, 0 and 0 without it, and no wrong value in any round. Beside them, the 100- and
 35-item proof-audit banks rerun with a Sonnet auditor on two days: 87 / 90, 32 / 31, 91 / 94 and 29 / 33 without and
 with the served block, none significant. Verdict rows only; `python recompute.py` checks all sixteen runs.
+
+## hard1k-ab-2026-09-12: 1,000 items, Opus 5 with and without the served block
+
+Ledger lookups (page sums, page differences, highest page, odd source), self-avoiding-walk counts and authored proof
+audits, each answered by an Opus 5 agent at maximum effort with nothing and with the block the math hook serves.
+Without the brain 538 of 1,000, with it 1,000 of 1,000: 462 helped, 0 harmed (exact McNemar p = 1.7e-139), every
+gain on the items whose answer is held only in the store. The walk counts, the odd-source letters and the proof
+audits were at 100% in both arms. Verdict rows only; `python recompute.py` checks the table.
