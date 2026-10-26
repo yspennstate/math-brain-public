@@ -1,0 +1,168 @@
+\documentclass[11pt,reqno]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+
+\title[Section profiles for Toeplitz and Hankel moment polytopes]
+{Section profiles, concatenation, and slab hierarchies for random
+Toeplitz and Hankel moment polytopes}
+
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of
+Jerusalem, Givat Ram, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{Primary 60B20; Secondary 05A18, 52B20, 46L54}
+\keywords{Random Toeplitz matrices, random Hankel matrices, limiting
+spectral distribution, pair partitions, lattice polytopes, box splines,
+unimodality}
+
+\begin{abstract}
+The moment polytopes of the limiting spectral laws $\gamma_T$ and
+$\gamma_H$ of random symmetric Toeplitz and Hankel matrices are
+studied through their sections by the initial coordinate.  The
+resulting section profile is multiplicative under concatenation of
+double-occurrence words, invariant under ear insertion at every
+position, and flattens to a constant under a nesting pair.  These three
+rules give an exact calculus: volumes of concatenations are computed by
+integrating products of profiles, insertions into a gap are computed
+against an explicit gap marginal, and the volume of a fully crossing
+$r$-pair word is $2/(r+1)$ in closed form.  Consequences include
+supermultiplicativity of pairing volumes and of the primitive core
+masses, an exact cluster equation exhibiting the crossing correction to
+the Catalan equation, and closed-form extremal families: the reduced
+Toeplitz cores of at least five pairs attain $4/9$ exactly on one
+dihedral orbit for each size, and their parity-mixing counterparts of at
+least seven pairs attain $1/4$.  All the slab constants appearing in
+this circle of problems -- $2/3$, $1/2$, $2/5$, $1/3$ and the
+conjectural $2/7$ -- are shown to be the single family $2/(j+2)$, with
+the exceptional system of the fully crossing word attaining each value.
+Finally, exact moment data through order twenty-two gives a four-moment
+certificate that $\gamma_H$ is not unimodal, shows no obstruction to the
+unimodality of $\gamma_T$, and supports a conjectural description of
+$\gamma_T$ as a scale mixture of semicircle laws.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $(a_j)_{j\ge0}$ be independent, identically distributed real random
+variables with mean zero and unit variance, and let $T_n$ and $H_n$ be
+the symmetric Toeplitz and Hankel matrices they generate.  The empirical
+spectral distributions of $n^{-1/2}T_n$ and $n^{-1/2}H_n$ converge
+almost surely to deterministic symmetric laws $\gamma_T$ and $\gamma_H$
+\cite{BDJ,HM}, whose even moments are sums of volumes of
+pairing-indexed polytopes: for a pair partition $\pi$ of
+$\{0,\dots,2k-1\}$ one forms
+\[
+\mathcal P_T(\pi)=\bigl\{(x_0,t)\in\mathbb R^{k+1}:
+0\le x_0+S_\ell(t)\le1,\ 0\le\ell<2k\bigr\},
+\]
+with $S_\ell$ the signed partial sums of the increments attached to the
+pairs, and $m_{2k}(\gamma_T)=\sum_\pi p_T(\pi)$ with
+$p_T(\pi)=\operatorname{vol}\mathcal P_T(\pi)$; the Hankel law is the
+same sum restricted to parity-mixing pairings, with alternating forms.
+No closed-form identification of either law is known.
+
+The companion analysis in \cite{Shmalo} exposes a stable combinatorial
+skeleton behind these sums: repeated deletion of adjacent pairs
+(``ears'') terminates in a canonical crossing core, volumes depend only
+on the core, and the resulting Catalan transform is exactly invertible.
+That analysis works with the volumes themselves.  The present paper
+works one level lower, with the function
+\[
+f_\pi(x)\;=\;\operatorname{vol}_k\bigl\{t:\ 0\le x+S_\ell(t)\le1,\
+0\le\ell<2k\bigr\},\qquad x\in[0,1],
+\]
+the volume of the section of $\mathcal P_T(\pi)$ at initial coordinate
+$x$, so that $p_T(\pi)=\int_0^1f_\pi$.  Sections are finer than
+volumes: they are not invariant under rotation of the cyclic word, since
+rotating moves the base point.  What they gain is a calculus.
+Section~2 proves that profiles multiply under concatenation, are
+unchanged by inserting an ear at any position, and collapse to a
+constant when a word is nested inside a single pair, and derives an
+exact formula for insertion into a gap.  Section~3 computes the profile
+of the fully crossing word in closed form.  These tools then do
+concrete work: supermultiplicativity of volumes and of the primitive
+core masses (Section~4), an exact cluster equation for the profile
+generating function (Section~5), extremal families realising $4/9$ and
+$1/4$ (Section~6), and the identification of every slab constant in the
+subject as one family (Section~7).  Section~8 turns to the limiting laws
+themselves, where exact moments through order twenty-two give a short
+certificate of non-unimodality for $\gamma_H$ and evidence for a
+semicircular-mixture description of $\gamma_T$.
+
+Throughout, references to numbered results of the form ``Theorem 4.1'',
+``Lemma 8.1'' and so on are to \cite{Shmalo}.  All computations
+described as exact were carried out in rational arithmetic; the
+verification scripts are available with the source package.
+
+\input{crossing_cores_new_results.tex}
+
+\section*{Funding}
+The research presented in this paper was supported by the European
+Research Council (ERC) under the European Union's Horizon Europe research
+and innovation program (grant agreement No.~101041711), by the Simons
+Foundation through the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital,
+and by the Israel Science Foundation (grants 2258/19 and 4101/25).
+
+\section*{Conflicts of interest}
+Y.~Shmalo holds equity interests in Heights Labs and Convex Nexus
+Capital.
+
+\section*{Declaration of generative AI use}
+Generative-AI tools were used for language editing, organizational
+assistance, and checking algebraic presentation during manuscript
+preparation.  The author independently reviewed the mathematical
+statements, proofs, and references and takes full responsibility for the
+content of the paper.
+
+\begin{thebibliography}{9}
+
+\bibitem{BDJ}
+W.~Bryc, A.~Dembo and T.~Jiang,
+\emph{Spectral measure of large random Hankel, Markov and Toeplitz
+matrices},
+Ann. Probab. \textbf{34} (2006), 1--38.
+
+\bibitem{DIK}
+J.~D.~Douthitt, E.~Israel and L.~Kennard,
+\emph{Higher cosystoles of matroids}, 2026, arXiv:2605.20409.
+
+\bibitem{HM}
+C.~Hammond and S.~J.~Miller,
+\emph{Distribution of eigenvalues for the ensemble of real symmetric
+Toeplitz matrices},
+J. Theoret. Probab. \textbf{18} (2005), 537--566.
+
+\bibitem{Prekopa}
+A.~Pr\'ekopa,
+\emph{On logarithmic concave measures and functions},
+Acta Sci. Math. \textbf{34} (1973), 335--343.
+
+\bibitem{SenVirag}
+A.~Sen and B.~Vir\'ag,
+\emph{Absolute continuity of the limiting eigenvalue distribution of the
+random Toeplitz matrix},
+Electron. Commun. Probab. \textbf{16} (2011), 706--711.
+
+\bibitem{Shmalo}
+Y.~Shmalo,
+\emph{Crossing cores, Gorenstein moment polytopes, and sharp volume gaps
+for random Toeplitz and Hankel laws}, preprint, 2026.
+
+\end{thebibliography}
+
+\end{document}
