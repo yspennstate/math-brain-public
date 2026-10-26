@@ -191,7 +191,9 @@ def run(
     if requests_path is not None:
         from .requests import RequestLedger
 
-        report["requests"] = RequestLedger(requests_path).consolidate(status_of=status_of)
+        led = RequestLedger(requests_path)
+        report["requests"] = led.consolidate(status_of=status_of)
+        report["request_backlog"] = led.backlog()
     return report
 
 
@@ -218,6 +220,19 @@ def digest(queue: Queue, report: dict[str, Any], *, top: int = 20) -> str:
         for key in ("answered", "reopened", "unresolved", "repeated", "stale"):
             if req.get(key):
                 lines.append(f"- {key}: {len(req[key])} ({', '.join(str(x).split()[0] for x in req[key][:8])})")
+    backlog = report.get("request_backlog") or []
+    if backlog:
+        lines += ["", "## Open requests by day", ""]
+        shown = 0
+        for day, rows in backlog:
+            if shown >= top:
+                lines.append(f"- and {sum(len(r) for _, r in backlog) - shown} more open; `python -m math_brain.requests backlog`")
+                break
+            lines.append(f"- {day}")
+            for e in rows[: top - shown]:
+                work = f"{e['produced']} produced" if e["produced"] else "not started"
+                lines.append(f"  - `{e['id']}` asked {e['times_asked']}x, idle {e['idle_days']}d, {work}: {e['text'][:100]}")
+            shown += min(len(rows), top - shown)
     return "\n".join(lines) + "\n"
 
 

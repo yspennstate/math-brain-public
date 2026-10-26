@@ -28,5 +28,6 @@ The proposals stay quarantined. The queue holds review work, not evidence; closi
 the review happened, and any change to a claim's status still goes through the verification gates.
 
 With `--requests`, the same run consolidates the request ledger (see `prompts-as-nodes.md`) and lists stale
-and repeated requests in the digest.
+and repeated requests in the digest, followed by the open requests grouped by the day they were first asked
+(at most `top` of them, newest day first, each marked with its idle days and whether it has been started).
 Add `--requests-in-graph` to walk the requests' links together with the store's graph.

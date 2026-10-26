@@ -274,6 +274,29 @@ class RequestLedger:
     def open_requests(self) -> list[Request]:
         return sorted((r for r in self.requests.values() if r.status == "open"), key=lambda r: r.first_asked)
 
+    def backlog(self, *, today: datetime | None = None, days: int | None = None) -> list[tuple[str, list[dict[str, Any]]]]:
+        """Open requests grouped by the day they were first asked, newest day first.
+
+        Each entry says how many times the request was asked, how many days have passed since anyone touched it
+        (an ask or a link), and how many nodes it has produced. An entry with nothing produced is a request no
+        one has started on. `days` keeps only the requests first asked in the last `days` days.
+        """
+        today = today or datetime.now(UTC)
+        out: dict[str, list[dict[str, Any]]] = {}
+        for req in self.open_requests():
+            first = _when(req.first_asked)
+            if days is not None and first is not None and today - first > timedelta(days=days):
+                continue
+            touched = [t for t in (_when(s) for s in [req.last_asked] + [ln["at"] for ln in req.links]) if t]
+            last = max(touched) if touched else (first or today)
+            out.setdefault(req.first_asked[:10] or "unknown", []).append({
+                "id": req.id, "text": req.text, "times_asked": req.times_asked,
+                "idle_days": max(0, (today - last).days), "produced": len(req.linked("produced")),
+            })
+        for rows in out.values():
+            rows.sort(key=lambda e: (-e["times_asked"], e["id"]))
+        return sorted(out.items(), key=lambda kv: kv[0], reverse=True)
+
     def made_since(self, rid: str, nodes: Iterable[Any], *, limit: int = 5, threshold: float = 0.6,
                    min_shared: int = 2) -> list[tuple[float, Any]]:
         """Store nodes made after a request was last asked that cover most of its words: candidates for `produced`.
@@ -399,6 +422,8 @@ def _main(argv: Iterable[str] | None = None) -> int:
     p = sub.add_parser("node"); p.add_argument("node")
     p = sub.add_parser("show"); p.add_argument("id")
     sub.add_parser("open")
+    p = sub.add_parser("backlog", help="open requests by the day they were first asked, newest first")
+    p.add_argument("--days", type=int, help="only requests first asked in the last N days")
     p = sub.add_parser("consolidate"); p.add_argument("--stale-days", type=int, default=14)
     p = sub.add_parser("import", help="add the requests in a prompt archive (PROMPTS.jsonl)")
     p.add_argument("archive"); p.add_argument("--automation", action="store_true")
@@ -438,6 +463,12 @@ def _main(argv: Iterable[str] | None = None) -> int:
         elif a.cmd == "open":
             for req in led.open_requests():
                 print(f"{req.first_asked[:10]} {req.id} x{req.times_asked} {req.text[:110]}")
+        elif a.cmd == "backlog":
+            for day, rows in led.backlog(days=a.days):
+                print(f"{day} ({len(rows)} open)")
+                for e in rows:
+                    work = f"{e['produced']} produced" if e["produced"] else "nothing produced"
+                    print(f"  {e['id']} x{e['times_asked']} idle {e['idle_days']}d, {work}: {e['text'][:90]}")
         elif a.cmd == "consolidate":
             print(json.dumps(led.consolidate(stale_days=a.stale_days), indent=1))
         elif a.cmd == "import":

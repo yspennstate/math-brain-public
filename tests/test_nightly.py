@@ -110,3 +110,15 @@ def test_request_links_reach_the_graph(tmp_path):
     again = run(tmp_path / "s.sqlite", tmp_path / "q2.jsonl", requests_path=tmp_path / "r.jsonl",
                 requests_in_graph=True)
     assert not again["changed"]
+
+
+def test_digest_lists_open_requests_by_day(tmp_path):
+    _store(tmp_path / "s.sqlite")
+    led = RequestLedger(tmp_path / "r.jsonl")
+    for i, day in enumerate(("2026-01-01", "2026-01-02", "2026-01-03")):
+        led.ask(f"Open question number {i} about cyclic groups of prime order", at=f"{day}T00:00:00+00:00")
+    report = run(tmp_path / "s.sqlite", tmp_path / "q.jsonl", requests_path=tmp_path / "r.jsonl")
+    page = digest(Queue.load(tmp_path / "q.jsonl"), report, top=2)
+    part = page.split("## Open requests by day", 1)[1]
+    assert part.index("2026-01-03") < part.index("2026-01-02") and "2026-01-01" not in part
+    assert "not started" in part and "and 1 more open" in part

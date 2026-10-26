@@ -37,11 +37,18 @@ python -m math_brain.requests similar "spectral gap Glauber lower bound"
 python -m math_brain.requests link req_3f0c9a1b2d4e claim_3d7e1176 produced
 python -m math_brain.requests node claim_3d7e1176
 python -m math_brain.requests open
+python -m math_brain.requests backlog --days 30
 python -m math_brain.requests show req_3f0c9a1b2d4e
 ```
 
 `ask` prints the earlier requests that share most of their words with the new one. An agent should read those
 before starting work: the question may already have an answer, or someone may be working on it.
+
+`open` is one flat list. `backlog` groups the open requests by the day they were first asked, newest day first,
+and within a day puts the ones asked most often on top. Each line says how many days have passed since anyone
+touched the request (asked it again or linked a node to it) and whether it has produced anything yet; "nothing
+produced" is a request nobody has started. That is the view to read when the question is "what did I ask this
+week that is still waiting?"
 
 ## Starting from the prompts you already have
 

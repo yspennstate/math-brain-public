@@ -214,3 +214,30 @@ def test_cli_import_reads_a_prompt_archive(tmp_path, capsys):
     assert _main(["--ledger", ledger, "import", str(archive)]) == 0
     assert json.loads(capsys.readouterr().out)["added"] == 1
     assert len(RequestLedger(ledger).open_requests()) == 1
+
+
+def test_backlog_groups_open_requests_by_day(tmp_path):
+    led = RequestLedger(tmp_path / "r.jsonl")
+    a = led.ask("Is the mixing time of the lamplighter walk polynomial?", at="2026-03-01T09:00:00+00:00")
+    led.ask("Is the mixing time of the lamplighter walk polynomial?", at="2026-03-04T09:00:00+00:00")
+    b = led.ask("Does every planar graph have a proper four colouring?", at="2026-03-01T15:00:00+00:00")
+    c = led.ask("Is the spectral gap of the Glauber dynamics bounded below?", at="2026-03-03T09:00:00+00:00")
+    led.link(c.id, "claim_x", "produced", at="2026-03-05T09:00:00+00:00")
+    d = led.ask("Is every group of prime order cyclic?", at="2026-03-02T09:00:00+00:00")
+    led.set_status(d.id, "answered")
+    days = led.backlog(today=datetime(2026, 3, 10, 9, tzinfo=UTC))
+    assert [day for day, _ in days] == ["2026-03-03", "2026-03-01"]
+    first = days[1][1]
+    assert [e["id"] for e in first] == [a.id, b.id]  # the request asked twice comes first
+    assert first[0]["times_asked"] == 2 and first[0]["idle_days"] == 6 and first[0]["produced"] == 0
+    assert days[0][1][0]["idle_days"] == 5 and days[0][1][0]["produced"] == 1
+    recent = led.backlog(today=datetime(2026, 3, 10, 9, tzinfo=UTC), days=8)
+    assert [day for day, _ in recent] == ["2026-03-03"]
+
+
+def test_cli_backlog(tmp_path, capsys):
+    path = tmp_path / "r.jsonl"
+    RequestLedger(path).ask("Is the mixing time of the lamplighter walk polynomial?", at="2026-03-01T09:00:00+00:00")
+    assert _main(["--ledger", str(path), "backlog"]) == 0
+    out = capsys.readouterr().out
+    assert out.startswith("2026-03-01 (1 open)") and "nothing produced" in out
