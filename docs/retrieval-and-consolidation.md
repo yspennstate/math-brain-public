@@ -67,3 +67,9 @@ A proposal is not `Evidence`, is never written as a verification event, and has
 no promotion method. Attempting to treat it as verification evidence raises an
 error. A human or independent verifier must perform the proposed action and feed
 the resulting artifact through the ordinary evidence and promotion gates.
+
+`math_brain.nightly` runs `consolidate` once a night against a read-only store
+and keeps the proposals in a review queue, so a proposal that keeps coming back
+unattended is visible as such; see [nightly-pass.md](nightly-pass.md). The
+requests that prompted the work are kept as nodes of their own and consolidated
+in the same pass; see [prompts-as-nodes.md](prompts-as-nodes.md).
