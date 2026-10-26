@@ -1,0 +1,35 @@
+{
+ "schedule": "slabs_neg8v2.json",
+ "schedule_sha256": "5df58db6f05b0589d6bb0b42e063d0c6414c4bdbb1d4088a49eefcd131585b83",
+ "slabs_expected": 500,
+ "slabs_certified": 500,
+ "kappa_lo": "-0.900000",
+ "kappa_hi": "-0.650000",
+ "sources_sha256": {
+  "results/box\\result_neg8_0.json": "0ff252742bbcc9ce02145c6c277e8b2088a985ac626086bdadc7021b9249e0fc",
+  "results/box\\result_neg8_1.json": "102ab0349f085e52f80608a1b91bcdcb98365712260c71b0c3de91ffde288f52",
+  "results/box\\result_neg8_10.json": "97dc32015ebddd8f67cbf369357779fefd6900ce2f01d16fbb859fc4d13c133c",
+  "results/box\\result_neg8_11.json": "040216e292cc03a9e3f1a3faec71a2b692ab2fda0272b8ffbd4e20356f4026b7",
+  "results/box\\result_neg8_2.json": "8cedb787f7b24e8ab2882bff1655abf4acb8f112bb2d5485c4a8d7143561723d",
+  "results/box\\result_neg8_3.json": "da4a8d88dd1c4712ca0655aa01373577bbfa40ce198c361abf02c968766a39be",
+  "results/box\\result_neg8_4.json": "6638bbd66d7b6f9d11c9b5a71b489c23875461897b361f0b189eee5dd3ff8635",
+  "results/box\\result_neg8_5.json": "032afa10a7b54d965115e7769576f945452909c8aafaceef2bcf253061deb182",
+  "results/box\\result_neg8_6.json": "c304f96af6ba0d5ac6bf84e13775316a417d952f60dc41bf8d11531c2b597937",
+  "results/box\\result_neg8_7.json": "172c55b71ad0573873168a5610f77da4db8efcc51075987f2c978d6d5d4ac2d5",
+  "results/box\\result_neg8_8.json": "9da0335df9454eae9deec692ef3d8b7c6f772979b71105026a22ba6dc092d6ac",
+  "results/box\\result_neg8_9.json": "ff2a33822f09d659d24bd9807c540cd52b0a966d1d118ccba872cb49127d9c23"
+ },
+ "bound": true,
+ "output_csv": "results/certified_intervals_neg8.csv",
+ "output_csv_sha256": "0c61c5cc4c58458d0f99f37bac16d87ad40bac9798fd58285720d1b906ddac61",
+ "collector_sha256": "48dfe713d425cb305715932abf88ed966106ee09fc963b4310eaf76536bd11b8",
+ "command": [
+  "collect_slabs.py",
+  "results/box/result_neg8_*.json",
+  "--expect",
+  "slabs_neg8v2.json",
+  "-o",
+  "results/certified_intervals_neg8.csv"
+ ],
+ "verify": "recompute sha256 of output_csv and compare to output_csv_sha256; a mismatch means a torn or superseded pair"
+}

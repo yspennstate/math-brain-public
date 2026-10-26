@@ -1,0 +1,40 @@
+ktag=0p16 a*=(1.23126175, 0.58934514) s0=0.64082358 W_ANG=0.6213 a1 ball rad=2.55e-05
+12 shoulder chunks over 4 arcs
+OK   band=[0.007, 0.0105, 0.7612799894541359, 0.7782799894541359] cells=2 worst=-1.4134075877805117 (7s)
+OK   band=[0.007, 0.0105, 0.7782799894541359, 0.7952799894541359] cells=2 worst=-1.722533901599565 (13s)
+OK   band=[0.007, 0.0105, 0.7952799894541359, 0.8112799894541358] cells=2 worst=-2.0653510977933394 (19s)
+OK   band=[0.007, 0.0105, 0.43127998945413587, 0.4482799894541359] cells=2 worst=-0.20917369362327065 (180s)
+OK   band=[0.007, 0.0105, 0.4482799894541359, 0.4652799894541359] cells=2 worst=-0.23597313146779442 (216s)
+OK   band=[0.007, 0.0105, 0.4652799894541359, 0.48127998945413586] cells=2 worst=-0.2661438462611585 (256s)
+OK   band=[0.007, 0.0105, 3.902872643043929, 3.919872643043929] cells=2 worst=-1.5490797868537598 (265s)
+OK   band=[0.007, 0.0105, 3.919872643043929, 3.936872643043929] cells=2 worst=-1.9122192714134698 (412s)
+OK   band=[0.007, 0.0105, 3.936872643043929, 3.952872643043929] cells=2 worst=-2.311757254918785 (558s)
+OK   band=[0.007, 0.0105, 3.572872643043929, 3.589872643043929] cells=2 worst=-0.2288675807448044 (722s)
+OK   band=[0.007, 0.0105, 3.589872643043929, 3.606872643043929] cells=2 worst=-0.21196082254003912 (756s)
+OK   band=[0.007, 0.0105, 3.606872643043929, 3.622872643043929] cells=2 worst=-0.42775494766585176 (927s)
+DONE 12 chunks, 0 fails -> ./results/huang_region1_supp_0p16.json
+star interior 0p16: 74f7968567c8c652
+supplement: 12 chunks -> 4 arcs, radius [0.007, 0.0105]
+240 top cells over EXCL_OLD=(1.0539617482024566, 1.4119617482024567, 0.4714451449345505, 0.6963451449345505), 3 workers, MIN_SIDE=0.001, RB=2.56e-05
+  24/240 top cells, 74 leaves, 0 fails, 18s
+  48/240 top cells, 189 leaves, 0 fails, 36s
+  72/240 top cells, 312 leaves, 0 fails, 58s
+  96/240 top cells, 501 leaves, 0 fails, 94s
+  120/240 top cells, 732 leaves, 0 fails, 156s
+  144/240 top cells, 974 leaves, 0 fails, 229s
+  168/240 top cells, 1148 leaves, 0 fails, 285s
+  192/240 top cells, 1362 leaves, 0 fails, 303s
+  216/240 top cells, 1408 leaves, 0 fails, 308s
+  240/240 top cells, 1425 leaves, 0 fails, 309s
+DONE: 1425 leaves, 0 fails, 309s
+Region II sweep: failures=0 leaves=896 sha=2ddcf0c2cddb9a53
+  sweep leaf-value replay: 0 ok cells with positive worst
+Region I: bands=1404 fails=0 sha=c59645f865ca57c6
+  Region I leaf-value replay: 0 ok bands with positive worst or a subcell failure
+Stage-2: failures=0 leaves=1425 sha=5f723e0639f061d7
+  stage-2 leaf-value replay: 0 ok cells with positive worst
+  stage-2 bound to region1 manifest: c59645f865ca57c6 (MATCH)
+  stage-2 bound to shoulder supplement: 16cab41a5ba5eeca (MATCH); supplement fails=0 over 12 chunks
+Star interior: inradius mid=143233 required mid=120990 sha=d5f2c1e4c972efa9
+
+CONDITION 2varfn CERTIFIED at tag 0p16: all pieces pass with zero failures and coherent geometry.
