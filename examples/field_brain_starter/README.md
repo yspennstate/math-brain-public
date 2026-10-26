@@ -16,6 +16,7 @@ production, a lab or a support desk.
 | `new_record.py` | write one record with its frontmatter, add its index line, and mark the record it supersedes |
 | `recall.py` | search the records (BM25 over description and body; standard library only) |
 | `ledger.py` | read and write the request ledger: list the open requests, record one, link a record that answers it, drop it |
+| `claims.py` | let several agents share the store: claim a record or a piece of work before changing it, release it after; a second agent is refused and told who holds it |
 | `check_store.py` | check that every record is indexed and every `[[link]]` and `superseded_by:` names a record that exists; run it after editing records by hand |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
@@ -106,6 +107,35 @@ they were tied, so the brain's lead there is time: it finds in one call what the
 trusting a score. Write your own questions from things your agents actually got wrong, never from the records'
 own sentences, or the test measures copying.
 
+## Several agents at once
+
+A brain is most useful when every agent on a team reads and writes the same store, and that is where stores get
+damaged. Two things go wrong.
+
+The first is the index. An agent that adds a record reads `MEMORY.md`, inserts its line and writes the file back; two
+agents doing this in the same second each write back their own version, and one line is lost. `new_record.py` holds
+a short lock on the index while it does this, so nothing needs to be done by hand. Twelve copies of `new_record.py`
+started in the same second on a copy of this store all landed with the lock; with the lock removed, the same test
+lost four or five index lines and three or four of the writers failed outright.
+
+The second is two agents editing the same record, or doing the same piece of work twice. For that, an agent claims
+what it is about to change:
+
+```
+python claims.py claim --agent ana --resource topic:pricing --purpose "move the ship date"
+claimed topic:pricing  held by ana for 29 more min  (move the ship date)
+
+python claims.py claim --agent ben --resource topic:pricing
+REFUSED topic:pricing  held by ana for 29 more min  (move the ship date)
+```
+
+The refusal exits with code 3. The second agent then works on something else, or asks the holder, or waits; it does
+not edit anyway. Claims expire (30 minutes by default; claiming again renews), so a crashed agent blocks no one for
+long. `python claims.py list` shows who holds what, and `python claims.py selftest` runs the checks. Add one sentence
+to the agents' standing instructions: "Before you change a record by hand or start a piece of work another agent may
+also start, run claims.py claim; if it is refused, do not change that resource." `framework/mesh/` is the full
+version, with heartbeats, mailboxes and handoffs, for a team of agents working all day.
+
 ## Growing it into a full brain
 
 1. Keep writing records as the work happens: one fact, its reason, its date, links to related records. The index line
@@ -116,8 +146,8 @@ own sentences, or the test measures copying.
 3. Run the dream cycle (`framework/dreaming/`) at night: it reads the day's records and transcripts, merges
    duplicates, links what belongs together, and compiles recurring mistakes from `MISTAKES.md` into reflexes that fire
    when an agent is about to repeat one.
-4. When several agents work at once, add the mesh (`framework/mesh/`) so they claim what they change and read each
-   other's state instead of colliding.
+4. When several agents work at once, start with `claims.py` (above); when they work all day and need to message and
+   hand work to each other, move to the mesh (`framework/mesh/`).
 5. Re-run the three-arm test whenever you change recall. If the brain arm stops beating the none arm, the change
    made the brain worse.
 

@@ -178,6 +178,19 @@ any `[[link]]` or `superseded_by:` that names a record nobody wrote; the run exi
 scheduler can flag the night. Run `python check_store.py` yourself after editing records by hand. `dream/README.md`
 has the cron, launchd and Task Scheduler lines for running it every night.
 
+## When more than one agent writes
+
+If several agents share the store from the first day, two of them will sooner or later change the same thing.
+`new_record.py` already locks the index while it adds a line, so records written at the same moment are all kept.
+For hand edits and shared pieces of work, have each agent claim first:
+
+```
+python claims.py claim --agent support-bot --resource record:refunds_over_500_dollars_need_a_second_approver_2026_03_02
+```
+
+A second agent asking for the same record is refused (exit code 3) and told who holds it and why. The starter's
+README, under "Several agents at once", has the rest.
+
 ## After the first week
 
 By now the store will have outgrown pasting, and the questions will show where recall misses. That is the point to

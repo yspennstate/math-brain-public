@@ -17,6 +17,7 @@ import datetime as dt
 import os
 import re
 import sys
+import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 TYPES = ("user", "feedback", "project", "reference")
@@ -27,6 +28,38 @@ def write_atomic(path, text):
     with open(tmp, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(text)
     os.replace(tmp, path)  # a crash mid-write leaves the old file whole
+
+
+class IndexLock:
+    """Hold memory/.index.lock while the index is read and rewritten. Without it, two agents writing records at the
+    same moment each read the old index, each add their line, and the second write drops the first agent's line.
+    A lock older than a minute is left by a crashed writer and is cleared."""
+
+    def __init__(self, folder, wait=20.0, stale=60.0):
+        self.path, self.wait, self.stale = os.path.join(folder, ".index.lock"), wait, stale
+
+    def __enter__(self):
+        end = time.time() + self.wait
+        while True:
+            try:
+                os.close(os.open(self.path, os.O_CREAT | os.O_EXCL | os.O_WRONLY))
+                return self
+            except FileExistsError:
+                try:
+                    if time.time() - os.path.getmtime(self.path) > self.stale:
+                        os.remove(self.path)
+                        continue
+                except OSError:
+                    continue
+                if time.time() > end:
+                    sys.exit("the index is locked by another writer (%s); try again" % self.path)
+                time.sleep(0.1)
+
+    def __exit__(self, *exc):
+        try:
+            os.remove(self.path)
+        except OSError:
+            pass
 
 
 def slugify(text, day):
@@ -68,7 +101,12 @@ def main():
     if links:
         out += ["", "Related: " + ", ".join("[[%s]]" % s for s in links) + "."]
     open(path, "w", encoding="utf-8", newline="\n").write("\n".join(out) + "\n")
+    with IndexLock(a.dir):
+        update_old_and_index(a, slug)
+    print("wrote", path)
 
+
+def update_old_and_index(a, slug):
     if a.supersedes:
         old = os.path.join(a.dir, a.supersedes + ".md")
         text = open(old, encoding="utf-8").read()
@@ -87,7 +125,6 @@ def main():
     at = next((i for i, l in enumerate(lines) if l.startswith("- ")), len(lines))
     lines.insert(at, entry)  # newest first
     write_atomic(index, "\n".join(lines) + "\n")
-    print("wrote", path)
 
 
 if __name__ == "__main__":
