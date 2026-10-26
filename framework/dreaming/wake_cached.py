@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """SessionStart hook for source "compact": hand back the wake this session already received, without re-running it.
 
-Owner, 16 Oct 2026 01:2x: "there is an agent that keeps getting stuck on compact, fix that issue". Measured that night:
-wake_brain.ps1 parts 1 and 2 re-ran on every compaction and took 390 s and 393 s for the film agent 259df7c9 (01:14-01:21
-his clock), 224 s / 162 s / 163 s for three other sessions - PowerShell alone took 35 s to start on the loaded laptop.
+Why: on 16 Oct 2026 an agent kept stalling after every compaction. Measured that night:
+wake_brain.ps1 parts 1 and 2 re-ran on every compaction and took 390 s and 393 s for one session (01:14-01:21 local
+time), 224 s / 162 s / 163 s for three other sessions - PowerShell alone took 35 s to start on the loaded laptop.
 The agent sat silent the whole time, and on a 300k window with a ~160k floor it compacts every 15-25 minutes.
 
 Startup, resume and clear still run the full wake_brain.ps1 (settings.json matcher "startup|resume|clear"). After a
