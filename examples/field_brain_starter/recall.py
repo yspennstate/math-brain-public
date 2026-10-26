@@ -36,7 +36,9 @@ def fold(w):
 
 
 def words(text):
-    return [fold(w) for w in WORD.findall(text.lower()) if w not in STOP]
+    # one-letter tokens go: the "s" split off "studio's" is rare in a small store, so it scored high and matched
+    # a question the store cannot answer to any record with a possessive in it
+    return [fold(w) for w in WORD.findall(text.lower()) if w not in STOP and len(w) > 1]
 
 
 def load(folder):
