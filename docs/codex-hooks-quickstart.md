@@ -105,3 +105,34 @@ Claude Code reads hooks from `settings.json` (`~/.claude/settings.json` applies 
 the same names and the stdin fields are the same. The output differs: for `UserPromptSubmit`, Claude Code gives
 the model plain stdout, so the script prints its lines directly. `recall_hook.py --runtime claude` does that.
 Claude Code also cuts one hook's output at about 10,000 characters, so the ordering advice holds for both.
+
+## The request hook from the math brain
+
+`math_brain.request_hook` (see [prompts-as-nodes.md](prompts-as-nodes.md)) is one more `UserPromptSubmit` hook. It
+shows the agent the earlier requests that look like the new one, with what they produced, so a question asked last
+week is not worked from scratch again. It needs the package importable (`pip install -e .` in the repository) and
+the ledger's path in `MATH_BRAIN_REQUESTS`. On Linux and macOS the variable can go in the command itself:
+
+```json
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command",
+                     "command": "env MATH_BRAIN_REQUESTS=/path/to/requests.jsonl MATH_BRAIN_REQUESTS_RECORD=1 python3 -m math_brain.request_hook --codex",
+                     "timeout": 30 } ] }
+    ]
+  }
+}
+```
+
+That is `~/.codex/hooks.json`. For Claude Code, put the same entry in `settings.json` and drop `--codex`, since
+Claude Code takes plain stdout. On Windows, set `MATH_BRAIN_REQUESTS` (and `MATH_BRAIN_REQUESTS_RECORD`) as user
+environment variables and keep only `python -m math_brain.request_hook` in the command. To see what the model will
+get, pipe a prompt in by hand:
+
+```
+echo '{"prompt": "is every group of prime order cyclic?"}' | MATH_BRAIN_REQUESTS=requests.jsonl python3 -m math_brain.request_hook
+```
+
+Record from one runtime only. A request is keyed by its text, so if two runtimes record into the same ledger, a
+prompt that reaches both is counted as asked twice, and the nightly pass lists it among the repeated requests.

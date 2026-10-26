@@ -72,7 +72,8 @@ MATH_BRAIN_REQUESTS=requests.jsonl python -m math_brain.request_hook --codex  # 
 
 It prints nothing when the ledger is not set, when nothing is similar enough, for prompts under four words, or
 on any error. With `MATH_BRAIN_REQUESTS_RECORD=1` it also records the prompt, after the lookup, so a prompt never
-matches itself.
+matches itself. The hook entries for Codex and Claude Code are in
+[codex-hooks-quickstart.md](codex-hooks-quickstart.md#the-request-hook-from-the-math-brain).
 
 ## In the graph
 
