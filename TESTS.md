@@ -113,8 +113,32 @@ Without the brain agents answered 538 of 1,000; with it, all 1,000. The brain he
 
 One Claude agent (Opus 5.5, high effort) took 20 items drawn at random from a 50-item recall bank. It first answered every item from its own knowledge with no tools and wrote the answers down; it then answered them again using `math_recall.py`, two or three wordings per call. A script graded both sets against keys the agent never read. Without the brain it answered 9 correctly, with it 19 (10 to 0 on the discordant items, exact sign test p = 0.002). The items it missed alone were the store's own results, such as constants found in the FEI campaign; the items it got alone were classical facts. The one item missed both ways may have a strict key.
 
+## One solver against pairs of solvers, 48 proof audits (10 October 2026)
+
+There were 48 proof audits, each asking whether a proof is correct and, if not, where it first fails.
+The GPT arms used gpt-6.1-sol at maximum effort: one agent alone, or two agents whose answers were
+reconciled. A single Claude agent (Opus 5.5) answered the same items blind, one item per call, with
+no tools and no brain.
+
+| Arm | Correct of 48 |
+|---|---|
+| Claude, one agent | 42 |
+| GPT, one agent | 35 |
+| every GPT arm, pairs included | 35 to 37 |
+
+By kind of item, Claude scored 16 of 20 clean proofs (GPT alone 15), 20 of 20 local logic faults
+(15) and 6 of 8 faults in the use of a cited result (5). Of the 12 items both members of a GPT pair
+missed, Claude answered 8. A pair of one GPT agent and Claude could reach at most 43, one more than
+Claude alone, because on the items they split Claude was nearly always the one that was right. On
+these items the choice of model family mattered and the pairing did not. Claude used 0.30 million
+tokens for the 48 items and the single GPT agent 1.62 million (the vendors count tokens differently).
+This was one run, with Claude at the client's default effort and the GPT arms at maximum.
+
 ## What did not help
 
 - **Spreading activation** (11 October). Agents told why each card came up scored 79 with spreading and 80 without, while reading 46 percent more input tokens. Without agents, on the 584 questions, spreading moved first-eight hits from 298 to 307, but it found no card the word search had missed: it only re-ranks.
 - **New open problems** (11 October). Fourteen Codex agents worked 13 open problems on which the store held only a first attempt from September. Graded blind, the brain arm scored 24 of 39 and the no-brain arm 26. A referee comparing each pair preferred the no-brain attempt 8 times and the brain's 3 times, with 2 even (p = 0.23).
 - **An early version against plain documents** (a hard 300-item set, no tools). Version 1 of the math-brain stream (hook notes, math recall, Lean and an audit step) scored 238; agents given the documents directly scored 264 (14 to 40, p = 0.0005). Most of the loss was in one group of 70 items, 22 against 55. A later version, which routes to math recall first and adds a clock, scored 102 of 110 against 104 for documents with recall (6 to 8, p = 0.79).
+- **Teams** (8 and 9 October). On 20 items run with Codex, a team of agents with the brain matched a single agent with the brain item for item, and without the brain the team lost two items to the single agent. A team used about three times the tokens. Every item on which the arms disagreed went to the arm with the brain, 4 to 0 (8 to 0 with the 7 October run); the items are shared between the runs, so that count is suggestive only.
+- **Query expansion and fusion in the engine** (15 October). On a 300-item recall bank, split into two halves of 292 questions each, pseudo-relevance feedback, reciprocal-rank fusion with the meaning channel, a wider meaning pool and a one-edge graph hop all failed to beat the live ranking for first place, the first eight or mean reciprocal rank (live: first place 112 and 106, first eight 158 and 156). Fusing in the meaning channel moved about 15 more answers into the first 200 and cost 15 to 20 first places. On the 94 fully reworded questions the live ranking put no answer in the first eight. What helps there is the agent rewording its own query in the card's vocabulary.
+- **BM25 in the math hook** (19 October). With BM25 (k1 = 1.2, b = 0.3) in place of the hook's length-penalized word score, on the 218-question hook bank, 12 questions gained first place and 10 lost it, cards with content served went from 70 to 69, and false fires on questions the store cannot answer rose from 28 to 31 of 40. The hook keeps its original scoring. Its firing thresholds are tuned to that scoring, so a new ranker needs its thresholds recalibrated before it can be compared fairly.
