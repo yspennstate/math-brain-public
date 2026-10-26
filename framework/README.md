@@ -119,6 +119,10 @@ far to trust it under every note it serves.
 
 ## The method
 
+`docs/COMPACTION.md` describes how long sessions compact: the 300k window, the hooks that compact
+at the end of a task instead of mid-subject, what the summary is told to keep, how every summary
+becomes a linked node in the brain, and what broke along the way.
+
 `docs/METHOD.md` is the working discipline — recall before you derive, a check is only worth
 its control, break it on purpose, verify the host rather than the patch, sample at the moment
 of the event. Every rule in it is there because breaking it cost something measurable. Read it
