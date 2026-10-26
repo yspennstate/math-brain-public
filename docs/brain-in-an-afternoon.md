@@ -152,7 +152,33 @@ Second, the hooks. `hooks/wake_hook.py` runs once when a session starts and give
 newest mistakes, so it knows what the store holds before anyone asks. `hooks/recall_hook.py` runs before the model
 sees each request and hands it the records that match, so the agent gets them even when it forgets to ask.
 `python hooks/recall_hook.py --selftest` shows what the model would receive.
-[codex-hooks-quickstart.md](codex-hooks-quickstart.md) shows where both go in Codex and in Claude Code.
+
+Recall answers questions; it does nothing when the agent is about to act. `hooks/scar_hook.py` runs before each tool
+call and compares the command with the records of mistakes and rules only. Here it is on the starter's own records,
+which belong to a small film studio, with a command an agent short of disk space might reach for:
+
+```
+echo '{"session_id": "s1", "tool_name": "Bash", "tool_input": {"command": "rm -rf footage/harbour/raw"}}' | python hooks/scar_hook.py
+```
+
+The model receives, before the command runs:
+
+```
+[brain] This action resembles something that went wrong before. A scar is a question, not an order: check
+whether it applies here before you go on.
+- feedback_ask_before_deleting_raw_footage_2026_03_27 [verified]
+  Never delete raw footage to free disk space without two checked copies (sizes and checksums compared) and the
+  director's yes.
+
+  **Why:** the camera cards are the only source; a finished edit cannot be re-cut without them.
+  **How to apply:** when disk runs short, report it and list candidates; delete only what was approved and verified.
+```
+
+`ls footage/harbour` gets nothing, and the same scar fires at most once a session, so the warning stays rare enough
+to be read. For your company, the records that earn this are the ones written after something broke: the refund
+issued twice, the migration run against the live database. `hooks/write_back_hook.py`, at the end of the turn, asks
+the agent to file a lesson it has just stated and not written down.
+[codex-hooks-quickstart.md](codex-hooks-quickstart.md) shows where each hook goes in Codex and in Claude Code.
 
 ## 6. The first night (ten minutes to set up)
 
