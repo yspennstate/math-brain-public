@@ -1,0 +1,155 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\Var}{Var}
+\DeclareMathOperator{\Bin}{Bin}
+\newcommand{\E}{\mathbb{E}}
+\renewcommand{\P}{\mathbb{P}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\hypersetup{pdftitle={Maximal flow through thin boxes with heavy-tailed capacities},pdfauthor={Yitzchak Shmalo}}
+
+\title[Maximal flow through thin boxes]{Maximal flow through thin boxes with heavy-tailed capacities}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+
+\subjclass[2020]{60K35, 82B43}
+\keywords{first-passage percolation, maximal flow, minimal cut, heavy tails, flow constant}
+
+\begin{document}
+
+\begin{abstract}
+Kesten's law of large numbers for the maximal flow $\Phi$ from the bottom to the top of a box $[0,k]\times[0,l]\times[0,m]$ in $\Z^3$ with i.i.d.\ capacities assumes a finite exponential moment, and Auffinger, Damron and Hanson ask whether the limit of $\Phi/(kl)$ exists without it. We show that without a replacement moment condition it need not. For every height function $m(N)$ with $\liminf m(N)/\log N=0$ there is a capacity law with no atom at $0$ such that $\limsup\Phi/N^{d-1}=+\infty$ almost surely in the boxes $[0,N]^{d-1}\times[0,m(N)]$ of $\Z^d$, $d\ge2$. The heights may tend to infinity, for instance as $(\log N)^{1/2}$, and so lie inside Kesten's range. For heights with $m(N)/\log N\to\infty$, Rossignol and Th\'eret proved convergence to a finite flow constant for every capacity law; for the laws constructed here the limit therefore depends on how fast the height grows.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Assign i.i.d.\ nonnegative capacities $t(e)$ with law $G$ to the nearest-neighbour edges of $\Z^d$, $d\ge2$. For integers $N\ge1$ and $m\ge1$ let
+\[
+B(N,m)=\{0,\dots,N\}^{d-1}\times\{0,\dots,m\},
+\]
+with bottom face $F_0=\{x\in B(N,m):x_d=0\}$ and top face $F_1=\{x\in B(N,m):x_d=m\}$, and let $\Phi(N,m)$ be the maximal flow from $F_0$ to $F_1$ through the edges with both endpoints in $B(N,m)$, each edge $e$ carrying at most $t(e)$ in either direction. By the max-flow min-cut theorem, $\Phi(N,m)$ is the least total capacity of a set of edges of $B(N,m)$ meeting every path in $B(N,m)$ from $F_0$ to $F_1$. For $d=3$ and the boxes $[0,k]\times[0,l]\times[0,m]$, Kesten~\cite{Ke} proved that $\Phi/(kl)$ converges almost surely and in $L^1$ to a constant when $k\ge l\to\infty$, $m=m(k,l)\to\infty$ with $\log m(k,l)$ at most of order $k^{1-\delta}$ for some $\delta>0$, $G(\{0\})$ is small and $G$ has a finite exponential moment; Zhang~\cite{Zh} extended this to all $d\ge2$ with no restriction on $G(\{0\})$, still under an exponential moment; the limit is positive exactly when $G(\{0\})<1-p_c(d)$. This is Theorem~7.2 of the survey of Auffinger, Damron and Hanson~\cite{ADH}, whose Question~36 reads: \emph{Determine if the limit in (7.2) exists without the exponential moment assumption.}
+
+Two results bear on the question. For capacities with finite mean and boxes whose base is a fixed rectangle dilated by $N$, Rossignol and Th\'eret~\cite{RT10} proved convergence in $L^1$ for every height $h(N)\to\infty$ with $h(N)/N\to0$. Without any moment condition, assuming only $G(\{+\infty\})<p_c(d)$, Rossignol and Th\'eret~\cite{RT18} defined a finite flow constant $\nu_G$ and proved almost sure convergence of the normalized maximal flow to it for heights with $h(N)/\log N\to\infty$ and $h(N)/N\to0$ \cite[Theorem~2.4]{RT18}. The theorem below shows that the lower bound on the height cannot be dropped in that result, and that the limit in Kesten's theorem can fail once the exponential moment is removed with nothing in its place.
+
+\begin{theorem}\label{thm:main}
+Let $d\ge2$ and let $m\colon\{1,2,\dots\}\to\{1,2,\dots\}$ satisfy
+\begin{equation}\label{eq:thin}
+\liminf_{N\to\infty}\frac{m(N)}{\log N}=0 .
+\end{equation}
+There is a law $G$ supported on $[1,\infty)$, in particular with $G(\{0\})=0$, such that
+\[
+\limsup_{N\to\infty}\frac{\Phi(N,m(N))}{N^{d-1}}=+\infty\qquad\text{almost surely.}
+\]
+More precisely, there are integers $N_1<N_2<\cdots$ with $\Phi(N_r,m(N_r))\ge\frac12N_r^{d-1/2}$ for all large $r$, almost surely, and $\P\bigl(\Phi(N_r,m(N_r))<\frac12N_r^{d-1/2}\bigr)\to0$. The law $G$ has infinite mean.
+\end{theorem}
+
+The second statement rules out convergence in probability to a finite limit, and hence convergence in $L^1$, along the boxes $B(N,m(N))$. The height function may tend to infinity, and a slowly growing one is the case relevant to Question~36.
+
+\begin{corollary}\label{cor:adh}
+Let $d=3$ and $m(k,l)=\max\{1,\lfloor(\log_2\min\{k,l\})^{1/2}\rfloor\}$ for $k,l\ge2$. Then $m(k,l)\to\infty$ as $k,l\to\infty$, $\log m(k,l)\le k^{1-\delta}$ for every $\delta\in(0,1)$ and all large $k\ge l$, and there is a law $G$ with $G(\{0\})=0$ for which $\Phi/(kl)$ in the boxes $[0,k]\times[0,l]\times[0,m(k,l)]$ converges neither almost surely nor in probability to a finite constant as $k\ge l\to\infty$.
+\end{corollary}
+
+\begin{proof}
+The first two claims hold because $m(k,l)$ is of order $(\log l)^{1/2}$. On the diagonal $k=l=N$ the height $m(N)=m(N,N)$ satisfies $m(N)/\log N\to0$, and Theorem~\ref{thm:main} gives a law for which $\Phi/N^2$ is unbounded almost surely along $k=l=N_r$ and exceeds $\frac12N_r^{1/2}$ with probability tending to one. Neither form of convergence to a finite constant is possible.
+\end{proof}
+
+For the law of Corollary~\ref{cor:adh}, Theorem~2.4 of~\cite{RT18} gives almost sure convergence to $\nu_G<\infty$ of the normalized maximal flow from the bottom to the top of the cylinders over $[0,N]^2$ of height $h(N)$ whenever $h(N)/\log N\to\infty$ and $h(N)/N\to0$, while along the heights $m(N)$ it is unbounded. So with the exponential moment deleted, the behaviour of $\Phi/(kl)$ depends on the height function, and logarithmic height is where it changes. Heights of exact order $\log N$ are covered by neither result. The construction needs infinite mean, and it says nothing about Question~36 under a finite mean or under a finite second moment, which Kesten expected to suffice \cite[Open problem~2.24]{Ke}; see \cite[Remark~3]{Zh}.
+
+\begin{example}\label{ex:explicit}
+For the height of Corollary~\ref{cor:adh} the proof below can be run with $N_r=2^{4r^2}$. Then $m(N_r)=2r$ and $4^{rm(N_r)}=N_r$, and the law is
+\[
+\P(t(e)=1)=\tfrac12,\qquad \P\bigl(t(e)=2^{4s^2}\bigr)=2^{-s-1},\quad s=1,2,\dots .
+\]
+For $d=3$ it gives $\Phi(N_r,2r)/N_r^2\ge2^{2r^2-1}$ for all large $r$, almost surely.
+\end{example}
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+\emph{Choice of the scales.} By~\eqref{eq:thin}, for every $r\ge1$ the set of $N$ with $m(N)\le\log_2N/(2r)$, that is with $4^{rm(N)}\le N$, is infinite. Choose recursively $N_r$ in this set with $N_r\ge2^r$ and $N_r>N_{r-1}$. Thus
+\begin{equation}\label{eq:scales}
+4^{r m(N_r)}\le N_r,\qquad N_r\ge 2^r,\qquad N_1<N_2<\cdots.
+\end{equation}
+
+\emph{The law.} Put $a_r=N_r$, so $2\le a_1<a_2<\cdots$, and let $G$ be the law with
+\[
+G(\{1\})=\tfrac12,\qquad G(\{a_s\})=2^{-s-1},\quad s\ge1 .
+\]
+The masses add up to $\frac12+\sum_{s\ge1}2^{-s-1}=1$, $G$ is supported on $[1,\infty)$, and since the $a_s$ increase and exceed $1$,
+\begin{equation}\label{eq:tail}
+\P\bigl(t(e)\ge a_r\bigr)=\sum_{s\ge r}2^{-s-1}=2^{-r}.
+\end{equation}
+The mean is $\frac12+\sum_s a_s2^{-s-1}\ge\sum_s 2^s2^{-s-1}=\infty$, so in particular $\E e^{\gamma t(e)}=\infty$ for every $\gamma>0$.
+
+\emph{High columns.} Fix $r$ and write $N=N_r$, $m=m(N_r)$. For $x\in\{0,\dots,N\}^{d-1}$ the column over $x$ is the path of the $m$ vertical edges joining $(x,j)$ to $(x,j+1)$, $0\le j<m$; it runs from $F_0$ to $F_1$. Call it high if all $m$ of its edges have capacity at least $a_r$. The $M=(N+1)^{d-1}$ columns use pairwise disjoint sets of edges, so their high indicators are independent, and by~\eqref{eq:tail} each column is high with probability
+\[
+\pi_r=2^{-rm}\ge N^{-1/2},
+\]
+by~\eqref{eq:scales}. The number $Y_r$ of high columns is $\Bin(M,\pi_r)$ with mean $\mu_r=M\pi_r\ge N^{d-3/2}\ge N^{1/2}$, and Chebyshev's inequality with $\Var Y_r\le\mu_r$ gives
+\[
+\P\bigl(Y_r<\tfrac12\mu_r\bigr)\le\frac{4\Var Y_r}{\mu_r^2}\le\frac4{\mu_r}\le 4N_r^{-1/2}\le 4\cdot2^{-r/2}.
+\]
+These bounds are summable in $r$, so by the Borel--Cantelli lemma $Y_r\ge\frac12\mu_r$ for all large $r$, almost surely.
+
+\emph{The flow bound.} Sending $a_r$ units up each high column and nothing elsewhere is a feasible flow from $F_0$ to $F_1$: the high columns are edge-disjoint, each of their edges has capacity at least $a_r$, and flow is conserved at every vertex not in $F_0\cup F_1$. Hence
+\[
+\Phi(N_r,m(N_r))\ge a_rY_r .
+\]
+The same bound follows from the cut side: a set of edges meeting every path from $F_0$ to $F_1$ meets every column, and choosing one of its edges in each high column gives $Y_r$ distinct edges of capacity at least $a_r$.
+
+\emph{Conclusion.} On the event $Y_r\ge\frac12\mu_r$, using $a_r=N$, $M\ge N^{d-1}$ and $2^{rm}\le N^{1/2}$,
+\[
+\frac{\Phi(N_r,m(N_r))}{N_r^{d-1}}\ge\frac{a_r\mu_r}{2N_r^{d-1}}\ge\frac{N_r}{2\cdot2^{rm}}\ge\frac{N_r^{1/2}}2 .
+\]
+This holds for all large $r$ almost surely, and with probability at least $1-4N_r^{-1/2}$ for each $r$. Since $N_r\to\infty$, the theorem follows. \qed
+
+\section*{Computations}
+The repository~\cite{code} contains the script \texttt{code/check.py} with its output. It checks in exact rational arithmetic the masses and tails of the law of Example~\ref{ex:explicit}, the relations $m(N_r)=2r$ and $4^{rm(N_r)}\le N_r$, the column probability $\pi_r=N_r^{-1/2}$, the Chebyshev bound and the final lower bound for $1\le r\le12$ and $d\in\{2,3\}$. It also computes exact integer maximal flows, with \texttt{scipy}, in $300$ random boxes $\{0,\dots,n\}^2\times\{0,\dots,m\}$ with $n\le4$, $m\le3$, and finds in each of them that the maximal flow is at least $a$ times the number of columns whose edges all have capacity at least $a$, together with a control box in which the flow is known exactly.
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 OpenAI GPT models, running as research tasks of that project, proposed the counterexample of Corollary~\ref{cor:adh} with the column argument. In October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked it against the sources, extended it to Theorem~\ref{thm:main}, wrote the computer checks of the repository~\cite{code}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/maxflow-thin-boxes}.
+
+\begin{thebibliography}{9}
+\bibitem{ADH} A.~Auffinger, M.~Damron and J.~Hanson, \emph{50 Years of First-Passage Percolation}, University Lecture Series~68, American Mathematical Society, Providence, RI, 2017; arXiv:1511.03262.
+\bibitem{Ke} H.~Kesten, \emph{Surfaces with minimal random weights and maximal flows: a higher dimensional version of first-passage percolation}, Illinois J.\ Math.\ \textbf{31} (1987), 99--166.
+\bibitem{RT10} R.~Rossignol and M.~Th\'eret, \emph{Lower large deviations and laws of large numbers for maximal flows through a box in first passage percolation}, Ann.\ Inst.\ Henri Poincar\'e Probab.\ Stat.\ \textbf{46} (2010), 1093--1131; arXiv:0801.0967.
+\bibitem{RT18} R.~Rossignol and M.~Th\'eret, \emph{Existence and continuity of the flow constant in first passage percolation}, Electron.\ J.\ Probab.\ \textbf{23} (2018), paper no.~99; arXiv:1707.08766.
+\bibitem{Zh} Y.~Zhang, \emph{Limit theorems for maximum flows on a lattice}, Probab.\ Theory Related Fields \textbf{171} (2018), 149--202; arXiv:0710.4589.
+\bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/maxflow-thin-boxes}.
+\end{thebibliography}
+
+\end{document}
