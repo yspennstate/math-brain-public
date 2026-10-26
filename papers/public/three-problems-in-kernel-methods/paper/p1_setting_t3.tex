@@ -1,0 +1,252 @@
+% ===== Part I, section 1: setting and harmonic preliminaries; section 2: Target 3 =====
+\section{Harmonic preliminaries}\label{sec:prelim}
+
+Throughout, $X,X_1,\dots,X_n$ are independent and uniform on $\Sph$, $d\ge3$, and
+\[
+K(x,y)=\exp\Big(-\frac{\|x-y\|^2}{2h^2}\Big)=e^{-\gamma}e^{\gamma\langle x,y\rangle},\qquad \gamma=h^{-2},
+\]
+with $h>0$ fixed. We write $\mathcal H_{d,s}$ for the space of spherical harmonics of degree $s$ on
+$\Sph$, $N_s=N_{d,s}=\dim\mathcal H_{d,s}$, and $\Pi_s(x,y)=\sum_{a=1}^{N_s}\psi_{s,a}(x)\psi_{s,a}(y)$
+for its reproducing kernel with respect to the uniform probability measure, so that
+$\Pi_s(x,y)=N_sP_s(\langle x,y\rangle)$ with $P_s$ the zonal harmonic normalised by $P_s(1)=1$
+\cite{AtkinsonHan}. The addition theorem gives $\Pi_s(x,x)=N_s$, and orthogonality of distinct degrees
+gives, for every $x,z\in\Sph$,
+\begin{equation}
+\E_Y\big[\Pi_s(x,Y)\Pi_t(Y,z)\big]=\delta_{st}\,\Pi_s(x,z),\qquad \E_Y\Pi_s(x,Y)=0\quad(s\ge1).
+\label{eq:repro}
+\end{equation}
+The Mercer expansion of the kernel is $K(x,y)=\sum_{s\ge0}\lambda_s\Pi_s(x,y)$ with $\lambda_s=\lambda_{d,s}>0$
+\cite{MinhNiyogiYao}; since $K(x,x)=1$, the trace masses $\tau_s=N_s\lambda_s$ satisfy $\sum_s\tau_s=1$.
+For a sample we write $K=(K(X_i,X_j))_{ij}$ for the Gram matrix, $\Pi_s(X,X)=(\Pi_s(X_i,X_j))_{ij}$, and
+$K_s=\lambda_s\Pi_s(X,X)$, so that $K=\sum_sK_s$. Each $\Pi_s(X,X)=\Phi_s\Phi_s^\top$ with
+$\Phi_s=(\psi_{s,a}(X_i))_{i,a}\in\R^{n\times N_s}$, and $\|\Phi_s\|_F^2=\sum_i\Pi_s(X_i,X_i)=nN_s$.
+
+\begin{lemma}[harmonic multiplicities]\label{lem:mult}
+For $d\ge3$ and $s\ge0$,
+\[
+N_{d,s}=\binom{d+s-1}{s}-\binom{d+s-3}{s-2}=\frac{(2s+d-2)\,(s+d-3)!}{s!\,(d-2)!},
+\]
+\[
+\rho_s:=\frac{N_{d,s+1}}{N_{d,s}}=\frac{(d+2s)(d+s-2)}{(s+1)(d+2s-2)} .
+\]
+The ratio $\rho_s$ is at least one and is non-increasing in $s$. For $s\le d$ one has
+$\tfrac34\binom{d+s-1}{s}\le N_{d,s}\le\binom{d+s-1}{s}$, and for $s^2=o(d)$,
+$N_{d,s}=\frac{d^s}{s!}\,e^{O(s^2/d)}$.
+\end{lemma}
+
+\begin{proof}
+The closed forms are classical \cite{AtkinsonHan}. From the product form,
+$\rho_s=\frac{d+s-2}{s+1}\cdot\frac{d+2s}{d+2s-2}$; both factors are non-increasing in $s$, and
+$\frac{d+s-2}{s+1}\ge1$ for $d\ge3$. The ratio of the two binomial coefficients is
+$\frac{s(s-1)}{(d+s-1)(d+s-2)}\le\big(\frac{s}{d+s}\big)^2\le\frac14$ for $s\le d$, which gives the two-sided
+bound. For $s^2=o(d)$, $\binom{d+s-1}{s}=\frac{d^s}{s!}\prod_{j=1}^{s-1}(1+j/d)=\frac{d^s}{s!}e^{O(s^2/d)}$
+and the subtracted term is smaller by the factor $O(s^2/d^2)$.
+\end{proof}
+
+\begin{lemma}[Mercer eigenvalues of the Gaussian kernel]\label{lem:mercer}
+With $(d)_{m}:=d(d+2)\cdots(d+2m-2)$ and $(d)_0=1$,
+\begin{equation}
+\lambda_{d,s}=e^{-\gamma}\sum_{r\ge0}\frac{\gamma^{s+2r}}{2^r\,r!\,(d)_{s+r}}
+=e^{-\gamma}\,\Gamma\!\big(\tfrac d2\big)\Big(\frac2\gamma\Big)^{d/2-1}I_{s+d/2-1}(\gamma),
+\label{eq:mercer}
+\end{equation}
+where $I_\nu$ is the modified Bessel function of the first kind. Consequently, for all $s\ge0$,
+\begin{equation}
+\frac{\lambda_{d,s+1}}{\lambda_{d,s}}\le\frac{\gamma}{d+2s},\qquad
+\lambda_{d,s}\ge\frac{e^{-\gamma}\gamma^s}{(d)_s},\qquad
+\tau_s\le e^{-\gamma}\sum_{m\ge s}\frac{\gamma^m}{m!}.
+\label{eq:mercerbounds}
+\end{equation}
+In particular the eigenvalues are strictly decreasing in $s$ as soon as $d>\gamma$.
+\end{lemma}
+
+\begin{proof}
+Write $K(x,y)=e^{-\gamma}\sum_m\frac{\gamma^m}{m!}\langle x,y\rangle^m$. The Funk--Hecke formula
+\cite{AtkinsonHan} gives the degree-$s$ coefficient of $t\mapsto t^m$ on $\Sph$; equivalently, for
+$G\sim N(0,I_d)$ and the homogeneous harmonic extension $H_s(ru)=r^sY_s(u)$ of $Y_s\in\mathcal H_{d,s}$,
+the identity $\E[H_s(G)e^{t\langle x,G\rangle-t^2/2}]=t^sH_s(x)$ and the comparison of the coefficient of
+$t^{s+2r}$ give $\E[\langle x,G\rangle^{s+2r}H_s(G)]=\frac{(s+2r)!}{2^rr!}H_s(x)$, while
+$\E\|G\|^{2(s+r)}=(d)_{s+r}$. Dividing out the radial moments yields the series in \eqref{eq:mercer};
+the Bessel form is the series $I_\nu(\gamma)=\sum_r\frac{(\gamma/2)^{\nu+2r}}{r!\,\Gamma(\nu+r+1)}$
+\cite[10.25.2]{DLMF} rewritten with $\nu=s+d/2-1$. The first two bounds in \eqref{eq:mercerbounds} are
+termwise: the $r$-th term of $\lambda_{s+1}$ equals $\frac{\gamma}{d+2(s+r)}$ times the $r$-th term of
+$\lambda_s$, and $\frac{\gamma}{d+2(s+r)}\le\frac{\gamma}{d+2s}$; the second is the $r=0$ term. For the
+third, expand $\langle x,y\rangle^m=\sum_{s\le m}c_{m,s}P_s(\langle x,y\rangle)$ with $c_{m,s}\ge0$
+(the Gegenbauer coefficients of a monomial are non-negative) and $\sum_sc_{m,s}=1$ by evaluating at
+$\langle x,y\rangle=1$; hence $\tau_s=e^{-\gamma}\sum_{m\ge s}\frac{\gamma^m}{m!}c_{m,s}\le
+e^{-\gamma}\sum_{m\ge s}\frac{\gamma^m}{m!}$.
+\end{proof}
+
+\begin{lemma}[hypercontractivity at growing degree]\label{lem:hyper}
+For every $Y_s\in\mathcal H_{d,s}$, every $s\ge0$ and every $p\ge2$,
+$\|Y_s\|_{L^p(\Sph)}\le(p-1)^{s/2}\|Y_s\|_{L^2(\Sph)}$. In particular, with $r_s:=\Pi_s/N_s$ and $z\in\Sph$
+fixed, $\|r_s(X,z)\|_{L^{2q}}\le(2q-1)^{s/2}N_s^{-1/2}$ for every $q\ge1$.
+\end{lemma}
+
+\begin{proof}
+Let $G\sim N(0,I_d)$ and $H_s(G)=\|G\|^sY_s(G/\|G\|)$, a homogeneous harmonic polynomial of degree $s$
+and hence an element of the $s$-th Gaussian chaos. Nelson's hypercontractive inequality
+\cite{Nelson,Janson} gives $\|H_s(G)\|_p\le(p-1)^{s/2}\|H_s(G)\|_2$. The radius and the direction of $G$
+are independent, so $\|H_s(G)\|_p=\|\,\|G\|^s\|_p\,\|Y_s\|_{L^p}$ and $\|H_s(G)\|_2=\|\,\|G\|^s\|_2\,\|Y_s\|_{L^2}$,
+and $\|\,\|G\|^s\|_p\ge\|\,\|G\|^s\|_2$ for $p\ge2$. Dividing gives the first claim; the second follows
+from $\|r_s(\cdot,z)\|_{L^2}^2=\Pi_s(z,z)/N_s^2=1/N_s$ by \eqref{eq:repro}.
+\end{proof}
+
+\section{Target 3: the exponential-sample lower bound}\label{sec:proofT3}
+
+Here $n=2^d$, the signal is zero, $Y_i=\varepsilon_i$ with $\varepsilon\sim N(0,\sigma^2I_n)$, and
+$\hat f(x)=k(x)^\top K^{-1}\varepsilon$ is the minimum-RKHS-norm interpolant, $k(x)=(K(x,X_i))_i$. The Gaussian
+kernel is strictly positive definite, so $K$ is invertible almost surely. The excess risk is
+$\mathcal E_{n,d}=\E_{X_0}[\hat f(X_0)^2]$, and we write $V(X)=\E_\varepsilon[\mathcal E_{n,d}\mid X]$.
+
+\begin{theorem}[Target 3]\label{thm:T3}
+For every fixed $h>0$,
+\[
+\liminf_{d\to\infty}\ \frac{\E\,\mathcal E_{2^d,d}}{\sigma^2}\ \ge\ \frac5{36},
+\]
+the expectation being over the design and the noise.
+\end{theorem}
+
+The proof has three steps: an exact reduction of $V(X)$ to the leverage of a block of harmonic degrees,
+a lower bound on the expected leverage of a block, and the location of the last block whose dimension
+does not exceed $n$.
+
+\begin{lemma}[reduction to a block]\label{lem:reduction}
+Let $G=\E_{X_0}[k(X_0)k(X_0)^\top]=\sum_s\lambda_sK_s$, $t_s=\Tr(K^{-1}K_s)$ and $q_s=\Tr(K^{-1}K_sK^{-1})$.
+Then $V(X)/\sigma^2=\Tr(K^{-1}GK^{-1})=\sum_s\lambda_sq_s$, $\sum_st_s=n$, $t_s^2\le nN_s\lambda_sq_s$ for
+every $s$, and for every finite set $B$ of degrees, with $T_B=\sum_{s\in B}t_s$ and $D_B=\sum_{s\in B}N_s$,
+\begin{equation}
+\frac{V(X)}{\sigma^2}\ \ge\ \frac{T_B^2}{nD_B}.
+\label{eq:blockreduction}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$\E_\varepsilon\hat f(x)^2=\sigma^2k(x)^\top K^{-2}k(x)$, so $V(X)/\sigma^2=\Tr(K^{-1}GK^{-1})$, and by
+\eqref{eq:repro},
+\[
+G_{ij}=\sum_{s,t}\lambda_s\lambda_t\,\E_{X_0}\big[\Pi_s(X_i,X_0)\Pi_t(X_0,X_j)\big]=\sum_s\lambda_s^2\Pi_s(X_i,X_j),
+\]
+i.e.\ $G=\sum_s\lambda_sK_s$; hence $V/\sigma^2=\sum_s\lambda_sq_s$, and
+$\sum_st_s=\Tr(K^{-1}K)=n$. Since $K_s=\lambda_s\Phi_s\Phi_s^\top$, we have
+$t_s=\lambda_s\langle K^{-1}\Phi_s,\Phi_s\rangle_F$ and $q_s=\lambda_s\|K^{-1}\Phi_s\|_F^2$, so by
+Cauchy--Schwarz
+\[
+t_s\le\lambda_s\|K^{-1}\Phi_s\|_F\,\|\Phi_s\|_F=\sqrt{\lambda_sq_s}\,\sqrt{nN_s}.
+\]
+Summing over $B$ and applying Cauchy--Schwarz once more,
+$T_B\le\sqrt{nD_B}\big(\sum_{s\in B}\lambda_sq_s\big)^{1/2}\le\sqrt{nD_B\,V(X)/\sigma^2}$.
+\end{proof}
+
+\begin{lemma}[expected leverage of a block]\label{lem:leverage}
+Let $d>\gamma$ and $L\ge0$, and put $D=\sum_{s\le L}N_s$, $\lambda=\lambda_{d,L}$, $\tau_{>L}=\sum_{s>L}\tau_s$
+and $T_{\le L}=\sum_{s\le L}t_s$. Then
+\begin{equation}
+\E\,T_{\le L}\ \ge\ \frac{nD}{D+n-1+\tau_{>L}/\lambda}.
+\label{eq:leverage}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Put $A=\sum_{s\le L}K_s$, $C=K-A=\sum_{s>L}K_s\succeq0$, and $A_w=\lambda\sum_{s\le L}\Pi_s(X,X)$. By
+Lemma~\ref{lem:mercer} the eigenvalues decrease in $s$, so $\lambda_s\ge\lambda$ for $s\le L$ and
+$0\preceq A_w\preceq A$. For $\epsilon>0$ let $K_\epsilon=K+\epsilon I$ and $C_\epsilon=A_w+C+\epsilon I$; then
+$K_\epsilon\succeq C_\epsilon\succ0$, so $K_\epsilon^{-1}\preceq C_\epsilon^{-1}$ by operator monotonicity of the
+inverse. Since $A+C+\epsilon I=K_\epsilon$,
+\[
+\Tr(K_\epsilon^{-1}A)=n-\Tr\big(K_\epsilon^{-1}(C+\epsilon I)\big)\ \ge\ n-\Tr\big(C_\epsilon^{-1}(C+\epsilon I)\big)
+=\Tr(C_\epsilon^{-1}A_w),
+\]
+where the inequality uses $C+\epsilon I\succeq0$. Cauchy--Schwarz for the Hilbert--Schmidt inner product,
+applied to $C_\epsilon^{-1/2}A_w^{1/2}$ and $C_\epsilon^{1/2}A_w^{1/2}$, gives
+$(\Tr A_w)^2\le\Tr(C_\epsilon^{-1}A_w)\Tr(C_\epsilon A_w)$. By the addition theorem $\Tr A_w=n\lambda D$
+pathwise. Letting $\epsilon\downarrow0$ (the Gram matrix is invertible almost surely),
+\begin{equation}
+T_{\le L}=\Tr(K^{-1}A)\ \ge\ \frac{(n\lambda D)^2}{\Tr(A_w^2)+\Tr(CA_w)}.
+\label{eq:pathwise}
+\end{equation}
+The denominator has exact expectations. By \eqref{eq:repro}, for independent $X,Y$,
+$\E[\Pi_{\le L}(X,Y)^2]=\sum_{s\le L}\E_Y\Pi_s(X,Y)^2=\sum_{s\le L}\Pi_s(X,X)=D$ where
+$\Pi_{\le L}=\sum_{s\le L}\Pi_s$, while $\Pi_{\le L}(X,X)=D$; hence
+$\E\Tr(A_w^2)=\lambda^2\big(nD^2+n(n-1)D\big)$. Likewise $\E[C(X,Y)A_w(X,Y)]=0$ for $X\ne Y$ because the
+two kernels expand over disjoint sets of degrees, while $C(X,X)=\tau_{>L}$ and $A_w(X,X)=\lambda D$; hence
+$\E\Tr(CA_w)=n\tau_{>L}\lambda D$. No independence between $C$ and $A_w$ is used here: both are functions of
+the same design, and the off-diagonal expectation vanishes by orthogonality alone. Since $z\mapsto1/z$ is
+convex on $(0,\infty)$, Jensen's inequality applied to \eqref{eq:pathwise} gives
+\[
+\E\,T_{\le L}\ \ge\ \frac{(n\lambda D)^2}{\lambda^2(nD^2+n(n-1)D)+n\tau_{>L}\lambda D}
+=\frac{nD}{D+n-1+\tau_{>L}/\lambda}. \qedhere
+\]
+\end{proof}
+
+\begin{lemma}[the last subcritical block]\label{lem:window}
+Let $n=2^d$ and $L_-=L_-(d)=\max\{L:\sum_{s\le L}N_{d,s}\le n\}$, $D_-=\sum_{s\le L_-}N_{d,s}$ and
+$y_d=D_-/n\in(0,1]$. Let $c_*\in(0,1)$ be the root of $H(c)=\log2$, where
+$H(c)=(1+c)\log(1+c)-c\log c$. Then $L_-/d\to c_*$, $c_*>1/4$, and
+\begin{equation}
+\liminf_{d\to\infty}y_d\ \ge\ \frac{c_*}{1+c_*}\ >\ \frac15,
+\qquad
+\frac{\tau_{>L_-}}{n\,\lambda_{d,L_-}}\ \longrightarrow\ 0 .
+\label{eq:lastblock}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$H$ is continuous and strictly increasing on $(0,\infty)$ ($H'(c)=\log\frac{1+c}c>0$), with $H(0^+)=0$ and
+$H(1/4)=\frac54\log5-2\log2<\log2$ (numerically $0.6255<0.6931$), so $c_*$ exists and $c_*>1/4$.
+By Stirling's formula, $\frac1d\log\binom{d+cd}{cd}\to H(c)$ uniformly for $c$ in compact subsets of
+$(0,\infty)$. Fix $c<c_*$: by Lemma~\ref{lem:mult}, $\sum_{s\le cd}N_{d,s}\le(cd+1)\binom{d+cd}{cd}
+=e^{d(H(c)+o(1))}<2^d$ for large $d$, so $L_-\ge cd$. Fix $c\in(c_*,1)$: $N_{d,cd}\ge\frac34\binom{d+cd-1}{cd}
+=e^{d(H(c)+o(1))}>2^d$ for large $d$, so $L_-<cd$. Hence $L_-/d\to c_*$, and by Lemma~\ref{lem:mult}
+$\rho_{L_-}=\frac{(d+2L_-)(d+L_--2)}{(L_-+1)(d+2L_--2)}\to\frac{1+c_*}{c_*}=:r_*$, with $r_*<5$ because
+$c_*>1/4$.
+
+For the first claim in \eqref{eq:lastblock}: $n<D_-+N_{L_-+1}$ by maximality of $L_-$, so
+$y_d>\big(1+N_{L_-+1}/D_-\big)^{-1}$. Fix an integer $J$. For $1\le j\le J$ and $d$ large,
+$\rho_{L_--j}=\rho_{L_-}\prod_{i=1}^{j}\frac{\rho_{L_--i}}{\rho_{L_--i+1}}\le\rho_{L_-}(1+1/(L_--J))^{2J}$,
+because, from the product form of $\rho_s$ in Lemma~\ref{lem:mult},
+$\frac{\rho_{s-1}}{\rho_s}=\frac{d+s-3}{d+s-2}\cdot\frac{s+1}{s}\cdot\frac{(d+2s-2)^2}{(d+2s)(d+2s-4)}
+\le\big(1+\tfrac1s\big)\big(1+\tfrac{4}{(d+2s)(d+2s-4)}\big)\le\big(1+\tfrac1s\big)^2$ for $s\ge2$.
+Writing $\bar\rho=\rho_{L_-}(1+1/(L_--J))^{2J}$,
+$D_-\ge\sum_{j=0}^{J}N_{L_--j}\ge N_{L_-}\sum_{j=0}^{J}\bar\rho^{-j}$, while $N_{L_-+1}=\rho_{L_-}N_{L_-}$.
+Since $L_-\to\infty$, $\bar\rho\to r_*$, and therefore
+$\liminf_dy_d\ge\big(1+r_*\big/\textstyle\sum_{j=0}^J r_*^{-j}\big)^{-1}$ for every $J$; letting
+$J\to\infty$, $\liminf_dy_d\ge\big(1+r_*(1-1/r_*)\big)^{-1}=1/r_*=c_*/(1+c_*)>1/5$.
+
+For the second claim, by Lemma~\ref{lem:mult}, for $s\ge L_-\ge d/10$ (large $d$),
+$\rho_s\le2\,\frac{d+s-2}{s+1}\le22$, and by Lemma~\ref{lem:mercer}, $\lambda_{s+1}/\lambda_s\le\gamma/d$.
+Hence for $j\ge1$, with $L=L_-$,
+$\frac{\tau_{L+j}}{n\lambda_L}=\frac{N_{L+j}}{n}\cdot\frac{\lambda_{L+j}}{\lambda_L}
+\le\frac{N_L}{n}\,(22\gamma/d)^j\le(22\gamma/d)^j$, using $N_L\le D_-\le n$. Summing over $j\ge1$ gives
+$\tau_{>L}/(n\lambda_L)\le 44\gamma/d$ for $d>44\gamma$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:T3}]
+Since $\gamma=h^{-2}$ is fixed, $d>\gamma$ for all large $d$, so Lemmas~\ref{lem:mercer}
+and~\ref{lem:leverage} apply. Take $B=\{0,\dots,L_-\}$ in Lemma~\ref{lem:reduction}, so $D_B=D_-$ and
+$T_B=T_{\le L_-}$. Taking
+expectations in \eqref{eq:blockreduction} and applying Jensen's inequality, $\E[T^2]\ge(\E T)^2$, then
+Lemma~\ref{lem:leverage},
+\[
+\frac{\E\,\mathcal E_{2^d,d}}{\sigma^2}=\E\frac{V(X)}{\sigma^2}\ \ge\ \frac{(\E T_{\le L_-})^2}{nD_-}
+\ \ge\ \frac{nD_-}{\big(D_-+n-1+\tau_{>L_-}/\lambda_{d,L_-}\big)^2}
+=\frac{y_d}{\big(1+y_d-\tfrac1n+\eta_d\big)^2},
+\]
+with $\eta_d=\tau_{>L_-}/(n\lambda_{d,L_-})\to0$ by Lemma~\ref{lem:window}. The function
+$g(y)=y/(1+y)^2$ is increasing on $(0,1]$, since $g'(y)=(1-y)/(1+y)^3\ge0$. Given $\epsilon>0$,
+Lemma~\ref{lem:window} gives $y_d\ge\frac15-\epsilon$ for all large $d$, and $y_d\le1$ always, so for large
+$d$ the right side is at least $g(\tfrac15-\epsilon)-o(1)$. Letting $d\to\infty$ and then $\epsilon\to0$,
+$\liminf_d\E\,\mathcal E_{2^d,d}/\sigma^2\ge g(1/5)=\frac{1/5}{(6/5)^2}=\frac5{36}$.
+\end{proof}
+
+\begin{remark}\label{rem:sharper}
+The argument gives more than the stated constant. Lemma~\ref{lem:window} shows $\liminf y_d\ge1/r_*$
+with $1/r_*=c_*/(1+c_*)=0.2271\ldots$, so the same proof yields the constant $g(1/r_*)=0.1509\ldots$;
+the constant $5/36$ is the value at the round number $1/5$. The bound is an expectation statement from
+start to finish: no concentration of the leverage is used, and none is needed. The certificate that the
+proof evaluates, $(T_{\le L}/n)^2/(D_{\le L}/n)$, and the block dimension ratio $D_{\le L}/n$ are exactly the
+quantities measured in Section~\ref{sec:t3}, where the one-window bound is compared with the realised
+$V(X)/\sigma^2$ at $d\le13$. Running the same argument over several blocks simultaneously improves the
+constant; the ten-window certificate $c_{10}=3882594969529/12500000000000=0.3106\ldots$ obtained in
+\cite{PN24} is the value against which the measurements of Section~\ref{sec:t3} are also reported.
+\end{remark}

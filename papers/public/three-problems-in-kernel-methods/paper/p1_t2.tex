@@ -1,0 +1,276 @@
+% ===== Part I, section 3: Target 2 =====
+\section{Target 2: benign overfitting along a doubly exponential sequence}\label{sec:proofT2}
+
+Here $\ell\ge1$ is the level, $R=2^\ell$, $d=2^R$ and $n=d^R$, so that $d_\ell=2^{2^\ell}$ and
+$n_\ell=2^{2^{2\ell}}$. The labels are $Y_i=f_d(X_i)+\varepsilon_i$ with $\varepsilon\sim N(0,\sigma^2I_n)$
+independent of the design, where $f_d\in\bigoplus_{s\le q_0}\mathcal H_{d,s}$ for a degree bound $q_0$ that
+does not depend on $\ell$, and $\|f_d\|_{L^2(\Sph)}\le B$. Let $\hat f$ be the interpolant of the data of
+minimal norm in the reproducing kernel Hilbert space $\mathcal H_K$ of $K$, and
+\[
+\mathcal R_\ell=\|\hat f-f_d\|_{L^2(\Sph)}^2=\E_{X_0}\big[(\hat f(X_0)-f_d(X_0))^2\,\big|\,X,\varepsilon\big].
+\]
+
+\begin{theorem}[Target 2]\label{thm:T2}
+For every fixed $h>0$, $q_0$, $B$ and $\sigma$, and every $\epsilon>0$, $\sum_\ell\Pr\{\mathcal R_\ell>\epsilon\}<\infty$.
+In particular $\mathcal R_\ell\to0$ in probability, and almost surely along the sequence under any coupling of
+the levels.
+\end{theorem}
+
+The critical degree is $k=R+\ell-1$; degrees $s<k$ form the low block, of dimension
+$D=D_{<k}=\sum_{s<k}N_s$, and degrees $s\ge k$ form the tail. We write $\delta_*=\frac1{\log2}-1=0.4426\ldots$,
+and throughout ``for large $\ell$'' means for all $\ell$ beyond a threshold depending only on $\gamma$.
+
+\begin{lemma}[scales at the critical degree]\label{lem:scales}
+As $\ell\to\infty$,
+\[
+\frac{N_k}{n}=d^{\,\delta_*+o(1)},\qquad \frac{D}{n}=d^{-(1-\delta_*)+o(1)},
+\]
+while $\log n=R^2\log2$, $n^{1/R}=d$, and $N_s$ is non-decreasing in $s$.
+\end{lemma}
+
+\begin{proof}
+Since $k^2=O(R^2)=o(d)$, Lemma~\ref{lem:mult} gives $\log N_k=k\log d-\log k!+o(1)$. With
+$\log d=R\log2$, $\ell=\log_2R$ and Stirling's formula $\log k!=k\log k-k+O(\log k)$,
+\[
+\begin{aligned}
+\log\frac{N_k}{n}&=(\ell-1)R\log2-(R+\ell-1)\log(R+\ell-1)+(R+\ell-1)+O(\log R)\\
+&=R(1-\log2)-(\ell-1)\log R+O(\ell),
+\end{aligned}
+\]
+because $(\ell-1)\log2=\log(R/2)$ and $\log(R+\ell-1)=\log R+O(\ell/R)$. Dividing by $\log d=R\log2$
+gives $\log(N_k/n)/\log d\to(1-\log2)/\log2=\delta_*$. For the low block, Lemma~\ref{lem:mult} gives
+$1/\rho_s\le\frac{s+1}{d+s-2}\le\frac{2k}{d}$ for $s<k$ and $d\ge4k$, hence $N_{k-j}\le N_k(2k/d)^j$ and
+$D\le N_k\sum_{j\ge1}(2k/d)^j\le4kN_k/d$, so $D/n\le d^{\delta_*-1+o(1)}$; the matching lower bound
+$D\ge N_{k-1}\ge N_k\,d^{-1+o(1)}$ follows from $\rho_{k-1}\le\frac{d+2k}{k}\cdot\frac{d+k}{d+2k-2}\le d^{1+o(1)}$.
+The identities for $\log n$ and $n^{1/R}$ are immediate from $n=d^R$, $d=2^R$, and monotonicity of $N_s$
+is $\rho_s\ge1$ in Lemma~\ref{lem:mult}.
+\end{proof}
+
+\begin{lemma}[the tail kernel]\label{lem:tail}
+Let $\tau=\sum_{s\ge k}\tau_s$, $w_s=\tau_s/\tau$ for $s\ge k$, $K_T=\sum_{s\ge k}\lambda_s\Pi_s$ and
+$r_T=K_T/\tau=\sum_{s\ge k}w_sr_s$ with $r_s=\Pi_s/N_s$. Then $r_T(x,x)=1$, $\E_Yr_T(x,Y)=0$, and for large $\ell$:
+\begin{enumerate}
+\item[\textup{(i)}] $\tau_{k+r}/\tau_k\le2e^{\gamma}\gamma^rk!/(k+r)!$ for all $r\ge0$; hence $1-w_k\le4e^\gamma\gamma/(k+1)$;
+\item[\textup{(ii)}] for every $z\in\Sph$ and $1\le q\le R$, $\ \|r_T(X,z)\|_{L^{2q}}\le4e^{\gamma}(2q-1)^{k/2}N_k^{-1/2}$;
+\item[\textup{(iii)}] $\E\,r_T(X,z)^2=\sum_{s\ge k}w_s^2/N_s\in\big[w_k^2/N_k,\,1/N_k\big]$, so $\E\,r_T(X,z)^2=(1+o(1))/N_k$;
+\item[\textup{(iv)}] with $G_T=(\E_z[r_T(X_i,z)r_T(z,X_j)])_{ij}$ and $R_T=(r_T(X_i,X_j))_{ij}$,
+$\ 0\preceq G_T\preceq N_k^{-1}R_T$ and $(G_T)_{jj}\le1/N_k$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+$r_T(x,x)=\sum w_s=1$ and $\E_Yr_T(x,Y)=0$ follow from \eqref{eq:repro} since every tail degree is positive.
+(i) By \eqref{eq:mercerbounds}, $\tau_{k+r}\le e^{-\gamma}\sum_{m\ge k+r}\gamma^m/m!\le\gamma^{k+r}/(k+r)!$,
+while $\tau_k=N_k\lambda_k\ge N_ke^{-\gamma}\gamma^k/(d)_k\ge\frac12e^{-\gamma}\gamma^k/k!$ for large $\ell$, because
+$N_kk!/(d)_k=e^{O(k^2/d)}\prod_{j<k}(1+2j/d)^{-1}\to1$ by Lemma~\ref{lem:mult}. The bound on $1-w_k$
+follows from $\sum_{r\ge1}\gamma^rk!/(k+r)!\le\sum_{r\ge1}(\gamma/(k+1))^r\le2\gamma/(k+1)$.
+(ii) By the triangle inequality, Lemma~\ref{lem:hyper}, monotonicity of $N_s$ and $w_{k+r}\le\tau_{k+r}/\tau_k$,
+\[
+\|r_T(X,z)\|_{2q}\le\sum_{r\ge0}w_{k+r}\frac{(2q-1)^{(k+r)/2}}{\sqrt{N_{k+r}}}
+\le\frac{(2q-1)^{k/2}}{\sqrt{N_k}}\,2e^{\gamma}\sum_{r\ge0}\Big(\frac{\gamma\sqrt{2q-1}}{k+1}\Big)^r
+\le\frac{4e^{\gamma}(2q-1)^{k/2}}{\sqrt{N_k}},
+\]
+since $\gamma\sqrt{2R}/(k+1)\le1/2$ for large $\ell$. (iii) By \eqref{eq:repro}, $\E[r_s(X,z)r_t(X,z)]=\delta_{st}/N_s$;
+the bounds use $\sum_sw_s^2\le(\sum_sw_s)^2=1$ and $N_s\ge N_k$. (iv) By \eqref{eq:repro},
+$\E_z[r_s(X_i,z)r_t(z,X_j)]=\delta_{st}r_s(X_i,X_j)/N_s$, so $G_T=\sum_{s\ge k}(w_s/N_s)\,w_sr_s(X,X)$; each
+$w_sr_s(X,X)$ is positive semidefinite and $w_s/N_s\le1/N_k$, which gives both claims.
+\end{proof}
+
+\begin{lemma}[the row-square statistic]\label{lem:rowsquare}
+Let $\widetilde X$ be an independent copy of the design and, for $1\le j\le n$,
+$S_j=\sum_{i\ne j}r_T(X_i,\widetilde X_j)^2$. Then for large $\ell$,
+\[
+\E\max_{1\le j\le n}S_j\ \le\ (1+o(1))\,\frac{n}{N_k}.
+\]
+\end{lemma}
+
+\begin{proof}
+Fix $z\in\Sph$ and put $Y_i=r_T(X_i,z)^2-\E r_T(X_i,z)^2$, independent, centred, and identically distributed.
+Rosenthal's inequality with the constant of Johnson, Schechtman and Zinn \cite{Rosenthal,JSZ} gives, for $q\ge2$,
+$\|\sum_{i\ne j}Y_i\|_q\le C_0q\big(\sqrt n\,\|Y_1\|_2+n^{1/q}\|Y_1\|_q\big)$ with an absolute constant $C_0$.
+Take $q=R$. By Lemma~\ref{lem:tail}(ii) with $q=2$ and $q=R$, $\|Y_1\|_2\le\|r_T\|_4^2\le C_\gamma3^k/N_k$ and
+$\|Y_1\|_R\le2\|r_T\|_{2R}^2\le C_\gamma(2R)^k/N_k$, and $n^{1/R}=d$. The bounds do not depend on $z$, so
+\[
+\E\max_j\big|S_j-\E S_j\big|\le\Big(\sum_j\E|S_j-\E S_j|^R\Big)^{1/R}\le n^{1/R}\sup_z\big\|\textstyle\sum_{i\ne j}Y_i\big\|_R
+\le C_\gamma\,dR\Big(\frac{\sqrt n\,3^k}{N_k}+\frac{d\,(2R)^k}{N_k}\Big).
+\]
+Relative to $\E S_j\le n/N_k$, the two terms are $dR3^k/\sqrt n$ and $Rd^2(2R)^k/n$. In base $d$, using
+$k=R+\ell-1$, $\log d=R\log2$ and $2R=2^{\ell+1}$: $3^k=d^{(\log_23)(1+(\ell-1)/R)}$ and
+$(2R)^k=d^{(\ell+1)(1+(\ell-1)/R)}$, so the two ratios are $R\,d^{\,1+\log_23+o(1)-R/2}$ and
+$R\,d^{\,3+\ell+o(\ell)-R}$, both of which tend to zero because $R=2^\ell$. Since $\E S_j=(n-1)\E r_T(X,z)^2\le n/N_k$
+by Lemma~\ref{lem:tail}(iii), the claim follows.
+\end{proof}
+
+\begin{proposition}[isotropy of the tail Gram matrix]\label{prop:isotropy}
+Let $R_T=(r_T(X_i,X_j))_{ij}$ and $A_d=\E\|R_T-I\|_{\mathrm{op}}$. Then $A_d\to0$; more precisely, for every fixed
+$\eta<\delta_*$ and large $\ell$, $A_d\le C_{\gamma,\eta}R^2d^{-\eta/2}$.
+\end{proposition}
+
+The proof follows the method of Kaushik, Romberg and Muthukumar \cite{KRM}: decoupling, then the
+noncommutative Khintchine inequality. It is written out because the quantity that must be controlled at
+the growing degree $k$ is the row-square statistic of Lemma~\ref{lem:rowsquare}, and the maximum-entry
+relaxation of that statistic which appears in the statement of \cite[Theorem~1]{KRM} is too large here by a
+factor of order $d^{\ell}$.
+
+\begin{proof}
+Since $r_T(x,x)=1$, $\Delta:=R_T-I=\sum_{i\ne j}r_T(X_i,X_j)e_ie_j^\top$ is a matrix-valued $U$-statistic of
+order two. By the decoupling inequality for $U$-statistics with values in a Banach space
+\cite{dlPMS,dlPG}, applied to the convex function $\|\cdot\|_{\mathrm{op}}$, there is an absolute constant $C_1$ with
+\[
+\E\|\Delta\|\le C_1\E\|\widetilde\Delta\|,\qquad
+\widetilde\Delta=\sum_{i\ne j}r_T(X_i,\widetilde X_j)e_ie_j^\top=\sum_{j=1}^nc_je_j^\top,
+\qquad c_j=\big(r_T(X_i,\widetilde X_j)\mathbf 1_{\{i\ne j\}}\big)_{i\le n},
+\]
+where $\widetilde X$ is an independent copy of $X$. Condition on $X$. The columns $c_1,\dots,c_n$ are then
+independent (each is a function of its own $\widetilde X_j$) and centred, by Lemma~\ref{lem:tail}. Moreover
+$\E[c_jc_j^\top\mid X]=P_jG_TP_j=:M_j$ with $P_j=I-e_je_j^\top$ and $G_T$ as in Lemma~\ref{lem:tail}(iv);
+hence $\|M_j\|\le\|G_T\|$ and
+\begin{equation}
+\Big\|\sum_jM_j\Big\|=\big\|(n-2)G_T+\mathrm{diag}(G_T)\big\|\le n\|G_T\|+\frac1{N_k},
+\qquad \Big\|\sum_jM_j^2\Big\|\le n\|G_T\|^2 .
+\label{eq:Mj}
+\end{equation}
+All expectations below are conditional on $X$ unless stated otherwise. Write $\|c_j\|^2=S_j$ as in
+Lemma~\ref{lem:rowsquare}, $m_2=\E\max_jS_j$, and $U=\E\|\sum_jc_jc_j^\top\|$; thus $m_2$ and $U$ are
+$X$-measurable random variables, and it is their $X$-expectations that enter at the end of the proof, where
+Lemma~\ref{lem:rowsquare} bounds $\E m_2$.
+
+\emph{First application of Khintchine.} By symmetrisation \cite[Lemma~6.3]{LedouxTalagrand} and the matrix
+Khintchine inequality for Rademacher series \cite[Theorem~4.1.1]{Tropp15}, applied to the $n\times n$ matrices
+$c_je_j^\top$, for which
+\[
+\sum_j(c_je_j^\top)(c_je_j^\top)^\top=\sum_jc_jc_j^\top,\qquad
+\sum_j(c_je_j^\top)^\top(c_je_j^\top)=\mathrm{diag}(S_1,\dots,S_n),
+\]
+we get
+\begin{equation}
+\E\|\widetilde\Delta\|\le2\sqrt{2\log(2n)}\ \E\max\Big(\big\|\textstyle\sum_jc_jc_j^\top\big\|^{1/2},\ \max_j\sqrt{S_j}\Big)
+\le2\sqrt{2\log(2n)}\,\big(\sqrt U+\sqrt{m_2}\big),
+\label{eq:K1}
+\end{equation}
+by Jensen's inequality.
+
+\emph{Second application.} The matrices $Z_j=c_jc_j^\top-M_j$ are independent, centred and symmetric, so by
+the same two inequalities, $\E\|\sum_jZ_j\|\le2\sqrt{2\log(2n)}\,\E\|\sum_jZ_j^2\|^{1/2}$. Since
+$Z_j^2\preceq2(c_jc_j^\top)^2+2M_j^2=2S_jc_jc_j^\top+2M_j^2$, \eqref{eq:Mj} gives
+$\|\sum_jZ_j^2\|\le2\max_jS_j\,\|\sum_jc_jc_j^\top\|+2n\|G_T\|^2$, and therefore, by Cauchy--Schwarz,
+\[
+U\le\Big\|\sum_jM_j\Big\|+\E\Big\|\sum_jZ_j\Big\|
+\le n\|G_T\|+\frac1{N_k}+4\sqrt{\log(2n)}\Big(\sqrt{m_2U}+\sqrt n\,\|G_T\|\Big).
+\]
+Using $4\sqrt{\log(2n)}\sqrt{m_2U}\le U/2+8\log(2n)\,m_2$ and rearranging,
+\begin{equation}
+U\le2n\|G_T\|\Big(1+4\sqrt{\tfrac{\log(2n)}{n}}\Big)+\frac2{N_k}+16\log(2n)\,m_2 .
+\label{eq:U}
+\end{equation}
+
+\emph{Closing the recurrence.} Take expectations over $X$. By Lemma~\ref{lem:tail}(iv),
+$\E\|G_T\|\le\E\|R_T\|/N_k\le(1+A_d)/N_k$, and by Lemma~\ref{lem:rowsquare}, $\E m_2\le(1+o(1))n/N_k$.
+Inserting \eqref{eq:U} into \eqref{eq:K1} (with $\E\sqrt U\le\sqrt{\E U}$) and then into the decoupling bound,
+\[
+A_d\le C\sqrt{\log n}\Big(\sqrt{\frac{n(1+A_d)}{N_k}}+\sqrt{\frac{\log n\ n}{N_k}}\Big)
+\le C\sqrt{\frac{n\log n}{N_k}}\,\big(\sqrt{1+A_d}+\sqrt{\log n}\big)
+\]
+for large $\ell$, with $C$ absolute. Put $\epsilon_d=n\log n/N_k$; by Lemma~\ref{lem:scales},
+$\epsilon_d\log n=d^{-\delta_*+o(1)}R^4\log^22\to0$. If $A_d\ge1$ the inequality gives
+\[
+\sqrt{A_d}\le C\sqrt{\epsilon_d}\Big(\sqrt2+\frac{\sqrt{\log n}}{\sqrt{A_d}}\Big)\le C\sqrt{\epsilon_d}\big(\sqrt2+\sqrt{\log n}\big),
+\]
+which is smaller than one for large $\ell$, a contradiction; so $A_d<1$ for large $\ell$, and then
+\[
+A_d\le C\sqrt{\epsilon_d}\big(\sqrt2+\sqrt{\log n}\big)\le C'\sqrt{\epsilon_d\log n}=C'R^2d^{-\delta_*/2+o(1)},
+\]
+which is at most $C_{\gamma,\eta}R^2d^{-\eta/2}$ for every fixed $\eta<\delta_*$.
+\end{proof}
+
+\begin{lemma}[the interpolant through the low block]\label{lem:lowblock}
+Let $\Psi\in\R^{n\times D}$ be the matrix of an $L^2$-orthonormal basis of $\bigoplus_{s<k}\mathcal H_{d,s}$
+evaluated at the design, $\Lambda$ the diagonal matrix of the corresponding eigenvalues $\lambda_s$, and
+$T=(K_T(X_i,X_j))_{ij}=\tau R_T$. Let $E_1=\{\|\Psi^\top\Psi/n-I_D\|\le1/2\}$ and $E_2=\{\|R_T-I\|\le1/2\}$. Then
+$\Pr(E_1^c)\le2De^{-n/(10D)}$ and $\Pr(E_2^c)\le2A_d$. On $E_1\cap E_2$ the minimal-norm interpolant is
+$\hat f=\Psi(\cdot)^\top\hat a+k_T(\cdot)^\top T^{-1}(y-\Psi\hat a)$ with $k_T(x)=(K_T(x,X_i))_i$ and
+\begin{equation}
+\hat a=G_0^{-1}\Psi^\top Wy,\qquad W=\tau T^{-1},\qquad G_0=\tau\Lambda^{-1}+\Psi^\top W\Psi,\qquad
+\tfrac23I\preceq W\preceq2I,\qquad \|G_0^{-1}\|\le\frac3n .
+\label{eq:normal}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The rows $\Psi(X_i)$ are independent, and by \eqref{eq:repro}
+\[
+\|\Psi(X_i)\|^2=\sum_{s<k}\Pi_s(X_i,X_i)=D,\qquad \E\,\Psi(X_i)\Psi(X_i)^\top=I_D .
+\]
+The matrix Chernoff inequality of Tropp \cite[Theorem~1.1]{Tropp12}, at deviation $1/2$, gives
+\[
+\Pr(E_1^c)\le D\big(e^{-1/2}\sqrt2\big)^{n/D}+D\big(e^{1/2}(3/2)^{-3/2}\big)^{n/D}\le2De^{-n/(10D)} .
+\]
+Markov's inequality gives $\Pr(E_2^c)\le2A_d$. The RKHS $\mathcal H_K$ is the orthogonal sum of
+$\mathcal H_{\rm low}=\bigoplus_{s<k}\mathcal H_{d,s}$ with norm $\|\Psi(\cdot)^\top a\|^2_{\mathcal H_K}=a^\top\Lambda^{-1}a$
+and of the tail space $\mathcal H_T$ with kernel $K_T$. For fixed low coefficients $a$, the tail function of
+minimal norm interpolating $y-\Psi a$ at the design is $k_T(\cdot)^\top T^{-1}(y-\Psi a)$, of squared norm
+$(y-\Psi a)^\top T^{-1}(y-\Psi a)$ ($T$ is invertible on $E_2$). The minimal-norm interpolant therefore
+minimises $J(a)=a^\top\Lambda^{-1}a+(y-\Psi a)^\top T^{-1}(y-\Psi a)$, a strictly convex quadratic whose
+stationarity condition is $(\Lambda^{-1}+\Psi^\top T^{-1}\Psi)a=\Psi^\top T^{-1}y$; multiplying by $\tau$ gives
+\eqref{eq:normal}. On $E_2$, $\tfrac12I\preceq T/\tau\preceq\tfrac32I$, hence $\tfrac23I\preceq W\preceq2I$; on
+$E_1\cap E_2$, $\Psi^\top W\Psi\succeq\tfrac23\cdot\tfrac n2I=\tfrac n3I$, so $G_0\succeq\tfrac n3I$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:T2}]
+Take $\ell$ large enough that $q_0<k$ and write $f_d=\Psi(\cdot)^\top\theta$ with $\|\theta\|=\|f_d\|_{L^2}\le B$
+and $\theta$ supported on degrees $\le q_0$. Work on $E_1\cap E_2$. Since low and tail functions are
+orthogonal in $L^2(\Sph)$ and $\|\Psi(\cdot)^\top a\|_{L^2}=\|a\|$,
+\[
+\mathcal R_\ell=\|\hat a-\theta\|^2+\|f_T\|_{L^2}^2,\qquad f_T=k_T(\cdot)^\top T^{-1}r,\qquad r=y-\Psi\hat a .
+\]
+\emph{The low coefficients.} With $y=\Psi\theta+\varepsilon$ and \eqref{eq:normal},
+$\hat a-\theta=-\tau G_0^{-1}\Lambda^{-1}\theta+G_0^{-1}\Psi^\top W\varepsilon$. For the first term, $\tau\le1$ and, by
+\eqref{eq:mercerbounds}, $\lambda_{d,s}\ge e^{-\gamma}\gamma^{s}/(d)_s\ge c_{\gamma,q_0}d^{-q_0}$ for $s\le q_0$, so
+$\|\tau G_0^{-1}\Lambda^{-1}\theta\|\le\frac3n\cdot\frac{B}{c_{\gamma,q_0}}\,d^{q_0}$. For the second,
+$\E_\varepsilon\|G_0^{-1}\Psi^\top W\varepsilon\|^2=\sigma^2\Tr\big(G_0^{-1}\Psi^\top W^2\Psi G_0^{-1}\big)
+\le\sigma^2\|G_0^{-1}\|^2\|W\|^2\Tr(\Psi^\top\Psi)\le\sigma^2\cdot\frac9{n^2}\cdot4\cdot nD=\frac{36\sigma^2D}n$.
+Hence
+\begin{equation}
+\E_\varepsilon\|\hat a-\theta\|^2\le C_{\gamma,q_0}\frac{B^2d^{2q_0}}{n^2}+\frac{72\sigma^2D}{n}.
+\label{eq:lowrisk}
+\end{equation}
+\emph{The tail function.} By \eqref{eq:repro}, $\|f_T\|_{L^2}^2=r^\top T^{-1}H_TT^{-1}r$ with
+\[
+H_T=\E_{X_0}\big[k_T(X_0)k_T(X_0)^\top\big]=\sum_{s\ge k}\lambda_s^2\Pi_s(X,X)\preceq\lambda_kT,
+\]
+because $\lambda_s\le\lambda_k$ for $s\ge k$ (Lemma~\ref{lem:mercer}). On $E_2$, $T\succeq\tfrac\tau2I$, so
+\[
+\|f_T\|_{L^2}^2\le\lambda_k\,r^\top T^{-1}r\le\frac{2\lambda_k}{\tau}\|r\|^2\le\frac2{N_k}\|r\|^2,
+\]
+using $\lambda_k/\tau\le\lambda_kN_k/(\tau_kN_k)\le1/N_k$. Since $r=\Psi(\theta-\hat a)+\varepsilon$ and $\|\Psi\|^2\le\tfrac32n$
+on $E_1$, $\|r\|^2\le3n\|\theta-\hat a\|^2+2\|\varepsilon\|^2$, and with \eqref{eq:lowrisk},
+\[
+\E_\varepsilon\|f_T\|_{L^2}^2\le\frac{6n}{N_k}\Big(C_{\gamma,q_0}\frac{B^2d^{2q_0}}{n^2}+\frac{72\sigma^2D}n\Big)+\frac{4n\sigma^2}{N_k}.
+\]
+\emph{The conditional risk bound.} Combining the two displays, on $E_1\cap E_2$,
+\begin{equation}
+\E_\varepsilon[\mathcal R_\ell\mid X]\le C_{\gamma,q_0}\Big[\sigma^2\Big(\frac Dn+\frac n{N_k}\Big)+B^2\Big(\frac{d^{2q_0}}{n^2}+\frac{d^{2q_0}}{nN_k}\Big)\Big]
+=C_{\gamma,q_0,B,\sigma}\,d^{-\delta_*+o(1)},
+\label{eq:riskbound}
+\end{equation}
+where the last step is Lemma~\ref{lem:scales}: $n/N_k=d^{-\delta_*+o(1)}$ is the slowest term, since
+$D/n=d^{-(1-\delta_*)+o(1)}$ with $1-\delta_*>\delta_*$, and $d^{2q_0}/n=d^{2q_0-R}$.
+
+\emph{Conclusion.} By Markov's inequality in the noise, $\Pr\{\mathcal R_\ell>\epsilon\mid X\}\le\epsilon^{-1}\E_\varepsilon[\mathcal R_\ell\mid X]$
+on $E_1\cap E_2$, so by Lemma~\ref{lem:lowblock} and Proposition~\ref{prop:isotropy},
+\[
+\Pr\{\mathcal R_\ell>\epsilon\}\le2De^{-n/(10D)}+2C_{\gamma,\eta}R^2d^{-\eta/2}+\frac{C_{\gamma,q_0,B,\sigma}}{\epsilon}\,d^{-\delta_*+o(1)} .
+\]
+Every term is summable in $\ell$ because $d=d_\ell=2^{2^\ell}$ and $n/D\ge d^{1-\delta_*+o(1)}$. This proves
+the summability claim; convergence in probability follows, and the first Borel--Cantelli lemma gives
+$\mathcal R_\ell\to0$ almost surely whatever the joint law of the levels, since only the marginal tail
+probabilities enter.
+\end{proof}
+
+\begin{remark}\label{rem:T2numerics}
+The mechanism is a dimension gap: the tail Gram matrix is isotropic because $n\ll N_k$, and the low block is
+well conditioned because $D\ll n$; both gaps are polynomial in $d$ with the exponents $\delta_*$ and
+$1-\delta_*$ of Lemma~\ref{lem:scales}. Section~\ref{sec:gap} measures the isotropy of $R_T$ and the risk of
+the interpolant as functions of the finite-size analogue $\delta=\log(N_{d,k}/n)/\log d$ of these exponents,
+on both sides of $\delta=0$, which is where Theorem~\ref{thm:T3} lives.
+\end{remark}

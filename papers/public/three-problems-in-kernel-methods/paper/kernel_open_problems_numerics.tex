@@ -1,0 +1,2315 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{microtype}
+\usepackage[section]{placeins}
+\usepackage[colorlinks,citecolor=blue,linkcolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{definition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{remark}[theorem]{Remark}
+
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\Var}{Var}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Sph}{S^{d-1}}
+\newcommand{\Kt}{K_{\mathrm{T}}}
+
+% Every \num... macro below is written by refresh_p9.py from the run records.
+% BEGIN AUTOTABLE macros
+\newcommand{\numAdvAdvantage}{-0.88}
+\newcommand{\numAdvBestLam}{10^{-5}}
+\newcommand{\numAdvDeltaEff}{-0.10}
+\newcommand{\numAdvRiskBest}{0.015}
+\newcommand{\numAdvRiskGated}{0.018}
+\newcommand{\numAdvRiskInterp}{0.0248}
+\newcommand{\numAdvRiskMean}{1.00}
+\newcommand{\numAdvRiskRidge}{0.0132}
+\newcommand{\numBetaBernFour}{0.0572\pm0.0020}
+\newcommand{\numBetaBernSixteen}{0.1354\pm0.0016}
+\newcommand{\numBetaBernTwoFiveSix}{0.8104\pm0.0047}
+\newcommand{\numBetaRadFour}{0.0573\pm0.0011}
+\newcommand{\numBetaRadSixteen}{0.1356\pm0.0015}
+\newcommand{\numBetaRadTwoFiveSix}{0.8155\pm0.0037}
+\newcommand{\numBmomWorst}{1.4}
+\newcommand{\numBurgAlpha}{2.02}
+\newcommand{\numBurgExp}{0.78}
+\newcommand{\numBurgFactor}{6}
+\newcommand{\numBurgR}{0.63}
+\newcommand{\numBurgRate}{0.72}
+\newcommand{\numBurgTakeover}{100}
+\newcommand{\numBurgTakeoverExp}{2}
+\newcommand{\numCertMax}{0.76}
+\newcommand{\numCertMin}{0.21}
+\newcommand{\numCone}{0.1389}
+\newcommand{\numControlWorstSe}{2.3}
+\newcommand{\numCorrLanes}{31}
+\newcommand{\numCorrPairs}{248}
+\newcommand{\numCten}{0.3106}
+\newcommand{\numCtenLong}{0.31060759756232}
+\newcommand{\numDratioMax}{3.9}
+\newcommand{\numDratioMin}{3.7}
+\newcommand{\numEdgeMax}{2.036}
+\newcommand{\numEdgeMin}{2.007}
+\newcommand{\numEmitGainLanes}{15}
+\newcommand{\numEmitPhysGain}{25.0}
+\newcommand{\numEmitSqGain}{21.0}
+\newcommand{\numEtaMax}{1.61}
+\newcommand{\numEtaMin}{0.01}
+\newcommand{\numExpBernA}{0.62}
+\newcommand{\numExpBernB}{0.61}
+\newcommand{\numExpBernC}{0.68}
+\newcommand{\numExpBernD}{0.65}
+\newcommand{\numExpRadA}{0.62}
+\newcommand{\numExpRadB}{0.61}
+\newcommand{\numExpRadC}{0.68}
+\newcommand{\numExpRadD}{0.65}
+\newcommand{\numGainemitYFour}{0.5}
+\newcommand{\numGainemitYOne}{25.5}
+\newcommand{\numGainemitYThree}{15.3}
+\newcommand{\numGainemitYTwo}{22.1}
+\newcommand{\numGainocoTwooTwo}{0.3}
+\newcommand{\numGainocoTwoscoTwo}{1.3}
+\newcommand{\numGainocoTwowcoTwo}{0.3}
+\newcommand{\numGammaMax}{0.15}
+\newcommand{\numGapBlocks}{20}
+\newcommand{\numGapDims}{7}
+\newcommand{\numGapInv}{8}
+\newcommand{\numGapInvDiffMax}{0.012}
+\newcommand{\numGapInvNmax}{1287}
+\newcommand{\numGapInvRiskMax}{0.39}
+\newcommand{\numGapPairs}{211}
+\newcommand{\numGateCaptured}{99}
+\newcommand{\numGateRiskBest}{3.3\times10^{-6}}
+\newcommand{\numGateRiskGated}{3.5\times10^{-6}}
+\newcommand{\numGateRiskMean}{1.5\times10^{-5}}
+\newcommand{\numGateTheta}{0.99}
+\newcommand{\numGateTrainMse}{1.1\times10^{-5}}
+\newcommand{\numHardDmax}{120}
+\newcommand{\numHardDmin}{20}
+\newcommand{\numHermCone}{0.63166}
+\newcommand{\numHermCtwelve}{0.33574}
+\newcommand{\numHermErr}{2\times10^{-17}}
+\newcommand{\numHermPr}{0.019483}
+\newcommand{\numHermSh}{0.016546}
+\newcommand{\numHermV}{0.43503}
+\newcommand{\numHurtemitYFour}{32}
+\newcommand{\numHurtemitYOne}{0}
+\newcommand{\numHurtemitYThree}{6}
+\newcommand{\numHurtemitYTwo}{0}
+\newcommand{\numHurtocoTwooTwo}{31}
+\newcommand{\numHurtocoTwoscoTwo}{4}
+\newcommand{\numHurtocoTwowcoTwo}{28}
+\newcommand{\numIdentWorst}{4\times10^{-12}}
+\newcommand{\numInvMeanCvMax}{0.84}
+\newcommand{\numInvMeanCvMin}{0.35}
+\newcommand{\numInvMeanSpreadMax}{7}
+\newcommand{\numInvMeanSpreadMin}{2}
+\newcommand{\numInvMedCvMax}{0.07}
+\newcommand{\numInvMedCvMin}{0.04}
+\newcommand{\numInvMedSpreadMax}{26}
+\newcommand{\numInvMedSpreadMin}{7}
+\newcommand{\numKsRatioMax}{1.10}
+\newcommand{\numKsRatioMin}{1.06}
+\newcommand{\numKurtDtwentyfourNmax}{71{,}636}
+\newcommand{\numKurtDtwentyfourNmin}{17{,}752}
+\newcommand{\numLanesemitYFour}{5}
+\newcommand{\numLanesemitYOne}{5}
+\newcommand{\numLanesemitYThree}{5}
+\newcommand{\numLanesemitYTwo}{5}
+\newcommand{\numLanesocoTwooTwo}{5}
+\newcommand{\numLanesocoTwoscoTwo}{1}
+\newcommand{\numLanesocoTwowcoTwo}{5}
+\newcommand{\numLbChi}{0.06}
+\newcommand{\numLbEndsSe}{24}
+\newcommand{\numLbExcA}{6.05}
+\newcommand{\numLbExcB}{14.9}
+\newcommand{\numLbExcC}{6}
+\newcommand{\numLbExcPull}{0.07}
+\newcommand{\numLbFitA}{1.990}
+\newcommand{\numLbFitAse}{0.010}
+\newcommand{\numLbFitB}{7.65}
+\newcommand{\numLbFitBse}{0.32}
+\newcommand{\numLbFitPull}{1.0}
+\newcommand{\numLbMidPull}{0.30}
+\newcommand{\numLbTwoA}{1.990}
+\newcommand{\numLbTwoB}{7.66}
+\newcommand{\numMomChiDof}{7}
+\newcommand{\numMomChiTwoLast}{9.6}
+\newcommand{\numMomDmax}{200}
+\newcommand{\numMomDmin}{20}
+\newcommand{\numMomFitB}{7.2}
+\newcommand{\numMomFitBse}{0.7}
+\newcommand{\numMomFitWorst}{0.2}
+\newcommand{\numMomLastMfour}{2.037}
+\newcommand{\numMomLastPull}{7}
+\newcommand{\numNBernFour}{20}
+\newcommand{\numNBernSixteen}{20}
+\newcommand{\numNBernTwoFiveSix}{20}
+\newcommand{\numNRadFour}{40}
+\newcommand{\numNRadSixteen}{60}
+\newcommand{\numNRadTwoFiveSix}{40}
+\newcommand{\numOcoLanes}{11}
+\newcommand{\numOcoMarginMaxFour}{2.2}
+\newcommand{\numOcoNegFive}{10}
+\newcommand{\numOofAtEmitRiseMax}{74}
+\newcommand{\numOofAtEmitRiseMin}{11}
+\newcommand{\numOofAtOcoLanes}{11}
+\newcommand{\numOofAtOcoNeg}{10}
+\newcommand{\numOofBestEmitMax}{1.0}
+\newcommand{\numOofBestOcoMax}{0.3}
+\newcommand{\numOofBestOcoMin}{-0.4}
+\newcommand{\numOofBestYfourMax}{3.1}
+\newcommand{\numOofBestYfourNeg}{4}
+\newcommand{\numOofPhysNeg}{30}
+\newcommand{\numOofPhysSignAgree}{31}
+\newcommand{\numOofPhysWorseMax}{29}
+\newcommand{\numOpRatioFirst}{1.75}
+\newcommand{\numOpRatioLast}{1.99}
+\newcommand{\numOverlapFirst}{0.71}
+\newcommand{\numOverlapLast}{0.80}
+\newcommand{\numPGainemitYFour}{0.5}
+\newcommand{\numPGainemitYOne}{25.9}
+\newcommand{\numPGainemitYThree}{22.2}
+\newcommand{\numPGainemitYTwo}{27.1}
+\newcommand{\numPGainocoTwooTwo}{0.2}
+\newcommand{\numPGainocoTwoscoTwo}{0.6}
+\newcommand{\numPGainocoTwowcoTwo}{0.2}
+\newcommand{\numRatioMaxHalf}{2.1}
+\newcommand{\numRatioMaxOne}{6.1}
+\newcommand{\numRatioMaxTwo}{12.5}
+\newcommand{\numRatioMinHalf}{1.7}
+\newcommand{\numRatioMinOne}{5.5}
+\newcommand{\numRatioMinTwo}{8.1}
+\newcommand{\numRayC}{1.14}
+\newcommand{\numRayMeasA}{0.1441}
+\newcommand{\numRayMeasB}{0.3254}
+\newcommand{\numRayMeasC}{0.0654}
+\newcommand{\numRayOffA}{0.5}
+\newcommand{\numRayOffB}{0.2}
+\newcommand{\numRayOffC}{3.7}
+\newcommand{\numRayPredA}{0.1448}
+\newcommand{\numRayPredB}{0.3261}
+\newcommand{\numRayPredC}{0.0678}
+\newcommand{\numRecords}{223}
+\newcommand{\numRedMedFirst}{1.0\times10^{-11}}
+\newcommand{\numRedMedLast}{6.3\times10^{-9}}
+\newcommand{\numShareAMax}{0.39}
+\newcommand{\numShareAMin}{0.33}
+\newcommand{\numShareBMax}{0.46}
+\newcommand{\numShareBMin}{0.39}
+\newcommand{\numShareDMax}{0.22}
+\newcommand{\numShareDMin}{0.20}
+\newcommand{\numSignAgree}{31}
+\newcommand{\numSignTot}{31}
+\newcommand{\numSlackMax}{3358}
+\newcommand{\numSlackMin}{60}
+\newcommand{\numSminRatioFirst}{0.815}
+\newcommand{\numSminRatioLast}{0.967}
+\newcommand{\numSminSdFirst}{0.04}
+\newcommand{\numSminSdLast}{0.002}
+\newcommand{\numSwRatioMaxSixtyFour}{2.8}
+\newcommand{\numSwRatioMinSixtyFour}{2.4}
+\newcommand{\numSwRatioOneTwoEight}{1.9}
+\newcommand{\numTauHalfMax}{0.9994}
+\newcommand{\numTauHalfMin}{0.9980}
+\newcommand{\numTransferLanes}{0}
+\newcommand{\numTransferPairs}{0}
+\newcommand{\numTransferSlackMin}{4.1}
+\newcommand{\numTthreeBlockDesigns}{36}
+\newcommand{\numTthreeIdLfirst}{1}
+\newcommand{\numTthreeIdLlast}{6}
+\newcommand{\numTthreeIdSdFirst}{0.18}
+\newcommand{\numTthreeIdSdLast}{0.004}
+\newcommand{\numTthreeSdMax}{0.0012}
+\newcommand{\numVgapMax}{1.2\times10^{-2}}
+\newcommand{\numVhDmax}{44}
+\newcommand{\numVhDmin}{10}
+\newcommand{\numVhMaxHalf}{0.64}
+\newcommand{\numVhMaxOne}{1.88}
+\newcommand{\numVhMaxTwo}{3.88}
+\newcommand{\numVhMinHalf}{0.54}
+\newcommand{\numVhMinOne}{1.70}
+\newcommand{\numVhMinTwo}{2.51}
+\newcommand{\numVhRmaxMax}{12}
+\newcommand{\numVhRmaxMin}{4.1}
+\newcommand{\numVhRqFirst}{3.1}
+\newcommand{\numVhRqLast}{2.1}
+\newcommand{\numVmeanGapMax}{0.13}
+\newcommand{\numYthreeNegA}{3}
+\newcommand{\numYthreeNegB}{2}
+\newcommand{\numYthreeNegC}{1}
+% END AUTOTABLE macros
+
+\title{Three problems in kernel methods: proofs and finite-size measurements}
+
+\author{Yitzchak Shmalo\thanks{\raggedright Einstein Institute of Mathematics, The Hebrew University
+of Jerusalem, Jerusalem, Israel. \texttt{yitzchak.shmalo@gmail.com}.}}
+
+\date{16 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Three questions about kernel methods are answered here, and a fourth is measured. For the Gaussian
+kernel with a fixed bandwidth on the sphere, the minimum-norm interpolant of noisy labels is benign
+along the sequence $d_\ell=2^{2^\ell}$, $n_\ell=2^{2^{2\ell}}$: its excess risk tends to zero in
+probability, and almost surely along the sequence, for every fixed-degree spherical-polynomial target
+(Theorem~\ref{thm:T2}). At the exponential sample size $n=2^d$ the same interpolant is obstructed: the
+expected excess risk on pure noise is at least $\frac5{36}\sigma^2$ in the limit, for every fixed
+bandwidth (Theorem~\ref{thm:T3}). For ridge regression on two augmented views of each sample through a
+random feature map with an odd activation, the optimised objective and the clean prediction risk have
+the same limits in law as those of a correlated Gaussian surrogate that keeps the shared latent
+variable of the two views (Theorem~\ref{thm:T1}); the proof rests on an exact Gaussianisation of each
+block conditional on the feature matrix. The hard edge of the degree-two Veronese matrix remains
+open; the two lemmas that stand between its reduction and the hard edge are measured, and the
+measurements point to a sharper statement, that the leave-one-out normal has a semicircular
+spectrum. The proofs are accompanied by finite-size measurements of the quantities they turn on: the
+leverage certificate of the lower bound, the harmonic dimension gap that separates the benign regime
+from the obstructed one, and the leverage concentration behind the equivalence. Two further results
+are evaluated on data: an exact same-sample risk identity for a kernel correction fitted on top of a
+learned mean, on the EMIT and OCO-2 radiative-transfer emulation corpora, where its sign depends on the
+component being emulated and the correction fitted to out-of-fold residuals gains nothing; and the
+compressed-resolvent hypothesis behind growing-rank spiked singular vectors, whose compression error
+along rays of fixed rank-to-size ratio approaches $\sqrt{r/n}$ plus a term of order $r/n$.
+\end{abstract}
+
+\section{Introduction}
+
+Kernel ridge regression and its ridgeless limit are among the few learning methods whose
+high-dimensional theory is close to complete, and several natural questions about them have stayed
+open. This paper settles three of them and measures a fourth. The questions are stated precisely in
+Section~\ref{sec:four}; they concern the minimum-norm interpolant of the Gaussian kernel on the
+sphere at two very different sample sizes, and ridge regression on augmented random features.
+
+Along the doubly exponential sequence $d_\ell=2^{2^\ell}$, $n_\ell=2^{2^{2\ell}}$ the interpolant is
+benign for every fixed-degree spherical-polynomial target and every fixed bandwidth
+(Theorem~\ref{thm:T2}, Section~\ref{sec:proofT2}); the mechanism is a dimension gap, polynomial in $d$
+on both sides of the critical harmonic degree. At the exponential sample size $n=2^d$ the interpolant
+of pure noise is obstructed: its expected excess risk is at least $\frac5{36}\sigma^2$ in the limit
+(Theorem~\ref{thm:T3}, Section~\ref{sec:proofT3}); the proof is an expectation argument built on the
+leverage of a block of harmonic degrees, with no concentration step. For two augmented views of each
+sample passed through a random feature map with an odd activation, the optimised ridge objective and
+the clean prediction risk have the same limits in law as those of a correlated Gaussian surrogate
+(Theorem~\ref{thm:T1}, Section~\ref{sec:proofT1}); conditional on the feature matrix there is a Gaussian
+block whose second moments match the actual block exactly, and the replacement argument then only
+has to pay for the fluctuation of a $2\times2$ leverage matrix. The fourth question, the hard edge of
+the degree-two Veronese matrix, is open; Section~\ref{sec:t4} states the reduction that isolates it
+and measures the two lemmas that the reduction names.
+
+Part~II measures, at sizes a computer can reach, the objects the proofs are made of. A proved constant
+may be far from the truth: between $d=9$ and $d=13$ the quantity bounded in Theorem~\ref{thm:T3}
+measures between $\numVhMinOne$ and $\numVhMaxOne$ times $\sigma^2$ at $h=1$ and between
+$\numVhMinHalf$ and $\numVhMaxHalf$ at $h=1/2$ (Section~\ref{sec:t3}), so the theorem is not tight, and
+the measurement says by roughly how much. A lemma in a reduction can be checked before it is proved:
+both lemmas that the reduction of Target~4 names look true at finite size, one of them in a stronger
+form than the reduction needs, and the other with its constant identified as the fourth moment of the
+semicircle law (Section~\ref{sec:t4}). An exact identity can be confronted with data directly:
+Section~\ref{sec:corr} does this for a same-sample risk identity on two radiative-transfer emulation
+corpora, where it separates the components on which a residual kernel correction helps from the one
+on which it hurts. Finite $d$ cannot settle a $\liminf_{d\to\infty}$, and the sample sizes of
+Theorem~\ref{thm:T2} leave the reachable world at $\ell=3$; where a table rests on a single seed or a
+single corpus, the text says so.
+
+\part{Theorems and proofs}
+
+\section{The problems}\label{sec:four}
+
+Throughout, $X_1,\dots,X_n$ are i.i.d.\ uniform on $\Sph$, $K$ is the Gaussian kernel
+\[
+K(x,y) = \exp\!\Big(-\frac{\|x-y\|^2}{2h^2}\Big) = e^{-\gamma}e^{\gamma\langle x,y\rangle},
+\qquad \gamma = h^{-2},
+\]
+with $h>0$ fixed, $N_{d,s}$ is the dimension of the degree-$s$ spherical harmonics, $P_s$ is the
+zonal harmonic normalized so $P_s(1)=1$ \cite{AtkinsonHan}, and $\lambda_{d,s}$ are the Mercer
+eigenvalues \cite{MinhNiyogiYao}, so that
+$K(x,y)=\sum_s \lambda_{d,s}N_{d,s}P_s(\langle x,y\rangle)$ and $\tau_s = N_{d,s}\lambda_{d,s}$
+satisfies $\sum_s \tau_s = 1$.
+
+\begin{description}
+\item[Target 1 (correlated Gaussian equivalence).] Two augmented views of each sample,
+$x_{ij}=\sigma(F^\top(g_i+\Delta z_{ij}))$, $j=1,2$, with a linear teacher $t_i=\xi^\top g_i$ and the
+ridge objective $L(w)=\frac1{4n}\sum_i\sum_j(t_i-x_{ij}^\top w)^2+\frac\lambda2\|w\|^2$. Does the
+optimized objective, and the clean test risk of its minimizer, agree with those of a matched
+Gaussian surrogate? This is a correlated form of the Gaussian equivalence of random-feature models
+\cite{Goldt,HuLu,MeiMontanari}.
+\item[Target 2 (benign overfitting).] Along $d_\ell=2^{2^\ell}$, $n_\ell=2^{2^{2\ell}}$, with fixed
+$h$, Gaussian noise and any fixed-degree spherical-polynomial target of bounded $L^2$ norm, does the
+conditional excess risk of the minimum-norm interpolant tend to zero in probability? Benign
+interpolation with kernels is a high-dimensional phenomenon
+\cite{LiangRakhlin,RakhlinZhai,Bartlett,Ghorbani,Mallinar}; the question is whether it survives a
+bandwidth that does not scale with the dimension.
+\item[Target 3 (the obstruction).] With $n=2^d$ and zero signal, is
+$\liminf_{d\to\infty}\E\,\mathcal{E}_{2^d,d}\ge c(h)\sigma^2$ for an explicit $c(h)>0$?
+\item[Target 4 (the Veronese hard edge).] With $p=d(d+1)/2$ and
+$z(x)=\big((x_a^2-1)/\sqrt2\big)_a\oplus(x_ax_b)_{a<b}$, $x\sim N(0,I_d)$, does $p\,s_{\min}(Z)^2$
+for the square $p\times p$ matrix $Z$ with rows $z(X_i)$ obey the real square Wishart hard edge, whose
+limit law is $1-e^{-\sqrt t-t/2}$ \cite{Edelman,TracyWidom}?
+\end{description}
+
+Theorems~\ref{thm:T2}, \ref{thm:T3} and~\ref{thm:T1} below answer Targets~2, 3 and~1. The proof of
+Target~2 also covers every target in the empirical low block below the critical degree, and this
+enlargement is sharp as a uniform bounded-$L^2$ class statement. Target~4 is open; Section~\ref{sec:t4}
+gives its reduction. Two further results established in \cite{PN24} are evaluated on data in
+Part~II: an exact identity for the change in population risk when a residual kernel correction is
+fitted on the same sample as the mean it corrects (Section~\ref{sec:corr}), and the
+compressed-resolvent hypothesis behind the theory of growing-rank spiked singular values and vectors
+\cite{BGN,BBP} and its consequences for pruning (Section~\ref{sec:prune}).
+
+\input{p1_setting_t3}
+
+\input{p1_t2}
+
+\input{p1_t1}
+
+\part{Finite-size measurements}
+
+\section{Target 3: the finite-block certificate}\label{sec:t3}
+
+\subsection{What the proof uses}
+
+For zero signal the excess risk of the minimum-norm interpolant is a quadratic form in the noise, and
+its expectation over the noise is the leverage functional
+\begin{equation}
+\frac{V(X)}{\sigma^2} \;=\; \E_U\big\|k(U,X)K^{-1}\big\|^2
+\;=\; \Tr\!\big(K^{-1}GK^{-1}\big),
+\qquad G=\sum_s \lambda_s^2N_sP_s,
+\label{eq:V}
+\end{equation}
+the second equality because $\E_U[k(X,U)k(U,X)]=\sum_s\lambda_s^2 N_sP_s$ by Mercer and the addition
+theorem. Writing $K_s=\lambda_sN_sP_s$ and $t_s=\Tr(K^{-1}K_s)$, Cauchy--Schwarz in the Frobenius
+inner product gives $t_s^2\le nN_s\lambda_sq_s$ with $q_s=\Tr(K^{-1}K_sK^{-1})$, and summing over a
+window $B$ of degrees,
+\begin{equation}
+\frac{V(X)}{\sigma^2}\;\ge\;\frac{T_B^2}{n\,D_B},
+\qquad T_B=\sum_{s\in B}t_s,\quad D_B=\sum_{s\in B}N_s .
+\label{eq:window}
+\end{equation}
+
+The proof of Target~3 \cite{PN24} takes $B$ to be the \emph{cumulative} block $0,\dots,L$, writes
+$D_L=\sum_{s\le L}N_{d,s}$, $\delta_L=D_L/n$, $T_L=\Tr(K^{-1}\sum_{s\le L}K_s)$, and bounds the
+leverage the block captures in expectation over the design,
+\begin{equation}
+\E\,T_L\;\ge\;\frac{n\,D_L}{D_L+n-1+\tau_{>L}/\lambda_{d,L}},
+\qquad \tau_{>L}=\sum_{s>L}\tau_s ,
+\label{eq:capture}
+\end{equation}
+with no concentration step: only operator monotonicity of the inverse, Cauchy--Schwarz, the Mercer
+decomposition, the addition theorem and Jensen's inequality enter. In the critical regime the tail ratio $\theta_L=\tau_{>L}/(n\lambda_{d,L})$ is $o(1)$,
+so \eqref{eq:capture} reads $\E\,T_L/n\ge\delta_L/(1+\delta_L+o(1))$, and taking expectations in
+\eqref{eq:window} and applying Jensen once more,
+\begin{equation}
+\E\,\frac{V(X)}{\sigma^2}\;\ge\;\frac{(\E\,T_L/n)^2}{\delta_L}\;\ge\;
+\frac{\delta_L}{(1+\delta_L)^2}-o(1).
+\label{eq:onewindow}
+\end{equation}
+For the largest $L$ with $D_L\le n$ the ratio $\delta_L$ lies in $(1/5,1]$ for all large $d$, by the
+exact multiplicity ratio and Stirling's formula, and $y\mapsto y/(1+y)^2$ is increasing on $[0,1]$,
+so
+\[
+\liminf_{d\to\infty}\E\,\frac{V(X)}{\sigma^2}\;\ge\;\frac{1/5}{(6/5)^2}=\frac{5}{36}=c_1 ,
+\]
+for every fixed $h>0$. This is the one-window theorem. Splitting the degrees into nested cumulative
+windows $B_0\subset\dots\subset B_J$ with $y_j=D_{B_j}/n$ and $A_j=T_{B_j}/n$, the pathwise
+reduction \eqref{eq:window} applied shell by shell gives
+$V/\sigma^2\ge A_0^2/y_0+\sum_{j\ge1}(A_j-A_{j-1})^2/(y_j-y_{j-1})$, a convex quadratic form in the
+$A_j$, and the same expectation bounds inserted into it, with the window offsets chosen against the
+phase of $n=2^d$ relative to the harmonic multiplicities, give the ten-window certificate
+\[
+c_{10}\;=\;\frac{3882594969529}{12500000000000}\;=\;\numCtenLong\ldots ,
+\]
+an exact rational number, again for every fixed $h>0$ \cite{PN24}. The one-window constant is Theorem~\ref{thm:T3}; the ten-window certificate is a strengthening
+obtained in \cite{PN24} by running the argument of Section~\ref{sec:proofT3} over ten blocks at once
+(Remark~\ref{rem:sharper}), and is quoted here as a comparison value. No random-matrix universality
+enters at any point. Both constants are independent of $h$; the measured functional is not, and the distance
+between them is measured below.
+
+\subsection{What is measured}
+
+Every object in the last subsection is computable from the Gram matrix alone. $P_s$ evaluated at the
+matrix of inner products follows the dimension-$d$ Legendre recurrence
+$(s+d-2)P_{s+1}(t)=(2s+d-2)tP_s(t)-sP_{s-1}(t)$, so no spherical harmonic is ever formed; the
+projection kernel $\Pi_L=\sum_{s\le L}N_sP_s$ gives $\|S_L-I\|_F^2=\|\Pi_L\|_F^2/n^2-D_L$ for the
+block's orthonormal feature matrix $\Phi_L$ and $S_L=\frac1n\Phi_L^\top\Phi_L$; and $G$ in
+\eqref{eq:V} is another accumulation over the same stream. For each design and each $L$ the driver
+records $D_L$, $\delta_L$, $T_L/n$, the certificate $(1/\delta_L)(T_L/n)^2$, and the ratio of the
+measured $\|S_L-I\|_F^2$ to its exact expectation
+\begin{equation}
+\E\big\|S_L-I\big\|_F^2=\frac{D_L(D_L-1)}{n},
+\label{eq:second}
+\end{equation}
+an elementary identity that serves as a check on the Gram-only implementation. It reports
+$V(X)/\sigma^2$ twice: once as a Monte-Carlo average over fresh test points, once exactly through
+\eqref{eq:V}.
+
+Carrying both is what exposes a numerical trap. At $h=1/2$ and $h=1$ the two derivations agree to a
+fraction of a percent. At $h=2$ the form $\Tr(K^{-1}GK^{-1})$ evaluated as written does not agree
+with the Monte-Carlo value, and the disagreement grows with $d$; the identity is not at fault, its
+evaluation is. In the eigenbasis of $K$ the trace reads $\sum_k \tilde G_{kk}/w_k^2$, so rounding of
+size $\varepsilon\|G\|$ in the entries of $G$ is amplified by $\varepsilon\,\kappa(K)^2$, not by
+$\varepsilon\kappa$: the inverse appears twice. The Gaussian kernel at $h=2$ is the smoothest of the
+three bandwidths and $K$ the worst conditioned, and Table~\ref{tab:traceform} shows
+$\varepsilon\kappa^2$ climbing from $3$ at $d=9$ to $2\times10^3$ at $d=11$, where the trace form has
+departed from the Monte-Carlo control by two percent while the factored evaluation described next
+stays within a tenth of a percent of it. Factoring $G$ alone does not help, because the rounding
+directions of $G$ carry eigenvalues of order $\varepsilon\|G\|$ that are still divided by $w_k^2$.
+The evaluation that survives uses the \emph{same} factors for both matrices: with
+$N_sP_s(T)=Y_sY_s^{\!\top}$ from one eigendecomposition per degree, $K=\sum_s\lambda_sY_sY_s^{\!\top}$
+and $G=\sum_s\lambda_s^2Y_sY_s^{\!\top}$, so that
+\[
+V/\sigma^2=\sum_{s\le L}\lambda_s^2\,\|K^{-1}Y_s\|_F^2 ,
+\]
+a form with one inverse in which rounding enters squared, and in which each factor's own rounding
+directions are separated from its true spectrum by many orders of magnitude and dropped. The exact
+column of Table~\ref{tab:t3band} is evaluated this way wherever $\varepsilon\kappa^2$ exceeds
+$10^{-4}$, and both forms are kept in the records with the criterion. The point is general: an exact
+trace identity carrying two inverses is not an exact number once $\varepsilon\kappa^2$ is of order
+one, and for a smooth kernel that happens at modest $n$.
+
+\begin{table}[t]
+\centering\small
+\caption{The two evaluations of \eqref{eq:V} at $h=2$, $n=2^d$, means over the designs of
+Table~\ref{tab:t3band}. $\varepsilon\kappa^2$ is machine precision times the squared condition
+number of $K$; the trace form is $\Tr(K^{-1}GK^{-1})$ as written, the factor form uses the shared
+per-degree factors, and the Monte-Carlo column averages $\|k(U,X)K^{-1}\|^2$ over $4{,}000$ fresh
+points per design.}
+\label{tab:traceform}
+\begin{tabular}{rrlrrr}
+\toprule
+$d$ & designs & $\varepsilon\kappa^2$ & trace form & factor form & Monte Carlo\\
+\midrule
+% BEGIN AUTOTABLE tab:traceform
+9 & 40 & 3.2 & 3.1941 & 3.1941 & 3.1925\\
+10 & 24 & 84 & 3.8754 & 3.8753 & 3.8757\\
+11 & 16 & $2.0\times10^{3}$ & 2.5691 & 2.5157 & 2.5138\\
+% END AUTOTABLE tab:traceform
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{The cumulative blocks at $d=10$, $n=2^{10}$, $h=1$, means over $\numTthreeBlockDesigns$
+designs (the standard deviation across designs of $T_L/n$ and of the certificate is at most
+$\numTthreeSdMax$; that of the identity ratio falls from $\numTthreeIdSdFirst$ at
+$L=\numTthreeIdLfirst$ to $\numTthreeIdSdLast$ at $L=\numTthreeIdLlast$). $\delta_L=D_L/n$;
+the certificate is $(1/\delta_L)(T_L/n)^2$; the two columns headed by functions of $\delta_L$ are the
+theorem's asymptotic lower bounds \eqref{eq:capture} and \eqref{eq:onewindow} for $T_L/n$ and for the
+certificate; the identity column is the measured $\|S_L-I\|_F^2$ divided by the exact
+\eqref{eq:second}; the last column marks the block the one-window theorem uses, the largest $L$ with
+$D_L\le n$.}
+\label{tab:t3}
+\begin{tabular}{rrrrrrrrc}
+\toprule
+$L$ & $D_L$ & $\delta_L$ & $T_L/n$ & $\frac{\delta_L}{1+\delta_L}$ & certificate &
+$\frac{\delta_L}{(1+\delta_L)^2}$ & \eqref{eq:second} & theorem's block\\
+\midrule
+% BEGIN AUTOTABLE tab:t3
+1 & 11 & 0.0107 & 0.0107 & 0.0106 & 0.0107 & 0.0105 & 0.982 & \\
+2 & 65 & 0.0635 & 0.0634 & 0.0597 & 0.0633 & 0.0561 & 1.003 & \\
+3 & 275 & 0.2686 & 0.2636 & 0.2117 & 0.2588 & 0.1669 & 1.001 & \\
+4 & 935 & 0.9131 & 0.7330 & 0.4773 & 0.5884 & 0.2495 & 1.000 & yes\\
+5 & 2717 & 2.6533 & 0.9639 & 0.7263 & 0.3502 & 0.1988 & 1.000 & \\
+6 & 7007 & 6.8428 & 0.9964 & 0.8725 & 0.1451 & 0.1112 & 0.999 & \\
+% END AUTOTABLE tab:t3
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{The bounded functional $V(X)/\sigma^2$ at $n=2^d$, mean $\pm$ standard deviation over
+independent designs, and its ratio to the ten-window constant $c_{10}=\numCten$. The last three
+columns give the one-window theorem's block $L_-$, the largest $L$ with $D_L\le n$, its $\delta_L$,
+and the mean certificate $(1/\delta_L)(T_L/n)^2$ at that block, to be read against
+$c_1=5/36=\numCone$. The cells $(d,h)=(12,2)$, $(13,2)$ and all of $d=14$ were not run.}
+\label{tab:t3band}
+\begin{tabular}{rrlrrrrr}
+\toprule
+$d$ & $h$ & $V(X)/\sigma^2$ & designs & $/\,c_{10}$ & $L_-$ & $\delta_{L_-}$ & certificate at $L_-$\\
+\midrule
+% BEGIN AUTOTABLE tab:t3band
+9 & 0.5 & $0.5371\pm0.0067$ & 40 & 1.73 & 3 & 0.410 & 0.214\\
+9 & 1 & $1.7743\pm0.0468$ & 60 & 5.71 & 3 & 0.410 & 0.373\\
+9 & 2 & $3.1925\pm0.1125$ & 40 & 10.28 & 3 & 0.410 & 0.403\\
+10 & 0.5 & $0.5621\pm0.0032$ & 24 & 1.81 & 4 & 0.913 & 0.285\\
+10 & 1 & $1.8357\pm0.0246$ & 36 & 5.91 & 4 & 0.913 & 0.588\\
+10 & 2 & $3.8757\pm0.0775$ & 24 & 12.48 & 4 & 0.913 & 0.760\\
+11 & 0.5 & $0.5891\pm0.0023$ & 16 & 1.90 & 4 & 0.628 & 0.279\\
+11 & 1 & $1.7087\pm0.0144$ & 24 & 5.50 & 4 & 0.628 & 0.517\\
+11 & 2 & $2.5138\pm0.0269$ & 16 & 8.09 & 4 & 0.628 & 0.598\\
+12 & 0.5 & $0.6125\pm0.0016$ & 8 & 1.97 & 4 & 0.422 & 0.250\\
+12 & 1 & $1.7047\pm0.0096$ & 12 & 5.49 & 4 & 0.422 & 0.390\\
+13 & 0.5 & $0.6384\pm0.0010$ & 4 & 2.06 & 5 & 0.978 & 0.320\\
+13 & 1 & $1.8797\pm0.0061$ & 6 & 6.05 & 5 & 0.978 & 0.611\\
+% END AUTOTABLE tab:t3band
+\bottomrule
+\end{tabular}
+\end{table}
+
+Four things are visible in Tables~\ref{tab:t3} and~\ref{tab:t3band}. The identity \eqref{eq:second}
+holds: the ratio sits within $2\%$ of one from $D_L=65$ on and within a tenth of a percent from
+$D_L=275$ on. The leverage the block captures exceeds the expectation bound \eqref{eq:capture} at
+every $L$ with $D_L\le n$, and by a wide margin at the theorem's block: at $d=10$ the block $L=4$ has
+$\delta_L=0.913$ and captures $T_L/n=0.733$ against the bound's $0.477$, so at these sizes
+\eqref{eq:capture} is the loose step. The certificate at the theorem's block sits above $c_1=5/36$
+at every dimension and bandwidth measured, between $\numCertMin$ and $\numCertMax$; its variation
+with $d$ is a sawtooth that follows $\delta_{L_-}$, which is set by where $2^d$ falls between two
+block boundaries, and not a trend. And the quantity being bounded exceeds the ten-window constant
+$c_{10}$ by a factor between $\numRatioMinHalf$ and $\numRatioMaxHalf$ at $h=1/2$, between
+$\numRatioMinOne$ and $\numRatioMaxOne$ at $h=1$, and between $\numRatioMinTwo$ and
+$\numRatioMaxTwo$ at $h=2$: the functional is monotone in the bandwidth while the constant is not,
+and the gap between them is where an $h$-dependent constant would live.
+
+The two derivations of $V/\sigma^2$ agree throughout: the largest relative discrepancy over all
+designs is $\numVgapMax$, and the mean values agree to within $\numVmeanGapMax$ percent. The Mercer mass
+$\sum_s\tau_s$ recovers to $1.000000$ at $h\ge1$ and to between $\numTauHalfMin$ and
+$\numTauHalfMax$ at $h=1/2$, where the eigenvalue tail reaches past the harmonic truncation.
+
+\section{The dimension gap between Targets 2 and 3}\label{sec:gap}
+
+Targets~2 and~3 are the same construction at two ends of one number. Let $k(d,n)=\min\{s:N_{d,s}\ge n\}$
+be the critical degree and
+\[
+\delta \;=\; \frac{\log\big(N_{d,k}/n\big)}{\log d}.
+\]
+Target~2's sequence has $\log N_{d,k}/\log d \to R+\delta_\star$ with
+$\delta_\star = 1/\log2-1=0.442695\ldots$, so it runs at $\delta\to\delta_\star>0$, and the proof's
+tail-isotropy step turns on exactly that positive gap: the harmonic dimension above the cutoff
+outruns the sample by $d^{\delta_\star}$, which is what makes $\|\Kt/\tau-I\|\to0$ for the tail
+block $\Kt$ of the kernel matrix and its Mercer mass $\tau$. Target~3's $n=2^d$ puts the crossing at
+$k\sim c_\star d$ with $c_\star=0.2938\ldots$ solving $(1+c)\log(1+c)-c\log c=\log2$, and there the
+gap closes. The same coordinate organises the large-dimensional theory of kernel ridge regression
+\cite{Ghorbani,Misiakiewicz,LuLinXiaHuang}: with $n\asymp d^\gamma$ the fractional part of $\gamma$
+is the gap of the last resolved harmonic block.
+
+The natural experiment is to fix $d$, sweep $n$, and watch the noise risk against $\delta$. One
+feature of the geometry has to be respected first: $\delta$ is not monotone in $n$. Each time $n$
+crosses a multiplicity $N_{d,k}$ the critical degree advances and $\delta$ resets to the top of its
+range, so a plain sweep in $n$ traces a sawtooth in $\delta$ while the risk climbs steadily with
+sample size for reasons that have nothing to do with the gap. Comparing across that sawtooth measures
+$n$, not $\delta$. The comparison has to be made \emph{within} a block, at fixed critical degree.
+
+Done that way the ordering is clean. Table~\ref{tab:gap} shows one dimension in full: at $d=8$,
+$h=1/2$, at fixed critical degree $k$, the mean noise risk falls monotonically as $\delta$ rises, in
+every one of the six blocks, over four independent designs per cell. Table~\ref{tab:gapsum}
+summarises the same sweep at seven dimensions from $d=8$ to $d=64$, all at $h=1/2$: over
+$\numGapBlocks$ blocks with at least three values of the gap, $\numGapInv$ of the $\numGapPairs$
+ordered pairs of cells are inverted, and every inversion lies either in a block with
+$N_{d,k}\le\numGapInvNmax$, where the noise risk is at most $\numGapInvRiskMax$ and the two inverted
+cells differ by at most $\numGapInvDiffMax$, or at $d=64$, where only two designs were run per cell.
+Across blocks the risk rises with $n$, as it must. From $d=12$ on the ladder reaches $\delta=0.44$, the value of $\delta_\star$, and at
+$d=24$, $32$ and $48$ it reaches $\delta=0.6$ (Table~\ref{tab:gapdeep}); the risk keeps falling
+through both, with no turnover at any dimension.
+
+The tail isotropy $\|\Kt/\tau-I\|$, the quantity Target 2's proof drives to zero, follows the same
+ordering (Table~\ref{tab:gapiso}), and strictly so in all but one of the blocks of
+Table~\ref{tab:gapsum}. It is an operator norm, a maximum over eigenvalues, and a maximum is a
+noisier estimate than an average at the same number of designs; the one block in which it inverts
+does so between the two smallest gaps, where its means differ by one percent.
+
+What this does and does not show is worth stating carefully. The two theorems constrain the two ends
+of the order parameter --- one proves a vanishing risk along a sequence with $\delta$ bounded away
+from zero, the other a positive floor along a sequence where the gap closes --- but neither implies
+anything about the monotonicity of a finite-size curve at fixed $d$. The measured ordering is
+consistent with them and is the shape one would expect if $\delta$ really is the controlling
+variable; it is evidence for that reading, not a consequence of either proof. All of it is at one
+bandwidth.
+
+\begin{table}[t]
+\centering
+\caption{The dimension gap at fixed critical degree, $d=8$, $h=1/2$, four designs per cell. Each row
+is one harmonic block: $n$ runs over the sample sizes whose critical degree is $k$, and the entries
+are the mean noise risk $\mathcal R_{\mathrm{noise}}/\sigma^2$ at each value of the gap $\delta$.
+Within every row the risk falls as $\delta$ rises.}
+\label{tab:gap}
+\begin{tabular}{rrrrrrr}
+\toprule
+$k$ & $N_{d,k}$ & $\delta=0.02$ & $0.05$ & $0.10$ & $0.20$ & $0.30$\\
+\midrule
+% BEGIN AUTOTABLE tab:gap
+5 & 672 & 0.772 & 0.754 & 0.705 & 0.697 & 0.627\\
+6 & 1386 & 1.125 & 1.088 & 0.989 & 0.885 & 0.819\\
+7 & 2640 & 1.482 & 1.337 & 1.286 & 1.207 & 1.126\\
+8 & 4719 & 1.760 & 1.668 & 1.609 & 1.487 & \\
+9 & 8008 & 2.054 & 1.983 & 1.967 & 1.802 & \\
+10 & 13013 & 2.428 & 2.389 & 2.257 & 2.147 & \\
+% END AUTOTABLE tab:gap
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{The tail isotropy $\|\Kt/\tau-I\|$ in the cells of Table~\ref{tab:gap}.}
+\label{tab:gapiso}
+\begin{tabular}{rrrrrrr}
+\toprule
+$k$ & $N_{d,k}$ & $\delta=0.02$ & $0.05$ & $0.10$ & $0.20$ & $0.30$\\
+\midrule
+% BEGIN AUTOTABLE tab:gapiso
+5 & 672 & 1.897 & 1.893 & 1.844 & 1.533 & 1.447\\
+6 & 1386 & 2.130 & 2.158 & 1.913 & 1.765 & 1.615\\
+7 & 2640 & 2.302 & 2.285 & 2.214 & 1.828 & 1.650\\
+8 & 4719 & 2.439 & 2.421 & 2.174 & 2.023 & \\
+9 & 8008 & 2.648 & 2.435 & 2.310 & 1.976 & \\
+10 & 13013 & 2.783 & 2.664 & 2.388 & 2.105 & \\
+% END AUTOTABLE tab:gapiso
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Within-block ordering at every dimension measured, $h=1/2$. A block is a critical degree
+$k$ at which at least three values of $\delta$ were run; a pair of cells in a block is inverted when
+the cell with the larger gap has the larger mean noise risk. The isotropy column counts the blocks in
+which $\|\Kt/\tau-I\|$ falls strictly along the whole row; the last column names the blocks that
+carry an inverted risk pair.}
+\label{tab:gapsum}
+\begin{tabular}{rrlrrl}
+\toprule
+$d$ & blocks & designs per cell & inverted pairs & isotropy monotone & blocks with an inversion\\
+\midrule
+% BEGIN AUTOTABLE tab:gapsum
+8 & 6 & 4 & 0 / 48 & 5 / 6 & --\\
+12 & 4 & 4 & 2 / 43 & 4 / 4 & $k=3$, $k=4$\\
+16 & 3 & 4 & 0 / 35 & 3 / 3 & --\\
+24 & 2 & 4 & 0 / 27 & 2 / 2 & --\\
+32 & 2 & 4 & 2 / 27 & 2 / 2 & $k=2$\\
+48 & 2 & 4 & 0 / 16 & 2 / 2 & --\\
+64 & 1 & 2 & 4 / 15 & 1 / 1 & $k=2$\\
+% END AUTOTABLE tab:gapsum
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{The blocks whose ladder reaches $\delta\ge0.44$: mean noise risk $\mathcal
+R_{\mathrm{noise}}/\sigma^2$ at $h=1/2$, four designs per cell, out to $\delta=0.6$ where it was
+run.}
+\label{tab:gapdeep}
+\begin{tabular}{rrrrrrrrrr}
+\toprule
+$d$ & $k$ & $N_{d,k}$ & $\delta=0.02$ & $0.05$ & $0.10$ & $0.20$ & $0.30$ & $0.44$ & $0.60$\\
+\midrule
+% BEGIN AUTOTABLE tab:gapdeep
+12 & 4 & 1287 & 0.393 & 0.388 & 0.392 & 0.369 & 0.318 & 0.271 & --\\
+12 & 5 & 4004 & 0.619 & 0.576 & 0.568 & 0.517 & 0.487 & 0.424 & --\\
+16 & 4 & 3740 & 0.347 & 0.331 & 0.316 & 0.300 & 0.277 & 0.228 & --\\
+16 & 5 & 14688 & -- & 0.478 & 0.468 & 0.436 & 0.407 & 0.366 & --\\
+24 & 3 & 2576 & 0.160 & 0.153 & 0.150 & 0.135 & 0.117 & 0.096 & 0.079\\
+24 & 4 & 17250 & -- & -- & 0.247 & 0.230 & 0.212 & 0.188 & --\\
+32 & 3 & 5952 & 0.135 & 0.135 & 0.120 & 0.117 & 0.103 & 0.084 & 0.070\\
+48 & 3 & 19552 & -- & -- & -- & 0.095 & 0.087 & 0.075 & 0.067\\
+64 & 2 & 2079 & 0.042 & 0.045 & 0.045 & 0.035 & 0.025 & 0.025 & --\\
+% END AUTOTABLE tab:gapdeep
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Target 4: the Veronese reduction and its two lemmas}\label{sec:t4}
+
+\subsection{The reduction}
+
+Write $x=ru$ with $u$ uniform on $\Sph$ and $r^2\sim\chi^2_d$ independent, and identify $z(x)$ with
+$Q=(xx^\top-I)/\sqrt2\in\mathrm{Sym}_d$ in an orthonormal Frobenius basis whose first element is
+$E_0=I/\sqrt d$. Then the trace coordinate is $c(r)=(r^2-d)/\sqrt{2d}$ and each traceless coordinate
+is $a(r)h_j(u)$ with $a(r)=r^2/\sqrt{d(d+2)}$ and
+$h_j(u)=\sqrt{d(d+2)/2}\;u^\top E_ju$, so that after an orthogonal change of feature coordinates
+\begin{equation}
+ZO=D\,[\,b,\;H\,],\qquad D=\mathrm{diag}(a_i),\quad b=D^{-1}c,
+\label{eq:reduction}
+\end{equation}
+with $b$ \emph{exactly} independent of $H$, and every row of $H$ centred, isotropic and of fixed norm
+$m=p-1$. The scalar column satisfies $b=\sqrt{(d+2)/2}\,(r^2-d)/r^2$, whence for $d>4$
+\[
+\E b=-\frac{\sqrt{2(d+2)}}{d-2},\qquad
+\Var(b)=\frac{d^2(d+2)}{(d-4)(d-2)^2}=1+\frac{10}{d}+O(d^{-2}),
+\]
+and $\max_i|a_i-1|=O_p(\sqrt{\log d/d})$, so the hard edge of $Z$ and of $[b,H]$ coincide in the
+limit. In the basis of an SVD of $H$ the smallest eigenvalue of $[b,H][b,H]^\top$ obeys an exact
+rank-one secular equation, and the leave-one-out normal has trace weight
+$\alpha^2=(1+\|H_-^{-1}b_-\|^2)^{-1}$ \cite{PN24}.
+
+The reduction names two lemmas whose truth would materially advance the transfer:
+\begin{description}
+\item[(L-a)] $|u_j^\top\mathbf{1}|=o_p(\sqrt d)$ for the bottom left singular vectors $u_j$ of $H$
+(this suffices to kill the mean shift of $b$; $O_p(1)$ is plausible);
+\item[(L-b)] $\E\Tr(A^4)=O(1/d)$ for the feature-space normal $A$ of $p-1$ rows, normalized to
+$\|A\|_F=1$.
+\end{description}
+
+\subsection{What is measured}
+
+The identity \eqref{eq:reduction} is verifiable exactly, and is verified:
+$s_{\min}(Z)$ and $s_{\min}(D[b,H])$ agree, in the median over designs, to $\numRedMedFirst$
+relative at $d=\numHardDmin$ and to $\numRedMedLast$ at $d=\numHardDmax$, the discrepancy growing
+with $d$ as the conditioning does; every row of $H$ has $\|h(u)\|^2=m$ to $10^{-15}$, and the mean
+and variance of the scalar
+column $b$ match their closed forms to within $\numBmomWorst$ percent at every dimension. The
+asymptotic half --- that dropping $D$ does not move the edge --- converges slowly but visibly: the
+ratio $s_{\min}(Z)/s_{\min}([b,H])$ in Table~\ref{tab:t4} rises from $\numSminRatioFirst$ at
+$d=\numHardDmin$ to $\numSminRatioLast$ at $d=\numHardDmax$, with a spread across designs that shrinks
+from $\numSminSdFirst$ to $\numSminSdLast$, and $d$ times its distance from one stays between
+$\numDratioMin$ and $\numDratioMax$ over the whole range, so the diagonal scaling moves the edge by
+about $3.9/d$ at these sizes.
+
+Both lemmas look true, and (L-a) in its stronger form (Table~\ref{tab:t4}). The overlaps
+$|u_j^\top\mathbf 1|$ show no growth with $d$ at all --- $\numOverlapFirst$ at $d=\numHardDmin$ and
+$\numOverlapLast$ at $d=\numHardDmax$, with a standard deviation near $0.6$ throughout --- which is
+$O_p(1)$, not merely the $o_p(\sqrt d)$ the reduction asks for.
+
+\begin{table}[t]
+\centering\small
+\caption{Target 4 lemma diagnostics. $A$ is the unit-Frobenius-norm feature-space normal of $p-1$
+rows; $u_1,u_2,u_3$ are the bottom left singular vectors of $H$ and $\mathbf 1\in\R^p$. Entries are
+mean $\pm$ standard deviation over the designs, with the $90$th percentile of the overlap beside it;
+extremes are not reported, since the width of a min--max grows with the number of designs. The
+seventh column is
+$s_{\min}(Z)/s_{\min}([b,H])$, the effect of the diagonal scaling $D$ in \eqref{eq:reduction}. A
+third column tending to a positive limit is (L-b); a fifth column that does not grow like $\sqrt d$
+is (L-a).}
+\label{tab:t4}
+\begin{tabular}{rrlllrlr}
+\toprule
+$d$ & $p$ & $d\,\Tr(A^4)$ & $\sqrt d\,\|A\|_{\mathrm{op}}$ & $|u_j^\top\mathbf 1|$ & p90 &
+$s_{\min}$ ratio & designs\\
+\midrule
+% BEGIN AUTOTABLE tab:t4
+20 & 210 & $2.37\pm0.24$ & $2.03\pm0.15$ & $0.71\pm0.54$ & 1.47 & $0.815\pm0.040$ & 1200\\
+30 & 465 & $2.24\pm0.15$ & $2.02\pm0.12$ & $0.73\pm0.56$ & 1.49 & $0.873\pm0.022$ & 900\\
+40 & 820 & $2.18\pm0.09$ & $2.02\pm0.10$ & $0.74\pm0.56$ & 1.54 & $0.902\pm0.014$ & 600\\
+60 & 1830 & $2.12\pm0.06$ & $2.02\pm0.08$ & $0.77\pm0.59$ & 1.59 & $0.934\pm0.007$ & 420\\
+80 & 3240 & $2.09\pm0.04$ & $2.01\pm0.06$ & $0.79\pm0.60$ & 1.66 & $0.951\pm0.005$ & 270\\
+100 & 5050 & $2.07\pm0.03$ & $2.02\pm0.05$ & $0.79\pm0.60$ & 1.63 & $0.961\pm0.004$ & 240\\
+120 & 7260 & $2.06\pm0.03$ & $2.02\pm0.05$ & $0.80\pm0.58$ & 1.53 & $0.967\pm0.002$ & 36\\
+% END AUTOTABLE tab:t4
+\bottomrule
+\end{tabular}
+\end{table}
+
+(L-b) is sharper than a glance suggests. $d\,\Tr(A^4)$ is not constant (Table~\ref{tab:lb}): the
+values at $d=20$ and $d=40$ are $\numLbEndsSe$ combined standard errors apart, so a flat fit is
+rejected outright. It is converging, with a $1/d$ correction. Fitting $d\,\Tr(A^4)=a+b/d$ to the two
+end points alone gives
+\[
+d\,\Tr(A^4)\;=\;\numLbTwoA+\frac{\numLbTwoB}{d},
+\]
+which reproduces the middle point, never used in the fit, to within $\numLbMidPull$ of its standard
+error; the weighted three-point fit reads $a=\numLbFitA\pm\numLbFitAse$ and
+$b=\numLbFitB\pm\numLbFitBse$ with a chi-squared of $\numLbChi$ on one degree of freedom. So
+$\Tr(A^4)=\Theta(1/d)$, which is (L-b), with the constant identified rather than merely bounded.
+
+The constant repays a second look, because $2$ is not an arbitrary number here. Were the $p-1$ rows
+generic rather than Veronese, their normal would be a uniform direction on the Frobenius sphere of
+$\mathrm{Sym}_d$; the spectrum of such a direction is semicircular \cite{Wigner,AGZ}, and
+$d\,\Tr(A^4)$ then tends to the fourth moment of the semicircle law, the Catalan number $C_2=2$. At
+finite $d$ the null is exact: a uniform direction is $U=G/\|G\|_F$ with $G$ a GOE matrix, whose
+norm is independent of its direction, so
+\begin{equation}
+d\,\E\Tr(U^4)=\frac{d\,\E\Tr(G^4)}{\E\|G\|_F^4}=\frac{d\,(2d^3+5d^2+5d)}{4p(p+2)},
+\qquad p=\frac{d(d+1)}{2},
+\label{eq:null}
+\end{equation}
+using $\E\Tr(G^4)=2d^3+5d^2+5d$ for the GOE normalised to unit off-diagonal variance, by Wick's
+formula, and $\|G\|_F^2\sim2\chi^2_p$. The measured intercept $\numLbFitA\pm\numLbFitAse$ sits $\numLbFitPull$
+standard errors from $2$. To leading order the leave-one-out normal behaves like a generic direction,
+and the limit in (L-b) is the semicircle's.
+
+What is not generic is the approach to it. At each dimension the measured value exceeds the null
+\eqref{eq:null} by forty to fifty standard errors (Table~\ref{tab:lb}), so the gap is not a sampling
+artefact, and multiplying the excess by $d$ gives values that drift gently downward rather than
+sitting still: a limit with its own $1/d$ correction, the two-point fit $\numLbExcA+\numLbExcB/d$
+landing the middle value within $\numLbExcPull$ of a standard error. So the excess over a uniform
+direction is itself $\Theta(1/d)$, and
+\[
+\Tr(A^4)\;=\;\frac{2}{d}+\frac{c}{d^2}+\cdots,\qquad c\approx \numLbExcC,
+\]
+where a uniform direction contributes under one to that second coefficient. The Veronese structure
+of the rows is invisible in the leading term of $\Tr(A^4)$ and enters only at the next one. For
+(L-b), which asks only for the order, that is a wide margin; for anyone setting out to prove it, the
+leading calculation is one about a generic direction in $\mathrm{Sym}_d$, and the rows' structure
+can be carried as a correction.
+
+\begin{table}[t]
+\centering\small
+\caption{Lemma (L-b) at the three dimensions with the largest design counts. The null is the exact
+generic-direction value \eqref{eq:null}; the excess is the measured mean minus the null, with the
+standard error of the mean and the excess in units of it; the last column is $d$ times the excess.}
+\label{tab:lb}
+\begin{tabular}{rrlrlrr}
+\toprule
+$d$ & designs & $d\,\Tr(A^4)$ & null \eqref{eq:null} & excess & in s.e. & $d\times$excess\\
+\midrule
+% BEGIN AUTOTABLE tab:lb
+20 & 1200 & $2.3728\pm0.0069$ & 2.0328 & $0.340\pm0.007$ & 49 & 6.80\\
+30 & 900 & $2.2436\pm0.0049$ & 2.0256 & $0.218\pm0.005$ & 45 & 6.54\\
+40 & 600 & $2.1813\pm0.0039$ & 2.0207 & $0.161\pm0.004$ & 41 & 6.43\\
+% END AUTOTABLE tab:lb
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Why the constant is two}\label{sec:semicircle}
+
+The value the constant took is not a numerical accident, and following it gives a statement about
+$A$ that is stronger than (L-b), simpler than (L-b), and --- unlike (L-b) --- of a shape that a proof
+can attack directly. Two exact facts do the work, and both are elementary.
+
+\begin{proposition}[Conjugation invariance]\label{prop:conj}
+The law of $A$ is invariant under $A\mapsto OAO^\top$ for every $O\in O(d)$. Consequently $A=U\Lambda
+U^\top$ with $U$ Haar on $O(d)$ independent of $\Lambda$, and every question about $A$ is a question
+about its eigenvalue law alone.
+\end{proposition}
+
+\begin{proof}
+For $v\in\R^p$ let $M_v\in\mathrm{Sym}_d$ be its un-vectorization, so that $z(x)^\top v=\langle
+M_v,xx^\top-I\rangle/\sqrt2$. Then $z(Ox)^\top v=\langle M_v,Oxx^\top O^\top-I\rangle/\sqrt2
+=\langle O^\top M_vO,xx^\top-I\rangle/\sqrt2$, so replacing every input $x_i$ by $Ox_i$ maps the row
+space of $Z$ through the linear map $M\mapsto OMO^\top$, which is orthogonal for the Frobenius inner
+product. The orthogonal complement of the row space maps the same way, and the inputs $Ox_i$ have
+the law of the $x_i$.
+\end{proof}
+
+\begin{proposition}[The Veronese feature vector is isotropic]\label{prop:iso}
+$\E\,z(x)z(x)^\top=I_p$ exactly, for every $d$.
+\end{proposition}
+
+\begin{proof}
+The diagonal coordinates have $\E[(x_a^2-1)^2/2]=(3-1)/2=1$ and the off-diagonal ones
+$\E[x_a^2x_b^2]=1$. Every cross term vanishes: $\E[(x_a^2-1)(x_b^2-1)]=0$ for $a\ne b$ by
+independence, and any term carrying an odd power of some coordinate vanishes by symmetry.
+\end{proof}
+
+Both scalars in Proposition~\ref{prop:iso} are forced, and it is worth seeing why, because it says
+what would have to fail for the leading order to stop being generic. The group $O(d)$ acts on
+$\mathrm{Sym}_d$ preserving the splitting $\mathrm{Sym}_d=\R I\oplus\mathrm{Sym}_d^0$ into the scalars
+and the traceless part, and for $d\ge3$ these are inequivalent irreducibles. Since
+$z(Ox)=Oz(x)O^\top$ and $Ox$ has the law of $x$, the operator $\E\,zz^\top$ commutes with the action,
+so by Schur's lemma it is scalar on each summand:
+\[
+\E\,zz^\top=\alpha\,P_{\R I}+\beta\,P_{\mathrm{Sym}_d^0} .
+\]
+No entry-by-entry computation can produce anything else, and isotropy is the single equality
+$\alpha=\beta$. For the Gaussian row both are $1$: along the traceless block a pure off-diagonal
+coordinate is $x_ax_b$ with variance $1$, and along $I/\sqrt d$ the row reads
+$(\lvert x\rvert^2-d)/\sqrt{2d}$, whose variance is $1$ because $\chi^2_d$ has variance $2d$. So
+$\alpha=\beta$ is a property of the Gaussian and not of the Veronese map, and it is the only thing
+about the row law that the leading order uses. The same argument applied to the normal itself gives
+its second moment: $\E\,A\otimes A$ is $a_dP_{\R I}+b_dP_{\mathrm{Sym}_d^0}$ with $a_d=O(1/d)$ and
+$b_d=(1-a_d)/(p-1)$, so that $\E\langle A,B\rangle^2=(1+O(1/d))/(p-1)$ for every fixed unit
+traceless $B$ \cite{PN24}; this is the second-moment shadow of the statement below, at the scale a
+Haar-distributed direction would give.
+
+Proposition~\ref{prop:iso} is what makes the leading order generic. Had the $p-1$ rows been
+isotropic \emph{Gaussian} vectors in $\R^p$, their normal would have been exactly uniform on the unit
+Frobenius sphere of $\mathrm{Sym}_d$; a uniform direction is a Frobenius-normalized GOE matrix, whose
+spectrum is semicircular, and the semicircle's moments are the Catalan numbers. The rows are not
+Gaussian --- they are quadratic in $x$ --- but they are exactly isotropic, and that is the part the
+leading order sees.
+
+Proposition~\ref{prop:conj} also says what cannot be measured. Every $\Tr(A^{2k})$, the operator
+norm, the Kolmogorov--Smirnov distance to the semicircle --- every statistic of $A$ alone that is
+invariant under conjugation --- is a function of the eigenvalues, and the eigenvectors carry no
+information beyond being Haar. So no such statistic can distinguish the Veronese normal from any
+other conjugation-invariant matrix with the same spectrum, and whatever the design leaves in $A$
+beyond its spectrum can only be seen in a statistic that involves $A$ \emph{and} the data: the
+alignment of an eigenvector with one of the $x_i$, or $x^\top Ax$ at a fresh point. That is where a
+proof of the conjecture may not go, and where a sharper description of $A$ must.
+
+So the statement the measurement is pointing at is this.
+
+\begin{conjecture}\label{conj:semicircle}
+$\sqrt d\,A$ converges in moments to the standard semicircle law on $[-2,2]$; equivalently, for every
+$k\ge1$,
+\[
+d^{\,k-1}\,\E\Tr(A^{2k})\;\longrightarrow\;C_k=\frac1{k+1}\binom{2k}{k},
+\]
+the odd moments vanishing by symmetry. Lemma (L-b) is the case $k=2$, where $C_2=2$.
+\end{conjecture}
+
+Table~\ref{tab:moments} is the test proper --- the same normal taken to the sixth, eighth and tenth
+moments and out to dimensions the full hard-edge driver cannot reach, the null vector being a linear
+solve rather than a decomposition. Every moment sits above its Catalan number and falls toward it as
+$d$ grows, and the edge $\sqrt d\,\|A\|_{\mathrm{op}}$ sits above $2$ throughout, between
+$\numEdgeMin$ and $\numEdgeMax$ over $\numMomDmin\le d\le\numMomDmax$, with no growth. The pipeline
+has a control (Table~\ref{tab:control}): replacing the Veronese rows by i.i.d.\ Gaussian or
+Rademacher rows in $\R^p$ makes the null direction exactly uniform on the sphere, so its
+un-vectorization is a Frobenius-normalized GOE matrix and its fourth moment must be the exact null
+\eqref{eq:null}; it is, to within $\numControlWorstSe$ standard errors at every dimension run, while
+the Veronese law
+sits far above at the same dimensions. The whole of the Veronese excess is a property of the feature
+law rather than of the measurement.
+
+The limit is an extrapolation, and it is worth being exact about what the data support.
+Table~\ref{tab:momentfit} reads off the intercept two ways over the whole range of dimensions,
+weighting each dimension by the inverse squared standard error of its mean. A two-term fit $a+b/d$
+sits below the Catalan number at every $k$, by under one standard error at $k=2$ and by between
+two and four at $k=4$ and $k=5$, with a chi-squared that reaches $\numMomChiTwoLast$ on
+$\numMomChiDof$ degrees of freedom at $k=5$: the higher moments carry a visible $1/d^2$ term that a
+two-term fit cannot absorb and loads onto the intercept. Adding that term, the three-term fit
+$a+b/d+e/d^2$ brings the intercept to within $\numMomFitWorst$ standard errors of the Catalan number
+at each of the four moments, and its $1/d$ coefficient at $k=2$, $b=\numMomFitB\pm\numMomFitBse$,
+agrees with the value the hard-edge driver measures independently in Table~\ref{tab:lb}. So the
+reading is the careful one: the data are consistent with the Catalan limits and the limits are
+approached, not attained --- at $d=\numMomDmax$, the largest reached, $d\,\Tr(A^4)$ is still
+$\numMomLastMfour$, $\numMomLastPull$ standard errors above $2$. Above $d=100$ the ladder rests on
+ten, six and six designs.
+
+\begin{table}[t]
+\centering\small
+\caption{Conjecture~\ref{conj:semicircle} under test. $A$ is the same unit-Frobenius normal as in
+Table~\ref{tab:t4}; each column reports $d^{\,k-1}\Tr(A^{2k})$ against the Catalan number it should
+converge to, and the last column the edge against $2$. Entries are mean $\pm$ standard error over
+independent designs. The null vector is obtained by a linear solve and checked by its residual
+$\|Zv\|$, which is below $10^{-10}$ on every design reported here.}
+\label{tab:moments}
+{\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{rrlllll}
+\toprule
+$d$ & designs & $d\,\Tr A^4$ & $d^2\,\Tr A^6$ & $d^3\,\Tr A^8$ & $d^4\,\Tr A^{10}$ &
+$\sqrt d\,\|A\|_{\mathrm{op}}$\\
+ & & ($C_2=2$) & ($C_3=5$) & ($C_4=14$) & ($C_5=42$) & ($2$)\\
+\midrule
+% BEGIN AUTOTABLE tab:moments
+20 & 320 & $2.371\pm0.012$ & $7.458\pm0.098$ & $27.005\pm0.621$ & $106.621\pm3.671$ & $2.034\pm0.008$\\
+30 & 270 & $2.258\pm0.008$ & $6.678\pm0.062$ & $22.665\pm0.364$ & $83.736\pm1.995$ & $2.036\pm0.007$\\
+40 & 200 & $2.187\pm0.006$ & $6.198\pm0.047$ & $20.082\pm0.272$ & $70.724\pm1.485$ & $2.029\pm0.007$\\
+60 & 140 & $2.118\pm0.005$ & $5.752\pm0.036$ & $17.784\pm0.204$ & $59.649\pm1.087$ & $2.021\pm0.007$\\
+80 & 60 & $2.091\pm0.005$ & $5.565\pm0.029$ & $16.743\pm0.149$ & $54.266\pm0.709$ & $2.007\pm0.006$\\
+100 & 40 & $2.071\pm0.004$ & $5.440\pm0.030$ & $16.151\pm0.166$ & $51.722\pm0.850$ & $2.009\pm0.010$\\
+140 & 10 & $2.055\pm0.009$ & $5.332\pm0.056$ & $15.575\pm0.269$ & $48.934\pm1.212$ & $2.019\pm0.013$\\
+160 & 6 & $2.054\pm0.008$ & $5.319\pm0.053$ & $15.500\pm0.265$ & $48.577\pm1.206$ & $2.009\pm0.017$\\
+200 & 6 & $2.037\pm0.005$ & $5.227\pm0.029$ & $15.100\pm0.132$ & $46.912\pm0.572$ & $2.013\pm0.006$\\
+% END AUTOTABLE tab:moments
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{The pipeline control. The same null-vector computation with the Veronese rows replaced by
+i.i.d.\ Gaussian and by i.i.d.\ Rademacher rows in $\R^p$, whose normal is exactly a uniform
+direction; its $d\,\Tr(A^4)$ must equal \eqref{eq:null}, which is $2.0329$, $2.0258$, $2.0207$ and
+$2.0141$ at $d=20,30,40,60$. Mean $\pm$ standard error over the designs.}
+\label{tab:control}
+{\footnotesize\setlength{\tabcolsep}{3pt}
+\begin{tabular}{rlrlllll}
+\toprule
+$d$ & rows & designs & $d\,\Tr A^4$ & $d^2\,\Tr A^6$ & $d^3\,\Tr A^8$ & $d^4\,\Tr A^{10}$ &
+$\sqrt d\,\|A\|_{\mathrm{op}}$\\
+\midrule
+% BEGIN AUTOTABLE tab:control
+20 & Veronese & 320 & $2.371\pm0.012$ & $7.458\pm0.098$ & $27.005\pm0.621$ & $106.621\pm3.671$ & $2.034\pm0.008$\\
+20 & Gaussian rows & 200 & $2.041\pm0.011$ & $5.258\pm0.066$ & $15.311\pm0.334$ & $48.263\pm1.588$ & $1.861\pm0.008$\\
+20 & Rademacher rows & 200 & $2.037\pm0.010$ & $5.263\pm0.065$ & $15.443\pm0.333$ & $49.207\pm1.600$ & $1.867\pm0.008$\\
+30 & Veronese & 270 & $2.258\pm0.008$ & $6.678\pm0.062$ & $22.665\pm0.364$ & $83.736\pm1.995$ & $2.036\pm0.007$\\
+30 & Gaussian rows & 150 & $2.039\pm0.008$ & $5.263\pm0.050$ & $15.384\pm0.254$ & $48.667\pm1.208$ & $1.916\pm0.008$\\
+30 & Rademacher rows & 150 & $2.025\pm0.007$ & $5.186\pm0.045$ & $15.023\pm0.229$ & $47.080\pm1.106$ & $1.905\pm0.008$\\
+40 & Veronese & 200 & $2.187\pm0.006$ & $6.198\pm0.047$ & $20.082\pm0.272$ & $70.724\pm1.485$ & $2.029\pm0.007$\\
+40 & Gaussian rows & 100 & $2.018\pm0.006$ & $5.118\pm0.040$ & $14.616\pm0.208$ & $44.984\pm0.995$ & $1.916\pm0.008$\\
+40 & Rademacher rows & 100 & $2.002\pm0.008$ & $5.046\pm0.051$ & $14.373\pm0.259$ & $44.323\pm1.229$ & $1.917\pm0.009$\\
+60 & Veronese & 140 & $2.118\pm0.005$ & $5.752\pm0.036$ & $17.784\pm0.204$ & $59.649\pm1.087$ & $2.021\pm0.007$\\
+60 & Gaussian rows & 60 & $2.022\pm0.006$ & $5.144\pm0.039$ & $14.725\pm0.184$ & $45.305\pm0.812$ & $1.944\pm0.007$\\
+60 & Rademacher rows & 60 & $2.013\pm0.006$ & $5.077\pm0.034$ & $14.384\pm0.157$ & $43.792\pm0.700$ & $1.938\pm0.007$\\
+% END AUTOTABLE tab:control
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{The intercept of the moment ladder of Table~\ref{tab:moments}, computed from the records
+over every dimension measured, each weighted by the inverse squared standard error of its mean. For
+each $k$: a two-term fit $a+b/d$, its intercept's distance from the Catalan number in standard
+errors and its chi-squared over degrees of freedom; then the same for a three-term fit
+$a+b/d+e/d^2$, with its $1/d$ coefficient.}
+\label{tab:momentfit}
+{\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{rrlrrllrr}
+\toprule
+$k$ & $C_k$ & two-term $a$ & s.e.\ from $C_k$ & $\chi^2/\mathrm{dof}$ & three-term $a$ & $b$ &
+s.e.\ from $C_k$ & $\chi^2/\mathrm{dof}$\\
+\midrule
+% BEGIN AUTOTABLE tab:momentfit
+2 & 2 & $1.997\pm0.004$ & -0.7 & 4.4/7 & $2.000\pm0.006$ & $7.2\pm0.7$ & +0.0 & 4.1/6\\
+3 & 5 & $4.959\pm0.024$ & -1.7 & 4.0/7 & $4.995\pm0.040$ & $44.8\pm4.7$ & -0.1 & 2.8/6\\
+4 & 14 & $13.669\pm0.121$ & -2.7 & 5.8/7 & $13.970\pm0.201$ & $213.9\pm25.3$ & -0.2 & 2.3/6\\
+5 & 42 & $39.904\pm0.581$ & -3.6 & 9.6/7 & $41.956\pm0.952$ & $917.7\pm127.7$ & -0.0 & 2.2/6\\
+% END AUTOTABLE tab:momentfit
+\bottomrule
+\end{tabular}}
+\end{table}
+
+Moments are a confirmation, and four of them agreeing is still four numbers; a law that is not the
+semicircle can match them. The observation that comes out differently if the conjecture is false is
+the shape of the whole spectrum, and the statistic for that is the Kolmogorov--Smirnov distance
+between the empirical distribution of $\sqrt d\,\lambda$ and the semicircle law itself. If the conjecture
+holds this must fall to zero; if the limit is some other law it must flatten at a positive value,
+however well the low moments behave. It falls (Table~\ref{tab:kssemi}), and what makes that readable
+is the control beside it, since the absolute value of a Kolmogorov--Smirnov distance at $d$
+eigenvalues means nothing on its own: Gaussian and Rademacher rows give a null direction that is
+exactly uniform, hence genuinely semicircular in the limit, and at the two dimensions where both arms
+were run the Veronese distance is $\numKsRatioMin$ to $\numKsRatioMax$ times the Gaussian-row
+distance. A laptop-scale run of the same construction at $d=20$, with $200$ designs per arm, gives
+$0.0919\pm0.0012$ against $0.0848\pm0.0012$, the same ratio. The Veronese spectrum sits a tenth
+further from the semicircle than an exactly uniform direction does, at every dimension where the
+comparison exists, and the two fall together. A law converging to something else would have separated
+from that control rather than tracking it.
+
+\begin{table}[t]
+\centering\small
+\caption{Kolmogorov--Smirnov distance between the empirical law of $\sqrt d\,\lambda$ and the
+semicircle law on $[-2,2]$, mean $\pm$ standard error over the designs whose records carry the
+statistic, by row law.}
+\label{tab:kssemi}
+\begin{tabular}{rlrl}
+\toprule
+$d$ & rows & designs & KS distance\\
+\midrule
+% BEGIN AUTOTABLE tab:kssemi
+40 & Veronese & 100 & $0.0515\pm0.0009$\\
+40 & Gaussian rows & 100 & $0.0484\pm0.0009$\\
+40 & Rademacher rows & 100 & $0.0481\pm0.0008$\\
+60 & Veronese & 100 & $0.0379\pm0.0006$\\
+60 & Gaussian rows & 60 & $0.0346\pm0.0007$\\
+60 & Rademacher rows & 60 & $0.0359\pm0.0007$\\
+80 & Veronese & 30 & $0.0300\pm0.0009$\\
+100 & Veronese & 20 & $0.0247\pm0.0009$\\
+200 & Veronese & 6 & $0.0141\pm0.0005$\\
+% END AUTOTABLE tab:kssemi
+\bottomrule
+\end{tabular}
+\end{table}
+
+Nor is the conjecture special to the Gaussian row. Take the inputs uniform on the unit sphere
+instead and centre inside the traceless block, $z(x)=xx^\top-I/d$; then the design never leaves
+$\mathrm{Sym}_d^0$, the scalar block of Proposition~\ref{prop:iso} is absent, isotropy is automatic
+by Schur, and $A$ is the unit traceless symmetric matrix whose quadratic form kills the design,
+$x_i^\top Ax_i=0$ for $i\le\dim\mathrm{Sym}_d^0-1$. In laptop-scale runs of that construction
+the four moments converge to the same Catalan numbers, and the corrections are the same size: with
+$7{,}373$, $2{,}650$ and $925$ designs at $d=24,32,40$ the excess over $C_k$ is $0.93$ to $1.03$
+times the excess of the Gaussian-input normal at the same $d$, read off the $1/d+1/d^2$ model fitted
+to the records, for every $k$ from $2$ to $5$; a direct pairing of the two constructions at the same
+$d$ with a few hundred designs each gives ratios between $0.9$ and $1.2$ with standard errors of
+five to ten percent. Same sign, same $1/d$ shape, the same size to within the errors. Two row laws,
+two ambient spaces, one limit.
+
+Where the non-Gaussianity sits is visible, and it has an exact formula. Write $U$ for a unit-Frobenius
+symmetric matrix and $u_1,\dots,u_d$ for its eigenvalues. Then $\langle z,U\rangle=\sum_iu_i(g_i^2-1)/\sqrt2$
+with $g$ standard Gaussian, a weighted sum of independent centred $\chi^2_1$ variables; since
+$(g^2-1)$ has variance $2$ and fourth cumulant $48$,
+\begin{equation}\label{eq:kurt}
+\operatorname{kurt}\langle z,U\rangle\;=\;3+12\,\Tr(U^4).
+\end{equation}
+The two coordinate values are the extremes of \eqref{eq:kurt}: a pure diagonal coordinate has
+$\Tr(U^4)=1$ and kurtosis $15$, a pure off-diagonal coordinate has $\Tr(U^4)=\tfrac12$ and kurtosis
+$9$. Along a \emph{typical} direction $\Tr(U^4)$ is the fourth moment of a Frobenius-normalized GOE
+spectrum, \eqref{eq:null} divided by $d$, so the kurtosis along a uniformly random direction is
+$3+24/d$ to leading order; a random direction mixes $\Theta(d^2)$ coordinates and the mixture is
+asymptotically Gaussian. Along the null direction of a design the row is slightly more leptokurtic
+than along an independent direction: for the sphere construction, where the typical value falls just
+below three, the pairs read $2.84$ against $3.21$ at $d=8$, $2.89$ against $3.23$ at $d=10$, $2.94$
+against $3.18$ at $d=14$ and $2.97$ against $3.11$ at $d=20$, the gap closing with $d$, while the two
+variances agree to three digits at every $d$ --- a direct check that the null direction is isotropic
+at second order (laptop, $12{,}753$ to $97{,}056$ designs).
+
+What the fourth moment does \emph{not} explain is the size of the correction, and the sphere
+construction is the reason. Its row $xx^\top-I/d$ has no $\lvert x\rvert^2$ fluctuation, and its
+kurtosis along a typical direction falls just \emph{below} three, against $3+24/d$ for the Gaussian
+row. Two row laws whose kurtoses straddle the Gaussian value, one leptokurtic by a factor of nearly
+two at $d=10$ and the other slightly platykurtic, produce corrections agreeing to within a tenth. A
+fourth moment cannot do that. Matching directly on the kurtosis makes the point sharper still. Take
+rows with \emph{independent} coordinates of variance one and kurtosis $\kappa$ --- the three-point
+law $\Pr(\pm\kappa^{1/2})=1/(2\kappa)$, $\Pr(0)=1-1/\kappa$ realises every $\kappa\ge1$ --- and the
+excess over $C_k$ is decided by $\kappa$ and nothing else: at $d=14$, over about $10^5$ designs per
+arm, a three-point law at $\kappa=3$ and a Gaussian agree to within half a standard error at
+$k=2,3,4,5$, while moving $\kappa$ from $1$ to $9$ multiplies the excess by $2.3$; at $d=24$ the same
+comparison holds for three matched pairs (uniform against three-point at $\kappa=1.8$, Gaussian
+against three-point at $\kappa=3$, Laplace against three-point at $\kappa=6$, all within two standard
+errors over $\numKurtDtwentyfourNmin$ to $\numKurtDtwentyfourNmax$ designs per arm) and the same
+move in $\kappa$ multiplies the
+excess by only $1.15$, so the $\kappa$-dependence is itself a higher-order term in $1/d$ than the
+excess. The Veronese row at $d=14$ has kurtosis $3+24/14\approx4.7$ along a typical direction and an
+excess of $0.46$ at $k=2$ against $0.041$ for independent coordinates matched to that kurtosis, an
+order of magnitude larger. With independent coordinates the correction is a fourth-moment functional;
+the Veronese row does not have independent coordinates, it is rank one, and that is the structure the
+two constructions share and the fourth moment does not see. A row $(XX^\top-rI)/\sqrt{2r}$ with $X$
+a $d\times r$ Gaussian matrix is a sum of $r$ independent rank-one forms, has kurtosis
+$3+12\,\Tr(U^4)/r$ along $U$, and its excess falls roughly as $1/r$ toward the generic value: $0.46$,
+$0.23$, $0.13$, $0.085$ at $r=1,2,4,8$ ($k=2$, $d=14$). Within one dependence structure the kurtosis
+tunes the correction; across structures at a fixed kurtosis it does not, and the Veronese row's $r=1$
+is the extreme. A derivation of the constant $b$ has to come from the rank-one dependence, not from a
+kurtosis. All of the numbers in this paragraph are laptop-scale computations at $d\le24$, recorded
+with their scripts beside the run records.
+
+\begin{remark}[(L-b) follows from a delocalization bound, and the loss is a factor two]
+Since $\Tr(A^2)=1$,
+\[
+\Tr(A^4)=\sum_i\lambda_i^4\;\le\;\Big(\max_i\lambda_i^2\Big)\sum_i\lambda_i^2=\|A\|_{\mathrm{op}}^2 ,
+\]
+so (L-b) is implied by $\E\|A\|_{\mathrm{op}}^2=O(1/d)$ --- a statement about one eigenvalue rather
+than about the whole spectrum, and the kind of delocalization estimate the random-matrix literature
+is built to supply. It is worth knowing how much that costs, because a crude bound that loses an
+unbounded factor is not a route. It loses exactly two. Under Conjecture~\ref{conj:semicircle} the
+edge is $2/\sqrt d$ and the fourth moment $2/d$, so the bound gives $4/d$ against a truth of $2/d$;
+measured, the ratio of $\|A\|_{\mathrm{op}}^2$ to $\Tr(A^4)$ climbs from $\numOpRatioFirst$ at
+$d=\numMomDmin$ to $\numOpRatioLast$ at $d=\numMomDmax$, converging to the two that the semicircle
+predicts. So an operator-norm route to (L-b) is not lossy in order and is lossy by a factor of two in
+the constant, which the reader attacking it should know before choosing between it and the moment
+route.
+\end{remark}
+
+\begin{remark}[The Gram matrix as a sum of independent rank-one terms]
+The Gram matrix of the reduction, $\sum_{i}z(X_i)z(X_i)^\top$, is a sum of independent rank-one
+matrices with heavily dependent entries within each summand, which is the setting of the matrix
+concentration inequalities of Brailovskaya and van Handel \cite{BvH} and of the Gaussian theory they
+rest on \cite{BBvH}, and outside that of edge universality for matrices with independent entries. In
+that framework the spectrum is controlled by the free model with the same mean and covariance --- here
+the Marchenko--Pastur law at aspect ratio one \cite{MarchenkoPastur}, whose hard edge is the one the
+conjecture names --- provided the norm of a single summand is small against the variance parameter
+of the sum. The variance parameter is exact: by the same Schur decomposition, $\E[\|z\|^2zz^\top]$
+has the two eigenvalues $(d^2+13d+16)/2$ on $\R I$ and $(d^2+9d+16)/2$ on $\mathrm{Sym}_d^0$, so for
+$X=\sum_{i\le p-1}(z_iz_i^\top-I)$ one has $\sigma(X)^2=\|\E X^2\|=(p-1)(d^2+13d+14)/2$. The summand
+norm is $\|z(x)\|^2=(|x|^4-2|x|^2+d)/2$ with $|x|^2\sim\chi^2_d$, of mean $p$ and with $|x|^4/2$ as
+its leading term, and in a laptop-scale sample at $d=\numVhDmin$ to $\numVhDmax$ its $99$th
+percentile runs from $\numVhRqFirst$ down to $\numVhRqLast$ times $\sigma(X)$ while its maximum
+stays between $\numVhRmaxMin$ and $\numVhRmaxMax$ times $\sigma(X)$: the boundedness parameter is of
+the order of the variance parameter at every reachable $d$, not small against it. Its tail is exactly what makes the inverse
+smallest singular value fail to be integrable at fixed $d$ (the remark after Table~\ref{tab:ks}); a
+truncation of that tail is the natural device, and the rate at which the truncated summand becomes
+negligible is the quantitative question the framework poses.
+\end{remark}
+
+\subsection{Does the reduced matrix look like a Wishart at the edge?}
+
+The reduction is exact and the two lemmas look true, so the question that remains is whether
+$[b,H]$ actually obeys the target law. That is directly testable: Table~\ref{tab:ks} compares the
+empirical distribution of each statistic against $1-e^{-\sqrt t-t/2}$ by a Kolmogorov--Smirnov
+distance, with the $95\%$ critical value $1.36/\sqrt N$ at $N$ designs beside it. After the
+reduction the matrix is statistically indistinguishable from the square real Wishart hard edge at
+every dimension from $d=20$ on, while $Z$ itself is rejected at $d=20$, $30$ and $40$ and becomes
+consistent only from $d=60$, where the critical value has also grown. The test has finite
+resolution and it should be quoted with it: at $1{,}200$ designs a Kolmogorov--Smirnov test sees a
+discrepancy only above about $0.04$ in the cumulative distribution, so this is evidence against
+distortions larger than four percentage points at $d=20$, and against progressively larger ones at
+the higher dimensions with fewer designs. The two statistics differ by exactly the diagonal scaling
+$D$, whose effect the theory shows vanishes and which at $d=20$ still contributes a factor
+$s_{\min}(Z)/s_{\min}([b,H])=\numSminRatioFirst$; squaring that moves the whole distribution of
+$p\,s_{\min}(Z)^2$ left by a third, which is what the first column registers. The finite-size
+discrepancy therefore sits in the one place the proof already controls.
+
+\begin{table}[t]
+\centering\small
+\caption{Kolmogorov--Smirnov distance of the empirical law of $p\,s_{\min}^2$ to the square real
+Wishart hard edge $1-e^{-\sqrt t-t/2}$, for $Z$, for the reduced matrix $[b,H]$, and for the
+$p\times(p-1)$ block $H$ alone (tested against the same law, to which it is not expected to
+conform; see the text). The critical value is $1.36/\sqrt N$ at the $95\%$ level; the verdict is for
+$Z$ and for $[b,H]$.}
+\label{tab:ks}
+\begin{tabular}{rrrrrrl}
+\toprule
+$d$ & designs & $Z$ & $[b,H]$ & $H$ & critical & verdict ($Z$ / $[b,H]$)\\
+\midrule
+% BEGIN AUTOTABLE tab:ks
+20 & 1200 & 0.104 & 0.024 & 0.397 & 0.039 & rejected / consistent\\
+30 & 900 & 0.078 & 0.024 & 0.401 & 0.045 & rejected / consistent\\
+40 & 600 & 0.058 & 0.020 & 0.399 & 0.056 & rejected / consistent\\
+60 & 420 & 0.054 & 0.035 & 0.431 & 0.066 & consistent / consistent\\
+80 & 270 & 0.058 & 0.037 & 0.421 & 0.083 & consistent / consistent\\
+100 & 240 & 0.035 & 0.047 & 0.427 & 0.088 & consistent / consistent\\
+120 & 36 & 0.114 & 0.099 & 0.379 & 0.227 & consistent / consistent\\
+% END AUTOTABLE tab:ks
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}
+The same test applied to $H$ alone rejects at a distance near $0.4$ at every dimension, and that
+number should not be read as evidence about anything. $H$ is $p\times(p-1)$, one column short of
+square, and the hard-edge law depends on the aspect deficit through the Bessel parameter
+$\alpha=|\text{rows}-\text{cols}|$ \cite{TracyWidom}; $1-e^{-\sqrt t-t/2}$ is the $\alpha=0$ law.
+Testing an $\alpha=1$ matrix against it rejects by construction. The column is recorded only to say
+that it is uninformative.
+\end{remark}
+
+\begin{remark}
+For every fixed $d\ge2$, $\E\,s_{\min}(Z)^{-1}=\infty$ \cite{PN24}. The rows span $\mathrm{Sym}_d$
+almost surely, so $\det Z\ne0$ almost surely, and the least singular value of a square matrix with
+i.i.d.\ rows has a positive linear lower-tail coefficient at the origin in every fixed dimension
+\cite{GregorattiMaran}, which forces the inverse first moment to diverge. This is not evidence
+against the conjecture --- the Gaussian square ensemble diverges the same way \cite{Edelman}, and the
+conjectured law $1-e^{-\sqrt t-t/2}$ has exactly the linear lower tail in $s_{\min}$ that causes it
+--- but it forbids any argument that asks for uniform integrability of the full inverse smallest
+singular value, as opposed to a truncated one or one with finitely many bottom modes removed.
+
+It is visible in the records, and it is a warning about reporting. Table~\ref{tab:invmoment} splits
+the designs at each dimension into disjoint blocks of $150$ and computes $(\sqrt p\,s_{\min}(Z))^{-1}$
+in each. A sample mean of $150$ independent draws of a quantity with finite variance varies by a few
+percent from block to block; these block means vary by factors of $\numInvMeanSpreadMin$ to
+$\numInvMeanSpreadMax$, with coefficients of variation between $\numInvMeanCvMin$ and
+$\numInvMeanCvMax$, because each is estimating the smallest draw in its block rather than any
+population quantity, while the block medians spread by $\numInvMedSpreadMin$ to
+$\numInvMedSpreadMax$ percent (coefficient of variation $\numInvMedCvMin$ to $\numInvMedCvMax$). That
+is what a
+divergent first moment looks like from inside a finite sample, and it is why the tables in this
+section report medians and standard deviations rather than means of inverse quantities.
+\end{remark}
+
+\begin{table}[t]
+\centering\small
+\caption{Block means and block medians of $(\sqrt p\,s_{\min}(Z))^{-1}$ over disjoint blocks of
+$150$ designs, with the coefficient of variation across blocks.}
+\label{tab:invmoment}
+\begin{tabular}{rrlrlr}
+\toprule
+$d$ & blocks & block means & c.v. & block medians & c.v.\\
+\midrule
+% BEGIN AUTOTABLE tab:invmoment
+20 & 8 & 5.5--33.0 & 0.82 & 2.12--2.66 & 0.07\\
+30 & 6 & 5.8--38.0 & 0.80 & 1.92--2.24 & 0.06\\
+40 & 4 & 5.3--10.2 & 0.35 & 1.95--2.15 & 0.04\\
+60 & 2 & 3.7--14.7 & 0.84 & 1.94--2.07 & 0.05\\
+% END AUTOTABLE tab:invmoment
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}
+The lower tail is where the conjecture lives, so it is worth looking at directly rather than through
+a single Kolmogorov--Smirnov number. Table~\ref{tab:tail} takes the $2$nd, $5$th, $10$th and $20$th
+percentiles of $p\,s_{\min}([b,H])^2$ and reports the mass the conjectured law assigns below each of
+them; the nominal values are $0.02$, $0.05$, $0.10$, $0.20$. The law is a little heavy in the extreme
+tail at $d=20$ and a little light at $d=30$, with no monotone drift in $d$ --- a pattern consistent
+with sampling noise at these design counts rather than with a systematic distortion, and consistent
+with the distances of Table~\ref{tab:ks}.
+\end{remark}
+
+\begin{table}[t]
+\centering\small
+\caption{The lower tail of $p\,s_{\min}([b,H])^2$: the mass assigned by $1-e^{-\sqrt t-t/2}$ below
+the empirical $2$nd, $5$th, $10$th and $20$th percentiles, at every dimension with at least $200$
+designs.}
+\label{tab:tail}
+\begin{tabular}{rrrrrr}
+\toprule
+$d$ & designs & at p2 & at p5 & at p10 & at p20\\
+\midrule
+% BEGIN AUTOTABLE tab:tail
+20 & 1200 & 0.025 & 0.058 & 0.102 & 0.205\\
+30 & 900 & 0.022 & 0.043 & 0.088 & 0.181\\
+40 & 600 & 0.021 & 0.044 & 0.111 & 0.201\\
+60 & 420 & 0.025 & 0.067 & 0.102 & 0.194\\
+80 & 270 & 0.021 & 0.051 & 0.088 & 0.187\\
+100 & 240 & 0.025 & 0.042 & 0.127 & 0.227\\
+% END AUTOTABLE tab:tail
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{remark}
+A measurement cannot prove either lemma, and neither can it prove the hard edge. What it can do is
+tell the next attempt where the difficulty is likely to be. On this evidence neither lemma is the
+obstruction, and the reduced matrix already passes the test the conjecture is about at the smallest
+dimension measured; what is missing is a hard-edge theorem for the harmonic block, not a reason to
+doubt the target.
+\end{remark}
+
+\section{Target 1: the surrogate's residuals, and why no Stein comparison is needed}\label{sec:t1}
+
+\subsection{A Hermite identification}
+
+The proof of Theorem~\ref{thm:T1} matches a Gaussian surrogate whose same-view variance and cross-view
+covariance agree with the activation's, with the shared and private residual coefficients of
+Dhifallah and Lu \cite{DhifallahLu}. The identification of those coefficients is a Hermite
+expansion, and their nonnegativity is immediate from it.
+
+\begin{proposition}\label{prop:hermite}
+Let $s=\sqrt{1+\Delta^2}$ and $\rho=1/(1+\Delta^2)$, and expand $\varphi(\alpha)=\sigma(s\alpha)
+=\sum_{k\ge0}c_k\mathrm{He}_k(\alpha)/\sqrt{k!}$ for $\alpha\sim N(0,1)$. Write $V=\E\varphi^2$ and
+$C_{12}=\E[\varphi(A_1)\varphi(A_2)]$ for a standard bivariate normal pair of correlation $\rho$.
+Then the shared and private residual variances of the matched surrogate are
+\[
+c_{\mathrm{sh}}=C_{12}-c_1^2\rho=\sum_{k\ge2}c_k^2\rho^k,
+\qquad
+c_{\mathrm{pr}}=V-c_1^2-c_{\mathrm{sh}}=\sum_{k\ge2}c_k^2\,(1-\rho^k),
+\]
+and both are nonnegative for every $\rho\in[0,1]$.
+\end{proposition}
+
+\begin{proof}
+Orthonormality of the Hermite basis gives $V=\sum_k c_k^2$ and, since a bivariate normal pair of
+correlation $\rho$ satisfies $\E[\mathrm{He}_j(A_1)\mathrm{He}_k(A_2)]=\delta_{jk}k!\rho^k$, also
+$C_{12}=\sum_k c_k^2\rho^k$. Subtracting the $k=1$ terms gives the two displayed series, and
+$c_0=0$ for odd $\sigma$. Each series has nonnegative terms for $0\le\rho\le1$.
+\end{proof}
+
+Numerically, with $\sigma=\tanh$ and $\Delta=1/2$ (so $\rho=0.8$): $c_1=\numHermCone$,
+$V=\numHermV$, $C_{12}=\numHermCtwelve$, $c_{\mathrm{sh}}=\numHermSh$, $c_{\mathrm{pr}}=\numHermPr$,
+and the two definitions of each agree to machine precision.
+
+\subsection{The leverage matrix}
+
+The reason the proof of Theorem~\ref{thm:T1} does not need a three-dimensional correlated Stein comparison is that
+the exact leave-one-block objective increment depends on six scalars, not three --- the teacher, the
+two logits, and the three entries of the $2\times2$ leverage matrix
+$Q_{ab}=N^{-1}x_a^\top H_-^{-1}x_b$ --- and $Q$ concentrates. The Gaussian Poincar\'e inequality
+\cite{BLM} gives $\Var(Q_{ab}\mid F,H_-)\le C/d$, after which the block functional is quadratic in
+the three logits and second-moment matching suffices \cite{PN24}; this is the step at which the
+argument departs from the Stein-method route of \cite{HuLu}.
+
+That is the step measured here. Table~\ref{tab:t1} reports $d\,\Var(q_{11})$ over fresh blocks,
+together with the relative gap between the optimized objectives of the actual and surrogate models,
+the gap between their clean risks, and the gap between the two models' risks at the same $w$, at
+$d=64$ for three augmentation strengths and at $d=128$ for one, and for two normalizations of the
+feature matrix: columns of $F$ normalized to unit length, and raw Gaussian columns, whose
+$O(\sqrt{\log d/d})$ norm fluctuation is one of the two sources the rate $\varepsilon_d$ is made of.
+The product $d\,\Var(q_{11})$ is of order one and depends on $\Delta$, falling from $0.49$ at
+$\Delta=1/4$ to $0.29$ at $\Delta=1$; the two column normalizations agree to within a hundredth on
+it, on the objective gap and on the end-to-end risk gap, and differ only in the same-$w$ risk gap,
+where the raw columns are $\numSwRatioMinSixtyFour$ to $\numSwRatioMaxSixtyFour$ times larger at
+$d=64$ and $\numSwRatioOneTwoEight$ times at $d=128$; and at $\Delta=1/4$ the value at $d=128$ equals
+the value at $d=64$. One doubling of $d$ is consistent with a constant and cannot distinguish it from
+a slow drift, and nothing more is claimed for the behaviour in $d$.
+
+\begin{table}[t]
+\centering\small
+\caption{Target 1 diagnostics, $\sigma=\tanh$, $m=2d$, $n=3d$, $\lambda=10^{-2}$; ``unit'' rows
+normalize the columns of $F$, ``raw'' rows leave them Gaussian. Entries are mean $\pm$ standard
+deviation over the designs; the two risk columns are the gap between the two models' clean risks at
+their own minimizers and at the same $w$. A fourth column constant in $d$ is the $\Theta(1/d)$
+leverage variance the proof needs.}
+\label{tab:t1}
+{\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{rrlllrrr}
+\toprule
+$d$ & $\Delta$ & columns & $d\,\Var(q_{11})$ & $|L^*_{\mathrm{act}}-L^*_{\mathrm{sur}}|/L^*$ &
+$|R_{\mathrm{act}}-R_{\mathrm{sur}}|$ & same-$w$ & designs\\
+\midrule
+% BEGIN AUTOTABLE tab:t1
+64 & 0.25 & unit & $0.49\pm0.04$ & $0.07\pm0.05$ & $1.3\times10^{-2}$ & $1.4\times10^{-3}$ & 360\\
+64 & 0.25 & raw & $0.49\pm0.04$ & $0.08\pm0.06$ & $1.4\times10^{-2}$ & $3.8\times10^{-3}$ & 360\\
+64 & 0.5 & unit & $0.37\pm0.03$ & $0.06\pm0.05$ & $1.9\times10^{-2}$ & $1.8\times10^{-3}$ & 360\\
+64 & 0.5 & raw & $0.37\pm0.03$ & $0.06\pm0.05$ & $2.0\times10^{-2}$ & $4.8\times10^{-3}$ & 360\\
+64 & 1 & unit & $0.29\pm0.02$ & $0.05\pm0.04$ & $3.0\times10^{-2}$ & $2.6\times10^{-3}$ & 360\\
+64 & 1 & raw & $0.29\pm0.02$ & $0.05\pm0.04$ & $3.0\times10^{-2}$ & $6.5\times10^{-3}$ & 360\\
+128 & 0.25 & unit & $0.49\pm0.04$ & $0.06\pm0.04$ & $8.5\times10^{-3}$ & $1.3\times10^{-3}$ & 300\\
+128 & 0.25 & raw & $0.49\pm0.04$ & $0.05\pm0.05$ & $7.7\times10^{-3}$ & $2.4\times10^{-3}$ & 100\\
+% END AUTOTABLE tab:t1
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\section{An exact same-sample identity, on two emulation corpora}\label{sec:corr}
+
+\subsection{The identity}
+
+A residual kernel correction fitted on top of a data-dependent mean is a construction used in
+emulation pipelines for radiative transfer \cite{Shmalo26a,Shmalo26b}, following the kernel-flow
+emulators of \cite{Lamminpaa} built on the kernel-flow method of \cite{OwhadiYoo}, and the question of when it helps is a question about the same sample
+being used twice. Fix a realized training sample $S$; let $m_S$ and $k_S$ be a mean and a kernel that
+may depend on $S$ in any way whatsoever, $r_S=G-m_S$ the residual function, $X$ the training inputs,
+$A=K+n\lambda I$, $R=r_S(X)$, $\alpha=A^{-1}R$ and $q(u)=k_S(X,u)$. With $U\sim\mu$ independent of
+$S$, put $Q_S=\E_U q(U)q(U)^\top$ and $B_S=\E_U q(U)r_S(U)^\top$. Then \cite{PN24}
+\begin{equation}
+\mathcal R_1(S)-\mathcal R_0(S)\;=\;-2\Tr(\alpha^\top B_S)+\Tr(\alpha^\top Q_S\alpha),
+\label{eq:identity}
+\end{equation}
+exactly, with no independence assumed anywhere; the correction improves the conditional population
+risk if and only if $2\Tr(\alpha^\top B_S)>\Tr(\alpha^\top Q_S\alpha)$. A two-point counterexample
+in the same source shows that a same-sample residual correction can strictly worsen population risk
+over a whole range of positive ridge, so the sign in \eqref{eq:identity} is not automatic. A
+companion bound $\eta\le\kappa\,\delta_{\mathrm{rms}}/(2\sqrt\lambda)$ controls the $L^2$ distance
+$\eta$ between the correction fitted against out-of-fold training-row predictions and the one fitted
+against the deployed predictions, in terms of the root-mean-square difference $\delta_{\mathrm{rms}}$
+between the two sets of training-row residuals.
+
+\subsection{On the data}
+
+The identity is evaluated on the two corpora of the emulation pipelines \cite{Shmalo26a}: the four
+radiance components $Y_1,\dots,Y_4$ of the EMIT imaging spectrometer \cite{Green} and the three
+spectral bands of the OCO-2 instrument \cite{Eldering,Susiluoto} --- the O$_2$ A-band and the weak and strong
+CO$_2$ bands. In each case a neural mean (width $384$, depth $3$, $120$ epochs) is trained and two
+residual vectors are formed on the training rows: the \emph{consistent} residuals, against the
+deployed mean's own predictions, and the \emph{out-of-fold} residuals, against predictions from four
+folds of the same architecture retrained without the row, which are the labels the emulation
+pipeline fits its correction to. A Mat\'ern-$5/2$ correction is fitted to each, with one length
+scale for both, chosen on the validation split for the correction fitted to the consistent
+residuals, and both are scored on the test split, which supplies the sample from $\mu$. The kernel stage is fitted on a random subsample of
+$8{,}000$ of the mean's own training rows: the identity is exact for whatever realized sample it is
+evaluated on, and the cap is what keeps an exact Gram inside memory. The identity, the margin and
+every ``gain'' below refer to the consistent arm; the out-of-fold arm is reported beside it in
+Table~\ref{tab:corr} and is the subject of the mismatch bound. Neither $Q_S$ nor $B_S$ is ever
+formed: with $K_{Xt}$ the train-by-test kernel block,
+$\Tr(\alpha^\top Q_S\alpha)=\|K_{Xt}^\top\alpha\|_F^2/n_{\mathrm{te}}$ and
+$\Tr(\alpha^\top B_S)=\langle K_{Xt}^\top\alpha,R_{\mathrm{te}}\rangle/n_{\mathrm{te}}$. Eight ridge
+values from $10^{-8}$ to $10^{-1}$ are swept on every lane; there are five seeds per component,
+except for the strong CO$_2$ band, which has one. Two corpora are two corpora: the remaining
+emulation data sets of the same pipelines were not run, and nothing here generalises beyond EMIT and
+OCO-2.
+
+The identity holds to machine precision: across the $\numCorrLanes$ lanes and $\numCorrPairs$
+(lane, ridge) pairs the largest relative discrepancy between the two sides of \eqref{eq:identity} is
+$\numIdentWorst$ (Table~\ref{tab:corr}). That is a check on the arithmetic, and it passes.
+
+The sign is where the content is, and it is decided by the component rather than by the ridge alone
+(Tables~\ref{tab:corr} and~\ref{tab:signs}). On $Y_1$ and $Y_2$ the margin
+$2\Tr(\alpha^\top B)-\Tr(\alpha^\top Q\alpha)$ is positive at every one of the eight ridges on every
+seed, and the correction reduces the mean's conditional test risk by $\numGainemitYOne$ and
+$\numGainemitYTwo$ percent at the best ridge. On $Y_3$ the margin is positive at every ridge from
+$10^{-5}$ up, but it is negative at $10^{-8}$ on $\numYthreeNegA$ seeds, at $10^{-7}$ on
+$\numYthreeNegB$ and at $10^{-6}$ on $\numYthreeNegC$ (Table~\ref{tab:signs}),
+$\numHurtemitYThree$ of the forty pairs in all, with a crossing that is monotone in $\lambda$ and
+interior to the swept grid; $Y_3$ is also the component the correction helps least when it does help,
+$\numGainemitYThree$ percent. On $Y_4$ the margin is negative at every ridge on four of the five
+seeds --- $\numHurtemitYFour$ of forty pairs --- and the correction changes the risk by
+$\numGainemitYFour$ percent at the best ridge, which is to say by nothing. The mean's own test risk
+on that component is an order of magnitude larger than on the other three, at the same rows, epochs
+and folds: the network fits $Y_4$ poorly, and the correction spends its capacity on the part of the
+residual that does not transfer to fresh points, which is the mechanism of the counterexample on the
+production pipeline itself. On the OCO-2 bands the correction is close to neutral: gains of
+$\numGainocoTwooTwo$, $\numGainocoTwoscoTwo$ and $\numGainocoTwowcoTwo$ percent on the O$_2$, strong
+CO$_2$ and weak CO$_2$ bands at the best ridge, with the margin negative at every ridge up to
+$10^{-6}$ on every lane, negative at $10^{-5}$ on $\numOcoNegFive$ of the $\numOcoLanes$ lanes,
+and of either sign and within $\numOcoMarginMaxFour$ percent of $\mathcal R_0$ from $10^{-4}$ up.
+So the harmful regime that the counterexample
+describes is real and reachable on real data, and the identity locates it per component and per
+ridge, computed rather than assumed.
+
+\begin{table}[t]
+\centering\small
+\caption{The same-sample identity on the EMIT components and the OCO-2 bands. ``Gain'' is the
+reduction in conditional test risk of the consistent arm --- the correction fitted to the residuals
+against the deployed mean's own training-row predictions --- at its best ridge $\lambda^*$, as a
+percentage of the mean's own risk, mean $\pm$ standard deviation over the lanes; ``phys.'' is the
+same gain in the pipeline's physical relative error; ``hurt'' counts the (lane, ridge) pairs, out of
+eight per lane, where the margin $2\Tr(\alpha^\top B)-\Tr(\alpha^\top Q\alpha)$ is negative. The two
+``o.o.f.'' columns are the out-of-fold arm --- the correction fitted to the residuals against
+out-of-fold predictions, the labels the pipeline fits to --- scored on the same test block: its gain
+at the consistent arm's $\lambda^*$, and its best gain over the eight ridges. The last column is the
+worst relative discrepancy between the two sides of \eqref{eq:identity}.}
+\label{tab:corr}
+{\small\setlength{\tabcolsep}{4pt}
+\begin{tabular}{lrllrllr}
+\toprule
+corpus & lanes & gain \% & phys.\ gain \% & hurt & o.o.f.\ at $\lambda^*$ \% & o.o.f.\ best \% &
+identity\\
+\midrule
+% BEGIN AUTOTABLE tab:corr
+emit Y1 & 5 & $25.5\pm4.2$ & $25.9\pm3.0$ & 0 / 40 & $-45.7\pm17.6$ & $0.4\pm0.3$ & $2\times10^{-13}$\\
+emit Y2 & 5 & $22.1\pm2.1$ & $27.1\pm5.1$ & 0 / 40 & $-41.3\pm20.4$ & $0.0\pm0.1$ & $1\times10^{-13}$\\
+emit Y3 & 5 & $15.3\pm3.9$ & $22.2\pm5.3$ & 6 / 40 & $-34.7\pm21.4$ & $0.4\pm0.4$ & $2\times10^{-13}$\\
+emit Y4 & 5 & $0.5\pm3.0$ & $0.5\pm1.5$ & 32 / 40 & $-2.1\pm3.1$ & $0.0\pm1.8$ & $1\times10^{-13}$\\
+oco2 o2 & 5 & $0.3\pm0.1$ & $0.2\pm0.1$ & 31 / 40 & $-5.5\pm1.6$ & $-0.2\pm0.2$ & $4\times10^{-12}$\\
+oco2 sco2 & 1 & $1.3\pm0.0$ & $0.6\pm0.0$ & 4 / 8 & $-15.1\pm0.0$ & $-0.2\pm0.0$ & $8\times10^{-14}$\\
+oco2 wco2 & 5 & $0.3\pm0.3$ & $0.2\pm0.2$ & 28 / 40 & $-3.4\pm4.3$ & $0.1\pm0.1$ & $7\times10^{-13}$\\
+% END AUTOTABLE tab:corr
+\bottomrule
+\end{tabular}}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{Lanes on which the margin $2\Tr(\alpha^\top B)-\Tr(\alpha^\top Q\alpha)$ is positive, by
+ridge value, out of the lanes in the second column.}
+\label{tab:signs}
+\begin{tabular}{lrrrrrrrrr}
+\toprule
+corpus & lanes & $10^{-8}$ & $10^{-7}$ & $10^{-6}$ & $10^{-5}$ & $10^{-4}$ & $10^{-3}$ &
+$10^{-2}$ & $10^{-1}$\\
+\midrule
+% BEGIN AUTOTABLE tab:signs
+emit Y1 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5\\
+emit Y2 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5 & 5\\
+emit Y3 & 5 & 2 & 3 & 4 & 5 & 5 & 5 & 5 & 5\\
+emit Y4 & 5 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1\\
+oco2 o2 & 5 & 0 & 0 & 0 & 1 & 1 & 4 & 1 & 2\\
+oco2 sco2 & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 & 1\\
+oco2 wco2 & 5 & 0 & 0 & 0 & 0 & 3 & 3 & 3 & 3\\
+% END AUTOTABLE tab:signs
+\bottomrule
+\end{tabular}
+\end{table}
+
+One transfer is worth checking rather than assuming. The identity is a statement about squared
+$L^2$ risk, while the emulator pipelines report a physical relative error, and an improvement in the
+first need not survive into the second --- a gain concentrated on high-magnitude components can wash
+out entirely once errors are taken relative. It survives here. Over the $\numEmitGainLanes$ EMIT
+lanes on $Y_1$, $Y_2$ and $Y_3$ the squared-risk gain averages $\numEmitSqGain$ percent and the gain
+in the physical metric $\numEmitPhysGain$ percent, and across all $\numSignTot$ lanes of
+Table~\ref{tab:corr} the two gains agree in sign on $\numSignAgree$. The physical metric inverts the
+principal-component and standardisation maps and returns the mean relative $L^2$ error in physical
+units, the pipeline's own reported quantity. On these two corpora the quantity the theory governs
+and the reported quantity move together.
+
+The mismatch bound holds and is loose: at the best ridge of every lane, $\eta$ measures between
+$\numEtaMin$ and $\numEtaMax$ against a bound that exceeds it by a factor between $\numSlackMin$ and
+$\numSlackMax$. It certifies nothing useful at this operating point. The quantity that does the
+certifying is the margin in \eqref{eq:identity}, computed directly, per corpus and per seed --- and
+it certifies the consistent arm. The pipeline's own arm is a different estimator, and the bound's
+transfer condition $\gamma>\eta$, with $\gamma=\sqrt{\mathcal R_0}-\sqrt{\mathcal R_1}$ the
+consistent arm's root-risk margin, is what would carry the certificate across. It holds on
+$\numTransferPairs$ of the $\numCorrPairs$ (lane, ridge) pairs and on $\numTransferLanes$ of the
+$\numCorrLanes$ lanes, which is to say nowhere: wherever the consistent arm has a positive margin at
+all, $\gamma$ is at most $\numGammaMax$ and $\eta$ exceeds it by a factor of at least
+$\numTransferSlackMin$. The out-of-fold
+arm behaves accordingly (Table~\ref{tab:corr}). At the ridge
+where the consistent arm is best it raises the test risk on every EMIT lane, by
+$\numOofAtEmitRiseMin$ to $\numOofAtEmitRiseMax$ percent of $\mathcal R_0$ on $Y_1$, $Y_2$ and
+$Y_3$, and on $\numOofAtOcoNeg$ of the $\numOofAtOcoLanes$ OCO-2 lanes; its best gain over the eight
+ridges is at most $\numOofBestEmitMax$ percent on $Y_1$--$Y_3$, $\numOofBestYfourMax$ percent on one
+$Y_4$ seed and negative on the other $\numOofBestYfourNeg$, and between $\numOofBestOcoMin$ and
+$\numOofBestOcoMax$ percent on OCO-2. Its physical error at the consistent arm's best ridge is worse
+than the mean's on $\numOofPhysNeg$ of the $\numCorrLanes$ lanes, by up to $\numOofPhysWorseMax$
+percent of the mean's own error, and the sign of that change agrees with the sign of its squared-risk
+change on all $\numCorrLanes$ lanes. So at this
+operating point --- an $8{,}000$-row kernel stage, four folds, the length scale chosen on the
+consistent labels --- the correction the pipeline fits does nothing on these lanes, while the
+consistent arm on the same rows gains $\numGainemitYThree$ to $\numGainemitYOne$ percent on the
+components where its margin is positive. The identity locates the gain; the mismatch is what stands
+between it and the deployed estimator, and neither the bound nor the data close that gap here.
+
+\begin{remark}
+The identity assumes nothing; the leave-one-out gate built on top of it in Section~\ref{sec:reg}
+carries the hypotheses. That gate can be stated under uniform sup-norm deletion stability of the mean
+and of the correction, with bounded-difference constants, or under the weaker integrated $L^2$
+stability by way of the Efron--Stein inequality \cite{EfronStein}; the second is the form used here.
+The fifth problem of Section~\ref{sec:prune} needs the same same-sample machinery for a quite
+different reason.
+\end{remark}
+
+\section{The fifth problem: growing-rank spikes and what pruning may assume}\label{sec:prune}
+
+The source is a manuscript on growing-rank spiked singular values and vectors with applications to
+pruning deep networks, and the theorem about it established in \cite{PN24}. The model is
+$W_n=X_n+P_n$ with $P_n=U_n\Theta_nV_n^*$ of rank $r_n\to\infty$, $r_n=o(n)$, and $n/m\to c\in(0,1]$,
+a growing-rank form of the spiked models of \cite{BBP,BGN}. Everything the source proves about
+cluster projectors and mixed dyads --- and therefore everything it says about pruning --- rests on a
+compression hypothesis for the resolvent compressed to the spike frame: writing
+\[
+A_n(z)=U_n^*z(z^2-X_nX_n^*)^{-1}U_n,\qquad
+D_n(z)=V_n^*z(z^2-X_n^*X_n)^{-1}V_n,
+\]
+\[
+B_n(z)=U_n^*X_n(z^2-X_n^*X_n)^{-1}V_n,
+\]
+the hypothesis asks, in operator norm and uniformly on a contour $\Gamma$ off the spectrum, that
+$A_n\approx\phi_nI$, $D_n\approx\widetilde\phi_nI$ and $B_n\approx0$, where $\phi_n$ and
+$\widetilde\phi_n$ are the corresponding normalized traces. The source verifies the hypothesis in the
+Haar class. The theorem extends it to entries that are i.i.d., symmetric and obey a dimension-free
+Euclidean concentration inequality, throughout $r_n=o(n)$ (claim P19-IID-GC-BLOCK-02 in
+\cite{PN24}), with
+\begin{equation}\label{eq:prunerate}
+\beta_n(\Gamma)\;:=\;\sup_{z\in\Gamma}\Big[\|A_n-\phi_nI\|_{\mathrm{op}}+\|D_n-\widetilde\phi_nI\|_{\mathrm{op}}
++\|B_n\|_{\mathrm{op}}\Big]
+\;=\;O_{\mathbb P}\!\left(\sqrt{\frac{r}{n}}+\sqrt{\frac{\log n}{n}}\right);
+\end{equation}
+up to constants and the contour net; for independent entries with bounded moments the anisotropic
+local law of Knowles and Yin \cite{KnowlesYin} supplies the compression for deterministic frames at
+$r=o(\sqrt n)$. An extension to centred laws without the symmetry is recorded in the same track's
+ledger without an archived proof. The concentration hypothesis remains, and nothing in the theorem
+applies to a pruning frame selected from the same matrix it is applied to.
+
+\subsection{What is measured}
+
+Three things. The entry law is the dial. A centred Bernoulli$(0.2)$ variable is bounded, so it
+satisfies the concentration hypothesis by Talagrand's inequality \cite{Talagrand}, and it is as
+asymmetric as a two-point law with unit variance can be, with mass $0.8$ at $-1/2$ and mass $0.2$ at
+$2$; a Student $t_5$ variable is exactly symmetric and has no exponential moment, so it fails the
+concentration hypothesis; a centred exponential variable fails both. Rademacher and Gaussian entries
+satisfy both. If the $t_5$ rows depart from the Rademacher rows, the concentration hypothesis is
+load-bearing at these sizes; if the Bernoulli rows depart, the symmetry is.
+
+Everything is read off one thin singular value decomposition per design. With
+$X=\sum_k s_kw_k\tilde v_k^*$ and $\bar U=W^\top U$, $\bar V=\tilde VV$,
+the three blocks are $\bar U^*\mathrm{diag}\big(z/(z^2-s_k^2)\big)\bar U$,
+$\bar V^*\mathrm{diag}\big(z/(z^2-s_k^2)\big)\bar V+z^{-1}(I-\bar V^*\bar V)$ and
+$\bar U^*\mathrm{diag}\big(s_k/(z^2-s_k^2)\big)\bar V$, so a whole contour costs nothing once the
+decomposition is in hand. The contour is a circle in the right half plane standing off the observed
+edge by fifteen percent of it, sampled at $64$ points, and $\phi_n,\widetilde\phi_n$ are the
+empirical traces the source itself centres at. Table~\ref{tab:prunerate} reports $\beta_n$ and,
+beside it, $\beta_n$ divided by the rate in~\eqref{eq:prunerate}: if that rate is right the ratio
+does not run away with $r$ or with $n$. The three blocks contribute to $\beta_n$ in fixed
+proportion at aspect $1/2$, the $A$ block $\numShareAMin$ to $\numShareAMax$, the $D$ block
+$\numShareDMin$ to $\numShareDMax$ and the cross block $B$ $\numShareBMin$ to $\numShareBMax$ of the
+sum, for every law, $n$ and $r$ run; the off-diagonal block, which the hypothesis wants to vanish, is
+the largest term at every size.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The compression block on a contour off the spectrum, at aspect $c=n/m=0.5$ unless the row
+says otherwise. $\beta_n$ is the supremum in~\eqref{eq:prunerate} over $64$ contour points;
+the ratio divides it by $\sqrt{r/n}+\sqrt{\log n/n}$. Entries are mean $\pm$ standard deviation over
+independent designs. Rows marked $\dagger$ lie outside the hypotheses of the theorem:
+Bernoulli$(0.2)$ is bounded but not symmetric, $t_5$ is symmetric but not concentrated, and the
+exponential law is neither.}
+\label{tab:prunerate}
+\begin{tabular}{lrrllr}
+\toprule
+entry law & $n$ & $r$ & $\beta_n$ & $\beta_n/(\sqrt{r/n}+\sqrt{\log n/n})$ & designs\\
+\midrule
+% BEGIN AUTOTABLE tab:prunerate
+Gaussian & 1000 & 4 & $0.06\pm0.01$ & $0.40\pm0.05$ & 40\\
+Gaussian & 1000 & 16 & $0.14\pm0.01$ & $0.65\pm0.04$ & 40\\
+Gaussian & 1000 & 64 & $0.32\pm0.01$ & $0.96\pm0.04$ & 40\\
+Gaussian & 1000 & 256 & $0.82\pm0.02$ & $1.39\pm0.04$ & 40\\
+Rademacher & 500 & 16 & $0.20\pm0.02$ & $0.69\pm0.06$ & 20\\
+Rademacher & 1000 & 4 & $0.06\pm0.01$ & $0.39\pm0.05$ & 40\\
+Rademacher & 1000 & 16 & $0.14\pm0.01$ & $0.65\pm0.05$ & 60\\
+Rademacher & 1000 & 64 & $0.32\pm0.01$ & $0.94\pm0.03$ & 60\\
+Rademacher & 1000 & 256 & $0.82\pm0.02$ & $1.38\pm0.04$ & 40\\
+Rademacher & 2000 & 16 & $0.09\pm0.01$ & $0.62\pm0.04$ & 20\\
+Rademacher & 2000 & 32 & $0.14\pm0.00$ & $0.77\pm0.02$ & 16\\
+Rademacher & 2000 & 128 & $0.33\pm0.01$ & $1.03\pm0.03$ & 16\\
+Rademacher & 4000 & 16 & $0.07\pm0.00$ & $0.60\pm0.02$ & 8\\
+Rademacher & 4000 & 64 & $0.14\pm0.00$ & $0.84\pm0.02$ & 8\\
+Rademacher & 4000 & 256 & $0.33\pm0.00$ & $1.10\pm0.01$ & 8\\
+Bernoulli$(0.2)$$^{\dagger}$ & 500 & 16 & $0.20\pm0.02$ & $0.69\pm0.05$ & 20\\
+Bernoulli$(0.2)$$^{\dagger}$ & 1000 & 4 & $0.06\pm0.01$ & $0.39\pm0.06$ & 20\\
+Bernoulli$(0.2)$$^{\dagger}$ & 1000 & 16 & $0.14\pm0.01$ & $0.65\pm0.03$ & 20\\
+Bernoulli$(0.2)$$^{\dagger}$ & 1000 & 64 & $0.32\pm0.01$ & $0.94\pm0.04$ & 20\\
+Bernoulli$(0.2)$$^{\dagger}$ & 1000 & 256 & $0.81\pm0.02$ & $1.38\pm0.04$ & 20\\
+Bernoulli$(0.2)$$^{\dagger}$ & 2000 & 16 & $0.10\pm0.00$ & $0.65\pm0.03$ & 20\\
+Bernoulli$(0.2)$$^{\dagger}$ & 4000 & 16 & $0.07\pm0.00$ & $0.62\pm0.02$ & 8\\
+Bernoulli$(0.2)$$^{\dagger}$, aspect 1 & 1000 & 16 & $0.20\pm0.01$ & $0.93\pm0.06$ & 20\\
+exponential$^{\dagger}$ & 1000 & 4 & $0.06\pm0.01$ & $0.40\pm0.05$ & 20\\
+exponential$^{\dagger}$ & 1000 & 16 & $0.13\pm0.01$ & $0.64\pm0.04$ & 20\\
+exponential$^{\dagger}$ & 1000 & 64 & $0.32\pm0.01$ & $0.94\pm0.03$ & 20\\
+exponential$^{\dagger}$ & 1000 & 256 & $0.81\pm0.02$ & $1.38\pm0.03$ & 20\\
+Student $t_5$$^{\dagger}$ & 500 & 16 & $0.19\pm0.03$ & $0.64\pm0.09$ & 20\\
+Student $t_5$$^{\dagger}$ & 1000 & 4 & $0.06\pm0.01$ & $0.41\pm0.06$ & 20\\
+Student $t_5$$^{\dagger}$ & 1000 & 16 & $0.14\pm0.01$ & $0.65\pm0.04$ & 20\\
+Student $t_5$$^{\dagger}$ & 1000 & 64 & $0.32\pm0.01$ & $0.94\pm0.04$ & 20\\
+Student $t_5$$^{\dagger}$ & 1000 & 256 & $0.76\pm0.09$ & $1.29\pm0.15$ & 20\\
+Student $t_5$$^{\dagger}$ & 2000 & 16 & $0.09\pm0.01$ & $0.61\pm0.08$ & 20\\
+Student $t_5$$^{\dagger}$ & 4000 & 16 & $0.07\pm0.00$ & $0.61\pm0.03$ & 8\\
+Student $t_5$$^{\dagger}$, aspect 1 & 1000 & 16 & $0.20\pm0.01$ & $0.93\pm0.06$ & 20\\
+% END AUTOTABLE tab:prunerate
+\bottomrule
+\end{tabular}
+\end{table}
+
+The third measurement is the adaptive spike. The theorem, like the source, assumes the spike frame
+is deterministic or independent of the noise. A rank-one perturbation built from the \emph{observed}
+top singular pair of the same $X$ leaves the empirical spectral distribution where it was, because a
+rank-one change cannot move it by more than $1/n$, while behaving nothing like an independent spike.
+The two arms are run side by side at matched $\theta$ --- same matrix, same rank, same strength, and
+the only difference is whether the spike frame was drawn before looking at $X$ or after.
+
+\subsection{What the entry law does, and what it does not}
+
+At $n=1000$ the five entry laws agree to the precision of the measurement at every rank
+(Table~\ref{tab:prunerate}). The asymmetric bounded law and the Rademacher law give
+$\beta_n=\numBetaBernFour$ against $\numBetaRadFour$ at $r=4$, $\numBetaBernSixteen$ against
+$\numBetaRadSixteen$ at $r=16$ and $\numBetaBernTwoFiveSix$ against $\numBetaRadTwoFiveSix$ at
+$r=256$, standard errors over $\numNBernSixteen$ and $\numNRadSixteen$ designs at $r=16$. Symmetry
+enters the proof at one identifiable place: the expectation of the clipped self-resolvent is made an
+exact scalar matrix by invariance of the law under independent signed row and column permutations,
+whose commutant is the scalars; without the signs the commutant gains the all-ones matrix, and the
+expectation acquires a rank-one part whose contribution to the compressed block is of order $r$
+times its coefficient. What is measured is the hypothesis as the source states it, on the unclipped
+resolvent centred at the empirical trace, which absorbs any scalar part and leaves precisely the
+non-scalar bias visible; and that bias does not reach the size of the fluctuation at these $r$ and
+$n$. The bias that a proof without the symmetry would have to control is not visible here. The
+heavy-tailed $t_5$ rows, outside the theorem, are indistinguishable from
+the Rademacher rows except at $r=256$, where their spread across designs is four times larger, and the
+exponential rows, outside it on both counts, are indistinguishable throughout. At these sizes neither
+hypothesis of the theorem is visible in the compression error.
+
+\subsection{The rate}
+
+The theorem is an upper bound with an unspecified constant, and only its shape can be tested. At
+fixed $n=1000$ the exponent of $\beta_n$ in $r$ reads $\numExpRadA$ from $r=4$ to $16$,
+$\numExpRadB$ from $16$ to $64$ and $\numExpRadC$ from $64$ to $256$ for the Rademacher rows, and
+$\numExpBernA$, $\numExpBernB$, $\numExpBernC$ for the Bernoulli rows, against the $1/2$ the rate
+carries. Part of the excess at small $r$ is the finite-$r$ approach of an $r\times r$ random matrix's
+operator norm to its $2\sqrt r$ asymptote from below: measured directly on the three shapes that
+occur --- real symmetric, complex symmetric, complex Ginibre --- the operator norm divided by
+$2\sqrt r$ runs $0.77$--$0.85$ at $r=4$, $0.91$--$0.94$ at $r=16$, $0.97$--$0.98$ at $r=64$ and
+$0.99$ at $r=256$, so a quantity growing exactly like $\sqrt r$ would be measured with an apparent
+exponent between $0.59$ and $0.62$ from $r=4$ to $16$, near $0.53$ from $16$ to $64$, and near
+$0.51$ from $64$ to $256$. The first step is consistent with that; the second and third are not, and
+the third rises where the finite-$r$ correction says it should fall. One confound has to be separated
+before that is read as a statement about the bound: at $r=256$ and $n=1000$ the ratio $r/n$ is
+$0.256$, outside the regime $r_n=o(n)$ the theorem is about, and there $\sqrt{r/n}=0.51$ is itself of
+order one.
+
+The experiment that separates the two is a ray of fixed $r/n$, along which the rate is constant up to
+the $\sqrt{\log n/n}$ term (Table~\ref{tab:ray}). Along each ray $\beta_n$ does not fall: it rises
+slightly and then flattens, while the rate itself falls by a fifth and an eighth over the same span
+because its $\sqrt{\log n/n}$ term is shrinking. So that term is not describing anything at these
+sizes: at fixed ratio the compression error converges to a constant rather than decaying with $n$.
+What it converges to is worth writing down. Subtracting the leading term $\sqrt{r/n}$ from the
+converged values at $n=4000$ leaves an excess of $1.12$ and $1.17$ times $r/n$ on the two rays, so
+\begin{equation}\label{eq:betalaw}
+\beta_n(\Gamma)\;\longrightarrow\;\sqrt{\frac rn}\;+\;c\,\frac rn,\qquad c\approx\numRayC ,
+\end{equation}
+with a leading coefficient consistent with exactly one. Fitted on those two points alone,
+\eqref{eq:betalaw} predicts the lanes it did not see: $\numRayPredA$ against $\numRayMeasA$
+measured at $(r,n)=(32,2000)$, $\numRayPredB$ against $\numRayMeasB$ at $(128,2000)$, and
+$\numRayPredC$ against $\numRayMeasC$ at $(16,4000)$ --- within a percent on the first two and
+$\numRayOffC$ percent on the third, the smaller-$n$ points sitting below the law because they have
+not finished rising.
+
+In the regime the theorem is about, $r_n=o(n)$, the second term of \eqref{eq:betalaw} is
+$o(\sqrt{r/n})$ and the bound's rate is the truth --- with, on this evidence, constant one rather
+than an unspecified $C$. The exponent above $1/2$ measured at fixed $n$ is the sum of the two terms of
+\eqref{eq:betalaw} read over a range of $r$ where $r/n$ climbed to $0.256$ and the second term was
+no longer small. The sharper statement the measurements support is not that the compression error is
+$O(\sqrt{r/n}+\sqrt{\log n/n})$ but that it approaches $\sqrt{r/n}+c\,r/n$, with no visible $\log n$
+at all.
+
+\begin{table}[t]
+\centering\small
+\caption{Rademacher rows along two rays of fixed $r/n$, at aspect $c=n/m=0.5$. $\beta_n$ is mean
+$\pm$ standard error over the designs; the excess is $\beta_n-\sqrt{r/n}$ and the last ratio divides
+it by $r/n$.}
+\label{tab:ray}
+\begin{tabular}{rrrlrrrr}
+\toprule
+$r$ & $n$ & $r/n$ & $\beta_n$ & $\sqrt{r/n}$ & excess & excess$/(r/n)$ & designs\\
+\midrule
+% BEGIN AUTOTABLE tab:ray
+16 & 1000 & 0.016 & $0.1356\pm0.0015$ & 0.1265 & +0.0092 & 0.57 & 60\\
+32 & 2000 & 0.016 & $0.1441\pm0.0011$ & 0.1265 & +0.0176 & 1.10 & 16\\
+64 & 4000 & 0.016 & $0.1444\pm0.0012$ & 0.1265 & +0.0179 & 1.12 & 8\\
+64 & 1000 & 0.064 & $0.3176\pm0.0013$ & 0.2530 & +0.0646 & 1.01 & 60\\
+128 & 2000 & 0.064 & $0.3254\pm0.0022$ & 0.2530 & +0.0724 & 1.13 & 16\\
+256 & 4000 & 0.064 & $0.3276\pm0.0014$ & 0.2530 & +0.0746 & 1.17 & 8\\
+% END AUTOTABLE tab:ray
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The frame you chose after looking}
+
+Table~\ref{tab:pruneadapt} is the counterexample with numbers on it. The two arms differ in one
+respect only: whether the rank-one spike's frame was drawn before or after seeing $X$. Below the
+transition the independent spike does what the independent-spike theory \cite{BGN} says it does ---
+at $\theta=0.6$ and $0.8$ the overlap with the planted direction is $0.003$ and $0.006$, which is to
+say nothing is recovered --- while the frame read off $X$ has overlap $1.000$ to three decimals at
+every $\theta$, with an outlier sitting at the unperturbed edge plus $\theta$ exactly. And the bulk
+cannot tell the two apart: the Kolmogorov--Smirnov distance between the perturbed and unperturbed
+spectra is $1.00/n$ in both arms at every $\theta$, which is the smallest value the statistic can
+take on a sample of this size. Both arms are rank one, both leave a textbook Marchenko--Pastur bulk
+\cite{MarchenkoPastur}, and one of them recovers a direction that was never planted.
+
+\begin{table}[htbp]
+\centering\small
+\caption{The same rank-one spike, drawn independently of $X$ and drawn from the observed top
+singular pair of $X$. Outlier is the leading singular value of $X+\theta uv^*$; overlap is
+$|\langle\hat u_1,u\rangle|^2$; the last two columns are the Kolmogorov--Smirnov distance between
+the perturbed and unperturbed bulk --- everything except the leading singular value --- in units of
+$1/n$, which is the resolution of the statistic on a sample of this size. Entries
+are mean $\pm$ standard deviation over independent designs; Rademacher entries throughout.}
+\label{tab:pruneadapt}
+{\setlength{\tabcolsep}{4.5pt}
+\begin{tabular}{rrllllrrr}
+\toprule
+& & \multicolumn{2}{c}{independent frame} & \multicolumn{2}{c}{frame read off $X$} &
+\multicolumn{2}{c}{$n\times$ bulk KS} & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){7-8}
+$n$ & $\theta$ & outlier & overlap & outlier & overlap & indep. & adapt. & designs\\
+\midrule
+% BEGIN AUTOTABLE tab:pruneadapt
+1000 & 0.6 & $2.41\pm0.01$ & $0.003\pm0.004$ & $3.01\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 0.8 & $2.41\pm0.01$ & $0.006\pm0.009$ & $3.21\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 1 & $2.41\pm0.01$ & $0.020\pm0.022$ & $3.41\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 1.2 & $2.42\pm0.01$ & $0.078\pm0.050$ & $3.61\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 1.4 & $2.44\pm0.02$ & $0.269\pm0.085$ & $3.81\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 1.6 & $2.51\pm0.02$ & $0.479\pm0.032$ & $4.01\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 2 & $2.73\pm0.03$ & $0.695\pm0.014$ & $4.41\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 2.5 & $3.08\pm0.03$ & $0.817\pm0.007$ & $4.91\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+1000 & 3 & $3.49\pm0.03$ & $0.877\pm0.004$ & $5.41\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 20\\
+2000 & 1 & $2.41\pm0.01$ & $0.006\pm0.011$ & $3.41\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 12\\
+2000 & 1.4 & $2.45\pm0.01$ & $0.338\pm0.030$ & $3.81\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 12\\
+2000 & 2 & $2.75\pm0.01$ & $0.702\pm0.013$ & $4.41\pm0.01$ & $1.000\pm0.000$ & 1.00 & 1.00 & 12\\
+% END AUTOTABLE tab:pruneadapt
+\bottomrule
+\end{tabular}}
+\end{table}
+
+The practical reading follows. A pruning frame taken from the singular vectors of the matrix being
+pruned is the second arm, not the first, and no amount of agreement between the observed
+singular-value histogram and its Marchenko--Pastur prediction licenses the independent calculation;
+the bulk is exactly the statistic that cannot see the difference. What is needed is a frame built
+without looking, or a stability argument connecting the learned frame to one --- the same
+same-sample problem that Section~\ref{sec:corr} handles for a mean and a correction. One more thing
+the frame is not: a substitute for the ridge. For kernel ridge regression truncated to the top $r$
+eigenvalues of the Gram matrix, Amini \cite{Amini} gives the worst-case risk over the unit ball of
+the RKHS exactly,
+$\max\{H_r(\lambda),\mu_{r+1}\}+\frac{\sigma^2}{n}\sum_{i\le r}\big(\frac{\mu_i}{\mu_i+\lambda}\big)^2$
+with $H_r(\lambda)=\max_{i\le r}\lambda^2\mu_i/(\mu_i+\lambda)^2$, and shows that truncating at any
+$r$ at or above the level the ridge itself resolves never raises the minimax risk and strictly
+lowers it whenever $\mu_{r+1}>0$; the implicit regularisation of the cut and the explicit one of
+$\lambda$ are both needed. A pruning theory that assumes the ridge away, or a ridge path that assumes
+the frame away, is describing half of the estimator.
+
+\begin{remark}
+The object the fifth problem describes is easy to see in a trained network. For five weight matrices
+of a vision transformer trained on ImageNet (timm's \texttt{vit\_base\_patch16\_224}, the first,
+seventh and last MLP input layers, $3072\times768$, one attention projection $2304\times768$ and one
+output projection $768\times768$), the number of singular values above the Marchenko--Pastur edge
+computed from each matrix's own entry standard deviation is $67$, $78$, $36$, $78$ and $2$ of $768$,
+against $0$ of $768$ for i.i.d.\ Gaussian matrices of the same shapes. This is one checkpoint, the
+edge is estimated from a matrix that contains the spikes and is therefore conservative, and the frame
+those singular vectors would supply is the second arm of Table~\ref{tab:pruneadapt} by construction:
+it shows the object, not the theorem.
+\end{remark}
+
+
+
+\section{Regularisation, overfitting, and a learned mean, on two corpora}\label{sec:reg}
+
+Targets~2 and~3 ask when an interpolating kernel estimator is harmless. The same question can be put
+to data along the whole regularisation path rather than at its ridgeless end, with the kernel placed
+on top of a network rather than standing alone. It is put here to two corpora: the one-dimensional
+Burgers problem of PDEBench \cite{PDEBench} and the advection problem of the operator-learning
+benchmark of de Hoop, Huang, Qian and Stuart \cite{deHoop}, a setting in which kernel methods are
+competitive with neural operators \cite{BatlleDarcyHosseiniOwhadi} and Gaussian processes solve the
+underlying equations directly \cite{ChenHosseiniOwhadiStuart}. The evidence is thin and is reported as
+such: one seed of the regularisation path and one of the network-mean gate on Burgers, three seeds
+of the constant-mean gate there, two seeds of the dimension-gap diagnostic on Burgers and one on
+advection. None of it is a population statement; each table is one or two draws.
+
+\subsection{The path as a learning curve}
+
+For each corpus and sample size the ridge estimator is fitted at thirteen values of $\lambda$ from
+$10^{-12}$ to $1$ and its test risk recorded; the interpolant is the $\lambda\to0$ end of the path.
+Two exponents are read off the same Gram matrix and labels the path was fitted on: the capacity
+$\hat\alpha$, the slope of log eigenvalue against log index, and the source $\hat r$, from the decay
+of the target's coefficients in the Gram eigenbasis --- the source and capacity conditions of
+\cite{CaponnettoDeVito}. In the parametrisation of Cui, Loureiro, Krzakala and Zdeborov\'a
+\cite{Cui}, ridge regression has a noiseless regime and a noisy one: the noiseless decay
+$n^{-2\alpha\min(r,1)}$ of the excess risk holds for $n$ well below
+$n_1^*\asymp\sigma^{-1/(\alpha\min(r,1))}$, and the noisy optimal rate takes over for $n$ well
+above $n_2^*\asymp\sigma^{-\max(2,\,1/(\alpha\min(r,1)))}$. The statistic that says whether
+interpolating was harmless is the ratio of the interpolant's risk to the best risk on the path.
+
+On Burgers at $n=4000$ with no label noise (Table~\ref{tab:regpath}) the interpolant is the optimum
+of the path --- the ratio is $1.00$ and the best ridge is the smallest one tried --- with
+$\hat\alpha=\numBurgAlpha$ and $\hat r=\numBurgR$, so that $1/(\hat\alpha\min(\hat r,1))=\numBurgExp$:
+in the theory of \cite{Cui} a tenfold increase in the noise moves the end of the noiseless decay by a
+factor of about $\numBurgFactor$ in $n$, and the takeover of the noisy rate, governed by
+$\max(2,\numBurgExp)=\numBurgTakeoverExp$, by a factor of $\numBurgTakeover$. Past the takeover the
+same theory fixes the shape of the ratio itself: with
+$\lambda\to0$ the excess risk plateaus at the noise variance while the optimally regularised risk
+keeps falling like $n^{-2\alpha\min(r,1)/(1+2\alpha\min(r,1))}$, so the ratio should grow with $n$
+at that exponent, $\numBurgRate$ for Burgers. The lanes at the other noise levels, which would test
+both predictions, were not run (Table~\ref{tab:crossover} carries the one noiseless cell), so on
+this corpus the predictions stand as predictions.
+
+\begin{table}[t]
+\centering\small
+\caption{The regularisation path with no label noise, one seed. $\hat\alpha$ and $\hat r$ are the
+capacity and source exponents read off the Gram spectrum; the fourth column is
+$1/(\hat\alpha\min(\hat r,1))$, the exponent of the noise level at which the noiseless decay ends in
+\cite{Cui}; $\lambda_\ast$ is the best ridge; the ratio is the
+interpolant's test risk over the best risk on the path, so $1.00$ means interpolation was the
+optimum.}
+\label{tab:regpath}
+\begin{tabular}{@{}llrcccccr@{}}
+\toprule
+corpus & comp. & $n$ & $\hat\alpha$ & $\hat r$ & exponent & $\lambda_\ast$ & interp./best & seeds\\
+\midrule
+% BEGIN AUTOTABLE tab:regpath
+burgers &  & 4000 & 2.02 & 0.63 & 0.78 & $10^{-12}$ & 1.00 & 1\\
+% END AUTOTABLE tab:regpath
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering\small
+\caption{The ratio interpolant over best ridge as the label noise is turned up. Only the noiseless
+cell was run.}
+\label{tab:crossover}
+\begin{tabular}{@{}llrcccc@{}}
+\toprule
+corpus & comp. & $n$ & noise $0$ & $0.03$ & $0.1$ & $0.3$\\
+\midrule
+% BEGIN AUTOTABLE tab:crossover
+burgers &  & 4000 & 1.00 & -- & -- & --\\
+% END AUTOTABLE tab:crossover
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The gate with a learned mean}
+
+The identity of Section~\ref{sec:corr} gates a kernel correction on top of a mean by leave-one-out
+risk. Here the mean is either a constant or a multilayer perceptron of width $256$ trained for sixty
+epochs, so that the network's own fit and the correction's ridge $\lambda$ enter together;
+leave-one-out, which stays consistent along iterative paths where generalised cross-validation
+\cite{GHW} does not \cite{Patil} and which is the selection principle of kernel flows
+\cite{OwhadiYoo,HamziOwhadi}, is used throughout. The question is whether the gate keeps doing its
+two jobs once the mean has itself been fitted to the training labels: taking the gain when the
+correction helps, and refusing the step when it hurts. The correction the gate acts on is fitted to
+the residuals against the trained mean's own training-row predictions --- the consistent arm of
+Section~\ref{sec:corr} --- so the gains below, and the share of them the gate captures, are that
+arm's; the out-of-fold arm is not measured here.
+
+On Burgers (Table~\ref{tab:gatemlp}) the network mean reaches a training error of
+$\numGateTrainMse$ and the gate still takes $\numGateCaptured$ percent of the remaining gain with
+$\hat\theta=\numGateTheta$; the mean's own risk of $\numGateRiskMean$ falls to $\numGateRiskGated$
+against a best of $\numGateRiskBest$. On the advection suite with a constant mean the correction is
+the whole model, from a risk of $\numAdvRiskMean$ to $\numAdvRiskGated$ gated against a best of
+$\numAdvRiskBest$, and the gate takes it. On none of the five designs does the correction, gated or
+not, leave the test risk above the mean's own, so the gate's second job --- refusing a harmful step
+--- is not exercised on these corpora.
+
+\begin{table}[t]
+\centering\small
+\caption{The leave-one-out gate on top of a constant mean and on top of a network mean. $w$ is the
+network's weight decay; $\hat\theta$ the step the gate chooses; ``captured'' the share of the gain
+between the mean's risk and the best achievable risk that the gated step takes; ``worse'' the
+number of designs, gated and ungated, on which the correction left the test risk above the mean's
+own.}
+\label{tab:gatemlp}
+\begin{tabular}{@{}lllcccr@{}}
+\toprule
+corpus & mean & $w$ & $\hat\theta$ & captured & worse (gated / full) & designs\\
+\midrule
+% BEGIN AUTOTABLE tab:gatemlp
+burgers  & const & -- & $0.95\pm0.00$ & $1.00\pm0.00$ & 0 / 0 & 3\\
+burgers  & mlp & 0 & 0.99 & 0.99 & 0 / 0 & 1\\
+caltech\_adv  & const & -- & 0.95 & 1.00 & 0 / 0 & 1\\
+% END AUTOTABLE tab:gatemlp
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{The order parameter on data that has none}
+
+The diagnostic of Section~\ref{sec:gap} maps the dimension gap onto a corpus through the Gram
+spectrum: $d_{\rm eff}$ is the number of directions resolved above the numerical floor,
+$p_{\rm eff}$ the participation ratio of the spectrum, standing in for the ambient dimension, and
+$\delta_{\rm eff}=\log(d_{\rm eff}/n)/\log p_{\rm eff}$. Beside it stands the thing this is supposed
+to predict: the advantage of ridgeless interpolation over the best ridge on a swept grid, as a
+fraction of the best risk, negative when interpolating loses (Table~\ref{tab:newcorp}).
+
+\begin{table}[t]
+\centering\small
+\caption{The empirical dimension gap and the interpolation advantage
+$(R_{\rm best}-R_{\rm interp})/R_{\rm best}$ on the two corpora, ordered by $\delta_{\rm eff}$;
+mean $\pm$ s.d.\ over the seeds where there are two.}
+\label{tab:newcorp}
+\begin{tabular}{@{}llrrrccr@{}}
+\toprule
+corpus & comp. & $n$ & $d_{\rm eff}$ & $p_{\rm eff}$ & $\delta_{\rm eff}$ & advantage & seeds\\
+\midrule
+% BEGIN AUTOTABLE tab:newcorp
+caltech\_adv &  & 6000 & 5164 & 4.7 & -0.096 & -0.88 & 1\\
+burgers &  & 6000 & 5382 & 5.1 & $-0.067\pm0.000$ & $0.25\pm0.01$ & 2\\
+% END AUTOTABLE tab:newcorp
+\bottomrule
+\end{tabular}
+\end{table}
+
+On the advection suite interpolating loses outright: at $n=6000$ the best ridge,
+$\lambda=\numAdvBestLam$, has risk $\numAdvRiskRidge$ and the interpolant $\numAdvRiskInterp$, an
+advantage of $\numAdvAdvantage$, with $\delta_{\rm eff}=\numAdvDeltaEff$. On Burgers at the same $n$
+the interpolant wins by a quarter of the best risk on both seeds, at a $\delta_{\rm eff}$ that is
+less negative. Two corpora are two points, and a rank correlation between $\delta_{\rm eff}$ and the
+advantage across corpora --- the statistic that would say whether the order parameter carries over
+to data --- needs many more. The mapping from the sphere to a corpus is a modelling choice, and this
+is where it would be tested.
+
+The theory side of Table~\ref{tab:newcorp} has been written down in the same coordinate. Lu, Lin,
+Xia and Huang \cite{LuLinXiaHuang} take $n\asymp d^{\gamma}$ on the sphere, a source parameter
+$s\ge0$ for the smoothness of the target, and the ridge $\lambda\asymp d^{-u}$, and prove that
+overfitting is benign --- in the under-regularised regime and at interpolation alike --- exactly
+when $0<s\le\Gamma(\gamma)$, for a threshold function recalled in \cite{LuLinXiaHuang} from earlier
+work, where with $\ell=\lfloor\gamma\rfloor$
+\[
+\Gamma(\gamma)=\frac{\gamma-\ell}{\ell}\quad(\ell<\gamma\le\ell+\tfrac12),\qquad
+\Gamma(\gamma)=\frac{\ell+1-\gamma}{\ell+1}\quad(\ell+\tfrac12<\gamma<\ell+1),
+\]
+$\Gamma=\infty$ for $\gamma\le\frac12$ and $\Gamma=0$ at every integer $\gamma$. Since the
+harmonic block of degree $k$ has dimension $N_{d,k}\asymp d^k$, the fractional part of $\gamma$ is the
+dimension gap of Section~\ref{sec:gap} for the last resolved block, $\delta=k-\gamma$ at level $k$: the
+threshold closes when $n$ sits at a block boundary, where Target~3's noise floor is exact, and it is
+widest when $n$ sits at the geometric middle of two blocks. At the sizes of Section~\ref{sec:t3},
+$n=2^d$ gives $\gamma=d\log2/\log d$, which is $3.35$ at $d=12$ and $3.51$ at $d=13$, so
+$\Gamma(\gamma)$ is $0.12$ at both: in that asymptotic only targets of source below about $0.12$
+overfit benignly on those designs, with $d$ far from the regime the theorem is stated in. In that
+reading $\delta_{\rm eff}$ is an estimate of the coordinate on which the benignity threshold is a
+known function, and the taxonomy of benign, tempered and catastrophic overfitting \cite{Mallinar} is
+a description of the same axis in the spectral coordinates of \cite{Cui}.
+
+\section{What the measurements say}
+
+\begin{enumerate}
+\item The proved lower bound for Target~3 is conservative at reachable sizes by a factor between
+$\numRatioMinHalf$ and $\numRatioMaxHalf$ at $h=1/2$, between $\numRatioMinOne$ and
+$\numRatioMaxOne$ at $h=1$, and between $\numRatioMinTwo$ and $\numRatioMaxTwo$ at $h=2$, against
+the ten-window constant $c_{10}=\numCten$, the strengthening of Theorem~\ref{thm:T3} quoted in
+Remark~\ref{rem:sharper}. Its constants are independent of bandwidth by construction while the
+measured functional is not; the gap between them is where a sharp,
+$h$-dependent constant would live. The single-block certificate the one-window argument bounds sits
+above its constant $c_1=5/36$ at every dimension and bandwidth measured, following the sawtooth of
+the block dimension rather than a trend, and the expectation bound on the captured leverage,
+\eqref{eq:capture}, is the loose step at these sizes.
+\item Within a harmonic block, at fixed critical degree, the noise risk falls as the dimension gap
+widens, at seven dimensions and one bandwidth and out to $\delta=0.6$, with the few inversions
+confined to blocks of small harmonic dimension or to cells with two designs; the tail isotropy that
+Target~2's proof
+drives to zero follows the same ordering.
+\item Both lemmas that Target~4's reduction names look true at finite size, one of them in a
+stronger form than the reduction requires, and the second with its constant identified rather than
+merely bounded: $d\,\Tr(A^4)\to$ a limit statistically indistinguishable from $2$, which is the
+fourth moment of the semicircle law and therefore the value a uniformly random direction in
+$\mathrm{Sym}_d$ would give. The leave-one-out normal is generic at leading order; the Veronese
+structure of the rows appears only in the $1/d$ correction, where it is an order of magnitude larger
+than the generic one and is set by the rank-one dependence of the row, not by its kurtosis. After the
+reduction the matrix is consistent with the square Wishart hard edge at every dimension measured.
+The remaining difficulty is the rectangular hard edge for the traceless harmonic block itself, and
+one thing that is known not to be available on the way there is uniform integrability of the full
+inverse smallest singular value, which diverges at every fixed $d$.
+\item The leverage concentration that lets Target~1's argument replace a correlated Stein comparison
+with second-moment matching shows $d\,\Var(q)$ of order one at $d=64$ and $d=128$, with a clear
+dependence on the augmentation strength, no dependence on the column normalization, and nothing that
+one doubling of $d$ can say about the limit; the residual coefficients that argument needs have a
+one-line Hermite identification with nonnegativity built in (Proposition~\ref{prop:hermite}).
+\item On the EMIT and OCO-2 corpora the same-sample correction identity is exact to
+$\numIdentWorst$, and its sign is computable per component and per ridge. On two of the four EMIT
+components the margin is positive at every ridge on every seed; on the third it changes sign at
+small ridge on some seeds; on the fourth, where the mean is poor, it is negative almost everywhere
+and the correction does nothing; on the three OCO-2 bands the correction is close to neutral. Where
+the consistent arm helps, its gain in squared risk transfers to the pipeline's physical error one for
+one. The mismatch bound holds and is loose by two to three orders of magnitude, its transfer
+condition fails on every (lane, ridge) pair, and the arm the pipeline fits, to out-of-fold
+residuals, gains nothing on these lanes.
+\item For the fifth problem, the compression error of the spike-frame resolvent is indistinguishable
+across five entry laws inside and outside the hypotheses of the theorem, at every rank and size run.
+Along rays of fixed $r/n$ it approaches $\sqrt{r/n}+\numRayC\,r/n$, with no visible $\log n$ term
+and a leading coefficient of one; the exponent above $1/2$ seen at fixed $n$ is the second term.
+Two rank-one spikes with bulk spectra that differ by the resolution of the statistic and nothing
+more have overlaps of $0.003$ and $1.000$ with the planted direction, according to whether the frame
+was drawn before or after looking at the matrix.
+\item On the two corpora of the regularisation block, one seed at a time, the noiseless Burgers
+interpolant is the optimum of the path at $n=4000$, and on the advection suite interpolating loses to
+the best ridge by $88$ percent of the best risk, at a more negative empirical dimension gap; the
+leave-one-out gate keeps its first property when the mean it corrects is a trained network, taking
+$\numGateCaptured$ percent of the gain on Burgers, and its second property is not exercised.
+\end{enumerate}
+
+\section*{Funding}
+The research presented in this paper was supported by the European Research Council (ERC) under the
+European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by
+the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of
+Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant
+number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at
+Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+This paper is a product of an ongoing project on the use of AI systems for research mathematics,
+provisionally called Math Brain, which studies how to make such systems better at solving open
+problems; the project and its tooling will be released publicly in due course. The proofs of
+Part~I were found by the automated programme ProofNet24 \cite{PN24}, whose workers run on OpenAI's
+Codex, and were rewritten, checked and typeset by Claude (Anthropic; Claude Fable 5.1). The
+experiments were designed, the code written and run, the records audited and this manuscript
+drafted by Claude (Claude Opus 5 and Claude Fable 5.1) and Codex (OpenAI) sessions between 14 and 16
+September 2026. The author set the goals of the project, commissioned and directed the work and
+approved the release; the author did not carry out the mathematics, the computations or the writing,
+and takes responsibility for the decision to publish.
+
+\section*{Data and code availability}
+The drivers, the \numRecords{} run records, the scripts of the laptop-scale computations quoted in
+Sections~\ref{sec:semicircle} and~\ref{sec:prune}, and the build script that regenerates every table
+and quoted number from the run records and checks the identities \eqref{eq:second}, \eqref{eq:V},
+\eqref{eq:reduction}, \eqref{eq:identity} and \eqref{eq:null} against them are in the repository
+\texttt{yspennstate/math-open-problems}, under \texttt{paper9\_kernel\_open\_problems}, together
+with the ProofNet24 run reports under \texttt{proofnet24}, one directory per track with every run
+preserved under its own timestamp. The repository is private and is available from the author on
+request.
+
+\begin{thebibliography}{99}
+
+\bibitem{Amini} A. A. Amini, Spectrally-truncated kernel ridge regression and its free lunch,
+\emph{Electron. J. Stat.} 15 (2021), 3743--3761. arXiv:1906.06276.
+
+\bibitem{AGZ} G. W. Anderson, A. Guionnet and O. Zeitouni, \emph{An Introduction to Random
+Matrices}, Cambridge Studies in Advanced Mathematics 118, Cambridge University Press, 2010.
+
+\bibitem{AtkinsonHan} K. Atkinson and W. Han, \emph{Spherical Harmonics and Approximations on the
+Unit Sphere: An Introduction}, Lecture Notes in Mathematics 2044, Springer, 2012.
+
+\bibitem{BBP} J. Baik, G. Ben Arous and S. P\'ech\'e, Phase transition of the largest eigenvalue
+for nonnull complex sample covariance matrices, \emph{Ann. Probab.} 33 (2005), 1643--1697.
+
+\bibitem{BBvH} A. S. Bandeira, M. T. Boedihardjo and R. van Handel, Matrix concentration
+inequalities and free probability, \emph{Invent. Math.} 234 (2023), 419--487.
+
+\bibitem{Bartlett} P. L. Bartlett, P. M. Long, G. Lugosi and A. Tsigler, Benign overfitting in
+linear regression, \emph{Proc. Natl. Acad. Sci. USA} 117 (2020), 30063--30070.
+
+
+\bibitem{BatlleDarcyHosseiniOwhadi} P. Batlle, M. Darcy, B. Hosseini and H. Owhadi, Kernel methods are competitive for operator learning, arXiv:2304.13202 (2023).
+\bibitem{BGN} F. Benaych-Georges and R. R. Nadakuditi, The singular values and vectors of low rank
+perturbations of large rectangular random matrices, \emph{J. Multivariate Anal.} 111 (2012),
+120--135.
+
+\bibitem{BLM} S. Boucheron, G. Lugosi and P. Massart, \emph{Concentration Inequalities: A
+Nonasymptotic Theory of Independence}, Oxford University Press, 2013.
+
+\bibitem{BvH} T. Brailovskaya and R. van Handel, Universality and sharp matrix concentration
+inequalities, \emph{Geom. Funct. Anal.} 34 (2024), 1734--1838. arXiv:2201.05142.
+
+\bibitem{CaponnettoDeVito} A. Caponnetto and E. De Vito, Optimal rates for the regularized
+least-squares algorithm, \emph{Found. Comput. Math.} 7 (2007), 331--368.
+
+
+\bibitem{ChenHosseiniOwhadiStuart} Y. Chen, B. Hosseini, H. Owhadi and A. M. Stuart, Solving and learning nonlinear PDEs with Gaussian processes, arXiv:2103.12959 (2021).
+\bibitem{Cui} H. Cui, B. Loureiro, F. Krzakala and L. Zdeborov\'a, Generalization error rates in
+kernel regression: the crossover from the noiseless to noisy regime, in \emph{Advances in Neural
+Information Processing Systems} 34 (2021), 10131--10143. arXiv:2105.15004.
+
+\bibitem{deHoop} M. V. de Hoop, D. Z. Huang, E. Qian and A. M. Stuart, The cost-accuracy trade-off
+in operator learning with neural networks, \emph{J. Mach. Learn.} 1 (2022), 299--341.
+arXiv:2203.13181.
+
+
+\bibitem{dlPG} V. H. de la Pe\~na and E. Gin\'e, \emph{Decoupling: From Dependence to Independence}, Springer, 1999.
+
+\bibitem{dlPMS} V. H. de la Pe\~na and S. J. Montgomery-Smith, Decoupling inequalities for the tail probabilities of multivariate $U$-statistics, \emph{Ann. Probab.} 23 (1995), 806--816.
+\bibitem{DhifallahLu} O. Dhifallah and Y. M. Lu, A precise performance analysis of learning with
+random features, arXiv:2008.11904 (2020).
+
+
+\bibitem{DLMF} NIST Digital Library of Mathematical Functions, \url{https://dlmf.nist.gov/}, F. W. J. Olver et al., eds.
+\bibitem{Edelman} A. Edelman, Eigenvalues and condition numbers of random matrices, \emph{SIAM J.
+Matrix Anal. Appl.} 9 (1988), 543--560.
+
+\bibitem{EfronStein} B. Efron and C. Stein, The jackknife estimate of variance, \emph{Ann.
+Statist.} 9 (1981), 586--596.
+
+\bibitem{Eldering} A. Eldering et al., The Orbiting Carbon Observatory-2: first 18 months of
+science data products, \emph{Atmos. Meas. Tech.} 10 (2017), 549--563.
+
+\bibitem{Ghorbani} B. Ghorbani, S. Mei, T. Misiakiewicz and A. Montanari, Linearized two-layers
+neural networks in high dimension, \emph{Ann. Statist.} 49 (2021), 1029--1054.
+
+\bibitem{Goldt} S. Goldt, B. Loureiro, G. Reeves, F. Krzakala, M. M\'ezard and L. Zdeborov\'a, The
+Gaussian equivalence of generative models for learning with shallow neural networks, in
+\emph{Proceedings of the 2nd Mathematical and Scientific Machine Learning Conference}, PMLR 145
+(2022), 426--471.
+
+\bibitem{GHW} G. H. Golub, M. Heath and G. Wahba, Generalized cross-validation as a method for
+choosing a good ridge parameter, \emph{Technometrics} 21 (1979), 215--223.
+
+\bibitem{Green} R. O. Green et al., The Earth Surface Mineral Dust Source Investigation: an Earth
+science imaging spectroscopy mission, in \emph{2020 IEEE Aerospace Conference}, IEEE, 2020.
+doi:10.1109/AERO47225.2020.9172731.
+
+\bibitem{GregorattiMaran} G. Gregoratti and D. Maran, Least singular value and condition number of a
+square random matrix with i.i.d.\ rows, \emph{Statist. Probab. Lett.} 173 (2021), 109070.
+
+
+\bibitem{HamziOwhadi} B. Hamzi and H. Owhadi, Learning dynamical systems from data: a simple cross-validation perspective, part I: parametric kernel flows, \emph{Physica D} 421 (2021), 132817.
+\bibitem{HuLu} H. Hu and Y. M. Lu, Universality laws for high-dimensional learning with random
+features, \emph{IEEE Trans. Inform. Theory} 69 (2023), 1932--1964. arXiv:2009.07669.
+
+
+\bibitem{Janson} S. Janson, \emph{Gaussian Hilbert Spaces}, Cambridge Tracts in Mathematics 129, Cambridge University Press, 1997.
+
+\bibitem{JSZ} W. B. Johnson, G. Schechtman and J. Zinn, Best constants in moment inequalities for linear combinations of independent and exchangeable random variables, \emph{Ann. Probab.} 13 (1985), 234--253.
+
+\bibitem{KRM} C. Kaushik, J. Romberg and V. Muthukumar, A general technique for approximating high-dimensional empirical kernel matrices, arXiv:2511.03892 (2025).
+\bibitem{KnowlesYin} A. Knowles and J. Yin, Anisotropic local laws for random matrices,
+\emph{Probab. Theory Related Fields} 169 (2017), 257--352.
+
+\bibitem{Lamminpaa} O. Lamminp\"a\"a, J. Susiluoto, J. Hobbs, J. McDuffie, A. Braverman and
+H. Owhadi, Forward model emulator for atmospheric radiative transfer using Gaussian processes and
+cross validation, \emph{Atmos. Meas. Tech.} 18 (2025), 673--694.
+
+
+\bibitem{LedouxTalagrand} M. Ledoux and M. Talagrand, \emph{Probability in Banach Spaces: Isoperimetry and Processes}, Springer, 1991.
+\bibitem{LiangRakhlin} T. Liang and A. Rakhlin, Just interpolate: kernel ``ridgeless'' regression
+can generalize, \emph{Ann. Statist.} 48 (2020), 1329--1347.
+
+\bibitem{LuLinXiaHuang} W. Lu, Q. Lin, Y. Xia and D. Huang, Learning curves and benign overfitting
+of spectral algorithms in large dimensions, arXiv:2604.23212 (2026).
+
+\bibitem{Mallinar} N. Mallinar, J. B. Simon, A. Abedsoltan, P. Pandit, M. Belkin and P. Nakkiran,
+Benign, tempered, or catastrophic: toward a refined taxonomy of overfitting, in \emph{Advances in
+Neural Information Processing Systems} 35 (2022). arXiv:2207.06569.
+
+\bibitem{MarchenkoPastur} V. A. Mar\v{c}enko and L. A. Pastur, Distribution of eigenvalues for some
+sets of random matrices, \emph{Math. USSR-Sb.} 1 (1967), 457--483.
+
+\bibitem{MeiMontanari} S. Mei and A. Montanari, The generalization error of random features
+regression: precise asymptotics and the double descent curve, \emph{Comm. Pure Appl. Math.} 75
+(2022), 667--766.
+
+\bibitem{MinhNiyogiYao} H. Q. Minh, P. Niyogi and Y. Yao, Mercer's theorem, feature maps, and
+smoothing, in \emph{Learning Theory (COLT 2006)}, Lecture Notes in Computer Science 4005, Springer,
+2006, 154--168.
+
+\bibitem{Misiakiewicz} T. Misiakiewicz, Spectrum of inner-product kernel matrices in the polynomial
+regime and multiple descent phenomenon in kernel ridge regression, arXiv:2204.10425 (2022).
+
+
+\bibitem{Nelson} E. Nelson, The free Markoff field, \emph{J. Functional Analysis} 12 (1973), 211--227.
+
+\bibitem{OwhadiYoo} H. Owhadi and G. R. Yoo, Kernel Flows: from learning kernels from data into the abyss, \emph{J. Comput. Phys.} 389 (2019), 22--47.
+\bibitem{Patil} P. Patil, Y. Wu and R. J. Tibshirani, Failures and successes of cross-validation
+for early-stopped gradient descent, in \emph{Proceedings of the 27th International Conference on
+Artificial Intelligence and Statistics}, PMLR 238 (2024), 2260--2268. arXiv:2402.16793.
+
+\bibitem{PN24} ProofNet24 run reports, tracks P15 (kernel mean correction), P19 (kernel spectral
+pruning), P20 (kernel hard edge), P21 (correlated Gaussian equivalence), P22 (benign overfitting) and
+P23 (kernel obstruction), repository \texttt{yspennstate/math-open-problems}, directory
+\texttt{proofnet24}, 2026. Private; available from the author on request.
+
+\bibitem{RakhlinZhai} A. Rakhlin and X. Zhai, Consistency of interpolation with Laplace kernels is a
+high-dimensional phenomenon, in \emph{Proceedings of the 32nd Conference on Learning Theory}, PMLR
+99 (2019), 2595--2623.
+
+
+\bibitem{Rosenthal} H. P. Rosenthal, On the subspaces of $L^p$ ($p>2$) spanned by sequences of independent random variables, \emph{Israel J. Math.} 8 (1970), 273--303.
+\bibitem{Shmalo26a} Y. Shmalo, Neural means and kernel corrections for radiative-transfer
+emulators, manuscript, code and records at
+\url{https://github.com/yspennstate/emit-oco2-kernel-emulators}, 2026.
+
+\bibitem{Shmalo26b} Y. Shmalo, Neural means and kernel corrections for operator learning,
+arXiv:2609.00389 (2026); code at \url{https://github.com/yspennstate/neural-means-kernel-corrections}.
+
+
+\bibitem{Susiluoto} J. Susiluoto, A. Spantini, H. Haario, T. H\"ark\"onen and Y. Marzouk, Efficient multi-scale Gaussian process regression for massive remote sensing data with satGP v0.1.2, \emph{Geosci. Model Dev.} 13 (2020), 3439--3463.
+\bibitem{PDEBench} M. Takamoto, T. Praditia, R. Leiteritz, D. MacKinlay, F. Alesiani, D. Pfl\"uger
+and M. Niepert, PDEBench: an extensive benchmark for scientific machine learning, in \emph{Advances
+in Neural Information Processing Systems} 35, Datasets and Benchmarks Track (2022).
+arXiv:2210.07182.
+
+\bibitem{Talagrand} M. Talagrand, Concentration of measure and isoperimetric inequalities in
+product spaces, \emph{Publ. Math. Inst. Hautes \'Etudes Sci.} 81 (1995), 73--205.
+
+\bibitem{TracyWidom} C. A. Tracy and H. Widom, Level spacing distributions and the Bessel kernel,
+\emph{Comm. Math. Phys.} 161 (1994), 289--309.
+
+
+\bibitem{Tropp12} J. A. Tropp, User-friendly tail bounds for sums of random matrices, \emph{Found. Comput. Math.} 12 (2012), 389--434.
+
+\bibitem{Tropp15} J. A. Tropp, \emph{An Introduction to Matrix Concentration Inequalities}, Foundations and Trends in Machine Learning 8, 2015.
+
+\bibitem{Vershynin} R. Vershynin, \emph{High-Dimensional Probability: An Introduction with Applications in Data Science}, Cambridge University Press, 2018.
+\bibitem{Wigner} E. P. Wigner, On the distribution of the roots of certain symmetric matrices,
+\emph{Ann. of Math.} 67 (1958), 325--327.
+
+\end{thebibliography}
+
+\end{document}
