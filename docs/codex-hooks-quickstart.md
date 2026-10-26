@@ -81,6 +81,14 @@ prints what the model would receive for a sample request. To wire it in, add it 
 `~/.codex/hooks.json` with its absolute path, approve it with `/hooks`, and ask Codex something the records answer
 ("what does the festival want for delivery?"). The answer should quote the 31 March delivery record.
 
+The other two hooks in the example above are in the same folder. `scar_hook.py` runs before a tool call, scores
+the command against the records of mistakes only, and adds one short warning when a scar matches well (at most two
+scars, each once per session). `write_back_hook.py` runs when the turn ends: if the agent's last message reads like
+a lesson and no record changed in the last two hours, it returns `{"decision": "block", "reason": ...}` once per
+session, which both runtimes read as one more step, filing the record with `new_record.py`. Set
+`BRAIN_WRITE_BACK=queue` and it appends the lesson to `memory/WRITE_BACK_QUEUE.md` instead of asking. Both keep
+their per-session state in `hooks/.state/`, and each has a `--selftest`.
+
 Three rules from running hooks like this every day:
 
 1. **Fail silent.** A hook that crashes or hangs blocks every turn. Catch every exception, print nothing on error,
