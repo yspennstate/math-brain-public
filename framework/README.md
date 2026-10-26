@@ -123,6 +123,9 @@ far to trust it under every note it serves.
 at the end of a task instead of mid-subject, what the summary is told to keep, how every summary
 becomes a linked node in the brain, and what broke along the way.
 
+`docs/RECALL_LEVERS.md` has two recall measurements: rewriting a question before searching, which
+helps only as a second look, and fusing the question's own embedding with the word search.
+
 `docs/METHOD.md` is the working discipline — recall before you derive, a check is only worth
 its control, break it on purpose, verify the host rather than the patch, sample at the moment
 of the event. Every rule in it is there because breaking it cost something measurable. Read it
