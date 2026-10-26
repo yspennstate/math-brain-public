@@ -103,3 +103,33 @@ def test_cli_round_trip(tmp_path, capsys):
     assert rid in capsys.readouterr().out
     rows = [json.loads(x) for x in open(path, encoding="utf-8")]
     assert [r["op"] for r in rows] == ["ask", "link"]
+
+
+def test_consolidate_reports_a_status_it_cannot_read(tmp_path):
+    led = RequestLedger(tmp_path / "r.jsonl")
+    rid = led.ask("needs a status").id
+    led.link(rid, "claim_x", "produced")
+
+    def refuse(node):
+        raise RuntimeError("persisted status must be recomputed")
+
+    out = led.consolidate(status_of=refuse)
+    assert out["answered"] == [] and led.get(rid).status == "open"
+    assert out["unresolved"] and "claim_x" in out["unresolved"][0]
+
+
+def test_consolidate_against_a_real_store(tmp_path):
+    from math_brain.models import Claim, ClaimKind
+    from math_brain.store import ResearchStore
+
+    with ResearchStore(tmp_path / "brain.sqlite") as store:
+        claim = Claim("Every group of prime order is cyclic.", ClaimKind.THEOREM)
+        store.add_claim(claim)
+        led = RequestLedger(tmp_path / "r.jsonl")
+        rid = led.ask("Is a group of prime order cyclic?").id
+        led.link(rid, claim.id, "produced")
+        led.link(rid, "claim_never_written", "asks_about")
+        led.link(rid, "claim_never_written", "produced")
+        out = led.consolidate(status_of=store.current_status)
+    assert led.get(rid).status == "open" and out["answered"] == []
+    assert [u.split()[1].rstrip(":") for u in out["unresolved"]] == ["claim_never_written"]

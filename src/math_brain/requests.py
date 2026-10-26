@@ -231,25 +231,30 @@ class RequestLedger:
     def consolidate(self, *, status_of: Any = None, stale_days: int = 14, today: datetime | None = None) -> dict[str, list[str]]:
         """What a dream pass does with the ledger. Returns what it changed and what it wants a person to look at.
 
-        status_of, when given, maps a store node id to its status string (ResearchStore.current_status works).
-        An open request whose 'produced' card is now verified is marked answered by that card; one whose
-        answer was refuted or retracted is reopened. Open requests untouched for stale_days are listed, not
-        dropped: only a person drops a request.
+        status_of, when given, maps a store node id to its status. With a store, pass
+        ``lambda node: recompute_current_status(store, node, verifier)`` from math_brain.verification: the
+        store's own current_status refuses any claim that has verification events. An open request whose
+        'produced' card is now verified is marked answered by that card; one whose answer was refuted,
+        retracted or found to have a gap is reopened. A node whose status cannot be read is listed under
+        'unresolved', never taken as an answer and never skipped in silence. Open requests untouched for
+        stale_days are listed, not dropped: only a person drops a request.
         """
         today = today or datetime.now(UTC)
-        out: dict[str, list[str]] = {"answered": [], "reopened": [], "stale": [], "repeated": []}
+        out: dict[str, list[str]] = {"answered": [], "reopened": [], "stale": [], "repeated": [], "unresolved": []}
         for req in list(self.requests.values()):
             if status_of is not None:
                 for node in req.linked("answered_by") + req.linked("produced"):
                     try:
-                        st = str(getattr(status_of(node), "value", status_of(node)))
-                    except Exception:  # noqa: BLE001 - a missing node is not an answer
+                        raw = status_of(node)
+                    except Exception as exc:  # noqa: BLE001 - reported below, never taken as an answer
+                        out["unresolved"].append(f"{req.id} {node}: {type(exc).__name__}: {exc}")
                         continue
+                    st = str(getattr(raw, "value", raw))
                     if req.status == "open" and st == "verified":
                         self.link(req.id, node, "answered_by")
                         out["answered"].append(req.id)
                         break
-                    if req.status == "answered" and node in req.linked("answered_by") and st in ("refuted", "retracted"):
+                    if req.status == "answered" and node in req.linked("answered_by") and st in ("refuted", "retracted", "gap_found"):
                         self.set_status(req.id, "open", f"answer {node} is {st}")
                         out["reopened"].append(req.id)
                         break

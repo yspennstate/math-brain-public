@@ -45,10 +45,15 @@ before starting work: the question may already have an answer, or someone may be
 
 ## The nightly pass
 
-`RequestLedger.consolidate(status_of=store.current_status)` is meant to run with the other consolidation steps:
+`RequestLedger.consolidate(status_of=...)` is meant to run with the other consolidation steps. The status has
+to be recomputed from authenticated evidence, so pass
+`lambda node: recompute_current_status(store, node, verifier)` from `math_brain.verification`; the store's own
+`current_status` refuses any claim that has verification events.
 
 - an open request with a `produced` card that is now verified is marked answered by that card;
-- an answered request whose answer is refuted or retracted is reopened, with the reason in its note;
+- an answered request whose answer is refuted, retracted or found to have a gap is reopened, with the reason in
+  its note;
+- a card whose status cannot be read is listed under `unresolved`, never counted as an answer;
 - open requests untouched for fourteen days, and open requests asked more than once, are listed for a person.
 
 Nothing is dropped automatically. Asking an answered request again reopens it, because a repeat means the
