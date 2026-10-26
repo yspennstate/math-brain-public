@@ -148,10 +148,11 @@ rewordings, say the brain does not have it. When you learn something we will nee
 new_record.py, with the reason.
 ```
 
-Second, the hook. `hooks/recall_hook.py` runs before the model sees each request and hands it the records that
-match, so the agent gets them even when it forgets to ask. `python hooks/recall_hook.py --selftest` shows what the
-model would receive. [codex-hooks-quickstart.md](codex-hooks-quickstart.md) shows where it goes in Codex and in
-Claude Code.
+Second, the hooks. `hooks/wake_hook.py` runs once when a session starts and gives the model the index and the
+newest mistakes, so it knows what the store holds before anyone asks. `hooks/recall_hook.py` runs before the model
+sees each request and hands it the records that match, so the agent gets them even when it forgets to ask.
+`python hooks/recall_hook.py --selftest` shows what the model would receive.
+[codex-hooks-quickstart.md](codex-hooks-quickstart.md) shows where both go in Codex and in Claude Code.
 
 ## 6. The first night (ten minutes to set up)
 
@@ -162,9 +163,20 @@ python dream/make_agenda.py
 This writes `DREAM_AGENDA.md`: mistakes with no rule yet, the week's new records and what they might contradict,
 superseded pairs and the records that still link the old one, provisional records waiting for a check, and records
 with no links. Give the agenda to an agent at the end of the day and let it work through it: link, merge, verify,
-turn a repeated mistake into a rule (`dream/README.md` says what to do with each section). Once that works by
-hand, schedule it: `framework/dreaming/run_dream.ps1` is the nightly runner the full brain uses, started through a
-hidden launcher so that no window opens.
+turn a repeated mistake into a rule (`dream/README.md` says what to do with each section).
+
+Once that works by hand, let `dream/run_dream.py` do the whole night with any agent command-line tool that reads a
+prompt on stdin:
+
+```
+python dream/run_dream.py --agent-cmd "claude -p --permission-mode acceptEdits"
+```
+
+It backs up `memory/` first, puts back any record the agent deleted, and writes a log with each agenda section's
+count before and after. It also runs `check_store.py`, which lists any record the night left out of the index and
+any `[[link]]` or `superseded_by:` that names a record nobody wrote; the run exits 1 when it finds one, so a
+scheduler can flag the night. Run `python check_store.py` yourself after editing records by hand. `dream/README.md`
+has the cron, launchd and Task Scheduler lines for running it every night.
 
 ## After the first week
 
