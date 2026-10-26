@@ -13,8 +13,8 @@ One run does five things:
 2. copies memory/ to dream/backups/<stamp>/ so a person can undo the night;
 3. hands the agent the agenda and the three dream rules;
 4. checks that no record was deleted (a deleted record is put back from the copy and the log says so);
-5. rebuilds the agenda and writes dream/logs/dream_<stamp>.md: the agent's reply, the files it changed, and each
-   section's count before and after.
+5. rebuilds the agenda, runs check_store.py, and writes dream/logs/dream_<stamp>.md: the agent's reply, the files it
+   changed, each section's count before and after, and any record the night left unindexed or linked to nothing.
 
 A section whose count falls is work done. A section that comes back the same means the agent read but did not
 write. Standard library only.
@@ -178,12 +178,16 @@ def main():
         log += ["## Files the agent changed", ""] + (["- %s %s" % c for c in changes] or ["- none"])
         if restored:
             log += ["", "## Records the agent deleted, put back from the backup", ""] + ["- " + r for r in restored]
+        chk = subprocess.run([sys.executable, os.path.join(ROOT, "check_store.py"), "--dir", MEM], cwd=ROOT,
+                             capture_output=True, text=True, encoding="utf-8", errors="replace")
+        log += ["", "## The store after the dream (check_store.py)", ""] + ["    " + ln for ln in chk.stdout.splitlines()]
         log += ["", "## The agent's reply", "", reply or "(empty)", ""]
         os.makedirs(os.path.join(HERE, "logs"), exist_ok=True)
         path = os.path.join(HERE, "logs", "dream_%s.md" % stamp)
         open(path, "w", encoding="utf-8", newline="\n").write("\n".join(log))
-        print("dream done: %d file(s) changed, %d put back; log %s" % (len(changes), len(restored), path))
-        return 0 if rc == 0 else 1
+        print("dream done: %d file(s) changed, %d put back; store check exit %d; log %s"
+              % (len(changes), len(restored), chk.returncode, path))
+        return 0 if rc == 0 and chk.returncode == 0 else 1
     finally:
         os.remove(LOCK)
 

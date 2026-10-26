@@ -16,6 +16,7 @@ production, a lab or a support desk.
 | `new_record.py` | write one record with its frontmatter, add its index line, and mark the record it supersedes |
 | `recall.py` | search the records (BM25 over description and body; standard library only) |
 | `ledger.py` | read and write the request ledger: list the open requests, record one, link a record that answers it, drop it |
+| `check_store.py` | check that every record is indexed and every `[[link]]` and `superseded_by:` names a record that exists; run it after editing records by hand |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
 | `dream/make_agenda.py` | builds the agenda a dreaming agent works from: mistakes without a rule, fresh records, superseded pairs, unchecked claims, open questions, unlinked records (see `dream/README.md`) |

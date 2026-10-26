@@ -38,7 +38,9 @@ python dream/run_dream.py --agent-cmd "codex exec --full-auto -"
 It builds the agenda, copies `memory/` to `dream/backups/<stamp>/`, hands the agent the agenda with the three rules
 below, puts back any record the agent deleted, rebuilds the agenda and writes `dream/logs/dream_<stamp>.md` with the
 files changed and each section's count before and after. The count to watch is the line "Mistakes with no rule for
-next time": a dream that leaves it unchanged did not do the most useful part of its job. Only one dream runs at a
+next time": a dream that leaves it unchanged did not do the most useful part of its job. The log also carries the
+output of `check_store.py`: a record the agent wrote without an index line, or a `[[link]]` or `superseded_by:` that
+names no record, is listed there, and the run exits 1 so a scheduler can flag it. Only one dream runs at a
 time (`dream/.dream.lock`). Write paths in the agent command with forward slashes, also on Windows. The backups are
 yours to prune once you have read the log.
 
