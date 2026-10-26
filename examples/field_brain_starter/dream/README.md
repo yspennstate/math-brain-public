@@ -150,6 +150,43 @@ Give the agent the agenda, the memory folder, and three instructions:
 Then rebuild the agenda. Sections that come back empty are the measure of a good dream; sections that come back
 the same mean the agent read but did not write.
 
+## One night on the example store
+
+This is what a good night looks like, run through `run_dream.py` on a copy of this folder. The edits are the ones the
+agenda above asks for, made by hand so the result is easy to check:
+
+- The 12 March mistake got its rule. `method_a_note_is_a_hint_not_an_order` gained "**How to apply:** before acting
+  on a recalled plan or decision, read its status and any superseded_by: line; if it was superseded, open the
+  replacement and work from that", and a link to the 12-minute decision, so the record no longer points only at the
+  plan that caused the mistake.
+- The lighthouse film record now links the clipped-audio mistake and the raw-footage rule, both of which bear on the
+  April interviews.
+- The open question about festival or online release now links the festival delivery specification.
+
+The log the runner wrote:
+
+```
+| section | before | after |
+|---|---|---|
+| 1. Mistakes to sit with | 3 | 3 |
+| 2. Fresh records (last 7 days) | 8 | 8 |
+| 3. Superseded pairs | 1 | 1 |
+| 4. Provisional records | 5 | 5 |
+| 5. Open questions | 1 | 1 |
+| 6. Unlinked records | 4 | 1 |
+
+Mistakes with no rule for next time: 1 before, 0 after.
+
+20 records: 0 error(s), 0 warning(s)
+```
+
+Read the counts with the sections in mind. Mistakes and superseded pairs stay listed after they are dealt with, so
+their counts do not move; what moved is the line under each (no mistake without a rule, no record that links the old
+plan without the new one). Fresh, provisional and open items fall only when time passes or someone checks the
+evidence, and the rules tell the agent not to mark a record verified without it. The one record still unlinked, the
+rule about writing dates as dates, touches every record and no one in particular; leaving it alone is the right
+call, and a dream that invented a link to empty the section would be worse than one that left it.
+
 ## Make it fit your field
 
 The six sections are generic. What changes from field to field is what counts as a mistake and what counts as
