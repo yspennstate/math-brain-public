@@ -23,7 +23,7 @@ Figure~\ref{fig:arch} shows how the parts fit together.
 
 \subsection{What we measured}
 
-Every test in this paper compares two arms that use the same model, the same budget and the same questions, and differ only in access to the brain; the one exception, a solving test whose full package also adds a clock and a hint, is marked where it occurs. Scores are counts of correct answers; $p$-values are exact two-sided McNemar tests on the items where the arms disagree. The question banks and their answer keys are kept private, so the same tests can be run on later versions of the system without the answers having been seen. Table~\ref{tab:intro-summary} collects the main comparisons; Section~\ref{sec:tests} gives each one in detail.
+Every test in this paper compares two arms that use the same model, the same budget and the same questions, and differ only in access to the brain; the one exception, a solving test whose full package also adds a clock and a hint, is marked where it occurs. Scores are counts of correct answers; $p$-values are exact two-sided McNemar tests on the items where the arms disagree. The question banks and their answer keys are kept private. Reusing a bank after its supporting records become public measures regression performance; new held-out claims require a fresh contamination audit and unseen items. Table~\ref{tab:intro-summary} collects the main comparisons; Section~\ref{sec:tests} gives each one in detail.
 
 \begin{table}[ht]
 \centering
@@ -39,17 +39,17 @@ Test & Without the brain & With the brain & $p$ \\
 80 questions about files in GitHub repositories (12 Oct) & 68 & 73 & 0.27 \\
 584 held-out ranking questions, before and after (12 Oct) & 298 & 317 & 0.0019 \\
 13 new open problems, graded blind (11 Oct) & 26 of 39 & 24 of 39 & 0.23$^{b}$ \\
-755 store items, three arms: repositories against brain, Claude (24 Oct) & $78.1\%$ & $94.3\%$ & $3.0\cdot 10^{-27}$ \\
-\quad of which, 593 items both arms answered in time & $99.3\%$ & $99.2\%$ & 1 \\
-182 store items, three arms: repositories against brain, Codex (24 Oct) & $97.3\%$ & $93.4\%$ & 0.09 \\
+988 store items, three arms: repositories against brain, Claude (25 Oct) & $82.0\%$ & $95.4\%$ & $1.2\cdot 10^{-29}$ \\
+\quad of which, 806 items both arms answered in time & $99.4\%$ & $99.3\%$ & 1 \\
+335 store items, three arms: repositories against brain, Codex (25 Oct) & $97.6\%$ & $95.2\%$ & 0.12 \\
 300 hard items, early version against documents & 264 & 238 & 0.0005 \\
 \bottomrule
 \end{tabular}
-\caption{The main paired comparisons. $^{a}$The full stack is the hook, the recall tool and the link walk; it went $10$ to $3$ against text search on the disagreeing items. The recall tool alone scored $83$. $^{b}$Each attempt was graded blind at up to $3$ points, so $39$ is the maximum over $13$ problems; the $p$-value is for a referee's pairwise preference, $8$ to $3$ for the arm without the brain, with $2$ even. The last two rows are tests the brain did not pass. The three-arm rows give the percentage correct on the items run in all three arms; the model alone scored $21.7\%$ and $31.9\%$. The recall and ranking comparisons and the Claude three-arm comparisons survive a Holm correction over all nineteen paired comparisons of the current system (Appendix~\ref{app:stats}); the early version's loss survives it too.}
+\caption{The main paired comparisons. $^{a}$The full stack is the hook, the recall tool and the link walk; it went $10$ to $3$ against text search on the disagreeing items. The recall tool alone scored $83$. $^{b}$Each attempt was graded blind at up to $3$ points, so $39$ is the maximum over $13$ problems; the $p$-value is for a referee's pairwise preference, $8$ to $3$ for the arm without the brain, with $2$ even. The Codex three-arm comparison is inconclusive, and the early-version comparison favours the documents. The three-arm rows give the percentage correct on the items run in all three arms; the model alone scored $18.9\%$ and $24.2\%$. The recall and ranking comparisons and the Claude three-arm comparisons survive a Holm correction over all nineteen paired comparisons of the current system (Appendix~\ref{app:stats}); the early version's loss survives it too.}
 \label{tab:intro-summary}
 \end{table}
 
-Three findings deserve to be stated in the introduction, because they determine how the system should be used.
+Four findings deserve to be stated in the introduction, because they determine how the system should be used.
 
 First, \emph{the brain helps where an answer has to be recalled, and not where it can be derived}. On the $1{,}000$ recall items the brain helped on $462$ and no harm was observed. On the $61$ reasoning items the gain lies mostly in the $26$ items that name a known result ($22$ against $13$); on the $35$ that name none the difference is small ($30$ against $28$, $p=0.73$), which bounds the effect on such items only loosely.
 
@@ -57,7 +57,7 @@ Second, \emph{how results are printed matters as much as how they are found}. Th
 
 Third, \emph{following links saves cost more than it adds accuracy}. On the $100$ store questions, adding the hook and the link walk to the recall tool changed accuracy by one question ($82$ against $83$, a test that could detect only a large difference), reduced the uncached input by a factor of $1.8$, and cut the session time from $666$ to $78$ minutes.
 
-Fourth, \emph{against an agent that can read the repositories, the brain wins on time, not on knowledge}. In the three-arm test (Section~\ref{subsec:threearm}) Claude agents with the brain scored $94.3\%$ and agents with the repositories $78.1\%$, but on the $593$ items both finished within the time they were tied, $99.2\%$ against $99.3\%$. The repositories hold the same records; the brain reaches them with fewer searches, at a quarter of the input. Codex agents, with half again as much time, did slightly better with the repositories, and their losses with the brain were abstentions after a search that missed.
+Fourth, \emph{against an agent that can read the repositories, the brain wins on time, not on knowledge}. In the three-arm test (Section~\ref{subsec:threearm}) Claude agents with the brain scored $95.4\%$ and agents with the repositories $82.0\%$, but on the $806$ items both finished within the time the observed rates were close, $99.3\%$ against $99.4\%$. The repositories hold the same records; the brain reaches them with fewer searches, at a quarter of the input. Codex agents, with half again as much time, did slightly better with the repositories, and their losses with the brain were abstentions after a search that missed.
 
 We also report what did not work. The hook by itself answers little ($7$ of the $100$ store questions); it was silent on $85$ of them, including all $60$ that had been reworded to share no words with their card. Spreading activation along links only re-ranks cards the words have already found. On thirteen new open problems on which the store held only a first attempt, the arm with the brain did not beat the arm without it, and an early version of the system lost, on a hard set of $300$ items, to agents that were simply given the documents.
 

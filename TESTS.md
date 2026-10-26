@@ -1,6 +1,6 @@
 # Tests
 
-Each test runs agents on a fixed set of questions with and without the brain and counts correct answers. P values come from exact paired tests on the items where the arms disagree. The questions, the answer keys and the per-question records are kept private, so the tests can be run again on later versions without the answers having been seen. Anchors for some blinded experiments were committed in advance and are public: [brain-benefit-experiment-anchors](https://github.com/yspennstate/brain-benefit-experiment-anchors). The rows of earlier tests not described here are kept in [results/earlier-tests](results/earlier-tests/), each with its own README.
+Each test runs agents on a fixed set of questions with and without the brain and counts correct answers. P values come from exact paired tests on the items where the arms disagree. The questions, the answer keys and the per-question records are kept private, to avoid disclosing the test instruments. Public answer-bearing records can still contaminate later evaluations; repeated runs on exposed items are regression checks, not fresh holdouts. Anchors for some blinded experiments were committed in advance and are public: [brain-benefit-experiment-anchors](https://github.com/yspennstate/brain-benefit-experiment-anchors). The rows of earlier tests not described here are kept in [results/earlier-tests](results/earlier-tests/), each with its own README.
 
 ## The brain, the repositories, and the model alone, 1,000 items (23 and 24 October 2026)
 
@@ -15,12 +15,12 @@ The figures cover the items run in all three arms by the morning of 25 October: 
 | Claude, 988 items: correct | 95.4% | 82.0% | 18.9% |
 | Claude: sessions timed out | 3.7% | 17.5% | 29.8% |
 | Claude: mean seconds an item | 120 | 211 | 211 |
-| Claude, 807 items both brain and repositories answered in time | 99.3% | 99.4% | |
+| Claude, 806 items both brain and repositories answered in time | 99.3% | 99.4% | |
 | Claude, 73 proof audits all arms answered in time | 98.6% | 97.3% | 98.6% |
 | Codex, 335 items: correct | 95.2% | 97.6% | 24.2% |
 | Codex, 56 proof audits | 98.2% | 94.6% | 92.9% |
 
-For Claude the brain beat the repositories 146 to 13 on the items where they disagreed (exact McNemar p = 1.2e-29) and the model alone 757 to 1. On the 807 items that both the brain arm and the repository arm finished within the time, they were tied, 3 to 4. So the lead is time: an agent searching the files finds the same records, but it needs more searches, and on a sixth of the items it was still searching when the clock ran out. The gap is widest on the walk lookups that need three or four records, where the repository arm answered 31 to 51 percent of a family and the brain arm 76 to 94 percent.
+For Claude the brain beat the repositories 146 to 13 on the items where they disagreed (exact McNemar p = 1.2e-29) and the model alone 757 to 1. On the 806 items that both the brain arm and the repository arm finished within the time, they were tied, 3 to 4. So the lead is time: an agent searching the files finds the same records, but it needs more searches, and on a sixth of the items it was still searching when the clock ran out. The gap is widest on the walk lookups that need three or four records, where the repository arm answered 31 to 51 percent of a family and the brain arm 76 to 94 percent.
 
 A second pass, which gives every timed-out session twice the time, is running; this section will carry it when it finishes.
 
@@ -41,7 +41,7 @@ Running it, every session to 24 October, timeouts and reruns included:
 | Codex, repositories | 231 | 17.0 | 57,000 | 600 | |
 | Codex, model alone | 232 | 14.8 | 7,000 | 3,100 | |
 
-In all: 3,113 sessions, 198 session-hours, 107 million input tokens, 5.7 million output tokens, and 125.69 dollars at list price for the Claude sessions (the runs used subscription accounts; the Codex client reports no price). A session stopped at its time limit records no tokens and no price, so those columns leave out the timed-out sessions. With Claude the brain arm read a quarter of the repository arm's input, wrote two fifths of its output, used 58 percent of its hours and cost 58 percent as much a session; since the repository arm timed out four times as often, the true ratio is probably lower. With Codex the brain arm took longer, 244 seconds a graded item against 215, partly from sessions rerun after the connection to the recall server dropped.
+In all: 3,113 sessions, 198 session-hours, 107 million input tokens, 5.7 million output tokens, and 125.69 dollars at list price for the Claude sessions (the runs used subscription accounts; the Codex client reports no price). A session stopped at its time limit records no tokens and no price, so those columns leave out the timed-out sessions. With Claude the brain arm read a quarter of the repository arm's input, wrote two fifths of its output, used 58 percent of its hours and cost 58 percent as much a session; since the repository arm timed out four times as often, the true ratio is probably lower. With Codex the brain arm took longer, 204 seconds a graded item against 194 (25 October accuracy cutoff), partly from sessions rerun after the connection to the recall server dropped.
 
 What this says: when an agent has the repositories and enough time, it finds what the brain holds; the brain gets there faster and at a fraction of the reading. The items the brain arm lost to the repositories fail differently by model: with Claude most of them (9 of 13) ran out of time, three were wrong values and one an abstention; with Codex every one was an abstention, two of them without a single search. [AGENTS_GUIDE.md](AGENTS_GUIDE.md) turns these results into a setup for agents.
 

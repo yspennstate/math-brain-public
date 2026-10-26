@@ -1,0 +1,34 @@
+\section{What compaction saves}\label{app:compaction}
+The agents that built and tested the brain ran for hours or days in a single session. When a session's context approaches the model's window, Claude Code replaces the conversation so far with a written summary and continues from it; this is compaction. A compaction can be triggered automatically near the window limit or by hand. This appendix preserves the aggregate compaction analysis reported in the 25 October edition. The underlying private session transcripts are not included in the public release, so the aggregates below have not been independently recomputed from public data.
+
+\paragraph{Data.}
+The analysis covered $1{,}254$ Claude session transcripts from 17 August to 25 October 2026, with seventy days having at least one compaction. The compaction index, which also covers sessions started from other folders, listed $9{,}640$ Claude compactions from 9 October onward against $7{,}081$ in these transcripts for the same dates, so this sample held about three quarters of the indexed compactions in that period. Context sizes were read from the harness records; summary lengths were estimated at four characters per token.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{lrrr}
+\toprule
+ & Automatic & By hand & All\\
+\midrule
+Compactions & 5{,}625 & 2{,}791 & 8{,}416\\
+Context before, median (tokens) & 268{,}898 & 215{,}400 & 267{,}448\\
+Context before, 90th percentile & 970{,}261 & 256{,}006 & 968{,}428\\
+Context after, median & 20{,}360 & 16{,}343 & 18{,}872\\
+Context after, quartiles & 17{,}067--26{,}321 & 13{,}860--19{,}124 & 15{,}675--23{,}318\\
+Summary alone, median & 3{,}847 & 2{,}365 & 3{,}175\\
+Before over after, median & 14.5 & 13.2 & 13.8\\
+Before over after, quartiles & 10.2--22.2 & 11.3--15.7 & 10.8--18.1\\
+Tokens removed, total (millions) & 2{,}339 & 560 & 2{,}899\\
+\bottomrule
+\end{tabular}
+\caption{Reported compactions in $1{,}254$ Claude transcripts, 17 August to 25 October 2026. ``After'' is the context the session continued with, including the summary, fixed system prompt, tool definitions and hook output. These are aggregate observational measurements.}
+\label{tab:compaction}
+\end{table}
+
+\paragraph{Result.}
+The median before and after contexts were about $267{,}000$ and $19{,}000$ tokens, and the median within-event reduction factor was $13.8$. Those are different summary statistics; the median ratio need not equal the ratio of the medians. The summary alone had a median estimated length of about $3{,}200$ tokens. The remaining context also included fixed instructions, tools and material injected on resumption; subtracting the marginal medians does not estimate the median size of that remainder. Automatic compactions clustered near the smaller context-window threshold, with an upper tail from sessions using the larger window. Manual compactions occurred earlier, at a median before-context of about $215{,}000$ tokens, and left shorter summaries.
+
+The reported total reduction across the compaction boundaries was $2.9$ billion context tokens. Counts were $227$ in August, $724$ in September and $7{,}465$ in October.
+
+\paragraph{What this does not measure.}
+Removed context is not a measurement of billed tokens or dollars saved. Such a counterfactual depends on subsequent model calls, cache behaviour, new context and the cost of producing the summary; those quantities were not jointly measured here. Nor does this table measure a causal improvement due to Math Brain or the quality lost in compaction. A summary can omit a needed detail. The memory system can retain summaries and pointers to earlier records, but access to those records does not guarantee that a resumed agent will recover every omitted fact.

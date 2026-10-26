@@ -3,13 +3,13 @@
 This section is for a reader who wants to use the store, add to it, or repeat the tests. Appendix~\ref{app:tools} lists every tool with its options.
 
 \subsection{Installing}
-The release is a Python package with the store exported as text, one file per bundle, so that it can be read, diffed and reviewed without the database. Installing builds the database from the export and checks every digest:
+The release is a Python package with the store exported as text, one JSONL file per table, so that it can be read, diffed and reviewed without the database. The import command builds the database and reports card and bundle-manifest digest failures:
 \begin{verbatim}
 pip install -e .
 python tools/import_store.py --out local/population/brain.sqlite3
 export MATHBRAIN_STORE=local/population/brain.sqlite3 MATHBRAIN_BUILD_SRC=src
 \end{verbatim}
-The import refuses any row whose content does not match its digest. The meaning channel needs the sentence vectors, which the import builds on first use; without them the tools fall back to the word and formula channels and say so.
+The importer reports digest mismatches; its exit status alone is not a certificate that all digests passed. Run the release-integrity checker supplied with this paper for an explicit fail-on-mismatch check. The meaning channel requires the separately configured encoder and vector index; importing the database alone does not build that model. Word-based recall remains available without it.
 
 \subsection{Asking}
 A question is asked in words, the way a card would state the answer:
@@ -52,9 +52,9 @@ A result is added as a packet: a folder with one file per new card (statement, c
 A new card enters as \textsf{unverified}. Changing its status requires evidence through the verification router of Section~\ref{sec:writeback}.
 
 \subsection{Repeating the tests}
-The tests of Section~\ref{sec:tests} can be repeated on a later version of the store, or on a different store, without the question banks becoming public. The harness takes a bank, a list of arms and a model, runs each item in a fresh session per arm, applies the contamination guard, grades blind against the keys, and writes per-arm scores, the discordant counts, the exact McNemar $p$-values and a cost ledger. An arm is a configuration: which tools the agent may call, whether the hook runs, which copy of the store it reads, and the budget. The two arms of a comparison must differ only in the brain.
+The tests of Section~\ref{sec:tests} can be repeated as regression tests on a later version of the store, or on a different store. Keeping the question banks private does not make such repetitions fresh held-out evaluations after the answer-bearing material has been released. The harness takes a bank, a list of arms and a model, runs each item in a fresh session per arm, applies the contamination guard, grades blind against the keys, and writes per-arm scores, the discordant counts, the exact McNemar $p$-values and a cost ledger. An arm is a configuration: which tools the agent may call, whether the hook runs, which copy of the store it reads, and the budget. The two arms of a comparison must differ only in the brain.
 
-The banks are kept by the authors and are not in the release. A researcher who wants a test run on a new version may send the version; a researcher who wants to build a bank of their own should follow three rules. Write items whose answers are cards and audit each key twice before admitting it; remove from the bank any item answerable from the public files; and before reporting a null result, compute whether the test had room to show the effect.
+The banks are kept by the authors and are not in the release. A researcher who wants a test run on a new version may send the version; a researcher who wants to build a bank of their own should follow three rules. Write items whose answers are cards and audit each key twice before admitting it; exclude from any fresh held-out bank items answerable from public files or previously used for tuning; and before reporting a null result, compute whether the test had room to show the effect.
 
 \subsection{Several agents}
 For several agents on one problem, the arrangement that worked was a work order that names the target, the cards already known (by identifier), what is ruled out and what counts as progress; a shared folder for reports; and one agent whose job is to turn reports into packets. Agents that write to the store directly in parallel are safe, because a bundle either lands whole or not at all and the landing checks are made inside the transaction, but they duplicate each other's work unless the work order divides it.
