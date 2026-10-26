@@ -33,6 +33,25 @@ next time": a dream that leaves it unchanged did not do the most useful part of 
 time (`dream/.dream.lock`). Write paths in the agent command with forward slashes, also on Windows. The backups are
 yours to prune once you have read the log.
 
+## A night of dreams
+
+One long dream is the wrong shape for a long night. The agent reads the agenda once, so what it fixes in its first
+hour never reaches the agenda it is still working from, and a session that runs for hours is more likely to be cut
+off with nothing written down. `dream_night.py` runs short dreams back to back instead, each from an agenda rebuilt
+from what the last one wrote:
+
+```
+python dream/dream_night.py --agent-cmd "claude -p --permission-mode acceptEdits" --hours 5
+python dream/dream_night.py --agent-cmd "codex exec --full-auto -" --hours 3 --rest 15 --max-cycles 6
+```
+
+Every cycle is an ordinary `run_dream.py` run, with its own backup and log. Between cycles the night rests
+(`--rest`, 10 minutes by default). It stops at the deadline (a cycle starts only when `--min-cycle` minutes remain),
+after `--max-cycles` cycles, when `dream/STOP` exists, when another dream holds the lock, or after two cycles in a row
+that changed no file (`--idle-stop`). That last count is read from each cycle's own log, not from the agent's exit
+status, because an agent can exit cleanly having written nothing. The night's summary is
+`dream/logs/night_<stamp>.md`: one row per cycle with the files it changed and the agenda counts after it.
+
 ## Run it every night
 
 The dream works best when nobody is editing the store. Point the scheduler at the folder that holds `memory/` and
