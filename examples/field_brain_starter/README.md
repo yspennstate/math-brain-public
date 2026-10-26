@@ -107,6 +107,13 @@ they were tied, so the brain's lead there is time: it finds in one call what the
 trusting a score. Write your own questions from things your agents actually got wrong, never from the records'
 own sentences, or the test measures copying.
 
+The weak-match line can be checked without a model. Run each question in `questions.json` through `recall.py -n 3`
+and note whether the output starts with `WEAK MATCH` and whether the graded phrases appear in what it printed. On
+the example store one question in ten printed the line, and it was the question the store cannot answer; each of
+the other nine had its answer among the three records printed. In a store of your own, a weak-match line on a
+question the store does answer means the records are worded differently from the way people ask, and the record
+needs a sentence in the asker's words.
+
 ## Several agents at once
 
 A brain is most useful when every agent on a team reads and writes the same store, and that is where stores get
