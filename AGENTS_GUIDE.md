@@ -73,7 +73,7 @@ The store also adds nothing to a task the model can do on its own. On proof audi
 
 ## 5. What it costs
 
-Per Claude Sonnet session in the three-arm test, at list price: 0.053 USD with the store, 0.092 USD with the repositories, and 0.010 USD for the model alone. The agents with the store read about a quarter as many input tokens as those searching the repositories and wrote about two fifths as many output tokens. Most of an agent's input tokens are re-reads of the session on every turn, so fewer and better calls save more than shorter answers.
+Per Claude Sonnet session in the three-arm test, at list price: 0.053 USD with the store, 0.092 USD with the repositories, and 0.010 USD for the model alone. The agents with the store read about a quarter as many input tokens as those searching the repositories and wrote about two fifths as many output tokens. Most of an agent's input tokens are re-reads of the session on every turn, so fewer and better calls save more than shorter answers. [docs/cost.md](docs/cost.md) has the other cost measurements, including where a connected question's tokens go when the brain arrives as standing instructions and hooks rather than as a tool.
 
 ## 6. Writing back
 
