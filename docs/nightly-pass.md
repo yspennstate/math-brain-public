@@ -29,3 +29,4 @@ the review happened, and any change to a claim's status still goes through the v
 
 With `--requests`, the same run consolidates the request ledger (see `prompts-as-nodes.md`) and lists stale
 and repeated requests in the digest.
+Add `--requests-in-graph` to walk the requests' links together with the store's graph.

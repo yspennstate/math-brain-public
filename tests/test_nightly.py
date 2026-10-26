@@ -94,3 +94,19 @@ def test_cli_run_writes_a_digest(tmp_path, capsys):
     capsys.readouterr()
     assert _main(["show", "--queue", str(tmp_path / "q.jsonl")]) == 0
     assert "proposal_" in capsys.readouterr().out
+
+
+def test_request_links_reach_the_graph(tmp_path):
+    a, _ = _store(tmp_path / "s.sqlite")
+    led = RequestLedger(tmp_path / "r.jsonl")
+    req = led.ask("Is a group of prime order cyclic?", at="2026-10-01T00:00:00+00:00")
+    led.link(req.id, a.id, "produced", at="2026-10-01T01:00:00+00:00")
+    plain = run(tmp_path / "s.sqlite", tmp_path / "q1.jsonl", requests_path=tmp_path / "r.jsonl")
+    linked = run(tmp_path / "s.sqlite", tmp_path / "q2.jsonl", requests_path=tmp_path / "r.jsonl",
+                 requests_in_graph=True)
+    assert linked["nodes"] == plain["nodes"] + 1 and linked["edges"] == plain["edges"] + 1
+    orphans = lambda q: {tuple(i.node_ids) for i in Queue.load(q).items.values() if i.kind == "orphan_review"}
+    assert (a.id,) in orphans(tmp_path / "q1.jsonl") and (a.id,) not in orphans(tmp_path / "q2.jsonl")
+    again = run(tmp_path / "s.sqlite", tmp_path / "q2.jsonl", requests_path=tmp_path / "r.jsonl",
+                requests_in_graph=True)
+    assert not again["changed"]

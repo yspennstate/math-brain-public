@@ -133,3 +133,20 @@ def test_consolidate_against_a_real_store(tmp_path):
         out = led.consolidate(status_of=store.current_status)
     assert led.get(rid).status == "open" and out["answered"] == []
     assert [u.split()[1].rstrip(":") for u in out["unresolved"]] == ["claim_never_written"]
+
+
+def test_graph_is_deterministic_and_bridges_cards_to_requests(tmp_path):
+    led = RequestLedger(tmp_path / "g.jsonl")
+    a = led.ask("Is every group of prime order cyclic?", at="2026-10-03T09:00:00+00:00")
+    b = led.ask("And is it abelian as well?", at="2026-10-04T09:00:00+00:00", follows=a.id)
+    led.link(a.id, "claim_ab12", "produced", at="2026-10-03T10:00:00+00:00")
+    led.link(a.id, "claim_ab12", "produced", at="2026-10-03T11:00:00+00:00")
+    nodes, edges = led.graph()
+    again_nodes, again_edges = RequestLedger(tmp_path / "g.jsonl").graph()
+    assert [n.digest() for n in nodes] == [n.digest() for n in again_nodes]
+    assert [e.digest() for e in edges] == [e.digest() for e in again_edges]
+    proxy = {n.metadata["external_id"]: n.id for n in nodes}
+    assert set(proxy) == {a.id, b.id}
+    pairs = {(e.source_id, e.target_id) for e in edges}
+    assert pairs == {("claim_ab12", proxy[a.id]), (proxy[b.id], proxy[a.id])}
+    assert all(e.kind.value == "bridges_to" for e in edges)

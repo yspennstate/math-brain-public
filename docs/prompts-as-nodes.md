@@ -74,6 +74,15 @@ It prints nothing when the ledger is not set, when nothing is similar enough, fo
 on any error. With `MATH_BRAIN_REQUESTS_RECORD=1` it also records the prompt, after the lookup, so a prompt never
 matches itself.
 
+## In the graph
+
+`RequestLedger.graph()` turns the ledger into records a recall or consolidation pass can walk: one
+external-reference proxy per request and one `bridges_to` edge per link, from the card to the request's proxy
+(and from a follow-up's proxy to the request it follows). The store is not written. Ids and times come from the
+ledger, so the same ledger always gives the same records and an unchanged night stays unchanged. With
+`--requests-in-graph`, the nightly pass consolidates them with the store's graph, so a card that a request
+produced is no longer reported as an orphan, and its request is one step away.
+
 ## What it does not do
 
 It does not decide that two differently worded requests mean the same thing. `similar` uses word overlap

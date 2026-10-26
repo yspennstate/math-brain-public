@@ -29,7 +29,7 @@ import os
 import re
 import sys
 import unicodedata
-from dataclasses import dataclass, field
+from dataclasses import dataclass, field, replace
 from datetime import UTC, datetime, timedelta
 from pathlib import Path
 from typing import Any, Iterable
@@ -226,6 +226,34 @@ class RequestLedger:
             todo.extend(self.requests[cur].linked("follows"))
             todo.extend(r.id for r in self.requests.values() if cur in r.linked("follows"))
         return sorted((self.requests[i] for i in seen), key=lambda r: r.first_asked)
+
+    def graph(self) -> tuple[list[Any], list[Any]]:
+        """The ledger as graph records a recall or consolidation pass can walk, without touching the store.
+
+        Each request becomes an external-reference proxy node (namespace "requests"), and each link becomes a
+        bridges_to edge from the store node to that proxy, so a card can be followed back to the request behind
+        it. A follow-up is a bridges_to edge from the later request's proxy to the earlier one's. Ids and times
+        come from the ledger itself, so the same ledger always yields the same records."""
+        from .models import EdgeKind, GraphEdge
+        from .overlay import external_reference_node
+
+        proxies: dict[str, Any] = {}
+        for req in sorted(self.requests.values(), key=lambda r: r.id):
+            node = external_reference_node("requests", req.id, req.text[:200])
+            proxies[req.id] = replace(node, created_at=req.first_asked or node.created_at)
+        edges: dict[str, Any] = {}
+        for req in sorted(self.requests.values(), key=lambda r: r.id):
+            for ln in req.links:
+                if ln["rel"] == "follows":
+                    if ln["node"] not in proxies:
+                        continue
+                    source, target = proxies[req.id].id, proxies[ln["node"]].id
+                else:
+                    source, target = ln["node"], proxies[req.id].id
+                eid = "edge_req_" + hashlib.sha1(f"{source}|{target}|{ln['rel']}".encode()).hexdigest()[:20]
+                edges[eid] = GraphEdge(source, target, EdgeKind.BRIDGES_TO, f"request link: {ln['rel']}",
+                                       id=eid, created_at=ln.get("at") or req.first_asked)
+        return list(proxies.values()), list(edges.values())
 
     # -- the nightly pass ------------------------------------------------------------------------------------
     def consolidate(self, *, status_of: Any = None, stale_days: int = 14, today: datetime | None = None) -> dict[str, list[str]]:

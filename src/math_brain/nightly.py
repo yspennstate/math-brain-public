@@ -143,6 +143,7 @@ def run(
     *,
     max_rem_proposals: int = 25,
     requests_path: str | Path | None = None,
+    requests_in_graph: bool = False,
     status_of: Callable[[str], Any] | None = None,
     at: str | None = None,
 ) -> dict[str, Any]:
@@ -157,6 +158,12 @@ def run(
         unknown = store.unknown_edge_kinds()
         mistakes = _load_records(store, "mistakes", store.get_mistake, damaged)
         reflexes = _load_records(store, "reflexes", store.get_reflex, damaged)
+    if requests_path is not None and requests_in_graph:
+        from .requests import RequestLedger
+
+        req_nodes, req_edges = RequestLedger(requests_path).graph()
+        nodes += req_nodes
+        edges += req_edges
     cycle = consolidate(nodes, edges, mistakes=mistakes, reflexes=reflexes, max_rem_proposals=max_rem_proposals)
     input_digest = "sha256:" + hashlib.sha256("\n".join(cycle.input_digests).encode()).hexdigest()
 
@@ -223,6 +230,8 @@ def _main(argv: Iterable[str] | None = None) -> int:
     r.add_argument("--requests")
     r.add_argument("--digest")
     r.add_argument("--max-rem", type=int, default=25)
+    r.add_argument("--requests-in-graph", action="store_true",
+                   help="consolidate the request proxies and their links with the store's graph")
     v = sub.add_parser("review")
     v.add_argument("--queue", required=True)
     v.add_argument("id")
@@ -233,7 +242,8 @@ def _main(argv: Iterable[str] | None = None) -> int:
     s.add_argument("--top", type=int, default=20)
     a = ap.parse_args(list(argv) if argv is not None else None)
     if a.cmd == "run":
-        report = run(a.store, a.queue, max_rem_proposals=a.max_rem, requests_path=a.requests)
+        report = run(a.store, a.queue, max_rem_proposals=a.max_rem, requests_path=a.requests,
+                     requests_in_graph=a.requests_in_graph)
         page = digest(Queue.load(a.queue), report)
         if a.digest:
             Path(a.digest).parent.mkdir(parents=True, exist_ok=True)
