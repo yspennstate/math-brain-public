@@ -11,7 +11,8 @@ only when the compaction is in the transcript's last 3 MB and under 6 hours old,
 agent it may stop with one line when everything is done, or is waiting on a person or a running job, so a finished
 agent pays one short turn and nothing more. Silent on any error.
 
-Environment: TASK_CHECKLIST_HOME (the checklist store, as for task_checklist_hook.py), KEEP_WORKING_STATE (where the
+Environment: TASK_CHECKLIST_HOME (the checklist store, as for task_checklist_hook.py; BRAIN_CHECKLIST_STATE names
+the state file directly and wins when set), KEEP_WORKING_STATE (where the
 once-per-compaction marks live), KEEP_WORKING_FIRES (a JSON-lines log of every nudge).
 
     python keep_working_after_compact.py --selftest
@@ -27,7 +28,7 @@ HOME = os.path.expanduser("~")
 _BRAIN_TREE = os.path.join(HOME, "brain-repo", "12_cognitive_architecture", "task_checklist")
 STORE = (os.environ.get("TASK_CHECKLIST_HOME")
          or (_BRAIN_TREE if os.path.isdir(os.path.dirname(_BRAIN_TREE)) else os.path.join(HOME, ".claude", "task_checklist")))
-CHECKLIST = os.path.join(STORE, "state.json")
+CHECKLIST = os.environ.get("BRAIN_CHECKLIST_STATE") or os.path.join(STORE, "state.json")  # the older name still works
 STATE_DIR = os.environ.get("KEEP_WORKING_STATE") or os.path.join(HOME, ".claude", "compact_hooks", "keep_working")
 FIRES = os.environ.get("KEEP_WORKING_FIRES") or os.path.join(HOME, ".claude", "brain_graph", "compactions",
                                                                "keep_working_fires.jsonl")
