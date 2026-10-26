@@ -59,6 +59,21 @@ to be recomputed from authenticated evidence, so pass
 Nothing is dropped automatically. Asking an answered request again reopens it, because a repeat means the
 answer did not settle the question.
 
+## At prompt time
+
+`math_brain.request_hook` is a prompt hook for Claude Code and Codex. It reads the prompt, looks it up with
+`similar`, and shows the agent at most three earlier requests with their status, how often they were asked and
+the cards they produced, before the agent starts the work again:
+
+```
+MATH_BRAIN_REQUESTS=requests.jsonl python -m math_brain.request_hook          # Claude Code
+MATH_BRAIN_REQUESTS=requests.jsonl python -m math_brain.request_hook --codex  # Codex wants a JSON envelope
+```
+
+It prints nothing when the ledger is not set, when nothing is similar enough, for prompts under four words, or
+on any error. With `MATH_BRAIN_REQUESTS_RECORD=1` it also records the prompt, after the lookup, so a prompt never
+matches itself.
+
 ## What it does not do
 
 It does not decide that two differently worded requests mean the same thing. `similar` uses word overlap
