@@ -106,6 +106,11 @@ so the dream finds the work already attached to the question that started it. Th
 request from the prompt step's state file, so it links nothing for requests recorded by `math_brain.request_hook`
 below; use one recorder per ledger. For Claude Code add `--runtime claude` to the prompt command.
 
+Recall finds a record only when the request uses its words. `wake_hook.py` covers the rest: once per session it
+hands the model the index (one line per record, newest first, cut to fit) and the newest lines of `MISTAKES.md`, so
+the agent knows a delivery spec or a past mistake exists before anyone asks, and can read it by name. In Codex, put
+it under `UserPromptSubmit` beside the recall hook; it speaks on the first prompt of a session and is silent after.
+
 Three rules from running hooks like this every day:
 
 1. **Fail silent.** A hook that crashes or hangs blocks every turn. Catch every exception, print nothing on error,
@@ -123,12 +128,15 @@ the same names and the stdin fields are the same. The output differs: for `UserP
 the model plain stdout, so the script prints its lines directly. `recall_hook.py --runtime claude` does that.
 Claude Code also cuts one hook's output at about 10,000 characters, so the ordering advice holds for both.
 
-The three starter hooks in `~/.claude/settings.json` (or `.claude/settings.json` inside one project), with your own
+The four starter hooks in `~/.claude/settings.json` (or `.claude/settings.json` inside one project), with your own
 absolute paths:
 
 ```json
 {
   "hooks": {
+    "SessionStart": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/wake_hook.py --runtime claude", "timeout": 30 } ] }
+    ],
     "UserPromptSubmit": [
       { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/recall_hook.py --runtime claude", "timeout": 60 } ] }
     ],
@@ -144,7 +152,9 @@ absolute paths:
 ```
 
 The tool names differ between the runtimes (`Bash`, `Edit`, `Write` here; `Bash`, `apply_patch` in Codex), so the
-matcher does too. `scar_hook.py` and `write_back_hook.py` print JSON in both runtimes and need no flag. Claude Code
+matcher does too. `scar_hook.py` and `write_back_hook.py` print JSON in both runtimes and need no flag. Under
+`SessionStart`, `wake_hook.py --runtime claude` speaks when a session starts and again after a compaction or
+`/clear`, when the earlier copy of the index has left the context. Claude Code
 does not ask you to trust a hook, but it reads `settings.json` when a session starts: open a new session after an
 edit. Run `/hooks` to see what it loaded, and check delivery in the session transcript, where an injected context
 appears next to the turn, rather than in the hook's own output.

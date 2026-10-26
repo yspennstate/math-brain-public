@@ -20,6 +20,7 @@ production, a lab or a support desk.
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
 | `dream/make_agenda.py` | builds the agenda a dreaming agent works from: mistakes without a rule, fresh records, superseded pairs, unchecked claims, open questions, unlinked records (see `dream/README.md`) |
 | `dream/run_dream.py` | runs one dream with any agent command-line tool, keeps a backup, puts back deleted records, logs each section's count before and after; scheduling lines for Linux, macOS and Windows in `dream/README.md` |
+| `hooks/wake_hook.py` | a session-start hook that gives the model the index and the newest mistakes once, so it knows what the store holds before anyone asks |
 | `hooks/recall_hook.py` | a prompt hook for Codex or Claude Code that hands the matching records to the model before it answers (see `docs/codex-hooks-quickstart.md`) |
 | `hooks/scar_hook.py` | a tool hook that warns the agent, once a session, when the command it is about to run resembles a recorded mistake |
 | `hooks/write_back_hook.py` | a stop hook that asks the agent once to file a record when its turn ended on a lesson and nothing was written |
