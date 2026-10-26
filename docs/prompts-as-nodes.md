@@ -43,6 +43,27 @@ python -m math_brain.requests show req_3f0c9a1b2d4e
 `ask` prints the earlier requests that share most of their words with the new one. An agent should read those
 before starting work: the question may already have an answer, or someone may be working on it.
 
+## Starting from the prompts you already have
+
+A new ledger knows nothing until someone asks, but most people who set one up already have months of prompts. The
+framework's prompt archive (`framework/dreaming/prompt_archive.py` going forward, `backfill_prompts.py` for the
+history in Claude Code and Codex transcripts) writes them to `PROMPTS.jsonl`. `import` turns that file into
+requests:
+
+```
+python -m math_brain.requests --ledger requests.jsonl import PROMPTS.jsonl
+```
+
+It prints what it did with each row: `added` (a new request), `again` (a request already in the ledger, asked once
+more), `already` (an ask the ledger holds at that time, so running the import twice adds nothing), `automation`,
+`short` and `unreadable`. Rows the archive marks `origin: automation` (a loop firing the same prompt every ten
+minutes, a launcher's preamble) are left out, because they would turn one request into hundreds of asks; pass
+`--automation` to keep them with the role `automation`. Rows with fewer than three content words ("ok do it",
+"yes") are left out too, since they mean something only beside the prompt before them (`--min-words` to change
+it). The archive writes local time without a zone; the import converts it to UTC on the machine that runs it, so
+run it where the archive was written. After the import, `made` and the nightly pass work on the old requests as
+on new ones.
+
 ## What the work made
 
 A request is only useful later if it points at the cards the work produced, and agents forget to write the `produced`

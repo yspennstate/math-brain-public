@@ -184,3 +184,33 @@ def test_cli_made_lists_and_links_store_nodes(tmp_path, capsys):
     out = capsys.readouterr().out
     assert claim.id in out and "lamplighter" not in out and "(linked)" in out
     assert RequestLedger(ledger).get(rid).linked("produced") == [claim.id]
+
+
+def test_import_prompts_keeps_real_asks_once(tmp_path):
+    led = RequestLedger(tmp_path / "i.jsonl")
+    rows = [
+        {"ts": "2026-10-01T09:00:00Z", "text": "Is the mixing time of the lamplighter walk polynomial?", "origin": "owner"},
+        {"ts": "2026-10-02T09:00:00Z", "text": "is the mixing time of the lamplighter walk polynomial"},
+        {"ts": "2026-10-02T09:05:00Z", "text": "ok do it", "origin": "owner"},
+        {"ts": "2026-10-02T10:00:00Z", "text": "Loop tick: check the mixing bound again", "origin": "automation"},
+        {"ts": "not a time", "text": "Does the walk on the torus mix in n squared steps?"},
+    ]
+    got = led.import_prompts(rows)
+    assert got == {"added": 1, "again": 1, "already": 0, "automation": 1, "short": 1, "unreadable": 1}
+    (req,) = led.requests.values()
+    assert req.times_asked == 2 and req.role == "researcher" and req.first_asked == "2026-10-01T09:00:00+00:00"
+    again = RequestLedger(tmp_path / "i.jsonl").import_prompts(rows)
+    assert again["added"] == again["again"] == 0 and again["already"] == 2
+    assert RequestLedger(tmp_path / "i.jsonl").get(req.id).times_asked == 2
+    auto = led.import_prompts(rows, automation=True)
+    assert auto["added"] == 1 and len(led.requests) == 2
+
+
+def test_cli_import_reads_a_prompt_archive(tmp_path, capsys):
+    archive = tmp_path / "PROMPTS.jsonl"
+    archive.write_text(json.dumps({"ts": "2026-10-01T09:00:00", "text": "Is every group of prime order cyclic?"})
+                       + "\n{torn\n", encoding="utf-8")
+    ledger = str(tmp_path / "r.jsonl")
+    assert _main(["--ledger", ledger, "import", str(archive)]) == 0
+    assert json.loads(capsys.readouterr().out)["added"] == 1
+    assert len(RequestLedger(ledger).open_requests()) == 1

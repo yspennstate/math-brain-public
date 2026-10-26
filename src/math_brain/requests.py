@@ -189,6 +189,57 @@ class RequestLedger:
         self._append({"op": "link", "id": rid, "node": node, "rel": rel, "at": at or now()})
         return self.requests[rid]
 
+    def import_prompts(self, rows: Iterable[dict[str, Any]], *, automation: bool = False,
+                       min_words: int = 3) -> dict[str, int]:
+        """Add the requests in a prompt archive (the framework's PROMPTS.jsonl rows) to the ledger.
+
+        Each row needs `text` and `ts`; `ts` without a zone is read as this machine's local time, which is how the
+        archive writes it. A row whose `origin` is "automation" (a loop re-firing a prompt, a launcher's preamble)
+        is skipped unless `automation` is true, and then it is kept with the role "automation". A row with fewer
+        than `min_words` content words ("ok do it", "yes") is skipped: a follow-up like that means something only
+        beside the request before it. Importing the same archive twice adds nothing, because an ask already in the
+        ledger at the same time is not written again.
+        """
+        seen = set()
+        if self.path.exists():
+            with self.path.open(encoding="utf-8") as fh:
+                for line in fh:
+                    try:
+                        ev = json.loads(line)
+                    except json.JSONDecodeError:
+                        continue
+                    if ev.get("op") == "ask":
+                        seen.add((ev.get("id"), ev.get("at")))
+        out = {"added": 0, "again": 0, "already": 0, "automation": 0, "short": 0, "unreadable": 0}
+        for row in rows:
+            text = redact(str(row.get("text") or "")).strip()
+            try:
+                t = datetime.fromisoformat(str(row.get("ts", "")).replace("Z", "+00:00"))
+            except ValueError:
+                out["unreadable"] += 1
+                continue
+            if not normalize(text):
+                out["unreadable"] += 1
+                continue
+            role = "researcher"
+            if row.get("origin") == "automation":
+                if not automation:
+                    out["automation"] += 1
+                    continue
+                role = "automation"
+            if len(words(text)) < min_words:
+                out["short"] += 1
+                continue
+            at = t.astimezone(UTC).isoformat(timespec="seconds")
+            rid = request_id(text)
+            if (rid, at) in seen:
+                out["already"] += 1
+                continue
+            out["again" if rid in self.requests else "added"] += 1
+            self.ask(text, role=role, at=at)
+            seen.add((rid, at))
+        return out
+
     def set_status(self, rid: str, status: str, note: str = "", *, at: str | None = None) -> Request:
         if status not in STATUSES:
             raise LedgerError(f"status must be one of {STATUSES}")
@@ -349,6 +400,9 @@ def _main(argv: Iterable[str] | None = None) -> int:
     p = sub.add_parser("show"); p.add_argument("id")
     sub.add_parser("open")
     p = sub.add_parser("consolidate"); p.add_argument("--stale-days", type=int, default=14)
+    p = sub.add_parser("import", help="add the requests in a prompt archive (PROMPTS.jsonl)")
+    p.add_argument("archive"); p.add_argument("--automation", action="store_true")
+    p.add_argument("--min-words", type=int, default=3)
     p = sub.add_parser("made", help="store nodes made after a request that look like its answer")
     p.add_argument("id"); p.add_argument("--store", required=True); p.add_argument("--limit", type=int, default=5)
     p.add_argument("--threshold", type=float, default=0.6)
@@ -386,6 +440,15 @@ def _main(argv: Iterable[str] | None = None) -> int:
                 print(f"{req.first_asked[:10]} {req.id} x{req.times_asked} {req.text[:110]}")
         elif a.cmd == "consolidate":
             print(json.dumps(led.consolidate(stale_days=a.stale_days), indent=1))
+        elif a.cmd == "import":
+            rows = []
+            with open(a.archive, encoding="utf-8") as fh:
+                for line in fh:
+                    try:
+                        rows.append(json.loads(line))
+                    except json.JSONDecodeError:
+                        pass
+            print(json.dumps(led.import_prompts(rows, automation=a.automation, min_words=a.min_words)))
         elif a.cmd == "made":
             from .store import ResearchStore
 
