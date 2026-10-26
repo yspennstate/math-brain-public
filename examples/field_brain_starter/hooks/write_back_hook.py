@@ -119,7 +119,7 @@ def main():
                                        "asks" if got else "silent"))
         return 1 if bad else 0
     try:
-        raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8", errors="replace").read()
+        raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8-sig", errors="replace").read()
         out = decide(json.loads(raw) if raw.strip() else {})
         if out:
             sys.stdout.write(out)

@@ -113,7 +113,7 @@ def main():
                 print("      " + got.splitlines()[1])
         return 1 if bad else 0
     try:
-        raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8", errors="replace").read()
+        raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8-sig", errors="replace").read()
         payload = json.loads(raw) if raw.strip() else {}
         tool_input = payload.get("tool_input") or {}
         text = tool_input if isinstance(tool_input, str) else " ".join(str(v) for v in tool_input.values())

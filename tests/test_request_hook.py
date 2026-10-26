@@ -49,3 +49,13 @@ def test_codex_envelope_and_errors_are_silent(tmp_path, monkeypatch, capsys):
     monkeypatch.setattr("sys.stdin", io.StringIO("not json"))
     assert request_hook.main([]) == 0
     assert capsys.readouterr().out == ""
+
+
+def test_a_byte_order_mark_on_stdin_is_read(tmp_path, monkeypatch, capsys):
+    # Windows PowerShell puts a byte-order mark in front of what it pipes; json.loads refuses one
+    _ledger(tmp_path)
+    monkeypatch.setenv("MATH_BRAIN_REQUESTS", str(tmp_path / "r.jsonl"))
+    raw = b"\xef\xbb\xbf" + json.dumps({"prompt": "is every group of prime order cyclic"}).encode() + b"\r\n"
+    monkeypatch.setattr("sys.stdin", io.TextIOWrapper(io.BytesIO(raw), encoding="cp1252"))
+    assert request_hook.main([]) == 0
+    assert "claim_ab12" in capsys.readouterr().out

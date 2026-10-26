@@ -65,7 +65,7 @@ def main():
         print(context_for("What does the festival need from us for delivery?") or "(no record matched)")
         return 0
     try:
-        raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8", errors="replace").read()
+        raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8-sig", errors="replace").read()
         payload = json.loads(raw) if raw.strip() else {}
         prompt = str(payload.get("prompt") or "")
         event = str(payload.get("hook_event_name") or "UserPromptSubmit")

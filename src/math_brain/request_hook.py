@@ -58,7 +58,10 @@ def run(event: dict[str, Any], env: dict[str, str]) -> str:
 def main(argv: list[str] | None = None) -> int:
     argv = sys.argv[1:] if argv is None else argv
     try:
-        raw = sys.stdin.read()
+        # bytes, decoded as UTF-8 with an optional byte-order mark: Windows PowerShell adds one when it pipes,
+        # and the console code page would garble a prompt that is not plain ASCII
+        buf = getattr(sys.stdin, "buffer", None)
+        raw = buf.read().decode("utf-8-sig", "replace") if buf is not None else sys.stdin.read().lstrip("﻿")
         text = run(json.loads(raw) if raw.strip() else {}, dict(os.environ))
     except Exception:
         return 0
