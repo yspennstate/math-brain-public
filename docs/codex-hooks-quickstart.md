@@ -123,6 +123,32 @@ the same names and the stdin fields are the same. The output differs: for `UserP
 the model plain stdout, so the script prints its lines directly. `recall_hook.py --runtime claude` does that.
 Claude Code also cuts one hook's output at about 10,000 characters, so the ordering advice holds for both.
 
+The three starter hooks in `~/.claude/settings.json` (or `.claude/settings.json` inside one project), with your own
+absolute paths:
+
+```json
+{
+  "hooks": {
+    "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/recall_hook.py --runtime claude", "timeout": 60 } ] }
+    ],
+    "PreToolUse": [
+      { "matcher": "Bash|Edit|Write",
+        "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/scar_hook.py", "timeout": 30 } ] }
+    ],
+    "Stop": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/write_back_hook.py", "timeout": 60 } ] }
+    ]
+  }
+}
+```
+
+The tool names differ between the runtimes (`Bash`, `Edit`, `Write` here; `Bash`, `apply_patch` in Codex), so the
+matcher does too. `scar_hook.py` and `write_back_hook.py` print JSON in both runtimes and need no flag. Claude Code
+does not ask you to trust a hook, but it reads `settings.json` when a session starts: open a new session after an
+edit. Run `/hooks` to see what it loaded, and check delivery in the session transcript, where an injected context
+appears next to the turn, rather than in the hook's own output.
+
 ## The request hook from the math brain
 
 `math_brain.request_hook` (see [prompts-as-nodes.md](prompts-as-nodes.md)) is one more `UserPromptSubmit` hook. It
