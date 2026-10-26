@@ -51,6 +51,15 @@ def now() -> str:
     return datetime.now(UTC).isoformat(timespec="seconds")
 
 
+def _when(stamp: str) -> datetime | None:
+    """An ISO time as an aware UTC datetime; a time with no zone is read as UTC; anything else is None."""
+    try:
+        t = datetime.fromisoformat(str(stamp).replace("Z", "+00:00"))
+    except ValueError:
+        return None
+    return t if t.tzinfo else t.replace(tzinfo=UTC)
+
+
 def normalize(text: str) -> str:
     """Lower case, accents folded, punctuation dropped, whitespace collapsed: two typings of one ask match."""
     text = unicodedata.normalize("NFKD", text or "")
@@ -214,6 +223,35 @@ class RequestLedger:
     def open_requests(self) -> list[Request]:
         return sorted((r for r in self.requests.values() if r.status == "open"), key=lambda r: r.first_asked)
 
+    def made_since(self, rid: str, nodes: Iterable[Any], *, limit: int = 5, threshold: float = 0.6,
+                   min_shared: int = 2) -> list[tuple[float, Any]]:
+        """Store nodes made after a request was last asked that cover most of its words: candidates for `produced`.
+
+        `nodes` is anything with id, title, body and created_at (the store's GraphNode). A node already linked to
+        the request, or made before it was last asked, is left out. The score is the share of the request's words
+        that the node's title and body contain, so a long card is not penalised for saying more than was asked.
+        These are candidates, not links: a person or an agent confirms each one with `link`.
+        """
+        req = self.requests.get(rid)
+        if req is None:
+            raise LedgerError(f"no request {rid}")
+        q = words(req.text)
+        since = _when(req.last_asked or req.first_asked)
+        linked = {ln["node"] for ln in req.links}
+        if not q or since is None:
+            return []
+        out = []
+        for node in nodes:
+            made = _when(getattr(node, "created_at", ""))
+            if node.id in linked or made is None or made < since:
+                continue
+            shared = q & words(f"{node.title} {getattr(node, 'body', '') or ''}")
+            score = len(shared) / len(q)
+            if len(shared) >= min_shared and score >= threshold:
+                out.append((round(score, 3), made, node))
+        out.sort(key=lambda smn: (-smn[0], smn[1], smn[2].id))
+        return [(score, node) for score, _, node in out[:limit]]
+
     def thread(self, rid: str) -> list[Request]:
         """The request with everything it follows and everything that follows it, oldest first."""
         seen: set[str] = set()
@@ -311,6 +349,10 @@ def _main(argv: Iterable[str] | None = None) -> int:
     p = sub.add_parser("show"); p.add_argument("id")
     sub.add_parser("open")
     p = sub.add_parser("consolidate"); p.add_argument("--stale-days", type=int, default=14)
+    p = sub.add_parser("made", help="store nodes made after a request that look like its answer")
+    p.add_argument("id"); p.add_argument("--store", required=True); p.add_argument("--limit", type=int, default=5)
+    p.add_argument("--threshold", type=float, default=0.6)
+    p.add_argument("--link", action="store_true", help="record each candidate as produced by the request")
     a = ap.parse_args(list(argv) if argv is not None else None)
     led = RequestLedger(a.ledger)
     try:
@@ -344,6 +386,16 @@ def _main(argv: Iterable[str] | None = None) -> int:
                 print(f"{req.first_asked[:10]} {req.id} x{req.times_asked} {req.text[:110]}")
         elif a.cmd == "consolidate":
             print(json.dumps(led.consolidate(stale_days=a.stale_days), indent=1))
+        elif a.cmd == "made":
+            from .store import ResearchStore
+
+            with ResearchStore.open_read_only(a.store) as store:
+                found = led.made_since(a.id, list(store.iter_nodes()), limit=a.limit, threshold=a.threshold)
+            for score, node in found:
+                if a.link:
+                    led.link(a.id, node.id, "produced")
+                print(f"{score:.2f} {node.id} {str(node.created_at)[:16]} {node.title[:90]}"
+                      + ("  (linked)" if a.link else ""))
     except LedgerError as exc:
         print(exc, file=sys.stderr)
         return 2

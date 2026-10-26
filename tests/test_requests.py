@@ -150,3 +150,37 @@ def test_graph_is_deterministic_and_bridges_cards_to_requests(tmp_path):
     pairs = {(e.source_id, e.target_id) for e in edges}
     assert pairs == {("claim_ab12", proxy[a.id]), (proxy[b.id], proxy[a.id])}
     assert all(e.kind.value == "bridges_to" for e in edges)
+
+
+def test_made_since_finds_the_card_made_after_the_ask(tmp_path):
+    from math_brain.models import GraphNode, NodeKind
+
+    led = RequestLedger(tmp_path / "m.jsonl")
+    rid = led.ask("Is every group of prime order cyclic?", at="2026-10-03T09:00:00+00:00").id
+    before = GraphNode("claim_old", NodeKind.CLAIM, "Every group of prime order is cyclic.",
+                       created_at="2026-10-02T09:00:00+00:00")
+    after = GraphNode("claim_new", NodeKind.CLAIM, "A group of prime order is cyclic, by Lagrange.",
+                      created_at="2026-10-03T12:00:00")
+    other = GraphNode("claim_walk", NodeKind.CLAIM, "The lamplighter walk on Z mixes slowly.",
+                      created_at="2026-10-03T12:00:00+00:00")
+    assert [n.id for _, n in led.made_since(rid, [before, after, other])] == ["claim_new"]
+    led.link(rid, "claim_new", "produced")
+    assert led.made_since(rid, [before, after, other]) == []
+    with pytest.raises(LedgerError):
+        led.made_since("req_nope", [after])
+
+
+def test_cli_made_lists_and_links_store_nodes(tmp_path, capsys):
+    from math_brain.models import Claim, ClaimKind
+    from math_brain.store import ResearchStore
+
+    ledger = str(tmp_path / "r.jsonl")
+    rid = RequestLedger(ledger).ask("Is every group of prime order cyclic?", at="2026-01-01T00:00:00+00:00").id
+    with ResearchStore(tmp_path / "b.sqlite") as store:
+        claim = Claim("Every group of prime order is cyclic.", ClaimKind.THEOREM)
+        store.add_claim(claim)
+        store.add_claim(Claim("The lamplighter walk mixes in order n squared steps.", ClaimKind.THEOREM))
+    assert _main(["--ledger", ledger, "made", rid, "--store", str(tmp_path / "b.sqlite"), "--link"]) == 0
+    out = capsys.readouterr().out
+    assert claim.id in out and "lamplighter" not in out and "(linked)" in out
+    assert RequestLedger(ledger).get(rid).linked("produced") == [claim.id]

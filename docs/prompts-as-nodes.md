@@ -43,6 +43,23 @@ python -m math_brain.requests show req_3f0c9a1b2d4e
 `ask` prints the earlier requests that share most of their words with the new one. An agent should read those
 before starting work: the question may already have an answer, or someone may be working on it.
 
+## What the work made
+
+A request is only useful later if it points at the cards the work produced, and agents forget to write the `produced`
+link. `made` finds the candidates: store nodes made after the request was last asked whose title and text contain
+most of the request's words.
+
+```
+python -m math_brain.requests made req_3f2a9c01b7de --store brain.sqlite            # list candidates
+python -m math_brain.requests made req_3f2a9c01b7de --store brain.sqlite --link     # and record them as produced
+```
+
+The score is the share of the request's words a node contains (at least two words and 0.6 by default, `--threshold`
+to change it), so a long card is not marked down for saying more than was asked. Nodes made before the latest ask
+and nodes already linked are left out. Word overlap finds the obvious answer and misses a card that answers in other
+words, so run it without `--link` first, or at the end of a session on the request that session worked on, where the
+time window does most of the filtering.
+
 ## The nightly pass
 
 `RequestLedger.consolidate(status_of=...)` is meant to run with the other consolidation steps. The status has
