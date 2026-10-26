@@ -150,9 +150,9 @@ Give the agent the agenda, the memory folder, and three instructions:
 Then rebuild the agenda. Sections that come back empty are the measure of a good dream; sections that come back
 the same mean the agent read but did not write.
 
-## One night on the example store
+## One dream on the example store
 
-This is what a good night looks like, run through `run_dream.py` on a copy of this folder. The edits are the ones the
+This is what a good dream looks like, run through `run_dream.py` on a copy of this folder. The edits are the ones the
 agenda above asks for, made by hand so the result is easy to check:
 
 - The 12 March mistake got its rule. `method_a_note_is_a_hint_not_an_order` gained "**How to apply:** before acting
