@@ -204,6 +204,23 @@ def walk(ids, nodes, title, links, superseded_by, chars, sid=None, S=None, typed
     return 0
 
 
+def request_lines(opened, path=None, per_card=3):
+    """After a walk: the requests that asked for each opened card (MATH_BRAIN_REQUESTS names the ledger)."""
+    path = path or os.environ.get("MATH_BRAIN_REQUESTS")
+    if not path or not opened or not os.path.exists(path):
+        return
+    try:
+        from math_brain.requests import RequestLedger
+        led = RequestLedger(path)
+    except Exception:
+        return
+    for nid in dict.fromkeys(opened):
+        for rel, req in led.for_node(nid)[:per_card]:
+            print("[request] %s %s it (%s, asked %dx since %s): %s (id: %s)"
+                  % (nid, "asked about" if rel == "asks_about" else rel.replace("_", " "), req.status,
+                     req.times_asked, req.first_asked[:10], req.text[:160], req.id))
+
+
 def walk_full(ids, nodes, title, links, superseded_by, chars, opened=None, by_id=None):
     """The 11 Oct walk printout (--full): links in stored kind order, full ids."""
     by_id = by_id if by_id is not None else {n.id: n for n in nodes}
@@ -452,6 +469,7 @@ def main(argv=None):
             rc = (walk_full(a.id, nodes, title, links, superseded_by, walk_chars, opened, by_id=by_id) if a.full else
                   walk(a.id, nodes, title, links, superseded_by, walk_chars, sid, S=S, typed=typed, opened=opened,
                        by_id=by_id))
+            request_lines(opened)
             if S is not None:
                 leads += [(x, o) for x in opened for o, _i in S.learned(x, typed)[:WALK_LINKS]]
             if not query:

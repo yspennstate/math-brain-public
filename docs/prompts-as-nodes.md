@@ -83,6 +83,8 @@ ledger, so the same ledger always gives the same records and an unchanged night 
 `--requests-in-graph`, the nightly pass consolidates them with the store's graph, so a card that a request
 produced is no longer reported as an orphan, and its request is one step away.
 
+When `MATH_BRAIN_REQUESTS` is set, `agent_tools/math_recall.py --id` ends a walk with one `[request]` line for each request that asked about, produced or was answered by an opened card.
+
 ## What it does not do
 
 It does not decide that two differently worded requests mean the same thing. `similar` uses word overlap
