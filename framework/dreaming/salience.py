@@ -47,7 +47,7 @@ FEAR = r"crash|bsod|whea|leak|flood|panic|corrupt|broke|broken|\bfail|stranded|b
 # JOY/PRIDE — the triumphs. High charge, positive valence.
 JOY = r"solved|proven|\bproof\b|verified|\bworks\b|working|finally|passed|landed|beautiful|elegant|\bclean\b|reproduc|confirmed|\bnovel\b|breakthrough|\bsharp\b|unlocked|\bgreen\b|nailed|cracked|\bwin\b|dominat"
 # STAKES — chronic importance (valence-neutral, high persistence). These matter every day.
-STAKES = r"live money|real money|\bowner\b|yitzchak|live book|production|hard rule|\bnever\b|\balways\b|\blaw\b|critical|sacred|load-bearing|non-negotiable|standing rule"
+STAKES = r"live money|real money|\bowner\b|live book|production|hard rule|\bnever\b|\balways\b|\blaw\b|critical|sacred|load-bearing|non-negotiable|standing rule"
 # TRIED + NOT SHIPPED (2026-07-08): a SURPRISE lexicon for "surprise -> salience" (the gist's named
 # edge - a memory of an expectation-violating result should stay vivid). Measured against the corpus it
 # lit up ~7 memories at >=2 markers, and most were files that DISCUSS surprise (PREDICTIONS.md,
