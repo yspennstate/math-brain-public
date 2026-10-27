@@ -167,9 +167,9 @@ def main():
             out.append("- `%s` asked %dx, first %s, last touched %s, %s: %s"
                        % (r["id"], r["times"], r["first"][:10], r["last"][:10], work, r["text"][:140]))
         if len(waiting) > a.max_requests:
-            out += ["", "And %d more; `python -m math_brain.requests backlog` lists them all."
+            out += ["", "And %d more; `python ledger.py list` lists them all."
                     % (len(waiting) - a.max_requests)]
-        out += ["", "For each: does a record answer it? If one does, link it (`requests link <id> <record>"
+        out += ["", "For each: does a record answer it? If one does, link it (`python ledger.py link <id> <record>"
                 " answered_by`); if a record is partial work toward it, link it as `produced`.", ""]
 
     open(a.out, "w", encoding="utf-8", newline="\n").write("\n".join(out))

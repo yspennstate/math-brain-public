@@ -178,3 +178,23 @@ def test_the_request_hook_writes_the_librarys_ask(starter, tmp_path):
     assert r.id in out and "asked 2x" in out and "did not land" in out
     assert "answered by: mistake_render_settings_reset_after_update_2026_03_18" in out
     assert RequestLedger(ledger).get(r.id).times_asked == 2
+
+
+def _ledger(starter: Path, *args: str) -> subprocess.CompletedProcess:
+    return subprocess.run([sys.executable, str(starter / "ledger.py"), *args], capture_output=True, text=True,
+                          encoding="utf-8", env=_env_without_ledger())
+
+
+def test_the_ledger_tool_closes_a_request_the_dream_answers(starter):
+    rid = _ledger(starter, "ask", "How long should the harbour film be for the festival?").stdout.strip()
+    assert rid == RequestLedger(starter / "requests.jsonl").requests[rid].id  # the library reads what it wrote
+    assert "## 7. Requests still waiting" in _agenda(starter, env=_env_without_ledger())
+    bad = _ledger(starter, "link", rid[:8], "no_such_record_2026_01_01", "answered_by")
+    assert bad.returncode != 0 and "no record" in bad.stderr
+    good = _ledger(starter, "link", rid[:8], "project_harbour_film_cut_to_twelve_minutes_2026_03_10", "answered_by")
+    assert good.returncode == 0, good.stderr
+    led = RequestLedger(starter / "requests.jsonl")
+    assert led.requests[rid].status == "answered" and not led.open_requests()
+    assert "0 of 1 requests" in _ledger(starter, "list").stdout and "answered" in _ledger(starter, "list", "--all").stdout
+    part = _agenda(starter, env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
+    assert rid not in part

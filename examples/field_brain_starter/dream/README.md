@@ -21,7 +21,8 @@ records, so you can see what a dreaming agent receives before you write a single
 If you keep a request ledger (`requests.jsonl` beside `memory/`, or wherever `MATH_BRAIN_REQUESTS` points; see
 `docs/prompts-as-nodes.md`), the agenda gains a seventh section, "Requests still waiting": the questions you asked
 that nothing has answered yet, the ones asked more than once first, each with whether any record has been
-produced for it. The dreaming agent links a record that answers one, so the count of that section falls as the
+produced for it. The dreaming agent links a record that answers one (`python ledger.py link <id> <record>
+answered_by`, standard library like the rest), so the count of that section falls as the
 dreams catch up with what you asked. The script folds the ledger itself and still needs only the standard library.
 
 To run a whole dream, give `run_dream.py` any agent command-line tool that takes a prompt on stdin and can edit files:
