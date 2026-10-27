@@ -190,3 +190,10 @@ On 103 proof-audit items (67 flawed, 36 clean), two rewordings of the posture th
 each naming the fault the auditor kept missing, against the live wording: 94, 94 and 94 correct (2 helped and 2
 harmed; 5 and 5), so the live wording stayed. Five items per solver instead of fifteen: 97 against 94, 3 helped and
 0 harmed (p = 0.25). Counts only.
+
+## teams-and-vote-pilots-2026-10-08: teams, single agents and a three-member vote
+
+Twenty items answered by four Codex arms on 8 October (brain or not, single agent or team) and three on 9 October (the
+hook layer, a team whose checker verifies first), plus a three-member Claude vote. Graded with the current grader: 19,
+20, 18 and 17 of 20 on 8 October, 20, 19 and 17 on 9 October, and 19 of 20 for the vote. Every contrast is one to three
+items; a team cost about three times the tokens of a single agent and bought nothing measurable. Counts only.
