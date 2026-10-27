@@ -8,9 +8,15 @@ score, so a second or third wording can find what the first one missed. A record
 and printed with the slug that replaced it. When the best score is low the output says WEAK MATCH: reword, or
 treat the store as not having the answer.
 
+If a request ledger exists (requests.jsonl beside this script, or --requests, or $MATH_BRAIN_REQUESTS; see
+docs/prompts-as-nodes.md), the earlier requests that share at least half the words of a wording follow the records:
+how often each was asked, whether it is open or answered, and the records linked to it. A request asked again after
+it was answered is flagged, because the answer it got may not have landed.
+
 Standard library only. Point it at another folder with --dir or the BRAIN_MEM_DIR variable.
 """
 import argparse
+import json
 import math
 import os
 import re
@@ -73,6 +79,62 @@ def bm25(recs, query, k1=1.4, b=0.75):
     return out
 
 
+def load_requests(path):
+    """Fold a request ledger (math_brain.requests: append-only JSON lines) into its requests, standard library only.
+
+    An ask adds or counts a request, a link records a record as answered_by or produced, a status event sets the
+    status, and asking again after an answer reopens it. Unreadable lines are skipped.
+    """
+    reqs = {}
+    with open(path, encoding="utf-8") as fh:
+        for line in fh:
+            try:
+                ev = json.loads(line)
+            except ValueError:
+                continue
+            r = reqs.get(ev.get("id"))
+            if ev.get("op") == "ask" and "text" in ev and "at" in ev:
+                if r is None:
+                    r = reqs[ev["id"]] = dict(id=ev["id"], text=ev["text"], first=ev["at"], times=0, status="open",
+                                              answered_by=[], produced=[], reopened=False, terms=words(ev["text"]))
+                r["times"] += 1
+                r["first"] = min(r["first"], ev["at"])
+                if r["status"] == "answered" and ev.get("reopen", True):
+                    r["status"], r["reopened"] = "open", True
+            elif r is not None and ev.get("op") == "link":
+                rel, node = ev.get("rel"), ev.get("node")
+                if rel in ("answered_by", "produced") and node not in r[rel]:
+                    r[rel].append(node)
+                if rel == "answered_by" and r["status"] == "open":
+                    r["status"] = "answered"
+            elif r is not None and ev.get("op") == "status":
+                r["status"] = ev.get("status", r["status"])
+    return reqs
+
+
+def asked_before(reqs, wordings, n=3):
+    """Earlier requests that share at least half the words of one wording, the closest first."""
+    hits = []
+    for r in reqs.values():
+        rt = set(r["terms"])
+        cover = max((len(set(words(q)) & rt) / len(set(words(q))) for q in wordings if words(q)), default=0.0)
+        if cover >= 0.5:
+            hits.append((cover, r["times"], r["first"], r))
+    hits.sort(key=lambda h: (-h[0], -h[1], h[2]))
+    return [h[3] for h in hits[:n]]
+
+
+def show_request(r):
+    line = "-- %s  asked %dx since %s, %s" % (r["id"], r["times"], r["first"][:10], r["status"])
+    if r["reopened"]:
+        line += " (asked again after an answer: the answer may not have landed)"
+    print(line)
+    print("   " + r["text"][:200])
+    for rel in ("answered_by", "produced"):
+        if r[rel]:
+            print("   %s: %s" % (rel.replace("_", " "), ", ".join(r[rel])))
+
+
 def show(slug, r):
     m = r["meta"]
     head = "== %s  [%s%s]" % (slug, m.get("type", "?"), ", " + m["status"] if "status" in m else "")
@@ -90,6 +152,8 @@ def main():
     ap.add_argument("--id", nargs="+", help="print these records whole")
     ap.add_argument("--dir", default=os.environ.get("BRAIN_MEM_DIR", os.path.join(HERE, "memory")))
     ap.add_argument("-n", type=int, default=4)
+    ap.add_argument("--requests", default=os.environ.get("MATH_BRAIN_REQUESTS", os.path.join(HERE, "requests.jsonl")),
+                    help="a request ledger; when it exists, earlier requests that match are listed after the records")
     a = ap.parse_args()
     recs = load(a.dir)
     if a.id:
@@ -124,6 +188,13 @@ def main():
     for s, k in ranked:
         print("(score %.1f)" % s)
         show(k, recs[k])
+    if a.requests and os.path.exists(a.requests):
+        before = asked_before(load_requests(a.requests), [a.query] + a.more)
+        if before:
+            print("Asked before (the request ledger):")
+            for r in before:
+                show_request(r)
+            print()
     return 0
 
 

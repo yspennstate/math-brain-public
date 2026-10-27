@@ -130,3 +130,25 @@ def test_a_night_refuses_an_unknown_stage(starter):
     res = subprocess.run([sys.executable, str(starter / "dream" / "dream_night.py"), "--agent-cmd", "x",
                           "--stages", "file,deep"], capture_output=True, text=True)
     assert res.returncode == 2 and "--stages" in res.stderr
+
+
+def _recall(starter: Path, *args: str) -> str:
+    res = subprocess.run([sys.executable, str(starter / "recall.py"), *args], check=True, capture_output=True,
+                         text=True, encoding="utf-8", env=_env_without_ledger())
+    return res.stdout
+
+
+def test_recall_lists_the_requests_asked_before(starter):
+    q = "how long should the harbour film be"
+    assert "Asked before" not in _recall(starter, q)  # no ledger, no block
+    led = RequestLedger(starter / "requests.jsonl")
+    r = led.ask("How long should the harbour film be for the festival?", at="2026-03-09T09:00:00+00:00")
+    led.link(r.id, "project_harbour_film_cut_to_twelve_minutes_2026_03_10", "answered_by", at="2026-03-10T09:00:00+00:00")
+    led.ask("How long should the harbour film be for the festival?", at="2026-04-02T09:00:00+00:00")
+    led.ask("Which music library terms cover online release?", at="2026-03-15T09:00:00+00:00")
+    out = _recall(starter, q, "--or", "festival slot length")
+    block = out.split("Asked before (the request ledger):", 1)[1]
+    assert r.id in block and "asked 2x since 2026-03-09, open" in block
+    assert "the answer may not have landed" in block
+    assert "answered by: project_harbour_film_cut_to_twelve_minutes_2026_03_10" in block
+    assert "music library" not in block  # an unrelated request stays out

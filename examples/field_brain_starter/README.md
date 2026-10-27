@@ -56,6 +56,13 @@ say the store does not have it rather than guessing. The same rules were measure
 (`AGENTS_GUIDE.md`): two or three wordings in one call scored 86 of 100 against 76 with one wording a call, and when
 the weak-match line showed, the answering card had been printed for only 4 of 21 questions.
 
+If you keep a request ledger (`requests.jsonl` beside `recall.py`, `--requests`, or `MATH_BRAIN_REQUESTS`; see
+`docs/prompts-as-nodes.md`), the requests you made earlier are part of the answer too: after the records, recall
+lists up to three past requests that share at least half the words of one wording, with how often each was asked,
+whether it is open or answered and the records linked to it. A request asked again after it was answered is
+flagged. That is the most useful line in the block: someone asked, got an answer, and asked again, so the answer
+did not land, and handing over the same record a third time will not help.
+
 Point the tool at your own folder with `--dir` or the `BRAIN_MEM_DIR` variable. The full brain's `brain.py recall`
 adds an association graph (built from the `[[slug]]` links) and semantic search on top of the lexical score; this
 starter keeps only the lexical part so it runs anywhere with no install.
