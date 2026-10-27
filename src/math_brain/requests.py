@@ -44,7 +44,7 @@ _STOP = frozenset(
 )
 _EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 _WIN_HOME = re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s\"']+", re.IGNORECASE)
-_NIX_HOME = re.compile(r"/(?:home|Users)/[^/\s\"']+")
+_NIX_HOME = re.compile(r"/(?:home|Users)/[^/\s\"']+", re.IGNORECASE)
 
 
 def now() -> str:

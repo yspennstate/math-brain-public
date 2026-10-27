@@ -69,6 +69,8 @@ def test_redaction_drops_addresses_and_home_paths():
     text = redact(r"see C:\Users\someone\notes.tex and /home/someone/x, mail a.b@example.org")
     assert "someone" not in text and "example.org" not in text
     assert normalize(text).count("home") == 2
+    shouted = redact("SEE /USERS/SOMEONE/NOTES.TEX AND /Home/someone/x")  # a path typed in capitals is a path
+    assert "someone" not in shouted.lower() and shouted.count("<home>") == 2
 
 
 def test_a_torn_last_line_is_skipped(tmp_path):

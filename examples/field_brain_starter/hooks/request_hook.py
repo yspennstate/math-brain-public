@@ -51,7 +51,7 @@ STOP = frozenset(
 )
 EMAIL = re.compile(r"[\w.+-]+@[\w-]+\.[\w.-]+")
 WIN_HOME = re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s\"']+", re.IGNORECASE)
-NIX_HOME = re.compile(r"/(?:home|Users)/[^/\s\"']+")
+NIX_HOME = re.compile(r"/(?:home|Users)/[^/\s\"']+", re.IGNORECASE)
 
 
 def normalize(text):
