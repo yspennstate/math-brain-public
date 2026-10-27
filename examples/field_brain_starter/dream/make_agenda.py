@@ -54,7 +54,8 @@ def open_requests(path):
     """Fold a request ledger (append-only JSON lines) into its open requests, without importing math_brain.
 
     The fold follows math_brain.requests: an ask adds or counts a request, an answered_by link answers it, a
-    status event sets its status, and asking again after an answer reopens it. Unreadable lines are skipped.
+    status event sets its status, and asking again after an answer reopens it. A reopened request comes first:
+    the record that answered it did not land. Unreadable lines are skipped.
     """
     reqs = {}
     for line in open(path, encoding="utf-8"):
@@ -66,20 +67,22 @@ def open_requests(path):
         if ev.get("op") == "ask" and "text" in ev and "at" in ev:
             if r is None:
                 r = reqs[ev["id"]] = dict(id=ev["id"], text=ev["text"], first=ev["at"], last=ev["at"], times=0,
-                                          status="open", produced=set())
+                                          status="open", produced=set(), answered_by=[], reopened=False)
             r["times"] += 1
             r["first"], r["last"] = min(r["first"], ev["at"]), max(r["last"], ev["at"])
             if r["status"] == "answered" and ev.get("reopen", True):
-                r["status"] = "open"
+                r["status"], r["reopened"] = "open", True
         elif r is not None and ev.get("op") == "link":
             r["last"] = max(r["last"], ev.get("at", ""))
             if ev.get("rel") == "produced":
                 r["produced"].add(ev.get("node"))
+            if ev.get("rel") == "answered_by" and ev.get("node") not in r["answered_by"]:
+                r["answered_by"].append(ev.get("node"))
             if ev.get("rel") == "answered_by" and r["status"] == "open":
                 r["status"] = "answered"
         elif r is not None and ev.get("op") == "status":
             r["status"] = ev.get("status", r["status"])
-    return sorted((r for r in reqs.values() if r["status"] == "open"), key=lambda r: (-r["times"], r["first"]))
+    return sorted((r for r in reqs.values() if r["status"] == "open"), key=lambda r: (not r["reopened"], -r["times"], r["first"]))
 
 
 def main():
@@ -166,11 +169,16 @@ def main():
             work = "%d produced" % len(r["produced"]) if r["produced"] else "nothing produced"
             out.append("- `%s` asked %dx, first %s, last touched %s, %s: %s"
                        % (r["id"], r["times"], r["first"][:10], r["last"][:10], work, r["text"][:140]))
+            if r["reopened"]:
+                out.append("  asked again after %s answered it: that record did not land"
+                           % (", ".join("`%s`" % n for n in r["answered_by"]) or "an answer"))
         if len(waiting) > a.max_requests:
             out += ["", "And %d more; `python ledger.py list` lists them all."
                     % (len(waiting) - a.max_requests)]
         out += ["", "For each: does a record answer it? If one does, link it (`python ledger.py link <id> <record>"
-                " answered_by`); if a record is partial work toward it, link it as `produced`.", ""]
+                " answered_by`); if a record is partial work toward it, link it as `produced`. A request asked again after"
+                " an answer needs the old record improved (a How to apply line, a link from where the reader looked),"
+                " not linked a second time.", ""]
 
     open(a.out, "w", encoding="utf-8", newline="\n").write("\n".join(out))
     print("wrote %s (%d records, %d fresh)" % (a.out, len(recs), len(fresh)))

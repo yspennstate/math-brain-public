@@ -23,7 +23,9 @@ If you keep a request ledger (`requests.jsonl` beside `memory/`, or wherever `MA
 that nothing has answered yet, the ones asked more than once first, each with whether any record has been
 produced for it. The dreaming agent links a record that answers one (`python ledger.py link <id> <record>
 answered_by`, standard library like the rest), so the count of that section falls as the
-dreams catch up with what you asked. The script folds the ledger itself and still needs only the standard library.
+dreams catch up with what you asked. A request asked again after it was answered comes first, with the record that
+answered it named below it: that record did not land, and the dream should improve it rather than link it again. The script folds
+the ledger itself and still needs only the standard library.
 
 To run a whole dream, give `run_dream.py` any agent command-line tool that takes a prompt on stdin and can edit files:
 

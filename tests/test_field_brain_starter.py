@@ -198,3 +198,19 @@ def test_the_ledger_tool_closes_a_request_the_dream_answers(starter):
     assert "0 of 1 requests" in _ledger(starter, "list").stdout and "answered" in _ledger(starter, "list", "--all").stdout
     part = _agenda(starter, env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
     assert rid not in part
+
+
+def test_a_request_asked_again_after_its_answer_leads_the_agenda(starter):
+    led = RequestLedger(starter / "requests.jsonl")
+    a = led.ask("Which records show a render reused after an audio change?", at="2026-04-01T09:00:00+00:00")
+    led.ask("Which records show a render reused after an audio change?", at="2026-04-01T09:30:00+00:00")
+    b = led.ask("How long should the harbour film be for the festival?", at="2026-04-01T10:00:00+00:00")
+    led.link(b.id, "project_harbour_film_cut_to_twelve_minutes_2026_03_10", "answered_by", at="2026-04-02T10:00:00+00:00")
+    led.ask("How long should the harbour film be for the festival?", at="2026-04-03T10:00:00+00:00")
+    part = _agenda(starter, env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
+    lines = part.splitlines()
+    first = next(i for i, ln in enumerate(lines) if ln.startswith("- `"))
+    assert lines[first].split("`")[1] == b.id  # reopened first, though the other was asked as often
+    assert lines[first + 1] == ("  asked again after `project_harbour_film_cut_to_twelve_minutes_2026_03_10` answered"
+                                " it: that record did not land")
+    assert lines[first + 2].split("`")[1] == a.id and "improved" in part
