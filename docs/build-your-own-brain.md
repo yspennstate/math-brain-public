@@ -52,7 +52,7 @@ Start from the recall in `agent_tools/math_recall.py` and `framework/dreaming/br
 
 ### Connect the agents
 
-Give agents the recall as a tool and a short paragraph on how to use it. [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) has the configuration for Claude Code and Codex and the paragraph the tests used. The wake step in `framework/hooks/` has an agent read the store's index and its own last notes at the start of a session, so it picks up the work where the last session left it instead of starting cold. [agency.md](agency.md) sets out the working loop that turns faster recall into more finished work: a next-step note on disk, leases on shared state, an audit before each report, and results written back to the store.
+Give agents the recall as a tool and a short paragraph on how to use it. [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) has the configuration for Claude Code and Codex and the paragraph the tests used, and [codex-hooks-quickstart.md](codex-hooks-quickstart.md) shows the hook files for both runtimes, including the output format Codex requires. The wake step in `framework/hooks/` has an agent read the store's index and its own last notes at the start of a session, so it picks up the work where the last session left it instead of starting cold. [agency.md](agency.md) sets out the working loop that turns faster recall into more finished work: a next-step note on disk, leases on shared state, an audit before each report, and results written back to the store.
 
 ### Turn mistakes into reflexes
 
@@ -67,6 +67,8 @@ Run `framework/dreaming/run_dream.ps1` nightly, through a hidden launcher so tha
 Test the brain against two controls on the same questions: agents with the brain, agents with read access to the same documents but no brain, and the model alone. Count a timeout as a wrong answer, rerun a session that never reached the model, and keep the answer keys out of every searchable corpus. Our test of this design is in [TESTS.md](../TESTS.md). Its main lesson applies to any field. Where both agents finished, the agent with the brain and the agent reading the documents were about equally accurate; the brain's lead came from finishing in time, at about a quarter of the input tokens. A brain is worth building when the documents are too many or too scattered to read within the time an agent has, and that is easy to test before building much.
 
 ## 4. Where to start
+
+The shortest path is [examples/field_brain_starter/](../examples/field_brain_starter/), which runs on Linux, macOS and Windows with nothing but Python: twenty example records, the recall tool, the hooks, a nightly dream and a ten-question test. [brain-in-an-afternoon.md](brain-in-an-afternoon.md) walks a team from an empty copy of it to a measured brain in a day, and [codex-hooks-quickstart.md](codex-hooks-quickstart.md) wires its hooks into Codex and Claude Code. Move to the full framework below once the starter has shown that the records help.
 
 ```
 git clone <this repository>
