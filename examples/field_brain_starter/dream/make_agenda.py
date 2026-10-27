@@ -18,14 +18,20 @@ The sections, in the order a dreaming agent should work through them:
 4. Provisional records - claims not yet checked. Either find the evidence or leave the status as it is.
 5. Open questions - records that ask instead of state. Has anything newer answered one?
 6. Unlinked records - nothing links to them and they link to nothing. Recall finds them only by their own words.
+7. Requests still waiting (when a request ledger exists: --requests, $MATH_BRAIN_REQUESTS, or requests.jsonl
+   beside memory/, the ledger math_brain.requests keeps) - the questions
+   the researcher asked that no record answers yet, the ones asked more than once first. Was one answered by a
+   record this dream should link to it?
 """
 import argparse
 import datetime as dt
+import json
 import os
 import re
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.join(os.path.dirname(HERE), "memory")
+ROOT = os.path.dirname(HERE)
+MEM = os.path.join(ROOT, "memory")
 SKIP = {"MEMORY.md", "MISTAKES.md"}
 LINK = re.compile(r"\[\[([a-z0-9_]+)\]\]")
 DATE = re.compile(r"(\d{4})_(\d{2})_(\d{2})$")
@@ -44,11 +50,47 @@ def read_record(path):
     return head, body
 
 
+def open_requests(path):
+    """Fold a request ledger (append-only JSON lines) into its open requests, without importing math_brain.
+
+    The fold follows math_brain.requests: an ask adds or counts a request, an answered_by link answers it, a
+    status event sets its status, and asking again after an answer reopens it. Unreadable lines are skipped.
+    """
+    reqs = {}
+    for line in open(path, encoding="utf-8"):
+        try:
+            ev = json.loads(line)
+        except ValueError:
+            continue
+        r = reqs.get(ev.get("id"))
+        if ev.get("op") == "ask" and "text" in ev and "at" in ev:
+            if r is None:
+                r = reqs[ev["id"]] = dict(id=ev["id"], text=ev["text"], first=ev["at"], last=ev["at"], times=0,
+                                          status="open", produced=set())
+            r["times"] += 1
+            r["first"], r["last"] = min(r["first"], ev["at"]), max(r["last"], ev["at"])
+            if r["status"] == "answered" and ev.get("reopen", True):
+                r["status"] = "open"
+        elif r is not None and ev.get("op") == "link":
+            r["last"] = max(r["last"], ev.get("at", ""))
+            if ev.get("rel") == "produced":
+                r["produced"].add(ev.get("node"))
+            if ev.get("rel") == "answered_by" and r["status"] == "open":
+                r["status"] = "answered"
+        elif r is not None and ev.get("op") == "status":
+            r["status"] = ev.get("status", r["status"])
+    return sorted((r for r in reqs.values() if r["status"] == "open"), key=lambda r: (-r["times"], r["first"]))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--today", help="YYYY-MM-DD; defaults to the newest record's date")
     ap.add_argument("--fresh", type=int, default=7, help="days that count as fresh")
     ap.add_argument("--out", default=os.path.join(HERE, "DREAM_AGENDA.md"))
+    ap.add_argument("--requests", default=os.environ.get("MATH_BRAIN_REQUESTS", os.path.join(ROOT, "requests.jsonl")),
+                    help="a request ledger; adds section 7 when the file exists (default $MATH_BRAIN_REQUESTS,"
+                         " else requests.jsonl beside memory/)")
+    ap.add_argument("--max-requests", type=int, default=15)
     a = ap.parse_args()
 
     recs = {}
@@ -116,6 +158,19 @@ def main():
         if not r["links"] and not inbound[s]:
             out.append("- `%s` - %s" % (s, r["head"].get("description", "")))
     out.append("")
+
+    if a.requests and os.path.exists(a.requests):
+        waiting = open_requests(a.requests)
+        out += ["## 7. Requests still waiting", ""]
+        for r in waiting[: a.max_requests]:
+            work = "%d produced" % len(r["produced"]) if r["produced"] else "nothing produced"
+            out.append("- `%s` asked %dx, first %s, last touched %s, %s: %s"
+                       % (r["id"], r["times"], r["first"][:10], r["last"][:10], work, r["text"][:140]))
+        if len(waiting) > a.max_requests:
+            out += ["", "And %d more; `python -m math_brain.requests backlog` lists them all."
+                    % (len(waiting) - a.max_requests)]
+        out += ["", "For each: does a record answer it? If one does, link it (`requests link <id> <record>"
+                " answered_by`); if a record is partial work toward it, link it as `produced`.", ""]
 
     open(a.out, "w", encoding="utf-8", newline="\n").write("\n".join(out))
     print("wrote %s (%d records, %d fresh)" % (a.out, len(recs), len(fresh)))
