@@ -66,6 +66,21 @@ partly on cost. Walking a card's links with `--id` reached the same answers as s
 against 83 of 100, on about half the uncached tokens. Spreading activation (`--depth`) added 46
 percent more tokens for one answer fewer. A search prints about 3,500 tokens.
 
+## One day of the open-problem campaign (10 October 2026)
+
+Every Codex session recorded for 10 October was counted from its own log. The open-problem solvers
+ran 464 sessions, 415 of them at maximum effort, and used 2.73 billion tokens in the day before the
+account's usage ran out mid-morning.
+
+That day solved no open problem. The solvers held 1,561 claims at the end of it, and every one
+still listed a remaining gap. Among them were 442 independently checked proofs of special cases or
+lemmas, 558 proved special cases, 361 sketches, 112 conjectures and 43 pieces of numerical evidence. The
+campaign's results to that date were 22 answers from September, 15 of them full answers or
+refutations and 7 reductions or partial answers. Spend at this scale buys checked partial results,
+not solutions, and the referee pass in
+[2026-10-10-two-agents-cross-family-referee](../results/frontier-2026-10/2026-10-10-two-agents-cross-family-referee/README.md)
+is what sorted those claims.
+
 ## Long sessions
 
 A long session re-reads its whole context on every call. One measured session on 9 October carried
