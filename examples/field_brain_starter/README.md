@@ -173,15 +173,27 @@ version, with heartbeats, mailboxes and handoffs, for a team of agents working a
 1. Keep writing records as the work happens: one fact, its reason, its date, links to related records. The index line
    carries the finding, not a description of it. `new_record.py` writes the file and the index line for you and
    refuses a link to a record that does not exist.
-2. Install the hooks (`framework/bootstrap/`) so every agent session starts by reading the index and a few seed
-   records, and so recall runs before work instead of after a mistake.
-3. Run the dream cycle (`framework/dreaming/`) at night: it reads the day's records and transcripts, merges
-   duplicates, links what belongs together, and compiles recurring mistakes from `MISTAKES.md` into reflexes that fire
-   when an agent is about to repeat one.
+2. Wire the hooks in `hooks/` into your agent runtime (`docs/codex-hooks-quickstart.md` has the settings for
+   Codex and Claude Code), so every session starts with the index, recall runs before work instead of after a
+   mistake, and a lesson is filed before the turn ends. `framework/bootstrap/` installs the larger set the full
+   framework uses.
+3. Schedule `dream/run_dream.py` for the night (`dream/README.md`): it works from the agenda `dream/make_agenda.py`
+   builds, merges duplicates, links what belongs together, and turns a mistake that recurs in `MISTAKES.md` into a
+   rule. `framework/dreaming/` is the full version, which also reads transcripts and grades the day's reflex fires.
 4. When several agents work at once, start with `claims.py` (above); when they work all day and need to message and
    hand work to each other, move to the mesh (`framework/mesh/`).
 5. Re-run the three-arm test whenever you change recall. If the brain arm stops beating the none arm, the change
    made the brain worse.
+
+### Making it your own field
+
+Copy the folder, then delete the twenty records in `memory/`, empty `MEMORY.md` and `MISTAKES.md` down to their
+headings, and replace `questions.json` with ten questions your team really asks. Keep every script: none of them
+knows about films. Write the first records with `new_record.py`, from what the team already paid to learn. For a
+company, the first ten are usually a few decisions with who made them and why, the policies agents keep getting
+wrong, the incidents that cost the most and the check that would have caught each one, and where the documents that
+matter live. Run `check_store.py`, then `three_arm.py`, before writing more: if the brain arm does not beat the none
+arm on your own ten questions, fix the records before adding hooks.
 
 `docs/build-your-own-brain.md` walks through each step in full, and `docs/brain-in-an-afternoon.md` takes a company
 from an empty copy of this folder to a measured brain in its first day.
