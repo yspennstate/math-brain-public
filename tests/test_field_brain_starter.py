@@ -152,3 +152,29 @@ def test_recall_lists_the_requests_asked_before(starter):
     assert "the answer may not have landed" in block
     assert "answered by: project_harbour_film_cut_to_twelve_minutes_2026_03_10" in block
     assert "music library" not in block  # an unrelated request stays out
+
+
+def _hook(starter: Path, ledger: Path, prompt: str) -> str:
+    import json
+    import os
+
+    res = subprocess.run([sys.executable, str(starter / "hooks" / "request_hook.py"), "--runtime", "claude",
+                          "--ledger", str(ledger)], input=json.dumps({"prompt": prompt}), capture_output=True,
+                         text=True, encoding="utf-8", env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+    assert res.returncode == 0 and not res.stderr, res.stderr
+    return res.stdout
+
+
+def test_the_request_hook_writes_the_librarys_ask(starter, tmp_path):
+    ledger = tmp_path / "requests.jsonl"
+    q = "Which records show a render reused after an audio change? See /Users/someone/notes.txt"
+    assert _hook(starter, ledger, q) == ""  # a new request is recorded silently
+    assert _hook(starter, ledger, "ok do it") == "" and _hook(starter, ledger, "/dream now please") == ""
+    led = RequestLedger(ledger)
+    (r,) = led.requests.values()  # the follow-up and the slash command were left out
+    assert r.times_asked == 1 and "<home>" in r.text and "someone" not in r.text
+    led.link(r.id, "mistake_render_settings_reset_after_update_2026_03_18", "answered_by")
+    out = _hook(starter, ledger, "  " + q.replace("Which records", "which RECORDS") + "!")  # the same words typed differently are the same request
+    assert r.id in out and "asked 2x" in out and "did not land" in out
+    assert "answered by: mistake_render_settings_reset_after_update_2026_03_18" in out
+    assert RequestLedger(ledger).get(r.id).times_asked == 2
