@@ -83,6 +83,31 @@ Point the tool at your own folder with `--dir` or the `BRAIN_MEM_DIR` variable. 
 adds an association graph (built from the `[[slug]]` links) and semantic search on top of the lexical score; this
 starter keeps only the lexical part so it runs anywhere with no install.
 
+## Writing back
+
+A brain that agents only read stops growing. `hooks/write_back_hook.py` runs when a turn ends. Suppose an agent
+closes with "The export came out 8-bit again. Root cause: the update reset the colour depth preset to its default.
+Next time check the preset before a long render." and wrote no record. The hook returns:
+
+```
+{"decision": "block", "reason": "Before you stop: this turn ended on a lesson (\"Root cause: the update reset the
+colour depth preset to its default.\") and no record was written. If it will matter to the next agent, file it in
+one step with new_record.py (type feedback for a mistake or a rule, project for a decision; say why, and how to
+apply it). If it will not matter, stop."}
+```
+
+Both runtimes read that as one more step, so the agent files the record before it stops. It asks once a session;
+a second lesson in the same session passes silently. With `BRAIN_WRITE_BACK=queue` it never holds the agent up and
+appends the line to `memory/WRITE_BACK_QUEUE.md` instead:
+
+```
+- 2026-10-27 Root cause: the update reset the colour depth preset to its default.
+```
+
+for a person, or the dream (`dream/README.md`), to turn into a record. Use the queue for unattended agents and the
+question for agents someone is watching. The hook counts any record changed in the last two hours as a write-back,
+so in a freshly copied or cloned folder, where every file is new, it stays quiet for its first two hours.
+
 ## Measuring it
 
 A brain is worth keeping only if it changes answers. `three_arm.py` asks every question three ways with the same
