@@ -200,6 +200,39 @@ def test_the_ledger_tool_closes_a_request_the_dream_answers(starter):
     assert rid not in part
 
 
+def _turn(starter: Path, ledger: Path, payload: dict, *flags: str) -> str:
+    import json
+    import os
+
+    env = {**os.environ, "PYTHONIOENCODING": "utf-8", "BRAIN_HOOK_STATE": str(ledger.parent / "state")}
+    res = subprocess.run([sys.executable, str(starter / "hooks" / "request_hook.py"), "--runtime", "claude",
+                          "--ledger", str(ledger), *flags], input=json.dumps(payload), capture_output=True,
+                         text=True, encoding="utf-8", env=env)
+    assert res.returncode == 0 and not res.stderr, res.stderr
+    return res.stdout
+
+
+def test_the_stop_hook_links_the_records_a_turn_wrote(starter, tmp_path):
+    ledger, mem = tmp_path / "requests.jsonl", starter / "memory"
+    q = "Which records show a render reused after an audio change?"
+    assert _turn(starter, ledger, {"prompt": q, "session_id": "s1"}) == ""
+    (mem / "method_rerender_after_any_audio_change_2026_04_02.md").write_text("---\nname: x\n---\nbody\n", encoding="utf-8")
+    (mem / "WRITE_BACK_QUEUE.md").write_text("queued\n", encoding="utf-8")  # an upper-case file is not a record
+    assert _turn(starter, ledger, {"session_id": "s1"}, "--stop") == ""  # a Stop hook stays silent
+    assert _turn(starter, ledger, {"session_id": "s2"}, "--stop") == ""  # a session with no request links nothing
+    r = RequestLedger(ledger).get(next(iter(RequestLedger(ledger).requests)))
+    assert r.linked("produced") == ["method_rerender_after_any_audio_change_2026_04_02"] and r.status == "open"
+    _turn(starter, ledger, {"prompt": "ok do it", "session_id": "s1"})  # a follow-up keeps the same request
+    (mem / "mistake_audio_swap_left_old_render_2026_04_03.md").write_text("---\nname: y\n---\nbody\n", encoding="utf-8")
+    _turn(starter, ledger, {"session_id": "s1"}, "--stop")
+    _turn(starter, ledger, {"session_id": "s1"}, "--stop")  # a second stop adds nothing twice
+    r = RequestLedger(ledger).get(r.id)
+    assert r.linked("produced") == ["method_rerender_after_any_audio_change_2026_04_02", "mistake_audio_swap_left_old_render_2026_04_03"]
+    part = _agenda(starter, "--requests", str(ledger), env=_env_without_ledger()).split("## 7. Requests still waiting", 1)[1]
+    assert ("  produced so far: `method_rerender_after_any_audio_change_2026_04_02`, "
+            "`mistake_audio_swap_left_old_render_2026_04_03`; read these first") in part
+
+
 def test_a_request_asked_again_after_its_answer_leads_the_agenda(starter):
     led = RequestLedger(starter / "requests.jsonl")
     a = led.ask("Which records show a render reused after an audio change?", at="2026-04-01T09:00:00+00:00")

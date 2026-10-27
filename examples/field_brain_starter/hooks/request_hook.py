@@ -10,6 +10,13 @@ The hook prints nothing for a new request. When the same request is already in t
 often it was asked, since when, whether it was answered and by which records. A request asked again after it was
 answered is the case to notice: the answer did not land, and handing over the same record again will not help.
 
+Run it a second time under Stop with --stop and it links the records written during the turn to the request the turn
+was working on: a record created in memory/ since that request (or since the last stop) gets a `produced` link. A
+short follow-up ("ok do it") keeps working on the request before it, so its records go there too. Whether a record
+ANSWERS the request is a judgement, left to the agent or the dream (ledger.py link ... answered_by); `produced`
+only says the record came out of that work. Two agents writing into one store at once can be credited with each
+other's records; the dream sees every link and can drop a wrong one by answering it.
+
 Codex (default):   prints {"hookSpecificOutput": {"hookEventName": ..., "additionalContext": ...}}
 Claude Code:       --runtime claude prints the lines as plain text
 
@@ -34,6 +41,8 @@ from datetime import datetime, timezone
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.dirname(HERE))
 MIN_WORDS = 3
+MEM = os.environ.get("BRAIN_MEM_DIR", os.path.join(os.path.dirname(HERE), "memory"))
+STATE = os.environ.get("BRAIN_HOOK_STATE", os.path.join(HERE, ".state"))
 
 # The next four are math_brain.requests' own rules, copied so the starter needs no install. Change them together.
 STOP = frozenset(
@@ -67,12 +76,53 @@ def default_ledger():
     return os.environ.get("MATH_BRAIN_REQUESTS") or os.path.join(os.path.dirname(HERE), "requests.jsonl")
 
 
-def record(prompt, ledger, at=None):
+def record_names(mem):
+    try:
+        return sorted(n[:-3] for n in os.listdir(mem) if n.endswith(".md") and not n[:-3].isupper())
+    except OSError:
+        return []
+
+
+def state_path(state, session):
+    return os.path.join(state, "request_" + re.sub(r"[^A-Za-z0-9_-]", "_", session)[:80] + ".json")
+
+
+def remember_turn(state, session, rid, mem):
+    """Note which request this session is on and which records existed when it was asked."""
+    if not session:
+        return
+    os.makedirs(state, exist_ok=True)
+    with open(state_path(state, session), "w", encoding="utf-8") as fh:
+        json.dump({"id": rid, "records": record_names(mem)}, fh)
+
+
+def link_made(ledger, state, session, mem, at=None):
+    """At a stop: link every record created since the request (or the last stop) to it as produced."""
+    path = state_path(state, session) if session else ""
+    if not path or not os.path.exists(path):
+        return []
+    with open(path, encoding="utf-8") as fh:
+        turn = json.load(fh)
+    now_names = record_names(mem)
+    made = [n for n in now_names if n not in set(turn["records"])]
+    at = at or datetime.now(timezone.utc).isoformat(timespec="seconds")
+    with open(ledger, "a", encoding="utf-8") as fh:
+        for n in made:
+            fh.write(json.dumps({"op": "link", "id": turn["id"], "node": n, "rel": "produced", "at": at},
+                                ensure_ascii=False, sort_keys=True) + "\n")
+    turn["records"] = now_names
+    with open(path, "w", encoding="utf-8") as fh:
+        json.dump(turn, fh)
+    return made
+
+
+def record(prompt, ledger, at=None, session="", state=STATE, mem=MEM):
     """Append the ask; return the lines for the model ("" for a new request, or one that was left out)."""
     text = redact(prompt).strip()
     if not text or text.startswith("/") or len(content_words(text)) < MIN_WORDS:
         return ""
     rid = request_id(text)
+    remember_turn(state, session, rid, mem)
     before = None
     if os.path.exists(ledger):
         import recall
@@ -126,10 +176,14 @@ def main():
     try:
         raw = io.TextIOWrapper(sys.stdin.buffer, encoding="utf-8", errors="replace").read()
         payload = json.loads(raw) if raw.strip() else {}
+        session = str(payload.get("session_id") or "")
+        if "--stop" in argv:
+            link_made(ledger, STATE, session, MEM)   # silent: a Stop hook that prints may be read as an order
+            return 0
         prompt = str(payload.get("prompt") or "")
         event = str(payload.get("hook_event_name") or "UserPromptSubmit")
         if prompt.strip():
-            emit(record(prompt, ledger), runtime, event)
+            emit(record(prompt, ledger, session=session), runtime, event)
     except Exception:
         pass
     return 0

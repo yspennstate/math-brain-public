@@ -172,6 +172,9 @@ def main():
             if r["reopened"]:
                 out.append("  asked again after %s answered it: that record did not land"
                            % (", ".join("`%s`" % n for n in r["answered_by"]) or "an answer"))
+            elif r["produced"]:
+                out.append("  produced so far: %s; read these first, one may already answer it"
+                           % ", ".join("`%s`" % n for n in sorted(r["produced"])))
         if len(waiting) > a.max_requests:
             out += ["", "And %d more; `python ledger.py list` lists them all."
                     % (len(waiting) - a.max_requests)]

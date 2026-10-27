@@ -23,7 +23,7 @@ production, a lab or a support desk.
 | `hooks/recall_hook.py` | a prompt hook for Codex or Claude Code that hands the matching records to the model before it answers (see `docs/codex-hooks-quickstart.md`) |
 | `hooks/scar_hook.py` | a tool hook that warns the agent, once a session, when the command it is about to run resembles a recorded mistake |
 | `hooks/write_back_hook.py` | a stop hook that asks the agent once to file a record when its turn ended on a lesson and nothing was written |
-| `hooks/request_hook.py` | a prompt hook that writes each request into the request ledger and tells the model when the same request was asked before, and whether it was answered |
+| `hooks/request_hook.py` | a prompt hook that writes each request into the request ledger and tells the model when the same request was asked before, and whether it was answered; under Stop with `--stop` it links the records the turn wrote to that request |
 
 Everything in the records is invented. The studio, its films and its director do not exist.
 
@@ -69,6 +69,12 @@ The ledger fills itself when `hooks/request_hook.py` runs on every prompt beside
 same ask event, with the same id for the same words, that `math_brain.requests` writes, leaves out slash commands
 and follow-ups of fewer than three content words, removes e-mail addresses and home paths, and stays silent unless
 the request is already in the ledger. Then it tells the model how often it was asked and what answered it.
+
+Wire the same script a second time under Stop, with `--stop`, and the ledger also learns what the work made: every
+record created in `memory/` during the turn gets a `produced` link to the request the turn was on, and a short
+follow-up keeps the request before it. It prints nothing. Whether a record answers the request stays a judgement
+for the agent or the dream (`python ledger.py link <id> <record> answered_by`); a request with records produced
+and no answer is the dream's cue to read them and decide.
 
 Point the tool at your own folder with `--dir` or the `BRAIN_MEM_DIR` variable. The full brain's `brain.py recall`
 adds an association graph (built from the `[[slug]]` links) and semantic search on top of the lexical score; this
