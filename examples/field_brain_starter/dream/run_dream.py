@@ -3,6 +3,7 @@
     python dream/run_dream.py --write-prompt dream/prompt.md          # build the agenda and the prompt, run nothing
     python dream/run_dream.py --agent-cmd "claude -p --permission-mode acceptEdits"
     python dream/run_dream.py --agent-cmd "codex exec --full-auto -"
+    python dream/run_dream.py --agent-cmd "claude -p --permission-mode acceptEdits" --stage file   # or --stage connect
 
 The agent command receives the prompt on stdin and runs with this folder as its working directory, so it can read
 and edit memory/. Any tool that takes a prompt on stdin and can edit files works.
@@ -48,6 +49,39 @@ per change: the file, what changed and why.
 
 """
 
+# A night can split the dream in two, as sleep does: a filing pass (slow-wave sleep, which settles the day into what
+# was already known) and a connecting pass (REM, which links things from different places). Each stage works only
+# its own sections of the agenda; "all" is the single dream this script ran before stages existed.
+STAGES = {
+    "all": (None, ""),
+    "file": ({1, 2, 3, 4, 7}, """This is the filing pass. Work only the sections below: settle what changed into what was
+already known. Link, correct, supersede and write rules; write no new ideas here, that is the connecting pass's job.
+
+"""),
+    "connect": ({5, 6}, """This is the connecting pass; the filing is done in the other pass. Work only the two sections below.
+For each unlinked record, find the record in a different part of the store that it bears on most and add a [[link]]
+in both, with one clause saying why; if nothing bears on it, leave it alone. For each open question, read the newer
+records the agenda names; if one answers it, add a dated line with the link to the question's record. If two records
+together suggest something neither states, you may write it as one new record with status: provisional and links to
+both. At most three new records in this pass. A link you cannot give a reason for is noise: skip it.
+
+"""),
+}
+
+
+def stage_agenda(agenda, keep):
+    """The agenda with only the numbered sections in `keep` (all of it when keep is None)."""
+    if keep is None:
+        return agenda
+    out, on = [], True
+    for line in agenda.splitlines():
+        if line.startswith("## "):
+            m = re.match(r"## (\d+)\.", line)
+            on = bool(m) and int(m.group(1)) in keep
+        if on:
+            out.append(line)
+    return "\n".join(out)
+
 
 def build_agenda():
     subprocess.run([sys.executable, os.path.join(HERE, "make_agenda.py")], cwd=ROOT, check=True,
@@ -89,15 +123,19 @@ def main():
     ap.add_argument("--agent-cmd", help="agent CLI that reads the prompt on stdin, e.g. \"claude -p\"")
     ap.add_argument("--write-prompt", metavar="FILE", help="write the prompt to FILE and run nothing")
     ap.add_argument("--timeout", type=int, default=3600, help="seconds the agent may run (default 3600)")
+    ap.add_argument("--stage", choices=sorted(STAGES), default="all",
+                    help="file: sections 1-4 and 7; connect: sections 5 and 6; all: every section (default)")
     a = ap.parse_args()
     if not (a.agent_cmd or a.write_prompt):
         ap.error("give --agent-cmd CMD or --write-prompt FILE")
 
     agenda = build_agenda()
-    prompt = RULES + agenda
+    keep, note = STAGES[a.stage]
+    prompt = RULES + note + stage_agenda(agenda, keep)
     if a.write_prompt:
         open(a.write_prompt, "w", encoding="utf-8", newline="\n").write(prompt)
-        print("wrote %s (%d characters); sections: %s" % (a.write_prompt, len(prompt), section_counts(agenda)))
+        print("wrote %s (%d characters, stage %s); sections: %s"
+              % (a.write_prompt, len(prompt), a.stage, section_counts(stage_agenda(agenda, keep))))
         return 0
 
     try:
@@ -132,6 +170,7 @@ def main():
         after = section_counts(agenda2)
         log = ["# Dream %s" % stamp, "",
                "Agent: `%s` (exit %s). Backup of memory/: `dream/backups/%s/`." % (a.agent_cmd, rc, stamp), "",
+               "Stage: %s." % a.stage, "",
                "| section | before | after |", "|---|---|---|"]
         log += ["| %s | %d | %d |" % (k, before.get(k, 0), after.get(k, 0)) for k in before]
         log += ["", "Mistakes with no rule for next time: %d before, %d after." % (no_rule_count(agenda),

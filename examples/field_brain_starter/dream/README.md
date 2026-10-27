@@ -58,6 +58,27 @@ that changed no file (`--idle-stop`). That last count is read from each cycle's 
 status, because an agent can exit cleanly having written nothing. The night's summary is
 `dream/logs/night_<stamp>.md`: one row per cycle with the files it changed and the agenda counts after it.
 
+## Filing and connecting
+
+A night of sleep is not one kind of sleep. Slow-wave sleep settles the day into what was already known; REM sleep,
+later, links things from different places. In one prompt the two jobs compete for the same session: careful
+correction and loose connection want different reading, and whichever comes first in the agenda tends to get the
+time. So a dream can run as one of two stages:
+
+```
+python dream/run_dream.py --agent-cmd "..." --stage file       # sections 1-4 and 7: mistakes, fresh, superseded, provisional, requests
+python dream/run_dream.py --agent-cmd "..." --stage connect    # sections 5-6: open questions and unlinked records
+python dream/dream_night.py --agent-cmd "..." --stages file,connect
+```
+
+The filing pass links, corrects and writes rules, and writes no new ideas. The connecting pass links each unlinked
+record to the record elsewhere in the store it bears on most, with a clause saying why, reads the newer records for
+an answer to each open question, and may write up to three new records of what two records suggest together, each
+`status: provisional`. With `--stages file,connect` the night alternates them, filing first, so the links are made
+between settled records. Each cycle's log names its stage, and the night's table has a stage column. The default,
+`all`, is the single dream described above. `framework/dreaming/dream_prompt_sws.md` and `dream_prompt_rem.md` are the
+same split as the mathematics brain runs it.
+
 ## Run it every night
 
 The dream works best when nobody is editing the store. Point the scheduler at the folder that holds `memory/` and

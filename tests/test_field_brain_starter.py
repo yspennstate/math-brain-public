@@ -87,3 +87,46 @@ def test_one_dream_with_a_stand_in_agent(starter, tmp_path):
     before, after = map(int, re.search(r"no rule for next time: (\d+) before, (\d+) after", log).groups())
     assert after == before - 1
     assert not (starter / "dream" / ".dream.lock").exists()
+
+
+def _prompt(starter: Path, stage: str) -> str:
+    out = starter / "dream" / "prompt_test.md"
+    subprocess.run([sys.executable, str(starter / "dream" / "run_dream.py"), "--write-prompt", str(out), "--stage", stage],
+                   check=True, capture_output=True, env=_env_without_ledger())
+    return out.read_text(encoding="utf-8")
+
+
+def test_each_stage_gets_its_own_sections(starter):
+    heads = {s: re.findall(r"^## (\d+)\.", _prompt(starter, s), re.M) for s in ("all", "file", "connect")}
+    assert heads["all"] == ["1", "2", "3", "4", "5", "6"]
+    assert heads["file"] == ["1", "2", "3", "4"]
+    assert heads["connect"] == ["5", "6"]
+    assert "This is the connecting pass" in _prompt(starter, "connect")
+    assert "This is the filing pass" in _prompt(starter, "file")
+    assert "This is the" not in _prompt(starter, "all")
+
+
+def test_a_night_takes_the_stages_in_turn(starter, tmp_path):
+    seen = tmp_path / "seen.txt"
+    agent = tmp_path / "agent.py"
+    agent.write_text(
+        "import sys\n"
+        "p = sys.stdin.read()\n"
+        "stage = 'connect' if 'This is the connecting pass' in p else 'file' if 'This is the filing pass' in p else 'all'\n"
+        "open(%r, 'a', encoding='utf-8').write(stage + '\\n')\n" % str(seen), encoding="utf-8")
+    cmd = '"%s" "%s"' % (Path(sys.executable).as_posix(), agent.as_posix())
+    res = subprocess.run([sys.executable, str(starter / "dream" / "dream_night.py"), "--agent-cmd", cmd,
+                          "--stages", "file,connect", "--max-cycles", "3", "--rest", "0", "--min-cycle", "0",
+                          "--idle-stop", "0", "--hours", "1"], capture_output=True, text=True, env=_env_without_ledger())
+    assert res.returncode == 0, res.stdout + res.stderr
+    assert seen.read_text(encoding="utf-8").split() == ["file", "connect", "file"]
+    night = next((starter / "dream" / "logs").glob("night_*.md")).read_text(encoding="utf-8")
+    assert [r.split("|")[2].strip() for r in night.splitlines() if re.match(r"\| \d+ \|", r)] == ["file", "connect", "file"]
+    logs = sorted((starter / "dream" / "logs").glob("dream_*.md"))
+    assert len(logs) == 3 and "Stage: connect." in logs[1].read_text(encoding="utf-8")
+
+
+def test_a_night_refuses_an_unknown_stage(starter):
+    res = subprocess.run([sys.executable, str(starter / "dream" / "dream_night.py"), "--agent-cmd", "x",
+                          "--stages", "file,deep"], capture_output=True, text=True)
+    assert res.returncode == 2 and "--stages" in res.stderr
