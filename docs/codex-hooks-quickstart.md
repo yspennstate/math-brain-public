@@ -89,6 +89,23 @@ session, which both runtimes read as one more step, filing the record with `new_
 `BRAIN_WRITE_BACK=queue` and it appends the lesson to `memory/WRITE_BACK_QUEUE.md` instead of asking. Both keep
 their per-session state in `hooks/.state/`, and each has a `--selftest`.
 
+`request_hook.py` keeps the starter's request ledger and is wired twice, once per event:
+
+```json
+"UserPromptSubmit": [
+  { "hooks": [ { "type": "command", "command": "python3 /path/to/request_hook.py", "timeout": 30 } ] }
+],
+"Stop": [
+  { "hooks": [ { "type": "command", "command": "python3 /path/to/request_hook.py --stop", "timeout": 30 } ] }
+]
+```
+
+At the prompt it writes the request into `requests.jsonl` and says so only when the same request was asked before.
+At the stop it prints nothing and links each record the turn created in `memory/` to that request as `produced`,
+so the dream finds the work already attached to the question that started it. The stop step knows a turn's
+request from the prompt step's state file, so it links nothing for requests recorded by `math_brain.request_hook`
+below; use one recorder per ledger. For Claude Code add `--runtime claude` to the prompt command.
+
 Three rules from running hooks like this every day:
 
 1. **Fail silent.** A hook that crashes or hangs blocks every turn. Catch every exception, print nothing on error,
