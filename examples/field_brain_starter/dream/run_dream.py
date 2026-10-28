@@ -146,7 +146,11 @@ def main():
         print("another dream holds %s; if no dream is running, delete the file and run again" % LOCK)
         return 3
     try:
-        stamp = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+        stamp = base = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+        k = 1
+        while os.path.exists(os.path.join(HERE, "backups", stamp)):   # two short dreams can start in one second
+            k += 1
+            stamp = "%s_%d" % (base, k)
         backup = os.path.join(HERE, "backups", stamp)
         shutil.copytree(MEM, backup)
         before = section_counts(agenda)

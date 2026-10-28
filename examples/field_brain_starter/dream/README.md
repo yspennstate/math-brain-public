@@ -44,6 +44,14 @@ names no record, is listed there, and the run exits 1 so a scheduler can flag it
 time (`dream/.dream.lock`). Write paths in the agent command with forward slashes, also on Windows. The backups are
 yours to prune once you have read the log.
 
+Before you hand the dream a real agent, run `python3 dream/dream_test.py`. It copies this folder to a temporary
+directory and runs the dream there with a stand-in agent, a few lines of Python that read the prompt on stdin, write
+the rule a mistake is missing and delete a record. It checks ten things: each stage's prompt carries its own sections,
+a second dream is refused while the lock is held, the rule lands and the no-rule count falls by one, the deleted
+record comes back word for word and the log names it, a backup exists, an agent that runs past `--timeout` is
+stopped, and a short night alternates its stages and stops after two cycles that changed nothing. It takes about a
+minute and leaves your `memory/` alone. If a step fails after you change one of the scripts, the change broke it.
+
 ## A night of dreams
 
 One long dream is the wrong shape for a long night. The agent reads the agenda once, so what it fixes in its first
