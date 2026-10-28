@@ -175,6 +175,10 @@ The tools behind the probability literature bank: proof extraction from arXiv La
 
 The sibling of the probability bank: 4,144 items (1,250 clean, 2,894 with one changed step) from 4,208 accepted proofs in 578 arXiv papers of 2026 in analysis, algebra, number theory, combinatorics, geometry, topology, logic and learning theory, built by eighteen operators over an eleven-class fault taxonomy and sealed with a Merkle root over the keys. A hand read of 201 flawed items before any verdict found 178 real defects (88.6 percent, 95 percent interval 83.4 to 92.3); a validity gate now keeps rejected items out of every sample. The folder holds the harvest, extraction, mutation, build, seal, sampling, notes and grading tools, the pre-registered four-arm protocol, the build report, the seal and the gate with its 15 tests. It holds no solver results, and the items, keys and per-item review notes are not included.
 
+## bank10k-runner-2026-08-22: the three-arm runner
+
+run_bank10k.py, the none / placebo / brain runner used by the bank10k tests and imported by both literature banks: stratified frozen sampling, deranged placebo notes, sterile solver calls with a transcript check, and exact-step grading. Its result is results/earlier-tests/bank10k-replication-2026-08-22. Generator, items and keys are not included.
+
 ## bank10k-replication-2026-08-22: right notes against scrambled notes, 160 paired proof audits
 
 A replication of an 80-item test from 17 Aug on a second, difficulty-screened bank. A Haiku solver audited flawed and
