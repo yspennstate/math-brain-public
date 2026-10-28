@@ -145,6 +145,10 @@ the theorem, each shown so by a counterexample; `corrections.jsonl` holds every 
 wording, its note clipping and the Lean checker (which passed `sorry` and a false axiom) were fixed; the checker's
 controls are in the folder. A five-arm pilot on 12 items is reported as a pilot.
 
+## brain-eval-2026-09-07: PLIT stage 1 rescored on the protocol's primary tiers
+
+The overnight grader called its pooled all-tier contrast primary. The frozen protocol names tier A for Haiku and tier B for Opus. Rescored on those tiers, Haiku answered 44 of 82 pairs correctly with the brain and 46 of 82 without it, and Opus answered 37 of 64 against 38 of 64. Neither result shows a benefit or a harm, and neither reached its planned pair count (120 and 146). An independent SQL count over 1,170 response rows reproduced all four figures. The folder holds the report producer, the inventory checks for 46 accepted calibration forms from 25 proofs in 13 families, and their tests. Item text, keys and snapshots are not included.
+
 ## bank10k-replication-2026-08-22: right notes against scrambled notes, 160 paired proof audits
 
 A replication of an 80-item test from 17 Aug on a second, difficulty-screened bank. A Haiku solver audited flawed and
