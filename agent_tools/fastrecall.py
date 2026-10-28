@@ -25,6 +25,7 @@ import os
 import re
 import sys
 import threading
+import time
 from array import array
 from collections import Counter, defaultdict
 from collections.abc import Mapping
@@ -34,7 +35,10 @@ FORMAT = 1
 PIN_RETRIEVAL = "350904078336b15b89ae71cf3e57678c360fdb85949402dd42ea592e883d0a79"
 #: the query encoder whose ONNX session the Encoder thread builds ahead of time
 PIN_QUERY_EMBED = "855b962e6c462ef151ce9c9417208214bd13750af26ee35bb5c5d6dd3cae57d8"
-KEEP_FILES = 4   # prepared states kept (about 60 MB each with the link file); an evaluation arm with other dials is one more
+KEEP_FILES = 4   # prepared states kept at most; an evaluation arm with other dials is one more
+#: and at most this many bytes of them (main + link file), the newest always kept. A state was about 60 MB when the count
+#: was set; on 28 Oct it was 370 MB, so four held 1.6 GB on a disk with 1.2 GB free (env MATH_RECALL_FAST_KEEP_MB).
+KEEP_MB = 800
 DREAMING = os.path.join(os.path.expanduser("~"), ".claude", "dreaming")
 STATUS = {}      # what the last open_prepared()/search() did (read by the controls and MATH_RECALL_FAST_DEBUG)
 _MEMO = {}       # key -> Prepared, for callers that run main() many times in one process
@@ -245,12 +249,48 @@ def build(store_path, R, derive):
 
 
 # ------------------------------------------------------------------------------------------------------- the cache
+def _first_unmarshallable(obj, path="", depth=0):
+    """Key path and type of the first value marshal refuses, or None."""
+    try:
+        marshal.dumps(obj)
+        return None
+    except ValueError:
+        pass
+    if depth > 6:
+        return path, type(obj).__name__, repr(obj)[:120]
+    if isinstance(obj, dict):
+        for k, v in obj.items():
+            hit = _first_unmarshallable(k, "%s{key %r}" % (path, k), depth + 1) or \
+                _first_unmarshallable(v, "%s[%r]" % (path, k), depth + 1)
+            if hit:
+                return hit
+    elif isinstance(obj, (list, tuple, set, frozenset)):
+        for i, v in enumerate(obj):
+            hit = _first_unmarshallable(v, "%s[%d]" % (path, i), depth + 1)
+            if hit:
+                return hit
+    return path, type(obj).__name__, repr(obj)[:120]
+
+
 def _write(path, obj):
     tmp = "%s.tmp%d" % (path, os.getpid())
     try:
         with open(tmp, "wb") as fh:
             fh.write(marshal.dumps(obj))
         os.replace(tmp, path)
+    except ValueError:
+        # a value marshal cannot write; log where it is, keep no half file
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        try:
+            hit = _first_unmarshallable(obj)
+            with open(os.path.join(os.path.dirname(path), "unmarshal.log"), "a", encoding="utf-8") as fh:
+                fh.write("%s %s %s\n" % (time.strftime("%Y-%m-%d %H:%M:%S"), os.path.basename(path), hit))
+        except Exception:
+            pass
+        raise
     except OSError:
         try:
             os.remove(tmp)
@@ -259,12 +299,24 @@ def _write(path, obj):
 
 
 def _prune(folder):
-    """Keep the newest KEEP_FILES prepared states (a state is a main file and its .heavy file)."""
+    """Keep the newest prepared states, at most KEEP_FILES of them and KEEP_MB in all; the newest is always kept
+    (a state is a main file and its .heavy file)."""
+    try:
+        budget = float(os.environ.get("MATH_RECALL_FAST_KEEP_MB", KEEP_MB)) * 1e6
+    except ValueError:
+        budget = KEEP_MB * 1e6
     try:
         mains = [os.path.join(folder, f) for f in os.listdir(folder)
                  if f.startswith("recall_") and f.endswith(".m") and not f.endswith(".heavy.m")]
         mains.sort(key=lambda p: os.path.getmtime(p), reverse=True)
-        for p in mains[KEEP_FILES:]:
+        keep, used = 0, 0
+        for p in mains:
+            size = sum(os.path.getsize(q) for q in (p, p[:-2] + ".heavy.m") if os.path.exists(q))
+            if keep == 0 or (keep < KEEP_FILES and used + size <= budget):
+                keep, used = keep + 1, used + size
+            else:
+                break
+        for p in mains[keep:]:
             for q in (p, p[:-2] + ".heavy.m"):
                 try:
                     os.remove(q)
@@ -616,11 +668,32 @@ class Prepared:
 
 
 # ---------------------------------------------------------------------------------------------------------- opening
-def open_prepared(store_path, R, derive, caller):
+STALE_S = 2700.0   # a caller may answer from a state this many seconds behind the store (MATH_RECALL_FAST_STALE_S)
+
+
+def _stale_window(stale_s):
+    if stale_s is not None:
+        return float(stale_s)
+    try:
+        v = os.environ.get("MATH_RECALL_FAST_STALE_S", "")
+        return float(v) if v.strip() else STALE_S
+    except ValueError:
+        return STALE_S
+
+
+def open_prepared(store_path, R, derive, caller, stale_s=None):
     """The prepared state for this store, code and environment: loaded, or built and written. None when the fast path
-    is off or must not be used (STATUS["why"] says why)."""
+    is off or must not be used (STATUS["why"] says why).
+
+    A state up to stale_s seconds behind the store (default STALE_S) is served as it is: on 27-28 Oct the store moved
+    every minute or two while one read of it took 3 to 115 minutes on the starved disk, so an exact match never landed
+    and every call read the whole store live (8 of 8 prebuild runs 00:02-00:24 28 Oct ended "the store changed while it
+    was read"; recall calls timed out at 200-240 s). Cards written in the last stale_s seconds can be missing from such
+    an answer (STATUS["stale_s"] says how far behind). A build that saw the store move is kept for the same reason; the
+    live path reads a moving store the same way. stale_s=0 is the old exact behaviour."""
     STATUS.clear()
-    STATUS.update(fast=False, built=False, path=None, why="")
+    STATUS.update(fast=False, built=False, path=None, why="", stale_s=0)
+    window = _stale_window(stale_s)
     if not enabled():
         STATUS["why"] = "MATH_RECALL_FAST=0"
         return None
@@ -642,34 +715,46 @@ def open_prepared(store_path, R, derive, caller):
         heavy_path = os.path.join(folder, "recall_%s.heavy.m" % name)
         STATUS["path"] = path
         state = None
+        state_key = key
         try:
             got = marshal.loads(_read(path))
-            if isinstance(got, dict) and got.get("key") == key and got.get("format") == FORMAT:
-                state = got
+            if isinstance(got, dict) and got.get("format") == FORMAT and isinstance(got.get("key"), str):
+                if got["key"] == key:
+                    state = got
+                elif window > 0 and got["key"].split("|", 1)[0] == name:
+                    age = time.time() - float(got.get("read_at") or os.path.getmtime(path))
+                    if 0 <= age <= window:
+                        state, state_key = got, got["key"]
+                        STATUS["stale_s"] = int(age)
         except Exception:
-            state = None
+            state, state_key = None, key
         if state is None:
+            t_read = time.time()
             built, heavy = build(store_path, R, derive)
             if built is None:
                 STATUS["why"] = heavy
                 _debug("live: " + heavy)
                 return None
             if _store_key(store_path) != key.split("|", 1)[1]:
-                STATUS["why"] = "the store changed while it was read"
-                _debug("live: " + STATUS["why"])
-                return None
+                if window <= 0:
+                    STATUS["why"] = "the store changed while it was read"
+                    _debug("live: " + STATUS["why"])
+                    return None
+                STATUS["moved"] = True
             built["key"] = heavy["key"] = key
+            built["read_at"] = t_read
             os.makedirs(folder, exist_ok=True)
             _write(heavy_path, heavy)
             _write(path, built)
             _prune(folder)
             state = built
             STATUS["built"] = True
-        prepared = Prepared(state, key, heavy_path, store_path, R)
+        prepared = Prepared(state, state_key, heavy_path, store_path, R)
         _MEMO.clear()
         _MEMO[key] = prepared
         STATUS["fast"] = True
-        _debug("fast: %s %s" % ("built" if STATUS["built"] else "loaded", path))
+        _debug("fast: %s %s%s" % ("built" if STATUS["built"] else "loaded", path,
+                                  " (%d s behind the store)" % STATUS["stale_s"] if STATUS["stale_s"] else ""))
         return prepared
     except Exception as exc:  # the live path is always there
         STATUS["why"] = "%s: %s" % (type(exc).__name__, str(exc)[:200])
