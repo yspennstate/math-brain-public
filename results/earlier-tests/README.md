@@ -30,6 +30,10 @@ the machine the tests ran on; every number it published is in `CLAIMS.json`. The
 the raw session streams are not included either (see the folder's own README); `TREATMENT_COMMITMENTS.jsonl` holds a
 hash of each counted session stream.
 
+## open-problem-candidate-checks-2026-09-06: nine open-problem candidates with analyses and exact checks
+
+Candidate answers to nine questions from surveys, monographs and recent papers (Hasebe and Ueda; van Handel; Hasebe, Ueda and Wang; Aldous and Fill, twice; the critical variational SPDE survey, twice; Salez; Pollett), each with a note that rederives its load-bearing steps by a second route and names the narrower versions it does not reach. Five scripts check the finite identities exactly and reject deliberately wrong variants; four need only the standard library and one needs sympy. No novelty is claimed: two of the notes point to published work that already contains the main construction.
+
 ## three-arm-house-2026-09-29: 281 recall questions, three arms
 
 A Sonnet solver answered 281 questions about results held in the store, drawn from seven banks (proof-audit cards,
