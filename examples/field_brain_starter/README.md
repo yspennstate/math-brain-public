@@ -21,6 +21,8 @@ production, a lab or a support desk.
 | `check_store.py` | check that every record is indexed and every `[[link]]` and `superseded_by:` names a record that exists; run it after editing records by hand |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
+| `new_field.py` | make an empty brain for another field from this folder in one step: every script, no studio records |
+| `new_field_test.py` | checks that the new brain is empty, its scripts are unchanged, a first record can be filed and found, and this folder is left alone |
 | `dream/make_agenda.py` | builds the agenda a dreaming agent works from: mistakes without a rule, fresh records, superseded pairs, unchecked claims, open questions, unlinked records (see `dream/README.md`) |
 | `dream/run_dream.py` | runs one dream with any agent command-line tool, keeps a backup, puts back deleted records, logs each section's count before and after; scheduling lines for Linux, macOS and Windows in `dream/README.md` |
 | `dream/dream_test.py` | runs the dream end to end with a stand-in agent on a temporary copy, and checks the prompt, the lock, the put-back, the log, the timeout and a short night |
@@ -193,9 +195,18 @@ version, with heartbeats, mailboxes and handoffs, for a team of agents working a
 
 ### Making it your own field
 
-Copy the folder, then delete the twenty records in `memory/`, empty `MEMORY.md` and `MISTAKES.md` down to their
-headings, and replace `questions.json` with ten questions your team really asks. Keep every script: none of them
-knows about films. Write the first records with `new_record.py`, from what the team already paid to learn. For a
+None of the scripts knows about films, so a brain for another field is this folder without the studio's records.
+One command makes it:
+
+```
+python3 new_field.py ../support_brain --field "the support desk of a small software company"
+```
+
+The new folder has every script and hook, an empty index and mistakes file, an empty `questions.json`, and a short
+README with the first day's steps. It leaves out the studio's records and questions, its dream agenda, and the two
+tests that check the hooks and the dream against the studio's records (run those here after changing a hook or the
+dream). Put ten questions your team really asks into `questions.json`, and write the first records with
+`new_record.py`, from what the team already paid to learn. For a
 company, the first ten are usually a few decisions with who made them and why, the policies agents keep getting
 wrong, the incidents that cost the most and the check that would have caught each one, and where the documents that
 matter live. Run `check_store.py`, then `three_arm.py`, before writing more: if the brain arm does not beat the none
