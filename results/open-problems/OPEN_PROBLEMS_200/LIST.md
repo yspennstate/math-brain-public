@@ -1,9 +1,7 @@
 # The 200 open problems (probability), 10 October 2026
 
-From 10 October 2026 to the end of the primary directive (16 October 2026, 19:08) this is the only list of open problems
-that agents work on. His words, 10 Oct 18:42: "make a list of important but solvable open problems in probability theory,
-based on the brain ... 200 open problems that are publishable but doable. and from now on for the rest of the prime
-directive this list should be the only list the agents are trying to solve".
+Two hundred open problems in probability theory, chosen to be important and within reach: each is
+publishable if solved and small enough to attempt.
 
 How the list was made. The pool was every probability problem in the ledgers (intakes C, D, E, F, G, H, I, P and the
 Claude intake) still open on 10 October, after the problems we have answered, partly answered or found settled in the
