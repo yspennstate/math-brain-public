@@ -163,6 +163,10 @@ source-review assertion is bound to the exact bytes compiled; missing, changed o
 Translation fidelity, whether the Lean statement says what the informal one says, is left open. The folder holds the
 old and new checkers, the receipt and admission code, and their tests.
 
+## proof-corpus-construction-2026-09-06: matched clean and one-step-flawed forms from literature proofs
+
+Each reviewed source proof yields a clean form and a form with one changed step, kept in the same split, with source binaries, licence evidence, proof locations and assumptions bound by hash. The folder holds the pair builder, a source-context extractor that pins its proof extractor by SHA-256 and checks every source file against the archived download, and 20 tests on synthetic fixtures. The first accepted packet, from Tropp's 2011 matrix-martingale paper, gave ten calibration forms from five proofs; none has been evaluated. Items, keys, sources and reviews are not included.
+
 ## bank10k-replication-2026-08-22: right notes against scrambled notes, 160 paired proof audits
 
 A replication of an 80-item test from 17 Aug on a second, difficulty-screened bank. A Haiku solver audited flawed and
