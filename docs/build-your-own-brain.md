@@ -70,6 +70,8 @@ Test the brain against two controls on the same questions: agents with the brain
 
 The shortest path is [examples/field_brain_starter/](../examples/field_brain_starter/), which runs on Linux, macOS and Windows with nothing but Python: twenty example records, the recall tool, the hooks, a nightly dream and a ten-question test. [brain-in-an-afternoon.md](brain-in-an-afternoon.md) walks a team from an empty copy of it to a measured brain in a day, and [codex-hooks-quickstart.md](codex-hooks-quickstart.md) wires its hooks into Codex and Claude Code. Move to the full framework below once the starter has shown that the records help.
 
+Once a first store exists, [brain-building/everything-to-brain-10-day-loop.md](brain-building/everything-to-brain-10-day-loop.md) is a prompt to hand an agent that can run on a schedule. It fires every ten minutes for ten days; each round brings new material in, links it, tests recall against the controls and leaves a checkpoint, so the store keeps growing without someone starting each step by hand.
+
 ```
 git clone <this repository>
 cd framework
