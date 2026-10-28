@@ -3,6 +3,10 @@
 `TESTS.md` describes the tests the paper relies on. This folder keeps the rows of earlier tests that are not in it, so
 that each number can still be recomputed. Each subfolder is self-contained and has its own README.
 
+## general-and-hard300-2026-10-04: 854 general problems and the hard 300, five and six arms
+
+On 854 general problems no arm differs (86.2 to 86.9 percent right). On the hard 300, which ask about the store's own mathematics, the documents and recall arm leads at 96.0 percent, against 88.0 with documents alone and 62.3 with nothing; the served note alone reaches 73.7. Aggregate tables only.
+
 ## ab30-2026-09-23: thirty math tests, brain on against brain off, with every agent's tokens counted
 
 Thirty questions (twenty proof audits and ten questions about results held in the store), each answered by one Claude
