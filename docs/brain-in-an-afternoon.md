@@ -7,15 +7,23 @@ else. [build-your-own-brain.md](build-your-own-brain.md) covers the full design;
 The example is an invented software company with a billing and support team. Every command below was run on an
 empty copy of the starter, and the output shown is what it printed.
 
-## 1. Copy the starter and empty it (twenty minutes)
+## 1. Copy the starter and empty it (ten minutes)
 
 ```
-cp -r examples/field_brain_starter acme_brain
+python examples/field_brain_starter/new_field.py acme_brain --field "a software company's billing and support team"
 cd acme_brain
-rm memory/*.md
-printf '# Memory index\n' > memory/MEMORY.md
-printf '# Mistakes\n' > memory/MISTAKES.md
 ```
+
+```
+made /path/to/acme_brain: 19 files copied, an empty store, an empty questions.json
+check_store.py: clean
+next: write ten records with new_record.py and ten questions in questions.json (README.md has the steps)
+```
+
+`new_field.py` copies every script, hook and dream file unchanged and leaves out what belongs to the example studio:
+its twenty records, its questions, its dream agenda and the two tests that check the hooks and the dream against
+those records. A plain `cp -r` would carry all of these into the new brain, and the studio's questions would then
+score your store. The new folder must not exist yet or must be empty.
 
 Then decide what one record is. For a company the useful units are a decision, an incident and what it taught, a
 policy with its reason, and a pointer to where something lives. A record holds one fact. If a sentence needs
