@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """summary_hook.py - the Stop hook the owner asked for on 2026-09-07 13:0x.
 
-His words: "i don't need to see the output from the waste hook, i prefer a new hook, call it summary hook, where
-the agents summarize what they were told to do and what they have done so far."
+The design: the waste hook's process census stays with the agent; at a stop the agent instead summarizes
+what it was told to do and what it has done so far.
 
 On Stop it asks the model for one short summary: what it was told to do in this session (the standing orders, in
 the owner's words where possible) and what it has done so far, with what is still open. It fires ONCE per stop:

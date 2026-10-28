@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Compaction hooks: agents compact at task boundaries, sooner, and lose nothing when they do (owner, 9 Oct 2026
-17:0x-17:2x: "if they feel like they have finished a subject they should autocompact", "i want thing to compact faster",
-"we should be compacting based on tasks", "100 new hooks for compacting").
+"""Compaction hooks: agents compact at task boundaries, sooner, and lose nothing when they do (9 Oct 2026: an agent that has finished
+a subject compacts then, compaction follows tasks rather than a full context, and it happens sooner).
 
 Fifty brain hooks in compact_hooks.jsonl (the math brain's fifty are HOOK_IDEAS_v6.jsonl under primary_directive/
 math_hooks). Each is fired by a measured signal; at most one per event (two right after a compaction); a per-session

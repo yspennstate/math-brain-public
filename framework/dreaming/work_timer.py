@@ -233,8 +233,8 @@ def main():
                 return
             m = None
             for cand in DUR_RE.finditer(prompt):
-                # 2026-10-04 15:33: "all new moives go to account 1, generally they should be 2 hours lon unless i say
-                # otherwise" started a 2 h clock - a FILM's length, with "go" 30 characters off. A duration that names
+                # 2026-10-04: a prompt saying new films "should be 2 hours long unless
+                # i say otherwise" started a 2 h clock - a FILM's length, with "go" 30 characters off. A duration that names
                 # how long a film, version or recording is (followed by long/movie/version..., his typos included)
                 # is not an order to work that long.
                 if LENGTH_AFTER.match(prompt[cand.end(): cand.end() + 24]):
@@ -275,8 +275,8 @@ def main():
                 return  # time's up - release
             # A session with an armed loop (a cron job or a wakeup that re-prompts it) is woken by the loop itself.
             # Blocking its Stop keeps it in one endless turn, and a loop only fires while the session is idle, so the
-            # loop never fires (owner 5 Oct 2026 12:02: "i don't see the loop i asked for actually firing as a prompt
-            # every 5 minutes"). The agent writes loop_armed/<session id>.json with an "until" epoch; while that is in
+            # loop never fires (5 Oct 2026: a requested loop was not visibly
+            # firing as a prompt every 5 minutes). The agent writes loop_armed/<session id>.json with an "until" epoch; while that is in
             # the future, the Stop is released and the clock keeps running for the next prompt.
             try:
                 _lm = json.load(io.open(os.path.join(HERE, "loop_armed", sid + ".json"), encoding="utf-8"))

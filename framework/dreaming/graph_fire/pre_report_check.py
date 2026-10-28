@@ -236,7 +236,7 @@ def main():
                       "the number is coming from memory or prior context, not from anything just measured. "
                       "Name the source it was read from (file, ledger, command output) or mark it plainly "
                       "UNVERIFIED before it reaches him. Config intent, sim output, and remembered P&L are "
-                      "not present-tense truth. (His words: 'you need to check the live feed before you report.')")
+                      "not present-tense truth. (Check the live feed before you report.)")
         # 2026-07-29 composition-time branch: a number in a domain the owner has already ruled
         # on, published without naming which convention produced it. Deliberately NOT gated on
         # `observed` - the 07-28 escapes were densely observed and correctly sourced, and still

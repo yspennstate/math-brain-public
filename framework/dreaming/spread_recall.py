@@ -163,8 +163,8 @@ MW_SEV_BIG = 0.8
 MW_MARGIN_BIG = 1.075   # big-scar standout margin; excess halved with MARGIN on 2026-07-25
 MW_HABIT_FLOOR = 0.9
 MW_SCORE_TILT = 0.10   # score x(1 + tilt*sev): a big scar wins ties, never floods
-# CONNECTION STRENGTH x2 (owner, 2026-07-25 evening: "strengthen connections by 2x so that
-# things trigger faster"). Two candidate mechanisms, both MEASURED on the 177-prompt replay:
+# CONNECTION STRENGTH x2 (25 Jul 2026: connections strengthened 2x so that
+# things trigger faster). Two candidate mechanisms, both MEASURED on the 177-prompt replay:
 #   (1) walk-conductance x2 (flow *= 2 per hop): REJECTED - it densifies the candidate pool
 #       (more runners-up clear CAND_FLOOR), the standout margin tightens, and baseline fires
 #       DROPPED 74 -> 65. Stronger connections, slower triggering - the opposite of the ask.

@@ -98,15 +98,15 @@ def fit_bytes(engine, text, maximum):
     raise ValueError("owner context header exceeds the available budget")
 
 
-# THE TOKEN BUDGET (owner, 8 Oct 2026 00:0x: "make sure ... we are not wasting a ton of tokens on the whole prompt
-# stuff"). Every tool step drained the next 9.5 KB part of the hourly block into the context - 71 parts an hour - and
+# THE TOKEN BUDGET (8 Oct 2026: the prompt history must not waste
+# tokens). Every tool step drained the next 9.5 KB part of the hourly block into the context - 71 parts an hour - and
 # every later turn re-read them: on 7 Oct 63 pct of a coordinator's recent context was this hook. The knob file caps it
 # until the important mode lands: tool_drain false = parts arrive with his prompts only; max_parts N = a block reaches
 # the session as its first N parts (what he keeps saying, then the session's own threads) and the rest stays on disk.
 # Absent or unreadable file = the delivery as before.
 BUDGET_FILE = os.environ.get("OWNER_PROMPTS_BUDGET_FILE") or os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "owner_prompts_budget.json")
-BUDGET_NOTE = ("[owner-prompts] %d more parts of this block were not sent, to save tokens (his order of 8 Oct 00:0x). "
+BUDGET_NOTE = ("[owner-prompts] %d more parts of this block were not sent, to save tokens (token budget, 8 Oct). "
                "His full text stays on disk: python ~/.claude/dreaming/owner_prompts_hook.py --show "
                "\"<thread>\" --hours 48 (or --show 100 for his last hundred asks).\n")
 

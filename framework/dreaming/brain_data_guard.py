@@ -1,7 +1,7 @@
-"""brain_data_guard.py - brain data is never deleted (his law of 26 Sep 2026).
+"""brain_data_guard.py - brain data is never deleted (a standing rule since 26 Sep 2026).
 
-His words, 26 Sep 2026 16:1x: "the data relevant to this kind of brain activity and improving the brain should NEVER EVER
-EVER be deleted, because the most important research product on this whole computer is the brain." A PreToolUse gate
+The rule: data about the brain's own activity and its improvement is never
+deleted, because the brain is the most important research product on the machine. A PreToolUse gate
 on Bash and PowerShell: a command whose command word deletes (rm, rmdir, del, erase, rd, unlink, shred, Remove-Item,
 Clear-Content, find -delete or -exec rm, git rm, git clean, or python calling os.remove, os.unlink, shutil.rmtree,
 Path.unlink) and that names brain data is refused, with the reason. Protected:

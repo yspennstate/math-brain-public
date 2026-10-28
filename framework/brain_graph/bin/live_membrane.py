@@ -805,8 +805,7 @@ def stale_orders(items, db, window=600.0):
 
 
 def diffuse_pol(pol):
-    """The diffuse-line trial's own split (owner, 6 Oct 2026 13:3x: "no diffuse line should be served until a trial
-    shows it changes an outcome"): memory and place lines are held in one session-block in hold_every_diffuse (2 =
+    """The diffuse-line trial's own split (rule: no diffuse line is served until a trial shows it changes an outcome): memory and place lines are held in one session-block in hold_every_diffuse (2 =
     half), not one in hold_every as the error and fix lines are."""
     return dict(pol, hold_every=max(2, int(pol.get("hold_every_diffuse", 2))))
 
@@ -959,7 +958,7 @@ def decide(ev, now, state, pol):
         for c in ([pick] if pick else []):
             sl = c["slug"]
             if pol.get("hold_mem", True) and held_back(state, "mem:" + sl, now, diffuse_pol(pol)):
-                # the diffuse-line trial (owner, 6 Oct 2026): a memory line is shown or held by the same hash as the error
+                # the diffuse-line trial: a memory line is shown or held by the same hash as the error
                 # lines, so whether showing it changes what the session reads can be measured; held: logged, judged, not shown
                 served.append(("held", "mem:" + sl, [x.split(" (")[0] for x in (c.get("why") or [])[:4]]))
                 held_n[0] += 1

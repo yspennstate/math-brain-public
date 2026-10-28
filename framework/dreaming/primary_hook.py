@@ -1,22 +1,15 @@
 # -*- coding: utf-8 -*-
-"""THE PRIMARY HOOK (his PRIMARY DIRECTIVE, dictated 6 Oct 2026, 18:0x-18:4x his clock, transcript segment 8).
+"""THE PRIMARY HOOK (the primary directive, 6 Oct 2026).
 
-His words: "there should be a primary math brain hook, and the first and most important part of the hook is the
-following thing. When ensembles work together, sometimes they just get lost in thought and wander off. They should
-constantly keep getting prompted that they have to work faster, be more efficient, think faster, and communicate more.
-That's the primary hook that they should get over and over and over every three minutes when they're connected to the
-brain for anything while we're building the brain ... work faster, be more efficient, finish the job faster, the
-timeline is soon, finish the job, finish the job, work faster, communicate faster, build faster, finish the job, give a
-deliverable, we're waiting, a bunch of agents are waiting on you, stop bottlenecks, speed things up, there are too many
-bottlenecks, speed things up, finish the job. This is the primary hook that should constantly be firing, both for any
-agent connected to math brain, and any agent in the brain itself ... Find the nearest bottleneck, clear it, speed things
-up, speed up your progress, focus on what you're supposed to do and finish your deliverable. There are agents waiting
-for you to finish your work."
+The directive: agents working together tend to drift into thought and wander off, so every agent connected to the
+brain or the math brain is reminded every three minutes to work faster and more efficiently, to communicate, to find
+the nearest bottleneck and clear it, to stay on its own task and to finish its deliverable, because other agents are
+waiting on it.
 
 What it does: on every prompt of every Claude and Codex session on this machine (they are all connected to the brain),
-prints his line once per session per three minutes. Nothing else: it never blocks, never edits, swallows its own
+prints the line once per session per three minutes. Nothing else: it never blocks, never edits, swallows its own
 exceptions, and its output is ASCII so no capture layer can choke on it. One switch turns it off for everyone:
-C:/Users/me/.claude/dreaming/PRIMARY_HOOK_OFF (his word only). State: primary_hook_state.json beside this file.
+C:/Users/me/.claude/dreaming/PRIMARY_HOOK_OFF (the partner's call only). State: primary_hook_state.json beside this file.
 
     python primary_hook.py                     Claude (the dispatcher runs it in-process; plain text is appended)
     python primary_hook.py --runtime codex     Codex (JSON hookSpecificOutput; Codex discards plain stdout)
@@ -34,9 +27,9 @@ OFF = os.path.join(HERE, "PRIMARY_HOOK_OFF")
 EVERY_S = 180
 LINE = ("[primary-hook] Work faster, be more efficient, finish the job faster. The timeline is soon. Communicate faster, "
         "build faster, give a deliverable: agents are waiting on you. Find the nearest bottleneck and clear it; speed "
-        "things up. Focus on what you are supposed to do and finish your deliverable. (His PRIMARY DIRECTIVE of 6 Oct "
-        "2026, for every agent on the brain or the math brain; repeats every three minutes.) SAVE AS YOU GO (his order, "
-        "7 Oct 02:44-03:0x): write every result to disk the moment you have it and keep a NEXT line current, so a "
+        "things up. Focus on what you are supposed to do and finish your deliverable. (The primary directive of 6 Oct "
+        "2026, for every agent on the brain or the math brain; repeats every three minutes.) SAVE AS YOU GO: "
+        "write every result to disk the moment you have it and keep a NEXT line current, so a "
         "crash never costs more than ten minutes of work; a headless session you launch gets its id at launch "
         "(claude --session-id / the codex thread id) and is resumed in that session after a crash, never restarted cold.")
 

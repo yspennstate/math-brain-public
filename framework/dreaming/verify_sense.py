@@ -2,8 +2,8 @@
 """verify_sense.py - UserPromptSubmit: when the work will produce a proof, a code change or a number, hand the agent
 the checks that could fail on it before it starts (owner, 30 Sep 2026 01:10).
 
-His words: "hooks telling them to check proofs, ideas, code and so on with lean algorithms as well, to audit their
-work, and to think about how to verify their work in a couple of ways". The card is short and concrete - the route for
+The design goal: hooks prompt agents to check proofs, ideas and code with Lean, to audit their
+work, and to plan how to verify it in more than one way. The card is short and concrete - the route for
 this kind of work, the command that runs it, and the rung the claim is allowed to reach - because a reminder to be
 careful measured as noise (the 30 Sep design review: "a reminder is not a verifier"). verify_gate.py is the other end:
 at the Stop it blocks once when the report claims more than the turn checked.

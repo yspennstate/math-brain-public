@@ -1,7 +1,7 @@
 """codex_profile_hooks.py - every Codex agent runs with the full hook set; only a picture call goes without.
 
-His words, 15 Oct 2026 00:0x, on finding the Codex film workers running hookless on the account profiles: "well they
-need the hooks if they are to make moives, come on this is a common sense thing make a hook abot this".
+The rule (15 Oct 2026, when the Codex film workers were found running hookless on the account profiles): an
+agent that does real work needs the hooks; only a bare picture call may run without them.
 
 What was wrong: the account profiles (~/.codex-img-acc2..acc5) were made bare on 24 Sep for picture drawing (86k
 tokens a picture against 272k-531k through ~/.codex), and since then the film series workers, the remakes, the solvers
@@ -249,8 +249,8 @@ def pretool(data):
         return
     _log("refused: %s" % reason)
     sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
-        "permissionDecisionReason": "CODEX AGENTS RUN WITH EVERY HOOK (his order, 15 Oct 00:0x: 'they need the hooks if "
-        "they are to make moives, come on this is a common sense thing'). This %s. Only a picture call (codex_img / "
+        "permissionDecisionReason": "CODEX AGENTS RUN WITH EVERY HOOK (a standing rule: an agent doing real work needs "
+        "the hooks). This %s. Only a picture call (codex_img / "
         "codex_lean) may run with --disable hooks. Launch the agent on its account profile as it is; every profile "
         "carries ~/.codex's hook set and trust (codex_profile_hooks.py --check)." % reason}}))
 

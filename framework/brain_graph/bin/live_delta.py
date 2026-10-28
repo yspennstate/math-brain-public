@@ -1,7 +1,6 @@
 """live_delta.py - the brain graph's fast layer: what the hours since the last store build taught it (27 Sep, claude-825b1305).
 
-His words, 27 Sep 17:1x: "the data should be live, i don't understand why we are stuck in the past, and the graph should
-also be temporal". The store (graph_store.py) is rebuilt every six hours from a capture that ran hourly, so the membrane
+Design goal: the graph is live (no stale snapshot between rebuilds) and temporal (every edge carries when it was seen). The store (graph_store.py) is rebuilt every six hours from a capture that ran hourly, so the membrane
 read edges up to seven hours old and knew nothing of a file, folder or memory first touched since the last build (at
 17:2x, 43,518 events in the log were newer than the store). This layer holds exactly what the store does not yet have:
 the touch events appended to events_touch.jsonl after the store was built, turned into context -> target edges by the

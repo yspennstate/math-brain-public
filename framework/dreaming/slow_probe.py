@@ -1143,8 +1143,8 @@ def main():
     # fine: measured in the same minute by hand, a cold open cost 0.26 ms. A latency taken behind a full run queue
     # measures the queue, not the thing being timed. The tell is a PowerShell start that is slow in WALL time while
     # its own CPU time stays small: waiting, not working.
-    # A CPU RESERVATION IS NOW A STANDING ALARM, by his order of 2026-09-15 20:2x ("fix this permanently so that this
-    # problem does not keep happening"). One was applied on 2026-09-05, became effective at the 09-13 restart, and cost
+    # A CPU RESERVATION IS NOW A STANDING ALARM, since 2026-09-15, so that the problem
+    # cannot quietly come back. One was applied on 2026-09-05, became effective at the 09-13 restart, and cost
     # him half his machine for two days before anyone measured it - because nothing watched. Now something does: any
     # logical processor held out of the default scheduler is reported every ten minutes, whoever put it there.
     try:

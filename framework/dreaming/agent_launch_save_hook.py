@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-"""Save the work of every agent you start (owner, 9 Oct 2026 00:1x; claude-4a88bc43 built it the same hour).
+"""Save the work of every agent you start (9 Oct 2026).
 
-His words: "make a hook for anyone starting an agetn that they must make sure that that agents work is saved otherwise
-there is no point", minutes after "make sure that even if agents get stopped that there informaoitn is saved so that you
-can use it please". That night four Codex stages were cut off for running long and one of them took a 20-minute merge with
+The rule: whoever starts an agent makes sure the agent's work is saved, including when the agent is stopped early;
+work that is not saved was not worth starting. That night four Codex stages were cut off for running long and one of them took a 20-minute merge with
 it; two disk fills lost audit rows mid-write; a test runner died on a flush and its half-run arms had to be run again.
 
 PreToolUse, Claude sessions (hook_dispatch_list.json): fires on the Agent, Task and Workflow tools every time, and on a

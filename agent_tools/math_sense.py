@@ -355,10 +355,10 @@ STRONG_ANCHORS_4 = re.compile(
     r"\b(ginibre|gumbel|ces[aà]ro|volterra|pollaczek|khinchine?|rayleigh|total[- ]variation|commute[- ]times?|"
     r"spectral-gap|supermodular\w*|orthomorphisms?|interlacements?|subset sums?|radius of convergence)\b", re.IGNORECASE)
 
-# SINGULAR VALUES (MATHBRAIN_ANCHORS_5, default on; campaign mb10d, 25 Sep, arm cand47). "the case where the fifth singular
-# value is bigger then 1" - his words for our quadratic-form result - was refused here: no list carried the term. Measured over
-# his 17,688 distinct archived prompts (campaign tools/measure_gate_linalg.py): it admits 2 of the 12,393 the gate refused, both
-# his random-matrix research orders; no must-stay-silent probe breaks and no absent-target question is admitted. His spellings
+# SINGULAR VALUES (MATHBRAIN_ANCHORS_5, default on; campaign mb10d, 25 Sep, arm cand47). A question about "the case where the fifth singular
+# value is bigger than 1" (a quadratic-form result) was refused here: no list carried the term. Measured over
+# an archive of real research prompts (campaign tools/measure_gate_linalg.py): it admits 2 of the prompts the gate refused, both
+# random-matrix research questions; no must-stay-silent probe breaks and no absent-target question is admitted. Misspellings
 # of it are corrected before the gate reads the text (the spelling map, arm cand49), not matched here: a gate that admits a misspelt
 # prompt hands retrieval words it cannot match. RMT (+105 pruning-project work orders) and spectral/operator norm (admits an
 # absent-target control) were rejected on the same run. MATHBRAIN_ANCHORS_5=0 restores the gate without it.

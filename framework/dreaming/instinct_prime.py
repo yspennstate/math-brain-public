@@ -167,7 +167,7 @@ DEDUP_SECS = 600   # a reflex fires once when you ENTER its territory, not on ev
 # three genuinely separated encounters, not three ticks of the same ten-minute clock.
 DEDUP_BACKOFF = 4.0     # window multiplier per prior fire, this session
 DEDUP_MAX = 8 * 3600    # ceiling, so a long session still re-primes occasionally
-# 2026-09-02 (owner: "make the brain fire less, and be more confident when it fires"): measured over the
+# 2026-09-02 (design goal: fire less, and be more confident when it fires): measured over the
 # previous 24h of interactive sessions, 7,036 fires over 1,456 (session, reflex) pairs - 4.8 per pair, 79%
 # of all fires a repeat of a reflex that session had already seen. Two causes. (1) The backoff state was ONE
 # shared JSON truncated and re-read by 21 concurrent sessions: a reader hitting a half-written file got {},
@@ -1093,8 +1093,8 @@ REFILL_AB = ("mesh_claim_never_chained_with_mutate", "a_refused_mesh_claim_did_n
              "bare_open_reads_cp1252", "edit_tool_for_verbatim_surgery")
 
 
-# The primary A/B (owner, 6 Oct 2026 13:3x his clock: "a show-or-hold trial for the reflex lines ... only a randomized
-# trial can say"): does a shown reflex change what happens next? Every reflex outside the refill trial above and outside
+# The primary A/B (6 Oct 2026: a show-or-hold trial for the reflex lines, because only a
+# randomized trial can say whether a line helps): does a shown reflex change what happens next? Every reflex outside the refill trial above and outside
 # the never-hold words is, for each (session, reflex), shown or held by sha256("primary:session:reflex"), one in
 # PRIMARY_HOLD_EVERY held, fixed for the session. A held reflex has passed _dedup (it entered the backoff as a shown one
 # does), keeps its slot through the refill (no other reflex takes its place), is not rendered, and is written with the

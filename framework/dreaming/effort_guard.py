@@ -1,8 +1,7 @@
-"""effort_guard.py - every Claude agent runs at effort HIGH, not max (his order of 14 Oct 2026).
+"""effort_guard.py - every Claude agent runs at effort HIGH, not max (a standing rule since 14 Oct 2026).
 
-His words, 14 Oct 2026 22:19 and 22:26: "make all of these terminals and all of the claude agents running high
-thinking, not max, i want high thinking from now on" and "make sure all agents running on claude in terminals or
-subagent from now on are high mode, put this in hooks, in the brain, and codify it".
+The rule: every Claude terminal and every Claude subagent runs at high thinking effort, not max, and the rule is
+held by a hook and by the brain rather than by memory.
 
 The lock itself is "maxEffortLevel": "high" in ~/.claude/settings.json: Claude Code clamps every ask above it (an
 --effort flag, CLAUDE_CODE_EFFORT_LEVEL, an /effort or /model pick, a model default) for every process that loads
@@ -108,7 +107,7 @@ def main():
         data = json.loads(sys.stdin.read() or "{}")
     except Exception:
         return
-    # 14 Oct 23:4x his order: "don't use any cluade agent, only codex" (about a day). While ~/claude_pool/NO_CLAUDE_AGENTS
+    # A temporary hold (14 Oct, about a day): no Claude agents, Codex only. While ~/claude_pool/NO_CLAUDE_AGENTS
     # holds, an Agent-tool subagent is refused in every session; headless launches are refused by claude_pool itself.
     if data.get("tool_name") in ("Agent", "Task"):
         try:
@@ -119,8 +118,7 @@ def main():
             why = None
         if why:
             sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse", "permissionDecision": "deny",
-                "permissionDecisionReason": "NO CLAUDE AGENTS (his order, 14 Oct 23:4x: 'don't use any cluade agent, only "
-                "codex'). Start a Codex worker instead. " + why}}))
+                "permissionDecisionReason": "NO CLAUDE AGENTS (a standing hold: Codex workers only while it is set). Start a Codex worker instead. " + why}}))
         return
     text, launches, path = tool_text(data)
     if not text:
@@ -128,8 +126,8 @@ def main():
     hit = problems(text, launches)
     if not hit:
         return
-    reason = ("EVERY CLAUDE AGENT RUNS AT HIGH EFFORT, NOT MAX (his order, 14 Oct 2026 22:26: 'make sure all agents "
-              "running on claude in terminals or subagent from now on are high mode'). This %s %s. Use --effort high "
+    reason = ("EVERY CLAUDE AGENT RUNS AT HIGH EFFORT, NOT MAX (a standing rule: terminals and subagents alike). "
+              "This %s %s. Use --effort high "
               "(or no flag: settings.json caps every session at high through maxEffortLevel). Codex is not covered."
               % ("write" if path else "command", "; ".join(hit)))
     try:

@@ -7,7 +7,7 @@ the LIVE PROCESSES DESCENDED FROM THIS SESSION (the claude.exe this hook runs un
 spawned), the box totals (processes, console hosts, node workers, the governor's mode), and injects the judgment
 the owner asked for: for each descendant, is it producing for anyone? idle, finished-but-alive, duplicated, a poll
 loop nobody reads, a shell left open = waste - but since 2026-09-18 the owner has banned shedding load to free resources
-("no more sheading loads ... we just power through it"), so REPORT it and leave it running; only your own finished shell
+(shedding makes everyone start over), so REPORT it and leave it running; only your own finished shell
 fragments that own no work may be reaped. At Stop
 (end of turn) it says: before you leave, stop what you leave behind, or name why it must stay.
 
@@ -526,9 +526,8 @@ def render(event, desc, totals, orphans=()):
                      "your own shell)." % (len(orphans), mins,
                      ", ".join("%s(%d)" % (n, p) for p, n, a, c in orphans[:8])))
     lines.append("  For each process above ask: producing, for whom? Idle, finished-but-alive, duplicated, a poll loop nobody reads, a shell "
-                 "left open = waste. DO NOT STOP IT TO FREE RESOURCES (owner, 2026-09-18 14:0x): \"no more sheading loads tell the "
-                 "agents and stop that stuff, becuase then we have to start all over agian, form now on we just power through it i "
-                 "don't care i need to be able to actual make stuff on tis compiter\". Killing work means he starts over, which costs "
+                 "left open = waste. DO NOT STOP IT TO FREE RESOURCES (standing rule since 2026-09-18: shedding load "
+                 "makes everyone start over, so running work is reported, not stopped). Killing work means he starts over, which costs "
                  "him more than the RAM is worth. You may still reap YOUR OWN finished shell fragment that provably owns no work (a "
                  "grep or head blocked on a dead pipe); everything else stays up and we power through. Report it, do not shed it. "
                  "Hook invocations are swept every 20 min (BrainWasteSweeper20m).")

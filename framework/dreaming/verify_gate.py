@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """verify_gate.py - Stop hook: a claim needs a check that could have failed on it.
 
-His words, 30 Sep 2026 01:10: "make sure to work lean algorithms into the math brain, so that agents connected to it
-have hooks telling them to check proofs, ideas, code and so on with lean algorithms as well, to audit their work, and
-to think about how to verify their work in a couple of ways". verify_sense.py asks for the checks when the work
+The design goal (30 Sep 2026): Lean checking is part of the math brain, and agents connected to it are
+prompted by hooks to check proofs, ideas and code with Lean, to audit their work, and to plan how to verify it
+in more than one way. verify_sense.py asks for the checks when the work
 starts; this is the other end. It reads the message about to reach him and the turn's own tool calls, and blocks once
 when the message claims something that nothing in the turn could have refuted:
 

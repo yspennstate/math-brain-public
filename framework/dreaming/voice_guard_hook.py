@@ -6,9 +6,9 @@ wrote it - "headline" is an instant tell, no bold-fests, no emoji, state a corre
 never write a note about sounding human. On 2026-09-09, on his personal website, he added a
 second family: self-introspection about the artifact itself ("Every paper on this site will
 get...", "the cards below track...", "click Abstract to read...") - prose that narrates the
-page instead of saying the thing. His words: "remove anything that sounds AI, read the brain
-about this, and make that node fire faster and put it in a hook before you guys are not
-paying attention to that".
+page instead of saying the thing. The rule: anything that reads as machine-written comes out; the brain's
+voice node fires early and is enforced by a hook, so the check does not depend on
+anyone remembering it.
 
 The voice_human reflex already existed but was ranked behind other reflexes and capped out
 of the fire list on the very session that produced the tells. A rule that must always hold
@@ -57,7 +57,7 @@ META_TELLS = [
     r"\bwhen (?:a|the) \w+ is (?:recorded|added|ready),? the card becomes\b",
     r"\bin this (?:section|page),? (?:we|I) (?:will )?(?:describe|discuss|present|explain)\b",
 ]
-# A paper never narrates its own history (owner, 2026-09-15, "for the love of god").
+# A paper never narrates its own history (rule of 2026-09-15).
 # It states mathematics and attributions; a correction to a citation is silent, the corrected
 # citation simply appears. The AI declaration is the ONE place the process may be named, so
 # "prepared the first draft of this manuscript" stays legal - see the selftest's negative control.

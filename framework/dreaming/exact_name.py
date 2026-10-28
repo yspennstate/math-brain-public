@@ -1,6 +1,6 @@
-"""The exact-name trigger for the main brain (owner, 6 Oct 2026 13:3x his clock: "When an agent's prompt or command names
-something the brain holds a specific card for, push that one card. That covers a memory's name, a file with a scar, a
-command that failed before in the same way, or one of your results.")
+"""The exact-name trigger for the main brain (6 Oct 2026): when an agent's prompt or command names
+something the brain holds a specific card for, push that one card - a memory's name, a file with a scar, a
+command that failed before in the same way, or one of the agent's own results.
 
 Version 1 is the file half. A scar card (a feedback card, or one whose description reads as a mistake) indexes a file
 only when the card is ABOUT that file: the file is named in the card's description, or the card names at most

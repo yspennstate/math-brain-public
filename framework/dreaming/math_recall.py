@@ -25,7 +25,7 @@ adds spreading through the links. It still leans on words: when nothing fits, as
 named result, an author, or a linked card's title - or walk from a card you already have with --id. Superseded cards
 are left out of the hits; a link to one says so.
 
-Why each hit is there (11 Oct 2026, his ask: "they can see where the diffusion itself came from and why"): under every
+Why each hit is there (11 Oct 2026, design goal: an agent can see where the diffusion came from and why): under every
 hit a "matched" line names the words that matched, and with --depth 2 each "found by spreading" line names the card
 the activation came from, the links it travelled (kind, then the card it reached) and the last link's own stated
 reason. A spreading line is a lead that an earlier card points here, not proof that this card answers the question; a
@@ -44,8 +44,8 @@ generalizes, specializes, analogous_to, bridges_to, defines), then dependencies 
 reasons ("uses the notion ...") are left out of a search (--id shows every reason). When the best score is low the
 printout says so and names the words of the query that no card contains, so the next call can reword them.
 
-Links that grow stronger with use (12 Oct 2026, his ask: "edges should get stronger as nodes that are similar are used
-at similar times ... agents should be able to see the strength between nodes and use that to find information"). A
+Links that grow stronger with use (12 Oct 2026, design goal: edges grow stronger as similar nodes are used
+at similar times, and agents can read the strength between nodes and use it to find things). A
 link line ends with [strength 0.62: used together 3 times, last 2 h ago] when agents have used the two cards together
 (opened one with --id, math_walk.py or math_note.py within 30 minutes of the other in one session); within a kind the
 strongest links are listed first; a "~ used together" line names a card with no link of its own that agents keep using

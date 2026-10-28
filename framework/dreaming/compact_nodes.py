@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
-"""Every compaction becomes its own brain node, connected to the nodes it relates to (owner, 9 Oct 2026 17:0x-17:2x:
-"save all of the compact information as a node", "every single compact should be saved as its own node and connected
-to other compact stuff", "every single compacting should be turned into a node and connected to relevant nodes"; and
-19:0x: "make sure that the compact methodology we developed is working and turning the compact files into nodes with
-edges").
+"""Every compaction becomes its own brain node, connected to the nodes it relates to (9 Oct 2026: every compaction is saved as
+its own node with edges to the other compactions and to the nodes it relates to, and the method is checked to be
+doing that).
 
 Claude Code runs this on two hook events (settings.json "PreCompact" / "PostCompact"):
 - PreCompact (input: trigger, custom_instructions): prints instructions that Claude Code hands to the summarizer, so
