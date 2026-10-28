@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A076-STRUCTURED-SPECTRA",
+    "version": 12,
+    "exact_statement": "Repair of stage11 raw-mask bank: for a zero-one shared event a, independent Boolean V, F=1+a(V-1), p=Ea, mu=EV,q=1-mu,D=sum |S| ahat(S)^2,J=sum phi(ahat(S)^2), N=H(F)-pH(V), the exact equation (1) of ACTIVATION_PROOF.md holds and 0<=N<=2qJ+5pq, I_shared=2qD, I_private=pI(V). For 0<p<=1/2 and J<=KD, N<=(K+5)I_shared. H(1-2a)<=C I(1-2a) implies N<=(C+13)I_shared. Existence of an absolute all-event coefficient for this admission is equivalent to full FEI. The specified rare-event admission need not be hereditary under shared restrictions. The known bent-splice family has N/I_shared>=k-2 for even k>=4 and so obstructs shared-only payment for two arbitrary nonconstant profiles; no novelty or FEI disproof is claimed.",
+    "hypotheses": [
+      "Uniform finite independent shared/private cubes; all entropies in bits with empty coefficient retained.",
+      "Root event probability p<=1/2 only where explicitly used; no automatic hereditary admission.",
+      "Threshold constant22 conditional on supplied threshold Theorem A equation6, with C<9.",
+      "Actual original unused account must pay any new admission; old source240, frozen R/K and all old debits remain unchanged."
+    ],
+    "statement_sha256": "a91c43964d021f65165d31faf458b31d09c71f95250df85201c3536413abaec6",
+    "contributors": [
+      "A076"
+    ],
+    "proof_source": {
+      "path": "agents\\A076\\runs\\20261027T052241Z-account04-A076-threshold-and-tribes-controls\\ACTIVATION_PROOF.md",
+      "locators": [
+        "sections1-3 repair",
+        "section4 known-obstruction reconstruction"
+      ],
+      "validation": "agents\\A076\\runs\\20261027T052241Z-account04-A076-threshold-and-tribes-controls\\out\\VALIDATION.json"
+    },
+    "proof_dependencies": [
+      "Finite Walsh tensor algebra, Parseval variance bound and Shannon chain rule",
+      "Supplied threshold Theorem A equation6 (only conditional constant22)"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_REPAIR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Any arbitrary-two-profile N<=K*I_shared with absolute K; known bent-splice obstruction reconstructed"
+    ],
+    "first_unproved_line": "An arbitrary-event original influence-priced source J(a)<=K D(a), or a necessary two-profile continuation paid jointly from unused original private/shared capacity.",
+    "next_consumers": [
+      "A077",
+      "A078",
+      "A092",
+      "A094"
+    ]
+  }
+]

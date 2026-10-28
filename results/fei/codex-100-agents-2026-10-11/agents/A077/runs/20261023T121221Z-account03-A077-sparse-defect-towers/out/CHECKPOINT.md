@@ -1,0 +1,1 @@
+Stage9: current A076 already removes depth ladder with original Q96I0. Target genuine positive parallel-subcube edit (unbounded free dimension), same K/Z/quota, physical I0<=2I_shared. Provisional derivation saved next; no searches started. FEI OPEN. Brain wake degraded: attachment lock; personal sources stale.

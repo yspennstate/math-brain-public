@@ -1,0 +1,45 @@
+# A082: repeated calibrated returns to the original source are paid
+
+## exact target, quantifiers, hypotheses and units
+
+For every normalized finite-cost reference R and every actual finite physical restriction, final vacuum calibration satisfies C_q(M C_p(R))=C_q(M R), with constant-function endpoints handled by the explicit vacuum point law. Consequently A096's supplied-likelihood frontier bound extends to arbitrarily nested returns to the ORIGINAL source marginal when each return includes calibration to the actual squared mean. The same c+(1-m^2)log2(1/gamma) ancestor bound pays all erasures and complete terminal references, m=E[g]^2. Units are bits and uniform physical-cube reach/influence. This is a supplied-reference theorem; full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+The current BOARD, own STATUS and B17 STREAM_NOTES v2 are read first. The older K5 census assignment is complete; the saved reset gap and new A096 dependency govern dispatch. A096 run20261023T010221Z DERIVATION sections1--4 and its exact SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER@1 statement are the review target. This stage independently reconstructs its subprobability chain, retained-vacuum bound and adaptive variance argument. The producer checker is not imported. Its larger mixed live-bank corollary is not independently accepted here.
+
+out/SOURCE_RECEIPTS.json pins49 actually read sources, including the complete execution-v2 protocol, required campaign indices/plan, supplement/source notes, all four context text versions and prior critical source versions. The threshold composition identities and percolation context supply no premise for the new identity. Explicit cp1252 decoding is recorded where paper exports reject UTF-8. Current owner instructions override older protocol dates. Brain wake reports stale owner-model/state-of-mind sources: personalization continuity remains degraded/unverified, and those notes are not mathematical premises. No new brain recall or brain write is needed for the algebra.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION sections1--2 show C_p(R)=alpha R+(1-alpha)delta_empty, alpha=(1-p)/(1-R(empty)). Coordinate deletion preserves delta_empty. The second final calibration cancels alpha on every nonempty atom, with both denominators proved positive on nonconstant finite-CE histories. The coefficient1-alpha can be negative; no convex-mixture inference is made. Constant endpoints are separated explicitly.
+
+Sections3--4 independently reconstruct A096's original theorem unchanged, then cut any new tree at its first source resets. Those nodes form an antichain. Below them every repeated ORIGINAL-source return equals CURRENT-reference calibration and has signed cost minus a binary KL. The ordinary query chain pays each continuation without renewing the bank or omitting complementary terminals. This closes the repeated-return gap left explicit in A096 v1, rather than refuting that correctly restricted version.
+
+Section5 isolates the genuinely unpaid bill for a different nonempty profile: reset cost=-D_Ber(q||v)+(1-q)[D(P_nonempty||R_new)-D(P_nonempty||R_old)]. Section6 states the exhaustive symbolic reduction and induction separately from finite validation. The first unsupported universal line remains an influence-priced source/likelihood supplier for arbitrary Boolean functions, or payment for an actual change of nonempty conditional profile. No such price is inferred from vacuum calibration.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Every domain is frozen before execution in out/FROZEN_*_SPEC.json. Commands use python -B -X utf8 on this run's code/intake.py, review_check.py --pilot, nested.py --pilot, nested.py, identity_check.py --pilot, identity_check.py, review_check.py and residual_check.py. The core identity uses exact Fraction atomwise equality. Other equalities use canonical prime-log forms; signs use24-term range-reduced rational atanh bounds rounded outward to2^-100.
+
+Final identity validation:6,634 admissible rational cases,18,432 physical two-query histories on ALL256 labelled three-bit Boolean sources,1,832 alpha>1 cases and58,453 assertions PASS. Omitting final calibration is an executed negative control and fails equality. The supplementary out/PHYSICAL_NEGATIVE_CONTROL.json repeats this control on an actual two-bit point-defect-to-dictator restriction. A separate fixed four-bit family search completes9,720 eligible histories without a counterexample; this search is evidence only and motivates the symbolic cancellation proof.
+
+Independent frontier replay: the two-bit pilot exhausts16 source tables,192 supplied-floor instances and5,376 policies,33,718 assertions PASS. The final bounded three-bit set has40 explicitly listed source tables,480 supplied-floor instances,13,440 policies and104,414 assertions PASS, including40 positive first-reset costs. An attempted ALL256 three-bit frontier validation reached its frozen60-second cap and is NOT reported as complete or included in these counts. Its replacement domain is separately frozen in out/REVISED_REVIEW_SPEC.json. Identity validation still covers all256 three-bit sources. The profile-residual replay passes336 finite-CE endpoint cases and3,055 assertions, with60 positive complete reset costs when nonempty profiles change. The first formal setup was rejected before compiler launch because the --stmt receipt omitted generated imports/newlines. A byte-exact --file correction is prepared, but fresh memok returns1 and blocks submission. out/LEAN.txt records the FIRST rejection; out/FORMAL_RECEIPT.json records the LATEST memory hold. No compiler is launched on the retry and no Lean certificate is claimed. The resource estimates are50--120MB; no >300MB numerical job, GPU, detached work or dimension escalation occurs. A narrow formal attempt is admitted only if fresh memok succeeds; no full theorem is claimed Lean-checked.
+
+## proof dependencies and changed downstream conclusions
+
+CLAIMS.json preserves A096's exact abstract statement/version/hash and adds A082's unchanged independent acceptance. The new A082 claim uses that reconstructed theorem and the explicit cancellation proof. Its full source-bound derivation is local. A096's conditional rate18/7e negative-cell exit application may substitute these larger repeated-return policies without a new conversion surcharge, PROVIDED its existing live-bank premises hold; this is a downstream substitution, not blanket independent acceptance of that mixed-bank chain.
+
+C024/C019 lose the restriction against nested ORIGINAL-source calibrated returns for arbitrary supplied Boolean sources and all finite histories. The universal FEI constant improves by zero. The remaining source supplier and changes to the normalized nonempty profile remain open. Extra label channels, integer-code bills or positive-only conversion fees are outside the signed reference ledger proved here.
+
+## one next mathematical action and independent reviewer
+
+A096/A085/A094 should independently reconstruct the cancellation, constant endpoints and first-reset antichain substitution. The next mathematical transaction is a prescribed reset whose normalized nonempty conditional profile actually differs: after one paid physical query, certify the signed nonempty divergence difference in DERIVATION(9) against the SAME unused source bank and actual binary refund, retaining all old debits and both complete terminals. Repeating a vacuum-only reset test would now duplicate a closed mechanism.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files, DERIVATION, code, frozen specifications, exact outputs, failed-attempt notes and source receipts are saved in the requested A082 run. The finalizer checks exact protocol schemas, identical PROGRESS/PACKET_DELTA, statement hashes, byte sizes and SHA256 persistence receipts. STATUS remains two lines; WORKLOG and LEARNED receive dated entries. Shared research trees, other agents' files, git, remote mirrors and the brain store are not edited. Supervisor copy, canonical adoption, independent review of the new theorem and remote mirrors are unverified. The task checklist is updated separately; any lock failure is preserved without changing shared locks.
+
+## Universal bridge
+
+C024 history transfer and C019 stopping-tree payment advance by removing the repeated-ORIGINAL-source calibration restriction at arbitrary depth, for every Boolean source with the supplied original likelihood floor, at exactly the SAME ancestor bound c+(1-m^2)log2(1/gamma) and zero extra reset surcharge. The finite certificate checks the scalar identity and complete physical histories; the affine identity and finite-tree induction make the stated domain exhaustive. Universal FEI improvement is zero: an influence-priced original source/likelihood supplier and genuine nonempty-profile conversion remain unpaid. NEXT isolates and prices that actual profile-change term from the same unused bank, because vacuum-only repeated returns are now an exact cancellation rather than a remaining route to full FEI.

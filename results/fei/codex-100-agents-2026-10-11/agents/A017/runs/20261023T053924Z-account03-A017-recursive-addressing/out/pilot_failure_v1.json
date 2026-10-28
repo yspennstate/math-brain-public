@@ -1,0 +1,7 @@
+{
+  "status": "IMPLEMENTATION_ERROR_FOUND_BY_PILOT",
+  "failing_check": "nonnegative local spectral entropy increment",
+  "cause": "Unnormalized Walsh entropy uses log(N^2)=2n log(2); v1 mistakenly used n log(2).",
+  "repair": "Set entropy-vector log2 coefficient to 2*n*N^2; preserve v1 frozen specification and rerun pilot before full job.",
+  "mathematical_claim_refuted": false
+}

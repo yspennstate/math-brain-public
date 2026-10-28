@@ -1,0 +1,65 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "counts": {
+    "rho_nonnegative": 110,
+    "rho_at_most_H": 110,
+    "rho_payoff": 110,
+    "credit_feasibility": 180,
+    "corrected_child_debits_nonnegative": 180,
+    "signed_total_conservation": 180,
+    "Parseval_D": 192,
+    "exact_whole_row": 192,
+    "special_nonnegative": 192,
+    "physical_factor": 192,
+    "natural_row_bound": 192,
+    "rational3_drift": 192,
+    "runtime_guard": 192,
+    "zero_total_signed_labels": 9,
+    "kernel_mean": 135,
+    "signed_label_transport": 135,
+    "gated_parity_spectrum": 1,
+    "witness_hull_zero": 1,
+    "witness_rational_children": 2,
+    "wrong_sign_refuted": 2,
+    "correct_sign_repaired": 2,
+    "A075_primitive_countercontrol_integer": 1
+  },
+  "total_checks": 2502,
+  "witness": [
+    {
+      "kappa": "9/2",
+      "incoming": "13",
+      "credits": [
+        "17/2",
+        "35/2"
+      ],
+      "wrong_debits": [
+        "17/2",
+        "-5/2"
+      ],
+      "right_debits": [
+        "17/2",
+        "75/2"
+      ]
+    },
+    {
+      "kappa": "3",
+      "incoming": "13",
+      "credits": [
+        "10",
+        "16"
+      ],
+      "wrong_debits": [
+        "10",
+        "-4"
+      ],
+      "right_debits": [
+        "10",
+        "36"
+      ]
+    }
+  ],
+  "runtime_seconds": 0.09249940002337098,
+  "proof_scope": "exact finite checks plus analytic all-dimensional reconstruction in PROOF.md; no full FEI claim"
+}

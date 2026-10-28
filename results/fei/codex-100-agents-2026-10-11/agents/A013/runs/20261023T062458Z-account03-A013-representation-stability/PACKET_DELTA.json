@@ -1,0 +1,66 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261023T062458Z-account03-A013-representation-stability",
+  "stream": "B03",
+  "packet_id": "A013",
+  "gap_id": "G-LOWSEL-COLLISION",
+  "attempt_id": "A013-stage19-v7-review-original-child-bank-history",
+  "method": "Independent semiconvex proof reconstruction, exact complement-class child certificate, dual arithmetic all-policy history replay and source-reserve reconciliation",
+  "mathematical_delta": "NEW v7 transfer/source scoped HOLDS. Saved physical s0 query paid from SAME post-variance child reserve, >1/4 bit remains and >1/2 original selector allowance untouched. Fixed next s1 query fails full account by>15/64 bit. All244 policies classified30 positive/214 negative.",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "mathematical_status": "SCOPED_V7_REVIEW_HOLDS; EXACT_EXPECTED_HISTORY_STEP_PROVED; ARBITRARY_HISTORY_AND_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+      "version": 7,
+      "scope": "NEW increment only"
+    },
+    {
+      "claim_id": "A013-SCOPED-REVIEW-A012-V6",
+      "version": 1
+    },
+    {
+      "claim_id": "C005",
+      "version": "baseline"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A013-SCOPED-REVIEW-A012-V7",
+      "version": 1,
+      "status": "HOLDS_NEW_V7_INCREMENT_ONLY"
+    },
+    {
+      "claim_id": "A013-ORIGINAL-CHILD-BANK-PHYSICAL-QUERY",
+      "version": 1,
+      "status": "PROVED_EXACT_LOCAL_PENDING_INDEPENDENT_AGENT_REVIEW"
+    }
+  ],
+  "source_artifacts": [
+    "DERIVATION.md",
+    "out/SOURCE_RECEIPTS.json",
+    "FROZEN_SPEC.json",
+    "FROZEN_REPLAY.json",
+    "out/HISTORY.json",
+    "out/HISTORY_REPLAY.json",
+    "out/CHILD_REVIEW.json"
+  ],
+  "next_consumers": [
+    "A012",
+    "A086",
+    "A094",
+    "B03",
+    "B20"
+  ],
+  "next_action": "Price an actual conditional nonempty-profile/reference handoff at the s0-then-s1 frontier that pays the >15/64-bit deficit using named unspent ORIGINAL source, retaining old5/(4ln2), both full terminals and all earlier debits. A012 construct; A086/A094 independently reconstruct. Flat unchanged-booking continuation with mere marginal Q is exactly obstructed.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Universal common-rank3 representation and arbitrary diminished-bank history closure are unproved.",
+    "New finite-history theorem pending independent-agent review.",
+    "Mirror/supervisor copy unobserved.",
+    "Brain self-care degraded/unverified: stale owner model and state-of-mind notes; no mathematical premise uses them."
+  ],
+  "packet_ids": [
+    "A013"
+  ]
+}

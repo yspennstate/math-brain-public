@@ -1,0 +1,13 @@
+{
+  "helper_version": "A014-dense-defect-v1; stage5 occupation factors independently recounted",
+  "family": "f_G=1-2 times independent-set indicator of a simple graph G",
+  "domain": "pilot: all 64 labelled missing-edge graphs on n=4; full: all 1024 on n=5, all 32 missing-edge subgraphs of the fixed 5-edge path on n=6, and n=8 deleting the first 1,2,4 edges of the fixed perfect matching; scalar n=4..128, d=0..floor(n/4)-1, k=1..n",
+  "case_count": "pilot64 candidates; full1059 candidates; skip isolated-vertex graphs for complete-reference positivity; scalar count computed and reported, domain fixed before execution",
+  "symmetry": "none; all specified labelled graphs and all nonempty sets, including cases outside final density hypothesis as diagnostics",
+  "arithmetic": "integer Walsh transform, Fraction masses, rational log intervals with analytic atanh remainder; integer-power tests for scalar bounds",
+  "memory_estimate_MB": 120,
+  "maximum_runtime_seconds": 300,
+  "pilot_maximum_runtime_seconds": 60,
+  "checks": "complete occupation J bounds; direct/polynomial matching sums; greedy-prefix multiplicity; full normalizer bound; mass lower bound; complete CE with actual variance and influence; projected full terminal costs for every single-coordinate query on theorem-domain graphs",
+  "automatic_dimension_escalation": false
+}

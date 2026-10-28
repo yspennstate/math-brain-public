@@ -1,0 +1,35 @@
+# exact target, quantifiers, hypotheses and units
+
+A025/B05 stage2026-10-23 13:20UTC. Bits throughout. Universal finite-law vacuum calibration and all adaptive source-controller histories; conditional capped point-surgery application retains SAME13t/576. Actual all-k Boolean counterfamily targets only a proposed positive mixture-selector refund for nonempty profile mismatch. Full FEI remains OPEN; author proof awaits independent-person review.
+
+# sources actually read, revisions and theorem locators
+
+Current BOARD header13:18UTC, B05 STREAM_NOTES v2, own STATUS/previous PROOF, machine-wide AGENTS, full execution-v2 protocol; A021@3 PROOF1--6 and CLAIMS, A022@9 run120109Z PROOF1--5 and claim metadata. Source hashes are in out/SOURCE_PINS.json. A021 already paid the saved second-query target and all capped unequal-depth cuts; this stage consumes that result rather than repeating it. A022 already pays an inherited external owner once; this stage closes its vacuum-calibrated descendant rule. Baseline campaign/paper reads are inherited from earlier stages, not newly claimed. One permitted brain recall supplied no mathematical premise and warned of an excluded unrelated attachment; no research-brain publication was attempted.
+
+# complete derivation or exact first unsupported line
+
+PROOF1--2 proves D(P||r)=binary-vacuum-KL+D(P||calibrated r), so calibration releases exact credit. Add physical source phase erasure/outcome KL and telescope using actual control reaches: the ONE original D0 covers all accumulated credits plus every terminal source KL. The CE identity also retains all original entropy spend. Source phase uses a_e amplitudes and is kept distinct from the full F phase channel. PROOF3 applies the A022 marginal subtraction: every descendant has matched vacuum, hence selector refund is0 and Bstar-B_H=A_cal-delta D0. The old reserve is retained within the original DATA cap, with no new entropy supplier.
+
+PROOF4 constructs a_k=(-1)^(sum disjoint bit products), N=4^k, H/I=2. Explicit rational calibrated r_k has D_k=(N-2)/(2N)log2(16/15)>0, yet eta D_k-D(M_eta P_k||M_eta r_k)=0 for EVERY0<eta<=1. This parameterizes the finite isovacuum failure: no positive fraction of nonempty mismatch is universally refunded by selector erasure. It refutes no FEI constant, all-coordinate influence rule or universal route. Prior@5's distinct rare-edit-only local charge obstruction is retained unchanged.
+
+First unsupported universal line: The ONE original CE(P_a,r0)<=K I(a) supplier for arbitrary Boolean a remains FEI-equivalent. DATA cap removal and payment for a necessary different nonempty descendant profile remain open; calibration does not supply or renew that entropy.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen SEARCH_SPEC.json/REPLAY_SPEC.json preceded each corresponding execution. Pilot32 roots/224 queries PASS in 0.298s. Production exhausts all256 actual3-bit functions x2 original profiles:512 roots,3584 physical query nodes,732 strict positive calibrations; PASS in 18.240s. Family k1--4 x4 activation densities gives16 exact cases, actual integer Walsh spectra and physical influence H/I=2. Independent author replay uses direct characters and global-frontier accounting:42 roots,200 changed frontiers and6 separate family cases, all PASS in 1.941s. Constants, zero pairs and dummy coordinates are included as required by the universal law claim, not used to refute an essential-coordinate influence rule. BOTH inherited and target full child KLs and all terminal CE remain in every check. Total exact assertions 288364.
+
+Arithmetic: Fraction/integer spectra, GCD-refined exact rational-log identities and48-term outward rational atanh intervals. Floating point only times runs. Memory estimates120MB each; no job above300MB, GPU, detached job or automatic dimension escalation. Main cap300s, replay180s, pilot/family60s; measured results meet all caps. Commands from run root: python -X utf8 code/check.py pilot; python -X utf8 code/check.py main; python -X utf8 code/check.py family; python -X utf8 code/replay.py. Outputs are out/pilot.json, main.json, family.json and replay.json. No formal compiler run. Shared arithmetic means the replay is not independent-person acceptance.
+
+# proof dependencies and changed downstream conclusions
+
+The finite-law/tree closure and all-k counterfamily are proved directly in PROOF1--2,4. Only PROOF3's numerical application consumes A021@3 and A022@9 auxiliary handoff at their conditional pending-review scopes; no GV theorem is consumed. No proof dependency cycle. This extends an existing packet claim rather than opening another broad FEI candidate under the stream review cap. New downstream conclusion: vacuum-correct source profiles CAN be maintained hereditarily at nonpositive calibration cost while keeping one original source payment. A positive selector refund cannot pay a different nonempty profile, as the actual all-k family proves.
+
+# one next mathematical action and independent reviewer
+
+A028/A022 specify an actually required descendant nonempty profile outside calibrated phase inheritance; compute its residual signed conditional KL and pay it from the SAME diminished original owner, retaining original entropy spend, old U, both full F terminal debts and source-versus-F phase distinction. No fresh supplier or assumed positive selector refund. A022/A028 reconstruct the necessary-profile criterion; A087/A094 independently review the original-owner and full-F conversion bookkeeping. Saved requests are not sent messages or review acceptance.
+
+# actual persistence receipts or precise save blocker
+
+Required protocol files, PROOF, frozen specs, pinned helper, code and PASS outputs are saved in this run; rolling STATUS/WORKLOG/LEARNED are updated. code/validate.py reads back exact protocol schemas, statement hash, helper provenance, complete outputs and bounded artifact sizes. Supervisor remote copies remain unverified. Fresh brain wake reports owner model99.8h/state of mind84.4h/dream35.1h stale: brain self-care remains degraded/unverified, affecting personal-context freshness and continuity. Current campaign files govern the mathematics.
+
+Universal bridge: C024 history transfer advances from an inherited one-owner interface to a vacuum-calibrated reference class closed under EVERY finite adaptive controller history, with exact original KL/CE telescopes; C019 retains SAME13t/576 in the already admitted unequal-depth point-surgery cuts. The all-k actual Boolean family excludes a positive selector-refund shortcut for nonempty profile costs, without refuting FEI or the universal route. A noncircular influence-priced original entropy supplier, necessary nonempty-profile conversion and DATA cap removal remain. Testing one ACTUALLY REQUIRED nonempty target against this closed inherited class and charging only its residual signed KL from the same diminished owner is the shortest route toward a reusable universal stopping-tree bridge rather than another isolated class bound.

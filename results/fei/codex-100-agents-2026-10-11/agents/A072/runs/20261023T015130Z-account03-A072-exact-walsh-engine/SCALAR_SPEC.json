@@ -1,0 +1,12 @@
+{
+  "version": "A072-credit-boundaries-v1",
+  "capacities": "s0,s1 in {-2,-1,0,1,2}",
+  "credit": "A in {0,1,2,3,4}",
+  "debit": "T=k/2, k=0..s0+s1+2A if nonnegative",
+  "allocation_cases": 636,
+  "hull_cases": 512,
+  "policies_per_hull": 9,
+  "arithmetic": "Fraction; independent integer witness enumeration",
+  "memory_estimate_mb": 30,
+  "max_runtime_seconds": 55
+}

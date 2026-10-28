@@ -1,0 +1,14 @@
+{
+ "helper_version":"A009-joint-connectors-v1",
+ "family":"Two original K_mm blocks plus ANY connector graph H from L1 to R2; original primes, both endpoint orders, pi=1/4, lambda=1/(2m)",
+ "pilot":"all16 labelled H at m=2; all256 physical inputs per graph; integer Walsh, direct flips, direct completion-defect sets; all singleton-root partner maps for K22",
+ "full":"pilot plus six frozen H at m=3 and four at m=4; all physical inputs, n<=16. Root maps for full K22 and K33; exact matching inclusion-exclusion for0<=s,t<=m through m=64; analytic constants through m=256; scalar old-source checks r,m through64",
+ "fixtures_m3":["empty","complete","one edge","diagonal matching","one full row","six-cycle"],
+ "fixtures_m4":["complete","diagonal matching","one full row","eight-cycle"],
+ "case_count":{"pilot_graphs":16,"full_graphs":26,"m3_partner_maps":729,"m2_partner_maps":16},
+ "symmetry":"No labelled H quotient at m2; fixtures explicitly fixed, no automatic dimension increase",
+ "arithmetic":"Integers and Fraction; FWHT and direct physical flips; exact rook/inclusion-exclusion polynomials; rational atanh log bounds only if needed; elapsed time floats not mathematical evidence",
+ "memory_estimate_mb":70,
+ "max_runtime_seconds":55,
+ "status":"FROZEN_BEFORE_EXECUTION"
+}

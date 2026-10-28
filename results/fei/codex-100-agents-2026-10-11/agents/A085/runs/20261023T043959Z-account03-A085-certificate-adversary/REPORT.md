@@ -1,0 +1,41 @@
+# A085 stage8: scope audit and three genuine profile changes from one refund
+
+## exact target, quantifiers, hypotheses and units
+
+Independently challenge A079-POST-TAG-SECOND-TAIL-RESET-SAME-REFUND@1, then fund a genuinely changed conditional-nonempty profile after an already paid one, using the SAME original source account. EVERY finite uniform Boolean seed and finite adaptive admitted tree under the supplied finite-CE source hypotheses; explicit numeric reserve uses the ORIGINAL controller beta3/8, seed mean+/-1/2, source empty1/2 and first mixture1/8. Bits, physical reaches and original influence. Both full children, reference-only atoms and old debits remain. Full FEI OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read current BOARD/B17 leadv2/own STATUS at intake, execution-v2 in full, machine-wide AGENTS and own stage7 continuity. The old lead census requests were completed earlier. A096/A097/A099 current reports close arbitrary original-source canonical returns; this target is not repeated. A050 stage7 report locates the non-point source gap. New critical read: A07920261023T034945Z complete PROOF1--5, exact CLAIMS, REPORT and author checker source for comparison only. SOURCE_RECEIPTS pins current bytes, including final coordination snapshot. Prior protocol/campaign/registry/supplement/paper intake remains prior-stage provenance, not a fresh whole-campaign proof audit. Current user deadline23 October14:49UTC supersedes static protocol dates. Source-author code is never imported/executed by the independent checker.
+
+## complete derivation or exact first unsupported line
+
+PROOF1 reconstructs the normalized signed vacuum/tail law, exact first tag increment, occupancy-KL chain, full block calibration and optional inherited-reference steps. Verdict HOLDS for A079@1 at its original supplied-reference scope, without repair; original statement/hypotheses/hash preserved. Empty/constant/beta-zero, missing reference blocks and ghost support are handled without0/0. Epsilon1 can create true occupied zeros and is explicitly outside the theorem, not a discovered error in it.
+
+PROOF2 derives tau=beta*(1-m^2), a physical supermartingale: a seed query loses exactly beta*(m0-m1)^2/4 in its average, while controller queries preserve the average. A profile mixture costs at most tau_v*(-log2(1-epsilon_v)). For a SAME pathwise budget B, potential tau_v*(B-already_spent) telescopes through arbitrary finite adaptive queries and changes, retaining all complete terminals. Total extra cost <=(9/32)B. PROOF3 sets B=2log2(64/63): two later1/64 changes are paid by the original first1/8 refund rho=(9/32)log2(21)-39/32, leaving delta>3/1024. Thus THREE genuine profile changes are funded counting the first. The strict sign is21^288*63^576>2^1251*64^576. This larger policy's >3/1024 differs from A079's >1/256 for ONE later change because an additional positive liability is now admitted; it does not correct the old result. No influence-rate increase occurs.
+
+The scalar sufficient envelope is negative for THREE later full rounds, certified by21^3*63^9<2^13*64^9. This is not a counterexample to actual payment: extra JS/query/calibration refunds were discarded. First unsupported universal line: an initially influence-priced reference for arbitrary seeds, or physical energy paying nonsummable new profile changes. A pathwise finite refund must not be reissued at descendants. No universal FEI constant improves.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC precedes evaluation and pins code/log helper. Pilot command: python -B -X utf8 code/check.py --pilot; 72 signed fixtures/144 actions/24368 exact assertions PASS in1.191243s. Main: python -B -X utf8 code/check.py; ALL22 labelled seeds n0,1,2, FIVE specified controller states, BOTH signs, TWO reference profiles =440 signed fixtures, plus ONE explicit four-bit non-point history. Main1606 physical actions/285979 exact assertions PASS in15.144044s. Main includes6 positive later profile charges. Pilot/main totals are separate, not pooled. No symmetry reduction or exhaustive-adaptive-tree claim. Analytic proof supplies arbitrary dimensions and histories.
+
+Independent integer FWHT, separate direct seed/controller character sums and physical pivotal edges check genuine Boolean spectra/influence. Fraction laws and prime-log exact cancellations prove identities before100-bit/40-term outward dyadic atanh sign bounds. Unresolved signs would fail, not silently increase precision or treat overlap as equality. Integer-power certificates independently prove the reserve and failed sufficient envelope. THREE_CHANGE_HISTORY saves the original source, tag debit, each subsequent weighted profile charge and eight complete final terminals. The active first seed query has two nonconstant children, means1/4 and3/4; a second physical query precedes third mixtures. Old sibling and source costs are retained.
+
+Separate BOUNDARY_SPEC precedes python -B -X utf8 code/boundary.py: true-support-only sparse tails, parity2 and three-bit negative indices0,1, root/beta0/beta1 controllers, both signs and all remaining single-coordinate queries. 12 signed fixtures/46 actions/11387 assertions PASS in2.442457s. Epsilon0 and1/64 finite-support endpoints hold; epsilon1 singular references are saved as excluded-endpoint guards. Counts are separate. Estimated120MB and frozen55s cap; no >300MB job, heavy search, GPU, automatic n increase, compiler or detached research work. No formal verification claimed.
+
+## proof dependencies and changed downstream conclusions
+
+Exact original A079@1 is independently accepted under its stated already-paid incoming-source hypothesis; no full upstream source-price chain is accepted implicitly. The new tail-mass/path-budget theorem is separate, author-proved and pending independent review. A096/A097/A099 canonical returns remain closed only at their exact delivered scopes and are not recounted as new profile changes. Consumers may allocate one existing earned refund across path-dependent genuine targets without renewing its owner. Neither the supplied reference hypothesis nor arbitrary-seed entropy has been paid by this stage.
+
+## one next mathematical action and independent reviewer
+
+A079/A094 should reconstruct PROOF2's physical supermartingale, pathwise potential and exact three-change witness. A050/A097/A099 should use the named diminished account to seek a physical-energy bound on nonsummable conditional-nonempty profile changes, or supply an initially influence-priced non-point reference. A073 can verify the integer signs. Another vacuum-only return or larger finite grid would duplicate closed work; another finite controller refund alone cannot price arbitrary Boolean sources.
+
+## actual persistence receipts or precise save blocker
+
+Four exact-schema protocol files, PROOF, pre-search specs, portable code and exact outputs are saved locally; STATUS has two lines and WORKLOG/LEARNED append. PERSISTENCE_RECEIPTS records schema/source/hash/readback and20MB checks. No git, mail, intentional brain write, other-agent research edit, deletion or trading-path access. Required task-checklist bookkeeping is separate. Supervisor copying, canonical adoption, new independent review and remote mirror verification remain UNVERIFIED. Brain self-care remains degraded/unverified: owner-model90.3h/state-of-mind74.9h stale at wake; current personal-context assumptions are affected, and these notes were not proof premises. No local save blocker or research job intentionally detached.
+
+## Universal bridge
+
+C024 history transfer feeding C019 stopping-tree payment advances from ONE later changed nonempty profile to TWO later changes, or ANY finite adaptive target allocation obeying the same pathwise log-retention budget. Actual occupied-tail mass9/32 replaces the beta-only3/8 bound, preserving all old debits and full terminals; SAME earned first refund leaves>3/1024 with no rate renewal. Universal constant improvement is zero: initial arbitrary-source influence pricing and nonsummable profile-change energy remain unpaid. NEXT targets that precise physical-energy/source interface because finite refund allocation is now explicit, whereas renewing it or repeating a vacuum identity cannot approach full FEI.

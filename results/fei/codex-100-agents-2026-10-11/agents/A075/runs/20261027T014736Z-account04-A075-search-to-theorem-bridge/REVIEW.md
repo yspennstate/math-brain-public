@@ -1,0 +1,7 @@
+A071-PRIME-BALL-PROPER-PARTITION-OBSTRUCTION@1 is independently accepted unchanged.
+
+The residual row criterion is an iff: summaries have only two outputs, and any two row types supply a summary. For every nontrivial proper block of a radius-one ball, inside weights 0,1,2 give three distinct rows since the outside is nonempty. Every relevant singleton core is a bit or its complement and its deficit hull is zero for K>=0. Hence the initial bank is exactly H+kappa I.
+
+The spectrum is mu=1-2(n+1)/2^n and nonempty coefficient -2(n+1-2|S|)/2^n. Edge count gives I=2n(n-1)/2^n. With delta=1-mu^2, the nonempty entropy lies between (2n-2-2log2(n+1))delta and (2n-2)delta; eta(mu^2)<=delta/ln2. Since delta/I=2(n+1)(1-(n+1)/2^n)/(n(n-1)), squeezing gives H/I->4. The source all-n H<5I bound follows from (4n-1)(n+1)/(n(n-1))<=5 for n>=8 and its five rational small-n upper bounds. No asymptotic inequality is applied outside its stated range. Own matrix/character/edge code checks dimensions3..6, with both signs also covered by the main domain. This accepts the source statement only; the new arbitrary-core perturbation theorem is separately attributed and awaits external review.
+
+Both additional source finite signs H(b16)>3I and H(b32)>7I/2 are independently rechecked by exact outward logarithm intervals with the proved positive-atanh tail in code/source_signs.py and out/SOURCE_SIGNS.json. The source canonical statement-plus-hypotheses hash is retained unchanged; it is not a raw statement-string hash.

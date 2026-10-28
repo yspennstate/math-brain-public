@@ -1,0 +1,26 @@
+# A complete child can spend only whole influence quanta
+
+The full critical budget bounds the number of children that can benefit from an affine reset. The saving has a parity constraint stronger than ordinary dyadic spacing.
+
+1. Fix a Boolean sign g on d bits. Write N=2^d and M={x:g(x)=-1}. For every nonzero direction v, let b(v)=|{x:g(x)!=g(x+v)}|. Since translation by v pairs the points in M intersect (M+v), its cardinality is even. Consequently b(v)=2|M|-2|M intersect (M+v)| is congruent to 2|M| modulo four. For d>=2, N is divisible by four and N-b(v) has the same residue. An invertible affine input change chooses a basis of nonzero directions; an output character independently complements the directional disagreement counts on that basis. The total influence numerator is therefore always congruent to d*2|M| modulo four. Translation changes none of these counts. Thus I(g)-a(g) belongs to 2^(2-d) times the nonnegative integers, where a is the minimum over the FULL affine/character orbit. For d=1 the quantum is one; for d=0 the saving is zero. This is a statement about exact Boolean signs; arbitrary real Fourier vectors do not have the input-set parity proof.
+
+2. Let f on n essential coordinates be a least-essential-dimension positive K-witness at the SAME fixed K>0, selected with I(f)=a(f). For any nonempty proper ORIGINAL block A of size r, put d=n-r, g_x=f restricted at x, delta_x=I(g_x)-a(g_x), R=2^-r sum delta_x, S=2^-r sum(K a(g_x)-H(g_x)), and D=H(f)-K I(f)>0. All full children have fewer essential coordinates, so every summand of S is nonnegative. The spectral chain rule and fibrewise Boolean log-Sobolev give
+
+  D+S+K R+W+G = r log2(1+exp(2)*2^-K) = cap,
+
+where W is the COMPLETE conditional Gibbs divergence and G is the nonnegative log-Sobolev gap. This is A051 PROOF(2), with c=2/ln2; the derivation is repeated in section 4 below. No component projection or analytic fibre is treated as a Boolean child.
+
+Define q_d=1 for d=1 and 2^(2-d) for d>=2. Let m_A be the number of physical assignments with delta_x>0. The parity lemma gives R>=2^-r q_d*m_A, and therefore
+
+  K*2^-r*q_d*m_A + D+S+W+G <= cap,
+  m_A < 2^r*cap/(K*q_d).
+
+In particular if cap <= K*2^-r*q_d, EVERY full child of this block is already affine/character influence-minimal in its inherited coordinates. This is a restriction on all children of a fixed block, not a criticality property inherited by those children. Even below that threshold the integer count, not an independent fresh bank, limits the number of reset opportunities.
+
+3. A rational sufficient regime follows from c=3: cap_3=r log2(1+2^(3-K)) < r*2^(4-K), using ln2>1/2 and ln(1+x)<x for x>0. For d>=2, the explicit condition K*2^(K-n-2)>=r forces m_A=0. For d=1 replace the exponent by K-n-3. These are sufficient conditions only. They depend on n and do not provide a universal FEI constant. The exact sharp-cap condition is the primary result. If it holds for every original singleton (n>=3), every codimension-one physical child is affine/character minimal. No claim concerns entropy paid by a nonlinear phase, whose mixed-row entropy price need not be quantized.
+
+4. To verify the bank independently, let sigma=sum over i in A Inf_i(f), t=E a(g_x), L=H(f)-E H(g_x), B the exterior spectral coordinates, and P the full squared spectral law. Influence splitting gives I(f)=sigma+E I(g_x), hence D+S+K R=L-K sigma. Write J=L-H(Z_A|Z_B) and c=2/ln2. The fibrewise log-Sobolev inequality gives G=c sigma-J>=0. For theta=1/(1+2^(K-c)), Q=Ber(theta)^r, the COMPLETE divergence W=D_2(P_AB||Q tensor P_B) equals cap+(K-c)sigma-H(Z_A|Z_B). Addition proves the identity. Q is strictly positive, zero exterior fibres contribute zero, and no division by an event probability occurs. Choosing c=3 gives the rational reference used in the certificate. The only analytic premise is the already established fibrewise log-Sobolev bound. The new parity/count deductions are elementary and self-contained once this bank is available.
+
+5. Side conditions that matter: D>0 is strict; omitting it would allow the affine-minimal two-bit quadratic sign (-1)^(xy) at K=16, whose queried children include a nonconstant character with positive reset saving despite the tiny capacity. S>=0 follows from least dimension at fixed K applied to COMPLETE affine optimized children. Physical ratio extremality alone supplies FEI bounds at inherited physical child influences, not their affine minima. Historical seven- and nine-bit component-pruning counterexamples remain counterexamples: their component indicators are not these complete children, and their improving physical restrictions already prevent critical admission. No claim of connected spectral support follows. Neither noncritical counterexamples nor failed threshold cases disprove FEI.
+
+FIRST UNSUPPORTED UNIVERSAL LINE: use this count restriction plus signed Booleanity and unused quotient rank to pay ONE ORIGINAL proper block on every genuine high-K witness when n is far above K, retaining full phase cost Pi, mixed rows, old debits and all complete terminals. The parity threshold loses its force in that regime. This is an author proof with exact finite checks, not a universal funding theorem, and formal checking is separately recorded.

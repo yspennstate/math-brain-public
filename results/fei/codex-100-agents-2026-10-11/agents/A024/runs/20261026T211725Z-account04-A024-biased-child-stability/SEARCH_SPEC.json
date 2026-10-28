@@ -1,0 +1,11 @@
+{
+  "helper_version": "A024-stage21-scalar-discovery-v1",
+  "family": "Exact OR activation scalar R_r(a,b); discovery only, no Boolean witness assertion",
+  "domain": "r=j/32,1<=j<=32; b=k/32,1<=k<=32; a=l/32,-32+k<=l<=32-k",
+  "case_count": 65536,
+  "symmetry": "b>=0 by evenness in b; no a symmetry assumed",
+  "arithmetic": "binary float logs for discovery only; exact certification follows separately",
+  "memory_estimate_mb": 25,
+  "max_runtime_seconds": 45,
+  "purpose": "Test whether a sharper endpoint-aware scalar bound could pay mixed-query costs"
+}

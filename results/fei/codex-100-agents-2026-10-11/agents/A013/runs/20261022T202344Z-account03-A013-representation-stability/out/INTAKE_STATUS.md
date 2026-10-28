@@ -1,0 +1,2 @@
+STATE: A013 stage5 saved: two shared-row edits with arbitrary correlated private events have B<4d, full surcharge<7d, exact terminal debt;4093 continuum certificates and834075 exact assertions PASS; FEI OPEN.
+NEXT: Extremal reduction or signed three-row profile for arbitrary three-bit middle band; retain one collision influence owner and both full terminals; A012/A086/A094 review all-probability two-row proof.

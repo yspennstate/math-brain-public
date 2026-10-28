@@ -1,0 +1,24 @@
+{
+  "helper_version": "v3: outward 160-bit log interval serialization; preserved v1 pilot threshold and v2 serializer failures",
+  "actual_Boolean_family": "G(x,j,z,w)=1 at x=0; (-1)^z(1-2*1[w=0 or (j=1,w=3)]) at x=1",
+  "parameter_domain": "physical r=3,4,5 and alpha=1/6,1/r^2; grouped r=3,4,8,16,32,64,128 alpha=1/r^2; pilot physical r=3, same two alpha; grouped r=8",
+  "case_count": "main 6 physical + 7 grouped; pilot 2 physical + 1 grouped",
+  "symmetry": "none; full truth tables in physical cases, analytically grouped identical Fourier rows for grouped cases",
+  "arithmetic": "Fraction exact Walsh and laws; 90-term atanh natural-log bounds, power-of-two range reduction, proved geometric remainder; interval log2 ratios; outward dyadic 2^-160 rounding at log output",
+  "memory_estimate_MB": 70,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "failure_checks": [
+    "fair actual outcomes",
+    "all source and reference mass",
+    "activation controller mass",
+    "nonzero inherited normalizers",
+    "independent child Walsh law",
+    "variance formula",
+    "chi2 formula",
+    "signed KL chain interval overlap",
+    "positive original KL",
+    "finite-to-infinite argument supplied separately"
+  ],
+  "helper_sha256": "9c88c3b2a2fc348a27b6f8d957c40d5c35a0832ff757372f729785cd21074097"
+}

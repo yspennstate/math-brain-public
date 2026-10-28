@@ -1,0 +1,498 @@
+{
+  "helper_version": "A094-stage20-v1, new full-source profile and positive-part path implementation",
+  "helper_sha256": "a1436f9228f41b2327af79534cf480c0b770e1cd1c17e702ac6bcf61f1c145c1",
+  "arithmetic_library_source": "agents\\A094\\runs\\20261023T110024Z-account03-A094-proof-chain-challenger\\code\\arithmetic.py",
+  "arithmetic_library_sha256": "1385f338436d78030d4a57e707c165b3bece18323e5d5a736ab2ed3086a6b187",
+  "Boolean_family": "actual arbitrary Boolean source full-point edit with m dummy bits and one fair selector; constants/a0 included",
+  "profiles": {
+    "cases": 69,
+    "padding": [
+      3,
+      5,
+      8
+    ],
+    "sources": [
+      [
+        1
+      ],
+      [
+        -1
+      ],
+      [
+        -1,
+        -1
+      ],
+      [
+        1,
+        -1
+      ],
+      [
+        -1,
+        1
+      ],
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        1,
+        1,
+        -1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1,
+        1
+      ],
+      [
+        -1,
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        1
+      ],
+      [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ]
+    ]
+  },
+  "paths": {
+    "cases": 33,
+    "installed_floors": 81,
+    "domain": [
+      {
+        "g": [
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1,
+          -1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1,
+          -1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1,
+          -1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          1,
+          -1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          1,
+          -1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          1,
+          -1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1,
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1,
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1,
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          1,
+          -1,
+          -1,
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 3,
+        "incoming": 2
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 5,
+        "incoming": 0
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 5,
+        "incoming": 1
+      },
+      {
+        "g": [
+          -1,
+          1,
+          1,
+          1
+        ],
+        "m": 5,
+        "incoming": 2
+      }
+    ],
+    "incoming_models": [
+      "canonical",
+      "half canonical subprobability",
+      "actual A011 floor based on source R=(P+uniform)/4"
+    ]
+  },
+  "pilot": {
+    "profiles": 2,
+    "paths": 3,
+    "installed_floors": 9,
+    "source": [
+      -1,
+      1,
+      1,
+      1
+    ],
+    "profile_padding": [
+      3,
+      8
+    ],
+    "path_padding": 3
+  },
+  "symmetry": "padding coordinate permutations only; finite physical paths use first remaining source coordinate, analytic proof handles adaptive distinct source choices",
+  "arithmetic": "integer source Walsh/physical edge counts; Fraction full references and posterior normalizers; rigorous24-term atanh log intervals; exact multiplicity classes for large dummy stocks",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds_per_job": 55,
+  "pilot_max_seconds": 55,
+  "automatic_dimension_escalation": false
+}

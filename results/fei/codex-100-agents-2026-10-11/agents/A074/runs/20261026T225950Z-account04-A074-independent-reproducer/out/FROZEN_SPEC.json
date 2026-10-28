@@ -1,0 +1,31 @@
+{
+  "helper_version": "A074-mobius-whole-row-v1",
+  "helper_sha256": "26c9f27188219cb684ec3a7acd9d5beff8226e77ec99230e17708fcf1a51bfdb",
+  "family": "Every two-input Boolean gate, every two-bit first core and one-bit second core; separately declared 4-bit primitive and 7-bit positive-drift witness",
+  "domain": {
+    "outer_masks": [
+      0,
+      15
+    ],
+    "first_core_masks": [
+      0,
+      15
+    ],
+    "second_core_masks": [
+      0,
+      3
+    ]
+  },
+  "case_count": 1024,
+  "query_rows": 3072,
+  "symmetry": "none",
+  "arithmetic": "Fraction and exact prime-log identities; positive atanh 48-term rational interval with proved tail",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": {
+    "pilot": 55,
+    "main": 240,
+    "witness": 55
+  },
+  "automatic_dimension_escalation": false,
+  "pilot_domain": "outer masks0..3,first masks0..3,second masks0..3:64 circuits/192 rows"
+}

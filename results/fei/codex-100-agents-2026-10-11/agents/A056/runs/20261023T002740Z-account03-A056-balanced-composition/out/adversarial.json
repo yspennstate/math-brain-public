@@ -1,0 +1,90 @@
+{
+  "status": "PASS",
+  "runtime_seconds": 0.670911299996078,
+  "assertions": 183,
+  "direct_small_models": [
+    {
+      "d": 2,
+      "root_influence": "7/4",
+      "old_spent_influence": "3/4",
+      "all_four_prefix_states_nonconstant": true,
+      "fresh_signed_price": {
+        "7": "1/8"
+      },
+      "expected_price": "(1/8)log2(2^(2^d-1)-1)",
+      "root_mean": "1/2"
+    },
+    {
+      "d": 3,
+      "root_influence": "7/4",
+      "old_spent_influence": "3/4",
+      "all_four_prefix_states_nonconstant": true,
+      "fresh_signed_price": {
+        "127": "1/8"
+      },
+      "expected_price": "(1/8)log2(2^(2^d-1)-1)",
+      "root_mean": "1/2"
+    },
+    {
+      "d": 4,
+      "root_influence": "7/4",
+      "old_spent_influence": "3/4",
+      "all_four_prefix_states_nonconstant": true,
+      "fresh_signed_price": {
+        "7": "1/8",
+        "31": "1/8",
+        "151": "1/8"
+      },
+      "expected_price": "(1/8)log2(2^(2^d-1)-1)",
+      "root_mean": "1/2"
+    }
+  ],
+  "critical_exact_boundary": {
+    "d": 7,
+    "root_truth_table_sha256": "afb87faa1a2aa629bed281e6f38342f5f509fea8cb23aec5d49c61ee3509b330",
+    "physical_truth_table_entries": 2048,
+    "root_influence": "7/4",
+    "old_complete_CE_debit": {
+      "2": "-1",
+      "3": "9/8"
+    },
+    "N_d": "170141183460469231731687303715884105727",
+    "all_four_actual_fresh_states": [
+      {
+        "shared_outcome": 0,
+        "B_outcome": 0,
+        "fresh_reference_sum": "1",
+        "coefficient_of_log2_N7": "1/8",
+        "positive_true_atoms_checked": 8,
+        "nonconstant": true
+      },
+      {
+        "shared_outcome": 0,
+        "B_outcome": 1,
+        "fresh_reference_sum": "1",
+        "coefficient_of_log2_N7": "1/8",
+        "positive_true_atoms_checked": 8,
+        "nonconstant": true
+      },
+      {
+        "shared_outcome": 1,
+        "B_outcome": 0,
+        "fresh_reference_sum": "1",
+        "coefficient_of_log2_N7": "1/8",
+        "positive_true_atoms_checked": 8,
+        "nonconstant": true
+      },
+      {
+        "shared_outcome": 1,
+        "B_outcome": 1,
+        "fresh_reference_sum": "1",
+        "coefficient_of_log2_N7": "1/8",
+        "positive_true_atoms_checked": 8,
+        "nonconstant": true
+      }
+    ],
+    "exact_inequality": "N7>2^126 and126/8>49/4=7*(7/4)",
+    "all_d_extension": "N_d>2^(2^d-2), 2^d>=128 for everyd>=7",
+    "scope": "refutes unrestricted prescribed geometric-floor payment; Boolean H/I<=20/7 under dummy padding"
+  }
+}

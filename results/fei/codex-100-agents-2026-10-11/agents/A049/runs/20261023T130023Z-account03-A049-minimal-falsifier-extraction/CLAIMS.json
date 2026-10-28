@@ -1,0 +1,96 @@
+[
+  {
+    "claim_id": "A047-STABLE-MASK-RARE-QUERY-RESET-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer r>=4, delta=2^(-r), let h(z)=(-1)^z1 for z0=0 and (-1)^z2 for z0=1 on r little-endian bits. Let h0 flip h only at integer1, h1 flip h at1,4,5, and g_r(a,z)=h_a(z). Both children have mean -2delta and FULL Fourier support, identical essential masks, and full coefficients2delta,6delta; the parent full coefficient is -2delta. Query influence is2delta. For each fixed0<alpha<1 use q(empty)=p(empty), q(S)=(1-alpha)p(S)+alpha Var(g)1_full-essential(S), and the SAME-alpha rule in both children, with actual coherent transport and its own reference outcome normalizer. For equal-mean, same-mask children more generally, u=mu^2, c=alpha(1-u), beta=1-alpha, t_b=p_child_b(full)>0 and E=(t0+t1)/2, the exact paired fresh-minus-inherited KL is sigma_core=D(fair||r)+Gamma with r_b=1/2+(c/2)(t_b/E-1), Gamma=(F(t0)+F(t1))/2-F(E)>=0 and F(t)=t log2(t/(beta*t+c)), Fsecond=c^2/(ln(2)*t*(beta*t+c)^2)>0. The parent full coefficient is required nonzero for matching support. For either-sign activation epsilon at x0,g at x1 with the normalized full lift, sigma_act=D(fair||r_act)+Gamma/2, r_act_b=1/2+(c/4)(t_b/E-1). For the displayed Boolean family set eta=4alpha(1-4delta^2)/5. Then sigma_core>=-log2(1-eta^2)/2 and sigma_act>=-log2(1-eta^2/4)/2, while activation query influence is delta. Multiplication by an independent character gives an exactly balanced variant with the SAME conclusions and eta=4alpha/5. At alpha1/6, all r>=4 have sigma_core>1/128 and sigma_act>1/512, so respective ratios exceed2^(r-8),2^(r-9). Thus for EACH fixed alpha no finite K_alpha bounds this prescribed reset cost by queried influence, even with unchanged essential masks and exact matching source/reference support. This is a stable-mask/all-tilt strengthening of A046 local price obstruction, not its first discovery, not a refutation of its paid original embedding, and not a necessary-reset assertion or FEI counterfamily; these cores and activations satisfy H<=8I.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; squared Walsh spectra; entropy and KL in bits",
+      "Specified whole-essential-core matching-empty full-spike reference and its normalized activation lift; not a product of factor references",
+      "Both physical outcomes retained, same alpha and SAME essential mask before/after query, actual reference outcome normalization",
+      "Equal child means and positive child full masses; parent full coefficient nonzero for matching-support general identity",
+      "No original surplus or new supplier is assigned free; conclusions concern this prescribed local reset price only"
+    ],
+    "statement_sha256": "deafaa59021adf985b8f08a223eee1a1ec0f35842960bc874ecd8b9b024782dc",
+    "contributors": [
+      "A047"
+    ],
+    "proof_source": [
+      "agents\\A047\\runs\\20261023T120344Z-account03-A047-boundary-search\\PROOF.md",
+      "agents\\A047\\runs\\20261023T120344Z-account03-A047-boundary-search\\out\\CHECK.json",
+      "agents\\A047\\runs\\20261023T120344Z-account03-A047-boundary-search\\out\\REPRODUCTION.json"
+    ],
+    "proof_dependencies": [
+      "Self-contained character calculation, exact coherent atom ratios and convexity in PROOF.md sections1-2",
+      "Elementary entropy tail and physical-edge influence bounds in section3; no FEI assumption",
+      "A046 priority acknowledged only; new proof does not assume its theorem or any initial supplier"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A049",
+        "verdict": "HOLDS_AT_FULL_DECLARED_SCOPE",
+        "method": "Independent full-row coherent transport, convexity/curvature comparison, integer FWHT construction, elementary entropy guard; direct core and both activation-sign replay for r4..8. All-r/all-alpha quantifiers proved analytically, not inferred from finite cases.",
+        "source": "PROOF.md sections3-4; code/check.py; out/CHECK.json",
+        "conflict": "A049 did not supply or repair this version; earlier4bit obstruction is background, not a dependency of this family.",
+        "limitations": "This acceptance supplies no initial arbitrary-core source or necessary-reset assertion."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_BY_A049_AT_DECLARED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Proposed universal bound sigma<=K_alpha Inf_i for this same-alpha full-essential-block refresh, even restricted to unchanged essential masks and matching support, for each fixed0<alpha<1"
+    ],
+    "first_unproved_line": "Supply and pay an appropriate hereditary whole-source/reference mechanism from the SAME actual unused original surplus, retaining old debits and complete terminal laws; arbitrary-core influence-priced initial supplier remains open.",
+    "next_consumers": [
+      "A036",
+      "A039",
+      "A046",
+      "A048",
+      "A049",
+      "A050",
+      "A092",
+      "A094",
+      "A097",
+      "A098",
+      "A099",
+      "B10",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A049-OUTCOME-NORMALIZER-INFLUENCE-RESIDUAL",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign f on n>=2bits with all parent coordinates essential, every physical query i whose BOTH children retain all remaining coordinates essential, and every0<alpha<1, use the same-alpha matched-empty whole-essential full-spike rule at parent and both children, actual coherent transport with fair source-zero fallback and own reference outcome normalization, retaining both children. If sigma is mean fresh-minus-inherited KL and O=D(fair||Z), then sigma<=O+JS+alpha*p_parent({i})/((1-alpha)ln2)<=O+(2+alpha/(1-alpha))*Inf_i(f)/ln2. Moreover0<=O<=-log2(1-alpha^2)/2<=alpha^2/(2(1-alpha^2)ln2). For equal-mean positive-full-mass children sigma=O+Gamma with0<=Gamma<=2min(p_parent(U),p_parent(U+i))/ln2<=2Inf_i(f)/ln2; its full activation lift has sigma_act=O_act+Gamma/2 and0<=sigma_act-O_act<=2Inf_i(activation)/ln2. The unmatched outcome invoices are not assigned a free original-source payment; full FEI remains open.",
+    "hypotheses": [
+      "Uniform finite Boolean signs, bit entropy/KL.",
+      "Fixed full-essential spike mask after erasure equals both actual child essential masks; alpha in(0,1) unchanged across the query.",
+      "Fresh empty mass matched, normalized whole-core spike law; parent/child reference-only full atoms retained.",
+      "Actual coherent kernel, fair source-zero fallback, actual reference outcome normalization and both physical branches.",
+      "Equal-mean sandwich requires positive child full masses; its activation statement uses the exact two-vacuum full lift."
+    ],
+    "statement_sha256": "0829f310ed6ac76f95375fffa5e02accd432b85378c478f0a33196826d8a6e7c",
+    "contributors": [
+      "A049"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_VALIDATION_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Pay cumulative actual reference-outcome KL invoices from SAME unused original source surplus with all prior debits, old quarter and both full terminals; an arbitrary-core influence-priced initial supplier remains absent.",
+    "next_consumers": [
+      "A047",
+      "A046",
+      "A048",
+      "A050",
+      "A092",
+      "A094",
+      "B10",
+      "B20"
+    ]
+  }
+]

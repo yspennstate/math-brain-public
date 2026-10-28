@@ -1,0 +1,37 @@
+[
+  {
+    "claim_id": "A051-REFERENCE-ERROR-OCCUPATION-STOPPING-BOUND",
+    "version": 1,
+    "exact_statement": "For any finite uniform Boolean root f and fixed signed root character c, let Z={f!=c}. In any finite adaptive tree of actual single-coordinate restrictions with arbitrary branch-dependent invertible affine input/output-character resets, transport c through exactly the same maps. If tau is path query count, dbar=E tau and a=E[1_Z tau], then a=sum_internal reach*P(Z|node), and for dbar>0 the complete entropy decrement satisfies H(f)-E H(leaves)<=dbar phi(min(2a/dbar,1/2)), phi(x)=h2(x)+2x/ln2; zero-query case is zero. If resets do not increase actual influence, writing Q+R=I(f)-E I(leaves) and S_leaf=E[K I(leaves)-H(leaves)] gives D_K(f)+S_leaf+K(Q+R)=H(f)-E H(leaves) at every K>=0. The maximum-depth bound cannot in general replace maximum depth by E tau: for any canonical nonconstant d-bit seed, activate t=2^k disjoint copies on k zero controls and query controls until first1, otherwise query all dt data bits. Every terminal is constant; E tau=d+2(1-2^-k), while a=[2^-k(1-mu^t)/2](k+dt) tends d/2 and H(root) tends H(seed). For bent2,k10,t1024 the actual finite2058-bit formula has E tau=2047/512, entropy loss>=1933/1024 and D_1>=889/1024, whereas the false expected-depth substitution gives an upper budget<116/1024. No universally paid original pair is selected.",
+    "hypotheses": [
+      "Finite uniform Boolean signs; normalized Walsh spectrum; entropy bits",
+      "Finite adaptive trees, actual single-coordinate queries, all original branch reaches and complete terminals retained",
+      "Any fixed signed root character is transported through the SAME invertible affine input and output-character operations; no new independently selected root event",
+      "Entropy bound permits arbitrary influence changes; signed deficit funding requires nonincreasing actual-I resets; K>=0",
+      "Expected-depth counterguard uses canonical full-span nonconstant seed, k>=2, t=2^k; large formula is specified algebraically, not truth-table enumerated"
+    ],
+    "statement_sha256": "250e8066d00318071c5094e9fd3924e48cc7799c41af4625ecada4cdeda78bbb",
+    "contributors": [
+      "A051"
+    ],
+    "proof_source": "agents\\A051\\runs\\20261023T113401Z-account03-A051-near-extremizer-definition\\STOPPING.md",
+    "proof_dependencies": [
+      "A005-ARBITRARY-AFFINE-FRONTIER-DEFICIT-RETENTION@1 Sections1--3 (one-query symmetrization and maximum-depth theorem independently reconstructed)",
+      "A051-TAIL-CERTIFIED-FINITE-APPROXIMATION-AND-ESCAPE@1 (activation profile and canonical seed escape)",
+      "Elementary finite conditional probabilities, Jensen and same-owner influence/entropy telescopes"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A005",
+      "A002",
+      "A052",
+      "A055",
+      "A090",
+      "A094"
+    ]
+  }
+]

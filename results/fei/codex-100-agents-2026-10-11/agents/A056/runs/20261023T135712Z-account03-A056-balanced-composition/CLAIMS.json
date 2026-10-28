@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+    "version": 9,
+    "exact_statement": "For every Boolean uniform-cube function and supplied normalized supporting empty-calibrated spectral reference R, the per-set uniform-mark lift J has CE(J_P,J_R)=CE(P,R)+L(P), D(J_P||J_R)=D(P||R), and 0<=L(P)<=I-Var. Under every physical query the explicit keep-surviving-mark/reselect-if-deleted kernel commutes with actual child spectral transport, outcome normalization and empty calibration, including reference-only fibers and biased/constant children. Its lifted CE release is scalar release plus lambda_i=sum_{i in S,|S|>=2} P(S)log2(|S|/(|S|-1)); its extra mark-reselection entropy is rho_i=sum P(S)log2(|S|-1)/|S|<=(2/5)Inf_i, with optimal pointwise constant attained by parity_5. Every finite adaptive tree retains complete terminal CE and satisfies the exact CE and L telescopes; total reselection entropy<=(2/5)(I_root-E I_leaf). Charging both gives bill<=CE(P_root,R_root)+(7/5)I_root-Var_root-(2/5)E I_leaf. Parity_8 has rho_i>lambda_i, and their ratio is unbounded along parity_d, so this explicit reselection invoice cannot be funded only from L release. Furthermore m(d)=sum_{j=2}^d log2(j-1)/j has physical drift rho_i exactly. With M(P)=E m(|S|) and c_star=[log2(5)+log2(3)/4+11/15]/5<7/10, every finite tree has combined bill=rootCE+E_P w(|S|)-E M_leaf<=rootCE+c_star I_root-E M_leaf, where w(d)=log2(d)+m(d). The optimal overhead coefficient for this explicit kernel/accounting convention is c_star, attained by a complete parity_5 restriction tree. No universal initial reference price or full FEI is supplied.",
+    "hypotheses": [
+      "All entropy and Shannon conditional randomness in bits; finite cube and finite adaptive physical restriction tree; actual outcome probabilities1/2 at each node",
+      "R supports P and has R(empty)=P(empty); each child carries the actual normalized/calibrated pushforward reference, not a renewed cheap source certificate",
+      "The same kappa_t(T)=P_t(T)/(2(P(T)+P(T+i))) is used for true/reference laws, with fair outcomes on zero-true fibers; keep all reference-only fibers and actual outcome normalizers Z_t",
+      "Uniform per-set marks, empty null atom; retain surviving marks and uniformly reselect among remaining elements when the mark is queried",
+      "rho charges only extra mark reselection under the stated true joint law; it excludes kappa-channel simulation, prefix-free integer code lengths and computational sampling complexity",
+      "Initial CE<=C I is a conditional supplied premise, not a theorem established here; parity obstruction concerns this explicit kernel only"
+    ],
+    "statement_sha256": "290f83870285ae3349f61d63b0f6584b1d63a6b6bf6ecb221cce256ebd098a2c",
+    "contributors": [
+      "A056"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections1-5 equations1-10",
+      "EXACT_POTENTIAL.md equations11-15",
+      "out/POTENTIAL_CERTIFICATES.json",
+      "code/witness.py",
+      "out/SHARP_RESELECTION.json",
+      "out/EXACT_RESULTS.json",
+      "out/lane0.json",
+      "out/lane1.json",
+      "out/lane2.json",
+      "out/lane3.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      {
+        "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+        "version": 8,
+        "scope": "extends same pending candidate with physical original-set witness transport and separate reselection payment; does not refute v8"
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "For the explicit keep/reselect per-set witness kernel, mark-reselection Shannon entropy rho is always at most the released mark overhead lambda",
+        "witness": "actual Boolean parity_8; 7^9>8^8; ratio unbounded along parity_d",
+        "scope": "No claim about optimal randomness among all kernels; no refutation of FEI"
+      }
+    ],
+    "first_unproved_line": "Supply an original-spectrum whole-set/per-set reference with CE(P,R)<=C I for all Boolean f using Boolean realizability, without assuming FEI or charging the refuted degree-biased reference entropy.",
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A006",
+      "A007",
+      "A015",
+      "A057",
+      "A059",
+      "A094",
+      "A096",
+      "A097",
+      "A099",
+      "B20"
+    ]
+  }
+]

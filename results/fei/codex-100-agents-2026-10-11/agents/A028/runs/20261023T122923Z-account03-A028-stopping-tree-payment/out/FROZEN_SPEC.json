@@ -1,0 +1,19 @@
+{
+  "helper_version":"v8 check.py copied as prior8.py, its base.py and exact_helper.py copied byte-for-byte; new row posterior channel layer",
+  "family":"actual Boolean binary mux, controller dimension0..2 and equal-dimension fully shared sources dimension0..1",
+  "pilot":{"controller_max_dim":1,"data_max_dim":1,"Boolean_roots":120,"reference_choices":8,"coupling_choices":3,"cases":2880,"max_seconds":60},
+  "full":{"controller_max_dim":2,"data_max_dim":1,"Boolean_roots":440,"reference_choices":8,"coupling_choices":3,"cases":10560,"max_seconds":480},
+  "source_references":["uniform","half actual spectrum plus half uniform"],
+  "controller_references":["root empty-calibrated conditional uniform","root empty-calibrated average of actual conditional and uniform"],
+  "couplings":["old constant kernel u=v=b","positive quantile endpoint tau=min(alpha,b)","negative quantile endpoint tau=max(0,alpha+b-1)"],
+  "zero_actual_input_completion":"unused source label sends nonempty probability0; q0 rows complete at empty control set",
+  "extra_fixture":"same v8 seven-variable point3/dictator versus Maj3/dictator mux,3-bit controller negative0,1,2 and fixed inherited nonempty reference weights1..7",
+  "extra_policies":["D0,C0,D1,C1 stopped","C0,D0,C1,D1,C2,D2,D3 complete","history-parity adaptive order and stop after depth>=3 on even parity"],
+  "switch_rule":"old row odds until first DATA query; positive endpoint after one DATA query, negative endpoint after two or more; no source/controller reference renewal",
+  "finite_label_fixture":"L=(0,1,2,0) on2controls; shared sources z,d,pointdefect2; all source root refs uniform; quantile full-controller-profile coupling; complete mixed D0,C0,D1,C1 tree,31nodes",
+  "obstruction":"pointdefect2 controller times z with dummy d; exact source/controller refs; dummy DATA query; target nonempty odds1/2 instead of3/4; one actual Boolean case",
+  "symmetry":"none; all padding and constants retained",
+  "arithmetic":"exact rational spectra/kernels/normalizers and prime-log identities; outward rational signs; integer27>16 obstruction",
+  "memory_estimate_MB":180,"automatic_escalation":false,
+  "independent":"direct characters, separate posterior disintegration, fixed six-variable mixed policies; <=254nodes,60seconds"
+}

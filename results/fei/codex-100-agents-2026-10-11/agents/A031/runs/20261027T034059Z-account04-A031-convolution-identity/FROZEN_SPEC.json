@@ -1,0 +1,59 @@
+{
+  "helper_version": "A031-independent-v6-v1",
+  "family": "All labelled Boolean functions n=0..3, inherited complete references with ghosts and retained scalar mass; analytic root scalar checks from actual Fourier coefficients",
+  "domain": {
+    "n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "reference": [
+      "P",
+      "(P+uniform)/2",
+      "(P+delta_empty)/2"
+    ],
+    "mass": [
+      "1",
+      "1/2"
+    ],
+    "policy": [
+      "fixed increasing",
+      "fixed decreasing",
+      "outcome adaptive with optional early stopping"
+    ],
+    "ghost_split": [
+      "1/2",
+      "1/3"
+    ],
+    "root_scalar_n": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "padding": 12,
+    "edit_steps": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      16,
+      32
+    ]
+  },
+  "case_count": "278 labelled functions x6 references x3 policies x2 ghost rules =10008 tree fixtures; scalar exact distinct Walsh coefficients plus boundary A=+-1",
+  "symmetry": "none; deduplicate only identical coefficient values in scalar tests, preserving all truth tables in trees",
+  "arithmetic": "integer Walsh; Fraction identities and sign certificates; logarithmic identities proved algebraically and diagnostic float check only",
+  "memory_estimate_mb": 80,
+  "pilot_max_runtime_seconds": 55,
+  "main_max_runtime_seconds": 120,
+  "automatic_dimension_escalation": false,
+  "goal": "Independent scoped review A011 v6 full inherited/vacuum-calibrated theorem and A096 ghost transport; no new FEI claim"
+}

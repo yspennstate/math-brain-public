@@ -1,0 +1,177 @@
+[
+  {
+    "claim_id": "A006-SAME-REFERENCE-INSERTION-AND-CONNECTED-COMPATIBILITY",
+    "version": 1,
+    "exact_statement": "For original fixed positive feasible gate references T subset Tprime retaining the old rules and weights, with normalizers D0,D1 and output masses Q0,Q1, every old actual run embeds uniquely and Q1(A)>=(D0/D1)Q0(A). For Boolean F=f+delta with Q0 positive on the nonempty Fourier supports of f and F and every theta>0, C_F(Q1)<=(1+theta)C_f(Q0)+(1+1/theta)sum_nonempty deltahat(A)^2 log2(1/Q0(A))+v_F log2(D1/D0). For every integer m>=2, let F be the positive edge DNF of two disjoint K_mm components joined by one edge from a left vertex of block1 to a right vertex of block2. On exactly its original edge primes, both endpoint orders, pi=1/4 and one fixed lambda=1/(2m), its complete all-partition actual-posterior cost satisfies C_F<23I(F).",
+    "hypotheses": [
+      "Uniform independent physical Boolean cube; entropy and costs in bits; actual runs counted once with posterior witness entropy retained.",
+      "The enlarged table keeps each old gate/order and subset/count/attachment law; its positive weights are globally fixed and packing-feasible. General insertion requires the stated support coverage.",
+      "For the connected specialization the original prime table is precisely the 2m^2+1 graph edges; no reference reset or sampled-set weight choice is used."
+    ],
+    "statement_sha256": "cfcb2fee57815af5fb1f5ece0060af1a8b0a2af7effd1d61e245e6d1723a5e53",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": [
+      "CONNECTOR.md sections1-5",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      "A010-EXACT-DISJOINT-PRIME-QUEUE-FACTORIZATION@1",
+      "A010-CROSSED-COMPONENT-PAYMENT-AND-REFERENCE-SEPARATION@1"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "verdict": "AUTHOR_PROOF_WITH_SEPARATE_PHYSICAL_AND_FOURIER_EXACT_CHECKS; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "finite_scope": "m2..4; 196 signed pairs;5120 FIFO merges; scalar checks through256",
+        "formal_status": "NOT_FORMALLY_CHECKED"
+      },
+      {
+        "reviewer": "A010",
+        "role": "independent reconstruction of new source contribution, no repair; A006 upstream A010 authorship explicitly disclosed",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "statement_sha256": "cfcb2fee57815af5fb1f5ece0060af1a8b0a2af7effd1d61e245e6d1723a5e53",
+        "evidence": [
+          "agents\\A010\\runs\\20261023T110124Z-account03-A010-universal-residual-falsifier\\REVIEW_A006.md",
+          "agents\\A010\\runs\\20261023T110124Z-account03-A010-universal-residual-falsifier\\out\\CHECK.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_A010_WITH_UPSTREAM_AUTHORS_DISCLOSED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A010",
+      "A009",
+      "A008",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-RARE-CHILD-MOMENT-AND-FIXED-POLARITY-MIXTURE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For any finite original conditioned queue with positive feasible packing lambda, activities x_e=lambda_e*pi_e, A0=sum x_e and D=prod(1+x_e)-1, mark a fixed set G of gate names of total lambda weight t. If z>=1, zt<=1/16 and zA0<=1/16, then E[1_finite_success z^(R-1+M_G)]<=16/19, where R is the initial root count and M_G counts marked CHILD visits with repetitions. Consequently, for every integer w>=32, r=2^w, U=AND of r disjoint width-w OR clauses, V(Y)=1-U(-Y) on an independent clone, and F=2U(X)V(Y)-1, every pair of original complete positive/negative-prime queues with independently arbitrary positive packing-feasible weights and arbitrary ordered covers satisfies C_mix(F)/I(F)>w/2592 for EVERY fixed normalized output mixture alpha Q_+ +(1-alpha)Q_-, alpha in [0,1]. This lower bound includes all finite runs, repeated gates, overlapping subsets and output ambiguity. Meanwhile H(F)<8I(F), so this is an obstruction to this fixed-pair coding route, not an FEI counterexample. Each original root normalizer is retained separately.",
+    "hypotheses": [
+      "Original queue offspring law p_c=1/[(c+1)(c+2)] and attachment through selected coordinates",
+      "Finite tables, positive feasible packing; failed and infinite runs have no output",
+      "Marked-tree lemma uses its explicit z conditions; marks do not change the sampler",
+      "Boolean obstruction uses the stated disjoint uniform-cube family and complete signed prime tables",
+      "Cost/entropy in bits; exactly one fixed reference per polarity; richer mixtures or jointly compressed codes are not refuted"
+    ],
+    "statement_sha256": "8665cf2638011cb0dffa64b7c0cad0b347746eeb92dc2541e4bbc262ce55e6e5",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": [
+      "MIXTURE_OBSTRUCTION.md",
+      "code/check.py",
+      "code/replay.py",
+      "out/full.json",
+      "out/replay.json"
+    ],
+    "proof_dependencies": [
+      "Original forests.tex queue semantics and conditioned root law",
+      "Direct Boolean prime classification, product Fourier coefficients and physical pivotal counting; proved in MIXTURE_OBSTRUCTION.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "role": "author proof plus separate exact implementations; not independent-agent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "out/full.json",
+          "out/replay.json"
+        ]
+      },
+      {
+        "reviewer": "A010",
+        "role": "independent reconstruction of entire source theorem, no repair",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "statement_sha256": "8665cf2638011cb0dffa64b7c0cad0b347746eeb92dc2541e4bbc262ce55e6e5",
+        "evidence": [
+          "agents\\A010\\runs\\20261023T110124Z-account03-A010-universal-residual-falsifier\\REVIEW_A008.md",
+          "agents\\A010\\runs\\20261023T110124Z-account03-A010-universal-residual-falsifier\\out\\CHECK.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_A010_AT_FULL_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Every Boolean f has influence-paid full output cost in a fixed mixture of one original positive-prime queue and one original negative-prime queue, optimizing their feasible weights and orders",
+        "witness": "F=2U(X)[1-U(-Y)]-1, U=AND of2^w disjoint width-w OR clauses, w>=32",
+        "scope": "Original fixed pair of queues only; universal one-root structural existence remains true; full FEI unrefuted"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A009",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A010-BOUNDED-MIXTURE-VARIATIONAL-RESIDUAL-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer w>=64, let r=2^w, U be the AND of r disjoint width-w OR clauses and F=2U(X)[1-U(-Y)]-1 on independent uniform blocks. Every fixed normalized output mixture of at most floor(2^(w/4)) original complete positive-prime queues of F and any finite or countable collection of original complete negative-prime queues has complete nonempty Fourier-weighted cross entropy C_mix(F)/I(F)>w/2592, uniformly over all independently chosen positive packing-feasible vectors, all valid ordered covers, all fixed mixture priors, and all posteriors over reference names and actual runs. Hence the variational infimum over this bounded representation class diverges, although H(F)<8I(F). More generally, with L>=1 positive references and Z=2^w/(48Lw)>=1, put B=min{(ceil(w/2)-1)log2 Z,2^w-1}; if B>0 then C_mix(F)/I(F)>B/(324w).",
+    "hypotheses": [
+      "Original finite gate tables, one complete prime table per queue, original subset/count/attachment rules, original nonempty-root conditioning and each summand's own normalizer; no conditioning on eventual success.",
+      "All weights and mixture priors fixed before sampling a Fourier set; failed and infinite runs provide no output; full finite successful mass includes repeated gates and overlapping subsets.",
+      "The all-size budget theorem uses w>=64; the tradeoff uses the same Boolean family and its stated Z and B conditions.",
+      "Cost and entropy are bits. This excludes unrestricted positive-reference mixtures, nonprime dictionaries and new once-per-set shared-tag codes; no FEI disproof is claimed."
+    ],
+    "statement_sha256": "1a2abb8577b60236493c8a8b38ad46dfcaf5d65b352cf0e99c293d9b511be6d0",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": [
+      "MULTIREFERENCE.md",
+      "REVIEW_A008.md",
+      "code/check.py",
+      "out/CHECK.json",
+      "out/BOUNDARY.json"
+    ],
+    "proof_dependencies": [
+      "A008-RARE-CHILD-MOMENT-AND-FIXED-POLARITY-MIXTURE-OBSTRUCTION@1; unchanged hash 8665cf2638011cb0dffa64b7c0cad0b347746eeb92dc2541e4bbc262ce55e6e5"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "role": "author derivation, independent source reconstruction and exact finite certificates; not independent-agent acceptance of this extension",
+        "verdict": "PASS; NEW_EXTENSION_REVIEW_PENDING",
+        "evidence": [
+          "out/CHECK.json",
+          "out/BOUNDARY.json"
+        ]
+      }
+    ],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "The full original-prime queue cost is universally influence-paid after optimizing any fixed mixture within the stated exponentially growing positive-reference budget",
+        "witness": "Actual F=2U(X)[1-U(-Y)]-1, w>=64",
+        "scope": "Bounded mixture variational infimum only; H(F)<8I(F)"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A008",
+      "A009",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

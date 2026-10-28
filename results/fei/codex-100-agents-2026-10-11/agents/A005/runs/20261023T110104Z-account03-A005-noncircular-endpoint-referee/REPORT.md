@@ -1,0 +1,47 @@
+# exact target, quantifiers, hypotheses and units
+
+A005/B01 stage19 tests whether arbitrary Boolean seed deficit survives an adaptive frontier once A002's ORIGINAL-data/no-intervening-reset restrictions are removed. Every finite uniform Boolean sign, normalized Walsh coefficients, H bits, fixed K>=0. Tree depth means MAXIMUM single-coordinate queries along a path, not expected depth or block count. We prove a uniform entropy budget for arbitrary affine reset policies, and a deficit budget when resets do not increase actual I. Full FEI remains OPEN; owner deadline23October2026 14:49UTC governs.
+
+# sources actually read, revisions and theorem locators
+
+BOARD header23October10:53UTC, unchanged B01 STREAM_NOTESv1, own stage18 STATUS, current protocol fields consumed; whole protocol and machine AGENTS retained from prior full session reads. Fresh substantive sources: A00205:38 REPORT/REVIEW_A051 Sections1--4; A05105:07 COMPACTNESS Sections1--4 and report context; A05205:58 REPORT/PRECONDITIONING_PROOF Sections1--5; A05504:20 REPORT's scoped acceptance of A005 prior claim. Current source claim identifiers and source hashes inspected. Exact paths/observed bytes saved in out/SOURCE_RECEIPTS. Prior campaign/registry/four-manuscript baseline reads are not represented as fresh audits. One two-wording read-only math recall returned background; its display was truncated and no stored card is a proof premise or a novelty claim.
+
+The old lead weak-influence assignment was closed earlier. Dispatch consumes A055's scoped HOLDS of A005 stage18 without repair, and A002's explicitly excluded basis-changing/control frontier. out/PREVIOUS_REVIEW records the source-bound acceptance without editing the immutable old run. Required current-session wake completed with warnings: owner-model97.5hours, state-of-mind82hours and latest dream32.8hours stale. Brain self-care remains degraded/unverified; personal-context and memory-consolidation reliability remain affected. Current instructions/proof sources govern.
+
+# complete derivation or exact first unsupported line
+
+DERIVATION Sections1--6 gives the complete proof. Error e against the best signed Fourier character is invariant under every affine chart and output character, and is a supermartingale under actual restrictions: the old best character restricts to a valid signed character on each daughter. Every directional minority is<=2e. Symmetrize the established one-query entropy bound by multiplying the queried character, then apply concavity level by level, retaining all branch reaches and idle stopped leaves. This gives Hroot-EHleaf<=r phi(min(2e_root,1/2)), where phi=h2+2x/ln2. Nonincreasing actual reset influence gives the corresponding signed deficit lower bound.
+
+For activation of t canonical seed copies with k>=2 controls, p2^-k, the resulting ALL-policy lower bound is E D_K(leaf)>=p[t D_K(seed)-(10+2K)k-15-2r(k+3/ln2)]. Every control query, changed physical partition and branch-dependent affine reset is covered. t2^k,rk/2^k->0 preserves expected seed deficit in the bounded-I escape; t2^l,k2l,rl/2^l->0 preserves normalized expected deficit while root I->0 and seed ratio survives. Genuine all-terminal nonviolation requires the explicit maximum-depth lower bound in DERIVATION Section3.
+
+The point8 seed at K15/4,k20,t2^20 has root deficit>3731/1048576. Every permitted frontier of maximum query depth64 retains COMPLETE expected terminal deficit>595/1048576. This scalar certificate describes an actual finite Boolean formula without constructing its multi-million-coordinate table. At least one terminal violates; inactive-control constant leaves demonstrate why ALL-leaf positivity is false.
+
+FIRST UNSUPPORTED UNIVERSAL LINE: force a paid ORIGINAL proper pair at a genuine finite least-dimensional positive fixed-K witness using NONNEGATIVE smaller-affine-child reserves, independent quotient rank, SAME unused bank and mixed interaction. The frontier theorem blocks manufacturing that eligibility from arbitrary cores; it does not select or pay a critical pair. No universal constant gain or full FEI counterfamily is claimed.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC precedes jobs. Commands from A005: python -B -X utf8 runs/20261023T110104Z-account03-A005-noncircular-endpoint-referee/code/check.py --pilot; same without --pilot; then code/independent.py in this run. Pilot4037 assertions PASS in1.008s on22 base roots/22 activation roots; excluded from final count.
+
+Primary full152876 assertions PASS in17.408s: ALL278 labelled n0..3 tables and66 frozen activated fixtures (root dimension<=6),1022 first queries,33560 complete branch/reset/query options. EVERY distinct nonincreasing affine/character image of each <=2-bit base child is generated. Independent branch maxima certify322426 Cartesian-combined policies by separability; this is NOT322426 individually replayed policies or assertions. Activated fixtures use identity, exact greedy canonical and accepted explicit shear resets, not an exhaustive higher-dimensional orbit census.
+
+Separate direct-character/physical-edge replay934 assertions PASS in15.287s: a7-bit tensor-bent activated root after an actual data/control input shear, branch-dependent resets, four complete depth2 terminals, all directional error bounds, inactive-control constant leaf, influence-increasing reset adversary, and point8 rational scalar certificate. Total153810 NEW full assertions; this differs from preceding stage11476 because this is a different frontier domain, not a revised old total. Old totals, pilot and source-agent checks are excluded.
+
+Arithmetic: integer FWHT versus separate direct characters, exact Fraction physical/spectral costs, prime-log entropy identities versus direct rational-log entropy intervals,24/40-term positive atanh tails with explicit error. No floating proof decisions. Constants, zero error, characters, zero coefficients and all original reaches are retained. Infinite-parameter/r-depth statements follow the analytic supermartingale/Jensen proof, not finite extrapolation. Jobs55s cap, estimated110MB RAM, peak unmeasured; no >300MB job, automatic dimension increase, GPU or detached work. Initial compute snapshot status ok,17.3GB physical free,69.3percent commit used; startup contention was reported by runtime. Existing work unchanged. No Lean attempt or formal certification claimed.
+
+# proof dependencies and changed downstream conclusions
+
+Consumes established channel JS<=2Inf/ln2 and B_i<=h2(Inf_i), the reviewed finite affine-basis criterion and A051 activation profile/full-span preservation. REVIEW/DERIVATION Section5 independently reconstruct A002 Section4 and A052 Sections1--2 unchanged, without repair; no whole-source/census acceptance inferred. A055's prior A005 acceptance is consumed at DERIVATION Sections2--6 only. The new theorem has author proof/exact certificates; independent-agent acceptance pending.
+
+Changed downstream conclusion: arbitrary affine/control frontiers cannot evade rare arbitrary-seed debt merely by changing query charts; explicit maximum-depth/expected-debt constraints replace the old original-data-only scope. Nonincreasing influence is essential to deficit conservation. Root e/H invariance alone permits influence-increasing resets, but those are not free funding. No source theorem is refuted and no FEI constant improves.
+
+# one next mathematical action and independent reviewer
+
+A002/A051 independently reconstruct the best-character-error supermartingale, padded-level Jensen step and r-dependent scalar budget; A055/A090/A094 challenge control/mixed-chart scope and the expected-versus-every-leaf distinction. A052/A055 should force critical ORIGINAL-pair lower funding using genuine nonnegative smaller-affine-child reserves, independent quotient rank, SAME unused bank and mixed T. This targets the excluded eligibility hypothesis; another bounded frontier or root-only structural admission remains arbitrary-seed hard. Handoff saved locally; no messages sent.
+
+# actual persistence receipts or precise save blocker
+
+All four protocol files, complete DERIVATION/REVIEW, frozen spec, code and exact outputs saved only under A005. Finalizer checks exact required field sets, statement hash, byte-identical PROGRESS/PACKET_DELTA, seven report headings,20MB cap and two-line STATUS. out/PERSISTENCE_RECEIPT hashes every run artifact and rolling file; out/HANDOFF_CHECK is written after a separate reopened hash verification. Local persistence verified. Independent-agent review, registry adoption, supervisor copies, remote mirrors and research-brain ingestion unverified. Required runtime wake ran; no research brain/shared-source writes, git, mail, deletion or trading access. No new job remains running, and no existing work was stopped.
+
+## Universal bridge
+
+C019 stopping-tree payment gains a uniform all-policy barrier beyond original-data frontiers: best-character error survives affine charts and controls the complete expected terminal debt through arbitrary nonincreasing affine resets, with explicit r-dependent lower bounds and a depth64 rational counterguard to eligibility at15/4. Constant gain is0; all-terminals-paid critical original-pair selection remains unproved. NEXT exploits genuine NONNEGATIVE smaller-child reserve and independent rank at the original pair, because that is the hypothesis these arbitrary-core frontiers still fail; another short chart-changing frontier cannot close the universal unpaid step.

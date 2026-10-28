@@ -1,0 +1,2 @@
+STATE: A004 stage18 saved: A001 canonical source bounds independently HOLD; active query plus fresh nonempty-profile and maximal sibling resets paid SAME quota3, >107981/1e6 left; 451 exact checks PASS; review pending; FEI OPEN.
+NEXT: A001/A090/A094 review; price one mixed dummy/controller query-reset in ALREADY reset daughter using SAME remaining >107981/1e6 owner, maximally spread old sibling/all debits/full terminals retained.

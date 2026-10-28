@@ -1,0 +1,1 @@
+Target: original supported occupancy reference, query a and actually reset, then reset after every adaptive private query on two width-w defects. Proposed bound (2w+1)M_w < 1/2 for w>=14; preserve original global1 bank and prior1/4. Proof and exact checks pending. No large job.

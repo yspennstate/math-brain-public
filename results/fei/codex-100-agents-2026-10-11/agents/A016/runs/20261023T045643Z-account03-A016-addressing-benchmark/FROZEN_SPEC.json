@@ -1,0 +1,23 @@
+{
+  "helper_version": "A016 stage8 log interval helper copied with provenance; new independent histograms",
+  "actual_Boolean_family": "A020 G_m=g3^m, rare switched parity, two-bit mask, original Q and U; query q and first bit of m-1 seeds; cleanup both surviving coordinates of seeds whose queried bit was 1",
+  "domain": {
+    "k": 5,
+    "r": [
+      3,
+      4,
+      16,
+      64,
+      256,
+      4096
+    ],
+    "s": "0,1,2,r for r<=64; 0,1,2,16 for r256,4096"
+  },
+  "case_count": 24,
+  "symmetry": "Permutation of disjoint identical seeds; every s occurs binomial(r,s) times, both q signs and all cleanup outcomes retained",
+  "arithmetic": "Fraction exact; 90-bit outward dyadic log intervals,40-term atanh with rigorous tail; integer Walsh",
+  "memory_estimate_MB": 95,
+  "maximum_runtime_seconds": 60,
+  "pilot": "r3 all four s only; must pass under60 seconds",
+  "no_auto_escalation": true
+}

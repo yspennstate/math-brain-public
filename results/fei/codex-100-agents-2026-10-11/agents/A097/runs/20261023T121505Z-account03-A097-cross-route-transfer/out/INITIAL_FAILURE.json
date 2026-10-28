@@ -1,0 +1,12 @@
+{
+  "attempt": "v1 pilot",
+  "result": "FAIL at assertion291 before main",
+  "first_failing_line": "kl(pp,qnew)==expected_delta",
+  "cause": "Expected map incorrectly included an extra -3/16 log2(2); exact stated cost is(3/32)log2(27/25)",
+  "additional_pre-main_audit_fix": "Post-conversion occupancy may be positive for L1; replace false checker equality with exact integer-power nonnegative-KL certificate; analytic proof already uses -D_occ<=0",
+  "preserved": [
+    "out/check_v1.py.txt",
+    "out/FROZEN_SPEC_v1.json"
+  ],
+  "proof_or_scope_changed": false
+}

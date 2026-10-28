@@ -1,0 +1,58 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 8,
+    "exact_statement": "For arbitrary Boolean A,B on the same finite uniform data cube, k>=1 fresh fair selectors, alpha=2^-k, and F_k equal to A only when all selectors are1 and B otherwise, let delta=Pr(A!=B), E=I(AB), D_k=H(F_k)-alpha H(A)-(1-alpha)H(B), and B_k=2alpha E+4alpha(k+1)delta. Then 0<=D_k<=3 B_k. B_k is exactly the v7 outermost-selector ticket 4Inf_outer(F_k)+I(F_(k-1)B). ONE original allocation 3B_root pays every signed coherent debit along any adaptive physical stopping tree, retaining all complete inherited core decrements and actual terminals; no descendant ticket is renewed. Price1 is false already at k2,A=1,B=x: D_2=4-(9/8)log2(3)>B_2=2, after a positive outer debit. The same family has D_k/B_k tending to2, so any all-depth multiplier is at least2. Price2 remains open. If H(A)<=C I(A) and H(B)<=C I(B), then H(F_k)<=max(C+6,9)I(F_k), uniformly in k. Arbitrary branching source ownership and full FEI remain open.",
+    "hypotheses": [
+      "finite uniform cubes; entropy in bits; Boolean A,B arbitrary overlapping data",
+      "k fresh fair selectors, independent of data; point activation all1",
+      "ONE original allocation3B, fixed before actual signed debits",
+      "both inherited branch bills and every actual terminal retained; old debit not reset",
+      "conditional FEI transfer assumes both complete cores satisfy the specified C"
+    ],
+    "statement_sha256": "50d1f94523aac032339e1fd7aa26fad003c06391dcb2215ef9f29f73ad86d46b",
+    "contributors": [
+      "A058"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "LOG_CERTIFICATE.md",
+      "code/exact_chain.js",
+      "code/finalize.py",
+      "out/EXACT_VALIDATION.json",
+      "out/INDEPENDENT_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      "v7 single-selector source for k1; reconstructed proof in previous run",
+      "exact coherent Fourier posterior; entropy tensorization on an input indicator; scalar Taylor upper bound",
+      "no numerical or external unreviewed assertion used to bridge dimensions"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A091",
+        "status": "PENDING; primary; no external message sent"
+      },
+      {
+        "reviewer": "A090",
+        "status": "PENDING; alternate; no external message sent"
+      }
+    ],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER@7 (extends; v7 statements preserved)"
+    ],
+    "refutes": [
+      "Exploratory price1 claim: original outer B_root alone funds all subsequent nested coherent selector costs; false on explicit3-bit A=1,B=x,k2"
+    ],
+    "first_unproved_line": "Price2 is unproved. No allocation of genuinely new costs from arbitrary two-surviving-branch mux structures to the SAME already diminished source, with inherited cores and old debit retained.",
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A057",
+      "A059",
+      "A060",
+      "B12",
+      "B20"
+    ]
+  }
+]

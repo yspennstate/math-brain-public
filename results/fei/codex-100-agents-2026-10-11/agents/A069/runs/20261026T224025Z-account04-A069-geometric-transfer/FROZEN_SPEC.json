@@ -1,0 +1,14 @@
+{
+  "helper_version": "A069-near-Boolean-v1",
+  "purpose": "Exact route guard, not Boolean FEI counterexample; independent A070 review reconstruction",
+  "family": "h_n=Im product_j ((m+i*x_j)/sqrt(m*m+1)), n=m*m; g=(x0+epsilon*h_n)/sqrt(1+epsilon^2*A_n)",
+  "parameter_domain": {"pilot_m": [2], "main_m": [2,4,8], "epsilon": ["1/2","1/4","1/8"]},
+  "case_count": "3 pilot parameter cases; 9 main cases, plus direct all 16 h4 inputs and all 256 h4 Fourier convolution coefficients/pairs as specified by checker; aggregated binomial spectra at n=16,64",
+  "symmetry": "Only permutation of n identical coordinates, justified by explicit product Fourier coefficient depending on cardinality and parity. Direct truth table used only at n=4.",
+  "arithmetic": "Fraction exact; square-root-free h coefficients because n even; normalized g squared spectrum rational; entropy lower bounds symbolic using rational mass <=1/(n+1), no floating sign decisions",
+  "memory_estimate_mb": 48,
+  "max_runtime_seconds": 55,
+  "pilot_max_runtime_seconds": 55,
+  "dimension_escalation": false,
+  "analytic_infinite_domain": "k>=2 integer, epsilon=1/k, n=2^(2*k^4); symbolic proof only, never enumerate or allocate this dimension"
+}

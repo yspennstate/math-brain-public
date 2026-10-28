@@ -1,0 +1,121 @@
+{
+  "run_id": "20261023T133708Z-account03-A080-universal-counterexample-standard",
+  "stream": "B16",
+  "claims": [
+    {
+      "claim_id": "A080-EXACT-HULL-TENSOR-FAITHFUL-BANK",
+      "version": 1,
+      "exact_statement": "For every K>=0 and arbitrary finite disjoint uniform-cube Boolean factors, the full physical stopping hull R_K of (H-KI)_+ tensorizes exactly: R_K(product_i f_i)=sum_i R_K(f_i), with no root-sign hypothesis. Always 0<=H-R_K<=KI, and for 0<=K<=L, 0<=R_K-R_L<=(L-K)I; R_K is convex piecewise affine in K. For every actual disjoint-core Boolean composition F=B(g_i), pivotal probabilities q_i and signed correction C=H(F)-sum_i q_i H(g_i), the bank A=C+kappa I(F)+sum_i q_i R_K(g_i) satisfies H(F)+(kappa-K)I(F)<=A<=H(F)+kappa I(F). Any two representations of the same F at the same K,kappa differ by at most K I(F). With fixed kappa, unbounded A/I implies an actual ordinary H/I counterfamily, even with varying K; the converse holds at bounded K. The clipped bank A_plus=C_+ +kappa I+sum_i q_i R_K(g_i), even though not universally coherent, obeys A_plus/I-kappa<=max(H(F)/I(F),max_{i:q_i I(g_i)>0} H(g_i)/I(g_i)); its unbounded root ratio therefore extracts an actual whole-or-core Boolean counterfamily. Products cannot amplify a finite A/I or R_K/I at fixed K,kappa. For F_t the product of t independent two-bit functions negative only at00, H=2t,I=t,Var=1-4^-t,R_K=t(2-K)_+, providing sharp bank endpoints at0<=K<=2 and divergent variance/average-influence normalizations despite H/I=2. No universal initial bank bound, no full FEI proof, and no unbounded ordinary-ratio family is asserted.",
+      "hypotheses": [
+        "Finite {-1,1}-valued functions on independent uniform physical bits; H is Shannon entropy in bits of the normalized squared Fourier law, I is total physical influence.",
+        "K>=0; every R_K is the true complete finite physical stopping hull, with all adaptive queries and both full outcomes retained; factors have disjoint supports.",
+        "Composition cores and outer gate are actual Boolean functions, allowing constants/dummies; q_i are actual independent biased-output pivotal probabilities, not substituted formal parameters.",
+        "Counterexample extraction uses fixed kappa, nonconstant actual whole functions, and actual full influence denominators; bounded K is required only in stated converse and representation-sequence comparisons.",
+        "Initial-bank algebra is unconditional. Nonnegative coherent status of the signed bank at kappa=6 is the separate A072 theorem reviewed by A074; no fresh original owner credit or repeated repartition payment is inferred."
+      ],
+      "statement_sha256": "4ff95a1f2c945e06dd0a49a3564b72efbe288e2bda939b4789740d43bc1c9f9a",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\PROOF.md",
+        "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\out\\main_certificates.json",
+        "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\out\\verification_summary.json",
+        "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\out\\extraction_summary.json"
+      ],
+      "proof_dependencies": [
+        "Finite physical restriction DAG and stopping-policy duality, proved directly by backward induction.",
+        "Shannon chain rule, entropy concavity, character orthogonality and direct edge counting, reconstructed in PROOF.md.",
+        "Actual pivotal-influence identity and exact composition correction; no unproved FEI inequality.",
+        "A072-SIGNED-COMPOSITION-DRIFT-COHERENT-ENVELOPE@1 is used only to identify the separately coherent kappa=6 bank; algebra, tensorization and extraction do not require its drift theorem.",
+        "The bank sandwich overlaps A089-SHARPENED-SIGNED-COMPOSITION-RESERVE@1, independently reconstructed here; source digest preserved in scoped review. Tensor lower bound and clipped extraction are distinct A080 additions."
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080",
+          "verdict": "AUTHOR_PROOF_AND_EXACT_VALIDATION_ONLY",
+          "arithmetic": "Rational prime-log forms and integer-power signs; direct-character primal/dual reconstruction without producer import or Bellman maximization.",
+          "critical_scope": "Zero-payoff leaf completion and actual joint policy attain the lifted feasible dual; clipped bank chooses an actual whole/core function.",
+          "external_independent_review": "PENDING",
+          "source_repair_supplied": false
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Tensor amplification of a finite ordinary H/I or full-hull R_K/I ratio.",
+        "Inference from variance-normalized or dimension-averaged-influence growth to an FEI counterexample."
+      ],
+      "first_unproved_line": "A dimension-independent initial price for the coherent bank, or a literal Boolean sequence with its actual root A/I (or A_plus/I with whole/core extraction) unbounded.",
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A075",
+        "A084",
+        "A089",
+        "A092",
+        "B16",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A089-SHARPENED-SIGNED-COMPOSITION-RESERVE",
+      "version": 1,
+      "exact_statement": "For every finite Boolean outer gate h and disjoint finite Boolean inner functions g_j on independent uniform physical bits, including constants and dummies, fix the original partition under restriction, put F=h(g), q_j equal to the true pivotal probabilities, and C=H(F)-sum_j q_j H(g_j), with base2 squared-Fourier entropy. For a physical query i in block j let mu=E g_j, t=ghat_j({i}) and d=Inf_i(g_j). Then mean C_child-C_parent <= q_j*(abs(t)*(abs(mu)+abs(t))+2*d)/ln2 <= (3/ln2)*Inf_i(F) <= (9/2)*Inf_i(F). For kappa=3/ln2 or9/2, C+kappa I(F) is nonnegative and full-query superharmonic. For every K>=0, adding sum_j q_j rho_K(g_j), where rho_K is the complete inner stopping hull of (H-KI)_+, gives a nonnegative full-query superharmonic majorant A_K of (H(F)-K I(F))_+. Actually supplied credit at least A_K can be propagated with conditional-mean-conserved old nonnegative credit owners and old signed debit labels, both full children and spent outside donors preserved. The coefficient is sufficient, not claimed optimal. No dimension-independent initial price is asserted: singleton physical cores give A_K=H(F)+kappa I(F), whose influence payment is FEI-equivalent. Moreover, for every such fixed partition and K>=0, H(F)+(kappa-K)*I(F)<=A_K<=H(F)+kappa*I(F): the inner savings H(g_j)-rho_K(g_j) lie in[0,K*I(g_j)]. Thus dimension-independent initial influence funding at any fixed K is FEI-equivalent for arbitrary choices of partition, not only singleton cores.",
+      "hypotheses": [
+        "uniform independent physical bits; entropy in bits; all finite arities and dimensions",
+        "fixed disjoint partition under every physical restriction; constants and dummies retained",
+        "K>=0 and complete finite stopping hulls",
+        "any historical reserve must be actually supplied by the same unused original owners; admission changes no partition; repartitioning needs its own comparison"
+      ],
+      "statement_sha256": "94adafb66d404d69b722a3569138674608b98775a94613fe3d4c9889ca26e633",
+      "contributors": [
+        "A089"
+      ],
+      "proof_source": [
+        "agents\\A089\\runs\\20261023T130925Z-account03-A089-repair-specialist\\PROOF.md",
+        "agents\\A089\\runs\\20261023T130925Z-account03-A089-repair-specialist\\CLAIMS.json",
+        "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\SOURCE_REVIEW.md"
+      ],
+      "proof_dependencies": [
+        "A072-SIGNED-COMPOSITION-DRIFT-COHERENT-ENVELOPE@1 exact identity, independently reconstructed unchanged in PROOF.md section3",
+        "Boolean restriction means mu+t,mu-t lie in[-1,1]; elementary log inequalities and finite backward induction proved here"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A089",
+          "independent_reviewer": false,
+          "verdict": "ANALYTIC_PROOF_AND_EXACT_FINITE_VALIDATION_PASS",
+          "scope": "All-dimensional proof plus fixed finite controls; independent review of new3/ln2 coefficient remains pending"
+        },
+        {
+          "reviewer": "A080",
+          "verdict": "HOLDS_AT_SUBSTATEMENT_SCOPE",
+          "scope": "Unchanged all-partition initial-price sandwich, inner savings bounds and fixed-K existential initial-price equivalence; PROOF section5 price paragraphs.",
+          "source_statement_sha256": "94adafb66d404d69b722a3569138674608b98775a94613fe3d4c9889ca26e633",
+          "not_accepted": "Full owner/debit proof: literal S=H-KI gives negative child debit; exact parity sign receipt and proposed S=KI-H erratum. No full source-version acceptance.",
+          "repair_supplied": "None in accepted price substatement; proposed sign repair in excluded owner proof, with recusal from independent acceptance of its repaired version.",
+          "artifacts": [
+            "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\SOURCE_REVIEW.md",
+            "agents\\A080\\runs\\20261023T133708Z-account03-A080-universal-counterexample-standard\\out\\SOURCE_SIGN_CHECK.json"
+          ],
+          "source_owner_correction": "PENDING_A089"
+        }
+      ],
+      "status": "SOURCE_AUTHOR_PROVED; A080_PRICE_SUBSTATEMENT_HOLDS; FULL_A080_ACCEPTANCE_WITHHELD_PENDING_OWNER_PROOF_ERRATUM",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": "Written PROOF section5 uses S=H-KI and incorrectly asserts d_b=S_b+a_b>=0; exact admissible-root witness fails. The proposed S=KI-H erratum awaits A089 source correction and independent owner-proof review. Separately the universal initial bank price remains unproved.",
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A075",
+        "A092",
+        "B18",
+        "B20"
+      ]
+    }
+  ]
+}

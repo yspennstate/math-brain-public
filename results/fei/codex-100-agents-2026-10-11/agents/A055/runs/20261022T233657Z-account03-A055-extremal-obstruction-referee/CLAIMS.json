@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "A055-AFFINE-WEAK-HIDDENPAIR-CORE-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every K>=0 and epsilon>0, full uniform Boolean FEI(K) is equivalent to FEI(K) on the following constructed members with0<I<=epsilon: a canonical full-affine-span affine-influence-minimal positive-entropy seed is tensor-powered, multiplied by the fixed m=3 path-addressing sign, then point-activated on k>=2 fresh fair controls. Taking k=max(2,ceil(sqrt(t))) gives the seed ratio in the limit and total influence tending to0. Every constructed member has full affine spectral span, is minimal over its entire affine spectral orbit, has C_i=C_j=0,C_ij>=2p(M-1)/M^2>0 at the original path data pair i2,j3, and has exactly entropy-neutral singleton children with influence drop2p/M. Consequently S_i=-D_K-2Kp/M and D_K+S_i<0 for K>0; no positive-deficit member is physically dimension-minimal. Before activation the actual pair price is1 with all four child H/I drops4/M. After activation all four terminals have the exact E_k entropy and influence profiles in PROOF Section7; price1 is not claimed for them.",
+    "hypotheses": [
+      "finite uniform Boolean signs; entropy bits",
+      "K>=0; epsilon>0; positive-entropy canonical seeds",
+      "disjoint tensor blocks; original physical path queries2,3",
+      "k>=2 and point activation; weight-two diagonal address for the displayed full pair profiles"
+    ],
+    "statement_sha256": "56c8bdb856d67073a7052e47e9ad58e08c553984d4c2a9e3f3f3f19f3756aca4",
+    "contributors": [
+      "A055"
+    ],
+    "proof_source": [
+      "PROOF.md Sections1--7",
+      "out/CHECK.json",
+      "out/ACTIVATION.json",
+      "out/INDEPENDENT_CHILDREN.json",
+      "out/NEGATIVE_MEAN.json"
+    ],
+    "proof_dependencies": [
+      {
+        "source": "agents\\A051\\runs\\20261021T193146Z-account03-A051-near-extremizer-definition\\AFFINE_SELECTION.md",
+        "sections": "2--3",
+        "status": "source read; independent A052 HOLDS consumed; criterion and SAME-K canonicalization used"
+      },
+      {
+        "source": "agents\\A052\\runs\\20261021T222218Z-account03-A052-critical-source-structure\\PATH_CODE_PROOF.md",
+        "sections": "1--4",
+        "status": "A055 independent scoped HOLDS in out/REVIEW_A052.json; original finite counts not adopted"
+      }
+    ],
+    "review_records": [
+      {
+        "kind": "author exact validation and independent representation",
+        "status": "PASS; new application still needs independent-agent review"
+      },
+      {
+        "kind": "Lean scalar numerator check",
+        "status": "SETUP_UNVERIFIED; fresh compiler admission held; no compiler launched"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "The conjunction of affine minimality, full affine span and arbitrarily small total influence suffices to suppress all singleton-invisible pair collisions or exclude arbitrary hard cores.",
+        "scope": "intermediate qualitative shortcut only; no registered A051/A052 theorem refuted"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A052",
+      "A005",
+      "A090",
+      "A094"
+    ]
+  }
+]

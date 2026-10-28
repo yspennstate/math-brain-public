@@ -1,0 +1,107 @@
+[
+  {
+    "claim_id": "A006-ACTUAL-RUN-PHYSICAL-WEIGHT-POLYNOMIAL-DUAL",
+    "version": 1,
+    "exact_statement": "For every finite distinct actual-run collection of one fixed generator with exact masses c_r(lambda)/Z(lambda), Z>0 on its admissible physical parameter domain, every finite Boolean nonempty squared spectrum p of total mass v, and every eligible fixed public-mixture candidate Q0 positive on supp p, a rational polynomial certificate M Z(lambda)-sum_A p(A)N_A(lambda)/Q0(A)>=0 throughout that domain implies C(Q0)-(M-v)/ln(2)<=inf_Q C(Q)<=C(Q0), where N_A sums actual run numerators once, C(Q)=sum_A p(A)log2(1/Q(A)), and the infimum includes all fixed public mixtures of admissible references from this run collection. With M=v the candidate is globally optimal. On the fixed fifteen-run maximal-matching star subreference for the K3 edge-union function, all incidence-feasible positive weights and all fixed mixtures have exact infimum (3/4)log2(217/16)+(1/4)log2(651), attained at lambda=(1/2,1/2,1/2); the earned posterior entropy is3/4+(1/4)log2(6). The physically infeasible used-root-simplex relaxation has gap121/96 natural units at that same candidate, whereas this certificate has zero gap. The claim does not lower-bound references with additional omitted runs and does not provide universal influence payment.",
+    "hypotheses": [
+      "Uniform physical Boolean cube; nonempty target Fourier masses are unnormalized and measured in bits.",
+      "One fixed actual generator/run collection, with all duplicates of descriptions merged by identical generator draws; distinct chronological orders remain distinct actual events.",
+      "All chosen run masses nonnegative and exact; N and Z rational polynomials after clearing only positive denominators; Z>0 wherever the output law is defined.",
+      "Q0 eligible and positive on target support; public mixtures fixed before observing output; certificate checked on entire physical feasible domain.",
+      "Calibration uses width-two edge gates on K3, full D=product(1+lambda_i/4)-1, lambda_i>0 and lambda_i+lambda_j<=1; its run collection is a subreference."
+    ],
+    "statement_sha256": "22b0d7349a5d9d43e3da68e114c21f2129a78945a40d8048ff211c3b91e74fb3",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": [
+      "DERIVATION.md",
+      "code/check.py",
+      "out/CHECK.json",
+      "out/PILOT.json",
+      "Kernel.lean",
+      "out/LEAN.json"
+    ],
+    "proof_dependencies": [
+      "Elementary logarithmic tangent inequality, finite mixture linearity and explicitly reconstructed width-two queue probabilities; no imported FEI theorem."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "role": "author analytic proof, exact coefficient identity, physical/run/hypothesis controls",
+        "verdict": "AUTHOR_PROOF_EXACT_CERTIFICATES; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "formal_scope": "See out/LEAN.json: at most upper-simplex scalar nonnegativity, not full entropy statement."
+      },
+      {
+        "reviewer": "A009",
+        "role": "independent reconstruction of entire unchanged theorem/calibration/relaxation gap; no author code imported",
+        "verdict": "HOLDS_FULL_STATED_SCOPE_UNCHANGED",
+        "unchanged_statement_sha256": "22b0d7349a5d9d43e3da68e114c21f2129a78945a40d8048ff211c3b91e74fb3",
+        "evidence": [
+          "REVIEW_A006.md",
+          "code/check.py",
+          "out/CHECK.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENT_A009_RECONSTRUCTION_HOLDS; SHARED_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A009",
+      "A010",
+      "A008",
+      "A015",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A009-EXACT-SCORE-MIXTURE-COMPRESSION-AND-SHARP-CYCLE",
+    "version": 1,
+    "exact_statement": "For any actual-reference class on a finite output space, nonzero target p supported on d outputs, and an eligible finite mixture Q* positive there satisfying the exact score certificate sum p(A)Q(A)/Q*(A)<=sum p for every allowed component Q, Q* can be compressed to at most d actual components preserving every positive-target output probability and complete posterior-optimized cost; rational data permit rational nullspace elimination. This bound is sharp: for the physical majority3 spectrum on triangle supports, the complete anchor/local-uniform-mask UNION law with all nonnegative activations a,b,c of positive sum and pairwise incidence caps has exact cost infimum over ALL fixed public mixtures equal to 3/2+(3/4)log2(3), attained by branch weight3/8 at (1/2,1/2,1/2) and5/24 at each axis vector. Its full output law gives1/6 per singleton and1/8 per pair and triple; all four branch types are necessary. The single-activation-vector infimum is strictly larger, and the mixed optimum strictly exceeds H=2. This is a generator-specific optimization theorem, not influence payment for arbitrary Boolean functions or a lower bound for other dictionaries.",
+    "hypotheses": [
+      "Finite nonzero target p; Q* eligible finite mixture, positive on supp p; exact score condition on ALL allowed actual components, with fixed public mixing before output.",
+      "Compression preserves complete OUTPUT cost with the optimal actual posterior, not an arbitrary frozen witness posterior.",
+      "Triangle generator is the stated normalized actual anchor/local-mask UNION law, not A006 fifteen-run forest subreference.",
+      "Triangle activations nonnegative, nonzero sum and pairwise caps; strictly positive domain has same infimum via valid boundary limits, not necessarily attainment.",
+      "All costs bits, physical cube uniform; no general source-price or FEI theorem asserted."
+    ],
+    "statement_sha256": "47fdf1dccc2e88b32733d1adff649872b74623d9f1cf82a1d13c9be0c22e1480",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": [
+      "MIXTURE_COMPRESSION.md",
+      "OPTIMUM.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      "Elementary finite-dimensional linear dependence, logarithmic tangent, rational physical probabilities and squared-polynomial identities, proved in the supplied files."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "role": "author exact analytic proof plus independent run/polynomial checks",
+        "verdict": "AUTHOR_CHECKED; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "formal_status": "Key scalar identity formalized as source only; admission outcome recorded separately."
+      }
+    ],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A010",
+      "A008",
+      "A015",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+{
+  "status": "PASS",
+  "direct_assertions": 146184,
+  "auxiliary_scalar_assertions": 86880,
+  "seconds": 7.2634097000118345,
+  "counts": {
+    "entries": 96,
+    "pivot_cuts": 1248,
+    "reset_children": 2496,
+    "post_reset_queries": 3648
+  },
+  "nonzero_pivot_O_witness": {
+    "core_code": 0,
+    "L_mask": 0,
+    "c": 0,
+    "reference": "ascending",
+    "query_ids": [],
+    "outcomes": [],
+    "r": [
+      "67/136",
+      "69/136"
+    ],
+    "O": {
+      "exact": {
+        "2": "2",
+        "3": "-1/2",
+        "17": "1",
+        "23": "-1/2",
+        "67": "-1/2"
+      },
+      "interval": [
+        "24721980664790664021320481/158456325028528675187087900672",
+        "12360990332395332010660243/79228162514264337593543950336"
+      ]
+    }
+  },
+  "non_affine_negative_control": {
+    "function": "F(v,y)=(-1)^(v*y0*y1*y2), constant core g=1, Q=p_F",
+    "K_entry": 0,
+    "M_core_entry": 0,
+    "expected_reset_KL": {
+      "exact": {
+        "2": "1",
+        "3": "-9/16"
+      },
+      "interval": [
+        "137487600952874277657288400285/1267650600228229401496703205376",
+        "68743800476437138828644200147/633825300114114700748351602688"
+      ]
+    },
+    "failure": "Expected reset KL>0 despite zero K+2Mcore; child phase is non-affine, outside theorem."
+  }
+}

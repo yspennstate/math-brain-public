@@ -1,0 +1,15 @@
+{
+  "helper_version": "A041-two-weight-prime-boundary-v1",
+  "family": "sign(3 X1 + 3 X2 + 2 sum rare >= 5) on 0/1 physical bits; sign output +/-1",
+  "domain": "m rare bits in {3,4,5,6}, p1=p2=1/2, epsilon in {1/(8m),1/(16m),1/(64m),1/(256m)}; deterministic epsilon=0 checked separately",
+  "case_count": 16,
+  "symmetry": "No truth-table quotient. All proper blocks checked by explicit cofactor rows; analytic proof groups blocks by core/rare counts.",
+  "arithmetic": "Exact Fraction product spectra through E[f product(X_i-E X_i)]/v_S on sign bits, integer dyadic cells. Natural log signs bounded by rational atanh intervals.",
+  "memory_estimate_mb": 80,
+  "max_runtime_seconds": 55,
+  "pilot": "m=3 and epsilon=1/24; max 60 seconds",
+  "no_automatic_dimension_escalation": true,
+  "targets": ["physical spectrum Parseval, Delta and R", "Jhi/ln4 >= 9/64", "0<(Bstar+ln4R)/ln4 <=5m epsilon", "prime all proper blocks", "nonsymmetric equal-Hamming-weight witnesses"],
+  "independent_check": "pivotal probabilities and c12 from binomial count versus full product expansion",
+  "analytic_extension": "All m>=3 and 0<epsilon<=1/(8m), proved separately; finite checks do not establish this extension."
+}

@@ -1,0 +1,102 @@
+[
+  {
+    "claim_id": "A007-SIGNED-CORE-PRIVATE-CLAUSE-UNIVERSALITY-AND-NORMALIZATION",
+    "version": 1,
+    "exact_statement": "For EVERY nonconstant Boolean core g on s>=1 bits and every integer L>=1, introduce L fresh positive private variables for each false core point v and take F_L=2 product_{v:g(v)=-1,l}(a_v(z) OR x_vl)-1, where a_v is the signed core clause false exactly at v. All private bits are relevant, the displayed CNF is irredundant and each displayed clause is a prime implicate (not necessarily the complete prime table). With q=Pr[g=-1] and epsilon=2^-L, every nonempty core-only coefficient is (1-epsilon)ghat(S), the empty coefficient is (1-epsilon)ghat(empty)+epsilon, and I(F_L)=(1-epsilon)^2 I(g)+2qepsilon[s(1-epsilon)+L]. Every nonempty private Fourier set lies in one private group, with coefficient magnitude 2^(1-s)epsilon for every core set; all cross-group private coefficients vanish. Thus private spectral mass is 4qepsilon(1-epsilon), its entropy is that mass times(2s+2L-2), H(F_L)->H(g), and H(F_L)/I(F_L)->H(g)/I(g). The supremum H/I on this actual signed-core positive-private clause family equals that over ALL Boolean functions, so same-constant FEI on this family is equivalent to full FEI. For ANY fixed normalized or subprobability nonempty reference R covering F_L, with core-sector mass Z_c>0 and r_c=R_core/Z_c, the EXACT extraction identity is C_g(r_c)=C_core(F_L;R)/(1-epsilon)^2+Var(g)log2 Z_c. The NEGATIVE normalization is retained. For the finite L=4s+4, C(F_L;R)<=K I(F_L) implies C_g(r_c)<=2K I(g). No influence-paid R for arbitrary cores is constructed, and no equivalence for all-positive core anchors or FEI resolution is claimed.",
+    "hypotheses": [
+      "Uniform physical cubes; signed core literals, fresh positive private bits; nonconstant g and finite integer L>=1",
+      "Displayed clauses are prime implicates and irredundant, not claimed to be all prime implicates",
+      "References fixed before target; costs in bits; core event selected from representation, not output",
+      "R total mass<=1 and covers every actual nonempty Fourier target, so Z_c>0; this creates a reference for g, not a free adaptive history reset",
+      "Same-constant FEI equivalence uses all L and exact spectral entropy limit; the finite reference implication uses L=4s+4 and K>=0"
+    ],
+    "statement_sha256": "28b5f19232d0500531deab1a5e89f99053951014639cb40af5914973cea9cd02",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "CORE_EMBEDDING.md",
+      "code/check.py",
+      "out/full.json"
+    ],
+    "proof_dependencies": [
+      "Direct literal clause witnesses, physical pivotal counting and signed Fourier expansion; all proved in CORE_EMBEDDING.md",
+      "Continuity of -t log2 t at0 for finite core probabilities plus EXPLICIT vanishing private entropy; no dimension-dependent entropy continuity premise"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "Author analytic proof, exact physical truth-table/Walsh/flip/log-vector checks; not independent-agent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "out/full.json"
+        ]
+      },
+      {
+        "reviewer": "A008",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "independent": true,
+        "evidence": [
+          "PROOF_AND_REVIEW.md",
+          "out/full.json"
+        ],
+        "scope": "Independent signed clause, physical-edge and exact full-spectrum reconstruction; no repair supplied; finite source normalization and all-parameter entropy limit reviewed."
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A010",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-ORIENTED-LOGARITHMIC-FINITE-CORE-EXTRACTION",
+    "version": 1,
+    "exact_statement": "For every nonconstant Boolean g on s>=1 uniform bits, every 0<delta<=1 and K>=0, choose h in {g,-g} with false density q<=1/2 and form A007 signed-core positive-private clauses with L=2ceil(log2(8s/delta)) private bits per false core point. Any fixed normalized or subprobability nonempty reference R covering F_L and having complete nonempty cross-entropy <=K I(F_L) induces a normalized nonempty core reference r with C_g(r)<=(1+delta)K I(g). The exact extraction is C_g(r)=C_core(F_L;R)/(1-2^-L)^2+Var(g)log2 Z, with Z its original core-sector mass. No source supplier, history reset or FEI theorem is asserted.",
+    "hypotheses": [
+      "Uniform physical cube, signed core literals, disjoint relevant positive private variables.",
+      "All references, orientation and represented core event fixed before the spectral set; costs in bits.",
+      "The supplied-reference bound is a hypothesis, not proved for arbitrary cores."
+    ],
+    "statement_sha256": "967a39caa741f36c75a9ef3f0d49319defa7ab7dadea351a8ec0899213f58a1d",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": [
+      "PROOF_AND_REVIEW.md",
+      "code/stage.py",
+      "out/full.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A007-SIGNED-CORE-PRIVATE-CLAUSE-UNIVERSALITY-AND-NORMALIZATION",
+        "version": 1,
+        "statement_sha256": "28b5f19232d0500531deab1a5e89f99053951014639cb40af5914973cea9cd02",
+        "acceptance": "Independent A008 reconstruction in this run"
+      },
+      "Poincare I(g)>=Var(g), directly from degree-weighted Fourier Parseval."
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "No gap in stated conditional extraction. Universal source reference for arbitrary signed cores is unpaid.",
+    "next_consumers": [
+      "A007",
+      "A015",
+      "A086",
+      "A094",
+      "B02"
+    ]
+  }
+]

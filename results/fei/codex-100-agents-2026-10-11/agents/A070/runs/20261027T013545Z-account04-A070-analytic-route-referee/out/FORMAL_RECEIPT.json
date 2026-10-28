@@ -1,0 +1,13 @@
+{
+  "memok_exit": 0,
+  "compiler_launched": true,
+  "statement": "example (a b c d : Int) : (a*c-b*d)^2+(a*d+b*c)^2=(a^2+b^2)*(c^2+d^2) := by ring",
+  "scope": "Gaussian integer norm multiplication only, not Fourier entropy or FEI",
+  "source_sha256": "a1d16ca828da7edf39758357e24e1fa8f65cbbc78651b9bcab68fbaee38110f8",
+  "wrapper_exit": 2,
+  "wrapper_output": "{\n  \"result\": {\n    \"status\": \"RUNTIME_UNVERIFIED\",\n    \"formal_target_verified\": false,\n    \"target\": \"A070GaussianNorm\",\n    \"source_sha256\": \"a1d16ca828da7edf39758357e24e1fa8f65cbbc78651b9bcab68fbaee38110f8\",\n    \"source_review_assertion\": \"a1d16ca828da7edf39758357e24e1fa8f65cbbc78651b9bcab68fbaee38110f8\",\n    \"target_kind\": \"UNVERIFIED\",\n    \"target_identity_verified\": false,\n    \"axioms\": null,\n    \"axiom_name_trees\": null,\n    \"allowed_axioms\": [\n      \"Classical.choice\",\n      \"Quot.sound\",\n      \"propext\"\n    ],\n    \"translation_fidelity\": \"UNVERIFIED\",\n    \"mathematical_falsity_established\": false,\n    \"threat_model\": \"Explicitly reviewed source and trusted compiler/dependencies; not a sandbox\"\n  },\n  \"compiler_exit_code\": null,\n  \"compiler_output\": \"\",\n  \"seconds\": 45.359,\n  \"compiler_sha256\": \"af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d\",\n  \"generated_sha256\": \"573846fbe75794c4095393de92061fe6d258167fd215e38384d010b015417333\",\n  \"environment\": {\n    \"manifest_sha256\": \"e53681b8d817947e44c51838f367219138162d03880ce23a449c8fec5139c784\",\n    \"declared_revisions\": {\n      \"mathlib\": \"0df444a360eaa60ab8c11dca51a86af692955474\",\n      \"plausible\": \"b7eb3304aeae834b12dda98993a37f6a41f6f0bb\",\n      \"LeanSearchClient\": \"5f4d51b81cbd3f6b32b156bfad9056621a040404\",\n      \"importGraph\": \"16f02aa7642864af59f1ff0e384a015994db9118\",\n      \"proofwidgets\": \"4be2e3d5087eeb272cf5a8853b8f9dd025ef5957\",\n      \"aesop\": \"3448c0bcc5ce01b2d1546e483ec3620e32df3d0e\",\n      \"Qq\": \"92c15be17b7caf78c2ad767ec40f89052d908d81\",\n      \"batteries\": \"4488d40d070b9700d4d5a6aa342f0d40c31b2a2d\",\n      \"Cli\": \"6130a47896ce867c6a4a55373441e59e565bad0f\"\n    },\n    \"dependency_bytes_independently_verified\": false\n  },\n  \"evidence_integrity\": true,\n  \"source_path\": \"agents\\\\A070\\\\runs\\\\20261027T013545Z-account04-A070-analytic-route-referee\\\\code\\\\GaussianNorm.lean\",\n  \"receipt_directory\": \"agents\\\\A070\\\\runs\\\\20261027T013545Z-account04-A070-analytic-route-referee\\\\out\\\\formal_scratch\\\\a5d67e80192440adb2d7a861dcede782\"\n}\n",
+  "status": "RUNTIME_UNVERIFIED",
+  "compiler_seconds": 45.359,
+  "formal_target_verified": false,
+  "reason": "45-second compiler timeout; no verified target or axiom audit"
+}

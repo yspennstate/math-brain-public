@@ -1,0 +1,309 @@
+\section{Supplied likelihood floors and arbitrary canonical-return histories}
+\label{sec:suppliedreturn}
+This section reconstructs the exact claims
+\texttt{A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER@1} and
+\texttt{A097-ORIGINAL-SOURCE-CANONICAL-RETURN-COMMUTATION@1}.
+They apply to arbitrary Boolean sources, but their reference hypotheses
+are supplied. They do not construct an influence-priced source for arbitrary
+Boolean functions. Their complete supplied-reference chain has scoped
+independent reconstructions by A098 and, here, A099. Neither is an audit
+of the entire FEI assembly. The older point-source policies remain valid
+at their original narrower scopes.
+
+Write $0$ for the vacuum frequency, $M_A$ for deletion of frequency
+coordinates in the physically queried set $A$, and $\operatorname{Cal}(Q,z)$
+for the normalized law of vacuum mass $z$ preserving $Q$'s conditional
+nonempty law. For $z=1$ use $\delta_0$ explicitly. Nonconstant actual
+descendants below a finite-cost source have a positive source nonempty
+normalizer: a nonzero child Fourier coefficient requires a nonzero
+ancestor coefficient in its fiber. The average of the two squared child
+spectra is exactly the parent frequency marginal. Consequently a source
+which is positive on occupied ancestor atoms is positive on occupied
+descendant fibers. These support facts justify all divisions below.
+
+\begin{lemma}[Comparison-chain identity for a subprobability]
+\label{lem:subprob8}
+Let $D$ be a nonnegative measure of mass at most one with
+$\CE(P_f,D)<\infty$. A physical query of $j$ has frequency marginal
+$p'=M_jP_f$ and comparison marginal $D'=M_jD$. Then
+\[
+\CE(P_f,D)-\tfrac12\sum_{b=0}^1\CE(P_{f_{j=b}},D')
+=B_j(f)+\sum_Tp'(T)\KL(P_f(\cdot\mid T)\Vert D(\cdot\mid T)).
+\]
+All occupied-fiber conditional measures on the right are normalized
+probabilities. In particular the rightmost term is nonnegative, even
+though $D$ need not be normalized globally.
+\end{lemma}
+\begin{proof}
+In each occupied fiber factor $D(T,b)=D'(T)D(b\mid T)$ and
+$P_f(T,b)=p'(T)P_f(b\mid T)$. Subtracting the two cross entropies cancels
+the marginal term because the average child spectrum is $p'$.
+The remaining conditional cross entropy is its conditional entropy
+$B_j(f)$ plus its conditional KL. Finite root CE propagates as above,
+so every occupied denominator is positive. Iteration on a finite
+adaptive tree with actual reach $\pi_v$ yields
+\[
+\sum_{v\text{ internal}}\pi_v B_{j_v}(f_v)
++\sum_{\ell\text{ terminal}}\pi_\ell\CE(P_{f_\ell},M_{A_\ell}D)
+\le\CE(P_f,D).
+\]
+No independence of branches is assumed and $D$ is never a terminal
+reference actually supplied to the algorithm.
+\end{proof}
+
+\begin{theorem}[Supplied likelihood transfer at a first-reset frontier]
+\label{thm:floorfront8}
+For every finite Boolean $g$, put $m=P_g(0)=(\E g)^2$.
+Supply a subprobability $D$ with $D(0)=m$ and finite
+$c=\CE(P_g,D)$. Supply normalized complete $S,Q$ with
+\[
+S\ge D,\qquad Q(0)\ge m,\qquad
+Q(T)\ge\gamma D(T)\quad(T\ne0),\qquad 0<\gamma\le1.
+\]
+For any finite adaptive physical query tree, select any subset of
+its stopping leaves. At each selected leaf use
+$\operatorname{Cal}(M_{A_\ell}S,P_{g_\ell}(0))$; at each other leaf retain
+the full inherited $M_{A_\ell}Q$. Then total spectral erasure plus
+all complete terminal CE is at most
+\[
+c+(1-m^2)\log_2(1/\gamma).
+\]
+A sharper excess is $\log_2(1/\gamma)$ times
+\[
+\sum_{\ell\text{ retained}}\pi_\ell
+\bigl[(1-m)+m\operatorname{Var}(g_\ell)\bigr].
+\]
+In particular $m^2=(\E g)^4$ in the displayed bound.
+\end{theorem}
+\begin{proof}
+Write $D=m\delta_0+N$; initially $N(0)=0$ and $\|N\|\le1-m$.
+The hypotheses give $Q\ge m\delta_0+\gamma N$.
+Every coordinate-deletion marginal fixes $\delta_0$ and preserves
+these inequalities. At a selected leaf, source dominance decreases
+CE, and calibrating a normalized reference to its true vacuum changes
+CE by minus its binary KL. Thus its complete bill is at most
+$\CE(P_{g_\ell},M_{A_\ell}D)$.
+
+At a retained leaf put $u=(M_{A_\ell}N)(0)$, so $0\le u\le1-m$.
+The nonempty likelihood loss is at most $L=\log_2(1/\gamma)$.
+For the vacuum, weighted arithmetic--geometric mean gives
+\[
+\log_2\frac{m+u}{m+\gamma u}
+\le \frac{u}{m+u}L\le(1-m)L.
+\]
+When $m=0$ a zero unoccupied term is omitted; when $m=1$ all laws
+are the vacuum point law and the theorem is immediate. For $0<m<1$,
+$u/(m+u)$ is increasing in $u$ and is at most $1-m$.
+Writing $v_\ell=\operatorname{Var}(g_\ell)$, the full retained-leaf
+excess is therefore at most
+$L[v_\ell+(1-v_\ell)(1-m)]=L[(1-m)+mv_\ell]$.
+Combine this with Lemma~\ref{lem:subprob8} to obtain the sharper claim.
+The stopped physical conditional means satisfy finite total variance:
+$\sum_\ell\pi_\ell v_\ell\le1-m$. The retained subset has total
+reach at most one and only nonnegative summands. This gives
+$L[(1-m)+m(1-m)]=(1-m^2)L$.
+For constant leaves use $\delta_0$ explicitly; a nonconstant leaf has
+a positive nonempty source normalizer by support propagation. These
+conventions cover zero vacuum mass without a $0/0$ cancellation.
+\end{proof}
+
+\begin{lemma}[Canonical calibration absorption]
+\label{lem:absorb8}
+On every actual finite-CE Boolean descendant path,
+\[
+\operatorname{Cal}(M\operatorname{Cal}(S,z),w)
+=\operatorname{Cal}(MS,w).
+\]
+Here $z,w$ are the actual squared means at the ancestor and descendant,
+and both sides use their explicit vacuum point law at constants.
+\end{lemma}
+\begin{proof}
+For a nonconstant ancestor write
+$\operatorname{Cal}(S,z)=\alpha S+\beta\delta_0$, where
+$\alpha=(1-z)/(1-S(0))>0$ and $\beta=z-\alpha S(0)$.
+This is an affine representation of a nonnegative law; $\beta$ may
+be negative and is not a mixture probability. Marginalization fixes
+$\delta_0$, so every nonempty output atom and the total nonempty
+output mass are multiplied by the same positive $\alpha$.
+Final calibration cancels that factor exactly. At a constant child
+both sides are $\delta_0$. A constant ancestor has only constant
+descendants. If $MS=\delta_0$, finite CE and support propagation force
+the descendant constant. These cases require no division by zero.
+All reference-only atoms participate in the same cancellation.
+\end{proof}
+
+\begin{theorem}[Arbitrary repeated original-source canonical returns]
+\label{thm:repeat8}
+Under exactly the supplied hypotheses of Theorem~\ref{thm:floorfront8},
+allow resets at any nodes, including internal nodes, to
+$\operatorname{Cal}(M_AS,P_{g_v}(0))$ from the SAME original $S$.
+Between resets inherit the current complete reference by actual
+frequency marginalization. Total erasure plus all final terminal CE
+is still at most $c+(1-m^2)\log_2(1/\gamma)$, with zero reset-count
+or depth surcharge.
+\end{theorem}
+\begin{proof}
+Prune at the first reset on every path, retaining paths without a
+reset to their stopping leaves. First-reset nodes form an antichain,
+so Theorem~\ref{thm:floorfront8} pays this full pruned frontier once.
+Below a selected leaf Lemma~\ref{lem:absorb8} identifies every later
+original-source calibrated return with calibration of the current
+inherited reference. Its signed cost is exactly
+$-\KL(\operatorname{Ber}(P_{g_v}(0))\Vert
+\operatorname{Ber}(Q_{v,\mathrm{in}}(0)))\le0$.
+The complete-reference query identity pays every intervening query.
+Replacing each first-reset leaf by its whole finite continuation
+therefore never increases its bill. Every old sibling, even a
+nonconstant one, and every previous erasure remains in this ledger.
+\end{proof}
+
+\subsection{Exact point-source application and distinct policies}
+\label{sec:exitfloor8}
+We reproduce the comparison used in
+\texttt{A085-POSTQUERY-EXIT-DIRECT-SOURCE-RESET@1} and
+\texttt{A096-ARBITRARY-EXIT-FRONTIER-SAME-ANCESTOR@1}.
+Use the previous section's family
+$F=1-2A_a+2A_{a+b+r}$, $a\ge1,b\ge0,r\ge1,d=b+r\ge2$,
+with $s=2^{-a},t=2^{-(a+b)},e=2^{1-a-b-r},\mu=1-2s$.
+The source $g=1-2A_a$ has calibrated complete reference $R$,
+$R(0)=m=\mu^2$, and cost $c$.
+At an eligible dummy ($b\ge1$) or control ($r\ge2$) creating query,
+the retained exit is $g$ with one irrelevant coordinate removed.
+Its FULL inherited law $Q_{\mathrm{off}}$ obeys
+\[
+Q_{\mathrm{off}}(0)\ge m,\qquad
+Q_{\mathrm{off}}(T)\ge\gamma R(T)
+\quad\text{on occupied nonempty source labels},\qquad
+\gamma=\frac{1-h}{1+h/2},\ h=e/s\le1/2.
+\]
+There is deliberately no domination claim on reference-only labels.
+To verify this, the canonical data reference is
+$R_e(T)=(1-h)R(T)+h\mu\mathbf1_{T=0}+2et$ and the data spectrum
+denominator at an active nonempty label is
+$Z=4s^2-4se+2et>0$. For a control exit its relevant numerator is
+$N=(2s-e)^2+e^2$, with
+$(1+h/2)N-Z=2e(s-t)+e^3/s\ge0$.
+For a dummy exit one contributing numerator is $(2s-e)^2$;
+$t\le s/2$ and $e\le s/2$ imply
+$Z/(2s-e)^2-1=(2et-e^2)/(2s-e)^2\le h/2$.
+Additional packets are nonnegative. Multiplication by
+$R_e(T)\ge(1-h)R(T)$ proves the floor. At the joint vacuum the
+canonical law is exactly $(\mu+e)^2\ge\mu^2$; marginalization adds
+nonnegative packets. All denominators stay positive at $a=1$.
+Finally
+\[
+L=-\log_2\gamma<11h/4,\quad
+(1-m)L<11e,\quad (1-m^2)L<22e.
+\]
+Indeed $-\log_2(1-h)\le2h$ by the convex graph below its endpoint
+chord, $\log_2(1+h/2)\le h/(2\ln2)<3h/4$ since $\ln2>2/3$,
+and $1-m=4s(1-s)\le4s$.
+
+For the general exit tree, remove source reference-only labels to form
+an auxiliary $D$ before the creating marginal. This preserves occupied
+source CE $c$ and vacuum $m$. Let $S$ be the FULL creating-source
+marginal with point frequency on irrelevant controls. It dominates
+$D$. The floor supplies Theorem~\ref{thm:floorfront8};
+Theorem~\ref{thm:repeat8} additionally permits arbitrary repeated
+original-source canonical returns inside this exit, at the same
+exit envelope $c+22e$.
+The previous live substitutions give creating erasure $<12e$ and
+live on-child envelope $\le c+20e(a+b+r-1)$. Therefore
+\[
+B_{\mathrm{creation}}+\tfrac12(W_{\mathrm{on}}+
+ \mathrm{complete\ exit\ tree})<W+13e,
+\quad W=c+10e(a+b+r).
+\]
+Along the single edited live branch $\pi_v e_v=e_{\mathrm{root}}$.
+There are at most $d_{\mathrm{root}}-1$ eligible nonactive creations.
+Retaining the already proved active substitutions, the original bank
+$K=2C_0+10$ has surplus
+$KI(F_{\mathrm{root}})-W_{\mathrm{root}}\ge
+5a_{\mathrm{root}}2^{d_{\mathrm{root}}}e_{\mathrm{root}}$.
+Thus the enlarged exit policy leaves at least $7e_{\mathrm{root}}$,
+because $5a2^d-13(d-1)\ge7$ for $a\ge1,d\ge2$:
+the minimum is at $a=1,d=2$ and its increment in $d$ is
+$5\cdot2^d-13\ge7$.
+For the structural source $C_0=4$ this remains rate $18$.
+This application is conditional on the exact prior paid live
+substitutions and source bank, not a new descendant source quota.
+
+For completeness the narrower A085 one-query policy has a better
+reserve. Make exactly one actual query inside an unreset exit;
+reset outcome zero to the direct creating-source marginal followed
+by ONE final calibration; keep outcome one's complete old marginal.
+For an active query let $v=R(\{j\})$ and $V_0=m+v>0$.
+The retained constant sibling's old vacuum has mass
+$W_0\ge m+\gamma v$, so its excess over source-comparison CE is
+\[
+\log_2(V_0/W_0)\le(1-m)L<11e.
+\]
+The ratio is maximized at $v=1-m$, and weighted AM--GM proves the
+last non-strict likelihood bound. Source disintegration pays the
+query and both source comparison children; irrelevant-data
+marginalization and final calibration decrease the fresh child's CE.
+Thus the exit's ENTIRE query-plus-two-terminal bill is
+$<c+11e/2$. At $a=1$ the on-child is constant and uses $\delta_0$;
+$v>0$ follows from finite source CE. For an inactive query the
+erasure is zero, the fresh child costs at most $c$ and the old child
+costs $<c+11e$, giving the same bound with two nonconstant children.
+The creating transaction is consequently $<W+19e/4$.
+All such exits leave $[5a2^d-(19/4)(d-1)]e_{\mathrm{root}}
+\ge(61/4)e_{\mathrm{root}}$. Mixed inherited exits retain the earlier
+$12e_{\mathrm{root}}$ guarantee.
+The reserves $18e$, $(61/4)e$, and $7e$ belong respectively to
+immediate-source, one-inside-query, and arbitrary repeated canonical
+exit policies. They are different policy bounds at the SAME rate;
+none is a correction or improvement of a universal FEI constant.
+
+\subsection{The surviving nonempty-profile liability}
+\label{sec:shape8}
+The original-source canonical-return leaf is closed only at the
+supplied-reference scope above. The existing signed reset interface
+still has an unpaid nonempty component. For actual $P(0)=z$, incoming
+normalized $Q$ with $Q(0)=q_0$, and prescribed normalized $R$ with
+$R(0)=z$, write $P^+,Q^+,R^+$ for conditional nonempty laws. Direct
+expansion of vacuum and nonempty sums gives
+\[
+\CE(P,R)-\CE(P,Q)
+=(1-z)\E_{P^+}\log_2\frac{Q^+}{R^+}
+-\KL(\operatorname{Ber}(z)\Vert\operatorname{Ber}(q_0)).
+\]
+The complete conditional normalizers and reference-only mass are
+essential. At $z=1$ the shape term is absent. For a finite-CE incoming
+reference and a new zero on occupied nonempty support, the new bill
+is infinite, not an endpoint cancellation. This identity is the
+previous signed-reset interface, not a new broad candidate theorem.
+
+A scope falsifier is actual parity on three bits. Query one physical
+coordinate; both children are nonconstant parity on two bits, with
+spectral law $P=(0,0,0,1)$. Set incoming
+$Q=(0,1/4,1/4,1/2)$ and prescribed $R=(0,1/3,1/3,1/3)$.
+The signed reset costs $\log_2(3)-1>1/2$, since $9>8$.
+Both vacuum masses are already correct; there is no vacuum refund.
+This disproves only the extension calling arbitrary nonempty-profile
+changes free, not FEI. For fixed unused original balance $U$ and
+query refund $r$, a prescribed frontier must still satisfy the actual
+reach-weighted signed bill $Z\le U+r$, with every old debit and both
+complete terminals retained. Neither absorption nor supplied-floor
+transfer proves that inequality for a changed non-point profile.
+
+The first unsupported universal step is an influence-priced supplier
+of useful original references and occupied-support likelihood floors
+for every Boolean function, or a hereditary original-bank rule that
+pays these actual changed-profile bills. The four universal conjectures
+in the earlier sections remain conjectures. A single next transaction
+on the already paid non-point A050/A046 source is more informative
+than further vacuum-only resets or larger point-source grids.
+
+\paragraph{Source and review locators.}
+A096, run \texttt{20261023T010221Z}, \texttt{DERIVATION.md}, Sections 1--4;
+A097, run \texttt{20261023T021120Z}, \texttt{DERIVATION.md}, Sections 1--4;
+A085, run \texttt{20261022T234859Z}, \texttt{PROOF.md}, Sections 2--5;
+A098, run \texttt{20261023T031803Z}, \texttt{REVIEW.md}, Sections 1--6.
+Exact original statement hashes, scoped verdicts and source-byte hashes
+are in this run's \texttt{CLAIMS.json} and \texttt{out/SOURCE\_RECEIPTS.json}.
+The independent bounded checker uses exact butterfly Walsh spectra,
+physical edge counts, complete marginals, prime-log identities and
+outward rational logarithm intervals. Its finite cases corroborate
+these analytic proofs; they supply no finite-to-all-dimensional inference.

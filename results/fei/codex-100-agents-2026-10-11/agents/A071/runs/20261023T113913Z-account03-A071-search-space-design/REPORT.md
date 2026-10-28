@@ -1,0 +1,41 @@
+# A071 stage20: the proposed outer-correction envelope fails
+
+## exact target, quantifiers, hypotheses and units
+
+Full FEI is OPEN. Refute the proposed U_K=(C_outer)_+ +sum(q_j inner deficit hulls) as a universally full-query-superharmonic envelope, while preserving the actual complete Boolean composition. An explicit seven-bit AND-of-OR(3,2,2) query gives mean child U minus parent U between0.107184 and0.107185 bits, for EVERY real K>=3. The physical query influence is9/64. This is a candidate-envelope counterexample, not an FEI counterexample or a refutation of A089's conditional coherent-envelope rerouting theorem.
+
+## sources actually read, revisions and theorem locators
+
+BOARD11:35UTC, unchanged B15 leadv2, own stage19 STATUS and certificates, A089110003 REPORT and PROOF sections1-5, current A075 STATUS, required session wake and compute-state/governor-log tail. The A074 new PROOF path was absent at read time, so no theorem is attributed to that nonexistent file. Earlier protocol2026-10-11-execution-v2, campaign/registry and threshold/percolation paper intake is reused background; no new literature claim is imported. Source/helper hashes are saved. The A089 NEXT explicitly proposed this candidate; its conditional allocation theorem is not independently accepted or changed here.
+
+## complete derivation or exact first unsupported line
+
+PROOF derives the occupied-spectrum correction and the independent physical edge-ratio expression. The exact drift is G=-37/16-(567/512)log2(3)-(25/1024)log2(5)+(3087/2048)log2(7). Its sign is the EXACT integer inequality7^3087>2^4736*3^2268*5^50. All three C values are positive by three separate integer-power inequalities, so clipping cannot repair this query. All AND-core restriction hulls vanish for K>=3; the only nontrivial endpoint uses3^9>2^14. Thus increasing K does not restore coherence. Any mean-conserved credit initially equal to this U cannot dominate both candidate child requirements; their mean exceeds it by G. Adding lambda I requires lambda>0.762198 on this row, a necessary local cost rather than a sufficient universal repair. First unsupported line: pay arbitrary signed-component drift from unused original influence stock and prove an initially influence-paid full-universe envelope. The witnessed candidate can overprotect these children; no claim of unavoidable Boolean FEI deficit is made.
+
+A further component repair is proved in VACUUM_PROOF: for EVERY Boolean f in every dimension, V(f)=-[Ef]^2 log2([Ef]^2)+3I(f) is full-query superharmonic and V<=9I/2. A global Lipschitz bound and physical mean coupling prove this analytically. On the witness, subtracting the empty-term drift leaves strictly NEGATIVE nonempty drift, certified by7^3087<2^5076*3^2268. The complete empty entropy remains paid; it is not dropped from terminal bills. Exact validation on256 three-bit tables and768 queries passes 1796 predicates in0.3819220999994286s. This is a narrow repair of the witnessed component, not a whole-spectrum envelope.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC fixes a11520-row circuit design:128 output-complement classes of three-input gates, first core plus/minus g_m for fixed m2..6, other cores in g2,-g2,dictator; n<=10. Its576-row pilot stops at row55 with a seven-bit witness, in0.361908s with695 predicates. Only55 rows were executed; neither the remaining pilot nor the full11520-row family was exhaustively searched. There is no reason to run the full search after an exact falsifying witness.
+
+Producer occupied masses and composition H/I match a separate literal integer-Walsh/full-edge lane. The independent author checker uses direct whole-cube character sums and block physical influence divided by inner influence, without importing producer code, for the parent and BOTH full children (essential dimensions7,6,4; pointwise dummies omitted only). It passes245 predicates in0.016914s. Altered C and drift controls are rejected. Five arbitrary-precision integer inequalities then certify the decisive signs and all-real K extension without log approximation. Directed192-bit atanh80 enclosures with proved tail give the reported rational brackets. No Lean certification is claimed.
+
+Commands from run: python -B -X utf8 code/drift.py --pilot; code/audit_witness.py; code/integer_witness.py; code/finalize.py. Specs precede all checks/searches. Jobs estimated<=100MB, pilot/audit<55s, integer check<5s; no >300MB admission, GPU, detached work, new agent or automatic dimension escalation. Compute telemetry was stale: unchanged state timestamp13:57:59 local across reads and a governor log ending at restart13:16. Those historical memory/disk values are not claimed current. No governor or other running work was stopped or restarted; research stayed small. Brain self-care is degraded/unverified: owner-model98.1h, state-of-mind82.7h and dream33.4h stale at intake; personal-context reliability is affected, and those notes are not mathematical premises.
+
+## proof dependencies and changed downstream conclusions
+
+The previous four-core finite closure is retained and not repeated. A089's coherent-envelope rerouting theorem remains conditional and untouched; the proposed concrete envelope in its NEXT is now refuted uniformly K>=3. The new exact witness has independent author representations and integer signs, with external A074/A089/A092 review pending. No universal constant or all-dimensional Boolean counterfamily is asserted. Proof dependencies are finite character orthogonality, Shannon chain rule, disjoint-block pivotal identity and five listed integer inequalities.
+
+## one next mathematical action and independent reviewer
+
+A089/A074 independently check the literal7-bit witness and integer powers. A072/A075/A089 replace C_plus by a signed-component envelope whose one-query drift is paid from SAME unused original influence/variance stock; preserve old labels, full children and already spent donor. Test superharmonicity and initial influence payment together, rather than merely raising K or retesting closed four-core Fplus.
+
+Refined NEXT: A074/A089/A092 review BOTH scoped proofs. With the complete empty Fourier term paid using V=phi(Ef)+3I from SAME actually unused influence stock, test coherence and initial price of the remaining NONEMPTY signed outer correction plus pivotal inner hulls near a nonempty coefficient cancellation; preserve old labels, both full children and spent donor.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files, PROOF, frozen specs, code and all exact outputs are saved only under A071 for research. STATUS has two lines; dated WORKLOG/LEARNED appended. PERSISTENCE validates exact protocol fields, canonical statement+hypotheses digest, progress/delta identity, sizes and hashes. Required session wake and explicitly directed checklist working/done are the administrative exceptions to local research writes. No git, mail, peer messages, other-agent research edits, trading access or shared campaign-index edits occur. Remote supervisor mirroring and new independent external acceptance remain unverified. No certificate job remains running at closure. Checklist entryT-20261023-396 identifies this invocation; older entries are not blindly closed because wake reports possible reused checklist IDs.
+
+## Universal bridge
+
+This stage advances C019 stopping-tree payment and C024 history transfer by refuting the proposed positive-outer-correction envelope on an actual seven-bit query, uniformly K>=3, with exact missing mean stockG>0.107184 bits. It then isolates the responsible EMPTY Fourier entropy term and proves an ALL-DIMENSION component envelope V=phi(Ef)+3I<=9I/2 that pays it under every physical query. The residual nonempty drift is negative on this witness, but its universal coherence and initial influence payment remain unproved. NEXT retains the full empty-term bill and tests nonempty coefficient cancellations from SAME actually unused original influence stock, old labels and both complete terminals; this targets the unpaid universal component rather than extending a closed finite census. Full FEI remains OPEN.

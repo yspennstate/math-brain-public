@@ -1,0 +1,31 @@
+## exact target, quantifiers, hypotheses and units
+
+For every r>=1 let n=2r+1, c=binom(2r,r)/4^r, g(a,y)=(1+a)/2+(1-a)Maj_n(y)/2, f=a*(product y_j)*g, and the actual one-bit parity lift F(a,y,z)=f(az,yz). All inputs are uniform independent signs. H(F)=H(f)=2+H(Maj_n)/2, I(f)=n+1/2-nc/2, I(F)=n+1-nc/2, and I_z(F)=1/2. The full upper-set discount d=U(f)-U(F) obeys d>=1/4+(nc^2/4)log2(1+1/c^2)>=1/4+(1/8)log2(r+2). Both actual padding children have full U(f), so Delta_z U(F)=-d and |Delta_z U(F)|/I_z(F)>=1/2+(1/4)log2(r+2) diverges. Exact all-r finite-sum U,G formulas are given in PROOF.md, with G(F)<=-2d. Nevertheless H(f)<=2I(f) and H(F)<2I(F). Thus added-padding-influence-only ABSOLUTE U payment fails; signed one-sided GU and FEI are not refuted. The universal target G<=aI+bU with a finite and b<1 remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read current BOARD including new A076/A077/A080/A092 rows; B16 STREAM_NOTES remains v2,11Oct. Read own STATUS and previous stage signed-discount proof. Read current A076 ACTIVATION_PROOF sections1-5 and current A077 PROOF including event reduction(7)-(9), reports and exact claim version. Protocol v2 field schemas were reread; inherited campaign/paper background is not re-audited or used as a theorem premise. Exact source hashes in out/SOURCE_MANIFEST.json. One two-wording math recall returned related general coding/restriction leads; none is a proof premise. The earlier owner GU provenance remains in stage124031Z/out/GU_OWNER_CONTRACT.json; it is not presented as freshly fetched.
+
+## complete derivation or exact first unsupported line
+
+PROOF sections1-4 derive actual Boolean outputs, exact full influences/entropy, complete discount top layer, all-r central-binomial induction, both full padding terminals and exact H,U,G formulas. This refutes absolute padding-only price: d/I_z diverges although H/I<=2. The signed drift is NEGATIVE, so it is not a GU violation. REVIEW_A077 reconstructs the exact activation reduction independently, at equations7-9 scope only. First unpaid universal line: fund one NECESSARY selected nonzero-erasure query and all full terminals from the SAME UNUSED ORIGINAL core plus padding capacity. Neither a magnitude bound nor a fresh arbitrary-event certificate is supplied.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+python -X utf8 code/check_family.py: PASS 684 exact assertions in 0.977s; fixed actual roots r0..4 (through11 physical bits), all complete Walsh rows, both children of every query, exact H,I,U,G, plus central-binomial rational guards r1..128. python -X utf8 code/independent_and_review.py: PASS 1081 assertions in 0.342s; ALL174 minority events d1..3 and three direct-Walsh family roots r0..2. Both domains frozen before execution; no symmetry enumeration reduction, automatic dimension increase or floating acceptance. Fraction arithmetic, exact prime-log vectors and rigorous outward logarithm signs. A syntax typo in the second script was corrected before its first mathematical run; it is not a failed mathematical certificate. Main implementation uses FWHT; separate direct character sums and edge counts audit the critical top-layer/influence claims. memok exited1; no heavy computation or Lean was launched. Rung: author analytic proof plus exact finite certificates; main proof not independently accepted or Lean-checked. Scoped A077 reconstruction is an independent mathematical review.
+
+## proof dependencies and changed downstream conclusions
+
+The main theorem uses no supplied threshold/percolation FEI theorem and no A077 transfer premise. Central-binomial and balanced-slice coefficients are derived explicitly. Main finite formulas include all mean rows and every padding/original influence. A076 already rules out a shared-only arbitrary-profile source for a different entropy bill; the new family shows why even zero-erasure U drift cannot be priced in ABSOLUTE value from added padding influence alone. No existing named claim is asserted to use that false helper. A077@1 equations7-9 independently HOLD, preserving both shared and private costs; its full theorem review remains open. No broad universal candidate is opened beyond the pending-review cap.
+
+## one next mathematical action and independent reviewer
+
+A076/A077/A094: fund ONE necessary selected nonzero-erasure query from BOTH UNUSED ORIGINAL core and padding capacities, preserving the signed discount, old debits and BOTH full child U. A092 independently reconstruct the all-r obstruction; consume only the scoped A077 equations7-9 review, not an acceptance of its whole transfer theorem. This is an on-disk handoff; no messages or new workers were launched. Main review acceptance and downstream adoption are not inferred.
+
+## actual persistence receipts or precise save blocker
+
+All four protocol products, both proofs, code, frozen specs and exact outputs saved in this unique A078 run; STATUS/WORKLOG/LEARNED current. out/FINAL_VALIDATION.json checks exact field sets, statement hash, byte-identical delta and all artifact sizes/hashes. No git, mail, brain-store write, other-agent write, deletion, remote job, trading action, detached helper or GPU. Supervisor copying/mirror is unverified. Signed contract processing remains locked/stale; work stayed reversible and local. Brain self-care remains degraded/unverified for owner-context continuity; stale personal notes were not used as mathematical evidence.
+
+## Universal bridge
+
+The owner GU target and C024 history-transfer bridge advance by an explicit all-parameter Boolean obstruction to paying the ABSOLUTE upper-set discount from added padding influence: one auxiliary bit costs1/2, yet d>=1/4+log2(r+2)/8, while full H/I<=2. This forces the signed discount and original core owner to remain in any selected-query account. The independent A077 source reduction further establishes that arbitrary-event shared-only funding is already full-FEI strength. No universal positive signed-query payment or initial arbitrary-core source is proved. NEXT targets that exact necessary transaction with BOTH full terminals and unused original capacity, rather than another root-only family ratio or a new class constant.

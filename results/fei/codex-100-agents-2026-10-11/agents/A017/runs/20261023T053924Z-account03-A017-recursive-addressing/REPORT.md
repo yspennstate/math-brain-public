@@ -1,0 +1,41 @@
+# A017 stage19: interacting committed blocks and the retained-leaf barrier
+
+## exact target, quantifiers, hypotheses and units
+
+At K=4+2/ln(2), extend the stage18 physical tangent-block payment to interacting original coordinates, with arbitrary inside edits and outside density at most1/32. All dimensions are quantified in PROOF.md sections1-3; finite tests are validation of a proved formula, not a finite-to-infinite inference. The previous twelve-edit theorem is inherited unchanged. Every prefix retains both full children and uses one committed original influence allocation; a full child FEI budget cannot spend the reserved part again. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read at stage start: machine AGENTS.md, BOARD.md (including the current B04/A017-A020 entries), B04 STREAM_NOTES v2, own STATUS and stage18 PROOF; full execution protocol was re-read. The lead's B04-SEL-LOG-SHARP@1 exact claim was read and copied for its established selector split and M_J bound; these baseline inequalities are not claimed as new. The stage17 actual Boolean witness was read and hash-bound. Read-only math recall returned draft warnings about every-coordinate induction and retained budgets; none was promoted to a proof dependency. Source hashes are in out/source_receipts.json. Earlier threshold/percolation readings belong to previous stages; no new reading of the papers is claimed here. The current campaign deadline is the owner's 2026-10-23 14:49 UTC instruction.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md gives the complete scoped derivation. Eligible original physical tangents satisfy Inf_j>=1/4-2 e_out/2^n regardless of interactions or inside edits. The established full-block identity bounds the erasure by sum_j h2(Inf_j), at most4 I_J when e_out<=2^n/32. This pays the whole J block at the unchanged K. Every adaptive J-prefix has exact entropy debit plus full completion debit equal to the SAME root block debit; its spent influence plus weighted remaining-J influence equals the SAME original I_J. The excess K I_J minus both debits is invariant through all such prefixes. This is a committed-block result, not a claim that every prefix is paid by its already queried influence alone.
+
+The exact ten-bit parent in section4 is a useful falsifier: both root tangents are eligible, yet after j=0, B_k>4 Inf_k. Its original I_J=9/16 still funds the full block. The tag separates the bad six-bit phase from the vacuum and gives exact half-scaling of selected erasure and influence. Shared address-data labels remain fully retained with weighted influence ONE after the address is fixed; no level gets a new allowance for the same label.
+
+First unpaid universal line: choose another useful block or pay every final leaf using only the unallocated physical influence. The precise obstruction is H(A_h)=2+H(h)/2, I(A_h)=1+I(h)/2 for arbitrary h. A uniform FEI bound for all these half-cube leaves already implies full FEI by tensor powers. Moreover, the inherited quadratic after the interacting block can have rank two, and every rank-two alternating matrix lacks eligible independent tangents: independent row coefficient pairs have determinant Q_ij=1. Thus merely iterating the old tangent predicate does not terminate on arbitrary retained cores. No terminal bound, paid reference change or universal selection is proved here.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+All frozen specs are under out/. The first pilot failed on a real verifier bug: unnormalized Walsh entropy requires 2n log(2), while v1 used n log(2). out/pilot_failure_v1.json and the original spec are retained; v2 corrected it before the successful pilot/full run. The corrected pilot passed28 parents,3072 prefix rows,6660 assertions in0.130 s.
+
+The full specified domain consists of ALL256 inside-half masks at n4 with no outside edits, plus128 explicitly frozen n5 masks and ALL17 zero/single-outside-edit choices. It is2432 actual parents, not an exhaustive n5 Boolean census. Every adaptive J-prefix policy is included:9 per n4 parent,244 per n5 parent. The result is533248 prefix rows and1136256 exact assertions, PASS, runtime 35.407 s. Integer Walsh/prime-log coefficient vectors certify the entropy and influence telescopes exactly. Rational 48-term atanh-series bounds with explicit tail certify every tested sign; floating point appears only in runtime metadata. The actual ten-bit bad-child witness passed exact integer products and direct edge counts.
+
+The separate reproduction uses direct XOR/popcount character sums, positive-integer erasure products and rational edge counts: ALL256 four-bit parents, the actual ten-bit parent/nine-bit child and16 tagged-activation identities,273 fixtures total; 1061 assertions, PASS, runtime 0.426 s. This is a distinct representation by A017, not independent-agent acceptance. Commands: python -X utf8 code/verify.py --freeze; --pilot; full without flags; --witness; code/independent.py --freeze; then no flags. Specs were frozen before each job. Estimated memory80/40 MB, no job over300 MB, no heavy admission needed; peak RAM not measured. No GPU, automatic dimension increase, detached process or Lean run.
+
+## proof dependencies and changed downstream conclusions
+
+A017-FOUR-EDGE-COMPATIBILITY@3 evolves the current pending candidate rather than opening another broad review candidate. Version2 supplies the unchanged twelve-edit theorem; B04-SEL-LOG-SHARP@1 supplies the established block identity/M_J bound with its recorded partial reconstruction. The new scope removes the pairwise Q_jk=0 condition from the WHOLE-BLOCK conclusion, not from the false descendant singleton assertion. Old five/six-control and twelve-edit certificates are not rerun or relabeled as new evidence. No earlier actual counterexample is withdrawn. External review of the new application and inherited chain remains pending.
+
+## one next mathematical action and independent reviewer
+
+Pay the first residual-core query or a reference change AFTER committed interacting J, using only original influence outside J; preserve both full leaves and every old debit. Rank-two inherited quadratics have no eligible independent tangent, so iteration of the old predicate is insufficient. Use the exact tagged-half identities to reject any free-terminal shortcut. A090/A091 review the account independently. This moves the unpaid terminal/selection issue directly; another fixed edit-count census would not resolve it. Handoff consumers are A018/A020/A024/A030 and A090/A091 through the saved run, without external messaging.
+
+## actual persistence receipts or precise save blocker
+
+The four required protocol files, proof, code, frozen specs and certificates are saved under the specified A017 run directory, each below20 MB. PACKET_DELTA is byte-identical to PROGRESS and has packet_ids=["A017"]. out/PERSISTENCE_RECEIPTS.json binds every other run file and the rolling notes to bytes/SHA256; schema fields and source/helper hashes are checked. STATUS.md, WORKLOG.md and LEARNED.md carry the result and next unpaid step. Remote transfer remains the campaign supervisor's job and has no receipt here. Brain self-care is degraded/unverified (owner-model91.3h stale, state-of-mind75.9h stale); personalization based on them is unverified and neither was used as a mathematical premise. No work was stopped or left running.
+
+## Universal bridge
+
+This stage moves C019 stopping-tree payment and C024 history transfer by removing pairwise polar noninteraction from the physical block payment at SAME K, allowing outside density<=1/32, and proving a nonrenewing original-account identity through every adaptive prefix of a committed block. An actual bad intermediate query confirms that local K4 heredity is unnecessary for this aggregate payment. What remains is useful-block selection and full retained-leaf payment from the original influence outside the committed block; the tagged-half identity shows why declaring those leaves free would assume full FEI. NEXT therefore targets the first such residual payment/selection rather than another isolated class census; the universal bridge remains open.

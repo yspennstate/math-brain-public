@@ -1,0 +1,18 @@
+{
+  "helper_version": "A074-binary-conditional-donor-v1",
+  "code_sha256": "25c21c4be5e8a04abab920a003759f6aedc43fa3601a5e8c34e6946488dcbd7d",
+  "own_independent_helper_sha256": "d091f6e07480d4a6b4092039133a228c0e219bc3a163cfa90a89417a432da90f",
+  "family": "six disjoint g6 negative {0,1,2}, gate J=-h(x xor1), h negative {0,1,2,4,8,16,32,6,17,40}",
+  "parameter_domain": "prefix block0 original2=0,0=0,3=b; b in{0,1}; next query blockj in1..5 coordinatei in0..5",
+  "case_count": 60,
+  "pilot_cases": 2,
+  "boundary_allocation_domain": "V0,V1,W0,W1 in{0,1,2};T=k/2 for all integers0<=k<=sum(V+W);405 allocations; exhaust all feasible integer d0 values",
+  "symmetry": "none; keep all labelled physical queries and full terminal costs",
+  "arithmetic": "integer direct characters, rational finite differences/entropy profiles; Fraction log2 intervals112bits from48-term atanh with proved tail",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 55,
+  "automatic_escalation": false,
+  "peer_code_imports": false,
+  "save_policy": "append each completed case once to unique pilot/full journal; refuse reuse of existing journal; full source-bound certificates locally",
+  "amendment": "Correct zero-physical-influence proof to include q_j=0 with nonidentical inner children; preserve failed partial journal and deliberately revalidate identical60-case domain with revised proof branch. No parameter, precision or rate change."
+}

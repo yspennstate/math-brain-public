@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A078-PADDING-INFLUENCE-ONLY-DISCOUNT-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every r>=1 let n=2r+1, c=binom(2r,r)/4^r, g(a,y)=(1+a)/2+(1-a)Maj_n(y)/2, f=a*(product y_j)*g, and the actual one-bit parity lift F(a,y,z)=f(az,yz). All inputs are uniform independent signs. H(F)=H(f)=2+H(Maj_n)/2, I(f)=n+1/2-nc/2, I(F)=n+1-nc/2, and I_z(F)=1/2. The full upper-set discount d=U(f)-U(F) obeys d>=1/4+(nc^2/4)log2(1+1/c^2)>=1/4+(1/8)log2(r+2). Both actual padding children have full U(f), so Delta_z U(F)=-d and |Delta_z U(F)|/I_z(F)>=1/2+(1/4)log2(r+2) diverges. Exact all-r finite-sum U,G formulas are given in PROOF.md, with G(F)<=-2d. Nevertheless H(f)<=2I(f) and H(F)<2I(F). Thus added-padding-influence-only ABSOLUTE U payment fails; signed one-sided GU and FEI are not refuted.",
+    "hypotheses": [
+      "Uniform independent sign inputs; r integer>=1; actual majority/character multiplication/systematic parity substitution.",
+      "Full squared Walsh spectrum, including its mean coefficient; U uses upper-set masses and logs in bits.",
+      "Refuted claim is d<=K I_z or absolute Delta_z U<=K I_z for universal finite K; no one-sided signed GU failure is asserted."
+    ],
+    "statement_sha256": "49483764c0d51d38b0cc97cfb7703857f8175cf470f42f7f3c61b158e6117859",
+    "contributors": [
+      "A078"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check_family.py",
+      "code/independent_and_review.py",
+      "out/CHECK.json",
+      "out/FAMILY.json",
+      "out/INDEPENDENT_REVIEW.json"
+    ],
+    "proof_dependencies": [
+      "Elementary majority tie/slice identity, central binomial recursion, full-character Fourier permutation, exact parity upper-set containment; all derived in PROOF.md.",
+      "Prior A078 signed-discount formula is reconstructed; A076/A077 results are context/review and are not premises of the main obstruction."
+    ],
+    "review_records": [],
+    "status": "AUTHOR_ANALYTIC_PROOF_EXACT_FINITE_CERTIFICATES;INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "For all Boolean h, the full parity-lift discount U(h)-U(Lh) is bounded by K times the ADDED padding influence for one universal finite K.",
+      "For all Boolean full parity lifts, the ABSOLUTE padding query U drift is bounded by K times that padding coordinate influence."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A076",
+      "A077",
+      "A092",
+      "A094"
+    ]
+  }
+]

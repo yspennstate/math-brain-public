@@ -1,0 +1,33 @@
+# A071 stage21: prime Boolean functions defeat proper-partition initial discounts
+
+## exact target, quantifiers, hypotheses and units
+
+Full FEI remains OPEN. For every n>=3, b_n is negative exactly on the radius-one Hamming ball of the uniform physical cube. Prove that every proper disjoint one-output Boolean core partition is singleton, so its initial signed bank is exactly H+kappa I for every real K>=0. Prove H/I tends to4. Entropy is in bits; no unbounded-ratio family or universal initial influence price is asserted. This family is itself paid by H<5I in all dimensions; its rational3 bank is below8I. The obstruction is zero partition discount, not an unbounded price for these balls.
+
+## sources actually read, revisions and theorem locators
+
+At this stage read current BOARD entries for B15/A071/A072/A074/A075/A080/A084/A089, unchanged B15 STREAM_NOTES v2 and own STATUS. Read current EXECUTION_PROTOCOL and machine AGENTS, retaining earlier full campaign/registry/paper intake as background. Read A089130925 REPORT, A072120900 REPORT, and A075133516 REPORT, full PROOF1-6 and first exact CLAIM. A080 was active with no final report available in the intake; its tensorization direction is avoided. Source pins bind the A075 proof/claim/report. Own prior stage20 arithmetic and profile helpers were copied byte-for-byte. No literature theorem or personal brain note is a premise.
+
+## complete derivation or exact first unsupported line
+
+PROOF1 proves the complete two-row criterion for a Boolean block summary. The radius-one family has exactly THREE rows on every block of size2 through n-1, so all proper decompositions are singleton. PROOF2 gives the full binomial spectrum and physical boundary influence. PROOF3 bounds full entropy, including the empty coefficient, to squeeze H/I to4. PROOF4 gives the exact bank obstruction and honest first unsupported line: actual same-owner initial influence funding for arbitrary Boolean functions. REVIEW independently reconstructs A075 whole-row cancellation, Boolean scalar estimates, every-real-K envelope and owner transfer including zero-total cases; the source holds unchanged.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC preceded both deterministic certificate runs. Pilot n3..6 passed 238 recorded predicates in 0.239783s:120 direct coefficients,94 proper blocks and all physical edges. Main n3..32 used555 binomial spectral weight rows including empty, passed 152 predicates in 0.206605s; exact outward intervals certify H(b16)>3I and H(b32)>7I/2. AUDIT_SPEC preceded the separate audit:256 complete circuits/768 physical queries, one four-bit primitive integer sign and altered-artifact controls; 3603 predicates in 1.088005s. Counts are validations, not the universal proof. Integer/Fraction and exact prime-log algebra use directed192-bit80-term atanh bounds with proved remainder, no floating sign decisions. Commands: python -B -X utf8 code/ball.py --pilot; code/ball.py; code/audit.py; code/finalize.py. Each frozen runtime cap55s and memory estimate100MB; observed peak memory unmeasured. No >300MB job or memok trigger, GPU, dimension escalation, external solver, detached worker or source executable execution. The first audit stopped only on a source-digest encoding mismatch: source persist.py9 uses ensure_ascii=False. Reading that producer line fixed our verifier, preserving the declared source statement and digest; out/FIRST_AUDIT_FAILURE.json records the failed attempt. Refined checks add the proved all-dimensional H<5I bound, with unchanged finite dimensions and resource caps.
+
+## proof dependencies and changed downstream conclusions
+
+New claim A071-PRIME-BALL-PROPER-PARTITION-OBSTRUCTION@1 is analytically proved, with external review pending. Its proof is elementary and independent of an assumed FEI bound. Source A075-WHOLE-ROW-SIGNED-COMPOSITION-DRIFT@1 is independently accepted UNCHANGED, preserving statement digest ff1866ccd4bbad05ef7a28b12298c145b88c08656bdfa06c6bf6eaeb74af4698. No repair or contributor change to that version. The new result does not contradict A075 coherence or duplicate A080 tensorization: it shows a concrete all-dimensional family where optimizing every proper Boolean partition is forced back to the singleton initial bank. The strategy-level positive-discount lemma is explicitly a proposal tested here, not a falsely attributed existing theorem. At kappa3, price tends to7 only for this bank; FEI ratio tends to4.
+
+## one next mathematical action and independent reviewer
+
+A075/A080 independently review prime-ball residual-row obstruction, then require an explicit paid history/overlap/multiple-output initialization that escapes singleton or whole-function restatement and retains actual unused owner stock. This targets the unpaid universal initialization interface rather than another gate census. A075/A080 are requested mathematical reviewers through the saved handoff only; no messages were sent.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files, PROOF, REVIEW, frozen specifications, exact certificates, source pins and code are saved inside this A071 run; out/PERSISTENCE.json verifies local byte hashes, schema fields, source stability, progress/delta identity and two-line STATUS. Rolling WORKLOG/LEARNED append this stage. No research write outside A071, git, peer message, mail, brain write, trading access or deletion. Supervisor copying, remote mirrors and downstream use remain unverified. No own job is left running after finalization. Brain self-care is degraded/unverified: personal model100.4h, state85.0h and dream35.7h were stale at wake; personal-context reliability remains affected and no mathematical premise uses it. Signed project-contract freshness is unverified; no irreversible publication was attempted.
+
+## Universal bridge
+
+C019 stopping-tree coherence is consumed through independent acceptance of A075's universal2/ln2 drift/rational3 reserve, while C024 history transfer and the whole-set initial payment are narrowed by an all-dimensional obstruction: every radius-one Hamming ball has only singleton proper disjoint Boolean decompositions, retaining the ENTIRE H+kappa I initial bank despite H/I tending to4. The universal initial price and actual unused original-owner funding remain open; this family does not disprove FEI. NEXT requires an explicitly paid history-aware or multiple-output state mechanism escaping the complete three-row obstruction, because optimizing more proper Boolean partitions cannot save even one bit of entropy on this family and cannot supply the missing universal bridge.

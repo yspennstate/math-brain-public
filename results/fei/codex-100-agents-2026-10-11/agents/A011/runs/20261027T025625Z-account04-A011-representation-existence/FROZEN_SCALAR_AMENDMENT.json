@@ -1,0 +1,11 @@
+{
+  "reason": "Original scalar helper exceeded its frozen 55-second runtime while recomputing every partial sum from scratch; failed attempt is INCOMPLETE, not a mathematical counterexample.",
+  "helper_version": "A011-stage22-scalar-v2",
+  "helper": "code/scalar.py",
+  "domain_change": "NONE: a1..16,b12..32,M0..128, j3..128 and21 original in-family witnesses",
+  "arithmetic_change": "Incrementally update exact Fraction partial sums. Witness log sign uses exact positive normalizer deficit; rational log bounds are derived from x<=-ln(1-x)<=x/(1-x) and 1<1/ln2<3/2.",
+  "case_count": 43344,
+  "memory_estimate_mb": 60,
+  "max_runtime_seconds": 55,
+  "parallelism": "One mathematical checker at a time"
+}

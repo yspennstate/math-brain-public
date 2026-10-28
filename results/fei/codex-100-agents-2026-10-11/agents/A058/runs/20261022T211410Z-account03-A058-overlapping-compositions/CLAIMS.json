@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 6,
+    "exact_statement": "For finite uniform Boolean G(X,S), H(Y,S) with disjoint private X,Y and a fresh fair selector z, the exact mux entropy is half the two branch entropies plus 4 Inf_z plus R=sum_T rho(a_T,b_T), where a,b are the shared-only Fourier amplitudes and rho is defined in PROOF.md section 1. Matching conditional private means imply R=0. For G=1+A(X)(u(S)-1), H=1+B(Y)(u(S)-1), arbitrary Boolean common phase u and independent point activations of probabilities p,q in {0,1,2^(-r): r>=1}, t=Pr[u=-1], the exact correction is R=rho(1-2pt,1-2qt)+4t(1-t)rho(p,q). Every actual shared or surviving private physical query satisfies |R_parent-E R_child|<=54 Inf_queried(F); selector revelation satisfies |R|<=162 Inf_z(F). Therefore H(F)<=half(H(G)+H(H))+166 Inf_z(F), and FEI-certified complete children with constant C transfer at max(C,166). Every finite adaptive physical stopping tree obeys the terminal-inclusive signed-core entropy ledger in PROOF.md section 6 with coherent rates 54 on pre-selector data and 166 at selector nodes, actual reach probabilities, both inherited cores and full actual terminals. At matching p=q, the first private query has the sharper coherent price 12. No arbitrary-core terminal FEI bound or unrelated-phase collision price is asserted. Earlier A058 v5 scoped statements remain at their original hypotheses and locators.",
+    "hypotheses": [
+      "Finite independent uniform physical coordinate blocks X,Y,S and fresh fair selector z; Boolean sign outputs and entropy in bits.",
+      "Matching-mean identity assumes equality of the full conditional private mean functions, not merely overall biases.",
+      "Common-phase extension assumes G=1+A(X)(u(S)-1), H=1+B(Y)(u(S)-1), one identical arbitrary Boolean u, and disjoint independent point indicators; reached activation probabilities are 0,1,2^(-r) for positive integer r.",
+      "Adaptive trees query actual remaining physical coordinates with true reach weights; both core entropies, signed core decrements and complete stopped terminal entropies remain.",
+      "The old v5 theorems retain their distinct original hypotheses; the new R subtracts 4 Inf_z and must not be confused with v5's unsubtracted R."
+    ],
+    "statement_sha256": "1d9bc32544176e7487e893696c3146b33cbb1291c10430b2242d2b82644644c4",
+    "contributors": [
+      "account05/A058 (preserved versions)",
+      "account03/A058 (v6 extension)"
+    ],
+    "proof_source": {
+      "current": "PROOF.md sections 1-7",
+      "exact_validation": [
+        "code/exact_matching_means.js",
+        "out/exact_matching_means.json",
+        "code/exact_common_phase.js",
+        "out/exact_common_phase.json",
+        "out/counterexamples.json"
+      ],
+      "preserved_version_5": "../20261014T052501Z-account05-A058-overlapping-compositions/CLAIMS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_ANALYTIC_PROOF_EXACT_CHECKS; INDEPENDENT_REVIEW_PENDING; LEAN_UNVERIFIED",
+    "supersedes": [
+      {
+        "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+        "version": 5,
+        "scope": "Add the norm-free common-phase transport extension; preserve every earlier scoped result and its original proof source."
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A076",
+      "A077",
+      "A078",
+      "B12",
+      "B20"
+    ]
+  }
+]
+

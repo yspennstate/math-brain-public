@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A052-RANK-RELEASE-ORIGINAL-PAIR-PAYMENT",
+    "version": 1,
+    "exact_statement": "For any finite d-bit Boolean sign g, let E contain all coordinate parity vectors, m(v)=min(P(v dot S=1),1-P(v dot S=1)), r_E(t)=rank_F2{v in E:m(v)<=t}, N(t)=#{j:m(e_j)<=t}, and chi=sum_j(2Inf_j(g)-1)_+. Its minimum influence a_E over parity bases from E and translations equals integral_0^(1/2)(d-r_E(t))dt, and the actual affine release equals chi+integral_0^(1/2)(r_E(t)-N(t))dt. This supplies a full-release lower bound and spends overlapping parity gains only once. For every integer k>=2,p=2^-k, Q=(-1)^(ab+ac+bc+za), F_k=1-A_k+A_k Q, the original proper pair(a,b) has I_A=p, exact full affine child release rho_A=p/4 and zero character-only child release. Its complete decrement L_A satisfies (15/4)p<L_A<(595/128)p, so after the explicit one-branch parity reset it is paid at SAME K=15/4 with margin>5p/128. The same query/reset/payment holds after tensoring ANY disjoint Boolean core left untouched in every terminal. The three nonconstant optimized terminals violate K=15/4 for k>=16, so no terminal nonviolation or full FEI follows.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; entropy bits and normalized real Fourier coefficients",
+      "E is a finite set of nonzero parity vectors containing every coordinate vector; d0 allowed",
+      "Activation depth k integer>=2; original pair(a,b), all four original reaches1/4",
+      "Arbitrary tensor core disjoint from displayed variables and retained untouched",
+      "Nonnegative optimized-child banks require all smaller Boolean functions nonviolating, stronger than physical ratio criticality"
+    ],
+    "statement_sha256": "ae8d73daa7c9e75e490620bf1e9c987dead51f19d9a214086a7a52e2065a519d",
+    "contributors": [
+      "A052"
+    ],
+    "proof_source": [
+      "RANK_PAIR_PROOF.md",
+      "code/check_rank_pair.py",
+      "code/independent_tensor.py",
+      "out/CHECK.json",
+      "out/INDEPENDENT.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A051-FULL-AFFINE-CHILD-RELEASE-BUDGET",
+        "version": 1,
+        "statement_sha256": "458cfc425aa95401d3f2f68a63f1805f406f31044ab52da1575729b20f09e91d",
+        "acceptance": "A052 independent scoped HOLDS: Section2 equation3 and eligibility; Section3 telescope only"
+      },
+      "A051-AFFINE-MINIMUM-BASIS-CRITICAL-REDUCTION@1; previously independently accepted; rank formula rederived here"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A052",
+        "scope": "author analytic audit, independent direct-character and physical shear representation",
+        "verdict": "PASS; independent-agent acceptance pending"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "claim_id": "EXPLORATORY-SUM-OF-OVERLAPPING-AFFINE-SWAPS",
+        "version": 0,
+        "exact_false_statement": "Sum all individually beneficial row exchanges as unused child influence release.",
+        "witness": "odd-d even-parity spectral hyperplane: true rho=1/2, proposed sum=d/2; actual Boolean realization in proof Section1"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A055",
+      "A090",
+      "A094",
+      "B11",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+Stage8 target: second distinct nonseparator shared query after paid odd-majority query. Proposed cofactor erasure bound12I; shared price15. Not yet certified. Original source/debits retained; FEI OPEN.

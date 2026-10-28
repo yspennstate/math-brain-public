@@ -1,0 +1,441 @@
+[
+  {
+    "file": "README.md",
+    "locators": []
+  },
+  {
+    "file": "CURRENT_STATUS.md",
+    "locators": [
+      [
+        9,
+        "The original paper, both recovered source archives, theorem audits and finite checks were preserved. The public source SHA256 is `85e9c4f36026eb5890be5686d03bf5264e524144686ee203ed799e3d41ac7017`; PDF SHA256 is `e7c8c3d7f2324f0a0720368f08ba8cbd2eeadad015bacbef4564080fd534f490`. Claude's engineer acknowledged the handoff and forwarded it to the publ"
+      ]
+    ]
+  },
+  {
+    "file": "CLAIM_REGISTRY.json",
+    "locators": [
+      [
+        210,
+        "      \"lead_packet\": \"A031\","
+      ],
+      [
+        213,
+        "        \"B07\","
+      ],
+      [
+        227,
+        "        \"B07\","
+      ]
+    ]
+  },
+  {
+    "file": "OBSTRUCTION_REGISTRY.json",
+    "locators": [
+      [
+        143,
+        "      \"exact_scope\": \"Known non-Boolean constructions defeat fixed signed-convolution orders and fixed atom-cap prefixes. State the exact relaxation; do not reject full Booleanity itself.\","
+      ],
+      [
+        145,
+        "        \"B07\","
+      ],
+      [
+        208,
+        "        \"B07\","
+      ],
+      [
+        226,
+        "        \"B07\","
+      ]
+    ]
+  },
+  {
+    "file": "PACKET_STATUS.json",
+    "locators": [
+      [
+        497,
+        "      \"packet_id\": \"A031\","
+      ],
+      [
+        498,
+        "      \"stream\": \"B07\","
+      ],
+      [
+        499,
+        "      \"topic\": \"Convolution identity\","
+      ],
+      [
+        509,
+        "      \"design_target_id\": \"FEI-B07-A031-INITIAL\""
+      ],
+      [
+        513,
+        "      \"stream\": \"B07\","
+      ],
+      [
+        524,
+        "      \"design_target_id\": \"FEI-B07-A032-INITIAL\""
+      ],
+      [
+        528,
+        "      \"stream\": \"B07\","
+      ]
+    ]
+  },
+  {
+    "file": "STREAM_NEXT_ACTIONS.json",
+    "locators": [
+      [
+        144,
+        "      \"native_stream\": \"B07\","
+      ],
+      [
+        147,
+        "        \"A031\","
+      ]
+    ]
+  },
+  {
+    "file": "FEI_100_agent_research_plan.tex",
+    "locators": [
+      [
+        65,
+        "With $D(f)=\\sum_i\\min\\{\\I_i(f),1-\\I_i(f)\\}$, its Theorem A gives $\\HH(f)\\le\\Creg D(f)$ for every regular Boolean function. Here regular means unate with a total desirability order, and therefore includes every deterministic linear threshold function with arbitrary real weights. It does not mean small or uniformly comparable weights."
+      ],
+      [
+        67,
+        "The proof proceeds through pivotal antichains, a relative resampling estimate, harmonic control of spectral ranks, and an Euler-product reference on Fourier levels. The proof was reconstructed in an independent audit during recovery; the product-biased threshold and bounded-overlap arguments were also independently read. No gap was identified in th"
+      ],
+      [
+        87,
+        "For a nonconstant Boolean function represented as a finite union of nonconstant gates with finite ordered covers of their relevant supports, the recovered queue construction generates a subprobability law on Fourier sets through finite successful runs. A partition forest assigns every coordinate of a nonempty set $A$ to a gate, visits each used gat"
+      ],
+      [
+        109,
+        "The cost $B_\\lambda$ retains gate names, gate-order multiplicity, subset congestion, rank discrepancies, and root rarity. For reference, with $A_l$ the coordinates assigned to gate $l$, $s_l=|A_l|$, $\\kappa_l=|A\\cap R_l|$, roots $\\mathcal R$, and $\\gamma=6/5$, it has the form"
+      ],
+      [
+        121,
+        "The highest-value work is to find a quantitative mechanism for this bound. Merely minimizing over witnesses or invoking a logarithmic partition-sum identity leaves the same cross-entropy unpaid. A reference law may depend on the fixed function $f$, including"
+      ],
+      [
+        127,
+        "$A$, its selection must be included in the actual reference"
+      ],
+      [
+        156,
+        "Thus a theorem asserting that every nonconstant Boolean $f$ has a relevant coordinate with $B_i(f)\\le K\\I_i(f)$ would settle FEI with constant $K+2/\\ln2$. Conversely, a global FEI constant $C$ implies existence of such a coordinate with $K=C$, because $\\sum_i B_i(f)\\le\\HH(f)$. This is an exact existential route to finiteness, applied at every reach"
+      ]
+    ]
+  },
+  {
+    "file": "CAMPAIGN.md",
+    "locators": [
+      [
+        3,
+        "**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/). The installation reference is [commit bc85302284612e979faae67ea51663242"
+      ],
+      [
+        37,
+        "3. Use full signed Boolean convolution identities to obtain a new valid entropy or spectral-edge inequality."
+      ]
+    ]
+  },
+  {
+    "file": "CLAIMS.md",
+    "locators": [
+      [
+        40,
+        "| C008 | PROVED_BASELINE | The final queue law is a subprobability reference. Every valid complete forest/assignment witness gives a Gibbs entropy bound, retaining normalization, roots, attachments, subset/rank costs, and used-gate counts jointly. | F01\u2013F03,F18 | P, \u201cA bound retaining the joint witness cost\u201d |"
+      ],
+      [
+        55,
+        "| C018 | CONDITIONAL | Uniform B\u2264KI for all Boolean f implies full FEI with C\u2264K+2/ln2; conversely B\u2264H makes FEI imply B\u2264CI. The equivalence is proved; a universal finite K is not. | F07,F20 | C005; ER \u00a74 |"
+      ],
+      [
+        56,
+        "| C019 | CONDITIONAL | A genuine stopping restriction tree with a linearly paid cumulative mismatch/log charge and FEI-certified leaves gives FEI. The same ancestral influence cannot be spent again in descendants. | F05,F06,F20 | C005,C006; LA \u00a75; ISO \u00a73; RM \u00a7\u00a72\u20133 |"
+      ],
+      [
+        57,
+        "| C020 | OPEN_TARGET | Bound the full expected joint witness cost by an absolute multiple of I on a new class or universally, including the rank, sparse-root, attachment and normalization terms. Addressing alone is already solved. | F01\u2013F04,F18,F20 | C008,C009; P, \u201cScope of the refinement\u201d |"
+      ],
+      [
+        61,
+        "| C024 | OPEN_TARGET | Pay actual-source entropy/history transfer while retaining history probabilities and full Boolean ancestry. The true integrated cost satisfies H_nat\u22123I\u2264C_path\u2264H_nat+I, so a universal linear payment is FEI-equivalent. | F08,F09,F20 | RM \u00a7\u00a711.13\u201311.16 |"
+      ]
+    ]
+  },
+  {
+    "file": "COUNTEREXAMPLES.md",
+    "locators": [
+      [
+        91,
+        "**Owners:** F08,F09,F18,F19. **Related:** C023,C024,C032. **Source:** RM \u00a7\u00a711.15,11.19\u201311.20, including `POINT_FLIP_SURPLUS.md` and `ADDRESS_HISTORY_GUARD.md`."
+      ]
+    ]
+  },
+  {
+    "file": "SEED_LEMMAS.md",
+    "locators": [
+      [
+        5,
+        "**Prepared:** 11 October 2026. **Research roles concerned:** F01\u2013F04 for reference distributions and piece costs; F15 and F17 for reductions and asymptotic diagnostics; F19 for independent reconstruction."
+      ],
+      [
+        138,
+        "Equal masses give \\(K_{\\mathrm{eff}}=m\\). The lemma can improve a mass-concentrated derivative decomposition; it does not prove that every Boolean function admits such a decomposition, pay the remaining reference normalizer, or establish \\(\\sum_i I_i\\ln K_{\\mathrm{eff},i}=O(I)\\). Any claimed FEI consequence must account for those terms separately i"
+      ],
+      [
+        142,
+        "## 2. A normalized prior over complete reference laws"
+      ],
+      [
+        165,
+        "Infinite costs are allowed where the reference provides no support. Then"
+      ],
+      [
+        186,
+        "When \\(v>0\\), let \\(R(A)=P(A)/v\\) be the conditional law given a nonempty set. Gibbs' inequality for a subprobability reference gives"
+      ],
+      [
+        192,
+        "This follows by normalizing \\(Q_{\\mathrm{mix}}\\), applying nonnegativity of KL divergence, and observing that the logarithm of its total mass is nonpositive. If a required reference probability is zero, the bound is simply infinite."
+      ],
+      [
+        203,
+        "### Application to the queue references"
+      ]
+    ]
+  },
+  {
+    "file": "NATIVE_MAPPING.md",
+    "locators": [
+      [
+        3,
+        "**This is a many-to-many research crosswalk, not a native reassignment.** The installed plan is [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/), with installation reference [bc85302284612e979faae67ea51663242d322221](the open-problems repository (commit bc853022)"
+      ],
+      [
+        19,
+        "| B07 | Booleanity |"
+      ],
+      [
+        43,
+        "| F04 \u2014 Rank-free references | B01, B02, B14, B09 | References using Boolean structure beyond a fixed collection of coordinate orders; testable gate-family reductions. |"
+      ],
+      [
+        46,
+        "| F07 \u2014 Erasure and synergy | B06, B07, B08, B14 | Signed spectral-edge inequalities that survive parity dependence and retain the downward logarithmic residual. |"
+      ],
+      [
+        48,
+        "| F09 \u2014 Boolean convolution | B07, B14, B08, B01 | Full signed XOR identities, failures of non-Boolean relaxations, and universal entropy interfaces. |"
+      ],
+      [
+        51,
+        "| F12 \u2014 Two spectral addresses | B04, B07, B09, B15 | Actual Boolean conditional-product spectra, coupled-row constraints, and the two-address constant beyond the refuted value two. |"
+      ],
+      [
+        53,
+        "| F14 \u2014 Shared-variable composition | B12, B03, B07, B10 | Valid Fourier convolution bounds and compositional invariants tested against false entropy subadditivity. |"
+      ]
+    ]
+  },
+  {
+    "file": "ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md",
+    "locators": []
+  },
+  {
+    "file": "ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md",
+    "locators": []
+  },
+  {
+    "file": "BLOCK_RESTRICTION_IDENTITY_2026-09-18.md",
+    "locators": [
+      [
+        126,
+        "3. abandon restriction induction and control the logarithmic edge functional K directly from signed Boolean convolution."
+      ]
+    ]
+  },
+  {
+    "file": "ERASURE_REDUCTION.md",
+    "locators": [
+      [
+        129,
+        "These follow by Fourier transforming f^2=1. Conversely, for a real vector a, (9) implies that its inverse Walsh transform takes values in {-1,1}. Thus an equivalent algebraic problem is to control (6) under these exact signed convolution constraints. A nonnegative arbitrary distribution p does not suffice."
+      ]
+    ]
+  },
+  {
+    "file": "ERASURE_RIGIDITY.md",
+    "locators": []
+  },
+  {
+    "file": "ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md",
+    "locators": []
+  },
+  {
+    "file": "GAMMA_ENDPOINT_LEDGER.md",
+    "locators": []
+  },
+  {
+    "file": "ISOSPECTRAL_SPLICING_CURATED.md",
+    "locators": []
+  },
+  {
+    "file": "LOG_ALLOCATION_CURATED.md",
+    "locators": [
+      [
+        137,
+        "with zero-j terms zero. The preceding theorem and the already proved recombination payment imply"
+      ]
+    ]
+  },
+  {
+    "file": "ONE_BIT_ENDPOINT.md",
+    "locators": []
+  },
+  {
+    "file": "OVERLAPPING_PRODUCT_NOTE.md",
+    "locators": []
+  },
+  {
+    "file": "ROUTE_MAP_CURATED.md",
+    "locators": [
+      [
+        64,
+        "**PROVEN obstruction, recovered September 20.** Exact Booleanity is normalization plus **all** signed convolution identities sum_S a_S a_(S xor U)=0 for U nonempty. Normalization and singleton cancellation alone were already subsumed by a much stronger no-go."
+      ],
+      [
+        82,
+        "For the actual spectral law P, Q is the product law with its coordinate marginals. Distinguish K_full=D_2(P||Q), K_supp=-log Q(A), and K_shape=D_2(P||Q(.|A)), A=supp(P). For a normalized reference amplitude b, put C_b(U)=sum_S b_S b_(S xor U), v_U=C_b(U)^2, Z=sum_U v_U, L=sum_U v_U log(1/v_U), and T=L/Z."
+      ],
+      [
+        89,
+        "- For any Boolean source with spectral zeros in dimension >=2, one physical-point flip fills every zero and preserves every existing Fourier sign. This realizes the completion signs in the explicit paired family; reference amplitudes are not thereby Boolean Fourier coefficients, and the original marginals remain the reference"
+      ],
+      [
+        91,
+        "[Complete tensor, support-loss, and surgery proofs](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-normalized-convolution-0236z/REPORT.md). \u201c+ at every zero\u201d is not a globally tensor-compatible rule; tensor identities for completed references require product completions"
+      ],
+      [
+        106,
+        "- Full unweighted convolution L2 payment and fixed/low-depth labelled KL extraction underpay rare logarithms"
+      ],
+      [
+        124,
+        "3. **KL:** pay K_occ>=[-B_inf^Gamma]_+ with actual source signs, bias, normalizations and reference changes retained. On the balanced slice this is already full-FEI-strength. Nonlinear/multiscale payment remains possible; fixed positive reserves and low-level truncations do not supply it"
+      ],
+      [
+        147,
+        "The prior [account02/B18 product-phase theorem](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/account02/B18/20260921T103159Z-product-phase-kl-stability/REPORT.md) already gives quantitative information. For actual Boolean amplitudes `a`, same-sign product-referenc"
+      ]
+    ]
+  },
+  {
+    "file": "percolation_spectral_pivotal_entropy_30pp.txt",
+    "locators": [
+      [
+        33,
+        "theorem answers the discrete triangular-site case of [6, Section 11, Question 5]. Both questions"
+      ],
+      [
+        2207,
+        "                                                      References"
+      ]
+    ]
+  },
+  {
+    "file": "percolation_spectral_pivotal_entropy_31pp_other_version.txt",
+    "locators": [
+      [
+        34,
+        "theorem answers the discrete triangular-site case of [5, Section 11, Question 5]. Both questions"
+      ],
+      [
+        2148,
+        "                                                        References"
+      ],
+      [
+        2163,
+        "      19\u00ad104. doi:10.1007/s11511-010-0051-x. Corrected version arXiv:0803.3750v4 (2013); numbered references follow"
+      ],
+      [
+        2177,
+        "      arXiv:1801.02602v1; numbered references follow this version."
+      ],
+      [
+        2186,
+        "      doi:10.1214/EJP.v13-565. arXiv:0711.4948; numbered references follow the published version."
+      ]
+    ]
+  },
+  {
+    "file": "threshold_paper_29pp_earlier_version.txt",
+    "locators": [
+      [
+        14,
+        "     proofs use antichain estimates for pivotal fibers, spectral reference measures, and product-measure"
+      ],
+      [
+        94,
+        "Theorem A. Every regular Boolean function f satisfies"
+      ],
+      [
+        138,
+        "one adds log w to the constant in Theorem A. For combinations of m such functions, one adds log w"
+      ],
+      [
+        139,
+        "to the constants in Theorem B; see Theorem 4.2. A different spectral reference measure gives a"
+      ],
+      [
+        162,
+        "and intersections of any number of halfspaces. The proof uses a reference distribution generated by"
+      ],
+      [
+        210,
+        "for small-read DNF was studied by Lecomte and Tan [13]; Section 8 records a direct concentration"
+      ],
+      [
+        224,
+        "plateaued functions [19]. The argument below instead controls a global reference measure on Fourier"
+      ]
+    ]
+  },
+  {
+    "file": "threshold_paper_38pp.txt",
+    "locators": [
+      [
+        15,
+        "     antichains, spectral reference measures, and product-measure composition."
+      ],
+      [
+        91,
+        "Theorem A. Every regular Boolean function f satisfies"
+      ],
+      [
+        135,
+        "one adds log w to the constant in Theorem A. For combinations of m such functions, one adds log w"
+      ],
+      [
+        136,
+        "to the constants in Theorem B; see Theorem 4.2. A different spectral reference measure gives a"
+      ],
+      [
+        159,
+        "and intersections of any number of halfspaces. The proof uses a reference distribution generated by"
+      ],
+      [
+        194,
+        "Fourier set and gives a constant bound for addressing inside the same queue construction. Section 8"
+      ],
+      [
+        225,
+        "plateaued functions [20]. The argument below instead controls a global reference measure on Fourier"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+A097 stage19: two-bin signed nonempty phase extension derived; x=Gamma*d^2+E*(cplus^2+cminus^2). Exact validation pending. NEXT: run fixed pilot then main; independently audit full CE ledger and parity nullspace.

@@ -1,0 +1,165 @@
+[
+  {
+    "claim_id": "A033-NONISOSPECTRAL-COMPATIBILITY-ATTAINMENT",
+    "version": 1,
+    "exact_statement": "Let p+,p- be any complete finite probability laws, q=(p++p-)/2, and pi any partition. Prescribe block probability profiles r+,r- with (r++r-)/2=pi(q) and r_tau(z)>0 whenever a_tau(z)=(pi p_tau)(z)>0. Among complete reference pairs with pi(R_tau)=r_tau and (R++R-)/2=q at EVERY fine label, the finite minimum M of average KL(p_tau||R_tau) exists and is at least L=average KL(a_tau||r_tau). Equality M=L holds IFF, for every block occupied by both actual children, either r+(z)=a+(z) or p+(.|z)=p-(.|z); singly occupied and zero blocks cause no extra obstruction. Equivalently (r+(z)-a+(z))*(a-(z)*p+(s)-a+(z)*p-(s))=0 for all s in doubly occupied blocks. Failure makes M strictly greater than L. For the actual three-bit Boolean selector with children point-defect2 and character y1, p+=(1/4,1/4,1/4,1/4), p-=(0,1,0,0), partition{0,1}|{2,3}, and r+=r-=(3/4,1/4), the exact optimizer is R+=(1/4,1/2,1/8,1/8), R-=(0,3/4,1/8,1/8). M=1/8+(1/2)log2(4/3), L=(3/4)log2(4/3), and M-L=1/8-(1/4)log2(4/3)>0, certified by16<18. At the TRUE full parent reference, the complete erasure-plus-mean-child-CE increment includes JS and equals M-JS=(1/8)log2[5^5/(2^7*3^4)]<0. Thus the fine gap is not an unpaid net transaction. Full-mean compatibility and prescribed profiles are explicit extra route obligations, not forced by Booleanity; no initial-source or full FEI bound follows. Units bits.",
+    "hypotheses": [
+      "Finite complete probability laws; fair averaging of both outcomes; the actual Boolean uniform physical query is a special case",
+      "Full fine-label mean compatibility is explicitly required in addition to prescribed block profiles; not assumed for A097 calibration or A011 target-changing edits",
+      "Finite coarse CE support as stated; zero child blocks and all reference-only atoms retained",
+      "All existing source bookings and complete terminal liabilities remain outside this local optimization"
+    ],
+    "statement_sha256": "6539cb533954094cf592d90f1f39926616f28a758e4cbf85d80a6ba34d364195",
+    "contributors": [
+      "A033; A031 compatible-reference geometry credited as context, not contributor to this extension"
+    ],
+    "proof_source": {
+      "run_id": "20261023T123045Z-account03-A033-derivative-hierarchy",
+      "files": [
+        "DERIVATION.md",
+        "code/check.py",
+        "out/validation.json"
+      ]
+    },
+    "proof_dependencies": [
+      "Elementary KL chain rule and Gibbs equality, proved/reconstructed in DERIVATION.md",
+      "Compactness and lower semicontinuity of finite extended KL; explicit finite feasible candidate in DERIVATION.md",
+      "Exact rational convex supporting-plane/KKT certificate and prime-log identities for the actual Boolean witness"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A031",
+        "status": "HOLDS_NO_REPAIR_AT_STATED_SCOPE",
+        "source_statement_sha256": "6539cb533954094cf592d90f1f39926616f28a758e4cbf85d80a6ba34d364195",
+        "source_proof_sha256": "66eff48098e596c6fb2cad9e7ca687c92ab49f8c09b16ab2f82c06ca0ce7ea9a",
+        "artifacts": [
+          "DERIVATION.md section1",
+          "out/REVIEW_A033.json",
+          "code/reproduce.py"
+        ],
+        "scope": "Independent chain-rule equality reconstruction and actual Boolean witness/global optimum. No arbitrary-core source or universal class necessity imported."
+      }
+    ],
+    "status": "INDEPENDENT_SCOPED_REVIEW_HOLDS_NO_REPAIR",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered surrogate: the separate coarse-bin KL lower bounds are always jointly attainable under full fine-reference mean compatibility, even for nonisospectral children"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A031",
+      "A079",
+      "A097",
+      "A094",
+      "A011",
+      "B07",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A035-MISMATCHED-MEAN-FINE-ATTAINABILITY",
+    "version": 1,
+    "exact_statement": "For finite child laws pplus,pminus absolutely continuous with respect to a complete inherited mean m, prescribed coarse target laws rplus,rminus averaging to m at block level, and finite coarse KL, the coarse joint KL invoice is attainable under full fine mean compatibility iff: on every doubly occupied block, rplus*pplus/a_plus+rminus*pminus/a_minus=2m at every label; on every singly occupied block, r_tau*p_tau/a_tau<=2m at every label; doubly empty blocks have no extra obstruction. Failure gives a strict positive minimum gap. This extends A033 actual-midpoint scope. An actual Boolean3-bit split with uniform inherited m has coarse cost1/2 and exact fine minimum log2(186624/3125)/8; omitting inherited mismatch gives a positive apparent debit log2(729/256)/8, while the complete query-plus-conversion debit is the fine minimum minus1<0. No initial-source payment or necessity of this reference class is asserted.",
+    "hypotheses": [
+      "Complete finite laws, support inclusion pplus,pminus<<m, bits",
+      "Prescribed normalized coarse profiles obey rplus+rminus=2m blockwise and finite coarse KL",
+      "Full fine compatibility is an EXPLICIT additional route obligation, not intrinsic to Boolean queries",
+      "Generic geometry labeled generic; actual Boolean witness uses complete signed physical laws",
+      "All old mismatch, actual JS, conditional refunds, reaches and full sibling costs retained"
+    ],
+    "statement_sha256": "438a7c923232202749f2338e124a25f9dac4ca55ca5d1ca4866ea5def8218ef1",
+    "contributors": [
+      "account03/A035"
+    ],
+    "proof_source": {
+      "path": "agents\\A035\\runs\\20261023T132111Z-account03-A035-signed-cancellation-countersearch\\DERIVATION.md",
+      "sha256": "22b89aae76b1e813328ac92b48ed5660701916d785223c6fbe43a15289c4cee3"
+    },
+    "proof_dependencies": [
+      "KL chain rule and equality for full conditional laws",
+      "Compactness/lower semicontinuity; convex supporting-plane inequality",
+      "Actual signed Boolean physical-mixture identity"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A031",
+        "status": "HOLDS_NO_REPAIR_AT_STATED_SCOPE",
+        "source_statement_sha256": "438a7c923232202749f2338e124a25f9dac4ca55ca5d1ca4866ea5def8218ef1",
+        "source_proof_sha256": "22b89aae76b1e813328ac92b48ed5660701916d785223c6fbe43a15289c4cee3",
+        "artifacts": [
+          "DERIVATION.md section1",
+          "out/REVIEW_A035.json",
+          "code/reproduce.py"
+        ],
+        "scope": "Independent chain-rule equality reconstruction and actual Boolean witness/global optimum. No arbitrary-core source or universal class necessity imported."
+      }
+    ],
+    "status": "INDEPENDENT_SCOPED_REVIEW_HOLDS_NO_REPAIR",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered extension of actual-midpoint no-shift criterion to mismatched carried means",
+      "Unregistered debit shortcut omitting old inherited mismatch from full transaction"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A031",
+      "A033",
+      "A096",
+      "A097",
+      "A088",
+      "A094",
+      "B07 lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A031-QUANTITATIVE-FINE-COMPATIBILITY-TARIFF",
+    "version": 1,
+    "exact_statement": "Let p+,p- be complete finite child laws absolutely continuous with respect to a complete inherited mean m, and let prescribed normalized block profiles r+,r- average to pi(m), with finite coarse KL. Let M be the minimum mean KL over complete references R_tau of profiles r_tau and full mean m, and L the mean coarse KL. On each doubly occupied block set a_tau=p_tau(block), kappa_tau=p_tau(.|block), e=r+*kappa+ + r-*kappa- -2m, W=r+^2/a+ + r-^2/a-. On each singly occupied block define o=sum(r_tau*kappa_tau-2m)_+. Then (M-L)*ln(2)>=Phi=sum_double ||e||_1^2/(4W)+sum_single a_tau*o^2/r_tau^2. Phi>0 iff a fine attainability test fails; wholly actual-zero blocks contribute zero and all ghosts remain. The common multiplier1 is optimal even for actual positive-influence Boolean child spectra: f=x*h2 with h2 the two-bit point defect, one block and inherited m=((1+2s)/4,(1+2s)/4,(1-2s)/4,(1-2s)/4), 0<s<1/2, has M*ln2=-ln(1-4s^2)/2, Phi=2s^2 and their ratio tends to1. Its FULL transaction is exactly0, since JS=occupancy=0 and old marginal KL=M. For any declared finite complete adaptive tree with current references and these class constraints, define the original margin A=W-U-CE(P_root,Q_root), with W the owner and U all old debits. Payment requires sum reach*(L+Phi/ln2-JS-D(actual_marginal||inherited_m)-actual_occupancy_KL)<=A; negative terms must be retained. This is generic reference geometry applied to actual Boolean witnesses, not an initial Boolean admission bound or universal necessity claim.",
+    "hypotheses": [
+      "Finite complete normalized laws, both physical children and all reference-only atoms retained.",
+      "Full-mean compatibility and prescribed profiles are explicit additional obligations; finite coarse KL.",
+      "Bits for M,L,JS,KL; Phi is in natural-log units.",
+      "Tree corollary retains every old debit, actual reach and negative credit; no positive-part replacement or renewed bank."
+    ],
+    "statement_sha256": "16d20ef754c45209dbbb3faad9803f99fdadebe89f89fad0a50d640a2b2b0094",
+    "contributors": [
+      "account03/A031"
+    ],
+    "proof_source": {
+      "path": "DERIVATION.md",
+      "sha256": "2c69800cb84068ab84af22a9a327a0221802b33b124e81444bc80ddff4b34492"
+    },
+    "proof_dependencies": [
+      "KL conditional chain rule and elementary log-sum/Pinsker, proved locally.",
+      "Triangle and weighted Cauchy-Schwarz on within-block reference errors.",
+      "Actual Boolean signed child identities and full convolution; checked directly.",
+      "Existing A033/A035 criteria independently reconstructed, not assumed as an initial source."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A031 author",
+        "status": "ANALYTIC_PROOF_AND_EXACT_CERTIFICATES_PASS_EXTERNAL_REVIEW_PENDING",
+        "artifacts": [
+          "out/CHECK.json",
+          "out/REPRODUCE.json"
+        ],
+        "independence": "Two implementations by same author; external peer review remains pending."
+      }
+    ],
+    "status": "AUTHOR_PROVED_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Any larger uniform multiplier on Phi under the stated general inherited-mean hypotheses, even on actual Boolean splits."
+    ],
+    "first_unproved_line": "A model/policy-required class and noncircular influence-priced unused ORIGINAL payer for arbitrary Boolean cores remain unproved; neither this fixed-mean class nor the floor class is universally forced.",
+    "next_consumers": [
+      "A033",
+      "A035",
+      "A094",
+      "A096",
+      "A097",
+      "B07 Claude lead"
+    ]
+  }
+]

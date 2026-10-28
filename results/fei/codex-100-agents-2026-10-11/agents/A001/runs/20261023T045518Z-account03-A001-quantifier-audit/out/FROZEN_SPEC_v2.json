@@ -1,0 +1,22 @@
+{
+  "helper_version": "A001-controller-reset-v1; rational Walsh plus 32-term rigorous log helper",
+  "family": "fixed neutral AND3/Maj3 nine-bit source; A090 maximal active/dummy frontier",
+  "domain": "three active choices, two dummy choices, three encoder choices; both encoder outcomes; new source parameter endpoints 0,1",
+  "case_count": 72,
+  "symmetry": "18 physical histories; two independent endpoint parameters, four corners",
+  "arithmetic": "integer Walsh; Fraction; prime-log exact equalities; rational atanh bounds",
+  "memory_estimate_mb": 90,
+  "max_runtime_seconds": 55,
+  "pilot": "one physical history; four corners; under60s",
+  "dimension_escalation": false,
+  "extension_after_pilot": {
+    "version": "v2",
+    "prior_pilot": "1182 exact assertions; four corners; .431 seconds",
+    "family": "all256 Boolean private events on three encoder bits at k2,r3; every encoder coordinate and both outcomes",
+    "case_count": 768,
+    "arithmetic": "same exact helper; source formula includes p=0 and1; support-completed normalized references",
+    "max_runtime_seconds": 55,
+    "memory_estimate_mb": 110,
+    "purpose": "test arbitrary-controller one-step nonpositive reset law; analytic induction covers all finite encoder-only trees"
+  }
+}

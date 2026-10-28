@@ -1,0 +1,16 @@
+{
+ "helper_version":"A015-BOUNDED-CORE-FUSION@1",
+ "family":"Actual Boolean shared-core clauses AND_j OR(Z_Tj,X_j), private X_j disjoint, plus arbitrary control/data truth tables",
+ "domain":"Pilot: all16 two-bit Boolean functions with each single control and two fixed local-reference rules; two physical anchor fixtures; majority m=1..4. Full: all256 three-bit Boolean functions, every nonempty proper core subset, two fixed local-reference rules (3072);1024 four-bit tables mask=(j*65521) mod65536, j0..1023, first2bits core, two rules (2048). Physical shared-core clauses: all ordered anchor lists of length1..3 from masks0..3, widths all1 or all2 (168); extra nonnested anchors1,2,3 widths1,2,1 (1). Local clause masks: all ordered widths1..3 length1..3 (39). Scalar majority m1..128, exact physical tables only odd sizes3,5,7,9.",
+ "case_count":{"generic_fusion":5120,"physical_core_functions":169,"local_clause_functions":39,"majority_scalar":128,"majority_physical":4},
+ "symmetry":"No Boolean table quotient; anchor ordering retained. No automatic dimension growth. Analytic generalization proved separately.",
+ "arithmetic":"Integer Walsh, Fraction physical probabilities/influences and reference normalization, rational prime-exponent logarithm identities; interval-free rational sufficient inequalities; central-binomial certificates",
+ "memory_estimate_mb":90,
+ "max_runtime_seconds":55,
+ "pilot_max_seconds":55,
+ "heavy_job":false,
+ "frozen_before_execution":true,
+ "commands":["python -X utf8 code/check.py --pilot","python -X utf8 code/check.py"],
+ "negative_controls":["Treating repeated core variables as independent must fail on shared OR2 product, physical influence1 versus3/2","Uniform nonempty growing-core code must have diverging actual majority cost/influence; no dimension-free fusion claim","Constants contribute zero local nonempty spectrum; no newly created branch budget"],
+ "scope":"Explicit normalized NEW root reference; no arbitrary reset or iteration closure, no FEI counterexample. Governor snapshot stale; only small bounded computation admitted."
+}

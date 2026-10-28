@@ -1,0 +1,8 @@
+{
+  "command": "python -X utf8 lean_check.py --core --timeout 45 --stmt \"example (terminal loss fee initial query bound : Nat) (ledger : terminal + loss + fee = initial + query) (budget : initial + query ≤ bound) : terminal + loss + fee ≤ bound := by rw [ledger]; exact budget\"",
+  "exit_code": 1,
+  "output": "SETUP_UNVERIFIED: Compute status is distressed or unknown",
+  "compiler_started": false,
+  "proof_rung": "UNVERIFIED; no formal certification",
+  "scope": "Only integer ledger-to-budget substitution; would not certify Fourier/entropy claims even if checked."
+}

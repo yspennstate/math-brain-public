@@ -1,0 +1,47 @@
+{
+  "helper_version": "A092-stage19-review-v2",
+  "helper_sha256": "74f6e6892ad85f8e5a315ddc2468c651c6cca72e63cf92255c6af9bd59e632ff",
+  "family": "F=a+sigma*(1-a^2)*parity_k for displayed A079 controller and every physical controller restriction",
+  "domain": {
+    "controller_restrictions": "all 3^4 labelled patterns (fixed0,fixed1,free)",
+    "k": [
+      3,
+      4,
+      5,
+      6
+    ],
+    "sigma": [
+      -1,
+      1
+    ],
+    "queries": "all k seed coordinates",
+    "epsilon": "1/64",
+    "target": "first remaining singleton frequency"
+  },
+  "case_count": {
+    "families": 648,
+    "query_nodes": 2916,
+    "full_children": 5832
+  },
+  "pilot": {
+    "controller": "unrestricted",
+    "k": [
+      3
+    ],
+    "signs": [
+      -1,
+      1
+    ],
+    "query_nodes": 6
+  },
+  "symmetry": "none; all labelled physical restrictions including duplicate/constant functions",
+  "arithmetic": "integer Walsh-Hadamard transform and exact Fractions; independent direct characters at unrestricted k3; rigorous 44-term range-reduced rational log enclosures from own earlier helper",
+  "memory_estimate_MB": 90,
+  "maximum_runtime_seconds": {
+    "pilot": 55,
+    "primary": 180
+  },
+  "no_dimension_escalation": true,
+  "scope": "Independent review of zero-phase obstruction, not acceptance of physical-phase funding theorem",
+  "revision_reason": "Replace redundant self-equality occupancy assertions by direct comparison of truth-table conditional probabilities against independently constructed controller reference. Same family/domain/deadlines."
+}

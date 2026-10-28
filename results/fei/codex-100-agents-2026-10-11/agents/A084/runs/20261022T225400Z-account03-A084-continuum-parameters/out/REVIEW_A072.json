@@ -1,0 +1,15 @@
+{
+  "source_claim_id": "A072-SATURATED-DONOR-OPTIMALITY",
+  "source_version": 1,
+  "source_statement_sha256": "589d2d5a88ed46b641128b06077714c386d0ae3b166dbae2465fce0644657772",
+  "reviewer": "A084",
+  "verdict": "HOLDS_SUBSTATEMENT_ONLY",
+  "exact_reviewed_scope": "mean unused child reserve equals original parent reserve; nonnegative reserves at a saturated parent force both children saturated; no positive child component can be reused as unused donor.",
+  "reconstruction": "Independent integer character sums/FWHT, physical edge counts and occupied-mask profile engine, plus real algebra in PROOF.md; one original A072 saturated parent and both next children reconstructed.",
+  "exclusions": "No acceptance of all60 optimizer cases, general child positivity or arbitrary-core continuation.",
+  "artifacts": [
+    "PROOF.md",
+    "out/SATURATION_RECONSTRUCTION.json",
+    "out/LEAN_ATTEMPT.json"
+  ]
+}

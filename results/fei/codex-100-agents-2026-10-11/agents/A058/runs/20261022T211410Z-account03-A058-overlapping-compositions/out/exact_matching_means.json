@@ -1,0 +1,43 @@
+{
+  "helper_version": "A058-matching-conditional-mean-v1",
+  "status": "PASS",
+  "rows": [
+    {
+      "shared": 0,
+      "private_each": 1,
+      "cases": 6,
+      "assertions": 18,
+      "zero_selector_cases": 2
+    },
+    {
+      "shared": 1,
+      "private_each": 1,
+      "cases": 36,
+      "assertions": 108,
+      "zero_selector_cases": 4
+    },
+    {
+      "shared": 2,
+      "private_each": 1,
+      "cases": 1296,
+      "assertions": 3888,
+      "zero_selector_cases": 16
+    },
+    {
+      "shared": 1,
+      "private_each": 2,
+      "cases": 4900,
+      "assertions": 14700,
+      "zero_selector_cases": 4
+    }
+  ],
+  "cases": 6238,
+  "exact_assertions": 18714,
+  "arithmetic": "integer Walsh and exact formal prime logarithms; maximum n=6; all arithmetic exact below 2^53",
+  "runtime_seconds": 3.319,
+  "counterexamples": {
+    "equal_global_bias_only": "G(S)=S,H(S)=-S: entropy increment=0, selector influence=1, predicted increment=4",
+    "overlapping_private": "G(X)=X,H(X)=-X with empty shared block: same failure"
+  },
+  "independent_review": "pending"
+}

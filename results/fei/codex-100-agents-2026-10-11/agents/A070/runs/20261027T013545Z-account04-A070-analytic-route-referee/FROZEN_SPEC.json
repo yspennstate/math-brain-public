@@ -1,0 +1,12 @@
+{
+  "helper_version": "A070-independent-parity-product-v1",
+  "family": "REAL Gaussian-integer sine product plus fresh sign, followed by disjoint b-bit parity substitution; actual rounded Boolean control is a parity",
+  "domain": "pilot n=4,b=1,epsilon=1/2; final n=4,b=1,2,3,epsilon=1/2,1/4; symbolic binomial checks n=4,16,64,b=1,2,3,epsilon=1/2,1/4",
+  "case_count": "6 lifted fixtures, 18 binomial fixtures; physical full values up to 2^15; all restriction states fixing at most 2b-1 bits in each lifted fixture",
+  "symmetry": "No function quotient; parity block map explicitly enumerated. Restricted norm uses exact Fourier coefficients of g^2; independently cross-checked by direct physical averaging for pilot and selected boundary restrictions.",
+  "arithmetic": "Python integers and Fraction only; represent g by rational numerator u=x0+epsilon*h and common squared normalization Z; entropy lower bound uses analytic atom bound, no floating logarithm signs",
+  "memory_estimate_mb": 70,
+  "maximum_runtime_seconds": 55,
+  "automatic_dimension_escalation": false,
+  "infinite_family": "k>=2, b=k, epsilon=1/k, n=2^(2*k^4); symbolic only, never allocated"
+}

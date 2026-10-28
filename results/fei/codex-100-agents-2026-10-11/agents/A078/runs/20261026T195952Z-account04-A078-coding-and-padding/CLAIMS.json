@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A078-GU-SIGNED-PADDING-DISCOUNT",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean f and nonzero parity column P, actual F(x,z)=f(x+zP) preserves H and has I(F)=I(f)+q_f(P)<=2I(f). Let d_P(f)=U(f)-U(F)>=0. At every uncovered physical query P_i=0, both child restrictions commute with padding, erasure and queried influence are preserved, and D_i U(F)=D_i U(f)-d_P(f)+E_b d_{P without i}(f_ib). For every finite adaptive tree of uncovered queries the signed correction telescopes to -d_root+E d_leaf with both full terminal U retained. The explicit 3-bit seed mask25, P=5, i=1 has nonzero erasure and positive correction (1/16)log2(129140163/100000000); thus the padding discount is not a supermartingale even at a first nonzero-erasure query. Disjoint m-block Boolean products accumulate exactly m times this correction and include every auxiliary influence, with no divergent correction/I or H/I claim.",
+    "hypotheses": [
+      "Boolean sign functions on finite uniform cubes; full squared Walsh spectra; logarithms in bits.",
+      "P is nonzero and P_i=0 for the uncovered-query transport.",
+      "Stopping tree queries only uncovered seed coordinates; padding z stays unrevealed.",
+      "Tensor family has disjoint physical blocks and a separate padding bit per block."
+    ],
+    "statement_sha256": "ed28f3eb106de5f4e4c5c6a9e97cfa5735c1f55c83895379e68a4c082db2afc6",
+    "contributors": [
+      "A078"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/padding_cocycle.py",
+      "code/independent_audit.py",
+      "code/tensor_tree_audit.py",
+      "out/CHECK.json",
+      "out/INDEPENDENT_AUDIT.json",
+      "out/TENSOR_TREE_AUDIT.json"
+    ],
+    "proof_dependencies": [
+      "Self-contained Walsh expansion and physical restriction; finite-tree telescoping; elementary monotonicity of logarithm.",
+      "Prior A078 stage124031Z GU_PROOF section1 is reconstructed within PROOF.md for covered-query scope."
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_WITH_EXACT_FINITE_CHECKS;INDEPENDENT_MATHEMATICAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Proposed padding-discount supermartingale E[d_child]<=d_parent under an uncovered physical Boolean query.",
+      "Proposed drift monotonicity D_i U(L_P f)<=D_i U(f) for all uncovered physical queries."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A076",
+      "A077",
+      "A092",
+      "A094"
+    ]
+  }
+]

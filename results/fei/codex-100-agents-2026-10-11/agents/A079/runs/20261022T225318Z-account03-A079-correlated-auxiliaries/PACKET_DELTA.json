@@ -1,0 +1,80 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261022T225318Z-account03-A079-correlated-auxiliaries",
+  "stream": "B16",
+  "packet_id": "A079",
+  "gap_id": "G-PHASE-COND",
+  "attempt_id": "A079-stage7-tagged-reference-same-source-bank-lift-v1",
+  "method": "Independent controller Bellman certificate; exact tagged-reference tensor lift; same-bank finite-tree induction; sourced canonical active reset and biased phase guard",
+  "mathematical_delta": "A032 controller-only theorem independently HOLDS. An already paid source history lifts through ALL admitted wrapper-controller/seed interleavings at unchanged K>=2, with actual normalizers and complete inherited terminals; last-address no-reset continuation paid. Fresh reset after address collision and generic initial source price remain open.",
+  "deliverable_status": "COMPLETE_LOCAL_SOURCE_AND_EXACT_CERTIFICATES",
+  "mathematical_status": "FULL_FEI_OPEN; generic conditional lifting paper proof, independent review pending; Lean not launched after memory gate1",
+  "claim_versions_used": [
+    {
+      "claim_id": "A032-FIXED-SIBLING-CONTROLLER-STOPPING-TRANSPORT",
+      "version": 1,
+      "statement_sha256": "ece8fb4ce6e744704a458001a65ba0f869140ddfac51a491a215720b6134958c",
+      "use": "independent review"
+    },
+    {
+      "claim_id": "A079-FIXED-NONFAIR-SIBLING-SEED-TRANSPORT",
+      "version": 1,
+      "statement_sha256": "9f459612f7674cd2e65de549e8fd7f36450f149c912b9a5381dd6fbb64da82b6",
+      "use": "A032 acceptance consumed"
+    },
+    {
+      "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+      "version": 1,
+      "use": "conditional full-history application; eight actual source steps independently checked"
+    },
+    {
+      "claim_id": "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR",
+      "version": 1,
+      "use": "conditional application at original admission, not full independent acceptance"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A032-FIXED-SIBLING-CONTROLLER-STOPPING-TRANSPORT@1: A079 independent acceptance",
+    "A079-FIXED-NONFAIR-SIBLING-SEED-TRANSPORT@1: A032 acceptance consumed",
+    "A079-TAGGED-REFERENCE-SAME-BANK-LIFT@1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "PROOF.md",
+    "REVIEW_A032.md",
+    "HANDOFF.md",
+    "CLAIMS.json",
+    "FROZEN_SPEC.json",
+    "code/check.py",
+    "code/Bank.lean",
+    "out/validation.json",
+    "out/review_controller.json",
+    "out/generic_lift.json",
+    "out/sourced_step.json",
+    "out/collision_guard.json",
+    "out/LEAN_ADMISSION.json",
+    "out/SOURCE_MANIFEST.json",
+    "out/PERSISTENCE_RECEIPT.json"
+  ],
+  "next_consumers": [
+    "A032",
+    "A034",
+    "A088",
+    "A094",
+    "A096",
+    "A097",
+    "B16",
+    "B20"
+  ],
+  "next_action": "After a sourced active reset, delete physical z and price ONE prescribed fresh child reset with actual signed empty-frequency interference, both full terminal references, previous controller/source debits and SAME diminished original bank. A032/A088/A094 review; A096/A097 consume.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Full FEI initial generic priced source remains OPEN",
+    "Fresh reset after physical z deletion not priced",
+    "New lifting independent review and registry/mirror adoption unverified",
+    "Fresh memok exited1: physical0.7GB; Lean not launched"
+  ],
+  "packet_ids": [
+    "A079"
+  ]
+}

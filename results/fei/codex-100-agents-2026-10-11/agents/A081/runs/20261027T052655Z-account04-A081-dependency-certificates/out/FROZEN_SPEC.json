@@ -1,0 +1,24 @@
+{
+  "helper": "A081 query-ledger-audit v2",
+  "family": "All labelled Boolean truth tables n0..3; models mass1/half, true-only or half-uniform mixture; each physical coordinate; actual same-mass mixture resets; literal b12 one-edit dictator; A094 grouped b12..64; graph guards",
+  "domain": {
+    "small_tables": "all n0..3 =278 tables, every coordinate",
+    "literal_witness": "b12 all16384 values/8192 grouped data masks",
+    "grouped_witness": "b12..64; all b>=12 by factorization"
+  },
+  "case_count": {
+    "tables": 278,
+    "query_reset_profiles": 3216,
+    "literal_target_values": 16384,
+    "normalizer_formula_cases": 53
+  },
+  "symmetry": "none",
+  "arithmetic": "integers and fractions; signs by exact polynomial factorization; no floating logs",
+  "memory_estimate_mb": 70,
+  "maximum_runtime_seconds": 55,
+  "automatic_escalation": false,
+  "heavy_compute": false,
+  "code_version": "source SHA256 recorded after code freeze",
+  "code_sha256": "456ed9750a54adbaec293c507469f37a2c63eae291621e125cf9330362510a8a",
+  "freeze_note": "Initial witness-only specification omitted small-query replay domain. Preliminary replay retained as PILOT; corrected complete domain frozen before final replay, no increase in dimension beyond explicit b12 witness."
+}

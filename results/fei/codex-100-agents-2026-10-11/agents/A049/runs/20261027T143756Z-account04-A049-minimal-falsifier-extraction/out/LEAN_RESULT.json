@@ -1,0 +1,26 @@
+{
+  "admission_exit": 0,
+  "admission_output": "OK: physical free 7.4 GB (need 4.0), commit free 20.9 GB (need 8.0)\n",
+  "source_sha256": "ed2f41040d8e4a887516170015104668fade447cf8a0eb021318f3c227770c16",
+  "status": "UNVERIFIED",
+  "scope": "Only the residual two-bit integer inversion; not full KL theorem or FEI",
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "lean_check.py",
+    "--core",
+    "--file",
+    "agents\\A049\\runs\\20261027T143756Z-account04-A049-minimal-falsifier-extraction\\code\\Residual.lean",
+    "--target",
+    "residual_two_bit_inversion",
+    "--reviewed-sha256",
+    "ed2f41040d8e4a887516170015104668fade447cf8a0eb021318f3c227770c16",
+    "--timeout",
+    "45",
+    "--json"
+  ],
+  "exit_code": 2,
+  "output": "SETUP_UNVERIFIED: Compute status is distressed or unknown\n"
+}

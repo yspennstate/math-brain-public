@@ -1,0 +1,21 @@
+# Ten precise research questions
+
+Q1. For an arbitrary Boolean core, can a useful declared coherent admission class be assigned a complete initial price O(I(core)) without assuming FEI or an equivalent source-capacity bound? Owners: A050, A011, A097. Independent review: A085, A094.
+
+Q2. After actual controller/selector exposure in the A086/A094 positive source-path construction, does reached full conversion fit the CURRENT diminished original owner after U,p1,p2 and both terminal costs? Owners: A086, A094, A011. Independent review: A095, A079.
+
+Q3. Can A011 TWO-edit fixed-padding/rate continuation be extended to arbitrarily many interacting active paths with the SAME original C0/K and every old booking, without a summable-resets hypothesis? Owners: A011, A095. Independent review: A086, A094.
+
+Q4. Does the sharp cross-half diagonal KL lower bound and its full residual in A079 hold for arbitrary ghost-bearing finite mixtures, and what ACTUAL original influence pays the latent capacity when the class is required? Owners: A079, A032. Independent review: A085, A097.
+
+Q5. For general isospectral leaf targets, can rho*[D(P||Rstar)-D(P||Q0)-log2 Z] be bounded by actual unused original U for a useful compatible policy, including all disagreement and reference-only mass? Owners: A096, A097. Independent review: A098, A094.
+
+Q6. Can the initial signed-component bank C+6I+sum(q_j inner_hull) be bounded by O(I) for an explicit useful initial decomposition, while retaining physical-query coherence? Owners: A072, A071, A075. Independent review: A074, A092.
+
+Q7. After EIGHT paid whole-core activation refreshes in A073, can a ninth positive refresh or the next actual data query be funded from the SAME remaining source with original variance and both signs retained? Owners: A073, A050. Independent review: A085, A094.
+
+Q8. Can Boolean signed autocorrelations bound sum over |S|=1,i notin S of phi(fhat(S)^2,fhat(S+i)^2) by absolute C I, with every nonempty coefficient constraint retained? Owners: A096, B20. Independent review: A088, A092.
+
+Q9. Can a complete whole-set witness/history code pay every label, rank, normalizer, lifetime and terminal cost once from original influence, without internal-donor or address-credit reuse? Owners: A020, A057, A059. Independent review: A091, A094.
+
+Q10. Can TWO independent reviewers reconstruct A099 v10 ENTIRE dependency chain, distinguishing accepted scoped leaves from the still-open arbitrary-core source/capacity premise? Owners: A099. Independent review: A085, A094.

@@ -1,0 +1,205 @@
+[
+  {
+    "claim_id": "A027-DATA-FIRST-PROPER-BLOCK",
+    "version": 1,
+    "exact_statement": "For every Boolean u on m>=1 uniform core bits, r>=1 fresh control bits, p=2^(-r), d=1-Eu, and F=1+A_r(u-1), the proper core block W satisfies B_W(F)<=p(2dm+2)<=6pm. I_W(F)=pI(u), expected terminal influence=rpd, and all leaves are constants or point defects satisfying H<=4I. For each fixed eta>0, I(u)>=eta*m implies H(F)<=max(6/eta+2/ln(2),4)*I(F) by a single-use physical stopping ledger.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Explicit core/control activation representation",
+      "For the constant bound only: fixed eta>0 and I(u)>=eta*m"
+    ],
+    "statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+        "local_UTF8_exact_statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A027-CORE-BLOCK-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every Boolean core u with Eu>=0, delta=(1-Eu)/2, v=1-(Eu)^2, p=2^(-r), R0=1-4p*delta+4p^2*delta, and L the entropy of the nonempty conditional core spectrum, B_W(1+A_r(u-1))/p=v*L+4*delta*(1-p)*h2(delta)+(R0/p)*h2(p^2*v/R0). Continuous zero-mass conventions apply. A uniform core-block bound B_W<=K*p*I(u) for all such cores and r>=1 implies full FEI with constant K+2. Conversely FEI with constant C implies this block bound with constant C+5.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Core mean nonnegative for the quantitative equivalence",
+      "Fresh point-indicator controls; W consists of all core coordinates but is proper in the full cube"
+    ],
+    "statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "agents\\A027\\runs\\20261011T215911Z-account05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-11T22:31:20.333650+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct integer character-sum/block-channel reconstruction, exact physical descendants, analytic proof and independent bounded checker",
+        "proof_source": "agents\\A087\\runs\\20261011T221055Z-account05-A087-restriction-referee\\REPORT.md",
+        "validation_sources": [
+          "out/check_results_identity.json",
+          "out/check_results_selection.json",
+          "out/check_results_activation.json",
+          "out/extra_results.json"
+        ],
+        "scope_guard": "No universal FEI conclusion; terminal boundary and original structural hypotheses retained.",
+        "source_recorded_statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+        "local_UTF8_exact_statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT",
+    "version": 10,
+    "exact_statement": "For every uniform Boolean core u, r>=1 fresh point controls with p=2^(-r), F=1+A_r(u-1), and finite adaptive physical core-only restriction tree T, the lifted actual leaf partition obeys Pi_I(F)=p*Pi_I(u) and |Pi_H(F)-p*Pi_H(u)|<=(12+8/ln(2))*Pi_I(F), with all remaining-core entropy and terminal control reserve retained. For proper-core stopping trees with Pi_H(u)<=K*Pi_I(u) and C001-regular core terminals, H(F)<=max(K+12+8/ln(2),C_reg)*I(F). In particular u=chi_[t]*g with t>=1 and regular g on at least one remaining core coordinate admits the proper character-block rule H(F)<=(12+8/ln(2))*I(F), even for g=D_s where core density tends to zero. A universal forward activation surcharge exactly 4 is refuted by the actual proper-core example u=z*D_32, r=16: the certified Pi_H(F)/Pi_I(F)>8193/2048 while Pi_H(u)=0. The iterated r->infinity then s->infinity surcharge limit on u=z*D_s is 4. Version 2 retains every version-1 component unchanged and strengthens the core-only transport: for every arbitrary Boolean controller a=1-2c on a DISJOINT uniform physical cube, p=Pr(a=-1), F=1+c(u-1), and every finite actual core-only stopping tree, Pi_I(F)=p Pi_I(u) and |Pi_H(F)-p Pi_H(u)|<=(4+12/ln(2))Pi_I(F), with 4+12/ln(2)<22. The controller spectral entropy cancels linearly across the core bias martingale, while all controller entropy remains in actual activated terminals. Their influence reserve is p E I(u_leaf)+Pr(u=-1)I(a). If the specified proper core partition has Pi_H(u)<=K Pi_I(u) and actual activated leaves have H<=L I, then H(F)<=max(K+4+12/ln(2),L)I(F). Ordinary controller FEI K_a and uniform core-leaf FEI K_l suffice for L=max(K_a+6,K_l), by the independently reconstructed A028 scalar correction. No universal paid core partition, arbitrary-controller certificate, or shared-support extension is asserted. Version 3 retains every previous component and adds interleaved point-control transport. For every Boolean core u, r>=1 fresh point controls p=2^(-r), F=1+A_r(u-1), and finite actual physical restriction tree T interleaving core and control queries, prune only queries after a failing control. Condition the original INPUT on all controls passing and delete deterministic control queries to obtain an actual core tree U. Active leaf l has projected weight v_l=w_l*p_l/p, where p_l=2^(-remaining controls). Q_core=p*Pi_I(u;U). Set Q_core_live to core influence queried before controls are exhausted, Q_control to queried control influence, and E=Pi_H(F;T)-p*Pi_H(u;U). Then -(4+12/ln2)Q_core_live<=E<=(4+12/ln2)Q_core_live+C0 Q_control, C0=2+2/ln2+1/(sqrt(e)ln2)<6, with a single signed root-to-terminal activation correction and all actual terminal entropies retained. If U is proper and Pi_H(u;U)<=K Pi_I(u;U), K>=0, and every actual active terminal has H<=L I, L>=0, then H(F)<=max(K+4+12/ln2,C0,L)I(F). No universal paid partition or shared-support extension is asserted. Version4 retains prior components and refines first-proper-core-split admission. Let u have m>=2 core coordinates, children g,h, epsilon=Pr(g!=h), delta=(Pr(g=-1)+Pr(h=-1))/2, r>=1 fresh point controls p=2^(-r), F=1+A_r(u-1), queried influence q=p epsilon, c=3/ln2. The recovered B05/C005 price gives Delta H(F)<=c q+B_data+B_future, B_data=(p/2)I(gh), B_future=rp epsilon. Expected terminal data/control influences are T_data=(p/2)(I(g)+I(h)), T_control=2rp delta; B_data<=T_data and B_future=rho T_control, rho=epsilon/(2delta)<=1 (rho=0 at delta=0), with both owner bounds sharp even as delta tends to zero. For every C>=0, ACTUAL complete signed child slacks s_g=C I(F_g)-H(F_g), s_h=C I(F_h)-H(F_h) satisfying (s_g+s_h)/2>=B_data+B_future+(c-C)q suffice for H(F)<=C I(F); certified lower bounds on these slacks may substitute. A specified first split with actual activated-child rateL>=0 closes at max(L+1,c). This does not certify arbitrary children or a depth-independent induction. For any core-only tree U with controls untouched, sum w B_future=rp Pi_I(u;U), whereas expected terminal control influence remains2rp delta. On actual point coresD_m and the proper prefix queryingm-1 core bits, their ratio is m-1, so renewing this unsigned reserve is false already at m3,r1. Those same actual entropy paths are paid at rate6; the growing sufficient debit is not an FEI counterexample. Version5 retains prior components and proves a sharp signed low-bias admission band. For any independent Boolean controller a with p=Pr(a=-1) in[0,1/2], the exact activation remainder R(p,d) is convex for0<=d<=d_star=(1-1/sqrt2)/2. Consequently any actual core-only restriction tree whose leaf negative probabilities lie in this interval satisfies Pi_H(F)-p Pi_H(u)<=0; controller nonempty entropy cancels linearly and complete terminal entropies remain. Any first proper core query from a parent with negative probability<=d_star/2 meets this sign condition, since both child biases are<=d_star. For point controls interleaved with cores, if every active core query has both core child biases<=d_star, then Pi_H(F;T)<=p Pi_H(u;U)+C0 Q_control, with the previously certified C0=2+2/ln2+1/(sqrt(e)ln2)<6 and actual original-input projected core tree U. Supplied proper projected core payment K and actual terminal allowance L give H(F)<=max(K,C0,L)I(F), removing the prior additive kappa core surcharge in this band. This does not supply K or L. The band is sharp uniformly in p<=1/2: at p=1/2 the remainder is strictly concave for d_star<d<1/2. Any extension has an actual dyadic nested shared-core nonconstant sibling witness; a six-bit fixed witness with child negative probabilities3/16 and1/4 has certified positive signed correction and refutes the wider quarter-band helper only. No universal selection or full FEI conclusion is asserted. Version 6 retains the prior scoped components and adds: let b=1-1/sqrt(2), F=1+((1-a)/2)(u-1), p=Pr(a=-1) in [0,1/4] union {1/2}, and d=Pr(u=-1)<=1/16. For EVERY finite actual core-only restriction tree with every complete terminal core bias<=b, Pi_H(F)-p Pi_H(u)=R(p,d)-E R(p,d_leaf)<=0. The same nonpositive correction holds at EVERY prefix frontier of that tree. Thus positive local activation debits are paid from ONE previously accumulated signed ancestor refund, while BOTH full activated terminal entropies and terminal influence p E I(u_leaf)+d I(a) remain. If the ACTUAL projected core decrement is independently paid at K and every complete activated terminal at L, the specified tree gives H(F)<=max(K,L) I(F). No controller query is permitted in this new endpoint clause. The actual seven-bit core with two core gates above the stage6 selector witness has d=7/128, final core biases0,3/16,1/4 and a positive selector correction; its original signed ancestor account pays it. A separate direct-character/rational certificate reproduces the positive debit and final negative correction. No universal paid core partition or terminal FEI certificate is inferred. Version7 retains all earlier scoped components and adds the following all-dimensional point-controller mixed-history statement. For ANY Boolean core u of negative probability t<=1/16, r>=1 disjoint fresh fair point controls, F=1+A_r(u-1), and ANY finite adaptive physical mixed tree stopping on a failed control, condition ORIGINAL INPUT on all controls passing to obtain the projected core tree U. If EVERY complete projected core leaf has negative probability<=b=1-1/sqrt(2), then at EVERY corresponding partial frontier Pi_H(F)-2^-r Pi_H(u)=sum_CONTROL w_v a_s(d_v)-B_frontier<=(21/4)Q_control, where T_s is the tangent at the SAME original t to G_s(d)=H(F_s(v))-2^-s H(v), a_s=T_s-(1/2)T_(s-1), and B_frontier=sum_active w_v[G_s(d_v)-T_s(d_v)]>=0. Every control releases inherited bank ell_s=U_s-(1/2)U_(s-1)=h_s-a_s>=0; no descendant bank is issued. The exact simplification h_s(d)=G_1(2p_s d) yields convexity for s>=2 and the old original-root supporting line handles s=1. A new exact scalar derivative certificate gives control rate21/4. Thus independently paid actual projected decrement K and COMPLETE physical terminals at L give H(F)<=max(K,21/4,L)I(F). All full terminal spectra remain. A fixed actual r2 witness with queries core0,control0,core1,selector2 has root bias7/128 and a positive later DATA correction, paid by this SAME bank; its physical budget45/256=15/256+7/256+23/256. No universal core/terminal certificate, arbitrary controller interleaving, or removal of root/endpoint biases is inferred. Version8 retains all prior scoped clauses. Let C=21/4, d_star=(1-1/sqrt(2))/2, u any uniform Boolean core with negative probability t<=d_star, and F=1+A_r(u-1) with r>=1 disjoint fair point controls. For EVERY finite adaptive physical mixed tree stopped on a failed control, at EVERY corresponding original-input projected frontier, define T_s to be the tangent to G_s at the SAME original t, U_s=G_s-T_s and D_s=2C*s*2^(-s)*d-T_s(d). Then D_s>=0 and a_s=T_s-T_(s-1)/2<=C*q_s on ALL d in[0,1]. The exact FULL terminal identity is [C I(F_s(v))-H(F_s(v))]+U_s(d)=2^(-s)[C I(v)-H(v)]+D_s(t,d). Hence a negative U_s is paid from that SAME full terminal surplus whenever H(v)-C I(v)<=D_s/p_s. No endpoint bias band or nonnegative control-release assumption is needed. The exact root surplus equals p_root[C Pi_I(u)-Pi_H(u)]+sum_CONTROL w(Cq-a)+sum_ACTIVE_LEAVES w[S_full+U]. Paid projected decrement at C and complete core terminal certificates at C therefore imply H(F)<=C I(F), at unchanged rate and arbitrary depth/interleaving. These two core hypotheses already imply core FEI and are not supplied universally. The D4 complete-core/no-control guard has negative U_1(1) paid by its own full dictator terminal surplus; old zero-surcharge omission guard remains valid. Root t=0 is trivial. General non-point controllers and root t>d_star excluded. Version9 retains all earlier scoped clauses and adds an explicit full-terminal-reference interface and transaction. For arbitrary disjoint Boolean core v and controller a, fixed ORIGINAL core root t, T_a tangent to G_a at t, U_a=G_a-T_a, and any normalized support-positive full output reference Q, [C I(F)-CE(P_F,Q)]+U_a=p[C I(v)-H(v)]+C d I(a)-T_a(d)-D(P_F||Q). A shape conversion nu_theta=(1-theta)nu+theta delta_j preserving every data row and empty/nonempty odds has EXACT full cost d Var(a)D(nu||nu_theta)<=3d Var(a)/14 for all real theta in[0,1/8]. This is a conditional admission rule, not an arbitrary-controller scalar influence bound. In the actual seven-bit fixture u=D4,a=negative Maj3, reveal core0 then controller0 on the surviving core branch, retaining the constant sibling and BOTH controller children of biases1/4,3/4. At unchanged C=21/4 and original t=1/16, book old debit1/64 ONCE from actual original core margin; control margin and unselected signed terminal accounts are nonnegative. Selected OR2 child original reach1/4 has full signed account B_OR>1/64. Its genuine nonempty-profile tilt for EVERY real theta<=1/8 costs at most9/1792 root units and leaves SAME B_OR residual>19/1792. Under ANY later finite adaptive physical continuation transporting CURRENT reference by actual phase kernels and OWN reference branch normalizers, complete entropy path plus full terminal CE plus old debit remains <=C I(root), retaining all earlier bills. RootI=11/32=1/16 queried core+1/32 queried control+1/4 terminal. No external reset is free. No arbitrary-Boolean initial supplier, universal stopping-tree theorem, or full FEI conclusion is inferred. Version10 retains every earlier scoped clause. For binary row probability k and relative-odds multiplier lambda in[1/2,2], the row KL equals log2(1+(lambda-1)k)-k log2(lambda) and is <=(log2(e)-1)k<=4k/9, with the second comparison strict for k>0. The first coefficient is sharp over unrestricted binary rows, by lambda=2,k tending to0; no aggregate Boolean optimality is asserted. For binary activation with supplied original source/controller references and inherited nonempty controller shape, eta=Pr(G!=H)Var(a) is DATA-harmonic and loses exactly Pr(G!=H)*ahat({i})^2 on CONTROL exposure. Thus replace the reconstructed A029@4 allowance eta/2 by4eta/9 once at the original root, allowing arbitrary finite adaptive mixed histories, lambda_t in[1/2,2] per data row, signed canonical reconstructions, own controller/output branch normalizers and full terminal CE. Source-deficit validity remains a hypothesis. In A027 actual D4/negative-Maj3 fixture, old1/64 core debit, rate21/4, first shape conversion theta in[0,1/8] and all siblings are retained. The selected original B_OR>1/64 pays first shape<=9/1792 plus ONE all-history weighted odds allowance1/96, leaving>1/5376. A029 eta/2 exceeds the previously certified residual FLOOR by1/896; this is not insufficiency of the actual bank. No universal FEI conclusion follows.",
+    "hypotheses": [
+      "Uniform Boolean signs, normalized Fourier spectrum, entropy in bits; core and controller physically disjoint",
+      "New arbitrary-controller sign theorem requires p<=1/2 and all actual core terminal biases<=d_star",
+      "Interleaved theorem has point controls and safe-band child biases at every active core query; exhausted controls have zero correction",
+      "Full entropy conclusion requires a genuinely certified proper projected core price K and complete actual terminal allowance L; both retained as hypotheses",
+      "For new endpoint clause: untouched disjoint controller p<=1/4 or p=1/2; root negative bias<=1/16; EVERY complete core leaf bias<=1-1/sqrt(2)",
+      "Core tree finite and physical; complete terminal entropy retained; no spectral-reference injection",
+      "Conditional FEI conclusion still requires independently paid actual core decrement K and complete terminal allowance L",
+      "Version7 only: independent point controls, fixed ORIGINAL root tangent t<=1/16, every complete projected core leaf bias<=1-1/sqrt(2)",
+      "Actual physical mixed tree stops on a failed point control; projection conditions original input on ALL controls passing",
+      "Conditional FEI conclusion retains independently certified projected decrement K and complete actual terminal allowance L",
+      "Version8 only: root t<=d_star; no descendant bias hypothesis; signed releases retained, possibly negative",
+      "Terminal requirement is exact S_full+U>=0, sufficient via core deficit<=D_s/p_s; projected decrement payment remains an independent hypothesis",
+      "All physical terminal entropy/influence and earlier control bills retained; single ORIGINAL root tangent",
+      "Version9: actual independent Maj3 controller fixture, original tangent t=1/16, rate21/4 and old debit1/64 unchanged",
+      "Continuation carries current changed reference via actual physical phase kernels and own nonfair reference normalizers; no extra prescribed reset",
+      "General formula is exact conditional reference admission only; no dimension-independent original suppliers supplied",
+      "Version10 new target class: every row relative-odds multiplier in[1/2,2], inherited controller shape, own physical branch normalizers, no renewed original envelope",
+      "Sharpness pertains to arbitrary scalar binary rows only; supplied original account remains required"
+    ],
+    "statement_sha256": "63020c5a4d9775977634de2526cb27a9d6bf0c03bb87450bc6dd50fab1ba7332",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "agents\\A027\\runs\\20261023T141418Z-account03-A027-block-selection\\DERIVATION.md",
+    "proof_dependencies": [
+      "A027@9 original complete terminal surplus and first shape conversion, recomputed original-account prefix",
+      "A029@4 sections7-10 independently reconstructed eta and signed-child identity; no universal supplier imported",
+      "Elementary logarithm inequality and exact rational ln2 certificates; actual current-reference physical kernels"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A027 self-reconstruction only",
+        "verdict": "EXACT_INTERNAL_REPLAY_PASS; NOT_INDEPENDENT_ACCEPTANCE",
+        "scope": "new scalar tangent, eligible curvature comparison, actual positive-exit tree and full terminal ledger",
+        "evidence": [
+          "out/validation.json",
+          "out/independent.json"
+        ],
+        "lean": "RUNTIME_UNVERIFIED; no compiler/axiom acceptance"
+      },
+      {
+        "reviewer": "A027 internal second implementation",
+        "verdict": "EXACT_REPLAY_PASS_NOT_INDEPENDENT_REVIEW",
+        "scope": "New mixed-history bank, scalar rate21/4, both full terminal spectra and original influence partition",
+        "evidence": [
+          "out/validation.json",
+          "out/independent.json"
+        ],
+        "formal": "NOT_RUN_MEMORY_ADMISSION; no Lean certificate"
+      },
+      {
+        "reviewer": "A027 author second implementation",
+        "verdict": "PASS_NOT_EXTERNAL_REVIEW",
+        "scope": "D4 five prefix frontiers, direct character spectra/physical influences, both complete terminal accounts and independent rational logarithms",
+        "evidence": [
+          "out/validation.json",
+          "out/independent.json"
+        ],
+        "formal": "NOT_RUN; no compiler or formal entropy certificate"
+      },
+      {
+        "reviewer": "A027 internal direct-character implementation",
+        "verdict": "PASS_NOT_EXTERNAL_ACCEPTANCE",
+        "scope": "Actual original quota, old core debit, full selected signed terminal B, genuine reset and current-reference DATA then CONTROL contraction",
+        "evidence": [
+          "out/validation.json",
+          "out/independent.json"
+        ],
+        "formal": "NOT_RUN; no compiler certificate"
+      },
+      {
+        "reviewer": "A027 author alternate direct-character implementation",
+        "verdict": "PASS_NOT_EXTERNAL_ACCEPTANCE",
+        "scope": "Scalar bound, actual fixture row debts and eta releases; main separately checks full mixed signed account and both own normalizers",
+        "evidence": [
+          "out/validation.json",
+          "out/independent.json"
+        ],
+        "formal": "NOT_RUN"
+      }
+    ],
+    "status": "PROVED_LOCAL_CONDITIONAL_EXTENSION; VERSION10_EXTERNAL_REVIEW_PENDING",
+    "supersedes": "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@9; all prior scoped clauses retained",
+    "refutes": [
+      "FORWARD-ACTIVATION-SURCHARGE-4 (new explicit helper, not the unrelated amplitude-proxy K=4)",
+      "UNSIGNED-FUTURE-CONTROL-RESERVE-RENEWAL@1: every proper core tree has sum w rp epsilon<=original2rp delta (actualD_m witness ratio m-1)",
+      "QUARTER-BIAS-NONPOSITIVE-ACTIVATION-SURCHARGE@1: child probabilities<=1/4 imply signed activation correction<=0; actual six-bit nested siblings3/16,1/4 refute it"
+    ],
+    "first_unproved_line": "No influence-priced original full-reference/source admission for arbitrary Boolean functions, or necessary terminal-class target satisfying the stated eligibility tests, is proved. Bounded relative-odds resets with inherited controller shapes are a conditional target class, not a universal supplier.",
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A030",
+      "A064",
+      "A087",
+      "A094"
+    ]
+  }
+]

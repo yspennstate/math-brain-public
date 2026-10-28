@@ -1,0 +1,266 @@
+[
+  {
+    "claim_id": "A006-DELETED-DEGREE-TWO-COMPLETE-POSTERIOR-COST",
+    "version": 1,
+    "exact_statement": "For every labelled bipartite H of maximum degree at most two on sides 2<=a<=b, the positive edge DNF for G=K_ab minus H, with its original surviving edge primes, both endpoint orders, pi=1/4 and fixed lambda_e=1/b, has complete nonempty posterior all-partition forest cost C<42 I(f) when G is nonempty; if a>=4, C<(283/8)I(f)<36I(f). The empty G case is constant and handled separately. More generally for any G on 4<=a<=b with every left degree>=b/2 and right degree>=a/2, the same reference satisfies C<(91/8)I(f)+2J log2 b, where J is the total physical flip influence of the indicator of assignments having nonempty active sets on both sides and no active surviving G edge.",
+    "hypotheses": [
+      "Uniform independent physical Boolean bits; logarithms and entropy in bits.",
+      "Actual partition-forest runs; posterior witness entropy subtracted; descriptions of one run not counted separately.",
+      "Nonempty original surviving width-two prime table with both endpoint orders; lambda_e=1/b satisfies packing.",
+      "Degree-two conclusion requires max degree(H)<=2; conditional dense-graph transfer has only the stated minimum-degree hypotheses."
+    ],
+    "statement_sha256": "b7dcb04baef45b89177ea1012a9c5cfc5ca81f3525ff510b637dc7dbe25752c2",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": [
+      "DELETED_DEGREE_TWO.md sections 1-5",
+      "REVIEW_A010.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      "A010-GENERIC-WIDTH-TWO-FOREST-MASS@1 (independently reconstructed locally; unchanged source hash in out/SOURCE_CLAIMS.json)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "kind": "author proof and exact validation; not independent acceptance",
+        "result": "PASS; formal compiler not started after admission hold",
+        "artifacts": [
+          "out/CHECK.json",
+          "out/REVIEW.json",
+          "out/ADVERSARIAL.json",
+          "out/LEAN_ADMISSION.json"
+        ]
+      },
+      {
+        "reviewer": "A009",
+        "verdict": "HOLDS; whole version independently reconstructed without substantive repair; local adoption only",
+        "timestamp_utc": "2026-10-23T03:46:52.657676+00:00",
+        "proof_source": "agents\\A009\\runs\\20261023T031946Z-account03-A009-fractional-incidence-optimization\\REVIEW_A006.md",
+        "finite_validation": "out/full.json: independent exact forests, Walsh and physical-boundary checks",
+        "formal_status": "NOT_LEAN_CHECKED"
+      }
+    ],
+    "status": "INDEPENDENT_A009_REVIEW_HOLDS; SHARED_REGISTRY_ADOPTION_NOT_PERFORMED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B02 Claude lead",
+      "A010",
+      "A007",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A009-GROWING-DELETED-DEGREE-COMPLETE-COST",
+    "version": 1,
+    "exact_statement": "For every labelled bipartite H on integers4<=a<=b with maximum degree at most integer0<=d<=a/2, let G=K_ab minus H and f_G its actual uniform Boolean positive edge DNF. Fix precisely its surviving width-two primes, both endpoint orders, pi=1/4 and lambda_e=1/b. The SAME original nonempty-conditioned all-partitions queue complete nonempty output cost obeys C/I(f_G)<91/8+2 b^2 2^(2d-b)/(1-2^(-(b-d))). Consequently C<22I for d<=a/4, and C<15I whenever a^2 4^d<=2^a. These are feasible fixed-reference complete-cost upper certificates, not optimality assertions.",
+    "hypotheses": [
+      "Uniform independent physical bits; Walsh normalization and logarithms in bits.",
+      "Both left and right deletion degrees are at most d; all surviving primes and the same original queue reference are retained.",
+      "C=sum over nonempty A of fhat_G(A)^2 log2(1/Q_G(A)); original root conditioning D=(1+1/(4b))^|G|-1."
+    ],
+    "statement_sha256": "d2db5940c0631e32a0f8b03fcb4af9c148b4a39ff3208b5ebeccdfca54b48a6d",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "agents\\A009\\runs\\20261023T031946Z-account03-A009-fractional-incidence-optimization\\GROWING_DEGREE.md",
+      "checker": "code/check.py",
+      "exact_output": "out/full.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-DELETED-DEGREE-TWO-COMPLETE-POSTERIOR-COST",
+        "version": 1,
+        "statement_sha256": "b7dcb04baef45b89177ea1012a9c5cfc5ca81f3525ff510b637dc7dbe25752c2",
+        "use": "whole-version A009 review HOLDS; only general half-dense transfer clause needed"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "AUTHOR_ANALYTIC_PROOF_WITH_EXACT_FINITE_AUDIT; NOT INDEPENDENT_AGENT_ACCEPTANCE",
+        "timestamp_utc": "2026-10-23T03:46:52.657676+00:00",
+        "formal_status": "NOT_LEAN_CHECKED"
+      }
+    ],
+    "status": "AUTHOR_CHECKED_PROOF; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A009-HALF-DENSE-DEFECT-LOG-PAYMENT-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every m>=2 take a=b=2m, delete the two within-index K_mm blocks, and retain the two disjoint crossed K_mm blocks. With E the physical event that both active sides are nonempty but no surviving edge is active, u=2^-m, the actual Boolean influence is I=8m u^2(1-u)(2-u) and J=I(1_E)=8m u^2(1-u). Thus J/I=1/(2-u)>1/2, and J log2 b/I is unbounded along m=2^t despite every surviving degree being half the opposite side. No universal bound J log2 b<=K I holds for all half-dense graphs. This is a transfer-bill obstruction, not a lower bound on complete queue cost, not a variational obstruction and not a disproof of FEI.",
+    "hypotheses": [
+      "Uniform physical cube; E is the exact completion-defect event.",
+      "I and J are sums of physical flip probabilities, not arbitrary spectral laws."
+    ],
+    "statement_sha256": "2890994750cde51737cd9e6bab66dce1215eafedf6656d751ac963171e881cda",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "agents\\A009\\runs\\20261023T031946Z-account03-A009-fractional-incidence-optimization\\HALF_DENSITY_OBSTRUCTION.md",
+      "checker": "code/check.py",
+      "exact_output": "out/full.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "AUTHOR_ANALYTIC_PROOF_WITH_EXACT_FINITE_AUDIT; NOT INDEPENDENT_AGENT_ACCEPTANCE",
+        "timestamp_utc": "2026-10-23T03:46:52.657676+00:00",
+        "formal_status": "NOT_LEAN_CHECKED"
+      }
+    ],
+    "status": "AUTHOR_CHECKED_PROOF; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A010-EXACT-DISJOINT-PRIME-QUEUE-FACTORIZATION",
+    "version": 1,
+    "exact_statement": "Let nonconstant Boolean f_j on disjoint physical coordinate blocks have finite original gate references, positive fixed packing-feasible weights, local subset/count/label rules and induced gate orders. Let f=OR_j f_j, q_j=Pr(f_j=-1), q_-j=product_(h!=j)q_h, v_j=4q_j(1-q_j), D_j=product_(e in j)(1+lambda_e*pi_e)-1, D=product_j(1+D_j)-1 and W_j(S)=D_j Q_j(S) for nonempty S, with W_j(empty)=1. The FULL original global output law factors exactly Q_f(A)=product_j W_j(A_j)/D for every nonempty A. Actual-run posteriors given A factor through a unique FIFO merge, with no shuffle credit. For finite local costs, I(f)=sum_j q_-j I(f_j) and C_f=v_f log2 D+sum_j q_-j[C_j-v_j log2 D_j]. If all local unnormalized bills C_j-v_j log2 D_j<=K I(f_j), the same global reference has C_f<=v_f log2 D+K I(f); widths>=k give C_f<[K+2a_k/ln2]I, a_k=(1-2^-k)/k, and width2 gives C_f<(K+9/8)I. The union of full local prime tables is exactly the full prime table of f, also for signed nonmonotone components. This is not a factorization across shared coordinates or a composition rule from local complete C_j bounds alone.",
+    "hypotheses": [
+      "Uniform independent physical cube; costs in bits; nonconstant component Boolean functions",
+      "Disjoint physical gate supports across components; one globally fixed feasible vector; original global nonempty root conditioning",
+      "Global gate ordering restricts to each local ordering; fixed FIFO and per-slot child orders, no freely resampled root order",
+      "Positive reference mass on every positive local nonempty spectral mass for the finite cost identities; mass identity also valid without that coverage",
+      "For the root-payment consequence gates are actual signed conjunction implicants, pi_e=2^-width, widths>=k>=1"
+    ],
+    "statement_sha256": "f7851c1bfa2ef4179de0cb856cd2802feb8f1df9e9a1db77bae2ce4f0a17be2d",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "path": "agents\\A010\\runs\\20261023T035817Z-account03-A010-universal-residual-falsifier\\COMPONENT_FACTOR.md",
+      "code": [
+        "code/check_executed.py",
+        "code/check.py"
+      ],
+      "certificates": [
+        "out/CHECK.json",
+        "out/CONTROLS.json",
+        "out/COMPACT_CERTIFICATES.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "forests.tex",
+        "use": "original queue probability mechanics and admissible actual partition runs"
+      },
+      {
+        "claim_id": "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT",
+        "version": 1,
+        "use": "only final root-payment consequence"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "status": "AUTHOR_PROOF_AND_TWO_DISTINCT_ENUMERATORS; NO_INDEPENDENT_AGENT_ACCEPTANCE",
+        "timestamp_utc": "2026-10-23T04:24:39.085778+00:00",
+        "finite_scope": "235 all-output component cases and20 crossed orbits;801 physical deletion tables;3969 scalar(r,m)pairs",
+        "formal_status": "NO_FORMAL_PROOF_CLAIMED; previous Lean setup timed out; not rerun"
+      }
+    ],
+    "status": "AUTHOR_ALL_PARAMETER_PROOF_AND_EXACT_FINITE_CHECKS; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A009",
+      "A008",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A010-CROSSED-COMPONENT-PAYMENT-AND-REFERENCE-SEPARATION",
+    "version": 1,
+    "exact_statement": "For every m>=2, A009s actual half-dense crossed family (two disjoint K_(m,m) components), with all original positive edge primes, both orders, pi=1/4 and its SAME lambda=1/(2m), has complete full-queue cost C<71I/8<9I even though J log2(2m)/I is unbounded. More generally, for r>=2 disjoint K_(m,m) components, fixed uniform lambda_U=1/(rm) gives, after optimization over ALL actual-run posteriors, C_U/I>(1/2)log2 r-35/24. The same complete prime table with one fixed feasible componentwise lambda_R=1/m has C_R<63I/8<8I. Thus the actual positive-global-weight/all-actual-posterior variational infimum containing lambda_R is below8I for all r,m; the growing uniform-reference cost is NOT growth of that infimum or a Boolean FEI counterexample.",
+    "hypotheses": [
+      "Uniform physical Boolean edge DNF, r>=2,m>=2; disjoint balanced bipartite components",
+      "Original surviving prime table only; both endpoint orders, actual rarity1/4 and all complete partition runs retained",
+      "For the crossed source r=2 keep its original lambda=1/(2m); the comparison reference lambda_R=1/m is fixed globally before A",
+      "Costs in bits; original D_U=(1+1/(4rm))^(rm^2)-1 and D_R=(1+1/(4m))^(rm^2)-1; no local reset"
+    ],
+    "statement_sha256": "bbfa2f24a11c66c7726c0aab3943fcb108f0a482cef6f304eea9033527fa6e80",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "path": "agents\\A010\\runs\\20261023T035817Z-account03-A010-universal-residual-falsifier\\COMPONENT_FACTOR.md",
+      "code": [
+        "code/check_executed.py",
+        "code/check.py"
+      ],
+      "certificates": [
+        "out/CHECK.json",
+        "out/CONTROLS.json",
+        "out/COMPACT_CERTIFICATES.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A010-EXACT-DISJOINT-PRIME-QUEUE-FACTORIZATION",
+        "version": 1
+      },
+      {
+        "claim_id": "A010-GENERIC-WIDTH-TWO-FOREST-MASS",
+        "version": 1
+      },
+      {
+        "claim_id": "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT",
+        "version": 1,
+        "use": "width2 only"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "status": "AUTHOR_PROOF_AND_TWO_DISTINCT_ENUMERATORS; NO_INDEPENDENT_AGENT_ACCEPTANCE",
+        "timestamp_utc": "2026-10-23T04:24:39.085778+00:00",
+        "finite_scope": "235 all-output component cases and20 crossed orbits;801 physical deletion tables;3969 scalar(r,m)pairs",
+        "formal_status": "NO_FORMAL_PROOF_CLAIMED; previous Lean setup timed out; not rerun"
+      }
+    ],
+    "status": "AUTHOR_ALL_PARAMETER_PROOF_AND_EXACT_FINITE_CHECKS; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A009",
+      "A008",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

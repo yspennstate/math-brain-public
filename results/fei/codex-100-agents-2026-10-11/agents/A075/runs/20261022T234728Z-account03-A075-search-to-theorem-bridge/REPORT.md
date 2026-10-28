@@ -1,0 +1,37 @@
+# A075 B15 stage7: inherited credit at growing depth
+
+## exact target, quantifiers, hypotheses and units
+
+Full FEI remains OPEN. For the actual uniform Boolean F_n=J(g_n^6), entropy in bits and S=4I-H, retain the original rate4 two-query debit and every full terminal. The exact remaining-credit law is R_j=S_Z+2^j(S_b-D0-S_Z). At remaining dimension4, R/p tends to -2.59607738536; at dimension5 it tends to +0.846617655529. Thus uniform no-transfer continuation fails despite the earlier fixed-depth eventuality. The last untouched sibling pays the sharp prescribed-booking deficit with positive capacity left. Its root-weighted cost/p^2 tends to 13.8457460553. This is a local endpoint theorem, not all-dimensional admission.
+
+## sources actually read, revisions and theorem locators
+
+EXECUTION_PROTOCOL revision2026-10-11-execution-v2, current BOARD (B15 snapshot2026-10-22 23:50UTC), B15 STREAM_NOTES v2, own rolling status and prior stage6 proof; A072 saturated-donor report20261021T225156, A074 independent report20261022T225155, and A089 signed-terminal report/claim20261022T225420. Source hashes are in out/SOURCE_INVENTORY.json; copied own helpers are pinned in the frozen spec. Prior campaign/paper intake remains background, without claiming a fresh full rereading or using a new literature theorem. The owner-model and state-of-mind brain sources are stale; self-care is degraded/unverified and those personal-context notes are not mathematical evidence.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md supplies the complete finite Walsh/occupied-spectrum chain rule, original debit, exact recurrence, its fixed-remaining-dimension asymptotics, independent closed-form first-order check, and sharp fixed-booking last-row transfer. Only fixed INITIAL profiles are expanded, so multiplying by 2^j for j=n-d-2 is justified with an explicit o(p) remainder; no uniform fixed-depth expansion is assumed. K4<0<K5 and A+K4>0 are rationally certified. Full S and D are both positive at the last parent and child eventually; the deficit is inherited-credit exhaustion, distinct from A089's negative S endpoints.
+
+Scope restriction: all earlier FULL residuals are eventually positive by the exact monotone formula, but nonnegative NET debits at every growing-depth ancestor for all n are not proved. Three finite full chains certify them on their stated domain. The positive root transfer cost is forced only with the prescribed descendant bookings fixed: reassigning the new bookings through the full-capacity kernel gives zero flow here because both raw full children are positive. Thus the theorem refutes the specified routing, not all no-transfer policies. A089's negative full terminals, independently reconstructed here, force flow even with reassignment. First unsupported universal line: derive component-level admission under the next physical query after a subsidy is assigned, with donor flow already spent and all old labels retained. The source A089 generic signed theorem and all18 terminal signs are independently reconstructed; its four historical coupled policies/old parked ancestry are not newly accepted here.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Before searches, out/FROZEN_SPEC.json fixed n=8,12,24 complete zero chains and n=16,32,48 endpoints only:35 retained states, no symmetry reduction or automatic escalation. The pilot n8 completed in 0.203s. Full finite computation took 2.858s with 1363 recorded helper predicates. All three full chains have nonnegative net bookings and positive full preterminal residuals; every final deficit is positive and exactly payable by its last untouched sibling. Endpoint-only jobs do not certify their omitted prefixes. A separate metadata correction records that five, not six, initial profiles are computed per n; no search domain changed.
+
+code/diagonal.py --analytic records 341 helper predicates, exact rational coefficient cancellations and rigorous signs; code/review_signed.py reconstructs18 original truth-core restrictions with 318 helper predicates in 9.343s, including exactly two negative full capacities. Both use exact Fraction arithmetic and 192-bit directed rational logarithm enclosures with80 atanh terms and a proved remainder. Floating displays are diagnostic only. Predicate counters include interval primitive checks and are not counts of distinct theorems. Commands were python -B -X utf8 code/setup_stage.py, code/diagonal.py --pilot, code/diagonal.py --analytic, code/diagonal.py, code/review_signed.py, and code/persist_stage.py, using paths relative to this run. The analytic command was repeated only after adding the independent closed-form equality checks. Estimated memory<=150MB; no >300MB job, GPU, detached process or Lean compiler launched. Prior Lean timeout is preserved, not called verification.
+
+## proof dependencies and changed downstream conclusions
+
+No empirical absence of failures is promoted to a theorem. Exact character orthogonality, the finite Shannon chain rule and explicit core spectra are reconstructed in PROOF.md. A075 fixed-depth@1 remains valid in its stated order of quantifiers; the new endpoint result blocks its proposed uniform no-transfer extension. A089's generic signed allocation theorem and18 terminal signs receive scoped independent support, with the positive-weight-support convention preserved. Whole-history admission remains distinct. The new endpoint proof awaits A074/A092 independent acceptance.
+
+## one next mathematical action and independent reviewer
+
+NEXT: after A074/A092 check the exact original-debit diagonal law, expose a physical data bit in a subsidized terminal, carrying the SAME incoming subsidy and the donor's already spent outgoing flow. Derive the conditional admission inequality from component spectra, rather than assuming mean full S covers the debit. A089/A072 are the intended mathematical consumers. No messages or edits to their folders were made.
+
+## actual persistence receipts or precise save blocker
+
+All seven report fields, CLAIMS.json, byte-identical PROGRESS/PACKET_DELTA, proof, frozen specs, code and exact outputs are saved locally in this immutable run. out/PERSISTENCE.json records per-file hashes and sizes after schema and statement-hash checks. STATUS.md is two lines; dated WORKLOG and LEARNED entries record the result and scope. No active own computation remains at close. Supervisor GitHub/brain copying and independent acceptance are not asserted; the specific user order forbids this agent's git/brain writes. No checklist identifier was supplied for this stage, and no shared checklist was modified under the own-folder-only order.
+
+## Universal bridge
+
+This stage moves C019 stopping-tree payment from fixed-depth eventuality to an exact growing-depth inherited-credit obstruction and a sharp, positive-root-cost last-row sibling repair at unchanged rate4: the coefficient is Gamma4=-(16/3)K4 in (13.8457460552,13.8457460553), while the donor retains positive capacity. It also independently checks the signed-capacity theorem and18 actual full terminal signs supporting the nonlocal route. Universal component admission, legality of every growing-depth nonnegative net debit, and closure under further physical queries with donor flow already spent remain unproved. NEXT carries that exact subsidy into the next query, directly testing the missing history-sensitive payment mechanism instead of adding another isolated fixed-depth class result. Full FEI remains OPEN.

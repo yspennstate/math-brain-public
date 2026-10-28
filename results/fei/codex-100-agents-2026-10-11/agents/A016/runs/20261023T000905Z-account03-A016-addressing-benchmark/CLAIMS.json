@@ -1,0 +1,75 @@
+[
+  {
+    "claim_id": "A016-FULL-SIGNED-TENSOR-PADDING-TRANSFER",
+    "version": 1,
+    "exact_statement": "On A020 tensor family G_m=g3^m,A=point_k(1-G_m)/2 with k>=5,m>=4 and the specified original Q, q then one tensor-bit query gives all four complete terminal signed reserves4I-CE>15/8 and4I-CE-U>5/4. One further actual padding-bit query retains all eight complete terminal reserves4I-CE>39/32 and4I-CE-U>19/32, with SAME original U=J_first<5/8 including conversion. For any predetermined subset of tensor bits erased after q with padding untouched, expected reserve>19/8, or>7/4 after U.",
+    "hypotheses": [
+      "Uniform independent physical bits; exact two-bit mask; original Q_h=(P_h+point_q)/2 and Q_F=(Q_h P_s+point_empty)/4 at both gate frequencies",
+      "Every descendant inherits frequency marginal, no reset; old U fixed at actual first insertion, never renewed",
+      "Only stated q/tensor/padding interleaving has local four/eight-terminal guarantee; arbitrary predetermined tensor subsets have an averaged guarantee, not arbitrary adaptive subsets",
+      "All spectral/terminal costs in bits; both q signs, physical reaches and offbranch costs retained"
+    ],
+    "statement_sha256": "f5ed405caebbd40ebb0e9662fba143c2554e32cd3533f8c028ac218fa7443336",
+    "contributors": [
+      "A016"
+    ],
+    "proof_source": "REPORT.md; code/check.py; out/CHECK.json",
+    "proof_dependencies": [
+      "A016 stage7 supplied-reference/interface, directly reconstructed",
+      "A020 stage7 tensor family and exact original reference; independent scoped no-go review in this run"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Find a contracting signed row-likelihood source under arbitrary mixed adaptive queries, without factor2 loss per query or unconditional averaging at outcome-dependent subsets.",
+    "next_consumers": [
+      "A018",
+      "A019",
+      "A020",
+      "A090",
+      "A091",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A016-REVIEW-A020-UNBOUNDED-ADMISSION-NOGO",
+    "version": 1,
+    "exact_statement": "A020 stage7 unbounded-admission/interface no-go HOLDS at its exact Boolean tensor scope: c-J_A>(5/16)2^-k m+123/128 for k>=5; the original half-bank remainder is<-123/128 when2^-k m>=8, despite eligible complete core/root/immediate-child references. A universal bounded-offset admission would force false FEI constant2; A016 conditional finite-width theorem is not refuted.",
+    "hypotheses": [
+      "Actual seed g3 is -1 at000,+1 elsewhere; G_m disjoint product, same source Q and old first debit",
+      "Exact endpoint C_end, conversion E and positive terminal deficit D retained",
+      "Scoped acceptance of source sections1--6 no-go/interface, not blanket acceptance of earlier source history"
+    ],
+    "statement_sha256": "56763119c10f0eba794d0bbb4b577bf03413cddfac6ae2d4d7423eddbc9a1491",
+    "contributors": [
+      "A016"
+    ],
+    "proof_source": "REPORT.md; code/check.py; out/CHECK.json",
+    "proof_dependencies": [
+      "A020 run20261022T231605Z-account03-A020-selector-boundary-tests REPORT sections1--6"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A016",
+        "at_utc": "2026-10-23T00:31:02.970043+00:00",
+        "result": "HOLDS_AT_STATED_SCOPE",
+        "method": "Independent Boolean coefficient/histogram reconstruction and analytic all-m eta bounds; exact checks at frozen m4,8,16,64,256; direct literal small cubes validate actual restriction/reference identities"
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_HOLDS",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "The failed half-bank allocation does not refute full signed physical payment or FEI; replacement continuation must retain the full original account.",
+    "next_consumers": [
+      "A018",
+      "A019",
+      "A020",
+      "A090",
+      "A091",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A083-SAME-REFERENCE-Y-CONTINUATION",
+    "version": 1,
+    "exact_statement": "For F(x,a,b,y)=(-1)^a if x=0, otherwise 2y-1 if b=1 and +1 if b=0, and every real c in [3/4,13/16], let Q_c have empty mass 1/16 and nonempty mass 15/16 distributed as Bernoulli(8c/15,8c/15,4c/15,4c/15) conditioned nonempty. Along query b then query y only at b=1, transport Q_c by the SAME normalized spectral branch kernels. The complete source-erasure, outcome and reach-weighted full inherited terminal KL bill equals D(P_F||Q_c)<183/128 bits. For the fair initial fallback, the previously booked conditional C=-(1/2)log2(1-4c/15) partitions into untouched-terminal C/2 and second-query erasure C/2, without duplication. The original mean b-child surplus 4 mean I-mean H=3 pays this full bill plus continuation energy debit 1, while retaining all terminal entropies and reserve greater than 73/128 bits.",
+    "hypotheses": [
+      "specified actual uniform-cube Boolean gate",
+      "3/4 <= c <= 13/16",
+      "bits; normalized finite KL",
+      "same inherited reference through both queries; fair initial zero-row fallback for explicit C partition",
+      "one original mean-child surplus dedicated only to this transaction; prior C booking retained"
+    ],
+    "statement_sha256": "b620aadd6d48b3d20cca3e1f98d634faa88e0146aee738f5d4dd076c9c7d3537",
+    "contributors": [
+      "A083; continuation proof and certificate",
+      "A038/A092 reached-gate provenance via A083 stage5"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/continuation.py",
+      "code/continuation_v1.py (helper only; original main timed out)",
+      "out/RESULT.json"
+    ],
+    "proof_dependencies": [
+      "finite KL chain rule and monotonicity of logarithm; reconstructed in PROOF.md",
+      "exact Walsh/direct-character-sum identities checked in this run",
+      "prior A083 stage5 canonical-root identification only; all-c theorem does not need that identification"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A047",
+      "A092",
+      "A038",
+      "A039",
+      "A094",
+      "B17",
+      "B20"
+    ]
+  }
+]

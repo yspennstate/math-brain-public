@@ -1,0 +1,126 @@
+{
+  "run_id": "20261023T112507Z-account03-A080-universal-counterexample-standard",
+  "stream": "B16",
+  "claims": [
+    {
+      "claim_id": "A089-SHARP-COHERENT-COLLATERAL-REROUTING",
+      "version": 1,
+      "exact_statement": "For finite outcome weights w>=0 summing to1, existing nonnegative credits c and required nonnegative envelope bounds u admit mean-conserving credit rerouting c+f>=u iff E c>=E u. The sharp minimum E(f)_+ is E(u-c)_+, attained by f=(u-c)_+-(E(u-c)_+/E(c-u)_+)(c-u)_+ with the zero-denominator boundary handled separately. On any finite Boolean restriction/admission DAG, a full-universe superharmonic majorant u>=(-S_K)_+ and initial credit a>=u(root) therefore support every adaptive admission/query/stop after minimum necessary rebalancing of each local-hull baseline, with separately conserved nonnegative credit owners, conserved signed debit labels, nonnegative total debits and no new outside credit. Taking u=R_all gives the sharp initial bank. In particular the same original R_d pays every policy on every A072 marked-point Boolean F_d at K=1 under this repaired allocator, although no constant multiple of R_d suffices uniformly for the original unmodified local-hull allocator.",
+      "hypotheses": [
+        "Finite positive-weight support; entropy in bits; S_K=K I-H on uniform physical restrictions.",
+        "Nonnegative credit owners may redistribute over full sibling support with individual conditional means preserved; no owner-specific forbidden destination constraints.",
+        "Total booked debit is nonnegative; individual old debit labels and query excess may be signed.",
+        "The supplied u is nonnegative, majorizes(-S_K)_+ and is superharmonic for all eligible queries, including not-yet-admitted coordinates.",
+        "This explicitly changes the original prescribed allocation rule and makes no claim of universal influence payment."
+      ],
+      "statement_sha256": "d6dc12b0dd92a1f57603cd12214dc2fa8d1e34a76f5a8151628b6678c39e318c",
+      "contributors": [
+        "A089; A072 supplied the unchanged admission-damage obstruction and exact marked-point hull interface."
+      ],
+      "proof_source": [
+        "PROOF.md sections1-4",
+        "out/REROUTE.json",
+        "out/REPAIRED_POLICY.json",
+        "out/RAW_AUDIT.json"
+      ],
+      "proof_dependencies": [
+        "Finite stopping-hull induction reconstructed in PROOF.md.",
+        "A072-LOCAL-HULL-ADMISSION-DAMAGE-UNBOUNDED@1 independently accepted unchanged in this run; all-d Boolean representation rederived.",
+        "Character orthogonality, direct physical edge identities and explicit outward log remainder."
+      ],
+      "review_records": [
+        {
+          "reviewer": "A089",
+          "result": "Exact rational account-cell optimizer, separate literal Boolean admission audit and actual labelled financial path; author audit only, external review pending."
+        },
+        {
+          "reviewer": "A080",
+          "verdict": "HOLDS_AT_SUBSTATEMENT_SCOPE",
+          "source_claim_id": "A089-SHARP-COHERENT-COLLATERAL-REROUTING",
+          "source_version": 1,
+          "source_statement_sha256": "d6dc12b0dd92a1f57603cd12214dc2fa8d1e34a76f5a8151628b6678c39e318c",
+          "scope": "Finite-real minimum mean-zero credit rerouting, supplied-coherent-envelope finite-DAG induction, separate owner/debit kernels incl zero totals (source PROOF sections1-2).",
+          "not_reviewed": "Source all-d marked-point application, capital estimates, ancestry and its separate A072 acceptance.",
+          "repair_supplied": false,
+          "independence": "Dual deficit-set lower certificate plus independent two-state LP vertices/kink optimizer on1280 rows; own Boolean physical query audit; no peer executable run.",
+          "artifacts": [
+            "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\REVIEW.md",
+            "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\out\\INDEPENDENT_AUDIT.json"
+          ]
+        }
+      ],
+      "status": "PROVED_LOCALLY; INDEPENDENT_EXTERNAL_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [
+        "Generic full-hull-to-unmodified-local-admission inference; source obstruction retained.",
+        "A089 pilot target T_d=1/2: actual F_(3,3) has5078/10000<T<5079/10000."
+      ],
+      "first_unproved_line": "Construct a dimension-independent influence-paid full-universe envelope using Boolean component constraints; universal u<=L I remains unproved and equivalent to FEI(K+L).",
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A075",
+        "A092"
+      ]
+    },
+    {
+      "claim_id": "A080-PIVOTAL-TRANSPORT-FRESH-GUARD-HULL",
+      "version": 1,
+      "exact_statement": "For arbitrary finite disjoint Boolean cores and a Boolean outer gate, supplied nonnegative coherent inner envelopes u_i transport by W=sum q_i*u_i: under a query in core j, W-EWchild=q_j*(u_j-Eu_jchild)>=0. The exact composition correction C=H(full)-sum q_i*H(core_i) leaves precisely the drift E(Cchild)_+-C_+ unpaid by this transport. For G_n=1-2*1{x=0} and F_n=AND_minus(G_n,y), a physical sign flip of the fresh coordinate identifies F_n with G_(n+1). Every K>=4 has full actual deficit hull0, but C_n=H(G_(n+1))-H(G_n)/2>0 violates mean coherence at EVERY n>=3. Its sharp all-policy coherent payoff hull is V_0=0,V_1=2,V_n=2^(2-n)*(3-(9/8)log2(3)) for n>=2. Actual H(F_n)/I(F_n)<4 tends to4; V_n/I(F_n)->0 and V_n/C_n has finite limit3-(9/8)log2(3). For ANY Boolean core g and fresh balanced physical bit y, its AND correction is majorized by the coherent envelope P=2Var(g)<=2I(g). Moreover P=8p(1-p)<=8p where p=Inf_y(AND_minus(g,y)), so the DISTINCT fresh physical source pays the correction at every K>=8. Consequently the FULL physical stopping hull satisfies R_K(AND_minus(g,y))=R_K(g)/2 for every Boolean g and every real K>=8, including all reveal orders and stopping policies. For every m>=0 fresh guards give R_K(F_m)=2^-m R_K(g); ordinary H/I is at most max(H(g)/I(g),8) for nonconstant g. No full FEI proof or unbounded-ratio Boolean family is asserted.",
+      "hypotheses": [
+        "Finite actual Boolean sign functions on uniform physical cubes; entropy in bits; complete Fourier spectrum and all physical influences retained.",
+        "General pivotal transport requires independent disjoint cores and supplied nonnegative envelopes superharmonic under every eligible physical query; it assumes no universal initial influence price.",
+        "AND_minus is negative exactly when both inputs are-1; y and every added guard are fresh disjoint balanced physical bits.",
+        "Point-defect raw-coherence obstruction is at K>=4; exact arbitrary-core guard-hull contraction is at K>=8. These rate ranges must not be interchanged.",
+        "V is the stopping hull of the outer-correction PAYOFF, not the full negative-slack hull. Matching conditional spectral/influence normalizations preserves bounded ratios.",
+        "Owner preservation uses full sibling support, nonnegative credit owners and signed debit labels with nonnegative total, as in the scoped reviewed conditional theorem. General outer-gate initial pricing remains open."
+      ],
+      "statement_sha256": "5cb347b67915c35284ac65b35e547bc38f4bf7bf1c52a09bd4a872c1b0c2ff5f",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\PROOF.md",
+        "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\ARITHMETIC.md",
+        "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\out\\VALIDATION.json",
+        "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\out\\INDEPENDENT_AUDIT.json",
+        "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\out\\VARIANCE_ENVELOPE.json",
+        "agents\\A080\\runs\\20261023T112507Z-account03-A080-universal-counterexample-standard\\out\\FRESH_PAYMENT.json"
+      ],
+      "proof_dependencies": [
+        "Elementary full-spectrum substitution and physical influence composition, reconstructed in PROOF.md sections1,2,7.",
+        "Binary entropy differentiation, exact7^49>2^80*3^36 and finite stopping-envelope induction.",
+        "A089-SHARP-COHERENT-COLLATERAL-REROUTING@1 sections1-2 only, independently reconstructed for owner bookkeeping; no reliance on its all-d marked-point theorem."
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080 (author)",
+          "verdict": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_CERTIFICATES_PASS",
+          "scope": "All-n point obstruction and sharp payoff repair; all-real-bias variance majorant; arbitrary-core/full-policy fresh-bit hull contraction and allm iteration.",
+          "independent_representation": "Literal character prime-log witness separate from fast Walsh; scalar LP optimizer separate from source formula. This is author verification, not independent external acceptance.",
+          "independent_external_review": "PENDING",
+          "formal_lean": "NOT_ATTEMPTED"
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Raw positive outer correction plus pivotal-weighted full inner hulls is automatically a coherent envelope, even for an AND gate (no registered theorem version asserted).",
+        "A Boolean FEI disproof from this point family, its correction-collateral growth, or appended fresh-bit guards on uniformly bounded-ratio seeds."
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A075",
+        "A084",
+        "A089",
+        "A092",
+        "B16",
+        "B20"
+      ]
+    }
+  ]
+}

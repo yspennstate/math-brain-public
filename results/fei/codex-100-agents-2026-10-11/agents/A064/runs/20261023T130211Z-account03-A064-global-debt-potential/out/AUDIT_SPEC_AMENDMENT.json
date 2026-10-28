@@ -1,0 +1,26 @@
+{
+  "before_any_audit_rare_capital_execution": true,
+  "reason": "Correct source-audit scalar check to substitute smallest l=2 explicitly; proof statement unchanged. Add finite point capital checks. No result-dependent change.",
+  "original_audit_sha256": "3fd5aab320cc59eaa004a7c65b634971dcfc6b27a8f098f27fd0d3597228f8cb",
+  "current_code_sha256": {
+    "audit.py": "a836dc9638b754ffe7e29cb60ca2213bdd12abca37e032e685cfdc60c046fdc6",
+    "rare.py": "8461b94eff13e6d7ffb651f1a6819a7a266e5aada9995d369a34cd06eeee4ec3",
+    "capital.py": "7f83e921432818686acf394ed4d3a7f82eec92c1f383bb20c73acf5874e39ba9"
+  },
+  "capital_spec": {
+    "helper_version": "df0ea68352541733093f215e40d386b8b413d347e6140364ed51cedc7a7f7fe3",
+    "family": "point_m; tensor source additivity analytically, no expanded tensor search",
+    "domain": [
+      2,
+      4,
+      6,
+      8
+    ],
+    "actual_case_count": 4,
+    "symmetry": "none",
+    "arithmetic": "rational exact normalized kernels and spectra, prime-log identities, rigorous outward log intervals",
+    "memory_estimate_mb": 120,
+    "max_runtime_seconds": 55
+  },
+  "rare_spec_unchanged": true
+}

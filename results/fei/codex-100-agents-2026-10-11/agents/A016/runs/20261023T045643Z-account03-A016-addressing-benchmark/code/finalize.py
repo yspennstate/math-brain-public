@@ -1,0 +1,52 @@
+from pathlib import Path
+import json,hashlib,datetime
+R=Path(__file__).resolve().parents[1];A=R.parents[1]
+def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+def sha(x):return hashlib.sha256(x).hexdigest()
+now=datetime.datetime.now(datetime.timezone.utc).isoformat()
+checked=json.loads((R/'out/CHECK.json').read_text(encoding='utf-8'));assert checked['status']=='PASS'
+source=Path(r'agents\A020\runs\20261023T040246Z-account03-A020-selector-boundary-tests')
+sc=json.loads((source/'CLAIMS.json').read_text(encoding='utf-8'));reviews=[]
+for c in sc:
+ assert c['statement_sha256']==sha(json.dumps({k:c[k] for k in ['exact_statement','hypotheses']},sort_keys=True,separators=(',',':')).encode())
+ reviews.append({'reviewer':'A016','at_utc':now,'source_claim':c['claim_id']+'@1','source_statement_sha256':c['statement_sha256'],'result':'HOLDS_AT_STATED_SCOPE','method':'Independent seed Walsh/projection, literal physical histories and original reference marginals; complete-row CE and both signs; analytic row mass7rho/64 and factor5/8; direct cleanup domination. No source repair.'})
+dump(R/'out/INDEPENDENT_REVIEW.json',reviews)
+claims=[]
+def claim(cid,st,hyp,status,deps,rev,gap):
+ obj={'exact_statement':st,'hypotheses':hyp}
+ claims.append({'claim_id':cid,'version':1,**obj,'statement_sha256':sha(json.dumps(obj,sort_keys=True,separators=(',',':')).encode()),'contributors':['A016'],'proof_source':'REPORT.md; code/check.py; out/CHECK.json','proof_dependencies':deps,'review_records':rev,'status':status,'supersedes':[],'refutes':[],'first_unproved_line':gap,'next_consumers':['A020','A019','A018','A094','B20']})
+claim('A016-REVIEW-A020-RARE-GHOST-OBSTRUCTION-AND-CLEANUP','A020-RARE-HISTORY-FULL-RESERVE-NOGO@1 and A020-ZERO-INFLUENCE-GHOST-CLEANUP@1 HOLDS at their exact scoped hashes: same original eligible Q and old U give both reserves<-241/256 at k5,r4096 on all1 history; exact zero-influence cleanup restores both>5/4 for all k>=5,r>=3. This does not refute FEI or fixed-subset averaged payment.',['Exact Boolean g3-product rare selector/mask family and original reference specified in source versions','No reference reset or omitted conversion; all physical histories and both q signs retained','Acceptance applies only to these two source versions'],'INDEPENDENT_RECONSTRUCTION_HOLDS',[c['claim_id']+'@1 sha256 '+c['statement_sha256'] for c in sc],reviews,'Universal cleanup for interacting restrictions with no irrelevant coordinate remains open.')
+claim('A016-CLEANUP-CLOSED-ALL-FIRST-BIT-OUTCOMES','For every k>=5,r>=3 in A020 family G_(r+1)=g3^(r+1), query q and one specified bit from each of r seeds, then both remaining bits of every seed whose first outcome was1. EVERY complete cleanup terminal, BOTH q signs and EVERY first-bit pattern retain full signed reserve4I-CE-U>3/4 under the ONE original reference and old U=L_q+E<5/8. All1 patterns retain>5/4. All physical reaches and cleanup outcomes are retained.',['Uniform physical bits; A=point_k(v)(1-G)/2; h=chi_u off A and chi_q on A; F=1 at gate0 and h times fixed two-bit mask at gate1','Original Q_h=(P_h+point_q)/2; Q_F(e,T)=(Q_h P_mask+point_empty)/4 at both gate frequencies; descendants use frequency marginals','Clean only exact zero-influence coordinates; retain surviving g2 seeds; never replace original mu,p,U by conditional parameters','Guarantee is for these complete cleanup endpoints, not arbitrary intermediate or interacting queries'],'PROVED_LOCALLY_REVIEW_PENDING',['A020 stage7/A016 stage8 original Q and U interface, reconstructed in REPORT steps1,3','Direct seed spectrum identity; product CE; latent-mixture log-sum; no assumed general FEI inequality'],[],'Query a second relevant bit in a surviving g2 while retaining original mu,p,U and zero-mean/constant children.')
+dump(R/'CLAIMS.json',claims)
+prog={'protocol_revision':'2026-10-11-execution-v2','run_id':R.name,'stream':'B04','packet_id':'A016','gap_id':'C024-SIGNED-INHERITED-TERMINAL-BANK','attempt_id':'A016-stage9-cleanup-closed-all-first-bit-outcomes','method':'Independent A020 review; exact original-reference projection; auxiliary normalized mixture domination and residual product CE payment','mathematical_delta':'A020 no-go/repair independently HOLDS. New all-outcome cleanup theorem: every complete terminal retains4I-CE-U>3/4 including arbitrarily many nonconstant g2 survivors, without source/bank reset.','deliverable_status':'COMPLETE_LOCAL_ARTIFACT','mathematical_status':'SCOPED_ANALYTIC_PROOF_WITH_EXACT_VALIDATION; FULL_FEI_OPEN; NEW_THEOREM_REVIEW_PENDING','claim_versions_used':[c['claim_id']+'@1' for c in sc]+['A016-FULL-SIGNED-TENSOR-PADDING-TRANSFER@1 explicit interface only'],'claims_created_or_changed':[c['claim_id']+'@1' for c in claims],'source_artifacts':['REPORT.md','CLAIMS.json','FROZEN_SPEC.json','code/check.py','code/finalize.py','out/CHECK.json','out/PILOT.json','out/FIRST_FAILURE.txt','out/INDEPENDENT_REVIEW.json','out/SOURCE_RECEIPTS.json'],'next_consumers':['A020','A019','A018','A094','B20'],'next_action':'Second remaining bit of surviving g2, with original Q,mu,p,U; retain zero-mean one-bit child and constant child with only exact irrelevant-coordinate cleanup.','stagnant_substantive_attempts':0,'blockers':['Universal cleanup-closed paid source under interacting restrictions remains open','New theorem independent review pending','Supervisor adoption and mirror verification pending'],'packet_ids':['A016']}
+dump(R/'PROGRESS.json',prog);dump(R/'PACKET_DELTA.json',prog)
+files=[Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),Path(r'BOARD.md'),Path(r'claude\B04\STREAM_NOTES.md'),source/'REPORT.md',source/'CLAIMS.json',A/'runs/20261023T000905Z-account03-A016-addressing-benchmark/REPORT.md',A/'runs/20261023T000905Z-account03-A016-addressing-benchmark/code/check.py']
+dump(R/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'bytes':p.stat().st_size,'sha256':sha(p.read_bytes())} for p in files])
+(A/'STATUS.md').write_text('STATE: A016 stage9 complete: A020 ghost obstruction/cleanup HOLDS; SAME Q/U all-first-bit cleanup endpoints reserve>3/4 with nonconstant survivors;8906 exact checks PASS; FEI OPEN.\nNEXT: Second bit of surviving g2 with ORIGINAL Q,mu,p,U; retain one-bit sign/constant children and exact cleanup; A020/A019 review new all-outcome theorem.\n',encoding='utf-8')
+entry='\n'+now+' '+R.name+': Independently accepted A020 rare-history no-go/cleanup versions1. New all-outcome cleanup endpoints retain>3/4 with original Q/mu/p/U; g2 CE<5/2<=4I; all1>5/4. Literal core dimensions9/12 validate all histories;8906 assertions PASS4.5196877s, pilot846 PASS. Initial literal influence oracle corrected, failure saved. No heavy job/compiler/remote writes. New theorem review/mirror pending.\n'
+if R.name not in (A/'WORKLOG.md').read_text(encoding='utf-8'):
+ with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write(entry)
+learn='''\n## Stage9: cleanup closes every first-bit outcome\nA020 source versions1 independently HOLDS: original projected reference factor(5/8)^r on all1 support; selected full rows mass7rho/64; k5,r4096 both reserves<-241/256. Querying BOTH remaining coordinates of each constant block has Inf0, replaces factor by1, restores both>5/4 after sameU. Not an FEI counterexample; stage8 averaged scope stands.\nNEW for ANY first-bit pattern after q and r seed queries(k>=5,r>=3): clean constant blocks, retain s g2 plus one g3. Actual nu=.75*2^-s, original mu=.75^(r+1) remain distinct. Original projected seed reference has g2-block law(5/8,1/8,1/8,1/8), actual g2 law uniform4. Its CE=log(8/5)/4+9/4<5/2<=4I. For s>=1 the auxiliary normalized M replacing only true product spectrum by inherited R satisfies Qcore>=M/8. Complete-code log-sum gives4I-CE>11/8; subtract SAMEU<5/8 leaves>3/4 at ALL cleanup endpoints; s0 stronger>5/4. Retain all binomial reaches, bothq signs and all cleanup outcomes. No arbitrary-intermediate/interacting-selector claim.\n8906 exact assertions PASS, independent seed Walsh/projection and literal original core cubes9/12 across every pattern verify reference/influence identities. NEXT: second query in surviving g2, zero-mean g1 child and constant child with cleanup, originalQ/mu/p/U retained. New theorem independent review pending.\n'''
+if '## Stage9: cleanup closes every first-bit outcome' not in (A/'LEARNED.md').read_text(encoding='utf-8'):
+ with (A/'LEARNED.md').open('a',encoding='utf-8') as f:f.write(learn)
+placeholder=R/'code/extension.tmp'
+if placeholder.exists():placeholder.unlink()
+protocol=json.loads(files[0].read_text(encoding='utf-8'))['required_per_run'];report=(R/'REPORT.md').read_text(encoding='utf-8')
+assert set(prog)=={k.split(' (')[0] for k in protocol['progress_fields']}
+for c in claims:assert set(c)==set(protocol['claim_fields'])
+for h in protocol['report_fields']:assert '## '+h in report
+assert report.rstrip().split('\n\n')[-2]=='## Universal bridge'
+assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
+assert len((A/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
+for p in R.rglob('*.json'):json.loads(p.read_text(encoding='utf-8'))
+manifest=[]
+for p in sorted(R.rglob('*')):
+ if p.is_file() and p.name!='PERSISTENCE.json':
+  assert p.stat().st_size<20_000_000
+  manifest.append({'path':str(p.relative_to(R)),'bytes':p.stat().st_size,'sha256':sha(p.read_bytes())})
+dump(R/'out/PERSISTENCE.json',{'status':'PASS','at_utc':now,'files':manifest,'schema':'exact report/claim/progress fields; equal delta; canonical hashes; two-line status; local readback','exact_assertions':checked['assertions'],'review':'two source versions HOLDS; new theorem review pending','formal_proof_assistant':'none claimed','mirror':'UNVERIFIED','brain_self_care':'degraded/unverified: stale owner-model/state notes'})
+for f in manifest:assert sha((R/f['path']).read_bytes())==f['sha256']
+print(json.dumps({'status':'PASS','files':len(manifest),'claims':len(claims),'source_reviews':len(reviews),'exact_assertions':checked['assertions'],'report_opening':report.splitlines()[2],'remaining_jobs':0}))
+p=Path(r'task_checklist_hook.py')
+for line in p.read_text(encoding='utf-8').splitlines():
+ if any(x in line for x in ['checklist.py','--done','done ','task.py','checklist ']):print(line[:220])

@@ -1,0 +1,24 @@
+# Next ten precise research questions
+
+One original owner for each spent reserve. These are local source-bound handoffs, not sent messages or proof of adoption.
+
+1. **NECESSARY-ZERO-CREDIT-CONVERSION** (C019/C024): For a zero-singleton ISOSPECTRAL actual query with CURRENT singleton ghost rho=0 and occupancy D_*=0, is the proposed conditional-nonempty conversion NECESSARY? If yes, pay it from ACTUAL unused original source/influence surplus with all old debits and both full terminals; otherwise exhibit an admissible policy avoiding it. Owners A097/A079/A096/A085; independent review A094/A032. Guard: Phase-bin energy and singleton ghost payment do not cover this nullspace; manufacturing a ghost is exact prepayment.
+
+2. **UNIVERSAL-INITIAL-SOURCE-PRICE** (C018/C019): Can the actual initial coherent source and required likelihood/occupancy certificate for an arbitrary Boolean seed be paid by an absolute influence multiple without assuming the same universal FEI-equivalent price? Owners A099/A096/A050; independent review A094/A098. Guard: Current phase/bin/ghost histories preserve a SUPPLIED price; selecting R=P_h merely assumes H(h) is already paid.
+
+3. **COMPATIBLE-INHERITED-HANDOFF** (C019/C024): Inside an already paid A011/A086 source-prefix account, construct ONE actual compatible inherited-profile conversion and charge its full signed CE against the SAME nonvanishing unused original allowance, retaining original C0/U, previous bookings and both complete terminal laws. Owners A011/A086/A079; independent review A094/A095. Guard: An allowance number alone does not identify A095 narrow-first canonical history with A011 padding-first prescribed floors, rates or references.
+
+4. **REVIEW-LARGER-ALLOWANCE** (C019): Does A094-LARGER-NONVANISHING-ALL-FRONTIER-ALLOWANCE@1 hold at full arbitrary-core scope, including q>=3 coefficient bounds, U<=(C0+37/8)Ig and residual7Ig/8 at every prescribed frontier? Owners A086/A011; independent review A092 or another noncontributing reviewer. Guard: A086 smaller allowance already has A094 full-scope review. The sharper A094 claim remains author-proved until independent review; no incompatible handoff is automatically paid.
+
+5. **ARBITRARY-INTERACTING-EDITS** (C019/C024): Can arbitrarily many interacting representation edits be paid at FIXED padding and SAME K=4C0+15 from the SAME original source, keeping old U/bookings, model compatibility and all complementary terminal CE? Owners A011/A086; independent review A094. Guard: Two nested genuine edits of any core are delivered at v3 and reviewed by A086; no renewed C0 or fresh bank per edit.
+
+6. **INFLUENCE-PAID-COHERENCE** (C019/C020): Can a fixed full-universe allocator or coherent envelope pay A074 half-child-gap-imbalance minus full-query surplus from SAME unused original influence owner, rather than inferring local admissibility from a small global hull? Owners A071/A075/A089/A072; independent review A074/A092. Guard: A072 global-hull-to-local shortcut is refuted by an actual Boolean all-d family; A074 independently accepts that obstruction.
+
+7. **POST-ACTIVATION-ELIGIBILITY** (C019/C024): After the already executed A050/A073 activation reset in an a-descendant, expose x and prove BOTH actual sign trees satisfy the precise next terminal eligibility and full inherited nonempty-profile law at SAME original rate4, with the first debit retained. Owners A050/A073/A097; independent review A094/A092. Guard: A073 arbitrary later1/7 activation resets at all widths/load are author-proved; consume and review their full occupancy KL chain, do not rediscover a second activation bound.
+
+8. **BOOLEAN-LEVEL-ONE-TO-TWO** (C018): Bound sum over |S|=1,i notin S phi(fhat(S)^2,fhat(S+i)^2) by universal C I using full signed Boolean convolution relations, rejecting normalized non-Boolean linear controls. Owners A096/B08; independent review A090/A094. Guard: Root/half taxes and FEI-equivalent existential/block/edge reformulations are already handled.
+
+9. **WHOLE-SET-HISTORY-COST** (C020/C024): Can one concrete whole-set witness/history construction pay original source/root choice, labels, rank, normalizer, correlated lifetime and complete terminal entropy once at physical reaches by absolute influence cost? Owners B03/B12/B16; independent review A086/A098. Guard: Use actual disjoint-support/fiber-antichain hypotheses, singleton t=1/4 correction and an arbitrary independent untouched terminal; no repeated address or refund owner.
+
+10. **TWO-COMPLETE-CANDIDATE-AUDITS** (C018/C019/C024): Do two independent complete reconstructions accept A099 current v9 chain with exact source prices, coherence/admission, phase/bin/ghost nullspace and every universal open leaf explicitly identified? Owners A099; independent review A094/A085 and existing independent reviewers. Guard: Fragment acceptance, source hashes, schema checks and local save are not complete FEI proof acceptance, adoption or public release.
+

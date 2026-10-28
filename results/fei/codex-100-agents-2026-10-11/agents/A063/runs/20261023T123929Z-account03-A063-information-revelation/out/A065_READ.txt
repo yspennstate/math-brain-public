@@ -1,0 +1,126 @@
+agents\A065\runs\20261023T112150Z-account03-A065-stopping-rule-falsifier\PROOF.md
+# Fixed-root product references: a linear terminal deficit and its exact signed repair
+
+All logarithms are base2. Physical restriction outcomes are fair; reference predictions need not be. Every reference uses the actual coherent kernel with fair extension on source-zero rows. Full FEI remains OPEN. The claim below concerns inherited reference cost, not H/I divergence.
+
+## 1. Consume the closed boundary and specify the false extension
+
+A061 stage19 and A087 stage19 already close the affine u/ordinary-before-pivot boundary, allowing arbitrary supporting references and nonzero outcome KL. We do not repeat it. A087's point-source obstruction rules out arbitrary-reference influence-scale reset payment, and A063's dense/sparse source rules out a purely local marginal-entropy price even for a genuine product reference. The next interface must retain the FIXED original root reference and the actual history.
+
+Test this unregistered stopping-ledger rule: for a disjoint product of Boolean modules with the original marginal-product reference, transport each queried module separately, report the tensor of those local descendants as the terminal inherited reference WITHOUT actually changing the global reference, and charge the ACTUAL global outcome KL. This silently assumes the globally transported reference equals that tensor, or that its discrepancy has a uniformly bounded unpaid terminal cost. If the tensor reference is ACTUALLY installed, that is a different policy with its own signed reference-change charges and subsequent kernels; it is not refuted here. The earlier A065 two-module calculation already withdrew tensorization; the present stage proves the all-size discrepancy and prices it, rather than reviving the failed assumption.
+
+## 2. An actual nine-bit module and its exact spectral cells
+
+Let y=(a,b,x) in GF(4)^3, with field coordinates fixed in any binary basis and nontrivial additive character psi. Let h(y)=psi(a)(1-2*1[x=ab]), and C_g(u,v,y)=(-1)^((u+v+parity(y))v)g(y). Define f(s,u,v,y)=C_1 for s=0 and C_h for s=1. Every variable is a uniform binary input.
+
+For completeness: summing the Fourier coefficient of psi(a)1[x=ab] over b gives 1/4 at the unique zero-gamma character (alpha,beta)=(psi,0); for every nonzero gamma it gives a signed1/16 at all16 (alpha,beta). Thus h has one squared Fourier atom1/4 and48 atoms1/64, has no empty atom, and H(h)=5. Its carrier adds a uniform four-atom spectrum under an invertible parity shear. Consequently C_1 and C_h have disjoint spectra, entropies2 and7. Every carrier ordinary influence is1/2 by averaging fresh v, and its u,v influences are1/2. The selector influence is Pr[h=-1]=1/2 since h is balanced. Therefore f REALLY has all nine influences1/2 and ORIGINAL product reference Q_0 uniform on512 atoms.
+
+The two selector Fourier entries have equal squared mass on every erased row, since the two child supports are disjoint. The selector-indicator source and reference conditionals are both fair, so its erasure KL E is zero. Aggregate erased spectral rows into four types:
+
+    type             G        H-large     H-small     zero-source
+    actual p         1/2      1/8         3/8         0
+    original Q       1/64     1/64        48/64       14/64.
+
+These cells retain all reference-only mass. Within each cell actual and reference atoms are uniform, and the selector kernel is constant. On G it chooses physical G, on either H cell it chooses H, and on zero-source rows it is fair. Thus this finite-cell representation is EXACT, not a synthetic spectral law.
+
+Write alpha=25/32 for Q_0 mass on source support, and pi=(1/50,49/50) for the G/H probabilities conditional on that support. Local reference outcomes are
+
+    r=(1/8,7/8)=alpha*pi+(1-alpha)*(1/2,1/2),
+    c=KL(fair||r)=(1/2)log(16/7)>1/2.
+
+The actual inherited child KLs are K_G=3 and K_H=log7-2. The root values are H_0=13/2, I_0=9/2, K_0=TC_0=5/2. The exact local identity is K_0=c+(K_G+K_H)/2. No child entropy is erased or set to zero.
+
+## 3. The globally fair zero-row extension has a persistent latent sector
+
+Take F_L as the disjoint product of L copies of f, for any integer L>=1. This is an actual Boolean function on9L inputs. Fourier coefficients, source entropies and influences tensor, so H(F_L)=13L/2, I(F_L)=9L/2. Its FIXED original reference is the product of the actual marginals, hence uniform on all2^(9L) spectral atoms. Its initial KL is A_L=5L/2.
+
+Admit any adaptive ordering of the L selectors, each at most once, with stops at any prefix. No ordinary or carrier coordinates are revealed in this stage. Every actual source child remains a disjoint product of remaining f modules and selected C_1/C_h modules. Actual physical outcomes are independent fair bits.
+
+Under the ORIGINAL reference, all modules are in their actual source support with probability alpha^L. In that active sector, a selector kernel chooses the G/H cell deterministically; independent module cell labels have law pi. If any module instead lies in its zero-source cell, the full product source mass is zero. Revealing selectors cannot remove that cell, because both selector-frequency entries in a zero cell have zero source mass. The globally specified fair extension therefore gives fair outcomes on EVERY later selector in that sector. Active rows inconsistent with a previously selected outcome have zero transported reference mass and cannot create another positive active sector.
+
+This proves, by induction using the actual kernel, that for ANY prescribed physical outcome history b of length t with k G outcomes, including an adaptively chosen order of identical modules, the global reference likelihood is
+
+    R_(L,t)(b)=(1-alpha^L)*2^(-t)+alpha^L*pi_G^k*pi_H^(t-k),
+    w_(L,t,k)=2^t R_(L,t)(b)
+       =(32^L-25^L+25^(L-t)*49^(t-k))/32^L.              (1)
+
+The mixture weight is alpha^L, NOT alpha^t; unqueried modules can keep the full source row zero. In particular L=2,t=1 gives global G prediction53/256 rather than local1/8. The conditional predictions along a history are the ratios R(child)/R(parent), not renewed one-module priors.
+
+The exact joint outcome KL at a fixed depth is
+
+    O_(L,t)=KL(U_t||R_(L,t))
+       =-sum_(k=0)^t binom(t,k)*2^(-t)*log w_(L,t,k).     (2)
+
+It equals the physical-reach sum of ACTUAL conditional outcome KLs. Gibbs and the strictly positive fair mixture give
+
+    0<=O_(L,t)<=-log(1-alpha^L).                         (3)
+
+The right side tends to0 as L grows, uniformly in t<=L. For example -log(1-x)<=log2(e)*x/(1-x) for0<x<1, by integrating1/(1-x). This is not a product bound on conditional events: the explicit joint mixture (1) is the proof.
+
+## 4. A growing expected unpaid terminal cost from the fixed product root
+
+Let Q_b be the actual GLOBAL transported reference at a reached history, and let T_b be the tensor of the SEPARATELY transported local descendants, leaving unqueried modules at their original Q_0. Both are normalized and support the actual source p_b. On every POSITIVE actual-source atom, global transport only comes from the active sector. Comparing its unnormalized weights gives the pointwise identity
+
+    Q_b = T_b * [prod_j r_(b_j)] / R_(L,t)(b).
+
+Hence, with K_b=KL(p_b||Q_b) and K_b^tensor=KL(p_b||T_b),
+
+    d_b=K_b-K_b^tensor
+       =log[R_(L,t)(b)/prod_j r_(b_j)].                 (4)
+
+This is an ACTUAL-source-weighted comparison, not KL between the two reference laws. It retains their reference-only mass in the normalizers. Taking true physical means gives the exact terminal deficit of the proposed tensor stopping ledger:
+
+    Delta_(L,t)=E d_b=t*c-O_(L,t).                      (5)
+
+Indeed E log R=-t-O_(L,t), whereas E sum log r=-t-tc. For L>=3, alpha^L<1/2 follows from2*25^3<32^3. Thus O_(L,t)<1. Since c>1/2, at the complete SELECTOR cut and every L>=4,
+
+    Delta_(L,L)>L/2-1>=L/4.                            (6)
+
+More generally Delta_(L,t)>t/2-1 for L>=3. This is the requested actual Boolean path family with linearly growing EXPECTED unpaid terminal reference cost when the tensor stopping rule fails. It starts at the genuine fixed original marginal-product reference; no arbitrary supplied Q=p or new descendant prior is used.
+
+The full terminal entropy at a history is
+
+    H_b=(13/2)L+(1/2)t-5k,
+
+so E H_b=(13/2)L-2t. In particular at t=L it is9L/2. Both the actual and false stopping bills retain this SAME FULL entropy. Their difference remains (5):
+
+    E[H_b+K_b]+O_(L,t)
+       - (E[H_b+K_b^tensor]+O_(L,t))=Delta_(L,t).
+
+This is not the whole-path entropy-minus-influence telescope and not an FEI counterexample: H(F_L)/I(F_L)=13/9.
+
+## 5. An even stronger reference-direction obstruction
+
+At L=2 after physical G in the first module, examine spectral cells where the first module is H-large or H-small and the second module is zero-source. The global kernel is fair there, so the globally transported reference assigns total mass
+
+    ((49/64)*(14/64)/2)/(53/256)=343/848>0.
+
+The separately transported G reference assigns zero mass to either H cell. Thus T_b assigns0 to this set, and
+
+    KL(Q_b||T_b)=infinity.                              (7)
+
+Both references nevertheless support the ACTUAL source, whose mass on that set is0. A proposed finite forward-reference-KL coupling correction fails already after one selector, at the true original product root. In contrast (4) is finite and exact because it uses p_b. Even its sign is path dependent: at L2 first G, d=log(53/32)>0; at first H, d=log(203/224)<0. Clipping this correction would lose the exact account.
+
+## 6. Pay the defect by an existing signed credit, not a new bank
+
+The same structure proves a repair and prevents overstating the obstruction. Every still-unqueried selector has fair SOURCE and REFERENCE conditional spectral indicator: earlier kernels depend only on the four erased cell types, never that untouched selector-frequency bit. Its actual erasure KL is0. Applying the existing normalized-reference chain therefore gives, at every adaptive selector stopping cut tau,
+
+    E K_tau + E sum O_actual = A_L.
+
+The local tensor account has drift c per queried selector. Consequently the exact signed transfer is
+
+    E d_tau=c*E tau-E sum O_actual.                     (8)
+
+The terminal defect is paid by redirecting the outcome allowance that was reserved for separate local predictions but was NOT actually consumed by the global predictions. It is not an additional loss after adding both reference and outcome costs. At every history the corrected potential is K_b^tensor+d_b=K_b>=0, and its compensated drift is precisely the actual outcome charge. This pays arbitrary declared selector orders and stopping choices, with no renewal, even though individual d_b and its increments may be negative. Already consumed unrelated debits may never be relabeled this unused credit.
+
+For an explicit original owner, the ACTUAL initial surplus is S_L=4I(F_L)-H(F_L)=23L/2. Supply this single originally unencumbered bank, retain an unrelated old debit0<=omega<=S_L/4, and book the full initial reference pipeline A_L=5L/2 ONCE. Then
+
+    S_L-omega-A_L >=49L/8=(49/92)S_L>S_L/2.
+
+All corrections in (8) are internal to A_L; additional owner charge is0. This is a certified family accounting statement, conditional on that original bank actually being unused, not a universal source-availability theorem. Adding the FULL E H_tau to both sides of the reference identity retains terminal cross entropy; it does not pay terminal H from A_L.
+
+## 7. The remaining universal line
+
+We close a specific fixed-root history defect: the global fair extension couples product modules, the expected omitted terminal cost grows linearly, forward KL between the candidate references may be infinite, and an exact actual-source-weighted signed likelihood correction pays it from unconsumed original outcome capacity. We do NOT transfer this finite-cell decomposition to ordinary queries that can erase a zero-source cell and move reference mass back onto source support. Nor do we unite it with A061's protected-pivot reset policies or price a second intermediate reset.
+
+The first unsupported universal line is a hereditary eligible-reference signed reserve under a query that CAN REMOVE a reference-only cell, financed by the SAME actually unused original influence owner with inherited K/E and old debits retained. The shortest NEXT is one ordinary data query after a selector on this fixed product root: explicitly measure the active/zero-sector transfer, then test whether (8) needs an additional signed defect. Increasing L again cannot resolve that interface. External independent review of this new fixed-root mixture theorem remains pending; consuming A087's affine result is not an independent acceptance of its entire dependency chain.

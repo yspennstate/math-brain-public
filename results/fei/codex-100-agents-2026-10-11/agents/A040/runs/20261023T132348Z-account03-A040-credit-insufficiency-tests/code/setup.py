@@ -1,0 +1,12 @@
+from pathlib import Path
+import json,hashlib,datetime
+R=Path(__file__).resolve().parents[1];A=R.parents[1]
+old=A/'runs/20261023T111233Z-account03-A040-credit-insufficiency-tests'
+(R/'out').mkdir(exist_ok=True)
+for name in ('arithmetic.py',): (R/'code'/name).write_bytes((old/'code'/name).read_bytes())
+model=(old/'code/check.py').read_text(encoding='utf-8').split('alpha=F(1,6);kappa=')[0]
+(R/'code/model.py').write_text(model,encoding='utf-8',newline='\n')
+spec={'version':'A040-stage10-v1','time_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'family':'all256 three-bit Boolean functions for universal outcome geometry; explicit rare-query G; A037 tensor priority family','main_domain':'256 tables x3 physical coordinates x1 supported spike reference=768;8 rare dense fixtures (r3,4 xalpha1/6,1/r xboth signs);3 complete A037 policies (k,r)=(1,3),(2,3),(1,4);36 grouped rare cases (r3..16,24,32,64,128 xboth profiles)','pilot_domain':'8 selected three-bit tables x3 coords; r3 rare fixtures both profiles/signs; one tensor policy k1r3; grouped r3,8,32 both profiles','audit_domain':'direct character-sum independent rare laws r3,4 xboth profiles/signs; tensor k1r3,k2r3 through ALL physical outcomes, scalar all-s bounds','symmetry':'none; tensor prefix states enumerated for k<=2 only; all-s extension analytic not extrapolated','arithmetic':'Fraction Walsh transform main; proved36-term atanh remainder and outward2^-120 log intervals; independent rational prime-log vectors and direct character sums audit','memory_estimate_mb':100,'maximum_runtime_seconds':55,'maximum_physical_dimension_main':12,'maximum_physical_dimension_direct_audit':10,'automatic_dimension_escalation':False,'helper_pins':{p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted((R/'code').glob('*.py'))}}
+(R/'out/FROZEN_SPEC.json').write_text(json.dumps(spec,indent=2)+'\n',encoding='utf-8',newline='\n')
+(A/'STATUS.md').write_text('STATE: Stage10 in progress: consuming A037 cumulative exhaustion and A049 outcome residual; bounded KL appears insufficient, likelihood control gives a universal outcome price; exact validation pending.\nNEXT: Certify all-r alpha=1/r Boolean sharpness and independently reconstruct A037 full-tree exhaustion; preserve all prior source bills and terminal laws.\n',encoding='utf-8',newline='\n')
+print('Frozen stage10 domains and helper hashes; no search executed.')

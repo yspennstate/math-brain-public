@@ -1,0 +1,44 @@
+{
+  "helper_version": "A010-multireference-review-v1",
+  "helper_sha256": "d5afec37239f34ae031022cb49899b334c89803b42de56e68109c6ba84ece9d9",
+  "family": "A008 actual F=2U(X)[1-U(-Y)]-1, r=2^w; A006 two Kmm with one inserted edge",
+  "domain": {
+    "pilot_w": [
+      1
+    ],
+    "full_w": [
+      1,
+      2
+    ],
+    "pilot_m": [
+      2
+    ],
+    "full_m": [
+      2,
+      3,
+      4
+    ],
+    "scalar_w": [
+      64,
+      256
+    ],
+    "scalar_L": "1,2,2^floor(w/4)"
+  },
+  "case_counts": {
+    "Boolean_family_inputs_full": 65552,
+    "gate_pair_clause_tests_full": 65552,
+    "joint_sector_targets_full": 148,
+    "connector_truth_functions_full": 6,
+    "connector_inputs_per_old_or_new_total": 69888,
+    "insertion_targets": 92,
+    "budget_scalar_pairs_full": 579,
+    "rational_root_vectors": 117
+  },
+  "symmetry": "No reduction of truth tables, prime tables, gate-pair transitions or insertion targets; scalar proof handles continuum weights analytically",
+  "arithmetic": "integer Walsh, direct physical flips, Fraction and rational generating-function tail certificates; floats for timing only",
+  "memory_estimate_MB": 100,
+  "pilot_runtime_limit_seconds": 55,
+  "full_runtime_limit_seconds": 180,
+  "automatic_dimension_escalation": false,
+  "no_claim_of_all_w_truth_tables": true
+}

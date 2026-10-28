@@ -1,0 +1,60 @@
+{
+  "helper_version": "A006-deleted-degree-two-complete-cost-v1",
+  "actual_Boolean_family": "positive edge DNFs K_ab minus any labelled bipartite H with maximum deleted degree at most2; include empty surviving table only as separately handled constant",
+  "parameter_domain": {
+    "pilot": "2<=a<=b<=3, all H",
+    "full": "2<=a<=b<=4, all H; six named larger path/cycle fixtures"
+  },
+  "case_count_by_size": {
+    "2,2": 16,
+    "2,3": 49,
+    "3,3": 265,
+    "2,4": 121,
+    "3,4": 1081,
+    "4,4": 7343
+  },
+  "case_count_pilot": 330,
+  "case_count_full": 8881,
+  "symmetry": "none",
+  "arithmetic": "integer Walsh/physical flips; Fraction spectra, defect Dirichlet energies and moment inequalities; rational atanh log enclosures; no floating sign",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds": {
+    "pilot": 55,
+    "full": 180,
+    "independent_review": 55
+  },
+  "no_automatic_dimension_escalation": true,
+  "fixtures": [
+    {
+      "a": 2,
+      "b": 8,
+      "H": "path: (i,j) with i=j or i+1=j, valid i<a,j<b"
+    },
+    {
+      "a": 3,
+      "b": 7,
+      "H": "path: (i,j) with i=j or i+1=j"
+    },
+    {
+      "a": 4,
+      "b": 5,
+      "H": "path: (i,j) with i=j or i+1=j"
+    },
+    {
+      "a": 5,
+      "b": 5,
+      "H": "cycle: (i,i),(i,(i+1)%5)"
+    },
+    {
+      "a": 4,
+      "b": 8,
+      "H": "cycle on first4 right vertices: (i,i),(i,(i+1)%4)"
+    },
+    {
+      "a": 6,
+      "b": 6,
+      "H": "three disjoint K22 components on consecutive pairs"
+    }
+  ],
+  "target": "all-parameter SAME original reference complete cost<42I; stronger<36I for a>=4; proof required independently of census"
+}

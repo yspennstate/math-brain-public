@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A052-FINITE-PHASE-ORIGINAL-PAIR-ALIGNMENT",
+    "version": 1,
+    "exact_statement": "For every K>0 and every hypothetical positive K-witness of least essential dimension n, one may initially select, without loss of positivity or dimension, a maximum of D_K=H-KI in its finite orbit under quadratic output phases; jointly allowing invertible affine input maps additionally makes the selected source affine-influence-minimal. Alternatively choose a finite-orbit maximum ratio R=H/I>K and substitute K=R below. For each original coordinate with complete children g,h, signed Fourier arrays a_T,b_T and every outside character v, define E_v=sum_T[eta((a_T+b_(T+v))/2)+eta((a_T-b_(T+v))/2)], eta(t)=-t^2 log2(t^2), C_v=Fourier(gh)(v), B_v=sum_(j:v_j=1)(1-2Inf_j(h)). A quadratic-phase-stationary source satisfies C_0>=0 and E_v-E_0<=(K/2)(B_v+C_0-abs(C_v)). Any probability-weighted average of these inequalities also holds. Actual one-cofactor character rematching preserves BOTH complete child entropies and affine-minimum influences, hence their complete optimized reserve, while its actual total influence change is(B_v+C_0-s*C_v)/2. Every mixed Fourier row remains. If h is bent on m even bits, then E_v=E_0,B_v=0 and C_0=max_v abs(Fourier(gh)(v))>=2^(-m/2), so Inf_i(f)<=(1-2^(-m/2))/2; equality at the lower correlation bound forces gh bent. This is initial finite extremal-source admission, not a descendant-only implication or renewal of a spent ancestor bank. Genuine least dimension licenses nonnegative smaller-child reserves; phase stationarity alone does not imply that eligibility or a universal paid pair. For a finite CUBIC-phase maximum, every ORIGINAL proper pair A, every one of its four full branches r, character v and sign s also obeys E_(r,v,s)-H(f)<=(K/4)[B_v+sum_(j in A)C_(j,0)-s sum_(j in A)C_(j,v)], where C_(j,v)=Fourier(g_(r+e_j)*g_r)(v), B_v=sum_(l in v)(1-2Inf_l(g_r)), and E_(r,v,s) is the entropy of ALL signed four-branch Walsh rows with branch r replaced by s chi_v g_r. The actual influence change is exactly the same bracket divided by4, and ALL FOUR complete optimized child banks remain unchanged. This pair entropy depends on s in general, so no sign-independent or absolute-correlation shortcut is licensed. Cubic initial normalization has the same finite, least-dimension and joint-affine admission proof; it does not reoptimize a spent history or change a booked comparison rate.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; normalized signed Walsh coefficients; entropy bits; K>0",
+      "Quadratic-phase stationarity for singleton constraints; CUBIC-phase stationarity for original-pair constraints; both available by finite INITIAL orbit optimization",
+      "Finite phase-orbit deficit maximization, or finite ratio-orbit maximization at its own positive ratio; not merely restriction-ratio criticality",
+      "Critical terminal eligibility additionally requires least essential dimension among positive fixed-K witnesses",
+      "Initial normalization only: every prior history/debit and comparison rate remain if an actual later change is made",
+      "Bent corollary: the full selected cofactor is bent on even outside dimension m"
+    ],
+    "statement_sha256": "dd2e5bdb5305c10dc353580ee22a7aa0d358733939fbe28288939ac43770a10a",
+    "contributors": [
+      "A052"
+    ],
+    "proof_source": [
+      "ALIGNMENT_PROOF.md",
+      "code/check_alignment.py",
+      "code/independent.py",
+      "code/check_pair.py",
+      "out/CHECK.json",
+      "out/INDEPENDENT.json",
+      "out/PAIR.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A052",
+        "scope": "Author analytic proof audit, exhaustive integer-Walsh finite source census, separate direct-character/physical-edge/integer-product reconstruction, and original-pair mixed-row/full-terminal reconstruction",
+        "verdict": "PASS; independent-agent acceptance pending"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "claim_id": "EXPLORATORY-PHYSICAL-DESCENDANT-ONLY-PHASE-STATIONARITY",
+        "version": 0,
+        "exact_false_statement": "Restriction-ratio criticality alone implies stationarity under one-cofactor output characters.",
+        "witness": "Two-bit character truth signs(1,1,-1,-1) has ratio0 like every nonconstant physical descendant, but actual quadratic phase gives(1,1,-1,1), entropy2 at SAME influence1. It is not a positive K-witness."
+      },
+      {
+        "claim_id": "EXPLORATORY-SIGN-INDEPENDENT-PAIR-MERGE-ENTROPY",
+        "version": 0,
+        "exact_false_statement": "A one-branch sign flip leaves root entropy unchanged for original-pair gluing, as it does for singleton gluing.",
+        "witness": "Constant3bit root, original pair(0,1), flip one of four complete branches: entropy0 to2."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A053",
+      "A054",
+      "A055",
+      "A090",
+      "A094",
+      "B11",
+      "B20"
+    ]
+  }
+]

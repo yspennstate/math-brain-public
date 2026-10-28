@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "A056-FIXED-INFLUENCE-POWER-SOURCE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For actual balanced Boolean f_k=(1-A_k)z+A_k y b_m with k>=2 and m=2(2^k-k), I=2, Var=1, H<=4. For normalized positive-support power references R_q=P^q/Z_q and arbitrary q_k in [0,1], sup_k CE(P_k,R_qk)<infinity iff sup_k[(1-q_k)2^(k+1)-k]<infinity. Thus exponent selection from only mean/variance/influence fails when its value at (0,1,2) is <1. The disjoint fresh selector has I=5/2, two full balanced I=2 children, and SAME-q inherited CEroot=2+average CEchildren. A three-stratum normalized original reference instead costs <=7/2 on f_k and <=11/2 on the selector. This does not disprove FEI or provide arbitrary-core sources.",
+    "hypotheses": [
+      "Uniform independent physical coordinates; sign-valued Boolean functions.",
+      "b_m is the explicit disjoint quadratic bent function; y,z and k guard bits are separate.",
+      "All information in bits; positive-support power reference, q in [0,1]; q is held fixed during the selector query.",
+      "The exponent policy may use mean, variance and total influence only for the stated policy obstruction.",
+      "Both entire terminal cross-entropies are retained; no inherited reference is replaced for free."
+    ],
+    "statement_sha256": "dcf7fe8d261d213b4f02794454e6afb348267d73f9b8e6e4033edbf2786931fb",
+    "contributors": [
+      "A056"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections 1-6",
+      "code/certify.py",
+      "code/audit.py"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A056",
+        "kind": "author adversarial reconstruction with independent direct Walsh arithmetic",
+        "status": "PASS; not independent external review"
+      }
+    ],
+    "status": "AUTHOR_PROOF_SCOPED_OBSTRUCTION; EXACT_FINITE_CERTIFICATES; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "CE(P,P^q/Z_q)<=K I universally for any fixed q<1, or exponent selected only from mean/variance/influence with value <1 at the exhibited invariants"
+    ],
+    "first_unproved_line": "An influence-priced ORIGINAL structural mixture/reference for every Boolean function, with its complete mixture normalizer and full terminal costs.",
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A006",
+      "A015",
+      "A058",
+      "A059",
+      "A094",
+      "B20"
+    ]
+  }
+]

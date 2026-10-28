@@ -1,0 +1,10 @@
+Initial pilot: a=2,b=1,r=1; matching and increasing reference modes.
+Exit 1 at predicate527: ck(bool(mixed)); chosen=mixed[-1].
+The fixture did not contain a spent-history dummy row with nonflat on-child.
+No local inequality failed up to this fixture-coverage assertion.
+Revised explicit pilot fixture: a=2,b=1,r=2, containing control-then-dummy.
+Also corrected the nonconstant-child diagnostic: a nonconstant parity can have
+a point spectral law; the valid test is P(empty)<1, not max(P)<1.
+Replaced an interval-endpoint comparison of equal source costs with the
+exact pointwise rational reference dominance that proves the comparison.
+The failed pilot is not counted as a passed certificate.

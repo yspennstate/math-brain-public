@@ -1,0 +1,35 @@
+# A070 stage10: exact shallow Boolean tests leave the source unpaid
+
+## exact target, quantifiers, hypotheses and units
+
+Independently referee A069-UNIFORM-NEAR-BOOLEAN-SOURCE-OBSTRUCTION@1 and test whether exact shallow norm/convolution constraints repair its relaxed source-payment failure. Units are bits. REAL functions use squared-derivative energy J; actual Boolean functions use pivotal influence I. The new explicit all-k guard has unit root norm, every restriction of depth<2k exactly normalized, all convolution identities of degree<2k exact, uniform distance to an actual Boolean parity tending to zero, and H/J>2k/(3(1+1/k^2)). The rounded Boolean family has H=0,I=k. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Execution protocol2026-10-11-execution-v2, current BOARD/B14 lead notesv2, A070 STATUS/LEARNED/WORKLOG and previous source artifacts, campaign README/current status and targeted registry/plan/supplement records were consulted. Sources are pinned in out/SOURCE_MANIFEST.json. A069 run20261026T224025Z DERIVATION Sections1-5 and both full CLAIMS are the substantive source. Its new theorem is reconstructed unchanged; its independent acceptance of the previous A070 boundary is consumed rather than self-awarded. Four paper-version scope openings and relevant theorem locators were revisited; percolation30pp Lemma2.1 is an arbitrary-random-set encoding, whose occupancy payment is separate. No new threshold/percolation premise is used. Those supplied text exports decode as cp1252; the initial UTF-8-only read failed and was retried explicitly, without modifying sources. The packaged cyclic companion certificate remains unavailable; no cyclic certificate replay is claimed. One read-only math recall gives existing singleton/convolution and conditioned-entropy guards, not an accepted source-payment theorem. No novelty priority is asserted. Current user continuation governs over old campaign clocks.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION Sections1-4 contain the complete finite Fourier derivation. The Gaussian product supplies a bounded h with A>1/3, energy<=1 and each atom<=1/(n+1). Normalization Z cancels exactly in H/J. Disjoint parity blocks preserve entropy and multiply energy by k. Since the original square has only even degrees and no nonconstant term below degree2, its lift has none below degree2k. Conditional averaging proves every shallow restriction norm exactly1; the explicit first nonunit norm occurs after fixing the dictator block and one y block. Taking n=2^(2k^4),epsilon1/k leaves H/J divergent despite the factor k. The homogeneous CE/energy telescope gives a full-terminal lower bound H-4J for EVERY stopping tree; normalized shallow trees also satisfy the reference-free entropy counterpart. The first unsupported Boolean line remains an ORIGINAL influence-priced source/update for arbitrary actual Boolean cores using a full Boolean consequence that excludes these real guards.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen FROZEN_SPEC precedes search. Independent pilot n4,b1,epsilon1/2 passes190 exact predicates. Final frozen fixtures n4,b1,2,3,epsilon1/2,1/4 plus binomial n4,16,64 and their18 parameter combinations pass 460146 exact predicates in 17.542064s arithmetic time. An initial final pass has460074 predicates;72 in-domain binomial normalization/ratio checks complete the frozen18 parameter combinations. No range expansion or floating sign test occurs. Actual integer Gaussian products and direct Walsh transforms are independent of author code; every lifted physical square coefficient, all shallow restriction masks/assignments and the direct boundary average are exact. n16,64 use finite binomial formulas; the infinite k family is symbolic and never allocated. Code and outputs are in code/check.py and out/pilot.json,out/results.json. Commands: python -B -X utf8 code/check.py --pilot; the same without --pilot (run relative to this run's parent path). Resource estimate70MB, arithmetic cap55s, no heavy search, GPU, detached worker or dimension escalation.
+
+Formal receipt: RUNTIME_UNVERIFIED. code/formal_attempt.py requests fresh memok admission before any compiler and uses one windowless BelowNormal thread with1024MB job cap and45s compiler timeout. Any accepted formal result is limited to the explicitly named Gaussian-integer norm identity, not the Fourier proof or FEI. The full theorem's rung is proof with exact finite certificates, pending independent review; no full formal verification is claimed.
+
+## proof dependencies and changed downstream conclusions
+
+A069's source theorem independently HOLDS at full stated scope without repair. The exact statement hash is preserved in local CLAIMS; original sources remain untouched. Prior A070 homogeneous-boundary external acceptance is source/hash matched in out/CONSUMED_REVIEW.json. New parity/stopped-tree consequences depend on the reconstructed product family and direct finite Fourier identities. They reject using exact finite-depth norms or truncated convolution plus small uniform defect as a universal real source supplier. They preserve every existing Boolean theorem and require no source reset, renewed budget or omitted terminal. No independent self-acceptance occurs.
+
+## one next mathematical action and independent reviewer
+
+A031/A033/A069 use a genuinely FULL Boolean consequence, excluding the exact shallow-normalization family, to price one necessary original-source update from SAME unused influence; retain old debits and both full terminals. A088/A094 independently review this parity lift and stopped-terminal extension.
+
+## actual persistence receipts or precise save blocker
+
+The four protocol artifacts, derivation, frozen spec, code and exact outputs are saved in this requested A070 run. STATUS is exactly two lines; WORKLOG/LEARNED are current. out/RECEIPTS.json verifies exact protocol key sets, statement/proof hashes, matching packet delta, limits and local artifact hashes. Supervisor remote copy, shared-index adoption, private mirror and brain ingestion remain unverified. No git, mail, research brain write, other-agent mutation, trading access or unrelated process stop occurs. Current compute record is ok with14.2GB free when read; no resource shedding or system changes occur.
+
+## Universal bridge
+
+This stage advances C024/C019 by accepting A069's uniform near-Boolean source obstruction and strengthening the referee boundary: even a growing exact prefix of Boolean convolution equations and EVERY shallow physical child norm leaves H/J unbounded, with a terminal-inclusive lower bound for arbitrary stopping rules. It supplies no arbitrary-core source payment. NEXT is to extract a full Boolean cancellation that pays one necessary update from SAME unused original influence, retaining old debits and both full terminals; that targets the universal unpaid line directly, whereas another source transfer or finite-prefix normalization lemma cannot close FEI.

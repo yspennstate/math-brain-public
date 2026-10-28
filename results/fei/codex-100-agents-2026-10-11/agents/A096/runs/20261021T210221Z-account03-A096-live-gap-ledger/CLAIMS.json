@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=1 let g=1-2A_a on a+b uniform bits and F=g+2A_r D_(a+b). Supply a normalized finite-cost source reference with c_raw<=C0 I(g), C0>=0; empty-calibrate and construct exactly the A097 complete floor Q. For every finite adaptive tree querying only active source bits, at each query with a_current>=2 reset the on-cell child to the A097 floor built from the marginal then empty-calibrated current source reference, retaining the actual conditional control kernel; on the last active query reset its on-cell child to the explicit point spectrum of -1+2A_(b+r). Every complementary child keeps its complete inherited marginal reference unchanged. The expected sum of all executed erasures plus all complete terminal cross entropies is at most c_cal+10e(a+b+r)<=(2C0+10)I(F), e=2^(1-a-b-r). At every a_current>=2 query the virtual source envelope releases at least e_current; the complementary signed reference excess is <18e_current. No original quota is renewed, and every previous debit and complementary terminal is retained. Arbitrary no-reset continuation below a stopping leaf remains paid. An untouched independent terminal of prescribed cost c_h retains its exact additive c_h. Structural source R=P_g permits C0=4 and initial rate18. This is not arbitrary-source reference construction, arbitrary incoming-profile reset, or a universal FEI theorem.",
+    "hypotheses": [
+      "Uniform Boolean physical cube; actual negative-cell point edit and fresh point controls",
+      "Normalized source reference finite on every occupied source atom; off-support zeros permitted",
+      "Every source marginal and empty calibration is specified; all complete reference normalizers and conditional control kernels retained",
+      "Queries in the reset phase touch only active source coordinates; complementary branches stop with inherited full references",
+      "Units bits; ideal CE, physical reach weights, ordinary influence; unrelated channels, labels and integer-code bills excluded",
+      "The C0 source-price hypothesis is supplied at the original ancestor only; no descendant influence-scaled price is assumed"
+    ],
+    "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c",
+    "contributors": [
+      "A096; A097 original negative-cell floor and source bank; prior A096 complete-reference chain rule credited"
+    ],
+    "proof_source": {
+      "run_id": "20261021T210221Z-account03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "code/adversarial.py",
+        "out/FROZEN_SPEC.json",
+        "out/VALIDATION.json",
+        "out/ADVERSARIAL_VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "source": "agents\\A097\\runs\\20261014T050248Z-account05-A097-cross-route-transfer\\CLAIMS.json",
+        "status": "Previously source-complete baseline; source-bound proof input, not new blanket independent acceptance"
+      },
+      {
+        "claim_id": "A096-PAID-FLOOR-NO-RESET-HISTORY",
+        "version": 1,
+        "statement_sha256": "56794970ffd9a6e18e8a2dc23d3e5cba56ef81424987b182aad015953f51a3c6",
+        "source": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\CLAIMS.json",
+        "status": "Previously source-complete baseline; source-bound proof input, not new blanket independent acceptance"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_WITH_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A097",
+      "A094",
+      "A085",
+      "A081",
+      "A099",
+      "B20"
+    ]
+  }
+]

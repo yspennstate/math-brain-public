@@ -1,0 +1,236 @@
+{
+  "finalized_at": "2026-10-22T22:01:36.224133+00:00",
+  "protocol_keys": "PASS",
+  "statement_sha256": "PASS",
+  "progress_delta_identical": true,
+  "validation": {
+    "status": "PASS",
+    "cases_completed": 1280,
+    "case_count_frozen": 1280,
+    "exact_assertions": 11466,
+    "Bellman_states": 1892,
+    "positive_local_options": 1256,
+    "comparisons_certified": 15,
+    "seconds": 0.1765544000081718,
+    "error": null,
+    "seed_tag_protected": true,
+    "source_sha256": "6fcb8b4632dd86a14916a82aa32fd3e1a9e464168fbf235285a375b5299a385c"
+  },
+  "nogo_validation": {
+    "status": "PASS",
+    "cases": [
+      {
+        "m": 2,
+        "N": 4,
+        "I": "7/4",
+        "selector_influence": "1/4",
+        "A_raw_norm": 12,
+        "A_raw_fourth_moment": 84,
+        "chi_square_to_uniform": "4/3",
+        "certified_positive_local_debt_rates": [],
+        "H_upper_over_I": "12/7"
+      },
+      {
+        "m": 4,
+        "N": 16,
+        "I": "37/16",
+        "selector_influence": "1/16",
+        "A_raw_norm": 240,
+        "A_raw_fourth_moment": 4560,
+        "chi_square_to_uniform": "4/15",
+        "certified_positive_local_debt_rates": [],
+        "H_upper_over_I": "80/37"
+      },
+      {
+        "m": 6,
+        "N": 64,
+        "I": "199/64",
+        "selector_influence": "1/64",
+        "A_raw_norm": 4032,
+        "A_raw_fourth_moment": 270144,
+        "chi_square_to_uniform": "4/63",
+        "certified_positive_local_debt_rates": [],
+        "H_upper_over_I": "448/199"
+      },
+      {
+        "m": 8,
+        "N": 256,
+        "I": "1033/256",
+        "selector_influence": "1/256",
+        "A_raw_norm": 65280,
+        "A_raw_fourth_moment": 16907520,
+        "chi_square_to_uniform": "4/255",
+        "certified_positive_local_debt_rates": [
+          2
+        ],
+        "H_upper_over_I": "2304/1033"
+      },
+      {
+        "m": 10,
+        "N": 1024,
+        "I": "5131/1024",
+        "selector_influence": "1/1024",
+        "A_raw_norm": 1047552,
+        "A_raw_fourth_moment": 1075835904,
+        "chi_square_to_uniform": "4/1023",
+        "certified_positive_local_debt_rates": [
+          2,
+          4
+        ],
+        "H_upper_over_I": "11264/5131"
+      },
+      {
+        "m": 12,
+        "N": 4096,
+        "I": "24589/4096",
+        "selector_influence": "1/4096",
+        "A_raw_norm": 16773120,
+        "A_raw_fourth_moment": 68753018880,
+        "chi_square_to_uniform": "4/4095",
+        "certified_positive_local_debt_rates": [
+          2,
+          4
+        ],
+        "H_upper_over_I": "53248/24589"
+      }
+    ],
+    "exact_assertions": 16470,
+    "seconds": 2.6840559999691322,
+    "proof_of_all_m_and_all_tensor_orders": "NO_GO.md; finite checks are not the all-dimensional proof"
+  },
+  "boundary_status": "PASS",
+  "formal_status": "SETUP_UNVERIFIED resource hold; no compiler started",
+  "local_only": true,
+  "artifacts": [
+    {
+      "path": "CLAIMS.json",
+      "sha256": "506b81c169f853c796edddce24ebef1043ab4ae1bfa5ee9449d3162b6682ce2c",
+      "bytes": 3126
+    },
+    {
+      "path": "FROZEN_BOUNDARY_FORMAL.json",
+      "sha256": "9a7e5e1f2a74306a4bc9f2825feebd79fa80979e2cb2d717860b779ede6d7be5",
+      "bytes": 639
+    },
+    {
+      "path": "FROZEN_NOGO.json",
+      "sha256": "ed699a18ce8fac5d289854200020076894d06d1fa50232218133f21d7fa3989d",
+      "bytes": 709
+    },
+    {
+      "path": "FROZEN_SPEC.json",
+      "sha256": "c62d43a6f8906577be137d3bea4f78793a3ff2ac45b0c856a5ba63607f83eeb3",
+      "bytes": 966
+    },
+    {
+      "path": "NO_GO.md",
+      "sha256": "1a3c4e0288ccfacc7c93e4885ced24ef551d6c7369e1e77aa724bf211ac46812",
+      "bytes": 4216
+    },
+    {
+      "path": "PACKET_DELTA.json",
+      "sha256": "1816d0c9a9d0fb8ab167bd3317fade834035cd535901176d53d228853238ba25",
+      "bytes": 3849
+    },
+    {
+      "path": "PROGRESS.json",
+      "sha256": "1816d0c9a9d0fb8ab167bd3317fade834035cd535901176d53d228853238ba25",
+      "bytes": 3849
+    },
+    {
+      "path": "PROOF.md",
+      "sha256": "acffb9973b9c200a168f242a9352157ab0d0f68bcbcb3913ab90220c05c76e39",
+      "bytes": 9407
+    },
+    {
+      "path": "REPORT.md",
+      "sha256": "fd6c944b90b7cbc1130ec7496bd6fad44445e742d72cb4d44f1db0c8c67df447",
+      "bytes": 11065
+    },
+    {
+      "path": "code\\boundary.py",
+      "sha256": "21e70cc3eae262e0b9c7f752684b9b0a1712dd90af1608a2a9fc769cd38d252b",
+      "bytes": 1128
+    },
+    {
+      "path": "code\\Core.lean",
+      "sha256": "93d3bf560db3ac20bc7a3e13577c646864e38f45af85779d240d14ca183d8a23",
+      "bytes": 230
+    },
+    {
+      "path": "code\\finalize.py",
+      "sha256": "4c1324dde5538be1cb86e8b7ae884906f151cf8ef849b2bb453986a201a23295",
+      "bytes": 17850
+    },
+    {
+      "path": "code\\finalize_extension.py",
+      "sha256": "05d3842e934b09bcd7bac9ad30a07baf87f9cefb0f62231ea1024877027ba877",
+      "bytes": 9846
+    },
+    {
+      "path": "code\\formal.ps1",
+      "sha256": "67b94b1e818a36052cfb6ba157fca831ae99a420bf8d4f462d217a2ef2d08892",
+      "bytes": 884
+    },
+    {
+      "path": "code\\interleaving.py",
+      "sha256": "6fcb8b4632dd86a14916a82aa32fd3e1a9e464168fbf235285a375b5299a385c",
+      "bytes": 4118
+    },
+    {
+      "path": "code\\nogo.py",
+      "sha256": "ea846217fc5207e6c55f3b59326588a0e1bcf496bc40a9b84778d67519ee04e5",
+      "bytes": 2005
+    },
+    {
+      "path": "out\\dependency_receipts.json",
+      "sha256": "b44fe38a4d1e393771bb5f0ea488a2719e39c50785e65c5c2a2169f98633d002",
+      "bytes": 2764
+    },
+    {
+      "path": "out\\interleaving.json",
+      "sha256": "e5a3efe4e856a802d4e8da17f3e76602f357b96cde9583de87e1ca98d62bce0c",
+      "bytes": 366
+    },
+    {
+      "path": "out\\lean_output.txt",
+      "sha256": "b30528839daed2e97611ab342809f3070e843d9b96628231d80dcdabdfc47b1b",
+      "bytes": 208
+    },
+    {
+      "path": "out\\lean_status.txt",
+      "sha256": "01b33ca5b118b65b25402c8fb31e122ebac1d25e2bb671bb978847d97ab5b14e",
+      "bytes": 20
+    },
+    {
+      "path": "out\\memok.txt",
+      "sha256": "b9fc2b0a51a8be07a661bd95c9d96dcfff375e66c6a76434f6a1849886e77a0b",
+      "bytes": 140
+    },
+    {
+      "path": "out\\nogo.json",
+      "sha256": "ba325d6813b2861a3c482c133edcc376f76f17921bfdcba5663fcfe8e5f32d75",
+      "bytes": 2015
+    },
+    {
+      "path": "out\\source_read_manifest.json",
+      "sha256": "8ff725c67543a201eb24c8285f4c2f07929600d2f68c13f8344889390b15308e",
+      "bytes": 26645
+    },
+    {
+      "path": "out\\tag_boundary.json",
+      "sha256": "976efe886ce6010a8e359322b8f44523838ed46fb49fd89f91d4b055431df1c3",
+      "bytes": 607
+    },
+    {
+      "path": "out\\voice_brief.txt",
+      "sha256": "71138787a07785ac39c6debd896242c1598d7295931eab98fec8943cfa542edf",
+      "bytes": 16950
+    },
+    {
+      "path": "out\\voice_check.txt",
+      "sha256": "f415ec7b2857cf820c5a96cfc73f0e00d4fad3091bf869dd71cd4140e9bb69a1",
+      "bytes": 1742
+    }
+  ]
+}

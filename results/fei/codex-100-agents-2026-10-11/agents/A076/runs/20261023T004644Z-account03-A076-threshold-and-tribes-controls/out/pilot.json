@@ -1,0 +1,63 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "assertions": 772,
+  "counts": {
+    "two_point_roots": 40,
+    "one_point_roots": 12,
+    "root_queries": 106,
+    "mixed_nodes": 32,
+    "mixed_leaves": 34,
+    "direct_reproductions": 40
+  },
+  "elapsed_seconds": 0.2168218000442721,
+  "arithmetic_helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+  "mixed_histories": [
+    {
+      "policy": [
+        "s2",
+        "x2",
+        "s1",
+        "z1",
+        "y"
+      ],
+      "all_first_query_children": [
+        {
+          "first_x1_bit": 0,
+          "expected_remaining_bank_interval": [
+            "4082154736695605991384007/4835703278458516698824704",
+            "4082154736695605991394167/4835703278458516698824704"
+          ],
+          "guaranteed_remaining_bank": "3/8",
+          "old_debit": "1/2",
+          "input_bank": "7/8",
+          "expected_terminal_H_interval": [
+            "916900127736519195829947/1208925819614629174706176",
+            "458450063868259597915233/604462909807314587353088"
+          ],
+          "private_query_influence": "21/64",
+          "gate_query_influence": "1/4",
+          "separator_query_influence": "13/128"
+        },
+        {
+          "first_x1_bit": 1,
+          "expected_remaining_bank_interval": [
+            "8264141345021879123961/9444732965739290427392",
+            "8264141345021879123975/9444732965739290427392"
+          ],
+          "guaranteed_remaining_bank": "3/8",
+          "old_debit": "1/2",
+          "input_bank": "7/8",
+          "expected_terminal_H_interval": [
+            "6159048716581329296153/9444732965739290427392",
+            "98544779465301268738503/151115727451828646838272"
+          ],
+          "private_query_influence": "5/16",
+          "gate_query_influence": "1/4",
+          "separator_query_influence": "3/32"
+        }
+      ]
+    }
+  ],
+  "first_unproved_line": "Extension to a nonconstant outside carrier, or an unrestricted original donor certificate, is not proved."
+}

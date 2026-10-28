@@ -1,0 +1,34 @@
+{
+  "helper_version": "df0ea68352541733093f215e40d386b8b413d347e6140364ed51cedc7a7f7fe3",
+  "actual_boolean_family": "F(u,v,y)=g(y) at v0, (-1)^u h(y) at v1",
+  "parameter_domain": "all ordered pairs of 2-bit Boolean cores; every ordinary history; two reference fixtures",
+  "case_count": {
+    "pilot": {
+      "ordered_pairs": 4,
+      "states": 104
+    },
+    "main": {
+      "ordered_pairs": 256,
+      "states": 6656
+    },
+    "source_audit": {
+      "field_l": 2,
+      "physical_dimension": 11,
+      "truth_table_entries": 2048
+    }
+  },
+  "symmetry": "none; all 16 truth tables per slot, all ordered partial assignments",
+  "arithmetic": "rational spectra/kernel/probabilities; exact rational prime-log expressions; proved 96-bit outward intervals",
+  "memory_estimate_mb": 120,
+  "maximum_runtime_seconds": {
+    "pilot": 55,
+    "main": 240,
+    "source_audit": 55
+  },
+  "automatic_dimension_escalation": false,
+  "initial_references": [
+    "genuine marginal product",
+    "weights1/3,2/3 with distinct positive nonproduct sector references"
+  ],
+  "frozen_before_search": true
+}

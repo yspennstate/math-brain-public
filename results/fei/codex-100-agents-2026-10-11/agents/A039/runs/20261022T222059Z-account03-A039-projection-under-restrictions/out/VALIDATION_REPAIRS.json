@@ -1,0 +1,10 @@
+{
+  "attempt": "check.py unrounded intervals v1 --pilot",
+  "result": "FAILED_RUNTIME_GUARD",
+  "observed": "n=3 run returned through all mathematical predicates, then failed its elapsed-time assertion; no PASS output was produced",
+  "cause": "interval reference propagation used exact endpoint fractions without outward size control, allowing denominator growth",
+  "repair": "outward rounding after interval addition/multiplication and before atanh evaluation at denominator 2^140; mathematical domain and signs unchanged",
+  "proof_of_rounding": "floor(lower*2^140)/2^140 <= lower and ceil(upper*2^140)/2^140 >= upper; log monotonicity transports rounded u endpoints",
+  "lean": "NOT_RUN: fresh memok printed WAIT (physical free 3.9 GB below required 4.0 GB); no claim of formal certification",
+  "secondary_prose_repair": "weighted x influence is 1/2, not (1-e)/2; independently recomputed from both a outcomes before final validation"
+}

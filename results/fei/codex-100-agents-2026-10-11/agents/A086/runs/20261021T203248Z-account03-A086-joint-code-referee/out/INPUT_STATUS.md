@@ -1,0 +1,2 @@
+STATE: Stage6 COMPLETE_LOCAL: A011 arbitrary-core envelope/history and A094 incoming shock/owner independently HOLD at full scope; prior neutral-floor A094 review adopted;80625 exact checks. Full FEI OPEN.
+NEXT: Audit A095 adaptive same-reference history admission against the general envelope; seek fixed-rate one-original-bank absorption of extra c and erased edges with incoming terminal costs retained.

@@ -1,0 +1,39 @@
+[
+  {
+    "claim_id": "A045-RATIONAL-MEAN-CONDITIONING-ADMISSION-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For each d>=2, let P be the squared Fourier law of the fair Boolean AND sign 2 product_i X_i-1. For every Fourier-set event E containing the empty set and r nonempty sets with 1<=r<=2^d-2, the full normalized conditional law Q=P(.|E) is not the normalized product Fourier law of any Boolean gate on any finite cube with rational product biases, for any Fourier phases and with the empty label preserved. Writing a=2^(d-1), Q(empty)=(a-1)^2/((a-1)^2+r) has irrational square root because its denominator lies strictly between consecutive integer squares. This is an admission obstruction, not an FEI disproof; Q remains an allowed normalized reference. The rational-bias restriction is essential, as the AND2 event retaining empty and one singleton is realized by a sign input at bias(1+1/sqrt2)/2.",
+    "hypotheses": [
+      "actual fair AND sign with d>=2 distinct physical inputs",
+      "conditioning retains empty and a nonempty proper subset of the nonempty Fourier labels",
+      "full conditional normalization; label empty remains empty",
+      "candidate gate has finitely many rational product biases, with deterministic coordinates/repeated wires contracted",
+      "irrational-bias countercontrol is outside the excluded rational class"
+    ],
+    "statement_sha256": "f1b8daa6656f1a9aab06f61363d05dcdc5fd3beda9b808b29348a41c90bad341",
+    "contributors": [
+      "A045/account03"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "33d46929c8b9644de04150eaf32e82ad927d9e08775fb869739cfcb0b77a994b",
+      "checks": "out/CHECKS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "unregistered Boolean reset of a proper empty-retaining conditional AND spectrum at inherited or other rational product biases"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A041",
+      "A042",
+      "A043",
+      "A044",
+      "A090",
+      "A091"
+    ]
+  }
+]

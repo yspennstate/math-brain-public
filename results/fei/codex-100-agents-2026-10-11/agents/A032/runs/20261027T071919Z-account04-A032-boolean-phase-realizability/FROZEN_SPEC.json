@@ -1,0 +1,13 @@
+{
+  "helper_version": "A032-stage22-independent-v1",
+  "actual_Boolean_family": "F_m(x,y)=(-1)^(sum_j x_j*y_j + y_1*sum_{j=2}^m y_j); restrict x_2,...,x_m to every assignment",
+  "parameter_domain": "m=1,2,3,4; r=1,2 defect tensors for A079 review; scalar p=7/4 and endpoint5/3",
+  "case_count": "4 parents and15 full terminals; two defect tensors; 85 coefficients on each of two scalar cones; all eight source atoms for endpoint tilt",
+  "symmetry": "none in finite validation; analytical affine frequency shifts account for all restriction assignments",
+  "arithmetic": "Python unbounded integers and Fraction; certified rational atanh logarithm intervals",
+  "memory_estimate_MB": 40,
+  "max_runtime_seconds": 55,
+  "pilot": "same fixed domain; no dimension escalation",
+  "checks_that_could_fail": ["homogeneous polynomial orientation and scale", "endpoint5/3 dual sign", "Boolean inverse Walsh realization", "all terminal spectra and physical influences", "reach-weighted influence conservation", "support zeros and degeneracy in KL dual", "posterior normalizers and complete mixture KL identity"],
+  "formal_scope": "Attempt a small exact rational inequality only if fresh Lean admission permits; does not certify the full entropy proof"
+}

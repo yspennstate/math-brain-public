@@ -1,0 +1,14 @@
+{
+  "helper_version": "standalone quadratic_audit.py v1; no external imports except Python standard library",
+  "family": "all Boolean quadratic phases on n=0..4; sharp bent-star extensions k=1..4",
+  "domain": "all edge sets, all linear terms, both constant terms; every physical coordinate and both outcomes; sharp family prescribed controller-prefix full tree",
+  "case_count": {"quadratic_truth_tables": 2198, "one_step_queries": 8612, "sharp_families": 4},
+  "symmetry": "none in exhaustive domain; all constant and linear terms explicitly retained",
+  "arithmetic": "integer Walsh transform, Fraction probabilities and normalized reference kernels, exact power-of-two logarithms, F2 matrix elimination",
+  "memory_estimate_MB": 120,
+  "max_runtime_seconds": 300,
+  "pilot": "n<=3 (150 truth tables, 420 root query transactions), under 60 seconds; main launched only after pilot passes",
+  "fixed_limits": "no automatic enlargement; no GPU, no external helpers, no background jobs",
+  "assertions": "actual fair zero-source normalization; initial and child KL; E/O/sigma formulas; affine flat spectrum; rank and influence; Bellman gross and signed reserve bounds for every stopping rule; bent-star cut necessity",
+  "frozen_before_execution": true
+}

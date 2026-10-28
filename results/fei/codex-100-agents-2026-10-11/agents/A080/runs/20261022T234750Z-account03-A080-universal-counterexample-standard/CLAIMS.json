@@ -1,0 +1,123 @@
+{
+  "run_id": "20261022T234750Z-account03-A080-universal-counterexample-standard",
+  "stream": "B16",
+  "claims": [
+    {
+      "claim_id": "A089-SIGNED-TERMINAL-COMMON-KERNEL-REPAIR",
+      "version": 1,
+      "exact_statement": "For finite weights w_b>=0 summing to1, signed real capacities s_b and a required nonnegative net debit T, nonnegative d_b and zero-mean transfers f_b with mean d=T and s_b+f_b-d_b>=0 exist iff T<=mean s. Writing P=E(s)_+, N=E(-s)_+, their minimum gross incoming transfer E(f)_+ is N. For P>0, k=(s)_+/P, d=T k, f=(-s)_+-N k attain it and transport every signed ancestor/new label L as L k, including T=0; P=0 has the stated zero-net boundary. On the actual twice-saturated J(g^6) history (block0 bits2,0,3 all0 then block1 bit0=b), all18 restrictions of block0 bits4,5 have exactly2 negative full S4 endpoints; both orders for each b admit this coupled payment at unchanged4, preserving all old labels and drawing zero from the old parked2tau reserve. Negative subsidies A_b lie in(55/1000,56/1000) and(45/1000,46/1000). No universal FEI bound.",
+      "hypotheses": [
+        "finite weights and real signed capacities, nonnegative net booked debit, zero-mean allowed transfers",
+        "for the application: exact declared disjoint Boolean cores, uniform physical coordinates, entropy bits, unchanged inherited saturation labels",
+        "all capacities and physical profiles supplied explicitly; no assumption of universal parent FEI"
+      ],
+      "statement_sha256": "7de96cb26ca33032ed22556b3aa7b89ca42d5acb81822f1715144de96cf8c25d",
+      "contributors": [
+        "A089"
+      ],
+      "proof_source": [
+        "REPORT.md sharp signed-capacity replacement and actual transfers",
+        "out/COUPLED_CASES.json",
+        "out/INDEPENDENT_REPRODUCTION.json",
+        "out/VALIDATION_SUMMARY.json"
+      ],
+      "proof_dependencies": [
+        {
+          "path": "agents\\A089\\runs\\20261021T154748Z-account03-A089-repair-specialist\\REPORT.md",
+          "sha256": "54350154fedad989f4a8c9eec76b2a36846e2032bfe354fb70ec49d1f364b473",
+          "scope": "explicit prefix and old2tau; reconstructed locally"
+        },
+        {
+          "path": "agents\\A072\\runs\\20261021T225156Z-account03-A072-exact-walsh-engine\\REPORT.md",
+          "sha256": "e077bc7bc23833ef3936fac90c2dde63c2334b5540c0cc08cef6a8ebe051e1b6",
+          "scope": "saturation optimizer as coordination; reconstructed physical identity used"
+        }
+      ],
+      "review_records": [
+        {
+          "reviewer": "A089 separate product-moment representation",
+          "independent_reviewer": false,
+          "scope": "all18 full H/I/S states and two negative endpoint signs",
+          "verdict": "INTERNAL_REPRODUCTION_PASS_EXTERNAL_REVIEW_PENDING"
+        },
+        {
+          "reviewer": "A080",
+          "verdict": "HOLDS_AT_SUBSTATEMENT_SCOPE",
+          "source_claim_id": "A089-SIGNED-TERMINAL-COMMON-KERNEL-REPAIR",
+          "source_version": 1,
+          "source_statement_sha256": "7de96cb26ca33032ed22556b3aa7b89ca42d5acb81822f1715144de96cf8c25d",
+          "scope": "Unchanged generic real signed-capacity allocation theorem, including zero-weight/zero-bank/T0 boundaries and signed old-label kernel; all18 actual complete terminal spectra, exactly2 negative endpoints and source subsidy intervals",
+          "not_reviewed": "Entire prefix ancestry booking, four complete policies and parked-donor reach/debit bookkeeping; full source acceptance remains pending",
+          "repair_supplied": false,
+          "independence": "Direct outer64 Walsh interpolation, full nonempty atom multiplicities, independent pivotal edges and occupancy entropy; no A089 executable run",
+          "artifacts": [
+            "agents\\A080\\runs\\20261022T234750Z-account03-A080-universal-counterexample-standard\\PROOF.md",
+            "agents\\A080\\runs\\20261022T234750Z-account03-A080-universal-counterexample-standard\\out\\REVIEW_VALIDATION.json",
+            "agents\\A080\\runs\\20261022T234750Z-account03-A080-universal-counterexample-standard\\out\\REVIEW_STATES.json"
+          ]
+        }
+      ],
+      "status": "SOURCE_COMPLETE_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [
+        "proposed twice-saturated full-child-positivity inheritance at rate4; not A071/A072 scoped previous theorems"
+      ],
+      "first_unproved_line": "Derive aggregate terminal eligibility from Boolean signed component information on arbitrary inherited histories; actual next data query must carry A already received and donor A already spent.",
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A075",
+        "A092"
+      ]
+    },
+    {
+      "claim_id": "A080-SEED-UNIFORM-ACTIVATION-NOGROWTH",
+      "version": 1,
+      "exact_statement": "For every actual nonconstant finite uniform Boolean seed G, either orientation, and every integer k>=1, let a=2^-k,p=Pr[G=-1],F=1+1_selector_vertex*(G-1) on k fresh selector bits, and c=2akp be the full selector influence. Then I(F)=aI(G)+c and H(F)<=aH(G)+(4+5/k)c, in entropy bits. Consequently H(F)/I(F)<=max(H(G)/I(G),4+5/k), uniformly when seed dimension,bias,influence and tensor count depend arbitrarily on k; and CI(F)-H(F)>=a(CI(G)-H(G))+(C-4-5/k)c. Consistently nonempty-conditioned ratio is no greater than ordinary H/I; for k>=2, I(F)-h2(ap)>=(2k-3)I(F)/(4k)>0 and its ratio is at most4k/(2k-3) times that maximum. Thus point activation cannot manufacture ordinary, consistently conditioned, or rare(k>=4) output-gap unbounded counterfamilies from bounded-ratio seeds. Two supplied negative-S4 A089 endpoints admit explicit finite arbitrarily rare/small-I tensor-activation lifts whose ordinary ratios converge to their same finite seed ratios>4, not infinity. No full FEI bound or unbounded seed family is supplied.",
+      "hypotheses": [
+        "Actual finite uniform-cube Boolean sign seed, nonconstant; base2 entropy",
+        "Fresh private point selector, all physical selector influence retained; disjoint copies when tensoring",
+        "No fixed-seed or lower-bias hypothesis; output-gap bound only k>=2 and rare divergence conclusion k>=4",
+        "Signed slack capacities for arbitrary cores are not assumed supplied by this lemma"
+      ],
+      "statement_sha256": "094d5410c3a936d6e8d3f674f30b0c9ab785c40fb935afe89a373b6413578acb",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "agents\\A080\\runs\\20261022T234750Z-account03-A080-universal-counterexample-standard\\PROOF.md",
+        "agents\\A080\\runs\\20261022T234750Z-account03-A080-universal-counterexample-standard\\out\\ACTIVATION_VALIDATION.json",
+        "agents\\A080\\runs\\20261022T234750Z-account03-A080-universal-counterexample-standard\\out\\RARE_LIFTS.json"
+      ],
+      "proof_dependencies": [
+        "Full activation spectrum reconstructed explicitly",
+        "Elementary binary entropy upper bounds; indicator entropy tensorization",
+        "Direct finite terminal spectrum reconstruction for the two scoped lifts"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080 (self)",
+          "verdict": "PASS",
+          "scope": "Analytic bias-proportional bound; direct Boolean Walsh and edges, variable rare tensor spectra; independent external review pending",
+          "lean_scope": "Integer scalar closure only: ADMISSION_HELD"
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Proposed FEI counterfamily amplification by point activation of a uniformly bounded-ratio seed family, including diagonal varying-seed schedules"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A075",
+        "A089",
+        "A072",
+        "A074",
+        "A092",
+        "B16",
+        "B20"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "helper_version": "A075-whole-entropy-row-v1",
+  "helper_sha256": "29a8c8374f05c078866ad52155528ff0b741e0d4417532e2a90027cab224b462",
+  "family": "all16 outer2-input Boolean gates; first inner every2-bit truth table, second inner every1-bit truth table; constants and dummies retained; separate AND-of-OR(3,2,2) witness",
+  "domain": {
+    "pilot": "outer tables0..3, both cores all4 one-bit truth tables:64 circuits/128 physical rows",
+    "main": "outer0..15, first core0..15 on2bits, second0..3 on1bit:1024 circuits/3072 physical rows",
+    "witness": "one7-bit circuit,all7 physical queries"
+  },
+  "case_count": {
+    "pilot": 64,
+    "main": 1024,
+    "witness": 1
+  },
+  "symmetry": "none; complements and all physical rows retained",
+  "arithmetic": "integer direct characters and inverse/FWHT, independent physical edges, Fraction prime-log exact identities,192bit80term directed atanh signs",
+  "memory_estimate_mb": 180,
+  "pilot_max_seconds": 55,
+  "maximum_runtime_seconds_per_command": 180,
+  "source_executable_imported": false
+}

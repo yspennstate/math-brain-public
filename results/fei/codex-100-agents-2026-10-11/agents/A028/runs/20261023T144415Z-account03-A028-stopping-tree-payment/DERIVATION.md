@@ -1,0 +1,14 @@
+# Exact admission is broader than the common-channel image
+
+All quantities are in bits. Retain v9 source/controller references and their OWN physical inheritance, all old debits, output erasure/outcome refunds, and both complete child/terminal bills. In binary v8 notation let T=Wdata+gamma Da, Z=Wdata-D(q||r), Cvac=D(Bern(V)||Bern(beta)). For ANY prescribed sector odds ell_t with finite true-law KL, leaving data marginal r and inherited nonempty shape B fixed, chain rule gives
+
+    Dstar=D8+C, C=sum_t q_t D(Bern(b_t)||Bern(ell_t)),
+    T-Dstar=Z+gamma Cvac-C.
+
+Consequently exact nodewise admission into the SAME account is equivalent to C<=Z+gamma Cvac. The v9 common-channel construction proves the stronger sufficient condition C<=Z, but its posterior image is NOT a necessary payment condition. If every target along a finite adaptive mixed tree satisfies this exact nodewise admission, the unchanged physical T-supermartingale telescopes to full path plus terminal CE<=Hroot+Troot. This is a supplied-account extension, not an initial influence-price theorem or a positive-part reset bound.
+
+Actual Boolean strict separation: a(y1,y2)=-1 only at00; G(z,d)=z,H(z,d)=1; f=(1-c)G+cH, c=(1-a)/2. Original Ra=Pa is uniform on four control sets; Rg=Rh is uniform on z's two sets with zero dummy-d mass. Thus Da=0,T=W=1. The actual spectrum is 1/16 on each of four empty-data controller rows, 9/16 on (empty,z), 1/16 on the other three z rows, and zero on sets containing d. H=4-(9/8)log2(3), I=5/4. Query dummy DATA d first: zero entropy and output E/O costs; the original source/controller references, actual source branch normalizers1/2, and both full child spectra are unchanged.
+
+Now prescribe ell=1/2 on the z row, retaining true ell=3/4 on the empty-data row and the original true nonempty shape. On z, alpha=1,rho=3/4,b=1/4, so the common-channel image is [3/16,7/16]; the target1/2 lies outside. Nevertheless C=(9/16)log2(3)-3/4 and Z=2-(3/4)log2(3), so S=Z-C=11/4-(21/16)log2(3)>1/8, certified by3<4. Target D=(21/16)log2(3)-7/4<T=1. Both changed child bills are fully charged from the SAME unused Z; no new supplier, JS bank, controller liability, quota or constant is introduced. An original real U=4I=5 with an explicitly reserved old debit1/8 admits H+T with reserve=-1/8+(9/8)log2(3)>1, certified by3>2. This is one exact paid example outside v9's image, not a necessary stopping-class target and not a universal FEI proof.
+
+The first unsupported universal line remains a noncircular O(I) original reference/account supplier for arbitrary Boolean cores, or a required compatible target whose exact admission fits that original unused account. Merely increasing the allowed reset class does not supply it. The v9 necessity wording must therefore stay scoped: outside the IMAGE does not imply outside the AVAILABLE KL budget. Existing v9 proofs remain valid; no independently accepted assertion is refuted.

@@ -1,0 +1,13 @@
+{
+  "helper_version": "A033-independent-A097-v1",
+  "family": "Actual Boolean seeds on n=1,2,3; fixed A079 complementary controller; both tag signs; current calibrated actual and calibrated uniform seed references",
+  "domain": "Pilot: every truth table n=1,2. Main: every truth table n=1,2,3. Query coordinate0. Partitions: single nonempty bin and optimal two sign bins. Target: uniform nonempty frequencies. Both physical children retained.",
+  "case_count": {"pilot_seed_queries": 20, "main_seed_queries": 276, "pilot_transactions": 160, "main_transactions": 2208},
+  "symmetry": "No truth table reduction. Fixed coordinate0 covers every physical query up to coordinate relabeling because all Boolean truth tables are present; target uniform and sign partitions are equivariant.",
+  "arithmetic": "Exact integer direct character sums; Fraction probabilities, Gram coefficients, Euclidean refund lower bounds, support and pointwise mixture floor certificates. No floating-point signs. Analytic log-sum/Pinsker and log(1+y)<=y supplied in REVIEW_A097.md; finite checks do not replace proof.",
+  "memory_estimate_MB": 70,
+  "maximum_runtime_seconds": {"pilot": 55, "main": 55},
+  "no_automatic_escalation": true,
+  "positive_witness": "h=x3 times two-bit point defect; zero-singleton nonisospectral energy21/4096, epsilon7/519",
+  "boundary": "Parity3, actual current reference: zero energy, all child calibration refunds zero; no prescribed positive reset is attempted"
+}

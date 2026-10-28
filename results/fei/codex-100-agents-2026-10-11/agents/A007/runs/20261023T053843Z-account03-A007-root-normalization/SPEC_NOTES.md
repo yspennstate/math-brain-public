@@ -1,0 +1,5 @@
+# Frozen-domain accounting
+
+The graph audit's frozen case-count string contains an arithmetic typo: 2*(15*15+63*255+63*511) is 96,966, not the printed 134,806. The expression, all three (r,w) pairs, two reference constructions, and all root/target sets were unchanged. out/graph_audit.json reports the actual nonzero count96,966. This corrects accounting; it does not enlarge, replace or adapt the domain.
+
+The main family sweep used the frozen nine CNF references on three complete Boolean tables and501 heterogeneous width-pattern orbits. Its code also contains one fixed structural guard for a nonprime five-bit conjunction table with four gates,15 root sets and31 outputs. This is a validation fixture for the universal graph identity, not an additional searched Boolean family or an extension of the501-orbit claim. Hence its aggregate receipt reports ten references and454 output/component cases, rather than the nine family references and423 family cases alone. The guard was present before the pilot and full execution. All sizes remain below the frozen maximum of nine gates and64 target subsets; no automatic dimension increase occurred.

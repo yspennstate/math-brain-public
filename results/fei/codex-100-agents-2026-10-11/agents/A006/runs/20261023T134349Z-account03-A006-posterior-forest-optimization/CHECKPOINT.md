@@ -1,0 +1,1 @@
+Stage11 COMPLETE_LOCAL: shared-core dictionary<=17I/2, all-prior individual-core/intersection obstruction on genuine overlap, EXACT conditional core-lift preserves max(4,K), and explicit<11I repair of that counterfamily. Two source proofs HOLD; 8348 nonpilot assertions PASS. Both new claims await review; FEI OPEN. NEXT: paid JOINT representation on nonfactorable overlaps.

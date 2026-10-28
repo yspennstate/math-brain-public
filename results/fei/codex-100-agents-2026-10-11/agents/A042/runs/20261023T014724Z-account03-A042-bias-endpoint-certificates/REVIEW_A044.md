@@ -1,0 +1,15 @@
+# Independent reconstruction of A044's all-profile obstruction
+
+Verdict: HOLDS at the full statement of A044-ALL-PROFILE-TRUNCATION-BENT-OBSTRUCTION@1, statement SHA256 75ecb79b377e491b6a62f6c08fc25c5c3decc0c1b3c2a40b44109e75fafcc088. Source PROOF.md SHA256 54304c42a8e72c617ee060ffcee191ebb9647ed645b1793ab407e510793d1468. No repair is supplied. This accepts the approximation obstruction, not FEI or an arbitrary-prime bound. The earlier physical cofactor scaling is a pre-existing dependency; no new change is made to it.
+
+Expanding (-1)^(xy) gives four coefficients of magnitude1/2; multiplying disjoint blocks makes the full tensor spectrum flat with atom4^-r. Hence H_bits=2r, I=r and Delta=r-1+4^-r. Independent integer Walsh transforms for r=1,2,3 check this without source code. For a k-coordinate cofactor, multiplying the full superset mass by4^(k-1) gives second moment2^(k-2); its mean magnitude is2^(k-1-r). This reproduces the exact profile and its scaling before any approximation.
+
+Write t_k=2^(k-1-r). Substitution of h(t_k)=2t_k^2(r+1-k)ln2 reproduces D_(r,m) as rational A plus rational B ln2. The96 fixed-order cases in code/review.py enclose that scalar independently. For the all-r lower bound, the first omitted positive term of phi-phi_m is at least2^(-m-1)t_k on k<=r. Multiplying by4^(1-k) gives2^(-m-r-k). The lower half of sum_k binom(2r,k)2^-k has at least half of the full(9/4)^r sum: pairing k with2r-k favors the smaller k. Remove k=0 to recover exactly the source lower bound. Its exponential divided by Delta<=r diverges for fixed m.
+
+For the precise rate, normalize that sum by2(9/8)^r. The remaining expectation is under K~Bin(2r,1/3), of a function bounded by2/(m+1) and tending to that value as its argument2^(K-1-r) tends to zero. Split at K<=5r/6 and K=0: Chebyshev gives Pr(K>5r/6)<=16/r and Pr(K=0)=(4/9)^r; on the retained event the argument is uniformly <=2^(-r/6-1). The coefficient tail is positive and summable. Thus D~4(9/8)^r/(m+1), without an unqualified dominated limit over changing laws.
+
+For growing M=m+1, r divisible by4 and M<=2^(r/4-1), retain k<=3r/4 and omitted indices M<=j<=2M-1. Bernoulli's inequality gives(1-t_k)^j>=1/2, the band coefficient sum is1/M, and1-t_k>=1/2. Thus phi-phi_m>=t_k/(4M). Markov gives Pr(K<=3r/4)>=1/9 for the same Bin(2r,1/3). Remove k=0: the lower bound is[(9/8)^r/18-2^(-r-1)]/M. All10 checked growing-order cases obey the side conditions.
+
+The complete Q=P reference has total mass1, ordinary KL0, and full base-two cross-entropy2r=2I INCLUDING the empty atom. Full entropy and corrected nonempty E are distinguished. The source correctly refutes only the all-profile fixed-order approximation extension, even with exact negative-profile terms retained. It does not refute A043's singleton approximation, a scale-aware scheme, or FEI.
+
+Executed output: out/REVIEW_CHECKS.json reports433 exact assertions PASS in0.2375373s. New PROOF.md uses an unbounded exact dyadic index and squared packet mass for its tail; it does not alter the reviewed source. Source files and the board are unmodified. External review of A042's new theorem remains pending.

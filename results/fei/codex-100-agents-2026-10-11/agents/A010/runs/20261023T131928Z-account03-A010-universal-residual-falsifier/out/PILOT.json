@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "helper": "A010-two-intersecting-core-falsifier-v1",
+  "pilot": true,
+  "assertions": 269,
+  "seconds": 0.15558640000017476,
+  "source_cover_families": 8,
+  "actual_anchor_runs_source": 106,
+  "source_paired_cases": 3,
+  "source_common_anchor_cases": 3,
+  "new_physical_cases": [
+    {
+      "r": 1,
+      "n": 7,
+      "inputs": 128,
+      "I": "57/64",
+      "P_outer_pair": "1/4096",
+      "full_Q_outer_pair": "1/3600",
+      "actual_target_anchor_events": 2
+    },
+    {
+      "r": 2,
+      "n": 11,
+      "inputs": 2048,
+      "I": "1349/1024",
+      "P_outer_pair": "2401/1048576",
+      "full_Q_outer_pair": "50963/103680000",
+      "actual_target_anchor_events": 24
+    }
+  ],
+  "all_size_scalar_checks": 13,
+  "source_review": "A006 full new law/disjoint payment and A008 full common-anchor obstruction/repair reconstructed; no source author helper imports",
+  "new_bound": "Every fixed mixture of Q and arbitrary laws individually supported within K1 or K2: C/I>(2r-1)/2592 for r>=4, although H/I<11",
+  "universal_FEI": "OPEN"
+}

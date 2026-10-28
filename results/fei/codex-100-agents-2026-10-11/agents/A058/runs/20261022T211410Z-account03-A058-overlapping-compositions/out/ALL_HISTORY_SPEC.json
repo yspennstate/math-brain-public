@@ -1,0 +1,17 @@
+{
+  "helper_version": "A058-common-phase-all-history-v1",
+  "family": "same arbitrary shared Boolean phase u; independent point activations with probabilities p,q in {0,1,1/2,1/4}; actual shared/private/selector queries",
+  "domain": "all u on s=0,1,2,3 bits; all 16 p,q pairs",
+  "case_count": 4448,
+  "symmetry": "none for u; point-control permutations identify private coordinates, each has identical restricted phase/activation probability",
+  "arithmetic": "formal dyadic prime-log vectors for exact mean-only R; BigInt-certified log2 prime intervals width1/1024",
+  "memory_estimate": "under 30 MB",
+  "max_runtime_seconds": 60,
+  "checks": [
+    "54 Inf local R transport at every shared and unresolved private query",
+    "162 Inf selector terminal R price",
+    "degenerate p,q in {0,1}",
+    "both complete branch entropy bills retained analytically"
+  ],
+  "dimension_escalation": false
+}

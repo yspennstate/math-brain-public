@@ -1,0 +1,37 @@
+{
+  "revision": "A075-diagonal-v1",
+  "helper_versions": {
+    "arithmetic.py": "29a8c8374f05c078866ad52155528ff0b741e0d4417532e2a90027cab224b462",
+    "block_reveal.py": "d945c4569e9ce8a0c6ede34133fb9199ad208a10b9eff877cb6f548e57b0e76a",
+    "asymptotic.py": "70d9656e43795192b248951cd97271c103c5f13710fca1a58d65a41062e030cf",
+    "bridge.py": "4ee6bafdce33c3fc4e8ff66bf32cb0592ce6eb188df7d1e7d09067a526f78e6e"
+  },
+  "family": "F_n=J(g_n^6), g_n negative on {0,1,2}; J=-h(x xor1), h negative {0,1,2,4,8,16,32,6,17,40}; disjoint uniform blocks",
+  "domain": {
+    "pilot": [
+      8
+    ],
+    "whole_zero_chain": [
+      8,
+      12,
+      24
+    ],
+    "endpoints_only": [
+      16,
+      32,
+      48
+    ],
+    "remaining_dimensions": [
+      4,
+      5
+    ]
+  },
+  "case_count": "29 retained states for n=8,12,24 (j=0..n-6), plus 6 endpoints for n=16,32,48; six fixed initial prefix profiles per n; two analytic fixed remaining dimensions. No symmetry reduction.",
+  "policy": "Original coordinates 2=0 then 0=0; carry original proportional D_b; subsequently query padding 3,4,... and assign all outgoing debit to zero child, zero to constant+ selected-core sibling. Full functions and stopped siblings retained.",
+  "arithmetic": "rational Walsh/product-moment identities and rational log forms; 192-bit directed intervals, 80-term atanh with proved tail; exact polynomial entropy expansion",
+  "memory_estimate_mb": 150,
+  "pilot_max_seconds": 55,
+  "maximum_runtime_seconds": 180,
+  "automatic_escalation": false,
+  "finite_claim_scope": "Only declared states. Infinite claims require separate analytic proof."
+}

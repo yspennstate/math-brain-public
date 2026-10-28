@@ -1,0 +1,35 @@
+# A011 B03 stage20: fixed-padding arbitrary finite actual edits
+
+## exact target, quantifiers, hypotheses and units
+
+For every finite edit count, arbitrary Boolean source and actual edit points, construct and price the prescribed old comb references without renewing the source reserve. The source must be nonconstant and supplied with complete CE c<=C0 Ig. Fix b>=12 ONCE; every edit adds at least one fresh controller. Bits throughout. Claim A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK@4, statement SHA256 `a06641f37f2fa16ae889390c2a10b44dde6afbe056252bed46c2ea5922de76b0`. First6rho and second8rho references are exactly the old definitions. For K=4C0+15 and the full old U<=(C0+37/8)Ig, every target prefix/root/old padding-source frontier satisfies KI-L-U >=[(241/1024)C0+54191/8192]Ig+K sum G>0. Scope excludes controller queries and arbitrary fixed-ambient admission. Full FEI OPEN; author proof complete, independent reconstruction pending.
+
+## sources actually read, revisions and theorem locators
+
+EXECUTION_PROTOCOL.json revision 2026-10-11-execution-v2; current user campaign end Oct23 14:49 UTC overrides the historical end. BOARD snapshot11:24 UTC, B03 STREAM_NOTES, own STATUS/LEARNED and preceding derivation; A086 run20261023T053719Z REPORT/CLAIMS named v2/v3 reconstruction; A094 run20261023T110024Z REPORT/DERIVATION/CLAIMS new allowance. Exact paths/hashes captured in out/SOURCE_RECEIPTS.json. Existing source-complete campaign baseline retained; no new paper or literature theorem is claimed this stage. A094's coefficient step was reconstructed without repair, with the contributor-conflict caveat in out/DEPENDENCY_RECONSTRUCTION.json. Its supplied statement hash is preserved; own v4 hash is UTF8 exact_statement only.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION.md sections1-5 give the full all-dimensional argument: improved cost of the existing first floor, two-edit average cost, summable eta_j=1/[8j(j+1)], actual mass-retaining lifts, product<=24/23, scalar entropy comparison, signed terminal history identity, weighted geometric error S<=151Ig/8192 and erasure<=15Ig/4096. All actual Boolean signs and old bills are retained. No finite-to-infinite inference is made: an exact cubic tail identity proves the bound for every finite M. Section6 proves both sparse fresh-controller scope and a fixed-ambient obstruction: dictator to parity requires2^(N-1) point changes, and the same positive majorant grows >=(N/3)2^(2N-3), although parity entropy is0. This refutes that universal continuation only, not FEI. First unsupported universal line: a cancellation-aware whole-set supplier with cost paid by influence for arbitrary fixed-ambient targets. No such supplier is assumed or proved.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen specs and pre-execution runtime amendments are saved. Run python -X utf8 code/check.py pilot, then modes0..5 sequentially; grid; gold; code/bounds.py first and later; code/replay.py. No parallel checkers, no GPU, no automatic dimension increases. Estimated120MB/job; no >300MB job was scheduled. Main: 90 supplied source/model/point-policy sequences, 360 target prefixes, 5112 nonempty frontiers, 921 positive and 4191 negative signed resets, 2425605 exact assertions. Domain is the frozen fixture list, not all source orbits. Fractions, integer transforms/edges and rational logarithm bounds with proved remainder; no floating sign tests. Compressed frequency classes retain per-atom probability, multiplicity and Hamming-weight sums. Uncompressed replay imports no primary checker; only the pinned logarithm primitive is shared. Full finite results, completed timings and per-job counts are in out/VALIDATION_SUMMARY.json; finite gold data in out/GOLD.json. Validation checks definitions and constants; universal quantifiers follow from DERIVATION.md. Total completed validation assertions across jobs: 4279503 (overlapping fixtures counted per job).
+
+## proof dependencies and changed downstream conclusions
+
+Same candidate version4 extends version3; its b>=6 two-edit scope survives. Dependency graph goes backward to v3 and the original GENERAL_ENVELOPE one-use source/history identities, not from v3 to v4. A086's scoped reconstruction of v2/v3 is recorded in its source, and is not presented as review of v4. A094's larger old booking is retained fully; eligibility context is reconstructed, while v4 independently pays it at every prefix. Downstream conditional constructions may now use arbitrarily many fresh-control edits at a fixed initial padding and rate. None may use this as arbitrary Boolean supplier, controller-query theorem, universal FEI, or independent v4 acceptance.
+
+## one next mathematical action and independent reviewer
+
+Replace positive-sum fixed-ambient admission by a cancellation-aware signed Fourier edit representation; first test exact parity cancellation as a required invariant, then seek an influence-paid whole-set selector. Independent reviewers A086 and A094 should reconstruct v4 sections1-5 and the actual-model update before any downstream acceptance. This changes mechanism because fixed-ambient positive aggregate admission is rigorously false; increasing a finite edit count would not address the gap.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files plus DERIVATION, specs, code and exact outputs saved in this immutable run. CLAIMS exact fields and statement hash checked; progress field set checked; PACKET_DELTA byte-identical with packet_ids A011; rolling files updated. out/ARTIFACT_RECEIPTS.json records local byte sizes and hashes after finalization. Local persistence is distinct from remote mirror verification and downstream use; supervisor owns campaign copying and no remote receipt is claimed. Brain self-care remains degraded/unverified: owner model97.9h, state-of-mind82.5h, latest dream33.2h stale at wake; freshness of owner-specific recall remains affected. Mathematical claims rest on explicitly read sources and exact checks.
+
+Did: proved and checked the count-independent conditional construction and exact parity obstruction; saved protocol artifacts.
+Stopped: finite checks completed normally; no detached job or partial search claimed.
+Left running: nothing.
+
+Universal bridge: C020 whole-set witness cost advances from two actual edits to EVERY finite fresh-control edit sequence with one fixed b>=12 padding and one original K4C0+15 reserve, retaining the entire nonvanishing (C0+37/8)Ig prior booking and every old comb frontier. Universal admission remains open, and the identical positive-sum admission is now disproved on dictator-to-parity fixed-ambient edits. NEXT is a coherent signed Fourier cancellation or richer whole-set supplier, because this is the exact unpaid line preventing the conditional representation from proving full FEI, whereas another finite-count class extension cannot remove it. Checklist entry T-20261023-380 closed for this completed local stage; universal research remains open.

@@ -1,0 +1,15 @@
+{
+  "helper_version": "A071-row-audit-and-three-state-summary-v1",
+  "family": "F_g,k(x,z)=g(x)*(-1)^[wt(x,z)<=1], actual labelled Boolean seeds",
+  "domain": "pilot n=1,2;k=2; main n=1,2,3;k=2,3; every truth table g including constants, dummies, complements",
+  "case_count": {"pilot_functions":20,"main_functions":552,"main_proper_blocks":21348},
+  "symmetry": "No reduction. Coordinate permutations within fresh coordinates and output complement preserve row counts, but every labelled seed and block remains included. No general affine quotient or parity multiplication.",
+  "arithmetic": "Python integers and Fraction; direct character sums independently check integer FWHT; physical edges independently check spectral influence; analytic entropy continuity reviewed separately",
+  "memory_estimate_mb": 80,
+  "maximum_runtime_seconds_per_command": 55,
+  "maximum_dimension": 6,
+  "automatic_escalation": false,
+  "target": "Independent reconstruction of A080-COMPOSITION-PRIME-APPROXIMATION@1 plus exact three-state multioutput summary and its physical influence cancellation; not a full-FEI search",
+  "completeness": "All labelled seeds in the frozen domain and every proper physical block; no claim of exhausting all functions in dimensions4..6. All-dimensional result requires analytic proof.",
+  "stop_rule": "Fail on first false exact assertion or after55 seconds; preserve failure; do not increase dimension or precision automatically."
+}

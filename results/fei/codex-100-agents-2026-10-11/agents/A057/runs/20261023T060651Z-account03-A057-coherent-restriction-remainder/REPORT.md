@@ -1,0 +1,37 @@
+# A057 stage19: original exterior pair capacity
+
+## exact target, quantifiers, hypotheses and units
+
+Price EVERY finite adaptive exterior/internal continuation after the optional source X exposure, including a first exterior query after nonzero internal debit, from the SAME diminished source, variance, fine and ORIGINAL exterior accounts. Entropy is bits. Self-contained exterior hypothesis: fixed physical pair partition, every outside-fixed pair slice has sign product-1, and b(0)=b(e_i)=+1. Combined source6 additionally assumes m>=4 and c<=Eb<=1/4. Internal private-priority/controller/DATA inputs remain explicit. Full FEI is OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Current BOARD.md (06:06 UTC), B12 STREAM_NOTES v2, own stage18 STATUS/PROOF and protocol2026-10-11-execution-v2. A059 run20261023T034026Z PROOF Sections1-4 supplies NEW singleton-density/variance mechanism. A060 run20261023T042148Z Sections1-6 and A091 run20261023T053740Z Sections1-5 reconstruct its LOCAL transfer/variance/source budget and refute source6-only exterior funding. Their scoped review does not certify the older internal assembly chain. Exact source hashes: out/SOURCES.json. Older campaign/paper background was read in prior stages; this stage makes no new literature claim. Direct brain recall returned low-separation old FEI warnings, not a new mathematical dependency; stale owner/state notes were not used.
+
+## complete derivation or exact first unsupported line
+
+PAIR_PROOF.md is the main complete derivation. Allocate exterior4I_ext at the ORIGINAL ancestor. An untouched hereditary pair has actual total influence>=1, so its incoming capacity>=4. Its first query costs<=2 and allocates2 in EACH full child for the remaining physical partner. Its second costs<=2 and closes that same pair. Other untouched influences are harmonic; open2 accounts are constant through all other queries. At an exterior point-mask split t becomes2t or0; exact changes are drop U=drop Q=0, drop R=t*Vbar and drop S=t*Var(g), where S=phi(t)Var(g). This is the CURRENT diminished logarithmic reserve, not a renewed root allowance. All local edges telescope with all full H-P terminals. Source6 and internal21/5 retain their old scopes and old debits.
+
+MATCHED_QUADRATIC.md proves arbitrary extra quadratic edges preserve the matched-pair floor. STRUCTURAL_LEMMA.md proves the actual physical slice criterion and arbitrary-degree family (-1)^(sum x_j*y_j+P(x)), P(0)=P(e_j)=0, with EXACT mean2^-k, so source6 is still valid. No flat-spectrum assumption is needed for the exterior lemma. The finite graph checks do NOT claim source6 for graphs of unsuitable bias.
+
+Canonical4 times current remaining influence is FALSE at the isolated partner: actual g=-1 gives D/d>=m-4 after a zero outcome, and all five tested m4..12 have strict positive deficits. The new account pays from capacity reserved at the first bit. This diagnoses a LOCAL shortcut; it does not refute full original accounts or FEI. The first unsupported universal line is funding an analogous first-query block conversion when no hereditary pair influence floor is available, together with the arbitrary root core/representation price. The mixed stopping statement is conditional on the named older internal local inputs, rather than independently certified here.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen SPEC/PAIR_SPEC/GRAPH_SPEC/REPRO_SPEC/STRUCTURAL_SPEC precede their jobs. Commands are python -X utf8 code/check_pair.py, code/check_graph.py, code/independent_repro.py --full, code/check_structural.py from this run (pilot flags saved separately). Integer Walsh and Fraction prime-log expressions use36-term rigorous atanh bounds; the separate reproduction uses DIRECT character sums, separate factorization and48-term enclosures. Nonpilot checks total **146685 exact assertions PASS**.
+
+Pair main:5832 states,72 source cylinders,3888 internal and7776 exterior edges,338 positive internal-debit edges. Graph main:16 actual matched quadratic graphs,20736 states,27648 exterior edges. Separate direct reproduction includes972 exposed states and a complete mixed physical tree A,X,z0,y,z1,z2,z3 with positive old internal debits, keeping X=0 siblings. Structural check exhausts16 six-bit phases,768 physical pair slices and1024 direct Fourier amplitudes. These finite domains are evidence; the all-dimensional/all-policy quantifiers follow from the written local-edge proof. Detailed counts and measured compute runtimes are in out/RESULTS.json. Pilots are excluded from the reported total. No Lean certificate or independent external acceptance is claimed. The obsolete canonical guard failure and quoting correction are recorded in out/EXECUTION_NOTES.json.
+
+## proof dependencies and changed downstream conclusions
+
+Use A059-SINGLETON-DENSITY-VARIANCE-TRANSFER@1 for CURRENT singleton/variance accounting, replacing the larger stage18 influence-surrogate bill. Stage18's source-only surrogate obstruction remains correct; the new sufficient tax is smaller, as A059/A060/A091 explicitly explain. Self-contained new pair conversion requires only Boolean D<=2 and harmonic physical influence. Internal erasure baseline and signed-DATA payment remain explicit local imports, so older assembly review is not silently upgraded. This completes the previously unpaid EXTERIOR continuation at fixed original rate4 in the stated geometry, including interactions and partners. It neither pays arbitrary inherited core entropy nor proves FEI.
+
+## one next mathematical action and independent reviewer
+
+A091/A087 should reconstruct the same-owner pair transaction, changed current fine/variance profiles and the mixed positive-debit tree; A060 can challenge the isolated-partner ownership distinction. Then replace the hereditary pair floor by an influence-paid block admission for a genuine gate outside this slice criterion, preserving original unused funds, old bookings and BOTH full terminal bills. Repeating additional matched-pair examples is not the next mathematical action.
+
+## actual persistence receipts or precise save blocker
+
+Required JSON schemas, statement hash, identical PACKET_DELTA and all local artifact hashes are checked by code/finalize.py; out/PERSISTENCE.json records the readback. Rolling STATUS is exactly two lines; WORKLOG and LEARNED updated. Every file is under20MB; no big artifact or search beyond the frozen dimensions. Source trees remain read-only. No git or external messages used; supervisor mirroring/adoption is NOT_VERIFIED. Checklist closure receipt is saved separately when available. Brain self-care remains degraded/unverified because owner-model92.1h and state-of-mind76.7h notes were stale at wake; those notes were not task authority.
+
+Universal bridge: C019 moves from internal-only stopping to ALL mixed exterior/internal continuations after source exposure under a physical hereditary-pair criterion, funded by ORIGINAL exterior4I plus unchanged source6/internal21/5 and SAME diminished fine/variance reserves. The exact t log(1/t) term survives every profile change; both full terminals and every old debit remain. What remains is arbitrary initial core/representation pricing, older internal dependency-chain review and a block admission beyond the pair influence floor. That admission is the shortest next route to full FEI because more examples within the proved hereditary-pair criterion would not address the missing universal payment.

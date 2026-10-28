@@ -1,0 +1,51 @@
+{
+  "helper_version": "rank_pair_v2-packed-branch-order",
+  "family": "every Boolean n0..3 for rank identity; f_k=1-A_k+A_k*(-1)^(ab+ac+bc+za), original queried pair(a,b), k>=2",
+  "domain": {
+    "rank_n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "direct_k": [
+      2,
+      3,
+      4
+    ],
+    "entropy_formula_k": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20
+    ]
+  },
+  "case_count": "278 small tables,3 actual activated roots/12 pair children,19 analytic profiles",
+  "symmetry": "none",
+  "arithmetic": "integer Walsh, Fraction parity costs and exact rational log intervals; finite entropy multisets",
+  "memory_estimate_mb": 90,
+  "max_runtime_seconds": 55,
+  "targets": [
+    "rank-integral affine release exact; every independent basis through n3",
+    "explicit original pair rho=p/4; all four child entropies and signed banks",
+    "paid K15/4 margin>=5p/128",
+    "negative-terminal guard at k>=16"
+  ],
+  "pilot": "rank n<=2 and direct k2, under55s",
+  "no_automatic_dimension_increase": true
+}

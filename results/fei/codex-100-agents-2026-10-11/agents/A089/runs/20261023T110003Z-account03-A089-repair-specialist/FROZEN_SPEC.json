@@ -1,0 +1,12 @@
+{
+  "helper_version": "A089 marked-point admission recurrence v1, own192-bit outward log primitive",
+  "family": "F_(r,t)=parity of r bits with sign flipped at allzero, K=1; r<=3, t<=6; formula-only recursion, no full large truth arrays",
+  "domain": "fixed d=0..6; all states r<=3,t<=d, and admitted counts p<=r,q<=t; initial(3,d,0,0)",
+  "case_count": "7 root cases, bounded at most 10*sum_(t=0)^6(t+1)=280 augmented count states, with repeated caches",
+  "symmetry": "literal permutations among parity bits and among selector bits; source actual Boolean point-flip family; every query tracked by remaining/admitted type counts",
+  "arithmetic": "Fraction/int intervals at192 bits; no float sign; no equality by interval overlap",
+  "memory_estimate_MB": 50,
+  "max_runtime_seconds": 55,
+  "pilot": "d0..2 first; then frozen full d0..6 only if useful",
+  "goal": "Determine sharp robust capital beyond source lower bound1/2; seek analytic all-d induction, or find first strict excess. Finite formulas alone not all-d proof."
+}

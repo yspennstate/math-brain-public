@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A021-ADJACENT-MUX-OWNER-VACUUM-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Let V(f)=sum_{S nonempty} fhat(S)^2 log2(sum_{T containing S} fhat(T)^2/fhat(S)^2), and GV(f) its sum of parent-minus-mean-child increments over physical coordinates. Let b(x)=g(x0,x1,x2)g(x3,x4,x5), with g=-1 only at000, delta=1/64, a_n balanced majority on n=2m+1 controls, m>=1, and F_n=b*a_n at data points0,e0, b elsewhere. For h_n(y,z)=(-1)^y a_n(z), GV(F_n)-2delta GV(h_n)>=delta log2(m+1)-37, whereas I_DATA(F_n)<=6. Therefore no finite constant K>=0 makes GV(F_n)<=2delta GV(h_n)+K I_DATA(F_n) hold for all m. The root marked-singleton term J_y(h_n) is zero, so a fixed root J credit cannot fix this. In contrast -37<=GV(F_n)-2delta GV(a_n)<=49 and I_DATA(F_n)>=21/16; the original-controller transfer holds with K=256 for this same family. An explicit failure of the unmarked-selector K=256 transfer is m=2^100736. These statements concern a proposed potential-transfer inequality, not unbounded Fourier H/I. Moreover, for the SAME fixed seed and pair of adjacent edits, EVERY balanced Boolean controller a on ANY finite number of uniform control bits obeys GV(F)-2delta GV(a)<70 and I_DATA(F)>=21/16, hence GV(F)<=2delta GV(a)+256 I_DATA(F). The two edits use the SAME controller; two different dependent controllers are not covered.",
+    "hypotheses": [
+      "Independent uniform DATA/control cubes; Boolean majority n=2m+1, m>=1.",
+      "All logarithms base2; zero spectral terms omitted; DATA influence counts all six physical DATA bits.",
+      "The tested combined-selector extension is UNPROVED, not a theorem asserted by A022@9."
+    ],
+    "statement_sha256": "41e92fe34e066557262de6ec1d0a02ed3db90d9da49d387fcd1cb593010fd7a1",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "dc7643319d7d88ddaba92b57ad29d488a411d2ab9b769fd5adb2919e6a2b968a",
+      "sections": "1--5; analytic all-m induction and uniform curvature estimate",
+      "additional_proof": {
+        "path": "BALANCED_COROLLARY.md",
+        "sha256": "142f3dddb57e398bd90fd5cbecb3dd3475c7324d13e2f44101ac3314da944214",
+        "scope": "All balanced shared Boolean controllers; Parseval light/heavy singleton split."
+      }
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 9,
+        "statement_sha256": "873c5aeda6a49b7224df3a50364eb592977fea0fe916b4abb4f97c9353bdb450",
+        "use": "GU_PROOF.md Section7 adjacent-selector interface and notation; independently rederived for the same-controller family; no general adjacent bound assumed.",
+        "acceptance": "Source author proof; external acceptance not assumed."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A021 author, alternative implementation",
+        "scope": "FWHT n3,5,7 all physical queries:37 assertions; direct characters n3 plus scalar m1..256:790 assertions.",
+        "result": "PASS; computational reconstruction is separate, but not independent external human/agent review."
+      },
+      {
+        "reviewer": "A021 author",
+        "scope": "Analytic all-dimensional corollary plus ALL70 balanced3-bit truth tables,560 assertions, no symmetry reduction.",
+        "result": "PASS; external mathematical review pending."
+      }
+    ],
+    "status": "AUTHOR_PROVED_SCOPED_OBSTRUCTION_AND_REPAIR_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Unasserted extension (N) in PROOF.md: GV(F)<=2delta GV(h)+K I_DATA for all adjacent shared-controller edits and one fixed K.",
+        "scope": "No proved A022@9 assertion is refuted; no FEI counterexample claimed."
+      }
+    ],
+    "first_unproved_line": "For two arbitrary dependent controllers, pay the complete signed marked singleton/sector cocycle after both physical outcomes from one compatible original owner at a stable rate. Universal original-owner eligibility and the universal GV criterion remain unproved.",
+    "next_consumers": [
+      "A022",
+      "A025",
+      "A028",
+      "A029",
+      "A087",
+      "A094",
+      "B05",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+{
+  "helper_version": "A058-first-private-common-phase-v1",
+  "family": "F=mux(1+a(X)(u(S)-1),1+b(Y)(u(S)-1)); a,b equal-width point indicators on disjoint private blocks; arbitrary Boolean u",
+  "domain": [
+    {
+      "shared": 0,
+      "widths": [
+        1,
+        2,
+        3
+      ],
+      "cases": 6
+    },
+    {
+      "shared": 1,
+      "widths": [
+        1,
+        2,
+        3
+      ],
+      "cases": 12
+    },
+    {
+      "shared": 2,
+      "widths": [
+        1,
+        2,
+        3
+      ],
+      "cases": 48
+    },
+    {
+      "shared": 3,
+      "widths": [
+        1,
+        2
+      ],
+      "cases": 512
+    }
+  ],
+  "case_count": 578,
+  "symmetry": "none over phase truth tables; fixed all-positive activation point defining family",
+  "arithmetic": "integer Walsh, formal prime-log exact identities, 1/1024 outward log bounds certified by bitlength of prime^1024",
+  "memory_estimate": "under 30 MB",
+  "max_runtime_seconds": 60,
+  "checks": [
+    "first private query signed R transport <=12 Inf",
+    "common-nonzero-mode formula",
+    "two full child entropy terms retained",
+    "constant and rare phase boundaries"
+  ]
+}

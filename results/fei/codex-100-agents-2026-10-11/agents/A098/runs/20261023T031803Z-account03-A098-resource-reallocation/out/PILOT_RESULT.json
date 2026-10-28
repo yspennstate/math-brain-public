@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "assertions": 7093,
+  "runtime_seconds": 0.1404818000155501,
+  "stats": {
+    "structural": {
+      "Boolean_tables": 16,
+      "source_roots": 48,
+      "physical_transitions": 576
+    },
+    "global": {
+      "Boolean_fixtures": 16,
+      "policies": 192,
+      "positive_first_resets": 0,
+      "later_nonidentity_calibrations": 0,
+      "old_nonconstant_terminals": 24
+    },
+    "changed_profile_guard": {
+      "actual": "parity3 queried once gives nonconstant parity2 in BOTH children",
+      "old_occupied_atom": "1/2",
+      "returned_occupied_atom": "1/3",
+      "reset_bill": "log2(3)-1 > 1/2 bit",
+      "bound_scope": "not an FEI counterexample; free-return theorem excludes this nonempty-profile modification"
+    }
+  },
+  "helper_sha256": "92ddd20cf4cbf0bedcffc2950fae3b96c16084ce7ea4282f4fff6fa690a42fd5",
+  "Lean": "separate admission and compiler receipt required",
+  "full_FEI": "OPEN"
+}

@@ -1,0 +1,98 @@
+{
+  "claims": [
+    {
+      "claim_id": "A075-ARBITRARY-CORE-BOOLEAN-PRIME-PERTURBATION",
+      "version": 1,
+      "exact_statement": "For every finite Boolean f:{0,1}^n->{-1,+1} and every integer m>=3, G_m(x,z)=f(x)*b_(n+m)(x,z), with b_N=-1 exactly on the radius-one Hamming ball, has at least three residual rows for every coordinate block B with 2<=|B|<=n+m-1. Thus G_m admits no proper nonsingleton single-Boolean-output block compression. With f fixed and m->infinity, H(G_m)->H(f) and I(G_m)->I(f); ratios converge when f is nonconstant. For every fixed finite C>=0, FEI(C) for all such block-prime functions is equivalent to full FEI(C), without changing C.",
+      "hypotheses": [
+        "Uniform finite physical cube; squared normalized real Walsh coefficients; entropy in bits.",
+        "m>=3; original f arbitrary, including constants and dummies.",
+        "Block compression uses one Boolean output per disjoint coordinate block; all outside inputs retained.",
+        "Ratio statement only when I(f)>0; C fixed across all dimensions."
+      ],
+      "statement_sha256": "cbda0351b60fb674a2b392874e121a51ed8614a90cad9722fcc9da94dc09b2b7",
+      "contributors": [
+        "A075"
+      ],
+      "proof_source": "PROOF.md sections1-5; code/verify.py; code/audit.py",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "ANALYTIC_PROOF_EXACT_FINITE_VALIDATION_EXTERNAL_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": "Full FEI still requires a dimension-independent entropy/influence payment on arbitrary block-prime functions; the reduction supplies none.",
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A080",
+        "A084",
+        "A089",
+        "A092",
+        "B15",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A071-PRIME-BALL-PROPER-PARTITION-OBSTRUCTION",
+      "version": 1,
+      "exact_statement": "For every n>=3 let b_n(x)=-1 exactly on the Hamming ball of radius one on the uniform n-bit cube. Every proper coordinate block B with2<=|B|<=n-1 has EXACTLY three distinct residual truth-table rows, so it admits no Boolean one-output summary, even with all outside bits raw. Consequently every disjoint proper Boolean-core decomposition of b_n has only singleton cores. For every real K>=0 and kappa>=0, each such decomposition has zero weighted inner entropy/hull savings and bank C+kappa I+sum q rho_K=H(b_n)+kappa I(b_n). The exact spectrum is bhat(empty)=1-2(n+1)/2^n and bhat(S)=-2(n+1-2|S|)/2^n for nonempty S; I=2n(n-1)/2^n and H/I tends to4. Hence the optimized proper-partition bank price tends to4+kappa; at rational kappa3 it tends to7. Exact certificates additionally give H(b_16)>3I and H(b_32)>(7/2)I. This obstructs a universal positive initial entropy discount from proper disjoint Boolean decompositions, not FEI: H/I has finite limit4 and the universal initial price remains unpaid. In addition H(b_n)<5I(b_n) for all n>=3, so this bank is below(5+kappa)I on the entire family; zero discount does not mean the family itself is unpaid.",
+      "hypotheses": [
+        "Uniform physical bits and complete squared Fourier Shannon entropy in bits; n>=3.",
+        "A proper partition covers all physical variables by disjoint nonempty coordinate blocks, none equal to the whole domain; each core has one Boolean output and the outer Boolean gate is arbitrary.",
+        "K>=0 and rho_K is the full physical stopping hull of(H-KI)_+ at that same K; constants/dummies retain their full branches.",
+        "No overlapping supports, multiple-output summaries, arbitrary linear changes of physical variables, decomposition transfers, or universal initial payment are inferred.",
+        "No FEI disproof or universal bank upper bound is claimed; fixed-family finite audits validate the separately proved all-dimensional formulas."
+      ],
+      "statement_sha256": "98a8713930e370bd1d3cc0ad1f9d8d98d6d30d2bcc1395c1dd696c7728e1d887",
+      "contributors": [
+        "A071"
+      ],
+      "proof_source": [
+        "PROOF.md",
+        "code/ball.py",
+        "code/audit.py",
+        "out/PILOT.json",
+        "out/BINOMIAL.json",
+        "out/AUDIT.json"
+      ],
+      "proof_dependencies": [
+        "Complete two-row block compression criterion, proved in PROOF1",
+        "Character orthogonality and physical boundary edges, derived in PROOF2",
+        "Elementary entropy bounds and squeeze limit, derived in PROOF3",
+        "Singleton entropy and finite stopping hull definitions, PROOF4"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A071",
+          "independent_reviewer": false,
+          "verdict": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_CERTIFICATES_PASS",
+          "scope": "All-dimensional structural and spectral proof; direct finite pilot and separately implemented character/composition audit. External peer review pending."
+        },
+        {
+          "reviewer": "A075",
+          "date": "2026-10-27T02:22:50.926912+00:00",
+          "verdict": "ACCEPT_UNCHANGED",
+          "independence": "Own direct physical matrix groups and character sums, plus complete analytic reconstruction",
+          "source_statement_sha256": "98a8713930e370bd1d3cc0ad1f9d8d98d6d30d2bcc1395c1dd696c7728e1d887",
+          "source_claims_sha256": "f8fb3b7f1775b5f4b588ca88c96ba50da1f14ea57fce9838f6c71441bf362a66",
+          "source_proof_sha256": "b54fe74563ff644e34d01384b95ae8a0b6f2db772514bdcb7df0a454b4170aa5",
+          "scope": "All n>=3, all proper disjoint Boolean partitions, every K>=0; zero discount; H/I limit4; explicit H<5I; not FEI resolution",
+          "artifact": "REVIEW.md"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_LOCAL_A075",
+      "supersedes": [],
+      "refutes": [
+        "Proposed strategy-level positive initialization-discount lemma for proper disjoint Boolean partitions; no cited agent is alleged to have claimed this as proved."
+      ],
+      "first_unproved_line": "Fund an initial bank for arbitrary Boolean functions from the same actual unused influence owners; proper disjoint Boolean partitions need not give any entropy discount.",
+      "next_consumers": [
+        "A071",
+        "A080",
+        "A092",
+        "B20"
+      ]
+    }
+  ]
+}

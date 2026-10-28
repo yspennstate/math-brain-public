@@ -1,0 +1,69 @@
+[
+  {
+    "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+    "version": 6,
+    "exact_statement": "For finite uniform Boolean c(S), H(S,V), disjoint physical S,V and fresh selector z, suppose the affine F2 dimension of supp(Fourier(c)) is at most three. Put q(s)=Pr_V[H(s,V)!=c(s)],d=E q,d*=min(d,1-d),F=mux_z(c,H). For arbitrary row events, with no independence across rows, exactly B_z=2d+sum_{a_T!=0}[Phi((a_T-b_T)^2,b_T^2)-2b_T^2], a=Fourier(c),b=Fourier(cq). For 0<d<1, B_z<4d*; at d=0 or1, B_z=0. Consequently Delta_z=H(F)-(H(c)+H(H))/2<=K d*, K=4+2/ln2<7, whereas original physical I(F)=(I(c)+I(H))/2+d. Exact parity quotient reduces arbitrary physical shared dimension to at most three parity coordinates. The entire eight-dimensional row-probability cube on three bits is proved by analytic sparse-support bounds and a complete exact signed-row continuum certificate. Supplied normalized finite-cost child references, calibrated on all shared-only singleton atoms while retaining complete joint private conditional reference and off-target mass, give normalized parent Q with D_F=D_Hcal/2 and CE_F=(CE_c+CE_Hcal)/2+Delta_z. Adding exact-spectrum affine-Fourier-dimension-at-most-three leaves and these pure-child nodes to the v5 certificate grammar, with BOTH actual children structurally certified, preserves CE<=KI, physical restrictions, disjoint products, fresh balancing and point activation, and membership reflection from rare activated balanced tensors to their original seed. This is noncircular: no opaque arbitrary child admission, and the five-bit at-least-two sign remains a grammar nonmember by affine-rank/cofactor/minor witnesses. Both-private collision payment, rank-four surplus accounting, universal representation and full FEI remain open.",
+    "hypotheses": [
+      "finite uniform Boolean signs; all entropy, CE and KL in bits; ideal probability costs",
+      "one pure child with affine Fourier support dimension<=3, arbitrary physical shared dimension; independent private coordinate cube; fresh physical selector",
+      "arbitrary possibly correlated row events, including all eight independently varying probabilities in the three-parity quotient",
+      "normalized finite-cost references positive on actual support; private conditional reference and off-target mass retained",
+      "BOTH actual children structurally certified for grammar admission; exact-spectrum affine-rank3 leaves certified directly, no opaque arbitrary leaves"
+    ],
+    "statement_sha256": "356e33c3f56f12f235e79b4e2222604d265ff58689b17b3b4c494359efb7d6af",
+    "contributors": [
+      "A012/account03; earlier A012/account05 structural grammar; A013 binary-squaring logarithm verifier technique credited"
+    ],
+    "proof_source": {
+      "derivation": "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\DERIVATION.md",
+      "classification": "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\CLASSIFICATION.json",
+      "continuum": [
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\CONTINUUM_0.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\CONTINUUM_1.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\CONTINUUM_2.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\CONTINUUM_3.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\CONTINUUM_4.json"
+      ],
+      "separate_replay": [
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\VERIFY_0.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\VERIFY_1.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\VERIFY_2.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\VERIFY_3.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\VERIFY_4.json"
+      ],
+      "Boolean_reference_parity_fixtures": [
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\FIXTURES_base.json",
+        "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\FIXTURES_lift.json"
+      ],
+      "aggregate": "agents\\A012\\runs\\20261023T010946Z-account03-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+        "version": 5,
+        "scope": "inherited structural grammar and full reference transport; new payment and affine-rank leaves reconstructed here; A013 independently reviewed only v5 three-row increment"
+      },
+      {
+        "claim_id": "C005",
+        "version": "campaign baseline",
+        "scope": "scalar JS_z<=2min(d,1-d)/ln2 after exact B_z payment"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_AGENT_REVIEW; LEAN_UNVERIFIED",
+    "supersedes": [
+      "A012-DISJOINT-PRIVATE-MUX-ADMISSION@5 as current syntax; earlier restricted statements remain valid"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A011",
+      "A058",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  }
+]

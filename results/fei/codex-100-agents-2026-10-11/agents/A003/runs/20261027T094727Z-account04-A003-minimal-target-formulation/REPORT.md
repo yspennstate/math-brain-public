@@ -1,0 +1,33 @@
+# A003 stage22: remove tensor overhead and tighten the witness constant
+
+## exact target, quantifiers, hypotheses and units
+
+Compare fixed whole-set witnesses, good-coordinate erasure and exact signed Booleanity with all constants explicit. The conditional witness implication improves from H<=(2+Kref+K)I to H<=(Kref+K)I, where Kref=3+2log2(3)+log2(6e). This change removes a bounded binary-entropy overhead on tensor powers; it does not prove the unpaid witness residual inequality. All information is in bits. The full FEI conjecture remains OPEN. Exact new statement and quantifiers are in CLAIMS.json; TARGETS.md is the compact diagram.
+
+## sources actually read, revisions and theorem locators
+
+Execution protocol2026-10-11-execution-v2 read completely; current BOARD timestamp2026-10-27 09:54UTC and B01 STREAM_NOTES v1; A003 STATUS/LEARNED and stage20/21 derivation and implication baseline; A001/A002/A004 current statuses. Campaign README/status/claim/obstruction/packet/action registries and plan, supplemental campaign/claims/counterexamples/seed/mapping, sources inventory, and the four requested paper text versions were loaded with selected relevant locators. out/SOURCES.json pins actual bytes and out/INTAKE.md gives the selections. This is not a fresh full audit of every paper. No external-paper theorem is a new proof premise. The fixed witness identity is copied verbatim in IMPLICATIONS_BASELINE.md, subsection beginning “For the conditioned posterior-forest route”. B01 supplies the inherited erasure and weak-coordinate implications; full signed Booleanity is C007. Brain recall supplied normalization/Booleanity warnings only, not proof authority.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION.md gives the all-dimensional author proof. F_m has product squared spectrum, H_m=mH and I_m=mI; each local B_i,L_i,Inf_i repeats. Total o(m) defects disappear by division, but local defects must tend to zero. High-average eligibility and the low-influence cutoff are preserved. The ORIGINAL witness identity gives H(F_m)<=h2(v_m)+Kref mI+R*(F_m). Since h2(v_m)<=1, R*<=K mI+o(m) implies H<= (Kref+K)I. This saves exactly2 against the old one-function estimate h2(v)<=2I. The complete-reference alternative follows from CE>=H. Fixed imperfect product references retain mD(p||Q), so their unpaid mismatch survives. A rational non-Boolean family satisfies normalization but violates a nonzero-shift convolution equation and has H/I unbounded, checking the necessity of exact Booleanity.
+
+The FIRST unsupported line is a noncircular construction of the admitted whole-set tensor witnesses or complete references at a fixed absolute linear price with sublinear overhead, for EVERY Boolean seed. No finite census, local reset, chosen exact-match reference or padding admission supplies that line. The tightened constant is a conditional interface consequence, not an independent solution of C020.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Both specifications were saved before their bounded loops. Main: all278 Boolean tables n0..3, m2,3, no symmetry, integer character sums and exact Fraction identities: 405972 predicates on556 tensor cases PASS in 20.033s. It checks normalized spectra, all signed autocorrelations, exact marginals, homogeneous fibre kernels, influence and eligible-coordinate replication. Audit: independently evaluate physical products for every n<=2 table; direct Walsh transform; represent H,B,L and relative entropy as exact rational coefficients of prime logarithms. 544 predicates on44 physical products and32 rational non-Boolean controls PASS in 0.247s. Exact symbolic equality proves the finite identities; no floating sign is a certificate. These are two implementations by A003, not independent-agent acceptance. Each job stayed below the55s pilot cap and estimated40MB; no >300MB admission or heavy job was used. Commands: python -X utf8 <run>/code/stage22.py and audit22.py. The Lean helper rejected compute admission (hung-window/free-memory gate), so no compiler started; formal status is UNVERIFIED and no retry was made. Rung: author proof with exact finite algebra validation, independent review pending.
+
+## proof dependencies and changed downstream conclusions
+
+One scoped candidate is created. Baseline tensor and Booleanity identities are not claimed as new. The witness implication's sufficient constant drops by2 because bounded binary entropy is amortized rather than charged to each seed influence. The coordinate and signed constants stay unchanged. Universal source payment remains open; normalized references must retain the vacuum, support, old debits, BOTH terminal liabilities and all query KL in any claimed source bill. A001's current query-KL warning is retained. Prior accepted A003 stage19/20 claims are untouched.
+
+## one next mathematical action and independent reviewer
+
+Have A004 or A086 independently reconstruct the sharper witness implication from the exact baseline identity, with A094 checking quantifiers and full-source scope. Then seek original admitted witnesses for every tensor seed with R*<=4mI+A_f log2(1+m). The error coefficient may depend on the fixed seed but the price4 may not. This is a local saved handoff, not a sent message.
+
+## actual persistence receipts or precise save blocker
+
+All four protocol files, derivation, target diagram, copied baseline, code/specifications, exact outputs and source hashes are inside this run. Rolling files are updated. Final readback checks schema fields, claim statement hash, delta byte identity, required artifacts and sizes below20MB; out/VALIDATION.json and out/ARTIFACTS.json are the receipts. No git, messages, brain writes, external mutation, deletion or other-agent edits. The wake reports stale personal-context notes; those were not used as mathematical premises. The resource snapshot's6.6GB free disk supersedes the older hook's2.0GB only as a later measurement, not as a cleanup claim. Shared work was not stopped. Supervisor collection and remote mirrors remain unverified.
+
+**Universal bridge:** C020 gains a sharper exact implication: the fixed residual target costs Kref+K instead of Kref+K+2, and may carry any o(m) total overhead on m product copies. C018 and the signed route gain matching defect scales, preserving eligible-coordinate and weak-influence quantifiers. No universal payment inequality is closed. What remains is the ORIGINAL arbitrary-core witness/source construction. NEXT allows logarithmic bookkeeping that the prior dimension-free additive target unnecessarily forbade, while keeping the full original linear bill; it addresses the universal supplier directly rather than another isolated class or optional reset.

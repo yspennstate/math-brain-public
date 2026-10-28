@@ -1,0 +1,3 @@
+COMPLETE_LOCAL 2026-10-23T06:16:37.772869+00:00
+Universal per-set polarity connectivity gives one-root forests in a fixed mixture, label v<=I. Both global-prime orientations locally refuted on product family. 128578 nonpilot assertions PASS; new review pending; full FEI OPEN.
+NEXT: Price the COMPLETE original fixed two-polarity mixture using the universal per-set one-root construction: retain each summand D, once-only polarity label, root names/rarities, child labels, attachment multiset/count and subset/rank costs. Start with the joint X/Y spectral sector of the both-global-polarity product family; prove payment or an exact rank obstruction without borrowing H. A008/A009/A015/A086/A094 review both universal structural proofs and all-reference obstructions first.

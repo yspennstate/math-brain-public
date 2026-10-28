@@ -1,0 +1,11 @@
+# Scoped source review
+
+A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT@4, DERIVATION1,7-8: scoped HOLDS for the supplied canonical interface, scalar relative-odds bound, eta supermartingale, and original-prefix integration. This is an A026 reconstruction, not blanket acceptance of all older clauses. The copied prior/exact helper belongs to A026@5; new code reconstructs source/controller normalizers and canonical rows rather than importing A029's checker.
+
+The scalar identity is D(k||lambda k/(1+(lambda-1)k))=log2(1+(lambda-1)k)-k log2(lambda). Ln(1+x)<=x gives the upper bound k[lambda-1-ln(lambda)]/ln2. The bracket is convex in lambda, so its maximum on[1/2,2] occurs at an endpoint. At2 it is<ln2/2 by ln2>2/3, and at1/2 it is<ln2/2 by ln2<1. This gives the claimed k/2, including endpoint zero cases directly. Eta's DATA release is0 and CONTROL release is gamma ahat_j^2. Actual controller influence is gamma I(a)>=eta. No source independence beyond controller/DATA separation is used.
+
+T=W+gamma Da supermartingality follows from actual source KL contraction at DATA and controller KL contraction at CONTROL, with gamma/p harmonic in their opposite blocks. The exact canonical KL disintegration and original uniform-source old4I/old1/8 prefix are recomputed in current main checker. New J/8 is an additional real original influence allowance, not A029's already spent childZ or a claim it was free in its prior121/128 margin. New same-rate floor55/64 pays the larger target class.
+
+A028@9 REPORT's posterior-channel core: only the implication alpha=rho => rho K=alpha K is used for the outside-image guard. It is algebraic and exact. No general feasible-channel characterization or universal supplier assertion is imported. The new source pair G=z,H=z*b_n uses EXACT source/controller spectra, so every reference posterior equals the actual one while the prescribed nonempty DATA-row target is different. This proves exclusion from that admissible image without relying on a numerical channel search.
+
+A026@5 structural completion remains a separate retained result. This stage uses default fair completions and own source/controller channels throughout, as declared. New@6 still needs independent external review. Its declared nonempty-row floor class is not proved necessary or sufficient for full FEI.

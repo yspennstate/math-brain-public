@@ -1,0 +1,14 @@
+{
+  "helper_version": "A076-stage7-arbitrary-point-carrier-v1, inherited rational logarithm helper from stage6",
+  "family": "F(s,x)=h(s)[1+1{s=0}(V(x)-1)], h(0)=1",
+  "domain": "All carriers d=0..3 with h(0)=1 and all V on n=0..2 private bits; Maj5 with every V on n=0..3; one prescribed x1,x2,s1,x3 history",
+  "case_count": "139*22=3058 small roots plus 278 Maj5 roots; every private coordinate in each root; one mixed history",
+  "symmetry": "Only h(0)=1 normalization, no quotient enumeration; no untested cases included in finite conclusion",
+  "arithmetic": "Integer Walsh transform, Fraction arithmetic, prime-exponent exact log identities, rational atanh log enclosures with proved remainder",
+  "memory_estimate_mb": 180,
+  "pilot_max_seconds": 60,
+  "maximum_runtime_seconds": 180,
+  "pilot_domain": "d<=2 and n<=1; Maj5 n<=1; mixed history",
+  "no_automatic_dimension_escalation": true,
+  "failure_checks": ["constant carriers and inputs", "zero Fourier rows", "mu=0 and +/-1", "zero-influence private queries", "signs of formerly pivotal carrier edges", "both terminal spectra and original bank conservation", "independent direct Walsh sums"]
+}

@@ -1,0 +1,56 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261023T063549Z-account03-A038-occupancy-term-audit",
+  "stream": "B08",
+  "packet_id": "A038",
+  "gap_id": "G-A038-OWNED-SELECTOR-RESET-TRANSFER",
+  "attempt_id": "A038-owned-selector-transfer-6-preserve-old-L-postreset",
+  "method": "Refine existing candidate using new lower entropy/stopping potential; bound actual old whole L rather than only KL A; retain first-reset bill through common-channel decomposition and separately pay post-leg U plus second canonical reset.",
+  "mathematical_delta": "For all m>=3 and all stated frontiers, actual booked L0<155/128. ANY further post-reset data stopping transaction is paid with >7/32 after original L0,B0,omega and new U. A following second canonical reset is additionally paid with >1/128. No earlier debit or full terminal bill is retired; full FEI remains OPEN.",
+  "deliverable_status": "COMPLETE_LOCAL_PROOF_EXACT_CERTIFICATES_AND_READBACK",
+  "mathematical_status": "SCOPED_ALL_WIDTH_POSTRESET_HISTORIES_AND_SECOND_RESET_PAID_UNIVERSAL_FEI_OPEN",
+  "claim_versions_used": [
+    "A038-BALANCED-CANONICAL-ADMISSION@2: e2c1b78432c7ba36ce74671ca284aadebf6f1749a32c19422558bd18dfbd0623",
+    "Pinned account02/B15 canonical occupancy definition"
+  ],
+  "claims_created_or_changed": [
+    "A038-BALANCED-CANONICAL-ADMISSION@3"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "PROOF.md",
+    "CLAIMS.json",
+    "FROZEN_SPEC.json",
+    "SECOND_COROLLARY_SPEC.json",
+    "code/postreset.py",
+    "code/independent.py",
+    "code/scalar_second.py",
+    "code/payment.lean",
+    "out/CHECK.json",
+    "out/SECOND.json",
+    "out/INDEPENDENT.json",
+    "out/LEAN_ADMISSION.txt"
+  ],
+  "next_consumers": [
+    "A039",
+    "A047",
+    "A048",
+    "A050",
+    "A088",
+    "A094",
+    "B08",
+    "B20"
+  ],
+  "next_action": "Pay ONE active data query AFTER the second canonical reset using the SAME current reference and diminished ORIGINAL owner, retaining actual L0,B0,omega,U,B1 and both new/complementary terminals; A050/A039 reconstruct, A088/A094 review v3.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Arbitrary-core affordable occupancy-source admission and stopping-potential supplier remain unsupported; full FEI OPEN.",
+    "A query after the second reset, a exposure, third reset and unrecorded intermediate positive booking excess remain unpaid.",
+    "Fresh memok exit1: physical2.0GB and commit6.4GB below4.0/8.0; Lean not launched.",
+    "No fresh remote-current Brain definition verification; pinned source-exact definition unchanged.",
+    "Independent external review, supervisor copy, mirror verification and downstream adoption unobserved."
+  ],
+  "packet_ids": [
+    "A038"
+  ]
+}

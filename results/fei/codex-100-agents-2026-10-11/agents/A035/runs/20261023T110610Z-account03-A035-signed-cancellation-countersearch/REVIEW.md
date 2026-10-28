@@ -1,0 +1,12 @@
+# Scoped independent A031 review
+
+{
+  "reviewer": "account03/A035",
+  "status": "ACCEPT_SCOPED_STRENGTHENED_SOURCE_AND_MARKER_EXTENSION_NO_REPAIR",
+  "source_statement_sha256": "933f4e36b0e1a2d8b484f23d250bacbafa6cbca8df9103259ff6457e663d3147",
+  "source_proof_sha256": "10b1a3c118341a6c745034f9607c8870b1440d517887e7aaeaea7e0ced605e45",
+  "independent_reconstruction": "DERIVATION section6: explicit five entropy errors and M comparison, independent limiting-row constant and rational tail endpoint, signed finite-source checks L1..19; independent truth-table source checks L1,2,3",
+  "scope": "New >7/8 original C2 guarantee and retained-marker extension. Generic earlier transfer acknowledged; not a blanket universal source supplier or FEI acceptance."
+}
+
+The new source tail is reconstructed from disagreement, Parseval, supported entropy derivatives, tail entropy and oriented-row derivatives. Finite certificates cover the remaining widths. The critical limiting constant and tail polynomial are separately rebuilt in the truth-table implementation. No source repair is supplied. The marker extension follows at its stated scope; this is not a claim of full-FEI acceptance.

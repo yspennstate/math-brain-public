@@ -1,0 +1,5 @@
+# Exact logarithm intervals used by exact_chain.js
+
+Set Q=2^160. For z in [0,1/3], ln((1+z)/(1-z))=2 sum_{j>=0} z^(2j+1)/(2j+1). Retain64 terms, computing each scaled term by exact integer division rounded down. The scaled rounding error is less than64. The omitted tail is at most 2 z^129/[129(1-z^2)], so its Q-scaled value is less than1: the code checks exactly 2Q*9<129*8*3^129. Thus the computed integer sum s encloses the logarithm in [s/Q,(s+65)/Q].
+
+For an integer prime p write p=2^b q with 1<=q<2, z=(p-2^b)/(p+2^b)<=1/3. Compute the interval above for ln q and for ln2 (z=1/3). Divide positive intervals outwards with exact floor/ceiling to bound log2 p=b+ln(q)/ln2 at scale Q. Powers of2 have exact logarithms. Entropies are integer linear forms in these logarithms, divided by an explicit power-of-two denominator. Coefficient signs select interval endpoints correctly; undecided signs throw INCOMPLETE. Every reported sign in the frozen3072 cases was decided. No floating estimate is used for a certificate.

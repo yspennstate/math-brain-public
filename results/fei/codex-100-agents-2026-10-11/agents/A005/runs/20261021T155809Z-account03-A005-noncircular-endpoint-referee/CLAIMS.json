@@ -1,0 +1,40 @@
+[
+  {
+    "claim_id": "A005-WHOLE-SIGN-REFUND-SAME-CONSTANT-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign f, let R_c be the spectral Bregman remainder of k(t)=-t^2 log2(t^2)+3t^2/ln2 for the edit to constant c=+1 or -1, with continuous zero terms. Writing mu=E f, R_c=H+4/ln2+c(2mu log2(mu^2)-4mu/ln2). Thus R_++R_-=2H+8/ln2 and R_min=H+a(abs(mu)), where a(u)=4(1-u+u ln u)/ln2 and 0<=a(abs(mu))<=4I^2/ln2. Every nonconstant Boolean seed embeds into actual Boolean functions F_t with I(F_t)->0, mean->1 and R_min(F_t)/I(F_t)->H(seed)/I(seed). If C_star=sup_all H/I in the extended reals and M(eps)=sup_{0<I<=eps}R_min/I, then C_star<=M(eps)<=C_star+4eps/ln2 and lim_{eps down to0}M(eps)=C_star. A uniform small-influence bound R_min<=KI implies full FEI at the SAME K. No exact fixed-eps converse or critical-witness admission is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes, normalized real Walsh coefficients, entropy bits",
+      "Zero terms continuous; convexity only needed on [-1,1]",
+      "Ratios use I>0; constants have R_min=H=0",
+      "Fixed seed nonconstant; disjoint tensor, fresh balancing literal, ceil(sqrt(t)) fair point controls",
+      "No finite maximality, minimal dimension or actual child certification assumed or concluded"
+    ],
+    "statement_sha256": "79de84df7d6fcef9fa6aaa64ab3aedebddbf2bbdf1ee124072e4e90fdffb19ab",
+    "contributors": [
+      "account03/A005"
+    ],
+    "proof_source": [
+      "DERIVATION.md Sections1--4",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      "Parseval, elementary log inequality and explicit finite activation spectrum; no unproved FEI estimate"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_FINITE_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A052",
+      "A055",
+      "A002",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

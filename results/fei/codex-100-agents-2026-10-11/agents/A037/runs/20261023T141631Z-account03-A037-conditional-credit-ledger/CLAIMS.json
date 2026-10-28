@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A037-ISOSPECTRAL-SIGNED-MEAN-CALIBRATION",
+    "version": 1,
+    "exact_statement": "For any Boolean coordinate restriction with identical child squared Fourier laws s, any occupied nonempty parent witness S, and 0<alpha<1, let t=p(empty), u=s(empty), T=S without the queried coordinate, and q=(1-alpha)p+alpha*t*delta_empty+alpha*(1-t)*delta_S. Its own physical outcomes are fair and its inherited child reference is (1-alpha)s+alpha*t*delta_empty+alpha*(1-t)*delta_T. If T is nonempty, matching the child empty mass at the same alpha has signed conversion sigma<=0, with strict inequality iff u>t. If T is empty, explicitly retiring the spike to q_new=s has sigma<=0, strict iff u<1. On any finite adaptive history of these eligible conversions and exact inherited transport, released credit C plus all reached erasure/outcome KL plus terminal KL equals the original source KL, so C cannot exceed that source KL or be renewed after conditioning.",
+    "hypotheses": [
+      "Finite uniform Boolean cube; real Fourier coefficients; identical two child squared spectra at each calibrated edge",
+      "Supplied support-matched original reference in displayed occupied-witness form; 0<alpha<1",
+      "Witness follows original coordinates; collision is explicitly retired, not replaced by a new full-mask witness",
+      "Complete finite adaptive trees, both outcomes and original reach weights retained; all other reference changes charged explicitly"
+    ],
+    "statement_sha256": "21545fda2c41f03f132effb49ff65e920e9c9c3ae5dbca7e043dff666b9fc64a",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": [
+      "agents\\A037\\runs\\20261023T141631Z-account03-A037-conditional-credit-ledger\\PROOF.md",
+      "agents\\A037\\runs\\20261023T141631Z-account03-A037-conditional-credit-ledger\\out\\CHECK.json",
+      "agents\\A037\\runs\\20261023T141631Z-account03-A037-conditional-credit-ledger\\out\\AUDIT.json",
+      "agents\\A037\\runs\\20261023T141631Z-account03-A037-conditional-credit-ledger\\out\\LEDGER.json"
+    ],
+    "proof_dependencies": [
+      "Exact Fourier restriction identity",
+      "Finite KL chain rule, Gibbs inequality and differentiability on positive support",
+      "A050 20261023T132645Z sections0-2 consumed for comparison and transport interface; present calibration proof reconstructed directly"
+    ],
+    "review_records": [],
+    "status": "PROVED_IN_RUN_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Universal extension requires an influence-priced original complete supplier and a useful query/stopping policy whose terminal surplus meets the remaining same-owner reserve. Neither is established here.",
+    "next_consumers": [
+      "A050",
+      "A047",
+      "A040",
+      "A088",
+      "A094",
+      "B08"
+    ]
+  }
+]

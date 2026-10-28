@@ -1,0 +1,14 @@
+[
+  {
+    "check": "constant-boundary entropy",
+    "failure": "interval log2(1) was not singleton zero",
+    "fix": "exact rational powers-of-two shortcut",
+    "rechecked": "CERTIFICATE PASS"
+  },
+  {
+    "check": "direct physical B0 identity",
+    "failure": "initial formula had spurious extra delta: E/2+delta(3+I(s))",
+    "fix": "E/2+delta(2+I(s)); equivalent to E/2+delta(3+I(g)) only for s=x*g",
+    "rechecked": "all2240 compositions PASS"
+  }
+]

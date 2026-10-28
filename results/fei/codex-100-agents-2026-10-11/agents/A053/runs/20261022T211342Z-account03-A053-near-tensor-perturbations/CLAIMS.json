@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A053-ANCESTOR-PACKING-ALL-POLICY-TWO-QUERY-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every n>=3, every Boolean sign F on the uniform n-cube whose nonzero Fourier support has minimum Hamming distance at least3 (singleton distance infinity), every physical vertex v, and G obtained by flipping F(v), put p=2^(-n). For every depth-two physical coordinate-query tree T which queries any coordinate i and then any remaining coordinate j_b depending on the first sign b, with its four actual leaves of weights1/4, let Q=Inf_i(G)+E_b Inf_(j_b)(G_b). Then H(G)-E_T H(G_leaf)<(71/2)p and Q>=4p. Consequently for every real K>=9, E_T[H(G_leaf)-K I(G_leaf)]>H(G)-K I(G)+p/2. Entropy is in bits; no greedy choice, criticality, lower bound on row mass, or renewal of a child influence budget is assumed. This is a paid two-level query theorem, not unrestricted FEI(9).",
+    "hypotheses": [
+      "n>=3; finite uniform cube; Boolean signs",
+      "seed Fourier-support minimum Hamming distance>=3; singleton support allowed",
+      "exactly one physical vertex flip; arbitrary edit vertex",
+      "actual coordinate query, followed by an actual remaining-coordinate query in each sign child",
+      "entropy bits; actual leaf probabilities1/4; K>=9 only for deficit consequence"
+    ],
+    "statement_sha256": "d6b05cbe6f124cbd78cadcac7d9739cbed83bfb483b07ac22f13d2ee3479b57e",
+    "contributors": [
+      "A053"
+    ],
+    "proof_source": "TWO_QUERY_PROOF.md sections1--5; out/EXACT_CHECK.json; code/check_two_queries.py",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A053",
+        "kind": "author adversarial hypothesis audit and two independent spectrum implementations",
+        "status": "PASS",
+        "evidence": "out/EXACT_CHECK.json; out/POLICY_AUDIT.md",
+        "scope": "complete local analytic proof plus stated finite domain; not independent-agent acceptance"
+      }
+    ],
+    "status": "PROVED_AUTHOR_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "No gap asserted in the local theorem. Universal continuation: pay the first non-injective signed Fourier projection after two queries from the same original ancestor bank, with all actual terminal deficits and old debits retained.",
+    "next_consumers": [
+      "B11",
+      "A051",
+      "A052",
+      "A054",
+      "A055",
+      "A090",
+      "A094"
+    ]
+  }
+]

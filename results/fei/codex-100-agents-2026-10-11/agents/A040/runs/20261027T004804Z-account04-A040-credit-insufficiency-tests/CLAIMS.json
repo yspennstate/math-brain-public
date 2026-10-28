@@ -1,0 +1,41 @@
+{
+  "claims": [
+    {
+      "claim_id": "A040-CHI2-SURROGATE-ORIGINAL-KL-OVERPRICE",
+      "version": 1,
+      "exact_statement": "For every integer r>=3, let G and its support-matched activated full-spike reference be as in PROOF section2 with alpha=r^-2, and prescribe first physical query j. Let K=D(P_G||Q_G), O its coherent outcome KL, X=chi2(erased Q_G||erased P_G), V the exact erased score variance, beta=1-alpha, and C_V=2XV/[beta(2-beta)ln2], C_eta=2X Inf_j(G)(1-Inf_j(G))/[beta(2-beta)ln2]. Then O<=C_V<=C_eta, C_V/O~7*2^r/9, C_eta/O~10*2^r/9, C_V/K~7*2^r/(100r^2), C_eta/K~2^r/(10r^2), while O/K~9/(100r^2). Thus no absolute multiple of the SAME original KL can bound these surrogate sums over every finite prescribed physical tree, even at its first node; this does not refute existential coordinate selection, exact inherited-reference KL payment, an influence-surplus payer, or FEI.",
+      "hypotheses": [
+        "actual Boolean family G specified in PROOF.md section2",
+        "integer r>=3; alpha=r^-2",
+        "query j required first; own-outcome normalization; matching support",
+        "surrogate payer is original KL K, not arbitrary larger influence surplus"
+      ],
+      "statement_sha256": "1f99f52160273290d1f0877446e1b6ae92c832aba078b58d76a330d1e9635268",
+      "contributors": [
+        "A040"
+      ],
+      "proof_source": "agents\\A040\\runs\\20261027T004804Z-account04-A040-credit-insufficiency-tests\\PROOF.md",
+      "proof_dependencies": [],
+      "review_records": [
+        {
+          "reviewer": "A040",
+          "type": "separate direct-Walsh/prime-log implementation; not independent peer review",
+          "result": "PASS 146 assertions; full analytic asymptotics reread against exact formulas"
+        }
+      ],
+      "status": "PROVED_LOCALLY_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [
+        "A040 stage10 proposed cumulative chi-square variance charge from same original KL, for arbitrary prescribed policies"
+      ],
+      "first_unproved_line": "No gap claimed for the stated asymptotic obstruction. Universal noncircular influence-priced original supplier and necessary terminal-policy payment remain open; Lean and external review pending.",
+      "next_consumers": [
+        "A049",
+        "A050",
+        "A039",
+        "A088",
+        "A094"
+      ]
+    }
+  ]
+}

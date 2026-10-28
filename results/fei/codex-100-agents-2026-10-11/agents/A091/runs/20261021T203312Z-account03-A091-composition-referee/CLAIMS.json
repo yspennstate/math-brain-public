@@ -1,0 +1,57 @@
+[
+  {
+    "claim_id": "A091-FIRST-PRIVATE-BEFORE-Y-REPEATED-FALLBACK",
+    "version": 1,
+    "exact_statement": "For F=(1-Y)G+Y[A*u+(1-A)*(B*v+(1-B)*G)] on finite uniform independent physical blocks, with A a point event of r>=1 bits, B any indicator, u,v,G arbitrary Boolean signs on mutually disjoint data blocks, and one actual G, every A-coordinate i satisfies B_i(F)<=12 Inf_i(F) and H(F)-(H(F_i=0)+H(F_i=1))/2 <= (12+2/ln(2)) Inf_i(F). In the original physically merged fine U/R account, U is harmonic and kappa=R-E R_child>=0, hence the same bound holds for the H-U-R decrement with both complete terminals retained.",
+    "hypotheses": [
+      "Entropy in bits; signs +/-1; actual physical fair-coordinate restriction.",
+      "Y is fresh and fair; A, B and all selected-data blocks are independent.",
+      "A is one current point event; r>=1, q=2^(-r)<=1/2; B may be empty or certain.",
+      "u, v and the actual G have disjoint physical blocks; internal private G selectors are allowed.",
+      "Prior data exposure must preserve these independent-block hypotheses; all means in [-1,1], including constant cores.",
+      "No later B-query claim, arbitrary earlier live priorities, generic data overlap or universal inherited-account funding is asserted."
+    ],
+    "statement_sha256": "a3e949b05ea1636844eee65e074b8422a757f7ef7f7c7ea414174a0bfb612408",
+    "contributors": [
+      "A091/account03 analytic grouping and tests; prior A091/account05 exact interface and scalar lemma"
+    ],
+    "proof_source": {
+      "path": "agents\\A091\\runs\\20261021T203312Z-account03-A091-composition-referee\\PROOF.md",
+      "sha256": "691ccdf3cd5ee4fb8ea1f91611160969e9c632658c335bee60ea3e28461f1174",
+      "locators": [
+        "Exact grouped identity (1)",
+        "Bounds (2)-(5)",
+        "Original account decrement (6)"
+      ]
+    },
+    "proof_dependencies": [
+      "C005 physical entropy decrement/channel bound J_i<=2 Inf_i/ln2; previously audited baseline",
+      "A091 stage6 PROOF.md scalar Phi(a^2,b^2)<=2|ab| and NEXT_IDENTITY.md equations (1),(2); direct grouping supplied in this version"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A091 author self-audit, not independent acceptance",
+        "verdict": "GROUPED_IDENTITY_REPRODUCED_WITH_DIRECT_CHARACTER_SUMS",
+        "source": "out/REPRODUCE.json",
+        "cases": 256
+      },
+      {
+        "reviewer": "Lean helper",
+        "verdict": "RUNTIME_UNVERIFIED",
+        "source": "out/LEAN.json",
+        "scope": "fallback variance ownership only; no formal verification obtained"
+      }
+    ],
+    "status": "AUTHOR_ANALYTIC_PROOF_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A059",
+      "A087",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+import Lean.Elab.Command
+import Lean.Util.CollectAxioms
+import Lean.Data.Json.Printer
+import Init
+
+-- Only the natural-width consequence of the analytic lower bound is formalized.
+-- This theorem does not assert the entropy or curvature bound itself.
+theorem width_growth (K : Nat) :
+    exists m : Nat, 2 <= m /\ K < m + 2 := by
+  refine Exists.intro (K + 2) (And.intro ?_ ?_)
+  · exact Nat.le_add_left 2 K
+  · exact Nat.lt_of_lt_of_le (Nat.lt_succ_self K)
+      (Nat.succ_le_succ (Nat.le_add_right K 3))
+
+open _root_.Lean _root_.Lean.Elab _root_.Lean.Elab.Command in
+run_cmd do
+  let expected : _root_.Lean.Name := (_root_.Lean.Name.str _root_.Lean.Name.anonymous "width_growth")
+  let ci ← _root_.Lean.getConstInfo expected
+  let rec encodeName (n : _root_.Lean.Name) : _root_.Lean.Json :=
+    match n with
+    | .anonymous => .arr #[.str "anonymous"]
+    | .str parent part => .arr #[.str "str", encodeName parent, .str part]
+    | .num parent number => .arr #[.str "num", encodeName parent, .str (_root_.Nat.repr number)]
+  let identity := _root_.Lean.Json.compress (encodeName ci.name)
+  _root_.Lean.logInfo (_root_.Lean.MessageData.ofFormat (_root_.Std.Format.text (_root_.String.append "TARGET_NAME width_growth: " identity)))
+  match ci with
+  | .thmInfo _ => _root_.Lean.logInfo (_root_.Lean.MessageData.ofFormat (_root_.Std.Format.text "TARGET_KIND width_growth: theorem=true"))
+  | _ => _root_.Lean.logInfo (_root_.Lean.MessageData.ofFormat (_root_.Std.Format.text "TARGET_KIND width_growth: theorem=false"))
+  let axioms ← _root_.Lean.collectAxioms expected
+  let encoded := _root_.Array.map encodeName axioms
+  let dependencies := _root_.Lean.Json.compress (_root_.Lean.Json.arr encoded)
+  _root_.Lean.logInfo (_root_.Lean.MessageData.ofFormat (_root_.Std.Format.text (_root_.String.append "TARGET_AXIOMS width_growth: " dependencies)))

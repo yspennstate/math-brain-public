@@ -1,0 +1,50 @@
+[
+  {
+    "claim_id": "A043-SINGLETON-IMPORT-BOUNDARY-AND-DEPTH",
+    "version": 1,
+    "exact_statement": "For every genuine Boolean disjoint composition F=g(f_i) under an independent product law at the actual child-output biases, contract constants and set w_i=Var(f_i), a_i=I_i(g)/w_i, s_i=P_g({i}), b_i=(I_i(g)-s_i)/w_i, M_i=Delta_i-R_i. For dyadic upper-mantissa scales j, let T=ln4 sum_i s_i M_i j_g({i})/w_i+sum_i b_i J_1(f_i), zero singleton terms omitted. Then J_hi(F)=J_hi(g)+sum_i a_i J_hi(f_i)+ln4 C_hi+T, where C_hi is the actual high-label mantissa carry. Universally 0<=T<=ln4 Delta_F-(ln4/2)[R_g+sum_i((a_i-b_i)Delta_i+a_i R_i)]<=ln4 Delta_F. The outer-singleton import sub-bound T_out<=(ln4/2)sum_i a_i M_i is sharp on actual AND2 with parity/literal children. The combined constant is not claimed sharp. In the actual balanced ternary-majority tower F_d on 3^d fair bits, all dyadic carries and complete-reference normalizers/KLs vanish, Delta_d=(3/2)^d-1, and weighted accumulated import divided by ln4 is (3/2)Delta_d-d(3/4)^d. At d=4 it exceeds Delta_d by49/64, and its ratio to Delta_d tends to3/2. Thus the one-boundary ln4 allowance cannot be renewed as a depth-free total-import bank. No FEI disproof or universal prime-scale payment follows.",
+    "hypotheses": [
+      "Actual Boolean signs; finite disjoint physical blocks; independent interior biases; constant children contracted",
+      "Normalized mixed coefficients and actual orthonormal squared spectrum; natural entropy units",
+      "Upper dyadic mantissa convention including exact endpoints; carry only on actually occupied physical high labels",
+      "Tower inputs are fair, disjoint and balanced, with Maj3=(x+y+z-xyz)/2; all-depth counterexample concerns the proposed import budget, not FEI"
+    ],
+    "statement_sha256": "0f4a98356a94028224020188918ef2d3caef8cc3aff708df442d04cf3814f2f6",
+    "contributors": [
+      "A043"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check_import.py",
+      "out/frozen_spec.json",
+      "out/checks.json"
+    ],
+    "proof_dependencies": [
+      {
+        "source": "agents\\A043\\runs\\20261023T063610Z-account03-A043-prime-gate-decomposition\\PROOF.md",
+        "sha256": "6379cfa8cca6edb6c8f4676b017f1e0ecb1264f55fc14780586dfa4e87509239",
+        "scope": "Normalized disjoint coefficient/deficit identities and paid-sector reference, reconstructed where used"
+      },
+      {
+        "source": "agents\\A041\\runs\\20261023T113320Z-account03-A041-weighted-threshold-fei\\PROOF.md",
+        "sha256": "97b6c74d3cc419072b005cd3b8ffe6567ed28f8466ba76dc2c387cc721834bae",
+        "scope": "New singleton-preserving all-depth carry interface and AND3 obstruction; current proof independently splits import from mantissa carry and adds the quantitative bound/tower obstruction"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_AUTHOR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Proposed shortcut: accumulated singleton import <=ln4 Delta(F) at arbitrary formula depth; actual Maj3 tower d4 refutes it. No registered source theorem asserted that shortcut."
+    ],
+    "first_unproved_line": "No gap claimed in the stated import/tower derivations. Arity-independent original-source payment of J_hi at every prime and all product biases remains open; the single-boundary payment does not pay inherited J_hi or high carry.",
+    "next_consumers": [
+      "A041",
+      "A044",
+      "A045",
+      "A042",
+      "A091",
+      "B09 lead"
+    ]
+  }
+]

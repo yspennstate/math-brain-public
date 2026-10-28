@@ -1,0 +1,100 @@
+[
+  {
+    "claim_id": "A071-POSITIVE-OUTER-CORRECTION-ENVELOPE-FAILS",
+    "version": 1,
+    "exact_statement": "For every real K>=3, the proposed disjoint-composition envelope U_K=(C_outer)_+ + sum_j q_j rho_K(inner_j), where rho_K is each full stopping deficit hull and C_outer=H(full composition)-sum_j q_j H(inner_j), is not superharmonic for all physical queries. Let g_m be negative only at0 and h be positive only on three positive signs. On the actual seven-bit F=h(g3,g2,g2), query original bit0 in the3-bit core. All inner hulls are exactly0 for K>=3; all three C values are positive; mean U(children)-U(parent)=G=-37/16-(567/512)log2(3)-(25/1024)log2(5)+(3087/2048)log2(7), with0.107184<G<0.107185. The queried physical influence is9/64; adding lambda I to this candidate requires lambda>0.762198 on this row. This refutes only the proposed envelope superharmonicity, not A089 coherent-envelope rerouting, not every possible bank allocation, and not FEI.",
+    "hypotheses": [
+      "uniform disjoint physical bits and base2 entropy; literal inner g_m and outer gate h stated above",
+      "C is the complete composition correction including constant Fourier mass; both full query outcomes retained",
+      "rho_K is the true full stopping deficit hull of each inner core, not its raw current deficit",
+      "the local repair test U+lambda I retains the same candidate child requirements and mean-conserved original credit"
+    ],
+    "statement_sha256": "b6d21b59b7f0081fa807a2d833ba06db318b7e0886f1d8b0b035214ef2bd3ad5",
+    "contributors": [
+      "A071"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/drift.py",
+      "code/audit_witness.py",
+      "code/integer_witness.py",
+      "out/COUNTEREXAMPLE.json",
+      "out/LITERAL_REPRODUCTION.json",
+      "out/INDEPENDENT_AUDIT.json",
+      "out/INTEGER_CERTIFICATE.json"
+    ],
+    "proof_dependencies": [
+      "finite character orthogonality, Shannon chain rule and disjoint-block pivotal identity rederived in PROOF.md",
+      "exact integer inequalities listed in out/INTEGER_CERTIFICATE.json"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A071",
+        "independent_reviewer": false,
+        "verdict": "AUTHOR_EXACT_COUNTEREXAMPLE_WITH_DISTINCT_WHOLE_CUBE_AND_INTEGER_SIGN_REPRODUCTIONS",
+        "scope": "fixed seven-bit parent, both full children, all-real K>=3 analytic extension; external review pending"
+      }
+    ],
+    "status": "EXACT_BOOLEAN_CANDIDATE_REFUTATION_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "A089 stage9 NEXT proposed envelope C_plus+sum pivotal-weighted inner hulls; this is a proposal, not a registered accepted theorem"
+    ],
+    "first_unproved_line": "Construct an influence-funded signed-component correction that pays this drift while remaining full-query superharmonic for arbitrary Boolean compositions and restrictions.",
+    "next_consumers": [
+      "A072",
+      "A074",
+      "A075",
+      "A084",
+      "A089",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A071-VACUUM-COMPONENT-ENVELOPE",
+    "version": 1,
+    "exact_statement": "For every Boolean f on any uniform cube, with entropy in bits, let phi(t)=-t²log2(t²), phi(0)=0, and V(f)=phi(Ef)+3I(f). Then V is superharmonic under EVERY physical coordinate query and 0<=V(f)<=9I(f)/2. It majorizes the EMPTY Fourier entropy term phi(Ef); it is not asserted to majorize the whole Fourier entropy or FEI deficit. On the stage20 seven-bit witness, the entire positive outer-correction drift is explained by the empty term: subtracting its drift leaves -1269/512-(567/512)log2(3)+(3087/2048)log2(7)<0, exactly certified by7^3087<2^5076*3^2268. This component payment does not establish coherence or influence-priced initialization for the remaining nonempty spectrum.",
+    "hypotheses": [
+      "uniform physical input cube; f is sign valued; base2 entropy",
+      "full physical-query children retained; influences use the original physical coordinates",
+      "the component potential may use only an actually unused original influence owner when inserted into a previously paid account"
+    ],
+    "statement_sha256": "960f72547188136d738bf74d2b2c02ba63ad66b047aab9630b6e1a989a72dbc7",
+    "contributors": [
+      "A071"
+    ],
+    "proof_source": [
+      "VACUUM_PROOF.md",
+      "code/vacuum.py",
+      "out/VACUUM.json"
+    ],
+    "proof_dependencies": [
+      "global Lipschitz bound2/ln2 for phi on[-1,1], ln2>2/3, direct mean coupling and influence telescoping proved in VACUUM_PROOF.md",
+      "Parseval Var<=I and elementary-u ln u<=1-u",
+      "integer inequality7^3087<2^5076*3^2268 for the fixed witness split"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A071",
+        "independent_reviewer": false,
+        "verdict": "AUTHOR_ANALYTIC_ALL_DIMENSION_COMPONENT_PROOF_AND_EXACT_SANITY_CHECK",
+        "scope": "all-dimensional claim follows from calculus/mean coupling, not extrapolation; finite validation256 tables/768 query rows; external review pending"
+      }
+    ],
+    "status": "AUTHOR_PROVED_UNIVERSAL_COMPONENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Pay and make coherent the remaining NONEMPTY signed composition correction with the same original influence account; V alone does not cover the whole FEI deficit.",
+    "next_consumers": [
+      "A072",
+      "A074",
+      "A075",
+      "A089",
+      "A092",
+      "B15",
+      "B20"
+    ]
+  }
+]

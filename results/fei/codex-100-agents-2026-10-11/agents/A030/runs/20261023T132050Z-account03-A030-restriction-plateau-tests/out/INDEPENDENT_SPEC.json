@@ -1,0 +1,13 @@
+{
+  "helper_version": "code/independent.py; standalone standard-library Python Fraction; no imports from campaign helpers or primary checker",
+  "actual_boolean_family": "ALL 256 Boolean functions on one control and two data bits, represented uniquely by their two slices with fixed L(y)=y",
+  "parameter_domain": "Source tables each run over all16 two-bit Boolean tables; pilot four fixed source pairs; main256 pairs. Root1/64 controller/source smoothing. No dimension escalation.",
+  "case_count": "Pilot4 pairs*6 orders*7 internal nodes=168; main256*6*7=10752 internal nodes, both actual outcomes and all complete query orders retained",
+  "symmetry_reduction": "None",
+  "arithmetic": "Exact Fraction, direct O(N^2) Walsh sums, unnormalized envelope measures propagated by2 times phase channel. Reconstruct actual child output independently as a truth table; no entropy/log arithmetic in this independent lane.",
+  "memory_estimate_mb": 50,
+  "pilot_max_runtime_seconds": 55,
+  "main_max_runtime_seconds": 180,
+  "parallel_heavy_jobs": 0,
+  "checks": "Pointwise controller/source domination, output envelope inequality, complete normalized target including reference-only rows, each label account and total account harmonicity, zero controller branch handling, direct parity witness and integer reserve certificates"
+}

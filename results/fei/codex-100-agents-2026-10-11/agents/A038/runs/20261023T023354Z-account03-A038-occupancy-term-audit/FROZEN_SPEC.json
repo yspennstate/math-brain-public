@@ -1,0 +1,14 @@
+{
+  "helper_version": "A038 controller-reset checker v1; copied Fraction/24-term-atanh interval primitives from previous stage check.py, imported without running its main",
+  "family": "F_h on x,a,b,y0,y1,y2,z with h=chi_z times three-bit point defect; scalar envelopes for all m>=3 proved separately",
+  "domain": "physical m=3 only, four fixed data/x policies in b1; b first, b0 untouched, a never queried; terminal canonical reset at every b1 leaf",
+  "policies": ["y0,x,y1", "z,x,y0", "x,y0,z", "y0,x,then y1 if y0=0 else z"],
+  "case_count": "pilot first physical policy; main four physical policies; scalar point-defect parameters k=0..16 and root envelopes m=3..16",
+  "symmetry": "none used to assert exhaustive finite coverage; all-history conclusions are analytic",
+  "arithmetic": "integer direct Fourier coefficients, Fraction physical probabilities, outward grid 10^24 intervals; positive atanh logarithms with proved remainder; original canonical c bracketed by 42 exact rational bisections",
+  "memory_estimate_mb": 90,
+  "maximum_runtime_seconds": 55,
+  "no_escalation": true,
+  "reset": "prescribed completed canonical occupancy law; full new KL booked in addition to whole original source KL, dominating every positive actual old-to-new KL increase",
+  "old_booking": "omega=11/32, retained once from original final owner"
+}

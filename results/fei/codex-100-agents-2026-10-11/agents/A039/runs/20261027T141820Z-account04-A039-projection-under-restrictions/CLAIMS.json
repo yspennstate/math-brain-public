@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A039-INTERLEAVED-SPARSE-GHOST-BANK",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean core g with complete dominating reference q_h and nonnegative supplied bank B_h paying actual BOTH-child signed coherent reset sigma_h<=B_h-E B_child after each physical core query, form F=1+AND_k*(x*g-1) with independent fair guard x, rho=2^-k, and the complete sparse reference that replaces core spectral law p_h by q_h only in guard-bearing rows. Allow ANY finite adaptive interleaving of data, controller and guard queries, both outcomes and stopping. Before guard exposure use canonical sparse resets; upon guard exposure reset both FULL children to exact spectra and retain their full terminal entropy. Let O(t)=-(1/2)log2(1-t^2), W0=0, Wk=sum_(j1..k)2^(j-k)O(2^-j), and V=rho*B+Wk until guard exposure,0 afterwards. Then Sigma<=Vroot-E Vterminal and Kroot+Sigma<=rho*(Kcore+Bcore)+Wk-E Vterminal, retaining the full erasure/outcome/terminal KL identity. Data queries obey sigmaF=rho*sigmacore+OF-rho*Ocore<=rho*sigmacore; each controller reset costs O(rho*z_current), and the last independent-guard reset is nonpositive. Wk<gamma*rho, where gamma=(1/(2ln2))*sum_(r>=1)1/[r*(2^(2r-1)-1)] lies strictly between0.78240592592391 and0.78240592592393, hence an UNUSED ORIGINAL guard allowance(4/5)*rho pays this separate controller liability. Gamma is sharp for the canonical controller-only prefix invoice: finite all-essential parity-product cores with supplied alpha1/6 wrong-anchor references and controls-first histories approach it. This does not lower-bound alternative reset policies or supply arbitrary-core initial CE/full terminal entropy; full FEI remains OPEN.",
+    "hypotheses": [
+      "Actual finite uniform Boolean functions; all logarithms bits; independent guard and k>=0 independent fair controllers",
+      "Supplied complete q_h covers actual support and gives finite coherent KL; same fair source-zero fallback and own strictly positive reference outcomes throughout",
+      "A single nonnegative ORIGINAL core bank already pays actual signed resets at every data node; original root cross-entropy remains owed",
+      "Canonical sparse lift on BOTH children after every data/controller query while guard remains; exact FULL spectra and full entropy after guard absorption; no new free guard or source",
+      "All prior debits and both full terminals retained; guard allowance is ORIGINAL and UNUSED; sharpness concerns the separate canonical controller prefix invoice only"
+    ],
+    "statement_sha256": "bb13da5f7144a23386c6ed2cba52d1877392d171e875e6f0e664754accde9f5b",
+    "contributors": [
+      "A039"
+    ],
+    "proof_source": "agents\\A039\\runs\\20261027T141820Z-account04-A039-projection-under-restrictions\\PROOF.md",
+    "proof_dependencies": [
+      "A039-MOVING-ANCHOR-ABSORPTION@1 for the concrete moving-factor bank, independently accepted by A036; abstract theorem assumes any supplied bank",
+      "A048-GHOST-CORRECTED-MOVING-TENSOR-SPARSE-TRANSFER@1 normalized product/controls-first scope independently reconstructed in PROOF sections1-3",
+      "Explicit finite coherent channels, finite-tree telescope and positive-series gamma certificate in this run"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A039",
+        "status": "AUTHOR_CHECKED_EXTERNAL_REVIEW_PENDING",
+        "evidence": [
+          "agents\\A039\\runs\\20261027T141820Z-account04-A039-projection-under-restrictions\\out\\CHECK.json",
+          "agents\\A039\\runs\\20261027T141820Z-account04-A039-projection-under-restrictions\\out\\AUDIT.json",
+          "agents\\A039\\runs\\20261027T141820Z-account04-A039-projection-under-restrictions\\out\\GAMMA.json",
+          "agents\\A039\\runs\\20261027T141820Z-account04-A039-projection-under-restrictions\\out\\GHOST_INCREASE.json"
+        ],
+        "formal_scope": "No Lean check; memok exit1 prevented the scalar compiler job."
+      }
+    ],
+    "status": "ANALYTIC_PROOF_SUPPLIED_SOURCE_HYPOTHESES_AUTHOR_CHECKED_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "The initial reference-only mass z can be held fixed under arbitrary physical data resets: an actual3bit fixture has root z0 and mean child z1/12. This does not refute A048 controllers-first theorem."
+    ],
+    "first_unproved_line": "A useful arbitrary-core ORIGINAL complete source with initial cross-entropy and required terminal-entropy descent paid by the SAME unused O(I) capacity.",
+    "next_consumers": [
+      "A036",
+      "A037",
+      "A048",
+      "A050",
+      "A088",
+      "A092",
+      "A094"
+    ]
+  }
+]

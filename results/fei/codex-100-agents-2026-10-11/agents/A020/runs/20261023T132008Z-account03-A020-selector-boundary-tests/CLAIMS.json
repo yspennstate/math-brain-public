@@ -1,0 +1,91 @@
+[
+  {
+    "claim_id": "A020-PREDETERMINED-MIXED-EXPOSURE-AVERAGED-RESERVE",
+    "version": 1,
+    "exact_statement": "For the supplied original Boolean family, reference Q and one original debit U, querying q followed by any predetermined subset of padding and source coordinates leaves, for each q sign, full physical-frontier expected reserve E[4I-CE]-U>107/64. Original root margin is>19/8 and source influence is retired exactly once. The projected-entropy hypothesis holds for every subset of G equal to a product of j>=2 disjoint overlapping-bit blocks E(a,b,c,d,e)=g3(a,b,c)g3(a,d,e); no independence is assumed between the two factors sharing a. This does not certify individual terminals or outcome-dependent exposure/stopping.",
+    "hypotheses": [
+      "All costs use base2 and uniform physical bits; k>=5, rho=2^-k, 0<=mu=E G<=1/2, A=point_k(1-G)/2, p=rho(1-mu)/2, h=chi_u off A and chi_q on A, F=1 at gate0 and hs2 at gate1, s2=[-1,1,1,1] on fresh bits.",
+      "Q_h=(P_h+point_q)/2, Q_F(e,T)=(Q_h(T_core)P_s2(T_mask)+point_empty(T))/4 at each gate frequency; all later codes are exact original frequency marginals. U=L_q+E is the single exact old debit defined in REPORT step1.",
+      "For each applied predetermined source subset S, H(R_S)<=4I_rem(S), where R_S is the original spectral marginal and I_rem is the original remaining physical influence; include empty S for root eligibility.",
+      "The post-q exposed subset may depend on q sign but not on subsequent padding/source outcomes. Keep all outcomes and leave u, mask and gate unqueried."
+    ],
+    "statement_sha256": "0421e5a152167b3358d41b10c57cd4d38ccfe500e11f08dfbfe22ce826df2778",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A016",
+      "A018",
+      "A019",
+      "A090",
+      "A091",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A020-REVIEW-A016-ESSENTIAL-MIXED-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Independent reconstruction holds for unchanged A016-ESSENTIAL-MIXED-PADDING-OBSTRUCTION-AND-AVERAGED-REPAIR@1: its original m4,k>=5 source has a mixed terminal with seven essential coordinates,4I=51/8 or53/8 and selected code cost7(k+11)/64. Both old-Q/U reserves at k64 are<-101/64 and diverge negatively with k. Conditional reach-weighted active-leaf deficit is<5 times actual padding influence k*2^-k/16, with ratio tending to7/4. Its full distinguished padding subtree has expected reserve>155/128; its complete stated mixed policy has expected reserve>5/8. No adaptive universal or pointwise mixed eligibility claim follows.",
+    "hypotheses": [
+      "Exactly the original source, reference, old U, stated distinguished three-first-bits-all1/cleanup history and full physical padding policy from the reviewed source version; all siblings and both q signs retained.",
+      "The other seven completed tensor histories use the unchanged accepted all-adaptive tensor theorem; the distinguished pre-padding state uses the separately reconstructed first-bit bound>5/4."
+    ],
+    "statement_sha256": "3a6c55755b34888a2e8e52db07bb4edf204e753d4c6270202b96a5a9bb3da88f",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A020-ALL-ADAPTIVE-TENSOR-CLEANUP",
+        "version": 1,
+        "statement_sha256": "ab62a2e48750345a45c5579e710888ecae64b5cb9f62bcc33e220389e3f60822"
+      },
+      {
+        "claim_id": "A020-REVIEW-A016-ALL-FIRST-BIT-CLEANUP",
+        "version": 1,
+        "statement_sha256": "f205d92ebce3599ffe5d970f56fefe3d08954bc43b414bb4e4a1748f91bc0744"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A020",
+        "source_under_review": {
+          "claim_id": "A016-ESSENTIAL-MIXED-PADDING-OBSTRUCTION-AND-AVERAGED-REPAIR",
+          "version": 1,
+          "statement_sha256": "40759bda62c6dcba2c20029977de7f0015948967460c345677130769d24b9642"
+        },
+        "conclusion": "HOLDS_UNCHANGED_FULL_STATED_SCOPE",
+        "method": "Separate128-point terminal Walsh/edge reconstruction; exact normalized original reference; analytic complete-cost and signed physical-tree ledger.",
+        "substantive_repair": false
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_HOLDS",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A016",
+      "A018",
+      "A019",
+      "A090",
+      "A091",
+      "A094"
+    ]
+  }
+]

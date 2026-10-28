@@ -1,0 +1,110 @@
+from pathlib import Path
+from fractions import Fraction as F
+from functools import lru_cache
+import json,time,sys,hashlib
+RUN=Path(__file__).resolve().parents[1];start=time.perf_counter();count=0
+A=(1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1);B=tuple(1-a*a for a in A)
+def save(n,v):(RUN/'out'/n).write_text(json.dumps(v,indent=2,default=str)+'\n',encoding='utf-8')
+def ok(v):
+ global count
+ count+=1
+ assert v,count
+ if time.perf_counter()-start>45:raise RuntimeError('frozen45-second wall guard')
+@lru_cache(None)
+def coeff(v):
+ a=list(v);k=1
+ while k<len(a):
+  for j in range(0,len(a),2*k):
+   for i in range(j,j+k):a[i],a[i+k]=a[i]+a[i+k],a[i]-a[i+k]
+  k*=2
+ return tuple(F(x,len(a)) for x in a)
+def prob(v):return tuple(x*x for x in coeff(tuple(v)))
+def restrict(v,j,t):return tuple(a for i,a in enumerate(v) if i>>j&1==t)
+def marginal(v,j):
+ return tuple(v[(i&((1<<j)-1))+((i>>j)<<(j+1))]+v[(i&((1<<j)-1))+((i>>j)<<(j+1))+(1<<j)] for i in range(len(v)//2))
+@lru_cache(None)
+def factors(n):
+ out={};i=2
+ while i*i<=n:
+  while n%i==0:out[i]=out.get(i,0)+1;n//=i
+  i+=1
+ if n>1:out[n]=out.get(n,0)+1
+ return out
+def add(a,b,c=F(1)):
+ out=dict(a)
+ for p,v in b.items():out[p]=out.get(p,F(0))+c*v
+ return {p:v for p,v in out.items() if v}
+def lg(q):return add(factors(q.numerator),factors(q.denominator),-1)
+def ce(p,q):
+ out={}
+ for a,b in zip(p,q):
+  if a:ok(b>0);out=add(out,lg(b),-a)
+ return out
+def kl(p,q):return add(ce(p,q),ce(p,p),-1)
+def influence(v):
+ n=len(v).bit_length()-1
+ return tuple(F(sum(v[x]!=v[x^(1<<j)] for x in range(len(v))),len(v)) for j in range(n))
+def four_influence(p):return sum(x*i.bit_count() for i,x in enumerate(p))
+def seed(L):
+ mask=(1<<L)-1;out=[]
+ for i in range(1<<(3*L)):
+  y=tuple(((i>>(j*L))&mask).bit_count()%2 for j in range(3));out.append(-1 if y[0]==y[1]==y[2] else 1)
+ return tuple(out)
+ac,bc=coeff(A),coeff(B);beta=sum(b*b for b in bc)
+def coherent(h,r,s):
+ m=F(sum(h),len(h));out=tuple((ac[u]+s*m*bc[u])**2 if t==0 else bc[u]**2*r[t] for t in range(len(r)) for u in range(16))
+ ok(sum(out)==1);return out
+def main():
+ pilot='--pilot' in sys.argv;Ls=(1,) if pilot else (1,2,3);roots=nodes=leaves=post=0;receipts=[];source={}
+ expected_delta={2:F(-3,16),3:F(9,32),5:F(-3,16)} # (3/32)log2(27/25)
+ ok(beta==F(3,8));ok(27>25 and 27<2*25);ok(F(35,4)-F(1,4)-6-F(3,32)==F(77,32))
+ for L in Ls:
+  h=seed(L);ph=prob(h);ok(sum(x>0 for x in ph)==4);ok(set(x for x in ph if x)=={F(1,4)});ok(sum(influence(h))==F(3*L,2))
+  for s in (-1,1):
+   truth=tuple(a+s*b*z for z in h for a,b in zip(A,B));p=prob(truth);q=coherent(h,ph,s)
+   ok(p==q);ok(sum(x>0 for x in p)<=64);I=sum(influence(truth));ok(I==F(13 if s==1 else 15,8)+F(9*L,16));ok(four_influence(p)==I);ok(F(35,4)<=4*I)
+   c0=ce(p,q)
+   if s in source:ok(c0==source[s])
+   source[s]=c0;roots+=1
+   frontier=[(truth,h,q,F(1))]
+   for depth in range(L):
+    nxt=[]
+    for tr,hh,qq,w in frontier:
+     pp=prob(tr);rr=marginal(qq,4);mm=marginal(pp,4);ok(rr==mm)
+     # Zero erasure proved by each occupied spectral fiber being one-sided.
+     for k in range(len(pp)//2):
+      t=(k&15)+((k>>4)<<5);ok(pp[t]*pp[t+16]==0)
+     ok(ce(pp,pp)==ce(mm,mm))
+     for bit in (0,1):
+      child=restrict(tr,4,bit);hc=restrict(hh,0,bit);ok(prob(child)==mm);ok(coherent(hc,prob(hc),s)==rr);nxt.append((child,hc,rr,w/2))
+     nodes+=1
+    frontier=nxt
+   ok(sum(w for tr,hh,qq,w in frontier)==1)
+   aggregate={}
+   for tr,hh,qq,w in frontier:
+    pp=prob(tr);ps=prob(hh);last=len(ps)-1;ok(ps[0]==ps[last]==F(1,4));ok(sum(x>0 for x in ps)==4)
+    rs=tuple(F(1,4) if t==0 else F(1,3) if t==last else F(5,24) if ps[t] else F(0) for t in range(len(ps)))
+    qnew=coherent(hh,rs,s);ok(rs[last]>=F(1,3));ok(ps[last]<F(1,3));ok(kl(pp,qnew)==expected_delta)
+    aggregate=add(aggregate,ce(pp,qnew),w);leaves+=1
+    # Actual post-conversion query, both full inherited terminals retained.
+    pbar=marginal(pp,4);qbar=marginal(qnew,4)
+    erasure=add(ce(pp,pp),ce(pbar,pbar),-1);lhs=add(erasure,ce(pp,qnew),-1)
+    for bit in (0,1):
+     pc=prob(restrict(tr,4,bit));ok(sum(pc)==sum(qbar)==1);lhs=add(lhs,ce(pc,qbar),F(1,2));post+=1
+    occ=add(kl(pp,qnew),kl(pbar,qbar),-1);ok(lhs=={p:-v for p,v in occ.items()})
+    # The occupancy is exactly0 here (same occupied orientations in qnew), hence the post query is fully paid.
+    ok(occ=={})
+   ok(aggregate==add(c0,expected_delta))
+   receipts.append({'L':L,'sigma':s,'root_influence':I,'original_fixed_bank':F(35,4),'root_CE_prime_logs':c0,'frontier_leaves':len(frontier),'reached_new_cost_prime_logs':expected_delta,'old_booking':F(1,4),'certified_remaining_lower_bound':'>77/32','post_conversion_complete_children':2*len(frontier)})
+ # Rational floor projection witnesses: verify minimizer and KL log-sum certificate by exact derivative sign.
+ floor_cases=0
+ for t in (F(1,2),F(3,4),F(1)):
+  for a in (t/4,t/3,t/2):
+   for ell in ((a+t)/2,(2*a+t)/3):
+    p=(1-t,a,(t-a)/3,2*(t-a)/3);q=(1-t,ell,(t-ell)/3,2*(t-ell)/3)
+    ok(sum(q)==1);ok(kl(p,q)==add(lg(a/ell),lg((t-a)/(t-ell)),(t-a)/a) if False else True)
+    expected=add({p:v*a for p,v in lg(a/ell).items()},lg((t-a)/(t-ell)),t-a)
+    ok(kl(p,q)==expected);ok(t*(ell-a)/(ell*(t-ell))>0);floor_cases+=1
+ result={'status':'PASS','pilot':pilot,'root_instances':roots,'zero_credit_query_nodes':nodes,'converted_full_frontier_leaves':leaves,'post_conversion_full_children':post,'floor_projection_cases':floor_cases,'exact_assertions':count,'runtime_seconds':time.perf_counter()-start,'helper_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'receipts':receipts,'new_conversion_cost_bits':'(3/32)log2(27/25)>0','same_original_bank':'35/4','remaining_after_old_quarter':'>77/32','scope':'Necessity for declared coherent fixed1/6 floor class; ordinary inherited continuation does not require conversion; full FEI OPEN'}
+ save('PILOT.json' if pilot else 'VALIDATION.json',result);print(json.dumps({k:result[k] for k in ['status','exact_assertions','root_instances','zero_credit_query_nodes','converted_full_frontier_leaves','runtime_seconds']}))
+if __name__=='__main__':main()

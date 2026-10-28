@@ -1,0 +1,9 @@
+# Independent scoped review of the character-cofactor clause
+
+Source: A078/runs/20261023T025441Z-account03-A078-coding-and-padding/PROOF.md section2 equations(3)-(4). Verdict: HOLDS AT THIS SCOPE, without repair. This is not acceptance of the complete27-case Maj3 classification or of its upstream private theorem, to which A076 contributed.
+
+For a fresh queried bit with Boolean children L,G, assume L is a signed character on the other physical inputs. Multiplication by L translates Fourier labels for the parent and BOTH children, so it preserves their full entropies and the actual queried influence. The transformed children are1 and M=GL. Let mu=EM=1-2j, j=Pr(G!=L). Direct Walsh expansion gives parent entropy H(M)/2+1-mu^2+g((1+mu)/2)+g((1-mu)/2)-g(mu)/2. Subtracting the complete child entropy H(M)/2 gives exactly4j(1-j)+g(1-j)+g(j)-g(1-2j)/2.
+
+For0<=x<=1, -x ln x<=1-x (continuity at0) implies g(x)<=2x(1-x)/ln2. Discard only the nonpositive last term. The two positive g terms sum to at most4j(1-j)/ln2. With ln2>=2/3 this yields Delta H<=10j(1-j)<=10j. At j0 and j1 the full exact decrement is0, so no division or hidden positive-influence assumption occurs. The arbitrary other child's entire entropy has canceled algebraically with its retained inherited half, rather than being assumed to satisfy FEI.
+
+This is a direct Fourier reconstruction and elementary analytic proof, not a numerical assertion. It explains why that accepted local clause is insufficient for the new stage9 family: BOTH actual cofactor means are nonzero and strictly between-1 and1, with persistent opposite-sign vertices, so neither child can be a character. PARITY_CARRIER_PROOF.md therefore supplies a different parity-leakage payment for that missing small-influence case. That new theorem is A076's contribution and awaits independent review.

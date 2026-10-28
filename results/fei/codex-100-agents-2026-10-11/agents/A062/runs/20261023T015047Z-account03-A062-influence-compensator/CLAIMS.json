@@ -1,0 +1,44 @@
+[
+  {
+    "claim_id": "A062-SPARSE-SIGNED-REFERENCE-ENVELOPE",
+    "version": 1,
+    "exact_statement": "For every finite law p on subsets with actual marginals 0<d_j<1, p(empty)>=prod_j(1-d_j), and a supporting normalized R whose conditional nonempty law is proportional to lambda^|S| times that actual marginal product, 0<lambda<=1, [TC(p)-KL(p||R)]_+ <= binaryKL(p(empty)||prod_j(1-d_j)) <= log2(e)*sum_j d_j. On eligible Boolean restriction trees the single-original-owner reserve B is at most log2(e)*I and the finite optional-stopping payment (5) holds. Eligibility is preserved for all point-defect physical histories starting from any conditional Bernoulli(delta) reference with 0<delta<=2^(1-n), arbitrary supporting empty tilt, and terminal conversion at most once. The coefficient log2(e) is asymptotically sharp. Independent randomized policies and a.s.-finite unbounded-tree stopping are admitted only under the explicit integrable nonnegative-account hypotheses in proof section 3.",
+    "hypotheses": [
+      "base-two information; actual spectral marginals, not reference marginals",
+      "one original normalized supporting reference transported with the common actual physical kernel",
+      "general projection requires empty-mass dominance and common odds attenuation at each node where conversion is admitted",
+      "conversion terminal and at most once; incoming KL and terminal entropy retained",
+      "original influence owner available once, ancestor debit never renewed",
+      "unbounded stopping requires a.s. finiteness, finite integrable initial nonnegative potential, stated local drift and terminal domination"
+    ],
+    "statement_sha256": "9087287f92eaf9c0ae2d0b2b02933055669f74b8cad9b793bcfafa5205849470",
+    "contributors": [
+      "A062"
+    ],
+    "proof_source": [
+      "PROOF_SHARP.md sections 1-6",
+      "out/EXACT.json",
+      "out/GENERAL.json"
+    ],
+    "proof_dependencies": [
+      "finite KL chain, reconstructed locally",
+      "Boolean Fourier restriction identity, reconstructed locally",
+      "finite exponential-family differentiation, proved locally",
+      "Fatou lemma only for the separately conditional unbounded-depth extension"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_CHECKED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "unconditional influence-scale additional product-reset reserve when arbitrary inherited R is allowed; exact R=p8 witness"
+    ],
+    "first_unproved_line": "To obtain universal FEI, pay initial reference admission and full terminal entropy and retain eligibility or pay its loss after arbitrary mixed physical queries from the same original unused owner. No such bound is proved.",
+    "next_consumers": [
+      "A061",
+      "A064",
+      "A065",
+      "A087",
+      "B13 lead"
+    ]
+  }
+]

@@ -1,0 +1,1 @@
+Stage20: exact floor I-projection and SAME original35/4 payer derived; >77/32 remains after old quarter. NEXT: fixed pilot/main and independent direct physical reproduction. Necessity is declared recipe-class admission only; full FEI OPEN.

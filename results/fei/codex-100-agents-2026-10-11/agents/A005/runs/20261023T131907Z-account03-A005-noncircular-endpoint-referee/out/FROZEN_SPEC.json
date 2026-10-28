@@ -1,0 +1,16 @@
+{
+  "helper_version": "A005-phase-normal-form-v2-preflight",
+  "preflight_change": "Before ANY search, cubic rate changed8 to16 because the frozen n5 point mass gives gamma=0 at8 and gamma=1 at16; no dimension or case-count escalation. Duplicate assertion counter removed before execution.",
+  "frozen_before_search": true,
+  "family": "Rare-negative Boolean roots times actual F2 polynomial output phases; exact Fourier marginal and physical-edge certificates",
+  "pilot": {"dimension": 4, "roots": 1, "phase_degree": 2, "phase_masks": [0,1,2,3,7,15,31,127,511,1023,2047], "maximum_seconds": 55},
+  "main": {"dimension": 4, "roots": "all16 single-negative point roots", "phase_degree": 2, "phase_count": 2048, "case_count": 32768, "K": 8, "maximum_seconds": 55},
+  "cubic": {"dimension": 5, "roots": "all32 single-negative point roots", "phase_degree": 3, "phase_masks": "0..255 plus every singleton monomial mask and all-monomial mask, deduplicated", "phase_count": 275, "case_count": 8800, "K": 16, "maximum_seconds": 55},
+  "arithmetic": "integer Walsh spectra and edges; Fraction entropy prime-log coefficients with rational logarithm enclosures from positive atanh series; no floating acceptance",
+  "symmetry": "No root location quotient; global sign phases retained; no terminal or Fourier row deletion",
+  "memory_estimate_MB": 30,
+  "total_maximum_seconds_per_job": 55,
+  "dimension_escalation": "None; pilot/main4 and independent cubic5 frozen explicitly",
+  "independent_check": {"helper_version":"A005-direct-transform-independent-v1", "domain":"n3 all256 Boolean roots times all128 degree<=2 phases", "case_count":32768,"symmetry":"none","arithmetic":"direct integer character sums and directed edge counts; exact entropy prime-log coefficients and rational logarithm enclosures", "memory_estimate_MB":30,"maximum_seconds":55},
+  "scalar_extension": {"domain":"One fixed point8 source at K15/4 and one phase-gap expression with k10000", "case_count":1,"arithmetic":"Fraction powers of2 and40-term rational logarithm enclosure","maximum_seconds":5,"memory_estimate_MB":2,"note":"Frozen before this independent helper is first executed; no parameter search"}
+}

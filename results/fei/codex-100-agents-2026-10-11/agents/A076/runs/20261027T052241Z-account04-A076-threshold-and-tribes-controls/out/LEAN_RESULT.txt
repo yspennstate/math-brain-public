@@ -1,0 +1,6 @@
+Command: python -X utf8 lean_check.py --stmt "example (d k L N : Real) (hd : 0 <= d) (hL : -1 <= L) (h : 2*k*d - d/2*(2*k-4*L) <= N) : (k-2)*d <= N := by nlinarith [mul_nonneg hd (show 0 <= L+1 by linarith)]"
+Exit code: 1
+RUNTIME_UNVERIFIED in 121.0s
+source_sha256: d6a88d414b11e65ffab6493758bdd262db8f79e552f0260fafde9690a3d1a6d8
+Translation fidelity: UNVERIFIED
+No Lean-checked result is claimed. No retry was launched. The attempted statement concerns only the final algebraic consequence of the curvature estimate, not its entropy calculus or the full theorem.

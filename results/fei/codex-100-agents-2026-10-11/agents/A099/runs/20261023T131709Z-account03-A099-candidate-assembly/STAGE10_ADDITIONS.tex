@@ -1,0 +1,215 @@
+\section{Zero-credit histories: complete ancestor accounting and admission}
+This section incorporates A085's arbitrary-core depth obstruction,
+A096's geometric-account theorem, A097's declared-floor admission, and
+A003's distinction between entropy payment and influence allocation.
+All are supplied-source or explicitly finite-core statements. The four
+universal conjectures in the preceding source remain conjectures. All
+logarithms in this section have base two.
+
+\begin{lemma}[Parity-block isometry and legal deferral]\label{lem:v10lift}
+For any Boolean core $g$ on $m$ bits replace each input by the parity of a
+disjoint block of $L\ge2$ physical bits. Then $h_L=g(y_1,\ldots,y_m)$ has
+Fourier coefficient $\widehat g(J)$ at the union of blocks indexed by $J$,
+and zero elsewhere. In particular $H(h_L)=H(g)$ and $I(h_L)=LI(g)$.
+A normalized finite-cost core reference $S$ pushes to the same block
+unions with its entire mass, including reference-only atoms, and
+$\operatorname{CE}(P_{h_L},S_{\rm lift})=\operatorname{CE}(P_g,S)$.
+After revealing any physical coordinates while leaving at least one in
+each block, write the remaining sizes as $\ell_j$ and revealed parity
+signs as $\theta_j$. The entropy remains $H(g)$, and the influence is
+$\sum_j\ell_j\operatorname{Inf}_j(g)$. A query in a block of size at least
+two has zero erasure, identical child squared spectra, and zero inherited
+occupancy refund. With matched references every calibration refund is
+zero; a mismatched reference can release already paid KL.
+\end{lemma}
+\begin{proof}
+Expand $g=\sum_J\widehat g(J)\chi_J$ and substitute the independent block
+characters. At a restriction the coefficient is multiplied by
+$\prod_{j\in J}\theta_j$ and its label becomes the union of remaining
+blocks. Distinct $J$ remain distinct; squares and every reference mass
+are preserved. A physical bit in block $j$ has influence
+$\operatorname{Inf}_j(g)$ by conditioning on the other parity inputs.
+If its block has at least two bits, toggling that singleton cannot connect
+two block-union labels. Thus each queried fiber has at most one occupied
+endpoint, for both the actual and lifted reference laws. Deletion is
+injective and preserves the true and reference probabilities. The two
+child coefficients $u\pm v$ have the same square because $uv=0$.
+The occupancy KL is zero since each positive true fiber and its reference
+use the same endpoint. Exact matched laws have zero KL for every
+partition; an arbitrary mismatched law need not. The coherent-wrapper
+formula already proved in the preceding section gives retained mismatch
+$\beta D(P_g\Vert S)$, not zero. For depth $D\ge1$, choosing $L=D+1$
+ensures every query up to that depth occurs before its block becomes a
+singleton. This proves the stated arbitrary-depth obstruction for all
+adaptive choices, without a finite-search extrapolation.
+\end{proof}
+
+The smallest entropy-bearing all-coordinate phase-null seed is
+$h=(1-x_1x_2-x_1x_3-x_2x_3)/2$, with law $1/4$ at the empty label and
+three pairs, $H=2$ and $I=3/2$. In dimensions at most two an
+adjacency-free occupied support has at most two opposite labels. If both
+opposite coefficients were nonzero, the Boolean autocorrelation identity
+at their difference would read twice their product equal to zero, a
+contradiction. Hence those dimensions have one-atom spectra and entropy
+zero. At any query of this three-bit seed, both children have uniform
+four-atom spectra. With the fixed controller $\beta=3/8$, replacing each
+conditional nonempty tail by its $63/64$ mixture with a singleton costs
+on each full child
+$\frac3{32}\log(131072/130977)>0$; the conditional probability ratios
+are $32/33,64/63,64/63$. All current matched query refunds vanish.
+This proves positive optional conversion cost, not that conversion is
+intrinsically required. Width-two source pricing of all arbitrary cores
+already implies FEI within factor two by the isometry.
+
+\begin{theorem}[Full-target geometric ancestor account]\label{thm:v10geo}
+Consider any finite complete adaptive Boolean query tree whose every
+queried pair satisfies $uv=0$. Let $P$ be the root squared law with
+occupied support $\Omega$, and $\pi_l$ the probability-preserving
+deletion bijection to leaf $l$, of physical reach $w_l$. Supply any
+normalized finite-cost root reference $Q_0$ and complete terminal
+references $Q_l$. Put
+\[
+ q_l(s)=Q_l(\pi_l(s)),\qquad
+ G(s)=\prod_lq_l(s)^{w_l},\quad Z=\sum_{s\in\Omega}G(s),\quad R_*=G/Z.
+\]
+Extend $R_*$ by zero off $\Omega$. Then $0<Z\le1$ and the entire signed
+replacement debit is
+\[
+ \Delta=D(P\Vert R_*)-D(P\Vert Q_0)-\log Z,
+ \qquad -\log Z=\sum_l w_lD(\pi_lR_*\Vert Q_l)\ge0.
+\]
+At global reach $\rho$, with original allowance $A$, all other prior
+debits and complementary terminals $W$, and actual unused
+$U=A-W-\rho\operatorname{CE}(P,Q_0)$, this handoff is paid exactly when
+$\rho\Delta\le U$. Disjoint frontier debits add with their actual
+global reaches. No allowance is renewed.
+\end{theorem}
+\begin{proof}
+The condition $uv=0$ makes deletion a bijection on occupied labels at
+each query, preserving every probability and giving erasure zero.
+Compose these maps along each leaf. Finite CE implies $q_l(s)>0$ on
+$\Omega$, hence $Z>0$. Weighted AM--GM and complete normalization give
+$Z\le\sum_lw_l\sum_{s\in\Omega}q_l(s)\le1$; mass outside the actual
+support is retained in the last inequality. By the definition of $G$,
+\[
+ \sum_lw_l\operatorname{CE}(P_l,Q_l)
+ =-\sum_sP(s)\log G(s)=\operatorname{CE}(P,R_*)-\log Z.
+\]
+Subtract the incoming full CE and use $\operatorname{CE}=H+D$.
+Likewise, average $\log(R_*(s)/q_l(s))$ over leaves: pointwise the result
+is $-\log Z$. Averaging over $R_*$ proves the second identity. Its zero
+case is equality of every full $Q_l$ with its transported $R_*$,
+including zero ghost mass. With $Q_0=P$, $\Delta\ge0$, and equality
+requires every $Q_l=P_l$. Finally substituting the exact new terminal
+bill into $A-W$ proves the same-account and frontier assertions.
+Intermediate reference changes telescope; their signed bills are not
+removed by the ancestor representation.
+\end{proof}
+
+For the three-bit seed just displayed, prescribe opposite targets
+$(3,3,1,1)/8$ and $(1,1,3,3)/8$ on the two transported four-atom
+supports. Then $R_*=P$ but $Z=\sqrt3/2$ and
+$\Delta=\frac12\log(4/3)>0$. Thus effective ancestor KL alone misses
+the full bill. These references test accounting; they are not asserted
+necessary for a universal FEI proof.
+
+\begin{lemma}[Sharp declared-floor admission]\label{lem:v10floor}
+Let $p$ have fixed vacuum $r$, tail $t=1-r>0$, and a specified tail event
+$A$ of mass $a\in(0,t)$. For a declared admissible class
+$q(0)=r$, $q(A)\ge\ell$, where $a<\ell<t$, the minimum complete
+conversion cost from the matched source is
+\[
+ \min_qD(p\Vert q)
+ =a\log(a/\ell)+(t-a)\log((t-a)/(t-\ell))>0.
+\]
+It is attained by preserving the conditional actual laws in $A$ and
+its tail complement and assigning masses $\ell,t-\ell$ respectively.
+For coherent complementary wrappers the full minimum is multiplied
+by $\beta$.
+\end{lemma}
+\begin{proof}
+Log-sum on the two tail events gives the lower bound at $z=q(A)$.
+Its derivative is $t(z-a)/(z(t-z)\ln2)>0$ for $z>a$; its minimum
+over $z\ge\ell$ occurs at $\ell$. The displayed conditional rescaling
+achieves equality and keeps every occupied denominator positive.
+Reference-only atoms have zero mass at this minimizer, as required by
+their complete normalization. In the wrapper the true signed vacuum
+is unchanged, and the nonempty probability and reference in each
+controller row share factor $\widehat b(U)^2$. Summing its KL gives
+$\beta D(p\Vert q)$ exactly.
+\end{proof}
+
+For the preceding seed, after exposing one entire block of any width
+$L\ge1$, the four-atom law is uniform and all preceding matched
+credits remain zero, including the last query in that block. The latter
+fact follows because the seed support contains no adjacent labels in
+that core direction. Requiring vacuum $1/4$ and distinguished
+nonempty mass at least $1/3$ has exact optimizer
+$(1/4,5/24,5/24,1/3)$, seed cost $\frac14\log(27/25)$, and full
+wrapper cost $\delta=\frac3{32}\log(27/25)<3/32$.
+For the fixed four-bit controller from the preceding section and either
+sign, the full source has at most $64$ occupied atoms, so its actual
+entropy $c_0\le6$. Direct controller counting gives influences
+$13/8+9L/16$ for the positive sign and $15/8+9L/16$ for the negative
+sign. The four controller pivotal probabilities are
+$5/16,5/16,1/2,1/2$ for $\sigma=+1$, and
+$7/16,7/16,1/2,1/2$ for $\sigma=-1$; their sums are the displayed
+controller contributions. The seed contribution is $\beta L(3/2)$.
+Consequently the original fixed allowance $35/4$ is at most four times
+the original physical influence for every $L$. If an eligible prior
+booking $\omega\le1/4$ is supplied and retained, the same account after
+admitting every one of the $2^L$ terminal histories has unused reserve
+\[
+ 35/4-\omega-c_0-\delta>77/32.
+\]
+The terminal reaches sum to one; they do not multiply the cost by
+$2^L$. An ensuing ordinary physical query with current full reference
+has debit $-D_{\rm occ}\le0$ by the earlier full-reference identity.
+This is class-relative necessity paid by an identified finite-core
+original margin. It gives neither universal necessity nor an
+influence-priced initial source for arbitrary cores.
+
+\begin{theorem}[Entropy deferral versus influence compression]\label{thm:v10rate}
+For a parity-block lift of any Boolean core, every legal deferral
+frontier $F$ has entropy $H(g)$ at all terminals. Write
+$J_F=\sum_{v\in F}\pi_vI(v)$ and $J=I(g)$. At supplied original
+allowance $K L J$ the entropy-payment residual is always $K L J-H(g)$.
+If a continuation additionally earmarks $K\operatorname{Inf}_i$ at
+every physical query, its different residual is $KJ_F-H(g)$. Requiring
+the latter nonnegative at every completely unwrapped cheaply admitted
+matched lift, for a fixed $K>0$, is equivalent to FEI with that exact
+$K$.
+\end{theorem}
+\begin{proof}
+Lemma~\ref{lem:v10lift} gives zero erasure and unchanged full CE at
+every legal query, while influence decreases by its core coordinate
+influence. Summing this decrease with physical reaches gives total
+earmarked influence $LJ-J_F$. This proves the two residual formulas.
+When all blocks have size one, $J_F=J$. Every nonconstant $n$-bit core
+has $J\ge2^{1-n}$ from a changing cube edge, and $H(g)\le n$.
+Choose integer $L\ge\max(2,\lceil n2^{n-1}/K\rceil)$; then the exact
+root source is cheaply admitted without FEI, since $H(g)\le KLJ$.
+The asserted endpoint condition yields $H(g)\le KJ$ for every core.
+Conversely FEI($K$) and $J_F\ge J$ give all such residuals
+nonnegative. Constants have both quantities zero. In the concrete
+majority-three guard, $H=2,J=3/2,L=2,K=1$, the original residual
+stays $1$ while the influence-earmarked endpoint residual is $-1/2$.
+No target reference improves exact CE below $H$.
+\end{proof}
+
+\paragraph{References and remaining leaf.}
+These are reconstructions of A085-ARBITRARY-CORE-ZERO-CREDIT-DEPTH-OBSTRUCTION@1
+(PROOF sections 2--5, run 20261023T112613Z),
+A096-ISOSPECTRAL-TARGET-GEOMETRIC-ACCOUNT@1
+(DERIVATION sections 2--3, run 20261023T115236Z),
+the declared-floor theorem in A097 run 20261023T121505Z (PROOF sections 2--4),
+and A003-MATCHED-DEFERRAL-INFLUENCE-COMPRESSION@1
+(DERIVATION sections 1--3, run 20261023T121547Z).
+Exact source statements, hypotheses, hashes and independently scoped
+review records are preserved in CLAIMS.json and SOURCE_RECEIPTS.json.
+The first unsupported universal step is still an influence-priced
+arbitrary-core initial source, or a genuinely useful compatible target
+whose full reached conversion cost is paid by its actual unused original
+account. Merely preserving entropy capacity does not establish a
+current-influence bound; dropping $-\log Z$ is false. The complete
+all-dimensional candidate still awaits two independent full-chain audits.

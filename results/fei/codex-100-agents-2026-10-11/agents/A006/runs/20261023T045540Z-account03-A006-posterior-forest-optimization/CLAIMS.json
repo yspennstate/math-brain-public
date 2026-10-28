@@ -1,0 +1,45 @@
+[
+  {
+    "claim_id": "A006-SAME-REFERENCE-INSERTION-AND-CONNECTED-COMPATIBILITY",
+    "version": 1,
+    "exact_statement": "For original fixed positive feasible gate references T subset Tprime retaining the old rules and weights, with normalizers D0,D1 and output masses Q0,Q1, every old actual run embeds uniquely and Q1(A)>=(D0/D1)Q0(A). For Boolean F=f+delta with Q0 positive on the nonempty Fourier supports of f and F and every theta>0, C_F(Q1)<=(1+theta)C_f(Q0)+(1+1/theta)sum_nonempty deltahat(A)^2 log2(1/Q0(A))+v_F log2(D1/D0). For every integer m>=2, let F be the positive edge DNF of two disjoint K_mm components joined by one edge from a left vertex of block1 to a right vertex of block2. On exactly its original edge primes, both endpoint orders, pi=1/4 and one fixed lambda=1/(2m), its complete all-partition actual-posterior cost satisfies C_F<23I(F).",
+    "hypotheses": [
+      "Uniform independent physical Boolean cube; entropy and costs in bits; actual runs counted once with posterior witness entropy retained.",
+      "The enlarged table keeps each old gate/order and subset/count/attachment law; its positive weights are globally fixed and packing-feasible. General insertion requires the stated support coverage.",
+      "For the connected specialization the original prime table is precisely the 2m^2+1 graph edges; no reference reset or sampled-set weight choice is used."
+    ],
+    "statement_sha256": "cfcb2fee57815af5fb1f5ece0060af1a8b0a2af7effd1d61e245e6d1723a5e53",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": [
+      "CONNECTOR.md sections1-5",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      "A010-EXACT-DISJOINT-PRIME-QUEUE-FACTORIZATION@1",
+      "A010-CROSSED-COMPONENT-PAYMENT-AND-REFERENCE-SEPARATION@1"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A006",
+        "verdict": "AUTHOR_PROOF_WITH_SEPARATE_PHYSICAL_AND_FOURIER_EXACT_CHECKS; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "finite_scope": "m2..4; 196 signed pairs;5120 FIFO merges; scalar checks through256",
+        "formal_status": "NOT_FORMALLY_CHECKED"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_FINITE_VALIDATION; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A010",
+      "A009",
+      "A008",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

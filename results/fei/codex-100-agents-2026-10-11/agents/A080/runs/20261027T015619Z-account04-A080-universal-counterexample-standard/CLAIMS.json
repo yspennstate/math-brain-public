@@ -1,0 +1,42 @@
+{
+  "claims": [
+    {
+      "claim_id": "A080-COMPOSITION-PRIME-APPROXIMATION",
+      "version": 1,
+      "exact_statement": "For every Boolean seed g on n bits and k>=2 with N=n+k>=3, F(x,z)=g(x)(-1)^{1[wt(x,z)<=1]} has at least three distinct truth-matrix rows on every proper block A with 2<=|A|<=N-1. For every nonconstant g, n>=1 and m>=1, choose N=8(n+m+2),k=N-n: |H(F)-H(g)| and |I(F)-I(g)| are each <=2^-m I(g), and H(F)/I(F)>=(H(g)/I(g)-2^-m)/(1+2^-m). Consequently the extended-real supremum C_prime of H/I over these composition-prime functions equals unrestricted C_FEI. For fixed K>=0 and kappa in R, let A_P=C_P+kappa I+sum_j q_j R_K(g_j) be the specific signed bank over proper disjoint single-output Boolean-core partitions P with true full stopping hulls. Then sup_{nonconstant f,dimension>=2} inf_P A_P(f)/I(f)=C_FEI+kappa. No unbounded seed family is constructed.",
+      "hypotheses": [
+        "uniform finite physical cube and actual Boolean signs",
+        "entropy in bits of complete normalized squared Fourier spectrum; total physical influence",
+        "fresh spectator bits and edits on exactly the radius-one ball",
+        "proper partition blocks are disjoint; one Boolean output per block; every block smaller than the whole domain",
+        "K>=0; true full physical stopping deficit hulls; fixed real kappa",
+        "relative-error schedule requires nonconstant seed n>=1 and accuracy index m>=1"
+      ],
+      "statement_sha256": "6bc67f200feecec2b789dae5b87770e118107c1532d7cd8c42fc4d8cdc561a6e",
+      "contributors": [
+        "A080; A071 row-compression criterion and prime Hamming-ball example are credited antecedents"
+      ],
+      "proof_source": "agents\\A080\\runs\\20261027T015619Z-account04-A080-universal-counterexample-standard\\PROOF.md",
+      "proof_dependencies": [
+        "Finite Boolean row-compression criterion, reconstructed from A071 stage21 section1",
+        "Parseval, Cauchy-Schwarz, finite maximal coupling and Shannon chain rule, proved/applied in PROOF.md",
+        "A080-EXACT-HULL-TENSOR-FAITHFUL-BANK@1: singleton hull is zero; independently accepted by A092 stage21; no universal FEI premise"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Strategy-level hypothesis that proper disjoint scalar Boolean decomposition uniformly reduces the worst-case optimal initial bank price below C_FEI+kappa"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A071",
+        "A075",
+        "A084",
+        "A089",
+        "A092",
+        "B20"
+      ]
+    }
+  ]
+}

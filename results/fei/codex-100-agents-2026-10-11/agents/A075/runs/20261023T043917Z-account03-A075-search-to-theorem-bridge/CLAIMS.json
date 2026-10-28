@@ -1,0 +1,110 @@
+[
+  {
+    "claim_id": "A075-SAME-CREDIT-THREE-CORE-CONTINUATION",
+    "version": 1,
+    "exact_statement": "For uniform physical bits, entropy in bits, g six-bit negative on{0,1,2}, h negative on{0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor1), let Fplus=J(-1,+1,g,g,g,g), S=4I-H and A=-S(Fplus)>0. For every already supplied real old net debit D>=0, root credit A+D pays every adaptive physical reveal/stopping policy touching at most THREE remaining cores using the specified conserved stopping-hull allocation. A first core may be chosen at the root, a second after an arbitrary one-core prefix with its actual one-core-hull credit, and a third after any subsequent two-core-hull history with its actual carried credit. At a phase admission the incoming credit is retained; thereafter use a_b=rho(child_b)+a-mean rho(children). Literal outer symmetries reduce the finite proof to two1728-state triples, and all864 pair-prefix cuts, including864 stronger one-then-two phase cuts, have exact extra initial-credit threshold0. Old debit and credit-owner labels are mean-conserved, all complete other/stopped terminal functions and original donor expenditure stay fixed, and no fresh outside flow is drawn. This is a finite six-bit-core family theorem with an all-real supplied-debit parameter, not an all-dimensional Boolean theorem, not fourth-core admission, and not acceptance of arbitrary alternative past allocators or A089 saved rounded accounts.",
+    "hypotheses": [
+      "specified actual disjoint Boolean family, base2 entropy, unchanged rate4",
+      "credit A+D was already supplied by the retained original account; D>=0 is a real net debit, not a newly priced resource",
+      "source phases use their exact single-core and pair stopping-hull allocators; phase admissions retain actual incoming credit",
+      "no fourth distinct remaining core is queried; dummy coordinates may be omitted without changing the full function",
+      "all signed old debit labels and nonnegative credit owners retained; source donor spending and other full terminals fixed"
+    ],
+    "statement_sha256": "f9c22f1e2f3c1200974ce44bd97ea355bc754bb521ef2a2b672a58b5a94801c5",
+    "contributors": [
+      "A075"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/third_core.py",
+      "code/bank_audit.py",
+      "out/TRIPLE_234.json",
+      "out/TRIPLE_235.json",
+      "out/BANK_AUDIT.json",
+      "out/CERT_234_*.json",
+      "out/CERT_235_*.json",
+      "out/PHASE_CUTS_*.json"
+    ],
+    "proof_dependencies": [
+      "A084-SAME-CREDIT-TWO-CORE-CONTINUATION@1 (independently accepted unchanged by A075 this stage)",
+      "finite character orthogonality, Shannon chain rule, finite stopping Bellman induction and affine supplied-credit transfer reconstructed in PROOF.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A075",
+        "independent_reviewer": false,
+        "verdict": "AUTHOR_EXACT_CERTIFICATE_AND_INDEPENDENT_BOTTOM_UP_REPLAY_PASS",
+        "scope": "both triple hulls,864 actual pair paths and864 one-then-two paths; independent named-profile transitions and original-coordinate replay; no external reviewer acceptance"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_FINITE_CERTIFICATE_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Pay fourth-core admission from the credit actually allocated by this three-core history, then derive an arbitrary-dimensional signed-component envelope funded by influence; no nontrivial parameterized Boolean bridge was obtained here.",
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A074",
+      "A084",
+      "A089",
+      "A092"
+    ]
+  },
+  {
+    "claim_id": "A084-SAME-CREDIT-TWO-CORE-CONTINUATION",
+    "version": 1,
+    "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative exactly on the bit masks {0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor 1), and g be negative exactly on {0,1,2} on six physical bits; bit 1 means sign -1. Retain the complete Boolean F_plus=J(-1,+1,g,g,g,g), S=4I-H with entropy in bits, and its supplied credit A0=-S(F_plus)>0. For any chosen pair of the four remaining disjoint physical cores, the exact conserved-credit hull over every allowed adaptive physical query and stopping policy within that pair has root R=A0. Further, after ANY prefix in one core using A072's original allocation a_b=R1(child_b)+a-mean R1, its actual incoming credit already dominates R2 at every cut, even when the second core is selected using the observed prefix. Thus all such two-core continuations require zero additional outside transfer for every real supplied initial old net debit D>=0 (incoming credit A0+D). All signed old debit labels, nonnegative credit-owner labels, other complete terminals and the outside donor books are preserved. On any finite restriction DAG the underlying account theorem holds for arbitrary nonnegative normalized real conditional weights, including zero-weight faces after removing unreachable outcomes: the exact all-policy requirement is R(v)=max(0,-S(v),max_query sum_b w_b R(child_b)). The physical Boolean application here uses only weights 1/2.",
+    "hypotheses": [
+      "The specified actual Boolean family and physical disjoint blocks; the other two whole cores remain present.",
+      "Original credit is already supplied and booked at the source terminal; no unused donor is asserted or newly renewed.",
+      "An optional initial prefix uses the actual source one-core allocation; after admission, only the chosen two cores may be queried.",
+      "All incoming credit-owner labels are nonnegative; signed old debit labels have total S+a>=0; refunds may be signed.",
+      "The general weighted-DAG statement assumes finite acyclic restriction states and fixed real S values; it makes no biased-influence identity claim."
+    ],
+    "statement_sha256": "75d8563fa4151b9c6fb42b10138f5bfdca7b6c08c1ae99272daa26771f77544b",
+    "contributors": [
+      "A084"
+    ],
+    "proof_source": [
+      "agents\\A084\\runs\\20261023T035136Z-account03-A084-continuum-parameters\\PROOF.md",
+      "agents\\A084\\runs\\20261023T035136Z-account03-A084-continuum-parameters\\REPORT.md",
+      "PROOF.md sections1-3 and5",
+      "out/INDEPENDENT_REVIEW.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A072-OTHER-CORE-STOPPING-CREDIT-HULL",
+        "version": 1,
+        "statement_sha256": "3232af6b6b8937dc62c1e50b57a212def54049aec44fe6ad145148fa912feb10",
+        "acceptance": "HOLDS_SUBSTATEMENT_INDEPENDENTLY_RECONSTRUCTED",
+        "scope": "Single-core S/R profiles and the actual source allocation; all24 source profiles reproduced. This does not independently review every other source financial claim."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A075",
+        "independent_reviewer": true,
+        "verdict": "HOLDS_UNCHANGED_SCOPE",
+        "scope": "all432 source pair-state instances/408 unique spectra and all hulls match exact prime-log expressions; all72 actual one-core prefix arrivals independently propagated; all-real supplied-debit and zero-credit/debit cases independently reconstructed analytically",
+        "method": "own direct Walsh subset expansion and bottom-up Bellman, no peer executable imported",
+        "source_declared_statement_sha256": "55c7c1651b72ecb1d203f529f289ad9c72fe6fe3a29b6d166c3bc665129dc203",
+        "source_claim_file_sha256": "3d3539533f8f82d71fc565133a37651176b946a81f97cd4e38457021a07d8644",
+        "source_digest_note": "source digest retained separately; local copy uses canonical statement+hypotheses hash",
+        "evidence": "out/INDEPENDENT_REVIEW.json"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_UNCHANGED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "None within the stated finite-family/analytic-account theorem. Universal extension: enabling a third physical core after credit already allocated jointly, and arbitrary-core admission, remain unpaid.",
+    "next_consumers": [
+      "A072",
+      "A089",
+      "A074",
+      "A092",
+      "A075",
+      "B17",
+      "B20"
+    ]
+  }
+]

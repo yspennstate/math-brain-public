@@ -1,0 +1,13 @@
+{
+  "helper_version": "A007-positive-dominated-extraction-v1",
+  "family": "All labelled nonconstant monotone sign cores s=1,2,3, canonical maximal-false positive CNFs; also one duplicate of the first anchor",
+  "domain": "canonical lifts L=1,2,3; duplicate-anchor lifts L=1,2; scalar bounds s=1..64 and delta=2^-j,j=0..16; rare-sector Z=2^-k,k=1,7,128",
+  "case_count": "23 cores;69 canonical and46 redundant-anchor lifts;1088 scalar pairs; pilot s<=2,L<=2 canonical only (10 lifts)",
+  "symmetry": "None; every labelled monotone truth table retained",
+  "arithmetic": "integer truth tables, integer Walsh transforms, Fraction pivotal counts and log-prime vectors; exact rational atanh log intervals only for entropy error checks",
+  "memory_estimate_mb": 100,
+  "maximum_runtime_seconds": 55,
+  "pilot_maximum_runtime_seconds": 55,
+  "dimension": "physical canonical <=12; duplicate-anchor <=11; no escalation",
+  "checks_that_could_fail": ["same physical private cube nesting","private Fourier phase and group incidence","prime-clause literal witnesses","finite entropy alphabet and growing tail","nonzero coefficient granularity","rho<1","reference positivity/total mass","negative normalization and surplus at rare sectors","no-domination negative control"]
+}

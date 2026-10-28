@@ -1,0 +1,12 @@
+{
+  "helper_version": "A038-v7-exact-prime-log-Bellman-1",
+  "family": "every Boolean function on n=0,1,2,3 uniform cubes",
+  "domain": "pilot n<=2; main n<=3; no automatic escalation",
+  "case_count": {"pilot": 22, "main": 278},
+  "symmetry": "none; all signed truth tables",
+  "arithmetic": "integer Walsh and independent character transform; rational influences; exact prime-log forms with outward rational atanh-series bounds for signs",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 55,
+  "checks": ["entropy drop=erasure+JS>=0", "physical influence conservation", "V4<=H", "[H-4I]+<=V4", "V4+minimum capped-drop tree sum=H"],
+  "limits": "finite checks validate implementations; all-dimensional proof is separate; no Lean compile within 1.5GB ceiling"
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "claim_id": "A008-RARE-CHILD-MOMENT-AND-FIXED-POLARITY-MIXTURE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For any finite original conditioned queue with positive feasible packing lambda, activities x_e=lambda_e*pi_e, A0=sum x_e and D=prod(1+x_e)-1, mark a fixed set G of gate names of total lambda weight t. If z>=1, zt<=1/16 and zA0<=1/16, then E[1_finite_success z^(R-1+M_G)]<=16/19, where R is the initial root count and M_G counts marked CHILD visits with repetitions. Consequently, for every integer w>=32, r=2^w, U=AND of r disjoint width-w OR clauses, V(Y)=1-U(-Y) on an independent clone, and F=2U(X)V(Y)-1, every pair of original complete positive/negative-prime queues with independently arbitrary positive packing-feasible weights and arbitrary ordered covers satisfies C_mix(F)/I(F)>w/2592 for EVERY fixed normalized output mixture alpha Q_+ +(1-alpha)Q_-, alpha in [0,1]. This lower bound includes all finite runs, repeated gates, overlapping subsets and output ambiguity. Meanwhile H(F)<8I(F), so this is an obstruction to this fixed-pair coding route, not an FEI counterexample. Each original root normalizer is retained separately.",
+    "hypotheses": [
+      "Original queue offspring law p_c=1/[(c+1)(c+2)] and attachment through selected coordinates",
+      "Finite tables, positive feasible packing; failed and infinite runs have no output",
+      "Marked-tree lemma uses its explicit z conditions; marks do not change the sampler",
+      "Boolean obstruction uses the stated disjoint uniform-cube family and complete signed prime tables",
+      "Cost/entropy in bits; exactly one fixed reference per polarity; richer mixtures or jointly compressed codes are not refuted"
+    ],
+    "statement_sha256": "8665cf2638011cb0dffa64b7c0cad0b347746eeb92dc2541e4bbc262ce55e6e5",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": [
+      "agents\\A008\\runs\\20261023T062437Z-account03-A008-gate-label-compression\\MIXTURE_OBSTRUCTION.md",
+      "agents\\A008\\runs\\20261023T062437Z-account03-A008-gate-label-compression\\code\\check.py",
+      "agents\\A008\\runs\\20261023T062437Z-account03-A008-gate-label-compression\\code\\replay.py",
+      "agents\\A008\\runs\\20261023T062437Z-account03-A008-gate-label-compression\\out\\full.json",
+      "agents\\A008\\runs\\20261023T062437Z-account03-A008-gate-label-compression\\out\\replay.json",
+      "agents\\A015\\runs\\20261023T110145Z-account03-A015-minterm-barrier-analysis\\REVIEW_A008.md"
+    ],
+    "proof_dependencies": [
+      "Original forests.tex queue semantics and conditioned root law",
+      "Direct Boolean prime classification, product Fourier coefficients and physical pivotal counting; proved in MIXTURE_OBSTRUCTION.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "role": "author proof plus separate exact implementations; not independent-agent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "out/full.json",
+          "out/replay.json"
+        ]
+      },
+      {
+        "reviewer": "A015",
+        "role": "Independent full-scope reconstruction and fresh exact helper, no source repair",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "evidence": [
+          "agents\\A015\\runs\\20261023T110145Z-account03-A015-minterm-barrier-analysis\\REVIEW_A008.md",
+          "agents\\A015\\runs\\20261023T110145Z-account03-A015-minterm-barrier-analysis\\out\\exact_checks.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_A015_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Every Boolean f has influence-paid full output cost in a fixed mixture of one original positive-prime queue and one original negative-prime queue, optimizing their feasible weights and orders",
+        "witness": "F=2U(X)[1-U(-Y)]-1, U=AND of2^w disjoint width-w OR clauses, w>=32",
+        "scope": "Original fixed pair of queues only; universal one-root structural existence remains true; full FEI unrefuted"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A009",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A015-ONCE-TAGGED-JOINT-DICTIONARY-REFERENCE",
+    "version": 1,
+    "exact_statement": "For independent uniform-cube blocks X,Y and nonconstant indicators U,V, a=EU,b=EV,g=2U-1,h=2V-1,F=2UV-1, any fixed positive normalized nonempty references q_g,q_h define a positive normalized nonempty Q by a uniform choice of X-only,Y-only,both and independent q sampling on used blocks. Its EXACT complete nonempty cost is C_Q(F)=Var(F)log2(3)+b C_g+a C_h and I(F)=b I(g)+a I(h). In particular, for independent w_X,w_Y>=4, r_i=2^w_i disjoint OR clauses of arbitrary widths in{w_i,w_i+1}, U_i their AND, F=2U_X[1-U_Y(-Y)]-1, choose each local nonempty clause mask by Bernoulli rho_i=1/(2r_i) conditioned nonempty and a uniform nonempty subset in each active clause. This FULL explicit joint-sector reference has C_Q(F)<=[11/2+log2(3)]I(F)<8I(F). Adding its actual empty/nonempty wrapper gives full cost<[13/2+log2(3)]I(F)<9I(F). Every mask, subset, sector and nonempty normalizer is included. This is a new root reference, not an original queue or a free reset; no universal physical-overlap or unlimited-composition claim is made.",
+    "hypotheses": [
+      "Costs in bits; uniform cube and physically disjoint component blocks",
+      "Generic identity: supplied positive normalized references fixed before sampling; local C is nonempty cross entropy",
+      "Explicit family: integers w_X,w_Y>=4; r_i=2^w_i disjoint clauses of widths w_i or w_i+1 in each component",
+      "References and clause dictionaries fixed before the target spectral set; full wrapper uses the stated actual Var(F)",
+      "No identification of this new sampler with the refuted original prime queues; no unpaid reference change in an existing history"
+    ],
+    "statement_sha256": "2ab314e33940b8c5c4555a26811c7fa8f3413f0359afa3382937915c0b502bd1",
+    "contributors": [
+      "A015"
+    ],
+    "proof_source": [
+      "JOINT_DICTIONARY_CODE.md",
+      "code/check.py",
+      "out/exact_checks.json"
+    ],
+    "proof_dependencies": [
+      "Direct disjoint Fourier composition, explicit reference normalization, clause activation moments and pivotal counting; all proved in JOINT_DICTIONARY_CODE.md",
+      "Parseval Var(f)<=I(f); elementary Bernoulli inequality and binomial-series bound sum1/j!<3"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A015",
+        "role": "Author analytic proof plus exact independently represented physical-table checks; not independent-agent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "JOINT_DICTIONARY_CODE.md",
+          "out/exact_checks.json"
+        ]
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A008",
+      "A014",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  }
+]

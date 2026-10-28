@@ -1,0 +1,13 @@
+{
+  "helper_version": "A038-positive-variation-v1; copied exact rational interval_primitives.py/baseline.py/postreset.py from 063549 stage; new cumulative.py",
+  "actual_Boolean_family": "priority root chi_a on x0, chi_z d_m on x=b=1, +1 otherwise; d_m=1-2*1[y=0]",
+  "parameter_domain": "physical m=4, n=8 ONLY; scalar k=1..16; independent symbolic recurrence k=1..32",
+  "case_count": "pilot 1 physical history; main 4 histories with b,x,reset1,first query,reset2,second query: (y0,y1),(z,y0),(y0,z),(y0,branch y1/z)",
+  "symmetry": "none asserted; selected named coordinate policies, analytic permutation invariance used only in all-k proof",
+  "arithmetic": "exact dyadic Fourier/edge checks, Fraction arithmetic, outward 10^24 rational grid, 24-term atanh log bounds; independent 32-term log and rational formal-log vectors",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds_per_job": 55,
+  "automatic_dimension_growth": false,
+  "checks": "all old and new disjoint positive debits, two full reset bills, all physical terminals, coherent common-kernel KL decomposition with reference normalizers and source-zero fallback; positive U both before and AFTER second reset; down-then-up policy separating cumulative from net debit",
+  "independent_external_review": "pending; second implementation is author validation, not external acceptance"
+}

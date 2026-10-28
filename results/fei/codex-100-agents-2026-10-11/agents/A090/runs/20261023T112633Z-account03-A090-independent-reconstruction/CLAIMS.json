@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "A004-ISOSPECTRAL-OCCUPANCY-TWO-BIN-FIXED-RESET",
+    "version": 1,
+    "exact_statement": "For any finite uniform coherent Boolean wrapper G=a+sigma*b*h, a ternary, b=1-a^2, supply normalized finite-CE seed reference R with R(empty)=(Eh)^2 and retain its already paid original owner/all debits. At an isospectral physical seed query j with hhat({j})=R({j})=0, beta=E b>0 and a0=1-(Eh)^2>0, let pi and M be normalized nonempty tails of the actual and reference j-marginals, delta=TV(pi,M), W=sum over occupied fibers pbar(T)*(p(T+j)/pbar(T)-R(T+j)/Rbar(T))^2 and eta=delta^2+W/a0. The actual occupancy refund is at least2*beta*W/ln2. Calibrating the SAME two bins {pi>M} and its complement on BOTH full children, retaining within-bin current conditionals and true vacuum, refunds at least2*beta*a0*delta^2/ln2 per child. Then an arbitrary prescribed target-tail mixture at strength eta/(1+eta), or FIXED strength1/64 whenever eta>=1/63, is paid at unchanged supplied rate and leaves at least beta*a0*eta/ln2 new local refund, with every full terminal and old debit retained. Here eta=0 iff R=p_h. Explicit parity3 references (delta7+delta6)/2 and (delta7+delta3)/2, queried bit0 under A079 beta3/8 controller, both pay fixed1/64 changes and retain>93/256 bits; the first uses only occupancy, the second only calibration. Exact-source parity has eta=0 and a distinct-target reset costs positive CE. This is supplied-reference mismatch payment with B_j=0, not universal influence pricing or a full FEI result.",
+    "hypotheses": [
+      "Uniform finite actual Boolean seed on disjoint cube from complementary ternary controller; sigma=+/-1.",
+      "Supplied CURRENT normalized full coherent reference with finite CE and true seed vacuum; every old debit and all complete complementary terminals stay booked.",
+      "Seed query has zero actual and reference singleton mass and coefficient products hhat(T)*hhat(T+j)=0 for every residual T; beta>0,a0>0 for positive-tail rule.",
+      "Two bins chosen before physical outcome using actual/reference marginal tails; arbitrary prescribed target on remaining nonempty labels; within-bin old reference conditionals retained.",
+      "Fixed1/64 authorization requires eta>=1/63. Zero beta/tail uses explicit zero-tail endpoint; exact-reference eta0 receives no positive refund.",
+      "Information in bits; all query influences physical, no renewed ancestor bank or initial influence supplier inferred."
+    ],
+    "statement_sha256": "283893b58de872cd20ac47ce26322e74062d2ee89ae4a60213c29dabc747d70a",
+    "contributors": [
+      "A004/account03; A003 mean-offset refinement, A097 nonempty-bin calibration, A079 coherent source credited"
+    ],
+    "proof_source": [
+      "agents\\A004\\runs\\20261023T070305Z-account03-A004-constant-and-unit-ledger\\CLAIMS.json",
+      "agents\\A090\\runs\\20261023T112633Z-account03-A090-independent-reconstruction\\REPORT.md",
+      "agents\\A090\\runs\\20261023T112633Z-account03-A090-independent-reconstruction\\code\\check.py",
+      "agents\\A090\\runs\\20261023T112633Z-account03-A090-independent-reconstruction\\out\\CHECK.json"
+    ],
+    "proof_dependencies": [
+      "A003-REFERENCE-SINGLETON-DISCREPANCY-FUNDED-RESET@1 independently reconstructed here for source comparison; new sector result derives directly from conditional KL and binary Pinsker",
+      "A079 coherent reference definitions and block-calibration identity independently reconstructed locally, not an assumed arbitrary source price"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A090/account03",
+        "timestamp": "2026-10-23T11:42:52.477238+00:00",
+        "verdict": "HOLDS at full source scope, no repair",
+        "producer_derivation_used": false,
+        "method": "Statement-only physical fiber/KL expansion and binary curvature proof; independent own Walsh/Fraction checker;6 direct7bit witnesses;exact-match boundary and threshold audited",
+        "source": "agents\\A090\\runs\\20261023T112633Z-account03-A090-independent-reconstruction\\REPORT.md"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_BY_A090_AT_UNCHANGED_SOURCE_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Influence-priced initial reference for arbitrary Boolean roots, or payment for a necessary prescribed conversion in exact-matched isospectral nullspace from actual unused original surplus. No uniform eta lower bound is supplied.",
+    "next_consumers": [
+      "A001",
+      "A003",
+      "A079",
+      "A090",
+      "A094",
+      "A096",
+      "A097",
+      "B01",
+      "B20"
+    ]
+  }
+]

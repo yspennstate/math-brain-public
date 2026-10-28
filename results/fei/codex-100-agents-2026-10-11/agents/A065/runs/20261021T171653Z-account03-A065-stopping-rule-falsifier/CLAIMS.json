@@ -1,0 +1,49 @@
+[
+  {
+    "claim_id": "A065-EARLY-TAG-GRAFT-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "At C=32609/5000, let u be bent10, v=u with its zero vertex flipped, and a=majority3 on fresh bits. For F=(u+v)/2+w*a*(u-v)/2 the complete early-tag/seed/data tree has Q_C(F)>1/100000, although the SAME inherited bank Pr[u!=v]*Q_C(a,seed-order)+Q_C(M,data-order/tag-last) is exactly zero. The tag-plus-all-seed stopping prefix retains both complete u/v terminal spectra and has debt epsilon>1/100000. Products of L disjoint modules and the corresponding 4L-query prefix have actual expected debt L*epsilon>L/100000 for every positive integer L. This obstructs the early-tag extension only; full FEI remains open.",
+    "hypotheses": [
+      "uniform cube; entropy in bits",
+      "actual shared-data bent10/one-vertex-edit pair",
+      "fresh majority3 controller and fair tag",
+      "fixed C=32609/5000",
+      "seed and data order increasing physical labels",
+      "profile tag last; challenged tree tag first",
+      "nonnegative complete-reserve definition; terminal H retained",
+      "tensor modules physically disjoint; L any positive integer"
+    ],
+    "statement_sha256": "dd6b741d4f51aa80f974ba0986379365d470a1622def82905d912fab3f409f1b",
+    "contributors": [
+      "A065 account03"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "out/BENT_EXACT.json",
+      "out/CLOSED_REPLAY.json",
+      "out/ACTUAL_CHILD_CONTINUATIONS.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A065",
+        "scope": "integer Walsh/direct edges versus closed coefficient multiplicities; Lean arithmetic sign",
+        "verdict": "SELF_CHECKED_NOT_INDEPENDENT_ACCEPTANCE"
+      }
+    ],
+    "status": "PROOF_AND_EXACT_CERTIFICATE_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Proposed extension of A062 shared-core graft allowing early tag exposure with the same zero bank; NOT A062 stated late-tag theorem"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A062",
+      "A064",
+      "A087",
+      "A094",
+      "B13",
+      "B20"
+    ]
+  }
+]

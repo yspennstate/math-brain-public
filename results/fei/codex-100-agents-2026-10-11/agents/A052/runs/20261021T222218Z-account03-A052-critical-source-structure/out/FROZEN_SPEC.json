@@ -1,0 +1,29 @@
+{
+  "helper_version": "affine_pair_v1",
+  "family": "every labelled Boolean truth table n=0..3 pilot; n=4 fixed full domain only if pilot warrants; retain exactly affine-influence-minimal tables",
+  "domain": {
+    "pilot_n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "full_n": [
+      4
+    ]
+  },
+  "case_count": {
+    "pilot": 278,
+    "full": 65536
+  },
+  "symmetry": "none",
+  "arithmetic": "integer Walsh; Fraction for collision; minimum-basis test every nonzero binary parity",
+  "memory_estimate_mb": 50,
+  "max_runtime_seconds": 55,
+  "targets": [
+    "Q<=2(C_i+C_j)",
+    "O_i+O_j<=M_i+M_j",
+    "all signed Boolean convolution identities"
+  ],
+  "no_automatic_dimension_increase": true
+}

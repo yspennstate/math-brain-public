@@ -1,0 +1,90 @@
+[
+  {
+    "claim_id": "A031-NONFAIR-PRIVATE-QUERY-THIRD-RESET",
+    "version": 1,
+    "exact_statement": "For every integer L>=1, let f_L be the Boolean triangle with clauses {x,a,c}, X2 union {a,b}, X3 union {b,c}, with equal disjoint L-bit private blocks. Let W=17 I_private(f_L), where private={x} union X2 union X3, and D=M(f_L)+B_x(f_L)+mean_s B_b(p_s). After physical x=s,b=t, use supplied Q_st=fair_a(marg_a p_st). Choose y in X2, physically query y in all four parents and prescribe Qnew_stu=fair_c(marg_c p_stu) in all eight original-reach-1/8 terminals. Then D+mean_st B_y(p_st)+mean_stu CE(p_stu,Qnew_stu)<W-1/32. For each parent the exact net increment is Delta-rho=-I_p(S_y;S_c|S_-(c,y))-J_y^(minus c)<=0, while the actual incoming conditional-KL refund is rho=I_p(S_y;S_a|S_-(a,y)). The x=1,b=0 incoming y kernel is nonfair for all L, and equals49/218 at L2. This is an inherited-bank extension, not universal FEI and not a demonstrated positive-price nonfair reset.",
+    "hypotheses": [
+      "Uniform normalized Walsh spectra; entropy and CE in bits; B_i=H(S_i|S_-i), M oriented erasure",
+      "Equal-width actual Boolean triangle and prescribed physical history; signs combined before squaring",
+      "A035-TRIANGLE-SECOND-PRESCRIBED-RESET v1 supplied same original rate17 bank",
+      "All eight full terminal references retained, including constant and dummy branches; no renewed fair-bit refund",
+      "Untouched independent spectator retains M(g)+CE(p_g,Q_g) with coefficient1 on both sides"
+    ],
+    "statement_sha256": "a17d8c0afc23df850af4f43b8f5e9c791e6edc03f6db5a6dfde9de1f7a880a6b",
+    "contributors": [
+      "account03/A031"
+    ],
+    "proof_source": {
+      "path": "agents\\A031\\runs\\20261023T001357Z-account03-A031-convolution-identity\\DERIVATION.md",
+      "sha256": "49e2970a096296b66a11d994e5c37a7dfdf22248fc842be3e475451c7e3701e8"
+    },
+    "proof_dependencies": [
+      "A035-TRIANGLE-SECOND-PRESCRIBED-RESET v1",
+      "Signed Boolean restriction identity and actual a/c,X2/X3 permutation symmetry",
+      "Conditional KL chain rule; mutual-information nonnegativity; exact parent/child mixture identity"
+    ],
+    "review_records": [
+      {
+        "reviewer": "account03/A035",
+        "claim_id": "A031-NONFAIR-PRIVATE-QUERY-THIRD-RESET",
+        "version": 1,
+        "source_statement_sha256": "a17d8c0afc23df850af4f43b8f5e9c791e6edc03f6db5a6dfde9de1f7a880a6b",
+        "source_proof_sha256": "49e2970a096296b66a11d994e5c37a7dfdf22248fc842be3e475451c7e3701e8",
+        "status": "ACCEPT_SCOPED_NEW_EXTENSION_NO_REPAIR",
+        "scope": "Third nonfair reset identity and actual pre-y symmetry, not a new independent acceptance of whole inherited source chain",
+        "independent_reconstruction": "DERIVATION section5; independent truth-table FWHT reproduces complete third bills L1,2,3",
+        "limitation": "Original source bank remains inherited; no local positive conversion inferred"
+      }
+    ],
+    "status": "INDEPENDENT_SCOPED_EXTENSION_REVIEW_HOLDS_INHERITED_BANK_DEPENDENCY_RETAINED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A035",
+      "A096",
+      "B07 lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A035-CLOSED-REFERENCE-CYCLE-ASYMMETRIC-RESET",
+    "version": 1,
+    "exact_statement": "For every integer L>=1 in the actual equal-width three-clause Boolean triangle, retain the original owner W=17 I_private and D=M(root)+B_x(root)+mean_x B_b. After physical x,b,y in X2,z in X3, prescribe fair-c after y and fair-a after z. Then D+mean_xb B_y+mean_xby B_z+mean_xbyz CE(p_xbyz,fair_a(marg_a p_xbyz))<W-1/32, with all sixteen full terminal bills. More generally every finite complete adaptive continuation from the paid x,b parents which never queries a and ends with fair-a references obeys the same inherited bank. The generic single-step full-bill change for a fixed retained marker j and query i!=j is -I(S_i;S_j|others)-J_i^(-j)<=0. Nonetheless the actual L=2,x=1,b=0,y=1 fourth reset has Delta-rho>1/10 bit, refuting the proposed local Delta<=rho rule; the cumulative cycle remains paid.",
+    "hypotheses": [
+      "Uniform normalized signed Walsh spectra; all entropies in bits",
+      "Actual Boolean triangle and supplied A035-TRIANGLE-SECOND-PRESCRIBED-RESET v1 original-bank theorem",
+      "All physical outcomes and every complete terminal CE retained at original reach; intermediate references and conditional refunds kept",
+      "For adaptive-tree corollary no query of retained marker a; all final references fair-a",
+      "Generic identity explicitly supplies transfer only, not universal Boolean initial admission"
+    ],
+    "statement_sha256": "2b909672dba20900367e5469c11fe61e8b57ebbcd75702ebed45d361f472d1b5",
+    "contributors": [
+      "account03/A035"
+    ],
+    "proof_source": {
+      "path": "agents\\A035\\runs\\20261023T041335Z-account03-A035-signed-cancellation-countersearch\\DERIVATION.md",
+      "sha256": "3462228a500c94e599c9761e171e077454c66a18f6328b58aa3777d5d3ecd66c"
+    },
+    "proof_dependencies": [
+      "A035-TRIANGLE-SECOND-PRESCRIBED-RESET v1",
+      "Actual signed physical child-mixture identity",
+      "Entropy chain rule; conditional mutual information and Jensen-Shannon nonnegativity"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_ALL_L_AND_ADAPTIVE_TRANSFER_EXACT_WITNESS_PENDING_PEER_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered candidate: every asymmetric fourth reset has Delta<=rho at its own node"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A031",
+      "A096",
+      "A088",
+      "A094",
+      "B07 lead",
+      "B20"
+    ]
+  }
+]

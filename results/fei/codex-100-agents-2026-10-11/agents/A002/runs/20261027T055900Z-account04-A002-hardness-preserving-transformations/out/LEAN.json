@@ -1,0 +1,25 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-B",
+    "-X",
+    "utf8",
+    "lean_check.py",
+    "--file",
+    "agents\\A002\\runs\\20261027T055900Z-account04-A002-hardness-preserving-transformations\\code\\Cancellation.lean",
+    "--core",
+    "--target",
+    "A002_weighted_cancellation",
+    "--reviewed-sha256",
+    "ccc7633279abdafc14e81780a5cbc6f72898e2dfe2d4ac1bda2c39a04ef219a0",
+    "--timeout",
+    "45",
+    "--json"
+  ],
+  "exit_code": 2,
+  "seconds": 60.846330799977295,
+  "stdout": "{\n  \"result\": {\n    \"status\": \"RUNTIME_UNVERIFIED\",\n    \"formal_target_verified\": false,\n    \"target\": \"A002_weighted_cancellation\",\n    \"source_sha256\": \"ccc7633279abdafc14e81780a5cbc6f72898e2dfe2d4ac1bda2c39a04ef219a0\",\n    \"source_review_assertion\": \"ccc7633279abdafc14e81780a5cbc6f72898e2dfe2d4ac1bda2c39a04ef219a0\",\n    \"target_kind\": \"UNVERIFIED\",\n    \"target_identity_verified\": false,\n    \"axioms\": null,\n    \"axiom_name_trees\": null,\n    \"allowed_axioms\": [\n      \"Classical.choice\",\n      \"Quot.sound\",\n      \"propext\"\n    ],\n    \"translation_fidelity\": \"UNVERIFIED\",\n    \"mathematical_falsity_established\": false,\n    \"threat_model\": \"Explicitly reviewed source and trusted compiler/dependencies; not a sandbox\"\n  },\n  \"compiler_exit_code\": null,\n  \"compiler_output\": \"\",\n  \"seconds\": 59.563,\n  \"compiler_sha256\": \"af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d\",\n  \"generated_sha256\": \"cb167182dce878db08f2628dbfea3c9126e49d196bc361178b632fc1201c4180\",\n  \"environment\": {},\n  \"evidence_integrity\": true,\n  \"source_path\": \"agents\\\\A002\\\\runs\\\\20261027T055900Z-account04-A002-hardness-preserving-transformations\\\\code\\\\Cancellation.lean\",\n  \"receipt_directory\": \"~\\\\AppData\\\\Local\\\\Temp\\\\lean_check\\\\4aa6888d638c4cd0be5e16cf17fa96ca\"\n}\n",
+  "stderr": "",
+  "scope": "binary scalar cancellation after clearing dyadic reaches only; not entropy/Boolean premises",
+  "admission": "memok exited0 before invocation; core Lean only, no Mathlib build"
+}

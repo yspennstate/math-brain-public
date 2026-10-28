@@ -1,0 +1,93 @@
+{
+  "status": "PASS",
+  "exact_assertions": 3040390,
+  "bounded_jobs": 8,
+  "primary": [
+    {
+      "status": "PASS",
+      "mode": "pilot",
+      "roots_or_grid_tuples": 15,
+      "frontiers": 105,
+      "positive_signed_resets": 25,
+      "negative_signed_resets": 80,
+      "exact_assertions": 59562,
+      "seconds": 2.8082551000406966,
+      "helper_sha256": "3b837b838c1bd4ed477d665c0845c89471191e65288c165a04edb5922fb1a0f2"
+    },
+    {
+      "status": "PASS",
+      "mode": "0",
+      "roots_or_grid_tuples": 75,
+      "frontiers": 570,
+      "positive_signed_resets": 169,
+      "negative_signed_resets": 401,
+      "exact_assertions": 473787,
+      "seconds": 19.56328800000483,
+      "helper_sha256": "3b837b838c1bd4ed477d665c0845c89471191e65288c165a04edb5922fb1a0f2"
+    },
+    {
+      "status": "PASS",
+      "mode": "1",
+      "roots_or_grid_tuples": 75,
+      "frontiers": 600,
+      "positive_signed_resets": 203,
+      "negative_signed_resets": 397,
+      "exact_assertions": 590727,
+      "seconds": 13.672098600014579,
+      "helper_sha256": "3b837b838c1bd4ed477d665c0845c89471191e65288c165a04edb5922fb1a0f2"
+    },
+    {
+      "status": "PASS",
+      "mode": "2",
+      "roots_or_grid_tuples": 75,
+      "frontiers": 600,
+      "positive_signed_resets": 172,
+      "negative_signed_resets": 428,
+      "exact_assertions": 589593,
+      "seconds": 12.3413736000075,
+      "helper_sha256": "3b837b838c1bd4ed477d665c0845c89471191e65288c165a04edb5922fb1a0f2"
+    },
+    {
+      "status": "PASS",
+      "mode": "3",
+      "roots_or_grid_tuples": 75,
+      "frontiers": 660,
+      "positive_signed_resets": 241,
+      "negative_signed_resets": 419,
+      "exact_assertions": 1055709,
+      "seconds": 28.66504440002609,
+      "helper_sha256": "3b837b838c1bd4ed477d665c0845c89471191e65288c165a04edb5922fb1a0f2"
+    },
+    {
+      "status": "PASS",
+      "mode": "grid",
+      "roots_or_grid_tuples": 25344,
+      "frontiers": 0,
+      "positive_signed_resets": 0,
+      "negative_signed_resets": 0,
+      "exact_assertions": 126720,
+      "seconds": 0.808356299996376,
+      "helper_sha256": "3b837b838c1bd4ed477d665c0845c89471191e65288c165a04edb5922fb1a0f2"
+    }
+  ],
+  "local_bound_audit": {
+    "status": "PASS",
+    "local_floor_reference_cases": 2484,
+    "scalar_collapse_widths": 64,
+    "exact_assertions": 131908,
+    "seconds": 6.071685199975036,
+    "independence": "local bound audit shares primary transform; separate direct-character replay is independent"
+  },
+  "independent_replay": {
+    "status": "PASS",
+    "roots": 4,
+    "frontiers": 28,
+    "constant_source_exclusion": 1,
+    "assertions": 12384,
+    "seconds": 2.0893436999758705,
+    "independence": "direct character sums, independent models and edge enumeration; imports only pinned logarithm primitive, not primary checker"
+  },
+  "finite_vs_universal": "all-dimensional conclusion proved in DERIVATION.md; finite certificates are validation, not extrapolation",
+  "formal": "not attempted this stage; no Lean certificate",
+  "max_seconds": 28.66504440002609
+}

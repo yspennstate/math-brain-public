@@ -1,0 +1,18 @@
+{
+  "helper_version": "A034-scalar-square-root-v5",
+  "family": "signed scalar Fourier amplitudes with total absolute sum<=1; actual ternary disjoint affine quadratic rows; inherited physical affine-intersection certificates",
+  "domains": {
+    "scalar": "all signed integer tuples with l1<=denominator for (length,denominator)=(1,16),(2,16),(3,12),(4,8)",
+    "scalar_cases": 6852,
+    "sharpness": "a=1-2^-k,b=-2^-k, integer k=2..64,63 exact intervals; control dropping l1 condition uses (a,b)=(1,-1/16)",
+    "dense": "four disjoint cells on fixed nY=14: codimensions1,12,13,14; all16 sign patterns, phases either constant or the fixed global quadratic y12*y13;32 actual rows; rare version fixes a fresh bit at0, preserving row bill and energy via symbolic activation identities",
+    "symbolic": "same256 fixed36-bit four-cell states as stage21, independent physical intersection implementation, now check sharp6/11 factor",
+    "boundaries": "exact partition-size compositions s1..12 and64 scalar energy-rounding test triples in range0..3"
+  },
+  "symmetry": "none",
+  "arithmetic": "integer Walsh, exact Fraction influences, rational logarithm intervals and directed rational square-root bounds via integer isqrt",
+  "memory_estimate_mb": 70,
+  "maximum_runtime_seconds_per_job": 55,
+  "no_automatic_dimension_escalation": true,
+  "formal": "core Lean rounding lemma only; own run output directory; fresh admission, no Mathlib compiler exceeding1.5GB"
+}

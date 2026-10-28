@@ -1,0 +1,69 @@
+[
+  {
+    "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+    "version": 6,
+    "exact_statement": "For every pair of Boolean signs f,c on any finite uniform physical cube, put g=fc and let r(c) be the affine dimension over F2 of the nonzero Walsh support of c. Then |H(g)-H(f)|<=r(c), and either physical restriction has rank no greater than r(c). At every node of any finite adaptive stopping tree of actual restrictions, Phi=r(c)+H(g)-H(f) lies in [0,2r(c)], and Delta(g)-Delta(f)=Phi-average(Phi_children)-[r(c)-average(r(c_children))]. Thus all signed corrections telescope from ONE original reserve with both full terminals and rank refunds retained. If c avoids all queried coordinates, actual queried influence equals baseline queried influence and ONE already funded Phi_root suffices to transfer any supplied K-good baseline policy. If c is queried, the exact influence correction E[1_{c flips}f f_prime] is retained. Universal admission Phi_root<=K I(g) is FALSE for every finite K: opposite-slice point defects in dimension m+1, m>=2, give Phi=m, I(g)=(m+1)2^-m and actual query correction zero.",
+    "hypotheses": [
+      "Boolean signs on the SAME finite uniform physical cube",
+      "entropy in bits",
+      "actual restrictions of ONE root multiplier; no renewed dictionary or gate labels",
+      "both full terminal entropy and influence retained",
+      "the K-good transfer requires a supplied baseline policy and preexisting ORIGINAL unused reserve; it does not supply one",
+      "queried-influence equality requires multiplier independent of queried coordinates; otherwise retain the exact signed influence transfer"
+    ],
+    "statement_sha256": "7388ab533a762930be2c4b318083f566c0f8b3e38557dfe674bfdd9a25c37924",
+    "contributors": [
+      "A017 author derivation and two exact implementations"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "dbef0ed71ef34374a9949144b8c688863ee561d6ebbcb2df2db2cdc80475e013",
+      "validation": [
+        "out/certificate.json",
+        "out/audit.json",
+        "out/formal.json"
+      ]
+    },
+    "proof_dependencies": [
+      "finite Walsh orthogonality",
+      "finite Shannon entropy chain rule and 0<=H<=log2(alphabet size)",
+      "exact physical influence restriction telescope"
+    ],
+    "review_records": [
+      {
+        "kind": "author exact verification",
+        "status": "PASS",
+        "assertions": 3502125,
+        "independent_agent": false
+      },
+      {
+        "kind": "core Lean scalar rank-refund algebra ONLY",
+        "status": "RUNTIME_UNVERIFIED",
+        "scope": "No Lean formalization of Walsh block entropy, rank monotonicity, or the full FEI conjecture"
+      }
+    ],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A017-FOUR-EDGE-COMPATIBILITY",
+        "version": 5,
+        "scope": "Continues the same pending C019 candidate; earlier scoped conclusions remain at their original source versions."
+      }
+    ],
+    "refutes": [
+      "Universal admission r(c)+H(fc)-H(f)<=K I(fc), for a fixed finite K and ALL actual Boolean f,c"
+    ],
+    "first_unproved_line": "A translation/vacuum-normalized entropy-sensitive reserve, unlike the refuted rank envelope, is funded from the SAME depleted ORIGINAL influence source after old U and BOTH full terminals; positive-part payment also remains separate.",
+    "next_consumers": [
+      "A018",
+      "A019",
+      "A020",
+      "A024",
+      "A090",
+      "A091",
+      "B04",
+      "C019",
+      "C024"
+    ]
+  }
+]

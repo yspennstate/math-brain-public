@@ -1,0 +1,373 @@
+[
+  {
+    "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+    "version": 9,
+    "exact_statement": "Version9 retains the prior scoped clauses and adds: for every finite-label selector L(Y) independent of shared data X, arbitrary Boolean sources g_j, and original support-positive source references R_j inherited through EACH source own physical phase kernel, let pi=law(L), q=sum pi P_j, r=sum pi R_j, W=sum pi D(P_j||R_j), alpha_j=pi_j P_j/q, rho_j=pi_j R_j/r, and k(U|t)=Pf(U,t)/q_t. For ANY history-adapted stochastic K_t(U|j) with alpha K=k, prescribe Q(U,t)=r_t(rho K)(U), completing zero-true rows at empty U. Then D(Pf||Q)=D(q||r)+C, C=sum q D(alpha K||rho K)<=Z=W-D(q||r), S=W-D(Pf||Q)>=0. W is a supermartingale under all physical DATA/CONTROL restrictions. Every finite adaptive mixed stopping tree obeys sum reach*(E Dchild-Dparent) +sum reach*(Wparent-E Wchild)+E Sleaf=Sroot, and the FULL entropy path plus full terminal CE equals Hroot+Wroot-sum reach*(Wparent-E Wchild)-E Sleaf<=Hroot+Wroot. For binary muxes whose nonempty controller SHAPE has already changed via the original inherited Ra of v8, admissible sector odds ell=rho*u+(1-rho)*v with alpha*u+(1-alpha)*v=b add C=sum q D(Bern(b)||Bern(ell))<=Zdata to D8; SAME original T=Wdata+gamma D(Pa||Ra) suffices and S9=Zdata-C+gamma Cvac>=0, with the same exact mixed-tree identity and no new liability or rate constant. Transport CURRENT Q through the actual output channel; raw reset equals signed debt increment plus actual erasure/outcome refunds. Both full terminal bills, vacuum KL, actual reference outcome normalizers, off-target mass and all previous debits remain. Exact admissible binary odds are the affine image of tau in [max(0,alpha+b-1),min(alpha,b)]. A Boolean odds-only witness with a=(-1,1,1,1), G=z,H=-z and dummy data d has H=I=2, W=Da=Z=0, alpha=rho=b=3/4; prescribed ell=1/2 costs (1/4)log2(27/16)>0 and lies outside the admissible image, refuting arbitrary odds-only payment from a tight quota but not FEI.",
+    "hypotheses": [
+      "Finite uniform independent control/data blocks, finite labels and arbitrary shared Boolean source functions.",
+      "Original normalized references positive on true supports; reference-only mass retained and each source/controller uses its OWN inherited physical kernel and actual branch normalizer.",
+      "At every node the SAME stochastic row channel is used on true/reference source-label posteriors and reproduces the true controller conditional law (or binary sector law). This is a genuine feasibility condition, not only a KL budget.",
+      "Binary v8-shape extension keeps original Ra, full controller KL including vacuum, and all original source references; beta=0 forces ell=0; zero true rows retain reference mass at empty U.",
+      "All actual output erasure/outcome refunds and both full terminal CE/KL bills are retained; signed costs are not clipped or replaced by a positive-part total.",
+      "Any influence bound remains conditional on original admission Hroot+Troot+old_debit<=C Iroot; the previous conditional source/controller supplier corollary stays conditional."
+    ],
+    "statement_sha256": "9500b09287dffa535c1642a2faa3e0a65ce35cdc77763a3ee32d281e9677a4a3",
+    "contributors": [
+      "A028"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections1-5",
+      "out/check_pilot.json",
+      "out/check_full.json",
+      "out/independent.json",
+      "out/finite_label.json",
+      "out/obstruction.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@8",
+        "scope": "Original controller/source T account; fully reconstructed here, not assumed to supply universal admission."
+      },
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@5",
+        "scope": "Prior influence-rate corollary only, explicitly conditional; not needed for the new KL theorem."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A029/account03",
+        "reviewed_version": 7,
+        "verdict": "HOLDS_SUPPLIED_REFERENCE_CORE_V7_SCOPED",
+        "scope": "Earlier v7 only; excludes supplier assertions, conditional corollary stays conditional, no v8 acceptance",
+        "source": "agents\\A029\\runs\\20261023T032111Z-account03-A029-child-deficit-transport\\REVIEW_A028.md",
+        "source_sha256": "31165d6cf1d0e39a04c8335426156452f8f0b261dad3d63bb856e402047ffe49"
+      },
+      {
+        "reviewer": "A029/account03",
+        "reviewed_version": 9,
+        "verdict": "HOLDS_NEW_POSTERIOR_CHANNEL_AND_MIXED_TREE_CORE_ONLY",
+        "scope": "Exactly the named new scope in REVIEW.md; other bundled claims remain unreviewed; no repair supplied",
+        "source": "agents\\A029\\runs\\20261023T125429Z-account03-A029-child-deficit-transport\\REVIEW.md",
+        "source_sha256": "7d26e1a74daba03f3ebd2521a2d8b992cba7d6d40e9ae42ee763575d4c5ffbba"
+      }
+    ],
+    "status": "V9_AUTHOR_PROOF_EXACT_CHECKED; INDEPENDENT_PEER_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      {
+        "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+        "version": 8,
+        "reason": "Adds admissible FULL conditional Markov profile references and DATA-row sector changes on already changed inherited v8 shapes, with SAME initial T."
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "Any arbitrary DATA-row odds change can be paid from the original tight allowance without a supplier or extra liability.",
+        "witness": "out/obstruction.json: H=I=2, source/controller liabilities0; true odds3/4, target1/2, extra=(1/4)log2(27/16)>0.",
+        "scope": "Reference-payment obstruction; not a FEI refutation."
+      }
+    ],
+    "first_unproved_line": "An influence-priced ORIGINAL initial reference supplier for every Boolean input remains unproved. A prescribed necessary target outside the conditional posterior-channel image also needs a genuine payer; this theorem does not price arbitrary resets or supply universal FEI admission.",
+    "next_consumers": [
+      "A029",
+      "A056",
+      "A087",
+      "A091",
+      "A094",
+      "A096",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A026-DISAGREEMENT-INFORMATION-RESERVE",
+    "version": 5,
+    "exact_statement": "For every finite disjoint Boolean substitution F=A+hD with actual branches g+=A+D,g-=A-D, let E=1{g+!=g-},delta=Pr(E=1),v=Var(h),V=v h2(delta),W=v I(g+g-). For any adaptive physical stopping tree with fixed encoder/data partition, Q+G_H+L_H+E V_leaf=V_root, where Q=sum_encoder w gamma^2 B_z, G_H=sum_encoder w gamma^2[h2(delta)-B_z]>=0, and L_H=sum_data w v I(E;r_j)>=0. V<=W and the boundary-minus-information accounts also telescope with all differences nonnegative. V<=4max(q,1-q)X sharply in every realizable interior bias, with X actual exclusive data influence. Nevertheless no finite A pays V<=S4+A delta for all price-four-certified actual branch pairs: point/constant pairs have V-S4>=delta(d-5) for d>=4, and tensoring both with a point sign on2d inputs gives two nonconstant terminals and V-S4prime>=delta(d-11/2) for d>=8. This is an obstruction to paying a reserve envelope, not to paying actual Q, existential coordinate selection, or FEI. The prescribed neutral six-bit padded AND3 pair with a disjoint Maj3 encoder admits each of its six alternative first data queries from the SAME initially booked price-four terminal bank, retaining actual data decrement, all four branch-grandchild entropies and the remaining actual encoder correction; every resulting full margin exceeds1/2 bit. Stage17 extension: For every independent balanced Boolean encoder h and every finite adaptive data-only stopping tree on shared Boolean branches G,H, H(F)=T+J+B+delta H(h), and the signed data debit after booking future B+e delta is J_root-E J_leaf<=1 bit for any fixed e. For even m>=4, G is the point sign on m+1 data bits and H is a quadratic bent sign on m bits with a dummy j; h=Maj3. At j, D_JS/I_j(F)>=m-6 and the carried A028 boundary release equals I_j(F), so no finite local fixed influence price plus that release pays this booked bill. A common fresh dictator makes all four original j-child branches nonconstant without changing the obstruction. Every bent-block coordinate at the original root has true B_i(F)<=4 I_i(F); hence this is not an existential-selection refutation. For all even m>=6, the SAME original price-four terminal surplus pays all finite adaptive DATA-ONLY histories, complete remaining encoder entropy and full terminals, with margin at least7/64 bit. No bank renewal or universal unused-terminal-surplus assertion is made. Stage18 source-reference extension: Let F=1-2A_a+2A_(a+b+r) on disjoint uniform bits, a>=1,b>=0,r>=2 at the original ancestor. Supply one normalized finite-cost source reference with c_raw<=C0 I(1-2A_a), C0>=0, and use its empty-calibrated A097 complete floor. At a dummy-data query (b_current>=1,r_current>=1), keep the full inherited off-reference and reset the on-child to the canonical floor of the ACTUAL source marginal followed by empty calibration. If e=2^(1-a-b-r), c_off-c<14e, B_dummy<12e, and B_dummy+(c_off+W_on)/2<W+9e for W=c+10e(a+b+r). Conditional on the source-bound A096/A097 active/control clauses, every adaptive interleaving of active resets, control queries only while r_current>=2, dummy queries while r_current>=1, stopping, and the explicit final active point-spectrum closure has complete erasure-plus-terminal-reference ledger <=W_root+[8(r_root-1)+9b_root]e_root<=(2C0+10)I(F_root)-12e_root. All off-branches keep their complete inherited references and allow no-reset continuations; no ancestor quota is renewed. Structural source R=P_g uses the SAME initial rate18. This newly pays the previously unpaid dummy-DATA source-marginal reset; it does not construct an O(I) reference for arbitrary Boolean sources, pay arbitrary off-branch resets, or prove universal coordinate selection or FEI. Stage19 carried-profile extension: For every finite Boolean mux f=A(X)+a(Y)D(X) with independent uniform blocks, intact controller Var(a)>0, pi(U)=ahat(U)^2/Var(a)>0 on every admitted nonempty controller index, and supplied complete normalized reference Q_b(empty,T)=q0(T), Q_b(U,T)=q1(T)b(U), actual-phase DATA channels preserve the carried profile b, and their physical reference branch masses and updated q0,q1 are independent of b. Zero-D pairs use the same fixed fair channel. A prescribed replacement b->b' retaining the ACTUAL CURRENT q0,q1 costs exactly eta[D(pi||b')-D(pi||b)], eta=Var(a)Pr(G!=H). For every finite adaptive DATA-only tree and any finite number of such changes, signed transactions telescope to E_leaf eta_leaf D(pi||b_leaf)-eta_root D(pi||b_root). If initially b=pi and every admitted b has D(pi||b)<=dmax, true entropy-decrement path plus all full terminal cross-entropies is <=CE(P_root,Q_pi)+eta_root dmax, with all physical query refunds, full reference normalizers and off-support mass retained. For the A029@2 point/majority common-character family m>=1, after the actual first shared DATA query and actual first theta=1/8 profile change, any further finite adaptive DATA history and any number of changes to b_theta=(1-theta)pi+theta Uniform_7, real theta in[0,3/16], are paid from the SAME inherited child Z: TOTAL signed conversion cost<1/64, Z_remaining>19/10304 in selected-child units (>19/20608 at the original root). The exact endpoint certificate is16807^9<2*15606^9. The SAME original U=4I(F_m), old debit1/8 and both original full terminal costs leave>3m-15/8+19/20608. The first1/8 debit is included, not renewed. At the next shared DATA query both child second transactions1/8->3/16 are strictly positive with all four source children nonconstant. m=0 fails this inherited-Z eligibility; theta1/4 fails at m=1; controller exposure changes reference branch masses and is outside the DATA commutation theorem. No universal reference supplier, all-coordinate bound or existential FEI selection is proved. Stage20 extension: With actual-phase structural completion on all nonempty rows, a full factorized mux reference Q(0,T)=q0(T),Q(U,T)=q1(T)b(U) is closed under every DATA and controller query, even with zero true controller Fourier atoms and reference-only rows; CURRENT empty blocks and output normalizers are retained. DATA carries b unchanged; controller queries carry the normalized (b(u0)+b(u1))*k_controller(u) profile. For every m>=1 in the actual A029 common-character point3/negative-majority3 source family, use the SAME original uniform source references, first shared DATA query, BOTH original children, quota4I and old debit1/8. In the selected x0=1 child, arbitrary finite adaptive DATA/profile histories with real theta in[0,3/16] are followed by arbitrary mixed physical histories, repeated profiles (1-phi)pi_current+phi Uniform with real phi in[0,1/2048], and arbitrary stopping/no-reset continuation; constant cofactors use uniform, with zero profile cost. All signed profile costs together are <=(9/64)log2(16807/15606)+(3/2)log2(2048/2047)<17/1024, paid from the SAME initial selected-child Z>45/2576. Remaining selected-child margin>143/164864; original-root margin>143/329728 and original whole-quota reserve>3m-15/8+143/329728. A larger phi<=1/256 is paid if only one first controller j0 orj1 is queried, followed by arbitrary DATA/profile transactions, with the same stated margin. The fair completion at every true-zero row need not commute and is explicitly refuted. These statements require the prescribed structural completion; they do not price new binary-row odds transactions, a universal initial supplier, or a dimension-free universal selection constant. Full FEI stays OPEN.",
+    "hypotheses": [
+      "Finite independent uniform physical sign cubes; entropy in bits; exact zero-log endpoints.",
+      "Fixed encoder/data partition and actual fair reach probabilities at every restricted history.",
+      "For the capacity obstruction: actual point sign b_d on d bits, constant -1, balanced encoder, optional fresh tensor point sign on2d bits; S4 is the actual mean branch surplus.",
+      "For the finite query certificate only: b positive iff first3 labels zero on6 bits, c flips origin, h=Maj3; six queries are alternative policies, never summed; earlier parity-unlock JS allowance is separate.",
+      "Stage17 extension only: Uniform physical cubes; actual Boolean signs; bits and ordinary influence",
+      "Stage17 extension only: Encoder and data cubes independent; encoder balanced and not queried in the DATA-ONLY history",
+      "Stage17 extension only: Same original source terminal account; signed debits include refunds; all full terminal entropies retained",
+      "Stage17 extension only: Counterfamily: even m>=4; all-history terminal payment: even m>=6; common-dictator lift optional",
+      "Stage18 extension only: original negative-cell point source and supplied normalized reference; bits, true physical flips and fair reach; C0 source-price supplied only once",
+      "Stage18 extension only: original r>=2; dummy local step admits b>=1,r>=1; final control query from r=1 excluded",
+      "Stage18 extension only: marginal then empty-calibrated SAME current source law; all complete normalizers and off-source atoms retained; no renewed bank or off-branch reset",
+      "Stage19 only: complete supplied block-factorized reference; fixed intact Boolean controller, support-positive normalized nonempty profile; true DATA phase channels with fair zero-D completion",
+      "Stage19 only: every query in the transaction history is DATA; no assumption of fresh q0/q1 or true row split at descendants; arbitrary finite signed transactions, never positive-part clipping",
+      "Stage19 concrete eligibility: A029@2 actual family, m>=1, original uniform source references, first shared query child1, SAME original quota4I and old debit1/8; profile targets real theta in[0,3/16]",
+      "Stage20 generic closure only: Boolean mux with independent controller/DATA; complete normalized factorized reference, finite CE; structural phase completion on ALL nonempty rows, including true-zero rows; actual empty rows and CURRENT branch normalizers retained.",
+      "Stage20 concrete full mixed history: A029@2 actual common-character family m>=1 and SAME original uniform source account/quota4I/old1/8; before controller queries theta in[0,3/16], afterwards real phi in[0,1/2048]; constant cofactors use uniform profile and zero charge. Arbitrary no-reset continuation and all full terminal references retained.",
+      "Stage20 larger-range variant only: first controller j0 orj1, then DATA/profile history only, phi in[0,1/256]. The full mixed-history theorem uses the smaller range."
+    ],
+    "statement_sha256": "20d6328480d9a5c78b12c003a2d11f9601f17b456376d7b6c4ae0d4c71effa57",
+    "contributors": [
+      "A026 (original reserve and stage17 extension)",
+      "A026 stage18 dummy-source marginal proof; A096 active theorem and A097 canonical floor/control theorem credited",
+      "A026 stage19 commutation/signed potential/all-transaction theorem; A029 original family and inherited-Z interface credited; A028 physical reference interface credited"
+    ],
+    "proof_source": [
+      "agents\\A026\\runs\\20261023T045831Z-account03-A026-good-coordinate-erasure\\DERIVATION.md",
+      "agents\\A026\\runs\\20261023T113002Z-account03-A026-good-coordinate-erasure\\DERIVATION.md",
+      "agents\\A026\\runs\\20261023T113002Z-account03-A026-good-coordinate-erasure\\out\\VALIDATION.json",
+      "agents\\A026\\runs\\20261023T113002Z-account03-A026-good-coordinate-erasure\\out\\MIXED_VALIDATION.json",
+      "agents\\A026\\runs\\20261023T113002Z-account03-A026-good-coordinate-erasure\\out\\INDEPENDENT.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A026-DISAGREEMENT-INFORMATION-RESERVE",
+        "version": 4,
+        "statement_sha256": "83a8243344ce2e15a72db60c4df5caad50215cd09ac9e9b431137456327f2f84",
+        "scope": "retained earlier clauses and original source payment interface"
+      },
+      {
+        "claim_id": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT",
+        "version": 2,
+        "scope": "actual initial source family; interface reconstructed in stage19 and current derivation4"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A026 alternate finite representation, same author",
+        "scope": "new stage19 clause",
+        "method": "direct character amplitudes and independently coded pair matrix; only exact log-vector primitive shared",
+        "result": "PASS209 predicates; not independent human acceptance"
+      },
+      {
+        "reviewer": "A026 alternate direct-character implementation",
+        "scope": "new source-profile and two-sided local transport, both integer certificates; no main/helper imports",
+        "verdict": "PASS; not external review",
+        "source": "agents\\A026\\runs\\20261023T113002Z-account03-A026-good-coordinate-erasure\\out\\INDEPENDENT.json"
+      },
+      {
+        "reviewer": "A029 stage8",
+        "scope": "A026@4 DATA/profile theorem and endpoint only; not new@5",
+        "verdict": "scoped independent HOLDS reported",
+        "source": "agents\\A029\\runs\\20261023T105559Z-account03-A029-child-deficit-transport\\REPORT.md"
+      },
+      {
+        "reviewer": "A029/account03",
+        "reviewed_version": 5,
+        "verdict": "HOLDS_TWO_SIDED_STRUCTURAL_COMPLETION_ONLY",
+        "scope": "Exactly the named new scope in REVIEW.md; other bundled claims remain unreviewed; no repair supplied",
+        "source": "agents\\A029\\runs\\20261023T125429Z-account03-A029-child-deficit-transport\\REVIEW.md",
+        "source_sha256": "7d26e1a74daba03f3ebd2521a2d8b992cba7d6d40e9ae42ee763575d4c5ffbba"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION; NEW_V5_EXTERNAL_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      {
+        "claim_id": "A026-DISAGREEMENT-INFORMATION-RESERVE",
+        "version": 4
+      }
+    ],
+    "refutes": [
+      "Universal fixed C payment of the signed booked DATA debit by C times actual query influence plus A028 boundary release",
+      {
+        "statement": "Fair completion at every true-zero f row always preserves the nonempty controller profile under DATA",
+        "witness": "agents\\A026\\runs\\20261023T113002Z-account03-A026-good-coordinate-erasure\\out\\VALIDATION.json",
+        "scope": "completion rule only; no FEI refutation"
+      }
+    ],
+    "first_unproved_line": "A universally influence-priced original source/reference with its necessary row-odds reconstruction liabilities; fixed-controller-depth profile bound alone does not supply it.",
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A056",
+      "A087",
+      "A094",
+      "A096",
+      "A097",
+      "A098",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+    "version": 5,
+    "exact_statement": "Version5 retains A030@4 at its stated scope and adds an all-history bounded signed reference-transfer theorem. For every finite-label Boolean selector on independent uniform control/data cubes with ell sources, rebuild CURRENT normalized Qinc(U,t)=sum_j Chat_j(U)^2 ghat_j(t)^2 after every physical query. The exact potential c_v=D(P_v||Qinc_v) lies in[0,log2 ell]. Actual-phase reference transport with its own branch masses gives raw reset kappa_v, pair-erasure refund E_v and outcome refund O_v satisfying sigma_v=kappa_v-E_v-O_v=average(c_child)-c_v. For EVERY finite adaptive mixed physical tree, sum reach*sigma=E c_leaf-c_root and the complete entropy path plus both full terminal CE bills equals H_root+E c_leaf<=H_root+log2 ell. Hence ONE original U with old debit b and U-b>=H_root+log2 ell funds all frontiers without renewed child allowances. For the tagged rare-label bent family, every even r>=4 has SAME original U=4I_root and b=1/4, with unused reserve at least7/2-2log2(3)>1/4 for ALL repeated resets on ALL branches of EVERY mixed physical tree. The prior>765/512 bound remains valid for its narrower one-reset/no-later-reset scope. Products of k two-bit point defects and their first-bit translates with one shared selector have coherence potential1,0,1,...,0,1,0 along the complete pairwise DATA-then-selector query order on EVERY branch: positive-part net reset total=k while signed total=-1; H=2k,I=k+1/2, so this is no FEI disproof. More generally supplied normalized source references R_j with initial finite pointwise P_j<=lambda_j R_j can be transported by their OWN source phase channels, lambda_child=2*rho_child*lambda_parent; M=sum lambda is a positive physical martingale. For targets Q^R=sum Chat_j^2 R_j, every adaptive frontier has E D(P||Q^R)<=E log2 M<=log2 M_root, and complete cost<=H_root+log2 M_root. Full influence-priced arbitrary-input initial admission and external controller suppliers are not asserted.",
+    "hypotheses": [
+      "Finite uniform cubes; Boolean sources may share all data, physical control and data blocks independent; base2 units.",
+      "Fixed original selector representation; retain zero-probability labels, constant children, off-true reference mass and all source/terminal costs.",
+      "CURRENT output/source references transported with their own actual-phase channels and reference branch normalizers; signed resets/refunds never clipped.",
+      "Explicit original admission U-b>=Hroot+log2 ell or Hroot+log2 Mroot required for payment.",
+      "Tagged-bent rate4 specialization uses the exact previous family and even r>=4; old debit1/4 retained.",
+      "External-source variant requires initial finite pointwise likelihood domination and inherited lambda updates, not re-estimated descendant maxima."
+    ],
+    "statement_sha256": "1aa21af5484522e586bea0c9b67694ee4016c867d8a372b46dae0cec588f00c5",
+    "contributors": [
+      "A030"
+    ],
+    "proof_source": [
+      "PROOF.md sections1-6",
+      "code/check.py",
+      "code/likelihood.py",
+      "out/VALIDATION.json",
+      "out/LIKELIHOOD.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE@4",
+        "scope": "Normalized incoherent target and original tagged family; bounded potential, stronger all-history admission and oscillating family proved here."
+      },
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@8",
+        "scope": "New CURRENT-profile/reset interface consumed and reconstructed; its optional controller/source supplier premises are not used."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A030",
+        "kind": "Author analytic reconstruction, exact actual-phase reset/refund certificates, raw Boolean spectrum/edge reconstruction and independent product/likelihood derivations.",
+        "result": "Main6372 local+13604 helper assertions over1026 nodes; external likelihood16438 local+6750 helper assertions over375 nodes. PASS; external review pending."
+      },
+      {
+        "reviewer": "A029/account03",
+        "reviewed_version": 5,
+        "verdict": "HOLDS_GENERIC_SIGNED_RESET_AND_LIKELIHOOD_INTERFACE_ONLY",
+        "scope": "Exactly the named new scope in REVIEW.md; other bundled claims remain unreviewed; no repair supplied",
+        "source": "agents\\A029\\runs\\20261023T125429Z-account03-A029-child-deficit-transport\\REVIEW.md",
+        "source_sha256": "7d26e1a74daba03f3ebd2521a2d8b992cba7d6d40e9ae42ee763575d4c5ffbba"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_EXTERNAL_REVIEW_PENDING_NOT_LEAN_CERTIFIED",
+    "supersedes": [
+      {
+        "claim_id": "A030-THREE-STATE-BOOLEAN-CUT-RESERVE",
+        "version": 4,
+        "reason": "Cumulative repeated-reset/current-reference transfer and supplied-source likelihood extension; previous narrower numerical reserve not withdrawn."
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "A fixed multiple of log label count bounds the sum of positive-part net incoherent-profile reset charges over all physical trees.",
+        "witness": "Two-label actual Boolean product family has positive-part total k for every k>=1, although potential stays0 or1 and signed total=-1."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B06 Claude lead",
+      "A028",
+      "A029",
+      "A056",
+      "A087",
+      "A094",
+      "A096",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT",
+    "version": 4,
+    "exact_statement": "For every finite number r of Boolean sources g_j on one shared uniform data cube X and every label map L from an independent uniform control cube Y, set F(y,x)=g_L(y)(x), pi_j=Pr(L=j), P_j(t)=ghat_j(t)^2, q=sum pi_j P_j, T=sum pi_j H(g_j), J=H(q)-T, and Lstr=H(S_Y|S_X) under the actual squared Fourier law. Then H(F)=T+J+Lstr and 0<=J<=min(H(pi),(2/ln(2))*I_controls(F)). At each DATA query the signed entropy residual after both original source decrements and signed structural variation equals Delta J; at each CONTROL query Delta J>=0. For every finite adaptive mixed physical stopping tree, sum_DATA reach*Delta J+sum_CONTROL reach*Delta J+E_leaf J=J_root. Both full terminal entropies T+J+Lstr are retained. If a SAME original supplied earmark U has an old debit b and U>=b+J_root, its unused value after those transactions is U-b-J_root+E_frontier J; after reserving complete frontier J only U-b-J_root can fund another reference conversion. A four-bit actual Boolean common-character point-defect fixture has J_root=0, first DATA debit -1, subsequent weighted DATA debit +1 and positive-part total 1, refuting clipping. Dummy-control extensions of a fixed positive-J three-label fixture show a renewed bank grows by depth while actual reserve stays J_root. No universal structural/source/reference payment or FEI conclusion is asserted. Version2 retains version1 and adds: For finite-label Boolean sources with supplied normalized support-positive references, use their actual phase-channel transports and branch normalizers, W=sum pi D(Pj||Rj), Df=D(sum pi Pj||sum pi Rj), Z=W-Df>=0. With source contraction A=W-EWchild, every finite mixed physical prefix satisfies sum reach*sigma+sum reach*A+E Z=Zroot, sigma=E Dfchild-Df. Changing only the true conditional controller profile k to a support-positive profile ell at the frontier costs exactly C=sum q D(k||ell). Full old entropy path plus BOTH full terminal cross-entropies equals Hroot+Wroot-sum reach*A-E Z+E C. Hence E C<=E Z pays conversion from the same inherited bank. For the concrete three-control mux family F_m of DERIVATION sections3-6, m>=1 common character bits, common complete uniform source references, one first DATA query followed by selected child1 nonempty profile Btheta=(1-theta)A+theta Uniform_7, EVERY real theta in[0,1/8] has inherited Z_m>1/64 and extra cost Ctheta<1/128. More than1/128 remains in selected-child units, hence1/256 in root units. With original U=4I(F_m), old debit1/8 and I(F_m)=m+29/16, both terminal costs and any later finite adaptive no-reset physical continuation leave more than3m-15/8+1/256>=289/256 of that original quota. For m=0 selected Z=0 and theta1/8 costs strictly positive, so that eligibility condition is essential. No universal source supplier or arbitrary repeated profile-reset theorem is asserted. Version3 retains version2 and adds the following actual mixed-history row-odds payment. In the SAME family and original uniform source references, query DATA x0, retain child0 fully, and perform the SAME theta1/8 nonempty-profile change only in child1, with first cost C1<1/128. Declare calibrated Ra=(Pa(empty),V*((7/8)A+(1/8)Uniform7)) before either query. Use it to carry the current changed shape through controller query y0, inheriting Ra by its own actual channel and reconstructing BOTH controller children with all output refunds. In selected y0=0 child, change true row nonempty odds k_t to (1-epsilon)k_t+epsilon/2 for EVERY real epsilon in[0,1/16], keeping inherited row marginal, inherited nonempty shape, and zero-true-row reference mass. The selected source-label slack is (5/8)D(Bern4/5||Bern(8M/(13M-12)))>3/140>1/48, M=2^(m+2), m>=1. The new odds charge is exactly (5/8)D(Bern9/10||Bern(9/10-(2/5)epsilon))<4107/1254400<1/256. Using T=W+gamma Da, S=Z+gamma Cvac, the full three-terminal cost retains C1 ONCE and has margin (S0-Cepsilon+S1)/2-C1>1/1536 at the first selected child, hence original-root payment<Hroot+Wroot-1/3072. With SAME original U=4I(F_m), old debit1/8, full quota reserve is>3m-15/8+1/3072>=3457/3072. ANY later finite adaptive physical continuation inherits each CURRENT full odds-changed reference, with no further free reset, and can only improve this payment. The m0 selected Z=0 guard and changed controller/output normalizers are explicit. No universal source supplier or repeated arbitrary odds conversion is asserted. Version4 retains prior scoped clauses and adds these supplied-reference theorems. For arbitrary finite uniform independent controller/data blocks and fully shared Boolean sources, supply one original controller and two source spectral references positive on their true supports, inherited through their OWN actual phase channels and normalizers. Set T=W+gamma Da, S=Z+gamma Cvac, eta=Var(a)*Pr(G!=H). Keep inherited row marginal and nonempty shape. At each occupied row and every adaptive history choose any real lambda in[1/2,2], and target ell=lambda*k/[1+(lambda-1)*k]. Its exact extra KL C=sum q D_Ber(k||ell) satisfies C<=eta/2. The quantity eta is a physical supermartingale, eta<=I_controls(F), and Trel=T+eta/2, Srel=S+eta/2-C>=0 give Dtarget=Trel-Srel. For EVERY finite adaptive mixed stopping tree, full entropy-decrement path plus ALL complete terminal CE equals Hroot+Trel_root-sum reach*(Trel_parent-E Trel_child)-E Srel_leaf, hence costs at most Hroot+Troot+eta_root/2. Raw reconstruction from the CURRENT target reference equals the signed target KL increment plus BOTH actual output refunds. No descendant allowance is renewed. Exact actual-child compensation is d0+d1<=2(R+A), d_i=C_i-S_i, R=U-b-H-T. A separate fixed-mixture class epsilon in[0,1/16] admits the same telescope with one ORIGINAL constant1/8 allowance. That constant is not universally influence-priced: with a=y,G=1,H negative only at0^n, exact source/controller references give T=S=0, I(F)=(n+1)2^-n and fixed-mixture cost C_n>1/1024 for all n>=4, although H(F)<4I(F). On the literal retained A029@3 family and prefix, the first odds target is a relative-odds target (lambda7/9 on the9/10 row, lambda1 elsewhere). Every subsequent finite adaptive mixed relative-odds history is paid by the SAME original4I(F_m) and old debit1/8, retaining the first profile cost exactly once, with reserve>3m-263/128>=121/128. The separate fixed-mixture envelope has reserve>3m-497/256>=271/256. Signed round trips give unbounded positive variation at fixed influence, refuting positive-part accounting. Exact-reference relative targets with alpha=rho,k1/2,ell2/3 lie outside A028@9 posterior-channel image and require the real eta/2 allowance. Universal initial H+T suppliers and necessity of bounded-relative-odds targets remain open; no full FEI theorem is asserted.",
+    "hypotheses": [
+      "Finite uniform product cube; disjoint independent physical control and data coordinates",
+      "Arbitrary finite label map and arbitrary Boolean sources sharing any data variables; zero-probability labels retained",
+      "Physical adaptive restrictions; both actual children, signed DATA refunds, structural variation and complete source/terminal costs retained",
+      "Supplied earmark admission U>=b+J_root is a hypothesis, not a universal source certificate",
+      "For the added supplied-reference theorem: normalized source references positive on true supports, own physical phase channels and own branch normalizers, off-true reference mass retained",
+      "For concrete eligibility: controller negative at points0,1,2 of three-bit cube; g negative only at000; h negative at data Hamming weight>=2; both multiplied by same character on m>=1 unqueried fresh data coordinates",
+      "One first shared data-bit query, selected child1 reset only to the stated nonempty-profile mixture with real theta in[0,1/8]; unchanged inherited row marginal and empty/nonempty split",
+      "Every later finite adaptive physical continuation inherits the CURRENT changed reference without another free reset; original quota and old debit retained",
+      "New v3 theorem permits the specified controller canonical reconstruction and one row-odds conversion AFTER the v2 first theta1/8 debit; source normalizers and inherited controller reference remain original",
+      "Exactly the declared DATA x0=1, CONTROL y0=0 selected physical prefix, with the original DATA sibling and other controller child fully retained; m>=1 common character bits remain until the odds change",
+      "Odds transaction has a nonempty controller index set, beta>0, real epsilon in[0,1/16]; keeps current row marginal and inherited nonempty shape; zero-true-row mass retained",
+      "No subsequent free canonical reset: arbitrary finite adaptive continuation transports the CURRENT full reference; first debit is present exactly once",
+      "New v4 general mixed-tree target theorem: normalized originally supplied source/controller references inherited through OWN physical channels and actual normalizers, all off-true reference mass retained",
+      "For each occupied row relative factor may vary arbitrarily by row and history in real[1/2,2]; zero/one odds are fixed, zero-true rows unchanged; no nonempty profile means no nonempty target mass",
+      "Original admission must genuinely cover Hroot+Troot+eta_root/2 (or Hroot+Troot+1/8 for the separate fixed-mixture class); original old debit b is not dropped",
+      "All actual children, current output references and both erasure/outcome refunds retained; signed reset increments are not clipped",
+      "Integrated rate4 corollaries are only the stated common-character family m>=1 with literal DATA x0 and CONTROL y0 prefix and first shape/odds target retained; no universal unused-credit assertion"
+    ],
+    "statement_sha256": "89df934fff291c0062613fb780ee67c0d2e05eabf6f196577c35c2b4aae85373",
+    "contributors": [
+      "A029",
+      "A028 (supplied canonical T/S core and separate posterior-channel admissibility)",
+      "A030 (generic signed-reset interface)",
+      "A026 (carried-profile precursor)"
+    ],
+    "proof_source": {
+      "retained_v3": "agents\\A029\\runs\\20261023T105559Z-account03-A029-child-deficit-transport\\DERIVATION.md",
+      "new_derivation": "DERIVATION.md sections1-10",
+      "source_reviews": "REVIEW.md",
+      "constant_main": "out/main.json",
+      "relative_main": "out/logit_main.json",
+      "separate_implementations": [
+        "out/independent.json",
+        "out/relative_independent.json"
+      ],
+      "frozen_specs": [
+        "out/FROZEN_SPEC.json",
+        "out/LOGIT_FROZEN_SPEC.json",
+        "out/VERIFY_SPEC.json",
+        "out/VERIFY_RELATIVE_SPEC.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT@3",
+        "scope": "retained literal paid prefix and actual current odds reference"
+      },
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@9",
+        "scope": "supplied canonical T/S transport and comparison with posterior-channel image; old universal supplier/surcharge clauses excluded"
+      },
+      {
+        "claim": "A030 version5",
+        "scope": "generic signed-reset and physical likelihood-account interface only"
+      },
+      {
+        "claim": "A026 version5",
+        "scope": "two-sided structural-completion comparison only; different zero-pair channel not substituted into checks"
+      },
+      "New scalar KL estimate, eta supermartingale and influence bound proved in DERIVATION sections6-8; no external universal supplier used"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_EXTERNAL_REVIEW_PENDING_NOT_LEAN_CERTIFIED",
+    "supersedes": [
+      {
+        "claim_id": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT",
+        "version": 3,
+        "reason": "Retains scope; adds all finite mixed relative-odds histories and influence-scaled original allowance, plus fixed-mixture obstruction"
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "Replace signed DATA JS transactions by their positive parts while retaining the same root bank",
+        "witness": "Common-character two-point-defect fixture: root J0, first debit-1, subsequent weighted debit+1, positive total1"
+      },
+      {
+        "statement": "Issue a fresh descendant JS allowance after every dummy physical control query",
+        "witness": "Fixed positive-J three-label fixture times d dummy controls; false allowance(d+1)J_root, actualJ_root"
+      },
+      {
+        "statement": "The selected-child Z payment of this family remains valid after dropping m>=1",
+        "witness": "m=0, Z=0 exactly and theta=1/8 cost>0; this does not refute the original4I quota or sibling transfer"
+      },
+      {
+        "statement": "The selected source-label Z lower bound in the new mixed prefix survives deleting m>=1",
+        "witness": "m0 gives exact Z=0 and positive odds charge; S may include controller vacuum credit, so no full-account or FEI refutation is implied"
+      },
+      {
+        "statement": "Fixed epsilon1/16 row-odds mixture has extra liability <=K I(F) universally for some finite K",
+        "witness": "Relevant point-defect family: I=(n+1)2^-n ->0, C_n>1/1024 for all n>=4; FEI still holds H<4I"
+      },
+      {
+        "statement": "Positive parts of all relative-odds target transactions fit one eta/2 bank",
+        "witness": "a=y with k dummy controls, G=z1,H=z2 and exact refs: signed charge C=(1/2)log2(9/8), positive sum kC at fixed I=3/2 and eta=1/2"
+      }
+    ],
+    "first_unproved_line": "Universal original influence-priced Hroot+Troot source/controller allowance, and a proof that a NECESSARY target has bounded relative odds or another source-owned price. Arbitrary prescribed fixed-strength mixtures cannot satisfy a universal influence price.",
+    "next_consumers": [
+      "A028",
+      "A026",
+      "A030",
+      "A056",
+      "A094",
+      "A096",
+      "A097"
+    ]
+  }
+]

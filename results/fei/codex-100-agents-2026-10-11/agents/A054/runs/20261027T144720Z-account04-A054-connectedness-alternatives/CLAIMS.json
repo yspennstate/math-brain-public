@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A054-ISOLATED-SPECTRAL-BIT-INTERFACE",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign f, if its spectral membership bit Zi is independent of its entire complementary spectral label, then Inf_i(f) is0,1/2,or1. In the nontrivial case Inf_i=1/2, the two complete physical child Fourier spectra have disjoint support and H(f)-average H(child)=2 exactly; conversely disjoint complete child spectra imply that independence. With K>0,D=H(f)-KI(f), a(child) the full affine-input/output-character influence minimum, S*=average[Ka(child)-H(child)],R=average I(child)-average a(child), one has the original account D+S*+KR=2-K/2. Hence a positive SAME-K witness of least essential dimension, represented on essential coordinates, cannot have an independent spectral coordinate when K>=4. Under the complete Gibbs identity each coordinate then has0<MI(Zi;Z_without_i)<log2(1+exp(2)2^-K). If all spectral bits are mutually independent then H(f)<=2I(f), without asserting tensor factorization of the Boolean sign. A052 stage22 modulo-four quantum and strict count theorem are independently reconstructed at their stated dimension-dependent scope. No quantitative Boolean stability lower bound or universal FEI constant is asserted.",
+    "hypotheses": [
+      "Finite uniform Boolean sign; normalized real Walsh coefficients; entropy bits",
+      "Independence is from the WHOLE complementary spectral label, not only zero pairwise covariances",
+      "Critical exclusion requires D>0, K>=4, least essential dimension at SAME K and no dummy coordinates",
+      "Both COMPLETE physical children, their optimized reserves and reset releases retained; Pi/old debits are never erased"
+    ],
+    "statement_sha256": "70deea9d7d08bd8ba92a86124e19c5d41597c7c94ca433f362c7dc4503f0a129",
+    "contributors": [
+      "account04/A054"
+    ],
+    "proof_source": {
+      "path": "agents\\A054\\runs\\20261027T144720Z-account04-A054-connectedness-alternatives\\PROOF.md",
+      "sha256": "846dfd9a1fcbcff561bb7479c4032e08d3ea1c18b5dd43152656c17eead3eda1",
+      "locator": "Sections1--4; A052 independent review Section5"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A054-RESET-COMPONENT-CROSSING-INTERFACE",
+        "version": 4,
+        "acceptance": "SCOPED_INDEPENDENT_ACCEPTANCE_BY_A051_STAGE22",
+        "used_scope": "essential SAME-K smaller-child nonnegativity and full accounting only"
+      },
+      {
+        "claim_id": "A051-stage22-complete-Gibbs-identity",
+        "version": "local PROOF Section2",
+        "acceptance": "SCOPED_AUTHOR_RECONSTRUCTION_FROM_DEFINITIONS",
+        "used_scope": "only strict positive-but-small mutual-information corollary; not needed for arithmetic rigidity or rate4 exclusion"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PASS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered implication: product squared Fourier law forces a tensor product of Boolean signs; quadratic two-bit sign is an actual counterguard"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "claude/B11",
+      "B20"
+    ]
+  }
+]

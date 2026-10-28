@@ -1,0 +1,3 @@
+First original full2208-transaction check exceeded its frozen55s cap; no completed exhaustive certificate. A separately frozen704-transaction panel completed successfully, preserving the original helper and timeout record.
+
+Initial finalize failed at the source exact-statement SHA256 assertion before writing CLAIMS/PROGRESS/REPORT or a persistence receipt. Subsequent readback correctly found no receipt. Neither failure is a mathematical counterexample; source-provenance mismatch must be measured and explicitly bound before any local accepted-review record is saved. No failed command is blindly retried.

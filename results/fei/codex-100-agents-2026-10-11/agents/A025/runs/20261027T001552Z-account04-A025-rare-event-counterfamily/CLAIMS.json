@@ -1,0 +1,45 @@
+[
+  {
+    "claim_id": "A025-DISTINCT-DEPENDENT-UNMARKED-OWNER-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every fixed K>=0 the actual distinct-dependent-controller family F_n with controllers Maj_n(z), Maj_n(z)*w and delta=1/64 violates G_V(F_n)<=2delta G_V(h_n)+K I_DATA(F_n) at sufficiently large odd n. Its exact residual is (delta/2)n phi(d_m^2)-delta n d_m^2+S_m+Dstar-4delta, |S_m|<=7, -49<=Dstar<=56; hence it is >=log2(m+1)/256-57. Root J_y=0. Retaining the marked y owner cancels the logarithm and gives G_V(F_n)<=2delta G_mark(h_n)+256 I_DATA(F_n) for all odd n>=3. H(F_n)/I(F_n)<15 under the stated threshold-paper theorem. This refutes only the unmarked combined-owner rule and root-only singleton repairs, not FEI or the marked universal route.",
+    "hypotheses": [
+      "uniform Boolean cubes; entropy in bits",
+      "b=g tensor g on6 DATA bits, g negative only at000; delta=1/64",
+      "F=b*a at0, b*a*w at e0, b elsewhere; a=odd majority, w fresh fair sign",
+      "DATA consists ONLY of six original x bits; w is a source controller, h branches a,-a*w",
+      "G_mark retains y mark in both children until physical y query, then full V of both controller terminals"
+    ],
+    "statement_sha256": "788168393f3e827f09dd02d152e42058cdb2d967dcbcf5cc4b4ea7dc884a85e0",
+    "contributors": [
+      "A025"
+    ],
+    "proof_source": "PROOF.md Sections1--5; code/check.py; out/main.json; out/replay.json",
+    "proof_dependencies": [
+      "A021 stage20261023T135142Z Sections1--3: target and majority recurrence, independently rederived here",
+      "threshold_paper_38pp Theorem A only for ancillary bounded H/I statement"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A025 author alternate direct-character representation",
+        "scope": "finite n=1 all physical coordinates and both outcomes; exact residual and marked cancellation",
+        "verdict": "PASS; not independent-person acceptance"
+      }
+    ],
+    "status": "AUTHOR_PROOF_CHECKED; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "N*: unmarked combined-controller-owner rule with any dimension-independent K",
+      "repair of N* by a fixed multiple of root J_y(h), which is zero"
+    ],
+    "first_unproved_line": "For arbitrary dependent controller pairs, pay all signed marked-sector changes from ONE eligible original unused source and retain both full terminals, without renewing controller entropy.",
+    "next_consumers": [
+      "A021",
+      "A022",
+      "A028",
+      "A029",
+      "A087",
+      "A094"
+    ]
+  }
+]

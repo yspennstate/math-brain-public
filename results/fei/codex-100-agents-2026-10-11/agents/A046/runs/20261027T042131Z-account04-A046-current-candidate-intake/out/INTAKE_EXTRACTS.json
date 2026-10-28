@@ -1,0 +1,671 @@
+[
+  {
+    "path": "math-open-problems/reports\\fei-2026-10-11\\FEI_100_agent_research_plan.tex",
+    "locators": [
+      [
+        9,
+        "\\pagestyle{fancy}\\fancyhf{}\\fancyhead[L]{\\small Full FEI: ten-day research campaign}"
+      ],
+      [
+        35,
+        "\\textbf{Current mathematical status.} The recovered preprint proves structured FEI results, led by an all-threshold theorem with constant below $8.937$. The joint witness construction and exact selector identities are valid tools. A universal bound for their remaining entropy cost is unproved. Neither this report nor the computations establish full FEI. A hundred agents can substantially expand the search and review capacity; the number of agents does not supply the missing inequality or guarantee a solution within ten days."
+      ],
+      [
+        37,
+        "\\textbf{Recommendation.} Spend the largest share of proof effort on the \\emph{posterior cost of an entire Fourier-set witness} and on \\emph{nonlocal restriction accounting}. Keep a substantial independent effort on signed Booleanity and product-biased gate inequalities. Use targeted falsification continuously, particularly on addressing, rare activation, near-tensor surgery, and actual Boolean realizations of proposed spectral laws. Treat every surviving universal reformulation as an unpaid obligation until its quantitative bound is proved."
+      ],
+      [
+        67,
+        "The proof proceeds through pivotal antichains, a relative resampling estimate, harmonic control of spectral ranks, and an Euler-product reference on Fourier levels. The proof was reconstructed in an independent audit during recovery; the product-biased threshold and bounded-overlap arguments were also independently read. No gap was identified in those audits. These are mathematical checks of a preprint, not external peer review or proof-assistant certification."
+      ],
+      [
+        69,
+        "The package also contains logarithmic FEI bounds for Boolean combinations of regular functions and for read-$k$ unions of structured gates, and an arity-independent corrected FEI+ estimate for symmetric thresholds under every product measure. The latter composes through read-once threshold/parity formulas. The proof of a product-biased estimate for \\emph{arbitrary weighted thresholds} is not supplied."
+      ],
+      [
+        312,
+        "\\subsection{Arbitrary biased weighted thresholds}\\label{sec:weighted-guards}"
+      ],
+      [
+        314,
+        "The public paper supplies the correct product-measure strong entropy normalization and proves it for symmetric thresholds. Extending this to arbitrary weighted thresholds with a constant uniform in weights, biases, and arity would immediately enlarge the depth-independent formula class through the established composition principle \\cite{ODT,Threshold}. This is a substantial secondary target even if full FEI remains open."
+      ],
+      [
+        483,
+        "Targeted counterfamilies, extremality, and falsification (B04, B10, B11, B15, B16) & 25 \\\\"
+      ],
+      [
+        616,
+        "\\emph{Acceptance tests.} Specify at each node which coordinates are fresh selectors and which are shared data; shared control variables require a new proof. Account for cross-level coefficient collisions and selector influence, instead of multiplying disjoint-composition formulas through reuse. Show an unbounded-depth or unbounded-arity regime beyond an already proved orthogonal-selector iteration, or identify why the candidate lies within that baseline."
+      ],
+      [
+        658,
+        "\\textbf{A024 --- Means and biased-child stability.} Keep fair physical restrictions separate from bias changes: unqueried uniform input bits stay uniform, while restricting an inner gate changes its output mean and hence the outer product law in disjoint composition. Track those means and corrected entropy normalization through a specified nontrivial family."
+      ],
+      [
+        660,
+        "\\emph{Acceptance tests.} A fair physical restriction leaves untouched originally uniform coordinates uniform; distinguish this from nonzero inner means inducing product biases at an outer gate. At zero/one input probabilities reduce deterministic coordinates before normalizing biased Fourier atoms or dividing by I-Var. Keep the mismatch/KL rebate and the corrected FEI+ normalization credit; do not charge a small child by an unsupported bounded scalar multiplier."
+      ],
+      [
+        712,
+        "\\emph{Acceptance tests.} An accepted realization has inverse Walsh values exactly $\\pm$1, not merely norm one or values numerically close to signs. An impossibility claim specifies the complete finite phase domain or a proved algebraic obstruction; a failed heuristic search is labelled inconclusive. Provide the common realizability interface reused by uniform coding, correlated auxiliaries, and the separate biased-normalization referee."
+      ],
+      [
+        734,
+        "\\subsection{B08: Relative entropy and posterior credit}"
+      ],
+      [
+        760,
+        "\\textbf{A040 --- Credit insufficiency tests.} Construct examples where every proposed KL term is positive but much smaller than the unpaid entropy. Require asymptotic ratios, not a statement that relative entropy is nonnegative."
+      ],
+      [
+        770,
+        "\\emph{Acceptance tests.} Import all three failures from reductions/paper/biased.tex: event total-correlation payment, coefficient-one pivotal normalization credit, and conditional-input-TC existential-coordinate payment. Test the two-branch weighted threshold A\\_m=\\{mX\\_0+$\\sum$X\\_j$\\ge$m\\} in the stated q/q\\_0 regimes before advancing any replacement; convert nats/bits exactly. Do not generalize the pivotal-credit failure beyond coefficient one, or confuse conditional-input TC with the still-open spectral B\\_i selection problem. Any claimed corrected FEI+ extension must be uniform in arity, real weights, product biases, and deterministic endpoints, with a complete composition implication."
+      ],
+      [
+        778,
+        "{\\small\\emph{Execution contract:} interface derivation; P1; initial cap 2 work cycles. Deliverables: \\path{BIASED_ENDPOINT_SERIES.tex}; \\path{WEIGHTED_CONTROL_LIMITS.json}. Independent review: A091, A090. Consumers: A024, A041, A044, A045, A047, A084.}"
+      ],
+      [
+        792,
+        "\\textbf{A045 --- Biased realizability referee.} Check the orthonormal product Fourier law of an actual Boolean gate, including deterministic input limits and repeated-variable exclusions. Distinguish a product physical input law, its generally dependent event-conditioned law, and spectral conditioning. Audit all three weighted normalization no-go scopes."
+      ],
+      [
+        796,
+        "{\\small\\emph{Execution contract:} independent scope review; P1; initial cap 2 work cycles. Deliverables: \\path{BIASED_REALIZABILITY_AUDIT.md}; \\path{GATE_BOUNDARY_AUDIT.json}. Independent review: A091, A090. Consumers: A041.}"
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\CAMPAIGN.md",
+    "locators": [
+      [
+        1,
+        "# Full FEI: mathematical supplement to the installed campaign"
+      ],
+      [
+        3,
+        "**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/). The installation reference is [commit bc85302284612e979faae67ea51663242d322221](the open-problems repository (commit bc853022)). The installed report and subsequent authorized updates remain the primary campaign instructions."
+      ],
+      [
+        31,
+        "The threshold manuscript supplies structured tools: a uniform regular/LTF bound with C_reg = log2(4+e) + 2log2(e*pi) < 8.937 against character-centered influence; explicit combination and overlap bounds; corrected biased symmetric-threshold composition; a complete joint witness code; and exact selector and rare-activation identities. Regularity means a desirability order, not small weights. These results have stated hypotheses and do not settle full FEI."
+      ],
+      [
+        39,
+        "5. Improve a proper structural endpoint, such as read-k covariance, two spectral addresses, controlled selector interference, or biased weighted thresholds, and then determine what it contributes to a universal proof."
+      ],
+      [
+        55,
+        "All discrete Fourier entropies use base-two logarithms unless the cited theorem explicitly uses natural units. Distinguish ordinary influence, character-centered influence, dual total correlation, variance deficit, and corrected biased FEI+. Physical restriction, spectral conditioning, and evolving real wavefunctions are different operations."
+      ],
+      [
+        61,
+        "Each mathematical contribution should state the exact inequality, quantifiers, input class, tracked metric, dependencies, and remaining unpaid term. Use code to resolve a concrete uncertainty. Integer Walsh transforms and rational identities support exact finite claims; logarithmic comparisons require rigorous intervals or analysis when used as certificates."
+      ],
+      [
+        63,
+        "A passing finite search does not prove an all-dimensional result. Rewriting full FEI as an unpaid coding or history cost is not a solved intermediate theorem. When a proposal fails, retain the failed statement and a witness satisfying its complete hypotheses; then change the mathematical attack within the installed B stream's scope."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\CLAIMS.md",
+    "locators": [
+      [
+        3,
+        "**Full FEI: OPEN.** Updated 11 October 2026. Team IDs below are the F01–F20 identities in `TEAMS.json`, copied from the root campaign roster. This ledger does not assign a replacement roster or claim that workers have run."
+      ],
+      [
+        55,
+        "| C018 | CONDITIONAL | Uniform B≤KI for all Boolean f implies full FEI with C≤K+2/ln2; conversely B≤H makes FEI imply B≤CI. The equivalence is proved; a universal finite K is not. | F07,F20 | C005; ER §4 |"
+      ],
+      [
+        61,
+        "| C024 | OPEN_TARGET | Pay actual-source entropy/history transfer while retaining history probabilities and full Boolean ancestry. The true integrated cost satisfies H_nat−3I≤C_path≤H_nat+I, so a universal linear payment is FEI-equivalent. | F08,F09,F20 | RM §§11.13–11.16 |"
+      ],
+      [
+        62,
+        "| C025 | OPEN_TARGET | Establish the corrected biased FEI+ inequality uniformly for arbitrary weighted thresholds, not only symmetric thresholds or balanced internal inputs. | F13 | C004; P, “Further consequences and questions” |"
+      ],
+      [
+        84,
+        "| C035 | PROVED_BASELINE | A fresh physical selector block of a bits gives H(F)≤2a+average H(g_b). Neighboring orthogonal branches yield I_sel=a/2 and FEI closure with max(4,C); a general I_sel≥ca gives ordinary closure max(2/c,C). Recursive fresh-selector orthogonal-neighbor multiplexers with regular leaves retain C_reg, even with shared data. | F11,F14; live B04,B12 | baseline/current-threshold-paper.tex, sec:shared-multiplexers; supporting/shared_data_delta_independent_audit.md |"
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\COUNTEREXAMPLES.md",
+    "locators": [
+      [
+        3,
+        "**Full FEI remains OPEN.** These examples refute specified intermediate assertions, or show that a proposed restriction retains full FEI. None is a counterexample to full FEI. Use the F01–F20 roster in `TEAMS.json`. Source aliases and log conventions are defined in `CLAIMS.md`; explicit natural-log exceptions are noted below."
+      ],
+      [
+        43,
+        "## X005 — Arbitrary signed leaves encode full FEI"
+      ],
+      [
+        91,
+        "**Owners:** F08,F09,F18,F19. **Related:** C023,C024,C032. **Source:** RM §§11.15,11.19–11.20, including `POINT_FLIP_SURPLUS.md` and `ADDRESS_HISTORY_GUARD.md`."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\SEED_LEMMAS.md",
+    "locators": [
+      [
+        3,
+        "**Status:** direct derivations, reviewed internally; separate from the completed threshold manuscript. These are not claims of novelty, external peer review, or a proof of full FEI. The hypotheses below are part of each statement. The effective-piece argument and prior mixture are useful interfaces; a dimension-independent bound on their complete expected cost remains an additional obligation."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\NATIVE_MAPPING.md",
+    "locators": [
+      [
+        22,
+        "| B10 | Falsification |"
+      ],
+      [
+        50,
+        "| F11 — Selector interference | B04, B03, B12, B10 | Cross terms for overlapping leaf Fourier supports; coherent reinforcement/cancellation and exact falsifiers. |"
+      ],
+      [
+        52,
+        "| F13 — Biased weighted thresholds | B09, B12, B14, B10 | Corrected FEI+ for weighted gate subclasses and composition consequences, including extreme-bias tests. |"
+      ],
+      [
+        53,
+        "| F14 — Shared-variable composition | B12, B03, B07, B10 | Valid Fourier convolution bounds and compositional invariants tested against false entropy subadditivity. |"
+      ],
+      [
+        55,
+        "| F16 — Exact finite search | B15, B10, B17 | Integer Walsh experiments aimed at named claims, exact hypothesis checks, and minimal certificates. |"
+      ],
+      [
+        56,
+        "| F17 — Asymptotic stress families | B16, B11, B05, B10 | All-dimensional addressing, bent, parity, sparse and tensor families distinguishing a route failure from a conjecture counterfamily. |"
+      ],
+      [
+        58,
+        "| F19 — Independent proof reconstruction | B18, B19, B10, B17 | Independent rebuilding, adversarial instances, hypothesis audits, and formalization of delicate cores where useful. |"
+      ],
+      [
+        74,
+        "| B10 | F11, F13, F14, F16, F17, F19 |"
+      ],
+      [
+        95,
+        "**Full FEI remains OPEN.** This crosswalk records research relevance. It is not evidence that a role was assigned, an agent executed, a result was saved, or a theorem was accepted."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md",
+    "locators": [
+      [
+        3,
+        "30 September 2026. Full FEI remains OPEN. This standalone addition leaves the canonical REPORT.md and the completed 12:48 UTC checkpoint unchanged."
+      ],
+      [
+        14,
+        "The literal indicator is an explicit unconditional low-ratio seed. The result rules out a blanket full-degree moment substitute for the remaining rare-row entropy payment. A claim restricted to an unknown high-rho class remains conditional on the existence of an actual seed in that class. Retained-degree-only moments, direct rare-row entropy, stronger primitive/minimum-dimensional hypotheses, and full FEI are not refuted."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md",
+    "locators": []
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md",
+    "locators": []
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+    "locators": []
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_RIGIDITY.md",
+    "locators": [
+      [
+        3,
+        "20 September 2026. Further mathematical work on the unrestricted FEI target. **Full FEI is not proved here.** The statements below have direct proofs. Their publication priority has not been checked. The companion checker is `check_erasure_rigidity.py`; its actual output is `erasure_rigidity_checks.json`."
+      ],
+      [
+        85,
+        "Substitution gives the asserted 4delta^2/(1+4delta^2). All denominators are positive. Relative entropy in bits is at most log_2(1+chi^2), by Jensen applied under the first law to the likelihood ratio. Mutual information equals h_2(delta)-B_t, so the upper estimates follow. It is strictly positive because the two displayed marginal masses are different and the first conditional law is uniform. Finally h_2(delta)/delta=log_2(1/delta)+1/ln 2+O(delta), proving the asymptotic. QED."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md",
+    "locators": [
+      [
+        129,
+        "Thus finiteness of K_D is equivalent to full FEI. The parity lift converts all spectral entropy into dual total correlation while increasing influence by at most two; the pair lift gives exact factor two. A plan that first proves D<=C I has not separated off an easy remainder; it has solved an equivalent full-scope problem."
+      ],
+      [
+        133,
+        "There is a sharper class-level consequence. Let Z be the class of Boolean functions whose positive Fourier support contains no adjacent pair. This is exactly the class B=0 (equivalently K=0): a binary conditional entropy is positive precisely when both members of some spectral edge have positive mass. Every parity lift (5) lies in the still smaller class whose Fourier support has even cardinality. Therefore FEI restricted only to that even-support class is already equivalent to full FEI up to factor two. Indeed, a constant C on this class gives"
+      ],
+      [
+        137,
+        "for every g. Conversely full FEI of course covers Z."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\GAMMA_ENDPOINT_LEDGER.md",
+    "locators": [
+      [
+        48,
+        "The earlier e^t/sqrt(1+t) estimate is insufficient on its own to bound (2), because multiplying a finite integral by the unbounded sqrt(1+t) is not justified. Source-realizability or a sharper information accounting must enter a proof of the remaining signed estimate. Full FEI remains open."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ISOSPECTRAL_SPLICING_CURATED.md",
+    "locators": [
+      [
+        3,
+        "**Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof."
+      ],
+      [
+        156,
+        "For `M_i>0`, let `D_2(\\nu\\Vert q)` denote base-two relative entropy. Then"
+      ],
+      [
+        285,
+        "It is **not** full FEI: a universal tree-level estimate for the weighted sum of these defect charges has not been proved."
+      ],
+      [
+        674,
+        "Therefore full FEI remains open."
+      ],
+      [
+        678,
+        "The next P03 method should be an **approximate-isospectral hereditary allocation theorem** rather than another minor-child, curvature, derivative-degree, fixed-Renyi, or absolute-overlap scalar majorant."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\LOG_ALLOCATION_CURATED.md",
+    "locators": [
+      [
+        3,
+        "**Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ONE_BIT_ENDPOINT.md",
+    "locators": [
+      [
+        3,
+        "Date: 2026-09-30. Full FEI remains OPEN. This is an exact arithmetic endpoint for the collective wringing route, not an approximate stability theorem. Publication priority is unverified."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\OVERLAPPING_PRODUCT_NOTE.md",
+    "locators": [
+      [
+        3,
+        "Full FEI remains OPEN. Immutable [complete report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md), [attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md), [claim ledger](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CLAIMS.json), and [executed verification](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/verification.json)."
+      ],
+      [
+        13,
+        "- Under uniform physical translations, E_z H(f g(.+z))<=Hf+Hg remains valid. The exact deficit equals H(S|S xor T)+I(U;Z), with its second term between zero and the first. The corresponding mean influence is If+Ig-2 sum_i Inf_i(f)Inf_i(g). These are retained two-input forms of the archived uncertainty mechanism, not new FEI closure."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ROUTE_MAP_CURATED.md",
+    "locators": [
+      [
+        3,
+        "**Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof."
+      ],
+      [
+        15,
+        "- Thus finiteness of sup B/I is equivalent to full FEI; it is not a solved weaker estimate"
+      ],
+      [
+        97,
+        "would imply **full FEI** with constant kappa+2+log e. Full support removes completion ambiguity. The reduction tensors an arbitrary seed, fills zeros with one-point surgery, and sparsely activates it. [Complete admission proof](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-log-allocation/COLLISION_ADMISSION.md). Thus small influence and full support do not make this a solved or demonstrably easier problem. The raw-L falsifier does not refute normalized T. For a broader collision construction, separately prove both valid lower payment and sufficient recovery of the required deficit; these are different tests."
+      ],
+      [
+        188,
+        "for universal finite `K,L`. The source proves that such a statement would imply full FEI. It does not prove the statement or show it easier than FEI."
+      ],
+      [
+        226,
+        "The [low-influence source note](https://github.com/yspennstate/math-open-problems/blob/ecc6da6b0c2514fd885bd2c4de03eb6f26f13f3b/research_pushes/2026-09-30-fei-log-allocation/LOW_INFLUENCE_SOURCE_NOTE.md) credits Shalev, arXiv:1806.03646v2, Theorem 3 and Section 3.2: a universal FEI theorem on `I(f)<=2^(-s(n))`, `s(n)=o(n)`, already implies full FEI; the activation construction is attributed there to Wan–Wright–Wu. Thus neither the general low-influence hardness principle nor tensor-plus-activation is new here. Section 4's particular normalized-collision premise, constants, and exact full-support perturbation remain unchanged, with the premise still unproved."
+      ],
+      [
+        232,
+        "### 11.13 Direct trajectory budget and the actual biased-Boolean remainder"
+      ],
+      [
+        244,
+        "**Stronger source structure, not independent sphere rows.** In [the biased-Boolean structure note](https://github.com/yspennstate/math-open-problems/blob/c63180b23321ce9130dbcbab825546f6c14923d0/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/scalar-information-remainder/integrated-trajectory/BIASED_BOOLEAN_STRUCTURE.md), the fixed-time clicked set A is sufficient; detailed click times are ancillary given A. With theta=1−exp(−t), its unnormalized amplitude b_A(x) is exactly the biased Fourier coefficient of the actual Boolean function eta↦f(x eta), where E eta_i=sqrt(1−theta). Thus mu_theta^x(A)=b_A(x)² obeys the complete weighted biased product identities, and all x-rows are translates of one f. The exact C functional uses adjacent coefficients, or equivalently the biased transforms of actual complementary ternary pairs."
+      ],
+      [
+        251,
+        "The integral is still unpaid. Its integrand is the full conditional-entropy sum of the actual biased-Boolean law, not TC or the unconditional thinning marginal. The independently checked reverse inequality now gives |Q_bias−C_path|<=(1+2ln2)I, hence H_nat−(4+2ln2)I<=Q_bias<=H_nat+(2+2ln2)I. Thus this is an FEI-equivalent bank, not an oversized proxy. Characters give Q_bias=(pi²/6)I as a normalization check. This does not establish the retired universal pointwise erasure bound."
+      ],
+      [
+        289,
+        "Root, peer and maintainer analytic reviews are recorded with the precise source hypotheses. The maintainer's isolated replays matched all final outputs byte-for-byte: seven rational-log bent/spike cases; thirteen four-bit noise cases; forty-two compressed point-flip dimensions;27,540 rational-law comparisons and32,640 Boolean spacing pairs; and the exact65,536-atom positive-source fixture. Numerical entropy columns remain diagnostic where labeled. All23 files changed in this final batch were exactly read back at draft PR12 head b1b9d08716766c3ef373de8350867ccae5314755; the local manifest audit found176 entries/176 unique files and zero mismatches. The draft remains unmerged. Full FEI, actual critical-source entropy restoration and the equivalent C/Q_bias payment remain open."
+      ],
+      [
+        362,
+        "Root and maintainer independently read all three notes and replayed the snapshot checker byte-identically:278 Boolean tables,35,628 positive fields,2,424 cascade states,2,172 forced-energy checks and196 exact-product leaves. The checker is exact finite arithmetic, not a simulation or certification of continuous entropy integrals. All six files were exactly read back at unmerged draft PR12 head b052f7ac40a2aef7e4768aa4f0d9836d6906b939. The substantive remaining step is a source-sensitive entropy transfer compatible with these paid error budgets; full FEI remains open."
+      ],
+      [
+        386,
+        "Root and trajectory researcher each read the full written proof and checked its zero-event conventions, right-continuous post-cascade states, generator and finite-horizon integration. No executable or formal certificate is claimed for this analytic note. The note and manifest were exactly read back at unmerged draft PR12 head 4002dfdd471e6130f138bfa161cda21f6ef23ccf; full FEI remains open."
+      ],
+      [
+        394,
+        "An actual ternary hole projection has zero starting primitive potential, but source-weighted mean potential creation tends to ln4 as its one-outcome probability tends to zero. Thus universal O(q) and O(h(q)) creation bounds fail. The note also checks ordinary-address calibration and exact tensor additivity, without an integrated or critical-source counterexample. Root and independent reviewer each read the complete proof and independently replayed its exact rational/logarithmic checker with byte-identical output:79 projected fields,237 snapshots,396 reveal identities,237 generator identities,669 mesh bounds,256 tensor pairs,7 hole cases and3 address cases. All four files were exactly read back at open, unmerged draft PR12 head 942eb3d49efa16d36a1a716a846dfbae9c6bca41. This is checked accounting and a failed-step guard, not full FEI or formal verification."
+      ],
+      [
+        400,
+        "This is a restricted continuous-history theorem, not an unrestricted profile, a new FEI class, or a novelty claim. Arbitrary Boolean leaves, overlapping blocks and the separate unreviewed clock-flux proposal are excluded. Root and an independent peer reviewed the complete proof, including the binary-entropy bound, and separately replayed the finite checker with byte-identical output:15 full/coarse histogram matches,331 coefficient identities,2 full physical tensor histories,465 positive fields and51,676 coordinate pairs. The finite entropy bounds use rational logarithm enclosures; they are not a formal or universal enumeration certificate. All four files were exactly read back at open, unmerged draft PR12 head8558b63bfe2127873c4808da8c512814ab13b6b2. The completed12:48 checkpoint is unchanged; full FEI remains open."
+      ],
+      [
+        408,
+        "The remaining full-scope difficulty is the low conditional-entropy bound together with payment by actual address influence. Positive hybrid laws on disjoint physical-address/Fourier-data factors exist more generally, but general Boolean leaves can retain large spectral entropy already at t=0. Positivity, the square-noise identity and vector orthogonality do not supply the missing influence-only estimate. Root and an independent peer reviewed the final proof and primary attribution and independently replayed the final checker byte-identically:15 exact profiles/full-coarse histograms,45 thinning checks,30 rate comparisons,271 positive fields and25,544 pairs. Rational finite certificates do not certify the universal statement by enumeration or prove full FEI. All seven files in the combined profile folder were exactly read back at open, unmerged draft PR12 head971fe8a485349a69914decb992000879acbc892e; the completed12:48 checkpoint is unchanged."
+      ]
+    ]
+  },
+  {
+    "path": "context\\percolation_spectral_pivotal_entropy_30pp.txt",
+    "locators": [
+      [
+        167,
+        "and define the binary relative entropy in natural units, for 0 < a < 1, by"
+      ],
+      [
+        256,
+        "relative entropy."
+      ],
+      [
+        349,
+        "For unbiased coordinates this gives H(Pf )  I(f ) - 1."
+      ],
+      [
+        512,
+        "the unbiased parameter; the local guard hypothesis supplies a positive bound there."
+      ],
+      [
+        2059,
+        "11.2. Testing and relative entropy. The exact overlap exponent also controls statistical distin-"
+      ],
+      [
+        2111,
+        "When the relative entropy is finite, Jensen's inequality under  gives KL()  -2 ln a; the same"
+      ],
+      [
+        2118,
+        "spectral probability and zero pivotal probability, proving infinite relative entropy. Finally, the"
+      ],
+      [
+        2217,
+        " [3] F. Chang. A lower bound for the Fourier entropy of Boolean functions on the biased hypercube. Preprint, 2025,"
+      ]
+    ]
+  },
+  {
+    "path": "context\\percolation_spectral_pivotal_entropy_31pp_other_version.txt",
+    "locators": [
+      [
+        177,
+        "and define the binary relative entropy in natural units, for 0 < a < 1, by"
+      ],
+      [
+        278,
+        "relative entropy."
+      ],
+      [
+        368,
+        "For unbiased coordinates this gives H(Pf )  I(f ) - 1."
+      ],
+      [
+        515,
+        "the unbiased parameter; the local guard hypothesis supplies a positive bound there."
+      ],
+      [
+        1999,
+        "11.2. Testing and relative entropy. The overlap bounds also control statistical distinguishability"
+      ],
+      [
+        2041,
+        "When the relative entropy is finite, Jensen's inequality under  gives KL()  -2 ln a; the same"
+      ],
+      [
+        2047,
+        "spectral probability and zero pivotal probability, proving infinite relative entropy. Finally, the"
+      ],
+      [
+        2156,
+        " [3] F. Chang, A lower bound for the Fourier entropy of Boolean functions on the biased hypercube, preprint, 2025,"
+      ]
+    ]
+  },
+  {
+    "path": "context\\threshold_paper_29pp_earlier_version.txt",
+    "locators": [
+      [
+        285,
+        "This follows by normalizing Q and applying nonnegativity of relative entropy."
+      ],
+      [
+        1128,
+        "   Under a biased measure, the corresponding bound for uncorrected Shannon entropy fails even for"
+      ],
+      [
+        1290,
+        "where TC(µA) is the relative entropy of µA with respect to the product of its marginals. This"
+      ],
+      [
+        1700,
+        "into the -biased Fourier expansion of g gives"
+      ],
+      [
+        1729,
+        "Corollary 7.2 (Constant-preserving composition). If g satisfies biased FEI+ with bit constant C0"
+      ],
+      [
+        1730,
+        "under its induced product law and every fi satisfies biased FEI+ with bit constant Ci, then"
+      ],
+      [
+        1761,
+        "      · fixed-arity arbitrary Boolean gates may be included with their established product-biased FEI+"
+      ],
+      [
+        2018,
+        "mathematics. Earlier versions of the rank, bounded-overlap, and biased-threshold arguments were"
+      ],
+      [
+        2022,
+        "prepare the manuscript. Separate agents reviewed the rank, bounded-overlap, and biased-threshold"
+      ],
+      [
+        2029,
+        "shifts, biased Fourier normalization, and composition identities, together with their outputs, are"
+      ]
+    ]
+  },
+  {
+    "path": "context\\threshold_paper_38pp.txt",
+    "locators": [
+      [
+        13,
+        "     addressing. Exact selector identities extend the bound to orthogonal multiplexers with shared data."
+      ],
+      [
+        197,
+        "the optimal constant of full FEI. These reductions specify the scope of the structured hypotheses."
+      ],
+      [
+        289,
+        "This follows by normalizing Q and applying nonnegativity of relative entropy."
+      ],
+      [
+        1336,
+        "exact cost for each finite witness. To obtain full FEI from it, one would still need a uniform influence"
+      ],
+      [
+        1340,
+        "gates already retain the full FEI problem."
+      ],
+      [
+        1415,
+        "   Under a biased measure, the corresponding bound for uncorrected Shannon entropy fails even for"
+      ],
+      [
+        1578,
+        "where TC(µA) is the relative entropy of µA with respect to the product of its marginals. This"
+      ],
+      [
+        1985,
+        "into the -biased Fourier expansion of g gives"
+      ],
+      [
+        2014,
+        "Corollary 7.2 (Constant-preserving composition). If g satisfies biased FEI+ with bit constant C0"
+      ],
+      [
+        2015,
+        "under its induced product law and every fi satisfies biased FEI+ with bit constant Ci, then"
+      ],
+      [
+        2047,
+        "      · fixed-arity arbitrary Boolean gates may be included with their established product-biased FEI+"
+      ],
+      [
+        2346,
+        "Corollary 8.3 (Selector closure from full FEI bounds). If H(hj)  CsI(hj) and H(gj)  Cg(I(gj) - 1)"
+      ],
+      [
+        2416,
+        "8.2. Multiplexers with shared data. Let x  {-1, 1}a be a uniform selector, independent of"
+      ],
+      [
+        2536,
+        "    For a concrete pair with shared data, take"
+      ],
+      [
+        2555,
+        "Consequently FEI on the class of these two-cell selectors is equivalent to full FEI, with the same"
+      ],
+      [
+        2654,
+        "   Thus a uniform estimate for arbitrary sparsely activated cores would resolve full FEI. Rarity and"
+      ],
+      [
+        2735,
+        "mathematics. Earlier versions of the rank, bounded-overlap, and biased-threshold arguments were"
+      ],
+      [
+        2739,
+        "and prepare the manuscript. Separate agents reviewed the rank, bounded-overlap, biased-threshold,"
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/reports\\fei-2026-10-11\\runs\\B19\\20261011T195038Z-account01-B19-independent-review\\REPORT.md",
+    "locators": [
+      [
+        18,
+        "No completed B10--B17 natural campaign packet was indexed in the authoritative status or found by focused repository searches at review time. The status identifies B05 as the first and only saved natural FEI run and explicitly records that it lacked independent end-to-end audit. I therefore reviewed that live proof chain rather than inventing a B10--B17 candidate or producing a receipt-only report."
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/reports\\fei-2026-10-11\\runs\\B09\\20261011T195500Z-account01-B09-biased-restriction-uncertainty\\REPORT.md",
+    "locators": [
+      [
+        1,
+        "# B09 — product-biased restriction uncertainty: a prime-gate counterexample and an endpoint-safe repair"
+      ],
+      [
+        3,
+        "**Run:** `20261011T195500Z-account01-B09-biased-restriction-uncertainty`  "
+      ],
+      [
+        59,
+        "- account02/B16 translation/XOR-fiber uncertainty, which proves the uniform Walsh-conjugate bound and sharp phase obstruction;"
+      ],
+      [
+        62,
+        "- the corrected Numaro biased-prime falsifications and composition-prime reduction reports found in the September archive."
+      ],
+      [
+        66,
+        "- O'Donnell--Tan, *A composition theorem for the Fourier Entropy-Influence conjecture*, arXiv:1304.1347.  It is the source for the product-biased disjoint composition framework; no novelty is claimed for that framework."
+      ],
+      [
+        67,
+        "- Maassen--Uffink, *Generalized entropic uncertainty relations*, Phys. Rev. Lett. 60 (1988), 1103--1106, DOI `10.1103/PhysRevLett.60.1103`."
+      ],
+      [
+        69,
+        "The new point of this run is the exact specialization of the non-mutually-unbiased transform to a physical product-biased restriction, its explicit endpoint tax, and the source-valid prime-gate falsifier to the tax-free version.  Publication novelty has not been independently reviewed."
+      ],
+      [
+        71,
+        "## 2. Exact product-biased block ledger"
+      ],
+      [
+        86,
+        "For Boolean `f`, write `hat f_p(S)` for the resulting product-biased Fourier coefficients and"
+      ],
+      [
+        92,
+        "Fix a block `A` and put `B=[n]\\setminus A`.  For a physical assignment `z` on `A`, let `f_z` be the restricted Boolean function on `B`, with the inherited product biases, and let `mu_z` be its biased spectral law.  For `S~mu`, write `S_A=S cap A` and `S_B=S cap B`.  Define"
+      ],
+      [
+        115,
+        "Indeed, biased Parseval on the revealed coordinates gives"
+      ],
+      [
+        132,
+        "## 3. PROVED: biased uncertainty bound with explicit rare-event tax"
+      ],
+      [
+        134,
+        "### Theorem B09-BIASED-BLOCK-UNCERTAINTY-01"
+      ],
+      [
+        202,
+        "This is a product-biased restriction lemma.  It is not a strong FEI inequality for arbitrary weighted thresholds, and it does not bound `M_A` by influence.  Its value is to identify exactly how the uniform Walsh uncertainty payment degrades at biased gate inputs."
+      ],
+      [
+        204,
+        "## 4. REFUTED: the tax-free biased extension"
+      ],
+      [
+        206,
+        "### Candidate B09-TAXFREE-BIASED-UNCERTAINTY (false)"
+      ],
+      [
+        225,
+        "The exact squared biased Fourier masses, in the order `empty,{X},{Y},{X,Y}`, are"
+      ],
+      [
+        240,
+        "The `X=0` child is constant, while the `X=1` child is the `Y` character, whose biased spectral nonempty mass is `3/4`.  Hence"
+      ]
+    ]
+  },
+  {
+    "path": "math-open-problems/reports\\fei-2026-10-11\\runs\\B05\\20261011T193057Z-account01-B05-rare-restrictions\\REPORT.md",
+    "locators": []
+  }
+]

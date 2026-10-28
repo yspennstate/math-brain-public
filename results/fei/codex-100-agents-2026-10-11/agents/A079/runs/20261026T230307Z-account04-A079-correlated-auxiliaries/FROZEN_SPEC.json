@@ -1,0 +1,12 @@
+{
+  "helper_version": "A079-scalar-polynomial-v1",
+  "actual_boolean_family": "Products of the Boolean three-bit one-point defect; scalar certificates for its spectral law P(000)=9/16, P(other)=1/16",
+  "parameter_domain": "Exactly p=5/3 and p=7/4; nonnegative real scalar inputs, certified by exact polynomial expansion on each ordered cone",
+  "case_count": "Two exponents, two ordered cones each; degree 45 or 84. No Boolean dimension search.",
+  "symmetry": "None; both u>=v and v>=u cones checked separately",
+  "arithmetic": "Python integers, complete binomial polynomial coefficient arrays; no floating-point signs",
+  "memory_estimate_mb": 30,
+  "max_runtime_seconds": 55,
+  "pilot": "Entire four-cone certificate attempt, under 60 seconds",
+  "stop_rule": "A failed coefficient-positivity test is inconclusive; a negative exact evaluation refutes that exponent. Do not expand parameter domain automatically."
+}

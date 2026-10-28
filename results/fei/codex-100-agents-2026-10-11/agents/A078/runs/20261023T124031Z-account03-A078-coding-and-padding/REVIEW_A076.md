@@ -1,0 +1,9 @@
+# Scoped reconstruction of A076 v10 mean bank
+
+Source: A076/runs/20261023T114019Z-account03-A076-threshold-and-tribes-controls/DEPTH_UNIFORM_PROOF.md equations1-9. Verdict HOLDS for the mean-bank algebra, nonnegativity, and quota arithmetic UNDER the explicitly supplied threshold entropy envelope. This is NOT independent acceptance of the full source chain: A078 contributed earlier private/collision results, and the external threshold theorem is not re-proved here.
+
+Expanding the complete shared/private Walsh sectors gives H=U+Xi+2R+E-p sum g(mu). Define Z=E+R-p sum g(mu)+1; hence H=U+Xi+R+Z-1 exactly. E>=0 because every mean-sector Fourier coefficient has magnitude<=1. The g maximum is1/(Euler ln2)<1 and p times the number of live points<=1, giving Z>=0 on every child, including dead events and constants. Shared K transport gives Delta Xi<=Delta K, with strict helpful inequality at a separator; private transport gives equality. Finite reach-weighted telescoping preserves the complete terminal Z and full H.
+
+Each point indicator has Fourier l1 norm1. The TWO-point mean perturbation has l1 norm<=4, so |g'|<=6 gives |E-H(h)|<=24. For zero/one/two live points, R=r2^-r sum Var<=1, including r0. Thus Z<=H(h)+26. GIVEN H(h)<=9I0 and I0>=1, Z<=35I0. The old charges satisfy L<=5+15+38=58<=58I0. Consequently96I0-L-Z>=3I0. This is explicit additional ORIGINAL shared allowance, not recovery of a spent private donor or a claimed consumed-pivot estimate.
+
+The new A078 proof extends the same algebra to two parallel affine fibers, with current code rank in R and conditional event density in p. That extension is A078's own contribution and awaits independent review. A076's external threshold entropy premise remains a declared baseline dependency; finite truth-table tests cannot verify its all-dimensional proof.

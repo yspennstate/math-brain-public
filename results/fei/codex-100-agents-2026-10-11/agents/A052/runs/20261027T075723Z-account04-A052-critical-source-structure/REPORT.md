@@ -1,0 +1,43 @@
+# exact target, quantifiers, hypotheses and units
+
+A052/B11 resumed stage22: derive a structural restriction on all COMPLETE physical children from the SAME fixed-K critical budget. Uniform finite Boolean signs, entropy bits, K>0. The child-count statement actually requires only D>0 and nonnegative complete average reserve S; least-essential-dimension positive K-criticality supplies S. Physical-descendant ratio extremality alone does not supply affine-optimized child eligibility. Full FEI remains OPEN. The explicit27October continuation authorizes this stage; historical campaign deadlines do not create a new timed schedule.
+
+# sources actually read, revisions and theorem locators
+
+Full execution protocol revision2026-10-11-execution-v2, machine rules, current BOARD, B11 STREAM_NOTES v2, own rolling files and prior stage11 REPORT. Fresh mathematical input: A051 20261027T043314Z PROOF Sections1--5 and REPORT; A054 20261026T222013Z REPORT; A055 20261027T011322Z REPORT and exact-helper definitions. The old beta-block assignment was exhausted in prior stages; dispatch consumes the new complete-child dependency. Campaign indices, supplement sources, plan and four manuscript byte hashes and relevant excerpts are refreshed in SOURCE_RECEIPTS. This is not a new complete audit of those manuscripts. One manuscript refresh with strict UTF8 failed because its bytes use a legacy encoding; corrected explicit decoding and source hashes are recorded below. No manuscript theorem is a new mathematical premise. Read-only math recall returned known FEI/Booleanity cautions; no recalled theorem is used without direct derivation.
+
+Wake completed WARN: personal model190h, state175h and dream47h stale; owner alerted before reliance. No affected personal-context note is a premise. Compute telemetry reported status ok but disk free4.9GB; current large reservations belonged mainly to Claude workers, Python workers, the terminal and film encoders. Existing work stayed running. New exact jobs are tiny and synchronous. Required checklist working call exited0.
+
+# complete derivation or exact first unsupported line
+
+PROOF Sections1--4 contains the all-dimensional derivation. For d>=2 and negative input set M, every nonzero directional disagreement count equals2|M| modulo4, because M intersect(M+v) is paired by translation. Complementation by a character preserves that residue since2^d is divisible by4. Every affine basis therefore gives the SAME total-influence residue modulo2^(2-d). Positive full-child reset savings are at least this quantum, twice the ordinary edge-spacing bound; d1 uses quantum1.
+
+Independently expanding the full Gibbs divergence reconstructs A051's equality D+S+KR+W+G=capacity. Thus if m of2^r children improve, K2^-r q_d*m+D+S+W+G<=capacity. Since D>0, m<2^r capacity/(Kq_d), so capacity<=K2^-r q_d forces m=0. The rational sufficient regime is K2^(K-n-2)>=r for d>=2; d1 uses exponent K-n-3. The strict log bound and equality threshold are checked. This strengthens the existing account by its exact Boolean parity, not by another source of money. No child inherits extremality or receives a fresh reserve.
+
+Historical component-pruning failures survive unchanged: their indicator spectra are not complete physical children and their improving physical restrictions already defeat critical admission. Exact fixed-K criticality changes the argument by certifying the full affine/character child reserves as nonnegative; physical ratio extremality only certifies inherited physical child ratios. The modulo-four lemma needs actual Boolean input sets and cannot be inferred from an arbitrary squared spectral law. No connected-support conclusion follows.
+
+FIRST UNSUPPORTED UNIVERSAL LINE: pay ONE ORIGINAL proper block for every genuine high-K witness when n is far above K, from signed Boolean convolution and unused quotient rank, retaining phase Pi, mixed rows, old debits and all complete terminals. The new threshold is dimension dependent and becomes weak there. Universal constant gain0.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC precedes v1; FROZEN_SPEC_V2 precedes the stronger mod-four run on the SAME domain. From this run: python -X utf8 code/check.py passes30553 assertions in2.801501s: all278 labelled roots n0..3 plus seven named n4 controls,1666 proper blocks and six K values1,2,3,4,8,16. The910 cases with certified D>0,S>=0 satisfy the count bound. ZERO small cases trigger the high-ratio rigidity threshold; the theorem is analytic, not inferred from nonexistent high-K witnesses. The initial weaker-quantum v1 also passed30553 checks and is preserved separately; it is excluded from the final total.
+
+The first independent frozen spec omitted its scalar subloop. out/FROZEN_INDEPENDENT_V2 states that exact unchanged finite domain before the final replay (initial output excluded). python -X utf8 code/independent.py:65253 assertions in0.338239s, all278 signs d0..3,57546 basis/character costs using direct physical edges, plus5312 scalar count cases. It imports no primary helper. Some three-bit signs attain positive saving1/2, establishing finite sharpness of the stronger quantum in that dimension. This is a second A052 representation, not independent-agent acceptance. NEW final total95806 assertions, excluding v1 and all prior stages.
+
+Integers, Fraction, exact prime-log identities and28-term rational atanh enclosures with explicit positive tails decide signs. No floating-point sign certificate. d0,d1, constant and character signs, equality thresholds, a positive-deficit/negative-reserve guard and an affine-minimal bent2 guard without D>0 are retained. No random sample or dimension escalation. Exact Python jobs estimate40--80MB and cap55s; observed peak memory unmeasured. memok exited0, physical5.9GB/commit8.8GB free, before the managed Lean scalar attempt. The wrapper then refused fresh admission below its5500MB threshold or for a hung window and started NO compiler. LEAN_STATUS records exit2 SETUP_UNVERIFIED. The source only formalizes the scalar zero-count implication; neither parity nor FEI is formally certified. Rung: analytic author proof with exact finite validation, not Lean-checked.
+
+# proof dependencies and changed downstream conclusions
+
+A051 full conditional-Gibbs equality receives independent algebraic reconstruction unchanged at its stated scope; the analytic premise is B11-R1 fibrewise uniform log-Sobolev. No whole-chain acceptance of its selector, occupied-divergence or A055 tensor theorem is asserted. The new narrow corollary is a parity refinement of the existing child budget, not another broad universal candidate. A051/A054/A055 may replace continuous reset-opportunity counting by an exact integer ceiling where useful. Old phase prices and original-account ownership remain.
+
+# one next mathematical action and independent reviewer
+
+A054/A094 independently reconstruct the modulo-four edge argument and count threshold; A051 checks its SAME-owner substitution. A055 targets remaining n>>K sources with genuinely nonnegative full-child reserves, signed convolution and unused quotient rank, retaining Pi and all mixed rows. The required next result is one paid ORIGINAL block in that regime. This is a saved source-bound handoff, not a sent message.
+
+# actual persistence receipts or precise save blocker
+
+REPORT, CLAIMS, PROGRESS, identical PACKET_DELTA, complete proof, frozen specs, both standalone scripts, exact outputs, source receipts and held-Lean receipt are saved only in A052. The finalizer checks exact protocol field sets and statement hash, reopens and hashes artifacts, checks20MB limits and two-line STATUS. WORKLOG and LEARNED are updated. Independent acceptance, registry adoption, supervisor copies, remote mirrors and brain ingestion remain unverified. No git, mail, brain write, other-agent research mutation, deletion, GPU, detached work or trading access. No mathematical job is intentionally left running and no existing work was stopped.
+
+## Universal bridge
+
+C019 stopping-tree payment through B11 critical selection gains an exact Boolean parity restriction: the SAME exponentially small complete-child budget limits the integer number of affine reset opportunities, and under an explicit dimension-dependent threshold forces EVERY child of an original proper block to be affine-minimal. Universal constant improvement is zero. The remaining universal bridge is original-block funding for n far above K, with phase, mixed rows, old debits and all full terminals retained. NEXT attacks that uncovered regime directly; another phase-optimality or component-pruning condition cannot pay it.

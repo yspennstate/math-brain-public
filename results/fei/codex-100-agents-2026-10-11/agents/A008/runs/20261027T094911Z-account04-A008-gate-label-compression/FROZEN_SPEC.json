@@ -1,0 +1,13 @@
+{
+  "helper_version": "A008-sharp-sector-v1",
+  "family": "All 23 labelled nonconstant monotone cores on at most three bits with canonical positive prime CNFs, private lifts L=1,2; and common-anchor cores z OR AND(x_1,...,x_s), s=1..4, L=1,2",
+  "domain": "46 arbitrary-core lifts; 8 common-anchor lifts; scalar s=1..64,L=1..16; finite A007 parameters core dimension 1..64 and delta=2^-j, j=0..16",
+  "case_count": {"monotone_lifts":46,"anchor_lifts":8,"anchor_scalar_pairs":1024,"finite_extraction_pairs":1088},
+  "symmetry": "None: all labelled monotone truth tables on s<=3; no automatic dimension escalation",
+  "arithmetic": "Integer truth tables and FWHT, Fraction probabilities, exact rational inequalities and symbolic rational-log coefficient identities; floats only for elapsed time",
+  "memory_estimate_mb": 80,
+  "maximum_runtime_seconds": 55,
+  "pilot": "s<=2 monotone lifts and s<=2 anchor lifts, same fixed L domain, fewer scalar pairs; under 60 seconds",
+  "checks_that_could_fail": ["Private character phase", "Physical shared-coordinate influence versus independent copies", "Core probability domination only after rho<1", "Two distinct normalizers and the surplus coefficient", "Anchor z-only coefficient versus high-degree minimum", "At least two sector atoms in the sharp necessity theorem", "Nonpositive subprobability reference lengths", "Unpaid original source versus arbitrary-reference extraction"],
+  "formal": "Attempt core-only Lean rational accounting implication separately, bounded 45 seconds, no Mathlib; failed infrastructure is UNVERIFIED"
+}

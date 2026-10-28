@@ -1,0 +1,29 @@
+# exact target, quantifiers, hypotheses and units
+
+Independently review A097-HIGH-MOMENT-MATCHED-QUERY-LOSS@1 and close its omitted tail coordinate. For EVERY even n>=4, the same actual Boolean function and strictly positive supplied reference satisfy n-1/2<min_i L_i<n, hence min_i L_i/Inf_i>2n-1. Bits; full spectral projection convention, matched vacuum/all marginals through n-2, original CE<4I, BOTH physical children and remaining terminal divergence. This rules out existential first-coordinate local payment under those hypotheses; it does not refute FEI.
+
+# sources actually read, revisions and theorem locators
+
+Current BOARD, unchanged B17 notes v2, own stage21 STATUS/report, protocol-v2, A097 stage22 PROOF sections3-4 and named CLAIMS, A033 stage22 PROOF section5 and A012 stage22 DERIVATION sections1-6 read. Actual bytes are pinned in out/SOURCE_RECEIPTS.json. Earlier baseline campaign, registries and four manuscript texts retain stage21 byte provenance; they are not new proof premises or re-audited literature. A097 explicitly consumes our derivative-t erratum; no old source was rewritten. The high-moment source is already independently reconstructed by A033 at its original scope; this stage adds the still-omitted tail calculation, not another copy of that scope. No external literature priority or new parity construction is claimed.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md gives the complete all-n finite-law argument. Root D=n-(1/4)log2(2-e), e=2^(-4n). For i<n, erased reference is uniform and L_i=D. For the tail, projected masses are(3-e)/2^n and(1+e)/2^n, so d=(1/2)log2(4/((3-e)(1+e))) lies strictly between0 and1/4. Exact16/9<2 supplies the bound, so L_n=D-d is the strict minimum and exceeds n-1/2. EVERY possible first physical coordinate has large loss. This extends rather than changes A097's original n-1/4 lower bound, which applies to the first n-1 coordinates only. Actual child entropy is n-2; influences are n/2 and(n-2)/2, with mean(n-1)/2. Their full CE is n-1+d_i, so the CE change is exactly -1-L_i. First unsupported universal line: noncircular useful original arbitrary-core CE<=C I source or a required productive globally paid interface retaining all query losses, old bills and full terminals.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json precedes execution: n4,6,8 only,3 roots,18 queries,36 actual children and315 marginal masks. No symmetry reduction or dimension escalation. python -B -X utf8 code/check.py: PASS 621 exact assertions in0.314824s. Direct Walsh character sums and Fraction/integer likelihood powers certify all matched marginals, exact projected laws, strict loss bounds, BOTH child CE and physical influence conservation, with no floating logarithm signs. The analytic proof supplies all even n, not extrapolation from these cases. out/DRAFT_CORRECTION.json records the pre-execution distinction between individual child influence and its mean. Formal finite n4 face/fiber source uses core rational arithmetic; its admission/checker receipt is NOT_RUN_ADMISSION_HELD. No kernel success, transitive axiom result or all-n formalization is inferred from an unverified draft or a refused run. out/FORMAL_MEMOK.json records fresh admission; no guard was overridden.
+
+# proof dependencies and changed downstream conclusions
+
+A097's high-moment claim independently HOLDS unchanged. Our strengthened all-coordinate claim has a standalone proof and awaits A097/A033/A094 review. It closes a selection escape: even the tail cannot be charged at a dimension-independent local influence rate. It leaves the complete A012/A097 projection-history theorem intact because initial divergence D pays the first large loss globally. The remaining positive tail divergence d and both child CEs are retained, not set to zero. No arbitrary reference is replaced by a true-kernel reference for free, no old charge is removed and no new original capacity appears.
+
+# one next mathematical action and independent reviewer
+
+A097/A033/A094 independently review the tail likelihood factor and full child account. A011/A050/A096 must supply a useful ORIGINAL arbitrary-core source or productive globally paid stopping interface. High-moment calibration releases zero on this reference and ALL-coordinate selection fails; further tuning of moment order cannot replace that unpaid source. The source or policy must preserve actual full query KL, old U and terminal mismatch from the SAME unused original account.
+
+# actual persistence receipts or precise save blocker
+
+All four exact-schema protocol files, PROOF, independent code, frozen domain, exact output, formal source/admission result and raw source receipts saved inside A083. out/PERSISTENCE.json verifies schema keysets, compatibility equality and file hashes/sizes. Rolling STATUS/WORKLOG/LEARNED updated. Shared trees and brain remain read-only; no git, external message or other-agent mutation performed. Supervisor mirror, independent acceptance and downstream use remain unverified. No stage research job is left running. Brain self-care remains degraded/unverified: stale personal model/state/dream records affect context freshness and consolidation reliability and supply no proof premise.
+
+Universal bridge: C024 history transfer and C019 stopping-tree payment gain an all-coordinate obstruction to replacing original query-KL payment by local influence after high-order moment calibration. The prior source excluded n-1 choices; the new exact tail formula excludes the last one, with min_i L_i/Inf_i>2n-1 while CE<4I and H/I=2. No universal FEI constant improves. What remains is the useful original O(I) arbitrary-core source or a productive globally paid interface retaining the full history and terminals. NEXT attacks that source/payment boundary because coordinate selection and even order-n-2 matching can no longer be invoked to bypass it.

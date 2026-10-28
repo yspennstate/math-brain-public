@@ -1,0 +1,160 @@
+{
+  "type": "exact Boolean straight-line circuit",
+  "variables": [
+    "x",
+    "a",
+    "b",
+    "z0",
+    "z1",
+    "z2",
+    "z3",
+    "z4",
+    "z5",
+    "z6",
+    "z7",
+    "z8",
+    "z9",
+    "z10",
+    "z11",
+    "z12",
+    "z13",
+    "z14",
+    "z15",
+    "z16",
+    "z17",
+    "z18",
+    "z19",
+    "z20",
+    "z21",
+    "z22",
+    "z23",
+    "z24",
+    "z25",
+    "z26"
+  ],
+  "bit_domain": [
+    0,
+    1
+  ],
+  "sign_output_domain": [
+    -1,
+    1
+  ],
+  "gates": [
+    {
+      "name": "q0",
+      "op": "AND",
+      "inputs": [
+        "z0",
+        "z1",
+        "z2"
+      ]
+    },
+    {
+      "name": "q1",
+      "op": "AND",
+      "inputs": [
+        "z3",
+        "z4",
+        "z5"
+      ]
+    },
+    {
+      "name": "q2",
+      "op": "AND",
+      "inputs": [
+        "z6",
+        "z7",
+        "z8"
+      ]
+    },
+    {
+      "name": "q3",
+      "op": "AND",
+      "inputs": [
+        "z9",
+        "z10",
+        "z11"
+      ]
+    },
+    {
+      "name": "q4",
+      "op": "AND",
+      "inputs": [
+        "z12",
+        "z13",
+        "z14"
+      ]
+    },
+    {
+      "name": "q5",
+      "op": "AND",
+      "inputs": [
+        "z15",
+        "z16",
+        "z17"
+      ]
+    },
+    {
+      "name": "q6",
+      "op": "AND",
+      "inputs": [
+        "z18",
+        "z19",
+        "z20"
+      ]
+    },
+    {
+      "name": "q7",
+      "op": "AND",
+      "inputs": [
+        "z21",
+        "z22",
+        "z23"
+      ]
+    },
+    {
+      "name": "q8",
+      "op": "AND",
+      "inputs": [
+        "z24",
+        "z25",
+        "z26"
+      ]
+    },
+    {
+      "name": "hbit",
+      "op": "XOR",
+      "inputs": [
+        "q0",
+        "q1",
+        "q2",
+        "q3",
+        "q4",
+        "q5",
+        "q6",
+        "q7",
+        "q8"
+      ]
+    },
+    {
+      "name": "selected",
+      "op": "AND",
+      "inputs": [
+        "b",
+        "hbit"
+      ]
+    },
+    {
+      "name": "fbit",
+      "op": "MUX",
+      "selector": "x",
+      "zero": "a",
+      "one": "selected"
+    }
+  ],
+  "sign_output": "1-2*fbit",
+  "truth_table_order": "LSB order x,a,b,z0,...,z26",
+  "normalizer_definition": "unique c in witness rational bracket satisfying product(1-c*Inf_i/v)=1-c",
+  "enumerate_truth_table": false
+}

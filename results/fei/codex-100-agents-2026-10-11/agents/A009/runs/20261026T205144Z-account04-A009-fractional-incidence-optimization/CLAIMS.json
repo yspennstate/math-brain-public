@@ -1,0 +1,117 @@
+[
+  {
+    "claim_id": "A010-INTERSECTING-CORES-VARIATIONAL-OBSTRUCTION-AND-JOINT-REPAIR",
+    "version": 1,
+    "exact_statement": "For every integer r>=4, on independent uniform physical bits let f_r=2[product_(j=1)^r OR(z0,z1,X_j1,X_j2) product_(j=1)^r OR(z1,z2,Y_j1,Y_j2)]-1. Use A006's fixed normalized anchor/local-mask union law Q_r on these 2r width-four supports, with t=1/16. Over ALL fixed references R=alpha Q_r+(1-alpha)nu, 0<=alpha<=1, where nu is any probability supported on nonempty subsets of K1={z0,z1} or K2={z1,z2}, the variational infimum of complete nonempty Fourier-weighted cross entropy satisfies inf_R C_R(f_r)/I(f_r)>(2r-1)/2592, including all optimal branch/anchor/allocation posteriors. Meanwhile H(f_r)/I(f_r)<11. In the broader class, one fixed uniform dictionary J on the seven nonempty subsets of {z0,z1,z2} gives R_joint=(Q_r+J)/2 with C_Rjoint(f_r)/I(f_r)<3725/160<24.",
+    "hypotheses": [
+      "All X_j and Y_j are mutually disjoint private width-two blocks, disjoint from the three actual shared core bits; n=4r+3. Physical influence and Fourier spectrum use the same cube.",
+      "The Q_r anchor prior, empty/nonempty local probabilities, canonical draw order and full physical-union pushforward are exactly those of the fixed original A006 shared-tag law, not a prime queue and not retuned after observing A.",
+      "The lower-bound class permits arbitrary individual-core laws and mixture priors fixed before A but excludes any branch spanning both cores; every actual anchor and allocation event is counted once.",
+      "The joint upper bound is a NEW fixed reference using public core coordinates only, not target Fourier probabilities. All entropy and costs are bits, with full output posteriors retained.",
+      "This refutes the specified individual-core variational class only. Arbitrary representations, retuned local mask laws, general joint-core libraries and full FEI are not refuted or proved."
+    ],
+    "statement_sha256": "8f66c6f6cf4318b27d7507bb4916fa9e078d9a1017b5f9c0a48944c18ad16dab",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": [
+      "TWO_CORES.md",
+      "JOINT_CORE_REPAIR.md",
+      "code/check.py",
+      "code/joint.py",
+      "out/CHECK.json",
+      "out/JOINT_CHECK.json"
+    ],
+    "proof_dependencies": [
+      "A006-NORMALIZED-SHARED-TAG-PUSHFORWARD-AND-PAID-CLAUSE-CODE@1",
+      "A008-COMMON-ANCHOR-OVERLAP-OBSTRUCTION-AND-CORE-DICTIONARY-PAYMENT@1 (direct physical pivot and entropy identities independently reconstructed)",
+      "Elementary physical conditioning, Parseval, fixed-mixture KL variational identity and integer inequalities; derived in the proofs"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "role": "author analytic derivation plus two independent representations for mass and physical moments; not independent-agent acceptance",
+        "verdict": "PASS; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "evidence": [
+          "out/CHECK.json",
+          "out/JOINT_CHECK.json"
+        ]
+      },
+      {
+        "reviewer": "A009",
+        "role": "independent reconstruction of complete unchanged source theorem; extension is separate",
+        "verdict": "HOLDS_FULL_STATED_FIXED_LAW_SCOPE",
+        "unchanged_statement_sha256": "8f66c6f6cf4318b27d7507bb4916fa9e078d9a1017b5f9c0a48944c18ad16dab",
+        "evidence": [
+          "REVIEW_A010.md",
+          "out/CHECK.json",
+          "out/BOUNDARY.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENT_A009_RECONSTRUCTION_HOLDS; SHARED_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Adding arbitrary fixed paid individual-core dictionaries to the supplied clause-mask anchor law universally makes its complete posterior cost influence-paid",
+        "actual_witness": "Two intersecting nonnested cores K1={z0,z1}, K2={z1,z2}, each with r private width-two clauses, r>=4",
+        "scope": "All priors/individual-core laws in the explicitly fixed Q_r mixture class; source one-common-coordinate theorem unchanged"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A007",
+      "A009",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A009-INCIDENCE-RETUNING-REPAIRS-FIXED-WIDTH-TWO-CORE-TEST",
+    "version": 1,
+    "exact_statement": "For every integer r>=4, for the actual physical Boolean family f_r=2 product_j OR(z0,z1,X_j1,X_j2) product_j OR(z1,z2,Y_j1,Y_j2)-1 on mutually disjoint private pairs and three shared bits, choose one global weight alpha_j=1/(2r) on each of its 2r width-four clause supports. Every physical coordinate incidence sum is at most1. The normalized actual-anchor/local-uniform-mask physical-union reference with anchor prior1/(2r), empty local mass1-alpha and each particular nonempty local mask mass alpha/15 has complete nonempty Fourier-weighted output cross entropy C_Q(f_r)/I(f_r)<8083/240<34. All actual anchor/allocation posteriors are retained, rho=sum alpha=1. No additional core dictionary or mixture is used. This is a feasible certificate, not a global optimum, original-prime PI-J theorem or universal FEI theorem.",
+    "hypotheses": [
+      "Uniform independent physical cube, sign Boolean output, bit costs.",
+      "r>=4; all private pairs mutually disjoint and disjoint from z0,z1,z2.",
+      "The actual sampler uses the stated retuned activation rather than A010 fixed t=1/16; full output is physical UNION.",
+      "Reference and all weights fixed publicly before the Fourier output is observed."
+    ],
+    "statement_sha256": "8d194c974e094b199889fd4d8879d89072158d9996ea93e594826d75eea53836",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": [
+      "RETUNED.md",
+      "code/check.py",
+      "out/CHECK.json",
+      "out/BOUNDARY.json"
+    ],
+    "proof_dependencies": [
+      "Elementary physical conditioning, Parseval, finite binomial and geometric estimates; reconstructed in RETUNED.md."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "kind": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_FINITE_CHECKS",
+        "verdict": "PASS; INDEPENDENT_AGENT_REVIEW_PENDING",
+        "formal_status": "Lean attempt recorded separately; no formal certification of the all-r theorem"
+      }
+    ],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A015",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,21 @@
+{
+  "helper_version": "A097-floor-admission-same-owner-v2",
+  "helper_sha256": "ee1021a7055373110ea9d244324a58cd414b41d5ceffd4399ad07b08490f5e95",
+  "family": "actual G_sigma,L with A079 four-bit complementary controller, g=-1 at equal3-sign inputs, each seed coordinate replaced by disjoint L-parity block",
+  "domain": "pilot L1/both signs; primary FIXED L1,2,3/both signs; reveal complete first block then fixed1/6 floor conversion on ALL leaves and one actual second-block-bit query",
+  "case_count": {
+    "pilot_roots": 2,
+    "main_roots": 6,
+    "main_zero_credit_query_nodes": 22,
+    "main_converted_frontier_leaves": 28,
+    "main_post_conversion_children": 56,
+    "rational_floor_cases": 18
+  },
+  "symmetry": "none; all physical outcome branches retained",
+  "arithmetic": "integer FWHT and independent direct physical pivotal edges, Fraction full normalized laws, exact prime-log CE/KL identities; integer 25<27<50 certifies positive cost<3/32",
+  "memory_estimate_MB": 90,
+  "max_runtime_seconds": 45,
+  "runtime_guard": "checked every assertion",
+  "automatic_dimension_escalation": false,
+  "revision_reason": "Correct expected prime-log map; remove unwarranted zero-occupancy assumption in last-bit continuation, certify actual nonnegative KL instead; theorem unchanged"
+}

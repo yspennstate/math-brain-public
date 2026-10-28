@@ -1,0 +1,37 @@
+# exact target, quantifiers, hypotheses and units
+
+Full FEI remains OPEN. Pay the next synchronized DATA query after A021@2's active-only controller conversion, and repeat that interleaving without renewing its account. For all t>=2 and every Boolean independent controller, prescribed block-first DATA depths d<=3floor(t/2)+2 retain the SAME13t/576 reserve after old0<=U<=t/64, when arbitrary adaptive controller trees operate only on active DATA cylinders between rounds. Every DATA round queries all frontier leaves. Entropies are bits; arbitrary unequal-depth DATA cuts are excluded.
+
+# sources actually read, revisions and theorem locators
+
+Current BOARD, B05 STREAM_NOTES v2, own STATUS and recent LEARNED were read. A021 stage19 run20261023T045725Z REPORT and complete PROOF1--5 provide the newly paid active-only conversion and its explicit next-DATA gap; its claim is A021-NONFLAT-INHERITED-REFERENCE-DATA-QUERY@2, SHA256 f4a33f2faf59d4cedf6d004067cb8420965450797ec72aca083d5f37c581577b. A025 stage8 run20261023T040353Z REPORT supplies the common-policy predecessor and actual reset warning; no whole-bundle independent acceptance is inferred. Own stage8 run20261023T012352Z complete PROOF1--7 and helper supply numerical admission and original reference ownership. EXECUTION_PROTOCOL v2 was reread, as were machine-wide AGENTS instructions. The broader campaign/paper baseline was read in prior stages, not newly reviewed here. Current deadline2026-10-23 14:49UTC overrides obsolete protocol dates. Source paths/hashes are in out/SOURCE_RECEIPTS.json.
+
+Brain self-care remains degraded/unverified: stale personal-context model and state-of-mind sources affect personalization and continuity. They are not mathematical premises; current campaign files govern.
+
+# complete derivation or exact first unsupported line
+
+PROOF1--4 gives the complete all-parameter argument. Relevant A021 scalar curvature and transaction are reconstructed: each actual active CONTROL node contributes p*gamma_w>=0, using ORIGINAL delta and actual data reach w. A DATA round conserves complete controller CE by Parseval while keeping each leaf's own frozen reference, and conserves the original source entropy earmark. Remaining DATA influence and DATA CE are affine in activation mean. The active controller leaves partition the original controller cube, so their mean corrections average to the original mean. Consequently each DATA-round bank change is EXACTLY that of the original pure-DATA account. Induction yields B=Bpure_d+Gamma, with Gamma the sum of all previously paid controller Jensen gaps. The reserve13t/576 follows from A022@7; no controller entropy or old booking is renewed.
+
+Both complete child KLs and all inactive leaves remain in B+D+E=constant, with DATA increment reach*(4Inf-DeltaH_F) and CONTROL increment delta*p*DeltaH_a-reach*DeltaH_F. The ORIGINAL controller entropy equals remaining earmark plus signed spend. A literal-control witness leaves strictly positive inactive controller CE=(1/2)log2(64/63), so those costs cannot be silently omitted or reset. First unsupported line: unequal DATA-depth, controller-outcome-dependent stopping breaks the synchronized affine comparison; payment of that next transaction from the same residual account is not established. Arbitrary source entropy still needs an influence supplier.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+SEARCH_SPEC preceded pilot/main; REPLAY_SPEC preceded the separate reconstruction. Pilot4 cases/188 exact assertions PASS in0.2139s. Main128 cases/6016 assertions PASS in8.4142s: t=2, vertices0,1,7,63, ALL16 two-bit controllers, two mixed schedules, DATA depths0..5, outcome-stopped second controller query. No symmetry or exhaustive-all-vertices claim. Production uses integer FWHT, exact physical edges, Fraction probabilities, prime-log identities and outward40-term atanh bounds with a proved geometric tail.
+
+Standalone replay imports NO production/helper code: direct character sums, Fourier-degree influence, separately constructed complete references, separate prime-log algebra and48-term outward rational enclosures. On32 fixtures (vertices0,63, all16 controllers, depth1 CONTROL then DATA, stopped depth3 CONTROL then DATA) it checks1122 assertions in3.9422s. It verifies the mixed bank, full signed history, source-spend identity and positive frozen-inactive-cost witness. This is author reproduction, not independent-person review. Total7326 assertions include the pilot. Finite checks do not provide the all-dimensional step: PROOF2--4 does.
+
+Commands: python -X utf8 code/check.py --pilot; python -X utf8 code/check.py; python -X utf8 code/replay.py. Frozen estimates100MB/80MB are below300MB; no large admitted job, formal compiler, GPU, automatic dimension increase or detached work. Peak memory is unmeasured. No Lean/formal certification is claimed. Compute snapshots read status ok; existing work was not changed. All mathematical jobs finished.
+
+# proof dependencies and changed downstream conclusions
+
+Advance the same A022 ledger from v7 to v8, preserving every inherited scope. A022@7 supplies the original numerical bound and remains pending external review. The necessary A021@2 controller transaction and scalar concavity are reconstructed, without claiming independent acceptance of its entire bundle. The new result removes the restriction that all DATA queries precede all active-only CONTROL queries: any number of synchronized rounds may interleave without spending the existing reserve. It does not remove the supplied-source premise, pay clipped raw resets, or prove FEI.
+
+# one next mathematical action and independent reviewer
+
+Make one DATA query on only one active controller-outcome leaf, creating unequal DATA depths; price its signed affine term from SAME diminished original account with original delta/current q/R, old U, previous Gamma, source spend and all complete terminal KLs. A021/A025 reconstruct; A028/A029/A087/A094 review. Review requests are recorded in consumer fields only; no messages or acceptances are asserted. This changes the synchronized-depth hypothesis, rather than extending an already paid controller-only tree.
+
+# actual persistence receipts or precise save blocker
+
+REPORT, PROOF, CLAIMS, PROGRESS, byte-identical PACKET_DELTA, frozen specs, source receipts, code and exact outputs are saved only under this assigned run. STATUS has two lines; WORKLOG and LEARNED are updated. out/ARTIFACT_CHECK.json validates protocol key sets, claim digest, compatibility bytes, hashes and20MB limits. No research write changes campaign sources, another agent's folder, brain, git or external services. Independent-person review, supervisor copying and remote mirrors remain unverified. Nothing owned by this stage remains running.
+
+**Universal bridge:** This advances C024 history transfer toward C019 by closing the actual next DATA transaction after a paid active-only CONTROL conversion, with an EXACT repeated-history identity B=Bpure_d+Gamma and the SAME13t/576 reserve. Original delta/current references, all prior gains and source spend, old U and both complete terminal debts remain. The universal gaps are unequal-depth stopping and arbitrary influence-priced source admission. NEXT makes one actual DATA branch asynchronous from the already diminished account; that tests the first missing universal stopping transaction instead of another isolated seed class.

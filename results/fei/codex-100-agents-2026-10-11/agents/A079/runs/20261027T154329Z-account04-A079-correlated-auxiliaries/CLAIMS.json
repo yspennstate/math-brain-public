@@ -1,0 +1,209 @@
+[
+  {
+    "claim_id": "A032-FLAT-PARENT-INHERITED-CONTRACTION-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer m>=1 the actual Boolean F_m(x,y)=(-1)^(sum_j x_j*y_j+y_1*sum_{j=2}^m y_j) has uniform full squared Walsh spectrum on2m bits, entropy2m, influence m, and optimal marginal-KL contraction coefficient1. For every physical assignment t to x_2,...,x_m, its complete residual law P_t is the four-atom uniform law of S_x1=A,S_y1=B,S_yj=A xor t_j for independent fair A,B. Its entropy is2, influence(m+1)/2, and the optimal coefficient c in sum_i D(R_i||(P_t)_i)<=c D(R||P_t) for all R supported on P_t is exactly m. Equality is attained by conditioning A=1 and retaining fair B. Every one of2^(m-1) terminals has this coefficient; original reach-weighted query influence(m-1)/2 plus retained terminal influence(m+1)/2 equals m. At every depth k entropy is2(m-k) and influence(2m-k)/2. The terminal TC is m-1; the exact mixture Q=P_t obtained by its two product A-components has posterior MI1 and divergence0, so any D+aMI>=TC requires a>=m-1. Its minimum product-mixture cardinality is2 for m>=2 and1 for m1. Consequently no uniform source contraction or uniform coefficient a is inherited through arbitrary physical restrictions even from a product squared Boolean spectrum. This does not refute A079 fixed-source7/4, a selected-policy claim, an amortized influence account, or FEI; the terminal TC equals twice the expended original query influence.",
+    "hypotheses": [
+      "Physical input bits uniform on{0,1}; Walsh characters(-1)^(S dot x); output signs only",
+      "m>=1; keep every assignment to exactly x2,...,xm",
+      "KL in bits; R supported on terminal spectral support; outside support full divergence infinite",
+      "Coordinate labels are physical labels; no invertible relabeling used to hide influence",
+      "A product-mixture target is optional unless separately required; no universal price is claimed"
+    ],
+    "statement_sha256": "057a2714601cd4fcd943859c497c78a24cd1856102edd1720324d92e4b089e64",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": {
+      "path": "agents\\A032\\runs\\20261027T071919Z-account04-A032-boolean-phase-realizability\\PROOF.md",
+      "sha256": "c0786f422fd48fb40c38a057a380a4114e3590b0600f0a637facc2c32d1c8415",
+      "certificates": [
+        "out/validation.json",
+        "out/independent.json",
+        "out/frontier.json"
+      ],
+      "formal_scope": "Finite A079 cone certificate only if out/formal.txt accepts; new all-m information proof is analytic"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A079",
+        "at": "2026-10-27T16:16:09.866557+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE_WITHOUT_REPAIR",
+        "source": "agents\\A079\\runs\\20261027T154329Z-account04-A079-correlated-auxiliaries\\PROOF.md",
+        "proof_sha256": "d0398dc3674e81777627f3e18a5a81cc83d71aaec9976e9767f14bd0198cd859",
+        "method": "Independent finite-law/projection derivation including boundary and complete mass; copied-bit contraction and full terminal Fourier laws; exact algebraic tilt brackets and separate representation-class audit; no peer checker imported"
+      }
+    ],
+    "status": "INDEPENDENT_LOCAL_RECONSTRUCTION_HOLDS_REMOTE_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "A dimension-independent marginal-KL contraction coefficient or TC posterior-capacity coefficient is automatically inherited by arbitrary physical restrictions of an actual Boolean product-spectrum parent",
+        "scope": "All-terminal explicit bent family; not FEI or every selected policy"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A033",
+      "A094",
+      "A096",
+      "A097",
+      "B07-lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-FREE-VACUUM-INFLUENCE-CALIBRATION",
+    "version": 1,
+    "exact_statement": "For any probability law p on subsets of a finite set and covering subprobability Q=s*q, 0<s<=1 with q normalized, let u be the information projection of q onto u(empty)=p(empty) and E_u|S|=E_p|S|. It exists, is unique on the q-supported feasible class, has a nonempty cardinality exponential tilt with extreme-cardinality boundary conventions, and satisfies CE(p,s*u)-CE(p,s*q)=-D(u||q)<=0, retaining the full -log2(s) penalty. Every finite adaptive Boolean physical query tree with inherited references and this mandatory normalized vacuum/total-influence calibration stays within its SAME supplied original full-CE account including both terminals and old bills. No bounded atom count, original O(I) source or universal stopping surplus follows.",
+    "hypotheses": [
+      "Finite law; base-two entropy and complete CE",
+      "Covering normalized shape q, retained scalar s",
+      "Conditional cardinality means use explicit extreme/one-level cases",
+      "Inherited physical query references; no dimension-independent witness-count promise"
+    ],
+    "statement_sha256": "69662a146249ee22aef5cd4a973f2c3daa48ad4ae5055d1719bc80b696c7eeb7",
+    "contributors": [
+      "A096; standard finite information projection credited as elementary background; A050 vacuum-only interface and A096 prior transport as stated dependencies"
+    ],
+    "proof_source": {
+      "path": "DERIVATION.md",
+      "section": "2",
+      "sha256": "0b12d83c55b1e590284b03736b429153c719c39c379ceb06331addd3c7194045",
+      "checks": [
+        "out/MAIN.json",
+        "out/AUDIT.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A096-GHOST-COMPLETE-HEREDITARY-WITNESS-TRANSPORT@1, independently reconstructed by A050",
+      "Finite Gibbs inequality and affine-moment cancellation, derived in source"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A079",
+        "at": "2026-10-27T16:16:09.866557+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE_WITHOUT_REPAIR",
+        "source": "agents\\A079\\runs\\20261027T154329Z-account04-A079-correlated-auxiliaries\\PROOF.md",
+        "proof_sha256": "d0398dc3674e81777627f3e18a5a81cc83d71aaec9976e9767f14bd0198cd859",
+        "method": "Independent finite-law/projection derivation including boundary and complete mass; copied-bit contraction and full terminal Fourier laws; exact algebraic tilt brackets and separate representation-class audit; no peer checker imported"
+      }
+    ],
+    "status": "INDEPENDENT_LOCAL_RECONSTRUCTION_HOLDS_REMOTE_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A050",
+      "A097",
+      "A094",
+      "A099",
+      "A100",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-SHARP-MOMENT-CALIBRATION-WITNESS-GROWTH",
+    "version": 1,
+    "exact_statement": "For every even n>=4, the actual Boolean product f_n of n/2 disjoint AND2 signs has uniform squared spectrum P on 2^n subsets and I=n/2. The supplied normalized one-witness reference q=(P+delta_full)/2 has CE(P,q)<=n+1<=5I/2. Vacuum calibration uses two witnesses. Its unique subsequent reference u matching the vacuum mass and total influence, while minimizing D(u||q_vac), has the following exact representation complexity: among ALL u=bP+sum_{j=1}^k a_j delta_Wj with b>0 and a_j>=0, the least number of distinct positive residual atom locations is k=2^n-n. Arbitrary witness relocation and new b are permitted. The excluded n=2 endpoint has u=P and k=0. This refutes fixed atom-count closure under this specified stronger calibration, not vacuum-only closure or FEI.",
+    "hypotheses": [
+      "Even n>=4; actual disjoint AND2 Boolean tensors",
+      "Specified one-atom original source and vacuum-then-moment information projection",
+      "One scalar positive true-law component and nonnegative individual atom residuals",
+      "Witness locations may be arbitrary and duplicate labels do not reduce distinct support"
+    ],
+    "statement_sha256": "7b6f1c539b19a79780e2326bff92be59ae47007ed5ea697aee6ee1f6d1ba30aa",
+    "contributors": [
+      "A096; standard finite information projection credited as elementary background; A050 vacuum-only interface and A096 prior transport as stated dependencies"
+    ],
+    "proof_source": {
+      "path": "DERIVATION.md",
+      "section": "3",
+      "sha256": "0b12d83c55b1e590284b03736b429153c719c39c379ceb06331addd3c7194045",
+      "checks": [
+        "out/MAIN.json",
+        "out/AUDIT.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A096-FREE-VACUUM-INFLUENCE-CALIBRATION@1",
+      "Exact AND2 tensor Walsh coefficients; positive-variance cardinality root; nonnegative residual support count, all derived in source"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A079",
+        "at": "2026-10-27T16:16:09.866557+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE_WITHOUT_REPAIR",
+        "source": "agents\\A079\\runs\\20261027T154329Z-account04-A079-correlated-auxiliaries\\PROOF.md",
+        "proof_sha256": "d0398dc3674e81777627f3e18a5a81cc83d71aaec9976e9767f14bd0198cd859",
+        "method": "Independent finite-law/projection derivation including boundary and complete mass; copied-bit contraction and full terminal Fourier laws; exact algebraic tilt brackets and separate representation-class audit; no peer checker imported"
+      }
+    ],
+    "status": "INDEPENDENT_LOCAL_RECONSTRUCTION_HOLDS_REMOTE_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [
+      "Dimension-independent atom-witness closure of vacuum-and-total-influence information projection, even with a supplied rate5/2 original source"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A050",
+      "A097",
+      "A094",
+      "A099",
+      "A100",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A079-HEREDITARY-CONDITIONED-PRODUCT-REFERENCE",
+    "version": 1,
+    "exact_statement": "For every finite frequency cube {0,1}^d and integer M>=0, consider normalized references Q=r delta_empty+(1-r)sum_{j<=M}w_j B_j, with a separate vacuum scalar and nonempty components B_j either coordinate-product Bernoulli laws conditioned on nonemptiness or arbitrary singleton-supported laws (the exact compact boundary class). Every coordinate marginal remains in this family with at most the ORIGINAL M components. For every covered law P and every feasible finite collection of affine occupancy moment constraints matching P, together with U(empty)=P(empty), the unique information projection U of Q also remains in this family with at most M components, INCLUDING boundary moments, and CE(P,U)-CE(P,Q)=-D(U||Q)<=0. A fixed subprobability scalar s is retained unchanged. Consequently every finite adaptive actual Boolean physical-query/moment-calibration history retains at most M nonempty components per current reference and obeys the EXACT complete account CEroot=sum reach(B_i+K_i)+sum calibration_reach D(U||Qincoming)+mean full terminal CE, where K_i=D(P||Q)-D(pi_i P||pi_i Q)>=0, BOTH signed physical child laws and all old original-account debits retained. General actual phase energy and full conditional auxiliary entropy are not replaced by latent labels. Each such reference expands into at most1+dM ordinary coordinate-product components; a fair product conditioned on nonemptiness needs exactly d ordinary product components. Thus the previously accepted fixed defect-source bound gives D(P_r||Q)>=max(0,r*tau-(3/4)log2(1+3rM)) for d3r only, without descendant coefficient renewal. A096 actual AND2-tensor moment-calibration family retains at most TWO nonempty components in this class, while its true-law-plus-individual-nonnegative-atoms count2^d-d remains correct in that different class. No useful initial O(I) arbitrary-core source, universal FEI constant, finite representation-parameter encoding cost, or FEI counterfamily is asserted. All units bits; all-dimensional author proof with exact finite validations, external review pending, not Lean-checked.",
+    "hypotheses": [
+      "Finite uniform physical Boolean cube for true query laws; references are complete probability models and need not be Boolean spectra",
+      "At most M nonempty components from the stated conditioned-product/singleton compact class; one separate empty mass; zero weights omitted and d0/r1 treated",
+      "Reference covers actual true law; affine occupancy moments and empty mass match true law; feasible boundary constraints included",
+      "The ORIGINAL complete source and scalar mass are supplied, not presumed influence-priced; all query KL, both full terminals and old debits retained",
+      "Fixed-source7/4 contraction used only in its specified defect tensor guard, never automatically inherited by true physical children"
+    ],
+    "statement_sha256": "1cd3e30e27194529c9745f5a9dcaf6266a9116199694db97f38e927cfb4452b3",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "agents\\A079\\runs\\20261027T154329Z-account04-A079-correlated-auxiliaries\\PROOF.md",
+      "sha256": "d0398dc3674e81777627f3e18a5a81cc83d71aaec9976e9767f14bd0198cd859",
+      "validation": [
+        "out/main.json",
+        "out/independent.json"
+      ],
+      "formal_verification": "NOT_CLAIMED; memok denied, compiler not launched"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A079-DEFECT-CORE-LATENT-CAPACITY",
+        "version": 1,
+        "statement_sha256": "0600eabe30c6bb4cc705595885de8bb5fcd43e6fbba1ef65f76cf0997cf0cbd4",
+        "scope": "Only fixed defect-source capacity guard after expansion into at most1+dM ordinary products; main hereditary/calibration theorem is self-contained",
+        "acceptance": "A032 independent HOLDS, PROOF section1 in run20261027T071919Z"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATIONS_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A097",
+      "A050",
+      "A011",
+      "A032",
+      "A033",
+      "A094",
+      "B16",
+      "B20"
+    ]
+  }
+]

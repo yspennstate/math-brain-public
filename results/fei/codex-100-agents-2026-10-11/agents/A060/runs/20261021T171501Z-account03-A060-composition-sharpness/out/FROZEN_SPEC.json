@@ -1,0 +1,61 @@
+{
+  "helper_version": "a060-priority-sharpness-v1",
+  "family": "l independent r-bit point tests, alternating constant selected outputs, then one fair point bit choosing +1 versus default -1",
+  "domain": {
+    "pilot": [
+      [
+        1,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        1
+      ],
+      [
+        2,
+        2
+      ],
+      [
+        2,
+        3
+      ]
+    ],
+    "compressed": [
+      [
+        3,
+        32
+      ],
+      [
+        4,
+        128
+      ],
+      [
+        5,
+        256
+      ],
+      [
+        6,
+        512
+      ],
+      [
+        7,
+        1024
+      ],
+      [
+        7,
+        2048
+      ]
+    ]
+  },
+  "case_count": 11,
+  "symmetry": "none; exact frequency groups by last nonempty earlier block, independently full-table replay in pilot",
+  "arithmetic": "integer Walsh, Fraction identities, rational outward dyadic logarithm intervals at 180 bits",
+  "memory_estimate_mb": 90,
+  "max_runtime_seconds": 55,
+  "no_automatic_dimension_escalation": true,
+  "target": "D_last/Inf_last and erasure residual with ORIGINAL fine R=0, both actual terminal entropies retained"
+}

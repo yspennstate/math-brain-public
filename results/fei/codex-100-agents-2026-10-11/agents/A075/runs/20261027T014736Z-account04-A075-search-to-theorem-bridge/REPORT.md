@@ -1,0 +1,43 @@
+# exact target, quantifiers, hypotheses and units
+
+For every actual Boolean f on n uniform bits, construct block-prime G_m=f(x)b_(n+m)(x,z) for every m>=3, retaining H and I in the limit m->infinity. A block-prime function has at least three residual truth-matrix rows for every proper block of at least two bits; thus no such block admits a one-Boolean-output summary. FEI(C) on this class is equivalent to full FEI(C) with the same constant. Entropy is in bits. Constants and dummies are allowed in f; ratio convergence requires nonconstant f. Full FEI OPEN.
+
+# sources actually read, revisions and theorem locators
+
+Read current machine AGENTS, full execution protocol v2, report README/CURRENT_STATUS and registry/packet/stream files, campaign plan and supplement files, B15 v2 notes, current BOARD, own latest proof and rolling files, A071 stage21 PROOF/PROGRESS and A084 resumed stage21 PROOF/PROGRESS. Exact source paths and hashes are in SOURCE_PINS and INDEPENDENT_REVIEW. Required paper text intake required cp1252 decoding after UTF-8 rejected byte0xad; no false source-corruption claim is made. Paper composition/percolation locators are background, not proof premises. A084 already improves reserve3 to9/4; this run does not duplicate or independently accept that scalar theorem. Latest board records A072/A074 independent acceptance of our previous drift theorem. A071 source is reviewed unchanged here. The B15 initial sparse-family assignment is already closed; dispatch consumes its new initial-bank obstruction.
+
+The session wake completed with OWNER ALERT REQUIRED NOW: personal-model/state/dream notes stale. Alert delivered before using affected notes; mathematics uses current task sources. Compute snapshot status ok: available RAM7253MB, disk14.4GB. No work is killed/throttled. Research writes remain inside A075; no git, mail, shared-index/brain writes, trading access or remote compute. Contract cache stale/unmatched; no irreversible action attempted. The read-only math recall found neighboring FEI/decomposition cards, no direct proof of this perturbation construction; none is used as a premise. No web or priority/clock changes.
+
+# complete derivation or exact first unsupported line
+
+PROOF sections1-2 give three explicit row witnesses in each of the exhaustive cases: a block contains at least two padding bits, exactly one, or none. Arbitrary original f signs cannot merge these patterns. Three padding bits suffice uniformly; no optimal-padding assertion is made. The difference set has exactly N+1 points. Physical edge comparison gives |I(G)-I(f)|<=2N(N+1)/2^N. Parseval and Cauchy-Schwarz give TV of squared spectra <=2sqrt((N+1)/2^N); a maximal-coupling conditional-entropy argument pays the growing alphabet by h2(epsilon)+N epsilon. Both errors vanish. Passing a hypothetical dimension-independent block-prime FEI inequality to this limit proves full FEI with the SAME constant. Constant f is handled without dividing by influence.
+
+On every proper disjoint Boolean partition of G_m all cores are singleton bits/complements. Consequently the supplied-bank price is exactly H(G_m)+kappa I(G_m), and for nonconstant original f its ratio tends to H(f)/I(f)+kappa. Unlike a fixed H/I->4 family, this obstruction retains arbitrary original ratios. It does not make a divergent family without an original divergent family. The first unsupported line is the ORIGINAL O(I) initial source on these arbitrary indecomposable cores, or an invariant using paid histories/overlap/multiple outputs. No universal payment is inferred from decomposition failure.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC precedes search and pins helper hash. Pilot: 22 actual circuits, 1046 predicates, 0.096s. Main: all 278 Boolean functions on n=0..3 with m=3, 14782 proper-block tests and 31510 exact predicates, 11.865s. Both signs, constants and dummies included; no symmetry quotient. Direct characters and integer FWHT agree, Parseval, physical edges, exact squared-coefficient perturbation norm, TV bound and literal original-core restriction all pass. Every physical row is retained. Results save after each original dimension.
+
+Boundary archive: 66 cases n<=2, m=0..2, 396 predicates and 220 block matrices. Some cases fail primeness; outputs preserve the case identifiers and minimum row counts. No statement for m<3 is inferred from passes or failures. Independently frozen audit: 246 predicates, 0.016s, separate matrix grouping/direct Walsh/edge formulas on radius-one balls in dimensions3..6, all sign-pattern triples, frozen helper digest, and a real radius-zero negative control (two rows, hence compressible). These finite checks validate proof fidelity; PROOF supplies the all-dimensional bridge.
+
+Commands: python -X utf8 code/verify.py pilot; main; boundary; code/audit.py; code/finalize.py. Integer/Fraction arithmetic; no floating logarithmic sign decisions, no LP, no GPU, no dimension escalation, memory estimates50-80MB, each measured check below60s. Formal receipt: HELD_COMPUTE_ADMISSION. An earlier premature Lean invocation failed because the requested file did not yet exist; this is preserved as a setup failure, not mathematical evidence. The source is now saved, and the actual attempted compiler receipt is separate. No compilation-only proof claim is made.
+
+Independent source sign certificates also recheck BOTH H(b16)>3I and H(b32)>(7/2)I with a separately frozen 40-term positive-atanh expansion and explicit geometric remainder, using exact Fractions (out/SOURCE_SIGNS.json). Source statement hashes use their own canonical statement-plus-hypotheses JSON convention; the new claim uses raw UTF-8 statement hashing. Both conventions are explicitly checked and preserved, with receipts in out/HASH_CONVENTION_*.json.
+
+# proof dependencies and changed downstream conclusions
+
+The new A075-ARBITRARY-CORE-BOOLEAN-PRIME-PERTURBATION@1 is a self-contained analytic reduction, author-checked with exact finite controls, external review pending. A071-PRIME-BALL-PROPER-PARTITION-OBSTRUCTION@1 is independently accepted unchanged: full row argument, spectrum, influence, entropy squeeze H/I->4 and H<5I reconstructed in REVIEW. This consumes a pending source before introducing a new broad candidate. The arbitrary-core extension is attributed separately. The bank corollary uses the previous A075 supplied-envelope definition only; it is not needed for the FEI equivalence proof. No pending A084 scalar result or FEI assertion is used.
+
+Downstream: proper Boolean partition search cannot remove arbitrary starting FEI difficulty by discarding decomposable cases; the indecomposable class is dense in H,I through explicit Boolean examples. A universal initial-bank payment must survive this construction, or explicitly use a different state/payment mechanism. No outside funds, influence reuse or new FEI constant follows.
+
+# one next mathematical action and independent reviewer
+
+A071/A080/A074 independently reconstruct the row patterns and the dimension-sensitive entropy continuity. Then price a useful paid restriction-history or multi-output initialization on G_m for arbitrary seed f with actual original owners. This directly tests a universal mechanism rather than another fixed-ratio example. A092 audits the reduction scope.
+
+# actual persistence receipts or precise save blocker
+
+Four protocol files, complete proof, source review, frozen search/audit specs, exact outputs, Lean source/receipt, helper code and rolling files are saved locally. PROGRESS and PACKET_DELTA are byte-identical. PERSISTENCE validates exact schema fields, statement hashes, source pins and file sizes; all files below20MB. Remote copy/mirror/downstream adoption remain unverified and belong to the supervisor. No own background worker is launched. The mandatory session wake is separate from research persistence; no shared checklist/mesh mutation is attempted under the explicit write-only-A075 rule.
+
+# Universal bridge
+
+C019 stopping-tree payment and C024 history transfer now have an explicit arbitrary-core initialization obstruction: every Boolean seed is approximated in BOTH Fourier entropy and physical influence by block-prime actual functions whose every proper Boolean-partition bank is exactly H+kappa I. The FEI target restricted to these indecomposable cores is equivalent with unchanged constant, upgrading the earlier ball limit4 to arbitrary seed ratios. What remains is an O(I) ORIGINAL source or a genuinely paid history/multiple-output mechanism on these cores. NEXT tests that mechanism on arbitrary f through G_m; it is shorter than another isolated class result because any proof on this reduced class would imply full FEI directly.

@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "mode": "pilot",
+  "root_cases": 10,
+  "counts": {
+    "prefix_states": 39,
+    "post_states": 21,
+    "prefix_query_nodes": 73,
+    "post_query_nodes": 39,
+    "field_directions": 12,
+    "field_reset_children": 48
+  },
+  "assertions": 41092,
+  "seconds": 0.9853474000119604,
+  "field_records": [
+    {
+      "l": 2,
+      "old_cap": 8,
+      "new_expected_envelope": {
+        "2": "14",
+        "3": "-3/2",
+        "5": "-5/2"
+      },
+      "same_original_owner": {
+        "2": "23/2"
+      },
+      "old_quarter_and_cap_residual": {
+        "2": "5/8"
+      }
+    }
+  ],
+  "root_records": [
+    {
+      "mask": 0,
+      "reference": "uniform",
+      "minimum": {
+        "2": "3"
+      },
+      "incoming_K": {
+        "2": "3"
+      }
+    },
+    {
+      "mask": 0,
+      "reference": "mixture",
+      "minimum": {
+        "2": "4",
+        "3": "-2"
+      },
+      "incoming_K": {
+        "2": "4",
+        "3": "-2"
+      }
+    },
+    {
+      "mask": 1,
+      "reference": "uniform",
+      "minimum": {
+        "2": "-1",
+        "3": "9/8"
+      },
+      "incoming_K": {
+        "2": "-1",
+        "3": "9/8"
+      }
+    },
+    {
+      "mask": 1,
+      "reference": "mixture",
+      "minimum": {
+        "2": "2",
+        "3": "-9/8"
+      },
+      "incoming_K": {
+        "2": "1",
+        "3": "11/16",
+        "11": "-9/16"
+      }
+    },
+    {
+      "mask": 7,
+      "reference": "uniform",
+      "minimum": {
+        "2": "-1",
+        "3": "9/8"
+      },
+      "incoming_K": {
+        "2": "-1",
+        "3": "9/8"
+      }
+    },
+    {
+      "mask": 7,
+      "reference": "mixture",
+      "minimum": {
+        "2": "2",
+        "3": "-9/8"
+      },
+      "incoming_K": {
+        "2": "1",
+        "3": "11/16",
+        "11": "-9/16"
+      }
+    },
+    {
+      "mask": 105,
+      "reference": "uniform",
+      "minimum": {
+        "2": "3"
+      },
+      "incoming_K": {
+        "2": "3"
+      }
+    },
+    {
+      "mask": 105,
+      "reference": "mixture",
+      "minimum": {
+        "2": "4",
+        "3": "-2"
+      },
+      "incoming_K": {
+        "2": "4",
+        "3": "-2"
+      }
+    },
+    {
+      "mask": 255,
+      "reference": "uniform",
+      "minimum": {
+        "2": "3"
+      },
+      "incoming_K": {
+        "2": "3"
+      }
+    },
+    {
+      "mask": 255,
+      "reference": "mixture",
+      "minimum": {
+        "2": "4",
+        "3": "-2"
+      },
+      "incoming_K": {
+        "2": "4",
+        "3": "-2"
+      }
+    }
+  ],
+  "scope": "finite certificates plus analytic all-width/all-depth proof; full FEI OPEN"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+    "version": 8,
+    "exact_statement": "For the balanced all-relevant Boolean family f_k=(1-A_k)z+A_k parity_(2^k), the true spectrum P_k has2<=I_k<=9/4 and H(P_k)<=min(3,4(k+1)2^-k), while the degree-tilted reference S_k has H(S_k)/I_k>=16k/81. Its true-law cross-entropy is <=(5/2)I_k. After one actual first-guard query, both children remain balanced/nonconstant, the complete old-debit+full-terminal CE bill stays <=(5/2)I_k, but expected child-reference entropy/I_k>=8(k-1)/63 for k>=2. Fixing z instead gives mean +/- (1-2^-k) and empty-calibrated reference entropy<=3. The influence-normalized pointed witness fails the same universal entropy price. A per-set witness J_star(i,T)=P(T)/|T|, plus the empty null atom, retains marginal P and has entropy H(P)+E_P log|T|<=H(P)+I-Var. None of these statements proves FEI or supplies a universal initial source price.",
+    "hypotheses": [
+      "Uniform cube; bits; independent guard x, outside literal z, parity block y; k>=1 and m=2^k",
+      "A_k is the exact point event all guard bits0; every input coordinate remains physically distinct and relevant",
+      "S(empty)=mean^2 and S(T)=Var*|T|P(T)/I on nonempty T; constants use their true point mass",
+      "Physical guard query retains z and y; both full outcome probabilities1/2 retained, old debit and full terminal H+KL retained",
+      "The own-entropy obstruction concerns S, influence-normalized pointed W and its label marginal; it does not rule out original-spectrum per-set coding"
+    ],
+    "statement_sha256": "96edd3f6c08a3923a4e40ab500f2ae357b78413f67deb27ba3417f326692e89b",
+    "contributors": [
+      "A056"
+    ],
+    "proof_source": [
+      "DERIVATION.md equations1-15",
+      "code/boundary.py",
+      "out/PHYSICAL_LEDGER_CERTIFICATES.json",
+      "out/EXPLICIT_BOUNDARY.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING; FULL_FEI_OPEN",
+    "supersedes": [
+      {
+        "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+        "version": 7,
+        "scope": "same pending candidate extended with scope boundary; no prior mathematical statement refuted"
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "Universal H(S_degree)<=C I for every Boolean phase, or inferred from CE(P,S_degree)<=K I",
+        "status": "FALSE_BY_ACTUAL_BOOLEAN_FAMILY",
+        "not_refuted": "v7 reset payment, original-spectrum witness possibility, full FEI"
+      }
+    ],
+    "first_unproved_line": "Influence-price the INITIAL original-spectrum whole-set code without charging degree-biased/pointed entropy; the corrected per-set joint entropy price remains FEI-equivalent.",
+    "next_consumers": [
+      "A091",
+      "A090",
+      "A006",
+      "A007",
+      "A015",
+      "A057",
+      "A059",
+      "A094",
+      "A096",
+      "A097",
+      "A099",
+      "B20"
+    ]
+  }
+]

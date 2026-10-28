@@ -1,0 +1,105 @@
+[
+  {
+    "claim_id": "A079-TAGGED-REFERENCE-SAME-BANK-LIFT",
+    "version": 1,
+    "exact_statement": "Fix A079 four-bit complementary rows a,b and F_h=a+z*b*h for any Boolean seed h on a disjoint uniform physical cube. For any controller restriction s and normalized finite-cost source reference R, define the normalized tagged wrapper reference by Q(0,U,T)=ahat_s(U)^2*1[T=empty] and Q(1,U,T)=bhat_s(U)^2*R(T). Then CE_wrapper=k_s+beta_s*CE(h,R), seed erasure and seed influence equal beta_s times the source quantities, and every prescribed source reset increment with BOTH complete child references equals beta_s times its source increment. Controller queries conserve the mean beta-weighted source bank and release the actual structural JS. Every supplied source continuation interface W satisfying its actual local erasure-plus-child-cost inequalities therefore lifts to V(s,v)=k_s+beta_s*W(v) for every finite admitted adaptive mixed controller/seed stopping tree leaving z unqueried, preserving all old debits and complete terminals. If W_root<=K*I(h)-rho with K>=2,rho>=0, the SAME K pays the wrapper and retains original reserve K*17/8-[5-(9/16)log2(3)]+3*rho/8. Any later physical z query and arbitrary no-reset continuation are paid by the full marginalized-reference chain rule. A generic initial source price and a fresh reference reset after biased z-sector collision are not asserted.",
+    "hypotheses": [
+      "Actual Boolean signs; independent uniform physical controller/address/seed cubes; fixed displayed a,b",
+      "Only the specified tagged wrapper references are admitted; this is not arbitrary incoming joint-reference closure",
+      "Every source interface W is already paid on ALL source actions actually admitted; both child references and prior debits retained",
+      "z is unqueried during mixed lifting; following its deletion only no-reset continuation is asserted",
+      "Entropy and CE bits; original coordinate influence; finite source CE; zero sectors handled without division"
+    ],
+    "statement_sha256": "6d19a69129e25311a7d55ce22611f8311f2c124119fbacfe1802d48f3b952318",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "agents\\A079\\runs\\20261022T225318Z-account03-A079-correlated-auxiliaries\\PROOF.md",
+      "sha256": "3effa9cfb019af27ef2f7e6d4ed050bb72361a23c5a5fa12ae9ec0864ab2e0b9",
+      "validation": [
+        "out/validation.json",
+        "out/generic_lift.json",
+        "out/sourced_step.json",
+        "out/collision_guard.json"
+      ],
+      "formal_verification": "NOT_LAUNCHED_MEMORY_GATE"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032",
+        "at": "2026-10-23T01:53:22.458109+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "agents\\A032\\runs\\20261023T013017Z-account03-A032-boolean-phase-realizability\\REVIEW_A079.md",
+        "method": "Independent full normalized-reference factorization, source/controller local erasure interface and finite-tree induction; no author code or repair",
+        "formal_verification": "NOT_CLAIMED"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_BY_A032_LOCAL_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A034",
+      "A088",
+      "A094",
+      "A096",
+      "A097",
+      "B16",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A032-SIGNED-TAG-VACUUM-TAIL-RESET",
+    "version": 1,
+    "exact_statement": "For the actual Boolean F_h=a+z*b*h with A079 fixed four-bit ternary row a and b=1-a^2, after ANY physical controller restriction, let A=ahat,B=bhat,beta=E b^2,m=E h,r=m^2,p=hhat^2. For EVERY normalized source reference R of finite CE(p,R), t=R(empty), every normalized prescribed nonempty-frequency law S and0<=epsilon<1, define M=(1-epsilon)R_tail+epsilon S and complete fresh child references Q_sigma(U,empty)=(A_U+sigma*m B_U)^2 and Q_sigma(U,T)=B_U^2*(1-r)*M_T for T nonempty. Constant-seed and zero-sector endpoints use the explicit formulas in PROOF.md without tail division. Relative to the full normalized incoming tagged reference Q(0,U,T)=A_U^2*1[T=empty], Q(1,U,T)=B_U^2 R_T, the exact erasure-plus-mean-child-CE reset increment is -JS_z-beta*d(r||t)+beta*(1-r)*(D(p_tail||M)-D(p_tail||R_tail)). Hence it is nonpositive whenever (1-r)*log2(1/(1-epsilon))<=d(r||t). Both actual signed child spectra and all prior source/controller debits remain; eligible frontier replacements and subsequent current-reference no-reset queries preserve the SAME already paid incoming source account. At the original root, for EVERY Boolean seed of mean+/-1/2, t=1/2 and epsilon=1/8 fund ANY prescribed S with increment strictly below-1/64. The actual seed[-1,1,1,1] and positive source reference[1/9,8/27,8/27,8/27] show that substituting sqrt(t)=1/3 for actual m=1/2 in the coherent minus-child vacuum creates normalized reference mass0 at a true atom of mass1/256, so child CE is infinite. All CE/KL/entropy units are bits. No universal initial source price, generic arbitrary reset or full FEI theorem is asserted.",
+    "hypotheses": [
+      "Actual Boolean independent uniform physical cubes and displayed complementary rows, including their actual restricted signs",
+      "Normalized finite-CE supplied source reference; it is already paid for the history application",
+      "Both full actual z children retained; fresh tail S is normalized and0<=epsilon<1",
+      "Free reset requires the explicit binary-KL/likelihood-floor eligibility condition; no arbitrary source price or bank renewal",
+      "Entropy, cross entropy and KL in bits; actual original physical influences"
+    ],
+    "statement_sha256": "a8eaef0443d2816feeef2b939d7fd28498792dd1561d0bd3da7168a2e134885e",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": {
+      "path": "agents\\A032\\runs\\20261023T013017Z-account03-A032-boolean-phase-realizability\\PROOF.md",
+      "sha256": "5365d5f40cb8c6fb31c2359d0247ad28dafd0d8a6e15896db9c3e1fe7640fa01",
+      "certificates": [
+        "out/validation.json",
+        "out/independent.json",
+        "out/fixed_resets.json",
+        "out/support_obstruction.json"
+      ],
+      "formal_verification": "NOT_LAUNCHED_MEMORY_GATE"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A079-TAGGED-REFERENCE-SAME-BANK-LIFT",
+        "version": 1,
+        "statement_sha256": "6d19a69129e25311a7d55ce22611f8311f2c124119fbacfe1802d48f3b952318",
+        "scope": "Independently accepted supplied paid interface for the history application; reset algebra reconstructed directly"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A034",
+      "A033",
+      "A088",
+      "A094",
+      "A096",
+      "A097",
+      "B07-lead",
+      "B20"
+    ]
+  }
+]

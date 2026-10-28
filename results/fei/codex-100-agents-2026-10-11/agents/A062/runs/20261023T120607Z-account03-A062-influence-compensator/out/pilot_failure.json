@@ -1,0 +1,6 @@
+{
+  "version": "stage20-sector-v1",
+  "result": "AssertionError in the compressed lower-bound interval check; no successful output certificate emitted",
+  "diagnosis": "56-bit mantissa enclosures have absolute log error of order 2^-56, too wide for k=32 source mass of order 2^-63. This is a certification precision failure, not a counterexample to the analytic inequality.",
+  "repair": "Retain 128 mantissa bits; keep the same frozen Boolean family, dimensions and domains; retain outward 2^-80 rounding and explicit atanh tail. Rerun once with falsification controls."
+}

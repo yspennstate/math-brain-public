@@ -1,0 +1,39 @@
+# A072 stage20: a signed outer correction has universally influence-paid drift
+
+## exact target, quantifiers, hypotheses and units
+
+Full FEI remains OPEN. Entropy bits, uniform physical cubes. For ANY finite outer Boolean gate and ANY disjoint Boolean inner cores, prove that the signed correction C=H(full)-sum q_j H(core_j) has mean physical-query increase <=(4/ln2)Inf_i<6Inf_i for positive queried influence. Constants and dummies are included. This yields a nonnegative coherent full-universe bank C+6I+sum q_j inner deficit hulls, at every K>=0, conditional on its initial supply. No initial influence payment is inferred.
+
+## sources actually read, revisions and theorem locators
+
+BOARD12:06UTC, unchanged B15 leadv2, own stage19 STATUS, protocol required fields/dispatch/review at the unchanged2026-10-11-execution-v2 revision, with earlier full protocol/campaign/paper intake retained. A071113913 REPORT and full PROOF, first CLAIM and exact statement of its vacuum component claim were read. The latter is background only; its VACUUM_PROOF was not used or accepted. Own prior finite stopping framework is rederived. SOURCE_PINS records immutable source bytes. Session wake completed with degraded self-care; owner-model98.6h, state83.2h and latest dream33.9h stale affect personal-context reliability and are not mathematical premises.
+
+## complete derivation or exact first unsupported line
+
+PROOF sections1-3 derive the erasure factorization: every inner Fourier pair factors except the pair involving the empty inner coefficient. Its contribution is Phi(mu^2,t^2), while the two Jensen-Shannon terms have signs derived from H(parent)-mean H(children)=B+J. The exact signed drift is q_j(Phi+J_inner)-B_special-J_full. Phi<=2|mu*t|/ln2, |t|<=inner Inf_i, and J_inner<=2 inner Inf_i/ln2 give the universal4/ln2 bound. No finite extrapolation is used. Section4 proves C+6I nonnegative and superharmonic, then adds the superharmonic inner-hull sum and supplies the owner-preserving conditional allocator. Full-universe admissions change no bank. The first unsupported line is the INITIAL price: on singleton cores this bank equals H+6I, so an influence-only bound here is precisely FEI. Coherence alone has not paid that price or replenished any spent donor.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC precedes calculation. Pilot: one full physical source row, 368 predicates, 0.0317s. Main: all7 physical queries of the actual seven-bit AND-of-OR(3,2,2), 828 predicates, 0.3684s. Full child domains retain6 free physical bits each, including the constant branch's2 dummy bits. Every core/full integer Walsh agrees with independent direct character sums, Parseval, every sign inverse and direct edge influences before its entropy is used. Full spectra and edge arrays are saved.
+
+CONTROL_SPEC freezes six circuits, at most6 bits, with26 physical query rows: constant, projection, parity, opposite-bias AND, parity with a constant dummy core, and negated AND. All 1405 predicates pass in0.2648s, including zero-influence rows, exact exceptional-erasure decomposition, signed drift identity, reserve superharmonicity, child solvency and conditional-mean credit allocation. Source and controls use independent own code, no source import. Directed192-bit atanh80 logarithms have a proved tail; exact prime-log cancellation proves equalities. Five arbitrary-precision integer inequalities independently repeat the source decisive signs. A real altered drift expression is rejected. No floating verdict or Lean certification is asserted. INNER_BANK_SPEC additionally freezes K=0 and1 on the same fixed source:14 queries with NONZERO inner hull banks, 861 predicates in0.2185s verify weighted-hull superharmonicity, q conditional means, full-bank solvency and mean-conserved credits.
+
+The seven-bit source's queried influence is9/64 and its exact positive drift G lies in(0.107184,0.107185). The signed6I reserve releases27/32; remaining coherence headroom is exactly27/32-G>0. This is a potential-stock release, conditional on genuine initially supplied unused stock, not a new donor draw. All jobs estimated<=100MB and complete in under1s of measured Python work; process startup/wake latency was substantial. No >300MB job, GPU, dimension escalation, detached process, resource shedding or governor restart occurred.
+
+Commands from this run: python -B -X utf8 code/drift.py --pilot; python -B -X utf8 code/drift.py; python -B -X utf8 code/controls.py; python -B -X utf8 code/finalize.py. No mathematical mismatch or failed sign arose. The first save attempt rejected differing digest key conventions: A071 uses statement,hypotheses, while A072 uses exact_statement,hypotheses. The source producer convention was then verified from its finalize code, its declared digest retained unchanged, and both encodings recorded in HASH_CONVENTION; FIRST_SAVE_FAILURE preserves the initial rejection.
+
+## proof dependencies and changed downstream conclusions
+
+A071-POSITIVE-OUTER-CORRECTION-ENVELOPE-FAILS@1 independently HOLDS UNCHANGED, digest retained. Its failure for every K>=3 and its necessary local lambda remain true. New A072-SIGNED-COMPOSITION-DRIFT-COHERENT-ENVELOPE@1 prices the entire SIGNED correction's drift at a universal influence rate and gives a coherent alternative to clipping C. The source's vacuum component is not a premise. The only new-proof dependencies are character orthogonality, Shannon chain rule, physical edge identities, finite stopping induction and the explicitly proved logarithm inequalities. External review of the new theorem is pending. No full FEI constant improves.
+
+## one next mathematical action and independent reviewer
+
+A071/A074/A089 independently reconstruct the signed drift identity and universal envelope; A075/A084 price its INITIAL signed outer correction plus inner hulls from SAME unused original influence, preserving old labels. No further source-witness or closed four-core census is needed. Review must check the empty-inner-row exception and the PLUS sign in B+J, and keep the missing initial price explicit. Actual old influence-owner balances must be provided before inserting the reserve into a previously booked campaign account.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files, PROOF, frozen specs, code and exact outputs are saved inside A072. PERSISTENCE checks exact fields, unchanged reviewed-source and new canonical digests, progress/delta identity, two-line STATUS and sizes; MANIFEST hashes local artifacts. STATUS/WORKLOG/LEARNED are current. Brain self-care remains degraded/unverified; stale personal context is unused as proof evidence. Contract cache was stale/unmatched, so no irreversible publication occurred. No git, mail, peer message, shared research-index write, other-agent edit, trading access or deletion occurred. Supervisor mirrors and new external acceptance remain unverified. No certificate job remains running.
+
+## Universal bridge
+
+This stage moves C019 stopping-tree payment and C024 history transfer by proving a dimension-independent COHERENCE price for the whole signed composition correction: each physical-query drift costs at most4/ln2 times its influence, safely covered by rational6I potential stock. Adding weighted inner stopping hulls gives a nonnegative, full-query-superharmonic, deficit-majorizing full-universe envelope with exact owner-preserving transfers once its initial bank is supplied. The A071 obstruction is independently accepted, and its row is paid with explicit headroom27/32-G. The initial influence payment remains open, transparently FEI-equivalent on singleton cores. NEXT targets that initial signed outer/nonempty price from the SAME unused original owner, because coherence is now proved generally and another finite restriction census cannot pay the universal starting bank.

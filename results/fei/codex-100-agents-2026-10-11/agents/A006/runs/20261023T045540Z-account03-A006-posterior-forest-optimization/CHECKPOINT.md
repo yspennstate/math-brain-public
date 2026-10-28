@@ -1,0 +1,1 @@
+Stage9 COMPLETE_LOCAL: proof of SAME-reference insertion and connected one-edge cost<23I,119567 exact recorded checks PASS. Four source versions locally reviewed unchanged. New theorem awaits independent review; full FEI OPEN. NEXT: joint compatible-root cover for interacting connectors with inherited D/weights and no iterated factor-two loss.

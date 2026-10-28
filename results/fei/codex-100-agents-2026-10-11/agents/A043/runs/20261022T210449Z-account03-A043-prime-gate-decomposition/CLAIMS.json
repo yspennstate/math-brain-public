@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A043-RETAINED-SLACK-POLYNOMIAL-HIERARCHY",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f in every finite dimension and every interior independent product law, in natural units let Delta=I-Var, R=sum_{|A|>=3}(|A|-2)P(A), S=4Delta-2R-E_single. With v_i=4p_i(1-p_i), t_i=|E D_i|, d_i=E D_i^2 and S_m=sum_i v_i[2(d_i-t_i)+t_i(1-t_i)sum_{k=1}^m 2(1-t_i)^k/(k(k+1))], every integer m>=0 satisfies 0<=S_m<=S_{m+1}<=S and S-S_m<=2(2Delta-R)/(m+1)<=4Delta/(m+1). The last coefficient is sharp, approached by AND2 at equal biases tending to zero. For actual reflected prime56067 at (alpha,e,d,q)=(t,t^2,t^4,t), fixed m and t->0, (S_m-4T)/T->-4/(m+1), whereas (S+2T-G)/T->6. Thus every fixed-order sufficient assertion S_m>=4T is false; actual G<=S+2T and full FEI remain unresolved.",
+    "hypotheses": [
+      "Boolean values {-1,1}; finite n; independent input coordinates; interior biases, with deterministic coordinates contracted for endpoint statements",
+      "Natural entropy units; actual biased orthonormal squared spectrum; nonempty corrected entropy",
+      "m is a fixed nonnegative integer before any corner limit; t in (0,1/2) for the prime56067 path"
+    ],
+    "statement_sha256": "84394ef9b2e518eeafdc7178139bc65ba04ce73cbc30a92e0da46e3532cbf521",
+    "contributors": [
+      "A043"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/check_reserve.py",
+      "out/checks.json",
+      "code/check_corner.py",
+      "out/corner_checks.json"
+    ],
+    "proof_dependencies": [
+      {
+        "source": "agents\\A043\\runs\\20261014T052009Z-account05-A043-prime-gate-decomposition\\PROOF.md",
+        "sha256": "1964ee27bfc5f5cf7e0af69ccec9ec09cfd7e9709b755266b0fb77755640e3a8",
+        "scope": "prime56067 polynomial and G ledger; Fourier variance identity reconstructed in current proof"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_AUTHOR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "No unproved line in the stated hierarchy or fixed-order obstruction. The target G<=S+2T on every prime56067 law and all-arity actual cofactor packet payment remain OPEN. Lean SETUP_UNVERIFIED: compute admission held; no compiler was started.",
+    "next_consumers": [
+      "A042",
+      "A044",
+      "A091",
+      "B20"
+    ]
+  }
+]

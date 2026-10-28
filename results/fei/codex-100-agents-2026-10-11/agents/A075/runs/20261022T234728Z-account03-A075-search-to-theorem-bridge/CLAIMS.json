@@ -1,0 +1,109 @@
+[
+  {
+    "claim_id": "A075-GROWING-DEPTH-SAME-DEBIT-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For the actual uniform disjoint-block family F_n=J(g_n^6), g_n negative on {0,1,2}, J=-h(x xor1), h negative on {0,1,2,4,8,16,32,6,17,40}, keep the original rate4 two-query debit D0=(2e1+e2)U_b/((U_b+U_c)/2) after block0 original coordinates2=0,0=0. Formally continue padding queries3,4,... by D_(j+1)=2(D_j+e_j) in the zero child and zero in the full constant-selected-plus sibling Z. Then exactly R_j=S_j-D_j=S_Z+2^j(S_b-D0-S_Z). With p=3*2^-n, E=log2(e), A=24log2(3)-32/3-16E, and fixed remaining dimension d, R_(n,d)/p tends to K_d=A-2^(5-d)(2+E). K4<0<K5, while both full endpoint capacities and their net booked debits at d4 and d5 are eventually positive. Thus no such no-transfer policy can remain feasible uniformly through depth n-6. At the last d5-to-d4 row, with these bookings fixed, transfer a_n=-R_(n,4) from the untouched sibling Z is sufficient and minimal, leaves positive donor residual, preserves every label and earlier stopped terminal, and has root-weighted cost/p^2 tending to -(16/3)K4 in (13.8457460552,13.8457460553). Nonnegative net debit legality at every intermediate growing-depth ancestor for all n is not asserted. Complete exact chain certificates cover n=8,12,24 only; n=16,32,48 certify endpoints only. No universal FEI theorem.",
+    "hypotheses": [
+      "uniform physical Boolean cube, six disjoint core blocks, base2 Fourier entropy and S=4I-H",
+      "specified original two-query proportional debit, signed query excesses, every full terminal and old label retained",
+      "d fixed before n tends to infinity; n>=d+2; prescribed continuation is algebraic, without assumed feasibility",
+      "minimal last-row flow is among zero-mean sibling transfers with the prescribed debit labels fixed"
+    ],
+    "statement_sha256": "fe3121754314bcb3dbf434e87d470a3ef889769723f0b5ba5b78f4e4205a4eb6",
+    "contributors": [
+      "A075"
+    ],
+    "proof_source": [
+      "PROOF.md sections1-5",
+      "code/diagonal.py",
+      "out/DIAGONAL_ANALYTIC.json",
+      "out/DIAGONAL_FINITE.json"
+    ],
+    "proof_dependencies": [
+      "finite character orthogonality, exact physical pivotal identity and Shannon chain rule reconstructed in PROOF.md",
+      "own pinned sparse-core and rational log primitives listed in out/FROZEN_SPEC.json"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A075",
+        "independent_reviewer": false,
+        "verdict": "AUTHOR_ALGEBRA_AND_EXACT_CERTIFICATES_CHECKED",
+        "scope": "exact telescoping, endpoint coefficient signs, independently simplified first-order closed form, and declared finite states"
+      }
+    ],
+    "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Proposed uniform growing-depth payment by the unchanged all-to-zero no-transfer policy; not the scoped fixed-depth theorem"
+    ],
+    "first_unproved_line": "Derive arbitrary inherited-history component admission after an exact subsidy has been received and its donor outgoing flow spent; all-dimensional intermediate net-debit legality also remains outside this endpoint theorem.",
+    "next_consumers": [
+      "A072",
+      "A074",
+      "A089",
+      "A092",
+      "A085"
+    ]
+  },
+  {
+    "claim_id": "A089-SIGNED-TERMINAL-COMMON-KERNEL-REPAIR",
+    "version": 1,
+    "exact_statement": "For finite weights w_b>=0 summing to1, signed real capacities s_b and a required nonnegative net debit T, nonnegative d_b and zero-mean transfers f_b with mean d=T and s_b+f_b-d_b>=0 exist iff T<=mean s. Writing P=E(s)_+, N=E(-s)_+, their minimum gross incoming transfer E(f)_+ is N. For P>0, k=(s)_+/P, d=T k, f=(-s)_+-N k attain it and transport every signed ancestor/new label L as L k, including T=0; P=0 has the stated zero-net boundary. On the actual twice-saturated J(g^6) history (block0 bits2,0,3 all0 then block1 bit0=b), all18 restrictions of block0 bits4,5 have exactly2 negative full S4 endpoints; both orders for each b admit this coupled payment at unchanged4, preserving all old labels and drawing zero from the old parked2tau reserve. Negative subsidies A_b lie in(55/1000,56/1000) and(45/1000,46/1000). No universal FEI bound.",
+    "hypotheses": [
+      "finite weights and real signed capacities, nonnegative net booked debit, zero-mean allowed transfers",
+      "for the application: exact declared disjoint Boolean cores, uniform physical coordinates, entropy bits, unchanged inherited saturation labels",
+      "all capacities and physical profiles supplied explicitly; no assumption of universal parent FEI"
+    ],
+    "statement_sha256": "050425d07fcf0f9385125f79cf108000b2a336e08afa346428e21bc67fcfa945",
+    "contributors": [
+      "A089"
+    ],
+    "proof_source": [
+      "agents\\A089\\runs\\20261022T225420Z-account03-A089-repair-specialist\\REPORT.md",
+      "PROOF.md section6",
+      "out/REVIEW_SIGNED.json"
+    ],
+    "proof_dependencies": [
+      {
+        "path": "agents\\A089\\runs\\20261021T154748Z-account03-A089-repair-specialist\\REPORT.md",
+        "sha256": "54350154fedad989f4a8c9eec76b2a36846e2032bfe354fb70ec49d1f364b473",
+        "scope": "explicit prefix and old2tau; reconstructed locally"
+      },
+      {
+        "path": "agents\\A072\\runs\\20261021T225156Z-account03-A072-exact-walsh-engine\\REPORT.md",
+        "sha256": "e077bc7bc23833ef3936fac90c2dde63c2334b5540c0cc08cef6a8ebe051e1b6",
+        "scope": "saturation optimizer as coordination; reconstructed physical identity used"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A089 separate product-moment representation",
+        "independent_reviewer": false,
+        "scope": "all18 full H/I/S states and two negative endpoint signs",
+        "verdict": "INTERNAL_REPRODUCTION_PASS_EXTERNAL_REVIEW_PENDING"
+      },
+      {
+        "reviewer": "A075",
+        "independent_reviewer": true,
+        "verdict": "HOLDS_FOR_GENERIC_THEOREM_AND_18_TERMINAL_SIGNS_ONLY",
+        "scope": "positive-weight support, sharp signed-capacity kernel including T=0/P=0; all18 actual physical full S signs via own original truth-core FWHT and physical edges. Four whole-history coupled policies/parked ancestry not newly accepted.",
+        "source_declared_statement_sha256": "7de96cb26ca33032ed22556b3aa7b89ca42d5acb81822f1715144de96cf8c25d",
+        "source_hash_convention": "source digest preserved separately; local claim digest canonical statement+hypotheses",
+        "evidence": "out/REVIEW_SIGNED.json and PROOF.md section6"
+      }
+    ],
+    "status": "PARTIAL_INDEPENDENT_REVIEW_GENERIC_AND_TERMINAL_SIGNS",
+    "supersedes": [],
+    "refutes": [
+      "proposed twice-saturated full-child-positivity inheritance at rate4; not A071/A072 scoped previous theorems"
+    ],
+    "first_unproved_line": "This independent review does not accept the four source historical coupled allocations or their parked2tau ancestry. The source universal admission gap remains open.",
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A074",
+      "A075",
+      "A092"
+    ]
+  }
+]

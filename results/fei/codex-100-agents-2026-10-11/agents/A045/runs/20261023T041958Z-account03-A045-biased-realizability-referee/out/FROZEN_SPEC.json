@@ -1,0 +1,14 @@
+{
+ "helper_version":"A045-stage8-dyadic-reference-referee-v1.2",
+ "family":"all two/three-bit Boolean tables; fixed four-bit controls; genuine disjoint compositions g(h(x1,x2),x3)",
+ "parameter_domain":"all n=2 and n=3 truth tables at two prescribed labeled product laws; AND4,parity4,bent4,mux4 at two laws; all16 binary outer gates and16 binary inner gates at two three-bit laws, constant outputs contracted",
+ "case_count":{"standalone_gates":552,"disjoint_formulas":512,"mandatory_AND3_at_equal_one_third_bias":1,"reused_wire_control":1},
+ "mandatory_nonflat_source":"AND3 at p1=p2=p3=1/3, composed as AND2(AND2(x1,x2),x3); included in pilot and main to compare the two complete references",
+ "pilot_domain":"first32 standalone n=2 cases and first8 formulas; same helper and arithmetic",
+ "symmetry":"none; every labeled gate tested in the fixed domain",
+ "arithmetic":"Fraction centered-product Fourier coefficients and independently constructed disjoint likelihood products; rational atanh log enclosures after dyadic reduction",
+ "memory_estimate_mb":80,
+ "max_runtime_seconds":60,
+ "automatic_dimension_escalation":false,
+ "target":"review complete dyadic normalizer/carry/KL composition; compare flat final reference with composed tree reference using exact signed KL conversion and test shared-wire exclusion"
+}

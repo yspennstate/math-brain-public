@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK",
+    "version": 2,
+    "exact_statement": "For every nonconstant Boolean source g on a>=1 uniform bits, b>=1 independent padded data bits, r>=1 fresh point controls and every edited point, supply a nonnegative source subprobability R of mass s in(0,1] positive on P_g support and finite c<=C0 I_g,C0>=0. Write n=a+b,p=2^-r,t=2^-n,w=2^-b, F=g-2g(y*)1_controls1_source1_padding, K=4C0+15, C=2pt(n-d),E=2ptd,J=2rpt, with original pivotal degree d. Use the original root floor (Rpad+6pt U_n)/(1+6pt) and its true conditional-control lift. Preserve all preceding v1 padding-prefix conclusions, including L_ell<=(3/2)c+(41/4)I_g and K I(F)-L_ell>=((3/2)C0+1)I_g. After ALL b padding bits are exposed along the unique edited path, query ANY k=1..a original source coordinates on that path in any adaptive order, stopping other branches at their full actual source restrictions. Derive each source restriction reference from ORIGINAL R by physical mass-preserving inheritance Q_j=s(2r_marg*pi_j)/Z_j, with every reference mass s and Z0+Z1=2s; retain zero true fibers and normalized factors Z_j/s. Prescribe the original general envelope based on these source references on the active edited descendants. No child reference is assumed influence-paid. Let L_k=CE_root+sum reach[avg D_child-D_parent]=H(F)+avg D_full_final, including all signed padding/source reset debits and every complementary terminal. For 1<=k<a, L_k<=2(1+w)c+30pt(2a+b+2r-k)<=3c+(45/4)I_g and K I(F)-L_k>=K(C+J)>0. At k=a, use the scalar zero-data floor M_final=(s+6p)/(1+6p)>=s times the actual control spectral law; L_a<=2c+30pt(n+r) and K I(F)-L_a>=C0 I_g+K(C+J)>0. Thus source-changing queries, even with constant source children and unequal spectra, are paid at the SAME original rate, without a renewed source bank. Any EXTRA prior booking0<=U<=U_star=min{(C0+1)I_g,K(C+J)} is paid at root, every padding frontier and every source frontier, leaving the stated respective margin minus U. Optional arbitrary independent terminal references retain full additive CE/KL and multiplied mass. Integer rounding is separate. This does not remove per-edit rate inflation C0->4C0+15 for a NEW representation operation, and does not price arbitrary unrelated off-path resets or prove full FEI.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes, nonconstant original source; arbitrary source-child spectra and constant descendants allowed",
+      "At least1 padding bit and1 fresh point control; all padding exposed before active source-prefix phase; off-path source branches stop at their prescribed inherited source references",
+      "R is a finite-cost nonnegative subprobability; off-true-support zeros or mass permitted and all true source support covered",
+      "Source references physically inherited from the ORIGINAL source R with conserved mass s and normalized child factors Z/s; active floors are prescribed, never free resets",
+      "ONE original bank KI(F)-CE_root; all signed old padding debits and complete complementary terminals retained; extra external booking U obeys the displayed all-frontier cap U_star",
+      "Ideal bits/ordinary physical influence; independent optional terminal costs untouched; no descendant influence certificate or new point edit admitted"
+    ],
+    "statement_sha256": "805620bf39632d41249625bf68fd7eac0667d553e08d0a0aedd413e663c32027",
+    "contributors": [
+      "A011/account03; continuation of its source-envelope and padding-refinement interface"
+    ],
+    "proof_source": {
+      "derivation": "agents\\A011\\runs\\20261023T000841Z-account03-A011-representation-existence\\DERIVATION.md",
+      "validation": "agents\\A011\\runs\\20261023T000841Z-account03-A011-representation-existence\\out\\VALIDATION_TOTALS.json",
+      "primary_checker": "agents\\A011\\runs\\20261023T000841Z-account03-A011-representation-existence\\code\\check.py",
+      "separate_direct_transform_replay": "agents\\A011\\runs\\20261023T000841Z-account03-A011-representation-existence\\code\\replay.py",
+      "formal_admission": "agents\\A011\\runs\\20261023T000841Z-account03-A011-representation-existence\\out\\FORMAL_RESULT.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A011-POINT-EDIT-GENERAL-ENVELOPE-ONE-USE-HISTORY",
+        "version": 1,
+        "statement_sha256": "91c986da02a99e02cf9b7782914f38e4a57725107589c8bddbdc83444aef1fb4",
+        "scope": "ONLY general arbitrary-core CE<=2c+15(C+E+J) and complete floor mass; source child need not have an influence-paid reference; author proof re-read, independent review pending",
+        "source": "agents\\A011\\runs\\20261014T074949Z-account05-A011-representation-existence\\GENERAL_ENVELOPE.md"
+      },
+      {
+        "claim_id": "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK",
+        "version": 1,
+        "statement_sha256": "da30f825b554ebb10d2ac10d7a3eb909b9ac054f03c360385e002dfadf6a9afd",
+        "scope": "previous padding-prefix bound preserved unchanged; pending external review",
+        "source": "agents\\A011\\runs\\20261021T182829Z-account03-A011-representation-existence\\DERIVATION.md"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXISTING_INTERFACE_REFINEMENT_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK",
+        "version": 1,
+        "scope": "additive v2: retains padding clauses and adds all active source prefixes and final source collapse"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": "Remove per-operation inherited source cost/rate inflation for a SECOND representation edit or pay an independently prescribed off-path descendant reset using SAME unused original bank and all existing bookings.",
+    "next_consumers": [
+      "A086",
+      "A094",
+      "A097",
+      "A096",
+      "A028",
+      "A029",
+      "B03",
+      "B20"
+    ]
+  }
+]

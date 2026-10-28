@@ -1,0 +1,11 @@
+{
+  "helper_version": "A071-inherited-credit-scalar-allocation-v1",
+  "family": "finite weighted signed capacities, fixed nonnegative inherited subsidy A, fixed nonnegative total debit T<=mean(s)+A",
+  "domain": "two equal weights; s0,s1 in {-2,-1,-1/2,0,1/2,1,2}; A in {0,1/4,1/2,1,2,4}; T in {0,half aggregate,aggregate} when aggregate>=0; deduplicate T",
+  "case_count": "at most882 labelled parameter triples before T choices; exact count recorded",
+  "symmetry": "none",
+  "arithmetic": "Fraction only; exact zero and boundaries",
+  "memory_estimate_MB": 30,
+  "maximum_runtime_seconds": 55,
+  "target": "minimum additional gross zero-mean flow is max(0,E(-s)+ -A); verify constructions and zero denominators, including signed capacities and T=0."
+}

@@ -1,0 +1,19 @@
+{
+  "helper": "check_tree.py v1",
+  "family": "all labelled Boolean signs on n=0,1,2,3; canonical exact affine/character reset at each child",
+  "domain": "K=2,4,8,16; all stopping/query-coordinate policies after deterministic canonical reset",
+  "case_count": "278 root tables; 244 policies per 3-bit root, 9 per 2-bit root, 2 per 1-bit root, 1 per 0-bit root; 250472 root/K/policy comparisons",
+  "symmetry": "none on labelled functions; deterministic optimal-basis choice is policy definition, not symmetry quotient",
+  "arithmetic": "integer Walsh, Fraction, exact prime-log vectors; integer products certify signs",
+  "memory_estimate_mb": 100,
+  "pilot_max_seconds": 55,
+  "main_max_seconds": 180,
+  "no_automatic_escalation": true,
+  "checks": [
+    "affine minimum by direct directional costs and exhaustive independent bases",
+    "node Gibbs identity; all conditional dependence retained",
+    "adaptive tree telescoping with actual reaches and full terminals",
+    "occupied-event and zero-mass boundaries",
+    "negative-reserve and omitted-reset controls"
+  ]
+}

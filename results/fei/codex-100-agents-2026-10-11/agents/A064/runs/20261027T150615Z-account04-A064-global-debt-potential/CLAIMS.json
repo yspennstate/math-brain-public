@@ -1,0 +1,95 @@
+[
+  {
+    "claim_id": "A087-HETEROGENEOUS-SELECTED-CUT-ENDPOINT-GUARD",
+    "version": 1,
+    "exact_statement": "For the actual 7-bit Boolean source point4 times point3, with a common selected product-reset boundary r=3 and exact initial reference, installing the point3 product reference before querying point4 gives full cross entropy H(point4)+M(point3) greater than max(H(point4)+H(point3),3*M(point3)/2)+1/5 bit. The two terms in this maximum are the immediate-stop and completed expected full-terminal bills. Both actual point4 query children preserve the frozen point3 full reference. Thus the identical-block endpoint maximum cannot be substituted for the sum of local maxima on heterogeneous live blocks. This is a selected-policy accounting guard, not a counterexample to A061 or FEI.",
+    "hypotheses": [
+      "Uniform labelled physical source p4(x)p3(y), disjoint blocks; bits.",
+      "point_s=1-2*1_{0^s}; M=sum coordinate marginal entropies.",
+      "Selected policy queries live blocks down to three bits, installs true marginal products and freezes; all full terminal H and KL retained."
+    ],
+    "statement_sha256": "594fff0c9724d0d47c6f3c0102859b4d7eb2ad30edf42c0c50e75ffc3d02f629",
+    "contributors": [
+      "A087/account04"
+    ],
+    "proof_source": {
+      "path": "agents\\A087\\runs\\20261027T091943Z-account04-A087-restriction-referee\\PROOF.md",
+      "sha256": "c6357ade3a1b846e4c28326c28fcc7a916aeb827430a10e090b68b1caaa560e6",
+      "validation": [
+        "agents\\A087\\runs\\20261027T091943Z-account04-A087-restriction-referee\\code\\adversary.py",
+        "agents\\A087\\runs\\20261027T091943Z-account04-A087-restriction-referee\\out\\ADVERSARY.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "verdict": "AUTHOR_EXACT_CERTIFICATE_EXTERNAL_REVIEW_PENDING",
+        "scope": "128 actual Fourier atoms; both physical children; outward rational sign gap >1/5."
+      },
+      {
+        "reviewer": "A064/account04",
+        "verdict": "HOLDS",
+        "scope": "Independent actual128-atom direct-character spectrum and full installed reference, both physical children retaining frozen reference, both strict gaps>1/5; no source repair.",
+        "proof_source": "agents\\A064\\runs\\20261027T150615Z-account04-A064-global-debt-potential\\PROOF.md",
+        "validation": "agents\\A064\\runs\\20261027T150615Z-account04-A064-global-debt-potential\\out\\AUDIT.json"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_HOLDS_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A061",
+      "A064",
+      "A065",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A064-INHERITED-DATA-QUERY-SELECTED-RESET-ORDER",
+    "version": 1,
+    "exact_statement": "For any finite uniform-cube Boolean f, any ordinary physical query i and ANY normalized supporting current reference Q, let C=H(P)+KL(P||Q), E the exact erased KL, O the actual coherent outcome KL and D=H(P)-mean H(P_e). Put R=D+E>=0. The actual inherited full references Q_e obey C=R+O+mean C_e. Installing each child actual marginal product has SIGNED debit J_e=TC(P_e)-KL(P_e||Q_e). Declare one finite fair physical-dummy lottery with arbitrary coupled child decisions a_e(z), extending Q with deterministic empty dummy Fourier coordinates. Let L(z)=mean_e a_e(z)[J_e]_+. Admit every adapted stopping cut before/after query, dummy and installation, retaining actual current reference and charging O exactly once when queried. Exact least original full-CE capital is A_after=C+(E_z L-R)_+ if i precedes revelation of z, and A_before=C+E_z[(L-R)_+] in the reverse order. All complete terminal entropy and SIGNED KL are separately retained: mean H(P_e), mean(K_e+E_z a_e J_e), plus actual O. Explicit nonnegative full potentials in PROOF sections3-4 give all-cut control and adapted cuts attain both minima. One SAME supplied original account S with consumed omega funds the rule iff S-omega is at least its stated capital; no descendant renewal or arbitrary-core initial O(I) supplier is inferred. Actual relevant f=character_i*point3, Q=Ber(31/32) tensor P_point3 and reset probability1/8 has D=O=0, E=log2(32/31), after extra0 and before extra>1/50. Full FEI remains OPEN.",
+    "hypotheses": [
+      "Finite Boolean physical cube; bits; every current reference normalized, supporting and fully retained, including source-zero rows.",
+      "Actual coherent query kernel has fair extension on source-zero erased rows; actual prediction t_e>0 and actual conditional references are used.",
+      "One declared installation after one ordinary coordinate query; added physical dummy Fourier reference marginals deterministic empty. No data query after the installation.",
+      "All cuts may stop before negative installation debits; L is nonnegative pending liability, while complete terminal KL uses SIGNED J.",
+      "Original S and consumed omega explicitly supplied; no claim that arbitrary initial full CE is influence-priced."
+    ],
+    "statement_sha256": "873ac95a23f8c6a92acffa95e4b1482e1a93bd9ef3f78eac5cfdbb3ecb27eb7b",
+    "contributors": [
+      "A064/account04"
+    ],
+    "proof_source": {
+      "path": "agents\\A064\\runs\\20261027T150615Z-account04-A064-global-debt-potential\\PROOF.md",
+      "sha256": "b7f636a3528e47915ef6c6a8edce6835aaf4d3e64e00fb6ae86c6b1556312064",
+      "validation": [
+        "agents\\A064\\runs\\20261027T150615Z-account04-A064-global-debt-potential\\out\\MAIN.json",
+        "agents\\A064\\runs\\20261027T150615Z-account04-A064-global-debt-potential\\out\\AUDIT.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A064",
+        "verdict": "AUTHOR_ANALYTIC_PROOF_AND_EXACT_CERTIFICATES; EXTERNAL_REVIEW_PENDING",
+        "scope": "Arbitrary inherited-reference query law, retained actual O, explicit all-cut potentials/minimality, exact physical spectra and separate direct-cut reconstruction. Full theorem not Lean-checked."
+      }
+    ],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "UNREGISTERED: actual query outcome KL may be added to available D+E while simultaneously charged as an outgoing bill"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A061",
+      "A065",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A042-SCALE-AWARE-DEFICIT-APPROXIMATION",
+    "version": 1,
+    "exact_statement": "For every finite Boolean sign under an interior independent product law, write v_S=product_i_in_S 4p_i(1-p_i), c_S=fhat(S)/sqrt(v_S), P(S)=v_S*c_S^2, E=sum_nonempty P(S)ln(v_S/P(S)), Delta=sum_nonempty (|S|-1)P(S), R=sum_|S|>=3 (|S|-2)P(S). For occupied nonempty S let t=|c_S|, and choose the unique j>=0 with 1/2<u=2^j*t<=1; set z=(1-u)/(1+u). For every integer N>=0 let L_N(z)=2sum_k=0..N-1 z^(2k+1)/(2k+1) and E_N=2sum_nonempty P(S)[j_S*ln2+L_N(z_S)]. Then E_N<=E_(N+1)<=E and 0<=E-E_N<=(11Delta-7R)/(2(2N+1)9^N). At zero deficit both are0. Dyadic normalized occupied coefficients give exact E_N=E even at N=0, including the actual flat bent tensor. The exact dyadic-scale terms are retained; no fixed global polynomial/cell count, independent Boolean reset, universal bound on E_N, or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual Boolean sign and physical independent finite product cube",
+      "All active input probabilities in (0,1); deterministic coordinates contract first",
+      "Natural logarithms; corrected nonempty E includes physical variance normalization",
+      "N any nonnegative integer; zero coefficients omitted before selecting dyadic cells",
+      "Exact dyadic-scale j ln2 terms retained; no uniform cell-count claim"
+    ],
+    "statement_sha256": "425d2402bfcf1b76a5fc044e13a9146b71c6ccfe44438d407f3b86f864e89178",
+    "contributors": [
+      "A042/account03"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "a3dcc6060376656b0925b4b80e6a296f032efd4939b9d4a5a06417e5c324ed9a"
+    },
+    "proof_dependencies": [
+      "Positive atanh series and geometric remainder, reconstructed directly",
+      "Actual Boolean singleton quantization d_i>=|c_i| and same-spectrum identity sum_i v_i Var(D_i)=2Delta-R",
+      "A044 obstruction motivates mechanism change but is not a premise of approximation theorem"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_ANALYTIC_PROOF_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Pay E_N, including its exact dyadic-scale whole-set cost, from a dimension-independent multiple of SAME unused root deficit through a complete conditional reference with normalizer, ordinary KL, off-support atoms and both full terminal laws.",
+    "next_consumers": [
+      "A043",
+      "A044",
+      "A041",
+      "A045",
+      "A090",
+      "A091",
+      "A094"
+    ]
+  }
+]

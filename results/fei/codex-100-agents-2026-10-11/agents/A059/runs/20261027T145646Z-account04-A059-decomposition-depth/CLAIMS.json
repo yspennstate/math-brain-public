@@ -1,0 +1,58 @@
+[
+  {
+    "claim_id": "A059-TENSOR-RESERVOIR-FULL-TERMINAL-PRICE",
+    "version": 1,
+    "exact_statement": "For any actual Boolean g, physical seed query i, and independent nonconstant Boolean reservoir h with j=I(h)>0,s=H(h)>0, put G_N=g times N disjoint h copies. At fixed rate A>0 and eligible received cash R_N=A I(G_N)-u, with fixed old depletion u>=0 independent of N, define e=(u+D_iH(g)-A Inf_i(g))_+. For e>0 and all sufficiently large N the minimal newly frozen FULL entropy of an outcome-dependent feasible A058 transaction is Fopt(N)=e min_a (H(g_a)+Ns)/(A(I(g_a)+Nj)), with |Fopt-e s/(Aj)|<=e M/(ANj), M=max_a|H(g_a)-(s/j)I(g_a)|. Its advantage over common continuation is at most2eM/(ANj). Any feasible post-query decision using at most b fresh irrelevant fair bits per outcome freezes at least Ns/2^(b+1). Dyadic rounding with b_N=ceil(2log2(N+1))+b0 attains the positive ideal limit and can be implemented with fewer than2 expected dummy queries per nontrivial action. On arbitrary adaptive restriction trees of AND2 products, full expected terminal entropy is2(N-E distinct factors touched); coherent-mask transport gives E H(Fleaf)>=2(cN-sum_first-touch w_v t_v). This is a necessary terminal price, not a universal initial supplier or FEI proof.",
+    "hypotheses": [
+      "uniform finite Boolean physical cubes; entropy bits",
+      "all reservoir factors use disjoint physical variables",
+      "A>0, I(h)>0, H(h)>0; fixed u independent of N; e>0 for positive-floor assertions",
+      "received cash is ACTUALLY eligible after old debits/protected reserves; no source reset",
+      "R_N>=D and e<=min_a AJ_a(N)/2 for exact one-outcome optimum; both hold for sufficiently large N when e>0",
+      "coin lower bound concerns worst-case at most b fresh irrelevant fair bits after each outcome, not expected coin work",
+      "coherent transport requires physical KC=0, C indicator and sign K off C; all actual siblings, biases and terminal functions retained"
+    ],
+    "statement_sha256": "8647380a1c6b69989bcec91abcfb3e587f7d8d1507ac2ca6b7cd5785e84c047e",
+    "contributors": [
+      "A059; A058 local liquidation action independently reconstructed; A060 earlier independent-schedule terminal-law context"
+    ],
+    "proof_source": {
+      "path": "PROOF.md",
+      "sha256": "4fb3ee96309f52a6f52adea55ac85d93b69b33737790724cb3986b934f464e11",
+      "certificates": [
+        "out/validation.json",
+        "out/audit.json",
+        "out/coins.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A058 stage11 PROOF Sections1-3 actual-cash LP, independently reconstructed at local scope",
+      "finite disjoint Fourier product identities",
+      "A059@2 exact coherent marginal, directly reproduced for all3^7 physical states",
+      "elementary rational LP dual and fair-bit cylinder identities"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A059",
+        "verdict": "AUTHOR_PROOF_EXACT_CONTROLS_PASS",
+        "independent_acceptance": false
+      }
+    ],
+    "status": "PROVED_AUTHOR_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Zero frozen-entropy bill for mandatory liquidation even under large tensor padding: actual rate6 seed has limiting floor>=1/768",
+      "Fixed worst-case coin width can attain bounded frozen entropy on the padded mandatory-liquidation family"
+    ],
+    "first_unproved_line": "Pay accumulated FULL frozen bills and make live entropy vanish for arbitrary Boolean cores from a sufficiently large SAME original unused influence owner.",
+    "next_consumers": [
+      "A058",
+      "A060",
+      "A057",
+      "A091",
+      "A087",
+      "B12",
+      "B20"
+    ]
+  }
+]

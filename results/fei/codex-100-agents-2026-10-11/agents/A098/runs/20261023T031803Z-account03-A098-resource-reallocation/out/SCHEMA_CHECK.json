@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "progress_fields": "exact",
+  "claim_fields": "exact",
+  "report_fields": "all present",
+  "progress_equals_delta": true,
+  "two_line_status": true,
+  "source_statements_and_hashes_preserved": true,
+  "result": {
+    "status": "PASS",
+    "pilot": false,
+    "assertions": 242679,
+    "runtime_seconds": 6.029573199979495,
+    "stats": {
+      "algebra": {
+        "laws": 330,
+        "pre_admissibility_tuples": 11880,
+        "admissible_tuples": 9801,
+        "negative_affine_beta": 1413
+      },
+      "structural": {
+        "Boolean_tables": 256,
+        "source_roots": 768,
+        "physical_transitions": 23040
+      },
+      "global": {
+        "Boolean_fixtures": 32,
+        "policies": 384,
+        "positive_first_resets": 15,
+        "later_nonidentity_calibrations": 204,
+        "old_nonconstant_terminals": 63
+      },
+      "changed_profile_guard": {
+        "actual": "parity3 queried once gives nonconstant parity2 in BOTH children",
+        "old_occupied_atom": "1/2",
+        "returned_occupied_atom": "1/3",
+        "reset_bill": "log2(3)-1 > 1/2 bit",
+        "bound_scope": "not an FEI counterexample; free-return theorem excludes this nonempty-profile modification"
+      }
+    },
+    "helper_sha256": "92ddd20cf4cbf0bedcffc2950fae3b96c16084ce7ea4282f4fff6fa690a42fd5",
+    "Lean": "separate admission and compiler receipt required",
+    "full_FEI": "OPEN"
+  }
+}

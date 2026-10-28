@@ -1,0 +1,14 @@
+{
+ "helper_version":"A003-singleton-discrepancy-v1",
+ "actual_Boolean_family":"all Boolean seeds on one and two bits, plus parity3 and the four-bit seed with negative input indices 0,1,2,4; controller a=(1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1), b=1-a^2",
+ "parameter_domain":"all seed coordinate queries, signs +/-1, three source references (actual spectrum, uniform nonempty, linearly weighted nonempty) with true vacuum; root controller plus its eight one-bit restrictions for n<=2; root controller only for named 3/4-bit seeds; singleton-point target",
+ "case_count":1986,
+ "pilot":"64 indices floor(i*1986/64), i=0..63, no dimension change",
+ "justified_symmetry_reduction":"none",
+ "arithmetic":"integer Walsh coefficients and Fraction laws; exact coarse-vector mean/variance identity; independently formed full parent/child references and rational log intervals with 28 atanh terms and outward bounds",
+ "memory_estimate_MB":120,
+ "maximum_runtime_seconds":{"pilot":55,"full":180},
+ "no_automatic_dimension_escalation":true,
+ "source_helper":"Only A003 previous-stage rational log/CE/restriction primitives reused; no A096/A079 producer helper imported",
+ "purpose":"check new mean-offset energy, full erasure/two-child ledger and positive zero-actual-singleton shape changes; preserve parity exact-source zero-refund control"
+}

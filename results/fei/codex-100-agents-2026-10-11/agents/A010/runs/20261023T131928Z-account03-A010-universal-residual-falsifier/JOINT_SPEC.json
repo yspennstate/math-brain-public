@@ -1,0 +1,35 @@
+{
+  "helper_version": "A010-joint-core-repair-v1",
+  "helper_sha256": "19c786bfdf476d65d5c947595a8283e8373e499d7b8d6fb8f283701273159df5",
+  "family": "Same actual two-intersecting-core function; fixed R_joint=(Q+uniform_nonempty_all_three_core_subsets)/2",
+  "pilot_r": [
+    1
+  ],
+  "full_r": [
+    1,
+    2
+  ],
+  "pilot_scalar_r": [
+    4,
+    16
+  ],
+  "full_scalar_r": [
+    4,
+    256
+  ],
+  "full_counts": {
+    "Boolean_functions": 2,
+    "truth_inputs": 2176,
+    "complete_allocation_tuples": 65792,
+    "distinct_actual_anchor_events": 246240,
+    "nonempty_outputs": 2174,
+    "all_size_scalar_cases": 253
+  },
+  "symmetry": "No reduction; enumerate every original local-mask tuple and its K real anchor choices; integer weighted aggregation over physical unions",
+  "arithmetic": "Integer/Fraction, complete physical Walsh and flips, rational log enclosure with tail and outward40-bit rounding",
+  "memory_estimate_MB": 60,
+  "pilot_max_seconds": 55,
+  "full_max_seconds": 120,
+  "execution": "One synchronous process runs pilot first, then the frozen full domain; pilot overlap not added",
+  "automatic_dimension_escalation": false
+}

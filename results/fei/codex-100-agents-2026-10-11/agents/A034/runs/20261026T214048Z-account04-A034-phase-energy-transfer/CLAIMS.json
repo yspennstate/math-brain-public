@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A034-AFFINE-PLANE-HEREDITARY-PHASE",
+    "version": 4,
+    "exact_statement": "For every integer s>=1 and every ternary row u on a finite uniform physical cube that is a signed sum of at most s disjoint affine-cell indicators with intrinsic quadratic phases, B(u)=sum_T uhat(T)^2 log2(1/uhat(T)^2) <= K_s E(u), where K_s=2s[log2(s)+(s-1)log2(64s^2)+3+log2(e)]. No bound on codimension, cell mass ratios, or spectral correlations is assumed. Thus any Boolean F(x,y) partitioned into at most M affine physical Y cells with a quadratic phase and an arbitrary CELL-DEPENDENT affine X-label map on each cell satisfies H(F)<=K_M I_Y(F) and H(S_Y|S_X)<=K_M I_Y(F), under every mixed physical restriction. The complete source class also has H(F)<=2^(M+1)I_Y and H(S_Y|S_X)<=2^M I_Y by the elementary bounded-phase/active-Y argument, so its better full rate is min(K_M,2^(M+1)). The optional integer X-degree bound d>=1 is retained when present. Fixed-M admission excludes fresh Boolean data tensor factors of F2 phase degree above M+1. Proper FOUR-cell rows have K_4=280+8log2(e)<292; complete four-phase-cell sources also have full rate32.",
+    "hypotheses": [
+      "independent uniform disjoint physical X,Y cubes",
+      "actual Boolean sign F",
+      "disjoint affine physical row cells",
+      "intrinsic quadratic phase on each cell",
+      "at most s pieces per row; at most M source phase cells for the hereditary corollary",
+      "all logarithms base two"
+    ],
+    "statement_sha256": "c840f378bd0ba8c8961a16f20070f39f2eade3d1b6fdcc98cef1af62786093a9",
+    "contributors": [
+      "A034"
+    ],
+    "proof_source": "PROOF.md sections 1-5",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_REVIEW_PENDING",
+    "supersedes": [
+      "A034-AFFINE-PLANE-HEREDITARY-PHASE@3"
+    ],
+    "refutes": [],
+    "first_unproved_line": "No influence-priced bounded-piece decomposition of an arbitrary Boolean core; no bound independent of s. Independent reconstruction pending.",
+    "next_consumers": [
+      "A079",
+      "A033",
+      "A088",
+      "A094",
+      "B07",
+      "B20"
+    ]
+  }
+]

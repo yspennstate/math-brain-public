@@ -1,0 +1,13 @@
+{
+  "helper_version": "A007-stage8-root-thinning-v1",
+  "actual_Boolean_family": "Every nonconstant labelled Boolean function on n=1,2,3; all signed conjunction implicant fibers; one deterministic at-most-three-gate table per function with lambda=1/max coordinate read, and fixed alternating thinning factors 1/2,3/4",
+  "parameter_domain": "Boolean pilot n<=2; full n<=3 only. Root activities scalar grid N=1,...,4, x_i in {1/64,1/8,1/2} for gradients, and N<=3 with y_i/x_i in {1/4,1/2,1} for full KL. Boolean root scales epsilon in {1,1/2,1/8,1/64,1/512}. AND endpoint widths 1,...,128. Four invalid-hypothesis fixtures (implication, packing, rarity, coordinatewise thinning) and the inherited OR2 forced-two-root posterior guard.",
+  "case_count": "270 nonconstant Boolean functions full, 16 pilot; 120 gradient vectors and819 scalar thinning pairs full; exact root-set enumeration uses at most7 nonempty sets per pair; every Boolean face/fiber is counted in output",
+  "symmetry": "none for Boolean/fiber checks; scalar grid is an independent algebra domain, never claimed to be Boolean spectra",
+  "arithmetic": "integers and Fraction; natural log intervals via32 positive atanh terms plus proved remainder after binary reduction; no floating acceptance signs",
+  "memory_estimate_mb": 80,
+  "maximum_runtime_seconds": 55,
+  "pilot_maximum_runtime_seconds": 55,
+  "failure_checks": ["q is false probability", "all physical influence factors of two", "empty and nearly full false fibers", "same packing before sampling", "strictly positive D and activity sums", "normalizer signed remainder on both sides", "nonempty product prior versus arbitrary posterior", "singleton root and strongly thinned endpoints", "mixed signs and unequal widths"],
+  "compute_admission": "No job expected above300MB; no GPU, detached process or automatic dimension escalation. Formal compiler admission is held while low-memory telemetry persists."
+}

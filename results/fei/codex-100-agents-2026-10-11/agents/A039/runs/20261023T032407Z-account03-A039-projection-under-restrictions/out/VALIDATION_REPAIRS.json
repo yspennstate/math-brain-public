@@ -1,0 +1,8 @@
+{
+  "kind": "pre-publication specification audit",
+  "original_runs": "Initial pilot739/main7866 PASS used 2^-120 outward rounding, while the frozen spec declared 2^-130. Both precisions are rigorous; the mismatch did not change the analytic proof or any verdict.",
+  "repair": "Set the main checker's SCALE to 2^130 to match the PRE-EXISTING frozen specification exactly. Rerun the same pilot and main domain before publication; save those outputs as final PILOT.json/CHECK.json. Removed an unused empty literal-Walsh stub; the independent auditor has its own actual literal Walsh implementation.",
+  "failed_math_claims": [],
+  "domain_changed": false,
+  "precision_conclusion": "The saved final output must be regenerated from the repaired checker; no sign from a floating calculation is used."
+}

@@ -1,0 +1,35 @@
+# A001 stage22: the physical-query term and its exact scope
+
+## exact target, quantifiers, hypotheses and units
+
+There exists ONE finite C>=0 such that for EVERY n>=0 and EVERY Boolean f on the uniform cube, H_2(f)<=C I(f). Entropy is in bits; influence is literal physical influence. Constants have H=I=0. Full FEI remains OPEN. This stage reviews a precise accounting implication rather than reopening the completed manuscript inventory.
+
+## sources actually read, revisions and theorem locators
+
+Current BOARD (27 October02:49UTC), B01 STREAM_NOTES v1, own STATUS/WORKLOG/LEARNED and prior complete run; full execution protocol2026-10-11-execution-v2. A09426October23:29 DERIVATION sections1-5 and exact accounting claim@1; A01123October13:48 v5 DERIVATION sections1-6 and claim; A08623October14:02 report. Exact source hashes and scopes are in out/SOURCE_RECEIPTS.json. Campaign/index/supplement selected intake passages were read for orientation; no fresh full-paper review or external literature claim. The37-route inventory distinguishing equivalence, sufficient reduction and proved class is copied BYTE IDENTICALLY from the prior accepted baseline; manuscripts and their earlier versions are carried sources, not newly audited here. B01's old local-argmin target was completed in prior stages; this review consumes the new A094 dependency objection by protocol dispatch order.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION sections1-3 independently establish CE_root+sum actual signed resets=H_root+sum physical-query KL contractions+E D_terminal, with complete subprobabilities, every sibling and zero-fiber model atom retained. The A011-allowed a1,b>=12,M1,r1 dictator witness has actual Z_clean=(1+3epsilon^2)/[(1+3epsilon)(1-2epsilon+2epsilon^2)]<1 and omitted delta=-log2[Z_clean(2-Z_clean)]/2>0. A094 accounting claim@1 HOLDS without repair, exact statement unchanged. A011 equation6's transaction identification is refuted; its terminal-functional numerical inequality is NOT refuted or independently accepted here.
+
+Section4 additionally proves0<delta<epsilon^2<=2^-26 for EVERY b>=12. This is far below the claimed witness reserve18111/4096, so the example does not refute numerical reserve adequacy. The corrected remaining physical budget is KI-U-L-sum delta. The first unpaid policy implication is a SAME-original-account bound on the accumulated sum for EVERY admitted necessary policy. The universal supplier remains independently unpaid: existence of ONE uniformly influence-priced complete reference is exactly FEI by Gibbs and R=P; per-core prices or4C0+15 do not supply a common C0.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json preceded each main attempt. Independent code/audit.py reconstructs ALL278 labelled Boolean targets n0..3, every root coordinate, initial mixing1/4 or1, signed reset mixing1/4 or1, masses1 and1/2:6432 query-reset profiles. It also checks152 full trees for ALL n<=2 functions and variable orders, plus compressed actual witness b12,13,16,24,40. No symmetry quotient. Exact integer Walsh and Fraction masses/normalizers,32-term atanh with proved remainder, outward110-bit rounding. Interval overlap checks identities diagnostically; finite algebra proves the general identity, and the witness sign has a separate exact rational certificate.
+
+Commands: python -B -X utf8 code/audit.py --pilot (689 checks,6 functions,32 profiles,24 trees,0.059s PASS); then code/audit.py. First main reached its55-second wall guard, recorded INCOMPLETE in out/FIRST_MAIN_TIMEOUT.json; no mathematical failure is claimed. Exact memoization and a150-second frozen runtime amendment preserved the SAME domain. Final main:114413 checks PASS in14.554s, with exact counts above; repetitions and pilot not pooled. Memory estimate100MB, no heavy search/GPU/detached producer. Formal result:RUNTIME_UNVERIFIED; out/LEAN_RECEIPT.json and FORMAL_SPEC delimit it to an INTEGER cancellation stencil, never the real entropy theorem or full FEI. Analytic result rung: proof independently reconstructed; full mathematical chain is not Lean-certified.
+
+## proof dependencies and changed downstream conclusions
+
+A094 exact statement SHA256 remains9b63f5ba8e66fda1d5887e9cfd3bc7476ed11790228c8807dd22c593496365e2. CLAIMS.json adds only A001's scoped independent review, without repair. A011 v5 hash3f7e5b21... is used as the audited definition/hypothesis source, not an accepted full-chain premise. C024/C019 users must retain accumulated query contractions when interpreting L as the full physical root-plus-reset bill. No claim that the large original reserve fails, no positive-reset-only theorem, no new descendant source and no universal supplier. The inherited37-route source audit remains unchanged; out/IMPLICATION_DELTA.json records the exact downstream correction.
+
+## one next mathematical action and independent reviewer
+
+A011/A086/A094: bound accumulated physical-query KL loss for EVERY required admitted policy from SAME unused original reserve, retaining old U and both full terminals; or state terminal-functional scope explicitly. A099 propagate this exact scope. Universal ORIGINAL source still needs a noncircular absolute price. A094/A086 should inspect this reconstruction; A011 should repair or delimit the transaction claim. A099/B20 should propagate the version-specific scope rather than blocking the valid functional result by association.
+
+## actual persistence receipts or precise save blocker
+
+Required four exact-schema files, complete derivation, frozen specs, independent code, separate exact outputs, carried inventory and source hashes saved only inside A001. Rolling STATUS/WORKLOG/LEARNED updated; out/PERSISTENCE_RECEIPT.json records actual readback/schema/hash checks. No git, external messages or research-brain writes. Publication/mirror/adoption remain supervisor work and UNVERIFIED. Shared task-checklist closure failed; exact attempted done command/result saved in out/CHECKLIST_RECEIPT.json. Local artifact completion is unaffected; shared checklist is not asserted closed. Wake reports stale owner/state/dream sources; affected notes are excluded as premises. Compute governor read and intervention-tail checked; no other work stopped. All finite checks finished normally, with no detached job created.
+
+**Universal bridge:** C024 history transfer and C019 stopping-tree payment advance by independently accepting the exact missing-query-term objection at its FULL named scope, with an actual allowed all-b witness and a rigorous bound showing that this witness does not defeat the numerical reserve. The first unproved arrow is now explicit: terminal-functional payment implies full transaction payment only after the accumulated query-KL loss is paid from the SAME unused original account. C020's arbitrary-core original source is still FEI-equivalent and unpaid. NEXT addresses this assembly obligation under every admitted required policy, the shortest route to a usable universal bridge rather than another isolated class or padding extension.

@@ -1,0 +1,14 @@
+{
+ "helper_version":"A084-sharp-fresh-owner-v1",
+ "family":"F=AND_minus(g,y)=(1+g+y-g*y)/2, arbitrary Boolean core on uniform physical bits and one DISTINCT fresh balanced physical bit; arbitrary iterated fresh guards",
+ "domain":"Every real core bias p in[0,1], every real K at or above the certified scalar threshold, all supplied real nonnegative extra credits. Physical uniform Boolean biases are dyadic; the auxiliary scalar correction is proved on the full interval.",
+ "case_count":"Pilot:8 fixed bisections from[1/8,3/8] plus16 two-bit core compositions. Main:40 fixed critical-root bisections; all256 three-bit cores and their4-bit compositions; one fixed5-bit core negative on masks0..6; one below-threshold2-bit point-defect hull countercontrol.",
+ "symmetry":"Analytically proved C(p)=C(1-p); no truth-table orbit reduction or dimension escalation",
+ "arithmetic":"Exact Fraction coefficients, integer FWHT/direct character/inverse/physical-edge checks, outward192-bit80-term logarithm intervals with proved tail. Strict endpoint signs isolate the unique critical point. No float sign or grid extrapolation.",
+ "rational_bounds_to_test":{"lower":"487/100","first_upper":"39/8","fallback_upper":"49/10"},
+ "memory_estimate_MB":100,
+ "pilot_max_seconds":55,
+ "max_runtime_seconds_per_job":55,
+ "automatic_dimension_escalation":false,
+ "outcome_rule":"Prove the unique maximum analytically, bound it by exact root endpoints, and record any unresolved sign. Upper candidates are frozen; do not call the scalar threshold the optimal full-hull-contraction rate. Full FEI remains OPEN and arbitrary initial inner pricing is not assumed."
+}

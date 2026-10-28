@@ -1,0 +1,105 @@
+[
+  {
+    "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+    "version": 6,
+    "exact_statement": "Version6 retains v5 at its original scope and adds the following theorem. For every Boolean controller a on an independent uniform physical control cube and arbitrary shared Boolean data sources G,H, define c=(1-a)/2, p=Pr(a=-1), V=4p(1-p), gamma=Pr(G!=H), J=JS_p(P_G,P_H), q_t=(1-p)Ghat(t)^2+pHhat(t)^2, and L=sum_t q_t h2(V(Ghat(t)-Hhat(t))^2/(4q_t))+V gamma H(P_a conditioned nonempty), with zero-row and V=0 conventions. Then H((1-c)G+cH)=(1-p)H(G)+pH(H)+J+L. At every data query, the signed entropy debit after subtracting both original source decrements and the signed L difference equals J-parent minus averaged J-children. At every control query this J difference is nonnegative. For EVERY finite adaptive mixed physical stopping tree, sum_DATA reach*debit+sum_CONTROL reach*Jrelease+E_terminal J=J_root, hence signed DATA payment never exceeds the SAME original J_root<=h2(p)<=1. Conditional on A028 v5 tensorized-JS price, J_root<=2log2(e)gamma I(a). No terminal KL reset payment or universal FEI admission is asserted.",
+    "hypotheses": [
+      "Uniform finite product cube; disjoint physical controller and data coordinates",
+      "Boolean controller and both Boolean source functions; sources may fully share data",
+      "All queries are actual coordinates; both restricted source functions retained at each node",
+      "Signed debits and structural L variations retained; no positive-part substitution or bank renewal"
+    ],
+    "statement_sha256": "e06ecdad95f92730ceca9cdf728b3cb52a6b51cde6df41de7dba1fd77dde0900",
+    "contributors": [
+      "A028",
+      "A026 (balanced intact-controller data-only precursor)"
+    ],
+    "proof_source": "DERIVATION.md equations (1)-(4); out/check_full.json; out/independent.json",
+    "proof_dependencies": [
+      {
+        "claim": "A026 stage17 signed DATA JS identity",
+        "scope": "precursor reconstructed and extended; not an assumed accepted theorem"
+      },
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@5",
+        "scope": "only quantitative original-J root price; exact mixed telescope independent of v5"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A029/account03",
+        "verdict": "HOLDS_SCOPED_MIXED_JS_IDENTITY_TELESCOPE_AND_QUANTITATIVE_JS_PRICE",
+        "scope": "v6 sector identity, signed DATA debit, nonnegative CONTROL release, all finite adaptive mixed histories, and J<=2log2(e)gamma I(a); earlier bundled v5 structural/reference/class clauses excluded",
+        "source": "agents\\A029\\runs\\20261022T221752Z-account03-A029-child-deficit-transport\\REVIEW_A028.md",
+        "method": "Joint Fourier marginal/conditional law, scalar entropy tensorization and direct-character finite reconstruction; no repair supplied"
+      }
+    ],
+    "status": "SCOPED_INDEPENDENT_REVIEW_HOLDS_OTHER_BUNDLED_CLAUSES_UNREVIEWED",
+    "supersedes": [
+      {
+        "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+        "version": 5,
+        "reason": "Narrow mixed-history signed-JS extension; v5 conclusions retained at their original scopes"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": "Universal certification/payment of inherited source entropy and prescribed terminal-reference conversion from one unused original influence account.",
+    "next_consumers": [
+      "A026",
+      "A027",
+      "A029",
+      "A076",
+      "A087",
+      "A091",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A029-FINITE-LABEL-SIGNED-CHILD-ACCOUNT",
+    "version": 1,
+    "exact_statement": "For every finite number r of Boolean sources g_j on one shared uniform data cube X and every label map L from an independent uniform control cube Y, set F(y,x)=g_L(y)(x), pi_j=Pr(L=j), P_j(t)=ghat_j(t)^2, q=sum pi_j P_j, T=sum pi_j H(g_j), J=H(q)-T, and Lstr=H(S_Y|S_X) under the actual squared Fourier law. Then H(F)=T+J+Lstr and 0<=J<=min(H(pi),(2/ln(2))*I_controls(F)). At each DATA query the signed entropy residual after both original source decrements and signed structural variation equals Delta J; at each CONTROL query Delta J>=0. For every finite adaptive mixed physical stopping tree, sum_DATA reach*Delta J+sum_CONTROL reach*Delta J+E_leaf J=J_root. Both full terminal entropies T+J+Lstr are retained. If a SAME original supplied earmark U has an old debit b and U>=b+J_root, its unused value after those transactions is U-b-J_root+E_frontier J; after reserving complete frontier J only U-b-J_root can fund another reference conversion. A four-bit actual Boolean common-character point-defect fixture has J_root=0, first DATA debit -1, subsequent weighted DATA debit +1 and positive-part total 1, refuting clipping. Dummy-control extensions of a fixed positive-J three-label fixture show a renewed bank grows by depth while actual reserve stays J_root. No universal structural/source/reference payment or FEI conclusion is asserted.",
+    "hypotheses": [
+      "Finite uniform product cube; disjoint independent physical control and data coordinates",
+      "Arbitrary finite label map and arbitrary Boolean sources sharing any data variables; zero-probability labels retained",
+      "Physical adaptive restrictions; both actual children, signed DATA refunds, structural variation and complete source/terminal costs retained",
+      "Supplied earmark admission U>=b+J_root is a hypothesis, not a universal source certificate"
+    ],
+    "statement_sha256": "a1dbce965dc96f208072a22f42b49e3e21de81b3c42d5a3f9347ab77eb196463",
+    "contributors": [
+      "A029",
+      "A028 (binary mixed-history precursor)",
+      "A026 (balanced data-only precursor)"
+    ],
+    "proof_source": {
+      "derivation": "DERIVATION.md sections1-6",
+      "main": "out/check.json",
+      "independent": "out/independent.json",
+      "source_review": "REVIEW_A028.md"
+    },
+    "proof_dependencies": [
+      "Self-contained finite entropy-chain, tensorization, scalar two-point inequality, Parseval and finite-tree algebra reconstructed in DERIVATION.md; no FEI premise"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_INDEPENDENT_REVIEW_PENDING_NOT_LEAN_CERTIFIED",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Replace signed DATA JS transactions by their positive parts while retaining the same root bank",
+        "witness": "Common-character two-point-defect fixture: root J0, first debit-1, subsequent weighted debit+1, positive total1"
+      },
+      {
+        "statement": "Issue a fresh descendant JS allowance after every dummy physical control query",
+        "witness": "Fixed positive-J three-label fixture times d dummy controls; false allowance(d+1)J_root, actualJ_root"
+      }
+    ],
+    "first_unproved_line": "Pay Lstr, signed arbitrary source deficits and one prescribed inherited terminal-reference conversion from one genuinely unused original budget after old debits and both complete terminal promises.",
+    "next_consumers": [
+      "A028",
+      "A030",
+      "A087",
+      "A094",
+      "A096",
+      "A097"
+    ]
+  }
+]

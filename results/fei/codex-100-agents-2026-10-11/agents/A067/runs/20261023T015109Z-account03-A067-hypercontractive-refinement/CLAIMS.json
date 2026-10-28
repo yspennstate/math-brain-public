@@ -1,0 +1,82 @@
+[
+  {
+    "claim_id": "A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK",
+    "version": 1,
+    "exact_statement": "For every integer m>=2, let b_m(Y)=(-1)^(sum_j Y_(2j-1)Y_(2j)) on 2m bits, G_m(w,Y,z)=b_m(Y)+1{w=0,Y=0}(z-1), c_m=b_m-2*1{w=0,Y=0}, and delta=2^(-(2m+1)). In bits, with both actual z terminals retained, D_z=H(G_m)-(H(b_m)+H(c_m))/2=B_z+JS_z and S_2=(2I(b_m)-H(b_m)+2I(c_m)-H(c_m))/2 satisfy S_2-D_z>delta/4. In particular both terminals and G_m satisfy H<=2I. For every C>=2 the same payment holds with S_C, including any independent spectator q with available H(q)<=C I(q), retaining its full terminal entropy. No assertion about arbitrary cores or already debited ancestor banks is made.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; actual specified quadratic bent phase and marked all-zero vertex",
+      "m>=2; full core Fourier label including w; both actual terminals retained",
+      "Spectator extension requires actual unused C-certified independent spectator; no reset of an inherited bank"
+    ],
+    "statement_sha256": "c8972812430c4b66c2874a9746d9fe2f5305397434ca62d56dc42755c2c3bee1",
+    "contributors": [
+      "account03/A067; A088 credited for physical post-core obstruction family"
+    ],
+    "proof_source": "agents\\A067\\runs\\20261021T224913Z-account03-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "account03/A088",
+        "verdict": "HOLDS_AT_EXACT_CANONICAL_PHASE_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "source": "agents\\A088\\runs\\20261022T215524Z-account03-A088-booleanity-referee\\PROOF.md",
+        "validation": "agents\\A088\\runs\\20261022T215524Z-account03-A088-booleanity-referee\\out\\CHECK.json",
+        "method": "Independent integer Walsh/physical edges; separate rational logs; literal real and Boolean scope guards; no source checker imported",
+        "note": "Prior A088 family attribution is retained; no source proof repair is supplied."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A070",
+      "A094",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-EDITED-INTACT-PAIR-CONDITIONAL-SOURCE-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every integer m>=2 take canonical G_m and its actual z terminals b_m,c_m of A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK@1. On the edited z=- branch successively query one member of any intact quadratic pair, stop each outcome-1 clean exit with its full inherited reference, and continue on outcome0 for any h<=m. Let Q_t be ONLY the original c_m spectrum marginalized over these t physical coordinates, P_t the actual edited-child spectrum, A=2^-m, delta=2^(-(2m+1)),delta_t=2^t delta. P_t/Q_t is 2^t except on the cell with w unoccupied and at least one exposed partner occupied, where it is 2^t A^2/(1+A^2). Hence every next intact-pair Fourier bit has equal P_t and Q_t conditionals. Its signed CE-drop-minus-2Inf debit is <=-4delta_t; with original G reaches the cumulative debit E_Q<=-2h delta. Retaining both full children, unchanged b_m, original bank S, old z debit D, and every signed terminal CE/KL bill gives S_Q(h)-(D+E_Q)=S-D=r>delta/4. Actual entropy ledger adds the SAME full weighted terminal KL to both bank and debit. The conditional equality/nonpositive-debit conclusions are not claimed for exposed-partner or w queries, prescribed reference resets, arbitrary phases or arbitrary cores; negative inherited terminal banks are not C2 leaf certificates.",
+    "hypotheses": [
+      "Finite uniform Boolean canonical quadratic phase at the all-zero marked point; m>=2",
+      "Original full normalized Q_c is marginalized, never replaced by actual child spectrum",
+      "One physical member of each intact pair on the zero-valued edited path; all exits retained with original reaches",
+      "Signed terminal banks and complete CE/entropy/KL terms are retained without clipping or renewed source quotas"
+    ],
+    "statement_sha256": "f7d1b7a7081a210246b0a73a236a981f43d499018500bb8ce95ca2716819e3f1",
+    "contributors": [
+      "account03/A067; A088 source acceptance, clean-history and phase-scope analysis credited"
+    ],
+    "proof_source": "agents\\A067\\runs\\20261023T015109Z-account03-A067-hypercontractive-refinement\\PROOF.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK",
+        "version": 1,
+        "statement_sha256": "c8972812430c4b66c2874a9746d9fe2f5305397434ca62d56dc42755c2c3bee1",
+        "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_ANALYTIC_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered extension of conditional source equality or nonpositive selected-query debit to every remaining physical coordinate (exact occupancy guard only)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A070",
+      "A094",
+      "A066",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  }
+]

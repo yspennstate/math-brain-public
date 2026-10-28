@@ -1,0 +1,62 @@
+[
+  {
+    "claim_id": "A020-SAME-REFERENCE-ALL-PRIVATE-PREFIX-RESERVE",
+    "version": 1,
+    "exact_statement": "For every integer k>=3, on F=1 at gate0 and s*[chi_u(1-A)+chi_q A] at gate1, A=1(v=0), s the two-bit point-defect sign of mean1/2, supply Q_h=(P_h+point_{q})/2, Q_s=P_s and Q_F(e,T)=[Q_h(T_core)P_s(T_mask)+1_(T=empty)]/4. Under q followed by all k private v queries inherit only frequency marginals of this same Q_F. At every depth t after q, the full expected signed rate4 reserve is >5/4. The original half-core reserve S=2I(h_q)-CE(P_hq,(P_hq+point_empty)/2)/2 pays the exact first insertion J, its retained fresh-to-inherited conversion through J, all later marginal query charges and the positive weighted final terminal deficit, leaving >1/32 bit. Nevertheless at q=0,v_1=...=v_(k-1)=0 the nonconstant terminal has I=11/8 and CE=6+k/4-[17log2(18+d)+3log2(2+d)+4log2(2-3d)]/32>4I for k>=8, d=2^-k.",
+    "hypotheses": [
+      "Independent uniform finite physical bits; Boolean signs; base-2 entropy/CE.",
+      "The supplied root reference and query order are exactly as specified; no reference reset.",
+      "Reserve is an expectation over both physical branches, not local eligibility at each history.",
+      "This is the specified point-event family, not an arbitrary Boolean activation."
+    ],
+    "statement_sha256": "b501a090e13393d70f4be0b0769893acea0ff447291306037fffe2f3bf34d83f",
+    "contributors": [
+      "A020; fixed-reference two-query antecedent supplied by A016"
+    ],
+    "proof_source": [
+      "REPORT.md sections complete derivation 1--5",
+      "code/check.py",
+      "out/CHECK.json",
+      "out/RATIONAL_ENDPOINTS.json"
+    ],
+    "proof_dependencies": [
+      {
+        "source": "A020 stage5 20261014T062539Z",
+        "scope": "specified starting family/reference; reconstructed here"
+      },
+      {
+        "source": "A016 stage6 20261014T075009Z",
+        "scope": "frequency marginal code identity and conversion; reconstructed here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A020",
+        "kind": "author exact validation",
+        "result": "PASS 6 families / 832 assertions; analytic bounds plus exact endpoint inequalities"
+      },
+      {
+        "reviewer": "Lean helper",
+        "kind": "attempt only",
+        "result": "RUNTIME_UNVERIFIED; no certification"
+      }
+    ],
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Automatic CE<=4I eligibility of all nonconstant descendants under the specified marginal transport"
+    ],
+    "first_unproved_line": "Universal initial-reference availability and conserved source reserve for arbitrary unequal-spectrum activations remain open.",
+    "next_consumers": [
+      "A016",
+      "A018",
+      "A019",
+      "A090",
+      "A091",
+      "A092",
+      "A094",
+      "B04",
+      "B20"
+    ]
+  }
+]

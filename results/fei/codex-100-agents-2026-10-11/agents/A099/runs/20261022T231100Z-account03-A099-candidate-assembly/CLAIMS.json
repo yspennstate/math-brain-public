@@ -1,0 +1,1098 @@
+[
+  {
+    "claim_id": "B20-ERASURE-LOW-INFLUENCE-COMPLETE",
+    "version": 2,
+    "exact_statement": "For every finite-valued s:N->[0,infinity) with s(N)=o(N), let K_E(s) be the supremum B(F)/I(F) over all finite N-bit Boolean signs satisfying 0<I(F)<=2^(-s(N)), with B=sum_i H(S_i|S_-i) in bits and ordinary influence. Then K_E(s)=K_E in the extended reals. For any nonconstant seed f, h_m=z*f^(tensor m) is balanced, B(h_m)=mB(f), I(h_m)=mI(f)+1; its point activation obeys B(F_m)>=2^(-k_m)*mB(f) and I(F_m)=2^(-k_m)*(mI(f)+1+k_m), with k_m=o(m) chosen for the s-class. Consequently C_FEI<=K_E(s)+2/ln2 by C018. This is aggregate-erasure transport and does not preserve a selected coordinate witness. Finiteness of K_E(s) remains open.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; all dimensions; entropy in bits",
+      "Finite-valued s:N->[0,infinity) with s(N)=o(N)",
+      "Aggregate B, not selectable-coordinate min ratio",
+      "Suprema and equality interpreted in extended reals"
+    ],
+    "statement_sha256": "522cb5ec2ed00fe5dfb5b485ea9e77d5eceb0eb3db2dd343f8627442e65b708a",
+    "contributors": [
+      "claude-B20 (version-1 activation/tensor proof)",
+      "A099 (fresh-balancing refinement)"
+    ],
+    "proof_source": {
+      "run_id": "20261012T044129Z-account05-A099-candidate-assembly",
+      "files": [
+        "REFINEMENT_PROOF.md",
+        "CANDIDATE_MANUSCRIPT.tex",
+        "code/check_balanced_transfer.py",
+        "out/EXACT_TRANSFER.json"
+      ],
+      "locator": "Theorem thm:low; no unproved universal payment premise"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "B20-ERASURE-TENSOR-ADDITIVE",
+        "version": 1,
+        "statement_sha256": "3df667565b3d8a1811408e02376f733e9ff43176b5a3d785ff61c58ebae35fe9",
+        "usage": "source identity reproduced with fresh balancing; no independent acceptance inferred"
+      },
+      {
+        "claim_id": "B20-ACTIVATION-ERASURE-FORMULA",
+        "version": 1,
+        "statement_sha256": "474250ee4cc99312d8b12f207a9bd79517c2012e48a2dec41f1602e29666384b",
+        "usage": "source identity reproduced with fresh balancing; no independent acceptance inferred"
+      },
+      {
+        "claim_id": "C018",
+        "version": "supplement-2026-10-11",
+        "source": "math-open-problems/research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "source_sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "usage": "proved constant comparison only for the C_FEI corollary; equality of erasure suprema does not need this reduction"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A090",
+        "timestamp": "2026-10-13T21:44:46.945653+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "independent_method": "Statement-only activation coefficients; tail-supremum cutoff reserve; independent integer Walsh and Fraction/log-dictionary validation",
+        "proof_source": "agents\\A090\\runs\\20261013T213537Z-account05-A090-independent-reconstruction\\REPORT.md",
+        "validation_source": "agents\\A090\\runs\\20261013T213537Z-account05-A090-independent-reconstruction\\out\\CHECK.json",
+        "source_recorded_statement_sha256": "522cb5ec2ed00fe5dfb5b485ea9e77d5eceb0eb3db2dd343f8627442e65b708a",
+        "local_UTF8_exact_statement_sha256": "ea6312747c33f095ab6255386e917294d733c4fe3589b1afbe709a810d0a9fec",
+        "scope_guard": "Only low-influence v2 fragment accepted; integrated A097/B05 applications and universal R_ge2 payment not accepted",
+        "checkpoint_correction": "Reviewer omitted positive pure-control root slices in provisional equality; source formula is correct and needs no repair."
+      },
+      {
+        "reviewer": "A094",
+        "verdict": "PENDING"
+      }
+    ],
+    "status": "ONE_INDEPENDENT_SCOPED_ACCEPTANCE_FULL_CHAIN_AND_SECOND_AUDIT_PENDING",
+    "supersedes": [
+      {
+        "claim_id": "B20-ERASURE-LOW-INFLUENCE-COMPLETE",
+        "version": 1,
+        "scope": "strengthens valid additive estimate; preserves original source unchanged"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B20",
+      "A096",
+      "A097",
+      "A100",
+      "A090",
+      "A094",
+      "A005"
+    ]
+  },
+  {
+    "claim_id": "A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS",
+    "version": 1,
+    "exact_statement": "For every fixed integer ell>=2 and every finite-valued s:N->[0,infinity) with s(N)=o(N), define R_geell(F)=sum_i sum_(T subset [N] minus {i}, |T|>=ell) phi(Fhat(T)^2,Fhat(T union {i})^2), where phi(x,y)=(x+y)h2(y/(x+y)) in bits with continuous zero conventions. The supremum K_geell(s) of R_geell(F)/I(F) over all finite N-bit Boolean signs with 0<I(F)<=2^-s(N) equals K_E=sup_(all finite nonconstant Boolean f) B(f)/I(f), in the extended reals. For every actual seed f and integers m,k>=1, let h=chi_Z*f^tensor(m) on ell fresh parity bits, F=1+A_k(h-1), q=2^-k, with all blocks disjoint. Then B_data(F)=qmB(f), I(F)=q(mI(f)+ell+k), R_geell(F)=qmB(f)+kq+2kq^2 sum_(r=ell..k-1) binom(k-1,r), and R_ge2(F)=qmB(f)+2kq(1-kq). Each parity coordinate z has B_z(F)=0 and Inf_z(F)=q>0, so min_(i relevant) B_i(F)/Inf_i(F)=0. No finiteness of K_E or selected-witness transport is asserted.",
+    "hypotheses": [
+      "Uniform finite physical cube; actual Boolean signs; normalized Fourier coefficients",
+      "Bits, ordinary influence, continuous zero conventions",
+      "ell>=2 fixed; m,k positive; all blocks disjoint",
+      "Finite-valued nonnegative s(N)=o(N), not necessarily monotone",
+      "Ratio-limit seed is nonconstant"
+    ],
+    "statement_sha256": "d9386e23e2a5c761555757d617c1309fdc64ccd1ca705dcdbd9723b3ad4be0f7",
+    "contributors": [
+      "A090"
+    ],
+    "proof_source": {
+      "path": "agents\\A090\\runs\\20261013T213537Z-account05-A090-independent-reconstruction\\REPORT.md",
+      "locators": [
+        "equations (8)-(14)",
+        "PARITY_TAIL_PROOF.tex"
+      ],
+      "checker": "code/check_transfer.py",
+      "output": "out/CHECK.json",
+      "attribution": "B20/A099 tensor-activation interface; new exact remaining-layer transport derived by A090."
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A096",
+        "timestamp": "2026-10-13T22:12:43.498688+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Derivative likelihood-ratio product reconstruction plus direct occupied-edge counts, cutoff quantifiers and independent integer FWHT/prime-log checker",
+        "proof_source": "agents\\A096\\runs\\20261013T220343Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+        "validation_source": "agents\\A096\\runs\\20261013T220343Z-account05-A096-live-gap-ledger\\out\\CHECK.json",
+        "scope": "Full finite B-tail formulas, all fixed ell>=2/sublinear cutoffs and zero-erasure relevant parity coordinates; no payment theorem",
+        "source_claims_sha256": "c4eac406a5f775b8fa93a9e1fbfc981ea15f567527f75c14cfa75bd800ba765e",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A099",
+        "timestamp": "2026-10-14T00:37:06.286373+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct physical truth-table character sums, rational prime-log cancellation, and complete analytic reconstruction of occupied edge and likelihood-ratio cases",
+        "proof_source": "agents\\A099\\runs\\20261014T001305Z-account05-A099-candidate-assembly\\CANDIDATE_MANUSCRIPT.tex",
+        "validation_source": "agents\\A099\\runs\\20261014T001305Z-account05-A099-candidate-assembly\\out\\EXACT_AUDIT.json",
+        "scope": "Full all-fixed-tail and arbitrary sublinear cutoff theorem; no finite universal payment or whole assembly acceptance",
+        "reviewer_contributed_repair": false,
+        "source_statement_sha256": "d9386e23e2a5c761555757d617c1309fdc64ccd1ca705dcdbd9723b3ad4be0f7"
+      }
+    ],
+    "status": "TWO_INDEPENDENT_SCOPED_ACCEPTANCES_A096_A099",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A099",
+      "A096",
+      "A064",
+      "A005",
+      "A089",
+      "A094",
+      "A085",
+      "B18",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-TERMINAL-KL-REFUND-AUDIT",
+    "version": 1,
+    "exact_statement": "For every finite Boolean seed f, every m,k>=1 and ell>=2 on disjoint uniform blocks, let h=chi_Z product_b f_b, J=mI(f)+ell, F=1+A_k(h-1), q=2^-k, d=(1-q)^2+q^2. For each relevant coordinate use mu_i(T)=p_(T+i)/Inf_i and r_i(T)=p_T+p_(T+i); both normalize to one. Let M=sum_i Inf_i[log2(1/Inf_i)-D(mu_i||r_i)] and D_f be the KL divergence of the normalized joint derivative/reference laws, with I(f)D_f=0 for constants. Original core-coordinate divergences obey D_i(F)=D_i(h)+k, D_i(h)=D_i(f) on seed blocks and D_i(h)=0 on parity bits. Every control divergence is D_c=(1-q)(k-1)+q log2(q/d). Consequently I(F)=q(J+k), I(F)D_F=q[mI(f)D_f+kJ+kD_c], M(F)=qmM(f)+k[q(1-q)+q^2 log2(d/q^2)], and M_ge2(F)=qmM(f)+kq(1-kq). For every fixed ell>=2 and finite nonnegative s(N)=o(N), the supremum of M_geell/I over 0<I<=2^-s(N) equals the unrestricted supremum K_M in the extended reals. No finiteness of K_M, universal refund payment or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs, normalized Fourier spectrum and ordinary physical influence",
+      "Uniform finite disjoint blocks; m,k>=1 and ell>=2; entropy/KL in bits",
+      "Zero terms by continuity; irrelevant coordinates omitted; constants treated by I D=0 convention",
+      "Sublinear cutoff finite nonnegative, not required monotone"
+    ],
+    "statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "agents\\A096\\runs\\20261013T220343Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Equations (2)-(6) and low-influence refund completeness"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A099",
+        "timestamp": "2026-10-14T00:37:06.286373+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent_method": "Direct physical truth-table character sums, rational prime-log cancellation, and complete analytic reconstruction of occupied edge and likelihood-ratio cases",
+        "proof_source": "agents\\A099\\runs\\20261014T001305Z-account05-A099-candidate-assembly\\CANDIDATE_MANUSCRIPT.tex",
+        "validation_source": "agents\\A099\\runs\\20261014T001305Z-account05-A099-candidate-assembly\\out\\EXACT_AUDIT.json",
+        "scope": "Complete normalized row/joint formulas, oriented tail and cutoff suprema; no terminal-core lower bound",
+        "reviewer_contributed_repair": false,
+        "source_statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce"
+      },
+      {
+        "reviewer": "A073",
+        "timestamp": "2026-10-13T23:51:48.476724+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent complete probability-channel/likelihood-ratio reconstruction and cutoff proof; direct normalized joint Q construction, truth-table Walsh and physical edge verification, prime-log cancellation; support-conditioning mutation",
+        "source": "agents\\A073\\runs\\20261013T234148Z-account05-A073-certified-logarithms\\REFUND_REVIEW.md",
+        "validation": "agents\\A073\\runs\\20261013T234148Z-account05-A073-certified-logarithms\\out\\REFUND_SUMMARY.json",
+        "scope": "All stated finite transport formulas and sublinear-cutoff equality in extended reals; no finite K_M or universal payment",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A001/account05",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "Every finite Boolean seed including constants; finite tensor/parity/point activation, complete row and joint KL, all listed finite formulas, every fixed ell>=2 and finite nonnegative sublinear cutoff including nonmonotone cutoffs. No universal payment theorem accepted.",
+        "method": "Independent complete-row likelihood-ratio and KL chain reconstruction; separately implemented direct physical flips/integer Walsh and exact prime-log identity checker; explicit cutoff-tail quantifier proof",
+        "proof_source": "agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\REPORT.md",
+        "locator": "complete derivation section 1",
+        "validation_source": "agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\out\\REVIEW.json",
+        "source_statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "MULTIPLE_INDEPENDENT_FULL_SCOPED_ACCEPTANCES_A099_A073_A001_NO_UNIVERSAL_PAYMENT",
+    "supersedes": [],
+    "refutes": [
+      "Activation rarity cancellation alone supplies a universal terminal-core retained-KL payment"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A098",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+    "version": 1,
+    "exact_statement": "For all Boolean G(s,X),H(s,Y) with one shared fair physical bit s, disjoint private uniform blocks X,Y and a fresh fair selector z, and normalized complete finite-cost references R_G,R_H, calibrate each reference separately on the two atoms empty and {s} to the true Fourier probabilities and rescale its complement. Costs c_G^c,c_H^c do not increase; the exact decrease is the categorical KL of those two atoms and the complement. The normalized compatible reference Q=rK, r=(R_G^c+R_H^c)/2 and K the actual conditional selector spectrum with a fixed normalized kernel on zero true fibers, has zero posterior mismatch kappa and D(P_F||Q)=[D(P_G||R_G^c)+D(P_H||R_H^c)]/2. Its complete cost is CE_F=(c_G^c+c_H^c)/2+Delta<=(c_G^c+c_H^c)/2+(2+4/ln2)Inf_z(F), where F=(G+H)/2+z(G-H)/2, Delta=B_z+J_z and I(F)=[I(G)+I(H)]/2+Inf_z(F), including s only through its actual averaged influence. Thus supplied child bounds transfer with constant max(K_G,K_H,2+4/ln2). For a t-bit shared block the same constant holds if both conditional-mean Fourier vectors have l1 norm <=1; without that hypothesis a proved coefficient is 2+(2*2^(t/2)+2)/ln2. No absolute selector-only coefficient holds for unrestricted sharing: selecting the even-k quadratic bent sign and its actual singleton flip has Inf_z=2^-k and Delta/Inf_z>=k-log2(16/9) for every even k>=4. This is a scoped reference transfer and an actual Boolean obstruction to its unrestricted selector-only extension, not a disproof of FEI.",
+    "hypotheses": [
+      "Boolean signs on finite uniform physical cubes; one shared bit, private blocks disjoint, selector fresh; private blocks may be empty",
+      "Normalized complete references fixed before the spectral sample, positive on true supports and with finite cross entropy",
+      "Both collision atoms calibrated separately; all complement normalizers and complete calibrated seed costs retained",
+      "All information units bits, ordinary total physical influence; ideal costs with separate integer-word rounding",
+      "Larger shared-block extension uses the expressly stated l1 admission or the dimension-dependent coefficient; no repeated allocation of selector or shared data influence"
+    ],
+    "statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+    "contributors": [
+      "A097"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222610Z-account05-A097-cross-route-transfer",
+      "files": [
+        "REPORT.md",
+        "DERIVATION.md",
+        "BOUNDARY.md",
+        "TRANSFER_HYPOTHESIS_CHECK.json",
+        "code/check.py",
+        "code/check_boundary.py",
+        "out/EXACT_RESULTS.json",
+        "out/BOUNDARY_RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-COMPATIBLE-LEAF-REFERENCE-TRANSFER",
+        "version": 1,
+        "statement_sha256": "408ea90dea600f4f8f1b9ffa66c29e34cc87a87a518ec3f87273d2905bef9246",
+        "source": "agents\\A097\\runs\\20261011T221240Z-account05-A097-cross-route-transfer\\CLAIMS.json",
+        "status": "Prior theorem; one-node KL identity reconstructed directly here"
+      },
+      {
+        "claim_id": "A086-DISJOINT-SELECTOR-PRESCRIBED-REFERENCE",
+        "version": 1,
+        "statement_sha256": "4ca5e14de151b95b20b31bb43aa71189213ec529966dd1342424bb5961b7e8b3",
+        "source": "agents\\A086\\runs\\20261013T220217Z-account05-A086-joint-code-referee\\CLAIMS.json",
+        "status": "Author-proved pending review; collision packet and scalar JS lemmas independently reconstructed here, no full claim acceptance assumed"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A094/account05/B19",
+        "at": "2026-10-14T00:39:56.030043+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "scope": "Entire exact statement: one-bit transfer, categorical calibration, retained full seed KL, l1-admitted larger block and dimension-dependent fallback, actual Boolean bent/flip boundary. No universal seed/reference cost inferred.",
+        "method": "Independent complete signed-coefficient/KL/physical-edge reconstruction and separate exact implementation; no author checker imported",
+        "source": "agents\\A094\\runs\\20261014T001244Z-account05-A094-proof-chain-challenger\\AUDIT.md",
+        "validation": "agents\\A094\\runs\\20261014T001244Z-account05-A094-proof-chain-challenger\\out\\EXACT_RESULTS.json",
+        "source_claims_path": "agents\\A097\\runs\\20261013T222610Z-account05-A097-cross-route-transfer\\CLAIMS.json",
+        "source_claims_sha256": "a7e602279e1f3fff6e0c2efa76287a9a749692f53af18a4c9e5d500c34d3dd1f",
+        "substantive_repair_supplied": false,
+        "contributor_conflict": false,
+        "declared_statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+        "plain_statement_sha256": "a0b36345e9b8eb02731703c849109a548a1738428547c88e303ece41c8419b3b",
+        "canonical_statement_hypotheses_sha256": "3bfe75e51c66a9c77b76ea9b31690b1724e93d91959a83df8672600ec1316435",
+        "known_hash_form_match": true
+      }
+    ],
+    "status": "ONE_INDEPENDENT_FULL_SCOPED_ACCEPTANCE_A094_SECOND_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A094",
+      "A011",
+      "A012",
+      "A095",
+      "A039",
+      "A064",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A095-RANK-KL-EQUIVALENCE",
+    "version": 3,
+    "exact_statement": "For every Boolean f and every order sigma, normalize Q_(sigma,k)(S)=prod_{i in positions_sigma(S)}i^(-2)/Z_(n,k), set beta_(n,k)=ln(Z_(n,k)(k!)^2), D_sigma=sum_k P(|S|=k)D_nat(P(S||S|=k)||Q_(sigma,k)), and T_sigma=2R_sigma-D_sigma. Then (ln2)H(f)=H_nat(|S|)+T_sigma+E beta, with 0<=beta_(n,k)<=k ln(pi^2/4). If K_T=sup_nonconstant_f min_sigma T_sigma/I(f) and C_FEI=sup H/I, then K_T/ln2<=C_FEI<=log2(4+e)+log2(pi^2/4)+K_T/ln2 in the extended real sense. Thus K_T finite iff uniform-cube FEI holds. Concrete paid application: for any Boolean g with known bias mu and supplied normalized core reference R positive on its spectrum, empty calibration to R0(empty)=mu^2 is CE-nonincreasing. For r>=1,p=2^-r,F=1+A_r(g-1), the full reference Q(vac)=[1-p(1-mu)]^2, Q(U!=empty,T=empty)=p^2(1-mu)^2, Q(U,T!=empty)=p^2 R0(T) is normalized and has CE_F-H(F)=p D(P_g||R0) and CE_F<=p CE_g_cal+6rp(1-mu). For g=q product_j(1-2 A_(L_j)) on disjoint private blocks and a supplied terminal reference, its fixed occupied-block/uniform-nonempty-subset reference gives CE_F<=p CE_q_cal+4p sum_j I(h_j)+6rp(1-mu_g), with I(F)=p[I(q)+sum_j I(h_j)+r(1-mu_g)]. Thus a terminal cost <=C I(q) yields full cost <=max(C,6)I(F); q=1 yields CE<=6I uniformly in r, widths and number of blocks. For r=0,q=1 the same block reference has CE=H<4I. No universal terminal reference bound or incompatible shared-control extension is claimed. Further complete-reference application: for every integer t>=2, Boolean children G(s,X), H(s,Y) sharing a uniform t-bit block s with disjoint arbitrary private cubes, fresh selector z and F=(G+H)/2+z(G-H)/2, put d=Inf_z(F), d*=min(d,1-d). Shared-collision minority mass delta obeys delta<=min(d*,2^t d*^2) and B_C<=h2(delta). Consequently Delta=H(F)-(H(G)+H(H))/2 <= (t+2+3/ln2)d*. Every supplied normalized finite-cost positive-support child reference can be calibrated at all shared-only atoms, decreasing CE by exact categorical KL; their lifted single normalized full-output reference Q retains exact debt D(P_F||Q)=(D(P_G||R_Gc)+D(P_H||R_Hc))/2 and CE_F<=(c_Gc+c_Hc)/2+(t+2+3/ln2)d*. I(F)=(I(G)+I(H))/2+d, counting shared physical bits once. Given supplied child CE bounds K_G I(G), K_H I(H), this closes CE_F<=max(K_G,K_H,t+2+3/ln2)I(F). If kappa_t=sup Delta/d* over all such children and private dimensions with 0<d*<=1/2, then t-1-log2(16/9)<=kappa_t<=t+2+3/ln2 for t>=4, and kappa_t/t tends to 1. These dimension-dependent transfers do not give an absolute selector-only coefficient, a universal arbitrary-terminal reference, or a full FEI bound.",
+    "hypotheses": [
+      "Boolean sign function",
+      "uniform measure",
+      "H in bits, D and beta in nats",
+      "zero-mass levels omitted",
+      "k=0 reference assigns mass one to empty set",
+      "References normalized and positive on actual support",
+      "Earlier activation application only: Shared controls form one common signed conjunction; all remaining private blocks and terminal cube are disjoint",
+      "Bias is fixed known instance data; references chosen before spectral sampling",
+      "Ideal negative-log probability costs; no optional binary prefix-rounding bit included",
+      "The new selector application uses t>=2 arbitrary shared uniform bits and disjoint private cubes; it does not use the common-spine hypothesis of the earlier activation application",
+      "d*=min(d,1-d) is justified by sign folding; child spectra and all entropy costs are preserved",
+      "All references are calibrated and fixed before spectral sampling; complete off-target reference mass retained"
+    ],
+    "statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+    "contributors": [
+      "A095; A097/A086 collision-calibration transfer and bent-flip lower witness credited as prior inputs"
+    ],
+    "proof_source": {
+      "original_equivalence": "agents\\A095\\runs\\20261011T231526Z-account05-A095-restricted-result-extraction\\REPORT.md",
+      "retained_v2": "agents\\A095\\runs\\20261013T213857Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "new_linear_tax_and_sharpness": "agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\DERIVATION.md",
+      "validation": "agents\\A095\\runs\\20261014T010024Z-account05-A095-restricted-result-extraction\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 2,
+        "status": "Earlier exact equivalence and paid applications retained unchanged; author-proved with independent review pending"
+      },
+      {
+        "claim_id": "A097-ONE-SHARED-DATA-COLLISION-TRANSFER",
+        "version": 1,
+        "status": "Calibration identity and bent-flip witness reconstructed from cited DERIVATION and BOUNDARY; independently accepted by A094 stage 3 at full stated scope; larger-block exponential bound replaced only as an upper estimate, not refuted"
+      },
+      "Elementary Parseval, signed selector expansion, Jensen for binary entropy, scalar JS inequality, and all-parameter calculus in current DERIVATION"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A099",
+        "timestamp": "2026-10-14T03:30:17.674181+00:00",
+        "verdict": "ACCEPT_NEW_SHARED_SELECTOR_APPLICATION_ONLY",
+        "scope": "Version-3 shared-block minority cap, all t>=2 linear Delta tax, normalized calibrated reference with full seed KL, physical influence accounting, and sharp leading coefficient. Earlier bundled rank equivalence and activation applications not independently accepted by this record.",
+        "method": "Independent signed direct-character/physical-edge and calibrated-channel reconstruction; full all-parameter Jensen/calculus proof; own rational natural-log enclosure and prime-log checker, no author code imports",
+        "proof_source": "agents\\A099\\runs\\20261014T031358Z-account05-A099-candidate-assembly\\CANDIDATE_MANUSCRIPT.tex",
+        "locator": "thm:lineartax",
+        "validation_source": "agents\\A099\\runs\\20261014T031358Z-account05-A099-candidate-assembly\\out\\EXACT_REVIEW.json",
+        "source_statement_sha256": "0e0f8156b244b72893f9cdd56d20be4257ff2cceb04252dc0805766411a2c4cb",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "NEW_SHARED_SELECTOR_APPLICATION_SLICE_INDEPENDENTLY_ACCEPTED_BY_A099_OLDER_BUNDLED_CLAUSES_UNAUDITED",
+    "supersedes": [
+      {
+        "claim_id": "A095-RANK-KL-EQUIVALENCE",
+        "version": 2,
+        "scope": "Prior statements retained; same C020 candidate extended with a linear all-overlap paid-reference application and sharp asymptotic tax"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A097",
+      "A086",
+      "A085",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+    "version": 1,
+    "exact_statement": "For every even integer d>=2, put delta=2^-d, t=2^(-d/2), b(y)=(-1)^(sum_j y_(2j-1)y_(2j)) on 0/1 labels, q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). Every Fourier atom of F_d is positive. Each query i in {u,v} has e_i=delta/2 and positive true erasure. Retaining only the other pair coordinate gives complete derivative/reference laws (1/2,1/2) and (1-e_i,e_i). With N_+=(2^d+2^(d/2))/2,N_-=(2^d-2^(d/2))/2 and D0=sum_sigma N_sigma delta log2[(1-delta/2)/(1-sigma t+delta/2)], the full KL equals binary KL plus D0/2 and the influence-weighted quotient loss is L_i=e_i D0/2. Uniformly 0<L_i/e_i<=log2(7/5)/2<1/4-1/256, certified by 7^128<2^63*5^128. The two losses together are <delta/4 and <Inf_(y1)/10 if that physical reserve is dedicated only to these losses. Nevertheless M_i/e_i>d/2+3/4. Each core influence equals (1+delta)/2, I(F_d)=d/2+(d/2+1)delta, and H(F_d)/I(F_d)<=2+4/d<=4. No universal conditional partition, terminal payment, or FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual uniform-cube Boolean signs; entropy and KL in bits; ordinary physical flip influence",
+      "Even d>=2, the specified quadratic bent core and two-bit gate on disjoint physical coordinates",
+      "Complete normalized reference laws including derivative-free mass; no reference conditioning on derivative support",
+      "Dedicated reserve inequality is only a partial ledger for the two stated quotient losses; no other charges or free global reserve are asserted"
+    ],
+    "statement_sha256": "cad6427336999a42e9519d546b6a1d38f42934ea5fe34a4270bfd2accd1a18ed",
+    "contributors": [
+      "A073"
+    ],
+    "proof_source": {
+      "path": "agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\DERIVATION.md",
+      "locator": "Nonzero-erasure Boolean boundary family; Certified logarithms",
+      "validation": [
+        "agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\SUMMARY.json",
+        "agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\UNIFORM_MARGIN.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A098",
+        "timestamp": "2026-10-14T02:53:46.097172+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Every clause of A073-NONZERO-ERASURE-BINARY-REMAINDER@1 for all even d>=2, including the dedicated remainder-only reserve, positive erasure, retained large row price and bounded H/I; no universal partition or free terminal bank.",
+        "method": "Independent signed character and full conditional-channel reconstruction; own exact Walsh versus analytic amplitudes and physical flips; complete KL prime-log cancellation, fixed rational log enclosures and integer margin",
+        "proof_source": "agents\\A098\\runs\\20261014T024504Z-account05-A098-resource-reallocation\\DERIVATION.md",
+        "validation_source": "agents\\A098\\runs\\20261014T024504Z-account05-A098-resource-reallocation\\out\\REVIEW_CHECK.json",
+        "source_statement_sha256": "cad6427336999a42e9519d546b6a1d38f42934ea5fe34a4270bfd2accd1a18ed",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "TWO_INDEPENDENT_FULL_SCOPED_ACCEPTANCES_A098_A100_REMAINDER_ONLY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A001",
+      "A085",
+      "A099",
+      "B15",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-SINGLE-SPECTATOR-REFUND-OWNERSHIP",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign f with masses p_S and influences e_i, let F_J replace each physical coordinate i in J by a disjoint pair parity u_i v_i. Then H(F_J)=H(f), I(F_J)=I(f)+sum_J e_i and M(F_J)=M(f)-sum_J M_i(f), where M_i=e_i[log2(1/e_i)-D(mu_i||r_i)] with complete normalized row laws mu_i(T)=p_(T+i)/e_i,r_i(T)=p_T+p_(T+i). Each duplicated row u_i or v_i has zero M and zero erasure. Marginalizing only its partner occupancy loses exactly M_i(f) of influence-weighted KL. In contrast retaining only that partner gives laws mu=(0,1),r=(1-e_i,e_i), preserves the complete KL log2(1/e_i) and loses zero refund. Independent common spectator factors can be discarded with zero loss in this binary quotient. All-pair deletion loss divided by total physical influence equals M(f)/I(f) if J is all coordinates. For every even d>=2 an actual witness G(u,v,y)=g(uv,y), g(s,y)=b(y)-1_{y=0}+s 1_{y=0}, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), has Inf_u=Inf_v=delta=2^-d, I(G)=d/2+(d+2)delta, H(G)/I(G)<=3, and each partner-deletion loss lies in [delta(d-1),delta d]. The reference partner and core are genuinely correlated. Thus no fixed local influence allowance using only the queried/erased pair pays this loss, even though the opposite binary quotient retains it exactly. No universal terminal-core payment or FEI disproof is asserted.",
+    "hypotheses": [
+      "Actual finite Boolean signs on the uniform physical cube; bits and ordinary flip influence",
+      "Disjoint two-bit parity substitutions, with no assertion of influence invariance under general linear changes",
+      "Complete reference probabilities retained, including derivative-free mass; irrelevant rows omitted",
+      "Bent witness even d>=2; y uses 0/1 labels of the uniform cube"
+    ],
+    "statement_sha256": "b1fdd3c722b48b9315633eaf31719222d0612f0a5fb4be763df2879c1a455fc9",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "agents\\A096\\runs\\20261014T013836Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Sections 2-4, equations (2)-(7) and binary repair",
+      "validation": "agents\\A096\\runs\\20261014T013836Z-account05-A096-live-gap-ledger\\out\\CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "timestamp": "2026-10-14T02:44:22.546136+00:00",
+        "verdict": "ACCEPT_AT_FULL_STATED_SCOPE_NO_REPAIR",
+        "method": "Independent character embedding and complete conditional likelihood reconstruction; own integer Walsh/physical flip/full joint KL checker; all labeled n<=2 and selected n3 subsets plus bent witnesses",
+        "proof_source": "agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\DERIVATION.md",
+        "locator": "Independent reconstruction section",
+        "validation_source": "agents\\A073\\runs\\20261014T023508Z-account05-A073-certified-logarithms\\out\\SUMMARY.json",
+        "reviewer_contributed_repair": false,
+        "scope": "Original parity-substitution identities, exact binary sufficiency, all-even-d unbounded local deletion and bounded H/I witness. No universal payment theorem."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_STATED_SCOPE_BY_A073_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "For all actual Boolean rows, deleting a single physical spectator has KL refund loss <=K(Inf_query+Inf_spectator) for one finite absolute K"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A085",
+      "A099",
+      "A097",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A001-BOUNDED-DEGREE-REFUND-LOSS",
+    "version": 1,
+    "exact_statement": "For every fixed integer L>=0, let C_L retain each residual Fourier subset T with |T|<=L separately and merge all |T|>L into one tail. On a finite uniform Boolean cube define mu_i(T)=p_(T+i)/e_i, r_i(T)=p_T+p_(T+i), D_i^L=D(C_L mu_i||C_L r_i) and M^L=sum_i e_i[log2(1/e_i)-D_i^L], omitting irrelevant coordinates. For n>=max(6,2L+2), let f_n be the n-bit one-point defect, e=2^(1-n), m=2^floor(n/2), and G_n=f_n^tensor(m). Every Fourier coefficient of G_n is nonzero and every physical influence equals e, so I(G_n)=mn e tends to zero. Its genuine H/I<4 and M/I<=2, but M^L/I>=floor(n/2)-2-beta(n-1), beta=e sum_(j=0..L)binom(n-1,j), which diverges. The exact lost refund is M^L-M=sum_i e_i mu_i(tail)D(mu_i(.|tail)||r_i(.|tail)), and therefore its ratio is at least floor(n/2)-4-beta(n-1). No auxiliary parity or dummy coordinates are used. This refutes a universal payment using fixed low-degree atom inspection and one undifferentiated normalized tail, or weaker partitions, not the complete row KL, adaptive or structurally refined tail references, or FEI.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes, standard physical flip influence",
+      "Entropy and KL in bits; continuous zero conventions; relevant rows only",
+      "L fixed independently of n; n>=max(6,2L+2)",
+      "Complete mu_i and r_i probability laws are coarsened without conditioning on derivative support",
+      "Tensor factors use disjoint physical blocks; one-point sign is -1 at one point and +1 elsewhere"
+    ],
+    "statement_sha256": "9cf5cfc2fad8eff6d67e4878052a1dc9b9131d6aabe489a084dbfb604700a833",
+    "contributors": [
+      "A001"
+    ],
+    "proof_source": {
+      "path": "agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\REPORT.md",
+      "locator": "complete derivation sections 2-3",
+      "immediate_derivation": "agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\DERIVATION.md",
+      "validation": "agents\\A001\\runs\\20261014T011101Z-account05-A001-quantifier-audit\\out\\TENSOR.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_NORMALIZED_REFERENCE_OBSTRUCTION_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "For some fixed degree L, replacing complete retained KL by individually inspected low-degree atoms and one normalized tail gives M^L<=K I for all Boolean signs, even full-support signs of vanishing total influence"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A073",
+      "A099",
+      "A098",
+      "A031",
+      "A033",
+      "A086",
+      "A094",
+      "B01",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=1, let g=1-2 A_a on n=a+b data bits with b dummies, edit any full negative data point under r fresh uniform point controls, F=g+2 A_r D_n, and supply a normalized data reference R positive on source support with finite cost c. Put s=2^-a,t=2^-n,p=2^-r,rho=4pt,lambda=2p*2^-b,mu=1-2s; let R0 be the CE-nonincreasing empty calibration to mu^2. The actual data marginal is q=(1-lambda)P_g+lambda*mu*delta_empty+rho*U_n. The positive normalized floor Rprime=(1-lambda)R0+lambda*mu*delta_empty+rho*U_n and actual conditional control kernel give a complete normalized Q. Its exact residual KL is (1-lambda)D(P_g||R0)-kappa, where kappa is the measured posterior KL of this same three-component true/reference mixture. Exact physical charges are I_g=2as,C=2ptb,E=2pta,J=2rpt and I_F=I_g+C-E+J. The full ideal cost satisfies CE_F<=c+10(C+E+J). For any K>=10, K I_F-CE_F>=S_K+(K-10)C-(K+10)E+(K-10)J with S_K=K I_g-c. Since E<=I_g/2, a certified supplied source cost c<=C0 I_g yields CE_F<=(2C0+10)I_F, spending that source bank once. The structural source R=P_g obeys c<4I_g and hence yields complete CE_F<=18I_F. An independent arbitrary Boolean terminal h with full supplied R_h retains exact tensor CE=c_h+CE_F, KL=D_h+(1-lambda)D_gcal-kappa, and additive influence; conditional c_h<=C_h I_h yields max(C_h,2C0+10) total payment. This is a prescribed-reference/erased-edge transfer on a known read-once Boolean class, not a new FEI class claim, arbitrary-core floor theorem, or hereditary incoming-reference transport.",
+    "hypotheses": [
+      "Uniform physical cubes; a>=1 active negative point-defect bits,b>=0 dummies,r>=1 fresh point controls",
+      "Edit a full data point inside the negative cell; positive-cell orientations and arbitrary three-amplitude spectra are excluded",
+      "Supplied reference normalized and finite-cost positive on source support; off-source zeros permitted and covered by uniform floor",
+      "Empty calibration retains its exact binary-KL savings and conditional source law; mixture labels analytical, not physical fair-child histories",
+      "All costs bits and ideal CE; single-output integer rounding remains separate",
+      "Source bound c<=C0 I_g and arbitrary terminal influence bound are conditional inputs; no independently reused child surplus assumed"
+    ],
+    "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+    "contributors": [
+      "A097; prior floor identity inputs A086/A011 credited in proof sources"
+    ],
+    "proof_source": {
+      "run_id": "20261014T050248Z-account05-A097-cross-route-transfer",
+      "files": [
+        "REPORT.md",
+        "DERIVATION.md",
+        "TRANSFER_HYPOTHESIS_CHECK.json",
+        "out/FROZEN_SPEC.json",
+        "code/check.py",
+        "out/VALIDATION_TOTALS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A086-UNEQUAL-AMPLITUDE-NEUTRAL-POINT-FLOOR",
+        "version": 1,
+        "statement_sha256": "13476c5099269b42bb53fab196bc31bc63fb33668a154b6505cca0cd71b17c35",
+        "source": "agents\\A086\\runs\\20261014T042208Z-account05-A086-joint-code-referee\\CLAIMS.json",
+        "status": "Author-proved pending independent review; actual mixture identity generalized and reconstructed locally; normalized/empty-calibrated references here, no blanket acceptance of the subprobability72-tax clause"
+      },
+      {
+        "claim_id": "A011-POINT-EDIT-PAID-REFERENCE-FLOOR",
+        "version": 1,
+        "statement_sha256": "0d76a3540b8d17149bbfeace28c72070205f730791bfecff9ad3ece9290742b4",
+        "source": "agents\\A011\\runs\\20261014T035454Z-account05-A011-representation-existence\\CLAIMS.json",
+        "status": "Fully independently reconstructed by A086; one-active-bit parity identity and complete6-charge bound rederived locally, allowing off-source reference zeros covered by the positive floor"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A098",
+        "timestamp": "2026-10-14T05:51:43.047133+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "scope": "Full original A097 negative-cell supplied-reference theorem for all a>=1,b>=0,r>=1; same-mixture complete KL, CE<=c+10(C+E+J), erased-edge source rate2C0+10, structural18 and arbitrary independent terminal debt. No hereditary reset or broader A086 theorem accepted.",
+        "method": "Independent vacuum/sector conditional-reference proof and physical edge reconstruction; own integer Walsh, complete conditional kernel, augmented posterior prime-log cancellations and fixed rational logarithm certificate",
+        "proof_source": "agents\\A098\\runs\\20261014T054007Z-account05-A098-resource-reallocation\\DERIVATION.md",
+        "validation_source": [
+          "agents\\A098\\runs\\20261014T054007Z-account05-A098-resource-reallocation\\out\\FLOOR_CHECK.json",
+          "agents\\A098\\runs\\20261014T054007Z-account05-A098-resource-reallocation\\out\\TENSOR_CHECK.json"
+        ],
+        "source_statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A099",
+        "timestamp": "2026-10-14T06:32:35.400079+00:00",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "For every a>=1,b>=0,r>=1, let g=1-2 A_a on n=a+b data bits with b dummies, edit any full negative data point under r fresh uniform point controls, F=g+2 A_r D_n, and supply a normalized data reference R positive on source support with finite cost c. Put s=2^-a,t=2^-n,p=2^-r,rho=4pt,lambda=2p*2^-b,mu=1-2s; let R0 be the CE-nonincreasing empty calibration to mu^2. The actual data marginal is q=(1-lambda)P_g+lambda*mu*delta_empty+rho*U_n. The positive normalized floor Rprime=(1-lambda)R0+lambda*mu*delta_empty+rho*U_n and actual conditional control kernel give a complete normalized Q. Its exact residual KL is (1-lambda)D(P_g||R0)-kappa, where kappa is the measured posterior KL of this same three-component true/reference mixture. Exact physical charges are I_g=2as,C=2ptb,E=2pta,J=2rpt and I_F=I_g+C-E+J. The full ideal cost satisfies CE_F<=c+10(C+E+J). For any K>=10, K I_F-CE_F>=S_K+(K-10)C-(K+10)E+(K-10)J with S_K=K I_g-c. Since E<=I_g/2, a certified supplied source cost c<=C0 I_g yields CE_F<=(2C0+10)I_F, spending that source bank once. The structural source R=P_g obeys c<4I_g and hence yields complete CE_F<=18I_F. An independent arbitrary Boolean terminal h with full supplied R_h retains exact tensor CE=c_h+CE_F, KL=D_h+(1-lambda)D_gcal-kappa, and additive influence; conditional c_h<=C_h I_h yields max(C_h,2C0+10) total payment. This is a prescribed-reference/erased-edge transfer on a known read-once Boolean class, not a new FEI class claim, arbitrary-core floor theorem, or hereditary incoming-reference transport.",
+        "proof_source": "agents\\A099\\runs\\20261014T061720Z-account05-A099-candidate-assembly\\CANDIDATE_MANUSCRIPT.tex",
+        "locator": "thm:floor",
+        "method": "Independent all-parameter complete-reference and one-bank proof, direct signed-character/physical-edge Fraction reconstruction and prime-log identities; product-terminal clause analytically reconstructed",
+        "validation_source": "agents\\A099\\runs\\20261014T061720Z-account05-A099-candidate-assembly\\out\\EXACT_FLOOR.json",
+        "source_statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "TWO_INDEPENDENT_FULL_SCOPED_ACCEPTANCES_A098_A099_HEREDITARY_TRANSPORT_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A086",
+      "A011",
+      "A094",
+      "A095",
+      "A039",
+      "A064",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-NONFLAT-POINT-QUOTIENT-REMAINDER",
+    "version": 1,
+    "exact_statement": "Let d,r>=1, delta=2^-d, b be any Boolean sign on d uniform bits with b(0)=1, c=b-2*1_0, and g any Boolean gate on r disjoint uniform bits with a_V=hat g(V). Put F=b+1_0(g-1), I_X=delta I(g), I_Y=((1+a_empty)I(b)+(1-a_empty)I(c))/2. For each relevant gate query use complete normalized derivative/reference laws. The partition retaining residual gate mask V and actual signed core Fourier amplitude beta_T=hat b(T) preserves full KL exactly. Retaining only V loses L_i=delta a_i^2 D(U||q_i), where U is uniform on 2^d core subsets, q_i(T)=((beta_T+delta(a_empty-1))^2+delta^2 a_i^2)/rho_i and rho_i=1-delta+delta(a_empty^2+a_i^2), with zero a_i contributing zero. Summed over all gate queries, 0<=sum_i L_i<=2 I_Y+[2/(e ln2)]I_X<=2 I_Y+(9/8)I_X. If b and c are both nonconstant, the coefficient 2 on I_Y improves to 1/2. The budgets use one original physical influence partition. They pay only quotient loss, not retained terminal price or an already spent child reserve. No universal FEI bound is asserted.",
+    "hypotheses": [
+      "Actual finite uniform-cube Boolean signs, physical influence, entropy/KL in bits",
+      "A single marked core vertex normalized to b(0)=1; all gate/core blocks disjoint",
+      "Complete reference mass retained; root influence quotas are dedicated only to the displayed loss"
+    ],
+    "statement_sha256": "c146410cfe95520382f4d6d8d37eff182fbc872b27438c91f359b4532ccb8443",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "agents\\A096\\runs\\20261014T042803Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Sections 1-2, equations (1)-(6)",
+      "validation": "agents\\A096\\runs\\20261014T042803Z-account05-A096-live-gap-ledger\\out\\CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_CONDITIONAL_REFERENCE_AUDIT_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A085",
+      "A097",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-CHILD-BANK-PRICE-FIVE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every d>=2, delta=2^-d, b_d=-1+2*1_0 on d uniform bits, c_d=-1 and g(x)=x, the actual point attachment F=-1+1_0(1+x) has query influence e=delta, core influence d delta and H(F)<=4I(F). Both actual query children satisfy H<=4I. Erasing the core frequency from the complete gate-query row loses L=delta[(1-delta)(d-1)+delta log2(delta/((1-delta)^2+delta^2))], with delta(d-2)<=L<=delta d. For actual child surplus S_C=(C I(b_d)-H(b_d))/2+(C I(c_d)-H(c_d))/2, one has 0<=S_4<=5delta and (L-S_C)/e>=(5-C)d-7. Thus for every fixed 4<=C<5 and every finite K the requirement L<=S_C+K e fails at sufficiently large d despite genuine C-certified children and a rate-four actual root. At C=5, S_5>=delta d>=L, so five is the exact asymptotic bank-price threshold for this quotient loss alone. For d>=3 b_d is non-flat. Tensoring the whole fixture with a nonconstant point sign q on 2d independent bits retains both terminal spectra and makes both actual children nonconstant; I(q)=4d delta^2 and the strengthened deficit is (L-Sprime_C)/e>=(5-C)d-7-4C d delta, while C=5 still pays L and H(Fq)<=4I(Fq). No general same-price child transfer or FEI disproof is inferred.",
+    "hypotheses": [
+      "Exact non-flat point/dictator fixture; d>=2 and non-flat subfamily d>=3",
+      "C in [4,5), finite constant query allowance; S_C is actual averaged child entropy surplus",
+      "Price five assertion concerns only L, not retained price plus all historical/terminal costs",
+      "Optional independent point-terminal tensor keeps all actual entropy, influence and reference mass"
+    ],
+    "statement_sha256": "ff252c022d9058b38b611c66957c5a61877ad108e18e5d1ef42c7da1bfc6018e",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "agents\\A096\\runs\\20261014T042803Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Section 3, equations (7)-(9) and terminal tensor continuation",
+      "validation": "agents\\A096\\runs\\20261014T042803Z-account05-A096-live-gap-ledger\\out\\CHECK.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_CONDITIONAL_REFERENCE_AUDIT_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "For each C in [4,5), an absolute K can pay every such quotient loss from the actual C-certified child surplus plus K times query influence"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A085",
+      "A097",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A100-BINARY-REMAINDER-JENSEN-BOUND",
+    "version": 1,
+    "exact_statement": "For every even d>=2 let delta=2^-d, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). For either i in {u,v}, with complete normalized laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i), retaining only the other pair coordinate gives influence-weighted lost conditional KL L_i=e_i[D(mu_i||r_i)-D(Cmu_i||Cr_i)], where e_i=delta/2. Put R(delta)=(1+delta-3delta^2/4)/(1+delta^2/4). Then 0<L_i/e_i<=log2(R(delta))/2<=log2(77/65)/2<1/8. Their combined loss satisfies L_u+L_v<=delta log2(R(delta))/2<delta^2/(2ln2), and also L_u+L_v<delta/8<=Inf_(y1)/20. The same row divergences and remainders hold after tensoring with any common Boolean spectator on independent fresh coordinates. These allowances pay only the two discarded conditional KL remainders; retained M_i/e_i>d/2+3/4 remains unpaid, and no globally available or repeatedly reusable terminal reserve is asserted.",
+    "hypotheses": [
+      "Actual finite uniform Boolean signs in the displayed family; d even and >=2; bits and ordinary physical influence",
+      "Complete residual reference is marginalized, not conditioned on derivative support; KL zero terms continuous",
+      "Common spectator is independent on fresh physical coordinates; both row laws share its same normalized spectrum",
+      "Dedicated physical reserve, if used, is exclusive to these two remainder bills; no universal core payment assumed"
+    ],
+    "statement_sha256": "80502ef87dba2f2e9ee6cb86e5774884a7c0cbfd2cf3cc6fce0bbdf5da23f474",
+    "contributors": [
+      "A100/account05; explicit boundary family credited to A073"
+    ],
+    "proof_source": {
+      "path": "agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\REVIEW.md",
+      "locator": "New quantitative refinement: Jensen bound",
+      "checker": "agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\code\\check_binary.py",
+      "output": "agents\\A100\\runs\\20261014T034838Z-account05-A100-release-and-continuation-ledger\\out\\INDEPENDENT_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A073-NONZERO-ERASURE-BINARY-REMAINDER",
+        "version": 1,
+        "usage": "Unchanged family/signed row identities independently reconstructed above; original lemma accepted by A098 and separately A100"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A099",
+        "timestamp": "2026-10-14T06:32:35.400079+00:00",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "For every even d>=2 let delta=2^-d, b(y)=(-1)^(sum_j y_(2j-1)y_(2j)), q(u,v)=-1 only at (1,1), and F_d=b(y)+1_(y=0)(q(u,v)-1). For either i in {u,v}, with complete normalized laws mu_i(T)=p_(T+i)/e_i and r_i(T)=p_T+p_(T+i), retaining only the other pair coordinate gives influence-weighted lost conditional KL L_i=e_i[D(mu_i||r_i)-D(Cmu_i||Cr_i)], where e_i=delta/2. Put R(delta)=(1+delta-3delta^2/4)/(1+delta^2/4). Then 0<L_i/e_i<=log2(R(delta))/2<=log2(77/65)/2<1/8. Their combined loss satisfies L_u+L_v<=delta log2(R(delta))/2<delta^2/(2ln2), and also L_u+L_v<delta/8<=Inf_(y1)/20. The same row divergences and remainders hold after tensoring with any common Boolean spectator on independent fresh coordinates. These allowances pay only the two discarded conditional KL remainders; retained M_i/e_i>d/2+3/4 remains unpaid, and no globally available or repeatedly reusable terminal reserve is asserted.",
+        "proof_source": "agents\\A099\\runs\\20261014T061720Z-account05-A099-candidate-assembly\\CANDIDATE_MANUSCRIPT.tex",
+        "locator": "sec:jensen",
+        "method": "Independent weighted Jensen algebra, all-parameter derivative and logarithm inequalities, exact integer certificate and product-factor cancellation",
+        "validation_source": "agents\\A099\\runs\\20261014T061720Z-account05-A099-candidate-assembly\\out\\JENSEN_CERTIFICATE.json",
+        "source_statement_sha256": "80502ef87dba2f2e9ee6cb86e5774884a7c0cbfd2cf3cc6fce0bbdf5da23f474",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "ONE_INDEPENDENT_FULL_SCOPED_ACCEPTANCE_A099_SECOND_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A073",
+      "A096",
+      "A001",
+      "A098",
+      "A099",
+      "A085",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-PAID-FLOOR-NO-RESET-HISTORY",
+    "version": 1,
+    "exact_statement": "For any finite uniform Boolean sign with spectrum P and any complete normalized Q of finite CE(P,Q), a physical query j admits the conservative common child reference Qminusj(T)=Q(T)+Q(T+j). Its actual signed child laws Pplus,Pminus satisfy their average=Pminusj. Exactly CE(P,Q)=B_j+(CE(Pplus,Qminusj)+CE(Pminus,Qminusj))/2+R_j, where R_j=D(P||Q)-D(Pminusj||Qminusj)>=0 is conditional occupancy KL including all reference-only support. Hence on every finite outcome-adaptive physical decision tree, with child references inherited only by marginalizing Q, the expected erasure sum plus complete expected terminal CE plus expected accumulated R equals the original CE. An already executed debit is retained and the genuinely remaining ancestor account increases only by these refunds. Applying this elementary chain rule to the specific incoming floor in independently accepted A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK@1, if c<=C0 I(g), every such history has erasures plus full terminal H+D <=(2C0+10)I(F), and <=18I(F) for its structural source reference, spending the original paid floor once. An independent arbitrary untouched terminal keeps its full supplied CE additively and contributes no edit bank. This is conditional no-reset ancestor-account continuation; it neither constructs a cheap reference for arbitrary Boolean functions nor bounds each leaf CE by its own influence nor pays a reset to prescribed fresh floors. The general chain rule is elementary baseline machinery, not a new universal FEI claim.",
+    "hypotheses": [
+      "Actual finite uniform-cube Boolean restrictions; bits; ordinary physical influence",
+      "Q normalized, finite CE, zeros off actual support allowed; full empty/reference-only mass retained",
+      "Fresh singleton physical queries, finite adaptive tree, child references are the original reference marginalized on each path",
+      "A097 original floor/source bound as independently accepted premise for its priced application; no blanket all-core floor claim"
+    ],
+    "statement_sha256": "56794970ffd9a6e18e8a2dc23d3e5cba56ef81424987b182aad015953f51a3c6",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "validation": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\out\\CHECK.json",
+      "checker": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\code\\check.py"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "source": "agents\\A098\\runs\\20261014T054007Z-account05-A098-resource-reallocation\\CLAIMS.json",
+        "status": "Independently accepted by A098, consumed at exact original scope"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A099",
+        "verdict": "HOLDS_AT_EXACT_ORIGINAL_SCOPE",
+        "source": "agents\\A099\\runs\\20261021T155354Z-account03-A099-candidate-assembly\\STAGE6_ADDITIONS.tex",
+        "scope": "Exact original statement, including priced A097 application and independent terminal; no integrated-chain acceptance",
+        "independent_method": "Direct character sums and prime-log identities; analytic conditional KL; full finite-tree cancellation",
+        "statement_sha256": "56794970ffd9a6e18e8a2dc23d3e5cba56ef81424987b182aad015953f51a3c6",
+        "timestamp": "2026-10-21T16:15:35.128565+00:00",
+        "validation": "agents\\A099\\runs\\20261021T155354Z-account03-A099-candidate-assembly\\out\\EXACT_TRANSPORT.json",
+        "review_guard": "Only this scoped statement; not universal cheap-source/reset existence or either integrated audit"
+      }
+    ],
+    "status": "ONE_SCOPED_INDEPENDENT_A099_REVIEW_INTEGRATED_CHAIN_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A097",
+      "A098",
+      "A099",
+      "A001",
+      "A081",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-INHERITED-CONSTANT-TERMINAL-COST",
+    "version": 1,
+    "exact_statement": "In A097 exact negative-cell floor at a=2,b=0,r=1 with uniform normalized source reference, the actual edited sign on data-first cube is [1,1,1,1,-1,1,1,1]. The initial complete floor Q equals its true squared spectrum. Query physical active data bit0 and take bit outcome1: the actual child is constant +1 with influence0, whereas the SAME inherited reference marginalized over the queried spectral coordinate is (5/8,1/8,1/8,1/8). Its full terminal CE is log2(8/5)>0. Thus no finite K bounds every such prescribed inherited leaf CE by K times its own influence, even for matching initial Q. The ancestor erasure-plus-complete-terminal conservation remains valid; this is an inherited-reference obstruction, not a Boolean FEI counterexample or an obstruction to all permitted paid resets.",
+    "hypotheses": [
+      "Specified actual three-bit sign, uniform source R, original A097 floor explicitly reconstructed",
+      "Prescribed conservative common child reference; full terminal CE, not entropy alone",
+      "Local influence bound for each inherited leaf is the rejected strengthening; root ancestor budget is distinct"
+    ],
+    "statement_sha256": "951d9f6ef33c5f01d50520b2f951d64970d5f296dfae5df3993d44e23af58936",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\DERIVATION.md",
+      "validation": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\out\\CHECK.json",
+      "checker": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\code\\check.py"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A099",
+        "verdict": "HOLDS_AT_EXACT_ORIGINAL_SCOPE",
+        "source": "agents\\A099\\runs\\20261021T155354Z-account03-A099-candidate-assembly\\STAGE6_ADDITIONS.tex",
+        "scope": "Exact original statement, including priced A097 application and independent terminal; no integrated-chain acceptance",
+        "independent_method": "Direct character sums and prime-log identities; analytic conditional KL; full finite-tree cancellation",
+        "statement_sha256": "951d9f6ef33c5f01d50520b2f951d64970d5f296dfae5df3993d44e23af58936",
+        "timestamp": "2026-10-21T16:15:35.128565+00:00",
+        "validation": "agents\\A099\\runs\\20261021T155354Z-account03-A099-candidate-assembly\\out\\EXACT_TRANSPORT.json",
+        "review_guard": "Only this scoped statement; not universal cheap-source/reset existence or either integrated audit"
+      }
+    ],
+    "status": "ONE_SCOPED_INDEPENDENT_A099_REVIEW_INTEGRATED_CHAIN_OPEN",
+    "supersedes": [],
+    "refutes": [
+      "Every prescribed inherited leaf reference can be paid by K times its own physical influence for some absolute finite K"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A097",
+      "A098",
+      "A099",
+      "A001",
+      "A081",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=1 let g=1-2A_a on a+b uniform bits and F=g+2A_r D_(a+b). Supply a normalized finite-cost source reference with c_raw<=C0 I(g), C0>=0; empty-calibrate and construct exactly the A097 complete floor Q. For every finite adaptive tree querying only active source bits, at each query with a_current>=2 reset the on-cell child to the A097 floor built from the marginal then empty-calibrated current source reference, retaining the actual conditional control kernel; on the last active query reset its on-cell child to the explicit point spectrum of -1+2A_(b+r). Every complementary child keeps its complete inherited marginal reference unchanged. The expected sum of all executed erasures plus all complete terminal cross entropies is at most c_cal+10e(a+b+r)<=(2C0+10)I(F), e=2^(1-a-b-r). At every a_current>=2 query the virtual source envelope releases at least e_current; the complementary signed reference excess is <18e_current. No original quota is renewed, and every previous debit and complementary terminal is retained. Arbitrary no-reset continuation below a stopping leaf remains paid. An untouched independent terminal of prescribed cost c_h retains its exact additive c_h. Structural source R=P_g permits C0=4 and initial rate18. This is not arbitrary-source reference construction, arbitrary incoming-profile reset, or a universal FEI theorem.",
+    "hypotheses": [
+      "Uniform Boolean physical cube; actual negative-cell point edit and fresh point controls",
+      "Normalized source reference finite on every occupied source atom; off-support zeros permitted",
+      "Every source marginal and empty calibration is specified; all complete reference normalizers and conditional control kernels retained",
+      "Queries in the reset phase touch only active source coordinates; complementary branches stop with inherited full references",
+      "Units bits; ideal CE, physical reach weights, ordinary influence; unrelated channels, labels and integer-code bills excluded",
+      "The C0 source-price hypothesis is supplied at the original ancestor only; no descendant influence-scaled price is assumed"
+    ],
+    "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c",
+    "contributors": [
+      "A096; A097 original negative-cell floor and source bank; prior A096 complete-reference chain rule credited"
+    ],
+    "proof_source": {
+      "run_id": "20261021T210221Z-account03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "code/adversarial.py",
+        "out/FROZEN_SPEC.json",
+        "out/VALIDATION.json",
+        "out/ADVERSARIAL_VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "source": "agents\\A097\\runs\\20261014T050248Z-account05-A097-cross-route-transfer\\CLAIMS.json",
+        "status": "Previously source-complete baseline; source-bound proof input, not new blanket independent acceptance"
+      },
+      {
+        "claim_id": "A096-PAID-FLOOR-NO-RESET-HISTORY",
+        "version": 1,
+        "statement_sha256": "56794970ffd9a6e18e8a2dc23d3e5cba56ef81424987b182aad015953f51a3c6",
+        "source": "agents\\A096\\runs\\20261014T094929Z-account05-A096-live-gap-ledger\\CLAIMS.json",
+        "status": "Previously source-complete baseline; source-bound proof input, not new blanket independent acceptance"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A097",
+        "run_id": "20261021T232544Z-account03-A097-cross-route-transfer",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "method": "Independent analytic reconstruction of Fourier pairs, likelihood endpoint and final point boundary; independent direct-character-sum rational checker,48 roots/256 mixed histories/9649 predicates",
+        "limitations": "No new universal-source inference; new control extension below is a separate contributor claim, pending independent review"
+      },
+      {
+        "reviewer": "A082",
+        "timestamp": "2026-10-21T23:22:07.648520+00:00",
+        "verdict": "INDEPENDENT_SCOPED_RECONSTRUCTION_HOLDS",
+        "method": "Analytic reconstruction of scalar endpoint/SOS certificate and envelope induction; independent direct-character, physical-edge, rational-log implementation",
+        "substantive_repair_contributed": false,
+        "scope": "Exact unchanged source statement, retaining A097 complete-floor premise and original source price; no independent acceptance of entire A097 dependency",
+        "evidence": [
+          "REVIEW.md",
+          "code/check.py",
+          "out/CHECK.json",
+          "out/BOUNDARY.json"
+        ],
+        "source_file_sha256": "853ff5317ae439a40f15a3ba6bb73508fa39acc98d9cd48a92cde40b9691da4f"
+      },
+      {
+        "reviewer": "A099",
+        "verdict": "HOLDS_AT_EXACT_ORIGINAL_SCOPE",
+        "source": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\STAGE7_ADDITIONS.tex",
+        "scope": "Exact original full statement reconstructed; author and independent review status remain separate",
+        "timestamp": "2026-10-22T23:31:15.938970+00:00",
+        "validation": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\out\\EXACT_EXIT_RESET.json",
+        "guard": "A099 independently reconstructs exact full scoped chain; no universal or integrated-chain acceptance"
+      }
+    ],
+    "status": "SCOPED_A099_INDEPENDENT_RECONSTRUCTION_INTEGRATED_AUDITS_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A097",
+      "A094",
+      "A085",
+      "A081",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=2 and F=1-2A_a+2A_(a+b+r), supply a normalized finite-cost source reference with c_raw<=C0 I(1-2A_a), C0>=0. Start with its empty-calibrated A097 complete floor. On the surviving edited branch, allow arbitrary interleavings and stopping of A096 canonical active resets and control queries while r_current>=2. Every control-on child resets to the A097 floor built from the SAME current source reference with r reduced by one; every active on-child uses the specified marginal/calibrated source floor or explicit final point boundary. ALL complementary children retain their COMPLETE inherited references, and allow arbitrary no-reset continuations. The expected sum of all booked erasures and complete terminal cross entropies is <=W_root+8(r-1)e_root<=(2C0+10)I(F)-12e_root, where W_root=c_cal+10e_root(a+b+r) and e_root=2^(1-a-b-r). This spends only the original ancestor quota: its reserve is at least5a*2^(b+r)e_root and 5*2^r>=8(r-1)+12. Structural source reference permits SAME initial rate18. Independent untouched terminals retain full additive cost. This excludes dummy-data resets, renewed canonical resets in complementary off-branches, arbitrary non-point sources and unrelated channel/code bills; full FEI remains OPEN.",
+    "hypotheses": [
+      "Uniform negative-cell point edit, a>=1,b>=0,r>=2 at ancestor",
+      "Normalized finite-cost original source reference and certified c_raw<=C0 I_g, C0>=0",
+      "Reset phase stays on surviving edited branch: active queries or control queries with current r>=2; explicit final active boundary ends that branch",
+      "Every off-branch keeps full inherited reference; further continuations there are no-reset only",
+      "Bits, ideal CE and ordinary influence; full normalizers retained; original quota never renewed"
+    ],
+    "statement_sha256": "5088d7a3a3a3b0711a953971e4faf8a884d2f24692a79bb4d1766378f33d91bf",
+    "contributors": [
+      "A097; A096 canonical active-reset theorem credited"
+    ],
+    "proof_source": {
+      "run_id": "20261021T232544Z-account03-A097-cross-route-transfer",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check_transfer.py",
+        "out/VALIDATION.json",
+        "code/check_mixed.py",
+        "out/FROZEN_MIXED_SPEC.json",
+        "out/MIXED_VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+        "version": 1,
+        "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+        "source": "20261014T050248Z-account05-A097-cross-route-transfer/CLAIMS.json"
+      },
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c",
+        "source": "agents\\A096\\runs\\20261021T210221Z-account03-A096-live-gap-ledger\\CLAIMS.json",
+        "review": "A097 independent reconstruction HOLDS at source scope"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A099",
+        "verdict": "HOLDS_AT_EXACT_ORIGINAL_SCOPE",
+        "source": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\STAGE7_ADDITIONS.tex",
+        "scope": "Exact original full statement reconstructed; author and independent review status remain separate",
+        "timestamp": "2026-10-22T23:31:15.938970+00:00",
+        "validation": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\out\\EXACT_EXIT_RESET.json",
+        "guard": "A099 independently reconstructs exact full scoped chain; no universal or integrated-chain acceptance"
+      }
+    ],
+    "status": "SCOPED_A099_INDEPENDENT_RECONSTRUCTION_INTEGRATED_AUDITS_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A094",
+      "A086",
+      "A098",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A073-DUMMY-DATA-RESET-SAME-ANCESTOR",
+    "version": 1,
+    "exact_statement": "For every a>=1,b>=0,r>=1 with d=b+r>=2, and every normalized finite-cost source reference R_raw for g=1-2A_a with CE(P_g,R_raw)<=C0 I(g), C0>=0, empty-calibrate the source and use the A097 canonical complete floor. Every adaptive surviving-edited-branch policy consisting of A096 active resets, dummy-data resets to the empty-calibrated source marginal while b>=1, and A097 control resets while r>=2, including the A096 final active point boundary, has booked expected erasure plus all full terminal cross entropy <=(2C0+10)I(F)-12e_root for F=1-2A_a+2A_(a+b+r), e_root=2^(1-a-b-r). Complementary children retain complete inherited references; all old debits remain booked. A dummy step alone costs <W+8e, where W=c+10e(a+b+r). Structural source gives unchanged rate18. No universal source/reference construction is asserted.",
+    "hypotheses": [
+      "Uniform physical cube; entropy in bits.",
+      "Point-source negative-cell edit and supplied finite-cost reference as specified.",
+      "Canonical reset only on surviving edited branch; full off terminals retained.",
+      "No control reset at r=1; no reset inside retained off-branches."
+    ],
+    "statement_sha256": "a401aa4e8fbc271219f0edd6985a2c6594aaf1ba7d461957fbda24e556be907e",
+    "contributors": [
+      "A073"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections1-4",
+      "code/certify_dummy.py",
+      "out/RESULT.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c"
+      },
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c"
+      },
+      {
+        "claim_id": "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "5088d7a3a3a3b0711a953971e4faf8a884d2f24692a79bb4d1766378f33d91bf"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "kind": "direct character sums plus physical-edge reconstruction and fixed rational log intervals",
+        "verdict": "PASS",
+        "assertions": 13420,
+        "independent_acceptance": false
+      },
+      {
+        "reviewer": "A099",
+        "verdict": "HOLDS_AT_EXACT_ORIGINAL_SCOPE",
+        "source": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\STAGE7_ADDITIONS.tex",
+        "scope": "Exact original full statement reconstructed; author and independent review status remain separate",
+        "timestamp": "2026-10-22T23:31:15.938970+00:00",
+        "validation": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\out\\EXACT_EXIT_RESET.json",
+        "guard": "A099 independently reconstructs exact full scoped chain; no universal or integrated-chain acceptance"
+      }
+    ],
+    "status": "SCOPED_A099_INDEPENDENT_RECONSTRUCTION_INTEGRATED_AUDITS_OPEN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Generic signed non-point source construction, or prescribed reset in a retained off-branch from the diminished SAME original bank.",
+    "next_consumers": [
+      "A096",
+      "A097",
+      "A085",
+      "A094",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A099-PRESCRIBED-EXIT-SOURCE-RESET",
+    "version": 1,
+    "exact_statement": "For the exact A073 negative-cell family with a>=1,b>=0,r>=1,d=b+r>=2, finite normalized source reference cost c_raw<=C0 I(g), and the specified canonical live-branch active/dummy/control histories, any non-active exit may be retained unqueried and then reset once to its current original source reference (control exit), or its dummy marginal calibrated at the unchanged source vacuum (dummy exit), with point spectral controls. Its complete source cost is <=c reserved at its creating parent. Any finite pure-source continuation using marginalization/calibration and explicit constant point references costs at most that c. All executed live-branch debits and every other full terminal remain. Each converted non-active exit costs at most W+2e locally, each inherited exit at most W+8e; therefore every such mixed policy is paid by the SAME original (2C0+10)I(F)-12e_root, or leaves18e_root when all non-active exits convert. A signed reset may be positive and is not assumed free. No further query may have been executed inside an exit before its conversion; arbitrary post-query exit resets, unrelated new source references, non-point sources and extra channel/code bills are excluded. Structural source uses unchanged rate18; universal FEI remains open.",
+    "hypotheses": [
+      "Uniform finite Boolean negative-cell point-source family; bits and ordinary physical influence",
+      "Original supplied complete source and canonical floor, d>=2; eligible controls r_current>=2",
+      "Exit root has no previously executed query inside it; old live-branch debits and all complementary terminals retained",
+      "Only the stated original source/marginal-calibrated exit references and pure-source continuations; no bank renewal"
+    ],
+    "statement_sha256": "cc09945ec48ad4f14cf3a67aa03b9552ad556b136c9f455c4362f784bc9a7fbd",
+    "contributors": [
+      "A099"
+    ],
+    "proof_source": "agents\\A099\\runs\\20261022T231100Z-account03-A099-candidate-assembly\\STAGE7_ADDITIONS.tex",
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c"
+      },
+      {
+        "claim_id": "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "5088d7a3a3a3b0711a953971e4faf8a884d2f24692a79bb4d1766378f33d91bf"
+      },
+      {
+        "claim_id": "A073-DUMMY-DATA-RESET-SAME-ANCESTOR",
+        "version": 1,
+        "statement_sha256": "a401aa4e8fbc271219f0edd6985a2c6594aaf1ba7d461957fbda24e556be907e"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A097",
+      "A073",
+      "A085",
+      "A094",
+      "A098",
+      "B20"
+    ]
+  }
+]

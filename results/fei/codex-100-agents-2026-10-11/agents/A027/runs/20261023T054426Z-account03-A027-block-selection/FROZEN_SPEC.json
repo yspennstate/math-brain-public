@@ -1,0 +1,16 @@
+{
+  "helper_version":"byte copy of stage18 code/exact.py; integer Walsh, rational prime-log arithmetic",
+  "actual_boolean_family":"six explicit four-bit negative sets, activated behind two CORE gates, then r fresh point controls",
+  "negative_sets":[[0],[0,1,2],[0,1,2,4],[0,1,2,3,4,5,6],[0,1,2,3,4,5,6,7],[0,1,2,3,4,5,6,7,8]],
+  "domain":"r=1,2,3; root bias=weight/64<=9/64<d_star; six core bits; at most nine total bits",
+  "case_count":"18 roots times 10 declared policies=180 policies; pilot first root,r=1,all10 policies. Separate D4,r=1 complete-core guard. Scalar t=1/64,1/16,1/8,9/64; s=1..8; d=j/16,j=0..16 (544 points).",
+  "policies":"6 static orders: all core; controls then core; core0 then controls then remaining; alternating; two core then controls then rest; reversed core then controls. Four adaptive policies: core order 0..5 and next control depending on bias>1/4, parity of observed core bits, after every second core, or only after all core. All allow stopping after five core queries on a fixed branch when mode=parity. Stop failed control or constant physical function.",
+  "symmetry":"none beyond identical point-control coordinates queried in index order; not exhaustive over Boolean functions or policies",
+  "arithmetic":"exact Fraction Walsh and physical edge counts; prime-log identities; 24-term atanh intervals with explicit geometric tail; separate direct-character implementation on fixed witness",
+  "memory_estimate_mb":160,
+  "pilot_max_seconds":60,
+  "main_max_seconds":240,
+  "independent_max_seconds":60,
+  "automatic_dimension_escalation":false,
+  "purpose":"Pay negative endpoint refund using SAME signed full terminal surplus; no endpoint-band assumption or clipping of old debits. Price21/4 unchanged."
+}

@@ -1,0 +1,13 @@
+{
+  "helper_version": "A001 independent query-ledger audit v2 (exact memoization only)",
+  "helper_sha256": "22b282790d1de81490c3a47eefe6737183c282f20cee041039fe62ff731b7e8f",
+  "family": "all labelled Boolean functions n=0..3; finite physical-query and same-target floor-reset profiles; separate padded dictator witness b=12,13,16,24,40",
+  "domain": "n<=3 fixed; every root coordinate; initial mixing theta=1/4,1; reset mixing=1/4,1; source masses1,1/2; complete trees for n<=2 and every variable order",
+  "case_count": "278 Boolean functions,6432 query/reset profiles,152 complete trees,5 compressed witnesses; correction before main: n0 contributes8 trees, n1 contributes16, n2 contributes128",
+  "symmetry": "none; both global signs retained",
+  "arithmetic": "integer FWHT, Fraction,32-term atanh with analytic remainder and outward110-bit grid; exact normalizers; interval identity overlaps diagnostic only",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 150,
+  "pilot": "n<=1, witness b12, under55seconds; no automatic escalation",
+  "amendment": "Before retry:55-second wall guard reached; mathematical domain unchanged; first failure preserved. Pilot remains under60seconds."
+}

@@ -1,0 +1,26 @@
+{
+  "exit_code": 2,
+  "scope": "Natural-number integer-gap comparison ONLY: if q>=1 and u<=2k^2 then u<=2k^2*q. Does not formalize signed-bucket identity, entropy, adaptive occupation or full theorem.",
+  "source_sha256": "c737b4255e6c8c3ac2a10e596a9858c00043e8d9bf112c883e4f955642a0bf48",
+  "memory_estimate_mb": 200,
+  "max_runtime_seconds": 55,
+  "core_only_no_Mathlib": true,
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "lean_check.py",
+    "--core",
+    "--file",
+    "agents\\A067\\runs\\20261027T082501Z-account04-A067-hypercontractive-refinement\\code\\occupied_ratio.lean",
+    "--target",
+    "occupied_ratio",
+    "--reviewed-sha256",
+    "c737b4255e6c8c3ac2a10e596a9858c00043e8d9bf112c883e4f955642a0bf48",
+    "--json",
+    "--timeout",
+    "45"
+  ],
+  "diagnostic": "SETUP_UNVERIFIED: Compute admission held (hung window or under 5500 MB free); no new compiler process\n"
+}

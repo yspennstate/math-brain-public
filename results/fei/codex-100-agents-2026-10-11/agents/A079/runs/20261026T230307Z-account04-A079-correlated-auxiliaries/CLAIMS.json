@@ -1,0 +1,113 @@
+[
+  {
+    "claim_id": "A032-ISOSPECTRAL-CORE-BOUNDED-MIXTURE-OBSTRUCTION",
+    "version": 2,
+    "exact_statement": "Let P(000)=9/16 and P(x)=1/16 on the other seven3-bit labels, the squared Fourier law of the actual Boolean truth table(-1,1,1,1,1,1,1,1), and let P_r=P tensor r. For every law R on3r bits, sum_i D(R_i||Bernoulli(1/4))<=2D(R||P_r). For every finite coordinate-product mixture q=sum_z w_z product_i q_zi, with exact posterior joint L(x,z)=P_r(x)w_z product_i q_zi(x_i)/q(x), D(P_r||q)+I_L(X;Z)>=r*tau where tau=2-(9/8)log2(3). Thus D>=max(0,r*tau-H_L(Z))>=max(0,r*tau-log2 M) for at most M components. Under the actual isospectral complementary-controller handoff of version1, the complete bill is beta D, beta3/8, so bill+beta I_L>=beta r tau. The improved coefficient1 in front of log2 M applies to the original unduplicated defect family. A contraction coefficient below5/3 is impossible by a rational moment/Taylor certificate;2 is not claimed sharp. This is a generic information theorem applied to actual Boolean spectra, not FEI, a necessary universal target class, or a Booleanity admission test.",
+    "hypotheses": [
+      "r is any positive integer; r0 reduces to KL nonnegativity",
+      "All source/target laws complete normalized finite laws; all logarithms base2",
+      "q positive on occupied source atoms; otherwise KL infinite and lower bound trivial",
+      "Finite latent alphabet with zero-weight components omitted; posterior entropy/information under L, not prior w",
+      "Coordinate products across all3r individual frequency bits",
+      "Complete controller vacuum and Fourier factors retained; physical targets necessary only when the reference class is specified",
+      "Exact local bill is not an influence-priced initial arbitrary-core source; no full FEI conclusion"
+    ],
+    "statement_sha256": "2f856c9181595408584a7835476bace9fe4a83548f8dd2006dedc47c20fde233",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": {
+      "path": "agents\\A032\\runs\\20261023T141525Z-account03-A032-boolean-phase-realizability\\PROOF.md",
+      "sha256": "b6fe7a60a4fa7b35d0c01af008e6b1728ba5db00a8680fc0987fd428e5538079",
+      "certificates": [
+        "out/validation.json",
+        "out/independent.json"
+      ],
+      "formal_verification": "NOT_CLAIMED"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A032-ISOSPECTRAL-CORE-BOUNDED-MIXTURE-OBSTRUCTION",
+        "version": 1,
+        "statement_sha256": "a2c85380d8f3fa331a62b0e78f6cb5b2f6018e872c6611d690e80cd159bfc2f8",
+        "scope": "Actual arbitrary-core isospectral complete-CE handoff, beta3/8; exact rank result retained unchanged; version1 independently accepted by A079 current source PROOF section3"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A079",
+        "at": "2026-10-26T23:25:48.988321+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE_WITHOUT_REPAIR",
+        "source": "agents\\A079\\runs\\20261026T230307Z-account04-A079-correlated-auxiliaries\\PROOF.md",
+        "proof_sha256": "d955dcd8217a22628d73b1601d42a0ab803032e9ab39520770e12303299d1663",
+        "method": "Independent degree6 scalar identity, Holder and posterior KL reconstruction; new7/4 certificate independently reconstructs and strengthens coefficient2; actual full physical handoff verified without author code"
+      }
+    ],
+    "status": "INDEPENDENT_LOCAL_RECONSTRUCTION_HOLDS_REMOTE_ADOPTION_UNVERIFIED",
+    "supersedes": [
+      {
+        "claim_id": "A032-ISOSPECTRAL-CORE-BOUNDED-MIXTURE-OBSTRUCTION",
+        "version": 1,
+        "scope": "Strengthens factor2 log M to factor1 for original unduplicated defect family; other version1 conclusions retained via dependency"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A033",
+      "A096",
+      "A097",
+      "A094",
+      "A099",
+      "B07-lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A079-DEFECT-CORE-LATENT-CAPACITY",
+    "version": 1,
+    "exact_statement": "Let P(000)=9/16 and P(s)=1/16 on the other seven labels, the squared Fourier spectrum of the Boolean3-bit point defect, and P_r=P^tensor r for every integer r>=0. For every law R on3r bits, sum_i D(R_i||Bernoulli(1/4))<=(7/4)D(R||P_r). Consequently, for EVERY complete normalized coordinate-product mixture Q=sum_j w_j product_i q_ji with at most M positive components, the exact posterior joint L=P_r(X)w_j product_i q_ji(X_i)/Q(X) satisfies D(P_r||Q)+(3/4)I_L(X;J)>=r*tau, tau=2-(9/8)log2(3), and D>=max(0,r*tau-(3/4)H_L(J))>=max(0,r*tau-(3/4)log2 M). Infinite divergence is allowed as trivial case. The coefficient5/3 in the contraction is FALSE by the explicit rational tilted posterior R(s)=P(s)*1000^(3-|s|)*1331^|s|/(A/16), A=8*1000^3+(1000+1331)^3; the exact positive polynomial witness is recorded. The contraction optimum is strictly above5/3 and at most7/4, with no exact optimum claimed. For the original four-bit complementary controller and h=z1*z2*z3*g_r, both full physical z1 children have zero erasure/JS/singleton/phase refunds; target core replacement costs beta times mean full KL, beta3/8, and therefore bill+(3 beta/4)mean posterior information>=beta*r*tau. Actual influence23/8+9r/32, full conditional auxiliary entropy c_aux+beta H(g_r), and physical auxiliary influence beta(3+3r/4) are retained. Targets are necessary only in the DECLARED class. No arbitrary-core initial price, automatic descendant contraction, full FEI theorem or FEI counterfamily follows. All units bits; author proof with independently reconstructed exact certificates, not Lean-checked.",
+    "hypotheses": [
+      "P_r is the tensor of the actual Boolean three-bit defect spectrum; no arbitrary spectral source substitution",
+      "Q is a COMPLETE normalized mixture of coordinate products, with finite posterior alphabet and finite divergence or trivial infinite case",
+      "Posterior information/entropy under L, not free mixture-prior labels",
+      "Complete original controller vacuum, BOTH physical children, all old debits and original unused-account ownership retained",
+      "No universally mandatory product target, no initially cheap arbitrary-core source, no descendant application without source hypotheses"
+    ],
+    "statement_sha256": "0600eabe30c6bb4cc705595885de8bb5fcd43e6fbba1ef65f76cf0997cf0cbd4",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "agents\\A079\\runs\\20261026T230307Z-account04-A079-correlated-auxiliaries\\PROOF.md",
+      "sha256": "d955dcd8217a22628d73b1601d42a0ab803032e9ab39520770e12303299d1663",
+      "certificates": [
+        "out/scalar.json",
+        "out/independent.json"
+      ],
+      "formal_verification": "NOT_CLAIMED; required wrapper held compute admission"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CERTIFICATES_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Contraction coefficient5/3 suffices for every law R relative to this defect spectrum",
+        "witness": "PROOF.md section3; out/independent.json endpoint_positive_integer",
+        "scope": "Strictly strengthens A032 lower guard; A032@2 remains true"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A033",
+      "A094",
+      "A096",
+      "A097",
+      "B16",
+      "B20"
+    ]
+  }
+]

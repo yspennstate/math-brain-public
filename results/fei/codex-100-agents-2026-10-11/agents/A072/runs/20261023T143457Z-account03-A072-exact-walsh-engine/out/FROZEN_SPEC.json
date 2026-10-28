@@ -1,0 +1,13 @@
+{
+  "helper": "A072 stage21 whole-row v1; own stage20 arithmetic/FWHT",
+  "family": "all16 two-input outer gates; cores from constant+, parity2, OR2, negated OR2",
+  "domain": "two cores each two physical bits",
+  "case_count": 256,
+  "query_rows": 1024,
+  "symmetry": "none",
+  "arithmetic": "integer direct/FWHT/inverse/edges then exact rational prime-log with outward192bit bounds",
+  "memory_estimate_MB": 80,
+  "max_runtime_seconds": 55,
+  "pilot": "first circuit before remaining255; under60seconds",
+  "automatic_dimension_escalation": false
+}

@@ -1,0 +1,21 @@
+from pathlib import Path
+import json
+R=Path(__file__).resolve().parents[1]
+spec=json.loads((R/'FROZEN_SPEC.json').read_text(encoding='utf-8'))
+spec.update(helper_version='A026-dummy-canonical-reset-v2',extension='Same 48 root domain; allow dummy queries also at r=1. Independent local domain adds 24 r=1 roots, total72. No dimension escalation.',output='Exact comparisons internally; reported interval endpoints rounded outward to dyadic denominator 2^40; reported minimum margin rounded downward.',prior_attempt='v1 main stopped only at 4300-digit rational serialization limit; no mathematical assertion failed')
+(R/'EXTENSION_SPEC.json').write_text(json.dumps(spec,indent=2)+'\n',encoding='utf-8')
+p=R/'code/check.py';s=p.read_text(encoding='utf-8')
+s=s.replace('def rec(x):return list(map(str,x))','def rec(x):\n d=1<<40\n return [str(F((x[0]*d).__floor__(),d)),str(F((x[1]*d).__ceil__(),d))]')
+s=s.replace('(b>=1 and r>=2)','(b>=1 and r>=1)').replace('b>=1 and r>=2 else','b>=1 and r>=1 else')
+s=s.replace("str(minimum)","str(F((minimum*(1<<40)).__floor__(),1<<40))")
+p.write_text(s,encoding='utf-8')
+p=R/'code/independent.py';s=p.read_text(encoding='utf-8').replace('same48 frozen roots','same48 frozen roots plus24 r=1 boundary roots').replace("'case_count':48","'case_count':72").replace('for r in [2,3]:','for r in [1,2,3]:').replace('r=1 is excluded from new dummy-reset theorem','r=1 dummy resets included; last control query r=1 excluded')
+p.write_text(s,encoding='utf-8')
+p=R/'DERIVATION.md';s=p.read_text(encoding='utf-8')
+s=s.replace('Let a>=1,b>=1,r>=2,','Let a>=1,b>=1,r>=1,')
+s=s.replace('under r>=2. Empty calibration','for an original root with r>=2. Local dummy substitution below holds already for r>=1, since b>=1 implies h=2^(1-b-r)<=1/2. Empty calibration')
+s=s.replace('while b>=1,r>=2','while b>=1,r>=1')
+s=s.replace('A control step may reach r=1, after which only the previously certified active continuation or stopping is asserted; this theorem does not admit further dummy resets at r=1.','A control step may reach r=1, after which active steps, dummy steps and stopping remain admitted. The last control query from r=1 to r=0 is excluded.')
+s=s.replace('or justify r=1 dummy resets','or justify the last control query from r=1 to r=0')
+p.write_text(s,encoding='utf-8')
+print('FROZEN_EXTENSION_WRITTEN; same roots, added lower-control boundary')

@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "A046-SIGNED-SPIKE-FLOOR-PRICE",
+    "version": 1,
+    "exact_statement": "For a finite normalized law p partitioned into vacuum V and N with pi=p(N)>0 and normalized finite-CE q with rho=q(N)>0, suppose q(.|N)=(1-beta)p(.|N)+beta delta_M, 0<=beta<1. Let R_gamma copy p on V and have conditional profile (1-gamma)p(.|N)+gamma delta_E on N. For any required spike-parameter floor 0<=ell<1, the minimum signed CE price over ell<=gamma<1 is pi[d_tE(ell)-d_tM(beta)]-L, where t_j=p(j)/pi, L=sum_V p log2(p/q)+pi log2(pi/rho)>=0 and d_t(u)=(1-t)log2(1/(1-u))+t log2(t/(t+u(1-t))), with continuous endpoints. All full-terminal conversions are payable from the SAME supplied original unused capacity iff their actual reach-weighted signed prices sum to at most B-C-U. For A049 balanced four-bit mux/parity circuit and every alpha,gamma in(0,1), both inherited child KLs vanish; the query consumes ALL original entry KL and a required fresh floor adds -log2(1-gamma)/2>0. No necessary floor or original O(I) source or full FEI theorem follows.",
+    "hypotheses": [
+      "Finite normalized p,q; finite CE; pi>0; beta<1; declared target E may be source-zero.",
+      "Floor means spike parameter, not atom mass or fixed within-cell profile.",
+      "Both physical outcomes, normalizers, ghost mass, old debits and full terminals retained; B,C,U genuinely supplied.",
+      "gamma<=beta sufficient only for same mask or source-zero-old-mask retarget, not arbitrary unrelated target."
+    ],
+    "statement_sha256": "b3f16657ec9a3decd1f703481f267b99b9c4b512f8a7637ea67d7164f801190a",
+    "contributors": [
+      "A046"
+    ],
+    "proof_source": [
+      "agents\\A046\\runs\\20261027T042131Z-account04-A046-current-candidate-intake\\PROOF.md sections2-4",
+      "agents\\A046\\runs\\20261027T042131Z-account04-A046-current-candidate-intake\\code\\check.py",
+      "agents\\A046\\runs\\20261027T042131Z-account04-A046-current-candidate-intake\\out\\CHECK.json",
+      "agents\\A046\\runs\\20261027T042131Z-account04-A046-current-candidate-intake\\code\\audit.py",
+      "agents\\A046\\runs\\20261027T042131Z-account04-A046-current-candidate-intake\\out\\AUDIT.json"
+    ],
+    "proof_dependencies": [
+      "Self-contained finite KL chain rule/log-sum, atomwise expansion and differentiation",
+      "A049-MINIMAL-ANNIHILATED-SPIKE-POSITIVE-FLOOR@1 independently reconstructed unchanged"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A047",
+        "verdict": "HOLDS",
+        "repair_contributed": false,
+        "scope": "Entire supplied-law price and SAME-owner/all-positive-parameter Boolean consequence; no necessity of floor or universal source assumed",
+        "source_statement_sha256": "b3f16657ec9a3decd1f703481f267b99b9c4b512f8a7637ea67d7164f801190a",
+        "evidence": "agents\\A047\\runs\\20261027T075006Z-account04-A047-boundary-search\\PROOF.md; out/CHECK.json",
+        "timestamp": "2026-10-27T08:14:24.822930+00:00"
+      }
+    ],
+    "status": "INDEPENDENT_REVIEW_HOLDS_A047",
+    "supersedes": [],
+    "refutes": [
+      "A fully consumed original entry-KL budget can be reused to pay a required fresh positive child floor."
+    ],
+    "first_unproved_line": "A necessary useful arbitrary-core profile and ORIGINAL O(I) complete source with actual unused surplus and all query losses/full terminal entropy paid.",
+    "next_consumers": [
+      "A049",
+      "A050",
+      "A097",
+      "A094",
+      "A011",
+      "B10",
+      "B20"
+    ]
+  }
+]

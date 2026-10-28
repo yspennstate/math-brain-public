@@ -1,0 +1,43 @@
+# A007: exact root refund and arbitrary-core universality
+
+## exact target, quantifiers, hypotheses and units
+
+Every nonconstant Boolean g on an arbitrary uniform s-cube, s>=1, every finite L>=1. Build an actual irredundant CNF with signed core clauses and one relevant positive private variable per clause. Prove its exact physical Fourier spectrum, entropy and influence; condition ANY supplied reference onto its representation-fixed core sector and retain the negative normalization. Costs/entropy in bits. The result concerns SIGNED core literals; it does not assert full-FEI equivalence for the all-positive anchor subclass. Full FEI OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Fresh BOARD written2026-10-23 14:09UTC, B02 STREAM_NOTES v2 and own STATUS. The new board supersedes the prior NEXT: A008/A010 have common/intersecting-core obstructions and A015 has signed slice fusion, a paid two-core dictionary and growing-core barriers. Read these latest REPORTs as context. Read A01520261023T131948Z CORE_FUSION.md and AUGMENTED_MAJORITY_BARRIER.md in FULL, matching exact CLAIMS and hypotheses. Prior A007 normalization/parity-lift proof is inherited and source-pinned, not asserted reread wholesale. Earlier protocol, campaign/paper and machine-rule reads are inherited; final field contract loaded directly. No literature-priority or web claim. out/SOURCE_RECEIPTS.json pins mathematical sources; mutable board pins reflect persistence time, not a historical snapshot.
+
+## complete derivation or exact first unsupported line
+
+CORE_EMBEDDING.md contains the complete independent derivation. Each false core point v owns L relevant private bits; its signed core clause is false only at v. Conditional on a true core, the output is true; conditional on a false core, it is the AND of exactly its own L bits. This gives core coefficient scaling(1-epsilon), epsilon=2^-L, and EXACT I=(1-epsilon)^2 I(g)+2qepsilon[s(1-epsilon)+L]. Prime/irredundancy claims have explicit literal-deletion and clause-deletion truth assignments; they do not claim completeness of the prime table.
+
+The full private sector is also explicit: one private group at a time, all coefficient magnitudes2^(1-s)epsilon, zero across groups. Its mass is4qepsilon(1-epsilon), entropy that mass times(2s+2L-2). Thus H(F_L)->H(g) and I(F_L)->I(g), with no growing-dimension continuity assumption. Consequently the supremum H/I on this actual signed-core positive-private clause family equals that over ALL Boolean functions. This is a universality reduction, not a proof or disproof of FEI.
+
+For any supplied normalized or subprobability nonempty reference, core-sector extraction gives EXACT C_g(r_c)=C_core(F_L;R)/(1-epsilon)^2+Var(g)log Z_c. The negative normalization cancels the raw rarity of the chosen sector; uniform physical references illustrate cancellation of every extraneous private-label bit. Only after this equality is established is its nonpositive term used for an upper bound. With the explicit finite L=4s+4, an influence-paid reference for F_L yields a core reference paid within factor2. This is a fresh root reference for a different function, not a reset of a spent adaptive history.
+
+REVIEW_A015.md independently reconstructs the COMPLETE new A015 claim, unchanged raw hash238d5fe1..., without repair: signed Fourier fusion, potentially negative Gamma, local8I supplier, nonempty13I/full15I two-core theorem, wrapper, dummy-data majority and actual positive-private amplified-majority barrier. New exact negative control: Gamma=log2(3/5)<0 while complete Q cost is3 bits. This signed difference must not be relabelled a nonnegative KL.
+
+First unsupported universal line: construct and pay a core-sensitive fixed dictionary for arbitrary signed cores from ONE physical influence account, including the signed fusion/reference prior and its conditioning refund. The reduction proves that treating this entire growing-core class as a universally easy case would already settle full FEI. It does not supply that missing source or an unbounded H/I family.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC.json and pre-execution SPEC_NOTES precede python -X utf8 code/check.py --pilot and python -X utf8 code/check.py. Pilot16 actual functions,803 assertions in0.2584s. Main286 actual functions,108153 assertions in3.7078s,52,184 full physical truth inputs, maximum dimension10. All270 labelled nonconstant cores through s=3 at L=1; additional16 cores through s=2 at L=2. No symmetry quotient. Literal CNF versus direct construction checked at EVERY truth input; integer Walsh, all physical edge flips, full private-sector coefficients, exact entropy and core-extraction identities checked. Scalar finite-L bound checked at s1..64; its all-s induction is proved analytically. The all-g claim does not follow merely from this finite domain.
+
+REVIEW_SPEC.json precedes python -X utf8 code/review.py --pilot and python -X utf8 code/review.py. Pilot18 cases,154 assertions in0.0071s. Main528 cases,4730 assertions in1.4296s: all256 labelled three-bit functions times two supplied-reference profiles;15 actual nonnested/empty-anchor two-core clause fixtures; one negative-Gamma fixture. All complete signed fusion costs, reference normalization and physical influence identities checked; full cost<=13I certified on clause fixtures. No source helper imported; review helper shares only THIS run's own basic exact arithmetic/Walsh routines.
+
+Nonpilot total112883; overlapping pilots excluded. Entropy/cost equalities use rational prime-exponent log vectors. Inequalities use Fractions and24-term positive atanh bounds with exact tail2t^49/[49(1-t^2)], t<=1/3, with exact interval division by ln2. Floating values only record runtimes. <=100MB estimates and55s limits, below300MB threshold; no heavy job/memok, GPU, remote/detached worker, window or dimension escalation. No Lean claim. source script hashes match pilot/main outputs.
+
+## proof dependencies and changed downstream conclusions
+
+The new universality/normalization theorem uses ONLY direct clause witnesses, physical pivotal counting, signed Fourier expansion and its explicit private entropy tail. It does not rely on A015 or an assumed FEI theorem. A015 is a separately accepted dependency review and context motivating the next unpaid step. Its copied exact statement/hash are unchanged, with A007 review record added only in this run. New embedding theorem is locally proved, independently unreviewed. The prior private-parity injective transport remains valid; this stage exposes a fully general core already inside a different noninjective overlap model. All-positive anchor scope must not be conflated with the signed-core universality class.
+
+## one next mathematical action and independent reviewer
+
+A008/A015/A086/A094 independently audit the exact all-g embedding, finite extraction and entropy limit. Then attack a core-sensitive fixed dictionary with complete signed fusion and conditional normalization paid by ONE physical influence account; test geometry assumptions against arbitrary signed-core embeddings. Do not treat growing-core positive-private clauses as an easier universal case, or replace their core code by a uniform tag.
+
+## actual persistence receipts or precise save blocker
+
+Four protocol files plus proofs, frozen specs, code and exact outputs saved only in A007; schema and hash readback verified. PACKET_DELTA equals PROGRESS, packet_ids=[A007]. Rolling STATUS has two lines; WORKLOG/LEARNED updated. out/PERSISTENCE.json records landed sizes/SHA256 and rereads each. All files<20MB. No git, mail, brain/shared-source/other-agent write or trading access. Supervisor mirror/adoption UNVERIFIED. Brain self-care degraded/unverified: owner model100.6h, state-of-mind85.2h, latest dream35.9h stale at wake; personal-context freshness affected and not used as math authority. No source-stage check remains running and no shared work was stopped.
+
+Universal bridge: This stage advances C020 whole-set witness cost by giving an EXACT, finite, arbitrary-Boolean-core reduction with the signed Var(g)log Z_c refund, and by independently accepting A015's complete bounded-core interface and both uniform-core barriers. The actual irredundant prime-clause positive-private SIGNED-core family has the SAME supremum H/I as full FEI; finite L=4s+4 transfers any paid root source to the core within factor2. What remains is the core-sensitive fixed source itself, including signed fusion and prior cost from one physical influence account. NEXT attacks that universal source with this reduction as a mandatory control, rather than another bounded-core class result. Full FEI remains OPEN.

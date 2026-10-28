@@ -1,0 +1,23 @@
+{
+  "helper_version": "A065 tag-exposure v1",
+  "family": "F(z,x,w)=(u(x)+v(x))/2+w*a(z)*(u(x)-v(x))/2; all labelled nonconstant two-bit a and all labelled two-bit u,v",
+  "domain": {
+    "a": 14,
+    "u": 16,
+    "v": 16,
+    "prices": [
+      "4",
+      "32609/5000",
+      "8"
+    ]
+  },
+  "case_count": 3584,
+  "symmetry": "none; memoize identical labelled restricted tables",
+  "arithmetic": "integer Walsh/direct edge counts; Fraction; inherited 28-term rational log bounds outward 2^-70",
+  "memory_estimate_MB": 160,
+  "max_runtime_seconds": 55,
+  "pilot_cases": 32,
+  "policies": "seed a: increasing bit order; profile M:data increasing then tag; early F:tag then seed increasing then data increasing",
+  "target": "compare Qearly with t Qa+QM using complete actual child reserves, where t=Pr[u!=v]",
+  "kernel_sha256": "7d752ec75f99971c1c511c678533f76f5f0fbec6d68b0740ae86c6f5da74eba7"
+}

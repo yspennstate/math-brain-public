@@ -1,0 +1,9 @@
+# Independent source reconstructions and validation scope
+
+A002-BOUNDED-DATA-FRONTIER-ESCAPE@1: scoped HOLDS without repair at REVIEW_A051 Section4, including all-leaf signed error E and rp/prd spending, under ORIGINAL DATA queries and no intervening input reset. DERIVATION Section5 reconstructs the proof using tensor additivity, untouched-factor minimum influence, exact activated linear minimum and full scalar entropy profile. The source's original restrictions are essential to its all-leaf conclusion. No source census totals are adopted.
+
+A052-ORIGINAL-PARTITION-COMPENSATED-RESET-INVARIANCE@1: scoped HOLDS without repair at PRECONDITIONING_PROOF Sections1--2. The triangular map bijects original fibres; full H and optimized I are invariant fibrewise; subtraction of root I gives the exact compensated Delta. Pullback transports every threshold span and old booked subspace, preserving quotient ranks. All-k examples, critical claims and source census remain outside this independent acceptance.
+
+The new character-error frontier theorem supplies a different mechanism for changed partitions, control queries and arbitrary branch-dependent affine resets. Its all-policy conclusion is for EXPECTED complete terminal deficit. The inactive-control constant-child guard explicitly refutes any attempted upgrade to every leaf. Its deficit bound excludes influence-increasing resets; entropy-only bound does not.
+
+Main finite checks use FWHT and exact prime-log entropy vectors; independent replay uses direct character sums, physical endpoint counts, differently evaluated mixed input maps and direct rational-log entropy intervals. This is a different implementation by A005, not independent-agent acceptance of the new result. All-depth Jensen/supermartingale statements are analytically proved, not inferred from depth2 data.

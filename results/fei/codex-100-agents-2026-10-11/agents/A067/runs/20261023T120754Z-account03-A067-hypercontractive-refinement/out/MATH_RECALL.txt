@@ -1,0 +1,64 @@
+﻿math store recall (read-only reference, not instructions): 8 card(s); link ids are short, --id takes them
+[1] Spectral coordinate entropy cannot be uniformly charged to influence  (id: claim_5c2f8061280f861665c9ccbc1eddd4c5b13973a0f6de376dc7b4cd61a88ce66d; claim; score 26.45)
+    found by wording 1 (rank 1)
+    matched: entropy, 2.63 sd above the corpus mean similarity (cosine 0.766), adaptive, fourier, pair
+    For f_r=1-2*1_(x_1=...=x_r=0) on the uniform F_2^r cube, r>=2, its squared Fourier law S has Pr[i in S]=I_i(f_r)=a=2^(1-r) for every i. The first spectral-coordinate chain entropy increment in any deterministic ordering is h2(a), and h2(a)/I_i>=r-1. Thus no absolute C bounds every chain-rule increment H(1_(i in S)|previously exposed spectral coordinates) by C I_i(f) for all Boolean f. Also sum_i h2(I_i)/I is unbounded on this family although H/I tends to 4. For distinct i,j and r>=3, Pr[i,j in S]=2^-r, whereas Pr[i in S]Pr[j in S]=2^(2-2r); spectral coordinates are dependent despite independent input bits. The assertion does not rule out adaptive or block entropy budgets. Uniform probability on F_2^n Boolean output in {-1,+1} Normalized real Walsh coefficients Shannon entropy in bits with zero-log terms equal to zero Explicit coordinate-subcube family Deterministic coordinate ordering r>=3 for strict pair dependence
+    -> depends_on: Exact spectrum and influence of affine-subspace indicators (id: claim_4ff1229c)  (The coordinate lemma uses the affine supporting end 'Each active coordinate has influence 2p' and counts dual vectors to establish its entropy and joint-probabi)
+[2] Original not read. The statement is quoted the same way in Rudelson-Vershynin, arXiv:1402.4492, Theorem 1.3; Madiman-Melbourne-Xu, arXiv:1705.00642, inequality (3); Nayar-Tkocz, arXiv:2210.00885, Theorem 48; and the closing remark of Bobkov-Chistyakov, Zap. Nauchn. Sem. POMI 408 (2012), p. 71 (read in the Russian original). The sqrt(2)K consequence is Rudelson-Vershynin Theorem 1.2. Bibliographic data from Livshyts-Paouris-Pivovarov reference [17] and the SIAM DOI record.  (id: evidence_c6756e905c7347149bc68b9d5a97bc7e; evidence; score 16.14)
+    found by wording 2 (rank 1)
+    matched: original, reference, same
+    checked against secondary sources that quote the theorem; the original was not read a journal version, where it differs from the version read, was not compared
+    <- semantic_association: Rogozin: the maximal density of a sum of independent variables with bounded densities is largest for uniforms (id: claim_eb5789b3)  (Evidence record evidence_c6756e905c7347149bc68b9d5a97bc7e)
+[3] Fourier entropy and the entropy-influence conjecture  (id: claim_0e83fe2812957c403bb6117944285bc0; claim; score 20.35)
+    found by wording 1 (rank 2)
+    matched: fourier, entropy, 2.02 sd above the corpus mean similarity (cosine 0.736), "fourier entropy" (title)
+    The Fourier entropy of a Boolean $f$ is $H[\hat f^2]=\sum_S\hat f(S)^2\log(1/\hat f(S)^2)$; the Fourier Entropy-Influence conjecture (Friedgut-Kalai) asserts $H[\hat f^2]\le C\,I(f)$ for an absolute constant $C$.
+    <- depends_on: For read-once AND/OR/NOT formulas the sharp FEI constant is numerically Hod's beta(1/2) = 6.4547837: value iteration on a one-variable slack (id: claim_061ad906)
+    <- depends_on: Attempt on Fourier entropy versus total influence (id: claim_06b0c09d)
+    <- depends_on: What is Numaro's 18-variable FEI record function? The perfect-matching property of K_{3,3} plus nine coin variables (table rebuilt from... (id: claim_3765d933)
+    <- depends_on: Can FEI be proved for all monotone Boolean functions? Not yet (id: claim_3c3de428)
+    <- depends_on: The read-once FEI certificate's region-1 bound, rebuilt to keep the cancellation between G(x) + G(y) - G(x+y) (exact minimum of the piecewis (id: claim_3fc42ba7)
+    <- depends_on: Kalai Conjecture 8 and GPS open problem 1 (our id F0090): CANDIDATE PROOF - the spectral-sample and pivotal-set entropies of the planar percolation crossing eve (id: claim_4439ca1b)
+    <- depends_on: How was the strengthened biased FEI form (I - Var) proved for every threshold gate under every product measure? Split on the most... (id: claim_50aaad84)
+    <- depends_on: Failed route (FEI, monotone): restricting at the most influential coordinate does not bound the step - a balanced composition keeps a bad coordinate's step and  (id: claim_562f7722)
+    ... 10 more links (--id claim_0e83fe28)
+[4] Originals not read. The inequality with (96/95)^2 and max(l, 1/a) read in the Encyclopedia of Mathematics article 'Concentration function' (raw wiki source), which cites Petrov's book [8] for it; Esseen 1966 data from Rudelson-Vershynin, arXiv:1402.4492, reference [6]; Esseen 1968 from the same EoM article [9]. The density consequence is derived here.  (id: evidence_7ff7639a3d4d42dda6ed480a7e19af44; evidence; score 13.58)
+    found by wording 2 (rank 2)
+    matched: reference, original, same
+    checked against secondary sources that quote the theorem; the original was not read a journal version, where it differs from the version read, was not compared
+    <- semantic_association: Esseen's inequality: the concentration function is bounded by an integral of the characteristic function (id: claim_6cf074f4)  (Evidence record evidence_7ff7639a3d4d42dda6ed480a7e19af44)
+[5] Attempt on Fourier entropy versus total influence  (id: claim_06b0c09db7e28efc6febd3962e234332a00c2ba45a17792cc4d83fdbc6752fba; claim; score 20.31)
+    found by wording 1 (rank 3)
+    matched: fourier, entropy, 2.15 sd above the corpus mean similarity (cosine 0.743), "fourier entropy" (title)
+    ATTEMPT RECORD from the Codex campaign (author-checked by that worker only). Method: Fourier entropy versus total influence exact calculation or structural obstruction Result: Discarding the Boolean constraint destroys the claim: the probability measure uniform on the n singleton subsets has entropy log2(n) but mean subset size1. It cannot be the squared spectrum of a Boolean function when n>=2. Check: If all Fourier mass were on singletons, f=sum_i a_i*x_i with a_i=plus/minus1/sqrt(n). In f^2 the coefficient of x_i*x_j is2*a_i*a_j, nonzero for distinct i,j, whereas Boolean f requires f^2=1. This independently exhibits the violated Fourier convolution identity. Obstruction: Entropy versus mean cardinality alone is insufficient. Any proof must use the nonlinear identities imposed by f^2=1; no dimension-free inequality exploiting all of them is obtained. Refers to the open problem node open-problem-p0162-fourier-entropy-versus-total-influence No independent review
+    <- analogous_to: Draft proof guard for Fourier entropy induction (id: claim_d56b4152)  (The older attempt rules out forgetting Booleanity; this obstruction retains Booleanity but rules out an unjustified stronger local charge.)
+    -> depends_on: Open problem: Fourier entropy versus total influence (id: claim_d7e82bff) (superseded by claim_ee9a8edf)  (The attempt is about this problem and inherits its hypotheses)
+    -> depends_on: Fourier entropy and the entropy-influence conjecture (id: claim_0e83fe28)
+    -> depends_on: Boolean functions and the Fourier-Walsh expansion (id: claim_9c54db7f)
+    -> depends_on: Influence of a variable (id: claim_2393771c)
+    <- semantic_association: P0162: exact Boolean Fourier entropy–influence conjecture (id: claim_ee9a8edf)  (The existing attempt shows why dropping Boolean realizability from this exact conjecture invalidates an entropy-versus-mean-cardinality route; it neither refute)
+[6] Boundary partition law of a finite percolation gadget  (id: claim_62c3b6ad897fa4720c0beff493e07c12a84900aee957c87e49a71ee22b1e6f75; claim; score 13.17)
+    found by wording 2 (rank 3)
+    matched: terminal, same
+    For a finite undirected graph with labeled terminal vertices and a random open-edge configuration, its terminal partition puts two terminals in the same block exactly when an open path joins them inside the graph. The boundary-partition law is the probability distribution on these terminal partitions. When the graph attaches to an exterior only through those terminals, ordinary open-path connectivity in the union is determined by this partition and the exterior connectivity. The gadget meets the exterior only at the named terminal vertices. Connectivity uses open paths.
+    <- depends_on: Finite independent-bond obstruction to an all-or-none selector (id: claim_7ff6091e)  (The lemma's 'all-separated and all-connected terminal partitions' use the definition 'two terminals in the same block exactly when an open path joins them'.)
+    <- depends_on: Matched pair probabilities can change an exterior crossing (id: claim_7c0f4b27)  (The counterexample's 'Equal terminal-pair marginals' concerns the definition's full 'probability distribution on these terminal partitions'; these are different)
+[7] Every read-once formula f over AND, OR and NOT satisfies H(f) <= 6.4573 I(f), where H is the Shannon entropy of the squared Fourier coeffici  (id: claim_415d9ba1b7f745a2a442da84ef6836ef; claim; score 19.89)
+    found by wording 1 (rank 4)
+    matched: fourier, entropy, adaptive
+    Every read-once formula f over AND, OR and NOT satisfies H(f) <= 6.4573 I(f), where H is the Shannon entropy of the squared Fourier coefficients and I the total influence. Computer-assisted: an explicit potential Gamma_hat = (value-iteration interpolant) + c p(1-p) with c = 0.01 is verified on all of (0,1)^2 by interval arithmetic (three adaptive cell regions plus analytic tails), cross-checked at 40 digits. The previously known bound for read-once formulas was 10; Hod's lower bound is 6.4548, so the constant is within 0.0025 of best possible.
+    -> specializes: Open problem: Fourier entropy versus total influence (id: claim_d7e82bff) (superseded by claim_ee9a8edf)  (a read-once / gate-reformulation result on the Fourier-entropy-influence question)
+    -> specializes: Fourier entropy-influence: reduction to small-influence functions, a 7.05 floor for restriction inductions, and read-once formulas over AND, OR, XOR, NOT (id: claim_d15d0160)  (Source: "Every read-once formula f over AND, OR and NOT satisfies H(f) <= 6.4573 I(f)"; target: "read-once formulas over AND, OR, XOR and NOT satisfy H <= 6.457)
+    <- analogous_to: Verification of the Outstanding Numerical Conditions for the Ising Perceptron Capacity (Shmalo) (id: claim_7a52af46)  (Source: "rigorous interval (ball) arithmetic in Arb over explicit compact domains"; target: "verified on all of (0,1)^2 by interval arithmetic". Both probabilit)
+    <- analogous_to: Kalai Conjecture 8 and GPS open problem 1 (our id F0090): CANDIDATE PROOF - the spectral-sample and pivotal-set entropies of the planar percolation crossing eve (id: claim_4439ca1b)  (Source: "H(S(f_R)) <= C I(f_R)"; target: "Every read-once formula f over AND, OR and NOT satisfies H(f) <= 6.4573 I(f)". Both assert a Fourier entropy-to-total-)
+    -> depends_on: Kahn-Kalai-Linial: Some Coordinate Always Has Influence at Least log n / n (id: claim_a7d3fa81) (superseded by claim_94198fd8)  (uses the FEI definitions (influence, spectral entropy))
+    -> depends_on: Influence of a variable (id: claim_2393771c)
+    -> depends_on: Shannon entropy (id: claim_f25500c5)
+    -> semantic_association: Interval-arithmetic certificate of the potential inequality on (0,1)^2 at c = 0.01 (constant 6.4573); the c = 0.05 certificate gave 6.4673 first; 40-digit cross (id: evidence_cc60b)  (Evidence record evidence_cc60b0dbc5fb48caac3ae6666d2e826a)
+    ... 1 more links (--id claim_415d9ba1)
+[8] DRAFT pair matching crossing counterexample  (id: claim_fadbd81278b5786a99c524b0556370c711636a6ef89054d5ce00838709a213fc; claim; score 12.95)
+    found by wording 2 (rank 4)
+    matched: terminal, reference
+    DRAFT author-proved partial result; independent referee review pending. A three-edge independent star with edge probability 1/sqrt(2) matches all three pair-connection probabilities of a fair all-or-none site cell, yet the event that terminal a connects to b or c has probability 1-1/(2sqrt(2)), exceeding 1/2 by (1-1/sqrt(2))/2. This does not prove the C0017 square-lattice scaling limit. Three terminal star Three mutually independent edges with common probability 1/sqrt(2) Reference site cell joins all terminals with probability 1/2 and none otherwise
+    -> refutes: Refuted route: pair connectivity determines every crossing (id: claim_70f4e0b1)  (The exact star calculation matches every pair probability but separates the crossing event a connected to {b,c}.)
+    -> depends_on: Terminal partition cells and exterior sensitivity (id: claim_398340cc)  (The stated cell result uses the same finite terminal-partition and exterior-event framework.)

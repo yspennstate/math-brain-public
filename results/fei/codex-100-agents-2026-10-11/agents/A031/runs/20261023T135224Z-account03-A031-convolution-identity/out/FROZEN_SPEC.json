@@ -1,0 +1,13 @@
+{
+  "helper_version":"A031-fine-gap-quantitative-v1",
+  "actual_Boolean_family":"All labelled 3-bit truth tables, one fixed physical query x0; complete signed Walsh transforms and both children",
+  "parameter_domain":"pilot truth tables0..15; main0..255. Every15 set partition of4 remaining frequencies; inherited means uniform4 and (actual midpoint+uniform4)/2; compatible template0 R+=R-=m and template1 opposite transfer min(m0,m1)/2 between frequencies0,1",
+  "case_count":{"pilot":960,"main":15360,"reference_candidates_per_case":2,"sharpness_parameters":["1/4","1/8","1/16","1/32"]},
+  "symmetry":"No truth-table or partition quotient. Fixed query x0 suffices only for stated labelled finite domain, not all physical queries",
+  "arithmetic":"Fraction primal/equality tests; prime-log rational linear forms; natural-log intervals via40-term atanh after exact power-of-two range reduction; explicit remainder. No floating mathematical comparison",
+  "memory_estimate_MB":80,
+  "pilot_max_seconds":55,
+  "main_max_seconds":180,
+  "outputs":"out/PILOT.json,out/CHECK.json; review witness and sharpness certificates included",
+  "independent_reproduction":"Separate direct character-sum Walsh path; exact prime-factor gap form and rational KKT witnesses; independent L1 transport minimization by finite box vertices, no numerical optimizer"
+}

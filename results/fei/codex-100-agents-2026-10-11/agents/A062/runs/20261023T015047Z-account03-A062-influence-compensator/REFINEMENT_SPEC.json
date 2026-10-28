@@ -1,0 +1,85 @@
+{
+  "helper": "A062-sparse-reference-v2",
+  "reason": "v1 full validation exceeded its 55s runtime guard, without a mathematical assertion failure; binary-log input mantissas now rigorously bracketed at 64 bits before the unchanged 28-term interval kernel",
+  "family": "point functions n=2..20, both original empty masses; general fixtures below",
+  "point_roots": 38,
+  "point_histories_including_constants": 456,
+  "point_raw_width_max": 7,
+  "general_families": [
+    {
+      "widths": [
+        2
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        3
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        4
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        2,
+        3
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        3,
+        3
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        3,
+        4
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        4,
+        4
+      ],
+      "parity_shift": 0
+    },
+    {
+      "widths": [
+        3
+      ],
+      "parity_shift": 1
+    },
+    {
+      "widths": [
+        4
+      ],
+      "parity_shift": 1
+    }
+  ],
+  "general_cases": 54,
+  "lambda": [
+    "1",
+    "1/2",
+    "1/4"
+  ],
+  "reference_empty_choices": [
+    "actual product empty",
+    "actual source empty"
+  ],
+  "symmetry": "all active point histories determined by remaining dimension and original reference; general fixtures use all exact Walsh atoms and direct influence edges",
+  "arithmetic": "Fraction; rigorous integer log bracketing via floor(v/2^s), outward fixed-point log intervals, no floating mathematical tests",
+  "memory_estimate_MB": 100,
+  "max_runtime_seconds_per_job": 55,
+  "pilot": "point n=2,3,4 and same two empty choices; no dimension escalation",
+  "constant": "analytic log2(e); executed strict certificates use its rigorous lower endpoint; rational owner 3/2 also checked",
+  "checkpoint": "point results saved after every completed root"
+}

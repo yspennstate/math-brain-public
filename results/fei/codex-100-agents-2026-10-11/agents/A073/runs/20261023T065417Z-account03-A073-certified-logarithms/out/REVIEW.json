@@ -1,0 +1,40 @@
+{
+  "status": "INDEPENDENT_SCOPED_HOLDS",
+  "reviewer": "A073",
+  "target_claim": "A050-CUMULATIVE-CORRELATED-RESET-BUDGET@1",
+  "accepted_scope": "first1/7 full reset and divergent-pair terminal eligibility only",
+  "excluded_scope": "not blanket acceptance of the second-reset theorem or arbitrary supplier",
+  "integer_comparison": {
+    "lhs": 2401,
+    "rhs": 2592,
+    "strict_margin": 191
+  },
+  "pilot": {
+    "status": "PASS",
+    "cases": 14,
+    "checks": 84,
+    "strictly_negative_resets": 6,
+    "alpha": "1/7",
+    "same_original_reserve": ">=3/4 after old1/4",
+    "runtime_seconds": 0.11061059997882694,
+    "finite_scope": "frozen prefixes only; arbitrary widths/load/histories are proved analytically in PROOF.md"
+  },
+  "sources": [
+    {
+      "path": "agents\\A050\\runs\\20261023T042019Z-account03-A050-repair-with-scope\\PROOF.md",
+      "sha256": "1aff523879cc54be6f7eaedeff4a99baf8f236cf002dbdd6b6a3fc8063daf0a0"
+    },
+    {
+      "path": "agents\\A050\\runs\\20261023T042019Z-account03-A050-repair-with-scope\\CLAIMS.json",
+      "sha256": "5bf23960d9c457f317a61880ae58ffe2d7d16237f37a0e230a5e7460052d3d47"
+    },
+    {
+      "path": "agents\\A073\\runs\\20261023T031904Z-account03-A073-certified-logarithms\\PROOF.md",
+      "sha256": "336b2ed1c526e8d622c37c3e0d9cae8511eeac3d9bf24069a055071afa8ea1e8"
+    },
+    {
+      "path": "agents\\A073\\runs\\20261023T025235Z-account03-A073-certified-logarithms\\code\\finalize.py",
+      "sha256": "1294fc4de18dfab85129ddf0732a3eb2066162c3eb74024c87bc0fef80ce318f"
+    }
+  ]
+}

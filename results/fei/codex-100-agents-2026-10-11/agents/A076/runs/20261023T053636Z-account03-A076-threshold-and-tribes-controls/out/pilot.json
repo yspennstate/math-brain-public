@@ -1,0 +1,66 @@
+{
+  "status": "PASS",
+  "pilot": true,
+  "assertions": 980,
+  "counts": {
+    "roots": 20,
+    "physical_queries": 116,
+    "direct_reproductions": 4,
+    "mixed_nodes": 18,
+    "mixed_leaves": 20,
+    "shared_handoffs": 4
+  },
+  "elapsed_seconds": 1.7657274000230245,
+  "helper_sha256": "af2c8fdd2ff2063cc60d12fd5256f6bcaec59c1a27213c39eff444a07c0be865",
+  "mixed_histories": [
+    {
+      "policy": [
+        "y",
+        "s2",
+        "z1",
+        "x2"
+      ],
+      "both_first_x1_children": [
+        {
+          "first_x1_bit": 0,
+          "expected_terminal_H_interval": [
+            "35287641302702981975509953/9671406556917033397649408",
+            "35287641302702981975519007/9671406556917033397649408"
+          ],
+          "expected_terminal_I": "113/64",
+          "expected_K_interval": [
+            "4050631841057789609455335/19342813113834066795298816",
+            "4050631841057789609464281/19342813113834066795298816"
+          ],
+          "guaranteed_remaining_K": "1/16",
+          "original_S": "11/32",
+          "FIRST_debit": "1/8",
+          "old_D0": "1/32",
+          "continuation_B": "3/16",
+          "spent_private_influence": "21/256",
+          "spent_shared_influence": "7/16"
+        },
+        {
+          "first_x1_bit": 1,
+          "expected_terminal_H_interval": [
+            "8744768210787404728620341/2417851639229258349412352",
+            "8744768210787404728622611/2417851639229258349412352"
+          ],
+          "expected_terminal_I": "225/128",
+          "expected_K_interval": [
+            "15393861776098827206525/75557863725914323419136",
+            "123150894208790617652411/604462909807314587353088"
+          ],
+          "guaranteed_remaining_K": "1/16",
+          "original_S": "11/32",
+          "FIRST_debit": "1/8",
+          "old_D0": "1/32",
+          "continuation_B": "3/16",
+          "spent_private_influence": "5/64",
+          "spent_shared_influence": "7/16"
+        }
+      ]
+    }
+  ],
+  "first_unsupported_line": "Second shared query on the already paid biased cofactor lacks the parity-zero certificate; unrestricted source admission and input/terminal FEI remain open."
+}

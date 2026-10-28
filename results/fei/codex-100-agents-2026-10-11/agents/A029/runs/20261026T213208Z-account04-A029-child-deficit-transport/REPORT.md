@@ -1,0 +1,41 @@
+# A029 stage21: calibrated vacuum floors, same original child allowance
+
+## exact target, quantifiers, hypotheses and units
+
+For every finite uniform Boolean binary mux with independent controller/DATA blocks and arbitrary shared DATA sources, price the adaptive real targets ell=(1-epsilon)k+epsilon eta, epsilon in[0,1/16], eta=Var(a)Pr(G!=H), from the already admitted original eta/2. Original support-positive source/controller references and their OWN physical inheritance are hypotheses. Every row marginal, nonempty shape, ghost mass, old debit, actual physical refund and BOTH full children/terminal bills is retained. Units bits; full FEI OPEN. Exact claim/hypotheses: CLAIMS.json.
+
+## sources actually read, revisions and theorem locators
+
+Fresh BOARD, B06 STREAM_NOTES v2, own STATUS/LEARNED and prior runs read. Protocol2026-10-11-execution-v2 read in full; campaign README/status/registries/packet/action/plan, supplement five documents and sources read as baseline refresh. Four supplied paper texts decoded explicitly as cp1252 (UTF-8 decoding failed); relevant composition/restriction extracts are saved, with no new paper audit or priority claim. out/SOURCE_RECEIPTS.json pins35 source files; out/SOURCE_EXCERPTS.json supplies locators. Latest A028 DERIVATION exact admission and A026@6 DERIVATION1-3 independently reconstructed in REVIEW.md. Prior A029@4 DERIVATION is the exact supplied-interface dependency. Current source/math files outrank stale wake personalization notes, which were not mathematical premises. No internet claims or new literature attributions are made.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION1-3: joint convexity gives an endpoint chord for Bernoulli KL; averaging and -ln(1-x)<=x/(1-x) prove C<=(epsilon-ln(1-epsilon))*eta/ln2<=31eta/160<=eta/2. Shared epsilon preserves sum q ell=eta; preservation of sum r ell is neither needed nor claimed. The existing eta supermartingale therefore pays every adaptive sequence alternating pooled and old relative targets, with no increase in original allowance. Both deficits and signed refunds telescope once; parent leaf bills are replaced, never added again. Existing same4I/old1/8 literal-prefix reserve>121/128 remains inherited at its old scope, not newly numerically reproduced here.
+
+Section4 gives actual point-defect targets with unbounded relative odds at the vacuum and vanishing influence-priced cost. Section6 shows a sharp limitation of this new class: AND2 times m disjoint copies of ANY Boolean h has all occupied k=eta=1/2, zero conversion cost, H=mH(h)+2 and I=mI(h)+1. A uniform FEI theorem for these nondegenerate calibrated terminals already implies full FEI. This is a universal reduction, not a counterexample to FEI or to paid transport. First unpaid line: an ORIGINAL influence-priced full source and a sufficient stopping rule using DATA-spectrum structure beyond these row odds. No universal constant improvement is asserted.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen specs precede their jobs: FROZEN_SPEC, INDEPENDENT_SPEC and REDUCTION_SPEC in out/. Commands: python -X utf8 code/check.py pilot; python -X utf8 code/check.py full; python -X utf8 code/independent.py; python -X utf8 code/reduction.py; python -X utf8 code/intake.py; python -X utf8 code/finalize.py (paths relative to this run). Pilot64 labelled mux representations/7657 assertions PASS in0.064s. Main1344 labelled representations,3968 physical splits,287433 exact assertions PASS in13.453s. No symmetry reduction. Both zero and nonzero occupancy endpoints and both query blocks are included. Main reconstructs actual Walsh probabilities, whole references, both inherited children, actual outcome/erasure refunds and exact signed conservation. Fraction arithmetic and prime-log identities; sign bounds use outward rational atanh enclosures.
+
+Alternate checker imports no main helper:729 rational two-row laws plus6 actual n1..6 point-defect truth tables rebuilt by direct characters/physical edge counts, 4878 exact assertions PASS in0.210s. Separate carrier checker:66 actual Boolean carriers, every h on0..2 bits and m1..3, 3120 exact assertions PASS in0.256s. Total main+alternate+carrier=295431; pilot separate, no earlier-stage checks included. All-dimensional/real-parameter claims use analytic proofs, not extrapolation from finite checks. These are different same-author implementations, not peer acceptance.
+
+Estimated memory160MB main/70MB alternate/40MB carrier; observed peaks unmeasured; no job above300MB launched. Fresh memok rejected large compute (physical free2.4GB; commit free2.9GB), and Lean's own core admission returned SETUP_UNVERIFIED: distressed or unknown compute. code/Accounting.lean states only the integer child-affordability algebra; it is UNCHECKED here. No Lean certification, GPU, detached research, remote compute or workload stop. A failed cmd.exe inline quoting attempt launched no mathematical search; using script paths corrected it. Small reads briefly stalled in the local tool chain and were resumed, not duplicated.
+
+## proof dependencies and changed downstream conclusions
+
+New bound and calibrated-carrier reduction are elementary; the physical supplied T/S interface, eta telescope and old literal prefix retain A029@4's hypotheses. A028 latest exact-affordability equivalence receives scoped HOLDS; A026@6 sections1-3 receive scoped HOLDS, excluding independent recertification of its separate prefix/necessity clauses. The same candidate advances to@5; peer review remains pending. A028/A096/A097 can now use a vacuum-regularizing target outside bounded relative odds without extra original allowance. They cannot treat calibrated terminals as FEI-certified: section6 explicitly retains arbitrary-core entropy. No canonical shared registry is edited.
+
+## one next mathematical action and independent reviewer
+
+A028/A026/A094 reconstruct the KL chord, true-versus-reference calibration distinction, old allowance identity and actual rare witness. A096/A097 consume the arbitrary-core carrier reduction: audit ONE proposed original supplier or stronger stopping certificate on these carriers, preserving mH(h), all old debits and both full terminal bills. This goes directly to initial core payment; more floor-only transactions are already paid and the floor-only terminal class is full-FEI-hard.
+
+## actual persistence receipts or precise save blocker
+
+All four protocol files, full proof/reviews, three frozen specs, scripts, exact outputs and source receipts are saved only in A029's run. Rolling STATUS is two lines; WORKLOG/LEARNED append dated findings. This finalizer checks exact protocol fields, statement hash, PASS results, compatibility-copy equality and all file sizes<20MB, then saves out/PERSISTENCE.json with local hashes. Supervisor copying, remote mirroring, canonical adoption and independent review remain unverified. Brain wake was degraded and explicitly reported. No git, mail, brain research writes, other-agent changes, deletion or trading-path action occurred. Lifecycle tooling is administrative only; no shared lock was altered.
+
+Administrative closure addendum: the prescribed done call returned exit1, `checklist: no entry T-20261026-042`, despite the earlier working call exiting0. out/CHECKLIST_RECEIPT.json preserves that result. Local research completion is unaffected; shared task metadata remains unverified and no lock or ledger was altered.
+
+## Universal bridge
+
+C019 stopping-tree payment and C024 history transfer gain an occupancy-calibrated vacuum floor with unbounded relative odds, at C<=31eta/160 and ZERO extra allowance beyond the existing original eta/2<=I_controls/2. Both child deficits remain signed and counted once. The nondegenerate calibrated-terminal reduction simultaneously shows why this cannot finish FEI: its class contains arbitrary tensor cores with their complete terminal entropy. Universal constant gain is zero; full FEI remains OPEN. The shortest next route is an original-core supplier or stronger DATA-spectrum stopping certificate tested against these carriers, rather than another isolated floor or reset example.

@@ -1,0 +1,87 @@
+{
+  "n": 4,
+  "K": "1",
+  "global_hull": {
+    "constant": "1/4"
+  },
+  "robust_capital": {
+    "constant": "1/2"
+  },
+  "global_interval": [
+    "1/4",
+    "1/4"
+  ],
+  "capital_interval": [
+    "1/2",
+    "1/2"
+  ],
+  "augmented_states": 256,
+  "physical_states": 81,
+  "edges": 768,
+  "extremal_path": [
+    {
+      "action": [
+        "admit",
+        0
+      ],
+      "increment": {},
+      "arrival_tag": [
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "arrival_mask": 1
+    },
+    {
+      "action": [
+        "query",
+        0,
+        0
+      ],
+      "increment": {},
+      "arrival_tag": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "arrival_mask": 0
+    },
+    {
+      "action": [
+        "admit",
+        1
+      ],
+      "increment": {},
+      "arrival_tag": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "arrival_mask": 2
+    },
+    {
+      "action": [
+        "query",
+        1,
+        0
+      ],
+      "increment": {
+        "constant": "1/2"
+      },
+      "arrival_tag": [
+        0,
+        0,
+        -1,
+        -1
+      ],
+      "arrival_mask": 0
+    }
+  ],
+  "extremal_need": {
+    "constant": "1"
+  },
+  "d": 1
+}

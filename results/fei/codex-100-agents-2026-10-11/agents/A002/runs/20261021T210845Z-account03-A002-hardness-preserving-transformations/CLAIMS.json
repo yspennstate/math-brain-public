@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A002-AFFINE-MINIMAL-RARE-ADMISSION",
+    "version": 1,
+    "exact_statement": "For every k>=2 and Boolean h, F(x,z)=1+1[z=0^k](h(x)-1) is affine spectral influence-minimal iff Pr[h(x)!=h(x+u)]>=max_{i:u_i=1}Inf_i(h) for every nonzero data direction u. Every affine-minimal seed and all its independent tensors satisfy this criterion. For every fixed eta,epsilon,tau>0 and K>=0, uniform FEI(K) is equivalent at the SAME K to FEI(K) on Boolean signs having full affine spectral span, affine spectral influence-minimality, mean>=1-eta, I<=epsilon and max_i Inf_i<=tau. An arbitrary positive-entropy seed is compressed/minimized to g with H(g)=H(f), I(g)<=I(f); activating g^tensor(t) with k=max(2,ceil(sqrt(t))) preserves these structural conditions and its ratio tends to H(g)/I(g)>=H(f)/I(f). These admission roots are not certified minimal-dimensional maximal-deficit witnesses.",
+    "hypotheses": [
+      "finite uniform F_2 cubes; Boolean signs; normalized Walsh spectrum; entropy bits",
+      "k>=2 for the exact activation criterion",
+      "fixed positive rarity/weakness thresholds; K>=0",
+      "seed H>0 only for the ratio construction; constants satisfy FEI directly"
+    ],
+    "statement_sha256": "c956beccccbbffc7dfea9d4cac0590c2e51d02518396e36184c4fb64e7bcac29",
+    "contributors": [
+      "A002"
+    ],
+    "proof_source": "ADMISSION_PROOF.md Sections1--6",
+    "proof_dependencies": [
+      "A051-AFFINE-MINIMUM-BASIS-CRITICAL-REDUCTION@1: only affine compression/minimum-basis characterization; independently reconstructed in ADMISSION_PROOF.md Section5",
+      "finite Parseval and entropy chain/multiplicity calculations"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A002",
+        "scope": "author analytic re-derivation; integer/Fraction exact checks; independent direct-character implementation by same author, not independent agent review",
+        "result": "PASS; Lean RUNTIME_UNVERIFIED"
+      }
+    ],
+    "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Universal selected proper-pair payment from actual finite maximality and lower-dimensional nonviolation, spending SAME D_K+S_A and complete terminals.",
+    "next_consumers": [
+      "A005",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094"
+    ]
+  }
+]

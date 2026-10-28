@@ -1,0 +1,156 @@
+[
+  {
+    "claim_id": "A007-NONUNIFORM-ROOT-THINNING-AND-PHYSICAL-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every finite nonempty positive vector x (dimension N>=1) and coordinatewise thinning 0<y<=x, put A_x=sum x_i, D_x=prod(1+x_i)-1, Q_x(R)=prod_{i in R}x_i/D_x for nonempty R, r_x(i)=x_i/A_x and L=sum(x_i-y_i). Then -L<=ln(D_y/D_x)-ln(A_y/A_x)<=0 and |KL_nats(Q_y||Q_x)-KL_nats(r_y||r_x)|<=L. For activities x_e=lambda_e 2^-w_e, y_e=lambda_prime_e 2^-w_e from any finite nonempty signed-conjunction implicant table of a nonconstant uniform sign Boolean f, positive packing-feasible lambda and 0<lambda_prime<=lambda, q=Pr(f=-1), v=4q(1-q), k=min w_e>=1, a_w=(1-2^-w)/w and d_i=sum_{e:i in R_e}(lambda_e-lambda_prime_e)a_w_e, vL<=2(1-q)sum_i Inf_i(f)d_i<=2a_k(1-q)I(f). Thus either root remainder above, in bits and weighted by v, is bounded by 2(1-q)sum_i Inf_i(f)d_i/ln2. These are alternative component bounds, not an added budget.",
+    "hypotheses": [
+      "Finite positive activities; no zero support changes",
+      "Only coordinatewise thinning is allowed",
+      "For physical corollary: genuine signed implicants, actual rarity, original feasible packing",
+      "KL compares the stated priors, not arbitrary witness posteriors"
+    ],
+    "statement_sha256": "f94e4958da3035622c25a3da9352ad588de673ca53e8ccbc612b8bc15e55ee33",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "ROOT_THINNING.md",
+      "REVIEW_A008.md",
+      "out/checks.json"
+    ],
+    "proof_dependencies": [
+      "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT@1: local fiber/packing core independently reconstructed; private-leaf corollary not used"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "author audit, not independent acceptance",
+        "verdict": "analytic derivation and independent representations checked; exact certificates PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/retuning.json"
+        ]
+      },
+      {
+        "reviewer": "A008",
+        "role": "independent reconstruction; author of earlier physical-core dependency, no repair to reviewed version",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "evidence": [
+          "agents\\A008\\runs\\20261023T024024Z-account03-A008-gate-label-compression\\REVIEW_A007.md",
+          "agents\\A008\\runs\\20261023T024024Z-account03-A008-gate-label-compression\\out\\review.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_A008_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-OVERLAPPING-PRIME-RARE-RETUNING-KL-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For the fixed three-bit sign Boolean f=2[x2 AND (x1 OR x3)]-1, the complete positive prime table is R1={x1,x2}, R2={x2,x3}, pi1=pi2=1/4, v=15/16 and I=5/4. For every integer j>=1 and delta=2^-j, lambda=(delta/2,delta^2/2) and lambda_prime=(delta^3/2,delta^2/2) are positive, fixed before sampling, packing-feasible ordered references on this same table. Their nonempty conditioned root priors satisfy v KL_bits(Q_lambda_prime||Q_lambda)/I > 3j/4-1 and equal 3j/4+o(1). All root activities tend to zero. Hence no universal K pays this KL for EVERY feasible thinning pair. This does not refute optimized reference existence or FEI.",
+    "hypotheses": [
+      "The actual fixed three-bit function and references specified in the statement",
+      "j is an integer at least one; KL is in bits; gate table remains fixed"
+    ],
+    "statement_sha256": "2bc7d5d538157242300e53749752295d5192ae5e8cb10a59d730561ce824dd29",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": [
+      "RETUNING_OBSTRUCTION.md",
+      "ROOT_THINNING.md",
+      "out/retuning.json"
+    ],
+    "proof_dependencies": [
+      "A007-NONUNIFORM-ROOT-THINNING-AND-PHYSICAL-PAYMENT@1"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A007",
+        "role": "author audit, not independent acceptance",
+        "verdict": "analytic derivation and independent representations checked; exact certificates PASS",
+        "evidence": [
+          "out/checks.json",
+          "out/retuning.json"
+        ]
+      },
+      {
+        "reviewer": "A008",
+        "role": "independent reconstruction; author of earlier physical-core dependency, no repair to reviewed version",
+        "verdict": "HOLDS_FULL_STATED_SCOPE",
+        "evidence": [
+          "agents\\A008\\runs\\20261023T024024Z-account03-A008-gate-label-compression\\REVIEW_A007.md",
+          "agents\\A008\\runs\\20261023T024024Z-account03-A008-gate-label-compression\\out\\review.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_A008_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered helper: for every feasible coordinatewise thinning, v KL_bits(Q_new||Q_old)<=K I with universal K"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A008",
+      "A015",
+      "A086",
+      "A094",
+      "B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-CENTRAL-PRIME-COMPATIBLE-ROOT-AGGREGATION",
+    "version": 1,
+    "exact_statement": "For every k>=1, F=2[|X|>=k][|Y|>=k]-1 on two disjoint 2k-bit blocks, use its complete positive prime table, lambda=1/binom(2k,k)^2, actual rarity 2^-2k and any fixed full physical order per prime in the original conditioned queue. Summing all compatible one-root zero-child runs when both block degrees are at most k, and using two fixed complementary disjoint primes otherwise, defines an actual partition-forest output subprobability Q_sel<=Q_*. For every separately block-exchangeable subset law P, its complete nonempty cross entropy satisfies C_sel(P)<=6H(P)/5+37 E_P|A|. For the actual Fourier law, threshold Theorem A yields C_*(F)<=C_sel(F)<=251 I(F)/5<51I(F). All gate names, root normalizers and rarities, subset and child-count choices, empty attachments and output ambiguity are included. An optional full empty/nonempty code costs at most 261I(F)/5. Full FEI remains open.",
+    "hypotheses": [
+      "Uniform cube; bits for entropy and cost",
+      "k integer >=1; no extra activation controls",
+      "One fixed original all-prime reference before observing A",
+      "The final numerical influence payment uses established threshold H(g)<9I(g), not a universal entropy absorption"
+    ],
+    "statement_sha256": "e65558de09e5ed30b847048af90eae15a5e4da12d8651ac3f3684213c8060271",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": [
+      "CENTRAL_PAYMENT.md",
+      "out/full.json"
+    ],
+    "proof_dependencies": [
+      "forests.tex original queue and lem:forestnormalizer",
+      "threshold_paper_38pp.txt Theorem A (Creg<8.937)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A008",
+        "role": "author analytic audit and exact independent representations; not independent-agent acceptance",
+        "verdict": "PASS",
+        "evidence": [
+          "out/full.json"
+        ]
+      }
+    ],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A007",
+      "A015",
+      "A086",
+      "B02",
+      "B20"
+    ]
+  }
+]

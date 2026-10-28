@@ -1,0 +1,41 @@
+[
+  {
+    "claim_id": "A052-CRITICAL-CHILD-RESET-QUANTIZATION",
+    "version": 1,
+    "exact_statement": "For any Boolean g on d>=2 bits, the difference between total influences of any two invertible-affine-input/output-character representatives is in 2^(2-d) Z; for d=1 the quantum is1. For any Boolean f on n bits, nonempty proper original block A of size r and d=n-r, K>0, D=H(f)-KI(f)>0, and S=E[K a(g_x)-H(g_x)]>=0 for the complete physical children, let q_d=1 if d=1 and2^(2-d) otherwise, m=count{x:I(g_x)>a(g_x)}, c=2/ln2, cap=r log2(1+2^(c-K)), W=D_2(P_AB||Ber(1/(1+2^(K-c)))^r tensor P_B), and G=c sigma-J>=0. Then D+S+W+G+K*2^(-r)*q_d*m<=cap and m<2^r cap/(Kq_d). Thus cap<=K2^(-r)q_d implies every full child is affine/character influence-minimal. A least-essential-dimension positive K-witness supplies S>=0. Sufficient: K2^(K-n-2)>=r when d>=2, or K2^(K-n-3)>=r when d=1. Entropy is in bits; full FEI remains open.",
+    "hypotheses": [
+      "Exact finite Boolean signs on uniform cube",
+      "K>0 and D>0",
+      "Complete physical children and full affine/character minimum a",
+      "Nonnegative complete average reserve S; least-essential-dimension criticality suffices",
+      "Nonempty proper original coordinate block; no component spectra substituted"
+    ],
+    "statement_sha256": "6502108c0a8caa2ef4ce0e72e961ddbf54721b956cd3cf3eeddf6fe433c2a4f0",
+    "contributors": [
+      "A052"
+    ],
+    "proof_source": "PROOF.md Sections1--4; code/check.py; code/independent.py",
+    "proof_dependencies": [
+      "A051 complete conditional-Gibbs budget, 20261027T043314Z PROOF(2), independently reconstructed in PROOF.md Section4",
+      "B11-R1 fibrewise uniform log-Sobolev bound c=2/ln2"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A052",
+        "scope": "Independent algebraic reconstruction of A051 full budget; direct-input independent basis enumeration for new modulo-four lemma",
+        "verdict": "AUTHOR_CHECKED; not independent-agent acceptance",
+        "checks": 95806
+      }
+    ],
+    "status": "PROVED_AUTHOR_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Universal ORIGINAL-block funding when n is far above K, with phase Pi, mixed rows, unused quotient rank, old debits and all full terminals. This is outside the proved claim.",
+    "next_consumers": [
+      "A051",
+      "A054",
+      "A055",
+      "A094"
+    ]
+  }
+]

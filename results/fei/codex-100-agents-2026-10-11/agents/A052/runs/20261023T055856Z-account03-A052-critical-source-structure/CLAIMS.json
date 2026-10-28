@@ -1,0 +1,67 @@
+[
+  {
+    "claim_id": "A052-ORIGINAL-PARTITION-COMPENSATED-RESET-INVARIANCE",
+    "version": 1,
+    "exact_statement": "For every finite Boolean sign f and fixed nonempty proper ORIGINAL coordinate block A, let a(g) be minimum influence in the full finite affine-input/output-character orbit of each complete physical child, rho_A=E[I(g)-a(g)], Q_A=sum_{i in A}Inf_i(f), L_A=H(f)-E H(g), and S_A*=E[K a(g)-H(g)]. Every affine input map x_A=P y_A+b,x_C=Q y_A+R y_C+c with invertible P,R, together with any output character, preserves L_A,S_A* and satisfies Qprime_A+rhoprime_A-Delta=Q_A+rho_A, where Delta=I(fprime)-I(f). In each matched child, every cheap-parity threshold space is transported by R inverse, and its quotient rank modulo ANY transported previously booked parity subspace is identical. Thus the SAME full-terminal compensated signed bank is invariant, for all real K; query-compatible preprocessing supplies no net additional influence funding or new independent quotient ranks. Chosen resets have the same property when transported by conjugation. Genuine least-essential-dimensional positive K-witnesses with K>=0 have S_A*>=0; physical ratio criticality alone does not imply it. On every k>=2 activated quadratic F_k, an explicit query-preserving shear adds Delta=p/4 to the apparent query-plus-release, with rho unchanged atp/4; the compensation cancels exactly. Arbitrary changes of the original partition are excluded and the three-bit point-defect guard violates the broader invariance.",
+    "hypotheses": [
+      "Uniform finite Boolean signs; Fourier entropy bits",
+      "A nonempty proper ORIGINAL coordinate block and all complete original reaches retained",
+      "Full affine-input/output-character orbit minimum, or a conjugately transported chosen reset",
+      "The displayed block-triangular affine map preserves the original query partition; changing the partition is outside scope",
+      "Critical nonnegative reserve requires all smaller Boolean functions to satisfy the same K"
+    ],
+    "statement_sha256": "8003a823313388cf0676e053a25faead12467d794a1dc7331f4a90afaac02bba",
+    "contributors": [
+      "A052"
+    ],
+    "proof_source": [
+      "PRECONDITIONING_PROOF.md",
+      "code/check_invariance.py",
+      "code/independent.py",
+      "out/CHECK.json",
+      "out/INDEPENDENT.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A052-RANK-RELEASE-ORIGINAL-PAIR-PAYMENT",
+        "version": 1,
+        "statement_sha256": "ae8d73daa7c9e75e490620bf1e9c987dead51f19d9a214086a7a52e2065a519d",
+        "scope": "Only all-k activated-quadratic guard rho=p/4; main invariance proved self-contained. Sections1--2 independently accepted at report scopes by A051/A053/A054; no blanket full-claim acceptance inferred."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A052",
+        "verdict": "AUTHOR_PROOF_AND_TWO_REPRESENTATIONS_PASS; independent-agent acceptance pending",
+        "scope": "Analytic finite-orbit derivation plus integer Walsh census and separate direct-character/physical-edge replay"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_VALIDATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "claim_id": "EXPLORATORY-FREE-QUERY-PRESERVING-PRECONDITIONING-REFUND",
+        "version": 0,
+        "exact_false_statement": "The apparent extra query-plus-child release created by a query-partition-preserving root shear can be spent without booking its root influence change.",
+        "witness": "All-k F_k guard: apparent extra p/4 is exactly root Delta=p/4."
+      },
+      {
+        "claim_id": "EXPLORATORY-ARBITRARY-AFFINE-PARTITION-INVARIANCE",
+        "version": 0,
+        "exact_false_statement": "The same invariance applies even when the original physical partition is changed.",
+        "witness": "Three-bit point2 with irrelevant query swapped with relevant bit: L0 to2, compensated influence0 to1."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A053",
+      "A054",
+      "A055",
+      "A090",
+      "A094",
+      "B11",
+      "B20"
+    ]
+  }
+]

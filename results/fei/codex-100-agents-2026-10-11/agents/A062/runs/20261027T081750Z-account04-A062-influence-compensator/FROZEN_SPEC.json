@@ -1,0 +1,12 @@
+{
+  "helper_version": "affine-admission-check-v1",
+  "family": "single zero-vertex flip of product of L equal-width point signs; unflipped positive controls",
+  "domain": {"truth_tables": [[2,2],[2,3],[2,4],[3,2],[3,3],[4,2]], "compressed": "m=8..12 full rank-spectrum checks, m=8..40 rational parameter checks without constructing 2^N for large N", "affine_bases": "all 20160 GL(4,2) bases on (m,L)=(2,2), and 256 reproducible elementary-shear bases on each other truth-table case"},
+  "case_count": "6 exact truth tables; all nonzero directions in each (1162 directions total); 20160 exhaustive four-bit bases plus 1280 prescribed bases; 33 parameter checks",
+  "symmetry": "No direction sampling in truth tables. Formula depends only on number of touched blocks, proved independently in PROOF.md. Translation does not change uniform derivative counts; translations checked on all vertices for one fixed shear basis per truth table.",
+  "arithmetic": "integers and fractions.Fraction; all spectra and derivative probabilities exact; no floating entropy used as proof. Entropy comparisons certified by h2 symmetry/concavity and exact interval membership; all-m conclusion uses analytic proof.",
+  "memory_estimate_mb": 45,
+  "max_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "formal_check": "Small core Lean arithmetic lemma only; full analytic proof is prose and not claimed Lean-certified. memok required before any compiler expected over300MB; do not run Mathlib within1.5GB cap."
+}

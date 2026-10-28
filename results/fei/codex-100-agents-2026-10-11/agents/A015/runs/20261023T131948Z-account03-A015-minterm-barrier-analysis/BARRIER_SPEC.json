@@ -1,0 +1,14 @@
+{
+ "helper_version":"A015-POSITIVE-PRIVATE-MAJORITY-BARRIER@1",
+ "frozen_before_execution":true,
+ "family":"Odd-majority core s=2m+1, every size-m+1 anchor repeated s times with fresh single-bit private clauses",
+ "pilot_domain":"All4096 physical truth points for s3; exact core profiles s3,5; scalar m1..4",
+ "full_domain":"Same single physical table s3,n12; all core Hamming profiles s3,5,7,9 (28 rows); scalar m1..128",
+ "case_count":{"physical_functions":1,"physical_truth_points":4096,"full_profile_rows":28,"full_scalar_m":128},
+ "symmetry":"Exact core Hamming permutation symmetry only; private coordinates are separate physical bits. No larger truth table or giant binomial-exponent rational is materialized.",
+ "arithmetic":"Integer Walsh, exact Fraction means/variances/pivotal profiles and direct edge influence; rational bound certificates. No logarithmic approximate sign.",
+ "memory_estimate_mb":90,
+ "max_runtime_seconds":55,
+ "commands":["python -X utf8 code/barrier.py --pilot","python -X utf8 code/barrier.py"],
+ "scope":"All-parameter proof in AUGMENTED_MAJORITY_BARRIER.md, finite checks are evidence only. This same-reference divergence is not FEI divergence."
+}

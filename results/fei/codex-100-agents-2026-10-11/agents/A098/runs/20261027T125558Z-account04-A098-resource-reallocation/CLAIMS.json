@@ -1,0 +1,169 @@
+[
+  {
+    "claim_id": "A097-AFFINE-PROJECTION-HISTORY-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every Boolean f on a finite uniform cube and every normalized covering squared-Fourier reference Q, every finite adaptive physical-query history whose two children inherit pi_i Q, augmented by any finite affine information projections containing the current true law and charged at their full fee D(u||q), has complete signed entropy-increment + full query-KL contraction + conversion-fee + full-terminal-CE bill at most CE(P_f,Q)+(2/ln 2)I(f). Any fixed old booking U stays added. The SAME original capacity B pays whenever U+CE(P_f,Q)+(2/ln 2)I(f)<=B. Scalar subprobability masses may be preserved without dropping their penalties.",
+    "hypotheses": [
+      "Finite uniform Boolean cube; all units bits",
+      "Finite adaptive tree and finite update sequences; actual physical reach probabilities; both outcomes retained",
+      "Normalized Q covers P_f; or fixed inherited positive subprobability scalar times such Q",
+      "Every update minimizes D(v||q) over a nonempty closed affine moment slice containing current P; support restricted to supp(q)",
+      "Projection inheritance specifically; signed entropy increments, without clipping positive parts or extra mandatory floor costs"
+    ],
+    "statement_sha256": "bc46cd1b3062fcf914edfcc89275c6e7391645eecd0edb7194defb5ea8e05035",
+    "contributors": [
+      "A097; A096 supplied calibration dependency; A012 supplied projection-history dependency"
+    ],
+    "proof_source": "agents\\A097\\runs\\20261027T092641Z-account04-A097-cross-route-transfer\\PROOF.md",
+    "proof_dependencies": [
+      "A096 stage22 section2 finite information-projection identity, rederived in PROOF section1",
+      "A012 stage22 DERIVATION equations2-6, including J_i<=(2/ln 2)Inf_i and physical influence telescope"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A097",
+        "kind": "separate exact representation audit, not independent-agent acceptance",
+        "source": "agents\\A097\\runs\\20261027T092641Z-account04-A097-cross-route-transfer\\out\\AUDIT.json"
+      },
+      {
+        "reviewer": "A098",
+        "at": "2026-10-27T13:19:38.118800+00:00",
+        "verdict": "INDEPENDENT_ANALYTIC_RECONSTRUCTION_HOLDS_UNCHANGED",
+        "source_statement_sha256": "bc46cd1b3062fcf914edfcc89275c6e7391645eecd0edb7194defb5ea8e05035",
+        "proof": "REVIEW.md",
+        "finite_checks": "out/VALIDATION.json and out/INTERFACE_FEE.json; different domains, counts not pooled as an exhaustive census",
+        "scope": "A097 two full exact statements; A093 full finite guard by explicit fixture and analytic input/output/coordinate symmetry. No whole A011/A012 bundled acceptance.",
+        "formal_verification": "NOT_LEAN_CHECKED"
+      }
+    ],
+    "status": "A098_INDEPENDENT_SCOPED_REVIEW_HOLDS_UNCHANGED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Noncircular useful ORIGINAL arbitrary-core full reference CE<=C0 I, or paid required interface conversion from SAME unused original account; full FEI remains OPEN.",
+    "next_consumers": [
+      "A012",
+      "A096",
+      "A094",
+      "A050",
+      "A011",
+      "A099",
+      "A100"
+    ]
+  },
+  {
+    "claim_id": "A097-HIGH-MOMENT-MATCHED-QUERY-LOSS",
+    "version": 1,
+    "exact_statement": "For every even n>=4 there is an explicit actual Boolean f_n, a product of n/2 disjoint two-bit signs, and a strictly positive rational reference Q_n with H(f_n)=n, I(f_n)=n/2, CE(P_n,Q_n)<4I(f_n), Q_n(empty)=P_n(empty), and all spectral marginals on at most n-2 coordinates identical to P_n, such that for every i<=n-1 projection loss L_i=D(P_n||Q_n)-D(pi_i P_n||pi_i Q_n) satisfies n-1/4<L_i<n and 2n-1/2<L_i/Inf_i(f_n)<2n. Q_n is already feasible for any calibration using only those moments, so its information-projection release is zero. No universal local L_i<=K Inf_i follows from these hypotheses; H/I=2 and FEI is not refuted.",
+    "hypotheses": [
+      "Every even integer n>=4",
+      "Two-bit sign is negative only at (+,+); disjoint physical pairs",
+      "Q_n is the explicit parity perturbation on spectral face {n} union V, V subset [n-1], with epsilon=2^(-4n)",
+      "Loss uses the explicit spectral projection; both normalized references and true laws are retained"
+    ],
+    "statement_sha256": "f3b5c69ef59c7d95ba81cee06034cdf49115a0a5036e75101f19a6ba1bd7064d",
+    "contributors": [
+      "A097"
+    ],
+    "proof_source": "agents\\A097\\runs\\20261027T092641Z-account04-A097-cross-route-transfer\\PROOF.md",
+    "proof_dependencies": [
+      "Direct Boolean Walsh tensor computation",
+      "Finite parity cancellation on every projection fiber and inclusion moment"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A097",
+        "kind": "separate exact representation audit, not independent-agent acceptance",
+        "source": "agents\\A097\\runs\\20261027T092641Z-account04-A097-cross-route-transfer\\out\\AUDIT.json"
+      },
+      {
+        "reviewer": "A098",
+        "at": "2026-10-27T13:19:38.118800+00:00",
+        "verdict": "INDEPENDENT_ANALYTIC_RECONSTRUCTION_HOLDS_UNCHANGED",
+        "source_statement_sha256": "f3b5c69ef59c7d95ba81cee06034cdf49115a0a5036e75101f19a6ba1bd7064d",
+        "proof": "REVIEW.md",
+        "finite_checks": "out/VALIDATION.json and out/INTERFACE_FEE.json; different domains, counts not pooled as an exhaustive census",
+        "scope": "A097 two full exact statements; A093 full finite guard by explicit fixture and analytic input/output/coordinate symmetry. No whole A011/A012 bundled acceptance.",
+        "formal_verification": "NOT_LEAN_CHECKED"
+      }
+    ],
+    "status": "A098_INDEPENDENT_SCOPED_REVIEW_HOLDS_UNCHANGED",
+    "supersedes": [],
+    "refutes": [
+      "Any hypothetical dimension-independent query-local payment deduced only from covering rate4, vacuum calibration and marginals through order n-2"
+    ],
+    "first_unproved_line": "Noncircular useful ORIGINAL arbitrary-core full reference CE<=C0 I, or paid required interface conversion from SAME unused original account; full FEI remains OPEN.",
+    "next_consumers": [
+      "A012",
+      "A096",
+      "A094",
+      "A050",
+      "A011",
+      "A099",
+      "A100"
+    ]
+  },
+  {
+    "claim_id": "A093-FORWARD-TRUE-KERNEL-HANDOFF-DEFICIT",
+    "version": 1,
+    "exact_statement": "For actual AND3 with the normalized original uniform spectral reference Q (CE=3=4I), every root coordinate has a projection-to-normalized-true-kernel handoff whose forward full-reference fee minus decrease of target KL, averaged over BOTH actual children, equals (3/32)log2(5)>0. The nonconstant child is already matched under projection but moves to (1/16,5/16,5/16,5/16). Thus true-kernel inheritance is not a free projection-profile or affine-calibration update in general; this does not refute the scoped A012/A011 history theorems or full FEI.",
+    "hypotheses": [
+      "Actual3-bit AND-sign truth table (one exceptional vertex), any input translation/output sign and root coordinate",
+      "Original full uniform8-atom reference; all child masses/normalizers retained",
+      "Projection Qprime=pi_i Q and A011 normalized true-kernel references defined from SAME parent",
+      "Fee convention D(new_reference||old_reference); BOTH physical children reach1/2"
+    ],
+    "statement_sha256": "291b4429e2ae930044be8521ea95b4699c21ec26f27b41924b91f7cc884de33b",
+    "contributors": [
+      "A093"
+    ],
+    "proof_source": {
+      "path": "DERIVATION.md",
+      "sha256": "6be9a462b9b1cfe1d54940f880b65de40b60a3b9fc26bc17dde948fc02fdf5ad",
+      "formal_verification": "NOT_LEAN_CHECKED_ADMISSION_HELD"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A093",
+        "kind": "AUTHOR_CHECK_DIRECT_WALSH_AND_PRIME_LOG_FORMS",
+        "verdict": "PASS_FIXED_FINITE_DOMAIN;ANALYTIC_IDENTITY_RECONSTRUCTED",
+        "independent_agent_review": "PENDING_A012_A011_A094"
+      },
+      {
+        "reviewer": "A098",
+        "at": "2026-10-27T13:19:38.118800+00:00",
+        "verdict": "INDEPENDENT_ANALYTIC_RECONSTRUCTION_HOLDS_UNCHANGED",
+        "source_statement_sha256": "291b4429e2ae930044be8521ea95b4699c21ec26f27b41924b91f7cc884de33b",
+        "proof": "REVIEW.md",
+        "finite_checks": "out/VALIDATION.json and out/INTERFACE_FEE.json; different domains, counts not pooled as an exhaustive census",
+        "scope": "A097 two full exact statements; A093 full finite guard by explicit fixture and analytic input/output/coordinate symmetry. No whole A011/A012 bundled acceptance.",
+        "formal_verification": "NOT_LEAN_CHECKED"
+      }
+    ],
+    "status": "A098_INDEPENDENT_SCOPED_REVIEW_HOLDS_UNCHANGED",
+    "supersedes": [],
+    "refutes": [
+      {
+        "exact_helper": "Every normalized true-kernel handoff is a paid projection-profile update with D(new||old)<=D(target||old)-D(target||new).",
+        "witness": "AND3 with full uniform root reference, both actual children",
+        "not_refuted": [
+          "A012-UNIVERSAL-PROJECTION-PROFILE-HISTORY@1",
+          "A011-PADDING-FRESH-RESET-SAME-SOURCE-BANK@6",
+          "full FEI"
+        ]
+      }
+    ],
+    "first_unproved_line": "Fund a REQUIRED arbitrary-core interface handoff or original O(I) complete source from actual unused original capacity after old bills and BOTH full terminals.",
+    "next_consumers": [
+      "A012",
+      "A011",
+      "A013",
+      "A097",
+      "A085",
+      "A094",
+      "A099",
+      "B19",
+      "B20"
+    ]
+  }
+]

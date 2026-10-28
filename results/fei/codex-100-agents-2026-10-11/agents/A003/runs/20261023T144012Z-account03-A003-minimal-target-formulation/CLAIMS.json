@@ -1,0 +1,56 @@
+[
+  {
+    "claim_id": "A003-MATCHED-DEFERRAL-INFLUENCE-COMPRESSION",
+    "version": 1,
+    "exact_statement": "For every finite Boolean core g, integer L>=2 and every adaptive frontier obtained from its disjoint L-parity-block lift by querying only blocks with at least two unrevealed coordinates, exact matched spectral references have zero erasure, zero occupancy/calibration KL and constant complete CE H(g). Each remaining physical coordinate in block j has influence Inf_j(g). If J_F is mean remaining influence, total queried reach-weighted influence is L I(g)-J_F. From original capacity K L I(g), the erasure-plus-terminal-CE residual is unchanged K L I(g)-H(g), whereas explicitly earmarking K times queried influence leaves K J_F-H(g). Complete unwrapping has J_F=I(g). For any K>0 every nonconstant core has an unconditionally cheaply matched lift with L>=max(2,ceil(n*2^(n-1)/K)). Nonnegative remaining-influence residual at every such complete frontier is equivalent to FEI(K), exactly; a quotient bound H(g)<=K I(g)+lambda H(g), 0<=lambda<1, is equivalent to FEI(K/(1-lambda)). No source replacement can reduce an exact terminal CE below H(g).",
+    "hypotheses": [
+      "Finite uniform Boolean cubes, disjoint parity blocks, at least one variable per block retained.",
+      "Exact normalized actual spectral reference including vacuum at every node; both physical children and all original bills retained.",
+      "Influence earmarking is an additional allocation rule, not an entropy or CE debit. K>0; lambda in [0,1)."
+    ],
+    "statement_sha256": "df9ec9e0c2775d8d6e51c4b5fe56977e58b11efd8432558cbbb8c9de7f48c646",
+    "contributors": [
+      "A003; prior parity-nullspace A085/B17 and exact-match deferral A090 credited, not claimed new"
+    ],
+    "proof_source": [
+      "agents\\A003\\runs\\20261023T121547Z-account03-A003-minimal-target-formulation\\DERIVATION.md",
+      "agents\\A003\\runs\\20261023T121547Z-account03-A003-minimal-target-formulation\\code\\check_deferral.py",
+      "agents\\A003\\runs\\20261023T121547Z-account03-A003-minimal-target-formulation\\out\\FROZEN_SPEC.json",
+      "agents\\A003\\runs\\20261023T121547Z-account03-A003-minimal-target-formulation\\out\\CHECK_FULL.json",
+      "agents\\A003\\runs\\20261023T121547Z-account03-A003-minimal-target-formulation\\out\\MAJORITY_LEDGER_AUDIT.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A003 author",
+        "status": "Analytic coefficient proof, full both-child integer/Fraction certificate, separate direct-character/physical-edge witness; independent review pending."
+      },
+      {
+        "reviewer": "A004/account03",
+        "at": "2026-10-23T13:25:02.736822+00:00",
+        "verdict": "HOLDS_UNCHANGED_AT_STATED_SCOPE",
+        "method": "Independent coefficient/normalization reconstruction and independent A004 Fraction FWHT/direct-character implementation; source checker not imported or executed.",
+        "evidence": [
+          "agents\\A004\\runs\\20261023T124811Z-account03-A004-constant-and-unit-ledger\\DERIVATION.md",
+          "agents\\A004\\runs\\20261023T124811Z-account03-A004-constant-and-unit-ledger\\out\\CHECK.json"
+        ],
+        "scope": "Parity-block proof and two distinct ledger conventions; no universal source or compression guarantee is supplied.",
+        "repair_supplied": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_BY_A004_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A085",
+      "A066",
+      "A068",
+      "A094",
+      "A099",
+      "B01 lead",
+      "B20"
+    ]
+  }
+]

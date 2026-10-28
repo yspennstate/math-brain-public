@@ -1,0 +1,12 @@
+{
+ "helper_version":"constrained-isospectral-calibration-v1",
+ "family":"generic complete four-cell reference calibration plus actual Boolean parity4 queried on one physical bit; prior A035 triangle envelope reviewed separately",
+ "domain":{"actual_binary_bin_mass":["0","1/4","1/2","3/4","1"],"root_bin0_mass":"k/8, k1..7","plus_bin0_mass":"j/16,j1..15 with both child profiles strictly positive","fine_conditionals":[["1/3","2/3"],["2/5","3/5"]],"competitors":"two exact signed perturbations preserving branch bins AND average full reference","parity_m":[1,2,3,4,8,16]},
+ "case_count":{"pilot":87,"main":285,"compatible_competitors_per_case":2,"fixed_parity_reference_profiles":6},
+ "symmetry":"none; both physical outcomes and all four reference cells retained, including actual-zero bins",
+ "arithmetic":"Fraction; distinct28-term rational atanh intervals with exact tail, weighted before2^-256 rounding; exact powers for strict threshold certificates",
+ "memory_estimate_mb":100,
+ "max_runtime_seconds":{"pilot":55,"main":180},
+ "pilot":"first actual bin mass values0,1/2,1 and rootk2,4,6; same feasible child grid",
+ "proof_target":"exact information-projection lower bound/attainer; compatible cost E>=0; free actual-mass calibration; genuine actual Boolean zero-JS/reference-cost witness; scalar criterion only, no full FEI claim"
+}

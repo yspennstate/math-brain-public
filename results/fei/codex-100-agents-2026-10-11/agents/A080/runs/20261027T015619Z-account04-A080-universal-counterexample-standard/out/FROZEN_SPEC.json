@@ -1,0 +1,39 @@
+{
+  "helper_version": "A080-prime-perturbation-v1",
+  "family": "F(x,z)=g(x)*(-1)^{1[wt(x,z)<=1]}, all Boolean seeds on n=0,1,2,3; k=3 fresh spectator bits",
+  "domain": {
+    "n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "k": [
+      3
+    ]
+  },
+  "case_count": 278,
+  "block_checks_expected": 14782,
+  "symmetry": "none; all labelled seeds, every proper block of size at least two",
+  "arithmetic": "integer Walsh and direct characters; exact Fraction influence and spectral TV; entropy comparisons use rational positive-atanh-series log enclosures",
+  "memory_estimate_mb": 100,
+  "max_runtime_seconds": 55,
+  "pilot": "n<=2, under 60 seconds",
+  "adversarial_checks": "constants, dummies, complements, all proper subsets, k=0,1,2 failure search separately frozen below",
+  "failure_search": {
+    "n": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "k": [
+      0,
+      1,
+      2
+    ],
+    "case_count": 834,
+    "stop": "record first block-compressible witness per k, no automatic escalation"
+  },
+  "analytic_schedule": "n>=1,m>=1,N=8(n+m+2),k=N-n; analytic only; no truth table at N"
+}

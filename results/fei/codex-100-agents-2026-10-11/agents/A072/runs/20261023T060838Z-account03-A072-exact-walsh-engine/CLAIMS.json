@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A072-LOCAL-HULL-ADMISSION-DAMAGE-UNBOUNDED",
+    "version": 1,
+    "exact_statement": "On any finite Boolean restriction/admission DAG with slack S=KI-H, prescribed local stopping-hull credit increments delta_b=rho_M(child_b)-E rho_M(children), and unchanged credit on admissions, the exact capital supporting every subsequent query/admission/stopping choice is T(v,M)=max{(-S(v))_+,T(v,M+j),T(child_b,M)-delta_b}. It equals the maximum over actual paths of terminal deficit minus cumulative delta. For all Boolean functions on at most3 bits and all K>=0, T(v,empty)=rho_all(v). At K=1 the explicit Boolean family F_d(s,x)=chi_3(x) with its sign flipped only at the all-zero vertex, d>=0 selector bits and3 parity bits, has full stopping hull R_d=max_(0<=r<=3,0<=t<=d) 2^(-(d+3-r-t))*(H_(r+t)-I_(r,t))_+, where I_(r,t)=r+2*(r+t-2*r)/2^(r+t) for r+t>=1, H_m is the entropy of one mass (1-2/2^m)^2 and2^m-1 masses4/2^(2*m), and H_0=I_(0,0)=0. It obeys 0<R_d<=8*(d+4)/2^(d+3), while sequential local-hull admission capital T_d>=1/2; hence sup_d T_d/R_d=infinity. For d=1 exactly R_1=1/4 and T_1=1/2. Credit-owner and signed-debit labels can be preserved conditionally whenever this capital criterion holds. This is an admission-accounting obstruction at rate1, not a rate4 or FEI counterexample.",
+    "hypotheses": [
+      "uniform independent physical bits and base2 Fourier entropy",
+      "finite acyclic physical restrictions, stop allowed, admissions cost no new credit",
+      "every query uses the exact CURRENT admitted-set stopping-hull allocator, with inherited actual credit retained",
+      "solvency required for every policy and every branch, individual nonnegative credit owners and signed debit owners retained",
+      "the explicit family conclusion uses K=1; no claim at K=4 or against influence-paid universal envelopes"
+    ],
+    "statement_sha256": "794f189e73fe133d5fc29f5b18d26f19a6e0a929999f900f76ccf9cf24875f3b",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "code/admission.py",
+      "code/verify.py",
+      "out/CONSTRUCTED_WITNESS.json",
+      "out/AUDIT.json",
+      "out/FAMILY_FORMULA_CHECKS.json",
+      "out/EXHAUSTIVE.json"
+    ],
+    "proof_dependencies": [
+      "A072-OTHER-CORE-STOPPING-CREDIT-HULL@1: finite Bellman framework; proof rederived here",
+      "finite character orthogonality, Shannon chain rule and the explicit positive atanh logarithm series"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A072",
+        "independent_reviewer": false,
+        "verdict": "AUTHOR_PROOF_AND_TWO_REPRESENTATION_AUDIT_PASS",
+        "scope": "all-d analytic family proof; exact four-bit backward recurrence and independent forward paths/subset hulls; no external acceptance"
+      }
+    ],
+    "status": "PROVED_LOCALLY_EXTERNAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Proposed generic implication: a full stopping-hull bank, enlarged by a universal constant factor, pays every sequential local-hull admission scheme (rate1 refutation; not a registered claim version)."
+    ],
+    "first_unproved_line": "Construct an initially influence-paid, owner-coherent superharmonic envelope at a suitable absolute rate for arbitrary Boolean restriction/admission DAGs; no universal FEI bound is supplied.",
+    "next_consumers": [
+      "A071",
+      "A074",
+      "A075",
+      "A089",
+      "A092"
+    ]
+  }
+]

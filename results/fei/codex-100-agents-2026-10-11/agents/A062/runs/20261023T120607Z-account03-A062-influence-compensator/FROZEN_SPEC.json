@@ -1,0 +1,12 @@
+{
+  "helper_version": "stage20-sector-v2; self-contained Fraction algebra; independent truth-table Walsh transform; normalized mantissas bounded at 128 bits after a 56-bit enclosure failed to certify k=32; explicit product-reference and R=p falsification controls",
+  "actual_Boolean_family": "f_n(x)=1-2*1[x=0], n=2k; consecutive two-coordinate blocks",
+  "reference": "R has the actual block-occupancy law, conditional on occupancy the actual marginal product Q conditioned independently inside each occupied block",
+  "domain": {"truth_table_k": [2,3,4], "compressed_k": [2,3,4,8,16,32]},
+  "case_count": "3 full truth tables, 6 compressed exact parameter checks; no automatic escalation",
+  "symmetry": "Only the analytically proved exchangeability of consecutive equal-size blocks is used in compressed formulas; full truth tables have no symmetry reduction",
+  "arithmetic": "Fraction probabilities and identities; rigorous logarithm intervals via a fresh rational atanh series with proved tail and outward rounding to 2^-80",
+  "memory_estimate_MB": 45,
+  "maximum_runtime_seconds": 55,
+  "purpose": "Separate failure of coupling payment from failure of block eligibility; this is not an inherited-product-root reachability certificate or FEI counterexample"
+}

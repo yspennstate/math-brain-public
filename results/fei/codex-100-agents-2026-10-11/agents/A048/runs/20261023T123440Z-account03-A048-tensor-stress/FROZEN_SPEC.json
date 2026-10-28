@@ -1,0 +1,15 @@
+{
+  "helper_version": "A048 mod3 cumulative full-spike stress v1; own prior intervals.py SHA256 abba32f22f19b686de6097d442a580f9d094f3801f91e2174ccc8c04dcfc8a40",
+  "actual_family": "Parity z1 reversed at z=e2,e1+e2, and additionally at z=0 iff the tail Hamming weight is r modulo3; initial/fresh full-essential spike theta1/6; full resets after each pair of tail queries",
+  "finite_domain": "7 dense blocks: (tail m,z width k,r)=(4,4,0..2),(6,4,0..2),(8,4,0). Four A036 old witness activations k5,6 and epsilon+/-1. One original F_h b/x transport and block reset at m4,k4,r0. Phase vectors m0..14, exact3x3 period matrix,90 bias scalar states m2..12,k4..8,r0..2",
+  "case_count": "7 dense blocks,4 incoming witness checks,1 original-source lift,90 phase/bias scalar states; one analytic account N=k=65536 and8 rational tensor/sparse cases r3..10, not a truth-table enumeration",
+  "symmetry": "Only Hamming-weight residue compression, proved explicitly; all3 residue states retained in the phase certificate; no unlisted dimension escalation",
+  "arithmetic": "Integer/Fraction Walsh and direct pivotal edges; exact rational reference transport; rational outward40-term atanh logs; rational3x3 matrix certificate and analytic total-KL identity",
+  "pilot_max_seconds": 60,
+  "main_max_seconds": 60,
+  "memory_estimate_mb": 200,
+  "largest_dense_core_bits": 12,
+  "largest_dense_outer_bits": 11,
+  "analytic_domain": "Every even N>=10 with k=N; original source fixed, both outcomes of every query kept, stop at2 tail bits. Counterexample to unlimited prescribed source payment, not FEI.",
+  "execution": "Single bounded foreground python -X utf8 code/check.py; timeout60; full frozen finite domain is the pilot"
+}

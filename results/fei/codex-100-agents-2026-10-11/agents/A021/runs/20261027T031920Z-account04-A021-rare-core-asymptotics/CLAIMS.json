@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A021-SAME256-BALANCED-DEPENDENT-MARKED-PAIR",
+    "version": 1,
+    "exact_statement": "For b=g tensor g on six uniform DATA bits, g=-1 only at000, delta=1/64, and every pair of balanced Boolean controllers a,c on the same arbitrary finite uniform cube, let F(0,z)=a(z),F(e0,z)=-c(z),F=b elsewhere and h(y,z)=a(z) or -c(z). With V the nonempty upper-set potential, W=V minus the marked singleton term, and Gmark the signed sum retaining W in both control children and V(a),V(c) at the mark query, GV(F)-2delta Gmark(h)<=321<256 I_DATA(F), and V(F)>=2delta W(h).",
+    "hypotheses": [
+      "uniform finite cubes and base2 logarithms",
+      "fixed six-bit tensor seed g tensor g",
+      "adjacent DATA vertices0,e0",
+      "both controllers balanced; dependence arbitrary",
+      "original mark retained in both control outcomes; removed only at its own query"
+    ],
+    "statement_sha256": "ce1ad87f537f31799d648fbdb58daae632522a93291610820fafc74a1f592387",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "agents\\A021\\runs\\20261027T031920Z-account04-A021-rare-core-asymptotics\\PROOF.md",
+    "proof_dependencies": [
+      "elementary Walsh Parseval and physical restriction means; exact row factorization rederived in PROOF.md1; no unreviewed theorem used as a premise"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A021",
+        "verdict": "AUTHOR_PROOF_EXACT_CHECKS",
+        "main_assertions": 956,
+        "separate_implementation_assertions": 6454,
+        "independence": "different implementation, same author; independent-person review pending",
+        "lean": "RUNTIME_UNVERIFIED; no formal acceptance"
+      }
+    ],
+    "status": "AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A022",
+      "A025",
+      "A029",
+      "A087",
+      "A094"
+    ]
+  }
+]

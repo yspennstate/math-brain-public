@@ -1,0 +1,16 @@
+{
+  "helper_version": "A096-selective-frontier-v1 code/check.py",
+  "family": "all Boolean truth tables on exactly 3 variables; and actual negative-cell edits g+2A_(a+b+r)",
+  "pilot_domain": "all 16 Boolean n=2 functions, 3 calibrated refs, gamma=1/2 and1/4; negative-cell a=1,2 b=0,1 r=1,2 with b+r>=2",
+  "primary_domain": "all 256 Boolean n=3 functions, 3 calibrated refs, gamma=1/2 and1/4; negative-cell a=1,2,3 b=0,1 r=1,2,3 with b+r>=2",
+  "case_count": "1536 abstract source instances x6 tree/frontier policies =9216; 63 creating-exit instances x6=378 negative-cell policies; pilot96 abstract instances x6 and24 exits x6=144 (exact executed counts authoritative)",
+  "symmetry": "none; all labelled truth tables in the frozen dimension, deterministic coordinate policies with asymmetric stopping and two selected-reset masks",
+  "arithmetic": "Fraction exact Walsh-Hadamard spectra/marginals; rational interval log2 via 18 atanh terms and geometric tail after binary range reduction; finite-to-infinite theorem is analytic",
+  "memory_estimate_mb": 100,
+  "pilot_max_seconds": 60,
+  "primary_max_seconds": 240,
+  "no_automatic_dimension_escalation": true,
+  "heavy_jobs": 0,
+  "expected_over_300mb": false,
+  "precommit": "saved before any checker execution"
+}

@@ -1,0 +1,79 @@
+from pathlib import Path
+from fractions import Fraction as F
+from datetime import datetime,timezone
+import json,hashlib
+R=Path(__file__).resolve().parents[1];A=R.parents[1]
+def write(n,s):(R/n).write_text(s,encoding='utf-8')
+def dump(n,x):write(n,json.dumps(x,indent=2)+'\n')
+bs=json.loads((R/'out/PHYSICAL_BILLS.json').read_text(encoding='utf-8'))
+lo=lambda e:F(e['interval'][0]);hi=lambda e:F(e['interval'][1])
+assert len(bs)==300
+assert all(lo(b['original_slack'])>F(3,10) for b in bs)
+assert sum(hi(b['envelope_slack'])<0 for b in bs)==12
+ind=json.loads((R/'out/INDEPENDENT.json').read_text(encoding='utf-8'))
+assert lo(ind['excess'])>F(1,128)
+summary={'policies':300,'strict_raw_envelope_violations':12,'same_original_account_paid':300,'minimum_original_slack_lower':str(min(lo(b['original_slack']) for b in bs)),'uniform_original_slack_bound':'3/10','independent_excess_lower':'1/128','arithmetic':'rational certified intervals; exact ledger derived in DERIVATION.md'}
+dump('out/AUDIT_SUMMARY.json',summary)
+next_action='A028/A029/A087/A094 review v11 scope correction; choose a REQUIRED bounded-odds terminal policy and pay accumulated Qloss from SAME original residual, or explicitly use inherited descendants. Original arbitrary-core O(I) full-reference supplier remains unpaid.'
+statement='For every finite physical restriction tree with normalized covering current references and own true-phase inherited children, root CE plus actual signed reference conversions equals Hroot+E Dterminal+sum_v w_v delta_v, where delta_v is erased-pair KL plus outcome KL and is nonnegative. A027 v10 Tnew-Snew telescope bounds the terminal functional only; its raw-transaction identity omits this sum. Actual bounded-odds point activations D_(m+1), m>=2, give positive missing cost after proper DATA then CONTROL. In the literal prior D3/OR2 domain, 12 of 300 policies strictly exceed the old raw envelope; one independently reconstructed excess exceeds1/128 selected-node bits. All300 tested actual bills fit the SAME exact original B_OR with root residual>3/10. No universal physical-policy affordability or FEI is concluded.'
+claim={'claim_id':'A027-PARTIAL-CORE-ACTIVATION-TRANSPORT','version':11,'exact_statement':statement,'hypotheses':['Uniform finite Boolean cube; bits; finite actual physical trees','Current references normalized, covering, inherited through actual true phase channel with OWN positive branch normalizers','Same target during reference conversions; all physical siblings and full terminal CE retained','All-dimensional strict witness m>=2; low-bias specialization m>=4','Finite literal300-domain solvency does not assert all-policy solvency'],'statement_sha256':hashlib.sha256(statement.encode()).hexdigest(),'contributors':['A027','A094 (original query-KL objection independently applied)','A011 (v6 inherited-reference repair, comparison only)'],'proof_source':'DERIVATION.md; code/check.py; code/previous_audit/check.py; code/independent.py; out/EXACT.json; out/PHYSICAL_BILLS.json; out/INDEPENDENT.json','proof_dependencies':['A027@10 source/terminal definitions; scalar and eta bounds retained','A094 stage21 DERIVATION1-2 query-KL correction independently reconstructed','A028 final-stage exact admission distinction, scope comparison only'],'review_records':[],'status':'AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_EXTERNAL_REVIEW_PENDING','supersedes':['A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@10 physical-transaction reading of equation3; earlier scoped transport/scalar/terminal clauses retained'],'refutes':['A027@10 claim that only signed sigma enters the full physical bill; raw-envelope interpretation of equation3'],'first_unproved_line':'For every REQUIRED compatible bounded-odds physical policy, Qloss <= M + sum w Anew + E Snew from SAME unused original quota; arbitrary-core original O(I) supplier also absent.','next_consumers':['A028','A029','A056','A087','A094','A099','B20']}
+dump('CLAIMS.json',[claim])
+progress={'protocol_revision':'2026-10-11-execution-v2','run_id':R.name,'stream':'B06','packet_id':'A027','gap_id':'G-R-SELECT','attempt_id':'A027-G-R-SELECT-022','method':'Consume A094 query-KL correction and A011 v6; independently audit OWN v10 and test actual raw bills from SAME original reserve','mathematical_delta':'v10 endpoint/physical scope corrected: raw=H+terminalKL+Qloss. All-dimensional bounded-odds point witness;12/300 strict old raw-envelope violations, independent excess>1/128; exact original B_OR pays300/300 with residual>3/10. Universal all-policy payment remains OPEN.','deliverable_status':'COMPLETE_LOCAL_ARTIFACT; V11_CORRECTION_EXTERNAL_REVIEW_PENDING','mathematical_status':'AUTHOR_PROOF_SCOPE_CORRECTION_AND_EXACT_FINITE_CERTIFICATES; FULL_FEI_OPEN','claim_versions_used':['A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@10','A094 stage21 query-KL accounting objection','A028 final exact nodewise admission comparison','A011@6 inherited/vacuum repair read, not blanket accepted'],'claims_created_or_changed':['A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@11'],'source_artifacts':['REPORT.md','DERIVATION.md','FROZEN_SPEC.json','FROZEN_PHYSICAL_AUDIT.json','FROZEN_INDEPENDENT.json','out/BASELINE_READS.json','out/SOURCE_RECEIPTS.json','out/EXACT.json','out/PHYSICAL_BILLS.json','out/INDEPENDENT.json','out/AUDIT_SUMMARY.json'],'next_consumers':['A028','A029','A056','A087','A094','A099','B20'],'next_action':next_action,'stagnant_substantive_attempts':0,'blockers':['Required policy and same-original payment of accumulated Qloss missing','Original arbitrary-core O(I) source missing','External review, supervisor mirrors and downstream adoption unobserved','Wake warned stale owner-model189.5h/state-of-mind174.1h/dream46.5h; excluded as mathematical premises'],'packet_ids':['A027']}
+dump('PROGRESS.json',progress);(R/'PACKET_DELTA.json').write_bytes((R/'PROGRESS.json').read_bytes())
+report='''# A027 stage22: correct the physical bill before extending block selection
+
+## exact target, quantifiers, hypotheses and units
+
+Audit the SAME v10 original-account bounded-odds theorem against physical queries, then test its actual bill without renewing any source. Uniform finite Boolean cubes, bits, covering normalized references, true-phase inheritance with own normalizers, all physical siblings and complete terminal CE. Full FEI remains OPEN. This is a correction of the same candidate, not a new universal theorem.
+
+## sources actually read, revisions and theorem locators
+
+Machine AGENTS, execution protocol2026-10-11-execution-v2, BOARD20261027T0659, B06 lead v2, own STATUS/LEARNED and stage21 REPORT/DERIVATION/checker were read. Original detailed sources: A09420261026T232939Z DERIVATION1-2; A02820261023T144415Z REPORT exact admission; A01120261027T025625Z REPORT v6 repair; A08720261023T143823Z REPORT false-necessity guard. Canonical indices, campaign plan, supplement and four paper texts were intake-accessed with selected passages inspected; no fresh full-paper audit or literature novelty claim.28 baseline source hashes/decodings/locators and detailed source receipts are saved. One source intake failed on UTF8 and was rerun with explicit cp1252 fallback; no source was modified. A read-only math-brain query returned restriction definitions and unrelated matches; none supplies this correction or is used as a theorem premise.
+
+## complete derivation or exact first unsupported line
+
+DERIVATION1 proves Braw=Hroot+E Dterminal+Qloss by finite cancellation; Qloss is reached erased-pair plus outcome KL. v10's code verifies raw=sigma+refund locally but sums only sigma into its terminal account. Its equation3 is correct for the terminal functional and false as an equality for the full physical transaction. DERIVATION2 gives actual D_(m+1) witnesses for allm>=2, including core bias<=1/16 at m>=4. DATA then bounded-odds reconstruction then CONTROL leaves zero terminal KL and positive raw bill. DERIVATION3 independently certifies an actual old-family policy with raw debt exceeding T+(4/9)eta by>1/128 selected-node bits.12/300 saved policies violate the old raw-envelope reading. The EXACT original B_OR still pays all300 actual bills, with residual>3/10; old1/64 remains in its separate original core allocation. This larger exact-bank result is not a revision of the old1/5376 sufficient floor, whose physical interpretation is withdrawn. No universal insolvency is claimed.
+
+The corrected necessary/sufficient admission is Qloss<=M+sum w Anew+E Snew, with M the SAME original remaining quota after old debits/full siblings. This is an exact condition, not its proof for required policies. Version11 retains scalar sharpness, eta transport and endpoint affordability; withdraws all-history raw-envelope/payment wording pending this condition. First unpaid universal line is still an original arbitrary-core O(I) complete reference or a genuinely required selected terminal policy with full query losses paid.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen specifications preceded every check. python -B -X utf8 code/check.py:15 actual point-family cases, m2..6 and odds1/2,1,2;2312 assertions PASS,0.045seconds. Integer butterfly Walsh equals separate direct-character sums; all channels/normalizers exact Fraction; strict signs use32-term atanh series, proved tail and outward80-bit intervals. code/audit_previous.py copies immutable stage21 helpers only into THIS run; code/previous_audit/check.py executes the original300 policies plus NEW exact raw-transaction tests:12899 predicates PASS,1.169seconds. The300 new ledger checks are included in12899; inherited old checks are not new mathematical results.12 strict envelope failures and300 original-budget successes are certified by rational intervals, including min residual>3/10. code/independent.py supplies a separate selected-family target implementation, imports only current standalone primitives, and passes16 checks with excess>1/128; its import reruns the15 cases, not added again to totals. This is author reproduction, not external review. Its telescope interval overlap is diagnostic; equality follows the finite proof. No floats determine a claim.
+
+Jobs estimate65/180MB, each under55seconds; no heavy search, GPU, automatic escalation, detached worker or new external process service. Fresh memok passed (5.6GB physical/12.1GB commit available); proof-check scope and receipt are recorded separately. No complete entropy theorem is claimed Lean-certified.
+
+## proof dependencies and changed downstream conclusions
+
+A094's query-KL objection is accepted at the exact algebraic scope and independently applied to A027's own saved theorem. A011 v6 now explicitly scopes inherited/vacuum descendants; this does not automatically repair rebuilt bounded-odds histories. A028's affordability-outside-channel example is consumed as a scope guard, not as a required terminal rule. Same candidate10->11 narrows its raw-transaction claim; prior immutable files remain untouched. Downstream A028/A029/A056/A087/A094/A099/B20 must preserve query loss when using v10 as a complete bill. This saved source-bound correction is the handoff; no messages or supervisor adoption are claimed.
+
+## one next mathematical action and independent reviewer
+
+'''+next_action+'''
+
+## actual persistence receipts or precise save blocker
+
+Four exact-schema protocol files, proof, frozen specs, scripts and exact outputs are saved only in A027. PACKET_DELTA is byte-identical to PROGRESS. Source/statement/file hashes and size limits are validated; rolling STATUS has two lines, WORKLOG/LEARNED are updated. Supervisor mirror and independent acceptance remain unverified. Wake succeeded with stale-context alerts disclosed; affected notes are unused as proof premises. No git, mail, brain-store mutation, peer-folder edit, deletion or process termination occurred.
+
+## Universal bridge
+
+This stage moves C019/C024 by exposing and certifying the exact physical-query cost omitted from A027's own bounded-odds endpoint account. It closes a false assembly inference with an all-dimensional Boolean witness and12 strict old-envelope counterexamples;300 finite literal policies remain paid from the exact SAME original bank. It makes no universal constant improvement. Remaining is payment of accumulated Qloss for a REQUIRED stopping policy, plus the original arbitrary-core O(I) source. NEXT targets that precise payment or uses the already-paid inherited interface where sufficient, which is shorter than extending another optional reset class.
+'''
+write('REPORT.md',report)
+sources=[Path(r'~\AGENTS.md'),Path(r'BOARD.md'),Path(r'claude\B06\STREAM_NOTES.md'),R.parent/'20261023T141418Z-account03-A027-block-selection/DERIVATION.md',R.parent/'20261023T141418Z-account03-A027-block-selection/code/check.py',Path(r'agents\A094\runs\20261026T232939Z-account04-A094-proof-chain-challenger\DERIVATION.md'),Path(r'agents\A011\runs\20261027T025625Z-account04-A011-representation-existence\REPORT.md'),Path(r'agents\A028\runs\20261023T144415Z-account03-A028-stopping-tree-payment\REPORT.md')]
+dump('out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in sources])
+(A/'STATUS.md').write_text('STATE: Stage22 saved: OWN v10 raw scope corrected; query KL omitted;12/300 strict envelope violations; SAME exact original reserve pays300/300 with residual>3/10; independent replay; FEI OPEN.\nNEXT: A028/A029/A087/A094 review v11; pay accumulated Qloss for a REQUIRED stopping policy from SAME original unused account or use inherited descendants; arbitrary-core O(I) supplier remains open.\n',encoding='utf-8')
+date=datetime.now(timezone.utc).isoformat()
+for name,entry in [('WORKLOG.md','Stage22: consumed A094/A011 correction; discovered OWN v10 raw=sigma+refund local check was not reflected in endpoint telescope. Scoped candidatev11;15 actual witnesses/2312 checks;300 physical ledgers/12899 predicates;12 strict old envelope failures but SAME exact bank leaves>3/10; independent selected-policy excess>1/128. Full FEI OPEN.'),('LEARNED.md','v10 bounds terminal functional H+E D, not automatically rootCE+actual signed resets. Exact full bill adds Qloss=sum w[erased-pairKL+outcomeKL]. Point activation m>=2, proper DATA then odds tilt then CONTROL: terminalKL0, positive reached bill. Literal D3/OR2 alternating odds/data-prefix3 exceeds old T+4eta/9 envelope>1/128;12/300 failures, while exact original B_OR pays300/300 with residual>3/10 (finite domain only). Exact admission: Qloss<=original unused margin+released Tnew+terminal Snew. Never call signed endpoint differences actual conversion payment without booking query loss. Prior scalar/transport results retained; full FEI/source remain open.')]:
+    with (A/name).open('a',encoding='utf-8',newline='') as f:f.write('\n'+date+' A027 '+entry+'\n')
+protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+assert set(progress)==set(x.split(' (')[0] for x in protocol['required_per_run']['progress_fields'])
+assert set(claim)==set(protocol['required_per_run']['claim_fields'])
+assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
+assert len((A/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
+receipts=[]
+for p in R.rglob('*'):
+    if p.is_file():
+        assert p.stat().st_size<20_000_000
+        receipts.append({'file':str(p.relative_to(R)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()})
+dump('out/PERSISTENCE_RECEIPT.json',{'timestamp':date,'status':'LOCAL_SCHEMA_HASH_READBACK_PASS','files':receipts,'remote_mirror':'UNVERIFIED','external_review':'PENDING'})
+print(json.dumps({'status':'PASS','schema':'exact','cases':300,'violations':12,'original_paid':300,'files':len(receipts),'run':str(R)}))

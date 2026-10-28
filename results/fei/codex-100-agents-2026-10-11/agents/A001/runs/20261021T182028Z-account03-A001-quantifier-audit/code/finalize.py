@@ -1,0 +1,47 @@
+from pathlib import Path
+import json,hashlib,datetime
+R=Path(__file__).resolve().parents[1]; A=R.parents[1]
+def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
+def save(p,d):p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
+check=read(R/'out/CHECK.json');boundary=read(R/'out/BOUNDARIES.json')
+assert check['status']==boundary['status']=='PASS'
+assert (check['nodes'],check['node_query_pairs'],check['assertions'])==(19683,59049,325165)
+assert boundary['assertions']==841
+protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+statement='For the nine-bit neutral padded AND3 point edit encoded by fresh balanced Maj3, with b(y)=1 iff y&7=0, c=b except c(0)=-1, F=(b+c)/2+Maj3*(b-c)/2, I0=(I(b)+I(c))/2=3/4 and T0=(H(b)+H(c))/2, every finite adaptive physical restriction tree has expected executed erasure W plus COMPLETE actual terminal entropy L at most H(F)<2444204/1000000<4I0=3. Hence the SAME original bank S=3-T0 satisfies S-W+(T0-L)>555796/1000000 bits. All actual signed references transport by a_child(T)=a_parent(T)+epsilon*a_parent(T+i); no arbitrary prescribed-reference cross-entropy assertion is made.'
+claim={'claim_id':'A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER','version':2,'exact_statement':statement,'hypotheses':['one specified actual Boolean fixture on nine uniform physical bits','all entropies in bits; B_i is conditional spectral-coordinate entropy','finite adaptive physical restriction tree with full actual spectral terminal laws','same original quota 4I0=3; no renewed child bank','expected global payment; no assertion of separate conditional-child solvency'],'statement_sha256':hashlib.sha256(statement.encode('utf-8')).hexdigest(),'contributors':['A001/account03; A001/account05 prior fixture and first-query certificate'],'proof_source':['DERIVATION.md','code/check_histories.py','code/check_boundaries.py','out/CHECK.json','out/BOUNDARIES.json'],'proof_dependencies':['A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1 fixture, explicitly reconstructed','physical Fourier restriction identity and Shannon entropy concavity, reconstructed here'],'review_records':[],'status':'EXACT_CERTIFICATE_AND_WRITTEN_PROOF_PENDING_INDEPENDENT_REVIEW','supersedes':['A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1; widens first-data-query scope to all adaptive histories on same fixture'],'refutes':[],'first_unproved_line':'Universal arbitrary-core admission and prescribed-reference terminal KL payment from one unused ancestor account are not established.','next_consumers':['A004','A003','A096','A097','A081','A090','A094','B01','B20']}
+assert set(claim)==set(protocol['required_per_run']['claim_fields'])
+save(R/'CLAIMS.json',[claim])
+progress={'protocol_revision':protocol['revision'],'run_id':R.name,'stream':'B01','packet_id':'A001','gap_id':'C024/INCOMING-REFERENCE-SAME-BANK','attempt_id':'A001-NEUTRAL-ALL-HISTORIES-1','method':'Pay exact root encoder entropy increment once; certify every labeled restriction edge and apply adaptive entropy telescope with complete terminals.','mathematical_delta':'All adaptive actual-reference histories of the neutral nine-bit fixture paid from original quota3 with margin>0.555796 bits; root coarse admission leaves>0.541893 bits. Thirty ordered second-data policies leave>0.670974 bits. 326006 exact assertions; dropped balance/freshness refuted.','deliverable_status':'COMPLETE_LOCAL_PENDING_SUPERVISOR_ADOPTION','mathematical_status':'SCOPED_EXACT_CERTIFICATE_AND_PROOF_PENDING_REVIEW; UNIVERSAL_FEI_OPEN; LEAN_RUNTIME_UNVERIFIED','claim_versions_used':['A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1, reconstructed fixture/first-query source','A001 baseline 37-route manuscript inventory, unchanged classification, not rereviewed'],'claims_created_or_changed':['A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@2'],'source_artifacts':['REPORT.md','DERIVATION.md','code/helpers.py','code/check_histories.py','code/check_boundaries.py','out/FROZEN_SPEC.json','out/BOUNDARY_SPEC.json','out/CHECK.json','out/BOUNDARIES.json','out/SOURCE_MANIFEST.json','out/RECOVERED_GAP_MAP.json','out/RECOVERED_TARGET_QUANTIFIERS.md','out/LEAN_ATTEMPT.json'],'next_consumers':claim['next_consumers'],'next_action':'Price conditional terminal sum reach*D(p_leaf||Q_leaf) on one weak non-flat prescribed-reference query from SAME unused ancestor bank, retaining both terminals and old executed debit; consume A096/A097 source instead of another fixture depth sweep.','stagnant_substantive_attempts':0,'blockers':['Arbitrary-core root admission and arbitrary-reference terminal KL unpaid','New certificate independent review and supervisor/mirror adoption unverified','Ten intervening A001 folders contain only .final markers; no substantive certificates to adopt','Lean rational bank check timed out; no formal certification'],'packet_ids':['A001']}
+fields=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']]
+assert set(progress)==set(fields)
+save(R/'PROGRESS.json',progress);save(R/'PACKET_DELTA.json',progress)
+save(R/'out/LEAN_ATTEMPT.json',{'status':'RUNTIME_UNVERIFIED','formal_target_verified':False,'command':'python -X utf8 lean_check.py --stmt "example (S T W L : ℚ) (h : W + L ≤ S + T) : 0 ≤ S - W + (T - L) := by linarith" --timeout 25 --json','seconds':25.801,'compiler_exit_code':None,'axioms':None,'source_sha256':'efea176f13a67f13b07259361914561f3c9e4932f15a1018e5ceb4797db513c4','generated_sha256':'cf1842bbdf76a5834e22f21d0484a4495a488abfec96c025c2860ee70ff4e4f3','compiler_sha256':'af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d','receipt_directory':r'~/AppData/Local/Temp/lean_check/4a6a07d6e3424c37af272c7d8d4256d1','interpretation':'Attempt only; no Lean proof or mathematical falsity established.'})
+manifest=read(R/'out/SOURCE_MANIFEST.json');seen={x['path'] for x in manifest}
+extra=[Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),Path(r'BOARD.md'),Path(r'claude/B01/STREAM_NOTES.md')]
+old=A/'runs/20261014T074909Z-account05-A001-quantifier-audit'
+extra.extend([old/'REPORT.md',old/'DERIVATION.md',old/'code/check.py'])
+for p in extra:
+    if str(p) not in seen:
+        b=p.read_bytes();manifest.append({'path':str(p),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest(),'scope':'read primary protocol/board or reconstructed prior fixture'})
+save(R/'out/SOURCE_MANIFEST.json',manifest)
+status='STATE: Stage saved: ALL adaptive histories of neutral AND3/Maj3 paid from SAME original quota; >0.555796 bits margin;326006 exact assertions PASS;FEI OPEN, review pending.\nNEXT: A004/A081/A090 review; price prescribed-reference conditional terminal KL on one weak non-flat query from SAME unused ancestor bank with both terminals and old debit.\n'
+(A/'STATUS.md').write_text(status,encoding='utf-8')
+date=datetime.datetime.now(datetime.timezone.utc).isoformat()
+with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:
+    f.write('\n'+date+' account03: Recovered 14 Oct as last complete artifact; ten later folders have markers only. Closed saved second-data NEXT and all adaptive actual-reference histories by root-increment admission plus exact 19683-node/59049-edge replay. 326006 assertions PASS; independent direct root character sums and boundary hypothesis failures saved. Lean timed out; no formal status claimed. Universal arbitrary-reference KL remains unpaid. '+R.name+'\n')
+with (A/'LEARNED.md').open('a',encoding='utf-8') as f:
+    f.write('\nFor balanced h on fresh inputs, F=A+hD and G=A+sD satisfy H(F)=H(G)+delta H(h), delta=E D^2. Hence a SINGLE original entropy bank pays every adaptive actual-reference history once its root increment Q+delta(H(h)+2/ln2) is admitted. Neutral six-bit AND3 point edit with Maj3 has H(F) in(2.444203,2.444204), original quota3, all-history margin>0.555796; all19683 labeled restrictions and59049 queries certified. Prescribed terminal reference Q adds KL and is not paid by this entropy telescope; expected global solvency does not assert separately allocated child solvency. Do not spend another stage extending this fixture depth. Ten intervening A001 .final-only folders carry no substantive artifacts; completion markers are not certificates.\n')
+assert len((A/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
+assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
+assert read(R/'CLAIMS.json')[0]['statement_sha256']==hashlib.sha256(statement.encode('utf-8')).hexdigest()
+report=(R/'REPORT.md').read_text(encoding='utf-8')
+for h in protocol['required_per_run']['report_fields']:assert '# '+h in report
+assert report.rstrip().split('\n')[-1].startswith('**Universal bridge:**')
+files=[]
+for p in sorted(R.rglob('*')):
+    if p.is_file() and p.name!='PERSISTENCE_RECEIPT.json':
+        b=p.read_bytes();assert len(b)<20*1024*1024
+        files.append({'path':str(p.relative_to(R)),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})
+save(R/'out/PERSISTENCE_RECEIPT.json',{'status':'PASS','at_utc':date,'schema_fields_exact':True,'report_fields_present':True,'packet_delta_identical':True,'statement_hash_verified':True,'readback_verified':True,'files_under_20MiB':True,'credited_exact_assertions':check['assertions']+boundary['assertions'],'independent_review':'PENDING','mirror_verification':'UNVERIFIED','files':files})
+print(json.dumps({'status':'SAVED_READBACK_PASS','files':len(files)+1,'exact_assertions':check['assertions']+boundary['assertions'],'run':str(R)}))

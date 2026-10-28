@@ -1,0 +1,33 @@
+# A084: same supplied credit for two-core continuation
+
+## exact target, quantifiers, hypotheses and units
+
+Retain the complete actual Boolean F_plus=J(-1,+1,g,g,g,g), rate4, entropy in bits, and S=4I-H. J=-h after flipping bit0, h is negative on masks{0,1,2,4,8,16,32,6,17,40}, and the six-bit core g is negative on{0,1,2} (bit1 means sign-1). The supplied original credit is A0=-S(F_plus)>0. For ANY pair of the remaining cores, EVERY adaptive query and stopping policy within that pair has exact minimum root credit A0. This remains true after ANY original one-core prefix with its ACTUAL source allocation and an answer-dependent choice of second core. All real already supplied old debits D>=0 are covered without new donor spending. This is a finite-family theorem; FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read this stage: BOARD.md, B17/STREAM_NOTES.md, own STATUS and recovered stage6 outputs; A072's 20261023T015130Z report, proof, exact hull code/data and claim A072-OTHER-CORE-STOPPING-CREDIT-HULL@1 (hash 3232af6b6b8937dc62c1e50b57a212def54049aec44fe6ad145148fa912feb10); latest A071/A089/A075 reports as financial context. Source bytes are pinned in out/SOURCE_PINS.json. Full execution protocol revision 2026-10-11-execution-v2 governs the schemas. Earlier campaign and paper intake is reused background; this theorem assumes no new literature assertion. The old lead AND direction was already closed in earlier A084 work; the productive new A072 dependency supplies this narrower C019 continuation target. Brain wake completed earlier in this session, but self-care remains degraded: stale personal model/state notes are not used as mathematical evidence.
+
+## complete derivation or exact first unsupported line
+
+PROOF.md gives finite Bellman induction, necessary and sufficient conserved credit, maximizing stopping-policy sharpness, complete occupied-spectrum composition with deterministic faces, and minimum actual-prefix credit propagation. The 12-state single-core restriction DAG is checked against all729 labelled restrictions and1458 query rows. Literal outer swaps yield three pair types. Each has144 states/840 query rows, with exact prime-log root equality R=A0; all72 source-prefix cuts have exact extra threshold B=0. Raising supplied initial credit by any real D>=0 shifts every descendant credit by exactly D. The account proof also covers all normalized nonnegative real branch weights; zero-weight outcomes are removed and zero-credit/debit kernels are treated explicitly. Physical applications use1/2 only. First unsupported universal step: control a third admitted core from credit actually allocated during a joint history, then arbitrary cores/dimension. No fresh donor payment or universal constant is claimed.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen specs: FROZEN_SPEC.json, FINANCIAL_SPEC.json, SCALAR_SPEC.json. From this run directory: python -B -X utf8 code/joint.py --pilot; python -B -X utf8 code/joint.py; python -B -X utf8 code/prefix.py; python -B -X utf8 code/scalar.py. See the exact helper argument conventions in the frozen spec and source. Pilot:21387 assertions,6.19125s. Full joint certificate:56646 assertions,11.83989s,432 state instances,2520 query rows,408 unique complete profiles. Source-prefix check:5572 assertions,1.56055s,24 independently reproduced source profiles and72 cuts. Scalar controls:3820 assertions over360 cases, including36 zero-credit and36 zero-total-debit cases. These three nonpilot runs total66038 assertions. Integer FWHT/direct characters, inverse/Parseval/edges, direct centered occupied masses, exact prime-log equalities and outward192-bit logarithmic sign bounds are checked. No floating signs decide the hull. Estimated memory120MB; no heavy search. The all-real proof is algebraic, not a grid inference. Lean helper admission returned checker exit2, SETUP_UNVERIFIED; no compiler process started. out/LEAN_ATTEMPT.json records it; no formal verification claimed.
+
+## proof dependencies and changed downstream conclusions
+
+Dependency: A072-OTHER-CORE-STOPPING-CREDIT-HULL@1, exactly pinned above. The one-core S/R substatement and original allocation are independently reconstructed; all24 source profiles match after prime normalization. This is not blanket acceptance of every source financial conclusion. The extension retains original donor expenditure, booked balance, other full terminals, parked2tau, old signed debit labels and nonnegative credit-owner labels. Source-prefix compatibility is proved rather than retrospectively reallocating its credit. New claim A084-SAME-CREDIT-TWO-CORE-CONTINUATION@1, hash 55c7c1651b72ecb1d203f529f289ad9c72fe6fe3a29b6d166c3bc665129dc203, is source-complete author proof/exact certificate pending independent review. This verifies and extends a narrow existing dependency, not another broad universal candidate.
+
+## one next mathematical action and independent reviewer
+
+At an actual two-core allocated leaf, compute the third-core requirement and compare it with the credit actually present, retaining both complete other terminals and the spent donor books; A074/A092/A075 independently reconstruct this certificate first or in parallel. No third-core or full FEI conclusion follows merely from the current root equalities.
+
+## actual persistence receipts or precise save blocker
+
+All artifacts are local to this A084 run; out/MANIFEST.json records SHA256/size receipts and protocol field checks. Rolling STATUS.md, WORKLOG.md and LEARNED.md are updated. No repository, shared index, other-agent folder or brain store was written. Supervisor mirroring and independent downstream acceptance remain unverified. Final local save/checklist receipt is out/FINAL_PERSISTENCE_CHECK.json; the manifest excludes itself and that final receipt to avoid circular hashes. Formal compilation remains held by admission, not a proof failure.
+
+## Universal bridge
+
+C019 stopping-tree payment advances from one-core stopping policies to every two-core adaptive policy in this retained actual family at ZERO additional outside flow, even after every original source prefix allocation, for the full real half-line of supplied old debit. The exact improvement is three144-state hulls and72 inherited-prefix cuts at extra threshold0. Third/fourth-core admission and a dimension-independent arbitrary-core credit bound remain open. Testing the next admission against actual joint allocated credit, while preserving donor expenditure and complete terminals, is the shortest next route toward universal C019 payment: it directly challenges the unpaid inherited charge rather than establishing another unrelated class inequality.
