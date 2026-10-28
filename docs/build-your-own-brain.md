@@ -60,7 +60,7 @@ Write every correction down as a mistake record: what happened, the evidence, an
 
 ### Schedule the dream
 
-Run `framework/dreaming/run_dream.ps1` nightly, through a hidden launcher so that no window opens. The dream reads the day's records and transcripts, writes summaries, merges duplicates, compiles new reflexes and grades a sample of the day's fires. Read the dream's log for the first week: a dream that stops committing its results or a part that stops firing is the most common way such a system decays without anyone noticing, and `hook_liveness.py` exists to catch it.
+Run `framework/dreaming/run_dream.ps1` nightly, through a hidden launcher so that no window opens. The dream reads the day's records and transcripts, writes summaries, merges duplicates, compiles new reflexes and grades a sample of the day's fires. Read the dream's log for the first week: a dream that stops committing its results or a part that stops firing is the most common way such a system decays without anyone noticing, and `hook_liveness.py` exists to catch it. [framework/dreaming/README.md](../framework/dreaming/README.md) describes the agenda's sections, the three kinds of dream (filing, connecting and the midday nap) and how to add a section for your own field.
 
 ### Measure it
 
