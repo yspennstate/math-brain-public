@@ -101,9 +101,9 @@ test file. These are focused tests, not an all-repository green-suite claim.
 VERIFIED: explicit eligible revision relations suppress the old assertion in
 both arms. Dates alone do not infer correction links. INFERRED: a missing
 source, missing relation, or stale status summary can survive independently of
-graph weight. UNTESTED: whether the actual owner store contains the later
+graph weight. UNTESTED: whether a full working store contains the later
 research sources and correct relations, whether any live hook fires them, and
-whether an agent uses them correctly. We did not query the live owner store.
+whether an agent uses them correctly. No full working store was queried.
 
 Two known mathematical discovery failures are development cases, permanently
 excluded from any confirmatory holdout: the September 16 C005/C006 full-scope
@@ -210,24 +210,17 @@ handling predeclared. Benefit requires a positive primary interval, valid
 integrity gates, and no predeclared unacceptable increase in false status
 claims. If these fail, say not shown or ineligible as appropriate.
 
-## OWNER VISION
+## What is shown and what is not
 
-Requirements 5 and 9: VERIFIED locally that graph-off and graph-on can be
-compared without changing the eligible revision set; real delivery and use
-remain UNTESTED. Requirement 6: the probe protects against repeat obsolete
-scope assertions, but their real incidence is not measured. Requirement 8:
-production diffusion and lexical behavior are preserved. Requirement 10:
-the synthetic diagnosis is explicitly separated from a proposed held-out
-benefit experiment. Requirement 11: no source history was deleted.
+VERIFIED locally: graph-off and graph-on can be compared without changing the
+eligible revision set; delivery to a working agent and its use remain UNTESTED.
+The probe protects against repeated obsolete scope assertions, but how often
+they occur in practice is not measured. Production diffusion and lexical
+behavior are unchanged. The synthetic diagnosis is kept separate from the
+proposed held-out benefit experiment. No source history was deleted.
 
-## BRAIN GRAPH
+## Scope of the graph result
 
-Source access and local retrieval execution: VERIFIED. Live full-brain
-connection, hook delivery, builder consumption and user benefit: UNVERIFIED.
-full_brain_connected: false. No deployment, merge or live-store ingestion.
-
-Fresh coordination sources read: FOCUS_2026-09-27_RECALL_JOBS.md blob
-9dab2a39da4c680df96ed7866c5dd127c65d6b2f; REPLIES_2026-09-27_RECALL.md blob
-fac7ec6348c1c931861158b75e812514aa47eb4a; CLAUDE_SUPPORT_2026-09-27.md blob
-4c25e4eab70d284b37c68c4779de0b50c6f73b41. The fresh replies were checked for
-earlier disposition of seed-retention/depth-zero findings; none was found.
+Source access and local retrieval execution: VERIFIED. Connection to a full
+working brain, hook delivery, builder consumption and benefit to a user:
+UNVERIFIED. Nothing was deployed, merged or ingested into a live store.
