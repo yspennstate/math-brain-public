@@ -58,10 +58,31 @@ _AGENT_AUTHORED = re.compile(
     r"|You are grading a mathematical argument from its text alone\b"
     # this fleet's own hook-delivery probes (`claude -p` with a prompt that says so), 2026-09-20
     r"|\[probe\]|Automated delivery probe of a hook\b"
+    # headless picture workers run one `codex exec` per batch and the Codex hook archived each batch prompt as his
+    # (142 ledger lines and a checklist entry per batch by 05:1x on 2026-09-23)
+    # (any count and film: "for a history documentary", and since 09-23 16:50 "for three history documentaries")
+    # (and since 09-23 17:27 "You are THE picture maker for a cinematic ... documentary", which the "a" form missed)
+    # (2026-09-24: and "You are a picture maker for YouTube thumbnails", which no longer names a documentary - it
+    # landed in the hourly block as his ask, re-fired x3; any picture-maker brief is a worker's, whatever it makes)
+    r"|\[headless-worker\]|You are (?:a|the) picture maker\b"
+    # the harness's own continuation turn when a usage limit resets, sent to every waiting session in the same
+    # minute; the dream re-stamped each earlier burst by hand (08-19..09-17) and the 09-23 14:50 one landed as six
+    # of his asks and six checklist entries
+    r"|Your claude\.ai usage limit has reset\b"
     # a Codex hook's own prompt, and a relayed agent message, arrive as user turns and are not his (2026-09-20)
     r"|<hook_prompt\b|<agent-message\b|Another Claude session sent a message\b"
     # harness-injected user turns: a mesh message relayed into the session, the plugin list, notifications (2026-09-20)
-    r"|<cross-session-message\b|<recommended_plugins\b|<task-notification\b|<system-reminder\b|<local-command-stdout\b|<agent-notification\b)", re.I)
+    r"|<cross-session-message\b|<recommended_plugins\b|<task-notification\b|<system-reminder\b|<local-command-stdout\b|<agent-notification\b"
+    # Codex's interruption marker, Claude's, and a supervisor's resume envelope typed into a saved thread (2026-09-24)
+    r"|<turn_aborted\b|\[Request interrupted by user|FLEET CONTINUITY ENVELOPE\b"
+    # the restore agent re-typing each session's goal after a restart: his ask is already in the ledger at the time he
+    # gave it, and seven of these rows read as fresh asks of 02:53-03:0x on 2026-09-24 (a /goal he types stays his)
+    r"|/goal \[Restored\b"
+    # the Codex app's own suggestion task, run in its install directory (30 Sep 03:01 it landed in the ledger and the hourly
+    # block as his ask, and a verification card answered it)
+    r"|#\s*Overview\s+Generate \d+ to \d+ hyperpersonalized suggestions\b)", re.I)
+# the Codex desktop app runs its own background tasks with its install directory as the working directory
+_CODEX_APP_CWD = re.compile(r"[\\/]AppData[\\/]Local[\\/]OpenAI[\\/]Codex[\\/]bin(?:[\\/]|$)", re.I)
 # the same grader prompts end with a JSON-only instruction; a body match catches variants
 _GRADER_BODY = re.compile(r"\bReturn ONLY a JSON object\b", re.I)
 _TICK_BODY = re.compile(r"\bEACH TICK:\s", re.I)
@@ -73,6 +94,13 @@ _LOOPISH = re.compile(r"^\s*(/loop\b|/dream\b|OVERNIGHT\b.{0,60}\bMANDATE\b|CONT
 def is_agent_authored(text):
     return bool(_AGENT_AUTHORED.match(text or "") or _TICK_BODY.search(text or "")
                 or _GRADER_BODY.search(text or ""))
+
+
+def machine_turn(text, cwd="", session=""):
+    """Whether a user-shaped turn was written by a machine: agent-authored text, a harness's synthetic session id, or the
+    Codex app's own background task (its install directory as the working directory). The archive stamps these
+    'automation'; hooks that answer his prompts use the same test so a machine turn gets no answer meant for him."""
+    return bool(is_agent_authored(text) or _synthetic_session(session) or _CODEX_APP_CWD.search(cwd or ""))
 
 
 def is_loopish(text):
@@ -168,7 +196,7 @@ def stamp(rec):
         # the ledger keeps the first 12 chars of a real Claude or Codex session id (8 hex, dash, 3 hex); a harness replaying a prompt through the hooks
         # (the dispatcher control gate ctlA1-/ctlA2-/ctlB-, timing probes, delivery probes) is not him, whatever
         # the text says - 33 "check the machine speed" rows became a standing ask in the hourly block (2026-09-20)
-        if _synthetic_session(rec.get("session")):
+        if _synthetic_session(rec.get("session")) or _CODEX_APP_CWD.search(str(rec.get("cwd") or "")):
             origin = "automation"
         rec["origin"] = origin
         if rof:
