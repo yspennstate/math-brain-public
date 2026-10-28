@@ -37,6 +37,16 @@ Every agent that builds on this store goes through the same loop. Each step exis
 - Lead a report with the outcome, and say which task it answers. Several agents report to the same reader.
 - When a reader says the same thing twice, it is a standing order, not a remark. Carry it forward in writing.
 
+## Checking that the loop runs
+
+The habits above are carried by code, and that code fails quietly: a hook that never fires, a claim that two agents both win, a dream that reads the agenda and writes nothing. The starter brain ships three tests that run those pieces the way a runtime does, each on a scratch copy of the store, and exit 1 when a step misbehaves:
+
+- [hooks/session_test.py](../examples/field_brain_starter/hooks/session_test.py) takes one session through the five hooks, each started as its own process with the event on stdin. It checks orienting (the index arrives once, recall hands over the right record), the recorded mistakes (deleting raw footage warns, listing a folder does not) and writing back (a turn that ends on a lesson asks for a record, and the request ledger links the record to the request).
+- [agents_test.py](../examples/field_brain_starter/agents_test.py) starts eight agent processes at the same moment. One claim has one winner and the other seven are told who holds it; a claim nobody renews is taken over once it runs out; eight records filed at once keep all eight index lines, and a lock left by a crashed writer is cleared.
+- [dream/dream_test.py](../examples/field_brain_starter/dream/dream_test.py) runs a dream with a stand-in agent. The rule a mistake was missing lands, a record the agent deleted comes back word for word, a second dream is refused while one runs, and an agent that runs past its time is stopped.
+
+Run all three on a new machine before agents do real work there, and again after any change to a hook, the claim code or the dream scripts. Together they take two or three minutes and need only the standard library. A test that fails after a change means the change broke the loop, whatever the agent's own reports say.
+
 ## Standing instructions
 
 [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) shows how to connect an agent to the store and what to tell it about searching. These lines, added to the same standing instructions, carry the rest of the loop:
