@@ -197,3 +197,10 @@ Twenty items answered by four Codex arms on 8 October (brain or not, single agen
 hook layer, a team whose checker verifies first), plus a three-member Claude vote. Graded with the current grader: 19,
 20, 18 and 17 of 20 on 8 October, 20, 19 and 17 on 9 October, and 19 of 20 for the vote. Every contrast is one to three
 items; a team cost about three times the tokens of a single agent and bought nothing measurable. Counts only.
+
+## two-families-2026-10-10: two agents through the brain, one model family or two
+
+Forty-eight proof audits. GPT single agents 37 (brain block) and 35 (none); GPT pairs of one model, with or without the
+crux block, 35; pairs of two GPT models 36 and 35, at four to six times the tokens; a Claude single agent 42. Two
+copies of one model were both wrong on the same 12 items, ten of them with the same wrong answer; Claude solved 8 of
+those 12. The same solver-and-referee arrangement on open problems is summarised beside it. Counts only.
