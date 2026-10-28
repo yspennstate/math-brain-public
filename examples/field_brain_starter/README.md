@@ -17,6 +17,7 @@ production, a lab or a support desk.
 | `recall.py` | search the records (BM25 over description and body; standard library only) |
 | `ledger.py` | read and write the request ledger: list the open requests, record one, link a record that answers it, drop it |
 | `claims.py` | let several agents share the store: claim a record or a piece of work before changing it, release it after; a second agent is refused and told who holds it |
+| `agents_test.py` | starts eight agent processes at the same moment and checks that one claim has one winner, an expired claim is taken over, and eight records written at once keep all eight index lines |
 | `check_store.py` | check that every record is indexed and every `[[link]]` and `superseded_by:` names a record that exists; run it after editing records by hand |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
@@ -164,7 +165,9 @@ REFUSED topic:pricing  held by ana for 29 more min  (move the ship date)
 
 The refusal exits with code 3. The second agent then works on something else, or asks the holder, or waits; it does
 not edit anyway. Claims expire (30 minutes by default; claiming again renews), so a crashed agent blocks no one for
-long. `python claims.py list` shows who holds what, and `python claims.py selftest` runs the checks. Add one sentence
+long. `python claims.py list` shows who holds what, and `python claims.py selftest` runs the checks. The selftest calls
+the functions one after another; `python3 agents_test.py` starts real agent processes at the same moment, which is
+where races show up (about a minute). Add one sentence
 to the agents' standing instructions: "Before you change a record by hand or start a piece of work another agent may
 also start, run claims.py claim; if it is refused, do not change that resource." `framework/mesh/` is the full
 version, with heartbeats, mailboxes and handoffs, for a team of agents working all day.
