@@ -85,6 +85,21 @@
           "timeout": 60
         }
       ]
+    },
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\graph_membrane_hook.py"
+          ],
+          "timeout": 60,
+          "enabled_if": "~/.claude/brain_graph/live/HOOK_ENABLED"
+        }
+      ]
     }
   ],
   "PreToolUse": [
@@ -225,6 +240,81 @@
             "{{DREAMING}}\\agent_launch_save_hook.py"
           ],
           "timeout": 60
+        }
+      ]
+    },
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "{{PYTHON}}",
+          "args": [
+            "-S",
+            "-B",
+            "{{DREAMING}}\\frontier_hook.py"
+          ],
+          "timeout": 600
+        }
+      ]
+    },
+    {
+      "matcher": "Bash|PowerShell",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\brain_data_guard.py"
+          ],
+          "timeout": 30
+        },
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\brain_checkout_guard.py"
+          ],
+          "timeout": 30
+        }
+      ]
+    },
+    {
+      "matcher": "Bash|PowerShell|Edit|Write|MultiEdit|Agent|Task",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\effort_guard.py"
+          ],
+          "timeout": 30
+        },
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\codex_profile_hooks.py"
+          ],
+          "timeout": 60
+        }
+      ]
+    },
+    {
+      "matcher": "Edit|Write|MultiEdit|NotebookEdit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\shared_edit_collision_hook.py"
+          ],
+          "timeout": 600
         }
       ]
     }
@@ -511,6 +601,19 @@
           "timeout": 30
         }
       ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\verify_gate.py"
+          ],
+          "timeout": 600
+        }
+      ]
     }
   ],
   "UserPromptSubmit": [
@@ -736,6 +839,59 @@
             "{{DREAMING}}\\compact_hooks.py"
           ],
           "timeout": 60
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\codex_profile_hooks.py"
+          ],
+          "timeout": 60
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\graph_membrane_hook.py"
+          ],
+          "timeout": 60,
+          "enabled_if": "~/.claude/brain_graph/live/HOOK_ENABLED"
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\verify_sense.py"
+          ],
+          "timeout": 600
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\primary_hook.py"
+          ],
+          "timeout": 30
         }
       ]
     }

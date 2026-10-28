@@ -104,6 +104,19 @@
             "timeout": 600
           }
         ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python",
+            "args": [
+              "-s",
+              "{{DREAMING}}/keep_working_after_compact.py"
+            ],
+            "timeout": 30
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [

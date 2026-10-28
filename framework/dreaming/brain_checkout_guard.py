@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Refuse a full checkout of the brain repo (claude-322bc92e, 10 Oct 2026).
+"""Refuse a full checkout of the brain repo (10 Oct 2026).
 
 brain-repo is about 252,000 files and 13 GB at origin/main. A `git worktree add` or a `git clone` of it
 checks the whole tree out onto C:. It happened five times (23 Jul, 25 Jul, 28 Sep, 2 Oct, 10 Oct): on 10 Oct 03:19 a

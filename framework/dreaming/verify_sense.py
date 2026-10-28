@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """verify_sense.py - UserPromptSubmit: when the work will produce a proof, a code change or a number, hand the agent
-the checks that could fail on it before it starts (owner, 30 Sep 2026 01:10).
+the checks that could fail on it before it starts (30 Sep 2026).
 
 The design goal: hooks prompt agents to check proofs, ideas and code with Lean, to audit their
 work, and to plan how to verify it in more than one way. The card is short and concrete - the route for

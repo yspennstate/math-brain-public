@@ -1,4 +1,4 @@
-"""session_kinds.py - whose session was this? One answer for every part of the brain that learns from use (27 Sep, claude-825b1305).
+"""session_kinds.py - whose session was this? One answer for every part of the brain that learns from use (27 Sep).
 
 Since the recall benches started (24 Sep) most of what the brain logs as use has been tests, and each consumer found it
 separately: the recall learner and the membrane (04:07), the usage record (04:51), the math brain's use layer (05:2x),

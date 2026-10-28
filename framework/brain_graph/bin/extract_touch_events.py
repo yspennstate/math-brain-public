@@ -1,10 +1,10 @@
-"""Everything an agent touches, as node events, from the Claude session transcripts (26 Sep, claude-9209cf81). v2.
+"""Everything an agent touches, as node events, from the Claude session transcripts (26 Sep). v2.
 
 His design (26 Sep 00:26 voice note, 00:29 prompt): every folder, file, piece of code, keyword, memory, mistake, tool,
 box, volume, rule and hook is a node; as agents use them in sequence the edges between them grow, as in a brain. The
 July network (network/) was fed only prompts, tool names and a few thousand memory reads, and its prompts never joined
 the rest (short session ids). This extractor reads what actually happened in each session and emits one event per touch.
-Classes follow brain_graph/NODE_CLASSES.md (claude-46849b92) where the transcripts carry them:
+Classes follow brain_graph/NODE_CLASSES.md where the transcripts carry them:
 
   tool      Read, Edit, Bash:python, Agent:sonnet ...            every tool call
   cmd       git, git push, gh pr, ssh, python -m pytest ...       the program (and its verb) of each shell command
@@ -167,7 +167,7 @@ def words(text, cap=None):
 def repo_roots(max_age=3600.0):
     """Git checkouts one or two levels under home (a .git file or folder marks one). Cached for an hour in
     brain_graph/repo_roots_cache.json: the two-level glob cost ~380 ms on a busy disk at every import, and the live
-    membrane hook imports this module on every evaluation (26 Sep, claude-825b1305)."""
+    membrane hook imports this module on every evaluation (26 Sep)."""
     cache = os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "repo_roots_cache.json")
     try:
         if time.time() - os.path.getmtime(cache) < max_age:

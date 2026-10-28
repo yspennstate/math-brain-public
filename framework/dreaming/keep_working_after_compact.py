@@ -1,15 +1,15 @@
 # -*- coding: utf-8 -*-
 """Stop hook: the first time a session tries to stop after a compaction, send it back to its open work.
 
-Owner, 16 Oct 2026 02:13: "please make sure that after agents compact they get a hook to keep working". Seen the same
+Design goal (16 Oct 2026): after a compaction an agent keeps working on its open tasks. Seen the same
 night: after a compaction an agent writes a recap of where it stands and ends the turn, although its tasks are still open
-and nothing is waiting on him (claude-4af6ff1a did exactly that at 02:11). The SessionStart notes (CP17, CP39, CP40) only
+and nothing is waiting on the user. The SessionStart notes (CP17, CP39, CP40) only
 add context; they cannot make the agent take another turn. A Stop hook that answers {"decision": "block"} can.
 
 Rules: once per compaction (keyed by the compact_boundary record's uuid), never while stop_hook_active (no loops), only
 when the compaction is in the transcript's last 3 MB and under 6 hours old, and only when the checklist holds open or
 working entries under this session's agent id. The reason tells the agent it may stop with one line when everything is
-done or waiting on him or a running job, so a finished agent pays one short turn, nothing more. Silent on any error.
+done or waiting on the user or a running job, so a finished agent pays one short turn, nothing more. Silent on any error.
 Fires are logged to ~/.claude/brain_graph/compactions/keep_working_fires.jsonl."""
 import io
 import json

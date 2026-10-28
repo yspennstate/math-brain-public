@@ -1,4 +1,4 @@
-"""graph_store.py - the brain graph built from use, for the dream to rebuild and the membrane to read (claude-9209cf81).
+"""graph_store.py - the brain graph built from use, for the dream to rebuild and the membrane to read.
 
 His 26 Sep voice note: "Parts of dreams should be algorithms building the edges and building the connections and
 activation paths and all that, just automatically through mathematics." This is that algorithm. It reads the touch
@@ -18,7 +18,7 @@ compact store:
   times     each edge's first and last moment (27 Sep: "the graph should also be temporal") - edges.npz p_first and
             p_last, float32 seconds after t_base; GraphStore.times(k) gives epoch seconds
 
-The membrane (brain_graph/membrane.py, claude-46849b92) takes a small in-memory Graph; `GraphStore.subgraph(seed, now)`
+The membrane (brain_graph/membrane.py) takes a small in-memory Graph; `GraphStore.subgraph(seed, now)`
 builds one holding only what the seed can reach (its rows, a bounded second hop, the uses of every node involved and the
 true row sums), so a hook call reads kilobytes, not the whole store.
 

@@ -611,7 +611,7 @@ def decide(data, runtime):
     if not block:
         return None
     reason = ("[verify-gate %s] Your report says \"%s\" but %s, so nothing in this turn could have shown it wrong. %s "
-              "If a check did run that this gate cannot see, name it and its result in one line. (owner, 30 Sep: audit "
+              "If a check did run that this gate cannot see, name it and its result in one line. (the standing rule: audit "
               "your work, verify it a couple of ways, use Lean where it applies)") % (rule, claim.strip(), detail, ADVICE[rule])
     return {"decision": "block", "reason": reason}
 

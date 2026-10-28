@@ -1,4 +1,4 @@
-"""Controls for session_kinds.py (27 Sep, claude-825b1305). Temporary folders only; nothing live is read or written.
+"""Controls for session_kinds.py (27 Sep). Temporary folders only; nothing live is read or written.
 
     python test_session_kinds.py
 """

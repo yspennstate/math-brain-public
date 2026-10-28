@@ -1,4 +1,4 @@
-"""live_delta.py - the brain graph's fast layer: what the hours since the last store build taught it (27 Sep, claude-825b1305).
+"""live_delta.py - the brain graph's fast layer: what the hours since the last store build taught it (27 Sep).
 
 Design goal: the graph is live (no stale snapshot between rebuilds) and temporal (every edge carries when it was seen). The store (graph_store.py) is rebuilt every six hours from a capture that ran hourly, so the membrane
 read edges up to seven hours old and knew nothing of a file, folder or memory first touched since the last build (at

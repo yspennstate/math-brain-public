@@ -1,4 +1,4 @@
-"""live_membrane.py - the subconscious graph feeding the conscious context, live (26 Sep, claude-825b1305).
+"""live_membrane.py - the subconscious graph feeding the conscious context, live (26 Sep).
 
 His voice note of 26 Sep 00:26: "If a certain sequence of files are used and then a tool is called and another tool and
 then a keyword is thought of, all of those stuff should be activations in the brain ... if an attractor lights up or a
@@ -10,7 +10,7 @@ What happens on a prompt or (every few) tool calls of a session:
 
   activation   the nodes the session touched in the last ten minutes (the capture's own reading of the transcript tail:
                files, folders, tools, commands, hosts, errors, memories read, notes served, his words, the agent's
-               words), each weighted 0.5 ** (age / 150 s) - the context of claude-9209cf81's walk-forward study
+               words), each weighted 0.5 ** (age / 150 s) - the context of the walk-forward study
   spreading    one learned hop through the sidecar (live_sidecar.py): hebb(x) = sum of weight x PMI x ln(1 + count),
                times what the learner has learned about that edge from earlier fires (learned.sqlite); the edges
                learned since the store was built come from the fast layer (live_delta.py, rebuilt every five minutes)
@@ -163,7 +163,7 @@ def served_row(now, sid, ep, kind, served, held_fix=None):
 MEM_KINDS = ("mem", "memw", "recalled", "served")
 
 
-# THE WORD CHANNEL (26 Sep 19:36, claude-825b1305; his 19:20 order: keep the part that tested well and combine it with the
+# THE WORD CHANNEL (26 Sep; the goal: keep the part that tested well and combine it with the
 # graph). SHADOW ONLY. Walk-forward replay of the live configuration (results/LIVE_MEMBRANE_STUDY_2026-09-26_1929_G_tight_lex.json,
 # cut 23 Sep 15:57, 120 sessions): over all 131 prompt moments the recall stack's BM25 top memory, among memories that existed
 # and the session had not seen, was read within 30 minutes after 27, and above a score of 61.4 after 20 of 41. Split by
@@ -195,8 +195,8 @@ def _bm25_conn(bm):
     return None
 
 
-# THE STANDING-ORDERS CHANNEL (27 Sep 18:xx, claude-825b1305; his 17:4x "think about who it is not helping, and make it
-# work ... the other index method does help, is there a way to combine them"). Of his 73 corrections and repeats since
+# THE STANDING-ORDERS CHANNEL (27 Sep; the goal: find whom the channel
+# is not helping, and combine the word index, which does help, with the graph). Of his 73 corrections and repeats since
 # 1 Sep, 22 restated an order the brain already held (the GPU nine times, pictures six, the voice four). Nothing put the
 # order in front of the agent: his ask's own words rarely name it, and the graph's memory lines are read 0.4% of the time.
 # Here the word index runs on his last ask plus the names and words of what the session touched in the last ten minutes,

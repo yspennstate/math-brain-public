@@ -77,7 +77,7 @@ def _touch_text(data):
     return " ".join(parts)
 
 
-# THE RECEIVER, NOT THE SESSION (30 Sep 2026, claude-825b1305; the 1000-page report's D12-T01, second channel). A
+# THE RECEIVER, NOT THE SESSION (30 Sep 2026; the 1000-page report's D12-T01, second channel). A
 # subagent's tool step carries its parent's session_id and its own agent_id, so the state below was shared with the
 # parent: a research subagent working the program's folder got nothing for an hour after its parent had touched the
 # folder, and the child that does the proof work is the one that needs the frontier. State is now kept per receiver,
@@ -143,8 +143,8 @@ def _log(now, session8, programs, chars, trigger):
         pass
 
 
-# THE TOP-200 ROWS (14 Oct 2026 23:5x, claude-362ebe34; his 23:25 order, T-20261014-145: "i don't want agents wasting
-# time resolving the same stuff ... push forward like this, with the frontier framework"). A call that touches a
+# THE TOP-200 ROWS (14 Oct 2026; the goal: agents do not spend
+# time resolving the same things twice, and push forward through the frontier framework). A call that touches a
 # folder STAFF.json assigns to a row, or the row's own folder under frontier/rows, gets that row's short brief (failure
 # point, obstruction, targets, the routes not to redo, how the row is scored) once, and again only when the brief has
 # changed, at most hourly. Read-only; silent on any error.

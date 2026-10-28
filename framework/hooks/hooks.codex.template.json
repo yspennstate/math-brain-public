@@ -140,6 +140,16 @@
           }
         ],
         "matcher": "*"
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{PYTHON}} -B {{DREAMING}}\\verify_gate.py --runtime codex",
+            "commandWindows": "{{PYTHON}} -B {{DREAMING}}\\verify_gate.py --runtime codex",
+            "timeout": 600
+          }
+        ]
       }
     ],
     "UserPromptSubmit": [
@@ -302,6 +312,26 @@
           }
         ],
         "matcher": "*"
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{PYTHON}} -B {{DREAMING}}\\verify_sense.py",
+            "commandWindows": "{{PYTHON}} -B {{DREAMING}}\\verify_sense.py",
+            "timeout": 600
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "{{PYTHON}} -B {{DREAMING}}\\primary_hook.py --runtime codex",
+            "commandWindows": "{{PYTHON}} -B {{DREAMING}}\\primary_hook.py --runtime codex",
+            "timeout": 30
+          }
+        ]
       }
     ]
   }
