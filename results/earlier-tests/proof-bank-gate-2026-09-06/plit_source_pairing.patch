@@ -1,0 +1,31 @@
+--- a/12_cognitive_architecture/brain_improvement/campaign_2026-09-06_prob_lit_bank/extract_proofs.py
++++ b/12_cognitive_architecture/brain_improvement/campaign_2026-09-06_prob_lit_bank/extract_proofs.py
+@@ -306,7 +306,7 @@
+         if lab in local_labels:
+             return "(" + local_labels[lab] + ")"
+         ext_counter[0] += 1
+-        return "(" + m.group(1) + " " + re.sub(r"[^A-Za-z0-9:._-]", "", lab)[:24] + ")"
++        return "(" + m.group(1) + " " + re.sub(r"[^A-Za-z0-9:._-]", "", lab) + ")"
+     s = re.sub(r"\\(eqref|ref|cref|Cref|autoref)\{([^}]*)\}", ref_repl, s)
+     s = re.sub(r"\\cite[tp]?\*?(?:\[[^\]]*\])?\{[^}]*\}", "[citation]", s)
+     s = re.sub(r"\\(?:qedhere|qed|hfill|noindent|medskip|smallskip|bigskip|par|newline|linebreak|clearpage|newpage|allowdisplaybreaks|displaybreak|nonumber|notag|indent|centering)\b", " ", s)
+@@ -452,6 +452,7 @@
+             "paper": pid, "title": meta.get("title", ""), "published": meta.get("published", "")[:10],
+             "primary_category": meta.get("primary_category", ""), "main_file": main,
+             "kind": envmap.get(target[2], "theorem"), "env": target[2], "stmt_opt": target[3],
++            "proof_heading": popt,
+             "labels": LABEL_RE.findall(target[4])[:3],
+             "statement": stmt_txt, "steps": steps, "n_steps": len(steps),
+             "proof_chars": sum(len(x) for x in steps), "stmt_chars": len(stmt_txt),
+@@ -465,6 +466,11 @@
+ 
+ 
+ def accept(r):
++    # A source proof explicitly restricted to a part/case/item does not prove
++    # the entire nearby theorem. Keep the heading for source review; do not
++    # silently turn a partial proof into a supposedly clean complete control.
++    if re.search(r"\b(?:parts?|cases?|items?)\b", r.get("proof_heading", ""), flags=re.I):
++        return False, "partial_statement_proof"
+     if not (3 <= r["n_steps"] <= 25):
+         return False, "n_steps"
+     if not (250 <= r["proof_chars"] <= 6000):

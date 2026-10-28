@@ -149,6 +149,20 @@ controls are in the folder. A five-arm pilot on 12 items is reported as a pilot.
 
 The overnight grader called its pooled all-tier contrast primary. The frozen protocol names tier A for Haiku and tier B for Opus. Rescored on those tiers, Haiku answered 44 of 82 pairs correctly with the brain and 46 of 82 without it, and Opus answered 37 of 64 against 38 of 64. Neither result shows a benefit or a harm, and neither reached its planned pair count (120 and 146). An independent SQL count over 1,170 response rows reproduced all four figures. The folder holds the report producer, the inventory checks for 46 accepted calibration forms from 25 proofs in 13 families, and their tests. Item text, keys and snapshots are not included.
 
+## proof-bank-gate-2026-09-06: acceptance contract for literature proof questions
+
+A literature proof question changes one step of a published proof or leaves the proof unchanged, and generating one does not make it usable. The gate accepts an item only when it matches its full source except at the keyed step, carries canonical hashes, and has affirmative reviews from two distinct reviewers, one the author and one independent. A flawed item must also have exactly one semantic defect at that step, and no paper or proof group may cross the development, calibration and held-out splits. The folder holds the gate, its contract, two fixes to the PLIT extractor (proof-to-statement pairing and full source identity on served notes) and their tests. The tests use synthetic fixtures only; the bank, keys and reviews are not included.
+
+## proofcheck-5h-2026-09-08: a Lean checker that certifies a named theorem, not a compiled file
+
+The twenty-hour audit of 7 September found that the Lean checker passed a file containing `sorry` and a false axiom.
+Three further cases in the old checker returned PASS when they should not: a source file missing after compilation,
+a file with definitions and no theorem, and a `--target` that `--file` ignored. The candidate here issues a
+certificate only when the named target exists and is a theorem, a transitive axiom receipt matches it, and a
+source-review assertion is bound to the exact bytes compiled; missing, changed or ambiguous evidence fails closed.
+Translation fidelity, whether the Lean statement says what the informal one says, is left open. The folder holds the
+old and new checkers, the receipt and admission code, and their tests.
+
 ## bank10k-replication-2026-08-22: right notes against scrambled notes, 160 paired proof audits
 
 A replication of an 80-item test from 17 Aug on a second, difficulty-screened bank. A Haiku solver audited flawed and
