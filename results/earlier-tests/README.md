@@ -114,6 +114,12 @@ The 130 locate questions put to Sonnet 5 four ways: the served block plus file t
 (100), the served block alone (129), nothing (3). Paired, both against files is 30 to 0 (p = 1.9e-9); the files arm
 lost by searching the wrong place, at three times the cost. `python recompute.py` rebuilds the table.
 
+## equal-tools-five-arms-2026-10-05: the same Python and Lean in every arm, five arms
+
+300 problems, every arm given the same Python and Lean tools; the arms differ only in what memory they add. Tools
+alone answered 299. The gaps in the other arms were mostly refused tool calls, not wrong mathematics. Aggregate
+scores only, no items.
+
 ## trap-bank-four-arms-2026-09-25: superseded, unanswerable and join questions, four arms
 
 34 questions an agent working from a changing record gets wrong in three ways: an older answer a later entry
