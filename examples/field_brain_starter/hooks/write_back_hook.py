@@ -74,9 +74,11 @@ def lesson_line(text):
     m = LESSON.search(text)
     if not m:
         return ""
-    start = max(text.rfind(".", 0, m.start()), text.rfind("\n", 0, m.start())) + 1
-    end_dot = text.find(".", m.end())
-    end = len(text) if end_dot < 0 else end_dot + 1
+    # A sentence ends at a full stop followed by a space or the end; the dot in "5.1" or "v2.3" does not end it.
+    stops = [s.end() for s in re.finditer(r"\.(?=\s|$)|\n", text[:m.start()])]
+    start = stops[-1] if stops else 0
+    end_dot = re.compile(r"\.(?=\s|$)").search(text, m.end())
+    end = len(text) if end_dot is None else end_dot.end()
     return " ".join(text[start:end].split())[:300]
 
 

@@ -175,7 +175,9 @@ version, with heartbeats, mailboxes and handoffs, for a team of agents working a
    refuses a link to a record that does not exist.
 2. Wire the hooks in `hooks/` into your agent runtime (`docs/codex-hooks-quickstart.md` has the settings for
    Codex and Claude Code), so every session starts with the index, recall runs before work instead of after a
-   mistake, and a lesson is filed before the turn ends. `framework/bootstrap/` installs the larger set the full
+   mistake, and a lesson is filed before the turn ends. `python3 hooks/session_test.py` runs one session through
+   all five the way a runtime calls them (JSON on stdin, a scratch copy of the store) and says which step misbehaves;
+   run it again after you point the hooks at your own records. `framework/bootstrap/` installs the larger set the full
    framework uses.
 3. Schedule `dream/run_dream.py` for the night (`dream/README.md`): it works from the agenda `dream/make_agenda.py`
    builds, merges duplicates, links what belongs together, and turns a mistake that recurs in `MISTAKES.md` into a
