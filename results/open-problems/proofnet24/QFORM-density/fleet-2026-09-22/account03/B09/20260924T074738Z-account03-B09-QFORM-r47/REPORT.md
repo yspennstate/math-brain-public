@@ -388,7 +388,6 @@ Full unrestricted QFORM remains **OPEN**. Full-target continuity remains **OPEN*
 
 Startup math-brain main: `fdce34c28d041bb3a7e7efa237522e9e2b403835`.  
 Prepublication control refresh observed: `53dd4d5734bc633ec5088ba95995b8c32c12a4b0`.  
-OWNER CONTROL: revision `2026-09-22.15`, QFORM exclusive, no account03/B09 pause.  
 Pre-write math-open-problems master observed: `1ec2c1d57ce156a13f1cdfa602e5de5e2b5dc43e`.
 
 Repository retrieval and application are verified. Separate native learned-memory receiver ingestion is not verified; status remains `WITHOUT_VERIFIED_BRAIN`.

@@ -10,7 +10,6 @@ Execution memory label: `WITHOUT_VERIFIED_BRAIN`.
 
 The full target remains OPEN: for every `n`, independent real `X_i` with densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal bound on the essential supremum of the density of `X^T A X`, or give a genuine target counterexample.
 
-Fresh control consumed before the mathematics: `yspennstate/math-research-brain@ced020f1463b04c309fa1e58559451b84f3c31b3`, OWNER CONTROL revision `2026-09-22.11`; refreshed before publication at a later main commit. The current owner message promotes the scalar-conditioning gate
 
 `sup_b ||p_(Q3 | Qrest=b)||_infinity <= C`
 

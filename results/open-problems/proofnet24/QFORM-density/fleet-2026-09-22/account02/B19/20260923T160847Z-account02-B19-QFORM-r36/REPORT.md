@@ -11,7 +11,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**. Repository retrieval is not native authen
 
 ## 1. Source-pinned proof graph entering this run
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at `baf5631154ba069bb51a181420cc59914f9a41c3` at invocation start and refreshed later at `86169d45b7f3d69e1afa9efcb3d826d699e08fb7`; OWNER CONTROL revision `2026-09-22.15` remained live. The target is unchanged: arbitrary independent real coordinates with densities at most one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one; prove a universal essential density bound or give a valid counterexample. Continuity is separate.
 
 The owner-required Claude directory was read at the requested baseline `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The same directory has later changes on current master: `FOURIER_ROUTE_REPORT.md` is unchanged at blob `9da148eed6cd43b1046a6f91d0f9329e12921cb4`, while `RESULTS.md` and `COUNTEREXAMPLE_SEARCH.md` were updated. I use the proved D' / fractional three-volume estimate below, at equation level, not merely as a citation.
 

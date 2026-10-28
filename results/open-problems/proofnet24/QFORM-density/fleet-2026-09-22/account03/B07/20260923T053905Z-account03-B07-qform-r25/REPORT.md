@@ -6,7 +6,6 @@ attacking: the high-tail nested-third-volume survivor — compile a fixed two-ro
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
 **Run:** `20260923T053905Z-account03-B07-qform-r25`  
-**Start control:** `yspennstate/math-research-brain@2b6b3e540229f8189a2210ae3dd07b4e42130ae6`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Classification:** `NEW SUPPORTING PHYSICAL-BANK COMPILER / FULL TARGET OPEN`.
 

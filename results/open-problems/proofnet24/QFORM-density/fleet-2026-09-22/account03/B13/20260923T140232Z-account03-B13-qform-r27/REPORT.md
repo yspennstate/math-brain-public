@@ -11,7 +11,6 @@ Full continuity: **OPEN**.
 
 ## 1. Source-pinned inputs actually used
 
-Fresh owner control at publication refresh: `yspennstate/math-research-brain@4b3c16d9d23e1ad11a01fe272754e57a5e1680c1`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.
 
 ### 1.1 Designated partner account04/B13
 

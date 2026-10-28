@@ -13,7 +13,6 @@ Full continuity: **OPEN**.
 
 The target is unchanged: for independent ORIGINAL real coordinates with arbitrary probability densities `0<=f_i<=1`, and real symmetric `A` with at least three eigenvalues of absolute value at least one, prove a universal finite essential density bound for `Q=X^T A X`, or give a genuine counterexample. No moment, centering, iid, log-concavity, compact-support, connected-support, or post-rotation independence hypothesis is permitted.
 
-Fresh brain control was resolved on `main` at startup and OWNER CONTROL revision `2026-09-22.15` was read together with the current QFORM manifest, research state, live correction inbox, memory protocol and this slot's assignment. In particular I do not use law-uniform pointwise quadratic oscillatory decay, independence after rotation, arbitrary-joint coarea, a worst conditional projection-density moment, a bounded support/fragment-count reduction, or the diagonal `pi` constant outside its proved scope.
 
 The newest completed designated-partner result actually used below is account02/B13 r30:
 

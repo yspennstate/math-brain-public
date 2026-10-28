@@ -9,7 +9,6 @@ attacking: QFORM-WITT-RANKTWO-BANK-AGGREGATE-COAREA-v1 — prove a product-prese
 **Regularity:** essential boundedness only in the new paid branches; continuity is not claimed.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control before this write was `yspennstate/math-research-brain@9facf7b09210cc7fe92f44934f1acece9df87e76`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop or reassignment for this slot.
 
 ## 1. Inputs actually used
 

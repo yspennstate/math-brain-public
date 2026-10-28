@@ -258,7 +258,6 @@ The remaining structural debt is therefore not an analytic Schur-sign problem an
 
 ## 9. Source pins and scope
 
-Owner/control source: latest owner-controlled `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`; later corrections win.
 
 Required pinned continuation source actually used:
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially the checked product-marginal theorem behind its ruled-hyperboloid argument.

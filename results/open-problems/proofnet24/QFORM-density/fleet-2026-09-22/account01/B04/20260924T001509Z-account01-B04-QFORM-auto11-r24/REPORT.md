@@ -14,7 +14,6 @@ The full conjecture is not proved here. Every random variable remains an origina
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain` main was resolved during this invocation. OWNER CONTROL remains revision `2026-09-22.15`, exclusively QFORM, and the full theorem remains open. The live correction `QFORM-TWO-HUB-PLUCKER-ESCAPE-FALSE-v1` was consumed before publication; the argument below does not use the refuted two-hub escape mechanism.
 
 Two completed inputs are used exactly at their proved scope.
 

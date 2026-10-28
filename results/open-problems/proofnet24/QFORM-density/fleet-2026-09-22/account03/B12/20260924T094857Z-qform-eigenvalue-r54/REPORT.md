@@ -16,7 +16,6 @@ The owner target remains the unrestricted statement: for every `n`, independent 
 
 No Gaussianity, log-concavity, moments, compact support, connected support, iid hypothesis, diagonal-basis independence, or post-rotation independence is used below. The new results are deterministic matrix inequalities on ORIGINAL-coordinate carriers. Added quadratic pieces are never peeled off as independent convolutions.
 
-Fresh owner control was resolved from `yspennstate/math-research-brain/main`; the pre-publication control commit is recorded in the receipt. OWNER CONTROL remains `2026-09-22.15`, active programme `QFORM-DENSITY-3EIG-20260922`, assignment revision `2026-09-22.5`. The live correction inbox was reread immediately before publication. In particular, nothing here uses pointwise van-der-Corput decay, arbitrary-joint coarea, conditional-density caps/moments, naive fiber-sup integration, or independence after rotation.
 
 Two completed dependencies are used at equations:
 
@@ -525,7 +524,6 @@ The present theorem does **not** prove that every target matrix admits such a ba
 ## 9. Source pins
 
 - Fresh control repository: `yspennstate/math-research-brain`, branch `main`; publication-refresh commit recorded in the run receipt.
-- Programme: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`.
 - Designated partner: `yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`,
   `proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260924T002154Z-account04-B12-multihub-shear-r8/REPORT.md`.
 - Six-mode receiver: `yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`,

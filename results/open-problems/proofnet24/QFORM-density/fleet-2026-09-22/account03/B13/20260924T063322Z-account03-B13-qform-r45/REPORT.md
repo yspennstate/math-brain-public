@@ -13,7 +13,6 @@ All random variables below are the original independent physical coordinates. A 
 
 ## 1. Source-pinned inputs
 
-Fresh control is OWNER CONTROL revision `2026-09-22.15`, QFORM-only and unpaused. The full conjecture and full-target continuity remain open.
 
 The previous B13 run is
 

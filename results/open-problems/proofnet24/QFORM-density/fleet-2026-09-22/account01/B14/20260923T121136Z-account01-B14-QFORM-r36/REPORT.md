@@ -10,7 +10,6 @@ attacking: protected-smoother block localization—retain one whole product bloc
 
 ## 1. Fresh control and sources
 
-At startup I resolved fresh `math-research-brain/main`, read `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE and OWNER CONTROL, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST.json`, `ORDER.md`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B14.json`. Immediately before this write I refreshed main at `1e8458d0755e702adf12d97dac750f71c30f568b`; protected control remains revision `2026-09-22.15`, QFORM only, no pause of account01/B14 and no later stop found.
 
 The completed designated-partner result actually applied is account02/B14 r34:
 

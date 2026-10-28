@@ -23,7 +23,6 @@ The theorem below pays branch (i) while retaining the whole complementary quadra
 
 ## 2. Sources consumed at equations
 
-Fresh control was QFORM-only with OWNER CONTROL revision `2026-09-22.15`. The live correction ledger was reread before publication. In particular, the proof does not use law-uniform pointwise quadratic-phase decay, an arbitrary-joint three-dimensional coarea bound, a conditional spectral-density supremum, a positive conditional-density moment, post-rotation independence, deletion of a small quadratic coefficient, or a single-good-minor implication.
 
 The required newest compatible Claude package was read at
 

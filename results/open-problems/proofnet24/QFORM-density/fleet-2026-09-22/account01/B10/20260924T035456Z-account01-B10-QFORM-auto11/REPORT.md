@@ -14,7 +14,6 @@ Fresh owner control was read from `yspennstate/math-research-brain` and refreshe
 
 `56c207cafad78da449e2bd084dd9a746b5e03d4c`,
 
-with OWNER CONTROL revision `2026-09-22.15`. QFORM remains the sole research target and the unrestricted theorem remains open. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `MEMORY_PROTOCOL.md`, the live `CORRECTION_INBOX.json`, and the account01/B10 assignment were consumed.
 
 This report does **not** use independence after rotation, an arbitrary-joint coarea cap, a conditional projection-height bound, law-uniform pointwise quadratic-phase decay, moments, support regularity, compactness, finite fragmentation, or deletion of a small random term.
 

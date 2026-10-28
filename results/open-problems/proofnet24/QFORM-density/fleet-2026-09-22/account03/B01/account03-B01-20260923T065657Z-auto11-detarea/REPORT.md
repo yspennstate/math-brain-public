@@ -11,7 +11,6 @@ attacking: factorization-invariant two-area smoothing for a grouped bilinear pac
 
 ## 1. Source boundary and the missing implication attacked
 
-Fresh control was resolved on `yspennstate/math-research-brain` and the live OWNER CONTROL remained revision `2026-09-22.15`, with QFORM as the sole research target. The phase-aligned fragmented-support counterexample to any law-uniform scalar pointwise Fresnel power decay remains binding. This report does not use such a decay estimate.
 
 The immediate analytic debt left by B01 run r23 was an anisotropy loss in the grouped bilinear receiver. If
 

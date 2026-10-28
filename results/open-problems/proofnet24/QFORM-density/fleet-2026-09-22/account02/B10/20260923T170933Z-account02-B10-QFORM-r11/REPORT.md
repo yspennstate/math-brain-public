@@ -12,7 +12,6 @@ The unrestricted target remains OPEN: arbitrary independent original-coordinate 
 
 ## 1. Fresh source boundary and first unpaid implication
 
-Fresh owner control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`; no later stop or reassignment was observed before publication. The required source bundle was read at
 
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
 

@@ -195,7 +195,6 @@ The unrestricted QFORM conjecture remains OPEN. Full-target continuity remains O
 
 ## 8. Source pins
 
-Current control and corrections were read from `yspennstate/math-research-brain` fresh main; current OWNER CONTROL is revision `2026-09-22.15` and the latest continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 Analytic source used for (2.10):
 `yspennstate/math-open-problems`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.

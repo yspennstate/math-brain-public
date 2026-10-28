@@ -12,7 +12,6 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 ## 1. Fresh source state and exact incoming branch
 
-Fresh startup control was read from `yspennstate/math-research-brain@9cc7dd6916694f784adbbcb8abd281374a7febcc`; pre-publication refresh resolved newer main `1f620a0a861dc8e8b2ee6a2fd0b6696ade9a46d6`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B07 pause or reassignment. The current claim ledger still marks the unrestricted theorem and full-target continuity OPEN.
 
 The incoming live branch is account03/B07 r48:
 

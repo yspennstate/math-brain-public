@@ -14,7 +14,6 @@ attacking: the near-coloop transition by retaining a dependent projected pair an
 
 The target remains: for every `n`, independent real original-coordinate variables `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` having at least three eigenvalues of modulus at least one, prove that `X^T A X` has a density bounded by one universal finite constant, or produce a valid counterexample.
 
-Fresh owner control was reread before publication from `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; QFORM is still the sole research target and account03/B16 is not paused. The live correction inbox was reread. In particular, nothing below uses post-rotation independence, arbitrary-joint coarea, positive conditional projection-density moments, worst-fiber suprema, coefficient deletion, or a law-uniform pointwise van-der-Corput estimate.
 
 The immediate account03/B16 predecessor is
 

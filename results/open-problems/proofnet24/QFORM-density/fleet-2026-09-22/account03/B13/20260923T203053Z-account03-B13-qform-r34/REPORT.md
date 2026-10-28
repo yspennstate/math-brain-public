@@ -11,7 +11,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, post-rot
 
 ## 1. Fresh sources and exact premises
 
-Fresh control was resolved from `yspennstate/math-research-brain` main. The publication refresh reached `9e082e796b525fd257fe16163c4d4ce320593dec`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, fleet enabled and account03/B13 unpaused. The live correction inbox was reread before publication.
 
 The designated partner report actually applied is
 

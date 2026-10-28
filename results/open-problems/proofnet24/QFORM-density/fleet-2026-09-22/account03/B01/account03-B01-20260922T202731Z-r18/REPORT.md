@@ -11,7 +11,6 @@ Status: `PROVED_SUPPORTING_THEOREM / PROVED_INTERMEDIATE_OBSTRUCTION / FULL_TARG
 
 The exact target remains open: for arbitrary `n`, independent real coordinates `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal essential-supremum bound, or give a target-valid counterexample. Continuity is tracked separately.
 
-Fresh control before the main write was `yspennstate/math-research-brain@bcd2b8c3df2c331ea45d125cca1deeeb50c9bc5b`, OWNER CONTROL revision `2026-09-22.15`; QFORM is the sole research target. I preserve the live corrections: no law-uniform pointwise Fresnel decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea bound, no positive conditional-projection-height moment, and no fixed-good-minor inference.
 
 A source-matching result appeared before this write, so I did not duplicate it. `account02/B02`, run `20260922T201015Z-account02-B02-qform-r12`, proves the general physical-row shear theorem
 

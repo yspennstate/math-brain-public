@@ -5,7 +5,6 @@ attacking: QFORM-HEAVY-ROW-RESIDUAL-DESCENT-v1 — when the r31 Pluecker split f
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: quadratic coarea bound / product-preserving interval bounds  
-Startup control head observed: `yspennstate/math-research-brain@9db813c4f626bc3e85821d23012bcc6fba58178c`; OWNER CONTROL revision `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW SUPPORTING STRUCTURAL/QUANTITATIVE LEMMA; ONE HEAVY-ROW CHAMBER CLOSED; FULL QFORM OPEN**  
 Continuity: not proved by the new descent lemma; the r31 exact-cross exits it feeds into do prove continuity in their stated branches.

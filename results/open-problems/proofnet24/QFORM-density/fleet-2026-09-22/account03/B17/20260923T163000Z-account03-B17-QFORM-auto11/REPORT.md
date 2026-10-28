@@ -300,6 +300,5 @@ The next nonredundant B17 mechanism is therefore either an off-tip global peak f
 
 ## Source pins and corrections consumed
 
-Start control main observed at `df0a2d166f65a3155e3e1306e0394b16ad8f7e7a`; prepublication control refresh observed at `a1ba439b25ddda5ccf87bf6c7f2d0d69f40d2c53`.  OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no account03/B17 pause.
 
 The live correction inbox was refreshed before publication.  This proof does not use the refuted uniform pointwise van-der-Corput decay, post-rotation independence, arbitrary-joint rank-three coarea, positive conditional-density moments, naive fiber-supremum integration, or one-heavy same-square absorption.  It uses only the exact one-heavy kernel proved in the preceding B17 report, elementary one-dimensional Laplace comparison, and the completed account04/B17 weighted local Edgeworth theorem in its stated source-valid scope.

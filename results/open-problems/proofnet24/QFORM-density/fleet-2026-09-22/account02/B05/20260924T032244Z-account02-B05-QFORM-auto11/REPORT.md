@@ -11,7 +11,6 @@ attacking: the fresh pair-star/cross-star endpoint — absorb source-disjoint lo
 
 ## 1. Fresh state and first unpaid implication
 
-Fresh owner control was re-resolved on `math-research-brain` main before publication; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop for this slot. The live correction ledger was reread. In particular, nothing below uses post-rotation independence, arbitrary-joint three-dimensional coarea, a conditional projection cap in place of independence, a worst-fiber supremum, a pointwise oscillatory-decay premise, support/moment/log-concavity assumptions, or deletion of a small nonzero random tail.
 
 The fresh account01/B05 Witt compiler puts the exact-rank-three heavy-null survivor in the form
 
@@ -371,7 +370,6 @@ Full QFORM remains **OPEN / not proved / not disproved**. Full-target continuity
 
 ## 8. Source pins
 
-- Fresh owner/control immediately before publication: `yspennstate/math-research-brain@ded8217f5106e8650f6fe0e7629fe4613c68cae2`; OWNER CONTROL revision `2026-09-22.15`.
 - Own null-hub/transverse-square theorem: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md`.
 - Fresh designated partner account03/B05 r39 theorem: `yspennstate/math-open-problems@2c56afab4cdeef591f4d39f4e8d065951a03d572`, with prepublication refresh `479369360517ab50d6f87aaa48b49d5feadd8851`.
 - Fresh account01/B05 pairwise Pluecker tube / aggregate debt: `yspennstate/math-open-problems@49e5472fbcb6e988b716d8e014dd9e893510426c`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T032721Z-account01-B05-QFORM-auto11/REPORT.md`.

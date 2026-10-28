@@ -85,4 +85,3 @@ If R is empty and u,v are orthonormal, the 2x2 coefficient matrix [[a,b],[d,e]] 
 This pays the exact two-ray/two-bank subcase of the open curved marginal P2 from the current single_hub_core source, for arbitrary fragmented cap-one product laws and uniformly over the curvature c. It does NOT settle P2 for a genuinely diffuse overlapping frame, and it does NOT settle the hub-that-sees-P estimate (SP).
 
 ## Fresh source state
-Control: math-research-brain main observed at a671eb718366fc9a72183be66ad32b106eb288a3, OWNER CONTROL 2026-09-22.15. New owner request QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z consumed. Newest pinned Claude continuation c4c23b784395630c094ba299a50712209921d1ae consumed; its (SP) estimate is explicitly OPEN. Latest account02/B06 handoff b06-20260923T165350Z-29753b was also consumed. Execution remains WITHOUT_VERIFIED_BRAIN.

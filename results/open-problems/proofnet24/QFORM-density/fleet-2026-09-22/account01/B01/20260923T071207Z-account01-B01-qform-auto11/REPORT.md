@@ -15,7 +15,6 @@ The unrestricted target remains OPEN: for every dimension, independent real phys
 
 No law-uniform scalar pointwise Fresnel decay is used. The phase-aligned fragmented-support construction still refutes any claim of the form `|E exp(itX^2)|<=C|t|^{-c}` uniformly over cap-one scalar laws. The argument below instead uses a weak-L2 distribution-function estimate for a scalar quadratic kernel and the completed aggregate sub-half-Riesz theorem for a coupled residual in the untouched original coordinates.
 
-Fresh startup control was `math-research-brain` main `07580fbc0a1ea90b6994adae5d5efb4c70b626d5`, OWNER CONTROL revision `2026-09-22.15`, QFORM only, with no account01/B01 pause or stop. The newest owner continuation and the required volume-stability handoff were read before the proof. A second control/correction refresh is recorded before publication in the source-pinned handoff.
 
 ## 2. Source-valid dependencies actually used
 

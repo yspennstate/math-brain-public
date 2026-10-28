@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Assignment: coordinate minor selection / GEOMETRY  
 Run: `20260923T213623Z-account03-B07-qform-r39`  
 Fresh control at publication: `yspennstate/math-research-brain@7d2ad323cb8b2f1d1ac362f1c58dafb8f5f0fad1`  
-OWNER CONTROL: `2026-09-22.15`; later continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` retained.  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.  
 Status: **NEW ANALYTIC CLOSURE OF THE O0/DISJOINT-THIRD-COMPOUND BRANCH / FULL QFORM OPEN / FULL CONTINUITY OPEN**.
 

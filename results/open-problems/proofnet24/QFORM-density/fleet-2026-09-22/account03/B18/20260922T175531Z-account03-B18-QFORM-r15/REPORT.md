@@ -191,7 +191,6 @@ Thus the same rank-three family whose conditional `2/3` moment diverges linearly
 
 The completed spectral-window theorem in the live brain handoff
 
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/interactive/20260922T151048Z-ridge-window.md`
 
 states that if `P` projects onto all eigenspaces with `|lambda|>=1/64` and `max_i P_ii<=1/32`, then the full form has a continuous density bounded by
 

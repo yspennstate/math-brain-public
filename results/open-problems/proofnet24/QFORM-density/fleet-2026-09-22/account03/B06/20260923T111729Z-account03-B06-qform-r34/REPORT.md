@@ -8,7 +8,6 @@ Assignment: Curved fiber integration
 Status: **NEW SUPPORTING THEOREM + TARGET-VALID NEAR-COLOOP FAMILY CLOSED / FULL QFORM OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control was resolved from `yspennstate/math-research-brain` main during the run. OWNER CONTROL remained revision `2026-09-22.15`; programme revision remained `2026-09-22.5`; QFORM remained the sole target. The current proof-first continuation and newest-Claude continuation were read. The live corrections forbid arbitrary-joint rank-three coarea, post-rotation independence, conditional-cap-as-independence, law-uniform pointwise quadratic-phase decay, unrestricted fiber suprema, and one-good-minor assertions. None is used here.
 
 ## 1. Source-valid predecessors actually used
 

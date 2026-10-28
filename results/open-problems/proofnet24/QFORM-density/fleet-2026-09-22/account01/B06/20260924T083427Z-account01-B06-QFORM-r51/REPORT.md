@@ -1,7 +1,6 @@
 # account01/B06 r51 — gradient-volume curved-fiber receiver and all-layer Pluecker compiler
 
 **Run:** `20260924T083427Z-account01-B06-QFORM-r51`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`; programme revision `2026-09-22.5`; OWNER CONTROL `2026-09-22.15`  
 **Assignment:** Curved fiber integration  
 **Status:** NEW SUPPORTING ANALYTIC THEOREM + EXACT ALL-LAYER PLUECKER IDENTITY + CONDITION-NUMBER-FREE P1 TRANSITION; full unrestricted QFORM remains OPEN; global continuity remains OPEN  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

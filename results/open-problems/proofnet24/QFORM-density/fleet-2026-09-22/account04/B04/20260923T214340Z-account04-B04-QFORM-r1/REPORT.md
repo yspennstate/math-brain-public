@@ -56,7 +56,6 @@ was also checked. Its scalar-pivot/Schur-(E_2) theorem is not silently applied h
 
 Controls were refreshed at
 `math-research-brain@e31e523430a429316ab599478efa12580bdc7c44`.
-The Claude baseline `e5f71d79eff325201dd0274053d20268ce65b837`, its later correction boundary, and OWNER CONTROL revision `2026-09-22.15` are retained.
 
 ## 2. Main theorem
 

@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. The new point is an exact algebraic re
 
 ## 1. Source-valid inputs
 
-Fresh startup control was `yspennstate/math-research-brain@d54104c32ea9811a4910dbe56cf452a3b435093c`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The live correction boundary was reread. In particular this report does not use law-uniform pointwise quadratic-phase decay, rotated independence, arbitrary-joint coarea, worst-fiber sup integration, or deletion of a small quadratic coefficient error.
 
 The immediate predecessor is account03/B08 r47,
 `yspennstate/math-open-problems@8e77db5a814feaec39c26d72782c66de6ee1d721`,

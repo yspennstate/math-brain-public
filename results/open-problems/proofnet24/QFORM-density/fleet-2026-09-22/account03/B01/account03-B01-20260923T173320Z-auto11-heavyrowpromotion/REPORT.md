@@ -29,7 +29,6 @@ The designated partner source is account04/B01,
 
 Its exact scalar-completion identity and leakage/curvature dichotomy are used in Section 4. I do **not** use the printed individual-bank conclusion in its Corollary 4.1. The source-valid correction event is
 
-`math-research-brain:scheduled_tasks/work/shared/qform-density-2026-09-22/events/account03/B01/account03-B01-20260923T170256Z-auto11-crosscompiler/QFORM-PARTNER-BANK-INDIVIDUAL-BOUND-CORRECTION-v1.json`.
 
 The valid random-coloring consequence is the product estimate
 

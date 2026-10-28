@@ -10,7 +10,6 @@
 
 The full target remains open: for every dimension, every product law of independent real coordinates with densities bounded by one, and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove a universal finite essential-density bound for `Q=X^TAX`, or give a valid counterexample. Continuity is tracked separately.
 
-Fresh owner control before this write was `yspennstate/math-research-brain@672ac0a70b5cfdf1e77d83559172c13b164ad0a2`, OWNER CONTROL revision `2026-09-22.15`. The live correction inbox blob was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. This proof does not use law-uniform pointwise Fresnel decay, post-rotation independence, arbitrary-joint coarea, conditional projection moments, worst-fiber suprema, fixed-fragment reductions, or a single-minor/cross-cut dichotomy.
 
 The known source-valid diffuse construction gives the target-level lower obstruction `C_* >= 3 sqrt(2)`. The purpose here is to test a genuinely rotated mixed-leverage mechanism that is not diagonal and in which one physical coordinate is shared exactly between a positive and the negative spectral directions.
 
@@ -253,5 +252,4 @@ Full QFORM remains open. A witness above `3sqrt(2)`, if one exists, must still b
 ## Sources
 
 - `account02/B17`, one-heavy square-Laplace theorem: `yspennstate/math-open-problems@fbf14cd80c31d2100cf849494016bb4703aefdd7`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T181037Z-r11/REPORT.md`.
-- `account02/B17`, latest aligned-majority one-heavy global theorem: brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/B17-20260923T014533Z-r14-multiscale.md`; canonical mathematics `yspennstate/math-open-problems@06aea167c49a7d7574f1c2f518c756f22413371a`.
 - K. Ball, *Cube slicing in R^n*, Proc. Amer. Math. Soc. 97 (1986), 465–473, for the normalized cube-projection density cap used only in the finite local-limit transfer.

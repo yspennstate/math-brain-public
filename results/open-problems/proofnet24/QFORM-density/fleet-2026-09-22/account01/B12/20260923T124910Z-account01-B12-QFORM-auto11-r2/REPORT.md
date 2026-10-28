@@ -277,4 +277,3 @@ Completed D5 receiver actually used:
 - path: `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 - result: `||p_Q||inf <=5 sqrt(2e) Z_5^(-1/10)`, hence `<=5 sqrt(2e)/s_5(M)`.
 
-Fresh control/corrections were re-read before publication. Effective OWNER CONTROL revision: `2026-09-22.15`. The proof uses none of the invalidated mechanisms: no pointwise van-der-Corput decay, no arbitrary-joint coarea, no rotated-coordinate independence, no dependent convolution, no fiber-sup shortcut, and no universal good-minor assertion.

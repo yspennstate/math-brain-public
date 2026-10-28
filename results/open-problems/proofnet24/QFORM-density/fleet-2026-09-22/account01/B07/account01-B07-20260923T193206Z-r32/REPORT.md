@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Role: coordinate minor selection / GEOMETRY  
 Run: `account01-B07-20260923T193206Z-r32`  
 Initial brain main: `yspennstate/math-research-brain@7202d57ea54cce639ea408b33a2c270271c6f8f4`  
-OWNER CONTROL revision: `2026-09-22.15`  
 Owner continuation: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SWAPPED-EXTENSION MAIN/CURVATURE IDENTITY / NEW PHYSICAL-E2-MARGINAL FUNNEL / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.

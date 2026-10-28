@@ -5,7 +5,6 @@ attacking: integrated Fourier estimate — compress the degree-4 Fourier-gate fa
 
 Full target status: OPEN. Target-wide universal unweighted `int_R |phi_Q(t)| dt` status: OPEN / not refuted here.
 
-Fresh control source at startup: `yspennstate/math-research-brain@5979a2d02580b5ba175f2a208321546a5d390935`, OWNER CONTROL revision `2026-09-22.15`, current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 Designated partner actually used: account02/B02, `yspennstate/math-open-problems@221e2d8972267cfffbb61e119d118f5011f8a265`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T153854Z-account02-B02-qform-fa558934/CHECKPOINT.md`. Its completed degree-4 gate gives: if a physical cross block `B` fails the `q=3/2` fourth-volume row-marginal gate in both orientations, there are a physical row `i` and column `j` such that the joint incident fourth-volume satisfies
 

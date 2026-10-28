@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. The the
 
 ## 1. Fresh source state actually used
 
-Fresh `yspennstate/math-research-brain/main` was read at startup, including `AGENTS.md`, the full owner message, fleet/role/protocol files, programme MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL and this exact `account03/B11` assignment. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and the full conjecture remains open.
 
 The immediate B11 predecessor is account03/B11 r49, whose theorem `QFORM-R48-CANCELLATION-XRAY-IMPOSSIBILITY-v1` proves that the explicit nonlinear same-bank cancellation law used to preserve the rank-two logarithm cannot be a genuine orthogonal projection of a cap-one product source. That result narrows the unpaid step to a product-provenance trace estimate; it does not itself give a linear small-ball bound.
 

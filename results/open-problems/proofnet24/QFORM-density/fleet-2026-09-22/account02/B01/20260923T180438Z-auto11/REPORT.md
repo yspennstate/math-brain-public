@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Sources actually used
 
-Control was resolved fresh from `yspennstate/math-research-brain/main`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no account02/B01 stop.
 
 Required historical Fourier source, read at the owner-pinned commit:
 

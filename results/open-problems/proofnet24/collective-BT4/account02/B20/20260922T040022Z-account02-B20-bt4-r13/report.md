@@ -17,7 +17,6 @@ Model self-report: GPT-5.6 Sol. Requested effort: highest useful effort allowed 
 ## Exact controlling inputs
 
 Fresh campaign lead:
-- account02/B04 `BT4-R4-SINK-v7`, shared handoff `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/BT4/account02-B04-20260922T031823Z-r11.md`, blob `42ccbd25b6972637cd4fae8ff257dfde354e55a6`;
 - controlling frontier addendum `account02-B04-20260922T031823Z-r11-frontier.md`, blob `a9064e9a9c82130029ee90f37991af3a34e75c54`.
 
 Named OTHER-account partner:

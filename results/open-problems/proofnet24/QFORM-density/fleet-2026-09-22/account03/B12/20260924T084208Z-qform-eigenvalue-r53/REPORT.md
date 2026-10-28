@@ -15,7 +15,6 @@ The owner target remains the unrestricted product-law conjecture: independent re
 
 This run deliberately changes mechanism after the recent relative-resonance / subspace-angle sequence. The new invariant is **signed**: only the negative part of the normalized local anticommutator can destroy protected carrier modes. Arbitrarily large constructive aligned spectrum and arbitrary transverse local action are free.
 
-Fresh control and corrections were read from `yspennstate/math-research-brain/main`, OWNER CONTROL `2026-09-22.15`, programme revision `2026-09-22.5`. In particular, this report does not use uniform pointwise quadratic van-der-Corput decay, an arbitrary-joint coarea cap, a conditional-density cap/moment shortcut, naive fiber-sup integration, or independence after rotating to eigen-coordinates.
 
 Two completed inputs are used at equations:
 
@@ -346,7 +345,6 @@ The full theorem's continuous-density conclusion is not established. Continuity 
 
 ## 9. Source pins and integrity
 
-- Fresh brain controls: `yspennstate/math-research-brain/main`, OWNER CONTROL `2026-09-22.15`, programme revision `2026-09-22.5`; latest owner continuation requires exclusive full-QFORM work.
 - Designated partner: `yspennstate/math-open-problems@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260924T021341Z-account04-B12-resonance-repair-r9/REPORT.md`.
 - Density receiver: `yspennstate/math-open-problems@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`.
 - Latest Claude continuation observed this run: `math-open-problems@8edfa020d8904154efd9488a01828e22e2e7b2d4`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/`.

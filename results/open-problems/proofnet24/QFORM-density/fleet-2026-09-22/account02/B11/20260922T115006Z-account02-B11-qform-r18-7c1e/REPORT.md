@@ -13,15 +13,12 @@ Consumed corrections:
 - `QFORM-POINTWISE-DECAY-FALSE` — no law-uniform pointwise Fresnel decay is used.
 - `QFORM-FIBER-SUP-DIMENSION-LOSS` — no fixed fiber-supremum localization is used.
 - `QFORM-NO-INDEPENDENCE-AFTER-ROTATION` — no rotated spectral coordinates are declared independent.
-- Fresh event `QFORM-CROSSMINOR-ALONE-FALSE`, source `math-research-brain@a2c4bd773284b766962edde311da0d29382e5e85:scheduled_tasks/work/shared/qform-density-2026-09-22/events/account02/B09/20260922T115241Z-account02-B09-QFORM-r1/QFORM-CROSSMINOR-ALONE-FALSE.json`. In particular, a nonsingular cross block alone is not treated as enough.
 
-Assignment source: `math-research-brain@46532ff524f78623e48eb66b2a0d0f2fc2b08fd4:scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account02/B11.json`.
 
 Relevant peer sources actually used:
 
 1. account02/B15, canonical report `math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e:proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md`: any invertible original-coordinate 3x3 principal block gives an affine conditional density bound `(2*pi+3*sqrt(3))/sigma_min`, and the flat Hadamard rank-three family shows one fixed principal triple can lose dimension.
 2. account01/B08, canonical report `math-open-problems@fce159beaecf924a3e500dc7865ae61f8b35c932:proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260922T114116Z-account01-B08-qform-r11/REPORT.md`: diffuse leverage `<=1/2` plus a separable one-coordinate residual phase gives a global bounded continuous density `<=3e`; its unpaid case is a genuinely nonseparable residual quadratic phase.
-3. account03/B12 handoff at `math-research-brain@c5ad43d54757c7e55d5877ad5dc9c5fcdb536265:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B12/account03-B12-20260922T114435Z-349dfcff7c.md`, which applies B15's principal-block theorem and records the same pair/triple-minor bridge.
 
 The assigned partner account03/B11 had no QFORM handoff in the fresh `handoffs/account03` tree at the latest peer snapshot used before this report; no partner theorem is fabricated.
 

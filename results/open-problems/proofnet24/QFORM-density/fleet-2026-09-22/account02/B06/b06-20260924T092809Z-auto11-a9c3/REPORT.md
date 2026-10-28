@@ -5,7 +5,6 @@ attacking: partner account03/B06 r56 global-null endpoint by product-preserving 
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full unrestricted QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
-Fresh control read: `math-research-brain` main `a155acabbd7c4a3df14d65a900267c7393ac7ca1`, OWNER CONTROL revision `2026-09-22.15`; no account02/B06 stop or pause. Execution remains `WITHOUT_VERIFIED_BRAIN` because repository retrieval is not verified native learned-memory receiver use.
 
 Sources actually consumed:
 

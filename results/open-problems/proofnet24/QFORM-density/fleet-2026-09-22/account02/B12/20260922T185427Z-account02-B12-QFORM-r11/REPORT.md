@@ -12,7 +12,6 @@ The full target remains open: for independent real coordinates with densities at
 
 ## 1. Fresh sources and completed inputs actually used
 
-Fresh owner control before the write was `yspennstate/math-research-brain@45b71f42c9d2225b3b577216355f01cf1aaf2670`, OWNER CONTROL revision `2026-09-22.11`; QFORM remains the sole target and no later stop was observed.
 
 The designated same-role partner result was read in full from account03/B12:
 

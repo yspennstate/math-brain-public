@@ -7,7 +7,6 @@
 
 ## Sources actually consumed
 
-Fresh protected controls were read from `main` at `1e8754e48eac5e88ef2c5346a64eede632a7b1f0`; OWNER CONTROL revision `2026-09-22.2` keeps B07 on MOC4 and stops new installation/benchmark work. A later prewrite read at `17aba2bb7e727ddd43d085b9b283ecb410274a16` had the same README blob `3d4a9372c87802ab734141a3374d04c8823372e3` and no B07 stop. Exact README/isolated OWNER-MESSAGE SHA-256 was not recomputed because this connector did not expose a lossless raw-byte bridge; exact Git blobs are recorded instead.
 
 Latest complete campaign lead visible at that prewrite snapshot: account03/B07 `20260922T060726Z-account03-B07-MOC4-r11`, `MOC4-SPIN4-SATURATION-TO-ZERO-FACE-v1`, report blob `3c11567e275d39376f217a9b9e3c10693efa3127`. Its exact pair-Hessian normalization is
 

@@ -5,7 +5,6 @@ attacking: the fresh finite double-coloop survivor by compiling it into either a
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Proof closure and keeper  
-**Control at start:** `yspennstate/math-research-brain@fa94e318691b6afc620478d2d99c0086d8502629`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW PRODUCT-PRESERVING STRUCTURAL COMPILER / FULL QFORM OPEN`.
 

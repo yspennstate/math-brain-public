@@ -12,7 +12,6 @@ attacking: replace the power loss in the rank-two cross-kernel near-null-curvatu
 
 ## 1. Source boundary and the exact debt attacked
 
-Fresh owner control was resolved from `yspennstate/math-research-brain@512aad991bacb4d1dd5103dde22b2ba27ecfc83f` at startup and refreshed before publication; OWNER CONTROL is revision `2026-09-22.15`, QFORM remains the sole research target, and no later stop was found.
 
 The full conjecture remains OPEN. The live corrections remain binding. In particular:
 

@@ -18,7 +18,6 @@ without rotating the random variables and without pretending that the resulting 
 
 The mechanism is deliberately different from r26. Run r26 obtained magnitude-free multirank control under a **sign-compatible Krein condition** on the inverse-leverage matrix. Here I drop sign compatibility completely. The replacement is a reciprocal-size hypothesis: if all active added coefficients are sufficiently large in modulus and the inverse-leverage matrix is nonsingular, then the Woodbury middle matrix is uniformly invertible no matter what the signs of those coefficients are. Small spectral coefficients are handled as one operator-norm tail. Thus the genuinely dangerous scale is intermediate, not arbitrarily large.
 
-Fresh owner control before publication: brain main `397d7ddcb7b107f7491a1e8ef34f00731013b27b`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction inbox was re-read at that commit. No step below uses post-rotation independence, a convolution with a dependent remainder, a pointwise van-der-Corput bound, a normalized conditional-density cap, or a naive fiber-supremum argument.
 
 ## 2. Sources actually consumed
 

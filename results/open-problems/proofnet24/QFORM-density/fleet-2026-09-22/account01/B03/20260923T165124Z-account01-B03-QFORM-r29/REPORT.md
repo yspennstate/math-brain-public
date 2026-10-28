@@ -11,7 +11,6 @@ The unrestricted QFORM conjecture remains OPEN. This report proves an analytic c
 
 ## 1. Source boundary
 
-Fresh owner control at run start: `math-research-brain@1ac9bddbe0d140d49484a7e1de116dad9eca86c0`, OWNER CONTROL revision `2026-09-22.15`, sole target QFORM. Current owner continuation consumed: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 Primary completed analytic source:
 

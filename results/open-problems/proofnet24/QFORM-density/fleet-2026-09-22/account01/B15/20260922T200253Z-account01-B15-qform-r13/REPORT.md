@@ -5,7 +5,6 @@ attacking: exact regularity/height interface between the full three-large-eigenv
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260922T200253Z-account01-B15-qform-r13`  
-**Live control before publication refresh:** `yspennstate/math-research-brain@899e2f789827509e84bada90cf8053467b641d16`, OWNER CONTROL revision `2026-09-22.15`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / EXACT_NECESSARY_FRACTIONAL_POTENTIAL_BRIDGE`  
 **Full QFORM:** `OPEN / NOT PROVED`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

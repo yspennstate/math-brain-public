@@ -12,7 +12,6 @@ The full target remains OPEN. This report proves a product-preserving structural
 
 ## 1. Fresh source boundary and completed dependencies
 
-Fresh control was read from `yspennstate/math-research-brain` main with OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live corrections against arbitrary-joint rank-three coarea, positive conditional projection-height moments, post-rotation independence, conditional-cap substitution for independence, and reciprocal single-minor selection are retained.
 
 The designated partner actually applied is account02/B10, run `20260923T014801Z-account02-B10-QFORM-auto11`, canonical proof
 

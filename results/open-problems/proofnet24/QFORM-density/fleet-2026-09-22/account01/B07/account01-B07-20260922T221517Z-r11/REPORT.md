@@ -6,7 +6,6 @@ attacking: coordinate-minor selection by an exact determinant-weighted row/colum
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `account01-B07-20260922T221517Z-r11`  
 **Assignment:** coordinate minor selection / GEOMETRY  
-**OWNER CONTROL:** revision `2026-09-22.15`; QFORM is the sole research target  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING STRUCTURAL THEOREM / FULL TARGET OPEN`.
 

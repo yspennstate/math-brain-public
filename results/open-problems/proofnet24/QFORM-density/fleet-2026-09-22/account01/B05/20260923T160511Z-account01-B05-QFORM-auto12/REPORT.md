@@ -14,7 +14,6 @@ The full conjecture remains OPEN / NOT PROVED / NOT DISPROVED. The theorem below
 
 ## 1. Fresh source state and first unpaid implication
 
-Fresh `math-research-brain/main` retained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. `CURRENT_RESEARCH.md` still marks the full target open and retains the corrections that arbitrary-joint 3D coarea and positive conditional-density moments are false proof interfaces.
 
 The preceding B05 auto11 proved the exact nonzero-pivot Schur identity
 

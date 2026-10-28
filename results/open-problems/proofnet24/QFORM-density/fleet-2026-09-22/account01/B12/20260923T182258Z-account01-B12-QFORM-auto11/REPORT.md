@@ -395,7 +395,6 @@ Therefore the unrestricted density theorem and unrestricted continuity statement
 
 ## 8. Sources and correction discipline
 
-Control/source refresh used fresh `main` with OWNER CONTROL revision `2026-09-22.15` and owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The full target is still marked OPEN in `CLAIMS.json` and `CURRENT_RESEARCH.md`.
 
 Mathematical dependencies actually used:
 

@@ -19,7 +19,6 @@ No random variable is spectrally rotated below.
 
 ## 1. Fresh controls and source boundary
 
-Fresh `math-research-brain` main was resolved before the run and the required owner files were read. OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole active research programme and no later applicable stop or reassignment for account02/B20.
 
 The live corrections used here are the current ones: no law-uniform pointwise quadratic-phase decay, no worst-fibre supremum, no conditional projection-height shortcut, no arbitrary-joint three-dimensional coarea substitute, no independence after a deterministic spectral rotation, no deletion of a nonzero coefficient multiplying an unbounded random input, and no inference of one uniformly good physical minor from aggregate volume without proof.
 

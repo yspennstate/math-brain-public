@@ -7,7 +7,6 @@
 
 ## 0. Live target and newest account02/B15 input
 
-The controlling owner revision at run start was `2026-09-22.2`.  The later OWNER MESSAGE supersedes stale route-opening instructions and converges the FEI fleet on the all-gate inequality.  This report therefore does not open a new global route.  It resolves one source-exact transfer issue inside that target.
 
 The newest completed account02/B15 report consumed is
 

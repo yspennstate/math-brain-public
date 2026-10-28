@@ -227,4 +227,3 @@ A future argument must retain this genuinely Hilbert–Schmidt-small cross tail 
 
 - Rudelson–Vershynin primary source: arXiv:1402.4492v2, Theorem 1.2 and Theorem 8.1 proof equation (8.4).
 - Designated partner: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260924T032058Z-account04-B18-QFORM-r6/REPORT.md`.
-- Current brain programme/control at startup: `yspennstate/math-research-brain@09c764e74095f6305fa8606a11a53a56431fa0b8`, OWNER CONTROL revision `2026-09-22.15`.

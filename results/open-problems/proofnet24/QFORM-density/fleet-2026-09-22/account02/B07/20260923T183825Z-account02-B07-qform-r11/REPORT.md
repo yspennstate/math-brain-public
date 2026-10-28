@@ -8,7 +8,6 @@ Assignment: coordinate minor selection / GEOMETRY
 Method: complementary constructions and source-valid counterexamples  
 Run: `20260923T183825Z-account02-B07-qform-r11`  
 Initial control head: `yspennstate/math-research-brain@0c15c14199790afed64185ab32189722b0c41bc5`  
-OWNER CONTROL revision: `2026-09-22.15`  
 Owner continuation: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW R35 RANK-TWO-CARRIER PLUECKER CORE RECEIVER / EXACT DIFFUSE AND ONE-COLOOP TARGET REGRESSIONS / PINNED-e5 FOURIER PAYMENTS / FULL QFORM OPEN**.

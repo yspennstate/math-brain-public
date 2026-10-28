@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target is unchanged: independent ORIGINAL real coordinates, one-dimensional densities at most one, arbitrary real symmetric A with at least three eigenvalues of modulus at least one. No Gaussianity, log-concavity, moment, compact-support, connected-support, diagonal-basis independence, conditional-density cap, or law-uniform pointwise quadratic van-der-Corput estimate is introduced.
 
-Fresh prepublication owner control was resolved from `yspennstate/math-research-brain@17d0da8c506f595ae6e77a1e2c49fd3facd3f471`; OWNER CONTROL remains revision `2026-09-22.15` and the latest continuation remains QFORM-exclusive. The live correction inbox blob consumed at that ref is `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The full QFORM conjecture remains OPEN. Full-target continuity remains OPEN. The unrestricted target-wide statement `sup int_R |phi_Q(t)| dt < infinity` remains OPEN / not refuted by this run.
 

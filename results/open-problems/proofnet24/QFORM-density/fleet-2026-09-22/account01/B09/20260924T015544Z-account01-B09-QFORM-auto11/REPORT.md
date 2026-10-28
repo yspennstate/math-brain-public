@@ -15,7 +15,6 @@ No random coordinate rotation is made, no moment/support/log-concavity hypothesi
 
 ## 1. Source-pinned premises and corrections
 
-Fresh control remained QFORM-only with OWNER CONTROL revision `2026-09-22.15`, no account01/B09 pause, and the full theorem explicitly OPEN. Before publication the control README was re-read at current `main` with blob SHA `14046b5138615be52bb1c49a998122a7c84e200e`; the live correction inbox was re-read with blob SHA `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 Corrections respected here include: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; no dimension-free conclusion from naive fiber suprema; no inference of a uniformly large physical minor from aggregate Frobenius mass; and no deletion of a small matrix coefficient as a small random quadratic perturbation.
 

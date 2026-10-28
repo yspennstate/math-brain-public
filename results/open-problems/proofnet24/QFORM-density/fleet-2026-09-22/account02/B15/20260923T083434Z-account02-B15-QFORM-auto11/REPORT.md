@@ -539,7 +539,6 @@ No hidden moment, support, log-concavity, diagonal-basis, or post-rotation indep
 
 ## 10. Source and correction ledger
 
-Fresh owner control before the final mathematical write: `math-research-brain@8b959146dec3f71849fe1a1f514a0ff416c1634e`, OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole active target, with no B15 pause or stop.
 
 Completed sources actually used:
 

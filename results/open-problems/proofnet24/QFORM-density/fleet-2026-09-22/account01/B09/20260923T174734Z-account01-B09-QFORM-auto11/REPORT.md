@@ -17,7 +17,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ### 1.1 Current programme state
 
-Fresh `math-research-brain/main` was read at this actual invocation. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole target and account01/B09 is not paused. I read current `AGENTS.md`, `scheduled_tasks/README.md` including the owner message, `fleet.json`, `roles.json`, `scheduled_tasks/PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, account01/B09's assignment card, and the continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The live corrections used here include: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; no arbitrary-joint rank-three coarea cap; no worst conditional projection-density moment; no deletion of a small nonzero quadratic coefficient as a small random error; and no assumption that the three-large-eigenvalue hypothesis forces one uniformly good physical minor.
 

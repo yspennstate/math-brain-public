@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The unrestricted owner target is not proved or disproved here. The theorem below is a source-coordinate product-Fourier receiver. It retains arbitrary same-bank quadratic terms, affine leakage, extra spectrum, and all signs. It does not use law-uniform pointwise quadratic-phase decay, independence after a random-variable rotation, arbitrary-joint coarea, or a worst-fiber density supremum.
 
-Fresh owner control was resolved from `yspennstate/math-research-brain/main`; the pre-write control commit was `cdb00c31f13127d5e0759d5211328220c7611eae`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction inbox read at startup had blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 ## 1. Pinned analytic inputs
 

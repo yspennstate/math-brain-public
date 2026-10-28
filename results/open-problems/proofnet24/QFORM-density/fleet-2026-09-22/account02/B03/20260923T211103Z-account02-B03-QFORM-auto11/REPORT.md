@@ -12,7 +12,6 @@ The unrestricted conjecture is not proved here. Continuity is not asserted by th
 
 ## 1. Sources and live corrections used
 
-Fresh owner/control state was resolved from `math-research-brain` main at the invocation. The active programme remains `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with no applicable stop/pause for this slot. The current correction inbox was read before doing mathematics. In particular this proof does **not** condition on a sum while treating its conjugate difference as cap-one/independent, does not use the refuted law-uniform pointwise quadratic decay, and does not assert that a universal physical rank-three cut exists.
 
 Pinned package actually used: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `FOURIER_ROUTE_REPORT.md` Section 1.2. Its volume-sampling decoupling proof is valid for general volume degree `k`; at `k=2`, under two-volume row marginals `alpha_i<=1/2`, it gives the critical one-copy envelope used in Branch A below. The square peel from the same package is used in Corollary 4.1.
 

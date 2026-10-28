@@ -13,7 +13,6 @@ Continuity: **OPEN for the full target.** The descent below proves the essential
 
 The target remains exactly the owner statement. The original coordinates are independent real random variables with one-dimensional probability densities bounded by one. The coefficient matrix `A=A^T` is arbitrary and has at least three eigenvalues of modulus at least one. No moment, compact-support, connected-support, iid, Gaussian, log-concavity, diagonal-basis, or post-rotation-independence assumption is introduced.
 
-Fresh owner control at login was `math-research-brain@c2a91eb23a8b7eb7fdbb7fc789376aafe0a82bca`; immediately before publication it was refreshed through `math-research-brain@249e6f3e66e1ac46c0bcfd67699b6a4b86d522cf`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread before publication. In particular this report does not use the false arbitrary-joint coarea gate, conditional projection-height moments, pointwise law-uniform quadratic-phase decay, a one-good-minor assertion, fiber-supremum dimension loss, or deletion of a small nonzero coefficient multiplying an unbounded input.
 
 The immediate finite-core input is account03/B20 r39,
 

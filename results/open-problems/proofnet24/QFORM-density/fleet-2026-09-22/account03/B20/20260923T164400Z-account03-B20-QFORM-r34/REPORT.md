@@ -11,7 +11,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 ## 1. Fresh controls and exact frontier
 
-The fresh protected source control observed during this run is `yspennstate/math-research-brain@d708fb9bc4d3798da196b908427256e3a012eba2`. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target. The newer owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was read and is acknowledged here. The live correction inbox was refreshed after the mathematics. I do not use post-rotation independence, an arbitrary-joint coarea cap, a worst-fiber density supremum, a uniformly good individual minor, uniform pointwise quadratic-phase decay, or deletion of a small coefficient tail as a small random quadratic perturbation.
 
 The immediate lead synthesis input is account03/B19 r37:
 

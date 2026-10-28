@@ -12,7 +12,6 @@ The full conjecture is not proved or disproved here. The new result pays a compl
 
 ## 1. Fresh scope and immutable premises
 
-Fresh brain control at the start of this run was `yspennstate/math-research-brain@943cf41068e1a047b67797b2555fabca858eda53`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target. The live shared state still marks `QFORM-FULL` OPEN and continuity separately OPEN.
 
 The designated partner actually applied is the newest `account02/B13` theorem:
 

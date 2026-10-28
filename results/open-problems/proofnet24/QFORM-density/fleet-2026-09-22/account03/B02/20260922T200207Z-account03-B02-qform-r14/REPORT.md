@@ -5,7 +5,6 @@ attacking: the integrated-Fourier route's first unpaid dense/localized split, th
 
 Run: `20260922T200207Z-account03-B02-qform-r14`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Control refreshed before publication: OWNER CONTROL revision `2026-09-22.15`  
 Status: `PROVED_SUPPORTING_SYNTHESIS / FULL_TARGET_OPEN / WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Exact target and why this run changed mechanism

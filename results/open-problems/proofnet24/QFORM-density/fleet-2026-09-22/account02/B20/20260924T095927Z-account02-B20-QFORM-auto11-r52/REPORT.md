@@ -13,7 +13,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random coordi
 
 ## 1. Fresh source-pinned frontier
 
-Fresh `math-research-brain/main` startup control was read at `9fe4d883b7cb59a26dbc1f20faeca18ec9cb7cab`; OWNER CONTROL remains revision `2026-09-22.15` and QFORM is the sole active programme.
 
 Newest compatible completed designated partner: account03/B20 r51,
 

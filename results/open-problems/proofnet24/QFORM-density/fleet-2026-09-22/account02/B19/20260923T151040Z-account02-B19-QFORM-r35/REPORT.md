@@ -13,7 +13,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**. Repository retrieval is not claimed as na
 
 ## 1. Source-pinned proof graph entering this run
 
-Fresh owner control is `math-research-brain@bc669ab5e491ff1113f6ada97feb28690348580b`, OWNER CONTROL revision `2026-09-22.15`. The full target remains: arbitrary independent real coordinates with densities at most one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, universal essential density bound; continuity is separate.
 
 The current account02/B19 compiler at `math-open-problems@b0628a95c0c4630d063fe8c5649416c804dbceea` reaches, after the paid spectral-window and D5 exits, a literal physical `STAR4` packet. In its quantitative-rank-two branch the physical cross block `N=A[J,K]` has a fixed positive singular product and the hub has nontrivial star energy into each of the disjoint original-coordinate banks `J,K`.
 

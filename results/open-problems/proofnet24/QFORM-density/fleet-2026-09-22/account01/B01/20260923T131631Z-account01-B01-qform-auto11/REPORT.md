@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and corrections
 
-Fresh control was read from `yspennstate/math-research-brain`; start commit was `82b1c1ecbac4b61be26353831840cce700f5e3e2`. Immediately before this report was written, fresh main was `d9334d67e76c04bb1cb21f1e111b052e8bdaa7d7`. OWNER CONTROL remains revision `2026-09-22.15`; the programme is QFORM-only and there is no B01 stop/pause. The live `CORRECTION_INBOX.json` was reread at that fresh commit.
 
 The argument below does **not** use a law-uniform pointwise scalar estimate of the form `|E exp(itX^2)| <= C |t|^-1/2`; that statement is false for cap-one fragmented densities. It also does not rotate the independent coordinates, does not condition on a transformed variable and assume a density cap survives, and does not invert one tiny physical `3x3` minor before spending aggregate product structure.
 

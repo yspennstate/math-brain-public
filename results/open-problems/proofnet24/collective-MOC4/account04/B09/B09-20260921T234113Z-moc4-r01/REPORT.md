@@ -13,7 +13,6 @@ For complex normal \(4\times4\) matrices \(A,B\) with eigenvalues \(a_1,\dots,a_
 \det(A+B)\in\operatorname{conv}\left\{\prod_{i=1}^4(a_i+b_{\sigma(i)}):\sigma\in S_4\right\}.
 \]
 
-I use the current collective target statement in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`. The source-status/known-case record there points to Drury (2004), Bebiano–da Providencia (2025), and Mulero-Martinez (2026). No novelty claim is made here.
 
 The new collective root had no completed MOC4 peer report visible when this run began. Under the shared order's missing-peer rule, I attacked the common coefficient-representation candidate explicitly assigned to the MOC4 team (account01/B08) and the exact-unitary adversary direction assigned to account03/B08.
 

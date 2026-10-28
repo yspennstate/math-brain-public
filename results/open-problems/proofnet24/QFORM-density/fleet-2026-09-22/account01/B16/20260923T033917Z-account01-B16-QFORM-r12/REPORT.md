@@ -12,7 +12,6 @@ attacking: projection-product interaction through a triangular conditional half-
 
 The full target remains: independent real physical coordinates with densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one; prove one dimension-free bound for the density of `X^TAX`. No moment, support, log-concavity, identical-law, or post-rotation-independence assumption is added.
 
-Fresh control immediately before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox blob was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. In particular this proof does **not** use the false arbitrary-joint 3D coarea bound, a positive conditional projection-height moment, a receiver-only indefinite density estimate, post-rotation independence, or law-uniform pointwise quadratic-phase decay.
 
 The completed designated partner result actually used is account02/B16 r23, `QFORM-DISJOINT-SPECTRAL-LINE-PLANE-44-v1`, canonical source
 
@@ -246,7 +245,6 @@ Arbitrary additional spectrum is still a separate global debt: selecting an exac
 
 ## 9. Source pins
 
-- controlling repository refreshed on `main`; OWNER CONTROL revision `2026-09-22.15`;
 - live correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`;
 - designated completed partner: `yspennstate/math-open-problems@7044d3cf479cc067d97a317cf67b41121cc48aab`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T023136Z-account02-B16-QFORM-r23/REPORT.md`;
 - conditional-cap falsifier: `yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`.

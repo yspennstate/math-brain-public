@@ -19,7 +19,6 @@ Immediately before the substantive write, `math-research-brain` main was refresh
 
 `bae85d53f4e024ee3fe11f7c48ce6ebce8f40985`.
 
-The latest owner continuation is still `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; OWNER CONTROL is revision `2026-09-22.15`; the sole research target is the full QFORM conjecture and it remains open. The live correction inbox was reread at blob `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`. In particular the new correction `QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1` forbids replacing the third curvature by a slope innovation. Nothing below uses that mechanism: the full Schur residual first receives a genuine product-Fourier small-ball estimate, and only then is it inserted into the already-proved logarithmic indefinite-pair envelope.
 
 Pinned mathematical inputs:
 

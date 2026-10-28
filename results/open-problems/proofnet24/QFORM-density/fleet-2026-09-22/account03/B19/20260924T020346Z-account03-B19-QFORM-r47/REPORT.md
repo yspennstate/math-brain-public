@@ -13,7 +13,6 @@ All random coordinates in the argument are literal ORIGINAL product coordinates.
 
 ## 1. Fresh source graph actually consumed
 
-Fresh owner control on `math-research-brain/main` remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with no later stop or reassignment observed before publication. The live correction inbox was reread. In particular this run respects the failures of law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, naive fiber-supremum integration, independence after rotation, and one-good-minor extraction from aggregate energy.
 
 The completed mathematical inputs are:
 

@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The full conjecture remains OPEN. This run repairs one important branch that had previously been justified through the now-refuted arbitrary-joint rank-three coarea lemma. The theorem below uses only original-coordinate independence and two completed product-coordinate account02/B03 results.
 
-Fresh prepublication control: `yspennstate/math-research-brain@832d4c92e0047038b5a48865065172b98aad73e8`, OWNER CONTROL revision `2026-09-22.15`, QFORM sole target. Live correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe` was reread before publication. In particular this proof does not use the false arbitrary-joint coarea claim, the false conditional positive-moment gate, law-uniform pointwise Fresnel decay, post-rotation independence, one-good-minor exhaustivity, or the refuted near-zero half-Riesz shortcut.
 
 Completed account02/B03 dependencies actually read and applied:
 

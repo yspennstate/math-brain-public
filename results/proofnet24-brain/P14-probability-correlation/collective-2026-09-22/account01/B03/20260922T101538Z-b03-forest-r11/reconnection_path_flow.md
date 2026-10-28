@@ -3,7 +3,6 @@
 Outcome: `ESSENTIAL_STEP_APPLIED`
 Parent target: `OPEN`
 Execution context: `WITHOUT_VERIFIED_BRAIN`
-Control snapshot: `06bf001f94973cedebcac52a31f2fbdad54ccae4`, OWNER CONTROL revision `2026-09-22.2`.
 Directive: `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`.
 
 ## Provenance and dependency use

@@ -11,7 +11,6 @@ attacking: QFORM-WITT-SHARED-MULTIPLIER-ENDPOINT-v1 by reducing it to one produc
 
 ## 1. Fresh state and the first unpaid implication
 
-Fresh control was read from `math-research-brain` main. OWNER CONTROL is revision `2026-09-22.15`; all eighty slots remain QFORM-only, and the continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains active. The live correction inbox was reread. In particular, this report does **not** replace independence by a conditional density cap, does not use an arbitrary-joint 3D coarea inequality, and does not discard a small coefficient as a small random error.
 
 The preceding B05 run put the exact-rank-three high-leverage zero-pivot survivor into the physical Witt form
 

@@ -78,4 +78,3 @@ Neither certificate is uniform if the pure line mass alpha or the least pure-pla
 Sources actually used:
 - account02/B16 r23: yspennstate/math-open-problems@7044d3cf479cc067d97a317cf67b41121cc48aab, proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T023136Z-account02-B16-QFORM-r23/REPORT.md.
 - newest fractional-volume theorem: yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md.
-- source control at run start: yspennstate/math-research-brain@5b676f62db748a3615134619fc9978a22e796744, OWNER CONTROL revision 2026-09-22.15.

@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; repository publication is not native ingest
 
 The unrestricted conjecture remains OPEN. The theorem below closes an exact original-coordinate model of the newest B08 “huge rank-one core plus fixed second-exterior currency” survivor. It does not absorb arbitrary same-bank leakage, arbitrary orthogonal twists, or arbitrary additional-spectrum interaction. Continuity is not asserted.
 
-Fresh controls were resolved from `yspennstate/math-research-brain@9e142532b451e67ebe2cefd7f91021ba44cfda51`; OWNER CONTROL remained revision `2026-09-22.15`. The current request `QFORM-CLAUDE-LATEST-20260922T225732Z` and the live correction boundary were retained. No independence after rotation, coefficient-small deletion, moment assumption, worst-fiber supremum, or arbitrary-joint coarea estimate is used.
 
 ## 1. Sources used at equations
 

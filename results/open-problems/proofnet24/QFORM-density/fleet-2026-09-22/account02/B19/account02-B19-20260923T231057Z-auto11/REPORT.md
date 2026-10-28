@@ -13,7 +13,6 @@ All coordinates below are literal ORIGINAL product coordinates. There is no post
 
 ## 1. Fresh proof graph and exact source boundary
 
-Fresh owner control was reread through `math-research-brain@266c274d46ac30968a84ab001fe0a7a26fde6f95`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later applicable stop. Account02/B20 has a current-hour substantive run, so this B19 run performs no keeper or scheduler mutation.
 
 The newest completed designated partner account03/B19 r43 is
 

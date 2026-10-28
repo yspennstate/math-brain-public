@@ -14,7 +14,6 @@ No Gaussianity, moments, compact support, connected support, log-concavity, post
 
 ## 1. Fresh source boundary
 
-Fresh main control remains OWNER CONTROL revision `2026-09-22.15`, all eighty existing slots QFORM-only. The current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The full target and full continuity claim remain open in `CURRENT_RESEARCH.md` / `CLAIMS.json`.
 
 The analytic input from this worker is the completed one-volume theorem
 

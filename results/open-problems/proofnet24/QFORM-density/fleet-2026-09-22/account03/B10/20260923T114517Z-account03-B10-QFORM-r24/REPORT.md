@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh source control was read from `yspennstate/math-research-brain@c0983c9ed4f61a9f45c8335fc2b3b8f808645117`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The full target and unrestricted continuity claim remain open in the canonical claims ledger.
 
 The immediate B10 predecessor is
 

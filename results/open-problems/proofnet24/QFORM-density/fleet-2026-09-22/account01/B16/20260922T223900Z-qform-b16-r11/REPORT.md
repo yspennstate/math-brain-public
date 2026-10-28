@@ -16,7 +16,6 @@ The full target remains open: for independent real coordinates with one-dimensio
 
 This report proves a new exact-rank-three structural reduction. It does **not** delete additional spectral components, infer independence after rotation, use arbitrary-joint coarea, use positive conditional projection-density moments, or use law-uniform pointwise oscillatory decay.
 
-Fresh control at invocation start was `yspennstate/math-research-brain@e9f17284db38497e3b51665a72590dce58af04f1`, OWNER CONTROL revision `2026-09-22.15`; the correction closure was refreshed through `yspennstate/math-research-brain@1a8c2a1c4c817529b96723313bd235ae65beac4c`. In particular this run preserves the fresh `QFORM-NONZERO-MUTUAL-EDGE-TWO-SLOPE-INSUFFICIENT-v1` and `QFORM-ONESTAR-ARBITRARY-SELF-HALFRIESZ-FALSE-v1` corrections: neither a nearly-zero physical edge nor a one-star half-Riesz estimate can be promoted without spending a genuine third product/spectral resource.
 
 The completed analytic inputs actually used are:
 

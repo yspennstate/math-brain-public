@@ -10,7 +10,6 @@ attacking: near-collinear shared-coefficient zero-anchor branch: use the residua
 
 ## 1. Sources and correction boundary
 
-Fresh owner control was resolved on `yspennstate/math-research-brain` main at `8461bd13bc1e523b06b84800aca4971a1967a4e1` and refreshed before publication; OWNER CONTROL remains revision `2026-09-22.15`, QFORM only, with no B06 stop. The live correction inbox was consumed. In particular, this report does **not** use: independence after spectral rotation; an arbitrary-joint coarea bound; a worst conditional projection-density moment; a fiber supremum; a uniformly good physical minor; or a law-uniform scalar stationary-phase estimate.
 
 Completed inputs actually used:
 

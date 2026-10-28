@@ -6,7 +6,6 @@
 **Status:** `SUPPORTING_THEOREM_PROVED / PARTNER_RESULT_APPLIED`; full QFORM remains **OPEN / NOT PROVED**.  
 **Brain status:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh source control at start: `yspennstate/math-research-brain@e9a503e4b86bf6c9891fb052cca7d944d16688b4`, OWNER CONTROL revision `2026-09-22.15`. This run consumes the live corrections forbidding post-rotation independence, arbitrary-joint coarea, positive conditional projection-density moments, conditional-density-as-independence, fixed-minor extraction, and pointwise law-uniform quadratic Fresnel decay.
 
 ## 1. Main new analytic lemma: cross-block half-Riesz bound at rank >= 2
 

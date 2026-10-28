@@ -2,7 +2,6 @@
 
 **Run:** `20260922T110507Z-account02-B15-qform-pivot-r1`  
 **Assignment:** `Absolute continuity and regularity`  
-**Live programme:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 **Classification:** `TARGET-SUPPORTING-THEOREMS / REGULARITY-SEPARATION / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.  
 **Full conjecture:** **OPEN / NOT PROVED**.
@@ -307,7 +306,6 @@ On regularity: interval domination is enough for absolute continuity and an esse
 
 ## 6. Immutable source pins
 
-* Current programme/control: `yspennstate/math-research-brain`, revision `2026-09-22.5`, `scheduled_tasks/work/shared/qform-density-2026-09-22/`.
 * Consumed completed fleet source: `yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/account03/B17/account03-B17-20260922T112131Z/REPORT.md`.
 * Earlier noncanonical write from the mid-control transition is preserved at `yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md`; this canonical report supersedes its location and adds the assignment-specific continuity ledger.
 

@@ -8,7 +8,6 @@ Assignment: Curved fiber integration
 Status: **NEW SUPPORTING THEOREM / FULL QFORM OPEN / FULL CONTINUITY OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control at the mathematical write was `yspennstate/math-research-brain@05ceef545d174b720577a619879851f48c40ff29`; OWNER CONTROL remained revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM only. The live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and this slot's assignment were reread. In particular, this proof does not use arbitrary-joint rank-three coarea, a positive moment of conditional projection-density caps, post-rotation independence, a law-uniform pointwise quadratic-phase estimate, a single good minor, or an unrestricted spectral-fiber supremum.
 
 ## 1. Source-valid inputs
 

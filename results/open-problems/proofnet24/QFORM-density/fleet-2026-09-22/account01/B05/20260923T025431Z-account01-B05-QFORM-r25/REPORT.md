@@ -5,7 +5,6 @@ attacking: the punctured double-zero scalar-pair branch; replace the vanishing p
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound.  
-**Fresh prepublication control:** `yspennstate/math-research-brain@235ca230ca9580f3ab7b4345f5bf68fd6073411a`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (authenticated repository retrieval was used; repository transport is not native learned-memory ingestion).  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / PRECISE_REMAINING_FACTOR_IDENTIFIED`.  
 **Full QFORM:** `OPEN_NOT_PROVED`.  

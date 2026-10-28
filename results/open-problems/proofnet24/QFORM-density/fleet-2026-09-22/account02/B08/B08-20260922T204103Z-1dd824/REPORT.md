@@ -48,7 +48,6 @@ The answer is yes for every exact rank-two physical cross bank. This gives a gro
    Its two-dimensional Plancherel calculation is reused below, but with new grouped physical coordinates whose density caps are paid by the whole incident bank rather than by a spectral projection cap.
 
 3. **One-dimensional product projection cap.**  
-   The completed grouped-bank application in account02/B16 uses the Ball--Rogozin consequence that if independent coordinate densities are bounded by one and `sum c_i^2=1`, then `sum c_i X_i` has density bounded by `sqrt(2)`. Source-pinned current handoff: `math-research-brain@dff5034f41c57151f54109c3eb9ebb9265f52769`, `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B16/20260922T203148Z-account02-B16-QFORM-auto11.md`.
 
 4. **Dependence-safe outer square smoothing.**  
    account04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, source used in the B06 and partner chains: `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T113729Z-account04-B18-qform-r1/REPORT.md`.

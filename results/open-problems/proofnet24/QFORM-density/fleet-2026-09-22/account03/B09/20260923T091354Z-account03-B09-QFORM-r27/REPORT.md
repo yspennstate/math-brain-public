@@ -17,7 +17,6 @@ Both results preserve original-coordinate product provenance. No random coordina
 
 ## 1. Fresh controls, corrections, and dependencies
 
-Fresh control was read from `yspennstate/math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15` under programme `QFORM-DENSITY-3EIG-20260922`, with no B09 stop or pause observed.
 
 The live correction set was reread. In particular this run does **not** use any of the following refuted interfaces:
 

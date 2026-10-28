@@ -15,7 +15,6 @@ The owner target remains the unrestricted product-law conjecture: for independen
 
 No Gaussianity, log-concavity, moment, compact-support, connected-support, iid, diagonal-basis, post-rotation independence, conditional-density cap, arbitrary-joint coarea estimate, pointwise van-der-Corput decay, or small-random-error approximation is used below. Every additional quadratic term remains in the final coefficient matrix.
 
-Fresh owner/control source: `yspennstate/math-research-brain@3f5fea75d417c44e6ae00068d9090d4726fb2759`, OWNER CONTROL `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction inbox SHA read at startup is `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The completed designated partner actually applied is account04/B12 r8:
 

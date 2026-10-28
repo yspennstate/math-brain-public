@@ -6,7 +6,6 @@ attacking: two-bank Pluecker disjointness—turn projected volume mass into a ge
 Status: `NEW SUPPORTING THEOREM + EXACT HIGH-LEVERAGE OBSTRUCTION / FULL QFORM OPEN`.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh controlling source before this write: `yspennstate/math-research-brain@f7c0076c1bcc51f9bd741070c76c94707da8279a`, OWNER CONTROL revision `2026-09-22.15`; no account02/B16 pause. The live correction inbox was reread at that source. In particular this argument does not use independence after spectral rotation, an arbitrary-joint coarea bound, a normalized conditional projection-height bound, a receiver-only fiber supremum, or a law-uniform one-dimensional pointwise oscillatory estimate.
 
 The full target remains: independent real `X_i` with densities at most one, symmetric `A` with at least three eigenvalues of magnitude at least one, prove a universal bound on the density of `X^T A X` or exhibit a valid counterexample. The result below closes a substantial exact-rank-three branch but does not cover every exact-rank-three frame and does not by itself treat arbitrary additional spectrum.
 

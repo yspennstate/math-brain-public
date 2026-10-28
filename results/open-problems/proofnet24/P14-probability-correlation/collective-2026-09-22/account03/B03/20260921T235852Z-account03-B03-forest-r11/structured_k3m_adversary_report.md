@@ -12,7 +12,6 @@ Model actually run: **GPT-5.6 Sol. Configured reasoning effort: UNVERIFIED / not
 
 This run consumes the exact cross-account handoff
 
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/account01-B03-20260921T234923Z.md`.
 
 For distinct edges `e,f`, that handoff sets `K=G-{e,f}`, lets `H` range over all forests of `K`, records whether `e` and `f` are individually addable by indicators `(X,Y)`, defines `n_ij=#{H:(X,Y)=(i,j)}`, `N=sum n_ij`, and lets `q` count the `X=Y=1` forests for which adding both edges creates a cycle. It proves the exact identity
 

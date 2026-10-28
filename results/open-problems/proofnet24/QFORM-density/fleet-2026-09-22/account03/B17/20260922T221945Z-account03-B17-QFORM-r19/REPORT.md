@@ -15,7 +15,6 @@ The full target remains open: for arbitrary independent real coordinates with de
 
 This report does not use the refuted arbitrary-joint rank-three coarea bound, the refuted scalar worst-conditional-density gate, any post-rotation independence assumption, pointwise law-uniform van der Corput decay, a single-minor extraction, or a histogram/extremality heuristic.
 
-Fresh controls at the start resolved QFORM as the sole research programme, OWNER CONTROL revision `2026-09-22.15`. The live correction state still marks the full theorem open.
 
 ## 2. Completed designated-partner theorem consumed
 

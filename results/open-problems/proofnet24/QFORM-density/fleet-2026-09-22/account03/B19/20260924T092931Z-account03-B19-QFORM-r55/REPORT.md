@@ -15,7 +15,6 @@ Every set below is a set of literal ORIGINAL coordinates. Orthogonal changes of 
 
 ## 1. Source-pinned live frontier
 
-Fresh owner control at the start of this run was `yspennstate/math-research-brain@a47d492ba3fdd33af89ce0c2fdf0616079f193f9`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only.
 
 The immediate robust crossing is account03/B19 r51:
 

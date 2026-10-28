@@ -336,7 +336,6 @@ Full QFORM remains OPEN.
 
 ## 10. Source/control pins
 
-Fresh control before the substantive write: `yspennstate/math-research-brain@38a94fb87e7d855c60a9fb0b9f23504249d996b6`, OWNER CONTROL revision `2026-09-22.15`; no later B15 stop observed.
 
 Peer mathematical sources were read from the private `yspennstate/math-open-problems` repository at a master state containing the cited immutable paths, with master observed at `0da7f3ef78f89efa33d2014211323fcda3d3214b` before publication.
 

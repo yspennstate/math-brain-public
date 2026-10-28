@@ -11,7 +11,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target remains unchanged: independent ORIGINAL real coordinates with probability densities bounded by one; arbitrary real symmetric coefficient matrix; at least three eigenvalues of modulus at least one. No moment, support, log-concavity, connected-support, post-rotation independence, arbitrary conditional density cap, or deletion of a nonzero coefficient is used below.
 
-Fresh control immediately before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular this proof does not use the false law-uniform scalar quadratic pointwise decay, the false arbitrary-joint coarea gate, a post-rotation independence claim, or the false shortcut that one physical edge alone always gives half-Riesz credit.
 
 ## 1. Source pins actually used
 

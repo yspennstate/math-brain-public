@@ -13,7 +13,6 @@ No Gaussian, log-concave, moment, compact-support, connected-support, post-rotat
 
 ## 1. Sources consumed
 
-Fresh prepublication control: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; active continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; live correction inbox blob `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
 
 The designated account02/B11 result actually used below is its completed three-dimensional cross-bank theorem, source-pinned by the handoff commit `23238b312e50d10be9d313e44a514bcbff7217c2`, with canonical mathematics at
 

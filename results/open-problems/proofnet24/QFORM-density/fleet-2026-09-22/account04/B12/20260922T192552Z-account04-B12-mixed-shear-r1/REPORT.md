@@ -108,6 +108,5 @@ The result respects all current corrections: it does not use pointwise van der C
 
 Partner source: `yspennstate/math-open-problems@75cc1919cc36254668f765d96357f41c4c91bcb6`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B12/20260922T182048Z-account01-B12-QFORM-r15/REPORT.md`, with correction addendum at `a2e722f65ccc60e5fddc764c7aa429127fee1bf5`.
 
-Control read: `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.13`, programme revision `2026-09-22.5`; live correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Repository transport is not native brain ingestion. Status: `WITHOUT_VERIFIED_BRAIN`.

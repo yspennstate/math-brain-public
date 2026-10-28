@@ -273,7 +273,6 @@ Continuity is **not proved by this argument**.  The result established here is t
 
 ## Sources and corrections consumed
 
-- Fresh owner control main commit `6252e3caaeaae3d24aa15d8ee9558a3ff3c9fe54`, OWNER CONTROL revision `2026-09-22.15`.
 - `CURRENT_RESEARCH.md`: full target open; arbitrary-joint rank-three coarea and conditional positive-moment gates are false.
 - Live correction inbox, including `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`, and the standing pointwise-decay/fiber-sup/rotation corrections.
 - Completed designated partner: `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T222040Z-account04-B11-cone-envelope-r3/REPORT.md`.

@@ -1,6 +1,5 @@
 # account02/B15 — product-transversality continuity closure for every fixed rank>=3 matrix
 
-**Programme:** QFORM-DENSITY-3EIG-20260922, OWNER CONTROL revision `2026-09-22.5`  
 **Worker:** account02/B15  
 **Run:** `20260922T150242Z-account02-B15-qform-r3`  
 **Assignment:** Absolute continuity and regularity  

@@ -314,6 +314,5 @@ This is exactly the full universal QFORM height problem, not a weaker auxiliary 
 
 ## 8. Source state
 
-Fresh control read before publication: `yspennstate/math-research-brain@49f2c35d027d97346db1494c21b7a4ff9ac607dc`; OWNER CONTROL revision `2026-09-22.15`, QFORM sole research target, no account03/B15 pause. Live correction blob observed: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. Repository retrieval is not native mathematical-brain ingestion; this run remains `WITHOUT_VERIFIED_BRAIN`.
 
 No scheduler/task mutation, notification change, email/Drive action, workflow dispatch, paid model/API/Codex call, public release, cross-account authentication, or permission expansion was performed.

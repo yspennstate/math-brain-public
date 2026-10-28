@@ -2,7 +2,6 @@
 
 **Run:** `20260922T180428Z-qform-r13-b06`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control source:** `yspennstate/math-research-brain@70e831492a1b8e841d2b31e818dbfdbadde6a237`, OWNER CONTROL revision `2026-09-22.11`  
 **Assignment:** Curved fiber integration  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

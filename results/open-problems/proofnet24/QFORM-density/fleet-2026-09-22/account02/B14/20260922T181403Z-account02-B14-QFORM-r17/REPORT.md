@@ -3,7 +3,6 @@ attacking: mass-linear localization of half-Riesz Schur debts, with arbitrary sh
 
 # account02/B14 — mass-cap Riesz localization and scalar-to-zero-diagonal compiler
 
-Programme: QFORM-DENSITY-3EIG-20260922. Control observed at startup: yspennstate/math-research-brain@3b341648e9a7186a0eb3299c4fdda50d3d2245bf, OWNER CONTROL 2026-09-22.10; refreshed before publication to main 0408eca2e2dd4b837a318a4470474d7b90905a65, OWNER CONTROL 2026-09-22.11. Full QFORM remains OPEN. Execution: WITHOUT_VERIFIED_BRAIN.
 
 ## 1. First unpaid implication and late correction
 

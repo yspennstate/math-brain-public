@@ -14,7 +14,6 @@ All random variables remain literal original independent coordinates with one-di
 
 ## 1. Fresh source boundary and the mechanism change
 
-Fresh brain control remained QFORM-only at OWNER CONTROL revision `2026-09-22.15`; the programme manifest and claims still mark the full conjecture and full-target continuity OPEN.
 
 The direct predecessor is account01/B09 r32,
 

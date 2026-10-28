@@ -13,7 +13,6 @@ The unrestricted target remains open.  This report proves a new source-valid Fou
 
 ## 1. Source state and completed inputs actually used
 
-Fresh control was resolved from the current QFORM-only brain state under OWNER CONTROL revision `2026-09-22.15`; the worker card remains `account02/B03`, title `Decoupled time integral`, partner `account03/B03`.  The live correction boundary includes the failures of pointwise scalar quadratic-phase decay, post-rotation independence, arbitrary-joint three-dimensional coarea, positive moments of worst conditional projection caps, universally good single physical minors/cross cuts, the B03 conditional sum/difference density-cap shortcut, and the newer dependent-joint-pair transfer `QFORM-NEARNULL-JOINT-PAIR-CAP-FALSE-v1`.  The argument below keeps the original product bank and therefore does not use that refuted dependent-pair interface.
 
 Three source-pinned inputs are used at displayed inequalities.
 

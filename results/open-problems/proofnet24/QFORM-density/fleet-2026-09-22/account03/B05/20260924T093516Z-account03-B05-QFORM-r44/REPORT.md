@@ -9,7 +9,6 @@ attacking: QFORM-WITT-PURE13-CLOSURE-AND-HIGHLEVERAGE-COMPILER-v1 — retire the
 **Regularity:** continuity is inherited only on the cited mixed-Fresnel null-pivot branch; the pair-star and definite-pair branches used below establish essential boundedness. Full-target continuity remains open.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh prepublication control was resolved at `yspennstate/math-research-brain@1eac6b2a386a7ebcb7d16f23aec5c70e895bd449`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular, nothing below uses law-uniform pointwise quadratic-phase decay, independence after spectral rotation, an arbitrary-joint rank-three coarea bound, a conditional-density-as-independence replacement, or a curved-fiber supremum.
 
 ## 1. The r42 pure-13 endpoint is no longer an open branch
 
@@ -436,7 +435,6 @@ The fresh account01/B05 stress theorem shows why the scalar-pivot-first half-Rie
 
 ## 9. Sources actually used
 
-- Fresh owner/control and live corrections: `yspennstate/math-research-brain@1eac6b2a386a7ebcb7d16f23aec5c70e895bd449`, OWNER CONTROL `2026-09-22.15`.
 - Own r42: `math-open-problems@05c329eb1b76b40cefe12e4554b96788382203fa`.
 - Fresh zero-pivot high-leverage closure: `math-open-problems@1ca1fc77ae8435274325c25657c496fd703c0b51`.
 - Null-hub mixed-Fresnel theorem: `math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`.

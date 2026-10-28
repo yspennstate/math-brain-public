@@ -17,7 +17,6 @@
 - owner_control_revision: `2026-09-22.2`
 - current_readme_git_blob: `3d4a9372c87802ab734141a3374d04c8823372e3`
 - readme_sha256_current_run: `NOT_RECOMPUTED`
-- owner_message_sha256_current_run: `NOT_RECOMPUTED`
 - hash_note: the authorized connector exposed the current Git text/blob but no exact byte-hashing bridge; no SHA-256 value was guessed or reused across changed README content
 - scheduler_inventory: current account-local exposed managed B01-B20 inventory showed `20/20` enabled and hourly-valid; no B18 scheduler mutation and no deficit requiring B20 action
 - scientific_result: exact `CENTER-BANK-DUAL-TRADEOFF-v1`; retaining the center coefficient in the 35-pair positive AND dual gives `W_wit(psi) <= kappa K + gamma psi(1/2)` and forces center increment `>0.000126714849610403362...` for repairs using only the guaranteed uniform AND bank

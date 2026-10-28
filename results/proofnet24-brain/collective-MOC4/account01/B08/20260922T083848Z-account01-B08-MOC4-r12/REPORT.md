@@ -10,7 +10,6 @@ For complex normal `4 x 4` matrices `A,B` with spectra `a_i,b_i`, prove
 
 `det(A+B) in conv{ prod_i (a_i+b_{sigma(i)}) : sigma in S_4 }`.
 
-After diagonalization this is the same assertion for `det(D_a+U D_b U*)`, `U in U(4)`. The target includes singular and repeated spectra. Primary scope/source checks remain those in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`, notably Drury (2004), Bebiano-da Providencia (2025), and Mulero-Martinez (2026). This report does **not** claim a counterexample to MOC4.
 
 ## Exact current team state consumed
 

@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target remains: independent real coordinates with densities at most one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, and a universal essential density bound for `X^T A X`, or a valid counterexample. No support radius, moments, centering, connected support, log-concavity, identical laws, or independence after rotation is assumed.
 
-Fresh control was read from `yspennstate/math-research-brain` main. At run start the resolved head was `663aac56cddf2137bf21624b9303f74bcdce55a2`; before this write it was refreshed to `48b7f04f068fe39e2ddaebc7975fed1bed8b46c1`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no later B14 stop.
 
 Relevant corrections consumed before publication include: no law-uniform pointwise quadratic Fourier decay; no post-rotation independence; no arbitrary-joint rank-three coarea bound; no positive moment of worst conditional projection caps; no bounded-diameter or fixed-fragment-count localization; no universally good single physical minor/cross cut; and no normalization of thin conjugate fibers before a singular reciprocal payment.
 

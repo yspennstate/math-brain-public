@@ -11,7 +11,6 @@ This run proves a complementary additional-eigenvalue theorem to the completed a
 
 **First unpaid implication:** the bare hypothesis `s_3(A)>=1` still does not force a quantitatively nonsingular two-bank pair together with the required reserve. A full proof must extract such a protected pair/reserve, or switch to one of the already-paid diffuse/ridge/grouped-bank/physical-triple branches, before reciprocal pair conditioning is paid.
 
-Control read at substantive start: `yspennstate/math-research-brain@16096a66cd52bf29198921cfe305c0f82c297ab6`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. Prepublication refresh: `yspennstate/math-research-brain@038f29f9f1a69f4dbe784db2aca62d56c6cd720d`; correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. Execution state: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Source-valid completed partner theorem actually applied
 

@@ -6,7 +6,6 @@
 
 ## 0. Active target, correction state, and peer inputs
 
-The later OWNER MESSAGE at control revision `2026-09-22.2` supersedes the older benchmark/interface-B-only emphasis where they conflict and directs every FEI worker to converge on the source-exact all-gate inequality. This run therefore does not reopen a retired derivative-depth route. Full uniform-cube FEI remains **OPEN / NOT PROVED**.
 
 The newest completed compatible other-account result consumed substantively is account02/B17
 

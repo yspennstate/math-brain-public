@@ -5,7 +5,6 @@ attacking: convert the fresh two-bank curved-tube estimate into a full rough-inp
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Role:** quadratic coarea bound; complementary constructions/source-valid counterexamples.  
-**Control refreshed at run start:** `math-research-brain@77fe4a7f70c14c189f91a24a2daff2fee18e8295`, OWNER CONTROL revision `2026-09-22.15`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `PROVED SUPPORTING INTERVAL/DENSITY THEOREM; FULL QFORM OPEN`.  
 **Regularity:** essential boundedness only; continuity is not claimed.

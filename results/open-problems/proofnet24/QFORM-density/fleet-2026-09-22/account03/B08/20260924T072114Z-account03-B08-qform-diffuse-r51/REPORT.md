@@ -12,7 +12,6 @@ The unrestricted conjecture remains **OPEN**. The new point is a deterministic c
 
 ## 1. Source boundary and inherited live state
 
-Fresh owner control was reread from `yspennstate/math-research-brain` main at prepublication commit `53dd4d5734bc633ec5088ba95995b8c32c12a4b0`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause or reassignment of account03/B08. The live correction inbox was reread at the same commit. The full theorem is still marked OPEN.
 
 The inherited B08 theorem is my r50 report
 

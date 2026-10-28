@@ -1,6 +1,5 @@
 # Revision 2026-09-22.8 route check: uniform conditional 3-D projection cap is false
 
-A late control refresh during this run advanced the OWNER CONTROL to revision `2026-09-22.8`. The owner message proposes a rank-three coarea route whose explicit open gap is a universal bound on the conditional 3-D spectral-projection density after conditioning on the complementary spectral coordinates.
 
 That particular conditional-density implication is false under the exact target assumptions. This is consistent with the already-live `QFORM-UV-CONDITIONAL-CAP-FALSE` correction, but the following 4-variable embedding shows it directly at the exact 3-D interface.
 

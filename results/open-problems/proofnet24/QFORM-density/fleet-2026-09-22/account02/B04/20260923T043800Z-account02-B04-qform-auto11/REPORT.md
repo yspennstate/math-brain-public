@@ -8,7 +8,6 @@ Execution status: WITHOUT_VERIFIED_BRAIN (authenticated repository retrieval occ
 
 ## 1. Source boundary and first unpaid implication
 
-Fresh brain control was resolved at `yspennstate/math-research-brain@a5ed45f708ca9e45d54d1fcdf2b1fd7456581844`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, no slot pause.
 
 Corrections consumed: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; no arbitrary-joint rank-three coarea bound; no positive conditional projection-density moment; no worst-fiber supremum; no universally good fixed principal minor or rank-three cross cut. None is used below.
 

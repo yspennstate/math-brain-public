@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted target remains OPEN: for every dimension, independent real physical coordinates with densities bounded by one, and every real symmetric A with at least three eigenvalues of modulus at least one, prove a universal essential bound for the density of Q=X^TAX, or give a target-valid counterexample. Full continuity remains separately OPEN.
 
-Fresh prepublication control was read from `math-research-brain` with OWNER CONTROL revision `2026-09-22.15`, QFORM only and no B01 stop. The live correction inbox was reread before publication. In particular no law-uniform scalar quadratic estimate `|E exp(itX^2)|<=C|t|^{-1/2}` is used. The phase-aligned fragmented-support counterexample remains valid; all smoothing below comes from a random linear slope in original independent coordinates.
 
 Source control state refreshed during the run: `yspennstate/math-research-brain@5e2c719118284e6c535165f6172ec4737f7385a8` (the control file itself still states revision 2026-09-22.15).
 

@@ -9,7 +9,6 @@
 
 ## 1. Exact inputs consumed
 
-Fresh owner control before this scientific write was `math-research-brain` main commit `de6ad5f5cd0c0a4de6ed991e24c15228ef29dc17`, OWNER CONTROL revision `2026-09-22.2`. The effective owner instruction stops benchmark/installation work and assigns account02/B08 to the MOC4 repeated-eigenvalue/common-block boundary. The current five-file control read preserved that assignment and contained no later B08 stop.
 
 The mathematical dependencies actually used are:
 

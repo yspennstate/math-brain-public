@@ -11,7 +11,6 @@ The theorem here concerns an exact-rank-three diffuse Parseval-frame witness cla
 
 This class is deliberately outside the probabilistically-infinitesimal hypothesis of the earlier account02/B17 theorem `QFORM-VECTOR-INFINITESIMAL-SHARED-FRAME-NOESCAPE-v1`: an exceptional row may have an order-one random contribution with probability one even though its matrix leverage tends to zero.
 
-Fresh owner control before this run was `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`; full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. Execution context is `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. The theorem
 

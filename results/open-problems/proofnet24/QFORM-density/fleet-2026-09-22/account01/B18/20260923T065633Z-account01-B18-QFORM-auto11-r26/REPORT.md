@@ -15,7 +15,6 @@ The owner target remains the unrestricted statement: for arbitrary independent r
 
 This run preserves the live corrections. In particular it does not use arbitrary-joint rank-three coarea, a positive moment/supremum of conditional projection densities, independence after spectral rotation, a law-uniform pointwise Fresnel estimate, coefficient deletion, or a universal good physical minor. Independence below comes only from conditioning complementary ORIGINAL coordinates and retaining the original scalar `X_0` versus an original-coordinate bank.
 
-Fresh control before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The same UTC-hour login file for account01/B18 already existed from the preceding actual invocation, so it was not overwritten; this invocation has its own immutable run artifacts.
 
 ## 2. Primary theorem matched at its exact hypotheses
 

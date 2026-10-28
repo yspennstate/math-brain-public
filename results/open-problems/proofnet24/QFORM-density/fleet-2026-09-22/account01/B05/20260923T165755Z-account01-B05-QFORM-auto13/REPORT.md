@@ -12,7 +12,6 @@ attacking: the punctured heavy near-null bridge after arbitrary-pivot mixed-supp
 
 The full conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. This report is an exact-rank-three heavy-row reduction. It does not silently extend to arbitrary higher-rank Schur remainders. No moment, compact-support, connected-support, log-concavity, iid, diagonal-basis, post-rotation-independence, conditional-density-cap, or law-uniform pointwise van-der-Corput hypothesis is introduced.
 
-Fresh control at the start remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction that arbitrary-joint three-dimensional coarea and positive conditional projection-height moments are false is retained throughout.
 
 ## 1. Source state and immediate predecessor
 

@@ -13,7 +13,6 @@ Full-target continuity: **OPEN**.
 
 The target remains the unrestricted owner statement: independent ORIGINAL real coordinates `X_i` with one-dimensional probability densities `0<=f_i<=1`, arbitrary real symmetric `A`, and at least three eigenvalues of absolute value at least one. Equivalently for symmetric `A`, `s_3(A)>=1`. No Gaussian, log-concave, moment, compact-support, connected-support, iid, centered, smoothness, diagonal-basis, or post-rotation independence assumption is used.
 
-Fresh owner control immediately before publication is `yspennstate/math-research-brain@78ecc50ddb80dab72bd9719d1ef021ae4d3aa1f7`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction ledger was reread there. Nothing below uses law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, a worst-fiber projected-density supremum, post-rotation independence, one-good-minor extraction, or deletion of a nonzero coefficient tail.
 
 The current inputs actually consumed are:
 

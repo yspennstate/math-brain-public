@@ -13,7 +13,6 @@ Status: **NEW SUPPORTING TARGET-LEVEL THEOREM + EXACT PARTNER IDENTITY APPLICATI
 
 The target is unchanged. The inputs are independent real ORIGINAL coordinates with probability densities bounded by one, and `A` is an arbitrary real symmetric matrix with `s_3(A)>=1`. No Gaussianity, log-concavity, moments, compact support, connected support, iid assumption, or independence after a rotation is used.
 
-Fresh control was read from `yspennstate/math-research-brain@e71afbc43fbe0cfd51f86b10b0ad7fb3bd59d9e9`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the full conjecture remains OPEN. The current correction boundary is retained: law-uniform pointwise quadratic Fresnel decay is false; arbitrary-joint coarea does not replace product provenance; small matrix tails cannot be deleted without moment assumptions; a bounded projection density alone does not control an indefinite quadratic pushforward.
 
 This run attacks the first unpaid structural implication left by the preceding B01 high-diagonal reduction. The new point is to aggregate **all** physical two-minors of the exact scalar Schur complement before selecting any individual minor. The resulting second-compound energy splits into three geometrically distinct channels, one of which is paid uniformly by the existing aggregate-E2 receiver.
 

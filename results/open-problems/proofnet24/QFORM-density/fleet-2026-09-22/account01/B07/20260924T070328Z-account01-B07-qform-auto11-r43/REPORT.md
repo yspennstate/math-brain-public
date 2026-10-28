@@ -15,7 +15,6 @@ Fresh owner control was read from `yspennstate/math-research-brain` main at star
 
 `26c1c354fa0bafe8de3d1c5f73317182121fbbd7`.
 
-OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account01/B07 stop or reassignment. The programme claim ledger still marks the full bounded-density conjecture and the full-target continuity conclusion OPEN.
 
 The exact-singular incoming geometry is the completed account01/B07 r42 result
 

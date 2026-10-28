@@ -11,11 +11,9 @@ The unrestricted conjecture remains open. This report proves a new dimension-fre
 
 ## 1. Source boundary and partner theorem actually used
 
-Fresh startup control source: `yspennstate/math-research-brain@b3cfd47c8cef091a6cec6b51e4528ce883a8bd48`; OWNER CONTROL revision `2026-09-22.15`; programme revision `2026-09-22.5`; live correction inbox blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The designated partner input is the newest account02/B06 handoff:
 
-- brain path `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B06/account02-B06-20260924T013401Z-1fca9092.md`;
 - full proof `yspennstate/math-open-problems@159d52912827d75566d254e155d93a8183ab254f`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/account02-B06-20260924T013401Z-1fca9092/REPORT.md`;
 - theorem `QFORM-DIAG-RANK1-SQRT-SMALLBALL-v1` plus its indefinite-pair upgrade.
 

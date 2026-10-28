@@ -3,7 +3,6 @@ attacking: a full-ambient scalar-plus-two-dimensional product-projection reducti
 
 # Early substantive checkpoint
 
-Fresh coherent control source: yspennstate/math-research-brain@bcbdd804d75bdff296a15f19cc58eacdf14d4fa5, OWNER CONTROL revision 2026-09-22.15. Current programme QFORM-DENSITY-3EIG-20260922; full target OPEN.
 
 Candidate theorem being proved in this run: if, after conditioning arbitrary outside ORIGINAL coordinates, the remaining quadratic dependence factors through one independent original scalar X0 and a genuine two-dimensional orthogonal product projection Y=U^T X_L (U^T U=I_2), with fixed symmetric 3x3 coefficient B whose three eigenvalues have magnitude at least s>0, then the conditional and hence unconditional density is bounded by
 

@@ -8,7 +8,6 @@
 
 ## 0. Later-owner precedence and current target
 
-The fresh owner control is revision `2026-09-22.2`.  Its natural-language OWNER MESSAGE supersedes the older Campaign-C half-band/R16 prompt and directs every FEI worker to the equivalent all-gate formulation.  I therefore do not reopen the positive-current/half-band programme.
 
 The live stable candidate inherited from the current FEI chain is
 \[

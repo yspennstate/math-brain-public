@@ -302,7 +302,6 @@ No counterexample to the owner's conjecture is produced.
 
 ## 10. Fresh source state consumed
 
-- `yspennstate/math-research-brain` fresh main, OWNER CONTROL revision `2026-09-22.15`; all 80 workers QFORM-only.
 - `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `MANIFEST.json`, `scheduled_tasks/fleet.json`, `roles.json`, `PROTOCOL.md`, and `assignments/account01/B05.json` were read fresh.
 - Live corrections used: arbitrary-joint 3D coarea false; conditional projection caps false; no post-rotation independence; no law-uniform pointwise quadratic-phase decay; single-minor/fiber-sup losses are not dimension-free.
 - Pair-log source used exactly at commit `f7f0fedb2d93b46824f96cac1164af6f8a55626f` and path named in Section 3.

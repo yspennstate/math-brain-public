@@ -4,7 +4,6 @@ attacking: spectral-threshold/footprint control of full nonseparable tails at th
 # account01/B12 — spectral-threshold footprint compiler for arbitrary additional eigenvalues
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Owner programme revision: `2026-09-22.5`; latest observed OWNER CONTROL revision: `2026-09-22.15`  
 Role: Additional eigenvalue control  
 Status: `PROVED_SUPPORTING_STABILITY_THEOREM / FULL_TARGET_OPEN`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  

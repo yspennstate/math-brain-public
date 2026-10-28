@@ -13,7 +13,6 @@ attacking: the near-coloop/two-source leakage obstruction by converting the proj
 
 The unrestricted owner target remains open: for arbitrary independent original-coordinate inputs with probability densities bounded by one and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one, prove one dimension-free bound for the density of `X^T A X`, or give a valid counterexample. No Gaussian, moment, support, log-concavity, connected-support, or spectral-coordinate-independence assumption is used here.
 
-Fresh brain control was read from `yspennstate/math-research-brain@339f829f790f89bdf337b1cb2b60c69b770f953a`; OWNER CONTROL is revision `2026-09-22.15`, QFORM only. The live correction inbox was reread. In particular, no arbitrary-joint 3D coarea estimate, positive conditional projection-height moment, worst fiber supremum, coefficient-smallness perturbation, or law-uniform pointwise one-dimensional Fresnel decay is used.
 
 The immediate B16 predecessor is
 

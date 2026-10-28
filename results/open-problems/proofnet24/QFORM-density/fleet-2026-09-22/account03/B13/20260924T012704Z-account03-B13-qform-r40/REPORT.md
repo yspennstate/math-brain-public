@@ -13,7 +13,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal
 
 ## 1. Fresh source-pinned premises
 
-Fresh owner control is `yspennstate/math-research-brain@0389ed8ba504e068b55029fb05c1a6859dc882ec`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction state was reread before this work. In particular, no uniform pointwise quadratic-phase decay, unrestricted joint coarea bound, dimension-free fiber supremum, bounded-diameter localization, or fixed-fragment reduction is used.
 
 The designated partner actually applied is account04/B13:
 

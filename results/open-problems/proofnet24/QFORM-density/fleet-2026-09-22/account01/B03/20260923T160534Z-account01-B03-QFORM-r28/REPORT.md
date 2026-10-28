@@ -20,7 +20,6 @@ No coordinate sum/difference pair is split and re-capped conditionally. No law-u
 
 ## 1. Fresh source boundary
 
-Fresh control immediately before the write remained QFORM-only with OWNER CONTROL revision `2026-09-22.15`; no pause/stop applied to account01/B03. The live correction boundary was reread before publication.
 
 ### 1.1 Designated partner actually applied
 

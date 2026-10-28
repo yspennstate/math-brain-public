@@ -25,7 +25,6 @@ has infinite Lebesgue measure. Choose a finite union of intervals inside it with
 
 Hence no law-uniform bound `|E exp(i s X^2)| <= C |s|^{-1/2}` can hold over all cap-one densities. The result below instead creates decay from a *multidimensional random linear slope*, then integrates that decay in frequency.
 
-Fresh control source before the run: `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The live current-research file still marks the full conjecture open and preserves the arbitrary-joint coarea and conditional-fiber corrections.
 
 ## 2. Source theorem used: density of a full-rank linear image
 

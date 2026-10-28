@@ -263,7 +263,6 @@ The remaining task is to cover arbitrary mixed-leverage frames and arbitrary hig
 ## 7. Source pins, computations, and delivery scope
 
 - Fresh owner README: yspennstate/math-research-brain, revision 2026-09-22.5, blob 433b2d57345823967480245b59a7c47d51019c37.
-- Correction snapshot: yspennstate/math-research-brain@fd2d5942b4da8a850f24fd65e18ed1a61f7c08f3, scheduled_tasks/work/shared/qform-density-2026-09-22/CORRECTION_INBOX.json. Consumed QFORM-CROSSMINOR-ALONE-FALSE, as well as the standing false pointwise single-square decay, fiber-supremum dimension loss, and no independence after rotation corrections.
 - Completed three-dimensional source: yspennstate/math-open-problems, proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md, blob 1da4167bbf6b2785659bd50007cab5f04b9c3084, present at archive snapshot 0605c987ff531ccc2fd5554c48df29e65b3eaaa8.
 - External theorem actually applied: Livshyts--Paouris--Pivovarov, arXiv:1507.07949v2, orthogonal marginal density bound 2^(r/2). Other researched Gaussian and smooth-input theorems were not used as if they covered arbitrary bounded densities.
 - Exact symbolic checks executed: the six-variable matrix eigenvalue multiplicities; mass integral of k; p_Q(0)=2pi-7/3; a 36-coordinate rank-three frame of leverage 1/12 with both partition Gram matrices I_3/2. These calculations support only these identities, not the universal conjecture.

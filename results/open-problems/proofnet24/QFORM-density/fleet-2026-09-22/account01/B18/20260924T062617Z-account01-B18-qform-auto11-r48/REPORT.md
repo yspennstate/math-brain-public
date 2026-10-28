@@ -415,7 +415,6 @@ What remains for FULL QFORM is structural: starting from only `s_3(A)>=1`, force
 ## 9. Source pins actually used
 
 - Rudelson–Vershynin, *Small Ball Probabilities for Linear Images of High-Dimensional Distributions*, arXiv:1402.4492 / IMRN 2015, Theorem 1.2.
-- Account02/B18 latest completed handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B18/account02-B18-20260924T060756Z-db964583.md`; canonical mathematics `yspennstate/math-open-problems@fd7c768025320fbb5e54e13a1acd00d329e8f8dd` and deterministic check `@7f65b2fc32c7c2f1800ff963c8544a02de61532f`.
 - Account03/B18 moving-square conditional receiver/check: `QFORM-CROSS-MOVING-DIFFUSE-SQUARE-v1`, scientific commit `866968bafb00203a9892c46bf761dbb150d705cc`.
 - Herry–Malicet–Poly, *Regularity of laws via Dirichlet forms — Application to quadratic forms in independent and identically distributed random variables*, arXiv:2303.09488, used only for hypothesis-scope comparison.
 

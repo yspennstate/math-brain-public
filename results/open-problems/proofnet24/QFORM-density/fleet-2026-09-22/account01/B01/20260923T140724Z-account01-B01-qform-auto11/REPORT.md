@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source boundary and corrections
 
-Immediately before publication, `yspennstate/math-research-brain` main was refreshed at `e72d292b6acea490fa6ae32db8d430acb97825e8`; OWNER CONTROL remained revision `2026-09-22.15`, all research remained QFORM-only, and no account01/B01 pause or stop was present. The live correction inbox was reread.
 
 In particular, nothing below uses a law-uniform pointwise estimate of the form
 

@@ -10,7 +10,6 @@
 
 The target remains the full statement: for every dimension `n`, every independent real vector `X=(X_1,...,X_n)` whose coordinate densities satisfy `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a density with one universal finite essential-supremum bound, or give a valid counterexample. No moments, compactness, log-concavity, diagonal-basis independence, or independence after rotation are assumed.
 
-The fresh control used at the start was `yspennstate/math-research-brain@fb48babff3d0a2b078a9df38923eb2f45bc3f3fa`, whose live OWNER CONTROL is revision `2026-09-22.11`. The pointwise-Fourier-decay, unrestricted-fiber-supremum, and post-rotation-independence corrections remain binding.
 
 The designated partner result actually consumed is account03/B20, run `20260922T175041Z-account03-B20-QFORM-r14`, canonical mathematics
 

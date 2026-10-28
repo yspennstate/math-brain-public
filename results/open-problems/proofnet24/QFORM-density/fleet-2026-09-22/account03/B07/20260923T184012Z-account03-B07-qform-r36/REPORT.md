@@ -8,7 +8,6 @@ Assignment: coordinate minor selection / GEOMETRY
 Run: `20260923T184012Z-account03-B07-qform-r36`  
 Initial fresh brain main: `fa7daf47cc710d11bf732d922f29c4c5b7f26b2a`  
 Pre-publication brain main: `d26e91fa027fd3a6a369b1d41a198d0ccdad7c95`  
-OWNER CONTROL: `2026-09-22.15`  
 Owner continuation: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING DETERMINANT-WEIGHTED DICHOTOMY + NEW FLAT-SIDE ANALYTIC RECEIVER / FULL QFORM OPEN / FULL CONTINUITY OPEN**.

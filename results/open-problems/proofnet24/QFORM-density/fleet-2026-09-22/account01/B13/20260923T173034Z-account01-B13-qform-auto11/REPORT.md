@@ -19,7 +19,6 @@ All random variables below remain ORIGINAL independent coordinates. Deterministi
 
 ## 1. Fresh control and source-pinned inputs
 
-Fresh owner control before the final write: `yspennstate/math-research-brain@fb15b4a4f49fbac178b67f1217aa4d11c3b94f14`, OWNER CONTROL revision `2026-09-22.15`, latest owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The unrestricted conjecture remains OPEN.
 
 ### 1.1 Latest designated partner account02/B13
 

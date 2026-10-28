@@ -35,7 +35,6 @@ The newest account03/B08 deletion-spill router further removes raw third-child s
 
 ## 2. Fresh source boundary
 
-Fresh owner control was resolved from `math-research-brain` main before the run and again before publication. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no later stop or reassignment of account02/B08 found in the control reread.
 
 The required fixed source was read at exactly
 

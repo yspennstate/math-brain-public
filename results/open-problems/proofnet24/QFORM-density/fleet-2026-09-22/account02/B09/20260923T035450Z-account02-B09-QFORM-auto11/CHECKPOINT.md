@@ -2,7 +2,6 @@
 
 Programme `QFORM-DENSITY-3EIG-20260922`; account02/B09; run `20260923T035450Z-account02-B09-QFORM-auto11`.
 
-Fresh source: brain main `8a24ac3b3b610693138602ff0294f093838b4eb2`, OWNER CONTROL `2026-09-22.15`. Full target remains OPEN.
 
 ## First calculation
 

@@ -15,7 +15,6 @@ The key improvement over an invertibility-based Schur rescue is that the updated
 
 ## 2. Sources and controls actually used
 
-Fresh brain main was observed at `50f8f9aff2441d2b7230c67e8357a7395a7a099e`; OWNER CONTROL remained revision `2026-09-22.15`. I re-read `AGENTS.md`, `scheduled_tasks/README.md`, the live `CORRECTION_INBOX.json` (blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`), the account04/B12 assignment (blob `eefbe5aa60685c7bfc6cc1a2abc1eb856d7de454`), and the current request (blob `165c570ecb4dcc6299c38fc3298771e4a8339dac`). The advertised `MEMORY_PROTOCOL.md` was not present at the tested repository paths; no content was invented.
 
 The required Claude source was re-read from `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` (current blob `62e20ee976ddeb3f42d3ee5befd6ed49edc917a5`; designated base commit `e5f71d79eff325201dd0274053d20268ce65b837`).
 

@@ -15,7 +15,6 @@ The fresh control branch was re-resolved immediately before publication at
 
 `yspennstate/math-research-brain@5f2ff5c256f100ecd0291fcdbd84fc1f52b2be39`.
 
-`AGENTS.md` still names `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and no later stop/reassignment was present. The live `CORRECTION_INBOX.json` was reread. In particular this proof does **not** use post-rotation independence, arbitrary-joint coarea, conditional-density caps after sum/difference transformations, pointwise quadratic-phase decay, a uniformly good physical minor, moment bounds, or deletion of a small matrix coefficient as a small random perturbation.
 
 The immediate B19 premise is the completed preceding report, read from
 

@@ -2,7 +2,6 @@
 
 **Run:** `20260922T164017Z-account03-B16-QFORM-r13`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh owner control before publication:** `yspennstate/math-research-brain@92be5594e3582a9e65102238590623311ed1df79`, OWNER CONTROL revision `2026-09-22.7`  
 **Assignment:** Projection-product interaction  
 **Classification:** `TARGET_SUPPORTING_THEOREM / EXACT_RANK3_DIFFUSE_BANK_BRANCH_CLOSED / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
@@ -15,7 +14,6 @@ This report does **not** rotate the independent physical coordinates, does not u
 
 The completed assigned partner result actually applied is account04/B16 run `20260922T161909Z-account04-B16-QFORM-r2`, source:
 
-- brain handoff: `yspennstate/math-research-brain@144f57f486c0d7caf6356876dbc4ea62686e44cf`, `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account04/B16/20260922T161909Z-account04-B16-QFORM-r2.md`;
 - full proof: `yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T161909Z-account04-B16-QFORM-r2/REPORT.md`.
 
 It proves in the exact-rank-three nested-heavy geometry that if physical row `i` has leverage `c_0>1/2` and row `j` has residual leverage `h>1/2`, then

@@ -11,7 +11,6 @@ Full unrestricted QFORM: **OPEN / NOT PROVED / NOT DISPROVED**
 Full-target continuity: **OPEN**  
 Execution context: `WITHOUT_VERIFIED_BRAIN`
 
-Fresh control before publication: `yspennstate/math-research-brain` main was reread at `5a71ebdcdcfdd94ff5f68a96ec6df52b5dc4dc82`; OWNER CONTROL remains revision `2026-09-22.15`. The live correction inbox was reread. No arbitrary-joint coarea bound, post-rotation independence, conditional-density-cap shortcut, pointwise Fresnel decay, fixed-fragment reduction, or one-small-minor extraction is used.
 
 The strongest certified target-level lower obstruction remains
 

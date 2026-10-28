@@ -14,7 +14,6 @@ attacking: derive a dimension-free structural bridge from the near-coloop shared
 
 The owner target is unchanged: for arbitrary finite `n`, independent real original-coordinate variables with densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal bound for the density of `X^T A X`, or give a valid counterexample.
 
-Fresh controls were read from `yspennstate/math-research-brain` main. At the last pre-write refresh the main commit was `1585a47111888139d354be294849208232ba0029`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM only. The live correction inbox was reread. Nothing below uses post-rotation independence, arbitrary-joint coarea, conditional projection-height moments, a worst-fiber supremum, pointwise law-uniform van der Corput, or deletion of small coefficients.
 
 The analytic input is account01/B18 `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical source
 

@@ -9,7 +9,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted conjecture remains OPEN / not proved / not disproved. Full-target continuity remains OPEN separately. No Gaussian, moment, compact-support, connected-support, log-concavity, iid, post-rotation independence, law-uniform pointwise quadratic-phase decay, worst-fiber supremum, or deletion of a small random quadratic term is used below.
 
-Fresh control before this run's substantive write was `yspennstate/math-research-brain@dbf1cc0f1b7d9f9cca670ac69bb52b64c7c699bb`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no account01/B09 pause. The same UTC-hour canonical B09 login already existed from r30 and was preserved rather than overwritten.
 
 ## 1. Immediate debt from r30
 

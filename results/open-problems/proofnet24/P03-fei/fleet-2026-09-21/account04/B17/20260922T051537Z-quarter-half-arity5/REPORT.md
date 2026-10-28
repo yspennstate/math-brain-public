@@ -7,7 +7,6 @@
 
 ## 0. Change summary
 
-The current OWNER MESSAGE supersedes the stale Interface-D-only prompt and asks every FEI worker to converge on the all-gate inequality, either proving the AND/decomposable extremality claim or falsifying it with a Boolean gate and bias vector. This run does not reopen a new Shannon remainder.
 
 I nevertheless consume the newest compatible other-account B15 source exactly where it matters. Account02/B15,
 

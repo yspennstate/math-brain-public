@@ -12,7 +12,6 @@ Native learned-memory status: **WITHOUT_VERIFIED_BRAIN**.
 
 The unrestricted theorem remains **OPEN / NOT PROVED / NOT DISPROVED**. This report proves a global all-output density bound for a source-valid exact-spectrum six-variable family with arbitrary finite or countable interval fragmentation, provided the nonkernel cell-center gap is positive at the explicit scale below. It removes the two gaps left after the latest partner theorem: fragment count had already been removed at the cone tip, but the bound was stated only at output zero; the present argument shows that the same six-chart mechanism is uniform in the output level, while the kernel aggregate is dominated as a measure by the connected triangular-bank control law.
 
-Fresh initial brain control was resolved at `cfd0d0ef51c48679957bf648422676b15207031c`; a prepublication refresh saw brain main `0082f302e675e9ab32b727c257b59cb67559d105`. OWNER CONTROL revision remains `2026-09-22.15`, QFORM-only. The live correction inbox was reread. No law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea cap, conditional projection-density moment, fixed fragment-count reduction, or generic two-sheet X-ray shortcut is used.
 
 ## 1. Exact physical matrix and source-valid fragmented laws
 

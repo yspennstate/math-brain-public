@@ -6,8 +6,6 @@ attacking: the one-strong-cross indefinite-curvature residual by identifying the
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account02/B09` — Bilinear block mechanism  
 Run: `20260922T214248Z-account02-B09-QFORM-r10`  
-Fresh control at start: `yspennstate/math-research-brain@d30d8c39d2131bc700cc1ebc7d5b94271a8c349c`, OWNER CONTROL revision `2026-09-22.15`  
-Pre-write refresh: `yspennstate/math-research-brain@38b2e0766a6d8394cb53e9a7fe3c4520770d3309`; protected controls unchanged, OWNER CONTROL still revision `2026-09-22.15`  
 Outcome: **ESSENTIAL_STEP_APPLIED + CANDIDATE_REFUTED / FULL TARGET OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**.
 

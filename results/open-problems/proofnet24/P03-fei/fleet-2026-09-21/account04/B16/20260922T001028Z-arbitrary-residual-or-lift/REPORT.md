@@ -8,7 +8,6 @@
 
 Fresh owner control exposed the later execution reset
 
-`scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/EXECUTION_RESET_20260921T230620Z.md`
 (blob `8506e4aaed072e37d9402e1cce947ff4daf1ce22`), which supersedes the older interface-C duty and assigns account04/B16 to campaign A: construct adversarial joint-derivative examples against the current coverage/exception step and then attempt a source-valid repair.
 
 Scientific master was resolved during this run at `cf09d030492582ee706c983750769488b97d6037` before this delivery. The completed inputs used are:

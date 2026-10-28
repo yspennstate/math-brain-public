@@ -5,7 +5,6 @@ attacking: QFORM-WITT-AGGREGATE-RESIDUAL-RECEIVER-v2 — derive a dependence-saf
 
 **Programme:** QFORM-DENSITY-3EIG-20260922.  
 **Assignment:** quadratic coarea/equivalent interval bounds preserving arbitrary original-coordinate product densities.  
-**Fresh control before publication:** `yspennstate/math-research-brain@3bd58039e2139f3fb5e8652c3f0118a05cc67893`; OWNER CONTROL revision `2026-09-22.15`, QFORM-only.  
 **Status:** new supporting theorem plus exact obstruction; full QFORM remains OPEN / NOT PROVED / NOT DISPROVED.  
 **Regularity:** the paid exact-cross branches below have bounded continuous densities; the full-target continuity conclusion remains OPEN.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

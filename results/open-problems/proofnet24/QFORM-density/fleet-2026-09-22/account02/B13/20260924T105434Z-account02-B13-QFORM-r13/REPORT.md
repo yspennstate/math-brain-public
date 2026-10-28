@@ -22,7 +22,6 @@ The partner's previously stated uniformly-conditioned physical-pair-plus-star re
 
 ## 2. Fresh sources actually used
 
-Fresh owner control remains QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with the full target OPEN and no applicable account02/B13 stop.
 
 The latest completed compatible designated partner at refresh is account03/B13 r48,
 

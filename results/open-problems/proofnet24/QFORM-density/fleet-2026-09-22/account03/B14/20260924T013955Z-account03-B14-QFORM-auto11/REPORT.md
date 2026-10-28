@@ -5,7 +5,6 @@ attacking: zero-tax localization from a diffuse three-bank compression to the va
 
 Run: `20260924T013955Z-account03-B14-QFORM-auto11`.
 Programme: `QFORM-DENSITY-3EIG-20260922`.
-Control refresh before publication: `yspennstate/math-research-brain@f12a7a8e419eb41ee89e4ae7b9c3ab436fdf7b1c`, OWNER CONTROL revision `2026-09-22.15`.
 Status: **NEW SUPPORTING LOCALIZATION THEOREM / PARTNER RESULT APPLIED / FULL QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

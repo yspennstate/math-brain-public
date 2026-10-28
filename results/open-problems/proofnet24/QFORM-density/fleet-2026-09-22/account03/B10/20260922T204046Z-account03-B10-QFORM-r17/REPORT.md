@@ -5,7 +5,6 @@ attacking: the exact-rank-three heavy-null overlap state; aggregate an arbitrary
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**Fresh owner control before publication:** `yspennstate/math-research-brain@5cf26e84c6587b838a6dde80f26f7ad0d1e88036`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / NESTED-HEAVY-OVERLAP-BRANCH-CLOSED / FULL_TARGET_OPEN`
 

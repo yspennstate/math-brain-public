@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. The theorem below proves absolute continuity a
 
 ## 1. Fresh scope and the first missing implication
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at start commit `718d1f4c7d3e942886470c5f84a0df388700865a`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction ledger was reread. In particular this report does not use arbitrary-joint rank-three coarea, conditional projection caps, independence after rotation, pointwise van-der-Corput decay, a fiber supremum, moments, compact support, connected support, or a perturbative deletion of a small random term.
 
 The immediate own predecessor is
 
@@ -275,7 +274,6 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity
 
 ## 6. Source pins
 
-- Owner/control at start: `yspennstate/math-research-brain@718d1f4c7d3e942886470c5f84a0df388700865a`, OWNER CONTROL revision `2026-09-22.15`.
 - Own determinant-only pair theorem: `yspennstate/math-open-problems@f24ae277a541417edf1ee63edcc002fd290ab6e6`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260924T023738Z-account03-B05-QFORM-r38/REPORT.md`.
 - Rank-one affine small-ball source: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 - Current heavy-row determinant-star addendum: `yspennstate/math-open-problems@b8c42cc3e7d06ba1362b8138887c79de8940348b`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T015848Z-account01-B05-QFORM-auto11/STRUCTURAL_ADDENDUM.md`.

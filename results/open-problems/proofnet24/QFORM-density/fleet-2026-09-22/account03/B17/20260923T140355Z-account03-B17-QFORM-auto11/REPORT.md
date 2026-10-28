@@ -255,7 +255,6 @@ What it rules out is stronger than the equal-periodic control: even if the three
 
 Controls/corrections consumed before publication:
 
-- OWNER CONTROL revision `2026-09-22.15`;
 - pointwise quadratic-phase decay is unavailable;
 - no independence is assumed after spectral rotation;
 - arbitrary-joint rank-three coarea bounds are unavailable;

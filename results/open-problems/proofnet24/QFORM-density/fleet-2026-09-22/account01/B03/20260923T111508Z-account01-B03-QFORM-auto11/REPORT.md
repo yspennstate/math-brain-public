@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. The theorem below is a product-coordin
 
 ## 1. Source inputs actually used
 
-Fresh control before publication: `yspennstate/math-research-brain@2faaeb854e95afd94dd7895446044992f9b5662d`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only.
 
 The one-dimensional integrated Fourier input is from
 

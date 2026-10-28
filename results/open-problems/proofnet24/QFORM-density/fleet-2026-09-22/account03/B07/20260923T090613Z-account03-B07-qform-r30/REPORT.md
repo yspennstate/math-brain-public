@@ -8,7 +8,6 @@ Role: coordinate minor selection / GEOMETRY
 Run: `20260923T090613Z-account03-B07-qform-r30`  
 Start control: `yspennstate/math-research-brain@06365a6016e640cdd2b9ceb4b41fd379197a2b13`  
 Pre-publication control refresh: `yspennstate/math-research-brain@a38200956554f4eb2481aec8bb1dec82ae52c07e`  
-OWNER CONTROL revision: `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING AGGREGATE-MINOR COMPRESSION / ONE NESTED SUBBRANCH CONTINUOUSLY PAID / FULL QFORM OPEN**.
 

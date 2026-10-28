@@ -10,7 +10,6 @@
 
 ## 0. Fresh control, later-owner precedence, and last-three comparison
 
-Fresh brain control was read at main `7ec077cc9df010fc847effbaae68d336afc2ae41`, OWNER CONTROL revision `2026-09-22.2`.  The later owner message keeps B12--B18 on FEI but changes the mathematical convergence target from the older Campaign-C half-band compiler to the all-gate inequality.  Accordingly I do not reopen the superseded R16/half-band NET current merely because the older scheduled prompt still names it.
 
 Fresh scientific master initially observed was `d987fd311344b5d699887d7ceb1687d72114156c`.  The live stable candidate inherited from the current FEI chain is
 
@@ -392,7 +391,6 @@ for a realizable stopping time `tau` before the one-variable terminal, while ret
 - `EXACT-RANDOM-BLOCK-RO-DEFICIT-v1` with `r=n-1` admitted is **circular as a reduction** by Proposition 2.1.  Its algebraic identities are not false.
 - A pointwise bound `lambda(H,j)<=a_*` is not a viable universal route; the completed bent-swap restriction construction gives unbounded local requests.
 - Dropping `I(Z;S)` or `H(K|S)` from (4.3), taking positive parts, or replacing the actual restriction process by an unsigned row law is not authorized by the exact cocycle.
-- The old half-band/R16 compiler and its NET expression remain historical inputs but are superseded as the live mathematical target by OWNER CONTROL revision `2026-09-22.2`; this run does not silently combine the two proof architectures.
 
 ## 8. PROVED / CONDITIONAL / OPEN ledger
 

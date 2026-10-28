@@ -13,7 +13,6 @@ Continuity: **proved for the scoped theorem below; unrestricted target continuit
 
 ## 1. Control, scope, and correction boundary
 
-Fresh `yspennstate/math-research-brain` main was read, including `AGENTS.md`, the full scheduled-task owner control/message, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the QFORM manifest/current-research/claims/correction inbox/memory protocol, and this worker's assignment. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole target and the full conjecture is still open.
 
 No step below assumes Gaussianity, log-concavity, moments, compact or connected support, smooth densities, or independence after a spectral rotation. Every random coordinate used below is an original coordinate or a source-disjoint block of original coordinates. No uniform pointwise van-der-Corput/Fresnel estimate is used.
 
@@ -327,7 +326,6 @@ The sibling `CHECKS.txt` records the actual numerical/algebraic check output. It
 
 ## 11. Source pins
 
-- Fresh owner/control source: `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`; QFORM-only.
 - Fresh designated partner: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`, account04/B01 L^r residual theorem.
 - Previous account03/B01 conditional-L^r source: `yspennstate/math-open-problems@02fc25c9017e7ff987ca1726cd542bd83cc1f103`.
 - Pointwise phase-aligned correction retained; no refuted conditional-cap/coarea or post-rotation independence premise is used.

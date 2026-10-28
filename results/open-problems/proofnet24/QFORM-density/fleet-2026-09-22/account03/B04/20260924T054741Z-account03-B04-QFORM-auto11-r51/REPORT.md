@@ -13,7 +13,6 @@ The full target remains unchanged: independent ORIGINAL real coordinates with on
 
 ## 1. Fresh source boundary and nonduplication check
 
-Fresh owner control was resolved from `yspennstate/math-research-brain`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live corrections against law-uniform pointwise quadratic van der Corput, post-rotation independence, arbitrary-joint coarea, and dimension-growing worst-fiber integration remain binding.
 
 A source-matching theorem already exists: account01/B06 proved `QFORM-PHYSICAL-TRIPLE-DET-ONLY-v1`, with
 

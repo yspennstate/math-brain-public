@@ -15,7 +15,6 @@ The target is unchanged: for arbitrary dimension, arbitrary independent real inp
 
 This run retains the live corrections: no independence is inferred after spectral rotation; law-uniform pointwise quadratic-phase decay is not used; no unrestricted spectral-fiber supremum is integrated; no arbitrary-joint rank-three coarea inequality or positive conditional projection-density moment is used; and no small matrix error is interpreted as a small random quadratic error on unbounded inputs.
 
-Fresh brain control before publication was `f44aba147602ade362205984416b49b725ad77fb`, OWNER CONTROL revision `2026-09-22.15`, with no B06 stop or pause.
 
 ## 2. Source-valid inputs actually applied
 

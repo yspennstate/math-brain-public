@@ -15,7 +15,6 @@ Every coordinate set below is a literal ORIGINAL-coordinate set. No random varia
 
 ## 1. Source-pinned live inputs
 
-Fresh owner controls were read from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15` and QFORM is the sole research target.
 
 The designated partner is account04/B20 r13:
 

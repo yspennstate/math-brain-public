@@ -9,7 +9,6 @@ Memory/runtime status: `WITHOUT_VERIFIED_BRAIN`; repository retrieval is genuine
 
 ## 1. Source and correction scope
 
-Fresh controls were read from `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`, including `AGENTS.md`, the full `scheduled_tasks/README.md` OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, the QFORM manifest/current research/claims/live correction inbox/memory protocol, and `assignments/account03/B17.json`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the current Claude continuation were also read.
 
 This argument does **not** use any of the refuted interfaces: no law-uniform pointwise quadratic-phase decay, no independence after a spectral rotation, no arbitrary-joint coarea cap, no fiber-supremum dimension bound, no conditional projection-density moment, and no interval-extremality assumption. The only rearrangement used below is a one-dimensional bathtub inequality for an explicitly positive Gaussian reward in an original independent coordinate.
 

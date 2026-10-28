@@ -8,7 +8,6 @@ attacking: the exact-coloop endpoint left by r34 — replace the fragile cancell
 **Status:** `NEW SUPPORTING THEOREM / EXACT-COLOOP ENDPOINT CLOSED INSIDE THE r32 ANGULAR PACKET / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh controls were read from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause or stop for account03/B03. The live correction inbox blob at the prepublication refresh is `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. The argument below does not use law-uniform pointwise van-der-Corput decay, post-rotation independence, a conditional density cap for a sum/difference conjugate, the false arbitrary-joint coarea lemma, or a fragile local minor before aggregation.
 
 ## 1. Source-valid packet and the remaining r34 endpoint
 

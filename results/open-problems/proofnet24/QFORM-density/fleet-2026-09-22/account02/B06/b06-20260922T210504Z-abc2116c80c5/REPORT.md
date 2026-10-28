@@ -12,7 +12,6 @@ attacking: the near-rank-two / grouped-coordinate branch after the curved-fiber 
 
 ## 0. Controls, exact scope, and source pins
 
-Fresh control at run start was `yspennstate/math-research-brain@76ad88edff677b20f3af647f77fd02bf99869f89`; the prepublication refresh reached `023eb6cd1ed8ef08a7815885daa923a9f068cfe9`. The controlling README OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B06 stop. The proof-first continuation requires a full-target conditional argument and preserves the corrections against arbitrary-joint coarea, positive moments of worst conditional projection density, worst scalar-remainder conditioning, unrestricted fiber suprema, post-rotation independence, and law-uniform pointwise Fresnel decay.
 
 Target quantifiers are unchanged: the original coordinates are independent, each one-dimensional density is at most one, and the symmetric matrix has at least three eigenvalues of absolute value at least one. No moment, support, identical-law, diagonal-basis, or post-rotation-independence assumption is added.
 

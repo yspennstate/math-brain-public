@@ -3,7 +3,6 @@
 Run: `20260924T064404Z-account01-B04-QFORM-auto11-r31`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: product Fourier rearrangement  
-Owner control observed before work: `math-research-brain@5f21153900232958c2057daec19ec268d81aa381`, OWNER CONTROL revision `2026-09-22.15`  
 Status: supporting theorem candidate / full QFORM OPEN / independent review pending / `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Target and scope
@@ -215,7 +214,6 @@ Thus this is a fully dense, genuinely rotated, indefinite family satisfying the 
 
 Fresh designated partner source read in this run:
 
-`math-research-brain@5f21153900232958c2057daec19ec268d81aa381:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B04/account02-B04-20260924T051847Z.md`.
 
 That completed result states that for a physical pair `a,b`, with pair-anchored third volume
 

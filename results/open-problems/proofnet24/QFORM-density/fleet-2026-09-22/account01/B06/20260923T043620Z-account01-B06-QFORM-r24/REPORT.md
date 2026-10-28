@@ -13,7 +13,6 @@ attacking: lift the remaining one-sided curved packet back to an original produc
 
 The exact owner target is unchanged: arbitrary dimension, independent original coordinates with probability densities at most one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, and no Gaussian/log-concave/moment/support/diagonal-basis hypothesis. The separate global continuity claim remains open.
 
-Fresh control at the start of this run was `yspennstate/math-research-brain@7b0ea80c713b9204a160ae7edcc0b4c0902d3249`; OWNER CONTROL remains revision `2026-09-22.15` and QFORM is the sole target. Live corrections are retained: no law-uniform scalar pointwise Fresnel decay, no post-rotation independence, no arbitrary-joint 3D coarea estimate, no positive moment of a worst conditional spectral-fiber cap, no unrestricted fiber supremum, and no localization of aggregate Pluecker mass to one reciprocal tiny physical minor.
 
 The incoming branch is account01/B06 r21, canonical
 

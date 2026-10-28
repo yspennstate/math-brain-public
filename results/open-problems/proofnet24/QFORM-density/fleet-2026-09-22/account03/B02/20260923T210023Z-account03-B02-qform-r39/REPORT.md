@@ -12,7 +12,6 @@ attacking: the globally spread V1 overlap-one third-compound mass; compile it, w
 
 The exact owner target is unchanged: independent ORIGINAL real coordinates with one-dimensional densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussianity, moments, compact support, connected support, log-concavity, post-rotation independence, or diagonal-basis independence is inserted.
 
-Fresh prepublication owner control was resolved on `yspennstate/math-research-brain@547b91cbdf4574753e24a02ca96122ba3f2b6c3a`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction ledger was reread at that same ref. The same-hour canonical B02 login already existed for this run ID and was preserved rather than overwritten.
 
 ## 1. Inputs actually used
 

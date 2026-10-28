@@ -2,7 +2,6 @@
 
 Run `20260923T104329Z-account01-B04-QFORM-auto11`.
 
-Fresh target/control: QFORM-DENSITY-3EIG-20260922, OWNER CONTROL revision `2026-09-22.15`; full conjecture remains open. Corrections retained: no law-uniform pointwise quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea, no universal good single physical minor/cross cut.
 
 ## First substantive calculation
 

@@ -1,7 +1,6 @@
 # account02/B06 — quadratic-form bounded-density: physical-block adversary and determinant-mass repair
 
 **Run:** `b06-20260922T113045Z-d47192d10a82`  
-**Live owner control:** `yspennstate/math-research-brain`, revision `2026-09-22.4`; later OWNER MESSAGE supersedes the stale FEI assignment and directs all workers to the bounded-density quadratic-form conjecture.  
 **Classification:** `ESSENTIAL_STEP_APPLIED` + local `CANDIDATE_REFUTED`; **full target OPEN / NOT PROVED**.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
 

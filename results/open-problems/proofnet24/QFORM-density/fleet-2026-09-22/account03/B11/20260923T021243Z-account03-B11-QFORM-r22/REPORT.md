@@ -16,7 +16,6 @@ Fresh `math-research-brain` main at startup was
 
 `e83382e04b0966b933d698cdf95e0388dbc97312`,
 
-with OWNER CONTROL revision `2026-09-22.15`, QFORM only. The live correction set forbids law-uniform pointwise quadratic-phase decay, independence after spectral rotation, arbitrary-joint rank-three coarea, worst conditional-density-moment bounds, and a universally good single physical minor.
 
 The current owner continuation requires application of the volume-stability package
 

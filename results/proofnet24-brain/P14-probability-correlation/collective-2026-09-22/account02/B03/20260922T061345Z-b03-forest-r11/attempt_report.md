@@ -8,7 +8,6 @@ Parent FOREST remains **OPEN**; no public solved-problem or novelty claim is mad
 
 ## 1. Controls and continuation state
 
-Fresh mandatory controls were read from `yspennstate/math-research-brain` at main commit `44c473e1d5af1c1712a165e969756e7b247e54a7`: `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, and `scheduled_tasks/PROTOCOL.md`, including OWNER MESSAGE, together with the live collective `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json`. OWNER CONTROL remained `2026-09-22.2`; the active programme remained `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; B03 remained FOREST adversary/separator research. No later applicable owner/platform stop was found. Old brain-installation and benchmark work stayed stopped.
 
 The newest local B03 report consumed was `20260922T051049Z-b03-forest-auto11`, report blob `57bd1c4cceaa39ba9db44f4f024a3b9a4f41c65c`. It proved exact rational two-terminal unitization and exact simple replacement of contraction-created parallel classes. This run does not repeat that construction; it changes mechanism to attack the newer source-generated STAR-2 conditional debt.
 

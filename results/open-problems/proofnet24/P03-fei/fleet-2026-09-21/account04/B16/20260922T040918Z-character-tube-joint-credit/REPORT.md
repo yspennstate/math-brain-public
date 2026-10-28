@@ -7,7 +7,6 @@
 
 ## 0. Control and exact scope
 
-The fresh brain control entering this run was OWNER CONTROL revision `2026-09-22.2`. Its later OWNER MESSAGE supersedes the inherited interface-C phase-switch assignment and sends the FEI fleet to the all-gate reformulation. I therefore do **not** claim a new universal phase-switch source-to-physical contraction here.
 
 I nevertheless consumed the two exact interface-C dependencies named in the inherited prompt and keep their ledgers live rather than silently replacing them:
 

@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. Continuity is proved on the exact-cross branch
 
 ## 1. Source discipline and scope
 
-Fresh owner control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. The live correction stream was also consumed: in particular, this argument does **not** use arbitrary-joint rank-three coarea, conditional projection-density caps or positive moments, post-rotation independence, pointwise quadratic van-der-Corput decay, fiberwise suprema, or a claim that a small coefficient is a small random error.
 
 The live ratio-packet source is
 

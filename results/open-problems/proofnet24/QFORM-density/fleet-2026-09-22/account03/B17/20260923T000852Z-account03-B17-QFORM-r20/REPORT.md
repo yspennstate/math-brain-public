@@ -9,7 +9,6 @@ The current owner target is the unrestricted QFORM density conjecture for indepe
 
 This run applies the newest no-pivot reduction and the completed designated-partner witness to the same quantitative inequality. The relevant source pins are:
 
-- owner/control repository: `yspennstate/math-research-brain@89bbc6d13a505b7d057401486e10b1c06f4b4cf2`, OWNER CONTROL revision `2026-09-22.15`;
 - newest no-pivot synthesis: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`;
 - newest Claude geometric/Fourier source: `yspennstate/math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`;
 - designated partner `account04/B17`: `yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B17/20260922T211900Z-account04-B17-QFORM-r3/REPORT.md`.

@@ -343,7 +343,6 @@ The identities themselves are proved exactly above; the numerical checks are reg
 
 ## 12. Source pins
 
-- Fresh control: `yspennstate/math-research-brain`, main; OWNER CONTROL revision `2026-09-22.15`.
 - LPP primary source: arXiv:1507.07949; Israel J. Math. 216 (2016), 877--889, Theorem 1.1.
 - Designated partner account02/B18 receiver: `math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`.
 - Newest account02/B18 private-bank theorem: `math-open-problems@529be48498963ede3243fd4a2b00a0104442fc05`.

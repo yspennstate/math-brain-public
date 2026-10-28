@@ -5,7 +5,6 @@ attacking: QFORM-TRIANGLE-PAIR-TRANSFER-RECONDITIONING-v1 — move the guarantee
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly / quantitative inequalities and rigorous computations  
-**Fresh owner control at derivation start:** `yspennstate/math-research-brain@16a783d4e410be9c953927da00cd893b44ac7b81`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; repository retrieval/writes are not native learned-memory ingestion  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW TARGET-LEVEL PAID SUBBRANCH + SHARPER RESIDUE / FULL QFORM OPEN`.
 

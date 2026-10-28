@@ -4,7 +4,6 @@ Run: `20260924T144518Z-account03-B14-fixedmult-r12`
 Current objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Logical assignment: translations and localization  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
-Control snapshot before worker writes: `yspennstate/math-research-brain@d30f1851962fadc94631e6eaa5cf319fd6ac22a8`, OWNER CONTROL revision `2026-09-22.15`.
 
 ## 1. Result
 

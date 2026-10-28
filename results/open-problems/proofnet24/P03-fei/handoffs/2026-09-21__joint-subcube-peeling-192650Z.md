@@ -10,7 +10,6 @@ Directory: `proofnet24/P03-fei/fleet-2026-09-21/account02/interactive/20260921T1
 
 Read the [initial proof](../fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/REPORT.md), the stronger [arbitrary-sign and approximate-support addendum](../fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/ADDENDUM.md), and then the [fixed-relative support obstruction](../fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/FIXED_RELATIVE_OBSTRUCTION.md). All new verification scripts, actual outputs and the unsuccessful depth exploration are included with exact manifests. Twelve pre-manifest remote file blobs and lengths matched local bytes.
 
-The substantive all-account brain handoff is at `fe0c4ff1de0ef64739b8300b1d5ef5192bd9152b`, path `scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/handoffs/20260921T192650Z-subcube-peeling.md`, blob `eb4255cf16db90ad2fe5c98691a597be55bfa992`. The common research state now points to it at `f87cd84e8de1e22db32dfb2d8778a76e06b71587`. The joint order is distributed through the common scheduled-task README, not only account02's work folder. Source-bound account03/B12 evidence shows actual use of account04/B18's result; keepers in account02 and account03 report prompt incorporation. This is not certification of uptake by every worker or native database ingestion.
 
 ## Main positive transfers
 

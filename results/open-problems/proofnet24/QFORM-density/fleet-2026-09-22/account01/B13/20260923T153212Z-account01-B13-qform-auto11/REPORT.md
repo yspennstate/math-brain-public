@@ -11,7 +11,6 @@ Full continuity: **OPEN**.
 
 ## 1. Sources and corrections consumed
 
-Fresh owner control was read from `yspennstate/math-research-brain`, `main`, with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target. The live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account01/B13 assignment were reread before the mathematical write.
 
 The argument below does **not** use any of the known-invalid interfaces: no law-uniform pointwise quadratic oscillatory decay, no independence after rotation, no arbitrary-joint coarea bound, no conditional projection-density moment bound, no single-interval/centered-uniform extremality, and no bounded fragment-count or bounded-diameter reduction.
 

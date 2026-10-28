@@ -13,7 +13,6 @@ attacking: the true near-coloop shared-bank survivor by converting the existing 
 
 The full owner target is unchanged: for every dimension, independent real original-coordinate variables with densities at most one and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove one universal density bound or give a valid counterexample.
 
-Fresh controls were read from `yspennstate/math-research-brain` main, initially at `c79f69a1004bc788459688fbf1871c84e65dc0b5`, under OWNER CONTROL revision `2026-09-22.15`. The live correction inbox was read. Nothing below uses post-rotation independence, arbitrary-joint coarea, a positive conditional projection-height moment, deletion of a small coefficient on unbounded inputs, or law-uniform pointwise quadratic-phase decay.
 
 The immediate B16 predecessor is
 

@@ -12,7 +12,6 @@ Regularity: continuous density on the proved branch; global continuity remains o
 
 The target remains the unrestricted one: independent real original-coordinate inputs with one-dimensional probability densities at most one, arbitrary finite dimension, and arbitrary real symmetric A with at least three eigenvalues of modulus at least one. No moment, support, iid, sign, exact-rank, smoothness, or post-rotation independence hypothesis is added to the target.
 
-Fresh brain control was read on 2026-09-23, including OWNER CONTROL revision 2026-09-22.15, the mutable continuation QFORM-CLAUDE-LATEST-20260922T225732Z, and the B16 assignment. The newest continuation still states that the rough-input full theorem is open. Later math-open-problems commits were checked through the 19:20 UTC source wave; the newest directly relevant account01/B16 theorem is the rank-(3,2) plane-determinant compiler at commit cec6d551cd519592f559a466d1870e7638934414.
 
 Three completed mathematical inputs are used at displayed equations.
 

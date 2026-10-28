@@ -9,7 +9,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted conjecture remains OPEN / not proved / not disproved. Full-target continuity remains OPEN separately. No random-variable rotation, law-uniform pointwise quadratic-phase decay, moment/support/log-concavity assumption, worst fiber supremum, or deletion of a small random quadratic term is used below.
 
-Fresh owner control at login was `yspennstate/math-research-brain@e965d24010197323e900b5165174ce070e6061d2`, OWNER CONTROL revision `2026-09-22.15`. The live claims still mark `QFORM-FULL` and full-target continuity OPEN. The current Claude continuation `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae` was read only as an OPEN-source continuation; in particular its `(SP)` hub-that-sees-`P` functional is not used as a theorem.
 
 ## 1. Starting point from the preceding B09 singular-pair reduction
 

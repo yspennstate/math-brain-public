@@ -13,7 +13,6 @@ The full universal QFORM conjecture remains open. This report closes one analyti
 
 ## 1. Fresh sources and correction boundary
 
-Fresh control at run start was `yspennstate/math-research-brain@f0e79e34042ac7ed02fb2e116f0c135fc357a98b`, OWNER CONTROL revision `2026-09-22.15`; QFORM is the sole research target.
 
 The latest designated partner result actually used below is account02/B03:
 

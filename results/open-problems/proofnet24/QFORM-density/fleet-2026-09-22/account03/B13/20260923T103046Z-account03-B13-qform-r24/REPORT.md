@@ -4,7 +4,6 @@ attacking: a rigorous replacement for the previously invalid arbitrary-joint loc
 # account03/B13 r24 — localized 3x3 principal-block compiler
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Control read at start: `yspennstate/math-research-brain@317f3f9f57ccaf91d0806998c9aee04a9d0eb313`; refreshed before publication at `b97015da7b6cc5d00c515d8c508de5693c67db9c`; OWNER CONTROL revision `2026-09-22.15`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Full QFORM: OPEN. Full continuity: OPEN.
 

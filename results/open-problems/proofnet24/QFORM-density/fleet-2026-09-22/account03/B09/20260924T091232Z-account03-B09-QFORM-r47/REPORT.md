@@ -17,9 +17,7 @@ No moment, support, log-concavity, identical-law, diagonal-basis, or post-rotati
 
 ## 1. Sources actually consumed
 
-Fresh control was resolved from `yspennstate/math-research-brain` main at startup (`0ac493113c8ca9f98d75b25dbfb2a0f6e587153d`) and refreshed before publication (`697942d6bd38e3cd1cbcf3d33cd7813069d84855`).  OWNER CONTROL remained revision `2026-09-22.15`, QFORM-exclusive, with no B09 pause.
 
-Required programme sources consumed: `AGENTS.md`, `scheduled_tasks/README.md` including the full OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account03/B09.json`.
 
 The direct predecessor is account03/B09 r46:
 

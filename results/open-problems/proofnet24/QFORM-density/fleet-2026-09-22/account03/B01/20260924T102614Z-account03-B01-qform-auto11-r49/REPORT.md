@@ -373,7 +373,6 @@ Full QFORM remains OPEN. Full-target continuity remains OPEN. No continuity conc
 
 ## 10. Source pins
 
-- Fresh owner control at run start: `yspennstate/math-research-brain@df90481f0848cb9bff1109c17730c71dd0fbde9e`, OWNER CONTROL revision `2026-09-22.15`; controls/corrections must be refreshed again before publication.
 - Immediate B01 predecessor: `yspennstate/math-open-problems@f98e469792a51ca58a4387cffc0c68561a24621a`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/20260924T083540Z-account03-B01-qform-auto11-r48/REPORT.md` and `ROW_RESTRICTION_ADDENDUM.md`.
 - Designated partner theorem: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260924T012155Z-account04-B01-lr-residual-r1/REPORT.md`.
 - Ball--Rogozin normalization used in r48: source-pinned there to `yspennstate/math-open-problems@b160cb60264aea801829a91df9c8e9d51350eaff`, account01/B14 report equation (0.2).

@@ -12,7 +12,6 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, pos
 
 ## 1. Fresh sources and exact incoming branch
 
-Fresh control was resolved from `yspennstate/math-research-brain` main at startup commit `270d644634a7b340a96a3234b5984e9d179ae172`. Before publication main was refreshed to `fdce34c28d041bb3a7e7efa237522e9e2b403835`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B07 pause or reassignment. The fresh correction added in `d49d5562e8d15b06cb23269fadf6d7fbc8af6756` repairs a noncompact bathtub-attainment proof and is unrelated to the coefficient-only argument below.
 
 The incoming worker-owned state is account03/B07 r49:
 

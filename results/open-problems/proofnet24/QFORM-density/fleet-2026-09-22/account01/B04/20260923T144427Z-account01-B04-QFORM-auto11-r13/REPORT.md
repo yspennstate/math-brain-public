@@ -15,7 +15,6 @@ The proof stays entirely in original-coordinate product space. It uses no law-un
 
 ## 1. Fresh sources actually used
 
-Fresh owner control remained QFORM-only at OWNER CONTROL revision `2026-09-22.15`.
 
 The newest required Claude/e5 source was read at the immutable source
 

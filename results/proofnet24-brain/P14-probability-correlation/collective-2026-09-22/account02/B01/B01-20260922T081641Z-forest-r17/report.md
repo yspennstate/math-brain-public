@@ -7,7 +7,6 @@
 
 ## 1. Fresh controls and exact inherited scope
 
-Fresh main was resolved at invocation start as `7f43d781a3221d4d8ca0a3c03a8d9355eab60cc3`; after concurrent work it was re-resolved before this substantive write as `c3b1cf41f2fc42a4cb31da7edc31b8ab034aa974`. The required AGENTS/README/fleet/roles/PROTOCOL and collective ORDER/TARGETS/ASSIGNMENTS controls were read. OWNER CONTROL revision remains `2026-09-22.2`, programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, with no account02/B01 pause or stop. The later owner control supersedes stale installation language in AGENTS.md: B01 remains FOREST research and new installation/benchmark work is stopped.
 
 The exact target remains the unit uniform law on **all** unrooted acyclic edge subsets of every finite simple graph, including disconnected forests and every size. For distinct physical edges `e,f`, prove `P(e,f in F) <= P(e in F)P(f in F)`.
 

@@ -9,7 +9,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval/writeback is aut
 
 ## 1. Sources actually consumed
 
-- Fresh brain control: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; QFORM is the sole target and B06 is not paused.
 - Current programme state: `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B06.json` from fresh main.
 - Immediate predecessor account01/B06 r53: `yspennstate/math-open-problems@16d43afc2381f65dde19296a917ffc436d823850`, path `proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T100917Z-account01-B06-QFORM-r53/REPORT.md`.
 - Designated partner account02/B06 theorem `QFORM-SPARSE-KERNEL-PRODUCT-DELETION-v1`: `yspennstate/math-open-problems@006892a091e8f58edf21e071244a2c7e2a340ec0`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`.
@@ -252,6 +251,5 @@ A 1000-case random audit in ambient dimension eight verified the reconstruction 
 ## 9. Source pins
 
 - Owner source: `https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`.
-- Startup brain head observed this run: `a76a4080ae0bfa50ae652210437f671450985a02`, OWNER CONTROL `2026-09-22.15`.
 - Predecessor r53: `yspennstate/math-open-problems@16d43afc2381f65dde19296a917ffc436d823850:proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T100917Z-account01-B06-QFORM-r53/REPORT.md`.
 - Designated partner: `yspennstate/math-open-problems@006892a091e8f58edf21e071244a2c7e2a340ec0:proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`.

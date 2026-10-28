@@ -10,7 +10,6 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target remains arbitrary independent ORIGINAL real coordinates with one-dimensional density caps at one and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one. Nothing below assumes Gaussianity, log-concavity, moments, compact support, connected support, identical laws, diagonal-basis independence, or post-rotation independence.
 
-Fresh `math-research-brain/main` was re-resolved immediately before publication at `38be5d78b2857ad1d372426b4b7b6e93061d63c4`; OWNER CONTROL remains revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM only. The live correction inbox was refreshed. In particular, no law-uniform pointwise quadratic van-der-Corput estimate, arbitrary-joint coarea cap, conditional projection cap, fiber supremum, or small-coefficient-as-small-random-error step is used.
 
 ## 1. New theorem
 
@@ -214,7 +213,6 @@ This is the precise missing factor exposed by the present coarea calculation: **
 
 ## Sources consumed
 
-- Fresh control/corrections: `yspennstate/math-research-brain@38be5d78b2857ad1d372426b4b7b6e93061d63c4`, OWNER CONTROL `2026-09-22.15`.
 - Immediate B05 predecessor: `yspennstate/math-open-problems@8d747d7492ffa182d10810ea4493a17de687b6c8`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T221248Z-account01-B05-QFORM-auto18/REPORT.md`.
 - Designated partner: `yspennstate/math-open-problems@3e2cfd317d73276f347d713292d5cba2ec0f3883`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T213321Z-account02-B05-QFORM-auto11e/REPORT.md`.
 - Rough conditional-convolution compiler: account04/B15 `proofnet24/QFORM-density/fleet-2026-09-22/account04/B15/20260923T211918Z-account04-B15-rough-mixture-c0-r7/REPORT.md` on current master.

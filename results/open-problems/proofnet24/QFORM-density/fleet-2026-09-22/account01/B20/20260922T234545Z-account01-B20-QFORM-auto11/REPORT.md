@@ -12,9 +12,6 @@ For arbitrary independent real coordinates `X_i` whose one-dimensional densities
 
 ## Fresh source dependencies actually read
 
-1. Brain controls at fresh `main`: `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, and the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B20.json`.
-2. Team lead account01/B01 latest complete handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260922T230746Z-b01-qform-auto11.md`, canonical scientific source `yspennstate/math-open-problems@d58130b048c1e7ef8a22cf7a52a0d23b610c5fa7`.
-3. Designated other-account result consumed at equation level: account02/B20 r22 handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B20/20260922T233033Z-account02-B20-QFORM-r22.md`, canonical `yspennstate/math-open-problems@1c1f83fe62149caa8b755ac8d39923214c8b6c39`.
 4. Prior B20 candidate theorem used only in the diffuse subbranch: `QFORM-FRACTIONAL-VOLUME-BL-v1` from the immediately preceding B20 run. It is treated as a completed internal proof but **not** as independently reviewed programme closure.
 
 Live corrections were respected: no uniform pointwise quadratic oscillatory decay, no post-rotation independence, no arbitrary-joint coarea shortcut, and no promotion of a single heavy edge to a well-conditioned physical pair.

@@ -13,7 +13,6 @@ The unrestricted target remains OPEN: for arbitrary dimension, arbitrary indepen
 
 ## 1. Fresh controls and source boundary
 
-Fresh `math-research-brain/main` was resolved at invocation and again before publication. OWNER CONTROL remains revision `2026-09-22.15`; `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains the current owner continuation; no later account02/B20 stop was observed. The current QFORM manifest/research/claims/deltas/correction inbox/pathways/memory protocol and the two required owner requests were reread. The active source-backed corrections are preserved: no law-uniform pointwise quadratic-phase decay, no dimension-free worst-fibre supremum, no arbitrary-joint coarea substitution, no conditional-cap-as-independence shortcut, no independence after spectral rotation, no deletion of a small nonzero random quadratic tail on rough unbounded laws, and no inference of a uniformly good local physical minor from aggregate volume alone.
 
 Fresh account-local keeper inspection found the same twenty account02 tasks `B01`--`B20`, all enabled, hourly-valid, QFORM-directed and quiet. B20 was available. No native prompt/title/state repair was needed, so no mutation lease, re-enable, duplicate creation or B19 fallback was used.
 

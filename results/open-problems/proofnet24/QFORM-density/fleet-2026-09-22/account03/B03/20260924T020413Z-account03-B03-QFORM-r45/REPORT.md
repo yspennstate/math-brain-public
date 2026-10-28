@@ -12,7 +12,6 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. Ful
 
 ## 1. Fresh source boundary and live debt
 
-Fresh control was read from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause/stop for account03/B03. The live correction inbox was reread immediately before publication. This report does not use law-uniform pointwise quadratic-phase decay, post-rotation independence, a conditional density cap for a sum/difference conjugate, arbitrary-joint rank-three coarea, deletion of a small nonzero cross tail, or Monte Carlo as proof.
 
 The immediate input is account03/B03 r44,
 

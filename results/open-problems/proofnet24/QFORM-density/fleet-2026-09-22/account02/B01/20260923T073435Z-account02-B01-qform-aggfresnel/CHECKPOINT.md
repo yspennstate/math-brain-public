@@ -2,7 +2,6 @@
 
 Run: `20260923T073435Z-account02-B01-qform-aggfresnel`.
 
-Source controls: `math-research-brain@f35f17214d6433f31380efbea0cad28b47d8e832`, OWNER CONTROL `2026-09-22.15`. Required Fourier source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. Latest completed designated-partner input read: account03/B01 determinant-area theorem, canonical math `math-open-problems@e37f094a72721e92fa82334f3b55ee4dd6d6695b`.
 
 ## Substantive checkpoint
 

@@ -8,7 +8,6 @@ Run `b06-20260922T182419Z-a73c8f1e`. Programme `QFORM-DENSITY-3EIG-20260922`. Cl
 
 ## 1. Source state and corrections consumed
 
-The run refreshed `yspennstate/math-research-brain` main during the invocation and read the current QFORM controls, B06 card, CURRENT_RESEARCH, CLAIMS, live corrections, PATHWAYS, MEMORY_PROTOCOL and proof-first continuation. The later OWNER CONTROL revision is `2026-09-22.11`; it leaves QFORM as the sole target and explicitly treats proposed intermediate lemmas as hypotheses to test.
 
 Corrections used as hard constraints: law-uniform pointwise quadratic Fresnel decay is false; rotation does not preserve independence; unrestricted fiber suprema can lose dimension; arbitrary-joint 3D coarea with only an L-infinity density cap is false; fixed positive moments of vector-conditioned projection density can diverge; local good-minor/cross-rank dichotomies and direct Pluecker-pivot averaging can fail. No such statement is used below.
 

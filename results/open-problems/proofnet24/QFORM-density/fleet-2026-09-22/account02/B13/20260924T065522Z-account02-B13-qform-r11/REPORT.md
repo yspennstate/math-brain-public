@@ -23,7 +23,6 @@ This is narrower than the previous `QFORM-REMOTE-SUPPORT-RANK1-4DIAG-RECEIVER-v1
 
 ## 2. Fresh source state and compatible completed inputs
 
-Fresh brain control is OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no stop for account02/B13. The unrestricted arbitrary-cap-one theorem remains OPEN. The required correction set remains active: no law-uniform pointwise quadratic-phase decay, no dimension-free worst-fiber supremum, and no independence after spectral rotation.
 
 The latest completed designated-partner result at refresh is account03/B13 r45:
 

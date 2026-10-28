@@ -206,7 +206,6 @@ A proof of (6.1), combined with the already-paid balanced sector, would close th
 
 ## 7. Integrity and source ledger
 
-Fresh control remained the exclusive QFORM programme, OWNER CONTROL revision `2026-09-22.15`; later stops prevail. Live corrections were reread before publication. This argument uses only exact algebra and the original product densities above; it does not use the false arbitrary-joint rank-three coarea lemma, a conditional density supremum, pointwise van-der-Corput decay, a projection-independence claim, or a numerical histogram.
 
 Sources actually used:
 

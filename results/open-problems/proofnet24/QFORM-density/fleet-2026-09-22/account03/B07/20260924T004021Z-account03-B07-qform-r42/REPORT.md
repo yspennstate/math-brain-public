@@ -13,7 +13,6 @@ No Gaussian, log-concavity, moment, bounded-support, connected-support, iid, dia
 
 ## 1. Fresh scope and inputs
 
-Fresh owner control was read from `yspennstate/math-research-brain` main, initially at `d681521a1b1a6fa789edca90e9301c2f2579d22d` and refreshed during the run through later main commits. The active programme remains QFORM-only under OWNER CONTROL revision `2026-09-22.15`; the full theorem and full-target continuity remain OPEN in `CLAIMS.json`.
 
 The immediate mathematical input is my r41 report
 

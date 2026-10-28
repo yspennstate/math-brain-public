@@ -12,7 +12,6 @@ attacking: the exact d=g=0 boundary of the newest rank-two center receiver, by s
 
 ## 1. Sources actually used
 
-Fresh owner control was resolved from `yspennstate/math-research-brain@21ed3b05f912aa5bc11f7f2eb01eb4abf10d83f2` at startup. OWNER CONTROL was revision `2026-09-22.15`, QFORM-only, with no B01 stop. The live correction inbox and newest owner requests were read before the argument; they retain the refutation of law-uniform pointwise scalar quadratic-phase decay and post-rotation independence.
 
 The required newest Claude source was read both at the owner-pinned snapshot `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` and at its compatible current state, directory
 

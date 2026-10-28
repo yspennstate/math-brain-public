@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. Full-target continuity remains OPEN. E
 
 ## 1. Fresh state and exact dependencies
 
-Fresh owner control was resolved from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox and current research state were reread before publication.
 
 The incoming own result is r45:
 

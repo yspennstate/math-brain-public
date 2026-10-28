@@ -17,7 +17,6 @@ No moment, support, log-concavity, single-interval, bounded-diameter, fixed-frag
 
 ## 1. Fresh sources and exact scope
 
-Fresh owner control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`; the unrestricted conjecture remains OPEN and continuity remains separate. The latest completed designated partner is account03/B13 r34:
 
 `math-open-problems@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
 

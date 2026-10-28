@@ -11,7 +11,6 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`. Authenticated GitHub retrieval was 
 
 ## Sources actually consumed
 
-Control source: `yspennstate/math-research-brain` fresh main at run start `8de0098b4ef1ff92ca93efcac679ec5ec636544a`, OWNER CONTROL revision `2026-09-22.15`; later control refreshes retained that revision and no B01 pause.
 
 Newest required Claude source:
 - `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
@@ -24,7 +23,6 @@ Later geometric source actually checked:
 - same commit/path `REPORT.md`
 
 Assigned partner actually applied:
-- account03/B01 r20 handoff, brain path `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260922T225725Z-r20.md`; canonical math-open-problems bundle tip reported there as `803d884ded9ccca63f2b1d129c5cd6c4b15ef40c`.
 
 Corrections preserved: no law-uniform pointwise quadratic Fresnel decay; no post-rotation independence; no arbitrary-joint rank-three coarea; no worst-fiber conditional-density supremum; no assumption of a uniformly good physical pair or rank-three cross cut.
 

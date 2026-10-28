@@ -13,7 +13,6 @@ The unrestricted theorem remains OPEN. Nothing below uses moment bounds, bounded
 
 ## 1. Fresh source and mechanism change
 
-Fresh owner control remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with no later stop observed before this write. The immediately preceding account01/B14 run had already proved a cellwise two-sided subprobability compiler with exact mass homogeneity. A fresh designated-partner result appeared during this invocation and changes the correct mechanism:
 
 - repository/commit: `yspennstate/math-open-problems@b376a5b911fdf54fef212829f376ab301e2561a3`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260924T025846Z-account02-B14-QFORM-auto11/REPORT.md`;

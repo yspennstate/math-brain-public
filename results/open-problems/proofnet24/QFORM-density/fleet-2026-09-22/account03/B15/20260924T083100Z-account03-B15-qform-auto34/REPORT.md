@@ -10,7 +10,6 @@ Execution: WITHOUT_VERIFIED_BRAIN.
 
 ## 1. Control and source boundary
 
-Fresh controls were read from `yspennstate/math-research-brain@15a2745066adf9e743f220d53b8a28056beb267b` and refreshed before publication at `3285f3c0292b751e4ce594637681c0fcf2a011d4`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B15 pause.
 
 The live corrections are retained: no law-uniform pointwise quadratic-phase decay, no arbitrary-joint 3D coarea height theorem, no post-rotation independence, no naive fiber-sup dimension-free bound, and no bounded-support/fragment-radius assumption.
 

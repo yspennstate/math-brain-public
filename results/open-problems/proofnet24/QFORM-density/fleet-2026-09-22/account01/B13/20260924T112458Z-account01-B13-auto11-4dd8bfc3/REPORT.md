@@ -13,7 +13,6 @@ The unrestricted target remains OPEN / NOT PROVED / NOT DISPROVED. No statement 
 
 ## 1. Source boundary and exact product-law reduction retained
 
-Fresh control was read from `yspennstate/math-research-brain/main`; OWNER CONTROL is revision `2026-09-22.15`. The live correction inbox still rules out the pointwise Fresnel shortcut, rotation-preserves-independence, arbitrary-joint coarea, bounded-diameter localization, and a uniform fragment-count reduction.
 
 The extremal-law reduction proved in the preceding account01/B13 report is retained at its exact scope:
 

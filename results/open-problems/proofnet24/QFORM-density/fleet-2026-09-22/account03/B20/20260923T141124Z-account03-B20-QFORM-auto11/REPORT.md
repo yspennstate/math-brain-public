@@ -381,7 +381,6 @@ No full-solution status should be inferred from the reduction.
 
 ## 10. Exact source paths consumed
 
-- owner/control and programme state: `yspennstate/math-research-brain`, fresh `main`, OWNER CONTROL revision `2026-09-22.15`;
 - arbitrary-tau full-target reduction: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`;
 - designated partner: `yspennstate/math-open-problems@e9b86c6b32c6209586e9f3bc040017300954c205`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B20/20260923T132335Z-account04-B20-QFORM-r9/REPORT.md`;
 - selected-subvolume BL theorem: `yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/20260923T124906Z-account03-B09-QFORM-r32/REPORT.md`;

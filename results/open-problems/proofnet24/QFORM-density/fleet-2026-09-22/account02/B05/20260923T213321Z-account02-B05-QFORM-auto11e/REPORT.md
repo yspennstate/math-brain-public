@@ -4,7 +4,6 @@ attacking: QFORM-TWOBANK-HUB-PUNCTURED-COUPLING-v1 — replace the power loss as
 # account02/B05 — logarithmic punctured-coupling bridge
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**OWNER CONTROL:** revision `2026-09-22.15`; actual invocation began from fresh `math-research-brain@5acc3c1a42fa387c15be82c742273af3929751de`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `PROVED_SUPPORTING_THEOREM / POWER LOSS REDUCED TO LOGARITHM / FULL QFORM OPEN`.  
 **Regularity:** essential boundedness is proved in the stated scope; continuity is not claimed.

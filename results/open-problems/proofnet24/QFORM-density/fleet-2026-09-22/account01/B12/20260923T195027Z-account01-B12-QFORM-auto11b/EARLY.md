@@ -5,7 +5,6 @@ attacking: a carrier-local approximation-number theorem for arbitrary signed spe
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full target OPEN.
 
-Fresh brain control resolved at `b3194faf6f2f82029363d57446443234a27d7079`; effective OWNER CONTROL revision `2026-09-22.15`. Current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` consumed. Same-hour canonical login already existed for account01/B12 and was preserved rather than overwritten.
 
 The first missing implication attacked is additional-eigenvalue stability without treating the induced quadratic remainder as an independent convolution. Let `P=P_H` be projection onto an ORIGINAL-coordinate carrier of size `m`, and let `A=A0+E` with `A0,E` symmetric. For every `k,r` with `k+r<=m`, the rectangular singular-value inequality gives
 

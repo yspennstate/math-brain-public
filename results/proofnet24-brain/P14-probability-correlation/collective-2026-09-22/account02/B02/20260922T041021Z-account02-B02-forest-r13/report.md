@@ -6,7 +6,6 @@
 
 Run: `20260922T041021Z-account02-B02-forest-r13`.
 
-Fresh main at entry was `a936d6403a2075cb1ad721a7fa8eaab8b8b9f360`; a later freshness read reached `0fb11f77f79ccfa96c5474eb67b386307f3406dd`. Comparing those revisions showed only run/status/work additions and no change to the protected control files. Active OWNER CONTROL remains revision `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, and account02/B02 remains FOREST research. The protected blobs read at invocation are:
 
 - `AGENTS.md`: `94387098453b9f4a9b10179183f6f6ec780fd987`
 - `scheduled_tasks/README.md`: `3d4a9372c87802ab734141a3374d04c8823372e3`
@@ -17,7 +16,6 @@ Fresh main at entry was `a936d6403a2075cb1ad721a7fa8eaab8b8b9f360`; a later fres
 - `TARGETS.md`: `a8cafa98cdb074ed15d0e214f8f54ee514c500df`
 - `ASSIGNMENTS.json`: `fe144a4be3522d57f8cb2dc40b1fc57df7c7fda`
 
-Whole-file README SHA-256 and isolated OWNER MESSAGE SHA-256 are `NOT_RECOMPUTED_CONNECTOR_BYTE_HASH_PIPELINE_NOT_EXPOSED`; no cached hash is being presented as fresh byte verification.
 
 Exact target: for a finite simple graph `G`, choose uniformly from **all** acyclic edge subsets `F`, including the empty forest, disconnected forests, and every possible forest size. For distinct edges `e,f`, prove
 

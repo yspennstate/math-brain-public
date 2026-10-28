@@ -507,7 +507,6 @@ finite census.
 ## 10. Provenance and honest status
 
 Fresh source control before the scientific write: `math-research-brain/main`
-at `735e93943485e402fb657512f74daa4881866247`, OWNER CONTROL revision
 `2026-09-22.2`, no account02/B13 pause or stop. Fresh scientific source was read
 from `math-open-problems/master`, including the all-gate reformulation, the
 exact account04/B17 cocycle, account04/B16 joint-character theorem, and the

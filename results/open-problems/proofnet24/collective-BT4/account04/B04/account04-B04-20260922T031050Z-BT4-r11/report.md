@@ -198,7 +198,6 @@ The separate exact-six branch remains unpaid. The general HX and HS closures als
 ## Exact peer/source references consumed
 
 - account02/B04 lead correction: shared handoff
-  `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/BT4/20260922T022208Z-account02-B04-correction.md`,
   Git blob `efc49c4d0177e30caf791b471ff9a9becb2c060b`;
   canonical correction blob `117d9760b66cfb5930c79ade79d2b449ce329b9b`.
 - account04/B04 `BT4-G1-WITNESS-INVARIANT-v1`, shared blob

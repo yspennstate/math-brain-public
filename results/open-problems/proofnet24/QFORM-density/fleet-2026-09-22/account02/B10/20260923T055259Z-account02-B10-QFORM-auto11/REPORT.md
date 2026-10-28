@@ -6,7 +6,6 @@ attacking: the exact-rank-three near-null nonzero coloop collar, using the ruled
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Role:** rank-three coupled case; complementary constructions/source-valid counterexamples  
 **Run id:** `20260923T055259Z-account02-B10-QFORM-auto11`  
-**Fresh owner control resolved before work:** `yspennstate/math-research-brain@b54c03bdbc451f9ec5399cf8dddbf80af4428d7e`, OWNER CONTROL revision `2026-09-22.15`; final control was refreshed again before publication.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_LEMMA / SOURCE-VALID LOCAL-CERTIFICATE OBSTRUCTION / FULL QFORM OPEN`.
 

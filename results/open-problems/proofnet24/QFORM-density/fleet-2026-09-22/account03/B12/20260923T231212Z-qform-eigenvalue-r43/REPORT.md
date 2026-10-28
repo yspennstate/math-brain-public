@@ -14,7 +14,6 @@ Continuity: **not claimed for the new general compiler; full-target continuity r
 
 The target remains the unrestricted original-coordinate statement: `X_1,...,X_n` independent with scalar probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No moment, bounded-support, connected-support, log-concavity, Gaussianity, iid, spectral-coordinate independence, or convolution treatment of an added quadratic term is used.
 
-Fresh controls were read from `yspennstate/math-research-brain` main at source head `559f9a1eab853a5815d851def9f81bd14a7e8c82`, OWNER CONTROL `2026-09-22.15`, programme revision `2026-09-22.5`. The current correction inbox was read through blob `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`, including the newest correction that indefinite two-hub slope innovation does not absorb an arbitrary completed same-bank remainder. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was also consumed. Full QFORM is still OPEN.
 
 The immediate own predecessor is account03/B12 r42,
 

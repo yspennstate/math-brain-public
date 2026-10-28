@@ -6,7 +6,6 @@
 
 ## 0. Change summary and later-owner scope
 
-The fresh OWNER MESSAGE supersedes the stale task-local instruction to keep opening Interface-D routes.  The live common target is the fixed all-gate candidate `LIMIT-PRIME-GATE-LIFT-v1`:
 
 \[
 C_*=6.5218512,\qquad

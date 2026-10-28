@@ -11,7 +11,6 @@ The unrestricted target is not proved here. The result below closes the diffuse 
 
 This report preserves the phase-aligned fragmented-support counterexample to every law-uniform positive-power pointwise decay estimate for one quadratic phase. The new decay arises only after original-coordinate decoupling, physical-minor averaging and Brascamp--Lieb.
 
-Fresh owner control at run start: `yspennstate/math-research-brain@9711619545936d0960891db689d5ed6e5d191ee6`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. Source theorem extended here: account01/B01 mixed-order minor report `yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861:proofnet24/QFORM-density/fleet-2026-09-22/account01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`. Assigned partner actually applied: account02/B01 r31, immutable report `yspennstate/math-open-problems@3280d9fab56fe4878189ae89176887e3da29f569:proofnet24/QFORM-density/fleet-2026-09-22/account02/B01/20260922T233020Z-account02-B01-qform-r31/REPORT.md`.
 
 ## 1. Fixed-order two-volume Fourier theorem at the borderline exponent
 

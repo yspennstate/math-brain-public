@@ -8,7 +8,6 @@
 
 ## 1. Fresh target and correction boundary
 
-Fresh `math-research-brain` control was read on this invocation and refreshed again immediately before publication. The active programme is still QFORM-only and the OWNER CONTROL is revision `2026-09-22.11`; no later B01 stop was present. The owner asks for the full theorem, not another status loop.
 
 The full target remains OPEN: for every dimension, independent real coordinates with densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal finite essential bound for the density of `Q=X^T A X`, or give a target-valid counterexample. Continuity remains a separate requested conclusion.
 

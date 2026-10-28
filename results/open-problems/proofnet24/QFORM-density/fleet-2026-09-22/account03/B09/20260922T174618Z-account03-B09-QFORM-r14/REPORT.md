@@ -6,7 +6,6 @@ attacking: the proposed universal 2/3-moment bound for conditional three-dimensi
 Run: `20260922T174618Z-account03-B09-QFORM-r14`  
 Worker: `account03/B09` — Bilinear block mechanism  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh prepublication OWNER CONTROL: revision `2026-09-22.10`  
 Classification: **REFUTED_INTERMEDIATE_MECHANISM / FULL TARGET OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

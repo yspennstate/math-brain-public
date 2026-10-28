@@ -13,7 +13,6 @@ The full arbitrary-dimensional QFORM conjecture remains OPEN. This run proves a 
 
 ## 1. Fresh source boundary and completed inputs
 
-Fresh control before publication: `yspennstate/math-research-brain@91104a78efb11aaf4927e2d975f7ccd996c5a8a9`, OWNER CONTROL revision `2026-09-22.15`; QFORM is the sole research target and no account01/B03 pause was present.
 
 Current mathematical state/corrections retain:
 

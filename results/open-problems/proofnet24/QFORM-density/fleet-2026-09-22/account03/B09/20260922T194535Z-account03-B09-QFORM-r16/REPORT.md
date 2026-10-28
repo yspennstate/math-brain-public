@@ -6,8 +6,6 @@ attacking: three-bank rank-one bilinear triangle aggregation as a product-preser
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B09` — Bilinear block mechanism  
 Run: `20260922T194535Z-account03-B09-QFORM-r16`  
-Control at start: `yspennstate/math-research-brain@f6f1d682ca00dd33feb4778e59908c68b6ad9dd6`, OWNER CONTROL revision `2026-09-22.15`  
-Control refresh before publication: `yspennstate/math-research-brain@a5d4a7d937615b03a98ffcde037b6232cb51746d`, OWNER CONTROL revision `2026-09-22.15`  
 Outcome: **SUPPORTING_THEOREM_PROVED / ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**
 

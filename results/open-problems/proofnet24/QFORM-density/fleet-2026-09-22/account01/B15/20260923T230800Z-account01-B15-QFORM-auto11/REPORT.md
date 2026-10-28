@@ -4,7 +4,6 @@ attacking: regularity transfer for the grouped pivot/leaf receiver and the first
 # account01/B15 — dominated C0 compiler and a rank-one leaf-curvature receiver
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, activation revision `2026-09-22.5`.
-Fresh control observed at `yspennstate/math-research-brain@837d087b3ace6e49093415e7f0baea30048e16b4`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop seen.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Full unrestricted QFORM status: `OPEN_NOT_PROVED`.
 

@@ -686,7 +686,6 @@ All checks pass to floating-point relative error below `6e-16` except the partit
 
 ## 12. Source integrity and scope
 
-Fresh owner control before publication was read at `yspennstate/math-research-brain@194f3af83b1c9fe35e2e593113eef9769bf4e9c4`, OWNER CONTROL revision `2026-09-22.15`: QFORM remains the sole target and account03/B09 is not paused. The live correction inbox was refreshed at the same commit.
 
 Consumed corrections include law-uniform pointwise quadratic-phase decay being false, no independence after rotation, naive fiber-sup dimension loss, and the fresh account03/B15 correction that a nonzero square plus a large affine slope does not give the claimed slope-rescue bound. None is used as a premise here.
 

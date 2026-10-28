@@ -5,7 +5,6 @@ attacking: localized-triangle plus second-arm receiver with arbitrary curvature;
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `20260923T151901Z-account03-B08-qform-diffuse-r39`  
-Owner control refreshed before publication: `yspennstate/math-research-brain@a3aba1241783fd49b15577902e851180b7af9102`, OWNER CONTROL revision `2026-09-22.15`  
 Assignment: diffuse eigenvector case / quantitative inequalities and rigorous computations  
 Status: `NEW SUPPORTING TARGET-LEVEL IMPLICATIONS / FULL TARGET OPEN / INDEPENDENT REVIEW PENDING`  
 Execution: `WITHOUT_VERIFIED_BRAIN`

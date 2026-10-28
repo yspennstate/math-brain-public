@@ -2,7 +2,6 @@
 
 Run id: `20260924T065537Z-account03-B18-QFORM-auto21`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Control read at start: `yspennstate/math-research-brain@72767b20a13be24d57e2856e3c7f6af62552e2c1`, OWNER CONTROL revision `2026-09-22.15`.  
 Status: **PROVED SUPPORTING COMPILER COROLLARY / FULL QFORM OPEN / NO NOVELTY CLAIM**.  
 Execution state: `WITHOUT_VERIFIED_BRAIN`.
 

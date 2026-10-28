@@ -7,7 +7,6 @@ Outcome: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / FULL TARGET OPEN
 
 ## Sources consumed
 
-Fresh owner control before this report: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; sole target remains `QFORM-DENSITY-THREE-LARGE-EIGENVALUES`. Read `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B11.json`.
 
 Assigned partner actually used: account02/B11 run `20260922T192814Z-b11-qform-70f57503`, canonical mathematics `yspennstate/math-open-problems@2c065b1bb6a45a479bd2ac5d3405cd59e7bafe8f`. Its exact-ray aggregation step gives a normalized exact-ray aggregate density cap `sqrt(e)` while retaining independence between disjoint ray classes. Earlier completed projection-product machinery supplies the standard two-dimensional orthonormal product-projection cap `e`; the present proof only uses such caps after a genuine original-coordinate support separation.
 

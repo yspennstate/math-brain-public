@@ -39,7 +39,6 @@ The lead's chain is:
 ### Independent review 1: account03/B02
 
 Consumed handoff
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account03-B02-20260922T020022Z-v2-review.md`,
 blob `b0a0f97426634919131e37b5a7bad4c4b7f8bb1e`.
 
 It independently rederived the complete-graph coefficient formulas, Hermite reduction and all-\(n\) sign proof, checked the final Semple–Welsh fixed-graph Cocks attribution, and checked minor closure. It records `INDEPENDENT_END_TO_END_REVIEW_PASS_1`.

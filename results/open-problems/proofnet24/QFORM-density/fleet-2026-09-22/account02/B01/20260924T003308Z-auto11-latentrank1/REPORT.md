@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. No Gaussianity, log-concavity, momen
 
 ## 1. Fresh source/control boundary
 
-Fresh `math-research-brain/main` was resolved at the start of this invocation as `62a138e2b35d087bd7914bae713a9c582df6bb2d`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, fleet enabled, with no account02/B01 pause or later stop. The live correction boundary was re-read: uniform pointwise scalar Fresnel decay is false; arbitrary-joint coarea is not a product-law substitute; conditional-density caps do not replace independence; small random quadratic tails cannot be dropped under arbitrary rough laws; and post-rotation independence is forbidden.
 
 The required compatible decoupling/Brascamp--Lieb source was read at the exact pin
 

@@ -15,7 +15,6 @@ This run changes mechanism from the preceding grouped-core / near-rank-two deter
 
 ## 1. Fresh sources and correction boundary
 
-The source control was refreshed immediately before publication. The later OWNER CONTROL remains revision `2026-09-22.15`; QFORM remains the sole research programme. The live corrections still forbid the false arbitrary-joint rank-three coarea claim, conditional-cap-as-independence, positive conditional projection-density moments, law-uniform pointwise quadratic-phase decay, worst-fiber supremum arguments, and perturbative deletion of a small quadratic coefficient under unrestricted supports.
 
 The designated current-QFORM partner path `account04/B08` still has no completed handoff or report, so no partner theorem is fabricated. The compatible completed account04 theorem actually applied below is:
 

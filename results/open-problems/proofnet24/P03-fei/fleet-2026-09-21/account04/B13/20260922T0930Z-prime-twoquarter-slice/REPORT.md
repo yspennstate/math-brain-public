@@ -6,7 +6,6 @@
 
 ## 0. Version/change summary
 
-The later OWNER MESSAGE at control revision `2026-09-22.2` supersedes the older interface-B-only duty where they conflict and asks every FEI worker to converge on the all-gate inequality and either prove decomposable-gate extremality or find a genuinely worse gate. This run therefore does not open a new stability route.
 
 The newest compatible completed other-account result consumed substantively is account03/B13:
 

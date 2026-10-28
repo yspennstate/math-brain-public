@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target is unchanged: for every finite `n`, independent real coordinates with probability densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal finite essential density bound for `X^T A X`, or give a valid counterexample. No support, moment, centering, identical-law, log-concavity, diagonal-coordinate, or post-rotation independence assumption is added.
 
-Fresh brain control was resolved on `main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause on account02/B14. The live corrections excluding pointwise law-uniform quadratic-phase decay, post-rotation independence, bounded-diameter localization, fixed fragment-count localization, arbitrary-joint rank-three coarea, and worst normalized spectral fibers remain in force.
 
 Two completed designated-partner results are used at equations below:
 

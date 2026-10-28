@@ -48,7 +48,6 @@ Fresh control before the derivation was read on `yspennstate/math-research-brain
 
 `987c70c9433591c2c1376a5db452d580aec9e78e`,
 
-with programme revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`, QFORM as the sole research target, and no account03/B12 pause. The later prepublication head was observed at
 
 `f6b1c4c8517c1d59d13fc883ccc35012bae1fdd0`.
 

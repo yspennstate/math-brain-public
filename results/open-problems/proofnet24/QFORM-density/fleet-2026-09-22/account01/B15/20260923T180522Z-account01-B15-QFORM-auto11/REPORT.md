@@ -10,7 +10,6 @@ Status: `NEW TARGET-LEVEL REGULARITY LEMMA / NEW RULED-SHEET CONTINUITY OBSTRUCT
 
 ## 1. Sources and exact scope
 
-Fresh control was read from `yspennstate/math-research-brain@b89fd2f4846d2e800a7850054cf30ed065533e28`, with OWNER CONTROL revision `2026-09-22.15`; the later refresh at `4720f08299456cef5ec22b32fe66988474981293` retained the QFORM-exclusive continuation and no later stop. The fresh math head observed before publication was `yspennstate/math-open-problems@55fb54d7ae819c87dec84db6e58408a26233aa02`.
 
 The full target remains open: for independent real coordinates with one-dimensional probability densities bounded by one and symmetric `A` with `s_3(A)>=1`, prove one matrix-, dimension-, and law-independent bound for the density of `Q=X^TAX`.
 

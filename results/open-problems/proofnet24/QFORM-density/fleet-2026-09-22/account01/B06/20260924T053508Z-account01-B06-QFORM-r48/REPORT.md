@@ -12,7 +12,6 @@ The unrestricted QFORM conjecture remains OPEN. Global continuity remains OPEN. 
 
 ## 1. Fresh source boundary and dependencies
 
-Fresh owner control immediately before publication remained OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM-only, with no account01/B06 pause or stop. The canonical claims state still records the full density theorem and the global continuous-representative conclusion as OPEN.
 
 Immediate predecessor:
 

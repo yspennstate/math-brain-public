@@ -15,7 +15,6 @@ Target: for independent real `X_i` with densities `<=1` and real symmetric `A` w
 
 This proof does **not** rotate the random variables, does **not** convolve a dependent quadratic remainder as if independent, and does **not** use any pointwise van-der-Corput estimate. Small operator norm is used only as a deterministic matrix perturbation bound on an original-coordinate physical certificate. The full conjecture and full continuity claim remain open.
 
-Fresh control read: `math-research-brain@fa03254e799d6452bd554991e9402ee068c24bfb`, OWNER CONTROL revision `2026-09-22.15`. The required current corrections include the false law-uniform pointwise oscillatory decay claim, the fiber-sup dimension-loss obstruction, and the no-independence-after-rotation warning; the newer arbitrary-joint coarea and positive conditional-moment gates are also refuted in current research.
 
 ## 2. Partner theorem actually used
 

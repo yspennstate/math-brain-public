@@ -6,7 +6,6 @@ attacking: near-endpoint regularity of the surviving bilinear-plus-square branch
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** absolute continuity and regularity  
 **Run:** `20260923T210401Z-account01-B15-QFORM-auto11`  
-**Fresh publication control:** `yspennstate/math-research-brain@9d8d520585f676828aae45dfe7a1cbdb952ca661`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `SUPPORTING_REGULARITY_THEOREM / PARTNER_RESULT_APPLIED / FULL QFORM OPEN`
 

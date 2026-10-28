@@ -297,6 +297,5 @@ A deterministic numerical check on 20,000 random full-column matrices `M` and ar
 
 ## 12. Control / source integrity
 
-Fresh control source was resolved from `math-research-brain` main at `2c60050fa1698076d252302c745923da86ebb298` before this run's start write; OWNER CONTROL was revision `2026-09-22.15`, QFORM-only, fleet enabled, no paused account or slot. The live correction state was read before the work and the theorem avoids all known refuted interfaces.
 
 Authenticated native Brain receiver use was not available, so this run remains `WITHOUT_VERIFIED_BRAIN`; repository transport is not being reported as native Brain recall.

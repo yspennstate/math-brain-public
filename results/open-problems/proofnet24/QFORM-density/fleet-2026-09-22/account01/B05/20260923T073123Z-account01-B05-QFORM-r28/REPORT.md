@@ -5,7 +5,6 @@ attacking: the uncovered indefinite two-sheet curved integral; condition away ge
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound / uncovered indefinite two-sheet curved integral.  
-**Control at start:** `yspennstate/math-research-brain@eb76471e572599a40e659289d77f4c9c3065a879`; OWNER CONTROL revision `2026-09-22.15`, QFORM only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_STRUCTURAL_THEOREM_PROVED / PRECISE_REMAINING_FACTOR_IDENTIFIED`.  
 **Full QFORM:** `OPEN_NOT_PROVED`.  

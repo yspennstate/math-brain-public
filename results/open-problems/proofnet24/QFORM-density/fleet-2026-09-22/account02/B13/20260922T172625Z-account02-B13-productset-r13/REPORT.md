@@ -16,7 +16,6 @@ Fresh protected controls were reread before this write at
 
 `yspennstate/math-research-brain@757247132f122cc18bfb84412588f66cd8676212`,
 
-with OWNER CONTROL revision `2026-09-22.8`. QFORM remains the sole research target and there is no later pause/stop for account02/B13.
 
 Mathematical sources actually used:
 

@@ -13,7 +13,6 @@ Status: **ESSENTIAL_STEP_APPLIED / NEW SYMMETRY-COMPATIBLE PLANAR-TWIST COMPILER
 
 The target remains the unrestricted original-coordinate problem: arbitrary independent real `X_i` with probability densities at most one and real symmetric `A` with at least three eigenvalues of absolute value at least one. No Gaussian, iid, moment, compact-support, connected-support, log-concavity, spectral-coordinate independence, arbitrary-joint coarea, pointwise quadratic-phase decay, uniformly good physical minor, or deletion of a small random quadratic tail is introduced.
 
-Fresh control was read on `math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM remains the sole research target, and no later B20 stop was observed. The full theorem and the global continuous-density conclusion remain OPEN.
 
 The designated completed partner is account02/B20 r37, pinned at
 

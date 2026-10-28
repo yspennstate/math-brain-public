@@ -12,7 +12,6 @@ attacking: projection-product interaction at the punctured fresh-hub endpoint; r
 
 ## 1. Fresh control and source discipline
 
-Fresh owner/control was reread before publication from `yspennstate/math-research-brain@83e19d13fa3526bb77269eeb6497a1690c15e1e0`. `AGENTS.md` still has the QFORM-exclusive continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; `scheduled_tasks/README.md` still has programme revision `2026-09-22.5`, OWNER CONTROL revision `2026-09-22.15`, no paused account/slot, and the unrestricted theorem OPEN.
 
 The two mathematical sources actually used are source-pinned:
 

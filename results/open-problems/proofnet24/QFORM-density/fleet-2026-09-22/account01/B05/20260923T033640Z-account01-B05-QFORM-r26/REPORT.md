@@ -5,7 +5,6 @@ attacking: diffuse Schur-direction grouping; derive an exact ratio-variance pack
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound.  
-**Startup control:** `yspennstate/math-research-brain@970d23e14326fecdce987acffe8a4ed8f2a641b1`; OWNER CONTROL revision `2026-09-22.15`, QFORM only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (authenticated repository retrieval was used; repository transport is not native learned-memory ingestion).  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_STRUCTURAL_REDUCTION_PROVED / EXACT_ENDPOINT_CLOSED / PRECISE_MISSING_FACTOR_IDENTIFIED`.  
 **Full QFORM:** `OPEN_NOT_PROVED`.  

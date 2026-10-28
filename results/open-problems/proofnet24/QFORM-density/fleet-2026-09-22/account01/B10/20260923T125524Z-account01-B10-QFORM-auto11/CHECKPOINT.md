@@ -3,7 +3,6 @@ attacking: the punctured near-null physical hub: derive an exact coupling-adapte
 
 # Early substantive checkpoint
 
-Fresh control is QFORM-only, OWNER CONTROL revision 2026-09-22.15. Full QFORM remains OPEN. This checkpoint records exact algebra only; it does not claim a density theorem.
 
 Let M be real symmetric invertible 3x3, r a unit vector, alpha=r^T M r, m=M r, s=||m||, v=m/s, and P=I-vv^T. Let K=PMP restricted to v^perp. In the orthogonal decomposition R v direct_sum v^perp, write
 

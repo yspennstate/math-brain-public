@@ -3,7 +3,6 @@
 Run: `account03-B09-20260922T171558Z-qform13`  
 Worker: `account03/B09` — Bilinear block mechanism  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh start control: `yspennstate/math-research-brain@b5ddc3ce7894270ed6dcf4648cb96baea7dbc251`, OWNER CONTROL revision `2026-09-22.8`  
 Status: **proved supporting theorem; full conjecture remains OPEN**  
 Execution label: `WITHOUT_VERIFIED_BRAIN`
 

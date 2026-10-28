@@ -11,7 +11,6 @@ attacking: two-sided curved bicore receiver by combining a rank-two random physi
 
 ## 1. Source boundary and precise debt attacked
 
-Fresh owner control at startup was `yspennstate/math-research-brain@b0827ad1464131cbe8c88c9240d4678a18377ac0`, OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target. The full conjecture remains OPEN.
 
 The previous B01 receiver (`yspennstate/math-open-problems@eb1104e11956999f1285c2d03e549f2df1c3a986`, `.../account03-B01-20260923T033250Z-r23/REPORT.md`) proved a bounded-density theorem for a rank-two grouped bilinear interaction when arbitrary same-side curvature is retained on the conditioned side but the still-random grouped side is linear. Its first unpaid analytic step was simultaneous curvature on both active sides.
 

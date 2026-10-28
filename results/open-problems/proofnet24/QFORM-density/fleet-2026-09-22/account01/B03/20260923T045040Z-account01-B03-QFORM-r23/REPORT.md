@@ -15,7 +15,6 @@ No claim below conditions one member of a conjugate sum/difference pair on the o
 
 ## 1. Source boundary and completed partner result actually applied
 
-Fresh control before publication: `yspennstate/math-research-brain@036b252b76aa9974f448956bb331a111d866c8e7`, OWNER CONTROL revision `2026-09-22.15`, QFORM sole target, with the live correction inbox reread at blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The designated completed partner is account02/B03:
 

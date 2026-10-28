@@ -13,7 +13,6 @@ The unrestricted conjecture is not proved here. Every random variable remains an
 
 ## 1. Fresh sources and the first missing implication
 
-Fresh `math-research-brain/main` was resolved during this invocation and refreshed before publication. OWNER CONTROL remains revision `2026-09-22.15`, exclusively QFORM, and the full theorem remains open. The live correction inbox was reread before publication.
 
 The analytic receiver used below is the completed marginal-free cross-third-volume theorem
 

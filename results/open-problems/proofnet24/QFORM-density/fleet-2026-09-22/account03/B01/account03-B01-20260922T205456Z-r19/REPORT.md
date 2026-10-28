@@ -8,7 +8,6 @@ Assignment: `Oscillatory replacement` / FOURIER
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **PROVED SUPPORTING THEOREM / TARGET-LEVEL SUBBRANCH CLOSED / FULL QFORM OPEN**.
 
-Fresh owner control immediately before publication was read from `yspennstate/math-research-brain@d981d66fe54f5cf301d76a6d852e039a9f52fc11`; OWNER CONTROL revision remained `2026-09-22.15`, QFORM remained the sole target, and no later stop was present. The live correction inbox was also refreshed there.
 
 The full target remains: for every finite dimension, every independent real input vector with one-dimensional probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove one dimension- and law-independent bound on the density of `X^T A X`, or give a target-valid counterexample. Nothing below claims that full implication.
 

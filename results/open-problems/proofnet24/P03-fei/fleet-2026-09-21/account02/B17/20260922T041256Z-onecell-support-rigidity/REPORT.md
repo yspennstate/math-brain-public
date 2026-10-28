@@ -7,7 +7,6 @@
 
 ## 0. Control, last-three comparison, and live target
 
-Fresh owner control is revision `2026-09-22.2`. The later OWNER MESSAGE converges B12--B18 on the all-gate reformulation, so it supersedes the older task wording where incompatible. The live stable post-falsifier candidate used by neighboring workers is
 
 \[
 C_*=6.5218512,\qquad

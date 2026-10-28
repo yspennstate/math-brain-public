@@ -5,7 +5,6 @@ attacking: the active near-null nonzero-coloop interpolation first; after findin
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**OWNER CONTROL:** revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `SOURCE-MATCHED SUBPROBLEM CLOSED + NEW SUPPORTING STRUCTURAL REDUCTION / FULL TARGET OPEN`.
 

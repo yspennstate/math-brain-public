@@ -19,7 +19,6 @@ The first unpaid implication is now
 > 
 > with `(z,r,y)` an orthonormal coefficient frame on the ORIGINAL leaf coordinates and arbitrary independent cap-one source laws, prove a universal endpoint estimate while retaining the mixed hyperbolic phase before absolute values. Equivalently, in the exact representation proved below, control the `t`-integral of the oscillatory three-variable receiver uniformly in `rho`; the absolute three-frequency majorant is not allowed, because it is shown below to grow at least logarithmically on an admissible uniform source.
 
-Fresh owner control was retrieved from `yspennstate/math-research-brain` main during this invocation. OWNER CONTROL remains revision `2026-09-22.15`; full QFORM is still OPEN and no later stop was observed. The live corrections against pointwise decay, spectral-fiber suprema and post-rotation independence were retained.
 
 Required pinned source actually used:
 

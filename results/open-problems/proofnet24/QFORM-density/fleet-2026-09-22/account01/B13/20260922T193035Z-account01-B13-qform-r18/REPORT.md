@@ -12,7 +12,6 @@ The full quadratic-form bounded-density conjecture remains OPEN. This report pro
 
 ## 1. Fresh sources and exact dependencies
 
-Fresh control before the mathematical write was `yspennstate/math-research-brain@f97f84b5c223d49ddf977658653802767b72d1c3`; OWNER CONTROL revision is `2026-09-22.14`, with QFORM the sole target. The live correction inbox was reread through that source. In particular `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1` is respected: this report proves an **exact zero-pivot** endpoint and does not infer it from a merely small pivot.
 
 The designated partner result actually consumed is account02/B13 run `20260922T182158Z-account02-B13-qform-4ebdd821`, canonical proof
 

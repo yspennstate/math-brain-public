@@ -7,7 +7,6 @@ attacking: the anchored-H3 survivor at its natural two-star scale — spend fift
 **Assignment:** coordinate minor selection / quantitative inequalities and rigorous computations  
 **Run:** `20260923T124137Z-account03-B07-qform-r31`  
 **Initial source control:** `yspennstate/math-research-brain@f1a64c536a8e6b6e930bdb1446d0bc6da2fa80ed`  
-**OWNER CONTROL:** revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Status:** **NEW SUPPORTING PHYSICAL-CORE REDUCTION / DESIGNATED PARTNER APPLIED / TWO FULL-AMBIENT SUBBRANCHES PAID / FULL QFORM OPEN / FULL CONTINUITY OPEN**.
 

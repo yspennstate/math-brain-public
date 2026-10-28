@@ -6,7 +6,6 @@ attacking: the high-tail four-bank survivor — aggregate all third minors throu
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
 **Run:** `20260923T044100Z-account03-B07-qform-r24`  
-**Fresh control before write:** `yspennstate/math-research-brain@32a1935ac4f126737f7dd9f50e03634e7f4f4002`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Classification:** `NEW DIMENSION-FREE AGGREGATE MINOR SELECTION THEOREM + PAID CONTINUOUS BRANCHES / FULL TARGET OPEN`.
 
@@ -305,7 +304,6 @@ The low-tail rank-one tube from r23 remains a separate debt. The new scale-sensi
 
 ## 9. Source pins and execution status
 
-- Fresh control before this write: `yspennstate/math-research-brain@32a1935ac4f126737f7dd9f50e03634e7f4f4002`, OWNER CONTROL `2026-09-22.15`.
 - Own incoming r22 bundle: `yspennstate/math-open-problems@c6ef0024d2d937df235fa0f8c8d7ad5a416dbba0`.
 - Own incoming r23 bundle: `yspennstate/math-open-problems@e24329a6a315b96a87b3efc608473ef0554f3b8d`.
 - Global disjointness theorem: `math-open-problems@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8`.

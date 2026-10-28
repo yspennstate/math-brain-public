@@ -10,7 +10,6 @@ Execution context: WITHOUT_VERIFIED_BRAIN.
 
 ## 1. Source pins and correction state
 
-Fresh brain control was read from `yspennstate/math-research-brain@4e09083f3b4231564e441e862e5c5c5abbfa1676`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction stream still forbids arbitrary-joint rank-three coarea, normalized scalar-fiber suprema, pointwise van-der-Corput decay, and treating small coefficients as small random errors.
 
 The main analytic dependency used below is the completed two-coordinate logarithmic coarea envelope
 

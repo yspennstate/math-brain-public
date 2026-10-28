@@ -15,7 +15,6 @@ The target remains the full arbitrary-dimensional statement: for independent rea
 
 for every interval `I`, or give a genuine counterexample. Continuity is separate and is not proved here.
 
-Fresh controls moved to OWNER CONTROL revision `2026-09-22.8`; the programme remains QFORM-only. The live proof-first continuation asks for actual mathematics on translation-uniform fractional-trace synthesis, the zero/near-isotropic physical-pivot branch, and exhaustive product-preserving structural reductions.
 
 The completed required partner input is account04/B14:
 

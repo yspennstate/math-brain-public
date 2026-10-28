@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted owner target remains OPEN. Inputs are arbitrary independent real coordinates with densities bounded by one; no moments, compact support, log-concavity, connected support, Gaussianity, or post-rotation independence are assumed.
 
-Fresh prepublication control was read at `yspennstate/math-research-brain@8ee5cc9b7170ce66c0e85c782cf7b0974a407345`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread at blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The phase-aligned fragmented-support counterexample to any law-uniform scalar quadratic estimate
 

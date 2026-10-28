@@ -4,7 +4,6 @@ attacking: `QFORM-HUBSINGULAR-DIFFUSE-BILINEAR-CURVED-RECEIVER-v1` by keeping a 
 # account03/B06 r54 — the diffuse singular-hub bilinear endpoint is density-paid
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Fresh prepublication control: `yspennstate/math-research-brain@237f86310bc904bfa68e3493c071862987740b14`, OWNER CONTROL revision `2026-09-22.15`.  
 Immediate B06 input: `QFORM-HUBSINGULAR-FOURMINOR-BANK-v1`, `yspennstate/math-open-problems@5659cc902d288c63efcd6774ca8c9510d10c8a42`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T071843Z-account03-B06-qform-r53/REPORT.md`.  
 Analytic input: `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
 Designated partner actually applied below: account04/B06 `QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1`, `yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`.  

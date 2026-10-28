@@ -2,7 +2,6 @@
 
 **Run:** `20260922T190509Z-qform-r14-b06`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh control used before publication:** `yspennstate/math-research-brain@bc641207682ca86ebe9b5bac4bccce2d78c053b8`, OWNER CONTROL revision `2026-09-22.13`  
 **Assignment:** curved fiber integration / geometry  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / NEAR-ZERO_EXTENSION_REFUTED / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
@@ -11,7 +10,6 @@
 
 The sole target remains: for independent real coordinates with densities `0<=f_i<=1` and a real symmetric `A` having at least three eigenvalues of modulus at least one, prove a universal essential bound on the density of `X^T A X`, or give a valid target counterexample. No moment, support, Gaussian, log-concave, post-rotation-independence, or diagonal-basis assumption is introduced.
 
-The live correction inbox was checked through brain commit `bc641207682ca86ebe9b5bac4bccce2d78c053b8`. In particular, this report does **not** use the refuted arbitrary-joint rank-three coarea bound, the refuted positive conditional-density moment, unrestricted fiber suprema, a fixed good physical minor, or pointwise law-uniform Fresnel decay. The revision-.13 OWNER MESSAGE repeats some older coarea claims; the source-backed corrections in `CURRENT_RESEARCH.md` and `CORRECTION_INBOX.json` override those mathematical claims as premises. The full target remains open.
 
 Named partner actually consumed and applied: account02/B06 run `b06-20260922T155426Z-9fd56fa68a65`, canonical report `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. I use its proved `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` in dimension one:
 

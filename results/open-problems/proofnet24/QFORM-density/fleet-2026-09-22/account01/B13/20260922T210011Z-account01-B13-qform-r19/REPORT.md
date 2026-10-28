@@ -13,7 +13,6 @@ The full quadratic-form bounded-density conjecture remains OPEN. This report pro
 
 ## 1. Fresh source state and exact dependencies
 
-The invocation resolved `yspennstate/math-research-brain` at initial source commit `93ae80dc03e853d4bb5ff871fe778010728d52e0`; before publication the protected owner control was refreshed at `145b8b967df6fa2c35473c8d3377cce44095999d`. OWNER CONTROL revision is `2026-09-22.15`, QFORM remains the sole research target, and the full conjecture remains OPEN in the correction-aware research state.
 
 The live `CORRECTION_INBOX.json` was reread at the prepublication source. In particular this argument does not use the refuted arbitrary-joint coarea estimate, the divergent conditional positive-moment bridge, conditional-cap-as-independence, bounded-diameter localization, fixed-fragment localization, or any law-uniform pointwise quadratic oscillatory decay.
 

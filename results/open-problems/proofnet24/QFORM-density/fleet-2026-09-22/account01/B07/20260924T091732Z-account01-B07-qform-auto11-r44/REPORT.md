@@ -7,7 +7,6 @@ attacking: the r43 four-bank actual rainbow E2 packet; prove a dimension-free de
 
 Full unrestricted QFORM remains OPEN / not proved / not disproved. Full-target continuity remains OPEN. This report proves supporting coordinate-selection statements only. No Gaussian, log-concave, moment, compact-support, connected-support, diagonal-basis, or rotated-independence assumption is used.
 
-Startup brain source: `yspennstate/math-research-brain@73744cbaa87b2f743c0f20efe496b499903b583b`. OWNER CONTROL read from `scheduled_tasks/README.md`: revision `2026-09-22.15`, active programme `QFORM-DENSITY-3EIG-20260922`, no pause/reassignment of account01/B07.
 
 Input from account01/B07 r43: on the actual rank-two-separator branch there are four mutually disjoint original-coordinate banks `R,S,C,D` and a physical pair `K` disjoint from all four, with
 
@@ -203,7 +202,6 @@ This is an exact aggregate compiler: the hub branch cannot consist solely of ind
 
 Latest completed compatible designated-partner handoff read at startup:
 
-`math-research-brain/scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B07/20260924T073847Z-account02-B07-qform-r50.md`.
 
 Its completed `QFORM-PAIRBLOCK-RANK-CANCELLATION-CORE-v1` states that for a literal physical pair-block diagonal `B`, rank-`r` correction, and operator tail `eta`, at least `r+3` pair-block singular directions at scale `d>eta` force an actual principal core on at most `2(r+3)` coordinates with `s_3>=d-eta`, and hence
 

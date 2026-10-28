@@ -18,12 +18,10 @@ An exact companion construction shows that small variance, small total influence
 
 ## 2. Current sources and correction boundary
 
-The brain's current `CURRENT_RESEARCH.md` and `CORRECTION_INBOX.json` under `scheduled_tasks/work/shared/fei-all-team-2026-09-22` were read before applying their mathematics. Full FEI remains open and the fixed-positive-occurrence-reserve no-go remains binding. No programme scheduling or prior claim was changed.
 
 Exact balanced disjoint-composition identities used here are already established in:
 
 - [F4 restriction/composition report](https://github.com/yspennstate/math-open-problems/blob/2fefba564fdaf0232db13ff468a89063ab29bc6c/proofnet24/P03-fei/continuations/2026-09-22-opus-team/F4-proof-attempt/REPORT.md), especially Theorems 3.1 and 4.1. This report already reduces FEI to tiny influences and gives genuine Boolean examples with all-coordinate decrement ratio above 7.05. It prohibits treating a proposed constant near four as established.
-- [Current checkpoint](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md): exact physical child accounting survives; finite-order Booleanity, unweighted convolution energy, and primitive-terminal raw-curvature shortcuts do not close the proof.
 - [Shalev, On the Fourier Entropy Influence Conjecture for Extremal Classes](https://arxiv.org/abs/1806.03646): low-total-influence reductions are prior literature. The joint-smallness statement below is a parameter-combination admission test, not a novelty claim or a replacement of that work.
 
 The independent current-sprint balanced regularization supplied by `advance_fei_amortization` is reconstructed in Section 6 rather than accepted on authority. The all-dimensional module proofs below are self-contained.

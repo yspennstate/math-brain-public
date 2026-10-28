@@ -15,7 +15,6 @@ The full target remains OPEN: arbitrary independent real original-coordinate inp
 
 This report does not use any refuted interface: no independence after spectral rotation, no arbitrary-joint three-dimensional coarea inequality, no conditional-cap-as-independence step, no positive moment of a worst conditional projection cap, no pointwise law-uniform Fresnel decay, no small-coefficient deletion, and no fixed-good-minor or exact-two-plane extraction.
 
-Fresh owner control was reread on `math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15`. The latest designated-partner report consumed is account02/B18 r26:
 
 `yspennstate/math-open-problems:proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T081256Z-account02-B18-QFORM-r26/REPORT.md`.
 

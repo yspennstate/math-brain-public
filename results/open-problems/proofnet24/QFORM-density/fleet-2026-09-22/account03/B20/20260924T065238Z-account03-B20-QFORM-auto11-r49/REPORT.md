@@ -15,7 +15,6 @@ All sets below are literal ORIGINAL-coordinate sets. No random variable is rotat
 
 ## 1. Source-pinned frontier
 
-Fresh owner control at run start was `yspennstate/math-research-brain@5f21153900232958c2057daec19ec268d81aa381`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only.
 
 Immediate same-account frontier:
 

@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh authority and scope
 
-Fresh `main` controls were resolved and read before substantive work: `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, and the collective MOC4 `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json`. OWNER CONTROL revision `2026-09-22.2` remains active. The collective assignment supersedes the historical installation and benchmark duties; B07 is MOC4 support-functional/second-variation research. No later account02/B07 stop was observed before the scientific writes. No benchmark payload or sealed-answer material was read or used.
 
 The scheduler surface was inspected only for account02. The current managed B01-B20 set has 20 enabled tasks, each on an hourly rule, with current collective/FEI role prompts and quiet task delivery flags. No missing managed slot, duplicate current slot, disabled current slot, or cadence defect was observed, so there is no B20 deficit to report and B07 made no scheduler mutation.
 

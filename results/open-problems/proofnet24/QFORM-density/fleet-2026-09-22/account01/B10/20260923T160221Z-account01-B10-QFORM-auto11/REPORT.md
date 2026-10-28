@@ -564,7 +564,6 @@ No Gaussianity, log-concavity, moments, compact or connected support, iid assump
 
 ## 12. Source ledger and control refresh
 
-Fresh control immediately before publication: `yspennstate/math-research-brain@1cdca4ec52a550e742bbb6d80c616de37ec264e1`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only and no later stop. The live correction inbox was re-read at that commit, including `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1` and `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`.
 
 The complement Brascamp–Lieb estimate (6.3) is the same completed product-frame input used in the preceding B10 Schur–Fresnel proof, source-pinned there to
 

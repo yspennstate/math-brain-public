@@ -5,7 +5,6 @@ attacking: QFORM-COLLAR-SECOND-GRADIENT-OR-RANKONE-ALIGNMENT-v1 — pay a domina
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** universal proof assembly / quantitative inequalities  
-**Owner control at start:** `yspennstate/math-research-brain@2bf933209ce168f6e792d47f0089f1279f516cae`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW TARGET-LEVEL BRANCH + STRUCTURAL REDUCTION / FULL TARGET OPEN`.
 

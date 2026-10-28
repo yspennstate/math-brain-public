@@ -10,11 +10,9 @@
 
 The full target remains open: for arbitrary independent real inputs with one-dimensional densities at most one and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove a universal dimension-free bound on the density of `X^T A X`, or give a valid counterexample.
 
-Fresh control source used in this run: `yspennstate/math-research-brain@e3bee2eda2138528e813bca0c19f2ac5e733a548`, OWNER CONTROL revision `2026-09-22.11`, programme revision `2026-09-22.5`.
 
 The designated completed partner result actually used is account03/B17:
 
-- brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/20260922T180732Z-account03-B17-QFORM-r14.md` at the fresh control source;
 - complete mathematics `yspennstate/math-open-problems@0fe842ad60b590ca774ecfd71cf2bb9d15639f90`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T180732Z-account03-B17-QFORM-r14/REPORT.md`.
 
 That result proves (i) an exact six-variable rotated witness with zero peak `4.0630706168060372601...`, still below `3 sqrt(2)`, and (ii) that arbitrary one-coordinate fragmentation cannot improve the earlier six-variable cross witness when the other five laws remain centered intervals. I use (ii) to move to the first unexcluded coordinated two-law macroscopic deformation, rather than repeat a one-coordinate fragment search.

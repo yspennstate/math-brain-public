@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Continuity is separate and is not claimed.
 
 ## 1. Sources and live corrections actually consumed
 
-Fresh control was resolved from `yspennstate/math-research-brain/main`; the current OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later pause/stop for account01/B14. I read fresh `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B14.json`. I also read the current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the Claude continuation at `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`, including the source-pinned `c4c23b784395630c094ba299a50712209921d1ae` update. The proposed `(SP)` adapted-hub estimate there remains OPEN and is not used as a premise.
 
 The designated partner theorem actually used below is account02/B14 r39, canonical report
 

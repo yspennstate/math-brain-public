@@ -13,7 +13,6 @@ attacking: the zero-diagonal rank-two Schur overlap branch; keep the full square
 
 The target is unchanged: for independent original real coordinates with one-dimensional probability densities bounded by one, and a real symmetric matrix with at least three eigenvalues of modulus at least one, prove one universal essential density bound for `X^T A X`, or give a valid target counterexample. The separate continuity request remains open here.
 
-Fresh owner control at run start remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. I retain the live corrections: no post-rotation independence, no law-uniform pointwise quadratic-phase decay, no arbitrary-joint rank-three coarea bound, no positive moment of a worst conditional spectral-fiber cap, no unrestricted fiber supremum, no perturbative deletion of a small nonzero quadratic tail, and no inference from aggregate determinant mass to one uniformly good physical minor.
 
 The exact incoming branch is the preceding account01/B06 r20 report
 

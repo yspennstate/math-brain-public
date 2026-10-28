@@ -7,7 +7,6 @@ Status: **PROVED_SUPPORTING_THEOREMS / FULL_TARGET_OPEN / WITHOUT_VERIFIED_BRAIN
 
 Target: for independent real inputs with densities bounded by one and symmetric A with at least three eigenvalues of modulus at least one, prove a universal density bound for X^TAX, or give a valid counterexample. This report does not claim the full target.
 
-Fresh control observed before publication: math-research-brain main `bf4025022951fec4ada13e008f431c30cc292f11`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. Live corrections consumed include the failures of pointwise quadratic-phase decay, arbitrary-joint coarea, normalized conditional-fiber bounds, post-rotation independence, one-good-minor extraction, and raw operator-norm stability of a collective cross-tail certificate.
 
 ## 1. Sources actually applied
 

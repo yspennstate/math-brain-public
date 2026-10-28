@@ -15,7 +15,6 @@ The target is unchanged: for every finite `n`, independent real original-coordin
 
 No Gaussian, log-concave, moment, compact-support, connected-support, iid, centering, diagonal-basis, or post-rotation independence assumption is used. This run does not use law-uniform pointwise decay of one-dimensional quadratic phases, an arbitrary-joint coarea estimate, a conditional-density supremum in place of independence, one-good-minor inversion, or deletion of a small nonzero random quadratic term.
 
-Fresh owner control at the start resolved to `yspennstate/math-research-brain@bc904e2e6a7daa685e0e65862211b96993cd40f0`, was re-resolved before the substantive calculation through `8f0a6944b6a8c5ac75092ac77829bc89c433fe16`, and remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only.
 
 The immediate fresh global input is account03/B01 `QFORM-SCALARPIVOT-COMPOUND-OPERATOR-CLOSURE-v1`, canonical source
 

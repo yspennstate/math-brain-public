@@ -11,7 +11,6 @@ Regularity: the new terminal half-Riesz exits prove essential boundedness. Conti
 
 The exact owner target is unchanged: independent ORIGINAL real coordinates with one-dimensional probability densities bounded by one; arbitrary real symmetric coefficient matrix; at least three eigenvalues of modulus at least one. No moments, compact support, connected support, log-concavity, iid assumption, Gaussianity, post-rotation independence, arbitrary conditional density cap, coefficient deletion, or pointwise law-uniform van der Corput bound is used.
 
-Fresh startup control was `yspennstate/math-research-brain@4cc299213d8730f3b55f3d1975a86c20a2dceea0`; the canonical actual-hour login and start record were created before the mathematics. Immediately before publication the control was refreshed at `yspennstate/math-research-brain@b1e4e4f78b0ad9dfb684bb010f86f14a766c2cb3`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox remains the source-backed override for older owner-message mathematical claims.
 
 ## 1. Source boundary and the exact live frontier
 

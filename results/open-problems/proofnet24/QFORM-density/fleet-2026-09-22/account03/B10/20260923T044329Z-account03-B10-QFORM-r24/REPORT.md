@@ -5,7 +5,6 @@ attacking: the exact-rank-three true near-coloop collar; condition only on genui
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**OWNER CONTROL at prepublication refresh:** revision `2026-09-22.15`, brain main `3683c2e02f2491b2aeb29d2ca943974fed0e0897`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Classification:** `NEW SUPPORTING THEOREM / MODERATE MIXED-OVERLAP NEAR-COLOOP BRANCH PAID / FULL QFORM OPEN`.
 

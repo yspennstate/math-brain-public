@@ -13,7 +13,6 @@ Continuity is not claimed here; the result below gives essential boundedness thr
 
 ## Fresh controls and corrections
 
-Programme: QFORM-DENSITY-3EIG-20260922, programme revision 2026-09-22.5, OWNER CONTROL revision 2026-09-22.15. Final pre-write brain main observed at 44eed49efa089550280980d59897af6afffa8f53. Live correction inbox blob remained c7000cf3822ae4935a2faf43b89ac92ea65ac0fe.
 
 Used corrections: no post-rotation independence; no law-uniform pointwise quadratic-phase decay; no arbitrary-joint coarea bound; no normalized worst conditional-fiber cap; no one-good-minor implication. The proof works entirely with original-coordinate cross blocks and exact spectral-footprint identities.
 
@@ -21,7 +20,6 @@ Used corrections: no post-rotation independence; no law-uniform pointwise quadra
 
 Latest account02/B12 handoff read before this report:
 
-- brain handoff: scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260923T025914Z-account02-B12-qform-r24.md;
 - canonical mathematics: yspennstate/math-open-problems@0d0b91b9c5b5ca41fbdc3b910bde3c3759195eb3, proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260923T025914Z-account02-B12-qform-r24/REPORT.md.
 
 Its theorem QFORM-SHIELDED-RANK-RESERVE-TAIL-STABILITY-v1 says the following. For an ORIGINAL-coordinate cut with cross block

@@ -363,7 +363,6 @@ The unrestricted conjecture therefore remains **OPEN / NOT PROVED / NOT DISPROVE
 
 ## 10. Source pins consumed
 
-- Fresh owner/control programme: brain main refreshed during this run; OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, no paused account/slot observed.
 - Required pinned Fourier source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; D5 is used in (6.1)-(6.9).
 - Newest compatible designated partner: account03/B12 r46, `math-open-problems@3575242f2140d442a474d5e32c695dbbfd521115`; its rank-plus-tail/interlacing theorem is used in (4.5)-(4.9).
 - Previous account02/B12 seven-mode receiver compiler: `math-open-problems@b99e8ce078453ccf72ee71f0dbc537f722b16340`, used only for the already-proved receiver synthesis in Section 5.

@@ -6,7 +6,6 @@ attacking: the first unpaid two-sided square/rank-two Fourier step; after a sour
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260922T215817Z-account03-B02-qform-r16`  
 **Assignment:** Integrated Fourier estimate  
-**Fresh owner control at start:** `yspennstate/math-research-brain@52cb2725682f68daf07e9e1583c12d8e641f0344`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 **Continuity:** proved only on the Fourier branches below because their characteristic functions are in `L^1`; full-target continuity remains open.

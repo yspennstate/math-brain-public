@@ -11,7 +11,6 @@
 
 The live target is the universal bounded-density conjecture for `Q=X^T A X` with independent real inputs having densities `0<=f_i<=1` and at least three eigenvalues of `A` of absolute value at least `1`.
 
-Fresh control was read from `yspennstate/math-research-brain` on main; the last pre-publication control head observed in this run was `707032d6e4e291b94573e8d3d982c739494b576d`, with OWNER CONTROL revision `2026-09-22.5`. The control README blob was `433b2d57345823967480245b59a7c47d51019c37`. Full-byte SHA-256 of the control README / OWNER MESSAGE is not exposed by the connector pipeline used here and is therefore recorded as `UNKNOWN_NOT_COMPUTED`, not guessed.
 
 Required route corrections were consumed: law-uniform pointwise one-dimensional Fresnel decay is false; unrestricted spectral-fiber suprema can lose dimension; diagonalizing `A` destroys the original coordinate independence. The live correction inbox at `defae9228f184bc5ea8495a040773b578e39e374` also records `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`, and `QFORM-TWOSHEET-XRAY-ONLY-FALSE`. None is contradicted below. In particular, no universal `C=pi` claim is made.
 

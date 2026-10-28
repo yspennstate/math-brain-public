@@ -190,7 +190,6 @@ Continuity is not claimed by this branch. No counterexample to the full conjectu
 
 ## Source pins
 
-- Brain control read on 2026-09-24: OWNER CONTROL revision 2026-09-22.15; the full theorem remains open.
 - Latest account01/B12 input: math-open-problems@6bbaa340406b8febd0270e186cc79040af81872a.
 - Completed account02/B12 compiler: math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004.
 - Required Claude starting package: math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837.

@@ -12,7 +12,6 @@ The full owner target remains open. This report proves a new zero-loss translati
 
 ## 1. Fresh source state and premises
 
-Fresh brain control before the main write was `yspennstate/math-research-brain@1571168c5317469216f772e9beeddd394a87d9bf`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B14 pause.
 
 Corrections consumed include the law-uniform pointwise quadratic-phase counterexample, the failure of positive moments of worst conditional projection caps, the failure of bounded-diameter/fixed-fragment localization, and the failure of selecting one universally good physical minor. The proof below retains the original product coordinates through every conditioning step.
 

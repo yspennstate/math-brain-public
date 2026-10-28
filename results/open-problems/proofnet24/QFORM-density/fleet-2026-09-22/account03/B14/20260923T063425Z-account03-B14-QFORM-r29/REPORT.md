@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The B14 obligation is to preserve arbitrary translations, distant fragments, and unbounded supports with no moment bounds through a genuine reduction. This run attacks the newest account04/B14 residual question: replace the two-coordinate conjugate shear by a collective independent coordinate bank before any thin-fiber normalization.
 
-Fresh source control at startup was `yspennstate/math-research-brain@9bb818bc402254e738c7d86b13082b386532c0dd`, OWNER CONTROL revision `2026-09-22.15`. The live corrections were consumed before the proof. In particular this proof does not use pointwise law-uniform Fresnel decay, independence after spectral rotation, an arbitrary-joint coarea bound, normalized conditional density caps, or a uniformly good single physical minor.
 
 Two completed mathematical sources are applied at equations.
 

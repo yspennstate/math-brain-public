@@ -12,7 +12,6 @@ The unrestricted conjecture remains **OPEN**. The result below sharpens the curr
 
 ## 1. Fresh source boundary
 
-Startup owner control was resolved from `yspennstate/math-research-brain` main at `1f4eb28d496430030c36c4b097d410c69381397f`; the prepublication control refresh was `c2cf502ba91445ad3119cfb9991131ec7d32d725`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause or reassignment of account03/B08.
 
 The arbitrary-rank crossing input is the reviewed source
 

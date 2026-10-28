@@ -12,7 +12,6 @@ The full exact-rank-three theorem is **not** proved here. The contribution is a 
 
 ## 1. Fresh source state and correction discipline
 
-Fresh control before publication was read from `yspennstate/math-research-brain@87630581e34d4781b33a6dee2acc47c5cd154f64`; OWNER CONTROL revision is `2026-09-22.15`, QFORM is the sole research target, and there is no later stop for B10.
 
 The live `CURRENT_RESEARCH.md` and `CORRECTION_INBOX.json` were enforced. In particular, this report does **not** use:
 

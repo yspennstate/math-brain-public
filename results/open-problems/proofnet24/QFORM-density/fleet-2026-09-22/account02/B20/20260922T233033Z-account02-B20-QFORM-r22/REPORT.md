@@ -12,7 +12,6 @@ The target remains: for every finite `n`, every independent real `X_i` with prob
 
 No moments, Gaussianity, log-concavity, compact/connected support, identical laws, diagonal-basis assumption, or post-rotation independence is used below. In particular this report does not use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, worst fiber supremum, positive conditional projection-density moment/supremum, or a direct spectral-to-single-minor selection claim.
 
-Fresh brain control used OWNER CONTROL revision `2026-09-22.15`. The newest owner continuation `QFORM-CLAUDE-LATEST-20260922T225732Z` requires equation-level use of a completed result from `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. The result actually used below is the proved fifth-volume theorem D5 from `FOURIER_ROUTE_REPORT.md`:
 
 `||p_Q||_infinity <= 5 sqrt(2e) E_5(M)^(-1/10)`                            (1.1)
 

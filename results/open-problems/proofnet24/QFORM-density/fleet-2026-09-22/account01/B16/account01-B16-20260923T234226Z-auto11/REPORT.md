@@ -11,7 +11,6 @@ attacking: the nonzero-hub discriminant on the source-valid minority-sign side; 
 
 ## 1. Source boundary and corrections
 
-Fresh controls were read from `yspennstate/math-research-brain`, with OWNER CONTROL revision `2026-09-22.15` and QFORM still the sole target. The unrestricted target remains OPEN / NOT PROVED / NOT DISPROVED.
 
 Pinned mathematical inputs actually used:
 

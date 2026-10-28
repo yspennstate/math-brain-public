@@ -10,7 +10,6 @@ This addendum is to be read after `REPORT.md` together with `CORRECTION.md`. It 
 
 ## Source pins actually used
 
-1. Fresh owner-controlled brain state was read from `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; live corrections did not stop account02/B16 or invalidate the premises below.
 2. Designated partner: account03/B16 r26, `yspennstate/math-open-problems@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260923T045948Z-account03-B16-QFORM-r26/REPORT.md`. In particular, its capped-basis Fresnel interface uses a probability law `w` on nonsingular physical 3-bases with every coordinate marginal at most `1/2` and the score
 
 `Z_w = exp(H(w)+sum_S w_S log(det(R_S)^2))`,

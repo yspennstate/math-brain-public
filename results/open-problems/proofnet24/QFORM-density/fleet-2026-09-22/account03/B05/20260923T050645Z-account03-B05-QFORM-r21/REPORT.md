@@ -10,7 +10,6 @@ Continuity: proved for the explicit target-valid stress family; not proved for t
 
 ## 1. Fresh source state and exact predecessor
 
-Fresh `math-research-brain/main` retained OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, and B05's concrete current obligation: attack the uncovered indefinite two-sheet curved integral while preserving original-coordinate product provenance.
 
 The immediately preceding B05 theorem is
 

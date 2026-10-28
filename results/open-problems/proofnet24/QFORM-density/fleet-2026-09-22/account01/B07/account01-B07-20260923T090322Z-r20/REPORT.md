@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.
 
 The target remains unrestricted: for every `n`, independent original-coordinate real random variables with probability densities `f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density bounded by one universal constant, or give a valid target-level counterexample. No moment, support, iid, Gaussian, log-concavity, connected-support, or post-rotation independence assumption is introduced. Continuity is tracked separately.
 
-Fresh protected control before publication remained OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole target and no B07 pause. The live correction ledger was refreshed. In particular this report does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, conditional projection-height moments, naive fiber-supremum integration, or a single reciprocal coordinate minor.
 
 Completed sources actually used:
 

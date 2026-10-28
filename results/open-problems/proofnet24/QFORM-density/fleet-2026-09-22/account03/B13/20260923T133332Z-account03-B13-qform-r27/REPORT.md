@@ -11,7 +11,6 @@ Full continuity: **OPEN**.
 
 ## 1. Fresh scope and sources actually used
 
-Fresh control was resolved from `yspennstate/math-research-brain@9906a85a1f8d912c53a48c69a17cf25993d07d69`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM only. `AGENTS.md` asks for proof-first work on the full target and explicitly keeps translation-uniform fractional-trace synthesis and an exhaustive product-preserving grouped-coordinate/ridge reduction as live missing implications.
 
 The designated partner result actually used is the latest completed `account04/B13` report:
 

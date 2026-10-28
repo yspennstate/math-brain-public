@@ -6,7 +6,6 @@ attacking: the N3 four-bank survivor — convert the disjoint star-star-core pac
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
 **Run:** `20260923T030701Z-account03-B07-qform-r22`  
-**Control refreshed before publication:** `yspennstate/math-research-brain@10bffccff59452d117bf5117b4583f54064c125f`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Classification:** `NEW STRUCTURAL ALTERNATIVE + PAID CONTINUOUS-DENSITY BRANCH / FULL TARGET OPEN`.
 

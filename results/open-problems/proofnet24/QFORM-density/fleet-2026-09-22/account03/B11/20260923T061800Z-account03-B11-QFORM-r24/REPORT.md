@@ -4,7 +4,6 @@ Status: **ESSENTIAL_STEP_APPLIED / PROVED_STRUCTURAL_DICHOTOMY / PROVED_OPPOSITE
 
 Programme: `QFORM-DENSITY-3EIG-20260922`.  Logical worker: `account03/B11`, indefinite signatures.  The target remains the unrestricted statement for arbitrary independent cap-one real densities and arbitrary symmetric `A` with at least three eigenvalues of absolute value at least one.  Nothing below is claimed to solve that full target.
 
-Fresh source control immediately before this report: `yspennstate/math-research-brain@d4ebfc23c8ea6ffc7f8bb69fcabb7dc9147f9a5b`, OWNER CONTROL revision `2026-09-22.15`.  Required corrections retained: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; no arbitrary-joint rank-three coarea; no worst-fibre supremum; no small-matrix-as-small-random-quadratic-error step.
 
 Required mathematical sources actually used:
 

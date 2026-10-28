@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
 
 The unrestricted target remains OPEN. Nothing below claims that the three-large-eigenvalue hypothesis by itself forces the extra second-stage child-window hypotheses in Section 6. Continuity is proved only on the paid third-volume branch explicitly identified below.
 
-Fresh prepublication control was read from `yspennstate/math-research-brain@38a94fb87e7d855c60a9fb0b9f23504249d996b6`; OWNER CONTROL remains revision `2026-09-22.15` and QFORM remains the sole research target. The live `CORRECTION_INBOX.json` was reread before this write. The proof below uses no post-rotation independence, no law-uniform pointwise van-der-Corput decay, no arbitrary-joint 3D coarea cap, no worst-fiber density supremum, no positive conditional projection-density moment, and no deletion of a coefficient-small quadratic tail.
 
 ## 1. Sources consumed at equations
 

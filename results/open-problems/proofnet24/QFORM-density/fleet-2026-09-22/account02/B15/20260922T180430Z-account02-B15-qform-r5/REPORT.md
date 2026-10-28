@@ -3,7 +3,6 @@ attacking: the scalar-Q' conditional-supremum implication in owner revision 2026
 
 # account02/B15 — scalar-Q' worst-level conditioning fails on a 4-cube corner
 
-Programme: QFORM-DENSITY-3EIG-20260922. Control refreshed to OWNER CONTROL revision 2026-09-22.11 before this write. Full conjecture status: OPEN. Execution context: WITHOUT_VERIFIED_BRAIN.
 
 ## 1. First unpaid implication and result
 

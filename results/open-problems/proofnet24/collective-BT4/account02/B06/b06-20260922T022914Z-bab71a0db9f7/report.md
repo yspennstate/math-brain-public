@@ -12,7 +12,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 Target: prove the k=4 Bermond--Thomassen statement that every finite loopless digraph with at most one arc per ordered vertex pair and minimum outdegree at least seven contains four vertex-disjoint genuinely directed cycles; opposite arcs/digons are allowed and all finite orders are included.
 
 Fresh control source for this invocation was `yspennstate/math-research-brain` main commit
-`63a7439240d9e98245277ac7ef03772949485b3b`, OWNER CONTROL revision `2026-09-22.2`.
 The open-problems allocation supersedes the older installation/benchmark duties for B06.
 
 Lead source consumed in full:

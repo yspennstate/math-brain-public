@@ -8,7 +8,6 @@ attacking: a mixed-norm completion-of-squares compiler that absorbs arbitrary ou
 
 Supporting theorem proved. Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. This report proves essential boundedness in a quantitative arbitrary-completion branch; it does not prove continuity under the bare cap-one hypotheses.
 
-Control source at the substantive refresh: `yspennstate/math-research-brain@ae1643d9435f8727fcc64f488d5acfbe752012db`, OWNER CONTROL revision `2026-09-22.15`. The live correction inbox still forbids pointwise van-der-Corput, worst normalized conditional fibers, arbitrary-joint coarea, and post-rotation independence shortcuts.
 
 ## Dependencies actually read
 

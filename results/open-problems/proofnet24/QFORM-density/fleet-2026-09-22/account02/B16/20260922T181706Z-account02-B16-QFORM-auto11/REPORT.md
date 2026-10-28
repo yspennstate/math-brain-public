@@ -9,7 +9,6 @@ Assignment: account02/B16, `Projection-product interaction`
 Execution memory: `WITHOUT_VERIFIED_BRAIN`  
 Status: **proved correction to a proposed proof interface; full QFORM remains OPEN / NOT PROVED**.
 
-Source control used for the decisive calculation: `yspennstate/math-research-brain@7bbf0e85ba7a64178299b6a7f7889dc0245468cc`, OWNER CONTROL revision `2026-09-22.11`.  
 Completed designated partner applied: account03/B16 run `20260922T175342Z-account03-B16-QFORM-r14`, canonical proof `yspennstate/math-open-problems@419c351eb125b56e3e717230c09f0d03d6e3628d:proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/20260922T175342Z-account03-B16-QFORM-r14/REPORT.md`.
 
 ## 1. First unpaid implication: the literal scalar-conditioning supremum is false

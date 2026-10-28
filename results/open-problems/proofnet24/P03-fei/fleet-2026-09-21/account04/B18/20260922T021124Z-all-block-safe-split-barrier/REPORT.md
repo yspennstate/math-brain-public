@@ -8,7 +8,6 @@ Full uniform-cube Fourier entropy--influence remains **OPEN / NOT PROVED**.
 
 ## 1. Live target and exact dependencies
 
-The later OWNER MESSAGE has superseded the older A/B route as the substantive target and asks all FEI workers to converge on the all-gate inequality. I therefore preserve the earlier mixed-curvature/zero-defect classification but do not combine it conditionally into a false closure.
 
 This run uses four compatible source-exact ingredients.
 

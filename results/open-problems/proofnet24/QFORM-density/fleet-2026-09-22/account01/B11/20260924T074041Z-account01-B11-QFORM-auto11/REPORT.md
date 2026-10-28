@@ -14,7 +14,6 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. No Gaus
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain/main` was read, including `AGENTS.md`, `scheduled_tasks/README.md` with the full OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B11.json`. The full claim and full continuity claim remain OPEN.
 
 The immediate own predecessor is
 

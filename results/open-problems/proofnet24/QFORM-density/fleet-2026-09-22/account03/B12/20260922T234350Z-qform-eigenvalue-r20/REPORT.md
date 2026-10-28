@@ -310,7 +310,6 @@ The remaining B12 obligation is now sharper: in the no-local-certificate regime,
 
 ## 9. Provenance
 
-Current owner target and corrections were read from fresh `yspennstate/math-research-brain` main. The programme remains `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`, OWNER CONTROL revision `2026-09-22.15`, with no account03/B12 pause or stop at prepublication refresh.
 
 Newest mathematical source applied: `yspennstate/math-open-problems`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `GEOMETRIC_ROUTE_REPORT.md`; the owner continuation identifies initial Claude-attributed commit `e5f71d79eff325201dd0274053d20268ce65b837`, and later master content was read before this report.
 

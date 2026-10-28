@@ -21,7 +21,6 @@ Equivalently, for every real support direction η, define
 
 `h(U) = Re(η det(D_a + U D_b U*))`, `H_σ = Re(η z_σ)`, and `M = max_σ H_σ`.
 
-The target is `h(U) <= M` for every true U. The owner-controlled exact statement and known-case boundaries are in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`. The campaign source record treats the n=3 conjecture as known and n=4 as open; singular and repeated-spectrum cases are included in this target.
 
 This run reads and applies two complete other-worker artifacts.
 

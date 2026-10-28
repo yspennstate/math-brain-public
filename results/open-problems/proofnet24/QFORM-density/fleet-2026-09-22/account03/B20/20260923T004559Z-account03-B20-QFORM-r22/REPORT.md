@@ -35,7 +35,6 @@ The preceding B19 near-null reduction also gives, for both rank-one companions,
 
 Sources consumed:
 
-- account03/B19 r20 handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B19/20260923T002541Z-account03-B19-QFORM-r20.md`; canonical mathematics recorded by that run as `yspennstate/math-open-problems@0a3018cb14b94787c8f3f8d95a0e292ed230f8e0`.
 - account03/B19 r19 rank-one-bank pivot theorem, report `proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260922T223200Z-account03-B19-QFORM-r19/REPORT.md`, with the proved bound
   `||p_Q||_inf <=16 sqrt(60) [lambda |a| |det M|]^(-1/4)` for a nonzero rank-one-bank scalar pivot.
 - designated partner account04/B20 r2, `QFORM-CONDITIONED-WHITENED-DIFFUSE-v1`, canonical `yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f`. If original-coordinate conditioning leaves frame Gram `S` with `delta=lambda_min(S)>0` and every residual whitened row leverage at most `1/32`, then the full conditional/unconditional form has a continuous density with

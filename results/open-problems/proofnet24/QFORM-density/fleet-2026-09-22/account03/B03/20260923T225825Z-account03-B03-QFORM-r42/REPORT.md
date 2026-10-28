@@ -12,7 +12,6 @@ The unrestricted QFORM conjecture remains OPEN. This report proves a critical we
 
 ## 1. Fresh source boundary and current obstruction
 
-Fresh `math-research-brain/main` controls were read at this actual invocation. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with no pause/stop for account03/B03. The current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account03/B03.json` were reread. Full QFORM and full-target continuity remain OPEN.
 
 Corrections retained in every argument below:
 - law-uniform pointwise decay for one-dimensional quadratic phases is false;

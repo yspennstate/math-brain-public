@@ -19,7 +19,6 @@ The family is **not** a counterexample to QFORM. It is a counterexample only to 
 
 ### account02/B19 r22
 
-Source-pinned handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B19/20260923T020950Z-account02-B19-QFORM-r22.md`; canonical mathematics `yspennstate/math-open-problems@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`.
 
 For a rank-two bank `G` with covariance `S_G`, unit normal `n_G`, and a physical row `u_i` outside `G`, r22 proves
 
@@ -35,7 +34,6 @@ It also proves a direct grouped-row density payment `<105 delta_i^{-1/2}` and th
 
 ### account02/B06 weighted affine-fiber Brascamp--Lieb theorem
 
-Source-pinned handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B06/b06-20260922T155426Z-9fd56fa68a65.md`; canonical mathematics `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 
 For a normalized one-dimensional physical projection `Y=sum c_i X_i`, `sum c_i^2=1`, of independent cap-one inputs,
 

@@ -12,7 +12,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 The exact target is the genuine `k=4` Bermond--Thomassen statement: every finite loopless digraph with at most one arc per ordered pair of distinct vertices and minimum outdegree at least seven contains four pairwise vertex-disjoint genuinely directed cycles. Opposite arcs are allowed, so a digon is a directed cycle.
 
-Fresh owner controls were read from `yspennstate/math-research-brain` at control commit `2fcd69ca856edd3021a3092a63069ff2142fe4c5`, OWNER CONTROL revision `2026-09-22.2`. The live assignment is BT4 research for account02/B06; older brain-installation and benchmark duties are stopped. No authenticated brain retrieval/context was used.
 
 Latest complete campaign-lead version actually consumed: account02/B04 run `20260922T041847Z-b04-bt4-r11`, primary scientific commit `71ff185ec9b372cc24c02c4630cd7c202d13eee7`, blob `596929efe56393d3ab515544fa33ec6a19e75c83`, with controlling strengthening commit `1277bd8435045651114cb6500f47674603f3f522`, blob `8bfc5b33fb232c8543856d6d9ad3b0e8fdc3432c`. The lead's exact-two-predecessor heavy-triangle cage and exact five-witness conclusions are used below.
 

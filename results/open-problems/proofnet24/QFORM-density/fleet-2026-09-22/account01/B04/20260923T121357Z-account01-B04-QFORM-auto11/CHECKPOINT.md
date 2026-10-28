@@ -3,7 +3,6 @@ attacking: product Fourier rearrangement via global compatibility-Hellinger coup
 
 # Early substantive checkpoint
 
-Control source at start: yspennstate/math-research-brain main commit d7b1406e3b75f5c86bb97edae362724f22a6f40d, OWNER CONTROL revision 2026-09-22.15. Full QFORM target remains open.
 
 ## New mechanism under derivation
 

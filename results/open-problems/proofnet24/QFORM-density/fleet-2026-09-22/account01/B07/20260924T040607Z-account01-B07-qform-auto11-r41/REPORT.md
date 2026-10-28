@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh control at startup was `yspennstate/math-research-brain@e6c8101ccf8b64693842d264465af9ebea580a73`; before this write it was refreshed through `e55988d29443cbaac67da89930a0b2efa45558cb`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account01/B07 pause or reassignment. The live correction ledger remains in force: no law-uniform pointwise van-der-Corput decay, no post-rotation independence, no arbitrary-joint coarea shortcut, no fiber-supremum reduction, and no deletion of a small nonzero quadratic tail is used.
 
 The immediate predecessor is account01/B07 r40b,
 

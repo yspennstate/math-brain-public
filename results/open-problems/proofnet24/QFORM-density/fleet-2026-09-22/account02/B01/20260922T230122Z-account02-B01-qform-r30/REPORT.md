@@ -3,7 +3,6 @@
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260922T230122Z-account02-B01-qform-r30`  
 **Assignment:** Oscillatory replacement  
-**Control at start:** `yspennstate/math-research-brain@54b4ee79cb719323602acfc805017b7a4fad5414`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / EXPLICIT TARGET-VALID STRUCTURAL FALSIFIER / FULL TARGET OPEN`
 

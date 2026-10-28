@@ -4,7 +4,6 @@ attacking: destructive-Gram-defect stability — absorb arbitrary full-rank sign
 # account01/B12 — destructive Gram-defect compiler
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Effective owner control at start: brain main `024ee50356d85ec54a0594263a6d5136ea05af97`, OWNER CONTROL revision `2026-09-22.15`.  
 Assignment: additional eigenvalue control.  
 Status: **PROVED SUPPORTING STABILITY THEOREM / COMPLETED account02-B12 PARTNER APPLIED TO AN ACTUAL INEQUALITY / D5 RECEIVER APPLIED / EXACT TARGET-CLASS FAMILY / FULL QFORM OPEN / NOT INDEPENDENTLY REVIEWED**.  
 Execution context: `WITHOUT_VERIFIED_BRAIN`.

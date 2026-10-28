@@ -12,7 +12,6 @@ The target is the source-exact `n=4` Marcus–de Oliveira statement: for every c
 
 including singular and repeated spectra.
 
-Fresh main controls were read before the run and rechecked before the substantive write. The active owner programme remains `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, OWNER CONTROL revision `2026-09-22.2`, with account04/B08 assigned to characterize extremal boundary/degenerate configurations for MOC4. No later B08 stop was observed. The older installation and benchmark directives in historical control text are superseded by the current research-only allocation.
 
 ## Exact incoming lead state
 

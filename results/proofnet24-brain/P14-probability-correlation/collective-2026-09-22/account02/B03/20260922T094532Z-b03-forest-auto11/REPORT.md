@@ -7,7 +7,6 @@
 
 ## Controls and sources
 
-Fresh entry controls were resolved at main `049dcedb88d73825394b0f0bb99f10d3761555a9`. Before external writes main was re-resolved at `3e39467dd208c10f30603e5113e80310f0995ad6`; OWNER CONTROL remained `2026-09-22.2`, programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, and no later applicable stop/pause was present. Current README Git blob: `3d4a9372c87802ab734141a3374d04c8823372e3`. Native-byte SHA-256 of the whole README/OWNER MESSAGE was not separately exposed by the connector, so no stale SHA-256 was reused.
 
 Latest complete campaign-lead version actually read: account01/B01 blob `4cee205cb7d254caf785692838111988a0b8a155`, candidate `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`, canonical report revision `79044b575c4b689248892f37b9930e983dddabca`. Its first missing comparison is the source-generated `{1,2}` STAR-2 contraction created when a triangle edge is conditioned present.
 

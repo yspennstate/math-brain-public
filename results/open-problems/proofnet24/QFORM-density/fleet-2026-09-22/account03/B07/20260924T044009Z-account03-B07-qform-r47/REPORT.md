@@ -12,7 +12,6 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 ## 1. Fresh source state and incoming debt
 
-Fresh pre-publication owner control is `yspennstate/math-research-brain@cf92baafb9fdd69f9d88cf4917acba1684a53ca9`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B07 pause or reassignment.
 
 The immediate source is r46, authoritative scope addendum
 

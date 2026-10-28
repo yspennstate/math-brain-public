@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted target remains open: for every dimension, every collection of independent real random variables with probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal essential bound on the density of `X^T A X`, or give a valid counterexample.
 
-Fresh control at run start was `yspennstate/math-research-brain@59b0b20a1d578e8e01ea566ec1d0f1643494dc9f`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The required pinned source package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, was read, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; its compatible current state was also reread from `master` before this report.
 
 The live correction boundary is retained. In particular, the phase-aligned fragmented-support construction refutes every law-uniform positive-power **scalar pointwise** quadratic-phase decay estimate under only `f<=1`. Nothing below asserts such an estimate. The proof instead combines a joint rank-two two-bank `1/|t|` envelope with an `L^2(dt)` estimate for a genuinely independent source-disjoint hyperbolic packet.
 

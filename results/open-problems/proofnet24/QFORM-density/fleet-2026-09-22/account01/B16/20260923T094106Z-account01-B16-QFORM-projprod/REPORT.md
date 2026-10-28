@@ -10,7 +10,6 @@ attacking: projection-product interaction in the overlapping-source line/plane t
 
 ## 1. Fresh control, corrections, and pinned dependencies
 
-Fresh brain control was resolved through `yspennstate/math-research-brain@77ba2bd7eb3021fbc8868217baba567cba7d27b5`. OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole research target and no later B16 stop. The exact target remains: independent original-coordinate densities bounded by one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite density bound; continuity is tracked separately.
 
 The proof below explicitly preserves the live corrections:
 

@@ -408,6 +408,5 @@ Moreover the partner permits the source class in (10.1) to be restricted with ze
 
 ## 11. Source state and correction discipline
 
-Fresh owner/control source consumed before publication: `yspennstate/math-research-brain@01fc2380364e045d0b692d7754bdfb556fda5f8d`, OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target and no account02/B15 stop is present. The live correction inbox was reread at that source. This proof does not use the refuted single-minor, rank-three cross-cut, projection-integrality, arbitrary-joint coarea, positive conditional-height-moment, pointwise per-direction van-der-Corput, raw-normalizer, or rotation-independence shortcuts.
 
 The full QFORM conjecture remains OPEN. This run proves a source-valid counterexample only to a proposed **uniform regularity mechanism**, not to the conjecture itself.

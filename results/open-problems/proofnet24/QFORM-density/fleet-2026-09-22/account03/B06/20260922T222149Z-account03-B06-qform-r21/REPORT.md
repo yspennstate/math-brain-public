@@ -7,7 +7,6 @@ attacking: the strict-higher-rank bicolooop survivor after the grouped actual-mi
 **Run:** `20260922T222149Z-account03-B06-qform-r21`  
 **Assignment:** Curved fiber integration  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Fresh control before publication:** `yspennstate/math-research-brain@32a86f64d32a11c29ef2bc95ae66cca2096844fe`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`.  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED.  
 **Continuity:** not proved by the branch theorem below; the paid branch gives an essentially bounded density.
 

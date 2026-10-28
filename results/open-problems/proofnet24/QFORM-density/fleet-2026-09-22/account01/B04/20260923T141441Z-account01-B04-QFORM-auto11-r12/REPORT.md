@@ -15,7 +15,6 @@ The argument stays in original-coordinate product space. It uses no law-uniform 
 
 ## 1. Sources actually used
 
-Fresh owner control at run start was QFORM-only, OWNER CONTROL revision `2026-09-22.15`.
 
 The Fourier compiler used here is this slot's completed theorem
 

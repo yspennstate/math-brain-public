@@ -6,7 +6,6 @@ attacking: adaptive second-volume Fourier smoothing, with a sharp half-Riesz rea
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Role:** Product Fourier rearrangement  
 **Status:** `NEW SUPPORTING THEOREM / FULL QFORM OPEN / WITHOUT_VERIFIED_BRAIN`  
-**Owner control at start:** `yspennstate/math-research-brain@e970ad5a9c833db09f1885e130dab591c27ce8ac`, live OWNER CONTROL revision `2026-09-22.15`.  
 
 The unrestricted conjecture is not proved here. The new result extends the previously paid rank-two volume branch from one fixed interpolation exponent to the whole marginal range below the true method endpoint `3/4`, and improves the dependence-safe outer-square constant by solving the underlying one-dimensional rearrangement problem sharply. No pointwise quadratic-phase decay, arbitrary-joint coarea estimate, post-rotation independence, moment assumption, support regularity, Gaussianity or log-concavity is used.
 

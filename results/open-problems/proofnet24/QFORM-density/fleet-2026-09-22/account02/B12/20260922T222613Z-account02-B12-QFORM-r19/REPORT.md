@@ -9,7 +9,6 @@ attacking: opposite-leverage dual physical certificates: route the sign of one a
 
 This run addresses the assignment's extra-eigenvalue question without diagonalizing the product source. The new point is that a single indefinite physical pair has a finite hostile rank-one resonance, but two complementary indefinite pairs with opposite Sherman--Morrison leverage signs let the deterministic sign of the added spectral coefficient choose a pair whose conditioning can only improve in the dangerous denominator. This permits an arbitrarily small or arbitrarily large rank-one addition of either sign, provided the final matrix remains in the target and the two base certificates satisfy explicit quantitative hypotheses.
 
-Startup control source: `yspennstate/math-research-brain@3dd4c98bc5826ee788593b9232d5a646ef2cf1fc`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction inbox read before the proof had blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 ## Completed assigned-partner theorem actually applied
 

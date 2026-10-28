@@ -8,7 +8,6 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Control and scope
 
-Fresh control was resolved from `main` and the five mandatory entry files plus the current collective ORDER/TARGETS/ASSIGNMENTS were read before the mathematics. The final pre-report control reread is at main commit `5de5a99c3ee660cc8f52e52f9a7c6037a26f864f`: OWNER CONTROL revision `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, B03 assigned to FOREST, and no applicable later stop. The final `scheduled_tasks/README.md` Git blob is `3d4a9372c87802ab734141a3374d04c8823372e3`. Exact connector-to-native byte SHA-256 for the full README and isolated OWNER MESSAGE is not exposed in this executor, so those SHA-256 fields remain `UNKNOWN_NOT_EXPOSED` rather than reusing a stale digest.
 
 The superseded brain-installation/benchmark role was not continued. Historical M1-M6/F01-F20 evidence is preserved unchanged and is not re-evaluated or promoted by this research run.
 

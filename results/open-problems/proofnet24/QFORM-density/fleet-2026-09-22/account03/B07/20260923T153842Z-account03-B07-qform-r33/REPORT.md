@@ -8,7 +8,6 @@ Assignment: coordinate minor selection / GEOMETRY
 Run: `20260923T153842Z-account03-B07-qform-r33`  
 Initial research-brain main: `364e58649db5f4e86517dbbc904cc041c301af3e`  
 Pre-publication research-brain main: `3707705ffa4f4e7cf71827f5ec4527272bedb1d4`  
-OWNER CONTROL revision: `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW PHYSICAL LOW-TAIL COMPILER / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN / FULL CONTINUITY OPEN**.
 
@@ -334,6 +333,5 @@ A promising next mechanism is a product-preserving grouped-coordinate or one-hub
 
 The captured result ends `STATUS=PASS`. These computations are regression evidence only; the proof is Sections 2-6.
 
-Pre-publication owner control was refreshed at research-brain main `3707705ffa4f4e7cf71827f5ec4527272bedb1d4`, still OWNER CONTROL revision `2026-09-22.15`, with no pause/reassignment of account03/B07. The live correction inbox was refreshed and no correction invalidates the algebra above. The repository search available earlier in the run did not find a separate source with this exact bank-cycle global-low-tail compiler; no claim of literature novelty is made.
 
 Repository transport is not native learned-memory ingestion. Execution remains `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.

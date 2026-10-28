@@ -7,7 +7,6 @@ Programme: QFORM-DENSITY-3EIG-20260922. Run: `b06-20260923T014809Z-5f81b9d02dd3`
 
 ## 1. Sources actually used
 
-Fresh starting control: `yspennstate/math-research-brain@ee0f2c9ba46b94775d510902fb5941a829289bfc`, OWNER CONTROL revision `2026-09-22.15`. Required current continuation and correction boundary were read there.
 
 Designated partner actually applied: account03/B06, run `20260923T004812Z-account03-B06-qform-r23`, source snapshot `yspennstate/math-open-problems@0c9a2e6a85863dc639c9551c09605ceafb5afb14`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260923T004812Z-account03-B06-qform-r23/REPORT.md`, blob `ec3a6f691bec67f77dbeedaa4a09bbe04742f904`. Its theorem `QFORM-BICOLOOP-STAR-AGGREGATION-SQUEEZE-v1` says that, in the inherited bicolooop chamber, either a determinant star pays the branch or the two exterior top-two singular directions are simultaneously diffuse. At its tau=1/16 collar the inherited nonanchor top-two leverage is <0.099 on both physical sides, while the nonzero higher-rank tail must still be paid.
 

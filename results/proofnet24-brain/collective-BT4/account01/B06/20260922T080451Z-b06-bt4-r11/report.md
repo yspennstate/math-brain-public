@@ -8,7 +8,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## Fresh state consumed
 
-Fresh owner controls were read coherently at main `510e36ffb25a8c459700e32bc690f2f677f43e60`, OWNER CONTROL revision `2026-09-22.2`, together with the collective ORDER/TARGETS/ASSIGNMENTS package. The active task is BT4 rerouting/linkage; old brain-installation/benchmark work remains superseded.
 
 The newest complete team dependency actually consumed is account04/B05 run `b05-20260922t074314z-r35`, handoff commit `5da7fbeac3f200fd228058be8662a8ccfad1bf00`, handoff blob `7b0ab787c77713fbc54cced778f236a0236468fe`. Its theorem is the direct-rank-three reduction: in the exact four-remainder heavy-triangle cage, excluding H-mediated connectors forces all three light-to-light Menger paths in each direction to be direct cross arcs. In the alternating-endpoint case these six arcs plus the three support intervals on each light cycle define permutations `pi_A,pi_B`; the all-cross decomposition has a number of mixed directed cycles equal to the number of cycles of `tau=pi_A^{-1}pi_B`. Identity `tau` gives three mixed cycles and hence, together with the packed heavy triangle `H`, four vertex-disjoint directed cycles. The live first debt in that handoff is `BT4-R4-DIRECT-3X3-ORDER-FORCING-v1`.
 

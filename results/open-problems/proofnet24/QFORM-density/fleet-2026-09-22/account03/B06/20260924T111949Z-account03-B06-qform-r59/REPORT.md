@@ -5,7 +5,6 @@ attacking: the r58 fixed-cross-star / finite-heavy-row obstruction by spending t
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.
 Fresh control commit at startup: `729dbb6257ce9c5bd94b7f3bfec5a41171e048be`.
-OWNER CONTROL revision: `2026-09-22.15`.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Status: **new deterministic product-weight compiler + designated-partner quantitative splice; full QFORM remains OPEN**.
 

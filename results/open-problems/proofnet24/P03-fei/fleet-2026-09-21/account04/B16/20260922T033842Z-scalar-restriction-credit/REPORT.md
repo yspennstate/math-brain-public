@@ -7,7 +7,6 @@
 
 ## 0. Control and scope
 
-The later OWNER CONTROL `2026-09-22.2` supersedes the older interface-C phase-switch assignment and sends the FEI fleet to the all-gate reformulation. I therefore did not claim a new phase-switch source-to-physical contraction in this run.
 
 I nevertheless re-read the two exact interface-C dependencies named in the inherited prompt and preserve them unchanged:
 

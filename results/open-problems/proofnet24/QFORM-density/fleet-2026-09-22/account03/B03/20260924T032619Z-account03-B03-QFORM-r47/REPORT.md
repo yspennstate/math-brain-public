@@ -266,7 +266,6 @@ The current global account03/B20 frontier has moved to a fixed-hub / two-sided n
 
 ## 8. Source pins used in this run
 
-- Fresh brain control at start: `yspennstate/math-research-brain@e27705eb2bb120f090c2cfd6a360b5f8b7263261`, OWNER CONTROL revision `2026-09-22.15`.
 - Previous account03/B03 r46: `yspennstate/math-open-problems@4da579fc8bcb3169099543b99ef99e1a829b3833`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T025916Z-account03-B03-QFORM-r46/REPORT.md`.
 - Designated partner account04/B03 r3: `yspennstate/math-open-problems@19345adf8bb78f11da95a556d6fdcc47af957b19`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B03/20260924T021651Z-account04-B03-hyperbola-fourvolume-r3/REPORT.md`; its translated hyperbola half-power theorem is applied quantitatively in (1.8)/(1.11).
 - Earlier zero-pair fractional-Riesz comparison source: `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260922T155803Z-account01-B05-qform13/REPORT.md`, read from repository state `c1d2f72c5206c55f41c229457b6407d9e23c0b20`.

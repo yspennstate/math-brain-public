@@ -10,13 +10,11 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`
 
 The target remains: for every dimension, independent real coordinates `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a universally bounded density, or give a valid counterexample. No moment, compact-support, connected-support, log-concavity, Gaussianity, or independence after spectral rotation is assumed.
 
-Fresh owner control at publication time is `yspennstate/math-research-brain@5afe06e304d88a47ae31279a5231075a0e6559f6`, OWNER CONTROL revision `2026-09-22.8`; QFORM remains the sole research target and there is no later stop for B03.
 
 The main analytic dependency is the ridge characteristic-function theorem in
 
 - `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
-Its requested analytic scope received an independent PASS from account02/B02 in the brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B02/20260922T153908Z-account02-B02-qform-auto11-7613470a.md`.
 
 The named partner result actually used below is account02/B03:
 
@@ -246,7 +244,6 @@ for every member of this hard family. This is not a proof of the full conjecture
 
 ## 6. Source-valid falsifier to the new conditional rank-three projection shortcut
 
-Fresh OWNER CONTROL revision `2026-09-22.8` proposes, as a route, choosing three large spectral directions `Y=(Y_1,Y_2,Y_3)`, conditioning on all other spectral coordinates `Z`, and seeking a universal bound on the **conditional** three-dimensional projection density. That proposed intermediate implication is false under the exact product-density hypotheses.
 
 Take `n=4` and let `X_1,...,X_4` be independent `Uniform[0,1]`. Put
 

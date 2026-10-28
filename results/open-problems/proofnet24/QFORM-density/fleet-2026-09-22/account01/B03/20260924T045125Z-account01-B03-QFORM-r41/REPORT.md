@@ -328,7 +328,6 @@ Continuity of the density is not proved in the new rank-one mixture branch. Full
 
 ## 9. Sources consumed
 
-- Fresh owner control and programme files from `yspennstate/math-research-brain/main`, OWNER CONTROL revision `2026-09-22.15`.
 - Current corrections including the false conditional sum/difference cap, false law-uniform pointwise quadratic decay, false arbitrary-joint coarea gate, and fiber-sup dimension loss.
 - account02/B03 completed partner theorem `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, brain commit `c2cf502ba91445ad3119cfb9991131ec7d32d725`, canonical math `5e5366b98337d13ba24bf666f4e42155553de7c2`.
 - Rogozin--Ball one-dimensional product-projection consequence, pinned QFORM source `e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.

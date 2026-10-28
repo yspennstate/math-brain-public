@@ -17,7 +17,6 @@ The canonical login for this actual hour already existed before this report and 
 
 `math-research-brain:scheduled_tasks/status/account01/logins/2026-09-23T17Z/B02.json`, run id `20260923T172058Z-account01-B02-qform-auto11-r33`.
 
-Startup control was recorded there as `5979a2d02580b5ba175f2a208321546a5d390935`, OWNER CONTROL revision `2026-09-22.15`. Immediately before this publication I refreshed `math-research-brain/main` to `2dfa3284da688014477485c6c90ee3b627d920e4`; the current continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, QFORM-only, and the full target remains open.
 
 ### 1.1 Designated partner actually applied
 

@@ -363,6 +363,5 @@ The theorem is exact for `A_m=[1]\oplus J_m/m\oplus(-J_m/m)` and arbitrary cap-o
 
 What it does remove is a natural unresolved stress mechanism: an arbitrary macroscopic coordinate plus two opposite minimum-variance diffuse banks, including all off-tip peaks and arbitrarily fragmented heavy support. A witness above `3\sqrt2`, if one exists, must leave this architecture, for example by retaining several non-collinear mesoscopic physical rows or by making the surviving non-Gaussian component interact nontrivially with more than one diffuse spectral mode.
 
-Controls refreshed immediately before publication from `yspennstate/math-research-brain@10fed257a3ba1f7c4dd3a36249c9bd58ddc70450`; OWNER CONTROL revision `2026-09-22.15`; owner README blob `fca13a89d221115332ce5e60d49554ee0e213efa`; correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Execution status: `WITHOUT_VERIFIED_BRAIN`; repository retrieval and durable writes are genuine, but no authenticated native learned-memory receiver-use event was observed.

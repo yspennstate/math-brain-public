@@ -8,7 +8,6 @@
 
 ## 1. Why this run changed target
 
-The current brain control is revision `2026-09-22.2`. Its later OWNER MESSAGE supersedes the older posterior-crossing assignment and tells all FEI workers to converge on the gate reformulation: either prove the dangerous gate margin is attained by decomposable gates or falsify that by producing a worse gate. I therefore did not extend the older A-interface.
 
 The scientific gate report fixes the old read-once candidate at
 

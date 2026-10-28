@@ -9,7 +9,6 @@ attacking: the rank-one Schur-residual endpoint by averaging the physical-pair l
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Start control:** `yspennstate/math-research-brain@e3e5003a8f11d307b56ece80a3ab42070833a9c1`  
 **Prepublication control:** `yspennstate/math-research-brain@363bb1062638754a59cdd0cd443047efed15a7ad`  
-**OWNER CONTROL revision:** `2026-09-22.15`  
 **Status:** `ESSENTIAL_STEP_APPLIED / RANK-ONE-SCHUR ANALYTIC OBSTRUCTION PAID / FULL_TARGET_OPEN`  
 **Continuity:** essential boundedness is proved in the new branch; continuity is not proved by this argument.
 

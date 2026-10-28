@@ -6,7 +6,6 @@ attacking: the owner-revision-15 decoupled L^3/Hölder bridge, specifically whet
 Programme: `QFORM-DENSITY-3EIG-20260922`.
 Assignment: `Projection-product interaction`.
 Status: **supporting theorem + source-valid correction; full QFORM remains OPEN / NOT PROVED**.
-Control used for this proof before publication: `yspennstate/math-research-brain@6de9595a16521f1e0e1dfacdd89db1daa7af9843`, OWNER CONTROL revision `2026-09-22.15`.
 Execution memory: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Target and the first unpaid implication

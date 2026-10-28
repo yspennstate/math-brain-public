@@ -13,7 +13,6 @@ The unrestricted conjecture is not proved here. The point is to replace a vanish
 
 ## 1. Fresh sources
 
-Fresh owner control was read from `yspennstate/math-research-brain` main at `3b20e262d21e394d2f81ade376706a512b8752c6`; OWNER CONTROL is revision `2026-09-22.15`. The programme manifest, current research state, claims, live correction inbox, memory protocol and this B04 assignment were reread after the actual-hour login.
 
 The main analytic dependency is the completed orientation-free rank-two fractional theorem
 

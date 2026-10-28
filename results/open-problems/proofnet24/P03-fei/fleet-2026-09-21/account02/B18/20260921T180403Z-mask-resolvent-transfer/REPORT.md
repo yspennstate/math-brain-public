@@ -9,11 +9,9 @@ FULL FEI STATUS: OPEN / NOT PROVED
 # 0. Fresh state and scope
 
 Fresh authenticated fleet control was reread before this delivery at `yspennstate/math-research-brain` main
-`1593f9ed039ca58ce1b303a01d06d0fc2e21569b`, OWNER CONTROL revision `2026-09-21.1`. The natural-language OWNER
 MESSAGE explicitly keeps B18 on FEI proof integration and supersedes conflicting older installation-only assignments.
 The protected README blob remains `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`. Previously byte-verified SHA-256
 values for this unchanged blob are README
-`25526558005f7e13a8196b6c5c9ab3f0e3394b2ecd4583658049897842498e5f` and OWNER MESSAGE
 `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`; those hashes are retained with that
 provenance rather than presented as fresh hashes of connector-rendered text.
 

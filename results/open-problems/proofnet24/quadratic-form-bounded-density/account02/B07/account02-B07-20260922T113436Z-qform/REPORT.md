@@ -11,7 +11,6 @@ The active owner target at control commit `63d2a5aaeeb662e9630d01ce5ee20b68710ea
 
 > For independent real random variables `X_1,...,X_n` with densities bounded by `1`, and every real symmetric quadratic form `Q(x)=x^T A x` having at least three eigenvalues with absolute value at least `1`, prove that the law of `Q(X)` has a density bounded by one universal constant, independent of `n`, the laws and `A`.
 
-This later OWNER MESSAGE explicitly supersedes the earlier FEI assignment. No FEI mathematics is used below.
 
 A compact end-to-end Fourier route would be: prove a universal bound
 

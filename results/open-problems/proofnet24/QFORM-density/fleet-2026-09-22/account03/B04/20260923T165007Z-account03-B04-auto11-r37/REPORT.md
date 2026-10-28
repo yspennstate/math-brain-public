@@ -12,7 +12,6 @@ The unrestricted conjecture is not proved here. The result below gives a continu
 
 ## 1. Source boundary and corrections
 
-Fresh control was read from `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`, including the current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, the programme manifest/current research/claims/live correction inbox/memory protocol, and this worker's assignment. The full target remains open.
 
 The immediate analytic source is
 

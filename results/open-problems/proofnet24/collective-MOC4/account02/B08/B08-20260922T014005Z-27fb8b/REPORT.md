@@ -16,7 +16,6 @@ The source-exact target is: for every pair of complex normal `4 x 4` matrices `A
 \det(A+B)\in\operatorname{conv}\left\{\prod_{i=1}^4(a_i+b_{\sigma(i)}):\sigma\in S_4\right\}.
 \]
 
-Fresh owner control before the scientific write was `math-research-brain` main commit `79bac51defd3a24362524cc2ff99a9f0e5344196`, OWNER CONTROL revision `2026-09-22.2`; the later owner message stops benchmark/installation work and keeps account02/B08 on the repeated-eigenvalue/common-block MOC4 boundary.
 
 This run read and applies:
 

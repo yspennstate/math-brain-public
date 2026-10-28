@@ -19,7 +19,6 @@ The target is: for every pair of complex normal `4 x 4` matrices `A,B`, with spe
 \tag{MOC4}
 \]
 
-Singular and repeated-spectrum cases are part of the statement. The campaign source/status boundary remains the one in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`: Drury's 2004 result is weakened n=4, while the 2025 survey and 2026 variational paper retain the general problem as open. No literature-search miss is used as a novelty claim here.
 
 This run read the newest complete campaign-lead report available in the canonical archive:
 

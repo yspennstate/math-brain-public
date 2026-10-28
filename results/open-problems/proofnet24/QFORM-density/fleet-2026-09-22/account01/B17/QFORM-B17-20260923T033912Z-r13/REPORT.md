@@ -341,8 +341,6 @@ Neither theorem is the unrestricted QFORM result.
 
 ## 9. Source pins
 
-* Fresh control: `yspennstate/math-research-brain`, main, OWNER CONTROL revision `2026-09-22.15`.
-* Current corrections/state: `scheduled_tasks/work/shared/qform-density-2026-09-22/CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`.
 * Designated partner actually applied: `yspennstate/math-open-problems@189fc052089ae2d3237bc0865b290b01b26a6513`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260923T031047Z-account02-B17-QFORM-r11/REPORT.md`.
 * Partner weighted Edgeworth source note: `yspennstate/math-open-problems@66ff43d64083414ef8e64f5702e3e4f085a9f877`.
 * Sharp dependent-square/diffuse rank-two input: `yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990`; expanded source `proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/20260922T142626Z-account03-B01-qform-r12/REPORT.md`.

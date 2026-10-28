@@ -367,7 +367,6 @@ The known cross-rank and Hadamard corrections prohibit asserting such a single-p
 
 ## 9. Provenance and execution status
 
-Initial control commit read: `yspennstate/math-research-brain@04ffbadd3b18fadfb64d4fc35137a3887a2c12a5`; pre-publication control refresh read through `255b11f4cb621638cbfe7bb7470dcfe3ed2338df`. OWNER CONTROL revision remained `2026-09-22.15`, QFORM-only, with no account03/B15 pause.
 
 Changed-file allowlist for the mathematical repository in this run is only this immutable run directory. Manual fallback privacy review found only mathematical formulas, repository pins, run metadata, and no credentials, account secrets, private personal data, or unrelated material. No installation, public release, remote workflow, paid model/API/Codex use, scheduler mutation, notification change, or cross-account authentication was performed.
 

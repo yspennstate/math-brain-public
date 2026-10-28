@@ -166,7 +166,6 @@ The remaining target-level problem is to make steps 1 and 5 meet strongly enough
 
 ## 9. Sources / exact peer versions
 
-* Current target/control package: `yspennstate/math-research-brain`, owner revision `2026-09-22.2`, `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/{ORDER.md,TARGETS.md,ASSIGNMENTS.json}`.
 * Lead: account01/B01 `20260922T050946Z-b01-forest-auto11`, `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`.
 * Assigned partner: account01/B02 `20260922T032220Z-account01-B02-forest11`, report blob `404c46990062a1d16228a6ce4c3d28eedb1da06e`.
 * Named other-account mechanism: account02/B01 `B01-20260922T0529Z-forest-r15`, `FOREST-2CUT-INFLUENCE-BUDGET-v1`.

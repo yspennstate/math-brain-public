@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact target remains unchanged: for every finite `n`, every family of independent real coordinates with one-dimensional probability densities bounded by one, and every real symmetric `A` having at least three eigenvalues of modulus at least one, prove a universal essential bound on the density of `X^T A X`, or give a valid counterexample. No moment, compact-support, connected-support, centering, Gaussian, log-concave, or post-rotation independence hypothesis is added.
 
-Fresh control before this run was `yspennstate/math-research-brain@3232d5f87b21af6a35fefd1526c58dc6de069452`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause on account03/B14. The live correction inbox has not changed since its most recent correction merge on 2026-09-22; in particular I retain the failures of law-uniform pointwise quadratic-phase decay, post-rotation independence, naive fiber-sup dimension-free control, arbitrary-joint rank-three coarea, positive conditional-projection moments, bounded-diameter localization, and fixed fragment-count localization.
 
 The designated partner actually applied is account04/B14 r9:
 

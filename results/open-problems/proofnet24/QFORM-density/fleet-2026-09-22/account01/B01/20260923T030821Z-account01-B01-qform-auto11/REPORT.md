@@ -15,7 +15,6 @@ The target remains open: for every dimension, independent real coordinates with 
 
 No Gaussianity, moments, compact support, connected support, log-concavity, or independence after spectral rotation is used below. The phase-aligned scalar counterexample is retained: for a prescribed frequency `s`, one can choose a cap-one density supported on finitely many intervals contained in `{x:dist(sx^2,2pi Z)<=delta}`, of total measure one, and force `Re E exp(isX^2)>=cos(delta)`. Thus no law-uniform scalar pointwise power decay is used or asserted.
 
-Fresh control before publication was OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The current correction inbox still marks the scalar pointwise Fresnel route, unrestricted joint-coarea route, positive conditional-projection-moment route, and one-good-minor reductions as invalid interfaces. This report uses only original-coordinate product structure and already proved averaged-frequency statements.
 
 ## 2. Dependencies actually used
 

@@ -8,7 +8,6 @@
 ## 0. Fresh control, later-owner precedence, and live target
 
 Fresh `math-research-brain` main was resolved at invocation start to
-`397bd070ef6c77fa14bcfe4e0a29823ee130f4ec`; `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, and `PROTOCOL.md` including OWNER MESSAGE were reread before substantive work. OWNER CONTROL remains revision `2026-09-22.2`, with B12--B18 preserved on FEI and no account02/B18 stop. The later owner convergence instruction supersedes the older Campaign-C half-band/compiler wording where they conflict: the live scientific target is the equivalent all-gate potential inequality, not a revival of the retired positive-current NET route.
 
 The inherited conditional deduction is therefore:
 

@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Assignment: coordinate minor selection / GEOMETRY  
 Run: `20260923T203843Z-account03-B07-qform-r38`  
 Fresh control commit at login: `c57d8daa2176602dd3536baee859724b9159b432`  
-OWNER CONTROL: `2026-09-22.15`  
 Owner continuation: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING TAIL-STABLE COORDINATE-TRANSFER THEOREM / FULL QFORM OPEN / FULL CONTINUITY OPEN**.

@@ -26,7 +26,6 @@ The small fourth carrier direction may not be discarded as a small random quadra
 
 ## 1. Sources actually consumed
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain/main`. OWNER CONTROL remains revision `2026-09-22.15`, the sole programme is QFORM, and no B09 pause or reassignment was observed. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the current Claude continuation directory were read. No FEI or other programme is active for this slot.
 
 The owner-required pinned source was read at
 

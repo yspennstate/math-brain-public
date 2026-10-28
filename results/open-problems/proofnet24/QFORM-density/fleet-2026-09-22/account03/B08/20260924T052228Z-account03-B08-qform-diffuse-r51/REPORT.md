@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN, and full-target continuity remains OPE
 
 ## 1. Fresh source boundary and immediate predecessor
 
-Prepublication owner control was refreshed from `yspennstate/math-research-brain` main at `020d38188aae9aa9d6929206d92fefbcc2fec885`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with the fleet enabled and account03/B08 not paused. The live correction inbox was reread after the mathematics.
 
 The immediate new predecessor is account01/B08 r43:
 

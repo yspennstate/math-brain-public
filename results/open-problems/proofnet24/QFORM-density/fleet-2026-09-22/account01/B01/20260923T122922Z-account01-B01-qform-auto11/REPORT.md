@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction boundary
 
-Fresh control was read from `yspennstate/math-research-brain` main; immediately before publication main was `4a6ac0f331a8c084566bf20dfba255890845edaf`, OWNER CONTROL remained revision `2026-09-22.15`, all research remained QFORM-only, and no B01 stop/pause was present. The live correction inbox was reread. In particular:
 
 * bounded one-dimensional input densities do **not** imply any positive-power law-uniform pointwise decay for a scalar quadratic phase;
 * spectral rotation does not preserve independence;

@@ -12,7 +12,6 @@ Regularity: no new full-line continuity conclusion is claimed.
 
 ## 1. Source boundary
 
-Fresh `math-research-brain/main` control was resolved during this invocation. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and no account02/B16 pause or redirect is present. The live corrections are retained: no post-rotation independence, no arbitrary-joint indefinite coarea bound, no worst conditional projection-height cap, no law-uniform pointwise quadratic-phase decay, and no deletion of a small quadratic term for unbounded inputs.
 
 The required pinned package was read at
 

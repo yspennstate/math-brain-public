@@ -13,7 +13,6 @@ The target asks for a universal density bound for `Q=X^T A X` when the original 
 
 The point of the argument below is that the added spectral directions are used only as a deterministic matrix decomposition. The random variables are never rotated. The terminal density theorem is applied after conditioning on all coordinates outside an ORIGINAL-coordinate physical triple.
 
-Fresh control/corrections consumed before publication: brain main initially `cd7be220caca96ae3a0819f8366251974ddb201c`, refreshed to `33f0d9ab4dfab3247b748f4619c2e80dc2486b6c`; OWNER CONTROL revision `2026-09-22.15`; programme revision `2026-09-22.5`. In particular I do not use pointwise quadratic Fourier decay, arbitrary-joint coarea, a conditional density cap after rotation, a naive fiber-supremum integral, or an independence/convolution assertion for a spectral remainder.
 
 ## 2. Partner premise actually read
 

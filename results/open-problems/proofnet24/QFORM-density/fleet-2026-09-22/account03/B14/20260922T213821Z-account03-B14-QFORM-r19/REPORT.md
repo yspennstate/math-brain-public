@@ -261,6 +261,5 @@ A useful next obligation is therefore:
 
 ## 9. Source/status discipline
 
-Fresh controls before publication: `yspennstate/math-research-brain@c7dc420c91c752edfb3197137d66ac38ef5190c0`, OWNER CONTROL revision `2026-09-22.15`, QFORM sole target, no B14 pause/stop. Live correction inbox blob: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Repository retrieval was genuine, but no authenticated native brain receiver-memory use occurred, so `WITHOUT_VERIFIED_BRAIN` remains required. No scheduler mutation, new task, cross-account action, email/Drive action, notification enablement, public release, remote workflow, paid API/model/Codex call, credential use, or unrelated private transcript was used.

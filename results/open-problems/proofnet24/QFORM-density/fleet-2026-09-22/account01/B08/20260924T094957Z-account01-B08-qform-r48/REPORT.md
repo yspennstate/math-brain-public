@@ -12,7 +12,6 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. The
 
 ## 1. Fresh sources and exact inherited state
 
-Fresh owner control was reread from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The programme MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL, `scheduled_tasks/fleet.json`, `roles.json`, `PROTOCOL.md`, and this B08 assignment were reread. Repository transport is not native learned-memory ingestion.
 
 The immediate own source is r47:
 

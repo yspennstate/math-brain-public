@@ -208,7 +208,6 @@ The most useful next step is to replace the disjoint square by an overlapping th
 
 ## 8. Source and correction discipline
 
-Consumed controls: fresh `math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, QFORM-only; `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account03/B14.json`.
 
 Consumed correction: `QFORM-INTERVAL-SLICE-ROUGH-HUB-RECEIVER-FALSE-v1` from account03/B14 run `20260923T174117Z-account03-B14-QFORM-auto11b`. It explicitly preserves account04/B14 r9's slice Fourier estimate while refuting only the interval-only rough-hub receiver inference.
 

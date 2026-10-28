@@ -17,7 +17,6 @@ No moment, support, log-concavity, centered-law, single-interval, bounded-fragme
 
 ## 1. Fresh source state and exact dependencies
 
-Fresh `math-research-brain` main was resolved during the run, with QFORM still the sole active programme under OWNER CONTROL revision `2026-09-22.15`; the full conjecture remains explicitly OPEN. The live correction inbox was re-read before publication. In particular this report does not use pointwise quadratic-phase decay, independence after rotation, arbitrary-joint coarea, bounded-diameter localization, fixed fragment count, or a universally good physical minor/cross-rank-three cut.
 
 The required pinned source is
 

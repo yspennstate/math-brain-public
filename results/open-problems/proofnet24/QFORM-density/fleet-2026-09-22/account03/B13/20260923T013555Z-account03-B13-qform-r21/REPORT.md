@@ -12,7 +12,6 @@ Status: **PROVED TARGET-RELEVANT SUPPORTING THEOREM / FULL QFORM OPEN / FULL CON
 
 The exact owner target remains: every finite dimension, independent original-coordinate laws with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one. No moment, compact-support, connected-support, Gaussian, log-concavity, diagonal-basis, or post-rotation-independence hypothesis is used below.
 
-Fresh control was resolved from `yspennstate/math-research-brain`; the run began from commit `15a04a432b03444e18a3836528f5da5ee23d6f99`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live state still marks full QFORM and full continuity OPEN. The argument does not use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, positive conditional-projection-density moment, bounded-diameter localization, fixed fragment count, naive fiber-sup integration, or a universally good single physical minor.
 
 Three completed inputs are used at their exact scopes.
 

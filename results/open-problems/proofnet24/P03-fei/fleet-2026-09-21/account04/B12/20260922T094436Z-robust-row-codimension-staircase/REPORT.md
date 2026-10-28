@@ -7,7 +7,6 @@
 
 ## 0. Current source state and the completed peer result consumed
 
-The later OWNER MESSAGE supersedes the stale native B12 mechanism for target selection: the current FEI programme is the all-gate / terminal-core route, not an independent attempt to revive the refuted fixed `Gamma^dagger`. The latter has a source-valid 18-input composition-prime counterexample and is not treated as universal here.
 
 The newest completed compatible `account02` result consumed substantively is
 

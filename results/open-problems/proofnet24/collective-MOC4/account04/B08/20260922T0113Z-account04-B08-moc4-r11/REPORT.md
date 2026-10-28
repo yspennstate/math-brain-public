@@ -20,7 +20,6 @@ This report addresses the assigned extremal/boundary question. It does **not** a
 
 ## Exact dependencies consumed
 
-1. **Named partner account01/B09, `MOC4-BIRAYLEIGH-MONOMIAL-RIGIDITY-NOGO-v1`**: shared handoff `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/MOC4/account01-B09-20260922T004711Z-birayleigh-monomial-nogo-v1.md`, blob `4b3fe75f1b421918ea66d4316cc151271a717f81`. It constructs an exact dense nonmonomial rational orthogonal point with simple spectra that is strict under all twelve row/column pair swaps and pair-Rayleigh conditions, but whose sum has rank two. Hence twelve pair-optimality conditions, even with strict swap gaps, do not imply monomiality.
 
 2. **account02/B07, `MOC4-BIRAYLEIGH-ORBIT-v1`**: shared blob `f0bcc37f9bb492433b6ec9e7ad9e6428ed39a5c1`. It proves the singular-safe `2 x 2` Rayleigh formula for every true-unitary row/column pair orbit and the resulting twelve pair-top conditions at every global support maximizer.
 

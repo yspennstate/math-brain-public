@@ -11,7 +11,6 @@ attacking: the concentrated-volume two-sided-core receiver — aggregate a full 
 
 ## 1. Source boundary and first missing implication
 
-Fresh brain control was resolved at `yspennstate/math-research-brain@8a6fb9d2e7f9675d0140e96165182f9975006081`. The live OWNER CONTROL is revision `2026-09-22.15`; QFORM remains the sole research target. The full conjecture remains OPEN.
 
 This run starts from the newest physical-core reductions rather than another scalar pivot split. In particular:
 

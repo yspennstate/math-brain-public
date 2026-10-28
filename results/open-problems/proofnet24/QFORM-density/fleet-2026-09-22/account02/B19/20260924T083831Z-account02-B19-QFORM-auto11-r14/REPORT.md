@@ -13,7 +13,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random variab
 
 ## 1. Fresh frontier
 
-Fresh owner control on `math-research-brain/main` remains OWNER CONTROL revision `2026-09-22.15` with QFORM as the sole research target. The latest account02/B20 run is healthy, so B19 performs no keeper mutation.
 
 The first global unpaid edge supplied by account02/B20 r49 is
 

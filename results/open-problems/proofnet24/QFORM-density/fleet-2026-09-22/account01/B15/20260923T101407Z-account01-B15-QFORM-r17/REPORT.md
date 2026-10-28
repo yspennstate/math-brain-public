@@ -13,7 +13,6 @@ The unrestricted QFORM conjecture remains **OPEN**. This run proves two target-l
 
 ## 1. Sources and corrections actually consumed
 
-Fresh owner control remained on QFORM only, OWNER CONTROL revision `2026-09-22.15`, with no later B15 stop observed. The current B15 delivery obligation is to supply a precise rough-law limit or trace justification used by a new density estimate, with continuity kept separate from the central height problem.
 
 Completed partner results used at equations below:
 

@@ -10,7 +10,6 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. The theorem below is a sharp-witness rigidity statement for exact source-valid finite matrices. It does not add any Gaussian, moment, compact-support, connected-support, or post-rotation independence assumption to the owner target. The uniform inputs occur only in this explicit lower-witness family.
 
-Fresh prepublication control was read at `yspennstate/math-research-brain@c1f31aa1415f249d6f24957883117c9c19059365`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and account03/B17 is not paused. The live correction inbox blob at that refresh is `a884b835aba929c5376e6417ae5cfcd44c0f7a76`. In particular, nothing below uses the refuted law-uniform pointwise van-der-Corput estimate, arbitrary-joint coarea cap, conditional projection-density moment, or naive fiber-sup argument.
 
 ## 1. Exact weighted-bank target family
 

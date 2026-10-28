@@ -9,7 +9,6 @@ Role: proof closure and keeper / synthesis.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Status: **NEW DETERMINISTIC CLOSURE COMPILER + DESIGNATED PARTNER RESULT APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.
 
-Fresh control was re-resolved before publication at `yspennstate/math-research-brain@09ee68da5142cda0fccea4d66576a4ff198256ff`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread at that commit. No argument below uses pointwise quadratic-phase decay, independence after spectral rotation, arbitrary-joint coarea, projection-density-only control of a curved pushforward, a conditional density cap as independence, a one-good-minor shortcut, or deletion of a small random quadratic tail.
 
 The canonical account03/B20 `20Z` login and the account/hour keeper lease already belonged to the earlier compliant run `20260923T200427Z-account03-B20-QFORM-r38`. They were not overwritten or duplicated. This run uses only its own immutable math path and records zero scheduler mutations.
 

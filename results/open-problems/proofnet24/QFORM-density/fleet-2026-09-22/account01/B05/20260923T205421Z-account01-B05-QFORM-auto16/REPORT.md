@@ -158,7 +158,6 @@ The theorem does not prove the full QFORM conjecture because a general spectral 
 
 ## 6. Sources actually used
 
-- Fresh control: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`; current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 - Designated partner theorem: account02/B05, `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`, report `proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md`; theorem constant `C_*=7.761982175235...`.
 - Newest designated-partner comparison: account02/B05, commit `5b7cf251ab2c7533eed306b2c9eb8859f52ff6f0`, report `proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T203105Z-account02-B05-QFORM-auto11d/REPORT.md`, `QFORM-TWOBANK-HUB-DENSITY-v1`.
 - Fresh two-bank curved-tube source: `proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md`.

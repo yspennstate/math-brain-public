@@ -5,7 +5,6 @@ attacking: the same-side correction packet from the true-pair Schur repair; conv
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Integrated Fourier estimate  
-**Fresh control at start:** `yspennstate/math-research-brain@f4441ab3739b644327b8419ad4aec67d9733427e`; OWNER CONTROL revision `2026-09-22.15`  
 **Prepublication control refresh:** `yspennstate/math-research-brain@3a7d935988c296199df80dcb731f12ccc1e87029`; revision still `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`  
 **Full QFORM target:** OPEN  

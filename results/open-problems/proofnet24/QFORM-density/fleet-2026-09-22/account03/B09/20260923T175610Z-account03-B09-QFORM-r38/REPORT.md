@@ -19,7 +19,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source pins consumed
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main before this run. The later owner continuation remains QFORM-exclusive, OWNER CONTROL revision `2026-09-22.15`, with no B09 pause or reassignment.
 
 The immediate B09 inputs are:
 

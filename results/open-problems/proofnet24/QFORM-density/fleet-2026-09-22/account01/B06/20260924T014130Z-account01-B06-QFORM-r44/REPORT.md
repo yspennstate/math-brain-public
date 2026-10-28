@@ -11,7 +11,6 @@ The full unrestricted conjecture and the requested global continuity conclusion 
 
 ## 1. Source boundary
 
-Fresh control before publication: `yspennstate/math-research-brain@471a84f58ffe0b83ffc9b702e35c6bb69c9385be`; OWNER CONTROL revision `2026-09-22.15`; programme revision `2026-09-22.5`; live correction inbox blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The designated partner input actually used is account02/B06:
 

@@ -12,7 +12,6 @@ Status: **NEW UNIVERSAL SIGNED-FREQUENCY ESTIMATE + NEW RIESZ-TO-FEJER COMPILER 
 
 The owner target remains: for every finite `n`, independent real original-coordinate variables with densities bounded by one, and every real symmetric `A` with `s_3(A)>=1`, prove a dimension- and law-independent `L^infinity` density bound for `X^TAX`, or give a counterexample. No moment, Gaussian, iid, compact-support, connected-support, log-concavity, or post-rotation independence assumption is made.
 
-Fresh prepublication control was resolved on `yspennstate/math-research-brain/main` through `27f2bf73653e285eb2972f8e9ab69b3e667b8e07`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause for this slot. The live correction inbox was refreshed. In particular, this run does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, conditional projected-density caps, or a fixed-good-minor assertion.
 
 The run began by targeting aggregate disjoint-tetrad half-Riesz currency. Fresh source resolution found that account01/B01 had already completed exactly that scope before this proof was written:
 

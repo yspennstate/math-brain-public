@@ -10,7 +10,6 @@ The unrestricted QFORM conjecture and unrestricted continuity conclusion remain 
 
 ## Source boundary
 
-Fresh owner control remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`; no pause/stop applied to account02/B03. Live correction inbox blob before publication: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Required pinned package: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. Its Theorems D/D' and D5 are used only with their stated volume-sampling gates.
 

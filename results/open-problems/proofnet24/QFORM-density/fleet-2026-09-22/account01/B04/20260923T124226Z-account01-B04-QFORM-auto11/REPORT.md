@@ -11,7 +11,6 @@ Full unrestricted QFORM theorem: **OPEN**.
 Independent end-to-end review of the new theorem: **not yet recorded**.  
 Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh protected control immediately before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM only. The fresh main head observed immediately before publication was `83a3ace04f2accf15b157e4fffe34be2c1a0c0b7`. The live correction inbox was refreshed and the argument below does not use law-uniform pointwise quadratic-phase decay, independence after a spectral rotation, an arbitrary-joint coarea estimate, a worst conditional projection-density moment, a fiber supremum, or a uniformly good individual physical minor.
 
 ## 1. The first missing implication and the mechanism change
 

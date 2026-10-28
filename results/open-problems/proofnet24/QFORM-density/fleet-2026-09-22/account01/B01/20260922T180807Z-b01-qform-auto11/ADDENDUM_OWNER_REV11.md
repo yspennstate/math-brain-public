@@ -3,7 +3,6 @@ attacking: test the revision-2026-09-22.11 scalar-conditioning reduction `sup_b 
 
 # Addendum — the scalar-conditioning supremum route is false
 
-Fresh control advanced during this run to OWNER CONTROL revision `2026-09-22.11`. That control correctly marks the vector-complement conditional moment as a dead end, and proposes instead the scalar-conditioning quantity
 
 `M = sup_b ||p_{Q3 | Q'=b}||_infinity`
 

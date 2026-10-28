@@ -7,7 +7,6 @@ Run: `20260922T190433Z-account01-B16-QFORM-auto11`
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Classification: **ESSENTIAL_STEP_APPLIED / SUPPORTING FULL-MATRIX BRANCH PROVED / FULL QFORM OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
-Fresh control used before the main write: `yspennstate/math-research-brain@22540f97867e35d0e2ef3976586c6770d0238210`, OWNER CONTROL revision `2026-09-22.13`. The mathematical corrections in CURRENT_RESEARCH / CORRECTION_INBOX override the refuted rank-three arbitrary-joint coarea and normalized conditional-supremum claims still present in owner-message prose.
 
 ## 1. Target and source-corrected first implication
 

@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and first missing implication
 
-Fresh control was resolved from `yspennstate/math-research-brain` and refreshed before publication; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the full conjecture remains OPEN. The live correction inbox was consumed. In particular, nothing below uses independence after spectral rotation, an arbitrary-joint coarea bound, a law-uniform pointwise quadratic-phase decay estimate, a conditional-density-cap-as-independence substitution, a fiber supremum, moments, compact support, connected support, log-concavity, Gaussianity, or deletion of a small coefficient times an unbounded random variable.
 
 The immediate predecessor is
 

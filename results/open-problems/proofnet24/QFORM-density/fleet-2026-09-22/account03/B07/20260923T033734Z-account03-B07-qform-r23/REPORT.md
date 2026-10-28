@@ -6,7 +6,6 @@ attacking: the N3 four-bank survivor — route the near-rank-two and two-sided b
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** coordinate minor selection / GEOMETRY  
 **Run:** `20260923T033734Z-account03-B07-qform-r23`  
-**Fresh pre-write control:** `yspennstate/math-research-brain@fb1cd73d0912a1ef24d1ecea573c6c27780579dd`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Classification:** `NEW DIMENSION-FREE PHYSICAL-MINOR ROUTING THEOREMS / FULL TARGET OPEN`.
 

@@ -7,7 +7,6 @@
 
 ## 0. Control resolution and exact live target
 
-The exact control snapshot read at the start of this run was `math-research-brain` main commit `a93fc89f6ca95f2c41d18e5146cef106d3bc2e7e`, revision `2026-09-22.2`. Its later OWNER MESSAGE supersedes the stale interface-D-only wording and requires the FEI fleet to converge on the all-gate potential inequality
 
 \[
 \Gamma(p_{\rm out})+\widetilde H_G(p)

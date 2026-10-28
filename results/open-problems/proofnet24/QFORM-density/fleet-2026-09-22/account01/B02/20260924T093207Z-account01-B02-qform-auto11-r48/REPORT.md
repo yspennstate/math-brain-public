@@ -13,7 +13,6 @@ The target remains exact: independent ORIGINAL real coordinates with probability
 
 ## 1. Fresh sources and mechanism change
 
-Fresh `math-research-brain/main` was read at startup. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. I read fresh `AGENTS.md`, `scheduled_tasks/README.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B02.json`.
 
 Immediate predecessor:
 

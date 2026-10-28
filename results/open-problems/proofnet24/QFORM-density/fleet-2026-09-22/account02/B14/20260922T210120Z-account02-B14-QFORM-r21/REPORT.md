@@ -486,6 +486,5 @@ A successful structural theorem of this kind would convert the translation/local
 
 ## 9. Source integrity and correction status
 
-Fresh control at the beginning of this run was `yspennstate/math-research-brain@93ae80dc03e853d4bb5ff871fe778010728d52e0`; before significant publication the control branch was refreshed again and remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`, with no account02/B14 stop.  The programme state continued to mark `QFORM-FULL` OPEN.
 
 Repository retrieval was genuine, including the complete assigned-partner proof, but no authenticated native brain receiver-memory use occurred.  Execution therefore remains `WITHOUT_VERIFIED_BRAIN`.  No scheduler mutation, task creation, email/notification action, cross-account authentication, paid model/API/Codex call, public release, remote workflow, permission change, credential access, benchmark answer use, or unrelated private-data access occurred.

@@ -12,7 +12,6 @@ The full QFORM target remains OPEN / NOT PROVED / NOT DISPROVED. This report tre
 
 ## 1. Pinned sources actually used
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The required newest-Claude source actually used is
 
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
 

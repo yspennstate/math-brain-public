@@ -6,7 +6,6 @@ attacking: determinant-only closure from any quantitatively nonsingular original
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260922T183248Z-account02-B14-QFORM-r18`  
 **Assignment:** Translations and localization  
-**Control used before publication:** `yspennstate/math-research-brain@a2fb861c2ec63ac9bf703751c3561ff57c7f9db7`, OWNER CONTROL revision `2026-09-22.11`  
 **Status:** `PROVED SUPPORTING TARGET-LEVEL BRANCH / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
 

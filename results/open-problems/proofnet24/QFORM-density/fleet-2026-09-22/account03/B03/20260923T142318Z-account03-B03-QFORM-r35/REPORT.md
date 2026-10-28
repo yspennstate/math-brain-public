@@ -10,7 +10,6 @@ attacking: decoupled time integral at the near-coloop angular-cancellation endpo
 
 The full owner target remains open and the full continuity conclusion remains open. This report proves a new source-preserving aggregation lemma and a dependence-safe time-integral theorem in the exact one-sided-overlap packet. It does not infer independence after spectral rotation, does not condition a sum/difference variable and reuse its marginal cap, and does not use law-uniform pointwise quadratic-phase decay.
 
-Fresh source control at publication was `yspennstate/math-research-brain@18965d8c4302c3edf76f6af7f3ca7de0af253885`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no B03 pause/stop. The live correction inbox was reread at that control line.
 
 ## 1. Source-valid inputs actually used
 

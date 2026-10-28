@@ -15,7 +15,6 @@ No moment, support, Gaussian, log-concavity, connectedness, spectral-coordinate 
 
 ## 1. Source boundary and completed inputs
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main. Startup control commit was `88ec2ee786408f69429c67221d0da7996b9455d1`; the prepublication refresh was `32d2893a86cbf54ad2f0bbdb7313752b128d7ba9`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause or reassignment of account03/B08. The live correction inbox was reread before publication.
 
 ### 1.1 Designated partner account04/B08 r2
 

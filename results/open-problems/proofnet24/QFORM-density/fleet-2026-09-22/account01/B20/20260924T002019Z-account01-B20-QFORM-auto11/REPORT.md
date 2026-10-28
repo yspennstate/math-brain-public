@@ -20,7 +20,6 @@ No Gaussian, moment, iid, compact-support, log-concavity, connected-support or r
 
 The unrestricted theorem remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
-Fresh control source at publication preparation: `yspennstate/math-research-brain@39ca3bebe297a874d8e9abb356c73b8c0b90edee`, OWNER CONTROL revision `2026-09-22.15`.
 
 ## 2. Completed designated-partner result consumed
 

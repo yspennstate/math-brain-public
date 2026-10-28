@@ -12,7 +12,6 @@ The full target remains: independent original real coordinates with scalar densi
 
 ## 1. Sources actually consumed
 
-Fresh owner control was read from `yspennstate/math-research-brain` main; OWNER CONTROL is still revision `2026-09-22.15` and QFORM is the sole active research target. The required source package was read at the owner-pinned commit
 
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
 

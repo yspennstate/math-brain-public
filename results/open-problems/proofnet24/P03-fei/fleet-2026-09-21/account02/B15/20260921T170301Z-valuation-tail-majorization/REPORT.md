@@ -9,8 +9,6 @@ TASK: B15 ACCOUNT: account02 RUN: 2026-09-21T17:03:01.165703Z — FEI spectral r
 ## 0. Fresh control, scientific frontier, and what moved
 
 Authenticated fleet control was resolved at `yspennstate/math-research-brain` main commit
-`c659fee54abcc190088286311cc97cf6854c0cfb`, OWNER CONTROL revision `2026-09-21.1`.
-The full natural-language OWNER MESSAGE was read. B15 remains assigned to **FEI spectral remainder proof** under directive
 `BRAIN-BENCHMARK-FEI-2026-09-21-01`; no account02/B15 pause or stop was present. The protected README Git blob was
 `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`.
 

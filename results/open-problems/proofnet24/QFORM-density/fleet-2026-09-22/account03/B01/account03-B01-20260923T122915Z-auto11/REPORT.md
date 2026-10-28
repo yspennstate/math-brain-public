@@ -11,7 +11,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 ## 1. Source and correction boundary
 
-Initial fresh control commit was `91e1a4b2910d1fcf9730d9f0f20d66ff38e097d1`. Immediately before publication control was refreshed at `086e04c720f2a230fc61b46b2ee5fdbd73dc6d2d`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause or reassignment. The live correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The unrestricted target remains open. This report uses no law-uniform pointwise quadratic-phase decay, no post-rotation independence, no arbitrary-joint coarea bound, no conditional projection-density moment, and no uniformly good fixed physical minor. The phase-aligned fragmented-support counterexample is preserved.
 

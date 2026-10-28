@@ -13,7 +13,6 @@ Continuity: proved on the D'/D3-paid branch below; not claimed for the remaining
 
 ## 1. Fresh source graph and corrections
 
-Fresh control was read from `yspennstate/math-research-brain` main at `cc60e8deb4714edd884dde5e55511a9a6546c78b` and refreshed during the run; OWNER CONTROL revision `2026-09-22.15` remained live. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. QFORM is the sole target and no later B19 stop was found.
 
 The full conjecture remains OPEN: independent real coordinates with arbitrary probability densities bounded by one; arbitrary real symmetric A with at least three eigenvalues of absolute value at least one; prove one universal finite essential density bound for X^T A X. No moments, iid law, support condition, smoothness, log-concavity or sign restriction is assumed. Continuity is separate.
 

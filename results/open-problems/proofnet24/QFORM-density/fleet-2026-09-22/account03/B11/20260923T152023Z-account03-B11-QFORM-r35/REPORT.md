@@ -11,7 +11,6 @@ This run proves an exact probability identity for every exact-rank-three Parseva
 
 Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control was reread before final publication at `yspennstate/math-research-brain@aaaab09d75e8fca3ac5295d8ea1f9e942d541eee`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction inbox still forbids post-rotation independence, law-uniform pointwise quadratic stationary phase, unrestricted joint coarea, conditional-cap substitutions, and single-good-minor assertions.
 
 ## 1. Source-pinned inputs actually used
 

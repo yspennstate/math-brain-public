@@ -11,7 +11,6 @@
 
 The target remains: for arbitrary independent real coordinates with densities `0<=f_i<=1` and every real symmetric `A` having at least three eigenvalues of absolute value at least one, prove one dimension/law/matrix-independent upper bound for the density of `X^T A X`, or give a valid counterexample. No moment, compact-support, identical-law, sign, or post-rotation independence hypothesis is added.
 
-Fresh brain control was read on `main`; the initial observed head was `4e09a9c664beb1c3cbe4b34ae5cf8ec647764281`, and the prepublication head was `5f3ca567bfbf0dad2cc703c876ea97c051cc7a5b`, with unchanged OWNER CONTROL revision `2026-09-22.5`. Required corrections were re-read immediately before publication: law-uniform pointwise Fresnel decay is false; unrestricted fiber suprema lose dimension; post-rotation independence is unavailable; a single cross minor / scalar-pivot dichotomy is false; transformed conditional density caps cannot be substituted for original product structure.
 
 Source-pinned mathematics actually used:
 

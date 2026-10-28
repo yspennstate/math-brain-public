@@ -14,7 +14,6 @@ Continuity: **not proved in the full scope below**; essential boundedness and ab
 
 The full target remains open. Inputs are independent original-coordinate real random variables with probability densities bounded by one; the matrix is an arbitrary real symmetric matrix with at least three eigenvalues of modulus at least one. No moment, support, Gaussian, log-concavity, connected-support, identical-law, or post-rotation-independence hypothesis is added.
 
-Fresh owner control was read at `yspennstate/math-research-brain` main and remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. The live corrections were re-read before publication. In particular:
 
 * law-uniform pointwise quadratic Fresnel decay is false for arbitrary cap-one densities;
 * an arbitrary spectral rotation does not preserve independence;

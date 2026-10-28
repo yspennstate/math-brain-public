@@ -5,7 +5,6 @@ attacking: translation-uniform square lifting of finite-Lp bilinear residuals an
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `B09-20260922T204925Z-r17`  
-Fresh control at start: `yspennstate/math-research-brain@db500d7c08947ef7050810af75725b0c2bfdcdee`; refreshed before publication at `5f5287423294b49cee78425e4a7cc98f4677f49d`; OWNER CONTROL revision `2026-09-22.15`.  
 Outcome: **ESSENTIAL_STEP_APPLIED / NEW SUPPORTING THEOREMS / FULL TARGET OPEN**.  
 Execution: **WITHOUT_VERIFIED_BRAIN**.
 

@@ -5,7 +5,6 @@ attacking: a null-hub plus dependent three-dimensional product-projection kernel
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full conjecture remains OPEN. This checkpoint is a supporting calculation, not a full solution.
 
-Fresh control source at start: yspennstate/math-research-brain@5fb1d59050b4be581cd5ecb4aca3463d875d04c3, OWNER CONTROL revision 2026-09-22.15. Corrections retained: no arbitrary-joint rank-three coarea bound, no positive conditional projection-height moment, no independence after rotation, no receiver-only indefinite fiber bound, no law-uniform pointwise quadratic stationary-phase decay.
 
 Newest Claude source actually used: yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md. Its Theorem 5 / definite planar curved geometry is used below in the set-valued form |{y:y^T C y in E}| <= pi |E|/sqrt(det|C|) for definite 2x2 C.
 

@@ -11,7 +11,6 @@ The full conjecture remains open. This report proves a new three-colour product-
 
 ## 1. Source boundary
 
-Fresh controls were read from `math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`, together with the current request `QFORM-CLAUDE-LATEST-20260922T225732Z`. The required Claude directory remains a source of scoped inputs, not a full proof.
 
 The newest completed account01/B10 source actually used is
 

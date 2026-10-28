@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. Full-target continuity remains OPEN. T
 
 ## 1. Fresh source state and a deliberate change of mechanism
 
-Fresh owner control was reread before publication and remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox was also reread. In particular the proof below respects the corrections against post-rotation independence, one-minor selection, and law-uniform pointwise oscillatory decay.
 
 I changed mechanism from the preceding deletion/star/alignment runs r36--r44 to the third exterior power of the actual full matrix.
 

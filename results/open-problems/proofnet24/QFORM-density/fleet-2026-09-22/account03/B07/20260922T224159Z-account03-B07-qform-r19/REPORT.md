@@ -6,7 +6,6 @@ attacking: the two-star curvature survivor after the new checkerboard-wedge redu
 **Run:** `20260922T224159Z-account03-B07-qform-r19`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
-**Fresh control at start:** `yspennstate/math-research-brain@8f4fc3081c4197ab549d4aa2b3bde859a10de324`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Classification:** `ESSENTIAL_STEP_APPLIED / SUPPORTING THEOREMS / FULL TARGET OPEN`.
 

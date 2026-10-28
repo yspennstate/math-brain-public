@@ -1,7 +1,6 @@
 # account02/B08 — diffuse eigenvector case
 
 **Run:** `B08-20260922T113624Z-qform11`  
-**Live programme:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 **Assignment:** Diffuse eigenvector case  
 **Classification:** `ESSENTIAL_STEP_APPLIED / DIFFUSE-RANK3-FOURIER-BL-CERTIFICATE`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`  
@@ -15,8 +14,6 @@ Fresh owner control superseded the stale FEI prompt during this invocation. The 
 
 Control/source pins used in this run:
 
-- `yspennstate/math-research-brain@2bdc6a17b2e88b7b0e897f78dd9041e79531c012`, `scheduled_tasks/README.md`, OWNER CONTROL `2026-09-22.5`.
-- Same commit, `scheduled_tasks/work/shared/qform-density-2026-09-22/CURRENT_RESEARCH.md`, blob `c8e8cd4d7065799e210a55810a500bbf589cd103`.
 - Same commit, assignment card `assignments/account02/B08.json`, blob `bd33fcd74bd3b2f9c5ef975df074c30c749dbc8d`.
 - `CORRECTION_INBOX.json` at the publication precursor snapshot contained no additional events.
 - Completed peer source actually consumed: `yspennstate/math-research-brain@2dac8145f316ba9ecced5c98093efc681522a878`, `scheduled_tasks/runs/account03/B16/20260922T113226Z-qform-r11/report.md`, blob `07109b1e3a16125ab7965e557a73c58e44d10715`.

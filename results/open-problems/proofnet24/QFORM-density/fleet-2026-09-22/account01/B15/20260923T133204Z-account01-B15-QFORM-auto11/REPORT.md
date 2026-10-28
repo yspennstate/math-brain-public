@@ -10,7 +10,6 @@ attacking: a weak-law-stable fixed-tent normal form for the exact sharp density 
 
 ## 1. Control, scope, and exact target
 
-Fresh final control was re-resolved at `yspennstate/math-research-brain@0cdc732db5de9f7573ef7fa36d1f8c01d3184e67`. The protected `AGENTS.md` and `scheduled_tasks/README.md` blobs are unchanged from the startup read; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and no later B15 stop was observed.
 
 The full target remains OPEN: for independent real coordinates with probability densities `0<=f_i<=1` and symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite bound on the essential density height of
 

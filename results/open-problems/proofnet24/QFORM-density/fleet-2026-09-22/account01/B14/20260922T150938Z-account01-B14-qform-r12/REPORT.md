@@ -307,7 +307,6 @@ This removes the need to insist on a globally triangular elimination order. Mild
 
 - source control immediately before scientific write: `yspennstate/math-research-brain@143158f9cac70bca95f553d1abd9da0bfa496eb1`;
 - programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
-- assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account01/B14.json`;
 - named partner actually applied: account02/B14, `yspennstate/math-open-problems@d358b89ba78735cee238c01e83c2c3ca9ec66352`, exact report path in Section 2;
 - exact localization compatibility source checked: account03/B14, `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`;
 - fresh correction inbox re-read at control commit `143158f9cac70bca95f553d1abd9da0bfa496eb1`, including the newer `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1`; no challenged premise above depends on that refuted structural implication.

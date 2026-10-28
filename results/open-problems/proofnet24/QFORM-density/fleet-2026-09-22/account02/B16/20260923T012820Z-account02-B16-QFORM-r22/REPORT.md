@@ -19,7 +19,6 @@ Thus any remaining nonzero-pivot/two-sheet branch must retain stronger original-
 
 ## 2. Sources actually used at equations
 
-Fresh owner control was `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`.
 
 Required Claude source pinned by the owner:
 

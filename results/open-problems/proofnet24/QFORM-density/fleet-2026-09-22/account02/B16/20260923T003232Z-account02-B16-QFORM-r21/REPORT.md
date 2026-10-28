@@ -11,7 +11,6 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`. Authenticated repository retrieval 
 
 ## Pinned sources actually consumed
 
-Control source: `yspennstate/math-research-brain`, fresh main `1b1c3533f0a9ae4bab631e0ad4d5c4ccd76d2ead` at invocation start; final pre-write control refresh `5d064dc0a591457d0da4cf92b111d1de857d7e99`; OWNER CONTROL revision `2026-09-22.15`, no pause for account02/B16.
 
 Required newest-Claude package:
 - `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`

@@ -20,7 +20,6 @@ Runs r26-r27 controlled arbitrary signed spectral changes on an **invertible** p
 3. an exact rank-one resonance formula even when the baseline core is singular;
 4. a two-physical-core compiler: **two distinct local resonance points already give a uniform bound for every real added eigenvalue**, with no opposite-sign inverse-leverage hypothesis.
 
-Fresh brain control immediately before this write was observed at `bd39b541bfc852473ee5220331de0fb6ef6678d6`; OWNER CONTROL remained revision `2026-09-22.15` and programme revision `2026-09-22.5`. The live corrections were re-read. No argument below uses pointwise quadratic van-der-Corput decay, arbitrary-joint coarea, a conditional density cap after spectral rotation, naive fiber-sup integration, or independence of a spectral remainder.
 
 ## 2. Sources actually consumed
 

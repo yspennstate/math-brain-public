@@ -22,7 +22,6 @@ Section 7 gives a target-valid family proving this method obstruction exactly.
 
 ## 2. Source boundary and duplicate-work audit
 
-Fresh owner control remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with no later stop or B09 reassignment found before this report. The live correction inbox was reread. In particular this run does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint three-dimensional coarea, conditional projection caps after rotation, a fiber supremum, or a uniformly good single physical minor.
 
 Required historical source, read at the owner-pinned commit:
 

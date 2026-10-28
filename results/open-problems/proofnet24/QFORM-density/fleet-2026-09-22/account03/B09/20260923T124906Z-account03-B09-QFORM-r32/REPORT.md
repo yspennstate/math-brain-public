@@ -23,7 +23,6 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Current controls, corrections, and sources actually used
 
-Fresh prepublication control was read from `yspennstate/math-research-brain` main after it advanced during this run. `scheduled_tasks/README.md` still carries OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, no paused account03/B09 slot. The live correction inbox was refreshed immediately before this report.
 
 Corrections retained include: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; naive spectral-fiber suprema can lose dimension; an arbitrary-joint rank-three coarea estimate is false; a universally good single physical cross minor is false; and max-singleton third-volume stability is false. None of those corrections refutes the original QFORM conjecture.
 

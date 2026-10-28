@@ -20,7 +20,6 @@ The account03/B01 assignment is to try a determinant/integral or coupling repres
 
 Consumed the current lead handoff `FOREST-KN-COCKS-RECONCILED-v3`,
 
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account01-B01-20260922T030948Z-v3.md`, blob `e02a4281a67d992d06d7c2c70586efa656353cab`,
 
 and its full scientific report
 
@@ -32,7 +31,6 @@ The lead candidate has no currently identified unpaid implication: it proves eve
 
 Consumed account04/B02's current handoff
 
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account04-B02-20260922T030824Z.md`, blob `c5776f4ffec3033953ce460620bbf7f2e170aaad`.
 
 That result gives exact overlap-reservoir formulas on `K_n` and, crucially, a disjoint-edge `K_5` witness showing that a **q-only** defect-routing coupling is impossible: its cells are `(n00,n10,n01,n11,q)=(49,21,21,43,14)` and the q-only capacity is insufficient, while the ordinary switch channel restores the positive Rayleigh gap `210`.
 

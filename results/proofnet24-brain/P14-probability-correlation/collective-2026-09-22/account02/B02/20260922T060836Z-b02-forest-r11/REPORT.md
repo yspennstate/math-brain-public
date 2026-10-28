@@ -20,7 +20,6 @@ Fresh main was resolved before work and refreshed before substantive writes. The
 - TARGETS blob `a8cafa98cdb074ed15d0e214f8f54ee514c500df`;
 - ASSIGNMENTS blob `fe144a4be3522d57f8cb2dc40b1fc57df7c7fda`.
 
-Whole-file SHA-256 for the rendered control README and isolated OWNER MESSAGE are `NOT_RECOMPUTED_CONNECTOR_BYTE_HASH_PIPELINE_NOT_EXPOSED`; I do not recycle a prior digest.
 
 Exact B02 assignment: derive a source-valid polynomial/probabilistic comparison for uniform unrooted forests at unit edge weights and justify any log-concavity/Rayleigh input. Named partner: `account03/B03`. Campaign lead: `account01/B01`.
 

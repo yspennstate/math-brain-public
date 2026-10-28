@@ -12,7 +12,6 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 ## 1. Fresh state and exact incoming branch
 
-Fresh startup control was `yspennstate/math-research-brain@6d966e0177a2aeb4a175e32aa4bc46dcc6161530`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B07 pause or reassignment. The current claim ledger still marks the unrestricted bounded-density conjecture and the full-target continuity conclusion OPEN.
 
 The immediate mathematical input is account03/B07 r47,
 

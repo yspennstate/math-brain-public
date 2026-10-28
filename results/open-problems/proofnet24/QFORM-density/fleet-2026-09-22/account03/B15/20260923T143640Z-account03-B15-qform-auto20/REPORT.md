@@ -196,6 +196,5 @@ A separate completed account02/B15 report source-reports a fixed-instance `C_0` 
 
 Native status remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval was authenticated, but no authenticated native mathematical-receiver ingestion/use was observed.
 
-Fresh control at start: `yspennstate/math-research-brain@7f70e05a57f62a7bc1be45aeb28899e17a585b2c`, OWNER CONTROL revision `2026-09-22.15`. Controls and live corrections must be refreshed again before publication.
 
 No scheduler/task state, email, notification, permission, public-release, cross-account authentication, paid model/API/Codex call, installation, or remote workflow was changed.

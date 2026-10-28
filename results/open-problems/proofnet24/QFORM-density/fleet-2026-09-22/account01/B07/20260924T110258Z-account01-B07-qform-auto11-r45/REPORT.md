@@ -11,7 +11,6 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concavity, moment, co
 
 ## 1. Source-pinned incoming state
 
-Fresh owner control at startup was read from `yspennstate/math-research-brain` with branch-head observation `4172e80ba9f6e425954868a6f63b7ef24b16319c`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and no B07 pause/reassignment was present.
 
 The immediate B07 predecessor is
 

@@ -3,6 +3,5 @@ attacking: the low-cross-rank strong-cut collar — derive an integrated-Fourier
 
 Programme: QFORM-DENSITY-3EIG-20260922. Current owner continuation QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z acknowledged. Full target remains OPEN. Brain status remains WITHOUT_VERIFIED_BRAIN unless native ingestion is actually verified.
 
-Fresh control read from math-research-brain main: OWNER CONTROL revision 2026-09-22.15, QFORM-only. Fresh current release says the unrestricted arbitrary-rough-law conjecture remains open. Live corrections retained: no post-rotation independence, no law-uniform pointwise quadratic-phase decay, no arbitrary-joint coarea cap, no worst conditional-height shortcut, no deletion of a small coefficient tail under unbounded fragmented inputs.
 
 Designated partner source selected for actual use: account02/B02, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T170839Z-account02-B02-qform-auto11/REPORT.md`, especially its marginal-free physical-E3 Fourier theorem and scalar-Schur physical lift. I will apply one of these to a concrete inequality, not merely cite it.

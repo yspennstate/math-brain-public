@@ -40,7 +40,6 @@ The owner's numerical AND/decomposable-extremality conjecture is already refuted
    \tag{1.3}
    \]
 
-The older account01/B18 curvature-refunded physical-restriction theorem remains valid and preserved, but the later OWNER MESSAGE explicitly supersedes the older A/B route as the substantive target. I therefore do not combine it conditionally into a false unconditional closure.
 
 ## 2. New theorem: every proper balanced restriction of `G_10` falls below 6.35
 

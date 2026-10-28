@@ -16,7 +16,6 @@ Fresh `math-research-brain/main` was read in this invocation. The final prepubli
 
 `c33c5449a7fcb686bf59450551ec160693c43ce3`,
 
-with OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole target, no paused account/slot affecting account03/B04, and full QFORM still open. The live correction inbox was reread at the same ref. The proof below respects the active corrections: no post-rotation independence, no law-uniform pointwise Fresnel decay, no arbitrary-joint coarea cap, no conditional-density-supremum shortcut, and no inference that one uniformly good local minor follows from the spectral hypothesis.
 
 The two mathematical inputs used are:
 

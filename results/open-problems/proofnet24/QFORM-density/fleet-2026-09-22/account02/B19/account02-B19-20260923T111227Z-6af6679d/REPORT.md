@@ -5,7 +5,6 @@ attacking: the strict-N3 STAR two-channel gap — test whether the two quantitat
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly / SYNTHESIS / complementary constructions and source-valid counterexamples  
-**Fresh owner control read:** `yspennstate/math-research-brain@8c376e8113908b0bc1d610da2844d1680bfb9c96`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED + CANDIDATE_STRUCTURAL_IMPLICATION_REFUTED`; full QFORM remains OPEN.
 

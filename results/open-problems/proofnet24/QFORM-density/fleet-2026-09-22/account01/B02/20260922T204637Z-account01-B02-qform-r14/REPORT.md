@@ -7,7 +7,6 @@ Run: `20260922T204637Z-account01-B02-qform-r14`.
 Programme: `QFORM-DENSITY-3EIG-20260922`.
 Status: **ESSENTIAL_STEP_APPLIED / FULL TARGET OPEN / WITHOUT_VERIFIED_BRAIN**.
 
-Fresh owner control was read on `yspennstate/math-research-brain` main, initially at `f24887ffa34adb07615288708fdb4801dfe0f466` and refreshed before publication at `a4ddb5b0246ac8e7826eb5bc6f414a582ffb7ea2`; OWNER CONTROL revision remains `2026-09-22.15`, QFORM only.
 
 ## 1. Exact scope and correction discipline
 

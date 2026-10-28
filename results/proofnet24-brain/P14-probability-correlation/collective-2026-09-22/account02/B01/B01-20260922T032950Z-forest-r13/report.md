@@ -11,7 +11,6 @@ Context: **WITHOUT_VERIFIED_BRAIN**
 The active target is the uniform law on all unrooted acyclic edge subsets of a finite simple graph, with unit edge weights. The required inequality is pairwise negative edge correlation.
 
 This run consumed the latest lead handoff `FOREST-KN-COCKS-RECONCILED-v3`, path
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account01-B01-20260922T030948Z-v3.md`, blob `e02a4281a67d992d06d7c2c70586efa656353cab`. That handoff records the separate complete-graph/Hermite -> fixed-graph Cocks -> minor-closure candidate and its two existing independent reviews. I do not re-promote it here; this run remains on the assigned separator/deletion-contraction mechanism.
 
 The named OTHER-account result actually applied is the partner account03/B02 handoff
 `account03-B02-20260922T0322Z-theta3-multigraph-reduction.md`, blob `3ca8177c939ff28e9b192276e478940e7fda4f9b`. Its exact contribution is the unit-law equivalence between finite simple graphs and finite loopless multigraphs obtained by the theta-3 replacement, together with the unit-minor sign-cluster consequence.

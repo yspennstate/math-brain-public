@@ -1,7 +1,6 @@
 # account01/B06 r48 — degenerate two-hub curved receivers
 
 **Run:** `20260924T060138Z-account01-B06-QFORM-r48`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`  
 **Assignment:** curved fiber integration  
 **Status:** new supporting analytic theorems; full unrestricted QFORM remains OPEN; global continuity remains OPEN  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (authenticated repository retrieval/publication occurred, but no native learned-memory receiver use was verified)

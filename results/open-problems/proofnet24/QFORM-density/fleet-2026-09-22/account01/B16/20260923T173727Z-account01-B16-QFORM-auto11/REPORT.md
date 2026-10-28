@@ -13,7 +13,6 @@ attacking: rank-(3,2) source-cut projection-product closure—combine genuine 3D
 
 The full owner target remains OPEN: arbitrary finite dimension, independent original-coordinate real variables with one-dimensional densities at most one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No support, moment, smoothness, log-concavity, identical-law, diagonal-basis, or post-rotation-independence hypothesis is introduced here.
 
-Fresh control was resolved on `math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`, including continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The current Claude continuation and later source commits were read. The live corrections retained throughout are:
 
 - a bounded joint projected density alone does **not** control an indefinite quadratic level-set integral;
 - a spectral/source rotation does **not** create independence among projected coordinates;
@@ -397,7 +396,6 @@ The full arbitrary-rank QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPR
 
 ## 7. Source pins and verification record
 
-- fresh owner control at run start: `yspennstate/math-research-brain@1798756838c5a8f36cd8b102744792b300e9882f`, OWNER CONTROL revision `2026-09-22.15`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`;
 - product-projection theorem: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`;
 - overlap-square theorem: `yspennstate/math-open-problems@bfb102a2317191969c16cf336b53ed47a8a06c6d:proofnet24/QFORM-density/fleet-2026-09-22/account01/B16/account01-B16-20260923T170732Z-auto11/REPORT.md`;
 - newest account02/B16 partner: `yspennstate/math-open-problems@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8:proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/account02-B16-20260923T163017Z-auto11b/REPORT.md`;

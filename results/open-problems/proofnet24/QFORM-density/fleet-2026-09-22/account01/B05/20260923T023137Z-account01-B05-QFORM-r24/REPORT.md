@@ -5,7 +5,6 @@ attacking: the near-rank-one scalar-pair transition in the one-rank-two/two-rank
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound.  
-**Fresh prepublication control:** `yspennstate/math-research-brain@7ef10720eda775b4405797e51a228db0d9458e45`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (authenticated repository retrieval occurred; repository transport is not native learned-memory ingestion).  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / PRECISE_REMAINING_FACTOR_IDENTIFIED`.  
 **Full QFORM:** `OPEN_NOT_PROVED`.  

@@ -17,7 +17,6 @@ No moment, support, iid, Gaussian, log-concavity, connected-support, or post-rot
 
 ### 1.1 Current control
 
-Fresh control was read on `yspennstate/math-research-brain@f2268894a29f0e4796d88319211c4ae227f58dd1`. `scheduled_tasks/README.md` has OWNER CONTROL revision `2026-09-22.15`, keeps QFORM as the sole mathematical target, and has no pause for account01/B08. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` asks every real invocation to sign in briefly and then publish substantive mathematics. The current release checkpoint explicitly keeps the unrestricted rough-input QFORM problem open.
 
 ### 1.2 Completed designated-partner theorem
 

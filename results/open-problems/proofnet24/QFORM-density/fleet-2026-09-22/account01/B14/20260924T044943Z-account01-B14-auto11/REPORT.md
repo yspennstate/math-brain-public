@@ -9,7 +9,6 @@ Status: **NEW ZERO-LOSS LOCALIZATION LEMMA + TARGET-VALID PARTNER APPLICATION / 
 
 The owner target remains the unrestricted statement for independent original-coordinate variables with probability densities at most one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No moment, centering, support, connectedness, log-concavity, iid, diagonal-basis, or post-rotation-independence assumption is introduced below. The known law-uniform pointwise quadratic Fourier decay is not used.
 
-Fresh control source before this run: `yspennstate/math-research-brain@aa2367e22ada13d982748057e4a0788e0e61adfe`; programme `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`. Relevant corrections retained include the false pointwise oscillatory shortcut, failure of fixed-diameter/fixed-fragment spatial localization, and failure of post-rotation independence.
 
 ## 1. A localization object that is already aggregated
 

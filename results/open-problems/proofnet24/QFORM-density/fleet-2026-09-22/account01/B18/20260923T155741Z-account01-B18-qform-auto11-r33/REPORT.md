@@ -13,7 +13,6 @@ attacking: lift the latest account02/B18 exact-rank-three heavy-anchor closure t
 
 The owner target remains the unrestricted statement: for arbitrary independent real original-coordinate inputs with densities at most one and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one, prove one universal finite essential density bound for `X^T A X`. The unrestricted claim is still OPEN.
 
-Fresh prewrite control remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. This argument never rotates the random variables, never treats spectral projections as independent, never invokes the false arbitrary-joint rank-three coarea inequality, never replaces a conditional density cap by independence, never takes a positive moment of a worst conditional projection cap, and never deletes the small nonzero pivot perturbatively.
 
 The new point is a transfer that is elementary but useful for proof assembly: the latest exact-rank-three partner theorem can be applied **inside an arbitrary ambient matrix** whenever an ORIGINAL-coordinate principal block has the required rank-three geometry. Arbitrary extra spectrum and arbitrary couplings to the conditioned coordinates then disappear into affine terms, which the cited analytic theorems already handle uniformly.
 

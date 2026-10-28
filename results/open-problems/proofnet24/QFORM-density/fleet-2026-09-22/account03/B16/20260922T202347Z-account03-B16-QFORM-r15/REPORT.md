@@ -5,7 +5,6 @@ attacking: replace the false projection-height/coarea interface by an original-c
 
 Run: `20260922T202347Z-account03-B16-QFORM-r15`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Initial fresh control: `yspennstate/math-research-brain@e6a76f4ec20a36b4c63611f377476edc1a03fda8`, OWNER CONTROL revision `2026-09-22.15`.  
 Assignment: Projection-product interaction.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Status: `PROVED SUPPORTING THEOREM / AMBIENT PHYSICAL-TRIPLE BRANCH / FULL QFORM OPEN`.

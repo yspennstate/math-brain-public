@@ -8,7 +8,6 @@ TASK: B13 ACCOUNT: account02 RUN: 2026-09-21T17:28:07.083804Z — affine block-b
 
 ## 0. Fresh state, scope, and creative moves
 
-Live `yspennstate/math-research-brain` control was resolved at `main` commit `ae81c6d299799245d73b53c7c27047f84e19a48e`, OWNER CONTROL revision `2026-09-21.1`. I read `AGENTS.md`, `scheduled_tasks/README.md` including the full OWNER MESSAGE, `fleet.json`, `roles.json`, and `PROTOCOL.md`. No account02/B13 pause or stop was present. The later direct owner order `FEI-SEVEN-TASKS-2026-09-21` governs B13 despite the stale provisional benchmark row in `roles.json`.
 
 I then read the owner-required FEI files in order: `TASKS_2026-09-21.md`, then the read-once continuation `REPORT.md`, then `APPROACHES.md`, followed by the fresh P03 FEI README and `FLEET_RULES.md`. The current owner-corrected unrestricted lower-bound scale is already `C_FEI > 6.521845710923046575`; the old `6.4547837` unrestricted target is obsolete.
 

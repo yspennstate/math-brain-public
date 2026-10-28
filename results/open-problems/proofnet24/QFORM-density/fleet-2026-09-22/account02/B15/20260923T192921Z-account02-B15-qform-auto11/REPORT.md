@@ -15,7 +15,6 @@ At the present structural frontier, the already completed strong-physical-triple
 
 ## 1. Source pins actually used
 
-Control was resolved freshly at brain main `8e6ad956046071e7a97df8d369012bf2ec36f16b`, OWNER CONTROL revision `2026-09-22.15`.
 
 Required owner-pinned mathematical source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.  Its completed Theorem C is used below in a rough-law majority-side tent inequality.
 

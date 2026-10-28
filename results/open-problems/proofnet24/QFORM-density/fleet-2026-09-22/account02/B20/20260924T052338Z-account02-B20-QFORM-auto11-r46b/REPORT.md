@@ -15,7 +15,6 @@ All coordinates used below are literal ORIGINAL coordinates. Every same-bank qua
 
 ## 1. Sources actually used
 
-Fresh owner control was read from `yspennstate/math-research-brain/main` at the start of the run. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread; in particular law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, worst-fibre suprema, conditional cap inheritance, post-rotation independence and deletion of small coefficient tails remain unavailable.
 
 Newest completed designated partner actually consumed:
 

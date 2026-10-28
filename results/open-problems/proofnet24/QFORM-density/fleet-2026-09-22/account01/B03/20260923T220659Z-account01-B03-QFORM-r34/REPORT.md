@@ -337,6 +337,5 @@ The next B03 mechanism should keep the `d`-average **inside** TT*/volume averagi
 
 ## 7. Source pins and integrity
 
-Fresh brain control was read from `yspennstate/math-research-brain` main with OWNER CONTROL revision `2026-09-22.15`, current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, live corrections, current research state, claims, memory protocol, fleet, roles, protocol and this assignment. The latest partner theorem actually used is `yspennstate/math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`.
 
 No Gaussianity, log-concavity, moments, compact support, connected support, diagonal-basis independence, conditional cap, or law-uniform pointwise quadratic decay is used. No scheduler/task/email/notification/permission/installation/public-release mutation is part of this run.

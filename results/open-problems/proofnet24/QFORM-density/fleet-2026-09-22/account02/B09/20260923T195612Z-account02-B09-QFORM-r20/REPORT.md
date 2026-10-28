@@ -13,7 +13,6 @@ No random source variable is rotated. The only rotations below diagonalize a det
 
 ## 1. Fresh sources and exact scopes
 
-Fresh owner control remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with no stop or B09 reassignment observed before publication.
 
 The required historical source was reread at
 

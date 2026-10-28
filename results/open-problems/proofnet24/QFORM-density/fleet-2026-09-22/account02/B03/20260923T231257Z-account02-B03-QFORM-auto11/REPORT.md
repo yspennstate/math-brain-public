@@ -241,7 +241,6 @@ Continuity is not claimed from the density-to-half-Riesz argument here. The full
 
 ## 10. Sources and scope
 
-- Control repository fresh main at run start: `yspennstate/math-research-brain@68eb8dc1352b5b227a43ff4dcc306a77d3ecf761`; OWNER CONTROL revision `2026-09-22.15`; no account02/B03 pause/stop observed. A later pre-publication main refresh reached `e5019cd6a4a964a1a04094433c2d0fec651d7303` and introduced no applicable stop.
 - Required pinned mathematical package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem A, with `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` also read.
 - Designated partner theorem actually used for the endpoint comparison: `yspennstate/math-open-problems@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`, account03/B03 r41.
 - Current continuation also confirms that the unrestricted theorem is still OPEN and warns against independence after rotation and small-random-error interpretations of small matrices.

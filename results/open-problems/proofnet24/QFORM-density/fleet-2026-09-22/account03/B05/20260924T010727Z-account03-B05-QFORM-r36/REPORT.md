@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. The theorem below proves absolute continuity a
 
 ## 1. Scope, fresh sources, and the first missing implication
 
-Fresh owner control was reread before publication at `yspennstate/math-research-brain@de64e09a8455761a19bf2f16c5c5472621751fdb`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular this run does not use arbitrary-joint rank-three coarea, conditional caps for conjugate projections, post-rotation independence, pointwise quadratic van-der-Corput decay, a fiber supremum, or a claim that small coefficients make a small random error.
 
 Immediate predecessor:
 

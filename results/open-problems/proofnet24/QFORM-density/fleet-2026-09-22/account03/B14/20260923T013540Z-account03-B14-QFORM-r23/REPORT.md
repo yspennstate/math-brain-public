@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact target remains open: for every dimension, every product law of independent real coordinates with one-dimensional densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal essential bound for the density of `Q=X^TAX`, or produce a valid counterexample. No moment, support, connectedness, Gaussian, log-concave, centering, or post-rotation independence hypothesis is added here.
 
-Fresh control at run start was `yspennstate/math-research-brain@5733681a5a543b2a3442c2721a7133c2cb9140a9`, OWNER CONTROL revision `2026-09-22.15`; a pre-publication refresh advanced main to `8562ac23d3b0ee00d9c2da4726b6fd0ad733c96d` with the same active programme. The live corrections used below include: no law-uniform pointwise quadratic phase decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea bound, no positive conditional-projection-density moment, no naive fiber-supremum closure, and no universal single-good-minor extraction.
 
 The designated completed partner actually used is account04/B14 r6, canonical report
 `yspennstate/math-open-problems@6442bbe9d4647a730b27b8e0786bc54b2546b7ec:proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260923T011517Z-account04-B14-kernel-leakage-core-r6/REPORT.md`.

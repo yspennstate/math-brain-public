@@ -8,7 +8,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Source state
 
-Fresh controls were read from `yspennstate/math-research-brain@026876aacebabc169aaa19b38c379cf36fb879e4`, then refreshed before publication to `65f5401c9613570fc100bd2555bcc262fc28dc0f`. OWNER CONTROL revision is `2026-09-22.9`; QFORM is the sole research target. The owner message proposes, for the full-rank case, conditioning on the spectral complement and bounding
 
 `E_Z ||rho_{Y|Z}||_infinity^(2/3)`
 

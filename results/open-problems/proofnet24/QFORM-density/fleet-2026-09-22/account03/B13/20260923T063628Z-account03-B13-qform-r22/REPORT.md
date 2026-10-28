@@ -12,7 +12,6 @@ Status: **PROVED TARGET-RELEVANT ANALYTIC/STRUCTURAL SUPPORTING THEOREMS / FULL 
 
 The owner target remains the unrestricted statement for independent ORIGINAL-coordinate real random variables with probability densities bounded by one and a real symmetric matrix having at least three eigenvalues of modulus at least one. No moment, compact-support, connected-support, Gaussian, log-concavity, interval-support, fixed-fragment, or post-rotation-independence assumption is introduced below.
 
-Fresh control before this write was `yspennstate/math-research-brain@a897b19c84591c4a1aeecc8fed7f18884255e9df`; live OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The full conjecture and the separate continuity assertion remain OPEN.
 
 Completed mathematics actually used:
 

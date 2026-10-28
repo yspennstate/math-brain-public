@@ -6,7 +6,6 @@ attacking: fractional-ridge L3 smoothing for arbitrary higher-rank cross tails, 
 **Outcome:** `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / REFUTED_INTERMEDIATE_MECHANISM / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh coherent control source:** `yspennstate/math-research-brain@ea264205433b3ad2eb15f41dc200155e2e2574d3`, OWNER CONTROL revision `2026-09-22.15`.
 
 The full owner target remains open: for every finite n, independent real coordinates with one-dimensional densities at most one, and every real symmetric A with at least three eigenvalues of modulus at least one, prove a universal bound on the density of X^TAX, or give a target-valid counterexample. The new positive result below proves essential boundedness only on a quantified diffuse physical-cross-range branch. It does not prove continuity. The negative result below refutes only a perturbative proof mechanism, not QFORM.
 

@@ -266,7 +266,6 @@ This is the precise sense in which an arbitrary extra eigenvalue and arbitrary m
 
 ## 8. Provenance
 
-Fresh coherent protected-control snapshot before the mathematical write: `yspennstate/math-research-brain@b2072e8df9e1777df5a215ae7afd8c79ac06d3eb`, OWNER CONTROL revision `2026-09-22.5`.
 
 Corrections consumed at that snapshot: `QFORM-CROSSMINOR-ALONE-FALSE` and `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`.
 

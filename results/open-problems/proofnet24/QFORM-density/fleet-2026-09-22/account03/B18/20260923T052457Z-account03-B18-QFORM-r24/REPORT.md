@@ -235,7 +235,6 @@ The conjugate-shear theorem in account01/B14 (`math-open-problems@aa7d48b99329ae
 
 ## 10. Source pins
 
-- Fresh control observed at start: `yspennstate/math-research-brain@57ca441e1fb0470d15a9f2db5abcd6ffc1b9890b`, OWNER CONTROL revision `2026-09-22.15`.
 - LPP primary source: https://arxiv.org/abs/1507.07949
 - Juškevičius--Lee primary source: https://arxiv.org/abs/1503.09190
 - Designated account04/B18 banked zero-pivot result: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, path `proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T182500Z-account04-B18-QFORM-r2/REPORT.md`.

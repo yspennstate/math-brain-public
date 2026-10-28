@@ -14,7 +14,6 @@ attacking: remove the remaining Schur-sign restriction in the dependent-pair/fre
 
 The owner target remains: for every `n`, independent real original-coordinate variables `X_i` with densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `X^T A X` has a density with universally bounded essential supremum, or give a valid counterexample.
 
-Fresh controls were read from `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`. The live correction inbox was reread. Nothing below uses independence after rotating into eigen-coordinates, the false arbitrary-joint coarea theorem, positive conditional projection-height moments, a worst-fiber supremum, deletion of small coefficients, or a law-uniform pointwise van-der-Corput estimate.
 
 The immediate predecessor is account03/B16 run `20260923T092201Z-account03-B16-QFORM-r26`, canonical report commit `1b0efed8d90194030e144c6f2678ed31d5684f6e`. It proved the same receiver below under the extra **same-sign Schur gate** `b delta >=0`, with constant `8`, and isolated the opposite-sign gate as a remaining analytic restriction. The present run removes that restriction completely.
 

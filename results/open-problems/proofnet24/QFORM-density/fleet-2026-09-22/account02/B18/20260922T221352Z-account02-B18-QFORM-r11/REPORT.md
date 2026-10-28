@@ -24,7 +24,6 @@ Thus every two-dimensional orthogonal marginal of an original-coordinate product
 
 ### 2.2 Completed designated partner account03/B18 r18
 
-Source-pinned partner handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B18/20260922T215805Z-account03-B18-QFORM-r18.md`. Canonical mathematics: `yspennstate/math-open-problems@aa1419c6f3f8559d7eef2030de7275e2d65e6567`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260922T215805Z-account03-B18-QFORM-r18/REPORT.md`.
 
 The partner exposes the dependence-safe zero-pivot bound used here. If a scalar `U` is independent of a two-dimensional vector `V`, the scalar density cap is `N`, the pair density cap is `M`, and `H=sup_t E|U-t|^(-1/2)`, then for a nonsingular symmetric `3x3` zero-pivot core `K` the completed zero-pivot argument gives
 

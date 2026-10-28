@@ -5,7 +5,6 @@ attacking: single-null-hub mixed-row survivor; convert the exact product-frame c
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**OWNER CONTROL:** revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `NEW_EXACT_STRUCTURAL_IDENTITY / DESIGNATED_PARTNER_APPLIED / UNIFORM_SUBCRITICAL_ANTICONCENTRATION / FULL_TARGET_OPEN`.
 
@@ -15,7 +14,6 @@ No Gaussianity, moment, bounded-support, connected-support, log-concavity, diago
 
 ## 1. Fresh sources and correction boundary
 
-Fresh control was resolved from `yspennstate/math-research-brain` main. The start snapshot was `17b89297d3120baf4efe2e668f654438d64846a7`; the prepublication refresh reached `8143354990ac73beb61a5481e234898ef9865aa1`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only.
 
 The immediate B10 predecessor is
 

@@ -7,7 +7,6 @@ Classification: `ESSENTIAL_STEP_APPLIED / UNIVERSAL-KERNEL-NORMAL-FORM / FIXED-B
 
 The full universal-height QFORM conjecture remains OPEN. The qualitative regularity ledger is sharper: absolute continuity is elementary far below the target hypotheses, and source-pinned B15 work gives a bounded `C_0` density for every fixed rank-`>=3` product target, but the available height bound is matrix dependent. Continuity is not used to prove the universal height statement below.
 
-Fresh control before the final write: `yspennstate/math-research-brain@9a7af2301edc50b97f680ff619f9956bea39ccf3`; OWNER CONTROL revision `2026-09-22.15`; programme revision `2026-09-22.5`; QFORM remains the sole target. The designated partner latest memory still points to account02/B15 run `20260923T130525Z-account02-B15-qform-auto11`, canonical mathematics `yspennstate/math-open-problems@46c33d97490f78f8c3de0435f63d573958d81180`.
 
 Preserved corrections: no law-uniform pointwise quadratic Fourier decay; no independence after rotating to the eigenbasis; no projection/X-ray-only shortcut for the two-sheet branch; no arbitrary-joint rank-three coarea bound; no positive conditional-projection-density-moment gate.
 

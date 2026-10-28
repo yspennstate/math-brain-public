@@ -12,7 +12,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 The target is unchanged: independent original coordinates with arbitrary real probability densities bounded by one, arbitrary real symmetric A, and at least three eigenvalues of modulus at least one. No moments, compact support, log-concavity, Gaussianity, connected support, or independence after spectral rotation is used.
 
-Fresh controls before the significant write retained OWNER CONTROL revision `2026-09-22.15` and the QFORM-only assignment. The live correction record still forbids law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, worst-fiber density caps, and post-rotation independence.
 
 Completed inputs actually used at equations:
 

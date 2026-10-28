@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target is unchanged: independent ORIGINAL-coordinate real random variables with probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of `A` of modulus at least one. No Gaussian, log-concave, moment, compact/connected-support, iid, diagonal-basis, or post-rotation-independence assumption is introduced. Continuity is separate.
 
-Fresh brain control at invocation start was `yspennstate/math-research-brain@b2038b44a8573cc2d96cc370eeff0bcdc0790821`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole active programme. The existing same-hour canonical B20 login was preserved rather than duplicated.
 
 The newest compatible completed designated partner at the fresh read was account03/B20 r33:
 

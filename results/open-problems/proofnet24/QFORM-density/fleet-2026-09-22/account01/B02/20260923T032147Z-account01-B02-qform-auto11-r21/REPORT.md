@@ -13,7 +13,6 @@ Continuity is proved on the final stability branch because that partner theorem 
 
 ## 1. Sources actually consumed
 
-Fresh control was resolved from `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target. The live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, the fleet protocol and this worker's assignment were read before the mathematics below.
 
 The designated partner result actually used is account02/B02, canonical report
 

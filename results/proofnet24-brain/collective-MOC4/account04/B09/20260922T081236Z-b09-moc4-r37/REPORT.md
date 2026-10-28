@@ -18,7 +18,6 @@ including repeated and singular spectra. After diagonalizing the relative positi
 
 A target counterexample is equivalent to a support direction having a genuine unitary `U` with `h(U)>M`; compactness then gives a positive-gap global maximizer.
 
-The final pre-write control reread was at main commit `81111552c32505ad75399b4feb5a60906e0293d5`, OWNER CONTROL revision `2026-09-22.2`. The later collective-open-problem order keeps B09 on MOC4 and supersedes the old installation/benchmark work. The protected control blobs at that snapshot were AGENTS `94387098453b9f4a9b10179183f6f6ec780fd987`, README `3d4a9372c87802ab734141a3374d04c8823372e3`, fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`, roles `ed17ecc94f76720c0345b3e32249b791b20ec611`, and PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`. No later B09/account04 pause or stop was present. The connector exposes decoded content and Git blob hashes but not a raw-byte materialization used here for an independent SHA-256 of the complete README/OWNER MESSAGE; no SHA-256 is fabricated.
 
 ## 2. Exact compatible mathematics consumed
 

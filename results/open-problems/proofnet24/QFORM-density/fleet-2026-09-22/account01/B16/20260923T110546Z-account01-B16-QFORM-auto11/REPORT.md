@@ -13,7 +13,6 @@ The full theorem is not claimed. The purpose of this note is to close an analyti
 
 ## 1. Sources actually used
 
-Fresh owner/control state was read from `math-research-brain@daef91678005d93e27eb75e565e7f8c2a50d689f`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM only. The live corrections rule out arbitrary-joint rank-three coarea, normalized conditional projection caps/positive moments, post-rotation independence, and worst-fiber trace arguments. None is used here.
 
 The rank-two fractional input is the completed supporting theorem
 

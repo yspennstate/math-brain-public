@@ -13,7 +13,6 @@ Continuity: **not claimed by the new shield branch**; only essential boundedness
 
 The full target remains: for every dimension, every independent real product law with one-dimensional densities bounded by one, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove a universal essential density bound for `X^T A X`, or give a valid counterexample. No moments, Gaussianity, compact support, connected support, log-concavity, or independence after spectral rotation are introduced below.
 
-Fresh control was read from `yspennstate/math-research-brain` main; final prepublication refresh observed main commit `008aa444065d49f1cdf443c2d897807bec6b6f6a`, OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, and correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. The run remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval is not native learned-memory ingestion.
 
 The designated partner result actually used at an equation is account04/B12:
 

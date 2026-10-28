@@ -4,7 +4,6 @@ attacking: the r57 large-diagonal / heavy-child obstruction by proving that diag
 # account03/B06 r58 — large-diagonal cancellation forces a finite near-coloop peel
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.
-OWNER CONTROL at prepublication refresh: `2026-09-22.15`.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Status: **new supporting structural/compiler theorem + partner-backed curved inequalities; full QFORM remains OPEN**.
 

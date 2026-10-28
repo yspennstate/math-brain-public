@@ -11,8 +11,6 @@ NOVELTY / PRIORITY: NOT CLAIMED.
 Fresh authenticated control at entry:
 `yspennstate/math-research-brain` main
 `9c61c2bffacf3a9f1253aff0300998f19c51a39a`,
-OWNER CONTROL revision `2026-09-21.1`.
-The natural-language OWNER MESSAGE was read.  No account02/B17 pause or stop
 was present.  Live allocation remained 8 brain B01-B06/B19-B20, 5 benchmark
 B07-B11, and 7 FEI B12-B18.
 

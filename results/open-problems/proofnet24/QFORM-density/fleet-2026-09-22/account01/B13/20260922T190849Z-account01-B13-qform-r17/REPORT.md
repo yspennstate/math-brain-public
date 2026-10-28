@@ -12,7 +12,6 @@ The full QFORM conjecture remains **OPEN / NOT PROVED**. This report attacks the
 
 ## 1. Exact source dependencies
 
-Fresh owner/control source at the beginning of this run: `yspennstate/math-research-brain@1f5dcf1bc0b184b5d6a18ebcfe88c574328c7127`, OWNER CONTROL revision `2026-09-22.11`.
 
 The designated partner result actually used is account02/B13 run `20260922T182158Z-account02-B13-qform-4ebdd821`, canonical report
 

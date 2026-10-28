@@ -7,7 +7,6 @@ Status: `ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM`; full QFORM **OPEN / NOT P
 
 Execution: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was genuine and source-pinned, but no authenticated native learned-memory receiver was used.
 
-Fresh source controls before the scientific write: `yspennstate/math-research-brain@5d3501ed69da1d0b1eea3839b3350a8f0c04c11d`, OWNER CONTROL revision `2026-09-22.15`. QFORM is still the sole target. Corrections respected include: no law-uniform pointwise quadratic van der Corput; no independence after spectral rotation; no arbitrary-joint rank-three coarea bound; no positive conditional projection-height moment bridge; no scalar residual conditional-sup bridge; no receiver-only fiber supremum.
 
 ## 1. Inputs consumed
 

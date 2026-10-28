@@ -3,7 +3,6 @@ attacking: the r28 four-hub curvature survivor — prove that a large hub-times-
 
 # Early substantive checkpoint — r29
 
-Source state: QFORM-DENSITY-3EIG-20260922, OWNER CONTROL revision 2026-09-22.15. Execution remains WITHOUT_VERIFIED_BRAIN.
 
 Incoming r28 source: `yspennstate/math-open-problems@1ffce50d452b85f4f080ce0b61c68023e8f0d66c:proofnet24/QFORM-density/fleet-2026-09-22/account03/B07/20260923T073755Z-account03-B07-qform-r28/REPORT.md`.
 

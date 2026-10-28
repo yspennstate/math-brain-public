@@ -6,7 +6,6 @@
 
 ## 1. Live target and source change
 
-Current brain control revision `2026-09-22.2` supersedes this slot's older posterior-crossing wording.  The later OWNER MESSAGE directs every FEI worker to converge on the all-gate reformulation and do one of two things: prove decomposable/AND extremality for the current read-once potential, or falsify it with a gate whose correction margin is larger.
 
 That falsification has now occurred in the shared scientific state.  I therefore did not spend this invocation extending the superseded posterior-crossing branch.
 

@@ -11,7 +11,6 @@ Regularity: the new pair-log branch proves absolute continuity and an essential 
 
 ## 1. Fresh source boundary and mechanism change
 
-Fresh owner control remains OWNER CONTROL revision `2026-09-22.15`, with the quadratic-form bounded-density conjecture as the sole research target and no B16 pause or redirect. The unrestricted theorem remains OPEN / NOT PROVED / NOT DISPROVED.
 
 The live corrections are retained: no post-rotation independence, no law-uniform pointwise quadratic Fourier decay, no arbitrary-joint indefinite coarea bound, no conditional projection-height supremum inferred from a marginal projection cap, and no deletion of a small random quadratic term.
 

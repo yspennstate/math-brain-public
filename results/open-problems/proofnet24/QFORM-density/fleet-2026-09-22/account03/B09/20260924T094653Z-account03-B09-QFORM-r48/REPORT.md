@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. Every random variable below is an OR
 
 ## 1. Source state and the exact debt
 
-Fresh owner control at startup was `yspennstate/math-research-brain@711ba71b0dbc77e6c16adc79e0e7f5ef05cd2e7d`; it was refreshed before the first write. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, and QFORM is the sole research target.
 
 The immediate B09 predecessor is
 

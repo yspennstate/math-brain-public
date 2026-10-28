@@ -212,7 +212,6 @@ The natural next B15 use is to take a current hub/grouped-bank decomposition who
 
 ## 9. Source/correction integrity
 
-Fresh publication control: `yspennstate/math-research-brain@3c1212d86ec67cb28f3405c4cb42bafd17750f45`, OWNER CONTROL revision `2026-09-22.15`; sole target QFORM, no account03/B15 pause. The live correction inbox was reread at that commit.
 
 Consumed corrections include the false uniform pointwise phase decay, no post-rotation independence, dimension-loss from naive fiber suprema, false arbitrary-joint coarea height, false conditional projection-moment gates, no uniformly good single minor/cross cut, and no uniform fragment-count reduction. None is used positively.
 

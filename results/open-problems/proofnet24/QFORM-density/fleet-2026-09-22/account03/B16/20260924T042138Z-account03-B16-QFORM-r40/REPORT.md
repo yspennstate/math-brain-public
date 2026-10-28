@@ -14,7 +14,6 @@ attacking: QFORM-PUNCTURED-FRESH-HUB-SQUARE-STABILITY-v1 by a second-fresh-hub c
 
 The owner target remains unrestricted: independent original-coordinate real inputs with scalar probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of `A` of modulus at least one. No Gaussianity, moments, compact support, log-concavity, connected support, iid assumption, or independence after spectral rotation is used.
 
-Fresh control was read from `yspennstate/math-research-brain/main`; OWNER CONTROL is revision `2026-09-22.15`, QFORM is the sole research target, and no pause/redirect for account03/B16 was present. The live corrections remain binding: pointwise law-uniform quadratic van der Corput is false; a bounded projected joint density alone does not control an indefinite curved trace; worst conditional projection caps can diverge; and a spectral rotation does not preserve independence.
 
 This run deliberately changes mechanism after the preceding mixed-volume/absolute-TT* attempts. The new step is source-first: condition an *outer* physical square before invoking a completed zero-pivot receiver on a **different** genuinely fresh source. This preserves original-coordinate independence and never deletes the outer square.
 

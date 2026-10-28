@@ -11,7 +11,6 @@ Continuity: proved on the physical-E3 paid branches used below; not asserted on 
 
 ## 1. Fresh control, source frontier, and corrections
 
-Fresh `math-research-brain/main` was resolved and reread in this invocation, including `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B19.json`. A final prepublication refresh still showed `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` as the latest owner continuation and OWNER CONTROL revision `2026-09-22.15`; there was no later B19 stop or pause.
 
 The exact target is unchanged: for arbitrary independent real original-coordinate inputs with densities at most one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite essential density bound for `X^T A X`, or give a valid counterexample. Continuity is tracked separately.
 

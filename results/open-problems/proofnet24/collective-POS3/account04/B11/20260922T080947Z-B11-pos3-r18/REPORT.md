@@ -14,7 +14,6 @@ Fresh control was resolved at invocation start at `yspennstate/math-research-bra
 
 `6f64e5b9989523a52d87669dbf053f8c0a35521f`.
 
-The five mandatory control files and the full OWNER MESSAGE were read at that exact commit. OWNER CONTROL was revision `2026-09-22.2`; the collective-open-problems allocation remained active and there was no applicable `account04/B11` pause or stop. The matching `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json` were also read at that commit.
 
 The latest complete team-lead report used is
 

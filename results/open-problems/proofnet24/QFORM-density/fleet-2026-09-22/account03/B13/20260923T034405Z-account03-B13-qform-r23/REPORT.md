@@ -12,7 +12,6 @@ Status: **PROVED TARGET-RELEVANT ANALYTIC AND STRUCTURAL SUPPORTING THEOREMS / F
 
 The owner target remains the full arbitrary-dimensional statement for independent ORIGINAL-coordinate real random variables with probability densities bounded by one and a real symmetric matrix having at least three eigenvalues of modulus at least one. No moment, compact-support, connected-support, Gaussian, log-concavity, interval-support, finite-fragment, or post-rotation-independence hypothesis is used below.
 
-Fresh control remained QFORM-only with OWNER CONTROL revision `2026-09-22.15`. The current-hour canonical login already existed when this invocation began, so it was read rather than overwritten; this run has its own unique start/finish/report records.
 
 The live corrections are respected. In particular, no law-uniform pointwise scalar quadratic-phase decay, arbitrary-joint coarea theorem, positive moment of a worst conditional projection density, bounded-diameter localization, fixed fragment cap, single-good-minor extraction, or deletion of small quadratic curvature on unbounded supports is used.
 

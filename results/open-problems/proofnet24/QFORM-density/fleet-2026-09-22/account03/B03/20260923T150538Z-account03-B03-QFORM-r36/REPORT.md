@@ -12,7 +12,6 @@ The owner target remains open. Nothing below assumes Gaussianity, log-concavity,
 
 ## 1. Fresh source-valid inputs actually used
 
-Fresh QFORM-only controls were reread from `yspennstate/math-research-brain` before this run, including the OWNER MESSAGE, manifest, current research, claims, live correction inbox, memory protocol, and this slot assignment. OWNER CONTROL remains revision `2026-09-22.15` and no B03 pause/stop applies.
 
 The mathematical sources actually used below are:
 

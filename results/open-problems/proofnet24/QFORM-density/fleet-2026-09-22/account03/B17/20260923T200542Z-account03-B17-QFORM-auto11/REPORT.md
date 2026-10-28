@@ -7,7 +7,6 @@ attacking: growing fragmented-support witnesses in the dense six-variable Househ
 
 This report proves a new supporting theorem for an exact six-variable rotated target matrix. It removes the fragment-count loss from the preceding remote-cell argument and permits arbitrary finite or countable interval fragmentation, including exact pairwise remote cancellations. It does **not** prove the full QFORM conjecture and does not address the full-target continuity conclusion.
 
-Fresh prepublication control: `yspennstate/math-research-brain` main `f9e600d050cfd7ee6d08fc8e5d074f83577dd110`, OWNER CONTROL revision `2026-09-22.15`. The full target remains open. Live corrections were refreshed; no pointwise law-uniform van-der-Corput decay, post-rotation independence, arbitrary-joint coarea theorem, conditional positive-density moment, bounded-fragment extremality, fiber-supremum principle, or histogram argument is used.
 
 The designated completed partner result actually applied below is `account04/B17`,
 `yspennstate/math-open-problems@4e8d5ae06f2657e9e1ac8a89f7bc26c9ff95169e`,

@@ -8,7 +8,6 @@ Assignment: rank-three coupled case
 Execution: `WITHOUT_VERIFIED_BRAIN`; repository transport was used, no authenticated native-brain receiver was invoked.  
 Classification: `NEW SUPPORTING THEOREMS / PROJECTED-CROSSING MARGINAL GATE CLOSED / FULL QFORM OPEN`.
 
-Fresh start control was `yspennstate/math-research-brain@6831428e0be00570f90a3559ea42d16594fc930f`, OWNER CONTROL revision `2026-09-22.15`. Before publication I refreshed to `yspennstate/math-research-brain@c91b947180dc2cdaf8825df57f832460e7f3eeba`; the owner continuation remains QFORM-only and the full theorem remains open. Fresh `math-open-problems` master at the prepublication refresh was `2e7f8a88a9f60abb7ef9e26f949c02b762ea3a8a`.
 
 The current correction boundary is retained: no independence after spectral rotation, no arbitrary-joint coarea cap, no conditional projection-height shortcut, no law-uniform pointwise quadratic-phase decay, no moment/support/log-concavity hypothesis, and no perturbative deletion of a small random quadratic term.
 

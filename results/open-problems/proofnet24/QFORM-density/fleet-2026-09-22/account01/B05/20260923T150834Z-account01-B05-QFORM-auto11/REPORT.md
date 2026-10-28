@@ -12,7 +12,6 @@ attacking: the first unpaid near-null nonzero-pivot bridge; isolate the exact Sc
 
 The full conjecture remains OPEN. This report gives no counterexample to the target. It identifies exactly what the post-null-pivot bridge has to spend and proves that the null-pivot single-hub square-root slice hypothesis, by itself, is insufficient once the hub acquires a nonzero quadratic coefficient.
 
-Fresh controls before this write remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`. Live corrections were re-read. In particular I do not use post-rotation independence, arbitrary-joint three-dimensional coarea, fiber suprema, conditional-cap-as-independence, or pointwise law-uniform van der Corput decay.
 
 ## 1. First unpaid implication after the newest account02/B05 result
 

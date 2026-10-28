@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The full target remains open: for every finite `n`, every independent real input vector with marginal probability densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal `L^infinity` density bound for `X^T A X`, or give a genuine counterexample.
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target. The live correction inbox was refreshed immediately before publication. In particular, the proof below does not use law-uniform pointwise quadratic van-der-Corput decay, interval-only Frostman control as a Borel profile, arbitrary-joint coarea, post-rotation independence, normalized thin fragments, moments, support diameter, connected support, or a finite fragment-count reduction.
 
 The designated partner result used at equation level is the still-valid slice-Fourier part of account04/B14 r9:
 

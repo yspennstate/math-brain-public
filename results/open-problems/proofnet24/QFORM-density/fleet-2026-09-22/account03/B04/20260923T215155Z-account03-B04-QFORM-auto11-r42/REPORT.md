@@ -13,7 +13,6 @@ The unrestricted conjecture is **not** proved here. All random variables stay in
 
 ## 1. Fresh sources
 
-Fresh owner control was read from `yspennstate/math-research-brain` main at `02e18dfc3abd04de1d6165de11d114d2ea48015b`; OWNER CONTROL remains revision `2026-09-22.15`. The live correction inbox blob is `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
 
 The two analytic inputs refined here are:
 

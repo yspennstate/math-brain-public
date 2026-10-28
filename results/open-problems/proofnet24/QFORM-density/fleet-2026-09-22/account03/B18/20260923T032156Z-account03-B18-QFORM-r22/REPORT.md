@@ -13,7 +13,6 @@ The owner target remains the unrestricted assertion for independent real origina
 
 This report proves a new exact-rank-three branch inside the surviving Schur-isotropic zero-pivot geometry. It does **not** claim that its extra source-separation hypothesis follows from the three-large-eigenvalue assumption. The unrestricted conjecture remains open.
 
-Fresh controls were read from `yspennstate/math-research-brain@678b4df4d4ac4532cd15d1a32dc6c9ebe27443de` and refreshed later on fresh main. OWNER CONTROL was revision `2026-09-22.15`. The live correction inbox was consumed, in particular the failures of arbitrary-joint rank-three coarea, positive conditional projection-density moments, fixed-minor/cross-cut extraction, conditional-cap-as-independence, and law-uniform pointwise quadratic-phase decay.
 
 ## 2. Primary literature transfer
 

@@ -28,7 +28,6 @@ The previous account01/B08 run treated the complementary large-defect/stable-ran
 
 Account03/B19 proved `QFORM-HALF-OFFDIAGONAL-BARRIER-v1`, source handoff
 
-`yspennstate/math-research-brain:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B19/20260922T170047Z-account03-B19-QFORM-r15.md`,
 
 canonical mathematics `yspennstate/math-open-problems@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`.
 

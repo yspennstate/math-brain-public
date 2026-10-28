@@ -11,7 +11,6 @@
 
 The target is unchanged: for arbitrary independent real coordinates with probability densities `0<=f_i<=1` and every real symmetric `A` having at least three eigenvalues of absolute value at least `1`, prove one universal bound for the density of `X^T A X`, or give a valid counterexample. No moment, compact-support, identical-law, sign, continuity, or post-rotation-independence hypothesis is added.
 
-Fresh brain control was read from `main`; the initial head was `15cee9997162022c9ebeba706bb4b992278eae13` and the pre-write head was `cc87fafb1bc2c3f202ae8bc5b940990f96b5acf9`. In both reads the protected control README blob was `433b2d57345823967480245b59a7c47d51019c37`, OWNER CONTROL revision remained `2026-09-22.5`, and there was no later stop. The live correction inbox was re-read at the pre-write head. This report does not use law-uniform pointwise Fresnel decay, unrestricted fiber suprema, post-rotation independence, transformed conditional density caps, or a single-minor / single-Schur-pivot dichotomy.
 
 Completed mathematics actually consumed:
 

@@ -21,7 +21,6 @@ obtained from an independent copy of the whole residual \(R\). No conjugate sum/
 
 ## 1. Control, sources, and correction boundary
 
-Fresh control before publication was resolved on `yspennstate/math-research-brain` main after commit `6f54c228609a81448c8e00325ed7972f32240a05`; the protected control README blob was `fca13a89d221115332ce5e60d49554ee0e213efa`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM remained the sole target, and no pause/stop for account01/B03 was observed.
 
 The current live correction inbox blob was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. In particular, this report respects:
 

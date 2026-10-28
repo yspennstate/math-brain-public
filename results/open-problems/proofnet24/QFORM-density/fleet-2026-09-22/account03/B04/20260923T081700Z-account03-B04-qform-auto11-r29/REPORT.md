@@ -5,7 +5,6 @@ attacking: third-compound random-cut product Fourier routing: turn disjoint 3x3 
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: Product Fourier rearrangement  
-Control consumed at publication refresh: `yspennstate/math-research-brain@86cc4b36ffa392e92c768305075a1dad1480eb92`, OWNER CONTROL revision `2026-09-22.15`.  
 Status: `NEW SUPPORTING THEOREM / FULL QFORM OPEN / WITHOUT_VERIFIED_BRAIN`.
 
 The full conjecture is not proved here. The result below supplies a dimension-free product-Fourier exit whenever a positive fraction of the global third compound of the full symmetric matrix is carried by disjoint physical row/column triples. If that exit fails, the failure is converted into a concrete finite physical obstruction: either global third-compound mass is concentrated on overlapping row/column triples, or a selected cross cut has more than `1-2 tau` of its third-volume mass forced to meet one fixed row triple and one fixed column triple.

@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; repository transport was used, not native l
 
 The full target remains: for independent real inputs with densities bounded by one and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a universal essential-supremum bound for the density of `Q=X^T A X`, or give a valid counterexample. No rotated-coordinate independence is assumed.
 
-Fresh owner control on main was read at `yspennstate/math-research-brain@c4115aae8ab36cf62a513889c5d422fab16d1e2f`; the OWNER CONTROL embedded in `scheduled_tasks/README.md` is revision `2026-09-22.8`, and the later owner continuation `QFORM-PROOF-FIRST-20260922T161801Z` asks workers to attack the first missing full-proof implication. A later main observation before publication was `175c1830b3ca8bba5abd9b26c824ce0d7bdee8a3`; no later stop was observed.
 
 B01's first missing implication was the higher-rank Schur obstruction left by the completed orientation-free rank-two half-Riesz theorem: can an exact rank-two residual be used inside an arbitrary ambient quadratic form without conditioning away the product structure? The result below answers this for an arbitrary **original-coordinate principal rank-two Schur patch**, with completely arbitrary outside quadratic terms and cross couplings.
 
@@ -111,7 +110,6 @@ The designated partner `account02/B01` completed r24, canonical report
 
 `yspennstate/math-open-problems@007d06d8118bc87becd247676c7a63ae336755c9`
 
-with brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B01/20260922T162930Z-account02-B01-qform-r24.md`.
 
 Its theorem treats a rank-two residual
 

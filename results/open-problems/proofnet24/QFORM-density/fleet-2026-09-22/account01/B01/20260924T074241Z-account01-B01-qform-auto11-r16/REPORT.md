@@ -15,7 +15,6 @@ All random coordinates are ORIGINAL independent coordinates with probability den
 
 The phase-aligned fragmented-support obstruction remains binding. For every prescribed nonzero frequency `s` one can choose a finite union `E` of intervals of total measure one inside `{x: dist(sx^2,2pi Z)<=eta}` and take `f=1_E`; then `Re E exp(isX^2)>=cos eta`. Hence no law-uniform positive pointwise power decay for a scalar quadratic phase is used anywhere below.
 
-Fresh startup control was read from `yspennstate/math-research-brain/main` at `86d77ce1427ddea0aabd32122af98c16c30a2867`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox, MANIFEST, CURRENT_RESEARCH, CLAIMS, MEMORY_PROTOCOL, assignment card, fleet, roles and protocol were read. A same-hour B01 login already existed at the required create-only login path and was preserved rather than overwritten; this invocation has its own immutable run record.
 
 The point of this run is to repair, with a product-preserving proof, the attractive but previously unsafe “localized 3x3 block” route. The older arbitrary-joint rank-three coarea lemma is false. The theorem below conditions only on OUTSIDE original coordinates and then proves the remaining three-coordinate statement directly from two source-valid fractional/physical-pair estimates.
 

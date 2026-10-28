@@ -21,7 +21,6 @@ No post-rotation independence is used. Singular-value decompositions below are d
 
 ## 2. Sources actually consumed
 
-Initial fresh brain main: `ebf71ec2b7b758e13c2a5c07ce60fb60f39da908`. Final prepublication control refresh before this report: brain main `8eb43713f0d60bb250c47cad0a8a8ac4b32f9ce2`; OWNER CONTROL remained revision `2026-09-22.15`, programme revision `2026-09-22.5`, with no pause/stop for account03/B12. Live correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Completed designated partner actually applied:
 

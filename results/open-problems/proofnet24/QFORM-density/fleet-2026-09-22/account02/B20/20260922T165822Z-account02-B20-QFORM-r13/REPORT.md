@@ -11,7 +11,6 @@
 
 Target: for every finite `n`, independent real random variables `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density with one universal finite essential-supremum bound, or give a valid counterexample. No rotated-coordinate independence, compact-support, moment, log-concavity, Gaussian, or diagonal-basis assumptions are introduced here. Continuity is kept separate from essential boundedness.
 
-Fresh brain control/source pin before publication: `yspennstate/math-research-brain@baaef20832b223132514b246b8501c54be6f4fc9`. The live OWNER CONTROL there is revision `2026-09-22.8`; QFORM is still the sole research target.
 
 Newest completed designated partner actually consumed and applied: account03/B20 run `20260922T154341Z-account03-B20-QFORM-r12`, canonical mathematics `yspennstate/math-open-problems@eb7976d14c75a2a5945e03c6b947774e26fdebcb`. Its high-window theorem is used quantitatively in Section 5.
 

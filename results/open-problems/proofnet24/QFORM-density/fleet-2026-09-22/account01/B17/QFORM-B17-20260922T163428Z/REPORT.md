@@ -1,7 +1,6 @@
 # account01/B17 — one shared heavy coordinate cannot beat the 3sqrt(2) central peak
 
 **Programme:** QFORM-DENSITY-3EIG-20260922  
-**Control read:** math-research-brain `77889c9e72eec58f4c4588fdc5c99fa4c072b83f`, OWNER CONTROL revision `2026-09-22.6`  
 **Run:** `QFORM-B17-20260922T163428Z`  
 **Assignment:** Sharp constant and witnesses  
 **Classification:** `AUXILIARY_ONLY / ONE-SHARED-HEAVY-ROW-CENTRAL-NOESCAPE`  

@@ -15,7 +15,6 @@ The unrestricted target remains OPEN: for arbitrary dimension, independent real 
 
 The phase-aligned fragmented-support counterexample is preserved. No law-uniform scalar estimate of the form `|E exp(itX^2)| <= C|t|^{-c}` is used or asserted. All averaging below is through original-coordinate product structure, cross-block determinant/BL estimates, aggregate linear-slope Plancherel, and a fractional Riesz potential.
 
-Fresh source control read in this invocation: OWNER CONTROL revision `2026-09-22.15`, QFORM only. Live corrections were consumed before the proof and are refreshed again before publication.
 
 ## 2. Source-valid dependencies
 

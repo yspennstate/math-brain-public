@@ -23,7 +23,6 @@ Fresh owner control was re-read immediately before publication from
 
 `yspennstate/math-research-brain@618ab66f5561589cb61db7e49c8debdc465d7b97`,
 
-with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target and no applicable pause/stop was present.
 
 The required newest mathematical package is
 

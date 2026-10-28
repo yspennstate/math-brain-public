@@ -14,7 +14,6 @@ The unrestricted conjecture is **not proved** here. The new theorem identifies a
 
 ## 1. Source boundary
 
-Fresh owner control was read from `yspennstate/math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and the full theorem remains open. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, the live corrections, programme state, memory protocol, and the account01/B04 assignment were re-read before publication.
 
 The analytic receiver is the independently checked arbitrary-rank projected-crossing theorem
 

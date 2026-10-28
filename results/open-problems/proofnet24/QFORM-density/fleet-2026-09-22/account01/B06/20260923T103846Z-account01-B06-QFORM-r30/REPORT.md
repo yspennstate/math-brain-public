@@ -15,7 +15,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and completed inputs actually used
 
-Fresh control is `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`. The live correction set was consumed. In particular I do not use law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, conditional projection-density moments, a spectral-fiber supremum, post-rotation independence, or a claim that one good physical minor must exist.
 
 A newer correction is especially relevant: `QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1` shows that an exhaustive proof cannot force every target matrix into a disjoint cross-volume or one-local-pivot branch. The result below therefore claims only a certified **low-collision transverse-compound branch**. High compound collision is kept as an explicit unpaid bank/hub aggregation regime.
 

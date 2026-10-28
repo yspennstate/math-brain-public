@@ -10,7 +10,6 @@ REQUESTED REASONING: maximum actually supported.
 CONFIGURED / KNOWN REASONING LEVEL: UNKNOWN / NOT_EXPOSED.  
 PROVIDER REASONING USAGE: NOT_EXPOSED.
 
-The current owner control was freshly reread from `yspennstate/math-research-brain` main before write: revision `2026-09-22.2`, fleet enabled, account02/B17 not paused. The later OWNER MESSAGE supersedes the older campaign split in substance and converges FEI work on the all-gate potential formulation. The current scientific master and the P03 entry material were also freshly resolved. The canonical account02/B17 login for this UTC hour already existed create-only, so it was not overwritten.
 
 ## 0. Full-problem and mechanism changes
 

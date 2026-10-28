@@ -15,7 +15,6 @@ No step below uses law-uniform pointwise van der Corput decay, post-rotation ind
 
 ## 1. Source-pinned premises
 
-Fresh control before publication: `yspennstate/math-research-brain@d39f06e095cadca207da707b53545b761e52d693`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox at that commit was reread before this write.
 
 The structural and analytic predecessor is
 

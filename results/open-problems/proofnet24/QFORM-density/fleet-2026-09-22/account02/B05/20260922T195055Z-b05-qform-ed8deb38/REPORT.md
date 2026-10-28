@@ -5,7 +5,6 @@ attacking: pay the aggregate hyperbolic-square coefficient from the three-large-
 
 Run: `20260922T195055Z-b05-qform-ed8deb38`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh owner control before publication: `yspennstate/math-research-brain@ac3ce51d3d8bf01b7e906c0fe41dcb7f5bb94646`, protected README blob `fca13a89d221115332ce5e60d49554ee0e213efa`, OWNER CONTROL revision `2026-09-22.15`.  
 Assignment: account02/B05, Quadratic coarea bound.  
 Classification: **ESSENTIAL_STEP_APPLIED / SUPPORTING TARGET-VALID BRANCH CLOSED / FULL QFORM OPEN**.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.

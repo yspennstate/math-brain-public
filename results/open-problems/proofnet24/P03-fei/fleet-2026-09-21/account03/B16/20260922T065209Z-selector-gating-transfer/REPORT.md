@@ -7,7 +7,6 @@
 
 ## 0. Version and why this is the live attack
 
-Fresh owner control is revision `2026-09-22.2`. Its later natural-language OWNER MESSAGE supersedes the older Campaign-C half-band assignment where they conflict and converges the FEI workers on the all-gate formulation. The current common post-falsifier center used by the live gate programme is
 
 \[
 C^\dagger=6.521851214,

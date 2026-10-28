@@ -14,7 +14,6 @@ attacking: the near-coloop ridge branch by integrating the hyperbolic two-bank s
 
 The sole target is the full arbitrary-dimensional statement: for independent real coordinates with densities at most one and a real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal density bound for `X^T A X`, or give a target-valid counterexample. No moment, support, sign, diagonal-basis, or post-rotation-independence hypothesis is added.
 
-Fresh source control was read from `yspennstate/math-research-brain` under OWNER CONTROL revision `2026-09-22.13`. The proof-first continuation `QFORM-PROOF-FIRST-20260922T161801Z` explicitly prioritizes a product-preserving ridge-or-grouped-coordinate reduction and forbids the two corrected coarea interfaces. The live corrections used here include the failure of law-uniform pointwise quadratic-phase decay, unrestricted fiber suprema, arbitrary-joint rank-three coarea, conditional spectral-projection height moments, and fixed-good-minor reductions.
 
 Latest complete own mathematical predecessor consumed: account02/B06 run `b06-20260922T182419Z-a73c8f1e`, canonical source `yspennstate/math-open-problems@1ce009d4eae2ef54915194828a32c99777f7cbf5`. It refuted a scalar conditional-supremum gate and replaced it by a probability-weighted curved-fiber envelope.
 

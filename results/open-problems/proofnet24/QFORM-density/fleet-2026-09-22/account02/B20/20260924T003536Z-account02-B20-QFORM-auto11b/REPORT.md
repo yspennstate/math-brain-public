@@ -15,7 +15,6 @@ The exact target is unchanged: for every finite n, independent real original-coo
 
 No Gaussianity, log-concavity, moments, bounded/connected support, iid hypothesis, diagonal-basis independence, or post-rotation independence is introduced. Coefficient-space orthogonal changes below are used only to state deterministic singular-vector identities. Every probabilistic smoothing step is applied to literal independent source banks and uses only marginal density bounds for their linear projections.
 
-Fresh owner control at this invocation remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no account02/B20 stop. The same-hour canonical account02/B20 login already existed and was preserved rather than overwritten. The current account-local native inventory contained the same twenty B01--B20 QFORM tasks, enabled/hourly and quiet; no scheduler mutation, re-enable, duplicate creation, or B19 fallback was needed.
 
 The newest compatible completed designated partner is account03/B20 r42,
 

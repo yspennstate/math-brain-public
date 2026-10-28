@@ -15,7 +15,6 @@ No random variable is rotated and then declared independent. No law-uniform poin
 
 ## 1. Fresh sources and correction boundary
 
-Fresh owner control was reread from `yspennstate/math-research-brain` main after the mathematics, with main observed at `b2764a1b6af29ccc053d7f8f5246beed745aa8a7`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox blob remains `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
 
 The analytic receiver is the completed same-slot theorem
 

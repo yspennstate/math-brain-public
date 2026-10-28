@@ -11,7 +11,6 @@ The unrestricted conjecture is not proved in this run. The new result is a dimen
 
 ## 1. Sources actually used
 
-Fresh brain control at the beginning of this run was on OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target and no B07 pause. The run remains `WITHOUT_VERIFIED_BRAIN`; repository retrieval is not native learned-memory ingestion.
 
 Mathematical sources:
 

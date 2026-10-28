@@ -13,7 +13,6 @@ The full universal QFORM theorem remains open. This report proves two dimension-
 
 ## 1. Source-valid inputs
 
-Fresh control was resolved from `yspennstate/math-research-brain` main, initially at `1aacbe1157ffc5aec3b67ab0448ade985816e65b` and refreshed before publication to `4adba71cf199af3b7a8ec29c33cab49635655524`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and no account/slot pause applies.
 
 The required pinned Claude input is
 

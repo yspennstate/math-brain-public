@@ -9,7 +9,6 @@ Status: **NEW SUPPORTING THEOREM PENDING INDEPENDENT REVIEW / FULL QFORM OPEN**
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Regularity: the theorem below has an integrable characteristic-function majorant, hence gives a continuous density vanishing at infinity (`C_0`) on its stated branch. The unrestricted continuity question remains open.
 
-Fresh control at startup was `yspennstate/math-research-brain@9009f7546727946cc924bb65ca2509a480d2637e`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The same-hour canonical B04 login already existed and was preserved rather than duplicated. The live corrections were read before this argument. In particular, nothing below uses law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, conditional projection caps after rotation, worst-fibre suprema, or deletion of a small nonzero random coefficient.
 
 ## 1. Source-valid input and mechanism change
 

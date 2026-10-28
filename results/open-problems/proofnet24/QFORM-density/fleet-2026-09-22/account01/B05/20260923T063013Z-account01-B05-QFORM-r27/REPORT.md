@@ -5,7 +5,6 @@ attacking: the uncovered two-sheet/near-coloop coarea interface; test whether th
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound; uncovered indefinite two-sheet curved integral.  
-**Control at start:** `yspennstate/math-research-brain@1bb6771ed7db72a1ef050722b08e3be150803592`; OWNER CONTROL revision `2026-09-22.15`, QFORM only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / REFUTED_INTERMEDIATE_MECHANISM / PRECISE_MISSING_FACTOR_IDENTIFIED`.  
 **Full QFORM:** `OPEN_NOT_PROVED`.  

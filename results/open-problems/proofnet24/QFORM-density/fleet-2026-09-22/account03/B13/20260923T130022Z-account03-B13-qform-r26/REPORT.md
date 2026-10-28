@@ -11,7 +11,6 @@ Full continuity: **OPEN**.
 
 ## 1. Inputs actually used
 
-Fresh brain control at run start was `yspennstate/math-research-brain@2800a95da390455e437c48ccf67bc1680ccb1706`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.
 
 ### 1.1 Designated partner account04/B13
 

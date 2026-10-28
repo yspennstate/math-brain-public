@@ -16,7 +16,6 @@ The owner target is the following uniform statement. For every finite `n`, every
 
 for one universal finite `C`, all intervals `J`, or give a genuine counterexample. No moment, compact-support, log-concavity, connected-support, Gaussian, or post-rotation-independence hypothesis is allowed.
 
-Fresh control was read from `yspennstate/math-research-brain`, initially at `c7ffb38c22f90a575de860076371c0bc923eb29c` and refreshed before publication to a later `main`; OWNER CONTROL revision remained `2026-09-22.15`, QFORM-only, with no B13 pause/stop observed.
 
 The two mathematical inputs actually applied are:
 

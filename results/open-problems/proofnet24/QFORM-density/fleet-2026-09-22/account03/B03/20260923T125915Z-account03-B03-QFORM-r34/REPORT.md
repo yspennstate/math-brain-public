@@ -8,7 +8,6 @@ attacking: dependence-safe time integration at the near-intersecting endpoint â€
 **Status:** `NEW SUPPORTING THEOREMS / NEAR-TRIANGLE COLLAR CLOSED IN THE EXACT ANGULAR PACKET / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control immediately before publication was `yspennstate/math-research-brain@178f58be7851340924df600c97d194fb040572b6`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target and no pause/stop applying to account03/B03. The live correction inbox at that refresh had blob SHA `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. The unrestricted theorem and unrestricted continuity conclusion remain OPEN.
 
 No step below uses a law-uniform pointwise van-der-Corput estimate, independence after a spectral rotation, a conditional density cap for one sum/difference variable given its conjugate, the false arbitrary-joint coarea bound, or the false single-Schur-rank-two structural implication. All stochastic selectors are genuine independent physical variables or source-proved product projections, and every Schur pivot is in an original physical coordinate.
 

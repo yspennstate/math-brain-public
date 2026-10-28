@@ -12,7 +12,6 @@ attacking: partner r33's bounded 191-coordinate high-leverage star hub: pay any 
 
 ## 0. Fresh control and source-valid inputs
 
-Fresh control was resolved from `yspennstate/math-research-brain` main during the run. OWNER CONTROL remained revision `2026-09-22.15`, QFORM remained the sole research target, and no account02/B06 pause or stop was present. A same-hour B06 login record from a preceding incomplete invocation already existed, so it was preserved rather than overwritten; this run created its own start record only.
 
 The exact target remains: for arbitrary independent real original-coordinate inputs with densities bounded by one and real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal essential density bound for `X^T A X`, or produce a valid target counterexample. No moment, support, log-concavity, identical-law, diagonal-basis, Gaussian, or post-rotation-independence hypothesis may be inserted.
 

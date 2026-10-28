@@ -16,7 +16,6 @@ The owner target is unchanged. For arbitrary independent real original coordinat
 
 No Gaussian, log-concave, moment, compact-support, connected-support, iid, centering, symmetry, smoothness, or diagonal-basis assumption is added below. No rotated coordinates are declared independent. The proof does not use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, conditional-density-cap-as-independence, positive moments of worst conditional projection caps, deletion of a small nonzero coefficient, or a forced uniformly good fixed physical minor.
 
-Fresh owner control before this write was `yspennstate/math-research-brain@64b7c446079d07690b48e4c3d262de1dce6c9762`, OWNER CONTROL revision `2026-09-22.15`; the live correction inbox was reread at that revision.
 
 ## 2. Primary literature transfer and prior receiver
 
@@ -261,6 +260,5 @@ These numerical checks only verify algebra/constants; they are not evidence for 
 - Primary: Galyna Livshyts, Grigoris Paouris, Peter Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949, Theorem 1.1.
 - Prior exact receiver: `yspennstate/math-open-problems@a2cf029c5c935d6eadf4216c073911fc8dc404ac`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T005514Z-account03-B18-QFORM-auto15/REPORT.md`.
 - Designated partner: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260924T032058Z-account04-B18-QFORM-r6/REPORT.md`.
-- Fresh pre-write brain control: `yspennstate/math-research-brain@64b7c446079d07690b48e4c3d262de1dce6c9762`, OWNER CONTROL revision `2026-09-22.15`.
 
 Manual changed-file review found only mathematical/source metadata in this report. No credentials, account secrets, scheduler IDs, personal archives, or unrelated data are included. A repository-local automated secret scanner was not exposed through the connector in this run, so this was a narrow manual fallback review of the exact changed file.

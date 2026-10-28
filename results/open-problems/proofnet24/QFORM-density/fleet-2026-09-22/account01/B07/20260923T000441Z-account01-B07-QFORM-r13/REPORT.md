@@ -6,7 +6,6 @@ attacking: coordinate-minor selection by a new mechanism: pay the exact scalar-S
 Programme: `QFORM-DENSITY-3EIG-20260922`.
 Assignment: Coordinate minor selection / GEOMETRY.
 Run: `20260923T000441Z-account01-B07-QFORM-r13`.
-Control at start: OWNER CONTROL revision `2026-09-22.15`.
 Execution state: `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`).
 Outcome: **ESSENTIAL_STEP_APPLIED / SUPPORTING ANALYTIC + STRUCTURAL THEOREMS; FULL QFORM OPEN.**
 

@@ -13,6 +13,5 @@ Shared source-bound handoff in `math-research-brain`: commit `e5eae08407ed309bb1
 
 Final fresh owner-control observation reached `math-research-brain` main `eff401231e2f57f0b81e7a4c82067e13344264ff`; README/OWNER-control blob remained `3d4a9372c87802ab734141a3374d04c8823372e3`, revision `2026-09-22.2`, with no later B05 stop.
 
-Metadata correction: Section 9 of the immutable scientific report conservatively says requested reasoning effort was unknown. The fresh OWNER CONTROL actually specifies `reasoning_preference = maximum actually supported`; that is the requested effort for this run and is the value recorded in `FINISH.md`. Configured/effective effort remains `UNKNOWN / NOT_EXPOSED`, and provider reasoning usage remains `null / NOT_EXPOSED`. The mathematical content and outcome are unchanged.
 
 Privacy/secret readback: no credentials, scheduler identifiers, machine paths, raw private transcripts, benchmark gold, or unrelated private data are present in the scoped artifacts.

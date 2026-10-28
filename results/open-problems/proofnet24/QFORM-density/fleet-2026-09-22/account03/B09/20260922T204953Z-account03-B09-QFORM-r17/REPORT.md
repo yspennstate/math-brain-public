@@ -6,8 +6,6 @@ attacking: the one-strong-cross curved-bank residual by keeping one bank project
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B09` — Bilinear block mechanism  
 Run: `20260922T204953Z-account03-B09-QFORM-r17`  
-Control at start: `yspennstate/math-research-brain@b5cde79f47c8be40a010cfcaf575534d10d0ae27`, OWNER CONTROL revision `2026-09-22.15`  
-Prepublication refresh: `yspennstate/math-research-brain@7ea84c9c6ecc9fb6013b3e70f4e08c80a89acb26`, OWNER CONTROL revision `2026-09-22.15`  
 Outcome: **SUPPORTING_THEOREM_PROVED / REAL CURVED-BANK SUBCASE CLOSED / FULL TARGET OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**
 

@@ -9,7 +9,6 @@ The exact owner target remains: independent real coordinates with densities boun
 
 ## 1. Source-pinned graph used in this run
 
-Mandatory owner control was read from fresh `math-research-brain/main` at control commit `ea8f89d9b837bfeb05672e82387061bab6e45e81`, OWNER CONTROL revision `2026-09-22.15`; the branch subsequently advanced by concurrent worker records, so a final late-control refresh is required before handoff publication. The live correction inbox still forbids law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, naive fiber suprema, independence after spectral rotation, and deletion of nonzero coefficient tails as random-small perturbations.
 
 The required pinned mathematical source was read at
 

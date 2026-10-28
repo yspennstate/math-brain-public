@@ -220,7 +220,6 @@ What remains open is quantitative: convert the finite product-projection X-ray/f
 
 ## 7. Sources
 
-- Fresh owner control: `yspennstate/math-research-brain`, main; OWNER CONTROL revision `2026-09-22.15`, QFORM only.
 - Immediate B11 predecessor: `yspennstate/math-open-problems@1981b7ded0883caf72e23b833f34274a6763a43c`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T023910Z-account03-B11-QFORM-r48/REPORT.md`.
 - Exact puncture normal form: `yspennstate/math-open-problems@12e2174445fbc824279bf1376da1346454d7060a`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260924T002432Z-account03-B11-QFORM-r45/REPORT.md`.
 - Designated account04/B11 null-scalar/product-projection source: `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260922T222040Z-account04-B11-cone-envelope-r3/REPORT.md`.

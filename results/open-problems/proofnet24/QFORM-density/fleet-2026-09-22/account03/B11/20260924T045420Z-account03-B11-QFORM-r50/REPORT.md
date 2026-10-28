@@ -302,7 +302,6 @@ It also reproduces `g(1/36)=0.23651996182670637...`, `3e/g=34.47846609814707...`
 
 ## 9. Source/status pins
 
-- Fresh owner control before publication: `yspennstate/math-research-brain/main`, OWNER CONTROL revision `2026-09-22.15`; QFORM only; no later stop/reassignment observed.
 - Immediate B11 predecessor: `yspennstate/math-open-problems@506a01e6b5026fd7f703ad5b7f2e6ad08b9277c3`.
 - Designated account04/B11 Schur identity: `yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`.
 - Product-projection Brascamp--Lieb cap `e^(k/2)`: `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.

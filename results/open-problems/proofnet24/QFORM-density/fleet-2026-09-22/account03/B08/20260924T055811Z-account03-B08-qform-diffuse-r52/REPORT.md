@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. Global continuity remains OPEN. This r
 
 ## 1. Fresh state and source pins
 
-Initial fresh control was read from `yspennstate/math-research-brain@f3b5298d1bffeedae854bfaae50444a1322f9393`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account03/B08.json` were read before the mathematics. The same UTC-hour account03/B08 login already existed for r51; protocol says not to overwrite a same-hour login, so r52 created a unique START record and preserved that login.
 
 Immediate predecessor:
 

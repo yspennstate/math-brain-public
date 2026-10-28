@@ -11,7 +11,6 @@ attacking: projection-product interaction in the true near-coloop two-bank endpo
 
 ## 1. Source boundary and corrections actually used
 
-Fresh control was read from `yspennstate/math-research-brain` main before the work, under OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target and no B16 stop. The full conjecture remains OPEN / NOT PROVED / NOT DISPROVED.
 
 The mathematical inputs pinned for this report are:
 

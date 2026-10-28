@@ -11,7 +11,6 @@ The exact target remains unchanged: independent ORIGINAL real coordinates with o
 
 ## 1. Fresh source and correction state
 
-Fresh `math-research-brain/main` was resolved during this invocation. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, QFORM-only, with continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` active and no later stop observed.
 
 The live correction package was reread. In particular this report does not use: law-uniform scalar pointwise Fresnel decay; post-rotation independence; arbitrary-joint coarea; conditional-density-as-independence; one-good-minor extraction from aggregate mass; deletion of a nonzero coefficient tail on unbounded product inputs; or the refuted one-heavy-row same-square absorption shortcut.
 
@@ -294,7 +293,6 @@ No exact-target counterexample to a universal `int |phi_Q|` bound was found. The
 
 ## 9. Sources
 
-Control repository at run start: `yspennstate/math-research-brain`, fresh main observed at `f655c4b115b3653b2ed4e09bc22e84a4d5685908`, OWNER CONTROL revision `2026-09-22.15`.
 
 Designated partner: `yspennstate/math-open-problems@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B02/20260923T212459Z-account02-B02-qform-auto11/EARLY.md`.
 

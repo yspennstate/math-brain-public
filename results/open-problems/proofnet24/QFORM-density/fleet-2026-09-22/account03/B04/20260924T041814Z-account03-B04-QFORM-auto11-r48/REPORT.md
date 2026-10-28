@@ -16,7 +16,6 @@ Fresh owner control was resolved from `yspennstate/math-research-brain/main`; th
 
 `ceea86b4db08435ab86f553e346d3d2d6168c4a0`,
 
-OWNER CONTROL revision `2026-09-22.15`. QFORM remains the sole research target and the full theorem remains open. The live correction inbox is still blob
 
 `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 

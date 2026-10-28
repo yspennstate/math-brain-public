@@ -15,7 +15,6 @@ All coordinates below are literal ORIGINAL coordinates. No random variable is ro
 
 ## 1. Source-pinned frontier
 
-Fresh owner control was read from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread before publication.
 
 The immediate inherited source is account03/B19 r49:
 

@@ -17,7 +17,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ### 1.1 Current owner/brain state
 
-Fresh `math-research-brain/main` at run start resolved to `15d5ecc437ef47d46394d4d5ce502f8482abd90a`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause of account01/B09. I read the current MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL and account01/B09 assignment, plus the newest owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The source corrections retained throughout include: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; arbitrary-joint rank-three coarea is false; worst conditional projection-density moments are unavailable; a small matrix operator cannot be discarded as a small random quadratic error under arbitrary unbounded cap-one laws; and a uniformly good single physical minor/cross cut is not automatic.
 

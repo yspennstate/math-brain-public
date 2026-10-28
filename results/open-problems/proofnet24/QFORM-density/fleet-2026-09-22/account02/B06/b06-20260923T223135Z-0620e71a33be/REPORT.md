@@ -19,7 +19,6 @@ Partner account03/B06 r45 already pays a fixed diagonal anchored curvature `(K_H
 
 ## 1. Sources actually used
 
-Fresh owner control was resolved before writing; OWNER CONTROL remained revision `2026-09-22.15`, with QFORM as the sole target and no B06 stop.
 
 The newest completed designated partner at invocation was account03/B06 r45, source-pinned as
 

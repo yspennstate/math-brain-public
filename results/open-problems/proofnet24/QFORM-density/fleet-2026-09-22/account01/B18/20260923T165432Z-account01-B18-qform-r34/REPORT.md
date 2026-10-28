@@ -8,7 +8,6 @@ attacking: near-null physical-pivot collar — transfer a source-valid bounded-d
 **Continuity:** essential density bound only for the new punctured-collar theorem; continuity is retained only where an already-completed partner theorem explicitly supplies it.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control was reread from `math-research-brain` main at invocation; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The later `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` continuation was acknowledged. No FEI or unrelated research was performed.
 
 ## 1. Incoming designated-partner state
 

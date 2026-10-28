@@ -5,7 +5,6 @@ attacking: QFORM-SQRT-COLLAR-TO-LINEAR-SMOOTHING-v1 via a two-physical-gradient 
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** universal proof assembly  
-**Owner control at start:** `yspennstate/math-research-brain@8a24ac3b3b610693138602ff0294f093838b4eb2`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW SUPPORTING ANALYTIC THEOREM / FULL TARGET OPEN`.
 

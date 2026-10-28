@@ -13,7 +13,6 @@ The unrestricted QFORM conjecture remains **OPEN**. This report proves a target-
 
 ## 1. Sources and corrections actually used
 
-Fresh control remained on the QFORM-only owner continuation, OWNER CONTROL revision 2026-09-22.15, with no later B15 stop observed. The current delivery plan assigns B15 to supply a precise rough-law limit or trace justification used by a new density estimate, while keeping continuity separate from the main height target.
 
 The following completed mathematical sources are applied below.
 

@@ -3,7 +3,6 @@ attacking: the punctured near-coloop interpolation gap: convert the uniformly pe
 
 # account03/B11 r42 — internal curvature to aggregate E3 or a finite heavy-row collar
 
-Programme: `QFORM-DENSITY-3EIG-20260922` (OWNER CONTROL revision `2026-09-22.15`; continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`).
 Status: **new exact structural identity + quantitative E3 exit + finite-row reduction / designated partner applied / full unrestricted QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Regularity: the new E3 branch below has a continuous `C_0` density by the cited physical-E3 receiver. The surviving finite-heavy-row collar is not closed here, so no unrestricted continuity conclusion is claimed.
@@ -422,7 +421,6 @@ The proof must retain the nonzero `sigma_3 zW` term exactly; no moment assumptio
 
 ## 7. Source pins and scope
 
-Fresh control immediately before publication: `yspennstate/math-research-brain@28e3f8d2529df15e5d65e5229f7f077536122d96`; OWNER CONTROL revision `2026-09-22.15`; full QFORM status OPEN.
 
 Fresh math source before publication: `yspennstate/math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`.
 

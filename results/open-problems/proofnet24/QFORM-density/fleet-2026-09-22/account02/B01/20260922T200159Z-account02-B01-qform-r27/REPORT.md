@@ -9,7 +9,6 @@ Status: `ESSENTIAL_STEP_APPLIED / CORRECTION_APPLIED / FULL_TARGET_OPEN / WITHOU
 
 The target remains the full arbitrary-matrix conjecture: for every dimension, independent real inputs with probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal finite essential density bound for `Q=X^T A X`, or produce a valid target counterexample.
 
-Fresh control at the beginning of this run was brain main `8efb061f07e415755e0fd571d9c085629f585a9c`, OWNER CONTROL revision `2026-09-22.15`. A later source refresh observed main `6ea81e119e39a8c97e2480cccc3a5c057afbd123`; QFORM remained the sole target and no B01 stop appeared. The latest correction state is retained: no uniform pointwise scalar quadratic-phase decay, no post-rotation independence, no unrestricted arbitrary-joint rank-three coarea bound, no positive conditional-projection-density moment shortcut, and no worst-level scalar-remainder conditional-density supremum.
 
 This run directly consumes the completed named-partner result account03/B01 r17, canonical report `yspennstate/math-open-problems@b6c3fd34d5c608023be5149189c1e88e66f3baeb:proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T192922Z-r17/REPORT.md` and its decoupling addendum `yspennstate/math-open-problems@e3ea72181ebd1934c889703821a7a9396c5fb853:proofnet24/QFORM-density/fleet-2026-09-22/account03/B01/account03-B01-20260922T192922Z-r17/DECOUPLING_CRITICAL_LOSS.md`.
 

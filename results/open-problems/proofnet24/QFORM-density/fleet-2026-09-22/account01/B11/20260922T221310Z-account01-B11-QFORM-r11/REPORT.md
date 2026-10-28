@@ -7,7 +7,6 @@ Outcome: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / FULL TARGET OPEN
 
 ## 1. Source state and conditional end-to-end map
 
-Fresh pre-publication control: `yspennstate/math-research-brain@ab37e417299f19c541938cb54ab8ad46b085ea5d`, OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target. The live corrections were reread. In particular this proof does not use arbitrary-joint rank-three coarea, a conditional-density cap as independence, a fixed good physical triple, perturbative deletion of small coefficients under unbounded supports, or pointwise law-uniform van-der-Corput decay.
 
 Named assigned partner actually consumed: account02/B11 run `20260922T211715Z-account02-B11-QFORM-5f4a9c7d`, canonical proof `yspennstate/math-open-problems@08587fcda4f590bb64d655cdaa8b8dd98fa8af45`, theorem `QFORM-DIFFUSE-TRANSVERSE-WEDGE-PARTITION-v1`. Its hypotheses and conclusion used below are exact: in the exact-rank-three heavy-null normalization, if each residual transverse row has squared norm at most `1/16`, it produces disjoint ORIGINAL-coordinate banks `S,T` with
 

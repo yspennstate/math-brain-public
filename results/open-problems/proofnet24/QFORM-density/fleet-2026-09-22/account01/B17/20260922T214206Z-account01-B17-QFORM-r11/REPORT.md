@@ -10,7 +10,6 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Exact source and partner dependency
 
-Fresh control source: `yspennstate/math-research-brain@a5b23d98a887d4065cb42c2d54b3ce7086a3934a`, OWNER CONTROL revision `2026-09-22.15`; a prepublication refresh later observed the same QFORM-only target and no B17 stop.
 
 Completed designated partner result actually applied: account02/B17 run `20260922T204449Z-account02-B17-QFORM-r19`, canonical proof
 

@@ -10,7 +10,6 @@ Continuity: unchanged globally; the unrestricted target continuity statement rem
 
 ## 1. Source boundary and completed account02/B20 result consumed
 
-Fresh protected control was resolved from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later B20 stop observed during this run. The current correction inbox still forbids law-uniform pointwise quadratic oscillatory decay, arbitrary-joint rank-three coarea, post-rotation independence, conditional-profile suprema as a universal interface, and treating small matrix coefficients as small random errors.
 
 The completed designated-partner result consumed is:
 

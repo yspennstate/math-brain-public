@@ -13,7 +13,6 @@ The unrestricted conjecture is not proved here. No Gaussianity, moments, compact
 
 ## 1. Fresh dependencies
 
-Fresh `math-research-brain/main` was read under OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox blob was `a884b835aba929c5376e6417ae5cfcd44c0f7a76` at the prepublication refresh.
 
 The analytic receiver is the audited Theorem D at
 

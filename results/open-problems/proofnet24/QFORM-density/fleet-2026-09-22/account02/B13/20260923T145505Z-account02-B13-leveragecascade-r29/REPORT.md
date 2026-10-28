@@ -11,7 +11,6 @@ Full continuity: **OPEN**.
 
 ## 1. Source-pinned inputs actually used
 
-Fresh owner control at invocation start was `yspennstate/math-research-brain@fd4721a4f33b56ca5a29b81bfaf2287bc35434b4`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The same-hour account02/B13 login already existed and was read rather than overwritten.
 
 ### 1.1 Designated partner account03/B13
 

@@ -7,7 +7,6 @@ Parent target: not publicly promoted; the team currently has an internal `FULL_P
 
 ## 1. Controls and exact scope
 
-Fresh start controls were read at main `e661d70e7469376d8e47acc24428bdecfbc13979`; pre-publication refresh was main `4c0d86cc5585faaa81e99166dbec429086e67391`. Active OWNER CONTROL is `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. This slot is FOREST research: for every finite simple graph, uniform over all unrooted acyclic edge subsets, prove pairwise negative edge correlation. New brain-installation and benchmark work remained stopped.
 
 Mandatory source/control blobs at the fresh read included README `3d4a9372c87802ab734141a3374d04c8823372e3`, ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`, TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`, ASSIGNMENTS `fe144a4be3522d57f8cb2dc40b1fc57df7c7f7da`. The assigned role is exact graph adversaries to separator/counting lemmas, especially overlaps and contraction-created parallel intermediates, then corrected sufficient statements.
 

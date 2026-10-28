@@ -334,7 +334,6 @@ Full-target continuity status: **OPEN**.
 
 ## 9. Source pins and integrity
 
-Fresh control source immediately before publication: `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction ledger was reread; the argument does not use the refuted pointwise-decay, arbitrary-joint-coarea, normalized-conditional-cap, fiber-sup, or generic absolute-cell closure interfaces.
 
 Previous B01 signed-cell theorem:
 `yspennstate/math-open-problems@de33e9a351f65e5ccb6ef40115b148de1a1214f8`,

@@ -27,7 +27,6 @@ with no leverage/marginal condition. Its proof gives `phi_Q in L^1`, hence a **c
 
 The designated partner result actually applied below is `account02/B12`'s completed `QFORM-THRESHOLDED-CROSS-FOOTPRINT-HYBRID-v1`, handoff
 
-`yspennstate/math-research-brain@f932c63bc3276710ec1bd41da7df0dc3a24b0096:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260923T065358Z-account02-B12-auto11.md`.
 
 Its first branch applies the same `D_5` theorem to an **actual final physical cross block** after a matrix-level perturbation estimate. I use that branch with a new rank/tail decomposition that does not require the large perturbation to have small cross norm.
 

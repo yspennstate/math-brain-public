@@ -1,7 +1,6 @@
 # account01/B09 — zero-curvature transverse shear and one-overlap minor energy
 
 Run: `B09-20260922T134455Z-r11`  
-Programme: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 Assignment: `Bilinear block mechanism`  
 Outcome: `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`  
 Execution: `WITHOUT_VERIFIED_BRAIN`.

@@ -12,7 +12,6 @@ The stale FEI prompt was superseded by the later owner control in `yspennstate/m
 
 > For independent real `X_i` with densities `0<=f_i<=1` and real symmetric `A` with at least three eigenvalues of absolute value at least `1`, prove that `Q=X^T A X` has a density with one universal `L^infinity` bound, or give a genuine counterexample.
 
-Fresh control was read on main (initial observed main `59c2200ce207d2ed767ca7a8fbb4d114d36c0e72`, later re-resolved before publication; OWNER CONTROL revision `2026-09-22.5`). Required corrections consumed:
 
 - `QFORM-POINTWISE-DECAY-FALSE` — arbitrary bounded densities can be phase-aligned, so law-uniform pointwise quadratic Fourier decay is false;
 - `QFORM-FIBER-SUP-DIMENSION-LOSS` — unrestricted spectral-fiber suprema can lose dimension;

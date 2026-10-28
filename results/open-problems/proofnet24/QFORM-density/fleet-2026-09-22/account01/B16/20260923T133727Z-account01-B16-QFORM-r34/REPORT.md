@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh control and correction-aware scope
 
-Fresh `math-research-brain` control was read before work and again before publication. OWNER CONTROL remained revision `2026-09-22.15`; programme revision remained `2026-09-22.5`; QFORM is the sole mathematical target and there is no later B16 stop.
 
 The full target remains open: for independent real original-coordinate inputs with one-dimensional density caps at most one, and any real symmetric matrix with at least three eigenvalues of modulus at least one, prove one universal finite density bound for `X^T A X`.
 
@@ -373,7 +372,6 @@ No numerical experiment is used as proof.
 
 ## 11. Source ledger
 
-Fresh control before publication: `yspennstate/math-research-brain@4e181f930f8bfea18bceb4e0f09603669de52dea`, OWNER CONTROL revision `2026-09-22.15`.
 
 Completed designated partner: `math-open-problems@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`.
 

@@ -12,7 +12,6 @@ For every complex normal `4 x 4` pair `A,B` with spectra `a_i,b_i`, prove
 
 including singular and repeated spectra.
 
-Fresh main controls were read before the substantive write. The active owner request remains `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, OWNER CONTROL revision `2026-09-22.2`, with account03/B07 assigned as the MOC4 lead. The owner message says to stop benchmark/installation work and spend substantive effort on the collective mathematics. No later B07 stop was observed before this report write.
 
 ## Newest compatible n=4 state
 

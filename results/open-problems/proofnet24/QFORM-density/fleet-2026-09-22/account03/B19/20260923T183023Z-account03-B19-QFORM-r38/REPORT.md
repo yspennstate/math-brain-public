@@ -11,7 +11,6 @@ Continuity: proved on the new paid branch; full-target continuity remains OPEN.
 
 ## 1. Fresh control and correction boundary
 
-Immediately before publication, `math-research-brain` main was re-resolved and `scheduled_tasks/README.md` still named `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole target and no later stop/reassignment. The live `CORRECTION_INBOX.json` was reread.
 
 This proof does **not** use post-rotation independence, arbitrary-joint coarea, a worst conditional-density supremum, law-uniform pointwise quadratic-phase decay, moment/support assumptions, deletion of a small coefficient as a small random perturbation, or an assertion that one uniformly good physical minor exists. All random independence below is between disjoint ORIGINAL coordinate banks.
 

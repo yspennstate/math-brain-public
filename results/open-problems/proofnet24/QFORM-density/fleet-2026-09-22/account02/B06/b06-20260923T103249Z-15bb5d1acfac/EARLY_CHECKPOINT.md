@@ -6,7 +6,6 @@ attacking: near-collinear transverse high-leverage branch: turn partner exact ra
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full conjecture remains OPEN. This checkpoint is supporting mathematics only.
 
 Source pins actually consumed before this checkpoint:
-- fresh owner control: `yspennstate/math-research-brain@05fe615d471d3214bbeab6f83f765fb10b229a3f`, OWNER CONTROL `2026-09-22.15`;
 - partner account03/B06 r32: `yspennstate/math-open-problems@9583647ef39bb355508b8f8fb49f05ded8b594f2`;
 - newest-Claude package required by owner: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially Theorem F / Theorem C and the counterexample notes.
 

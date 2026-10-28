@@ -13,7 +13,6 @@ The source target is the Grimmett--Winkler uniform-forest pairwise negative-corr
 
 `P(e,f in F) <= P(e in F) P(f in F)`
 
-for all distinct present edges `e,f`. I use the source/hypothesis boundary recorded in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`; no rooted, fixed-size, spanning-tree, or weighted substitute is used.
 
 The latest complete team-lead version read before this attempt was account01/B01 run `20260922T050946Z-b01-forest-auto11`, candidate `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`. Its report creation commit is `79044b575c4b689248892f37b9930e983dddabca`. I retain its correction that the old fixed-graph Cocks weighted-globalization bridge is not source-secure; the parent target remains open.
 

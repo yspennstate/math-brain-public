@@ -14,7 +14,6 @@ attacking: collapse the entire r31/r33 Dodgson split into unconditional physical
 
 The unrestricted target remains OPEN. Inputs are independent ORIGINAL coordinates with one-dimensional densities bounded by one; no moment, support, log-concavity, Gaussian, iid, post-rotation-independence, arbitrary-joint coarea, pointwise law-uniform Fresnel decay, fiber supremum, or one-good-minor premise is used.
 
-Fresh control before publication was `yspennstate/math-research-brain@38775820a56bf2ad13b250939d69778f2d8cdf04`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The live correction inbox was reread at that commit.
 
 The exact algebraic input is B08 r31:
 

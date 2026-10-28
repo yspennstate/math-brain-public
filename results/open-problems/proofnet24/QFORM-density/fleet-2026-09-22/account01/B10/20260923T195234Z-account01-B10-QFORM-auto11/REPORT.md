@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source boundary and live state
 
-Fresh owner control was read from `yspennstate/math-research-brain@a1fd04e11dc76cda318e20b3c18f467daeaa4076`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The canonical claims ledger still records the unrestricted theorem and unrestricted continuity claim as open.
 
 The completed account03/B10 reduction
 

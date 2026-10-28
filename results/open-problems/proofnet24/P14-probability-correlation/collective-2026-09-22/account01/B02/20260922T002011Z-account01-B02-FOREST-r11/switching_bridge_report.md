@@ -12,7 +12,6 @@ The target is the Grimmett–Winkler uniform-unrooted-forest pairwise negative-c
 
 `P(e,f in F) <= P(e in F) P(f in F)`.
 
-The current campaign source boundary is recorded in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`. Historical continuity used `operations/claims/P0001.md` and `runs/R02/20260918T0024Z_8c7d1e52.md`; the latter proves only the block-cyclomatic-number-`<=6` partial theorem, not the parent conjecture.
 
 No complete current collective FOREST artifact from lead `account01/B01` was present at the bounded fresh archive check, so I used the exact compatible reduction from `account01/B03`, brain handoff blob `b49c6b896238cd62508b98549526dd12a469ceb3`, rather than wait.
 

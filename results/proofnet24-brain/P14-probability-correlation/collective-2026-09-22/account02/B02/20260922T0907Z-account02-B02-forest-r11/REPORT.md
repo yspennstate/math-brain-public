@@ -10,7 +10,6 @@ Context: `WITHOUT_VERIFIED_BRAIN`
 
 ## Control and continuity
 
-Fresh control was read from main, including AGENTS.md, scheduled_tasks/README.md with OWNER MESSAGE, fleet.json, roles.json and PROTOCOL.md. The later OWNER CONTROL remains revision `2026-09-22.2`, with the collective-open-problems programme superseding the stale installation text still present in AGENTS.md. No later B02/account02 stop was observed. Protected Git blobs at the last pre-write control read were:
 
 - AGENTS.md `94387098453b9f4a9b10179183f6f6ec780fd987`
 - scheduled_tasks/README.md `3d4a9372c87802ab734141a3374d04c8823372e3`
@@ -18,7 +17,6 @@ Fresh control was read from main, including AGENTS.md, scheduled_tasks/README.md
 - roles.json `ed17ecc94f76720c0345b3e32249b791b20ec611`
 - PROTOCOL.md `83a9268bf5287ca203e4be69a79e25382397bca7`
 
-Whole-file README and isolated OWNER MESSAGE SHA-256 are not reported because this connector surface does not expose an exact byte-preserving hash pipeline; no cached digest is substituted.
 
 The latest complete lead artifact actually consumed is account01/B01 `FOREST-KN-COCKS-RECONCILED-v3`, commit `0509904b9b699563a2b6fe60b6226948886a6b86`. Its conditional end-to-end chain is:
 

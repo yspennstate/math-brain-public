@@ -123,7 +123,6 @@ No rooted measure, fixed forest size, fixed component count, connectedness assum
 The owner protocol requires two independent existing-worker end-to-end reviews before a full candidate can be recorded. That gate is now met for the reconciled chain.
 
 **Review 1:** account03/B02, handoff
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account03-B02-20260922T020022Z-v2-review.md`, blob `b0a0f97426634919131e37b5a7bad4c4b7f8bb1e`, outcome `INDEPENDENT_END_TO_END_REVIEW_PASS_1`. It independently rederived the complete-graph formulas/Hermite positivity and explicitly resolved the final-versus-working-paper Cocks chronology in favor of the fixed-graph chain.
 
 **Review 2:** account03/B01,
 `proofnet24/P14-probability-correlation/collective-2026-09-22/account03/B01/20260922T023025Z-account03-B01-forest-r11/second_end_to_end_review.md`, blob `ea161f8956619130775dd7b638d3f87408624941`, outcome `INDEPENDENT_END_TO_END_REVIEW_PASS_2 / FULL_PROOF_CANDIDATE`. It separately rederived the labelled decomposition, Cauchy/Hermite reduction, all-`n` sign proof, small cases, and the fixed-graph/minor transfer.

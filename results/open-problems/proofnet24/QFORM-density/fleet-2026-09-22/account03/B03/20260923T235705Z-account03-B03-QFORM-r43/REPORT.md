@@ -12,7 +12,6 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. Ful
 
 ## 1. Fresh source boundary and exact live debt
 
-Fresh brain control at this invocation resolved to `yspennstate/math-research-brain@ebfdadd903d729b9b173211dc811367d5cbb5447` and OWNER CONTROL revision `2026-09-22.15`; the later prepublication refresh is recorded in the receipt. No pause/stop applies to account03/B03.
 
 The newest account03/B20 operator-overlap compiler used here is
 

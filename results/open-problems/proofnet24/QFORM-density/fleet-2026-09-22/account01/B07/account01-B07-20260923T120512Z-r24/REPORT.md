@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.
 
 The target is unchanged: for every dimension, independent real ORIGINAL-coordinate inputs `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density with a universal essential-supremum bound, or give a target-valid counterexample. No Gaussianity, moments, compact/connected support, log-concavity, iid assumption, or independence after spectral rotation is used. Continuity remains a separate desired conclusion.
 
-The final pre-publication control refresh retained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no B07 pause. The live correction inbox was reread. In particular, this run does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, positive moments of conditional projection density, naive fiber-sup integration, deletion of a small nonzero quadratic tail, or a one-good-minor claim.
 
 The principal sources actually used are:
 

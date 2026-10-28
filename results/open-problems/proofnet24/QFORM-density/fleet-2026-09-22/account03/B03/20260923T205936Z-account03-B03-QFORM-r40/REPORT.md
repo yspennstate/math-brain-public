@@ -8,7 +8,6 @@ attacking: the critical two-sided decoupled-time endpoint; consume account04/B03
 **Classification:** `NEW SUPPORTING THEOREM / DESIGNATED PARTNER RESULT APPLIED / MATCHED-OPPOSITE TWO-SIDED ENDPOINT CLOSED / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control was resolved from `yspennstate/math-research-brain` main before the mathematical write. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause/stop for account03/B03. The current continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The live corrections retained here include `QFORM-UV-CONDITIONAL-CAP-FALSE`, no post-rotation independence, no law-uniform pointwise quadratic-phase decay, no arbitrary-joint coarea shortcut, and no uniformly good single-minor assumption. The full theorem and the full continuity conclusion remain OPEN.
 
 The completed designated partner source is
 

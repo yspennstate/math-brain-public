@@ -10,7 +10,6 @@ attacking: QFORM-HIGHLEVERAGE-BALANCED-REGRESSION-CROSSING-v1 — turn the diffu
 **Regularity:** continuous `C_0` density is proved on the exact-cross and diffuse-complement branches below; the pair-star and designated definite-pair branches give essential boundedness. Full-target continuity remains open.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh startup control was read from `yspennstate/math-research-brain@853f24ee3f2ec6baa05deceaac1c498feacdd154`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. Before publication I refresh controls and corrections again. Nothing below uses law-uniform pointwise quadratic-phase decay, an arbitrary-joint rank-three coarea theorem, a conditional projection-density cap, independence after rotating random coordinates, a curved-fiber supremum, moments, support bounds, log-concavity, or deletion of a small random term.
 
 The immediate same-slot source is
 
@@ -637,7 +636,6 @@ A separate neighboring endpoint is the genuine near-coloop chamber `c>3/4`; the 
 
 ## 10. Source pins
 
-- Startup control: `yspennstate/math-research-brain@853f24ee3f2ec6baa05deceaac1c498feacdd154`, OWNER CONTROL revision `2026-09-22.15`.
 - Immediate own r44: `math-open-problems@461ca4597face7955d318d0540729ca6b809fce2`.
 - Pair-star theorem r39: `math-open-problems@22d59171a8870dbcdbf7641e990800db2fc9df42`.
 - Determinant-sensitive exact crossing r31: `math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85`.

@@ -258,7 +258,6 @@ No moment, support, log-concavity, identical-law, spectral-coordinate independen
 
 ## Sources actually consumed
 
-- fresh owner control: `math-research-brain@8fb181936c7fef01d96c03385d44902d165f9dd3`, refreshed before this report at newer main `a9f0ed5db27beaf29001ae44b24aa4607fb23e35`, OWNER CONTROL revision `2026-09-22.15`;
 - assigned partner annular normal form: `math-open-problems@a86bb095aac440bd79e2b2c26b23228ac952d2ab`;
 - assigned partner phase-aligned regularity obstruction: `math-open-problems@a5094ce57d028af28c2c114f92ca26ac277d4cec`;
 - required Claude source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`;

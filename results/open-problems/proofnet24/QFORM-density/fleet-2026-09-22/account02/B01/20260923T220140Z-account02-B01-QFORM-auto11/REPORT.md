@@ -7,7 +7,6 @@ Status: **ESSENTIAL_STEP_APPLIED / FULL QFORM OPEN**
 
 ## 1. Control and correction boundary
 
-Fresh control was resolved from `yspennstate/math-research-brain/main@49e1e941f15fcadfa6b3c8472eae900d2aac5fbb`. OWNER CONTROL remains revision `2026-09-22.15`, fleet enabled, QFORM-only, with no account02/B01 pause or later stop observed at sign-in. The active correction boundary is preserved: there is no law-uniform pointwise scalar quadratic-phase decay for arbitrary cap-one densities; there is no post-rotation independence; and no small random quadratic tail is discarded merely because its coefficient matrix is small.
 
 The exact target remains the universal bounded-density conjecture for `X^T A X` under independent real cap-one densities and `s_3(A)>=1`.
 

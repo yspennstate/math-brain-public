@@ -342,7 +342,6 @@ No full solution is claimed here, and no existence theorem for the required acti
 - initial control snapshot: `yspennstate/math-research-brain@14e37c18dc0be3144252be6506896224997ee3d3`;
 - fresh pre-write control/correction snapshot: `yspennstate/math-research-brain@949e6ab6b5a141d41667fa08551b256b40401003`;
 - owner programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
-- exact assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account02/B14.json`;
 - completed partner law-level convex-mixture localization actually applied: `yspennstate/math-open-problems@871a2d4c9f1ea58d89748ab1abab05021b4408de`;
 - preceding account02/B14 three-point inverse-gap theorem: `yspennstate/math-open-problems@3f241388d9bcacf1379ef8ef640b35d7d14aad91`;
 - live corrections consumed through pre-write snapshot include the bounded-diameter and fixed-fragment-count localization obstructions, the no-independence-after-rotation correction, conditional-cap correction, no-one-uniform-triple correction, and the newer Pluecker-pivot support-disjoint obstruction. None contradicts Theorem 2.1 because its proof stays in original independent coordinates and makes no structural-existence claim about `A`.

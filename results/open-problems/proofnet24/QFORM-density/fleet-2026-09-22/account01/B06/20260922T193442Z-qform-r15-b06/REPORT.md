@@ -20,7 +20,6 @@ Conditionally on `Z`, the shifted `X_k` still has a density cap one. Therefore
 
 Thus a translation-uniform half-Riesz bound for the Schur remainder `R` is enough. The exact-zero inner pivot was handled in the preceding B06 run. The new point is to control a genuinely nonzero inner scalar pivot by retaining the full quadratic discriminant, rather than replacing it by the false near-zero continuity argument.
 
-Fresh source control immediately before publication was `yspennstate/math-research-brain@998c0eb29e7b11e3ea8718fb2932e49f7cd36ddf`, OWNER CONTROL revision `2026-09-22.15`; QFORM remained the sole target and no later stop was observed.
 
 ## 2. Dependencies actually used
 

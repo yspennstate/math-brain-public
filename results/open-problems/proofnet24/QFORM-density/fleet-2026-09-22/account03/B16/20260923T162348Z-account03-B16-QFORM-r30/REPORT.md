@@ -13,7 +13,6 @@ attacking: co-locate the true-near-coloop aggregate hyperbolic pair mass with tw
 
 The owner target is unchanged: for every dimension, independent real original-coordinate inputs with one-dimensional densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal bound on the density of `X^T A X`, or give a valid counterexample. No moments, compact support, connected support, Gaussianity, log-concavity, post-rotation independence, or diagonal-basis hypothesis is used below.
 
-Fresh control was read from `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`. The live correction inbox was consumed. In particular this report does not use arbitrary-joint coarea, positive conditional projection-height moments, worst-fiber suprema, coefficient deletion on unbounded inputs, or law-uniform pointwise quadratic-phase decay.
 
 The immediate B16 sources are:
 

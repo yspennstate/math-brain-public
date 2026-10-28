@@ -12,7 +12,6 @@ attacking: weighted unnormalized projection disintegration—can the partner's a
 
 The full target remains open: arbitrary independent real coordinates with densities at most one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No moment, support, log-concavity, rotation-independence, or conditional-density-cap assumption is introduced.
 
-Fresh controls were read from `yspennstate/math-research-brain@9397b657cb5327fa0a01cefb0c2aa6f89cca5116`, OWNER CONTROL revision `2026-09-22.15`, then refreshed before the mathematics write at `ba76face1ab203d2904f9f82dd4ec1cde1b05843`, same owner revision. The live state marks arbitrary-joint coarea, positive conditional projection-height moments, projected-coordinate independence, absolute phase-Wiener, and several one-local-minor routes as invalid. None is used here.
 
 ## 1. Completed designated partner actually applied
 

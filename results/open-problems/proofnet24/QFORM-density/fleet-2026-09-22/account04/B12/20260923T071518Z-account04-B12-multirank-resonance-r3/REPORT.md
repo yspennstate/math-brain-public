@@ -39,7 +39,6 @@ The remaining global extraction problem is stated in Section 7.
 
    where `ell(rho)=(sqrt(rho^2+4)-rho)/2`.
 
-Fresh brain control was read at `yspennstate/math-research-brain@da6e4d750e712d00d07673214f4aaf73403131d1`; OWNER CONTROL remains revision `2026-09-22.15`. The live correction inbox blob remains `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 ## 3. A multirank local resonance formula
 

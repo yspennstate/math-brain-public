@@ -11,7 +11,6 @@
 
 ## 0. Control and version reconciliation
 
-Fresh `math-research-brain` main control was resolved before work; the required `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, and `PROTOCOL.md` were read. OWNER CONTROL is revision `2026-09-22.2`, keeps B12--B18 on FEI, and contains no account02/B18 stop. The later owner message converges FEI work on the exact all-gate / Shannon residual and supersedes conflicting older Campaign-C mathematical duties. The execution-reset admission rule nevertheless remains relevant history: Campaign C was allowed only two substantive iterations without an explicit source-bound NET candidate and actual joint cancellation calculation before redirect to A or B.
 
 The last three substantive own B18 mechanisms were:
 

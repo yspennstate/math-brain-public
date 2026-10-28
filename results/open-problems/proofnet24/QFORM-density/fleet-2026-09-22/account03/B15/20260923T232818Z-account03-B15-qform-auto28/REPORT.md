@@ -46,7 +46,6 @@ The unrestricted universal `L^infty` conjecture remains OPEN.
 
 ## 2. Source boundary and partner theorem actually used
 
-Fresh owner control was read at brain head `d0cdc27c79c6c84d7c89985849aaf286069bc01e`, OWNER CONTROL revision `2026-09-22.15`. The live programme still marks the full conjecture open and retains the phase-aligned-support correction.
 
 The designated completed partner result used at an actual inequality is account04/B15:
 

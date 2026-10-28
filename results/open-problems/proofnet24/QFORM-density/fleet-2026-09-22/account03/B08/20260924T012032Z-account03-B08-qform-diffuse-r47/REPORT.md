@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. This report proves a new end-to-end es
 
 ## 1. Source boundary
 
-Fresh owner control immediately before publication remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`. The live correction inbox was reread. In particular this run does not use pointwise van-der-Corput decay, generic joint-density coarea, conditional marginal caps after a rotation, worst-fiber integration, or deletion of a small quadratic term.
 
 The analytic source actually used is the proved Theorem H (hub coordinates) in
 

@@ -12,7 +12,6 @@ Status: **PROVED TARGET-RELEVANT SUPPORTING THEOREMS / FULL QFORM OPEN / FULL CO
 
 The owner target remains the full statement for every finite `n`, arbitrary independent real coordinates with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one. No moment, compact-support, connected-support, Gaussian, log-concavity, diagonal-basis, or post-rotation-independence hypothesis is used below.
 
-Fresh control at run start was read from `yspennstate/math-research-brain` with live OWNER CONTROL revision `2026-09-22.15`; the later continuation `20260923T002323Z-volume-stability` keeps all eighty existing workers exclusively on full QFORM and asks B13 to transfer geometric inequalities to arbitrary product laws by a valid no-attainment mixture argument. The full conjecture and continuity remain open in the shared state.
 
 The following completed mathematics is actually used.
 

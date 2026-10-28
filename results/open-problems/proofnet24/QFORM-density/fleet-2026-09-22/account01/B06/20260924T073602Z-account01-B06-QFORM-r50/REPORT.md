@@ -1,7 +1,6 @@
 # account01/B06 r50 — scalar-pivot / P2 weighted curved receiver
 
 **Run:** `20260924T073602Z-account01-B06-QFORM-r50`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`  
 **Assignment:** Curved fiber integration  
 **Status:** NEW SUPPORTING ANALYTIC THEOREM + EXACT P1/P2 PLUCKER BRIDGE + DESIGNATED PARTNER APPLIED; full unrestricted QFORM remains OPEN; global continuity remains OPEN  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
@@ -10,7 +9,6 @@
 
 The target remains: for every `n`, independent real `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has an essentially bounded density by one universal finite constant, or give a valid counterexample. No moment, support, compactness, connected-support, Gaussian, log-concavity, iid, or diagonal-basis assumption is introduced. No input rotation is treated as preserving independence.
 
-Fresh `math-research-brain` control was read before the substantive calculation. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and account01/B06 is not paused. The live corrections were refreshed; in particular this run does not use law-uniform pointwise van der Corput, arbitrary-joint coarea, a worst conditional fiber cap, a largest-minor inference, or an unrestricted curved-fiber supremum.
 
 Immediate predecessor: account01/B06 r49, canonical mathematics `yspennstate/math-open-problems@3b734087af35e1fa1c601fc92ddadf73e4d3a206`, path `proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T063803Z-account01-B06-QFORM-r49/REPORT.md`. It paid the exact rank-one physical-pair endpoint by a parabolic product-fiber theorem but left the invertible-near-singular transition unpaid.
 

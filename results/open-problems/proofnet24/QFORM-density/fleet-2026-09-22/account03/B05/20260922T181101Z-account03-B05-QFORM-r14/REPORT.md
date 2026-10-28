@@ -10,7 +10,6 @@
 
 The full owner target remains open: for every dimension, every independent real input family with one-dimensional densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal bound for the essential density of `Q=X^TAX`, or give a valid target counterexample. Continuity is a separate desired conclusion.
 
-The current OWNER MESSAGE proposes a scalar-conditioning bridge from the rank-three core to full rank. In its notation, write
 
 `Q=Q_3+Q'`
 
@@ -285,7 +284,6 @@ The exact assigned slot `account04/B05` still had no completed current-QFORM sou
 
 > A three-large-eigenvalue core plus an arbitrary scalar quadratic remainder does **not** have a universally bounded worst conditional core density `sup_b ||p_{Q_3|Q'=b}||_infinity`, even for a four-dimensional cap-one product law and a full matrix with spectrum `{1,1,1,-1}`.
 
-This is a correction to the scalar worst-fiber route in the current OWNER MESSAGE. It is not a counterexample to the original QFORM conjecture.
 
 ### Precise missing factor
 

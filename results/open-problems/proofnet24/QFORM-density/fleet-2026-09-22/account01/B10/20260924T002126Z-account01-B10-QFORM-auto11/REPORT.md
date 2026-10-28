@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and first unpaid implication
 
-Fresh control from `yspennstate/math-research-brain` remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The current correction inbox was consumed. Nothing below uses independence after spectral rotation, a law-uniform pointwise quadratic-phase estimate, the false arbitrary-joint coarea estimate, a conditional-density-cap-for-independence substitution, a moment/support/log-concavity hypothesis, or deletion of a small coefficient times an unbounded random variable.
 
 The immediate B10 input is
 

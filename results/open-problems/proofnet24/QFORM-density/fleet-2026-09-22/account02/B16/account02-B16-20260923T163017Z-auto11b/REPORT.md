@@ -419,6 +419,5 @@ Arbitrary additional spectrum remains a separate global interface after this exa
 
 ## 9. Source and correction boundary
 
-Fresh owner control was re-read before publication. OWNER CONTROL remains revision `2026-09-22.15`; the later continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed during this actual run. The live correction inbox was refreshed. In particular, nothing above uses the refuted arbitrary-joint coarea bound, a uniform conditional projection-height cap, post-rotation independence, law-uniform pointwise quadratic-phase decay, deletion of a small coefficient on unbounded inputs, or a uniformly good single physical minor.
 
 The newest projected-crossing checkpoint and the newest adapted-hub Gaussian/obstruction checkpoint were read at the source-pinned reviewed bundle `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`. They are supporting theorems, not a full proof.

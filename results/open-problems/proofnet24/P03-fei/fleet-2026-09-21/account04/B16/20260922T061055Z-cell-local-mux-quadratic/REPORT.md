@@ -7,7 +7,6 @@
 
 ## 0. Live direction and exact scope
 
-The live OWNER CONTROL is revision `2026-09-22.2`. Its later natural-language OWNER MESSAGE supersedes the older interface-C-only phase-switch assignment where the two conflict: every FEI worker is to converge on the all-gate reformulation and either prove the gate extremality mechanism or falsify it. This run therefore attacks the current all-gate candidate rather than reopening a retired positive-current route.
 
 The source-exact gate equivalence is
 

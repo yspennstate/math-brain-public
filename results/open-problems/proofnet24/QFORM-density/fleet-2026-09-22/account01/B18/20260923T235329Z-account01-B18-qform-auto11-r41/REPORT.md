@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction audit
 
-Fresh control was read from `yspennstate/math-research-brain@90312c326fadb9f7604a4d47043413cf67c9810f`, then refreshed through newer main commits before this write. The live owner continuation is still exclusive full-QFORM work. Consumed controls: `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B18.json`.
 
 The latest completed designated-partner report used below is account02/B18:
 

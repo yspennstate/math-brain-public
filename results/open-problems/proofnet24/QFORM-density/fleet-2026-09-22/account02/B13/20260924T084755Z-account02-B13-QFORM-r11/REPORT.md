@@ -23,7 +23,6 @@ This is strictly narrower than `QFORM-DIAMETER-BANK-TO-ROUGH-RECEIVER-v1`: the p
 
 ## 2. Fresh compatible inputs
 
-Fresh owner control is QFORM-only under OWNER CONTROL revision `2026-09-22.15`; the unrestricted arbitrary-cap-one theorem remains OPEN / not proved / not disproved, and full-target continuity remains separate.
 
 The latest completed designated-partner result at refresh is account03/B13 r45,
 

@@ -36,7 +36,6 @@ of an entire half-bank. Thus no bounded-size localized pivot or sparse-condition
 
 ## 2. Source-pinned inputs actually used
 
-Fresh brain control immediately before publication remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`; the full claim remained OPEN. No later control/correction path changed between the preceding control read and the publication read.
 
 ### 2.1 Predecessor actual spectral gate
 

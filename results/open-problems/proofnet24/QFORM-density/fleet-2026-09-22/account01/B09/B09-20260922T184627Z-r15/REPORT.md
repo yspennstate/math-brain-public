@@ -5,7 +5,6 @@ attacking: pay a rank-two bilinear cross block when one physical bank has arbitr
 
 Run: `B09-20260922T184627Z-r15`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh control before publication: `yspennstate/math-research-brain@5948b3d5bff64fb78148829878bf341ea513716b`, OWNER CONTROL revision `2026-09-22.11`  
 Assignment: Bilinear block mechanism  
 Outcome: **ESSENTIAL_STEP_APPLIED / PROVED SUPPORTING THEOREM / FULL_TARGET_OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**

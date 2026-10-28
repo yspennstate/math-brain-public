@@ -12,7 +12,6 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. Ful
 
 ## 1. Fresh source state and correction boundary
 
-Initial fresh control source: `yspennstate/math-research-brain@171d269816bdfe0511c926fd3c8b3b78046c055d`; the final prepublication refresh observed `f5c602f3c22de60b9640af10edaaeb65b6776b8a`. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with no pause/stop for account03/B03.
 
 The proof preserves the live corrections:
 

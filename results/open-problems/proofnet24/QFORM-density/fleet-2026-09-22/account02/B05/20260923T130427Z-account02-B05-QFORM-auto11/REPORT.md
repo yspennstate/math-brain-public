@@ -50,7 +50,6 @@ That next step must remain uniform as `A_ii -> 0` without treating the small mat
 
 ### 2.1 Fresh controls and predecessor
 
-Fresh owner control was read at `yspennstate/math-research-brain@396b922ecaa9a85d3a95b610560a90c798c28fa9`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later account02/B05 stop observed before the start write.
 
 The immediate predecessor is
 

@@ -23,7 +23,6 @@ and reread immediately before the mathematical write at current main descendant
 
 `yspennstate/math-research-brain@17d0485914975deb71a305f1241dd20bdc17b6e0`.
 
-OWNER CONTROL remains revision `2026-09-22.15`, the sole research programme is QFORM, and the unrestricted theorem remains OPEN. The current corrections and CLAIMS retain all the known failures listed above.
 
 The immediately preceding same-slot frontier is
 

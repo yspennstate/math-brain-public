@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 ## 1. Fresh state and exact inherited collar
 
-Fresh `yspennstate/math-research-brain/main` was resolved before the mathematics at commit `9a94dc10b612d7f5f5a4a4f5aace294106411298`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. I reread the current programme files and the live correction inbox. In particular `QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1` remains binding, so no universal `|t|^{-1/2}||G_t||_2` integration is used.
 
 Immediate predecessor:
 

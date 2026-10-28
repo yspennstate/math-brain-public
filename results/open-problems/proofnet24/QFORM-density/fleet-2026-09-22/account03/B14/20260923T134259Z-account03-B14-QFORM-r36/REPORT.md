@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target is unchanged. For every finite `n`, every family of independent real coordinates whose one-dimensional probability densities satisfy `0<=f_i<=1`, and every real symmetric matrix `A` with at least three eigenvalues of modulus at least one, prove a universal essential bound for the density of `X^T A X`, or give a valid target-level counterexample. No Gaussian, log-concave, moment, compact-support, connected-support, centering, or post-rotation independence assumption is introduced.
 
-Fresh control used for this run is `yspennstate/math-research-brain@eeeaa6e7db4d386ef0a7ec1474dc1570db15fafd`; OWNER CONTROL revision is `2026-09-22.15`, QFORM-only, with no pause on account03/B14. I consumed the current `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account03/B14 assignment before the derivation. In particular I do not use law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint rank-three coarea, positive conditional-projection moments, bounded-diameter localization, fixed fragment-count localization, or a worst normalized fiber bound.
 
 The designated partner actually applied is account04/B14 r9:
 

@@ -14,7 +14,6 @@ The unrestricted conjecture is **not proved** here. The new result closes one sp
 
 ## 1. Source boundary and pinned inputs
 
-Fresh `math-research-brain` main was resolved during this invocation. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only; the full theorem and the full continuity assertion remain open.
 
 The main analytic input is this worker's completed result
 

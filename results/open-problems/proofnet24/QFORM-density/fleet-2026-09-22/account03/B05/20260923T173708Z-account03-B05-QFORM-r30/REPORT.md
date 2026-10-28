@@ -7,7 +7,6 @@ attacking: QFORM-PARTIAL-BILINEAR-TRANSVERSE-U-COAREA-v1 — determine whether t
 
 Full QFORM is OPEN: this report is not a proof or counterexample to the conjecture. Full-target continuity is also not proved here. The useful output is (i) a sharp product-kernel half-Riesz lemma, and (ii) an exact obstruction showing why completing both scalar directions before averaging can erase the third curvature even on a target-valid matrix.
 
-Control source refreshed before publication: yspennstate/math-research-brain@fd833b8e184d76d66929db61837a07f3ca3c7574, OWNER CONTROL revision 2026-09-22.15. Execution context remains WITHOUT_VERIFIED_BRAIN.
 
 ## 1. A universal product-kernel half-Riesz lemma
 

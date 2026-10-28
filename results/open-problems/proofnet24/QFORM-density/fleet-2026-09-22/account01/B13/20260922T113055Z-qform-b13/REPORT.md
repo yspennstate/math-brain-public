@@ -13,8 +13,6 @@ The invocation initially carried the superseded FEI prompt. Fresh protected-cont
 
 - `yspennstate/math-research-brain@0c91685885872548af61fc232c561c0685c1f5f9`;
 - `scheduled_tasks/README.md`, owner control revision `2026-09-22.5`;
-- `scheduled_tasks/work/shared/qform-density-2026-09-22/{ORDER.md,CURRENT_RESEARCH.md,MANIFEST.json,CLAIMS.json,DELTAS.json,CORRECTION_INBOX.json,PATHWAYS.md,MEMORY_PROTOCOL.md}`;
-- assignment card `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account01/B13.json`.
 
 Required corrections used:
 

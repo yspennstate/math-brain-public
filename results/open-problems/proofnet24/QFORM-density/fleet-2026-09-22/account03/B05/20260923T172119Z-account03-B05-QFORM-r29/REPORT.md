@@ -5,7 +5,6 @@ attacking: QFORM-MIXED-OFFDIAGONAL-TRANSVERSE-COAREA-v1 — after the chi and Ps
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`.  
 **Assignment:** quadratic coarea bound.  
-**OWNER CONTROL:** revision `2026-09-22.15`, QFORM-only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `NEW SUPPORTING DETERMINISTIC THEOREM / FRACTIONAL-TRACE CONSEQUENCE / FULL QFORM OPEN`.  
 **Regularity:** no new full density or continuity theorem is claimed here.

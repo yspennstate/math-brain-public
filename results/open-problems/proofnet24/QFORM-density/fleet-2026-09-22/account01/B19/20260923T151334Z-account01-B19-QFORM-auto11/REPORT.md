@@ -11,7 +11,6 @@ Continuity: proved on the new paid branches below; full-target continuity remain
 
 ## 1. Source-pinned inputs and corrections preserved
 
-Fresh owner control was read from `yspennstate/math-research-brain` at OWNER CONTROL revision `2026-09-22.15`; the exact target remains: independent original-coordinate densities `f_i<=1`, symmetric `A`, and at least three eigenvalues of modulus at least one. No moment, support, iid, symmetry, smoothness, log-concavity, or rotated-coordinate independence assumption is made.
 
 The live corrections were consumed before this derivation. In particular this report does **not** use the false arbitrary-joint coarea gate, conditional-cap-as-independence, pointwise quadratic oscillatory decay, perturbative deletion of small non-diagonal quadratic terms, or a forced source-disjoint third mode.
 

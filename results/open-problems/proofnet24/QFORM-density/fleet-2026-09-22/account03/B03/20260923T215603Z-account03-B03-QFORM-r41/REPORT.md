@@ -12,7 +12,6 @@ The unrestricted QFORM conjecture remains OPEN. Full-target continuity remains O
 
 ## 1. Source and correction scope
 
-Fresh owner controls were read from `yspennstate/math-research-brain` main at the start of this actual invocation. OWNER CONTROL remained revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with no pause/stop for account03/B03. The current continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The live corrections retained here include:
 - no law-uniform pointwise quadratic van-der-Corput estimate for arbitrary cap-one laws;

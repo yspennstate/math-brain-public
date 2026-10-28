@@ -11,7 +11,6 @@ Continuity: proved only on the physical-E3 branch recalled below; not asserted f
 
 ## 1. Fresh control and corrections
 
-Fresh `math-research-brain/main` controls were reread in this invocation, including `AGENTS.md`, `scheduled_tasks/README.md` and OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B19.json`. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and no later B19 stop/pause was observed.
 
 The exact target remains: independent real ORIGINAL coordinates with probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one; prove one universal finite essential density bound for `X^T A X`. Continuity is separate.
 

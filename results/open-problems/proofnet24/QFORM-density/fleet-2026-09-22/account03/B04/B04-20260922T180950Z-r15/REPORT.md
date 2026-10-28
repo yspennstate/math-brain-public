@@ -335,7 +335,6 @@ Thus the bad edge conditional cap is multiplied by a vanishing scalar-conditioni
 Fresh control observed in this run:
 
 * brain owner-control commit before operational writes: `eb93d5ba9d2e5fa40d55d15696832f556b715e9d`;
-* OWNER CONTROL revision: `2026-09-22.11`;
 * target remains `QFORM-DENSITY-THREE-LARGE-EIGENVALUES`;
 * fresh correction commit additionally consumed: `938e59f2caed677576b8bb3cd87ee1ffe81ee572`, event `QFORM-COAREA-AND-CONDITIONAL-MOMENT-CORRECTIONS-v1`.
 

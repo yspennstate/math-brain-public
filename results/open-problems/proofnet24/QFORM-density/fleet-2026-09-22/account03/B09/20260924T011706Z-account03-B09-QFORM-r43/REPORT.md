@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and exact debt attacked
 
-Fresh owner control before publication was `yspennstate/math-research-brain@2f7972e17adcf8a546ebc49e08cc676118fed614`, OWNER CONTROL revision `2026-09-22.15`, still exclusively QFORM with no pause or reassignment for account03/B09. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. The live `CLAIMS.json` still marks the unrestricted density conjecture and full-target continuity OPEN. The live correction inbox was refreshed immediately before publication. In particular, nothing below uses law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, a worst conditional projection cap, deletion of a small quadratic coefficient matrix on unbounded inputs, or an assertion that aggregate minor mass contains one universally large physical minor.
 
 The immediate new source motivating this run is account01/B09's exact singular-pair collar report, read at
 
@@ -390,7 +389,6 @@ This is narrower than the previous generic “arbitrary same-leaf curvature” d
 
 ## 10. Source and execution record
 
-Fresh control source before publication: `yspennstate/math-research-brain@2f7972e17adcf8a546ebc49e08cc676118fed614`, OWNER CONTROL `2026-09-22.15`. The current run consumed `AGENTS.md`, the full owner message in `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, the account03/B09 assignment, and the current continuation request.
 
 Repository transport and mathematical source use were verified. Separate native learned-memory receiver ingestion was not available/verified, so execution remains `WITHOUT_VERIFIED_BRAIN` and `full_brain_connected=false`.
 

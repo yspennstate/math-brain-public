@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. Nothing below assumes Gaussianity, l
 
 ## 1. Fresh source state and predecessor
 
-Fresh control was read from `yspennstate/math-research-brain` main, with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target. The live correction ledger was reread before this write. In particular this proof does not use the refuted arbitrary-joint coarea theorem, conditional projection-density caps, a uniform pointwise quadratic-phase decay estimate, independence after spectral rotation, or a supremum over curved fibers.
 
 The immediate B06 predecessor is
 

@@ -13,7 +13,6 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`
 
 The full target is unchanged: for arbitrary independent real coordinates with densities at most one and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a dimension-free essential-density bound for `X^T A X`, or give a valid counterexample. Nothing below proves the full target or the full continuity conclusion.
 
-Fresh control at invocation start was `yspennstate/math-research-brain@a7003d12b71d73e7918e40de00122c28548467f4`; immediately before the substantive write it was refreshed at `bc92626e3b3ccd056b05e4f72a52d6f0bd30fc0d`. In both reads OWNER CONTROL was revision `2026-09-22.15`, QFORM was the sole target, and there was no B17 pause/stop.
 
 The live correction state was reread before publication. This argument does not use the refuted arbitrary-joint coarea bound, conditional-projection positive moments, worst scalar conditional supremum, law-uniform pointwise stationary phase, post-rotation independence, or a law-uniform integrable radial envelope. In particular, the recent event `QFORM-NO-UNIVERSAL-INTEGRABLE-RADIAL-ENVELOPE-v1` does not conflict with the calculation below: here the source is one explicit compact product law and the radial integral is evaluated before any universal supremum.
 

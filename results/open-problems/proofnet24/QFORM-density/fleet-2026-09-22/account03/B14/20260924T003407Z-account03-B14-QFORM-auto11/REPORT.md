@@ -12,7 +12,6 @@ Continuity: the theorem below proves an essentially bounded density. The unrestr
 
 ## 1. Fresh controls and source state
 
-Fresh owner control was resolved on `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction state was read before this proof. In particular, this report does **not** use post-rotation independence, a generic joint-density/coarea bound for an indefinite quadratic, conditional projection-density caps, pointwise van-der-Corput decay, bounded support, moments, a bounded fragment count, or a small-coefficient-as-small-random-error argument.
 
 The designated completed partner actually applied below is:
 

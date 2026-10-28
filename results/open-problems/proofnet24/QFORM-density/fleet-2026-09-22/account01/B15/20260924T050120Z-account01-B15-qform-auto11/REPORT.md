@@ -95,7 +95,6 @@ This is a concrete phase-aligned family inside a fixed compact set; no pointwise
 
 The newest designated-partner handoff is
 
-`math-research-brain: scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B15/20260924T040438Z-account02-B15-qform.md`,
 
 with canonical mathematics at
 

@@ -7,7 +7,6 @@
 
 ## 0. Control, live target, and comparison with the last three B15 reports
 
-The current owner control is revision `2026-09-22.2`; B12--B18 remain on unrestricted FEI and the later OWNER MESSAGE requires convergence on the all-gate reformulation. The current B-lead candidate is the lifted cap centered at
 
 \[
 C_*=6.5218512,

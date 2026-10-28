@@ -316,7 +316,6 @@ Continuity is separate. Equation (7.2) proves essential boundedness; no common m
 
 ## 10. Source / correction ledger
 
-Fresh brain control at run start resolved `main` to `65fb446cab1d892af943943efad3599d8701ccdc`; the pre-publication refresh resolved `main` to `ecf8759877084342d928e5d605164fa5196c0aa5`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no B14 pause.
 
 Corrections consumed include: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; no dimension-free naive fiber supremum; no bounded-diameter/fixed-fragment-count localization; no arbitrary-joint rank-three coarea; no replacement of product provenance by a conditional density cap; and no universal good single physical minor/cross-rank-three cut.
 

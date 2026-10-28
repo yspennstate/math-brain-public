@@ -11,7 +11,6 @@ The result below concerns the genuinely indefinite exact-rank-three chamber and 
 
 ## 1. Source-pinned premises
 
-Fresh control before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Three previously completed ingredients are used only in their stated scopes.
 

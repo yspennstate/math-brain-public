@@ -5,7 +5,6 @@ attacking: exact-rank-three indefinite grouped-coordinate compiler; reduce the m
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `QFORM-B11-20260922T1814Z-r12`  
-Control observed before the write: OWNER CONTROL revision `2026-09-22.11`  
 Outcome: `ESSENTIAL_STEP_APPLIED / FULL TARGET OPEN`  
 Execution context: `WITHOUT_VERIFIED_BRAIN`
 
@@ -79,7 +78,6 @@ The arbitrary affine term is important because conditioning on a set of original
 
 Latest completed assigned-partner handoff used here:
 
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B11/20260922T155024Z-b11-qform-87d73745.md`
 
 Canonical partner proof:
 

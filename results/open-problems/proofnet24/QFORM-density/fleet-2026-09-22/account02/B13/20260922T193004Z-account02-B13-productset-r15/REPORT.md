@@ -13,7 +13,6 @@ The full quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED**
 
 ## 1. Fresh controls, correction discipline, and first unpaid implication
 
-Fresh owner control at run start was `yspennstate/math-research-brain@adae38c23ca80889201638b46430601ae62d8bfb`, OWNER CONTROL revision `2026-09-22.14`, with QFORM as the sole research target and no account02/B13 stop or pause. Later source-backed mathematical corrections override stale mathematical assertions in owner prose. In particular, this report does **not** use the refuted arbitrary-joint rank-three coarea inequality, the refuted positive conditional-projection moment, post-rotation independence, bounded-diameter or bounded-fragment localization, a single-good-minor reduction, or law-uniform one-dimensional stationary phase.
 
 The newest exact-rank-three structural input is account01/B13,
 

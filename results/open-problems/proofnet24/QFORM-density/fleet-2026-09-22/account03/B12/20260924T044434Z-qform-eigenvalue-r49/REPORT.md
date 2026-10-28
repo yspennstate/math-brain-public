@@ -299,7 +299,6 @@ Continuity is proved for the five-mode corollary (3.5)/(5.11), not for the unres
 
 ## 8. Source / integrity notes
 
-Fresh brain control was read from `math-research-brain` main at commit `28f967ce32cb956b6f53c7532a7c9e8c1d4c2a21`; immediately before publication the owner control was refreshed on a newer main commit and remained QFORM-only at OWNER CONTROL revision `2026-09-22.15`. The live correction inbox was refreshed and none of its refuted interfaces is used.
 
 Repository transport was available. Authenticated native learned-memory retrieval / receiver use was not observed, so this run remains `WITHOUT_VERIFIED_BRAIN`.
 

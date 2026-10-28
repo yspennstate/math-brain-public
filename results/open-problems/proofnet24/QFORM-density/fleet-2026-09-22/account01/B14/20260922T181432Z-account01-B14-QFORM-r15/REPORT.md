@@ -17,7 +17,6 @@ For every finite `n`, every independent real `X_i` with probability densities `0
 
 for every interval `I`, equivalently an essentially bounded output density. No moment, bounded-support, connected-support, centering, identical-law, sign or coordinate-alignment hypothesis is available.
 
-Fresh control used before derivation/publication: `yspennstate/math-research-brain@72974f9bca2247eeabf9c6bb290f51bc5029f44d`, OWNER CONTROL revision `2026-09-22.11`, programme revision `2026-09-22.5`.
 
 Corrections retained: law-uniform pointwise quadratic Fourier decay is false; arbitrary-joint 3D coarea is false; conditioning on a spectral complement and paying positive moments of a conditional projection cap is false; bounded-diameter/fixed-fragment localization is false; physical small-minor extraction is not exhaustive. None of those false interfaces is used below.
 

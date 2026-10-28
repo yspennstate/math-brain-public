@@ -9,7 +9,6 @@ This run proves a new quantitative supporting theorem for the B12 additional-eig
 
 Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. The result proves essential boundedness in its stated scope. Continuity is not proved.
 
-Control source at substantive start: `yspennstate/math-research-brain@1013ae404283ab76b8e4844acd17844b1167f72e`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. Execution state: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Source-valid dependencies actually used
 

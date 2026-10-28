@@ -10,11 +10,9 @@ Continuity: **not proved globally in this run**.
 
 The target is unchanged. The coordinates are independent ORIGINAL real coordinates, each marginal has a probability density `0<=f_i<=1`, and `A=A^T` has at least three eigenvalues of absolute value at least one. No moment, compact-support, connected-support, Gaussian, log-concave, iid, or rotated-coordinate independence assumption is used.
 
-Fresh control at the beginning of this run was `yspennstate/math-research-brain@79600f30658b4fbc39763ab87430b3e0f83515ec`, OWNER CONTROL revision `2026-09-22.15`. A later control refresh is required before publication. Repository retrieval is not native brain ingestion; this run remains `WITHOUT_VERIFIED_BRAIN` unless a genuine native receiver is later used.
 
 The designated partner input is account04/B13:
 
-- handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account04/B13/20260923T201653Z-account04-B13-extremal-slab-dichotomy-r1.md`, read at brain commit `79600f30658b4fbc39763ab87430b3e0f83515ec`;
 - underlying report `yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`.
 
 In its diffuse exact-rank-two chamber

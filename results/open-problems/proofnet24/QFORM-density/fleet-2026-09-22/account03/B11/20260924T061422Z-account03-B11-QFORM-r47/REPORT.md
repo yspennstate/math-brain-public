@@ -21,7 +21,6 @@ Fresh brain control was resolved from `yspennstate/math-research-brain` main, in
 
 `db0d6dbe2a76fa54e663e4bcbe1a7acd0b2fc956`
 
-and refreshed before publication. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and the full target remains open.
 
 The latest own mathematical predecessor consumed is
 

@@ -18,7 +18,6 @@ Fresh owner control was resolved from `yspennstate/math-research-brain` main at 
 
 `d8ae9f823b044ecb1756fa6bca4c2bf9f66155c9`,
 
-under OWNER CONTROL revision `2026-09-22.15`. A prepublication refresh reached a later main tail with no protected-control change in the intervening comparison; the intervening changes were run/status/handoff/memory traffic. No later stop or correction displaced this run.
 
 Required owner-pinned source package read at
 

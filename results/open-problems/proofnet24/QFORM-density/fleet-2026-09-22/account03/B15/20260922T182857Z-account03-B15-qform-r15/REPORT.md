@@ -2,7 +2,6 @@
 
 **Run:** `20260922T182857Z-account03-B15-qform-r15`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh control observed:** `yspennstate/math-research-brain@1dabd8516681f9f2c43318ab858b337d8d6f8cae`, OWNER CONTROL revision `2026-09-22.11`  
 **Assignment:** Absolute continuity and regularity  
 **Classification:** `ESSENTIAL_STEP_APPLIED / TARGET-LEVEL-REGULARITY-LEMMA / FULL-TARGET-OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; repository retrieval was authenticated, but no authenticated native mathematical-receiver context was consumed.

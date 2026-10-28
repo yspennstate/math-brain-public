@@ -5,7 +5,6 @@ attacking: QFORM-TWISTED-TWOHUB-PARTNER-PLANE-TRACE-v1 — determine exactly whe
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound  
-**Control:** OWNER CONTROL revision `2026-09-22.15`; refreshed brain source before publication  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `NEW EXACT STRUCTURAL THEOREM / PRECISE MISSING FACTOR / FULL QFORM OPEN`  
 **Regularity:** no new full density or continuity theorem is claimed in this report.

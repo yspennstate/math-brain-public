@@ -13,7 +13,6 @@ Status: **NEW SUPPORTING TARGET-LEVEL THEOREM / HIGH-DIAGONAL BRANCH PAID / FULL
 
 Let `X_1,...,X_n` be independent real random variables whose probability densities satisfy `0<=f_i<=1`, and let `A` be real symmetric with `s_3(A)>=1`. No moment, support, Gaussian, log-concavity, connected-support, iid, spectral-coordinate independence, or post-rotation product assumption is used.
 
-Fresh owner control was resolved on `yspennstate/math-research-brain/main`; immediately before publication it was commit `1e5b27aef796a45fad7fe5e2ba648f3b462e4626`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause for account03/B01. The live correction boundary was refreshed: law-uniform pointwise quadratic-phase decay is false; arbitrary-joint coarea is not a valid replacement for product provenance; small matrix tails cannot be discarded without moment/support assumptions; rotations generally destroy independence; and the corrected account04/B01 random-coloring corollary is not used here.
 
 The full conjecture remains open. This report proves a dimension-free closure of the three second-compound channels after **one literal original-coordinate scalar pivot**. It closes the principal-versus-overlap aggregate gap left by the preceding B01 run and gives a universal payment whenever that pivot has a quantitative lower bound.
 

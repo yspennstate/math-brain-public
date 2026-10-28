@@ -5,7 +5,6 @@ attacking: the strict-N3 STAR grouped-descent gap — combine the partner's two-
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly  
-**Control source:** `yspennstate/math-research-brain@f71bcad6ee232ae6d3aaf74acb51c4eb2b609e61`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED`; the full QFORM theorem remains OPEN. Continuity remains a separate global question.
 

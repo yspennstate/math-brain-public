@@ -13,7 +13,6 @@ Full-target continuity: **OPEN**.
 
 The target remains the unrestricted statement: independent real original-coordinate variables `X_i`, each with probability density bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No moment, support, iid, log-concavity, smoothness, or sign assumption is made. No spectral rotation of the product law is used.
 
-Fresh controls retained OWNER CONTROL revision `2026-09-22.15` and the later `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` continuation. The full theorem and the full continuity conclusion remain open.
 
 The designated partner mathematics actually used is account02/B19 auto11b, canonical source
 

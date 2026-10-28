@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target remains: for every dimension, every product law of independent real coordinates with one-dimensional probability densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal finite bound for the essential density of `X^TAX`, or give a valid counterexample. No moment, support, connectedness, log-concavity, identical-law, or post-rotation-independence hypothesis is added.
 
-Fresh control at the start was `yspennstate/math-research-brain@ae7f5672a8a28d7693b91679f0e4a8581086abe9`, OWNER CONTROL revision `2026-09-22.15`; a pre-write refresh advanced main to `a05b08f84f939248c82f5d2f91d15c2964e7ae95` with the same active programme.
 
 The assigned completed partner actually used is account03/B14 r23, canonical
 `yspennstate/math-open-problems@1f87f660ea368893d7f0aae76399af0d904318fd:proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T013540Z-account03-B14-QFORM-r23/REPORT.md`.

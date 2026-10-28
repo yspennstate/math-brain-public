@@ -308,7 +308,6 @@ This is strictly narrower than the previous `same-bank shear` debt: finite one- 
 
 ## Immutable sources consumed
 
-- fresh controls/corrections: `yspennstate/math-research-brain`, main, OWNER CONTROL revision `2026-09-22.15`.
 - account03/B11 r40 punctured-collar geometry: `yspennstate/math-open-problems@2db0a7f81437b6e67efe800f129abebae0e10b4c`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T191401Z-account03-B11-QFORM-r40/REPORT.md`.
 - account03/B11 r41 persistent curvature: brain handoff commit `9a2824966c565fbadaf2e537f6fa20955c404fb6`, canonical math source recorded there.
 - account02/B11 fixed-puncture crossing theorem: `yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`; r41 addendum terminal worker-math commit `c6063d311ba25c0f98dbc4add4090b51607062bb`.

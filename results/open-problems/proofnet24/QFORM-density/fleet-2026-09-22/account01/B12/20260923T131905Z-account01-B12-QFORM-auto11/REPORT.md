@@ -416,6 +416,5 @@ Thus the full QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. Th
 
 ## 10. Source / correction discipline
 
-Fresh control used the current owner programme `QFORM-DENSITY-3EIG-20260922`, effective OWNER CONTROL revision `2026-09-22.15`. The live correction set was read before this derivation. In particular the proof respects the corrections that bounded marginal density does not yield uniform pointwise quadratic-phase decay, general rotations destroy independence, arbitrary-joint coarea is false, positive conditional projection-density moments can diverge, and naive fiber-supremum integration can lose dimension.
 
 Repository transport and native learned-memory ingestion are distinct. This run is `WITHOUT_VERIFIED_BRAIN`.

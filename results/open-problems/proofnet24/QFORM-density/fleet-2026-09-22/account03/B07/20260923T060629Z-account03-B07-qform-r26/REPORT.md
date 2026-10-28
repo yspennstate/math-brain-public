@@ -6,7 +6,6 @@ attacking: the nested edge-star-core survivor — split its residual physical co
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
 **Run:** `20260923T060629Z-account03-B07-qform-r26`  
-**Start control:** `yspennstate/math-research-brain@bebec006f22d6e9aed3a5e542b65f466b6c9e63a`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Status:** `NEW SUPPORTING PHYSICAL-CORE COMPILER / ONE NESTED SUBBRANCH CONTINUOUSLY PAID / FULL QFORM OPEN`.
 

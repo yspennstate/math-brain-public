@@ -14,7 +14,6 @@ attacking: QFORM-PUNCTURED-NO-SECOND-FRESH-RELAY-v1 by extracting the exact nonz
 
 The owner target remains unrestricted: independent original-coordinate real inputs with scalar probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussianity, moment, support, log-concavity, connected-support, iid, or independence-after-rotation hypothesis is introduced.
 
-Fresh `math-research-brain/main` controls were read at startup. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and no pause/redirect applies to account03/B16. The live corrections remain binding: a bounded projected joint density alone does not control an indefinite curved trace; a law-uniform pointwise quadratic-phase decay is false; and general spectral rotations do not preserve independence.
 
 The immediate B16 predecessor is r40:
 

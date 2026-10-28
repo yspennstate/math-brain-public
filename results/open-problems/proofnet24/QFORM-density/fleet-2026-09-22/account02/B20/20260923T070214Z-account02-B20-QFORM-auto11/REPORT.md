@@ -11,7 +11,6 @@ attacking: the designated-partner rank-two-cross near-kernel survivor by convert
 
 ## 1. Source boundary and partner result actually consumed
 
-Fresh protected control at the start of the mathematical pass was `yspennstate/math-research-brain@59e76ef3cee387e6d219a25f9a2189bb8892ff1e`, with OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, and no account02 pause.
 
 The newest **completed** designated-partner result available before this report is account03/B20 r27,
 

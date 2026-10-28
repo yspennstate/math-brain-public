@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Control and correction scope
 
-Fresh brain control was read from `yspennstate/math-research-brain@41949ba63fc63c006d1b23fe34aaeadf5d3c04ed` before this mathematical write. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B14 pause/stop. The full conjecture remains open. The live corrections forbid law-uniform pointwise quadratic Fourier decay, post-rotation independence, bounded-diameter/fixed-fragment localization, arbitrary-joint 3D coarea, and worst normalized spectral-fiber caps. None is used below.
 
 The newest completed designated-partner result consumed is account02/B14 r37, canonical `yspennstate/math-open-problems@66d12f0c2a0691601221d8e827736d24c56ca4f0:proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260923T135912Z-account02-B14-QFORM-r37/REPORT.md`, read-back blob `8dc939d26c3055ccda1e662ae79c27769dbce2e0`. Its exact active-interval partition identity is applied in Section 6.
 

@@ -108,7 +108,6 @@ Regularity note: the argument proves essential boundedness. Even if the lower-di
 
 Named partner dependency consumed:
 
-`yspennstate/math-research-brain:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260922T1953Z-account02-B12-qform-r16.md`,
 with canonical mathematics at
 `yspennstate/math-open-problems@5295a978b9e3336cc823f0e631bde093c30a8a4d:proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T1953Z-account02-B12-qform-r16/REPORT.md`.
 

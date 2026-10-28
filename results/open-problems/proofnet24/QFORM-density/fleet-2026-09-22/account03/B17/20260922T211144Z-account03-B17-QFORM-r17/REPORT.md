@@ -15,7 +15,6 @@ The full target remains: for arbitrary independent real coordinates with densiti
 
 This run uses none of the refuted arbitrary-joint coarea, worst conditional-density, pointwise van-der-Corput, one-minor, or near-zero half-Riesz shortcuts. The result below is a sharp witness constraint inside the completed fixed-period uniform-cube Edgeworth family. It does not claim a full upper bound for QFORM.
 
-Fresh control at start: `yspennstate/math-research-brain@7708818b2832fb5055d55674e596fbb93270e79b`, OWNER CONTROL revision `2026-09-22.15`, QFORM sole research target, no B17 pause/stop.
 
 ## 2. Partner theorem consumed
 

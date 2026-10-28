@@ -5,7 +5,6 @@ attacking: the account03/B19 r42 pairwise-weak finite-core residue — determine
 
 Sources pinned for this calculation:
 
-- owner brain control resolved fresh before the write: `yspennstate/math-research-brain@c851e69b20fca80e1704fc6f8ad21560fd33047d`, OWNER CONTROL revision `2026-09-22.15`;
 - designated partner: `yspennstate/math-open-problems@9862459c9cc8e534a8a49c7d20959de7cb1ad992`, `account03/B19/20260923T210457Z-account03-B19-QFORM-r42/REPORT.md`;
 - required compatible completed source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md` Theorem A and `RESULTS.md` Theorem F.
 

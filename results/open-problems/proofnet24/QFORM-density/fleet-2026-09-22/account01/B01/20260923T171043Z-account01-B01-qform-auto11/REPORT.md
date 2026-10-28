@@ -19,7 +19,6 @@ The phase-aligned fragmented-support counterexample remains fully in force. This
 
 The replacement below is genuinely averaged in frequency: one ORIGINAL scalar coordinate gives an `L^4(dt)` square-phase budget, while two ORIGINAL physical hubs give a critical `|t|^-1` Plancherel factor. The coefficient of the scalar linear phase is allowed to depend arbitrarily on the same leaf bank that creates the hub slopes, so the scalar residual is not independent as a random term.
 
-Fresh control before publication: `math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, QFORM-only; current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; full theorem still explicitly open. Current correction inbox was reread. No false arbitrary-joint coarea cap, conditional projection-density cap, post-rotation independence, or uniform scalar Fresnel decay is used.
 
 Source inputs used at equations:
 

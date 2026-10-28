@@ -16,7 +16,6 @@ The full target is unchanged: for every dimension, independent real coordinates 
 
 The preceding B16 runs treated the null/nonzero-coloop interpolation. This run changes mechanism as required: instead of refining another scalar coloop kernel, it performs an **original-coordinate heavy/light spectral-frame decomposition** and uses product-preserving projection results before the nonlinear quadratic payment.
 
-Fresh control was read from `yspennstate/math-research-brain@6c3241b8679d0d42516cbdb68d2051b3838f4c2d`, OWNER CONTROL revision `2026-09-22.15`. Live corrections consumed include the failure of arbitrary-joint rank-three coarea, positive conditional projection-height moments, post-rotation independence, receiver-only fiber suprema, and law-uniform pointwise quadratic-phase decay. None is used below.
 
 The completed inputs actually used are:
 

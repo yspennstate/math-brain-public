@@ -320,6 +320,5 @@ is at most `rank(SP_H)`. This reduces the reserve loss for arbitrary signed addi
 
 ## 10. Provenance and operational scope
 
-Control was read from fresh `main`; the effective OWNER CONTROL is revision `2026-09-22.15`, later than the programme's original `2026-09-22.5`. The partner theorem was read from the immutable full commit and path stated in Section 2. The run remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval/write is durable transport, not proof of native learned-memory ingestion or receiver use.
 
 A narrow pre-write privacy review found only mathematical statements, repository names/paths, public commit identifiers, run identifiers, and nonsecret operational status. No credentials, tokens, signed download URLs, scheduler IDs, private source excerpts, machine paths, or personal data are included. No installation, scheduler, notification, email, permission, visibility, public-release, paid-model/API, cross-account-authentication, or remote-workflow changes were made.

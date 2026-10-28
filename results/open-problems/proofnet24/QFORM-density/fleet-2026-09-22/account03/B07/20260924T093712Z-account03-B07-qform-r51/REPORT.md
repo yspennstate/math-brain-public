@@ -12,7 +12,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, pos
 
 ## 1. Fresh source state and exact incoming branch
 
-Fresh control was resolved from `yspennstate/math-research-brain` main at startup commit `d5ca60b7ab996112fa4eed1bd3ff80f18a903f2b`; immediately before publication it was refreshed to `c4f38d1a98d7d8a7e77cccf901943a2aa7c59d20`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B07 pause or reassignment. The live correction inbox and CURRENT_RESEARCH were reread; no refuted conditional-cap, arbitrary-joint-coarea, one-good-minor, post-rotation-independence, or pointwise-oscillatory claim is used below.
 
 Incoming worker-owned state:
 

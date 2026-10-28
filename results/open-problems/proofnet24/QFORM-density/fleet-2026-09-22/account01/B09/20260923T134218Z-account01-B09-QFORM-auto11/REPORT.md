@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. The result below advances the heavy-ro
 
 ## 1. Fresh source state and completed inputs
 
-Fresh `math-research-brain/main` was resolved during this run. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, QFORM only. The live correction inbox was refreshed at blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe` before publication.
 
 The exact target remains: independent real original coordinates `X_i` with densities at most one; real symmetric `A`; at least three eigenvalues of `A` have modulus at least one; prove one universal essential density bound or give a valid counterexample. Full-target continuity is tracked separately.
 

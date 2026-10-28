@@ -13,7 +13,6 @@ The exact target remains: independent ORIGINAL real coordinates with one-dimensi
 
 ## 1. Fresh sources and correction boundary
 
-Fresh `math-research-brain/main` was resolved during this run and refreshed immediately before publication; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular, the phase-aligned fragmented-support counterexample to scalar pointwise decay remains binding, as do the corrections against post-rotation independence, arbitrary-joint coarea, fiber-sup integration, and coefficient-tail deletion.
 
 The parametric spectral-window theorem used and re-specialized below is the completed account03/B02 r47 report:
 

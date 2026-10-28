@@ -13,7 +13,6 @@ attacking: the one-sided zero-diagonal overlap survivor by replacing conditional
 
 The target is unchanged. For every dimension, independent real original coordinates `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` having at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite essential supremum, or give a valid counterexample. Continuity is a separate requested conclusion and is not proved here.
 
-Fresh control at the start of this run was `yspennstate/math-research-brain@0de28be725f2b0b14daa210b4df494d9ea356a78`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, and the account01/B06 assignment were reread. In particular, the full conjecture is still OPEN and the following false interfaces are not used: law-uniform pointwise quadratic-phase decay, independence after spectral rotation, arbitrary-joint rank-three coarea, positive moments of worst conditional projection caps, unrestricted fiber suprema, perturbative deletion of a small nonzero quadratic tail, or selection of one uniformly good physical minor from aggregate minor mass.
 
 The immediate predecessor is account01/B06 r21, which proved the two-bank curved square-hyperbola estimate and reduced the exact-rank-three zero-diagonal Schur endpoint to the one-sided state
 

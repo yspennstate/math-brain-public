@@ -1,6 +1,5 @@
 # Freshness addendum — live owner revision 2026-09-22.8
 
-After the main report was committed, fresh `math-research-brain/main` advanced the OWNER CONTROL to revision `2026-09-22.8` while preserving the same sole QFORM target.
 
 The new owner message proposes a bare rank-three coarea lemma from an arbitrary bounded three-dimensional joint density. I did **not** use that implication: the live correction ledger already contains `QFORM-TWOSHEET-XRAY-ONLY-FALSE`, whose thin-hyperboloid-shell construction shows that bounded joint/X-ray control alone does not uniformly control the indefinite quadratic trace. Product-projection provenance must be retained before or jointly with coarea. This is consistent with the standing correction that a bounded-density projection theorem alone does not control an indefinite quadratic pushforward.
 

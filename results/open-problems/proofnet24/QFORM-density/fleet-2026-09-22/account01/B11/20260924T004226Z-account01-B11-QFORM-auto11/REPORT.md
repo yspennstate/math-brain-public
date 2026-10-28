@@ -13,7 +13,6 @@ No Gaussianity, log-concavity, moments, bounded/connected support, diagonal-basi
 
 ## 1. Source state and dependencies
 
-Fresh control read from `yspennstate/math-research-brain` main during this run retained OWNER CONTROL revision `2026-09-22.15`, active programme `QFORM-DENSITY-3EIG-20260922`, and the full conjecture as OPEN. `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account01/B11 assignment were refreshed. The existing canonical login for account01/B11 in UTC hour `2026-09-24T00Z` was preserved rather than overwritten.
 
 The immediate inherited B11 theorem is:
 

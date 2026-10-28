@@ -17,7 +17,6 @@ The result below shows that even all of the following data together are insuffic
 
 Thus any successful use of the product-projection theorem on the two-sheet/nonzero-pivot side must preserve stronger product provenance, such as the already proved rank-two half-Riesz control, rather than retaining only the projected density height.
 
-Source control read before this proof: `yspennstate/math-research-brain@a882c01768a9d32952675332bbc594e6a397ca08`, OWNER CONTROL revision `2026-09-22.15`. Designated partner input: `yspennstate/math-open-problems@6cc61cf326bd672c2177cc0411a5ce7291eafe16`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B16/20260922T231542Z-account04-B16-QFORM-r1/REPORT.md`.
 
 ## 2. Exact construction
 

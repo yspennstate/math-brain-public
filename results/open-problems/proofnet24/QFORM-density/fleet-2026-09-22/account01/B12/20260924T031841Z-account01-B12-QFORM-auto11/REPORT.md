@@ -389,7 +389,6 @@ Nothing in this report proves that extraction. In particular, the theorem does n
 Fresh source refresh before publication retained:
 
 - `math-research-brain` main observed at `c39c94da8c37d039fc460c844f5f89b515ba7884` during the final prepublication refresh;
-- OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM-only, no paused account/slot observed;
 - live correction inbox blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`;
 - current claims still mark `QFORM-FULL` and unrestricted continuity OPEN;
 - the refuted pointwise quadratic-phase bound, arbitrary-joint coarea cap, conditional-density moment shortcut, naive fiber-sup, and independence-after-rotation mechanisms are not used here.

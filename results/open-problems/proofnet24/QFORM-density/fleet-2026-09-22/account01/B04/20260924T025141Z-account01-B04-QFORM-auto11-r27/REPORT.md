@@ -13,7 +13,6 @@ The unrestricted conjecture is not proved here. Every probabilistic conditioning
 
 ## 1. Fresh source boundary
 
-Fresh `yspennstate/math-research-brain/main` was observed immediately before publication at `faa30f942c8f7167d34af9199b990e4137002c72`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM only; `CLAIMS.json` still marks `QFORM-FULL` and full-target continuity OPEN. The live correction inbox was reread at the same fresh state.
 
 The two analytic inputs are:
 

@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. Continuity for the unrestricted target
 
 ## 1. Fresh premises and corrections consumed
 
-Fresh owner control remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with no account01/B09 pause observed before publication. I reread `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B09.json`.
 
 The proof does **not** use law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, post-rotation independence, a bounded conditional spectral-density supremum, or the false implication that a single cross minor alone proves bounded density. It also respects the latest designated-partner obstruction `QFORM-SCALARPIVOT-RANK2-CURRENCY-FORCING-FALSE-DENSE-MIXEDFRAME-v1`: no scalar pivot is selected before the two-coordinate Schur resource is aggregated.
 

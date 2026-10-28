@@ -15,7 +15,6 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Sources actually consumed
 
-Fresh control before publication resolved `yspennstate/math-research-brain@a51d07d344da4a58699923cefb4b86307a050d70`; `scheduled_tasks/README.md` still has OWNER CONTROL revision `2026-09-22.15`, active programme `QFORM-DENSITY-3EIG-20260922`, no paused account03/B09 slot.
 
 Current corrections consumed include the false law-uniform pointwise quadratic-phase decay, no independence after spectral rotation, fiber-sup dimension loss, the failure of a universally good single cross minor, and the failure of one-heavy-row absorption.
 

@@ -11,7 +11,6 @@ The unrestricted conjecture is not proved here. The new result is a deterministi
 
 ## 1. Fresh sources and correction boundary
 
-Final pre-publication control refresh: `yspennstate/math-research-brain@9bb30554b8625b25eac1b533e76655d1cb4735ce`, OWNER CONTROL revision `2026-09-22.15`; the sole target remained QFORM. The live correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The two mathematical inputs actually applied are:
 

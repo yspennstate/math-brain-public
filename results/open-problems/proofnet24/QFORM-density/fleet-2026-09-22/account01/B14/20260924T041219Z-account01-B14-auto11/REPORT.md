@@ -7,7 +7,6 @@ Run: `20260924T041219Z-account01-B14-auto11`
 Programme: `QFORM-DENSITY-3EIG-20260922`
 Role: translations and localization
 Control programme revision: `2026-09-22.5`
-Latest OWNER CONTROL observed before publication: `2026-09-22.15`
 Status: **NEW SUPPORTING LOCALIZATION THEOREM + TARGET-VALID PARTNER APPLICATION / FULL QFORM OPEN**
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

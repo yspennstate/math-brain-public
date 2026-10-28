@@ -188,4 +188,3 @@ Accordingly a valid sharper witness must now leave at least one of the two prote
 
 ## 8. Corrections and provenance
 
-Fresh brain control was read on this invocation; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later B17 stop observed before this write. The live correction inbox was reread. This proof does not use the refuted law-uniform pointwise oscillatory decay, arbitrary-joint rank-three coarea bound, post-rotation independence, positive moments of conditional projection caps, worst scalar-remainder conditional suprema, or a universal single-minor/cross-rank-three extraction.

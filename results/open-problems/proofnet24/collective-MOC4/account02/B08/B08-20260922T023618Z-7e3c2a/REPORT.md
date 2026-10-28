@@ -16,7 +16,6 @@ For every pair of complex normal `4 x 4` matrices `A,B`, with spectra `a_1,...,a
 \det(A+B)\in\operatorname{conv}\left\{\prod_{i=1}^4(a_i+b_{\sigma(i)}):\sigma\in S_4\right\}.
 \]
 
-Fresh owner control before this scientific write was `math-research-brain` main commit `bd273211f4c917c767f47a93a891a880ded0c462`, OWNER CONTROL revision `2026-09-22.2`. It stops installation/benchmark work and keeps account02/B08 on the repeated-eigenvalue/common-block MOC4 boundary.
 
 This run read and applies the following exact completed peer artifacts at science snapshot `8113b8fa4fa802e11d1777202ce1bab7d50dba61`:
 

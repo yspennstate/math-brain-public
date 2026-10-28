@@ -10,7 +10,6 @@ Status: `NEW SUPPORTING THEOREM / SHARP-WITNESS OBSTRUCTION / FULL TARGET OPEN`
 
 The unrestricted quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity remains separate. The result below is a source-valid global barrier for a genuinely fully quadratic 3-variable target family. It assumes only independence and marginal density caps `<=1`; there is no moment, bounded-support, log-concavity, connected-support, regularity, or post-rotation-independence hypothesis.
 
-Fresh owner control was resolved from `math-research-brain` at the beginning of the run and refreshed before publication. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is active and account02/B17 is not paused. The live correction inbox blob used in this run is `a884b835aba929c5376e6417ae5cfcd44c0f7a76`. In particular this proof does not use the corrected-false arbitrary-remainder innovation theorem, the nonzero-square affine-slope rescue, a generic two-sheet X-ray bound, or a post-rotation independence assertion.
 
 ## 1. First unpaid implication paid
 

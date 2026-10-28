@@ -387,7 +387,6 @@ Neither global implication is proved here; therefore the unrestricted conjecture
 
 ## 11. Source dependencies
 
-- Fresh owner/control repository: `yspennstate/math-research-brain` main; OWNER CONTROL revision `2026-09-22.15`.
 - Orientation-free affine rank-two half-Riesz theorem:
   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 - Physical-pair logarithmic theorem:

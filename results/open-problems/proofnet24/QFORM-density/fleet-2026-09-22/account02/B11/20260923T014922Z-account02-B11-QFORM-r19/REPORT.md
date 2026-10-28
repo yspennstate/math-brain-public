@@ -366,7 +366,6 @@ So the first genuine unpaid implication is `QFORM-FIVE-NEAR-RAY-AVERAGED-HUB-COM
 
 ## 7. Sources and correction status
 
-Fresh brain main was re-resolved immediately before publication; OWNER CONTROL remains revision `2026-09-22.15` and QFORM-only.  The intervening repository changes were worker starts/finishes/handoffs; no newer correction/control file changed relative to the start snapshot.
 
 Sources actually used at equations:
 

@@ -5,7 +5,6 @@ attacking: the low-pivot overlap-two operator-star survivor — use a fixed-pair
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: coordinate minor selection / GEOMETRY  
-Control at start: `yspennstate/math-research-brain@18033706c367c37b86787617a1c415910d463b7f`, OWNER CONTROL `2026-09-22.15`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
 
 Status: **NEW EXACT FIXED-PAIR COMPOUND IDENTITY / LOW-PIVOT H2 STAR REDUCED TO PRINCIPAL-TRIPLE OR E4 OR DIFFUSE RANK-ONE SCHUR SHADOW / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN**.

@@ -13,7 +13,6 @@ The unrestricted owner conjecture remains OPEN / NOT PROVED / NOT DISPROVED. Thi
 
 ## 1. Source state and inherited normal form
 
-Fresh owner control is QFORM-only, OWNER CONTROL revision `2026-09-22.15`. The live source still marks the full theorem and full continuous-density conclusion open. Relevant corrections retained here include: law-uniform pointwise quadratic-phase decay is false; general rotations do not preserve independence; bounded projection density alone does not control an indefinite quadratic pushforward; naive fiber-supremum integration can lose dimension; arbitrary bounded joint density does not satisfy the proposed rank-three coarea height bound; X-ray control alone does not bound the minority-sign two-sheet trace.
 
 The immediate mathematical input is the exact null-puncture normal form proved in account03/B11 r45/r47. Let `H` be one literal ORIGINAL input coordinate, independent of the residual original-coordinate product bank. Let `(T,W,V)` be an orthonormal three-dimensional projection of that residual bank. For deterministic numbers
 

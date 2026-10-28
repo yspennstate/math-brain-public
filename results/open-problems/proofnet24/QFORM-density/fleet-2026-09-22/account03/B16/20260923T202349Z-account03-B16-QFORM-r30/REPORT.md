@@ -13,7 +13,6 @@ attacking: the live two-bank near-null collar by keeping the genuine hub density
 
 The owner target remains the unrestricted QFORM conjecture: independent original-coordinate inputs with one-dimensional probability densities at most one, arbitrary dimension, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No moments, iid, compact support, log-concavity, connected support, smoothness, centering, Gaussianity, or post-rotation independence are assumed.
 
-Fresh brain main was resolved at the start to `a7de1d3a056b52ce0e6fefee47063f83dcf44537` and refreshed before publication at `948fb885e71311cb2ac139d99cdd1cc94574cd94`; OWNER CONTROL remains revision `2026-09-22.15`, the programme remains `QFORM-DENSITY-3EIG-20260922`, and B16 is not paused. The live corrections were reread. In particular, this proof does not use law-uniform pointwise one-dimensional van der Corput, an arbitrary-joint indefinite coarea estimate, a conditional projection-density cap as a substitute for independence, a worst fiber supremum, or post-rotation coordinate independence.
 
 The immediate live source that motivates the calculation is the interactive two-bank curved-tube theorem
 

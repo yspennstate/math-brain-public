@@ -7,7 +7,6 @@
 
 ## 0. Source discipline and change of method
 
-Control was resolved at invocation start in `yspennstate/math-research-brain` commit `7d3fa2919d2595cc139df068f6074c863a00f569`, OWNER CONTROL revision `2026-09-22.2`. The required control files, full owner message, shared `ORDER.md`, shared `RESEARCH_STATE.md`, and fresh FEI handoffs were read before the mathematics. The later owner order supersedes the narrow older lane wording by converging FEI work on the all-gate formulation, while retaining B14's physical restriction/selector role.
 
 Fresh account01/B18 result consumed: `proofnet24/P03-fei/fleet-2026-09-21/account01/B18/20260922T095300Z-shaped-safe-frontier/REPORT.md`, scientific commit `a5f19f05fa03671fb5ffeb435081ed92e9827e6a`, which constructs the current universally safe shaped repair direction but leaves the universal composition-prime obligation open.
 

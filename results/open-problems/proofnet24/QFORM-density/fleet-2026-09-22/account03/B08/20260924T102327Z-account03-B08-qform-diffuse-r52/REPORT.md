@@ -15,7 +15,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, identica
 
 ## 1. Fresh source state
 
-Fresh owner/control files were read from `yspennstate/math-research-brain` main before the mathematics. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only; the programme manifest remains revision `2026-09-22.5` and `FULL_CONJECTURE_OPEN`.
 
 Immediate same-slot predecessor:
 

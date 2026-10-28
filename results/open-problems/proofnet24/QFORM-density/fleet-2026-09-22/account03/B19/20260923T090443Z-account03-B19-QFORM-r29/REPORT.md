@@ -5,7 +5,6 @@ attacking: the extreme normalized-coloop / thin-line / small-pivot-triangle resi
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly / quantitative inequalities and rigorous computations  
-**Fresh prepublication owner control:** `yspennstate/math-research-brain@4ac85fccb0633ca94a33d795a677c12598cc6b5f`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; repository retrieval is not native learned-memory ingestion.  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW TARGET-LEVEL STRUCTURAL REDUCTION / FULL QFORM OPEN`.
 

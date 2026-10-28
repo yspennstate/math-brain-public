@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact target remains: for every finite `n`, independent real coordinates with one-dimensional probability densities bounded by one, and every real symmetric `A` having at least three eigenvalues of modulus at least one, prove a universal essential bound on the density of `X^T A X`, or give a valid counterexample. No moment, compact-support, connected-support, centering, Gaussian, log-concave, or post-rotation independence hypothesis is added.
 
-Fresh control main before publication is `yspennstate/math-research-brain@b4261373d985278deaafbbfe8aedd965e6948d12`; OWNER CONTROL remains revision `2026-09-22.15`. The live corrections consumed include the false law-uniform pointwise quadratic-phase decay, false post-rotation independence, false fiber-sup dimension-free route, false arbitrary-joint rank-three coarea route, false universal positive conditional-projection moment, and the B14 no-uniform-fragment-count correction.
 
 The first route attempted this run was positive-completion tail compactification. A source match ended that duplicate direction: account02/B14 had already proved the exact unnormalized truncation-plus-filler theorem at
 

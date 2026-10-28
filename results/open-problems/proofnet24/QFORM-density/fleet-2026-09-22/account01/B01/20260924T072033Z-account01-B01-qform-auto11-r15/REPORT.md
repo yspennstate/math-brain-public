@@ -14,7 +14,6 @@ All random coordinates below are literal ORIGINAL independent coordinates with p
 
 The full owner target remains OPEN. The new density conclusion below is essential boundedness; continuity is not asserted for arbitrary merely measurable input densities. There are not two independent end-to-end reviews of the full conjecture.
 
-Fresh startup sources: `math-research-brain/main` resolved before this run at `db07e76faa5c0f49d6bfa936c03eaa3adf8d429c`; OWNER CONTROL in the fresh README is revision `2026-09-22.15`, QFORM-only. The live correction inbox, MANIFEST, CURRENT_RESEARCH, CLAIMS, MEMORY_PROTOCOL and assignment card were read before the proof.
 
 Two pinned mathematical inputs are used explicitly:
 

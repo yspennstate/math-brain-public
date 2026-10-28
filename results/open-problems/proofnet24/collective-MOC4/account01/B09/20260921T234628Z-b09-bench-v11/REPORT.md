@@ -18,7 +18,6 @@ For complex normal \(4\times4\) matrices \(A,B\), with eigenvalues
 \]
 
 The current collective source record is
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`.
 It points to Drury (2004), Bebiano--da Providencia (2025), and
 Mulero-Martinez (2026) and explicitly records that the full \(n=4\) target is
 not known from those sources.

@@ -5,7 +5,6 @@ attacking: QFORM-TWISTED-MIXED-CUT-CROSSRANK3-v1 — convert the r29/r30 residua
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** quadratic coarea bound  
-**Control at startup:** `yspennstate/math-research-brain@ada4473f8a31945908fdbacda5fc3b12f6030e2e`; OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `NEW SUPPORTING DENSITY/CONTINUITY THEOREM; FULL QFORM OPEN`  
 

@@ -6,9 +6,7 @@ Target retained: for independent real coordinates with densities bounded by one 
 
 ## Source pins and corrections used
 
-Fresh owner control: `yspennstate/math-research-brain@0f5f138b2c373eaebce228707f04fcf5535daf22`, OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`.
 
-Current correction-aware state: `scheduled_tasks/work/shared/qform-density-2026-09-22/CURRENT_RESEARCH.md` at the same control commit. In particular I do not use the refuted arbitrary-joint coarea lemma, the refuted positive conditional-density moment gate, post-rotation independence, or a uniform pointwise quadratic-phase decay estimate.
 
 Completed dependencies actually used:
 

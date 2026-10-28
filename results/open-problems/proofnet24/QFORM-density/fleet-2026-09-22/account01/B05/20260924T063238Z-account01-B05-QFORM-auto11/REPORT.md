@@ -5,7 +5,6 @@ attacking: aggregate cross-star coarea in the near-coloop Witt survivor; pay the
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`.
 **Assignment:** quadratic coarea / equivalent interval bound preserving arbitrary original-coordinate product densities.
-**Control:** refreshed before publication; OWNER CONTROL revision `2026-09-22.15`, QFORM-only.
 **Status:** `NEW SUPPORTING ANALYTIC THEOREM + LONGITUDINAL-SPIKE EXACT-RANK-TWO-TAIL BRANCH PAID + PARTNER MAX-CUT APPLIED`; the full unrestricted QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**.
 **Regularity:** the new receivers prove absolute continuity and an essential `L^infinity` bound. They do **not** by themselves prove a continuous representative. Full-target continuity remains OPEN.
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

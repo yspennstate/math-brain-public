@@ -11,7 +11,6 @@ attacking: the strict-N3 two-sided curved bicore by replacing direct density inv
 
 ## 1. Source boundary and exact obligation
 
-Fresh control at the start of this run was `yspennstate/math-research-brain@608b60255ab9af7e63bbeb1bd85fd3039ceb75be`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only and with no B01 pause. The live B01 obligation is to replace the false law-uniform scalar quadratic-phase envelope by an averaged/distributional estimate useful in the full no-pivot problem.
 
 Required source package consumed:
 

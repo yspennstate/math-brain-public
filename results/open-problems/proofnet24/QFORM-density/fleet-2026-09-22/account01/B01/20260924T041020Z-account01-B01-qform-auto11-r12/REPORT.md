@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction boundary
 
-Fresh control was resolved from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The current programme files continue to mark the unrestricted conjecture and the full continuity assertion OPEN. The following corrections are binding throughout: no post-rotation independence; no arbitrary-joint coarea shortcut; no positive conditional-projection-density-moment shortcut; no deletion of a small random quadratic tail under rough laws; and no law-uniform pointwise power decay for `E exp(itX^2)`.
 
 The phase-aligned fragmented-support construction is therefore preserved. Nothing below asserts `|E exp(itX^2)| <= C|t|^{-1/2}`. The new mechanism is instead: a quarter-power **distribution-function** estimate for a Schur remainder, upgraded through two literal original-coordinate square completions, plus a joint/conditional mixed-Fresnel estimate only in a spread rank-one-slope branch.
 

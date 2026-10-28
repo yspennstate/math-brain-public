@@ -2,7 +2,6 @@
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full theorem remains OPEN.
 
-Fresh owner control: math-research-brain@1fe4828112f08195f6f1f912b64c12e827853e66, OWNER CONTROL revision 2026-09-22.15. Required Claude source used: math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837. Designated partner used: account03/B10 report math-open-problems@46df88a3c81ee860e09a67bc8193514c26281555, which pays the entire small-Pluecker collar with hub leverage c<=63/64 and leaves only the true-near-coloop collar c>63/64, |q|<1/16.
 
 ## First unpaid implication attacked
 

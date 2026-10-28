@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source state and exact target
 
-Fresh control at publication preparation was `yspennstate/math-research-brain@a09d9d2e6167544a6437de79b6819cc4d7044528`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. QFORM remains the sole research target and no later applicable stop was present.
 
 The target remains: for every dimension, independent real coordinates with densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal finite essential density bound for `X^T A X`, or give a genuine counterexample. Continuity is an additional desired conclusion and is tracked separately.
 

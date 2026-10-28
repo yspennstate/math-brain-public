@@ -12,7 +12,6 @@ This report does **not** assume Gaussianity, log-concavity, moments, compact or 
 
 ## Source pins actually used
 
-- Brain control refreshed at `yspennstate/math-research-brain@fffe8d3324a491df8fea1425f2ac346c423d6210`; OWNER CONTROL revision `2026-09-22.15` still makes QFORM the sole active research programme and supplies no later account02/B20 stop.
 - Designated partner account03/B20: `20260922T204947Z-account03-B20-QFORM-r17`, math source `yspennstate/math-open-problems@ff81131d3199d8a7dc66b51fa28229ecb5af19ce` and corresponding brain handoff. Its residual balanced-hub discussion imports the same localized high-window physical coordinate `j` used below and labels a `p != j` two-anchor state as the next unpaid obligation.
 - account01/B20 r13: `yspennstate/math-open-problems@f45187170f0d940c8bdc61d095564f92fb749092`, theorem closing the **diagonal-dominated** localized second-Schur-row alternative with universal density bound `<1198.924`.
 - account04/B20 r3: `yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, theorem `QFORM-CROSSDOM-TWO-PHYSICAL-PIVOT-CLOSURE-v1` closing the **cross-dominated** localized second-Schur-row alternative with universal density bound `<5262`. Its own synthesis states that together with account01/B20 r13 the whole localized second-row alternative is closed.

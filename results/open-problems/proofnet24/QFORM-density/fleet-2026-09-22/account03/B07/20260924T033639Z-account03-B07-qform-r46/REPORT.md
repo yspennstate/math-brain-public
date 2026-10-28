@@ -13,7 +13,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, dia
 
 ## 1. Fresh source state and exact incoming debt
 
-Fresh owner control remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, no account03/B07 pause, and the full theorem still OPEN.
 
 The main incoming structural source is my r40 positive overlap compiler:
 

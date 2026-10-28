@@ -13,7 +13,6 @@ attacking: grouped two-hub projection-product closure in the true near-coloop; t
 
 The exact owner target remains: for every dimension, every independent real original-coordinate input with density at most one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal density bound for `Q=X^T A X`, or give a valid counterexample. No moment, compact-support, connected-support, Gaussian, log-concavity, iid, diagonal-basis, or post-rotation-independence assumption is added below.
 
-Fresh publication control was read at `yspennstate/math-research-brain@47d9b52fcf49ce23e58bcb7b4eb02480d0f5766b`; OWNER CONTROL remains revision `2026-09-22.15`, with QFORM the sole research target and no B16 pause. The live correction inbox was reread. In particular, this run does not use arbitrary-joint coarea, conditional projection-height moments, a fiber supremum, pointwise law-uniform quadratic-phase decay, or independence after rotation.
 
 The analytic input is the completed grouped projected-crossing theorem
 

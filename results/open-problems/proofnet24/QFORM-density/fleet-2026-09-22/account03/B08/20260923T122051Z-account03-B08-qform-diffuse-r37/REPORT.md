@@ -9,7 +9,6 @@ The unrestricted owner target remains OPEN. Everything below stays in ORIGINAL i
 
 ## 1. Source-valid inputs
 
-Fresh prepublication brain control was `yspennstate/math-research-brain@d8a543e2422b75ca3c6d2b350c4a41de5d2685f5`; OWNER CONTROL remained revision `2026-09-22.15` and QFORM remained the sole research target. The live correction inbox was reread before publication.
 
 The analytic input actually used is the completed mixed-Fresnel theorem in `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. Split original coordinates into heavy coordinates `H` and light coordinates `L`. Suppose
 

@@ -7,7 +7,6 @@ attacking: the arbitrary-self-block near-coloop splice; extract a fractional L3 
 **Run:** `20260922T194649Z-account03-B06-qform-r17`  
 **Assignment:** Curved fiber integration  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Fresh control at prepublication refresh:** `yspennstate/math-research-brain@fcca43e7d6be77bdfb3afc35d24d8719b4fc3fcd`, OWNER CONTROL revision `2026-09-22.15`  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 **Continuity:** not proved by the new theorem; the conclusion below is absolute continuity with an essential `L^infinity` bound.
 

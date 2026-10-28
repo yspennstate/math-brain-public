@@ -11,7 +11,6 @@ Full unrestricted QFORM: **OPEN / NOT PROVED / NOT DISPROVED**.
 
 ## 1. Source state and what is new here
 
-Fresh control was resolved from `yspennstate/math-research-brain@91c583588ff65dac10eaddb64c2e0e07c644c2f6`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B14 pause or stop. The live correction inbox was reread before publication. In particular this proof uses no law-uniform pointwise quadratic-phase decay, no post-rotation independence, no arbitrary-joint indefinite coarea bound, no fiber-supremum dimension-free shortcut, no bounded-diameter or bounded-fragment localization, and no near-zero half-Riesz shortcut.
 
 The ingredients are source-pinned and are not relabelled as individually new:
 

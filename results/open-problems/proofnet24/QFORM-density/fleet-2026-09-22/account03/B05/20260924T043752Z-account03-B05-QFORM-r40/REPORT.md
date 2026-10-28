@@ -5,7 +5,6 @@ attacking: QFORM-WITT-CROSSSTAR-AGGREGATE-COAREA-v1 — aggregate the pairwise P
 
 **Programme:** QFORM-DENSITY-3EIG-20260922.  
 **Role:** quadratic coarea / equivalent interval bounds, preserving arbitrary product densities.  
-**Control source at startup:** `yspennstate/math-research-brain@f0bbeceeecd03e381530181e133fc283d63a0b8c`; OWNER CONTROL revision `2026-09-22.15`.  
 **Status:** supporting theorem only; full QFORM OPEN / NOT PROVED / NOT DISPROVED.  
 **Regularity:** the new grouped endpoint proves absolute continuity and an essential L-infinity bound; continuity is not claimed.  
 **Execution:** WITHOUT_VERIFIED_BRAIN.

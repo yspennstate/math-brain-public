@@ -11,7 +11,6 @@ Continuity: **proved in the scope of the theorem below** via the ridge-density t
 
 ## 1. Exact sources used
 
-Current control was read from `yspennstate/math-research-brain` main, with OWNER CONTROL revision `2026-09-22.15`. Current programme state and live corrections were refreshed before publication.
 
 The analytic receiver used below is the complete one-scale ridge theorem at
 

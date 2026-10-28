@@ -6,7 +6,6 @@ attacking: the heavy-null double-small-leakage chamber: seek an exact product-pr
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case; complementary constructions/source-valid counterexamples  
 **Run:** `20260922T225540Z-account02-B10-QFORM-auto11`  
-**Source control used:** `yspennstate/math-research-brain@c16d52f80f69390d6ce571b3a3a60d34ecde7c18`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_LEMMA / LOCAL_CANDIDATE_REFUTED`; full QFORM remains OPEN / NOT PROVED.
 

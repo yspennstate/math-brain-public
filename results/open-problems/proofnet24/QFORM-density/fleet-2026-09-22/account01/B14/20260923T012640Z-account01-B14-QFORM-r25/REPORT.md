@@ -6,7 +6,6 @@ attacking: nested translation-uniform indefinite-pair logarithmic smoothing on t
 Status: `NEW SUPPORTING TARGET-LEVEL THEOREM / FULL QFORM OPEN / WITHOUT_VERIFIED_BRAIN`.
 
 Programme: `QFORM-DENSITY-3EIG-20260922`.
-Control read: math-research-brain main `2cfc6c6eda98aee565f7c5e2933d32b20deb029a`, OWNER CONTROL `2026-09-22.15`.
 Assignment: translations/localization. No moment, bounded-support, connected-support, centering, fragment-count, or post-rotation independence assumption is used.
 
 ## 1. Source-pinned dependency actually used

@@ -4,7 +4,6 @@
 
 ## 1. Live target and supersession
 
-The active OWNER CONTROL is revision `2026-09-22.2`. Its natural-language OWNER MESSAGE supersedes the older interface-C phase-switch assignment and directs every FEI worker to the all-gate reformulation
 
 \[
 \Gamma(p_{\rm out})+H_t(G;p)\le \sum_i \operatorname{It}_i(G;p)\frac{\Gamma(p_i)+h(V_{p_i})}{V_{p_i}},\qquad V_u=4u(1-u).

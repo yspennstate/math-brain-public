@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source state and scope
 
-Fresh control at startup was `yspennstate/math-research-brain@22755523d8f88f79b7b3f066007469d441b994b4`, OWNER CONTROL revision `2026-09-22.15`. QFORM remains the sole research target and no account03/B09 pause or reassignment was present. The current assignment remains the bilinear-block mechanism in original coordinates.
 
 The unrestricted target is unchanged: independent real ORIGINAL coordinates with marginal densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. Nothing below assumes moments, support bounds, connected support, Gaussianity, log-concavity, iid laws, a diagonal eigenbasis, or independence after rotation.
 

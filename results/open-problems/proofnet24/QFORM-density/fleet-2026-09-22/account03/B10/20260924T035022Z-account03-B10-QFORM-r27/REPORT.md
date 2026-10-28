@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and live state
 
-Fresh controls were resolved on `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`; the owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains in force. The full unrestricted theorem and unrestricted continuity conclusion remain OPEN. No post-rotation independence, arbitrary-joint coarea cap, conditional projection-height supremum, law-uniform pointwise quadratic-phase decay, moment/support/log-concavity assumption, or deletion of a small random quadratic term is used below.
 
 The immediate completed B10 source used is
 

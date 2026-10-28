@@ -296,6 +296,5 @@ The exact symbolic forms, not decimal rounding, are used in the proof.
 
 ## 8. Source/control integrity
 
-Fresh owner control before publication: `yspennstate/math-research-brain@d807616e6b87831c03123841f19528208d0ba623`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no pause for account03/B13. The live correction search found no later correction invalidating the r29 projected-crossing cascade; its receiver remains pending independent review and is therefore explicitly retained as a condition rather than silently promoted to reviewed fact.
 
 Repository source use does not establish native brain ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

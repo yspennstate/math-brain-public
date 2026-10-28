@@ -5,7 +5,6 @@ attacking: exact-rank-three null-ray-bank / two-sheet diffuse survivor; use a ca
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Rank-three coupled case  
-**OWNER CONTROL:** revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `PROVED SUPPORTING TARGET-LEVEL BRANCH / FULL TARGET OPEN`.
 

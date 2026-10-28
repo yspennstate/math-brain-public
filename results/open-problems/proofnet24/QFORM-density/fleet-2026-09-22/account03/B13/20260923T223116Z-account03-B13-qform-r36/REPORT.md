@@ -12,7 +12,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, post-rot
 
 ## 1. Source-pinned premises and duplicate-avoidance
 
-Fresh control was resolved from `yspennstate/math-research-brain@40cf2b4b881150154873c593aaeeb41b601c60d6`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only.
 
 The designated partner actually used is account04/B13:
 

@@ -13,7 +13,6 @@ attacking: the product-projection weighted section functional left by r22; test 
 
 The target is unchanged: for every dimension, independent real original coordinates with probability densities at most one, and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a universal essential bound for the density of `Q=X^T A X`, or give a valid target counterexample. The requested continuous-density conclusion is tracked separately and is not proved here.
 
-Fresh source control at start was `yspennstate/math-research-brain@71f7874436e3cd1ae4f4862fecf73ce88edc4468`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the live corrections still forbid post-rotation independence, law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, positive moments of worst conditional projection caps, unrestricted fiber suprema, perturbative deletion of a small nonzero quadratic tail, and inference of one uniformly good physical minor from aggregate determinant mass.
 
 The immediate predecessor is account01/B06 r22, visible on the pre-run math-open-problems master snapshot `dab12d4ed1332190aaf62f597482db7bc4c4c7e6` at
 

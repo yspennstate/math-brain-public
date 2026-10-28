@@ -5,11 +5,9 @@ attacking: co-heavy aggregate routing: replace the now-refuted fixed-second-grad
 
 **Outcome:** `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN / WITHOUT_VERIFIED_BRAIN`.
 
-Fresh prepublication control: `yspennstate/math-research-brain@f36917932cd48ad857c3293a596e44b3e44a8498`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. No invalid arbitrary-joint coarea, conditional-cap-as-independence, post-rotation independence, coefficient deletion, or reciprocal single-minor selector is used below.
 
 ## Source-pinned peer inputs actually used
 
-1. **Latest designated partner account02/B19 r26.** Handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B19/20260923T041017Z-account02-B19-QFORM-r26.md`, blob `880e609e974fa8d329ddf882f9cb435b644c0ee8`; canonical mathematics `yspennstate/math-open-problems@d294539dec9f048e8da354542b37cc9ac664f020`. It proves the pure-bipartite target branch
 
    `A=[[0,C],[C^T,0]], s_2(C)>=1  =>  ||p_Q||_infinity <= e sqrt(pi) < 4.819`,
 

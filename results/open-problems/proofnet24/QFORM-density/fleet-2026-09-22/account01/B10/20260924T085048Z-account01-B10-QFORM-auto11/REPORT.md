@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and mechanism change
 
-Fresh `math-research-brain` controls keep all work on the full QFORM target under OWNER CONTROL revision `2026-09-22.15`; the full conjecture and the full continuity conclusion remain open. The live corrections against pointwise quadratic van der Corput, post-rotation independence, arbitrary-joint coarea, conditional-cap-as-independence, fiber suprema, and full absolute phase-Wiener receivers are retained.
 
 The immediate predecessor `account01/B10` Fourier mechanism reduced the harmonic near-coloop endpoint to the dynamic amplitude
 

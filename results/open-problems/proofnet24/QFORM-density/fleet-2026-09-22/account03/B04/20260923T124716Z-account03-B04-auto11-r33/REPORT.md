@@ -350,4 +350,3 @@ All final matrix identities, spectra, minor currencies, inclusion marginals, bal
 
 The early `CHECKPOINT.md` was intentionally written before the exact arithmetic pass. Its first trial currencies and weights were provisional and are superseded by the corrected `CHECKS.json` and this final report. The checkpoint is preserved rather than rewritten so the failed preliminary calculation remains visible.
 
-Initial fresh brain control commit observed: `9202010c7d88d996da6f22d7411acf242224cb0a`. Prepublication refresh observed later main with the same OWNER CONTROL revision `2026-09-22.15`; the live correction-inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.

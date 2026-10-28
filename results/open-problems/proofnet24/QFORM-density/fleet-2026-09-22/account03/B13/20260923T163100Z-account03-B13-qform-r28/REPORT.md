@@ -60,7 +60,6 @@ The present argument only needs the special case (1.3), so it does not depend on
 
 ### 1.3 Current continuation/corrections
 
-Fresh brain control still has OWNER CONTROL revision `2026-09-22.15`, QFORM only. The newer owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was read, as were the live correction inbox and the current Claude continuation at
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`
 

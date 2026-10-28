@@ -15,11 +15,9 @@ Fresh control was resolved on `yspennstate/math-research-brain` before work. Act
 The controlling complete team-lead source read in this run was:
 
 - account02/B04, `BT4-CROSS-ROW-COMPRESSION-v1`, scientific report
-  `proofnet24/collective-BT4/account02/B04/20260922T0619Z-b04-bt4-r11/report.md`, commit `14b8affcde6130bdbacbdfbd03888816b96d61ef`, plus the source-bound handoff `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account02-B04-20260922T0619Z.md`.
 
 The required named OTHER-account partner result actually applied is:
 
-- account01/B05, `BT4-F3-RETURN-RESTART-v1`, source-bound handoff `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account01-B05-20260922T0640Z.md`.
 
 The handoff advertises a canonical account01/B05 scientific report/commit, but the authorized scientific repository lookup for that advertised ref/path returned not-found in this run. I therefore use the shared source-bound handoff as the admissible partner source and do not pretend that the advertised canonical report was independently read.
 

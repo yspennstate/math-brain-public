@@ -12,7 +12,6 @@ No moment, support, iid, log-concavity, diagonal-basis, post-rotation independen
 
 ## 1. Fresh source state and first unpaid implication
 
-Fresh brain main controls retain OWNER CONTROL revision `2026-09-22.15`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, full QFORM only, and no B07 stop/reassignment. The live correction ledger was reread before publication.
 
 Latest completed designated partner is account03/B07 r46:
 

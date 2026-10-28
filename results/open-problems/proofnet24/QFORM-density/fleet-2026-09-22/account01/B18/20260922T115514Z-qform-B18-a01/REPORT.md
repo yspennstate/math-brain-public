@@ -116,7 +116,6 @@ from three large eigenvalues. A marginal bound alone, a fiber supremum, or a gen
 ## 7. Source pins
 
 - live control before write: `yspennstate/math-research-brain@428ea8b10266994fcacde3ef4075758875004c18`, owner revision `2026-09-22.5`;
-- correction consumed: `scheduled_tasks/work/shared/qform-density-2026-09-22/events/account02/B09/20260922T115241Z-account02-B09-QFORM-r1/QFORM-CROSSMINOR-ALONE-FALSE.json`;
 - compatible peer consumed: `yspennstate/math-open-problems@39b363886b16b0d29919b0c0f45bedd997c47c44:proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260922T115433Z-account02-B12/REPORT.md`;
 - primary theorem: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1;
 - scope check: Kosov, arXiv:2511.02679, Theorems 1.6--1.7.

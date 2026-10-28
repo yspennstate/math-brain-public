@@ -14,7 +14,6 @@
 
 The fresh brain control read used main commit
 `cbc06c37ac3e6f776bc298133c4d1be715b6d9bc`; a later control recheck used
-`446baef73de0223776607d38ee0d795df9f45204`.  The active OWNER CONTROL is
 revision `2026-09-22.2`, programme
 `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`.  The later README explicitly
 supersedes the historical installation/benchmark clauses and assigns B08 to

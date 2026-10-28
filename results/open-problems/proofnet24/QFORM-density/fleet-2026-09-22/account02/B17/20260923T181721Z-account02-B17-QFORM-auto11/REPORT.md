@@ -12,7 +12,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted theorem remains OPEN / NOT PROVED / NOT DISPROVED.  This report concerns one exact six-variable target matrix and a broad fixed-finite fragmented source class.  It assumes no moments, support bound, log-concavity or connected support in the full conjecture.  Log-concavity appears only as an explicit property of one particular triangular control density in Section 6.  No independence after spectral rotation is asserted.
 
-Fresh source control before the run used brain main `c503a0e2c63fb442e0f61f7479c80113b467995e`, OWNER CONTROL revision `2026-09-22.15`; the current exclusive continuation and live corrections were subsequently refreshed.  The corrected-false arbitrary-joint coarea cap, conditional-density moment/supremum gates, pointwise stationary-phase bound and post-rotation-independence shortcut are not used.
 
 ## 1. Exact source-valid Householder matrix
 

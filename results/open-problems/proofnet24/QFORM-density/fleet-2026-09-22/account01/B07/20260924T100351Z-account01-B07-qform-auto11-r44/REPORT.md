@@ -11,7 +11,6 @@ The unrestricted conjecture remains open. No Gaussianity, log-concavity, moment,
 
 ## 1. Source-pinned incoming state
 
-Fresh owner control at startup was `yspennstate/math-research-brain@f3d703b285a07de11c66e93928eaa54b9fa5321f`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no B07 stop or reassignment.
 
 The exact-singular anchored-fourth-compound input is account01/B07 r43:
 

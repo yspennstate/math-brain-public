@@ -24,7 +24,6 @@ The newest partner theorem pays arbitrary curvature on the grouped hub bank, but
 
 ## 2. Source-pinned completed inputs
 
-Fresh owner control was resolved on `math-research-brain` main at `ff647523f1610458c976ef715e6bf9099879fd69`; no protected control file changed relative to the earlier fresh read. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`.
 
 Required analytic source:
 

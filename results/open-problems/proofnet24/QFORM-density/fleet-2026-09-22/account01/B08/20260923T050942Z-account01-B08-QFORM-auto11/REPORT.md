@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
 
 The unrestricted QFORM conjecture remains OPEN. The theorem below is a selected-three-eigenvector diffuse branch; it does not make selected-eigenvector diffuseness basis-invariant inside repeated eigenspaces, and it does not claim that every target matrix satisfies the diffuse hypothesis. Continuity is asserted only on the explicitly paid Fourier branches.
 
-Fresh start control was read from `yspennstate/math-research-brain@2873434705753bd3de9dcdd5d4efe1a85a3c8226`; OWNER CONTROL remained revision `2026-09-22.15` and QFORM remained the sole research target. The live correction inbox was read before the mathematics. No post-rotation independence, pointwise scalar van-der-Corput decay, arbitrary-joint coarea cap, conditional projection-height moment, worst-fiber supremum, or coefficient-small law perturbation is used.
 
 ## 1. Sources used at equations
 

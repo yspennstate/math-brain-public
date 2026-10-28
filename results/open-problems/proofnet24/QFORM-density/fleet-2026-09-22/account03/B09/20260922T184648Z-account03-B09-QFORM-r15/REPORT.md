@@ -6,7 +6,6 @@ attacking: translation-uniform half-Riesz smoothing for the first unpaid Schur r
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Logical worker: `account03/B09`  
 Run: `20260922T184648Z-account03-B09-QFORM-r15`  
-Control observed before publication: `yspennstate/math-research-brain@3b492b0cd6eba9c9474d3fdcfb7b20a98a82cd54`, OWNER CONTROL revision `2026-09-22.11`  
 Outcome: **ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**
 

@@ -39,7 +39,6 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source pins actually consumed
 
-Fresh owner control before publication: `yspennstate/math-research-brain@8c9e81b6209f5272c81f3e9ff5fb8f433a2eb101`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no account03/B09 pause.
 
 Live correction inbox at that refresh: blob `6bdbd9987a4eefeba79d53915cfe7e232263f8ec`. In particular this proof does **not** use law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, a positive conditional-density moment, or a fiber supremum.
 

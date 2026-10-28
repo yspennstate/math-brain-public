@@ -13,7 +13,6 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 ## 1. Source-pinned inputs
 
-Fresh `math-research-brain/main` was resolved during this run; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction inbox and current continuation were refreshed before publication.
 
 The first analytic input is my earlier global row-cap theorem at
 

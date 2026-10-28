@@ -370,7 +370,6 @@ Changed-file allowlist for this mathematical repository run is confined to this 
 
 ## 11. Sources consumed
 
-Fresh brain control at publication refresh: current `main` resolved during the run; OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 Designated partner theorem actually applied at (7.19):
 

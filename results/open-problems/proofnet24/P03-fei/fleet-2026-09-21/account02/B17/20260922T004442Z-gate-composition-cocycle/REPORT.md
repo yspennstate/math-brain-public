@@ -11,7 +11,6 @@
 The latest account03/B18 Campaign-B handoff `B-HARMONIC-DELETE-v2`
 (`account03/B18/20260921T235729Z-harmonic-deletion-residual/HANDOFF_B.md`,
 blob `4c872737c5d91a6054face583380f959192f8326`) was read first. It leaves
-`D_del <= C_del I` as its sole harmonic residual. The later OWNER MESSAGE in
 `math-research-brain` revision `2026-09-22.2` explicitly supersedes route
 proliferation and directs the FEI workers to one all-gate inequality. I therefore
 preserve B-HARMONIC-DELETE-v2 but do not start a competing residual attack here.

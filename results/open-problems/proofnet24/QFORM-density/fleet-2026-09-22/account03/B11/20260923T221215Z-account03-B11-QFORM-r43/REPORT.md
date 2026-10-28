@@ -3,7 +3,6 @@ attacking: the finite-heavy-row punctured receiver: prove that two heavy physica
 
 # account03/B11 r43 — finite-heavy-row collar to unique hub + scalar/edge/two-star trichotomy
 
-Programme: `QFORM-DENSITY-3EIG-20260922` (OWNER CONTROL revision `2026-09-22.15`; continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`).
 Status: **NEW STRUCTURAL REDUCTION / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Regularity: the partner pair-area and scalar/pair-log exits below establish essential boundedness in their stated branches. No new continuity theorem is claimed here. The full conjecture and full-target continuity remain open.
@@ -492,6 +491,5 @@ The deterministic identities used here were checked numerically on random orthon
 
 had maximum floating error `1.56e-15` over the test set. These computations only check algebra already proved above; no numerical experiment is used as evidence for the universal density claim.
 
-Prepublication owner refresh: `yspennstate/math-research-brain` main observed at `1aa9060755395697649d891f1fff0bb4598f8b65`; `scheduled_tasks/README.md` still reports OWNER CONTROL revision `2026-09-22.15`, QFORM-exclusive, no paused accounts/slots. Live correction inbox blob: `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
 
 No scheduler/task-state change, email, notification, public release, paid API/model, Codex call, installation, credential/permission expansion, remote workflow, unrelated-data access, or cross-account authentication was performed.

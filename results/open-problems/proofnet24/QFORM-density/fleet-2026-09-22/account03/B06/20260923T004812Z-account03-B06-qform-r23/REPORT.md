@@ -7,7 +7,6 @@ attacking: aggregate an entire determinant star before reciprocal payment, so th
 **Run:** `20260923T004812Z-account03-B06-qform-r23`  
 **Assignment:** Curved fiber integration / GEOMETRY  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
-**Fresh prepublication control:** `yspennstate/math-research-brain@c38d166e7fd914787003b1179139ff0e7f533954`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`.  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED.  
 **Continuity:** not proved by the new paid branch; the conclusion there is absolute continuity plus an essential `L^infinity` bound.
 

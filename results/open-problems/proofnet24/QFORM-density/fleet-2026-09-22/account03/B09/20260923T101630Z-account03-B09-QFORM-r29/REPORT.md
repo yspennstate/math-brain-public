@@ -18,7 +18,6 @@ Fresh control was read from `yspennstate/math-research-brain` main at commit
 
 `c393c6af9218e1c22871c899ce8a3823556b6ee9`.
 
-OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with no B09 pause or reassignment. The live correction ledger was reread. In particular, this proof does not use the refuted arbitrary-joint coarea estimate, the refuted conditional projection-height moment, any post-rotation independence, or any pointwise law-uniform van-der-Corput estimate.
 
 The direct predecessor is account03/B09 r27,
 

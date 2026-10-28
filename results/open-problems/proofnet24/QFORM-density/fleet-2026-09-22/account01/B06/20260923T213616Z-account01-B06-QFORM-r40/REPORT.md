@@ -17,7 +17,6 @@ Fresh `math-research-brain` control at the prepublication refresh is commit
 
 `58a0cc3c21033d8b1d445194421ff978111020db`,
 
-with OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, no paused account and no paused B06 slot. The current owner continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The live state continues to mark the full QFORM claim OPEN and the global continuous-density conclusion OPEN. I retain the required corrections: no law-uniform pointwise quadratic-phase decay, no unrestricted fiber supremum, no independence after rotating independent coordinates, no arbitrary-joint coarea cap, no positive moment of worst conditional projection-density caps, and no assertion that aggregate spectral mass forces one uniformly good physical minor.
 

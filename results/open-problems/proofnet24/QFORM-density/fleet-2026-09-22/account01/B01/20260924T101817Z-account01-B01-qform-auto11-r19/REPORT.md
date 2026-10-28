@@ -198,7 +198,6 @@ Full continuity status: **OPEN**.
 
 ## 7. Source pins
 
-Fresh control before publication: `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`; current README blob `14046b5138615be52bb1c49a998122a7c84e200e`; live correction-inbox blob `ba7aeac3d879f59da5ec8a12daad74ea85714465`.
 
 Previous B01 sum/difference theorem and absolute-pullback obstruction:
 `yspennstate/math-open-problems@9f02f516e97372b852fe88a9d4a6138adee74a41`,

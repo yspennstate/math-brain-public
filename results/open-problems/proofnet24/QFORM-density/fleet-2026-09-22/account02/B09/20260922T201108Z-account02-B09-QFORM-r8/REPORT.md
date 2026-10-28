@@ -5,7 +5,6 @@ attacking: aggregate bilinear packet anti-concentration across a product-preserv
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `20260922T201108Z-account02-B09-QFORM-r8`  
-Control at start: `yspennstate/math-research-brain@8d88b8a0f0c629b892444e56cf0657fc9419bc25`; OWNER CONTROL revision `2026-09-22.15`.  
 Outcome: **ESSENTIAL_STEP_APPLIED + CANDIDATE_REFUTED / FULL_TARGET_OPEN**.  
 Execution status: **WITHOUT_VERIFIED_BRAIN**.
 

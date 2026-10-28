@@ -13,7 +13,6 @@ The point of this run is to remove the *one physical third coordinate* from the 
 
 ## Sources actually used
 
-Fresh brain control used before derivation: `yspennstate/math-research-brain@b36283853c9627f804ce503f52ca9e0c53978a47`, OWNER CONTROL revision `2026-09-22.11`.
 
 Named partner result actually applied: account03/B09 `QFORM-INDEFINITE-PAIR-SCHUR-SMOOTHING-v1`, canonical source `yspennstate/math-open-problems@f510cd96f4505202fa369a8ac74b9d016b72ae14`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B09/account03-B09-20260922T171558Z-qform13/REPORT.md`. I use its translation-uniform indefinite-pair density envelope and the source-pinned weak-`L^2` logarithmic-square estimate.
 

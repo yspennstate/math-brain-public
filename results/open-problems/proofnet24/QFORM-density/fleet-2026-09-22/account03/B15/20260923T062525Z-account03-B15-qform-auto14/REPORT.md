@@ -6,7 +6,6 @@ attacking: one-scale regularity compiler — collapse every output smoothing/sma
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Worker:** `account03/B15`  
 **Run:** `20260923T062525Z-account03-B15-qform-auto14`  
-**Fresh control before publication:** `yspennstate/math-research-brain@1cb942376552bea25ed88827913945cff2e200ea`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution context:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED / EXACT_ONE_SCALE_KERNEL_NORMAL_FORM / FULL_TARGET_OPEN`
 

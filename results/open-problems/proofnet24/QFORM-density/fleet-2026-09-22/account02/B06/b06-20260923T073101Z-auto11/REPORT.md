@@ -12,7 +12,6 @@ attacking: a weighted joint negative-moment receiver for the shared-coefficient 
 
 ## 0. Control, exact target, and dependencies actually used
 
-Fresh starting control was `yspennstate/math-research-brain@398784a523ebbda01243fad6975e70c5c4b96e1d`; a pre-publication refresh reached `d05a95d64c6cea5bb3dc3755bca1a2e888f09ff7`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM remained the sole research target, and no account02/B06 pause or stop was present.
 
 The exact target is unchanged. For arbitrary independent real original-coordinate inputs with probability densities bounded by one and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal essential density bound for `X^T A X`, or give a valid target counterexample. No moment, support, log-concavity, identical-law, diagonal-basis, Gaussian, or post-rotation-independence assumption is used. Continuity is separate.
 

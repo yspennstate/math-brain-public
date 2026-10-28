@@ -7,7 +7,6 @@ attacking: aggregate the post-pivot curved cross bank before reciprocal minor se
 **Run:** `20260922T201841Z-account03-B06-qform-r18`  
 **Assignment:** Curved fiber integration  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Control at start:** `yspennstate/math-research-brain@e24a774d6315f1af8c60a8854868c53e27036cb3`, OWNER CONTROL revision `2026-09-22.15`  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 **Continuity:** not proved by the new theorem. The conclusions below are `L^3` regularity of a residual law and essential `L^infinity` boundedness after a genuine physical square.
 

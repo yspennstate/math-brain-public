@@ -13,7 +13,6 @@ attacking: the rank-two crossing half-power debt when the third square is NOT a 
 
 The full target remains: independent real original-coordinate inputs with one-dimensional densities at most one, arbitrary dimension, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No moments, support, identical-law, log-concavity, post-rotation independence, or smoothness assumptions are used.
 
-Fresh control remained OWNER CONTROL revision `2026-09-22.15`. The live corrections retained here are:
 
 - a bounded joint projection density by itself does **not** bound an indefinite quadratic level-set integral;
 - a spectral rotation does **not** make projected coordinates independent;

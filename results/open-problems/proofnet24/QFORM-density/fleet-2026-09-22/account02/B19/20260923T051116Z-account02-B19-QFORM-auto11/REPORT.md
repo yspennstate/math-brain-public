@@ -5,7 +5,6 @@ attacking: the rank-two aggregate cross-bank near-range endpoint — pay the exa
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Role:** Universal proof assembly / SYNTHESIS / complementary constructions and source-valid counterexamples  
-**Fresh control before write:** `yspennstate/math-research-brain@ea07f80c996cc2ef383f7e68b243ec6e3fdfb147`, OWNER CONTROL revision `2026-09-22.15`  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW SUPPORTING THEOREM / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 

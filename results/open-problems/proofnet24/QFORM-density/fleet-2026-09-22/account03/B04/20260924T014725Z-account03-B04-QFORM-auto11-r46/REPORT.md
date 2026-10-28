@@ -13,7 +13,6 @@ The full universal conjecture is not proved here. The new point is that a physic
 
 ## 1. Fresh source boundary and checked dependencies
 
-Startup controls were read from fresh `yspennstate/math-research-brain/main`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The live claim ledger still marks the unrestricted density theorem and full-target continuity OPEN. Current corrections were consumed: no law-uniform pointwise quadratic-phase decay, no post-rotation independence, no arbitrary-joint coarea cap, no conditional-fiber supremum shortcut, and no inference of a uniformly good individual minor from the spectral hypothesis.
 
 The analytic inputs are all source-pinned completed supporting results:
 

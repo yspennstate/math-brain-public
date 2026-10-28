@@ -337,6 +337,5 @@ The live scale-forcing and single-minor corrections prevent simply asserting suc
 
 ## 12. Source / control state at proof time
 
-Fresh `math-research-brain` main was read at `d9f710e227ff05194a2881be2815b74e58adcdc0`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, with QFORM as the sole target. The current exclusive sign-in request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, current manifest/current research/claims/corrections/memory protocol/assignment, and the fresh partner report were read. Fresh `math-open-problems` master was resolved at `21d0bb88d9b44a7a7991337302bed86553ff28e6` before the early calculation.
 
 Authenticated native Brain receiver use was not available. Repository retrieval and publication are therefore recorded as `WITHOUT_VERIFIED_BRAIN`, not as native learned-memory ingestion.

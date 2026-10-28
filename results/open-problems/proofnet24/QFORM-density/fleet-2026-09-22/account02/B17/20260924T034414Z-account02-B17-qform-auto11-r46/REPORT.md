@@ -10,7 +10,6 @@ Status: **NEW SUPPORTING TARGET-LEVEL THEOREM / SHARP-WITNESS OBSTRUCTION / FULL
 
 The unrestricted quadratic-form bounded-density problem remains **OPEN / NOT PROVED / NOT DISPROVED**. Continuity for the unrestricted target remains separate. The theorem below assumes only independence and marginal density caps at one. It uses no moments, bounded support, log-concavity, connectedness, regularity, post-rotation independence, arbitrary-joint coarea bound, or pointwise stationary-phase estimate.
 
-Fresh owner control remains `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with no account02/B17 pause. The live correction inbox was refreshed before publication; in particular the proof below does not use `QFORM-TWOSHEET-XRAY-ONLY-FALSE`, conditional-cap-as-independence, arbitrary-joint coarea, or a uniformly good physical minor.
 
 ## 1. First unpaid implication paid
 

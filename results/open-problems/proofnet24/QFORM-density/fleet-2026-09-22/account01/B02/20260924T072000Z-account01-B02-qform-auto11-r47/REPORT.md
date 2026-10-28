@@ -13,7 +13,6 @@ The target is unchanged: independent ORIGINAL real coordinates with one-dimensio
 
 ## 1. Fresh source boundary and the live packet
 
-Fresh `math-research-brain/main` was resolved at startup. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. `AGENTS.md`, the full fresh `scheduled_tasks/README.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B02.json` were read. The historical source owner message was also checked at immutable brain commit `0dc369ddf8b860648dd780d8f92c62994dc53ecf`; later main control wins. The literal root paths `fleet.json`, `roles.json`, and `PROTOCOL.md` are absent on resolved main and no contents are invented for them.
 
 The live structural source is account03/B02 r47,
 

@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target remains: independent real `X_i` with densities `0<=f_i<=1`, symmetric `A` with at least three eigenvalues of modulus at least one, and a universal bound for the density of `X^T A X`. No moments, bounded support, connected support, centering, log-concavity, or post-rotation independence are assumed.
 
-Fresh control was read from `yspennstate/math-research-brain` main, with OWNER CONTROL revision `2026-09-22.15`; the full conjecture is still OPEN. Live corrections consumed include the false law-uniform pointwise quadratic Fourier decay, spectral-fiber dimension loss, loss of independence after rotation, bounded-diameter localization failure, and absence of a universal fixed fragment-count reduction. None is used as a premise.
 
 The designated partner result actually used below is account02/B14 run `20260923T193835Z-account02-B14-QFORM-auto11`, canonical report
 

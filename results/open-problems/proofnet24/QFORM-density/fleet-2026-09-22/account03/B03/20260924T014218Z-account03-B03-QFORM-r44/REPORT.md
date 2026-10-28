@@ -12,7 +12,6 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. Ful
 
 ## 1. Fresh source boundary and exact debt attacked
 
-Fresh control remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no pause/stop for account03/B03. The live corrections are retained throughout: no law-uniform pointwise quadratic-phase decay, no independence after a spectral rotation, no conditional cap-one law for `X-X'` given `X+X'`, no arbitrary-joint rank-three coarea estimate, no deletion of a small nonzero random quadratic tail, and no inference from a single tiny physical minor.
 
 The immediate full-target structural input is account03/B20 r42, whose one-anchor branch produces a literal original-coordinate partition
 

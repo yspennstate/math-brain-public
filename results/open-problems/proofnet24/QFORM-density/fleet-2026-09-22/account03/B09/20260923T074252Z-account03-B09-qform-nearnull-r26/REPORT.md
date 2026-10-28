@@ -14,7 +14,6 @@ No Gaussian, moment, compact-support, connected-support, log-concavity, identica
 
 ## 1. Fresh sources and exact missing implication
 
-Fresh owner control remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`. The live correction ledger and current research state were reread. In particular, nothing below uses law-uniform pointwise van der Corput decay, arbitrary-joint coarea, a conditional spectral-density supremum, or a fixed-good-minor implication.
 
 The predecessor account03/B09 r25 is
 

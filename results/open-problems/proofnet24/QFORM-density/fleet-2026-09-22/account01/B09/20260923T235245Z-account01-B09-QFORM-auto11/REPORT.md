@@ -237,7 +237,6 @@ The exact rank-one formula (4.3) further shows that the singular overlap-two col
 Newest completed account02/B09 result consumed in this run:
 
 `QFORM-RANKONE-PHYSICAL-PAIR-COLLINEAR-STAR-v1`,
-source handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B09/20260923T224553Z-account02-B09-QFORM-r15.md`,
 canonical mathematics
 `yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
 `proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260923T224553Z-account02-B09-QFORM-r15/REPORT.md`.

@@ -367,4 +367,3 @@ Neither obligation is the full conjecture. Full QFORM remains OPEN; full-target 
 
 The mixed-2/1 theorem is an algebraic reuse of the already source-pinned r20 determinant/BL proof with the compound orders changed from `(3,2)` to `(2,1)`. The half-Riesz integral is computed explicitly and the `h=3/4` constant equals `27.2194298438`. The star collision lemma is an exact probability/coloring identity. Finite numerical checks, if used, are regression evidence only and are not premises of these proofs.
 
-Pre-publication control source: `yspennstate/math-research-brain@c96d67458e3b0b131ee625b6003344143caabe20`; OWNER CONTROL revision `2026-09-22.15`; no B07 pause. Execution remains `WITHOUT_VERIFIED_BRAIN`: repository reads/writes are not authenticated native learned-memory ingestion.

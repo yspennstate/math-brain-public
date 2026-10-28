@@ -14,7 +14,6 @@ The early note `EARLY.md` had one arithmetic root error; immutable `CORRECTION.m
 
 ## 1. Sources actually consumed
 
-Fresh owner control came from `yspennstate/math-research-brain/main`, OWNER CONTROL revision `2026-09-22.15`, with the exclusive QFORM continuation and the later Fisher continuation. Full QFORM remains open and the live corrections against pointwise quadratic-phase decay, post-rotation independence and arbitrary-joint coarea remain binding.
 
 The required pinned source was read at exactly
 

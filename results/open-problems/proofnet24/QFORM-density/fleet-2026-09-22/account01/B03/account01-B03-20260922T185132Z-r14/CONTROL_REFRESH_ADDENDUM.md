@@ -1,7 +1,0 @@
-# r14 pre-finish control reconciliation
-
-A later source refresh after `REPORT.md` was committed observed `yspennstate/math-research-brain@d0e3c10ca60e37cc24556e99a5bfa527255e47b6`, OWNER CONTROL revision `2026-09-22.12`. The sole research target remains the same full QFORM conjecture, so there is no owner/platform stop and no scope change invalidating this run's square-collision theorem.
-
-The revision-.12 OWNER MESSAGE contains proposed mathematical claims about an unrestricted rank-three coarea bound and an exact-rank-three closure. Those claims are not used here. At the same fresh source version, `CURRENT_RESEARCH.md` still carries the urgent source-backed correction `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1`: the arbitrary-joint `K ||rho||_infinity^(2/3)` coarea assertion is false and therefore cannot serve as a premise. It also retains the correction that positive conditional projection-density moments can diverge. Under the standing protocol, these source-backed mathematical corrections override the owner's proposed proof deductions while leaving the target and work authorization unchanged.
-
-Accordingly, the mathematical conclusions of `REPORT.md` remain exactly scoped as written: `QFORM-SQUARE-COLLISION-RIESZ-v1` and its two-square/three-square corollaries are supporting theorems; the full conjecture remains OPEN; continuity is not established by the new branch. The remaining global issue is still a product-preserving structural reduction/aggregation, with the known rank-one/star hard families retained as regression tests.

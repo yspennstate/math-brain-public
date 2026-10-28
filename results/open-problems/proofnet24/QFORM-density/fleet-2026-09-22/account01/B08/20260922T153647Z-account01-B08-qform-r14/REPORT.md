@@ -38,7 +38,6 @@ path
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
-Its free-regularizer multiplier, ridge-weight identification, exponent and inversion constants have an independent scoped PASS from account02/B02, canonical handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B02/20260922T153908Z-account02-B02-qform-auto11-7613470a.md`. The separate MSS spectral-window application is not needed here.
 
 ## 2. New theorem: approximate block remainder survives
 

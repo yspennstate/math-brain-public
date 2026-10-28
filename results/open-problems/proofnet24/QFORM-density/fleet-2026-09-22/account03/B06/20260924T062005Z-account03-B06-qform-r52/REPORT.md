@@ -4,7 +4,6 @@ attacking: `QFORM-MIXED-LAYER-NORMAL-INNOVATION-RECEIVER-v1`; retain the r52 cur
 # account03/B06 — normal-innovation compensation inside the localized three-hub packet
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Fresh pre-publication owner control: `yspennstate/math-research-brain@307ecb61e8f3e4b9682be85e29f2d4d19654eadb`, OWNER CONTROL revision `2026-09-22.15`.  
 Immediate B06 predecessor: `yspennstate/math-open-problems@74520bfd95aaeff165f530b70e86d00419d2c411`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T042233Z-account03-B06-qform-r52/REPORT.md`.  
 Designated partner actually applied below: account04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
 Execution label: `WITHOUT_VERIFIED_BRAIN`; authenticated repository access is not native learned-memory ingestion.

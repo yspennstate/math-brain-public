@@ -6,7 +6,6 @@
 
 ## 1. Live target, supersession, and peer results actually consumed
 
-The current natural-language OWNER MESSAGE supersedes B16's older campaign-C signed-current assignment and directs every FEI worker to the all-gate formulation
 
 \[
 \Gamma(p_{\rm out})+H_t(G;p)

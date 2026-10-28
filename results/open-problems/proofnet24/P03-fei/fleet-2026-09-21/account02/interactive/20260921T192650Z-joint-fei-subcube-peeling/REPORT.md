@@ -323,7 +323,6 @@ Repository searches included `Holevo`, `max-influence`, and combinations of maxi
 
 ## 10. All-account delivery and exact remaining task
 
-This invocation did not confine coordination to account02. It created a shared order and source-exact research index under `scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/` in the brain repository, and inserted an additive pointer in the common `scheduled_tasks/README.md` read by all four accounts. The root change is exactly eight inserted lines, with prior controls intact, at commit d2c57e60881050d3cae1176d9804a1a538831378. The order is 4ba19644d6c44499692c5e16c29c3c02515f66de, and the research-state index is 5b02cab94d0ea3563adc86da6831f25ad62ffcf5. They route the 28 existing FEI slots into complementary cross-account interfaces and preserve the other existing brain/benchmark roles and safeguards.
 
 Publication, local keeper prompt incorporation, and a subsequent worker actually consuming a peer result are separate states. The completed 18Z login snapshot had 20/17/17/20 files across accounts01-04, respectively: 74 canonical check-ins, not 74 completed proofs. Mathematical reports from every account were actually read. Neither the activity snapshot nor the shared instruction proves that every scheduled worker has already adopted the new order.
 

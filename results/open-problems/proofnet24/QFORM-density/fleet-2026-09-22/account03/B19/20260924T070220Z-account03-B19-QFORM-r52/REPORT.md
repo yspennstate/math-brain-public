@@ -15,7 +15,6 @@ All coordinate sets are literal ORIGINAL-coordinate sets. No random coordinate r
 
 ## 1. Source-pinned frontier
 
-Fresh owner control was read from `yspennstate/math-research-brain@baa01934f6a0f49fdbac5600772948e341986443` and refreshed again before publication. OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole research target.
 
 Immediate same-slot source:
 

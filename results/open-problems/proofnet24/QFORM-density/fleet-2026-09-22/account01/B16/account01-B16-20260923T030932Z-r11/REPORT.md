@@ -12,7 +12,6 @@ The full conjecture is not proved here. The new result is an exact-rank-three st
 
 ## 1. Sources and correction boundary
 
-Run-start control source: `yspennstate/math-research-brain@5b676f62db748a3615134619fc9978a22e796744`, OWNER CONTROL revision `2026-09-22.15`. Fresh control was rechecked before publication and remained QFORM-only.
 
 The designated partner result actually used is account02/B16 r23:
 

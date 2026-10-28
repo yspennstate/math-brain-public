@@ -302,7 +302,6 @@ The still-unpaid target-level implication is to derive, from only `s_3(A)>=1`, e
 
 ## Sources consumed
 
-- Fresh owner/control state: `math-research-brain/main`, OWNER CONTROL `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922` revision `2026-09-22.5`.
 - Newest completed partner at the time of this report: account03/B12 r53, `math-open-problems@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`, signed anticommutator stability.
 - Required pinned source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; D5 is applied in (6.1)-(6.2) and (8.3)-(8.4).
 - Live corrections consumed: no uniform pointwise quadratic-phase decay; no arbitrary-joint coarea shortcut; no conditional cap/moment replacement for product provenance; no naive fiber-sup dimension-free step; no independence after spectral rotation.

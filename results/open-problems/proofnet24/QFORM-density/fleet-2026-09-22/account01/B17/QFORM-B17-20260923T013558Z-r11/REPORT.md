@@ -238,7 +238,6 @@ The full conjecture is still open. A sharper witness, if one exists, must leave 
 
 ## 8. Corrections and provenance
 
-Fresh QFORM control was read before the run and again before the write. OWNER CONTROL revision is `2026-09-22.15`; there was no later B17 stop. The full conjecture remains OPEN and continuity remains separate.
 
 No refuted law-uniform pointwise oscillatory-decay estimate, arbitrary-joint coarea bound, post-rotation independence, conditional-cap/moment bound, fiber-supremum reduction, finite-fragment-count reduction, single-minor extraction, or cross-rank-three dichotomy is used.
 

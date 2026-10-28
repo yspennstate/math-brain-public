@@ -16,7 +16,6 @@ Fresh source heads at the start of this run were
 - `yspennstate/math-research-brain/main@f7b1bd7fb40e7c63dbaa8724b795297e136d44e1`,
 - `yspennstate/math-open-problems/master@0662743d81a3dfcba062f36ecc52815fbaa26012`.
 
-OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The full target is still OPEN. The current live corrections were consumed: no post-rotation independence, no arbitrary-joint coarea cap, no naive conditional-density-cap inheritance, no deletion of a small random quadratic tail, and no law-uniform pointwise quadratic Fresnel decay.
 
 The phase-aligned fragmented-support counterexample remains binding: for each prescribed nonzero `t` one can choose a cap-one density supported on finitely many intervals on which `t x^2` is nearly phase-aligned, so `|E exp(itX^2)|` can be arbitrarily close to one. Nothing below contradicts that. The new estimates come either from a JOINT rank-two cross block or from a direct distribution-function/fractional-potential calculation for a pure bilinear product.
 

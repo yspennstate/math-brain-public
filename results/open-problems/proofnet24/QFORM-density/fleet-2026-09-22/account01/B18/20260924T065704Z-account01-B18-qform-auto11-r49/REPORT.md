@@ -14,7 +14,6 @@ attacking: fuse the exact rank-two original-cross receiver with the new Hilbert-
 
 The full owner target remains OPEN: independent original coordinates with probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. This run does not use arbitrary-joint coarea, conditional projected-density moments, post-rotation independence, law-uniform pointwise oscillatory decay, deletion of a small nonzero remainder, or a claim that `s_3(A)>=1` forces the structural packet below.
 
-Fresh prepublication controls were read at `yspennstate/math-research-brain@fb71ccb02937b879a9a55b5cbeb641a63c731836`, OWNER CONTROL revision `2026-09-22.15`; the live correction inbox blob remained `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 ## 2. Primary literature and hypothesis transfer
 

@@ -15,7 +15,6 @@ No interval, centered-uniform, compact-support, moment, bounded-diameter, bounde
 
 ## 1. Fresh controls, corrections, and sources actually used
 
-Fresh protected controls were resolved from `yspennstate/math-research-brain` during this run. The prepublication control refresh observed main `ac9dc5a387e67f95612a4e9e165d42c953a4c1b2`, with OWNER CONTROL revision `2026-09-22.11`; QFORM remained the sole target and no account02/B13 pause or stop was present.
 
 The live correction inbox was reread before publication. In particular, this report does **not** use the refuted arbitrary-joint rank-three coarea inequality, the divergent positive conditional-projection-moment bridge, law-uniform pointwise Fresnel decay, post-rotation independence, a universal good fixed minor, bounded-diameter localization, or bounded fragment count.
 

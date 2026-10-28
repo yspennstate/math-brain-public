@@ -4,7 +4,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Run: `20260923T143944Z-account01-B01-qform-auto11`  
 Status: substantive checkpoint; full conjecture OPEN.
 
-Fresh control at run start was `math-research-brain@82273630628b1b1fd2c83731f8e9a80307f94c2f`, OWNER CONTROL `2026-09-22.15`. The live correction boundary is retained: no law-uniform scalar pointwise quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea theorem, and no worst conditional projection-density cap.
 
 The prior B01 endpoint is a common ORIGINAL-coordinate hub `h` with a leaf packet
 

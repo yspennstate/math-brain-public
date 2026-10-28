@@ -5,7 +5,6 @@ attacking: two-sided contaminated hyperbolic packets: derive a joint product-spa
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Product Fourier rearrangement  
-**Fresh owner control:** `math-research-brain@6e5e3fae8f8bc63666b39a89469f4909c02e19de`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used; no native learned-memory receiver/ingestion was observed.  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREMS_PROVED / FULL_TARGET_OPEN`.
 

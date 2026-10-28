@@ -10,7 +10,6 @@ REQUESTED REASONING: maximum actually supported
 CONFIGURED / KNOWN REASONING LEVEL: UNKNOWN / NOT_EXPOSED  
 PROVIDER REASONING USAGE: NOT_EXPOSED
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main and reread immediately before write. OWNER CONTROL revision is `2026-09-22.2`; fleet is enabled, account02/B17 is not paused, and the later collective owner message keeps B12--B18 on full FEI and the all-gate formulation. The source scientific master was freshly resolved before this report. The canonical brain login write for this hour was attempted create-only and denied by platform safety; it was not retried or bypassed.
 
 ## 0. Last-three comparison and exact change
 

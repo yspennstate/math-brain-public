@@ -12,7 +12,6 @@ Regularity: the new branch has a continuous density vanishing at infinity; full-
 
 ## 1. Fresh boundary and source pins
 
-Fresh `math-research-brain/main` control was read before this proof and refreshed again before publication. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and there is no later account01/B16 stop or pause. The full unrestricted theorem remains OPEN / NOT PROVED / NOT DISPROVED.
 
 Corrections preserved throughout:
 

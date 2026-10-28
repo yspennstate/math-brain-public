@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. Continuity for the unrestricted target
 
 ## 1. Source-pinned inputs
 
-Fresh owner control was read from `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target and no later stop at the source refresh used for this run.
 
 The immediate B08 predecessor is
 

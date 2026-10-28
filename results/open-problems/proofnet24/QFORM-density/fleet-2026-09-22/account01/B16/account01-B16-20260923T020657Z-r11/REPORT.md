@@ -12,7 +12,6 @@ attacking: a full-ambient scalar-plus-two-dimensional product-projection reducti
 
 The full target is unchanged: for every dimension, every independent real input family whose one-dimensional densities are at most one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a single universal essential bound for the density of `X^T A X`, or give a valid counterexample.
 
-Fresh owner control was read from `yspennstate/math-research-brain@bcbdd804d75bdff296a15f19cc58eacdf14d4fa5`; OWNER CONTROL revision is `2026-09-22.15`. A final pre-publication control/correction refresh reached `86648d78b4d1c8d0418327c08c360f7b95119a28`; no later stop was encountered.
 
 The following live corrections are enforced throughout:
 

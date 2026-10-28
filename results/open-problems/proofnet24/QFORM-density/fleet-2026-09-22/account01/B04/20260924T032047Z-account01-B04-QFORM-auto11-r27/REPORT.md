@@ -17,7 +17,6 @@ Fresh `math-research-brain/main` was resolved at control commit
 
 `dd5a4025756b11e275f3e344211fab71a7d7ef0c`.
 
-OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and the full theorem remains open. `AGENTS.md`, `scheduled_tasks/README.md` including the OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, the programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and this worker's assignment card were read. The current correction discipline is respected throughout.
 
 The analytic receiver used below is account03/B04 `QFORM-CROSS-E3-OPTIMAL-THRESHOLD-v1`, source
 

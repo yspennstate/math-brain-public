@@ -164,7 +164,6 @@ This branch allows arbitrary remaining dimension, arbitrary self-quadratic terms
 
 The designated partner handoff is
 
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account04/B03/20260922T193150Z-account04-B03-collision-l2-r1.md`,
 
 with canonical mathematics `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`.
 

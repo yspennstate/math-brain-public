@@ -6,7 +6,6 @@ attacking: the exact-rank-three hybrid/near-null physical direction: consume the
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: Rank-three coupled case; complementary constructions/source-valid counterexamples  
 Run id: `20260923T064541Z-account02-B10-QFORM-auto11`  
-Owner control resolved fresh before work: `yspennstate/math-research-brain@f299dbb4de2dd2c07b4b6e777f49dbc07ccfb64c`, OWNER CONTROL revision `2026-09-22.15`; prepublication main refreshed to `6e7daa7013a3e1992223981a3b6527b4799aba3f`.  
 Math source head observed before publication: `yspennstate/math-open-problems@b39ba2509cda545075ec804aa057457d7ebd4163`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Classification: `ESSENTIAL_STEP_APPLIED / LOCAL_CORRECTION / PROVED_SUPPORTING_THEOREM / TARGET-VALID TRUE-COLLAR STRESS FAMILY / FULL QFORM OPEN`.

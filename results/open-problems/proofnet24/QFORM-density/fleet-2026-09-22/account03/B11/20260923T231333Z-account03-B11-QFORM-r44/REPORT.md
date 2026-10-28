@@ -14,7 +14,6 @@ No Gaussian, log-concave, moment, compact-support, connected-support, finite-fra
 
 ## 1. Fresh sources and inherited hard chamber
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main at invocation start. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the full conjecture is `OPEN / NOT PROVED / NOT DISPROVED`.
 
 The immediate B11 predecessor is
 

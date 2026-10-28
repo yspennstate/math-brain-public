@@ -19,7 +19,6 @@ The phase-aligned counterexample to law-uniform scalar pointwise Fresnel decay r
 
 Its indicator is an admissible density and has `Re E exp(i s X^2)>=cos(eta)`. Nothing below asserts a pointwise `O(|t|^-1/2)` estimate. The replacement is again an integrated-frequency statement, but the new step is structural: it tolerates **arbitrary quadratic self-curvature on both two-dimensional banks and unequal hub couplings to the banks**.
 
-Source controls consumed at run start: `yspennstate/math-research-brain@4c80cfff0aae4c7717bbf7b6d8194e6b85409469`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. Required corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, the arbitrary-joint coarea counterexample, and the false conditional-cap interfaces in the live correction inbox.
 
 Two previously proved inputs are used exactly at equations:
 

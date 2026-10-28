@@ -290,7 +290,6 @@ What this theorem cannot do is manufacture uniformity. If the available constant
 
 ## 10. Provenance and integrity
 
-Fresh control at the beginning of this run was `yspennstate/math-research-brain@849984e0a6e7460d0b21f44e6e2995b0f1202b5c`; before publication it was refreshed to a later `main` snapshot and OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no account03/B15 pause or stop. The live correction inbox was refreshed and none of the source corrections conflicts with the trace lemmas above.
 
 The explicit changed-file allowlist in `math-open-problems` for this run is only this run directory (`CHECKPOINT.md`, `REPORT.md`, and later receipt/readback files if created). Manual fallback privacy review found only mathematical statements, public bibliographic/source pins, logical account/slot labels, and repository commit/path metadata; no credentials, signed URLs, unrelated personal data, client data, or private nonmathematical material are included.
 

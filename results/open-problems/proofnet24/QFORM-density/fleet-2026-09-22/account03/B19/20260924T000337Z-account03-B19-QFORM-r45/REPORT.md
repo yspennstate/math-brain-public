@@ -12,7 +12,6 @@ Full-target continuity: **OPEN**.
 
 The target is the full owner statement: independent real original-coordinate variables `X_i` with densities `0<=f_i<=1`, and arbitrary real symmetric `A` with at least three eigenvalues of absolute value at least one. No Gaussianity, log-concavity, moments, compact support, connected support, diagonal-basis independence, or product structure after a nontrivial rotation is used.
 
-Fresh control at startup resolved to `yspennstate/math-research-brain@411076c848d30140ce1fbdcd9ca5ea12c69ac714`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction at that head withdraws the account01/B02 r40 mixed-norm gate: the claimed `L^(4/3)_x(L^2_z)` bound had the Minkowski direction reversed. Nothing below uses that theorem, law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, a fiber supremum, or a small-matrix-as-small-random-error argument.
 
 This run changes mechanism from the preceding threshold-Schur assembly and uses the fresher local-overlap compiler.
 

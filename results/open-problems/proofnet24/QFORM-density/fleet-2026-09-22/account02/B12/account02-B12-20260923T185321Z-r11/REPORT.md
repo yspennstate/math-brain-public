@@ -448,7 +448,6 @@ The live correction `QFORM-GSTAR-SCALE-FORCING-FALSE-v1` rules out simply demand
 
 ## 10. Source pins and scope
 
-- Fresh brain control observed this run: OWNER CONTROL `2026-09-22.15`; QFORM exclusive continuation active; full theorem open.
 - Required pinned newest-Claude source: `e5f71d79eff325201dd0274053d20268ce65b837` (`RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`).
 - Latest designated partner account03/B12 used at equation (2.5): report read through `b4745ece98fa3839cf7afe35d829d08384c815b4`, theorem commit `005c80f70952024e3460260cb12936870f26d70e`.
 - Destructive square-Gram stability: `c307f81b3196820aa711a5c47f243feeeeb74781`.

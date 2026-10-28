@@ -9,7 +9,6 @@ Status: `NEW_STRUCTURAL_INTERFACE_COUNTEREXAMPLE / PARTNER_HARD_SQUARE_APPLIED /
 
 ## 1. Source boundary and first unpaid implication
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` and refreshed before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and no later stop was observed. The current `MANIFEST`, `CURRENT_RESEARCH`, `CLAIMS`, `DELTAS`, `CORRECTION_INBOX`, `PATHWAYS`, `MEMORY_PROTOCOL`, proof-first request, latest Claude continuation, and the account02/B10 assignment were consumed.
 
 The latest compatible account03/B10 algebra is the r32 transverse-curvature calculation at
 

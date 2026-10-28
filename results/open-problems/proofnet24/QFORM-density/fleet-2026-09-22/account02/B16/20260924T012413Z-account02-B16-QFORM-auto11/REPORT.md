@@ -10,7 +10,6 @@ attacking: the punctured majority-sign near-coloop by deriving the exact physica
 
 ## 1. Source boundary and first unpaid implication
 
-Fresh owner control keeps `QFORM-DENSITY-3EIG-20260922` as the sole target, OWNER CONTROL revision `2026-09-22.15`, with no B16 pause. The full statement remains OPEN: arbitrary independent original-coordinate inputs with densities at most one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, and no moment/support/log-concavity/iid/post-rotation-independence assumptions.
 
 Required pinned source consumed at
 

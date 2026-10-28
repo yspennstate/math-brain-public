@@ -14,7 +14,6 @@ Continuity: separate; asserted only on the paid historical-source branch below, 
 
 The target is unchanged: for every `n`, independent real ORIGINAL-coordinate variables `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove a single universal finite essential-supremum bound for the density of `X^T A X`, or give a valid counterexample.
 
-Fresh protected owner control was reread before publication. OWNER CONTROL is still revision `2026-09-22.15`, QFORM is the sole research programme, and the current continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. No stop or pause applies to account02/B20.
 
 The live corrections remain in force. In particular, this report does **not** use law-uniform pointwise one-dimensional quadratic-phase decay, a dimension-free worst spectral-fiber supremum, arbitrary-joint rank-three coarea, post-rotation independence, a conditional marginal cap as independence, a one-good-minor inference from aggregate volume, or deletion of a small nonzero random quadratic tail.
 

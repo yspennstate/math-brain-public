@@ -13,7 +13,6 @@ The full universal QFORM theorem remains open. This report proves a new synthesi
 
 ## 1. Sources and correction boundary
 
-Fresh owner control was resolved from `yspennstate/math-research-brain`; before publication main was at `1c9a140cc5268d5f8d0d1a4a9004068747bb306a`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target and no applicable account/slot pause.
 
 Required pinned Claude source:
 

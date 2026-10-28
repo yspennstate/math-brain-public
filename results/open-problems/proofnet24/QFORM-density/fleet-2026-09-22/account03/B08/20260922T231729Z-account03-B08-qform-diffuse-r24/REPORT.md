@@ -5,7 +5,6 @@ attacking: an exact-eigenvector curvature-transfer ladder across a balanced phys
 
 **Run:** `20260922T231729Z-account03-B08-qform-diffuse-r24`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh owner control:** `yspennstate/math-research-brain@78f318e2c65263b0de840aaf014f28f4d6ef0f20`, OWNER CONTROL revision `2026-09-22.15`  
 **Assignment:** Diffuse eigenvector case  
 **Classification:** `PROVED SUPPORTING STRUCTURAL THEOREM / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

@@ -12,7 +12,6 @@ The full arbitrary-dimensional conjecture is not proved here. The result below p
 
 ## 1. Source boundary and designated-partner theorem actually applied
 
-Fresh `math-research-brain` control remains QFORM-only, OWNER CONTROL revision `2026-09-22.15`; the full conjecture and continuity remain open.
 
 The designated partner source used at the decisive inequality is
 

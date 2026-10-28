@@ -229,4 +229,3 @@ No refuted arbitrary-joint coarea estimate, post-rotation independence claim, co
 
 Every finite input law above is source-valid under the exact target assumptions. The theorem establishes the displayed cone-tip asymptotic and associated lower-bound constraint. It does not establish the unrestricted QFORM upper bound. No new full-family continuity theorem is claimed here; full-target continuity remains open.
 
-Fresh pre-publication control: `yspennstate/math-research-brain@aebcf1d236a0c0d57cc96508d06772c89a57a5bd`, OWNER CONTROL revision `2026-09-22.15`.

@@ -4,7 +4,6 @@ This note corrects the live-target interpretation after a final fresh owner-cont
 
 ## Fresh later owner control
 
-OWNER CONTROL remains revision `2026-09-22.2`, with B12--B18 on FEI and no account02/B18 stop. The OWNER MESSAGE is stronger than the stale Campaign-C wording: all FEI workers are to converge on `FEI-ALL-GATE-MARGIN-v1`, with the immediate alternatives “prove AND/decomposable margin extremality” or “falsify it with an actual gate/bias.”
 
 ## Newly completed OTHER-account result consumed and applied
 

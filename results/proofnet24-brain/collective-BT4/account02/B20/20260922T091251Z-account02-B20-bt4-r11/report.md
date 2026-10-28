@@ -13,7 +13,6 @@ The argument below works inside the inherited normalized oriented exact-seven mi
 
 ## Fresh control and scientific inputs
 
-Fresh owner control was resolved from main before the scientific write; OWNER CONTROL remained revision `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, with new brain-installation/benchmark work stopped and B12–B18 retained on FEI.
 
 Latest complete campaign lead actually consumed:
 - account02/B04 `BT4-CLEAN-FOUR-PORT-WITNESS-LIFT-v1`, shared handoff blob `b0c1c37b1d36fd7cf855946f20eb382a61cd346d`, canonical report commit `14b8affcde6130bdbacbdfbd03888816b96d61ef`.

@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.
 
 The target remains the unrestricted conjecture: for every dimension, independent real ORIGINAL-coordinate inputs with probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a density with one universal essential-supremum bound, or give a valid target-level counterexample. No Gaussianity, moments, compact/connected support, log-concavity, iid assumption, diagonal-basis assumption, or independence after rotation is introduced. Continuity is tracked separately.
 
-The final pre-publication control refresh was `math-research-brain@c90bd5cd5bb247315da726ad09cf034e6c578fc6`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B07 pause. The live correction inbox was reread. This report does not use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, positive conditional projection-density moments, naive fiber-sup integration, or a one-good-minor reduction.
 
 Actual mathematical dependencies:
 

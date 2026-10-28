@@ -148,7 +148,6 @@ This is precisely where the present proof fails: once `A_II` is nonzero, conditi
 
 ## 7. Source pins and correction status
 
-- Fresh brain control snapshot used at entry: `e2f66606906db9d48887fb4b4b04195de4b1b9b8`, OWNER CONTROL revision `2026-09-22.15`.
 - LPP primary source: arXiv:1507.07949, Theorem 1.1; exact marginal cap used above.
 - Newest owner-required Claude source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem B and `FOURIER_ROUTE_REPORT.md`.
 - Completed designated partner account03/B18 r19: handoff commit `86e7fb46b1a8535041e77e9864e44caf0175b551`; canonical theorem `math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`, `ADDENDUM_CROSSBLOCK.md`.

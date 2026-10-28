@@ -7,7 +7,6 @@ Status: `PROVED_SUPPORTING_TARGET-LEVEL THEOREM`; full QFORM remains OPEN.
 
 ## 1. Source scope and correction discipline
 
-Fresh brain control at the start of this run: `yspennstate/math-research-brain@f35f17214d6433f31380efbea0cad28b47d8e832`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. Required source package used below: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially its one-dimensional Fourier L^p lemma, Fresnel linearisation, and geometric Brascamp--Lieb argument. Latest completed designated-partner input at the calculation stage: account03/B01 determinant-area theorem, canonical math `yspennstate/math-open-problems@e37f094a72721e92fa82334f3b55ee4dd6d6695b`.
 
 The phase-aligned-density counterexample remains binding: there is no law-uniform pointwise scalar quadratic-phase decay under only `f<=1`. Nothing below asserts one. The proof obtains integrability only after averaging a two-dimensional random cross coefficient and then performing a joint Fresnel/Brascamp--Lieb integral.
 

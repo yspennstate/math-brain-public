@@ -4,7 +4,6 @@
 
 **PROVED SUPPORTING THEOREM / NEW LEVERAGE-1/2 EXACT-RANK3 CHAMBER / NEW ONE-HUB CONDITIONAL BRANCH / PARTNER ENDPOINT APPLIED / FULL EXACT-RANK3 OPEN / FULL QFORM OPEN.**
 
-Programme: `QFORM-DENSITY-3EIG-20260922`. Source control initially resolved at `yspennstate/math-research-brain@4e31ab7d46e8d7a01a90bc1c685d1c3f6c5187df`, OWNER CONTROL revision `2026-09-22.15`. This report preserves all live corrections: no pointwise law-uniform van-der-Corput decay; no post-rotation independence; no arbitrary-joint coarea lemma; no conditional-density-moment gate; no fiber-sup dimension-free shortcut.
 
 The main new point is that **sharp Hausdorff–Young exactly cancels the small row-leverage entropy loss in geometric Brascamp–Lieb**. This gives a dimension-free Wiener norm for every 3D orthogonal product projection whose row leverages are at most `1/2`. The resulting Fresnel compiler proves a continuous bounded density with constant `3e |det M|^{-1/3}` for an arbitrary invertible rank-three quadratic form, including arbitrary affine terms.
 

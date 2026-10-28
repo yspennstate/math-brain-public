@@ -216,6 +216,5 @@ A nonredundant next B17 step is to attack whether additional eigenvalues bounded
 
 ## 8. Source state
 
-Fresh control at the prepublication refresh: `yspennstate/math-research-brain` main commit `1c136d20cd51d611497cff94688c1f59b530fde9`, OWNER CONTROL revision `2026-09-22.12`. Current corrections were treated as authoritative mathematical state; in particular the arbitrary-joint rank-three coarea and conditional positive-moment claims remain unavailable as premises despite their historical appearance in owner-message prose.
 
 Full QFORM status: `OPEN / NOT PROVED`.

@@ -12,7 +12,6 @@ The full target remains open. The results below preserve arbitrary independent o
 
 ## 1. Sources actually consumed and applied
 
-1. Fresh owner/control state from `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; `CURRENT_RESEARCH.md` and the live correction inbox still mark full QFORM OPEN.
 2. Designated partner `account02/B13` r23:
    `yspennstate/math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/account02/B13/20260923T040105Z-account02-B13-extremal-r23/REPORT.md`.

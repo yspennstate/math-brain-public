@@ -9,7 +9,6 @@ Run: 20260923T114804Z-account03-B14-QFORM-r34
 Status: SUPPORTING TARGET-LEVEL LOCALIZATION THEOREM PROVED; FULL QFORM OPEN
 Continuity: NOT PROVED by this localization theorem
 Execution: WITHOUT_VERIFIED_BRAIN
-Final source-control refresh used: yspennstate/math-research-brain@ccd134e403fd9445f09e4d4a286ecc877128491c, OWNER CONTROL revision 2026-09-22.15.
 
 ## 1. Exact theorem
 

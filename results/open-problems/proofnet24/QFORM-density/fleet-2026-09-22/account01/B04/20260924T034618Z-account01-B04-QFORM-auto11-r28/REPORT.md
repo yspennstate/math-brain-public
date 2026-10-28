@@ -13,7 +13,6 @@ The unrestricted conjecture is not proved here. All random variables remain orig
 
 ## 1. Fresh source boundary and mechanism change
 
-Fresh `math-research-brain/main` was resolved at `4c93dadb21c8ad87c64490ca60404b9f3ae1f549`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, live corrections, `CURRENT_RESEARCH`, `CLAIMS`, `MEMORY_PROTOCOL`, and this assignment were read. The same UTC-hour canonical login already existed from B04 r27 and was not overwritten.
 
 This run deliberately changes mechanism after the preceding collision runs. The analytic receiver is Theorem D from
 

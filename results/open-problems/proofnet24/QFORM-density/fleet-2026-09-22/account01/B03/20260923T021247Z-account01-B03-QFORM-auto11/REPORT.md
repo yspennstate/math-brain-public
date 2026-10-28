@@ -14,7 +14,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The full target remains open: for arbitrary dimension, arbitrary independent real coordinates with one-dimensional densities bounded by one, and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one, prove a universal density cap for `X^T A X`, or give a valid target-level counterexample. Continuity is a separately desired conclusion.
 
-Fresh control was resolved from `yspennstate/math-research-brain` main before publication; OWNER CONTROL remained revision `2026-09-22.15` and QFORM remained the sole research target. The live correction inbox was reread. In particular, no law-uniform pointwise quadratic-phase decay, no independence after spectral rotation, no conditional cap for conjugate sum/difference variables, no arbitrary-joint rank-three coarea lemma, and no fixed-good-minor structural assertion is used below.
 
 The designated partner result actually used in an equation is account02/B03 run `20260922T150949Z-account02-B03-QFORM-r11`, canonical commit
 

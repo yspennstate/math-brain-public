@@ -5,7 +5,6 @@ attacking: Lp localization through an arbitrary disjoint quadratic receiver bank
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `20260923T193515Z-account03-B14-QFORM-auto11`  
-Control refresh: math-research-brain `133485801d290cfa098b37df20f8655c1d7fd44c`, OWNER CONTROL revision `2026-09-22.15`.  
 Status: `SUPPORTING_THEOREM_PROVED / FULL_QFORM_OPEN`.  
 Continuity: proved on the branch below; full-target continuity remains open.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.

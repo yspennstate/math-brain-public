@@ -6,11 +6,9 @@
 
 This run is account02/B08 and is restricted to the repeated-spectrum/common-block boundary of the complex normal 4-by-4 Marcus–de Oliveira problem. New benchmark/brain-installation work was not performed.
 
-Fresh control source at start: main commit `94469b947c0d4e763150447cf1a65181cdb68b44`, OWNER CONTROL revision `2026-09-22.2`, program `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. The exact blobs read at that ref were AGENTS `94387098453b9f4a9b10179183f6f6ec780fd987`, README `3d4a9372c87802ab734141a3374d04c8823372e3`, fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`, roles `ed17ecc94f76720c0345b3e32249b791b20ec611`, PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`; collective ORDER blob `a70e03208ae00795ca7c6cdf9b7dbce854347138` and TARGETS blob `a8cafa98cdb074ed15d0e214f8f54ee514c500df` were also consumed.
 
 Campaign-lead source actually read: account03/B07 canonical report `proofnet24/collective-MOC4/account03/B07/20260922T060726Z-account03-B07-MOC4-r11/REPORT.md`, blob `3c11567e275d39376f217a9b9e3c10693efa3127`, candidate `MOC4-SPIN4-SATURATION-TO-ZERO-FACE-v1`. Its current residual mechanism is zero-face support plus strict Spin(4) interior safety; saturation at a genuine maximizer can be moved along a flat SU(2) orbit to a zero-entry representative.
 
-Named OTHER-account result actually consumed and applied: account03/B09 handoff `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/account03-B09-20260922T051640Z-moc4-external-facets.md`, blob `5614c49e68dab63b0a7c5be62aeddcdd67ee260f`, status `ESSENTIAL_STEP_APPLIED`. Its exact usable statement is the Saxl external-facet bound described below. Previous B08 dependency: `MOC4-COMMON-BLOCK-EDGE-PAYMENT-v1`, shared handoff blob `73a4822805fdb2e620f8a7fed20bafa16d96fcc8`.
 
 Work mode: `WITHOUT_VERIFIED_BRAIN`; no brain-on experiment is claimed.
 

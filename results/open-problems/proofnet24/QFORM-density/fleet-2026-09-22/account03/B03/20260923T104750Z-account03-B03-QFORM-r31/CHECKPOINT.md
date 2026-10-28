@@ -3,7 +3,6 @@ attacking: two-dimensional balanced-basis Fresnel compiler — aggregate the who
 
 # Early substantive checkpoint
 
-Fresh owner control before this write: `yspennstate/math-research-brain@eec27ed45689ed7ee56c8ce23b04616fa954a71e`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The actual-hour canonical B03 login already existed and was preserved; this is a distinct immutable mathematical run. Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
 ## First essential calculation
 

@@ -41,7 +41,6 @@ I also used account03/B03 `20260922T005605Z-b03-forest-r11b` (blob `0246ec8c670c
 
 The assigned partner account02/B03 **did** deliver the later source-bound handoff
 `FOREST-BOUNDARY-DISCRIMINANT-v2`,
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account02-B03-20260922T011111Z.md`
 (blob `abf745feb0430529ebc4ce68458ea99c6d8c4f3f`). It proves the exact one-boundary-edge Rayleigh quadratic
 `Q(w)=D0+M w+D1 w^2` and the corrected response-weight criterion
 \[

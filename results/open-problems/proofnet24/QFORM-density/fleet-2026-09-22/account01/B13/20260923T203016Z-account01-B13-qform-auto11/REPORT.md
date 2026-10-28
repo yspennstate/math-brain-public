@@ -3,7 +3,6 @@ attacking: convert account02/B13's single-bi-star obstruction into a quantitativ
 
 # account01/B13 — bi-star concentration forces relative rank-three collapse
 
-Programme: `QFORM-DENSITY-3EIG-20260922`. OWNER CONTROL revision `2026-09-22.15`. Assignment: extremal product laws. Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 **Status.** New proved deterministic exterior-volume lemma plus a target-level slab inequality obtained by applying the latest completed designated partner theorem. Full unrestricted QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Continuity remains separately open.
 

@@ -2,7 +2,6 @@
 
 **Outcome:** `AUXILIARY_ONLY / HETEROGENEOUS_BRANCH_DEPTH_CLOSED`. Full unrestricted uniform-cube FEI remains **OPEN / NOT PROVED**.  
 **Execution:** **WITHOUT_VERIFIED_BRAIN**. Authenticated repository controls and mathematical sources were used directly; no authenticated mathematical-brain retrieval/context entered the derivation.  
-**Owner control:** revision `2026-09-22.2`. Its later natural-language OWNER MESSAGE supersedes the older account04/B16 interface-C phase-switch assignment and directs the FEI fleet to the all-gate reformulation. The old signed-current dependencies are preserved, not re-used as if they were a live universal proof route.
 
 ## 1. Exact live target and peer versions consumed
 

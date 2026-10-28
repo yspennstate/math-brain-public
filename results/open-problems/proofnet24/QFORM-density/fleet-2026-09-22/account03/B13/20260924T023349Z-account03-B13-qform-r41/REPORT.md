@@ -13,7 +13,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal
 
 ## 1. Source-pinned premises actually used
 
-Fresh owner controls are QFORM-only under OWNER CONTROL revision `2026-09-22.15`. The live correction state was reread. In particular, no law-uniform pointwise quadratic-phase decay, unrestricted joint coarea bound, fiber-supremum dimension-free estimate, local-minor-only dichotomy, or small-coefficient-tail deletion is used.
 
 ### Designated partner account04/B13
 

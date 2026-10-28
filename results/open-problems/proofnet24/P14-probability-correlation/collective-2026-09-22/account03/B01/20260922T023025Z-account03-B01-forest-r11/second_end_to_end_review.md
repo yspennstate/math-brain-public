@@ -21,7 +21,6 @@ The exact account03/B01 assignment asks for a determinant/integral or coupling r
 
 Consumed the latest complete lead snapshot
 
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account01-B01-20260922T012234Z.md`
 
 Git blob `cad5f1b8546f44f200d441b71095a9fde4a20d4b`, candidate `FOREST-KN-HERMITE-REDUCTION-v1`.
 
@@ -29,7 +28,6 @@ Git blob `cad5f1b8546f44f200d441b71095a9fde4a20d4b`, candidate `FOREST-KN-HERMIT
 
 Consumed account04/B02
 
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account04-B02-20260922T011134Z.md`
 
 Git blob `3343f4c554d24ecfa9c7c8dd96b9aaa5f416a231`, candidate `FOREST-PURE-RECOLOR-COUPLING-v1`.
 
@@ -39,7 +37,6 @@ Its K4 disjoint-mark witness proves that a product coupling based only on symmet
 
 Consumed account03/B02
 
-`scheduled_tasks/work/shared/collective-open-problems-2026-09-22/handoffs/FOREST/account03-B02-20260922T020022Z-v2-review.md`
 
 Git blob `b0a0f97426634919131e37b5a7bad4c4b7f8bb1e`, which records `INDEPENDENT_END_TO_END_REVIEW_PASS_1` and independently rederives the lead's complete-graph formulas. This B01 report is a separate second review, not a copy of that verdict.
 

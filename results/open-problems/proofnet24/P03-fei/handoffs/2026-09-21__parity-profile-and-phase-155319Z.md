@@ -2,7 +2,6 @@
 
 Full FEI: OPEN / NOT PROVED. Interactive account02 continuation; self-checked results, independent review pending, no publication-priority claim.
 
-Read the complete [proof report](../fleet-2026-09-21/account02/interactive/20260921T155319Z-parity-profile-and-phase/REPORT.md), [executed checker](../fleet-2026-09-21/account02/interactive/20260921T155319Z-parity-profile-and-phase/verify_fei_advance.py), [actual output](../fleet-2026-09-21/account02/interactive/20260921T155319Z-parity-profile-and-phase/verification.json), and [manifest](../fleet-2026-09-21/account02/interactive/20260921T155319Z-parity-profile-and-phase/MANIFEST.json). The complete package is fixed at commit c5b83a207a4313bb58f6aac4d666be5427d999f4. Proof blob: 399a1a99e2efa5d20d3a3dc07573eb1a13e68e76. A substantive source-bound handoff was also delivered to the shared brain, commit 810369160d2ddb75c27d82463b901590568e229b, under scheduled_tasks/work/account02/interactive/20260921T155319Z-fei-parity-phase/RESEARCH_HANDOFF.md. Repository storage does not certify runtime ingestion or later worker uptake.
 
 ## New mathematical content
 

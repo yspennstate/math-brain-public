@@ -18,7 +18,6 @@ This run keeps the regularity hierarchy separate:
 2. a finite essential height is the central quantitative target;
 3. a continuous representative is a separate stronger regularity statement, already known instancewise for rank at least three but not used to manufacture a universal height.
 
-Fresh owner/control source was read on `math-research-brain` main at `2ea138dc4d05b138b9b57f79057b64426a8ad749`, OWNER CONTROL revision `2026-09-22.15`. The live corrections against pointwise law-uniform quadratic Fourier decay, independence after spectral rotation, and projection/X-ray-only closure are retained.
 
 The completed assigned-partner material actually used is account02/B15 at the current math source, in particular
 

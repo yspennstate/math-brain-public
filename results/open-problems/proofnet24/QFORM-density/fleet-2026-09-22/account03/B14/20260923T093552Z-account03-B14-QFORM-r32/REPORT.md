@@ -249,4 +249,3 @@ Full-target continuity is not derived by this argument; only an essentially boun
 
 Consumed current corrections include the failure of law-uniform pointwise quadratic-phase decay, normalized conjugate-fiber cap inflation, bounded-diameter localization, fixed-fragment-count localization, and the arbitrary-joint coarea/positive-conditional-moment interfaces. None is used as a premise.
 
-Control source refreshed immediately before publication from `yspennstate/math-research-brain@117abf09d147ad48e1e2cd545b6ab91104e7fa3f`, OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target and account03/B14 is not paused.

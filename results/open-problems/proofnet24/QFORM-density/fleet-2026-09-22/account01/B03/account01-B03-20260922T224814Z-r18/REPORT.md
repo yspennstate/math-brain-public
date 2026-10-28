@@ -8,7 +8,6 @@ Assignment: `Decoupled time integral`
 Classification: **ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / INTERMEDIATE_MECHANISM_REFUTED / FULL_TARGET_OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control at start: `yspennstate/math-research-brain@1a8c2a1c4c817529b96723313bd235ae65beac4c`, OWNER CONTROL revision `2026-09-22.15`; QFORM is the sole research target. The theorem below does not use post-rotation independence, moment/support/log-concavity hypotheses, law-uniform scalar quadratic-phase decay, arbitrary-joint rank-three coarea, conditional projection-density positive moments, worst-fiber suprema, or conditioning of a copy difference on its dependent conjugate sum.
 
 The unrestricted owner conjecture remains OPEN. Continuity is tracked separately and is not proved by the new branch below.
 

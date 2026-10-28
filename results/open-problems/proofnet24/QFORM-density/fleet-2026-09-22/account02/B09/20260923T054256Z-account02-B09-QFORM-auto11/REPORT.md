@@ -34,7 +34,6 @@ What remains after this run is the small-torsion/invariant-plane endpoint and th
 
 ## 2. Sources actually used at equations
 
-Fresh owner control remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`. The required newest-Claude directory was read at the requested source
 
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
 

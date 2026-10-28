@@ -9,7 +9,6 @@ No full-solution claim is made. Independent end-to-end review of the new theorem
 
 ## 1. Fresh controls and source pins
 
-The run began from `yspennstate/math-research-brain@339f829f790f89bdf337b1cb2b60c69b770f953a`; prepublication fresh main was `1e216b821b947c1767615e1555e8d44dfc726bab`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM remained the sole target, and the latest B05 delivery instruction was to attack the indefinite two-sheet curved integral rather than replace it by a fiber supremum.
 
 Required newest external source actually consumed:
 

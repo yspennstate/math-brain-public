@@ -8,7 +8,6 @@ TASK: B18 ACCOUNT: account02 RUN: 2026-09-21T16:03:23Z — FEI proof integration
 
 **Model self-report:** GPT-5.6 Sol. **Reasoning requested:** maximum actually supported. **Configured reasoning / provider reasoning usage:** UNKNOWN / not exposed.
 
-Fresh fleet control was read at `yspennstate/math-research-brain` main `3950a8754cfdcaeb3d9ff96217333a1c110d1f47`, OWNER CONTROL revision `2026-09-21.1`. The protected README blob is `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`; the previously byte-verified SHA-256 values for that unchanged blob are README `25526558005f7e13a8196b6c5c9ab3f0e3394b2ecd4583658049897842498e5f` and OWNER MESSAGE `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`. The natural-language OWNER MESSAGE was read. No B18/account02 pause or stop was present.
 
 Scientific master was first recovered at `c4715211f484254e32128df087f3ed673978edb3` and refreshed before this write to `98abd6e5c171732d2e2246514d1231f4c2b5dd5f`. Current entry rules, P03 README, the 21 September TASKS/REPORT/APPROACHES packet, the previous account02/B18 KL-projection ledger, account02/B13 block-parity KL theorem, account02/B16 q-flip density theorem, and the fresh account04/B18 exact phase-defect theorem were read at compatible master states. The current owner correction is preserved: `6.521845710923046575` is already a certified lower bound for the unrestricted FEI constant; the `6.4547837...` scale is read-once/Hod-class and is not the unrestricted target.
 

@@ -4,7 +4,6 @@ Run: `20260922T100508Z-b01-forest-auto11`
 Account/slot: `account01/B01`
 Campaign: `FOREST`; role: campaign lead.
 Target: uniform law on all acyclic edge subsets of every finite simple graph; prove pairwise negative correlation for every distinct physical edge pair.
-Control snapshot read: `yspennstate/math-research-brain` main `2b73138636cf3c7c5b37758fecc45093503f723f`, OWNER CONTROL revision `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`.
 Control README blob: `3d4a9372c87802ab734141a3374d04c8823372e3`; exact SHA-256 to be recorded if reproducibly exposed in-run.
 Assignment: lead the common source-exact argument; consume a named other-account result and attack the first unpaid all-graphs comparison.
 Execution context: `WITHOUT_VERIFIED_BRAIN`.

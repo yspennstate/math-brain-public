@@ -326,6 +326,5 @@ Full-target continuity: **OPEN**.
 
 ## 8. Source/control snapshot used
 
-Immediately before publication, fresh `math-research-brain/main` still carried OWNER CONTROL revision `2026-09-22.15`, fleet enabled, QFORM-only, no paused account/slot applicable to account01/B03. Fresh live corrections still included `QFORM-UV-CONDITIONAL-CAP-FALSE` and the other standing no-shortcut events. The full target remained marked OPEN.
 
 No task, schedule, enabled/paused state, email/push notification, permission, installation, cross-account authentication, paid API/model call, remote workflow, or public-release setting was changed in this run.

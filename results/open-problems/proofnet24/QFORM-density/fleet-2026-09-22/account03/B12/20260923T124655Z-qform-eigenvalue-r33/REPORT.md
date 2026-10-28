@@ -50,7 +50,6 @@ This supporting theorem does NOT follow from the bare target assumption `s_3(A)>
 
 ## 2. Sources and corrections
 
-Fresh owner control before publication remained programme revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`, QFORM as the sole target, and no pause for account03/B12. The live correction inbox remained blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The analytic receiver used below is the one-scale ridge theorem:
 

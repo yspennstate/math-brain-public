@@ -12,7 +12,6 @@ All random coordinates below are literal ORIGINAL product coordinates. No random
 
 ## 1. Fresh proof graph and current frontier
 
-Fresh owner control on `yspennstate/math-research-brain/main` remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with no later stop or reassignment observed before publication. The live correction inbox was reread before this write.
 
 The immediate inherited source is account03/B19 r47:
 

@@ -5,7 +5,6 @@ attacking: QFORM-N3-CURVED-AGGREGATE-THIRD-SOURCE-v1 via an exact rank-two aggre
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly / SYNTHESIS  
-**Fresh control:** `yspennstate/math-research-brain@7f58fcf3ce4b1262aaa9f88295b2eb131347d8e8`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; repository retrieval is not native learned-memory ingestion.  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW SUPPORTING THEOREM / FULL QFORM OPEN`.
 

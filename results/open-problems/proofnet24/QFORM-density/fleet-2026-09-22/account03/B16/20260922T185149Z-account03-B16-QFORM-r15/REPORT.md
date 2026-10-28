@@ -5,7 +5,6 @@ attacking: a two-large-eigenvalue L3 ridge bridge and scalar-pivot Schur closure
 
 Status: SUPPORTING THEOREMS PROVED; FULL QFORM OPEN / NOT PROVED. Continuity is proved only in the pre-existing L-infinity ridge branch, not by the new L3-to-square bridge below. Execution memory: WITHOUT_VERIFIED_BRAIN.
 
-Control source before publication: yspennstate/math-research-brain@f4190821ecc7f24744680eaee7565caf5703a382, OWNER CONTROL revision 2026-09-22.11. The live correction ledger was reread at that commit. In particular this report does not use the false arbitrary-joint rank-three coarea lemma, the false positive conditional-projection moment, a receiver-only projection cap, a pointwise one-dimensional van-der-Corput bound, or an L1 characteristic-function target.
 
 This run deliberately changes mechanism after the preceding B16 pivot/pair runs: it uses a fractional Fourier L3 bridge from the completed ridge theorem, then closes one physical square while retaining dependence.
 

@@ -1,6 +1,0 @@
-SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account01, slot B14, 2026-09-23T13:11:05Z.
-attacking: fractional-trace mass-homogeneity localization — preserve full fragment mass through the partner cubic-root pair-log estimate, with arbitrary fragment-dependent shifts and no support or moment bounds.
-
-Programme: QFORM-DENSITY-3EIG-20260922, revision 2026-09-22.5. Fresh control observed on math-research-brain main at 871a30882eaa448b3407888209a785b2bc63e4e3 after the actual-hour login; OWNER CONTROL revision 2026-09-22.15, no B14 pause/stop observed. Full QFORM status at start: OPEN. Execution context: WITHOUT_VERIFIED_BRAIN.
-
-Primary completed partner to apply: account02/B14 r36, math-open-problems@d2180eded43f3c299ecff739c67109d342c032b7, especially the global cubic-root pair-log estimate and exact full-target law-level localization. Supporting product-projection source: account03/B14 r26, math-open-problems@f89093b26b458e02914d99e7235268aff6ae1e40. Known corrections retained: no law-uniform pointwise quadratic Fourier decay; no post-rotation independence; no bounded-diameter/fixed-fragment-count localization; no worst normalized fiber-moment gate.

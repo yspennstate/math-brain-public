@@ -144,7 +144,6 @@ This remains only a cone-tip theorem. No claim is made that zero is the global m
 
 Pinned partner source:
 
-- brain handoff at `yspennstate/math-research-brain@080c640df93e7a45763adca5a499bd185d62e88e`, `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B17/20260923T151331Z-account02-B17-QFORM-auto11.md`;
 - canonical partner mathematics at `yspennstate/math-open-problems@2f227775f53ca554a645737b9dbad18e25437d74`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/20260923T151331Z-account02-B17-QFORM-auto11/REPORT.md`.
 
 That completed theorem says that for arbitrary unit vectors `a,b`, arbitrary cap-one heavy law `X`, centered unit-interval bank coordinates, and eigenvalue magnitudes at least one,

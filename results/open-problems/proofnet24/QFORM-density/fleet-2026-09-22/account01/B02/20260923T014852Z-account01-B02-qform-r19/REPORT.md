@@ -17,7 +17,6 @@ Target: for every finite `n`, independent real `X_i` with probability densities 
 
 No Gaussian, log-concavity, moment, compact-support, connected-support, identical-law, diagonal-basis, or post-rotation-independence assumption is used. The phase-aligned fragmented-support counterexample still refutes every law-uniform scalar pointwise quadratic van-der-Corput bound. The arguments below use coupled original-coordinate volume sampling and frequency integration, not such a pointwise premise.
 
-Fresh control at run start was `math-research-brain` main commit `df5a3552f682d8efff15844f46765afba78d4eda`, OWNER CONTROL revision `2026-09-22.15`. The live `CORRECTION_INBOX.json` and `CURRENT_RESEARCH.md` were read before this proof and refreshed after the first immutable report commit; no retrieved correction invalidates the scoped argument.
 
 ## 2. Partner theorem actually used
 

@@ -3,7 +3,6 @@
 **Run:** `20260922T004054Z-account04-B15-gate-r36`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Outcome:** **ESSENTIAL_STEP_APPLIED**. Full unrestricted uniform-cube FEI remains **OPEN / NOT PROVED**.  
-**Live target:** OWNER CONTROL `2026-09-22.2`: converge on the universal gate inequality and either prove decomposable/AND extremality or find a gate whose required margin exceeds the two-input AND margin.
 
 ## 0. What changed
 

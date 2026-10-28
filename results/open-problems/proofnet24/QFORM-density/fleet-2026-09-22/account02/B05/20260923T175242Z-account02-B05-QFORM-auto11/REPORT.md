@@ -5,7 +5,6 @@ attacking: repair the invalid interval-to-Borel frozen-slice receiver by identif
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`.  
 **Assignment:** quadratic coarea bound; complementary constructions/source-valid counterexamples.  
-**OWNER CONTROL:** revision `2026-09-22.15`, current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `PROVED_SUPPORTING_THEOREM / PROVED_INTERMEDIATE-INTERFACE OBSTRUCTIONS / FULL QFORM OPEN`.  
 **Regularity:** the new receiver proves essential boundedness under a Borel slice profile; continuity is not asserted there. The target-valid e5f lift below has a continuous density by an L1 characteristic-function estimate.

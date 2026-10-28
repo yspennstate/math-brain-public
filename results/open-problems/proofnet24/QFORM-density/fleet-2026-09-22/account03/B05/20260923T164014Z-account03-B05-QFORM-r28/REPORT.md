@@ -12,7 +12,6 @@ attacking: QFORM-NEAR-DOUBLEZERO-ESCAPED-CURVATURE-COAREA-v1 — retain the near
 
 ## 1. Fresh sources and the exact remaining packet
 
-Fresh owner control before publication was read from `yspennstate/math-research-brain` main (OWNER CONTROL revision `2026-09-22.15`, QFORM only), together with the new continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The newest Claude continuation was also read at
 
 `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`
 

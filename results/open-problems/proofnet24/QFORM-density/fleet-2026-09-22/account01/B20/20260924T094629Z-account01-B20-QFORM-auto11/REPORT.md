@@ -14,7 +14,6 @@ No Gaussian, moment, iid, compact-support, connected-support, log-concavity, con
 
 ## 1. Fresh source-pinned inputs
 
-Fresh owner control from `yspennstate/math-research-brain/main` remains OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with the unrestricted theorem explicitly OPEN.
 
 The newest completed designated partner is account02/B20 r51:
 

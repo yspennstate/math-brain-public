@@ -9,7 +9,6 @@ attacking: decoupled time integral at the angular-cancellation endpoint; derive 
 **Status:** `NEW SUPPORTING THEOREM / EXACT ANGULAR-CANCEL COLLISION ENDPOINT PAID / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh prepublication owner control was read from `yspennstate/math-research-brain@03892f529bd709f2dc61731bbf545deaf42ba997`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live corrections were reread. In particular this proof does **not** condition on a sum/difference coordinate, does not claim post-rotation independence, does not use law-uniform pointwise quadratic-phase decay, does not use arbitrary-joint rank-three coarea, and does not invoke a worst conditional projection-height moment.
 
 The unrestricted owner conjecture and the unrestricted continuity claim remain OPEN.
 

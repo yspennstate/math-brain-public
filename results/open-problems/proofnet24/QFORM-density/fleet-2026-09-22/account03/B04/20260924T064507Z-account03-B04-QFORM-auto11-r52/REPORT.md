@@ -11,7 +11,6 @@ Regularity: the new receiver proves absolute continuity and an essential density
 
 The unrestricted target remains unchanged. All random coordinates below are literal ORIGINAL independent coordinates with one-dimensional density caps one. No moment, Gaussian, log-concave, compact-support, connected-support, iid, diagonal-basis, post-rotation-independence, arbitrary-joint coarea, worst-fiber supremum, law-uniform pointwise quadratic-phase decay, or deletion of a nonzero random tail is used.
 
-Fresh prepublication owner control was resolved from `yspennstate/math-research-brain@e849a8102612d63466fda91fac3f06963ba45dde`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction discipline remains binding.
 
 ## 1. Source-valid analytic inputs
 

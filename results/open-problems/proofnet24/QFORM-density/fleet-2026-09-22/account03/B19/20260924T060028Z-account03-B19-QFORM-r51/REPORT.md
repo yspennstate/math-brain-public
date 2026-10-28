@@ -15,7 +15,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random variab
 
 ## 1. Fresh source-pinned frontier
 
-Fresh owner control at run start was read from `yspennstate/math-research-brain@c837d700714bd804df257ac60769ab2510beb32e`; OWNER CONTROL remains revision `2026-09-22.15` and QFORM is the sole research target.
 
 The immediate same-slot source is account03/B19 r50:
 

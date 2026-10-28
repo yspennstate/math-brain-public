@@ -7,7 +7,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source-pinned proof graph consumed
 
-Fresh brain control at invocation was `yspennstate/math-research-brain@6c140e5c9cb524e3f339087af8bd0a41675aaa06`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The owner proof-first and Claude-latest requests were read. The current synthesis reduction remains the no-pivot class `N3(tau)`: after the already-paid scalar/pair branches one may restrict to matrices satisfying
 
 `|A_ii| < tau`,  `|A_ii A_jj - A_ij^2| < tau` for every `i != j`,
 

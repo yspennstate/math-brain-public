@@ -30,7 +30,6 @@ This is strictly narrower than the partner r50 terminal alternative “some phys
 
 ## 2. Fresh sources and corrections
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, fleet enabled, with no pause or reassignment of account02/B08 found in the fresh control reread.
 
 The required fixed source was read exactly at
 

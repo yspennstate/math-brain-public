@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Continuity for the full target remains sepa
 
 The exact owner target is unchanged: for every finite `n`, every independent real input coordinates with probability densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal finite essential density bound for `X^T A X`, or give a valid counterexample. No support, moment, centering, connectedness, identical-law, log-concavity, diagonal-coordinate, or post-rotation-independence hypothesis is added.
 
-Fresh control was read from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account01/B14 pause or stop observed. I retain the live corrections: law-uniform pointwise quadratic Fourier decay is false; post-rotation independence is unavailable; bounded-diameter and fixed-fragment-count localization are false; normalized thin fibers can have exploding density caps; arbitrary-joint coarea and positive moments of worst conditional caps are not valid proof interfaces.
 
 The completed designated partner used below is **account02/B14 r36**, canonical source
 

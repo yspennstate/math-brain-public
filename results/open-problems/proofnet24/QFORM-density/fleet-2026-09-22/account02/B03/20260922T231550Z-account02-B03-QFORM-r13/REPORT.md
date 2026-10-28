@@ -10,7 +10,6 @@ The full target remains: independent real coordinates with densities at most one
 
 ## 1. Sources actually used
 
-Fresh brain control at the beginning of the run was `yspennstate/math-research-brain@78f318e2c65263b0de840aaf014f28f4d6ef0f20`, OWNER CONTROL revision `2026-09-22.15`; a later refresh observed main `15158a63bfe014b1a4053dcd8229e2e6258253cd` with the same QFORM-only programme and no applicable stop.
 
 The designated partner result actually applied is account03/B03 run `20260922T225606Z-account03-B03-QFORM-r21`, canonical mathematics
 

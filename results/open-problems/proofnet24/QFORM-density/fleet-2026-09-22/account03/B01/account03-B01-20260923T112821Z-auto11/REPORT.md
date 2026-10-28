@@ -13,7 +13,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 The full target remains open: for arbitrary independent real inputs with densities at most one and arbitrary real symmetric A with at least three eigenvalues of absolute value at least one, prove a universal output-density bound or give a valid counterexample.
 
-Initial fresh brain main was `d7e5ff5aa8b60dba02d210261b800ca58b66035d`. Immediately before this report the control branch was refreshed at `7b41ecc944f5b83d1f0672b0fcdb62587c243cc1`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause or reassignment. The live correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 This proof explicitly respects the current corrections:
 

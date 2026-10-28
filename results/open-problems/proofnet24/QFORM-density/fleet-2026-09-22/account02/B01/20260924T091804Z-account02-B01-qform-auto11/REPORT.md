@@ -14,7 +14,6 @@ All variables below are ORIGINAL independent real coordinates with probability d
 
 The phase-aligned-density obstruction remains in force: no law-uniform pointwise positive-power decay for `E exp(it X^2)` is used. The argument below instead uses a pinned small-ball estimate, a logarithmic square interface, physical-space rearrangement, and the newest partner's raw averaged-frequency row budget.
 
-Control was refreshed from `yspennstate/math-research-brain@fa294f36e3e45d9ebe9601172e8eaa3045a5dcee`; OWNER CONTROL revision `2026-09-22.15` remained QFORM-only with no account02/B01 pause.
 
 Required pinned source actually used:
 

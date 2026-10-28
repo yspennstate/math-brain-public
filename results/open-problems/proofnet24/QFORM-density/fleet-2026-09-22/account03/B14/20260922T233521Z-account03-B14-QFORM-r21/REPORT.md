@@ -6,7 +6,6 @@ attacking: rough-input localization for the ruled one-sheet rank-three estimate,
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Status: `ESSENTIAL_STEP_APPLIED / FULL_CONJECTURE_OPEN`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
-Control read: `yspennstate/math-research-brain@cb13f8ef744550c0e1a1136dbaf95d617e95d638`, OWNER CONTROL revision `2026-09-22.15`.
 
 ## 1. Result
 

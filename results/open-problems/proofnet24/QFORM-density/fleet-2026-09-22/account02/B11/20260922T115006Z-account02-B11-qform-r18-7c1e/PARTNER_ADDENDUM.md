@@ -2,7 +2,6 @@
 
 Fresh brain main later exposed the completed assigned-partner handoff
 
-`yspennstate/math-research-brain@1b9bb349149e079c0257c592ec7c3d6669ca8849:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B11/20260922T114319Z-account03-B11-qform-r1.md`,
 
 with canonical mathematics
 

@@ -7,11 +7,8 @@ Status: SUPPORTING THEOREM + EXACT STRUCTURAL FALSIFIER PROVED. Full QFORM remai
 
 ## Source pins
 
-Control source at substantive start: `yspennstate/math-research-brain@d09d5637b62d72d0143ec0381858d2faad4d972d`, OWNER CONTROL `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922` revision `2026-09-22.5`.
 
-Assignment card: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account02/B12.json`, blob `5be0e0d0ffddcfe7175b43a25431ac7a9a269eab`.
 
-Consumed completed assigned-partner result: account03/B12 handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B12/20260922T211306Z-qform-eigenvalue-r17.md` at brain commit `f743df155d698c2c5f069d26786105c00ec3f1ae`, canonical mathematics `yspennstate/math-open-problems@c43187f6b08ce3bedcf419b38f32638d31e65ce9`. Its theorem `QFORM-THREE-DISJOINT-BANK-ARBITRARY-COMPLETION-v1` says: for three pairwise-disjoint ORIGINAL-coordinate banks with normalized statistics `Y_j=u_j^T X_{T_j}`, if
 
 `Q = Y^T M Y + 2 Y^T C Z + psi(Z)`,   `s_min(M) >= s > 0`,
 

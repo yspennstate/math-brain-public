@@ -258,4 +258,3 @@ Known correction families prohibit replacing this by the assertion of one unifor
 
 ## 7. Source/correction boundary
 
-Control was resolved from fresh brain main at the beginning of the invocation; OWNER CONTROL revision 2026-09-22.15 remained active. The live correction inbox was re-read immediately before publication at a later fresh main head. The proof uses none of the refuted interfaces: no pointwise law-uniform stationary phase, no arbitrary-joint coarea, no worst conditional projection-density moment, no uniformly good single minor, and no post-rotation independence.

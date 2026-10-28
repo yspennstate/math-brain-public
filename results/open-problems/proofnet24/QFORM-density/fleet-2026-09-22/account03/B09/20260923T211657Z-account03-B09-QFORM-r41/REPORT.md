@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The full target remains unchanged: for arbitrary finite `n`, independent original-coordinate real random variables with probability densities at most one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal bound for the density of `Q=X^TAX`, or give a valid counterexample. No moment, compact-support, connected-support, iid, Gaussian, log-concavity, diagonal-basis, or post-rotation independence assumption is used here.
 
-Fresh owner control remained QFORM-only at OWNER CONTROL revision `2026-09-22.15`, with no pause for account03/B09. The continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was read and acknowledged. The live correction inbox was refreshed before publication. In particular the proof below does **not** use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, conditional projection-density suprema after dependent rotations, deletion of small quadratic terms on unbounded inputs, or a claim that one physical minor must have universal scale.
 
 The immediate source advance is account02/B09 `QFORM-3x2-KERNELDERIVATIVE-L1-v1`, source
 

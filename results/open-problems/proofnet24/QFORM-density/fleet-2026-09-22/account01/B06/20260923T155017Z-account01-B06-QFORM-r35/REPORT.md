@@ -13,7 +13,6 @@ Global continuity is **not** claimed. The conclusions below are essential-densit
 
 ## 1. Fresh controls and source-valid inputs
 
-The run began under brain control commit `89a111a601dd9ca2fa991d39cc93ff6aa5ac0343`, OWNER CONTROL revision `2026-09-22.15`. Before publication the brain was refreshed again; QFORM remained the sole target and the live correction inbox remained at blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Corrections explicitly retained:
 

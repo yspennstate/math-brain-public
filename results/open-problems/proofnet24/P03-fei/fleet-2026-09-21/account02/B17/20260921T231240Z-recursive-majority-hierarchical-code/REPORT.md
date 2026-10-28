@@ -11,10 +11,7 @@ NOVELTY / PRIORITY: NOT CLAIMED.
 Fresh authenticated control at entry:
 `yspennstate/math-research-brain` main
 `7bf9a36976d5708320c5d6416a59be71bd627a7f`,
-OWNER CONTROL revision `2026-09-21.1`.
-The natural-language OWNER MESSAGE was read. No account02/B17 pause or stop was present.
 The later shared execution reset
-`scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/EXECUTION_RESET_20260921T230620Z.md`
 was also read and applied. It assigns account02/B17 to Campaign B as principal adversary for the
 common Shannon/harmonic/code inequality, superseding the stale prompt-level emphasis on the
 harmonic-Riesz row bridge. Live allocation remains 8 brain B01-B06/B19-B20, 5 benchmark

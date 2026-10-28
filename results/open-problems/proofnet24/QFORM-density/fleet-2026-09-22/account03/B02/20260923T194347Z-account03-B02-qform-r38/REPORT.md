@@ -14,7 +14,6 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 ## 1. Fresh source state and inputs actually used
 
-Fresh control was resolved on `yspennstate/math-research-brain` at `08031c9315d52d26619716b65fe9097867c4a325`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop or reassignment. The same-hour canonical B02 login already existed at `scheduled_tasks/status/account03/logins/2026-09-23T19Z/B02.json` from the immediately preceding invocation, so it was preserved rather than overwritten, exactly as PROTOCOL requires.
 
 The immediate B02 predecessor is
 

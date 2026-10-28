@@ -14,7 +14,6 @@ This report proves a new source-valid branch for **exact rank three** and applie
 
 The proof does not use any of the live false interfaces: no independence after rotation, no arbitrary-joint coarea theorem, no conditional projection-density cap, no positive conditional-density moment, no pointwise law-uniform quadratic-phase decay, no near-zero-as-zero replacement, and no localization to one physical pair before aggregation. The aggregation below occurs first on disjoint original-coordinate banks.
 
-Startup control was read from fresh `yspennstate/math-research-brain` main in the OWNER CONTROL revision `2026-09-22.15` epoch; programme revision remains `2026-09-22.5`. The prepublication control/correction closure is recorded in the handoff/finish metadata.
 
 ## 2. Primary literature transferred at its exact hypotheses
 
@@ -386,7 +385,6 @@ At `p_disj=0`, Edmonds reduces the vector geometry to the low-complexity cases i
 
 ## 12. Exact source pins
 
-- Owner/source repository: `yspennstate/math-research-brain`, main; OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`.
 - Designated partner: `yspennstate/math-open-problems@0a28faf7bf87a49a9df787eb276b449aee3d9c47`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260922T221352Z-account02-B18-QFORM-r11/REPORT.md`.
 - Prior own capped-basis theorem: `yspennstate/math-open-problems@a9812cdd26a9dd066638b0e6f0dccf3dbdce2ab8`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 - LPP primary source: arXiv:1507.07949; Israel J. Math. 216 (2016), 877–889; DOI 10.1007/s11856-016-1431-5.

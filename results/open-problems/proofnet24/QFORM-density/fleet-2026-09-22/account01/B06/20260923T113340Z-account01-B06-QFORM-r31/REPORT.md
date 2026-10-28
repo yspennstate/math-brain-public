@@ -10,7 +10,6 @@ Continuity: the new collision theorem is deterministic and does not itself prove
 
 ## 1. Source boundary actually used
 
-Fresh owner control was resolved on `yspennstate/math-research-brain` main at `0e96ac4a4f21b42f18eac9d39744304266b1e76d`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM only.  The live corrections were consumed, in particular `QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1`: one may not replace an aggregate collision packet by one favorable physical pair.  The result below does **not** do that.  Its high-collision endpoint is one physical **hub carrying an entire rank-one bank-to-bank compound contraction**; no individual minor is inverted.
 
 Immediate predecessor: account01/B06 r30, canonical `yspennstate/math-open-problems@c17a14105e7cb453bbca9576ab7df54f504eff67`, path `proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T103846Z-account01-B06-QFORM-r30/REPORT.md`.  It proved the bordered compound identity and the random-cut estimate, but left high compound collision as an unpaid grouped-hub regime.
 

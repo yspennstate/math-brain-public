@@ -1,7 +1,6 @@
 # QFORM B15 — algebraic genericization with no loss of the universal height constant
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control:** `yspennstate/math-research-brain@e94ef1e63c1ae9f377eec4c7149fb04fa4967f2a`, OWNER CONTROL revision `2026-09-22.8`  
 **Worker:** `account03/B15`  
 **Run:** `20260922T173720Z-account03-B15-r14`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / TARGET-LEVEL-REDUCTION / FULL-CONJECTURE-OPEN`  

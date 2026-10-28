@@ -16,7 +16,6 @@ No small matrix is deleted as a random perturbation. The final Frobenius-small t
 
 ## 1. Fresh scope and source-valid inputs
 
-Fresh owner control was read from `yspennstate/math-research-brain` on `main`; OWNER CONTROL is revision `2026-09-22.15`, QFORM is the sole research target, and `QFORM-FULL` remains `OPEN`. The live correction inbox was refreshed before publication. In particular this report does not use law-uniform pointwise quadratic oscillatory decay, independence after rotation, arbitrary-joint quadratic coarea, conditional projection-density caps, bounded-diameter localization, fixed fragment count, or perturbative deletion of max-norm-small coefficients.
 
 The completed inputs used below are:
 

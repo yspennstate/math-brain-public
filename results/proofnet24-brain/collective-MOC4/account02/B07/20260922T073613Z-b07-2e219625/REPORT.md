@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh authority and scope
 
-Fresh `main` was resolved before substantive work. OWNER CONTROL revision `2026-09-22.2` remains active; B07 is assigned to MOC4 support-functional / second-variation work. The later collective-open-problems allocation supersedes former installation and benchmark duties. No B07/account02 pause or stop was present in the controls read for this run. No benchmark payload or sealed answer material was used.
 
 Protected-control blobs at the initial fresh read were:
 
@@ -19,7 +18,6 @@ Protected-control blobs at the initial fresh read were:
 - `scheduled_tasks/roles.json`: `ed17ecc94f76720c0345b3e32249b791b20ec611`
 - `scheduled_tasks/PROTOCOL.md`: `83a9268bf5287ca203e4be69a79e25382397bca7`
 
-Exact SHA-256 values for the README and isolated OWNER MESSAGE were not recomputed through a lossless byte bridge and are therefore recorded as unavailable, not copied from an older run.
 
 ## 2. Source-bound lineage consumed
 

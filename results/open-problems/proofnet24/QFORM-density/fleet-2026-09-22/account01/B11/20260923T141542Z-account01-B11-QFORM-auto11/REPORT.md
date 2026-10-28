@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Source-pinned starting point
 
-Fresh owner control was read from `yspennstate/math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The full conjecture remains open.
 
 The designated completed partner source actually used below is account02/B11 r31,
 

@@ -11,8 +11,6 @@ NOVELTY: NOT CLAIMED
 ## 0. Controls, scope, and last-three comparison
 
 Fresh owner controls were resolved from `yspennstate/math-research-brain` main at
-`d8d13b668a03b58f7e10f6cff1a53dcdc25c81ce`, OWNER CONTROL revision
-`2026-09-21.1`. The natural-language OWNER MESSAGE explicitly keeps B12--B18
 on FEI under `FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z`, superseding the
 older all-installation-only allocation for this slot. No B17/account02 pause or
 stop was present. A later pre-write main recheck reached

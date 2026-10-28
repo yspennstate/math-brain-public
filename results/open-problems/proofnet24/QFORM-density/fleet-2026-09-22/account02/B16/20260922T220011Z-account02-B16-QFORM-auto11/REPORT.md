@@ -5,7 +5,6 @@ attacking: grouped-bank projection-product interaction—compress collinear spec
 
 **Programme:** QFORM-DENSITY-3EIG-20260922  
 **Assignment:** Projection-product interaction  
-**Initial fresh brain control:** `yspennstate/math-research-brain@c696115b277f2166beeaa10a4ea29c1573acf516`; refreshed before this report through `ea264205433b3ad2eb15f41dc200155e2e2574d3`; OWNER CONTROL revision `2026-09-22.15`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `NEW SUPPORTING THEOREM + EXPLICIT AGGREGATION BARRIER / FULL QFORM OPEN`.
 

@@ -15,7 +15,6 @@ The full owner target remains open. All random coordinates below are ORIGINAL in
 
 The phase-aligned fragmented-support counterexample to any law-uniform scalar pointwise estimate `|E exp(itX^2)| <= C|t|^{-alpha}` remains valid and is not used around. The mechanism here is a composition of (i) the already proved subcritical fractional potential of a JOINT rank-one bilinear packet with arbitrary same-bank phases and (ii) exact square-density kernels in original scalar coordinates.
 
-Fresh prepublication owner control was read from `yspennstate/math-research-brain/main` at head `37f68521a96c96fbfa924525e017538682fcb35c`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B01 pause/stop. The live correction inbox was reread at blob `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
 
 ## 2. Source-pinned premise: subcritical rank-one potential
 

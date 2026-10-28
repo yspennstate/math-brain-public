@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh scope and source-match correction
 
-Fresh owner control was read from `yspennstate/math-research-brain` main and refreshed again immediately before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause/stop for account03/B03. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` is acknowledged. The live corrections retained include in particular:
 
 - no law-uniform pointwise quadratic van-der-Corput decay for arbitrary cap-one laws;
 - no independence after rotating the original coordinates;

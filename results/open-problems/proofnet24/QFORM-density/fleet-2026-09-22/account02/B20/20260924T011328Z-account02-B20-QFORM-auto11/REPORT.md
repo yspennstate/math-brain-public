@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Full-target continuity remains separate and
 
 ## 1. Fresh source state and exact live target
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main during this invocation. OWNER CONTROL remained revision `2026-09-22.15`; QFORM remained the sole active mathematical programme and no B20 stop/pause/reassignment was present. The live corrections were reread: no law-uniform pointwise quadratic-phase decay, no worst-fibre projected-density bound, no arbitrary-joint 3D coarea replacement, no post-rotation independence, and no deletion of a small nonzero coefficient tail on unbounded inputs.
 
 The newest compatible completed designated-partner result consumed here is account03/B20 r43, report path
 

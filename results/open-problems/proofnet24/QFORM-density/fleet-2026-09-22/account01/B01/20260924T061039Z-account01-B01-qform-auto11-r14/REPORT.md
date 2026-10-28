@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The owner target is unchanged: independent ORIGINAL real coordinates with densities at most one; arbitrary real symmetric `A`; at least three singular/eigenvalue magnitudes at least one; prove a universal essentially bounded density for `Q=X^T A X`, or give a valid counterexample. The full conjecture and the requested full-target continuity conclusion remain OPEN.
 
-Fresh prepublication control was read from `yspennstate/math-research-brain/main` at `8a9f23ae7988024b1f1e401008fa213b0caaded1`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B01 stop. The live correction inbox was reread at that commit.
 
 The phase-aligned fragmented-support counterexample remains binding. No claim of the form
 

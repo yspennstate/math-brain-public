@@ -13,7 +13,6 @@ The full target remains open: for arbitrary independent real original-coordinate
 
 ## 1. Source and correction boundary
 
-Fresh owner control was read from `yspennstate/math-research-brain`; the pre-write refresh remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. The live programme still records the full conjecture as open. I do not use law-uniform pointwise one-dimensional quadratic-phase decay, arbitrary-joint rank-three coarea, positive moments of conditional projection-density suprema, post-rotation independence, or the refuted rule that a bounded conditional hyperbolic-variable density can replace genuine product provenance.
 
 The essential immutable dependencies read for this run are:
 

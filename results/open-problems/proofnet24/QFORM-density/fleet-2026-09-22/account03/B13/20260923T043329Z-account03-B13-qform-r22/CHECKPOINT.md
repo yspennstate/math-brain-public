@@ -3,7 +3,6 @@ attacking: aggregate all disjoint residual three-minors before choosing a cut, t
 
 # Early mathematical checkpoint
 
-Fresh control was resolved at `yspennstate/math-research-brain@1fe4828112f08195f6f1f912b64c12e827853e66`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
 The initial localized-3-block idea was abandoned after reading the already completed correction-safe localized theorem in account03/B11. The first new implication is instead the following cut-elimination identity.
 

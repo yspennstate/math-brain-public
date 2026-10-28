@@ -8,7 +8,6 @@
 
 ## 0. Scope and source pins
 
-Fresh protected control was read at `yspennstate/math-research-brain@7eed8549df05d1ce2eced35e1df8550b9aaaad27`, with OWNER CONTROL revision `2026-09-22.15`; a pre-write refresh at `899e2f789827509e84bada90cf8053467b641d16` still keeps QFORM as the exclusive target and contains no later stop.
 
 This run substantively consumes the completed assigned-partner theorem:
 

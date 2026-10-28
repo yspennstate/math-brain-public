@@ -1,7 +1,6 @@
 # account02/B15 — principal-pivot regularity closure and qualitative bounded-density theorem
 
 **Run:** `20260922T120155Z-account02-B15-qform-r1`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 **Assignment:** `Absolute continuity and regularity`  
 **Classification:** `TARGET-SUPPORTING-THEOREM / FULL_UNIVERSAL_CONSTANT_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.

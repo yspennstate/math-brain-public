@@ -13,7 +13,6 @@ Continuity: the grouped projected-crossing exit below gives a continuous `C_0` d
 
 The target is unchanged: independent original coordinates with scalar probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of absolute value at least one. No moments, compact support, connected support, Gaussianity, log-concavity, iid assumption, post-rotation independence, or independent-convolution treatment of an added quadratic remainder is used.
 
-Fresh control was read from `yspennstate/math-research-brain` main commit `d1884fc9c62b8706dff15a91ed1189cf112a043f`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction set was consumed, including the failures of law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, conditional density-cap shortcuts, and universally good fixed minors. Repository transport is not native learned-memory ingestion, so this run remains `WITHOUT_VERIFIED_BRAIN`.
 
 Mathematical inputs used at their stated scopes:
 

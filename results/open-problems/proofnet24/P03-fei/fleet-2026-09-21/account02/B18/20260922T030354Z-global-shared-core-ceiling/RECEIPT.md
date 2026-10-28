@@ -3,7 +3,6 @@
 - account: account02
 - slot: B18
 - role: FEI proof integration
-- directive_control: OWNER CONTROL revision 2026-09-22.2; B12-B18 retained on FEI; later all-gate/full-proof convergence supersedes incompatible older Campaign-C compiler wording
 - execution_mode: WITHOUT_VERIFIED_BRAIN
 - model_self_report: GPT-5.6 Sol
 - requested_effort: maximum actually supported

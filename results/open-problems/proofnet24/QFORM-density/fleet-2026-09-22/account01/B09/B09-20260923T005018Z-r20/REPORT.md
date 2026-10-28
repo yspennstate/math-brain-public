@@ -12,7 +12,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 The unrestricted conjecture remains OPEN. This report proves a new rank-one *fractional* endpoint of the previously proved diffuse separable-phase bilinear estimate, and then turns it into a genuine `L^infinity` density bound by a disjoint square smoother. It also observes that the explicit Hadamard spike/dust family recently introduced as an obstruction to robust second-singular-value extraction is itself already paid by a source-matched arbitrary-rank half-Riesz theorem. Neither statement is a proof of the full conjecture.
 
-Fresh owner control immediately before publication remained QFORM-only at OWNER CONTROL revision `2026-09-22.15`. The live correction ledger was reread. In particular this proof does not use law-uniform pointwise van der Corput decay, post-rotation independence, a conditional spectral-density cap, an arbitrary-joint rank-three coarea estimate, a single good local minor, or the false one-heavy-row-plus-own-square absorption rule.
 
 ## 1. Source pins and duplicate-work audit
 

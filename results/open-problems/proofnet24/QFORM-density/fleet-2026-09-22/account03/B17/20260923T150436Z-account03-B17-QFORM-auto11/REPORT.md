@@ -383,6 +383,5 @@ The partner theorem supplies continuity for the finite diffuse-bank witness fami
 
 ## 9. Provenance and correction discipline
 
-Fresh control source at run start: `yspennstate/math-research-brain@7c02cf9bd17ce69461b17d3c34629a8a58b476a1`; OWNER CONTROL revision `2026-09-22.15`. The current proof-first/newest-Claude continuation and eighty-worker plan were read. This run uses no uniform pointwise quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint coarea bound, no worst-fiber supremum, no positive conditional projection-density moment, and no near-zero half-Riesz shortcut.
 
 The full QFORM conjecture remains **OPEN / NOT PROVED**. Repository use in this run is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.

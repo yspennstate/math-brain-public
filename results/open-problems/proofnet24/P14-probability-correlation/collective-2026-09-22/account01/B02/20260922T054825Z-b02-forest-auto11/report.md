@@ -6,7 +6,6 @@ Context: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh control and exact dependencies
 
-Fresh mandatory controls were read from `yspennstate/math-research-brain` at main commit `849cc0304831185171b794101b937b08ae6a65cd`: `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, and `scheduled_tasks/PROTOCOL.md`, including OWNER MESSAGE. The active owner revision is `2026-09-22.2`; the active allocation is `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; B02 remains FOREST. The exact collective objects were ORDER blob `a70e03208ae00795ca7c6cdf9b7dbce854347138`, TARGETS blob `a8cafa98cdb074ed15d0e214f8f54ee514c500df`, and ASSIGNMENTS blob `fe144a4be3522d57f8cb2dc40b1fc57df7c7d9`.
 
 The latest complete campaign-lead version consumed was account01/B01 `20260922T050946Z-b01-forest-auto11`, candidate `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`, shared handoff blob `4cee205cb7d254caf785692838111988a0b8a155`, canonical report commit `79044b575c4b689248892f37b9930e983dddabca`. Its source-safe core is the triangle-free conditioning lemma; its new spectral strengthening replaces the ground-set homogenizing degree by graphic rank.
 

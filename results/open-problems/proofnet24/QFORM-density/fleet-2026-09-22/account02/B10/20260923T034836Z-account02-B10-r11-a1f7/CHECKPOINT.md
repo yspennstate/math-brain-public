@@ -3,7 +3,6 @@ attacking: the exact-rank-three near-null small-Pluecker-mass hub/star collar; p
 
 # Early substantive checkpoint: a target-valid logarithmic obstruction to raw near-null square peeling
 
-Fresh source state before this calculation: brain main `fb1cd73d0912a1ef24d1ecea573c6c27780579dd`, OWNER CONTROL revision `2026-09-22.15`. Required Claude package read at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. Latest designated partner read: account03/B10 `20260923T023946Z-account03-B10-QFORM-r23b`.
 
 The partner reduces the genuine exact-rank-three debt to the collar `0<d<1/64` where one original row has leverage `c>1/4`, normalized Rayleigh quotient `<1/16`, and fixed aggregate star norm, unless a paid scalar-pivot or ruled branch applies. I test the tempting next step: complete the small nonzero physical square and try to bound its half-Riesz envelope uniformly.
 

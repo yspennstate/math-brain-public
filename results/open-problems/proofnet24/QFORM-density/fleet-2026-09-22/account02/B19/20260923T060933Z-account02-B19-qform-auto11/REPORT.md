@@ -5,7 +5,6 @@ attacking: the punctured near-null transverse-square gate in the aggregate rank-
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Role:** Universal proof assembly / SYNTHESIS / complementary constructions and source-valid counterexamples  
-**Fresh owner control observed at start:** `yspennstate/math-research-brain@be6e8d72614867191c6b1b03b3157bf10aa247cc`, OWNER CONTROL revision `2026-09-22.15`  
 **Status:** `ESSENTIAL_STEP_APPLIED / NEW SUPPORTING THEOREM / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 

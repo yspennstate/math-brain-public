@@ -13,7 +13,6 @@ All random coordinates below are literal ORIGINAL coordinates. No random variabl
 
 ## 1. Fresh source graph and completed inputs actually used
 
-Fresh owner control was resolved at `yspennstate/math-research-brain@284e7b3ed4ebfce7efe7e183418d8c25d0c4cd8c` and refreshed before publication at a newer main head with the same OWNER CONTROL revision `2026-09-22.15`; no later stop or reassignment was observed. The full target remains open.
 
 The designated partner theorem used at equation level is account02/B19
 

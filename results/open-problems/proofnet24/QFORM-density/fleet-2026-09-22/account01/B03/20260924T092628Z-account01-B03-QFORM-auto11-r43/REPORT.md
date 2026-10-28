@@ -357,7 +357,6 @@ Full-target continuous density: **OPEN**.
 
 ## 9. Sources and correction ledger
 
-Fresh owner/control source: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, refreshed immediately before publication.
 
 Partner theorem actually applied: `yspennstate/math-open-problems@54243d0668be2be7879ae467ed9cb6b962f24652`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260924T081949Z-account02-B03-QFORM-auto11-r52/REPORT.md`, especially equations (2.2), (3.1).
 

@@ -3,7 +3,6 @@ attacking: the tail-hub receiver after double-wedge diffusion; retain aggregate 
 
 # Early substantive checkpoint
 
-Programme `QFORM-DENSITY-3EIG-20260922`; full target still open. Fresh control was read through brain main `26513d906d6c181d809590c20370657a09283b5c` and refreshed before this write to `6ac12de082689ff1401507ffd4bbab7511cd5516`, OWNER CONTROL revision `2026-09-22.15`.
 
 ## 1. A coupled two-bank kernel that needs no within-bank independence
 

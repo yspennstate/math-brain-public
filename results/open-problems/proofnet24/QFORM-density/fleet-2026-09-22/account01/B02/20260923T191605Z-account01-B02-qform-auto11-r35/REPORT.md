@@ -10,7 +10,6 @@ Execution/memory status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source state and exact inputs
 
-Fresh owner control was reread from `yspennstate/math-research-brain` main before publication. It remains OWNER CONTROL revision `2026-09-22.15`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, QFORM only. The live correction inbox was reread; in particular no post-rotation independence, one-good-cross-minor shortcut, arbitrary-joint coarea bound, conditional-density-supremum shortcut, or law-uniform one-dimensional pointwise quadratic decay is used.
 
 The strong-cut source is account04/B20,
 
@@ -267,7 +266,6 @@ The full QFORM density conjecture and full continuity remain **OPEN**.
 
 Consumed mathematical sources:
 
-- owner/control and programme state: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`;
 - strong physical cut: `math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`;
 - D5 / optimized strong-cut continuation: `math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
 - designated account02/B02 marginal-free E3 theorem: `math-open-problems@3fccd9b82b456e198758e5839be364b4b0ec5024`;

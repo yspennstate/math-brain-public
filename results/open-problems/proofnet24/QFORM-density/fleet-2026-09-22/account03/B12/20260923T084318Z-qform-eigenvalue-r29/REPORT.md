@@ -15,7 +15,6 @@ The sole target remains: for every dimension, every independent real product law
 
 No Gaussianity, moment, compact-support, log-concavity, connected-support, or post-rotation independence is used below. Every probabilistic endpoint is applied on ORIGINAL independent coordinates. Orthogonal bases W,Z appear only inside deterministic matrix algebra.
 
-Fresh brain main was read at `219efa8d68a7684b45d11c990f3bd5105325f4d3` at startup and refreshed before this report at `defbddfe341c3f2efc1388abf6eb4a67996cca18`. OWNER CONTROL remains revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM-only, with no account03/B12 pause. The live corrections were re-read. In particular this run does not use the refuted arbitrary-joint coarea lemma, law-uniform pointwise van-der-Corput decay, worst-fiber density suprema, or independence of a quadratic remainder after spectral rotation.
 
 ## 2. Completed sources actually used
 

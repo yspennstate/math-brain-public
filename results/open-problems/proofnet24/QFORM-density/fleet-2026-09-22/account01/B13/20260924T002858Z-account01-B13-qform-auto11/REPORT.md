@@ -12,7 +12,6 @@ No moments, compact support, connected support, log-concavity, Gaussianity, post
 
 ## 1. Fresh source-pinned premises
 
-Fresh control before this run was read from `yspennstate/math-research-brain` main with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target and no account01/B13 stop was present. The live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, assignment card, fleet, roles and protocol were reread. In particular, this proof does not use the refuted law-uniform pointwise quadratic oscillatory decay, arbitrary-joint coarea estimate, projection-density-only argument, independence after rotation, bounded-diameter localization, fixed fragment count, or single-minor inversion.
 
 The completed designated partner result actually applied is account02/B13 r37:
 

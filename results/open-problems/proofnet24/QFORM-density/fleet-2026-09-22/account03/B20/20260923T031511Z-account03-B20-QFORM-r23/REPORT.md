@@ -11,7 +11,6 @@ attacking: the co-heavy two-rank-two aggregate obstruction by an exact generaliz
 
 ## 1. Source boundary
 
-Fresh control before the mathematical write was `yspennstate/math-research-brain@970d23e14326fecdce987acffe8a4ed8f2a641b1`, OWNER CONTROL revision `2026-09-22.15`, QFORM only, no B20 pause.
 
 The immediate exact-rank-three source is account03/B19 r22,
 `yspennstate/math-open-problems@d0d68512c0e8ddaa3893134fdfc03e2214a751aa`,

@@ -13,7 +13,6 @@ attacking: grouped-square curved-fiber absorption in the rank-two zero-diagonal 
 
 The target is unchanged: for every dimension, independent real original coordinates with probability densities bounded by one, and every real symmetric `A` having at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite essential supremum, or give a valid counterexample. Continuity is tracked separately and is not proved here.
 
-Fresh owner control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. I retained the live corrections: no post-rotation independence, no unrestricted spectral-fiber supremum, no arbitrary-joint rank-three coarea inequality, no positive moment of a worst conditional projection cap, no law-uniform pointwise quadratic-phase decay, no perturbative deletion of a small nonzero quadratic tail, and no inference that aggregate minor mass produces one uniformly good physical minor.
 
 Two completed account02/B06 results are used at displayed inequalities.
 

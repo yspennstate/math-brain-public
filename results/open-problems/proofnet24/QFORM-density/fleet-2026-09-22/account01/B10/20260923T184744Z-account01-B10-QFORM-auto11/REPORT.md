@@ -12,7 +12,6 @@ The unrestricted exact-rank-three theorem and the full owner conjecture remain *
 
 ## 1. Fresh source state and inherited survivor
 
-Fresh prepublication control was read from `yspennstate/math-research-brain@d17c1533474a2107cc16189027e53776911e1d2d`; OWNER CONTROL remains revision `2026-09-22.15`, with `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` current and QFORM the sole research target. The live correction inbox was reread. In particular, nothing below uses law-uniform pointwise quadratic-phase decay, independence after rotation, an arbitrary-joint coarea bound, a conditional-density-supremum substitute for independence, a uniformly good single minor, or a small-coefficient random-perturbation argument.
 
 The newest Claude continuation actually read was
 

@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. This report proves a dimension-free de
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain` control at this actual run remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The live claims still mark the unrestricted theorem and the global continuous-density conclusion OPEN.
 
 Corrections retained include: no law-uniform pointwise quadratic-phase decay; no post-rotation product independence; no arbitrary-joint rank-three coarea cap; no positive moment of worst conditional projection caps; no dimension-free unrestricted spectral-fiber supremum; and no inference of one uniformly good physical minor from aggregate compound mass.
 

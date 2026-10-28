@@ -411,7 +411,6 @@ Separately, the full owner target still requires the bridge from exact rank thre
 
 ## 6. Source pins
 
-- fresh brain control consumed at startup: `yspennstate/math-research-brain@82e2c29e2291ee7265a2a45758e422be0e60b8e4`, OWNER CONTROL revision `2026-09-22.15`;
 - latest owner continuation consumed: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`;
 - preceding B11 r38 source: `yspennstate/math-open-problems@430d0746f305abeeea58af4d319efe98be87d563`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T175922Z-account03-B11-QFORM-r38/`;
 - exact-graph r37 source: `yspennstate/math-open-problems@60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`;

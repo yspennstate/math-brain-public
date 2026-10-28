@@ -14,7 +14,6 @@ No Gaussian, moment, iid, compact-support, connected-support, log-concavity, pos
 
 ## 1. Fresh source-pinned inputs
 
-Fresh control is OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with the full theorem explicitly OPEN.
 
 The newest completed designated partner at the final dependency refresh is account02/B20 r52,
 

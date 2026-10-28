@@ -340,4 +340,3 @@ The full arbitrary-density QFORM conjecture therefore remains **OPEN / NOT PROVE
 
 ## 9. Source integrity
 
-Fresh brain control before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM only, with no account02/B13 pause or stop. Fresh corrections were re-read before this write. This proof does not use uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, conditional projection-density moments, independence after rotation, a uniformly good physical minor, bounded support/diameter, fixed fragment count, or perturbative deletion of small matrix coefficients.

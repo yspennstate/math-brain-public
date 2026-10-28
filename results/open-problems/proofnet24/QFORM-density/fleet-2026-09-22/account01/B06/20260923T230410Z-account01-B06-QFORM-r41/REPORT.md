@@ -13,7 +13,6 @@ The unrestricted QFORM conjecture remains OPEN. The new argument proves a produc
 
 ## 1. Fresh source boundary and dependencies
 
-Fresh `math-research-brain` main was `0de777bf179e4f31dce8dafda3fb8e4020d868fd` at the prepublication refresh. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B06 pause/stop. The full claim and global continuity claim remain OPEN.
 
 Corrections retained include: no law-uniform pointwise quadratic-phase decay; no unrestricted fiber supremum; no arbitrary-joint coarea cap; no positive moment of worst conditional projection-density caps; no independence after rotation; no uniformly good single-minor inference; and the recent `QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1`. The theorem below is not a same-bank argument: the scalar crossing hub and the bank are disjoint original-coordinate product groups.
 

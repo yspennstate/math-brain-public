@@ -7,7 +7,6 @@
 
 ## 0. Control, live target, and retained arithmetic input
 
-The fresh owner control is revision `2026-09-22.2`. Its later OWNER MESSAGE supersedes this slot's older interface-D-only wording and sends every FEI worker to the exact all-gate formulation
 \[
 \Gamma(p_{\rm out})+\widetilde H_G(p)
 \le

@@ -15,7 +15,6 @@ All random coordinates remain literal ORIGINAL coordinates. No random variable i
 
 ## 1. Fresh source-pinned premises and corrections
 
-Fresh owner control was reread on `math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and the full theorem remains open. The live correction inbox was reread. In particular this report does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, post-rotation independence, a uniform conditional-fibre cap, deletion of a small coefficient matrix, or extraction of one uniformly good physical minor.
 
 The immediate same-slot source is account01/B19 r55,
 

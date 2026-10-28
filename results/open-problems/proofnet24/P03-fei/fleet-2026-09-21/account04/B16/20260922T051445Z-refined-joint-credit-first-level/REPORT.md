@@ -7,7 +7,6 @@
 
 ## 0. Later-owner precedence and exact sources consumed
 
-The fresh OWNER CONTROL is revision `2026-09-22.2`. Its natural-language OWNER MESSAGE supersedes the older interface-C-only prompt and sends every FEI worker to the all-gate reformulation. Accordingly this run does not claim a new universal source-to-physical phase-switch contraction. It carries the signed/orientation discipline of that interface into the live exact restriction cocycle instead.
 
 The two inherited interface-C sources named by the standing B16 prompt were freshly read and retained at their proved scopes:
 

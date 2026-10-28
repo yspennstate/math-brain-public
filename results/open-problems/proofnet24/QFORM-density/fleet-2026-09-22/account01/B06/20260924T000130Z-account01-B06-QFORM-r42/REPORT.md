@@ -15,7 +15,6 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, iid, 
 
 ## 1. Fresh source boundary and premises
 
-Fresh `math-research-brain/main` at the start of this run was `b2764a1b6af29ccc053d7f8f5246beed745aa8a7`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause/stop for account01/B06. The actual-hour login was committed at brain commit `654c9a71f39942e6d76137a82369d7ef0c001e05`.
 
 The live full claim and global continuity claim remain OPEN. Corrections retained include: no law-uniform pointwise quadratic-phase decay; no post-rotation independence; no dimension-free unrestricted fiber supremum; no arbitrary-joint three-dimensional coarea cap; no positive moment of worst conditional projection caps; no inference of one uniformly good physical minor from aggregate compound mass; and the recent failure of the critical rank-one same-bank half-Riesz interface.
 

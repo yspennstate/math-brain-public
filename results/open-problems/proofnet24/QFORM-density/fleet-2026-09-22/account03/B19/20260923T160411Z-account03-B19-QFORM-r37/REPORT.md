@@ -11,7 +11,6 @@ Continuity: proved on the new D3-paid branch; not proved for the remaining align
 
 ## 1. Controls, corrections, and source pins
 
-Fresh owner control at the prepublication refresh was `yspennstate/math-research-brain@f08ac7f091ff74a8d50036f4e2d484defb08930c`, OWNER CONTROL revision `2026-09-22.15`; QFORM remained the sole research target and account03/B19 was not paused. The live correction inbox was reread before this report. No post-rotation independence, arbitrary-joint coarea bound, pointwise scalar quadratic-phase decay, fixed-good-minor principle, Monte Carlo extremality claim, or deletion of a matrix tail is used below.
 
 The immediate B19 predecessor is
 

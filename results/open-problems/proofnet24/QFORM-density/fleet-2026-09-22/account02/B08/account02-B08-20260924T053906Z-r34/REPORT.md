@@ -30,7 +30,6 @@ This is strictly narrower than the preceding r33 `rank<=4/rank<=7` tube.
 
 ## 2. Fresh sources and corrections
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, fleet enabled, with no later stop or B08 reassignment observed.
 
 The required pinned source was read exactly at
 

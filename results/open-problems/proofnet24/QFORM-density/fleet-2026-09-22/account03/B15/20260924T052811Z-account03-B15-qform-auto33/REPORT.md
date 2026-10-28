@@ -369,7 +369,6 @@ The remaining mathematical task is now equivalent to showing that the countable 
 
 ## 11. Source discipline
 
-Fresh owner programme: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`.
 
 Completed fixed-instance regularity source actually read: `math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`.
 

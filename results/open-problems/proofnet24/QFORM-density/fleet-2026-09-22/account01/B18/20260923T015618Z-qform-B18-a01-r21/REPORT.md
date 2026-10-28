@@ -217,6 +217,5 @@ Fleet dependencies actually used:
 - designated account02/B18: `math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/20260923T013147Z-bf13c29b/REPORT.md`;
 - null-ray packet geometry and continuity: `proofnet24/QFORM-density/fleet-2026-09-22/account03/B10/20260922T231827Z-account03-B10-QFORM-r21/REPORT.md` on master, source blob `d34a92896ab80e510e8807c9fb26b84304ad7d5d` as read this run.
 
-Pre-publication control refresh: brain main observed at `d83e0a9b1a5b058e3b4163682d35ca086c19f7b7`; OWNER CONTROL remained revision `2026-09-22.15`. The live correction inbox was reread immediately before this write.
 
 Privacy/write note: this file contains only mathematical and operational source pins. No credentials, private personal material, scheduler identifiers, or unrelated data are included. Repository-native secret scanning was not exposed by the connector; manual changed-file review was used as the limited fallback.

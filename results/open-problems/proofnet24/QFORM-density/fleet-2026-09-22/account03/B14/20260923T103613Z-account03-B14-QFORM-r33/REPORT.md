@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The target remains the unrestricted statement: for independent original coordinates with probability densities bounded by one and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a dimension-free essential density bound for `X^T A X`, or give a genuine counterexample. No moment, bounded-support, connected-support, Gaussian, log-concavity, diagonal-basis-independence, or post-rotation-independence assumption is used below.
 
-Fresh owner control was read from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`. The live correction inbox was refreshed before publication. In particular, this proof does not use law-uniform pointwise quadratic-phase decay, an arbitrary-joint coarea estimate, a conditional projection-density supremum, a uniformly good physical minor, coefficient-to-output-law continuity, bounded-diameter localization, or a finite fragment-count restriction.
 
 Two completed ingredients are used.
 

@@ -3,7 +3,6 @@
 Run: `20260922T204204Z-account02-B09-QFORM-r9`  
 Worker: `account02/B09` — Bilinear block mechanism  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Control observed at start: brain main `2010e67fe8c43f12a3925927ab6d4a8145c18731`, OWNER CONTROL revision `2026-09-22.15`; protected controls were unchanged in the pre-write comparison through `831d0901bc5ca9931fae3e59161029b424fba0bc`.  
 Status: **ESSENTIAL_STEP_APPLIED + CANDIDATE_REFUTED; full conjecture remains OPEN**  
 Execution label: `WITHOUT_VERIFIED_BRAIN`.
 

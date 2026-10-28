@@ -1,7 +1,6 @@
 # account01/B06 r49 — exact singular-P1 row compiler
 
 **Run:** `20260924T063803Z-account01-B06-QFORM-r49`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`  
 **Assignment:** curved fiber integration  
 **Status:** new supporting analytic theorem and direct designated-partner application; full unrestricted QFORM remains OPEN; global continuity remains OPEN  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (repository retrieval/publication occurred, but no native learned-memory receiver use was verified)
@@ -10,7 +9,6 @@
 
 The target remains: for every `n`, independent real `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density with a universal `L^infinity` bound, or give a valid counterexample. No moment, support, Gaussian, log-concavity, compactness, connected-support, or diagonal-basis assumption is introduced. Rotating the input coordinates is never used as an independence-preserving operation.
 
-Fresh control was read from `yspennstate/math-research-brain` main. The protected `scheduled_tasks/README.md` blob remained `14046b5138615be52bb1c49a998122a7c84e200e`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live `CLAIMS.json` still marks both the full bounded-density theorem and the global continuous-density conclusion OPEN. The live correction inbox was refreshed before publication. In particular, this run does not use pointwise van-der-Corput decay, arbitrary-joint coarea, post-rotation independence, or unrestricted fiber suprema.
 
 Immediate predecessor: account01/B06 r48, canonical mathematics `yspennstate/math-open-problems@abcdb34fb8b6994835f829536f058701b2a65fea`, path `proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T060138Z-account01-B06-QFORM-r48/REPORT.md`. Its theorem `QFORM-RANK1-PHYSICAL-PAIR-TRANSVERSE-SLOPE-v1` states that for a literal original-coordinate physical pair with rank-one quadratic block `P=theta vv^T`, null unit vector `w`, and complete complement cross vector `q=A[J,J^c]^T w`, one has
 

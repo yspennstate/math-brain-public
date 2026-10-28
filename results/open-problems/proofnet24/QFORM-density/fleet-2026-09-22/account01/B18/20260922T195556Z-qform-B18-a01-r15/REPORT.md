@@ -9,7 +9,6 @@ attacking: literature-to-proof transfer; replace determinant/smallest-singular-v
 
 Target: for arbitrary independent real coordinates with densities at most one and symmetric `A` with at least three eigenvalues of modulus at least one, prove one dimension-independent finite density bound for `X^T A X`. Continuity is separate and is **not** claimed by the theorem proved here.
 
-Control source read before derivation: `yspennstate/math-research-brain@1451104bea0c9070e30f3631aaca89eb029460c8`, then refreshed before publication with no later target/stop change; live OWNER CONTROL revision `2026-09-22.15`.
 
 ## Source theorem transferred exactly
 

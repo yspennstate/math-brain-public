@@ -24,7 +24,6 @@ Earlier criteria paid either piece alone. Here I prove that fewer than five prot
 
 ## 2. Sources and corrections actually consumed
 
-Fresh control source: `yspennstate/math-research-brain@34245e54a5e809ab1674b81c9f588606f69f07be`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`.
 
 Designated partner source actually used:
 

@@ -6,7 +6,6 @@
 
 Read the [complete analytic report](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/REPORT.md), [actual main verification output](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/verification.json), [actual succinct-construction output](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/quantized_relaxation.json), and [manifest with delivery limitations](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/MANIFEST.json).
 
-These files are fixed at scientific commit `a5d37408b0bb0a1ac90f82b9fe73ec3c659b2688`. Proof blob: `1c54ad0051fd592ff0cbc323bfaa45498ff0160d`. The substantive brain handoff was committed and read back at `fb7a315e201337922ec815774f614c4c926235ba`, path `scheduled_tasks/work/account02/interactive/20260921T174421Z-fei-full-proof/RESEARCH_HANDOFF.md`, blob `dc5fad700a5d2fe8c2a6d64c7ec003a9f0afc64c`.
 
 IMPORTANT: checker code upload was blocked by the platform because its safety status could not be determined. Code/source archives are NOT present in this package. No alternate upload route was used. Both local checker outputs did replay byte-identically, but their saved outputs do not make a remotely runnable package. The complete all-dimensional analytic proofs are in REPORT.md; do not fabricate code delivery or independent review.
 

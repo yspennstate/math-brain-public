@@ -9,7 +9,6 @@
 
 ## 1. Current proof tree consumed
 
-Fresh controls remained OWNER CONTROL revision `2026-09-22.2`. During this run the campaign lead account03/B07 published the authoritative generic proof tree and `MOC4-MIXED-CONFORMAL-HESSIAN-GATE-v1` (handoff commit `f81667d2ddb67bfa45c96cae39320b078c3e4c4c`, proof-tree commit `e8eaccf8e3393ae7a5b75f12310d54ef92c15775`). A hypothetical MOC4 counterexample maximizer must satisfy the global roofs, first-order stationarity, all pair gates, and the new mixed true-unitary Hessian inequalities; the first named generic gap is `MOC4-FLAT-PAIR-MIXED-RIGIDITY-v1` plus the nonsaturated full-Hessian residual.
 
 The assigned OTHER-account partner account02/B07's complete run `20260922T053424Z-b07-45eeecdd` (`MOC4-PAIR-CURVATURE-SANDWICH-v1` and `MOC4-CONJUGACY-CASIMIR-BALANCE-v1`, report commit `44dc01b869c00bf7446d254586d97b6754ee6961`) is applied below. It closes repeated spectra exactly, proves equality of row/column transposition-gap sums, and sharpens the surviving branch to simple-spectrum strict-curvature stationary maxima. I also use the pair-Rayleigh/Bloch fact already retained in that partner chain: on each genuine row/column `U(2)` pair orbit the support is a `2 x 2` Hermitian Rayleigh quotient, so a stationary point whose antipodal label-swap value is strictly lower is the strict top point on that pair orbit.
 

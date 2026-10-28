@@ -13,7 +13,6 @@ Continuity: **proved for the scoped theorem below; the unrestricted target conti
 
 ## 1. Control and correction boundary
 
-Fresh control was read from `yspennstate/math-research-brain` main and refreshed immediately before publication. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and the full conjecture remains open. The live correction inbox was reread. No step below uses post-rotation independence, a pointwise law-uniform Fresnel estimate, arbitrary-joint coarea, a conditional projection-height cap, moment/support assumptions, compact or connected support, or deletion of a small random quadratic perturbation.
 
 The phase-aligned obstruction is preserved: for every prescribed `s>0` and small `eta>0`, choose a finite union of intervals of total length one inside
 

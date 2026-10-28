@@ -320,6 +320,5 @@ The singleton-plus-two-banks and Hadamard/diffuse correction families show why o
 
 `CHECK.py` verifies the exact closed form (4.4) against 450 iterated recurrences and evaluates the certificate-adapted thresholds. It is a finite algebra/constant check only; no Monte Carlo or histogram is used as proof.
 
-Current prepublication control observed: `yspennstate/math-research-brain@3b461bee8c160d664091e53ce6f1b4cdf6697a9a`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`; QFORM remains the sole research target. The live correction inbox remained active and no newer correction invalidated the premises above.
 
 Repository transport is not native learned-memory ingestion. Status remains `WITHOUT_VERIFIED_BRAIN`.

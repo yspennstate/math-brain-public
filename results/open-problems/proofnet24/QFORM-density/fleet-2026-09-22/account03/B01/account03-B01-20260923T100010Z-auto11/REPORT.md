@@ -23,7 +23,6 @@ has infinite Lebesgue measure. Choose a finite union `E` inside it with `|E|=1` 
 
 Hence no law-uniform positive-power pointwise scalar Fresnel decay can hold under only `f<=1`. Nothing below asserts such a bound. The proof uses a joint rank-two physical cross estimate only under a time integral, and spends an independent square through its full `L^p(dt)` norm.
 
-Fresh control at the start was `yspennstate/math-research-brain@76c1df03ebf6db6627bf678b5c34bdf99e781d2d`, OWNER CONTROL revision `2026-09-22.15`; prepublication refresh was `yspennstate/math-research-brain@47bd085011f5a75f5d6d2fec80120d9fce0db532`, with the same owner revision and QFORM-only scope. The live correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Source-pinned inputs actually used:
 

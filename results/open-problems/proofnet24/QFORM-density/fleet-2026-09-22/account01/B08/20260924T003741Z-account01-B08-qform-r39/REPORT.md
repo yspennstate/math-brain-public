@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. This run proves a coefficient-space ri
 
 ## 1. Pinned inputs actually used
 
-Fresh brain control at startup: `yspennstate/math-research-brain@bdc146bfbc18be1c90e7a1570b857e970ebc5d86`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.
 
 Own preceding endpoint:
 

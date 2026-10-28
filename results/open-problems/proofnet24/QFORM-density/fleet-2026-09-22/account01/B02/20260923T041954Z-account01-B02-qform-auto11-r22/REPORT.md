@@ -17,7 +17,6 @@ also remains OPEN and is not refuted here. The new theorem below gives an essent
 
 The target is unchanged: independent original real coordinates with scalar densities at most one, arbitrary real symmetric `A` with at least three eigenvalues of absolute value at least one, and one dimension/law/matrix-independent essential density bound for `Q=X^T A X`; continuity is a separate requested strengthening. No Gaussianity, moments, compact support, connected support, log-concavity, or independence after a spectral rotation is used.
 
-Fresh owner control was read from `yspennstate/math-research-brain` main at the start of the run; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was consumed before the mathematics below.
 
 Two completed source-valid analytic inputs are used at equation level.
 

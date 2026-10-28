@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target is unchanged. For arbitrary finite `n`, independent original-coordinate real random variables `X_i` with densities bounded by one, and an arbitrary real symmetric matrix `A` with at least three eigenvalues of modulus at least one, prove a universal essential density bound for `X^T A X`, or produce a valid counterexample. No moment, compact-support, Gaussian, log-concavity, connected-support, iid, diagonal-basis, or post-rotation independence assumption is used below.
 
-Fresh owner control was read from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause for account03/B09. The live correction stream was consumed. In particular this proof does **not** use law-uniform pointwise Fresnel decay, arbitrary-joint coarea, a conditional projection-density cap, or a deletion of small quadratic terms on unbounded inputs.
 
 The immediate source obstruction is the overlap-third-compound identity from account02/B02. For a physical triple `L`, write `P=A[L,L]`. For two physical columns `r,s` outside `L`, put
 

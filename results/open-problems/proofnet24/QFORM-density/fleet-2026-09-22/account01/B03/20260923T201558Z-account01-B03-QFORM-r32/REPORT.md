@@ -270,6 +270,5 @@ This theorem's branch: continuous `C_0` density with explicit linear small-ball 
 
 ## 9. Partner application and provenance
 
-Partner account02/B03 result applied at the exact inequality in Section 3: its whole-background Cauchy--Schwarz / whole-selector Plancherel calculation gives the `K^2 |t|^{-2}` critical factor; this run retains the physical-square multiplier through the same calculation and proves the new dyadic energy lemma. The designated partner's latest handoff is `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B03/b03-20260923T191657Z-4d3b23.md`; its canonical theorem report is `math-open-problems@1cf28b1faa4ca92850b551bd1cc23457164639d6`.
 
 No Monte Carlo or histogram is used. All estimates above are analytic and uniform over the stated rough input laws.

@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. The new statement below is a product-s
 
 ## 1. Control and correction boundary
 
-Fresh control at the final prepublication refresh was `yspennstate/math-research-brain@47d9b52fcf49ce23e58bcb7b4eb02480d0f5766b`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM only. The live `CORRECTION_INBOX.json` was reread at that commit. In particular this run does **not** use a uniform pointwise van-der-Corput estimate, an arbitrary-joint coarea estimate, post-rotation independence, naive fiber-sup integration, a universally good scalar Schur pivot, or deletion of a small quadratic term as random noise.
 
 The canonical actual-hour login/start was already present for this run (`20260923T232327Z-account03-B08-qform-diffuse-r45`); no duplicate login or start record was created.
 

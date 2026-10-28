@@ -13,4 +13,3 @@ These scripts check exact identities numerically and finite examples. They do no
 
 All seven mathematical/evidence source files were read back at math-open-problems commit c2414ef633b9d4b7f04a83e1aeefbe713ed82bba and their Git blob hashes match the distributed files. The distributed WORK_PLAN.md likewise matches the brain handoff at a830e7f6edc52b772c1e826b284b99217b9e910d. The existing latest-Claude directive was updated and read back at fd707d78db4ce7e7f3fdb4373525b9472cb6829e. Exact paths and SHA-256 hashes are in MANIFEST.json.
 
-Read the active directive at math-research-brain: scheduled_tasks/work/shared/qform-density-2026-09-22/requests/QFORM-CLAUDE-LATEST-20260922T225732Z.md. The work plan is its linked handoffs/interactive/20260923T002323Z-volume-stability.md. The current native observation covered only the accessible account04 tasks; no eighty-worker adoption or proof-correctness certification is inferred from task configuration or commit counts.

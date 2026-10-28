@@ -12,7 +12,6 @@ The unrestricted conjecture remains open. This run keeps the whole independent-c
 
 ## 1. Fresh source boundary
 
-Fresh owner/control state keeps `QFORM-DENSITY-3EIG-20260922` as the sole target under OWNER CONTROL revision `2026-09-22.15`; the newer owner continuation and Fisher handoff explicitly keep the rough-input endpoint open. The later affine-shear correction is also preserved: a uniform dyadic `a r^2` tube estimate with an arbitrary shear parameter is false by a logarithmic tube example. Nothing below uses that false tube estimate.
 
 Required pinned source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`. I use its one-coordinate completion kernel at an actual inequality in Section 5.
 

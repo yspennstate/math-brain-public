@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh `math-research-brain` control keeps QFORM as the sole research target under OWNER CONTROL revision `2026-09-22.15`. The full conjecture remains OPEN. I consumed the live corrections, in particular: no post-rotation independence; bounded projection density alone does not control an indefinite quadratic pushforward; arbitrary-joint coarea is false; conditional density caps do not substitute for source independence; and the absolute phase-Wiener route is false. No Gaussianity, moment, support, connected-support, log-concavity or diagonal-basis assumption is used below.
 
 The newest completed designated partner input is account02/B10 at
 

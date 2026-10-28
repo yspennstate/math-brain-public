@@ -274,7 +274,6 @@ A separate global assembly issue remains: repeated lower-dimensional deletions c
 ## 11. Source pins
 
 - Owner source message: `https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`.
-- Startup control snapshot read: `yspennstate/math-research-brain@42a2a06efb95d896baa57d0e781b8bfc2e5601d3`, OWNER CONTROL `2026-09-22.15`.
 - Prepublication refresh read: `yspennstate/math-research-brain@b0b17be8ce16b8baaccfeec0230015dd1e66ec46`.
 - Predecessor r52: `yspennstate/math-open-problems@6c9adce6b8378fa430fc731b4969ae9e2f2f0659:proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260924T093818Z-account01-B06-QFORM-r52/REPORT.md`.
 - Designated partner result actually applied: `yspennstate/math-open-problems@006892a091e8f58edf21e071244a2c7e2a340ec0:proofnet24/QFORM-density/fleet-2026-09-22/account02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`, theorem `QFORM-SPARSE-KERNEL-PRODUCT-DELETION-v1`.

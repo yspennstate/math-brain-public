@@ -7,7 +7,6 @@ Classification: `ESSENTIAL_STEP_APPLIED / SOFT-MAJORITY-RESIDUAL-COMPILER / SHEE
 
 Full QFORM remains OPEN. Raw continuity remains a separate stronger issue and is not used below. The live corrections remain in force: no law-uniform pointwise quadratic Fourier decay, no rotated-independence assumption, and no projection/X-ray-only shortcut.
 
-Fresh source state used in this run: math main `e83d0cc194d791acf31d6c86245204887cfd8171`; brain main `a6ca76c139ab3fb4665e8dfe7c8113fe9ae71a34`; OWNER CONTROL revision `2026-09-22.15`. Partner source: account02/B15, `20260923T130525Z-account02-B15-qform-auto11/REPORT.md`.
 
 ## 1. Partner input
 

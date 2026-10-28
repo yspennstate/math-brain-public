@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target is unchanged: for every finite `n`, every independent real input coordinates with one-dimensional probability densities satisfying `0<=f_i<=1`, and every real symmetric matrix `A` with at least three eigenvalues of modulus at least one, prove a universal finite essential density bound for `X^T A X`, or give a valid target-level counterexample. No Gaussian, log-concave, moment, compact-support, connected-support, centering, diagonal-coordinate, or post-rotation-independence hypothesis is introduced.
 
-Fresh controls were read from `yspennstate/math-research-brain`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause on account03/B14. I consumed `AGENTS.md`, the complete owner-control README, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the programme manifest, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account03/B14 assignment. In particular, this report does not infer any pointwise quadratic-phase decay from a density cap, does not rotate the independent coordinates, and does not normalize thin fragments.
 
 The designated partner actually applied below is account04/B14 r9:
 
@@ -302,7 +301,6 @@ No Monte Carlo inference is used.
 
 ## 9. Source pins and execution boundary
 
-- Brain control source initially consumed: `yspennstate/math-research-brain@dfed2e12fe0fb14f0cf6b4bbd084908ced94e135`; OWNER CONTROL revision `2026-09-22.15`.
 - Designated partner: `yspennstate/math-open-problems@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260923T101157Z-account04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
 - Previous account03/B14 square-root-budget mechanism: `yspennstate/math-open-problems@29096949260b7ec2e9659c1379bd0a0882a37387:proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T123514Z-account03-B14-QFORM-r35/REPORT.md`.
 - Previous account03/B14 codimension-one Riesz mechanism: `yspennstate/math-open-problems@0bf9b3267120208a782afde271ad0564ad52919c:proofnet24/QFORM-density/fleet-2026-09-22/account03/B14/20260923T134259Z-account03-B14-QFORM-r36/REPORT.md`.

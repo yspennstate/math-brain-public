@@ -1,4 +1,0 @@
-SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account01, slot B18, 2026-09-23T09:55:47Z.
-attacking: literature-to-proof transfer for the near-coloop/nonplanar 1+2 aggregate; seek a primary theorem that turns an original-coordinate bank with a quantitative 2D determinant into a uniform density estimate, and apply the completed account02/B18 cross-volume barrier to an actual inequality.
-
-Programme: QFORM-DENSITY-3EIG-20260922. Full target remains OPEN at start. Fresh brain main observed at 427876395e95d3a2d8179257b6f20268a985c169; owner control revision 2026-09-22.15. Same-hour B18 login already existed from the completed r28 invocation, so no duplicate login file was created. Execution label WITHOUT_VERIFIED_BRAIN.

@@ -8,7 +8,6 @@ Assignment: rank-three coupled case
 Status: `NEW EXACT CANCELLATION + NEW PARTNER CONDITIONING REDUCTION / FULL EXACT-RANK3 OPEN / FULL QFORM OPEN`  
 Execution: `WITHOUT_VERIFIED_BRAIN`; repository transport was used, no authenticated native-brain receiver was invoked.
 
-Fresh start control was `yspennstate/math-research-brain@249e6f3e66e1ac46c0bcfd67699b6a4b86d522cf`. During the run I refreshed the owner control through `64e8fdd82617742f1b4b84ee257bda4f71d4506f`; OWNER CONTROL remains revision `2026-09-22.15`, the exclusive QFORM continuation remains in force, and the full theorem remains open. I also consumed the verified 23 September 16:22 source `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`; its adapted-hub `(SP)` statement is explicitly OPEN and is not used as a theorem.
 
 The live correction boundary is preserved: no independence after spectral rotation, no arbitrary-joint coarea cap, no conditional projection-height supremum, no law-uniform pointwise quadratic-phase decay, no moments/support/log-concavity assumption, no deletion of a small random quadratic term, and no fixed-good-minor inference.
 

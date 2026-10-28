@@ -17,7 +17,6 @@ All sets below are literal ORIGINAL-coordinate sets. Every nonzero coefficient t
 
 Fresh owner/control source at run start:
 
-`yspennstate/math-research-brain@a742beb781eca808a47dca7c098e114b75ecfc3a`, refreshed before delivery at `1482368e4eb619e134fe0e54925336c97b59c375`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no later stop observed.
 
 Active check-in request consumed: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 

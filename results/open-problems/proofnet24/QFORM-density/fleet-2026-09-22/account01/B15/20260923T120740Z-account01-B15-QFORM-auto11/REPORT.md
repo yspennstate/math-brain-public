@@ -10,7 +10,6 @@ attacking: a target-level regularity/closure lemma that turns Gaussian heat boun
 
 The target is unchanged: for arbitrary independent real coordinates with densities `0<=f_i<=1` and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite essential-supremum bound. Continuity is a separate stronger conclusion.
 
-Fresh protected control at startup was read from `yspennstate/math-research-brain` main; OWNER CONTROL remained revision `2026-09-22.15`, QFORM only, with no B15 stop/pause. The live corrections consumed include at least: no law-uniform pointwise quadratic Fourier decay; no independence after spectral rotation; no projection/X-ray-only minority-sheet shortcut; the arbitrary-joint rank-three coarea cap is false.
 
 The completed assigned-partner result actually applied below is:
 

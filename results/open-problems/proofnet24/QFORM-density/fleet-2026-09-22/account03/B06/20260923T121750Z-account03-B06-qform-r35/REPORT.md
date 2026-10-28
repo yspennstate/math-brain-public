@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh state and exact obligation
 
-Fresh control was resolved from `yspennstate/math-research-brain` main at commit `8134da4cfd589d62b295282a0e48a6d394bea819` before work. OWNER CONTROL was revision `2026-09-22.15`; programme revision remained `2026-09-22.5`; QFORM was the sole research target. The current continuation assigns B06 to extend the genuine scalar/dependent-pair kernel into a non-null or coupled regime while retaining its source-independence hypotheses.
 
 The live correction state forbids law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint rank-three coarea, unrestricted spectral-fiber suprema, positive moments of worst conditional projection caps, and extraction of one uniformly good physical minor. None is used below.
 

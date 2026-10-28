@@ -9,7 +9,6 @@ Status: `ESSENTIAL_STEP_APPLIED / CANDIDATE_REFUTED / FULL_TARGET_OPEN / WITHOUT
 
 Target: for arbitrary dimension, independent real coordinates with probability densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal finite essential bound for the density of `Q=X^T A X`, or give a target-valid counterexample. No moment, support, log-concavity, Gaussianity, diagonal-basis, or post-rotation independence assumption is used below.
 
-Fresh controls were read from `yspennstate/math-research-brain`; startup main was `42bec6f16eedcf68865159f35a82ebc92e54ddaa`, and the pre-write refresh was `76e129ce7679d60145bcb175da42011e59b5c700`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no pause for account02/B01. I consumed the current corrections: law-uniform pointwise Fresnel decay is false; arbitrary-joint rank-three coarea is false; positive moments of full conditional projection heights are not dimension-free; worst scalar-remainder conditioning `sup_b` is false; absolute Fourier `L^1` is not the correct universal interface; fixed good physical minors are not forced.
 
 The immediately preceding B01 result (`math-open-problems@b3f18a11f29e878b69278f6487fe50b4e3380d99`) supplied a leakage-safe bank-overlap identity but left a three-bank synthesis debt. This run changes mechanism inside the same target: it attacks the owner-highlighted zero/near-isotropic physical-pivot branch and uses the fresh designated partner account03/B01 result.
 

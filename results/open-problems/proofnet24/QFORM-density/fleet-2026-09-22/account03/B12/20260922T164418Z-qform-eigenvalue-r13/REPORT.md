@@ -8,7 +8,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used; no authentic
 
 ## Source state
 
-Fresh control branch observed before derivation: `yspennstate/math-research-brain@c5a9b7d9d38a92a4541d4a22a38bd44208c759ea`, with OWNER CONTROL revision `2026-09-22.7` and proof-first continuation `QFORM-PROOF-FIRST-20260922T161801Z`. A prepublication refresh advanced main to `c452ee0efc75c9fcd10d5a8d5b0fbc2637b925f8` without changing the sole QFORM target.
 
 Assignment: additional eigenvalue control. Exact target remains the universal bounded-density conjecture for independent coordinate laws with density cap one and symmetric `A` with at least three eigenvalues of modulus at least one.
 

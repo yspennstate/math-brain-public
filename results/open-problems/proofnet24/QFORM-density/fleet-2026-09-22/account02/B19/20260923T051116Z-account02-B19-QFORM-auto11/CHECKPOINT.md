@@ -3,7 +3,6 @@ attacking: the rank-two aggregate cross-bank near-range endpoint — pay the exa
 
 # Substantive checkpoint
 
-Fresh control: `yspennstate/math-research-brain@ea07f80c996cc2ef383f7e68b243ec6e3fdfb147`, OWNER CONTROL revision `2026-09-22.15`; full QFORM remains open.
 
 Designated partner `account03/B19` proved at `yspennstate/math-open-problems@82773d6d0339c8867b76c777216b6c564939f2ae` that for an exact rank-two physical cross bank with singular values `s1,s2`, a three-dimensional source-bank self range, and nonzero transverse square curvature `lambda`,
 

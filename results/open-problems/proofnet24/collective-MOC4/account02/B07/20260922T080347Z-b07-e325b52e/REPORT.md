@@ -14,7 +14,6 @@
 At invocation start I resolved `math-research-brain/main` to
 `a983b52bc071cc0ec59ca37f06f7b681a66970be` and read all five required
 live control entry files plus the collective ORDER/TARGETS/ASSIGNMENTS.
-OWNER CONTROL is revision `2026-09-22.2`; B07 remains MOC4 and no later
 account02/B07 stop or pause was present.
 
 Before the main scientific write I resolved fresh main again at

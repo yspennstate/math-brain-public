@@ -15,7 +15,6 @@ It is obtained by preserving the exact Brascamp--Lieb half-leverage hypothesis u
 
 ## 1. Source-pinned inputs
 
-Fresh owner-controlled brain state was read on `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`. Full QFORM and full-target continuity remain open.
 
 ### 1.1 Raw mixed-hub theorem
 

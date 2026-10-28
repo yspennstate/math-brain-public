@@ -298,7 +298,6 @@ For the balanced-cut lemma, a 1024-by-3 Sylvester-Hadamard frame has exact row l
 
 ## 8. Source pins
 
-Fresh brain control initially resolved to `4e19b067da9367f9db2bd5ed4f6dbb7d3a860f1f`; prepublication refresh resolved to `d708fb9bc4d3798da196b908427256e3a012eba2`. OWNER CONTROL remained `2026-09-22.15`; programme revision remained `2026-09-22.5`. The live correction inbox blob remained `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 Completed designated partner actually applied: `yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B12/20260923T081758Z-account04-B12-complementary-schur-shield-r4/REPORT.md`.
 

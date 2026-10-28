@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Role: Coordinate minor selection / GEOMETRY  
 Run: `account01-B07-20260923T220407Z-r35`  
 Fresh brain main before publication: `yspennstate/math-research-brain@18f446e214be7ab49bb6d4ea3ab131182daf3264`  
-OWNER CONTROL: revision `2026-09-22.15`, QFORM-only, no B07 pause.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Status: **NEW DETERMINANT-ONLY PHYSICAL-TRIPLE RECEIVER + PRINCIPAL-CORE BRANCH PAID + NEW SUPPORT-DIFFUSE H3 TRI-COLOR COMPILER / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.
 

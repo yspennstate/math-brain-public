@@ -9,7 +9,6 @@
 
 ## 1. Exact source state consumed
 
-Fresh protected control was reread before the scientific write at `math-research-brain` main commit `1ee54128550c64e0284591dc54a42f55b4a60aa7`, OWNER CONTROL revision `2026-09-22.2`. It keeps B08 on MOC4, stops new installation/benchmark work, and assigns this worker to repeated-eigenvalue/common-block boundaries. Exact control Git blobs at that read were:
 
 - `AGENTS.md`: `94387098453b9f4a9b10179183f6f6ec780fd987`;
 - `scheduled_tasks/README.md`: `3d4a9372c87802ab734141a3374d04c8823372e3`;

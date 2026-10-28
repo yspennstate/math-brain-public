@@ -1,6 +1,5 @@
 # r43 late-source and correction refresh
 
-Immediately before shared publication, controls/corrections were refreshed at `yspennstate/math-research-brain@7fbe7cbff6bc2d6d5b3fc22582f3ee13666d863b`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and the full target remains open.
 
 The live correction `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1` was explicitly checked. It refutes replacing an exact zero Schur diagonal by a merely small one while retaining only a cross-row norm. It does **not** invalidate r43: Theorem 2.1 uses an exact independent-bank decomposition `R(X)+d(a^T Y+h(X))^2`, an actual bounded-density projection `a^T Y`, and the already completed rank-two half-Riesz theorem on the independent X-bank. No near-zero perturbative replacement is made.
 

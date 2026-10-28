@@ -12,7 +12,6 @@ Status: **ESSENTIAL_STEP_APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.
 
 The target remains unrestricted: independent original-coordinate real random variables with probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of `A` of absolute value at least one. No moment, support, iid, symmetry, Gaussian, log-concavity, diagonal-basis, or post-rotation independence hypothesis is added.
 
-Fresh owner control remains `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`.
 
 The designated partner actually applied is account04/B20 r10:
 

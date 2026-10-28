@@ -5,7 +5,6 @@ attacking: the k=1 diffuse hybrid — aggregate one macroscopic child direction 
 
 Status: SUPPORTING THEOREM + TARGET-VALID MECHANISM OBSTRUCTION; full QFORM target remains OPEN.
 
-Control source at the final pre-write read: `yspennstate/math-research-brain@c0e792245a23b4a49d9e39561a86d3f6363ef7fa`, OWNER CONTROL revision `2026-09-22.15`. Assignment: diffuse eigenvector case, complementary constructions/source-valid counterexamples, partner `account03/B08`. Live corrections were reread and no later stop/reassignment was present.
 
 Source-pinned inputs actually used:
 

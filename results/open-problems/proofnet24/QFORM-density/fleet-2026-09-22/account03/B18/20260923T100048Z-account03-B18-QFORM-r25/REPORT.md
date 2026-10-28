@@ -352,7 +352,6 @@ A separate global compiler is still needed to absorb arbitrary additional spectr
 
 ## 9. Source pins
 
-- Fresh brain control at start: `yspennstate/math-research-brain@b1ceab9c1789b9be77b4d8d2b5d80e7bb59d5e9a`, OWNER CONTROL revision `2026-09-22.15`.
 - Edmonds 1965 primary paper: https://doi.org/10.6028/jres.069B.004
 - Edmonds 1970 primary matroid-union source: *Submodular functions, matroids, and certain polyhedra*, pp. 69--87.
 - LPP primary source: https://arxiv.org/abs/1507.07949

@@ -12,7 +12,6 @@ The unrestricted QFORM conjecture is not proved here. The branch below proves a 
 
 ## 1. Source boundary
 
-Fresh owner control was read from `yspennstate/math-research-brain` main, including OWNER CONTROL revision `2026-09-22.15`, the current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, current programme state/corrections, and the B04 assignment. The final pre-publication refresh was at brain commit `e9d4e58cfe4effcb133fcd511e7ba7d5a72a1398`. The current Claude continuation `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae` was read as a source, not assumed as a theorem; its dependent `hub that sees P` functional remains open.
 
 The analytic input from this worker's preceding run is
 
@@ -226,7 +225,6 @@ The designated partner is `account04/B04`. Fresh direct lookups still found no c
 
 I did apply the latest completed same-role peer result from account01/B04:
 
-`QFORM-FRACTIONAL-GROUPED-PROJECTED-CROSSING-v1`, canonical report `yspennstate/math-open-problems@8d19ef916b35c81fcc7461911a0e941128ca3abf`, handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B04/20260923T174459Z-account01-B04-QFORM-auto11-r16.md`.
 
 On the exact matrix (4.2), its canonical two-volume maximum marginal is `25/41`, so choose
 

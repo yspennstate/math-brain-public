@@ -9,7 +9,6 @@ attacking: projection-product interaction at a nonzero near-null spectral coloop
 
 The target is: for independent real `X_i` with probability densities at most one and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove one dimension-independent finite constant bounding the density of `X^T A X`. No moment, identical-law, support, sign, or log-concavity assumptions are available.
 
-Fresh controlling source at startup was `yspennstate/math-research-brain@8b3939cff4def148fd1a005b506c99e684176053`; a later control refresh reached `4faad47c73251c03932c297213feec85f779e874`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop seen before this write.
 
 Required newest-Claude source read and used: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, with the underlying later Claude route `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`. In particular I preserve the determinant-only physical-pair theorem and the reduction to the still-open strict no-pivot problem `N3`; neither is treated as the full solution.
 

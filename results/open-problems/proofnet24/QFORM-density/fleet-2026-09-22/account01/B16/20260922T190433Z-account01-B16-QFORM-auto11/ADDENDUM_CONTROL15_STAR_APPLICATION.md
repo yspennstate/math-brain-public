@@ -5,7 +5,6 @@ attacking: aggregate singular-pair determinant mass before reciprocal local-mino
 
 Run: `20260922T190433Z-account01-B16-QFORM-auto11`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh control before this addendum: `yspennstate/math-research-brain@aeadf50740521c7dd953a4fa27a12360157d3231`, OWNER CONTROL revision `2026-09-22.15`.  
 Status: **ESSENTIAL_STEP_APPLIED / SUPPORTING FAMILY CLOSED / FULL QFORM OPEN**. Continuity remains separate.
 
 This addendum applies the run's proved theorem `QFORM-RANK1-PAIR-AGGREGATE-SMOOTHER-v1` and the completed designated-partner theorem `QFORM-INDEFINITE-BINARY-FROSTMAN-v1` to the same exact target family. The comparison isolates the benefit of aggregating an original-coordinate bank before paying a reciprocal principal-minor cost.

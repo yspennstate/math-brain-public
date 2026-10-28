@@ -8,7 +8,6 @@ Full unrestricted uniform-cube FEI remains **OPEN / NOT PROVED**.
 
 ## 0. Control precedence and scope
 
-Fresh OWNER CONTROL revision `2026-09-22.2` directs the FEI fleet to the all-gate reformulation.  This later owner message supersedes the older interface-C-only assignment where they conflict.  The all-gate defect is
 \[
 D_\Gamma(G;p)=
 \sum_i {\operatorname{It}_i(G;p)\over V_{p_i}}

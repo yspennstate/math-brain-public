@@ -9,7 +9,6 @@ Status: **NEW SUPPORTING THEOREM / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN*
 Execution: **WITHOUT_VERIFIED_BRAIN**  
 Continuity: **not proved by this run**.
 
-Fresh control was read from `yspennstate/math-research-brain` main. At the prepublication refresh the control commit was `ff6c8cb4dcd0709a8630c9dec58942a202597b44`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop or B11 reassignment observed. The full conjecture and full continuous-density conclusion remain open.
 
 This run changes mechanism from the preceding two-chart coarea work to the independent-copy product law. It does not use law-uniform pointwise van der Corput decay, arbitrary-joint rank-three coarea, conditional density caps after the sum/difference transform, X-ray-only control, fiber suprema, moments, support regularity, or independence after a spectral rotation.
 

@@ -37,7 +37,6 @@ Canonical source:
 
 `yspennstate/math-open-problems@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
 
-Theorem `QFORM-DIFFUSE-APPROX-BLOCK-STABILITY-v1`, recorded in the partner handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B08/B08-20260922T153820Z-r12.md`.
 
 In the notation needed here, write
 

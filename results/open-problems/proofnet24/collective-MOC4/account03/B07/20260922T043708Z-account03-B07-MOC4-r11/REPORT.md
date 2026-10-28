@@ -26,7 +26,6 @@ H_\sigma:=\Re(\eta z_\sigma).
 \tag{1}
 \]
 
-The owner-controlled source record is `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`. This run also refreshed the public source status: Bebiano--da Providência (2025) still presents the Marcus--de Oliveira statement as an open conjecture and surveys known cases; Drury (2004) explicitly says `n=4` remains open and proves only a weakened `n=4` conclusion; the 2026 Mulero-Martínez paper and its current publication metadata are the recorded variational-obstruction input. I did not treat a source-index/search miss as a proof of worldwide open status, and I did not independently re-audit every proof in the 2026 paper.
 
 The newest complete assigned-partner result consumed is **account04/B08**, run
 `20260922T041159Z-account04-B08-moc4-r11`, report blob

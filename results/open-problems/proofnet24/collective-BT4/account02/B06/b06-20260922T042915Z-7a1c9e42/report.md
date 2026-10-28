@@ -9,7 +9,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## Control and scope
 
-Fresh controls were read from `yspennstate/math-research-brain` at start commit `99eb373df32075f515dafcafa12ae00e69cf0d68`, OWNER CONTROL revision `2026-09-22.2`: B06 is BT4 adversary engineering; new brain-installation and benchmark work is stopped. A later main refresh during the run reached `fd4867f44948216441974cb8202951c0800fb61f`; no later account02/B06 stop was observed.
 
 Exact target retained throughout: every finite loopless digraph with at most one arc per ordered pair and minimum outdegree at least seven should contain four pairwise vertex-disjoint genuinely directed cycles. Digons count as directed cycles.
 

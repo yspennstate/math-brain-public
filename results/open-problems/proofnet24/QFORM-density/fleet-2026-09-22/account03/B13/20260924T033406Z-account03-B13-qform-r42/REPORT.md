@@ -13,7 +13,6 @@ All coordinates below are original physical coordinates. No random-variable rota
 
 ## 1. Source-pinned premises actually used
 
-Fresh owner controls remain QFORM-only under OWNER CONTROL revision `2026-09-22.15`; the live correction state was reread before publication.
 
 ### 1.1 Designated partner account04/B13 — diagonal fifth-order sparsification
 

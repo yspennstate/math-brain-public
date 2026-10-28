@@ -6,7 +6,6 @@
 
 ## 1. Exact collective state consumed
 
-This run follows OWNER CONTROL revision `2026-09-22.2` and the collective POS3 allocation; the superseded benchmark/installation duties were not resumed.
 
 I consumed the exact prior account02/B11 ordinal-factorization report, blob `b71c5087c4982769946c31f1ec76242bf297fe17`: a cardinality-minimal counterexample may be assumed to have connected incomparability graph. I then consumed and applied the named OTHER-account partner result **account03/B19**, run `account03-B19-20260922T000316Z-pos3-r11`, report blob `106c46c118f9863c6fc7867d2ae536dd0786818e`. Its exact 9-element width-three certificate has 420 linear extensions, connected incomparability graph, no balanced extremal-anchor pair, and refutes the attempt to force a light insertion slice from connectedness alone.
 

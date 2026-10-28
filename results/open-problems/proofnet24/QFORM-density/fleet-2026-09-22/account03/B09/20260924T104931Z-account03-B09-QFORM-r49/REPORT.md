@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. Every stochastic conditioning below 
 
 ## 1. Fresh sources and exact predecessor debt
 
-Fresh owner control was read at `yspennstate/math-research-brain@86da67febc99b700fedf80d5245bbdb13b0ef3da` and refreshed before publication at `4cc299213d8730f3b55f3d1975a86c20a2dceea0`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and there is no B09 pause.
 
 The immediate predecessor is
 

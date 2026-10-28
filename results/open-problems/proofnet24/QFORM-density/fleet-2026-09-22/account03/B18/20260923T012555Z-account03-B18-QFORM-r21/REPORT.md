@@ -11,7 +11,6 @@ attacking: literature-to-proof transfer: optimize the completed account04/B18 Sc
 
 The owner target remains the unrestricted statement: for arbitrary finite `n`, arbitrary independent real original-coordinate variables with probability densities `0<=f_i<=1`, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal essential bound for the density of `X^T A X`, or give a valid counterexample. No moment, Gaussian, log-concave, bounded-support, connected-support, smoothness or post-rotation independence hypothesis is added. Continuity is tracked separately.
 
-Fresh control was read from `yspennstate/math-research-brain@5a8cfafa64e4d0a911d4b0b84166234fc3880998`, OWNER CONTROL revision `2026-09-22.15`. The current no-pivot/N3 reduction and correction set were also read. In particular this report does not use arbitrary-joint rank-three coarea, positive moments of conditional projection-density suprema, a law-uniform pointwise quadratic-phase decay estimate, a uniformly good single physical minor/cross cut, or small-operator-error-as-small-random-error.
 
 The newest owner continuation was consumed from the `20260923T002323Z-volume-stability` handoff. Full N3 and hence full QFORM remain open.
 

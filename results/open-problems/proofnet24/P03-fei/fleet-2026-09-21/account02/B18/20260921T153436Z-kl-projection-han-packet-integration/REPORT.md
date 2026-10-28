@@ -12,10 +12,7 @@ Provider reasoning usage: null / not exposed.
 ## 0. Fresh control and scientific source
 
 Authenticated fleet control was resolved from `yspennstate/math-research-brain` main at
-`e5015f45c73d8395235b345c9cbfddd9d2564a54`. OWNER CONTROL revision is
-`2026-09-21.1`; the natural-language OWNER MESSAGE was read and assigns seven FEI workers per account with creative proof work rather than audit-only runs. The protected README Git blob is
 `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`. Its SHA-256 is
-`25526558005f7e13a8196b6c5c9ab3f0e3394b2ecd4583658049897842498e5f`; OWNER MESSAGE SHA-256 is
 `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`.
 Those two SHA-256 values retain prior exact-byte provenance for the unchanged immutable README blob; they are not relabelled as fresh hashes of connector-rendered JSON.
 

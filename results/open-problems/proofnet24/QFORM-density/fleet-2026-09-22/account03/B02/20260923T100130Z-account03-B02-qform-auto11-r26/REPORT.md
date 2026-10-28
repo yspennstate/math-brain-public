@@ -15,7 +15,6 @@ attacking: the heavy mixed-marginal Schur/star residue by an integrated Fourier 
 
 The exact target remains arbitrary independent ORIGINAL real coordinates with one-dimensional probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. Nothing below assumes Gaussianity, moments, log-concavity, bounded/connected support, identical laws, or independence after rotating coordinates.
 
-Fresh control was resolved first at brain main `d8f170c5f8a2f16fab23d8f4d869a964964dd58e`, then refreshed before publication at `63925d76847f1372e48bb21c52ad88ef23861e11`; both expose OWNER CONTROL revision `2026-09-22.15` and no later stop. The live correction inbox was reread before publication. In particular this report does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, a positive moment of conditional projection heights, post-rotation independence, deletion of small coefficients, a uniformly good individual physical minor, or the false identification of cross-only Schur packets with true symmetric Schur packets.
 
 The main analytic source is this slot's completed weighted mixed theorem
 

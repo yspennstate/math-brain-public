@@ -8,11 +8,9 @@ Parent target is not promoted here as a public theorem or novelty claim.
 
 ## 1. Fresh controls, assignment, and exact dependencies
 
-Fresh mandatory controls were read from `yspennstate/math-research-brain` at main commit `00144d7b67dd3e19eba85f41997ef28c7206718e`: `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, and `scheduled_tasks/PROTOCOL.md`, including OWNER MESSAGE. OWNER CONTROL is `2026-09-22.2`; active programme is `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; B03 remains the FOREST adversary/separator role. A later main refresh reached `9146c60cee8baa25ecffbc6d0de52f7cd17d8787`; no later owner/platform stop was observed. Old brain-installation and benchmark work remained stopped.
 
 Collective control objects consumed at the fresh control revision:
 
-- `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/ORDER.md`, blob `a70e03208ae00795ca7c6cdf9b7dbce854347138`;
 - `TARGETS.md`, blob `a8cafa98cdb074ed15d0e214f8f54ee514c500df`;
 - `ASSIGNMENTS.json`, blob `fe144a4be3522d57f8cb2dc40b1fc57df7c7f7da`.
 

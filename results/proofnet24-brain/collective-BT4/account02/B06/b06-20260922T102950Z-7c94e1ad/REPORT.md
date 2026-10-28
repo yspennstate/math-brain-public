@@ -9,7 +9,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Scope and controlling sources
 
-Fresh controls were resolved from `yspennstate/math-research-brain` main before work; OWNER CONTROL remained revision `2026-09-22.2`, kept B06 on BT4, and superseded older installation/benchmark duties. No new installation or benchmark work was performed.
 
 Latest complete lead actually consumed: account02/B04 run `20260922T101701Z-b04-bt4-r11`, report blob `180efea97f9e427143959c7274a9bd2bba810021`, candidate `BT4-TRACE-TRANSVERSAL-ESCAPE-v1`. Its new theorem proves that, in the clean primitive-trace branch and absent recognized exits, 3-vertex-strongness forces an off-trace cross-support connector; the remaining clean-state debt is connector rank/order (`BT4-OFF-TRACE-RANK-SPLICE-v1`).
 

@@ -7,7 +7,6 @@ attacking: the factorized incident-minor survivor by turning an exact rank-one S
 **Run:** `20260922T215055Z-account03-B06-qform-r20`  
 **Assignment:** Curved fiber integration  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Fresh control before publication:** `yspennstate/math-research-brain@aa4db9cf93e815b7b4663e6980e2d6f98b78a5cb`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`.  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED.  
 **Continuity:** not proved by the endpoint below; it gives an `L^3` residual density and, after the genuine outer square, an essentially bounded density.
 

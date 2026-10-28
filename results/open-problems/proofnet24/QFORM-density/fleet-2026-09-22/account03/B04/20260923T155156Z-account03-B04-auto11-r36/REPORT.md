@@ -11,7 +11,6 @@ Continuity: proved on the theorem branch below (`C_0` density); full-target cont
 
 ## 1. Fresh controls and mathematical sources
 
-Fresh main was resolved at the beginning of the run to brain commit `c0f74a12d63c365ff97503c17167b5d932a5d8b5`, with OWNER CONTROL revision `2026-09-22.15`; the sole target remained QFORM. I read the current owner continuation, current research/corrections, memory protocol, fleet/roles/protocol, and this slot's assignment. The live corrections still forbid law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint rank-three coarea, naive fiber-suprema, and hidden support/moment hypotheses. None is used below.
 
 The main analytic input is this slot's completed finite-family theorem
 

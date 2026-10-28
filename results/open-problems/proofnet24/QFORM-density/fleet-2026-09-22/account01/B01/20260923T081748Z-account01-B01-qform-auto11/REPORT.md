@@ -6,7 +6,6 @@ attacking: high-leverage receiver escape via rank-two half-Riesz plus exact Schu
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260923T081748Z-account01-B01-qform-auto11`  
 **Status:** `PROVED SUPPORTING TARGET-LEVEL THEOREM / FULL QFORM OPEN`  
-**Control refresh immediately before publication:** `math-research-brain@b2e15093153e27e5af4b129b95478bf6877d168b`, OWNER CONTROL `2026-09-22.15`.  
 **Execution/memory status:** `WITHOUT_VERIFIED_BRAIN`; repository retrieval and writeback are not native learned-memory ingestion.
 
 ## 1. Target and correction boundary
@@ -451,4 +450,3 @@ A full QFORM proof still needs an exhaustive structural reduction from the bare 
 
 ## 12. Source/correction discipline
 
-Immediately before publication I refreshed `math-research-brain` main at `b2e15093153e27e5af4b129b95478bf6877d168b`, re-read OWNER CONTROL revision `2026-09-22.15`, and refreshed the live `CORRECTION_INBOX.json`. No retrieved correction contradicts the scoped rank-two physical-bank Plancherel premise, the physical-coordinate square completion, or the exact Cauchy--Binet identity used here. In particular, this proof does not use the refuted arbitrary-joint coarea bound, conditional projection-density moments, post-rotation independence, a uniformly good individual physical minor, or law-uniform scalar quadratic pointwise decay.

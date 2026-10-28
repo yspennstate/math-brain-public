@@ -13,7 +13,6 @@ The unrestricted target remains OPEN: independent original-coordinate probabilit
 
 ## 1. Source boundary and first unpaid implication
 
-Fresh owner control was resolved under OWNER CONTROL revision `2026-09-22.15`; no later stop was observed before this report. The live correction inbox was reread immediately before publication. In particular, arbitrary-joint coarea, spectral conditional-density caps, post-rotation independence, reciprocal single-minor selection, and small-random-perturbation arguments remain unavailable.
 
 The latest completed designated partner result actually used is account03/B10 r24,
 

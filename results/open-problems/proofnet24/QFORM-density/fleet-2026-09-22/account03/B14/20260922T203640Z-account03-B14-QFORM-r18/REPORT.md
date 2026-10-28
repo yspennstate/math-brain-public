@@ -288,6 +288,5 @@ The three-large-eigenvalue condition does not itself guarantee one uniformly con
 
 ## 10. Source integrity and status
 
-Fresh owner controls before this report: `yspennstate/math-research-brain@dcc00a0a2e2b2a8f36ddb5ef929c1e68ade2f253`, OWNER CONTROL revision `2026-09-22.15`; full QFORM remains the sole target and no B14 pause was present. The live correction inbox was re-read at that commit. The completed designated-partner theorem is source-pinned in Section 5.
 
 Repository retrieval was genuine but no authenticated native brain receiver-memory use occurred, hence `WITHOUT_VERIFIED_BRAIN` remains required. No scheduler mutation, new task, notification change, email/Drive action, public release, remote workflow, paid API/model/Codex call, credential access, or unrelated private data was used.

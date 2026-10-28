@@ -402,7 +402,6 @@ The remaining witness frontier is the gap from `4.0625` to the diffuse obstructi
 
 ## 7. Sources, corrections, and computation status
 
-Fresh owner/control source was resolved from `yspennstate/math-research-brain` main during this run, with OWNER CONTROL revision `2026-09-22.15`; no later B17 pause or stop was observed before publication. The current research state continues to mark `QFORM-FULL` open and full continuity open.
 
 Corrections explicitly preserved include at least: law-uniform pointwise oscillatory decay is false; arbitrary-joint rank-three coarea bounds of the previously proposed type are false; conditional projection positive-moment gates are false; fiber-sup dimension-free reduction is false; and spectral rotation does not preserve independence. None is a premise here.
 

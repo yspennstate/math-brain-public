@@ -17,7 +17,6 @@ The present run changes mechanism from the preceding relative-inertia/operator-c
 
 The first unpaid implication remains structural: bare `s_3(A)>=1` has not been shown to force a fifth-volume physical cross certificate, nor does common spectral independence imply such a certificate (the live `QFORM-BIINDEPENDENT-SPECTRAL-MODES-NOT-CROSS-VOLUME-v1` correction forbids that shortcut). The theorem below transports a certificate once it exists; it does not manufacture one from `s_3(A)>=1`.
 
-Fresh control read before publication: `yspennstate/math-research-brain@ff61378f690209c9d98542dbb67ab6cff48d981c`, OWNER CONTROL revision `2026-09-22.15`. The designated partner result actually applied is account02/B12 `QFORM-RELATIVE-NUMERICAL-RANGE-MODE-SHIELD-v1`, canonical report `yspennstate/math-open-problems@572fa1f2bc3b1ab29018a426f414d21dce2b5504`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260924T055637Z-account02-B12-QFORM-auto11/REPORT.md`.
 
 The density receiver used at the end is the completed fifth-volume theorem in `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`: for any actual disjoint ORIGINAL-coordinate cross block `B=A[I,J]`,
 

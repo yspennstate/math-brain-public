@@ -332,6 +332,5 @@ The current correction `QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1
 
 ## 7. Source and verification status
 
-Fresh control was read from `yspennstate/math-research-brain` main with OWNER CONTROL revision `2026-09-22.15`; the full target remains OPEN. The live correction inbox was refreshed before publication. The designated partner theorem was read at its full immutable commit and exact path above.
 
 No source-matching published theorem was found or claimed for this exact curvature-cover splice. Independent review of the new theorem is pending; therefore its status is a supporting theorem, not a fleet-level proved claim and not a full solution.

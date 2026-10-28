@@ -12,7 +12,6 @@ The unrestricted owner target is not proved here. The result below is a determin
 
 ## 1. Fresh sources and exact scope
 
-Prepublication control was refreshed from `yspennstate/math-research-brain@5a2ba1ba8d2970b819061ead95a58c4bb74d6d36`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the full theorem remains open. The live correction inbox at that ref has blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The product-Fourier input is account03/B04 r42,
 

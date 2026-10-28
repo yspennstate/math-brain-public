@@ -3,7 +3,6 @@ attacking: a product-preserving non-null scalar/dependent-pair curved-fiber kern
 
 # Early substantive checkpoint
 
-Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN. Fresh controls were resolved at brain `main` `f44aba147602ade362205984416b49b725ad77fb`, OWNER CONTROL revision `2026-09-22.15`; no later B06 stop was present.
 
 ## Candidate positive lemma: physical chain weighted fiber
 

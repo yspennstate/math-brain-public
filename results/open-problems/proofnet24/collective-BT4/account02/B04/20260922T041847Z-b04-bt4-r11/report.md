@@ -11,7 +11,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 Target: prove that every finite loopless digraph with at most one arc per ordered pair of distinct vertices and minimum outdegree at least seven contains four pairwise vertex-disjoint genuinely directed cycles. Opposite arcs, and therefore digons, are allowed in the source problem.
 
-Fresh owner controls were read from `yspennstate/math-research-brain` at control commit `9344b178083ed82409726542ef94d6e920402ab0`, OWNER CONTROL revision `2026-09-22.2`. The active owner programme is the collective open-problems directive; the older installation/benchmark programme is stopped for this slot.
 
 The external theorem boundary remains unchanged:
 

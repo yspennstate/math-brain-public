@@ -17,7 +17,6 @@ Fresh control was read on `yspennstate/math-research-brain` main. The prewrite c
 
 `d3cdecfa1c922008cf324d5755de69578cebfa74`,
 
-with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target. The proof-first continuation and newest-Claude continuation were also read. The newest synthesis used below is
 
 `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 

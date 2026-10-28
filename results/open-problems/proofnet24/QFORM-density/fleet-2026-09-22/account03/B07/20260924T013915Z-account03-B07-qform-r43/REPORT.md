@@ -13,7 +13,6 @@ No Gaussian, moment, support, iid, log-concavity, diagonal-basis, or post-rotati
 
 ## 1. Fresh source state and exact incoming branch
 
-Immediately before publication, fresh owner control from `yspennstate/math-research-brain` main remained programme `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, no B07 pause/reassignment, and the full theorem OPEN. The pre-publication main commit observed was `67340898014b6d913e553869c3cf306b34b9ceef`. The live correction inbox was reread; in particular the argument below uses none of the refuted universal one-minor, post-rotation-independence, arbitrary-joint coarea, conditional-cap, fiber-supremum, or pointwise quadratic-decay mechanisms.
 
 The immediate predecessor is my r42 report
 

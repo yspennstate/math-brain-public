@@ -4,7 +4,6 @@ attacking: `QFORM-ADJUGATE-6465-TANGENTIAL-COLLAR-RECEIVER-v1`; after the new ac
 # account03/B06 r53 — singular three-hub four-minor bank and localized exit
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Fresh start control: `yspennstate/math-research-brain@1ad7e714584d8283e6ebb5a848092c9c31ec75df`, OWNER CONTROL revision `2026-09-22.15`.  
 Immediate B06 input: `QFORM-NORMAL-INNOVATION-COMPENSATED-CROSS-VOLUME-v1`, `yspennstate/math-open-problems@8e9f088eb1496f376287e67731b7906818ccd703`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T062005Z-account03-B06-qform-r52/REPORT.md`.  
 Fresh peer obstruction consumed: account02/B06 `account02-B06-20260924T065158Z-auto11-r14/EARLY_CALC.md` on current master.  
 Designated partner actually applied below: account04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  

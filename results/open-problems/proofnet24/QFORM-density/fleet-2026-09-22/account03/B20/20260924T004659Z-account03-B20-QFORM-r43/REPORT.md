@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. Continuity is claimed below only on the alread
 
 ## 1. Fresh proof graph and correction boundary
 
-Fresh owner control was resolved at run start from `yspennstate/math-research-brain@3a3de1f6b21fb434a3e9d573e458464b28d34ee8`; before publication it was refreshed to a later main head while OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no B20 pause or target change. The full conjecture remains open.
 
 The live corrections were reread before publication. In particular this run does not use: law-uniform pointwise quadratic-phase decay; the refuted maximal weak-L2 chirp supremum; arbitrary-joint rank-three coarea; worst-fiber projected-density bounds; post-rotation independence; deletion of a small nonzero quadratic/cross tail on unbounded inputs; a one-good-minor inference; or Monte Carlo as proof.
 

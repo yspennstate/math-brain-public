@@ -24,7 +24,6 @@ Before reaching that endpoint, Section 3 removes arbitrary high cross-rank compl
 
 ## 2. Source-pinned completed inputs
 
-Fresh brain control before this run was `math-research-brain@915fc256ee363b302e6acc0ce0c853a92f86c520`, with OWNER CONTROL revision `2026-09-22.15`. The programme claims file still records the unrestricted target as OPEN.
 
 The current predecessor is account02/B08 r25:
 

@@ -21,7 +21,6 @@ This is narrower and more source-valid than the previous interval-width obligati
 
 ## 2. Fresh compatible inputs
 
-Fresh owner control is QFORM-only under OWNER CONTROL revision `2026-09-22.15`; full unrestricted QFORM remains OPEN and continuity remains separate.
 
 The latest completed designated partner is account03/B13 r45, canonical math `a1ccc98be0cd4752de1b2b29e4c46f8193854757`. In the surviving diffuse exact-rank-two chamber it gives
 

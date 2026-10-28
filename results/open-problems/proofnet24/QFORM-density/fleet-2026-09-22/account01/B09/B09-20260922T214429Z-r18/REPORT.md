@@ -9,7 +9,6 @@
 
 The full target remains open: for every independent real coordinate vector with one-dimensional densities bounded by one, and every real symmetric matrix A with `s_3(A)>=1`, prove a universal bound on the density of `X^T A X`, or give a genuine counterexample. No rotated-coordinate independence, moments, support regularity, or pointwise van-der-Corput estimate is used below.
 
-Fresh control was read from `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`. The live correction set includes the failure of law-uniform pointwise quadratic-phase decay, the failure of worst conditional spectral-density caps, and the failure of a universal single Schur-rank-two extraction. The newest designated partner input used below is account02/B09 r9, theorem `QFORM-PAIRLOG-SCHUR-CENTER-v1`, canonical source `yspennstate/math-open-problems@004631a217e4c6b716651d7ac551e035a181cc45`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B09/20260922T204204Z-account02-B09-QFORM-r9/REPORT.md`.
 
 The second source applied is account03/B20 r16, `QFORM-SCHUR-RIDGE-OR-UNIFORM-NEARRANK1-v1`, canonical source `yspennstate/math-open-problems@241e781422352daf5ca803898f1e2d20f4dfda8e`, whose unpaid survivor satisfies a quantitative all-cut near-rank-one condition and the approximate tetrads recorded below.
 

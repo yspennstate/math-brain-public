@@ -34,7 +34,6 @@ This run proves an exact Schur-star ledger, shows that `H` can vanish or tend to
 
 ## 2. Sources actually consumed
 
-Fresh owner control remains QFORM-only, programme revision `2026-09-22.5`, OWNER CONTROL revision `2026-09-22.15`, with no later B09 pause or reassignment observed before the mathematical writes.
 
 The required fixed source was reread at
 

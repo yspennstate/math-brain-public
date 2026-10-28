@@ -32,7 +32,6 @@ The secondary entangled carrier is now two powers of `rho` below unit scale; the
 
 ## 2. Fresh compatible inputs
 
-Fresh brain-main control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`, with no account02/B13 stop. The full theorem and full-target continuity remain open.
 
 The newest completed designated-partner result is account03/B13 r48:
 

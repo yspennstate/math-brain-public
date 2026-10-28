@@ -281,7 +281,6 @@ This run proves an essentially bounded density only through the cited five-squar
 
 ## 8. Source pins
 
-Control repository: `yspennstate/math-research-brain`, branch `main`; startup control head observed at `664bfdb0433fbf565f817d7fafa439fb39dd9e6b`, later refreshed before publication. OWNER CONTROL revision remained `2026-09-22.15`; programme revision remained `2026-09-22.5`.
 
 Partner mathematics applied: `yspennstate/math-open-problems@3e7c3dea777f9cfbae2d6311372daf447bd01ef0`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B12/20260924T075526Z-account02-B12-r11/REPORT.md`.
 

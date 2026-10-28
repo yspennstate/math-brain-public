@@ -6,7 +6,6 @@ attacking: aggregate coordinate-minor payment: convert determinant-weighted thir
 **Programme:** QFORM-DENSITY-3EIG-20260922  
 **Run:** 20260922T203121Z-account02-B07-QFORM-4f9c2e  
 **Assignment:** Coordinate minor selection / complementary constructions and source-valid counterexamples  
-**Control at start:** math-research-brain main e56fb0b7356cd84241c8cfe8ca1921a13f9be4f8, OWNER CONTROL revision 2026-09-22.15.  
 **Execution:** WITHOUT_VERIFIED_BRAIN.  
 **Classification:** ESSENTIAL_STEP_APPLIED; full QFORM OPEN.
 

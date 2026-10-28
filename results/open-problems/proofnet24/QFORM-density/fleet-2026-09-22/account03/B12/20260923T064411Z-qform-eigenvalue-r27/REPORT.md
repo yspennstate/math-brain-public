@@ -13,7 +13,6 @@ Execution: WITHOUT_VERIFIED_BRAIN
 
 Let X=(X_1,...,X_n) have independent real coordinates with probability densities bounded by one, and let A=A^T. No moment, support, Gaussian, log-concavity, identical-law, or post-rotation independence hypothesis is used.
 
-Fresh owner/control source was read from yspennstate/math-research-brain main at d44625c5e1da67c6dac43092f611e6ed0c9624ba before this run's first write; OWNER CONTROL revision 2026-09-22.15 and programme revision 2026-09-22.5 remained active. The live correction boundary includes the false pointwise van-der-Corput shortcut, false arbitrary-joint coarea, false naive fiber-sup interface, and false universal-good-minor reductions.
 
 The designated partner result actually applied below is:
 

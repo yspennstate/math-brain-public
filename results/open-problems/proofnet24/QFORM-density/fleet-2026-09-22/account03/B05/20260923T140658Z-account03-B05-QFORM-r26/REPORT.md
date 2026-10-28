@@ -5,7 +5,6 @@ attacking: QFORM-PRODUCT-PROJECTION-CURVED-SHELL-EXCLUSION-v1 — test the first
 
 **Programme:** QFORM-DENSITY-3EIG-20260922.  
 **Assignment:** quadratic coarea bound.  
-**Fresh control source:** `yspennstate/math-research-brain@6f54c228609a81448c8e00325ed7972f32240a05`, OWNER CONTROL revision `2026-09-22.15`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; repository retrieval is not native learned-memory ingestion.  
 **Status:** rigorous target-valid obstruction to a conditional coarea proof interface; full QFORM remains OPEN / NOT PROVED / NOT DISPROVED.  
 **Continuity:** not proved for the full target.
@@ -234,7 +233,6 @@ Thus the conditional-cap moment in (4.4) diverges while the actual target-valid 
 
 The completed partner result
 
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account04/B05/20260923T041255Z-account04-B05-dominant-slope-r2.md`
 
 proves
 

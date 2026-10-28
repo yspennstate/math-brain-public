@@ -564,7 +564,6 @@ The complementary convex/two-sheet contribution and higher-rank diffuse/no-good-
 
 ## 14. Source discipline
 
-Fresh owner programme: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`.
 
 Required source actually read: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, all three named files.
 

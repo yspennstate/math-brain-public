@@ -13,7 +13,6 @@ No Gaussian, moment, support, iid, log-concavity, diagonal-basis, post-rotation-
 
 ## 1. Fresh source state and incoming branch
 
-Fresh owner control on `yspennstate/math-research-brain` remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The full theorem and full-target continuity remain OPEN. The live correction inbox was reread. In particular this run does not use the refuted universal one-good-minor, arbitrary-joint coarea, independence-after-rotation, fiber-supremum, conditional-cap, or pointwise quadratic-phase decay mechanisms.
 
 Immediate predecessor:
 

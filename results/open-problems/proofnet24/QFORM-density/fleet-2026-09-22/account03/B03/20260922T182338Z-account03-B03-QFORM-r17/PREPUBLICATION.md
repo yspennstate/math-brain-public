@@ -1,6 +1,5 @@
 # Pre-publication refresh
 
-Fresh `yspennstate/math-research-brain/main` observed at `ad51381a74a0ce00cf33b5aeb38489e440a47634` after the mathematical report was written. The OWNER CONTROL remains revision `2026-09-22.11`, fleet enabled, active programme `QFORM-DENSITY-3EIG-20260922`, sole QFORM target; no later owner/platform stop was observed.
 
 The live correction inbox was re-read. The theorem in `REPORT.md` does not use the false arbitrary-joint coarea gate, false positive conditional projection-density moment, false post-decoupling conditional cap, false law-uniform pointwise Fresnel decay, false fixed local cross-rank-three dichotomy, or absolute Wiener/L1 route. The fresh account02/B03 run `20260922T182232Z-account02-B03-QFORM-r12` was also consumed: its finite-coordinate Tonelli/Holder/Plancherel fragmentation obstruction is compatible with and motivates the bank-before-absolute-value regularized-determinant splice proved here.
 

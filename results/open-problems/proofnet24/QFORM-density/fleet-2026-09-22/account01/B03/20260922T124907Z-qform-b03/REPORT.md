@@ -10,7 +10,6 @@
 
 The full target remains open: for every dimension, independent real coordinates with probability densities bounded by one, and every real symmetric matrix `A` with at least three eigenvalues of absolute value at least one, prove one universal finite `L^infinity` bound for the density of `Q=X^T A X`, or give a genuine counterexample. Continuity is a separate desired conclusion.
 
-Fresh source control before this report was `yspennstate/math-research-brain@311426c5f818721df4dfc8c091571d985da147e5`, OWNER CONTROL revision `2026-09-22.5`. The live correction inbox includes:
 
 - `QFORM-CROSSMINOR-ALONE-FALSE`: rank two cannot be promoted directly to `L^infinity` under arbitrary same-side curvature;
 - `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`;

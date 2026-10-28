@@ -6,7 +6,6 @@
 
 ## 1. Fresh control and why this is the live target
 
-Fresh `math-research-brain` main was resolved at invocation start, and `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, and `scheduled_tasks/PROTOCOL.md` including the OWNER MESSAGE were read. The active OWNER CONTROL is revision `2026-09-22.2`: B12--B18 remain on FEI, but the later all-gate/full-proof convergence directive supersedes incompatible older Campaign-C compiler wording. Thus the old signed-current NET route is not reopened here.
 
 Fresh `math-open-problems` master and `proofnet24/P03-fei/README.md` were also read. Full FEI remains open. The exact current all-gate formulation is the gate inequality
 \[

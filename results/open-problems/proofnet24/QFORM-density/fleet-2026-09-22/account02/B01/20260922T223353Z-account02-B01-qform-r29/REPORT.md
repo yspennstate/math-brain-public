@@ -9,7 +9,6 @@ Status: `ESSENTIAL_STEP_APPLIED / EXPLICIT_INTERMEDIATE_FALSIFIER / FULL_TARGET_
 
 The target is unchanged: for every `n`, independent real `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite essential-supremum bound, or give a target-valid counterexample.
 
-Fresh startup control was `yspennstate/math-research-brain@82521c4e42d1f353c9ee1aaa5e4b61d7097ad8f3`; the prepublication refresh was `3f72c7506277515478cac4df56974a31e9f829e1`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no B01 stop. The live corrections consumed include the false law-uniform pointwise Fresnel decay, false post-rotation independence, false arbitrary-joint rank-three coarea estimate, false positive conditional-projection-height moment, and the existing fixed-minor/fiber-supremum obstructions.
 
 The mandatory phase-aligned-density refutation remains in force: for any nonzero `s` and small `delta`, a cap-one density supported on a measure-one subset of `{x:dist(sx^2,2pi Z)<=delta}` has `Re E exp(i sX^2)>=cos(delta)`. Nothing below uses pointwise `|s|^{-1/2}` decay.
 

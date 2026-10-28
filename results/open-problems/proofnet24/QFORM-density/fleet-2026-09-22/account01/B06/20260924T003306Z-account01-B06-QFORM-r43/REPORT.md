@@ -18,7 +18,6 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, iid, 
 
 ## 1. Fresh source boundary and premises
 
-Fresh `math-research-brain/main` was reread before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account01/B06 pause/stop. `CURRENT_RESEARCH.md` and `CLAIMS.json` still mark the full theorem and global continuity as OPEN. The live correction inbox was refreshed. In particular this report does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint 3D coarea, positive moments of worst conditional projection caps, post-rotation independence, unrestricted fiber suprema, single-minor inversion from aggregate mass, or any abstract `H_(1/2) -> L^infinity` upgrade.
 
 The current UTC hour already contained this slot's canonical login from r42, so it was not overwritten; the protocol explicitly requires noting the existing same-hour login rather than fabricating a second one. A unique r43 start record was created separately.
 

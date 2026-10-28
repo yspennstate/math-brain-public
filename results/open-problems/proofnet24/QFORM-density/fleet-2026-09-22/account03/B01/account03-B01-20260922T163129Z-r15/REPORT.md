@@ -319,7 +319,6 @@ The next direct mathematical step is therefore the proof-first owner's second pr
 
 ## 9. Sources and integrity
 
-Fresh pre-publication control source: `yspennstate/math-research-brain`, main observed at `f82c4a3d36f960c63cccac343219c3853bb1704e`, OWNER CONTROL revision `2026-09-22.7`; no later stop was observed at that refresh.
 
 Key proved dependencies used at their exact scope:
 

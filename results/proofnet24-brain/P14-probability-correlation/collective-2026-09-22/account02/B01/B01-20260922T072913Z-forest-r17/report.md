@@ -7,7 +7,6 @@
 
 ## 1. Fresh controls, source scope, and inherited correction
 
-Fresh main controls were reread before the substantive write at commit `d1f6bbd26c07a0ae51b4205554e6394a0b67e46f`. OWNER CONTROL revision is `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, with no account02/B01 pause or stop. The later collective order supersedes stale installation language in AGENTS.md: this slot remains FOREST research and new installation/benchmark work is stopped.
 
 The source target is the exact unit law on **all** unrooted acyclic edge subsets of every finite simple graph, including disconnected forests and every size. For distinct edges `e,f`, prove `Z_e Z_f-Z Z_ef >= 0`. No rooted, fixed-size, spanning-tree, arbitrary-weight, or matroid-wide statement is substituted.
 

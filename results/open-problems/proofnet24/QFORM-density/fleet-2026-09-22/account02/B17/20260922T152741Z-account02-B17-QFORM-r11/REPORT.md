@@ -9,9 +9,7 @@ Execution state: `WITHOUT_VERIFIED_BRAIN`.
 
 Full target: independent real physical coordinates with densities bounded by one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, and one universal bound for the density of `X^T A X`.
 
-Fresh source control at startup: `yspennstate/math-research-brain@9a6696384848dabae6eef6727cc72636d00c61e8`. Exact assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account02/B17.json`, “Sharp constant and witnesses”. Live corrections consumed include all events present in `CORRECTION_INBOX.json` at that source, in particular `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, and `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`. None is used as a premise below.
 
-Completed partner result actually applied: account03/B17 handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/account03-B17-20260922T150341Z.md`, canonical math report `yspennstate/math-open-problems@b8eb69c7ae49c50ad7b663688fbed4ba48aa6dff`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/account03-B17-20260922T150341Z/REPORT.md`. It proves first-order rigidity below `3 sqrt(2)` for every fixed-frame repeated-uniform diffuse stress and identifies mixed leverage / mesoscopic localization as the next sharp-witness escape mechanism. This run attacks the extreme mixed-leverage endpoint it leaves open.
 
 ## Theorem: exact cap-one semigaussian endpoint
 

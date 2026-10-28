@@ -13,7 +13,6 @@ attacking: heat-scale Dini/Cauchy closure — separate bounded height from conti
 
 The unrestricted QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. This report supplies a regularity/trace compiler for any new height estimate and applies it quantitatively to the current three-volume branch. It does not assume Gaussian, log-concave, moment-bounded, compact, connected, or post-rotation independent inputs.
 
-Fresh brain control at publication preparation was `yspennstate/math-research-brain@cc8bc05b80f7be9c60f791f03b701b358cafd6aa`, OWNER CONTROL revision `2026-09-22.15`. The live correction inbox at that commit has blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`; in particular this report does not use the refuted arbitrary-joint rank-three coarea bound, law-uniform pointwise quadratic-phase decay, a worst-fiber density supremum, or independence after a spectral rotation.
 
 The newest volume theorem actually used below is
 

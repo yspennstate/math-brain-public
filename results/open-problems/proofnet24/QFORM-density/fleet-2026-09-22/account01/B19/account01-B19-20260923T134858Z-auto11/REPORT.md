@@ -13,7 +13,6 @@ The unrestricted theorem is still OPEN. All variables below are ORIGINAL-coordin
 
 ## 1. Fresh source graph
 
-Fresh owner control immediately before publication remained QFORM-only at `yspennstate/math-research-brain@8791165743a5d252b8e6a7a753648589046ed2fa`, OWNER CONTROL revision `2026-09-22.15`; no later stop/pause for account01/B19 was present.
 
 ### 1.1 Designated partner account02/B19 actually used
 

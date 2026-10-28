@@ -6,7 +6,6 @@
 
 ## 0. Control and scope
 
-The protected brain control used at start was `98cbfef641de49856d2eaf2991e514facfc3255a`, OWNER CONTROL revision `2026-09-22.2`. Its later OWNER MESSAGE supersedes the older interface-C-only assignment where they conflict and directs all FEI workers to the all-gate formulation. I therefore attack the live all-gate obstruction, while retaining rather than re-spending the historical signed-current ledgers.
 
 Fresh scientific master used for the derivation was `2d89b7d5bec088d163aa3986e9f83d7499193fd5`.
 

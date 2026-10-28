@@ -23,7 +23,6 @@ of measure one is an admissible cap-one density and satisfies
 
 Hence no law-uniform scalar pointwise estimate `|E exp(itX^2)| <= C|t|^{-1/2}` is used or recovered. The mechanism below instead couples a scalar `L^4(dt)` budget to a critical two-dimensional `|t|^{-1}` Plancherel factor.
 
-Fresh control at run start was `math-research-brain/main` with OWNER CONTROL revision `2026-09-22.15`, QFORM-only, and owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; the full theorem was explicitly OPEN. Live corrections were consumed: arbitrary-joint coarea is not used, conditional projected-density caps are not assumed, and no rotated coordinate is declared independent.
 
 Two source results are used at equations:
 

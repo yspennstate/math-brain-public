@@ -12,7 +12,6 @@ The full target remains open. This report proves a new dimension-free compositio
 
 ## 1. Exact source dependencies
 
-Fresh control at the beginning of the run was `yspennstate/math-research-brain@e32f0a7869f892f268455300b2eb02b5e1900d21`; a prepublication refresh reached `a94dcdc9a270df65a05879c412b34d4f58586413`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only.
 
 The exact partner theorem used below is account02/B06 `QFORM-ONE-SIDED-RANK2-CROSS-SMOOTHER-v1`, canonical report
 

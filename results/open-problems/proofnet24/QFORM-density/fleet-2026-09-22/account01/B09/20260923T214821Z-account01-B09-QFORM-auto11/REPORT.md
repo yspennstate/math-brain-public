@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN / not proved / not disproved. Full-targ
 
 ## 1. Source-pinned inputs and correction boundary
 
-Fresh `math-research-brain/main` was resolved at startup to `a549254d4fb822d38ff43aa12918da9d6e9576e8` and at the prepublication refresh to `03c4985213eb2ba64579a4dea76e8068766549f5`. The current README still carries OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, and no pause for account01/B09. The live `CLAIMS.json` still records `QFORM-FULL` and full-target continuity as OPEN.
 
 The following completed results are used at their exact scopes.
 

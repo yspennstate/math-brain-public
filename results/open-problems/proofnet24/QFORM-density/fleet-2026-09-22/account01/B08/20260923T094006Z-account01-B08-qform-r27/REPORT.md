@@ -3,7 +3,6 @@ attacking: a wide two-eigenvalue diffuse half-Riesz window, then apply it to the
 
 # account01/B08 r27 — wide two-eigenvalue half-Riesz window and mixed-hybrid router
 
-Programme `QFORM-DENSITY-3EIG-20260922`; OWNER CONTROL revision `2026-09-22.15`.
 
 Status: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_ANALYTIC THEOREM / DESIGNATED PARTNER APPLIED / FULL TARGET OPEN**.
 

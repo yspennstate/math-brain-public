@@ -12,7 +12,6 @@ Independent end-to-end review: **not supplied**.
 
 ## 1. Fresh source boundary and the first unpaid implication
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at the beginning of the invocation and refreshed again before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no pause or stop for account02/B01. The canonical actual-hour login already existed and was left untouched; this invocation uses a new immutable start/finish pair.
 
 The target remains the unrestricted statement: independent original-coordinate real variables with probability densities bounded by one; arbitrary real symmetric `A`; at least three eigenvalues of `A` of modulus at least one; prove one universal bound for the essential supremum of the density of `X^T A X`, or give a valid counterexample. No moment, support, Gaussian, log-concavity, connected-support, diagonal-basis or post-rotation-independence assumption is added. Continuity is separate.
 

@@ -4,7 +4,6 @@ attacking: overlapping third-resource localization after the zero-loss connected
 # account03/B14 — smooth connected support does not repair the interval-only rough-hub receiver
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control refresh before publication:** `yspennstate/math-research-brain@becd0de177e4136fabb281389aceec62fc86c693`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no paused account03/B14 slot.  
 **Run:** `20260923T233929Z-account03-B14-QFORM-auto11`  
 **Status:** `RIGOROUS COUNTEREXAMPLE TO AN INTERMEDIATE LOCALIZATION INTERFACE / PARTNER TARGET BRANCH APPLIED / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  

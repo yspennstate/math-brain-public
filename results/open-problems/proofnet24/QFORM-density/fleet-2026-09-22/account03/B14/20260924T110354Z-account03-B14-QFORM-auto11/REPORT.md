@@ -5,7 +5,6 @@ attacking: prove the maximal zero-loss translation-localization lemma and isolat
 
 Run: `20260924T110354Z-account03-B14-QFORM-auto11`.
 Programme: `QFORM-DENSITY-3EIG-20260922`.
-Fresh control read before publication: `yspennstate/math-research-brain@7b7d3a07b929a1935d45bbbccde70ba7968d4ccd`, OWNER CONTROL revision `2026-09-22.15`.
 Status: **SUPPORTING LOCALIZATION THEOREM + RIGOROUS NO-GO FOR TRANSLATION-ONLY CURVATURE REPAIR / PARTNER RESULT APPLIED / FULL QFORM OPEN**.
 Execution label: `WITHOUT_VERIFIED_BRAIN`.
 

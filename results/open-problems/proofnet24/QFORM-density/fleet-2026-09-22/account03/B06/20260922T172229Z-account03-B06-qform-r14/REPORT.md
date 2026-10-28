@@ -8,7 +8,6 @@
 
 ## 0. Fresh control, scope, and dependencies
 
-Fresh `main` control was read from `yspennstate/math-research-brain@7616d5e069b312c428e179da7d6549210f01cc42` at startup and refreshed before publication at `c639bcc078717be24746e44827785eceeaaf90f0`. The active OWNER CONTROL is revision `2026-09-22.8`; QFORM remains the sole research target and account03/B06 remains `Curved fiber integration`. The full target is unchanged: independent real physical coordinates with densities bounded by one, and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one; prove a universal essential-density bound or give a valid counterexample. Continuity is a separate desired conclusion.
 
 The live correction inbox was reread before publication. This report does **not** use law-uniform pointwise quadratic oscillatory decay, independence after spectral rotation, an unrestricted fiber supremum, a generic X-ray bound, a conditional-density surrogate for independence, or the existence of one uniformly good physical triple. In particular it responds directly to the corrections showing that reciprocal local minors can lose powers of dimension and that product aggregation must occur before or jointly with the curved trace.
 

@@ -7,7 +7,6 @@ attacking: multiscale fragmented three-bank witnesses beyond the Gaussian ceilin
 
 This report proves a new supporting sharp-witness theorem.  It does **not** prove the full arbitrary-input QFORM conjecture.  The unrestricted universal density upper bound and the full-target continuity conclusion remain open.
 
-Fresh control before publication: `yspennstate/math-research-brain` main `8ea10f660e25d4525dd6b205128f1f075c511650`, OWNER CONTROL revision `2026-09-22.15`, owner README blob `fca13a89d221115332ce5e60d49554ee0e213efa`, correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.  The live corrections were consumed.  In particular, no uniform pointwise van-der-Corput decay, arbitrary-joint coarea bound, post-rotation independence, conditional projection positive-moment bound, fixed fragment-count extremality, or single-minor principle is used.
 
 The designated completed partner result actually used is account04/B17:
 

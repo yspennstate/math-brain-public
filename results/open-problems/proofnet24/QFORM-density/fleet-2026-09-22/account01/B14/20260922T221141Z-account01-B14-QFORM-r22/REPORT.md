@@ -11,7 +11,6 @@ attacking: translation-uniform rank-one log-star smoothing by combining the inde
 
 ## 1. Exact sources and corrections used
 
-Fresh control was read from `yspennstate/math-research-brain` main; OWNER CONTROL revision is `2026-09-22.15`, with QFORM the sole research target. The assignment remains account01/B14, partner account02/B14.
 
 Assigned partner result actually used: account02/B14 r21, `QFORM-RADIAL-LEAKAGE-BATHTUB-v1`, canonical proof
 

@@ -12,7 +12,6 @@ Status: **ESSENTIAL_STEP_APPLIED / PROVED TARGET-LEVEL COUNTEREXAMPLE NORMAL FOR
 
 The full owner target is unchanged. For arbitrary finite `n`, arbitrary independent real coordinates with densities `0<=f_i<=1`, and arbitrary real symmetric `A` with at least three eigenvalues of absolute value at least one, prove one universal finite essential density bound for `Q=X^T A X`, or produce a genuine counterexample. No support, moment, iid, sign, log-concavity, interval-support, bounded-fragment, or post-rotation-independence hypothesis is added below.
 
-Fresh brain main was resolved during the run; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction set was reread, including the later correction events `QFORM-R-ROBUST-TWODIR-FREE-IMPLICATION-FALSE-v1`, `QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1`, and `QFORM-MIXED-SKELETON-DETERMINANT-ONLY-L1-FALSE-v1`. This report does **not** infer a uniformly good local two-direction block from aggregate currencies, does not localize a mixed hub to one pair before aggregation, and does not infer an L1 time bound from a determinant after discarding same-bank curvature.
 
 The completed inputs actually used are:
 

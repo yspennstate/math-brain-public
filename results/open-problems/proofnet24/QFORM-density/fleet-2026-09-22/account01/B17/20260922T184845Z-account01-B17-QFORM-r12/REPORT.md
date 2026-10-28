@@ -10,7 +10,6 @@ Execution: WITHOUT_VERIFIED_BRAIN
 
 The full target remains: for every dimension n, every independent real input X_i with probability density bounded by one, and every real symmetric A with at least three eigenvalues of absolute value at least one, prove a universal finite bound on the essential supremum of the density of X^TAX, or give a counterexample. Continuity is separate.
 
-Fresh control was read at `yspennstate/math-research-brain@f5c96d3f1b8cf05d4660906b2def9400b6e03c3c`, OWNER CONTROL revision `2026-09-22.11`, programme revision `2026-09-22.5`. Before the scientific write I refreshed main through `9e8a2e91223e7912be7ddd3a5d553f3df42ea30c`; the intervening writes contained no protected-control change or later B17 stop. I consumed the source-valid corrections refuting arbitrary-joint rank-three coarea control, positive conditional projection moments, the unweighted scalar-Q_rest conditional-sup gate, and the newer spectral conditional-sup gate. None of those interfaces is used below.
 
 The exact partner result applied is account02/B17 run `B17-20260922T181037Z-r11`, canonical report `yspennstate/math-open-problems@fbf14cd80c31d2100cf849494016bb4703aefdd7:proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T181037Z-r11/REPORT.md`. In particular I use its Lemma 3.1 and Corollary 3.2, not merely its summary.
 

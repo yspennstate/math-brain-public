@@ -13,7 +13,6 @@ No moment, compact-support, log-concavity, connected-support, diagonal-basis, po
 
 ## 1. Fresh source state and first unpaid implication
 
-Fresh brain control was resolved at `math-research-brain@ffaa62dd3b3d172fcc95d5c2d8bdbcf8d4817837` and refreshed again before this report. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no stop for account02/B13. The full target remains OPEN.
 
 The latest completed compatible designated-partner result at the refresh is account03/B13 r44:
 

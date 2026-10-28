@@ -18,7 +18,6 @@ The owner target is unchanged: for arbitrary independent real coordinates with p
 
 in the essential sense for one universal finite `C`, or give a valid target counterexample.
 
-Fresh control was read from `yspennstate/math-research-brain` main; the final pre-report refresh resolved main at `be22efbf66328899b6017e13269c70cb71dbf9a7`, with OWNER CONTROL revision `2026-09-22.15` and no later B15 stop. The live correction set was retained: no law-uniform pointwise quadratic Fourier decay, no post-rotation independence, no arbitrary-joint rank-three coarea height bound, no projection/X-ray-only payment of the two-sheet branch, and no uniform small-matrix perturbation claim for arbitrary unbounded product sources.
 
 Two completed sources are applied below rather than merely cited.
 

@@ -9,7 +9,6 @@ Run: `20260923T151555Z-account01-B12-QFORM-auto11`
 Status: **PROVED SUPPORTING STABILITY THEOREM / FULL QFORM OPEN**  
 Continuity: **not claimed for this theorem as a whole**. The designated partner's D5 exit gives continuity; its physical-core/pair exits give essential boundedness only.
 
-Fresh control immediately before publication retained OWNER CONTROL revision `2026-09-22.15`; fresh main was observed at `24f75537c3e283f33de7c532409d3404b04daa67`. The live correction inbox was reread. In particular, no post-rotation independence, arbitrary-joint coarea, fiber-sup, pointwise van-der-Corput, or small-random-error assertion is used below.
 
 ## 1. First essential missing implication attacked
 
@@ -303,7 +302,6 @@ So the result here settles a real **additional-eigenvalue bookkeeping problem** 
 
 ## 8. Sources and review status
 
-Current control and proof-first source: `yspennstate/math-research-brain`, main observed at `24f75537c3e283f33de7c532409d3404b04daa67`, OWNER CONTROL `2026-09-22.15`.
 
 Designated partner actually applied:
 

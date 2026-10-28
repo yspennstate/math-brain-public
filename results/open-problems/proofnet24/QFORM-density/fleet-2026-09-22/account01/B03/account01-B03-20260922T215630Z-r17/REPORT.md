@@ -8,7 +8,6 @@ Assignment: `Decoupled time integral`
 Classification: **ESSENTIAL_STEP_APPLIED / SUPPORTING_THEOREM_PROVED / FULL_TARGET_OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control at start: `yspennstate/math-research-brain@0c1cc679366558c072955ef13ff16d7556adab23`; OWNER CONTROL revision `2026-09-22.15`. The full target remains the unrestricted product-input quadratic-form density conjecture. No post-rotation independence, moment hypothesis, support hypothesis, pointwise Fresnel estimate, arbitrary-joint coarea lemma, or conditional sum/difference cap is used below.
 
 ## 1. Partner result actually applied
 

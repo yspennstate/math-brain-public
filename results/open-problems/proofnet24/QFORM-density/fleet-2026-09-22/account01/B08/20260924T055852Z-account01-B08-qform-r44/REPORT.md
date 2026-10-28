@@ -14,7 +14,6 @@ The canonical same-hour B08 login had already been created by the immediately pr
 
 ## 1. Fresh source boundary and dependencies
 
-Fresh `math-research-brain` main was read before the mathematics. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live `CORRECTION_INBOX.json` and the programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B08.json` were reread. In particular the full claim is still OPEN.
 
 The immediate B08 predecessor is
 

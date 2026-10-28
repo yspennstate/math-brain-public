@@ -12,7 +12,6 @@ The full arbitrary exact-rank-three theorem and the owner-level three-large-eige
 
 ## 1. Source state and inherited hard chamber
 
-Fresh control source: `yspennstate/math-research-brain@63c79bd8f5831cb7523e01fc6e2f2173b7f51f3b`, OWNER CONTROL revision `2026-09-22.15`. The current programme state still records the full conjecture as open. The live corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, the false arbitrary-joint coarea gate, the false positive conditional-projection-moment gate, and `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`.
 
 Use the exact-rank-three representation
 

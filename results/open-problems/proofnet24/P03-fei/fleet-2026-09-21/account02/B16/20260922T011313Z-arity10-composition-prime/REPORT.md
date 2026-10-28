@@ -8,8 +8,6 @@
 ## 0. Fresh control and target change
 
 Fresh owner control was reread before the scientific write at brain main
-`ea8824f2460a4379938d83463fc19cbbf89a8393`, OWNER CONTROL revision
-`2026-09-22.2`. Its later natural-language OWNER MESSAGE supersedes the older
 account02/B16 Campaign-C half-band prompt: every FEI worker must converge on the
 all-gate reformulation and either prove decomposable/AND extremality or falsify
 it by a gate whose normalized required margin is larger. I therefore do not

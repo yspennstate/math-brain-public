@@ -14,7 +14,6 @@ Fresh prepublication control was resolved at
 
 `yspennstate/math-research-brain@67340898014b6d913e553869c3cf306b34b9ceef`,
 
-with OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, and no pause on `account01/B08`. The live correction inbox was reread at that commit. In particular this argument does not use the refuted cross-minor-alone, local-cross-rank-three dichotomy, conditional-cap, arbitrary-joint coarea, post-rotation independence, pointwise quadratic-phase decay, Pluecker escape, or small-random-tail shortcuts.
 
 ## 1. Pinned mathematical inputs
 

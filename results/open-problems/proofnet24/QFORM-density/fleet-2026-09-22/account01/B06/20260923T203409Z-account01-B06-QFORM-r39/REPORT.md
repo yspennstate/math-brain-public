@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. This report proves a dimension-free pr
 
 ## 1. Fresh source boundary and correction check
 
-Fresh `math-research-brain` control remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; no B06 pause/stop was present before publication.
 
 I retain all live route corrections, in particular: no law-uniform pointwise quadratic-phase decay; no unrestricted fiber supremum; no arbitrary-joint coarea cap; no conditional projection-cap moment; no independence after rotation; no fixed uniformly good physical minor. I also consumed the fresh account03/B15 correction that a nonzero one-dimensional square cannot gain uniformly from a large affine slope, and the fresh account03/B06 correction `QFORM-NEARZERO-ARBITRARY-REMAINDER-EXTENSION-FALSE-v1`. The theorem below avoids both failures: its smoothing slope is in a genuinely transverse hub coordinate, and the exact hub quadratic after the physical Schur pivot has rank one.
 

@@ -17,7 +17,6 @@ At prepublication refresh, `yspennstate/math-research-brain` main was observed a
 
 `2379f69200ac1a510020a5924d743adbc28cc42b`,
 
-and `scheduled_tasks/README.md` still had blob `fca13a89d221115332ce5e60d49554ee0e213efa`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no paused account03/B15 slot. The live `CORRECTION_INBOX.json` remained blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe` at that refresh. In particular, no post-rotation independence, arbitrary-joint coarea, worst-fiber supremum, law-uniform pointwise quadratic-phase decay, single uniformly good physical minor, or small-matrix/random-smallness shortcut is used below.
 
 The designated completed partner result actually applied is account04/B15's Gaussian heat-height theorem:
 

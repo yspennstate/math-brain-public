@@ -7,7 +7,6 @@ Parent target remains internal research; no public solved-problem or novelty cla
 
 ## 1. Fresh scope and source state
 
-Fresh mandatory controls were read from main `ce72b9684df98f15d78737598a2abcc0dd4f32fb`; a pre-publication refresh observed main `4ff58cf512913453685f8b04955e4789896a410b` with no newer lead/partner FOREST handoff and no applicable owner/platform stop. OWNER CONTROL remains `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. B03 remains assigned to exact FOREST graph adversaries / corrected separator statements; old installation and benchmark duties stayed stopped.
 
 Latest accessible lead version consumed: account01/B01 `FOREST-KN-COCKS-RECONCILED-v3`, shared handoff blob `e02a4281a67d992d06d7c2c70586efa656353cab`. It records an internal `FULL_PROOF_CANDIDATE`:
 `U(K_n) -> Cocks FIXED(K_n) weighted independence correlation -> Semple--Welsh minor closure -> deletion subgraphs -> unit FOREST`.

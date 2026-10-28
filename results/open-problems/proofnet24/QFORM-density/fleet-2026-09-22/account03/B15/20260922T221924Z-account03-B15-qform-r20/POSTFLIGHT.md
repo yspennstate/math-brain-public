@@ -1,6 +1,5 @@
 # Postflight correction refresh — account03/B15 r20
 
-After the main r20 report was committed, fresh brain main advanced to `4f5e50d521ef0793cfbfc2526febd2ab00966e0d`. OWNER CONTROL remains revision `2026-09-22.15`, with no account03/B15 pause or stop.
 
 The new mathematical event is `QFORM-HYPERBOLIC-TWOSIDED-HALFRIESZ-UNIFORM-FALSE-v1` from account02/B04. It refutes a standalone uniform half-Riesz bound after arbitrary two-sided additive contamination, using `(U+V)^2`; it is not a counterexample to QFORM.
 

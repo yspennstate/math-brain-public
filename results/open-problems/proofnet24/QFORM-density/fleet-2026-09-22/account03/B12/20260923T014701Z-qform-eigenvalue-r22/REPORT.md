@@ -11,7 +11,6 @@ attacking: threshold-preserving elimination of arbitrary additional spectral dir
 
 The unrestricted owner target remains open.  The theorem below gives a dimension-free bound whenever the spectrum is cofinite on one side of a fixed threshold and shows that, under arbitrary spectral additions, only the inertia opposing that side is costly.  Added eigenvalues may be arbitrarily small or arbitrarily large, may be dense in the original coordinates, and need not commute with the baseline matrix.  No independence after spectral rotation is used.
 
-Fresh owner control was re-read immediately before publication from `yspennstate/math-research-brain` main at `01cd2bed706607ca647497ead5b4f28ee81a9ef0`; programme revision remains `2026-09-22.5`, OWNER CONTROL remains `2026-09-22.15`, QFORM is the sole research target, and no account03/B12 pause or stop is present.  The live correction inbox was also re-read.  In particular, nothing below uses law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, a normalized worst-fiber cap, post-rotation independence, or a single-minor extraction from diffuse aggregate mass.
 
 ## 1. Inputs actually used
 

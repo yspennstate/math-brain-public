@@ -19,7 +19,6 @@ Fresh owner control was resolved from `yspennstate/math-research-brain` main at 
 
 `40024d459ee9559e24841ef53535df834761c6d9`.
 
-OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and account03/B09 is not paused. I consumed the current `AGENTS.md`, `scheduled_tasks/README.md` including the OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, account03/B09's assignment card, and the continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The relevant mathematical inputs are:
 

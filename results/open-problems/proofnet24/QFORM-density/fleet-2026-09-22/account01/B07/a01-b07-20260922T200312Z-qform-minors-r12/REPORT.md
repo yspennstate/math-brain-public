@@ -6,7 +6,6 @@ attacking: coordinate-minor selection by an exact fixed-pair Schur/exterior hier
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** coordinate minor selection  
 **Run:** `a01-b07-20260922T200312Z-qform-minors-r12`  
-**Control used at start:** OWNER CONTROL revision `2026-09-22.15`; full QFORM remains the sole target.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING_STRUCTURAL_THEOREM_PROVED / FULL_TARGET_OPEN`.
 

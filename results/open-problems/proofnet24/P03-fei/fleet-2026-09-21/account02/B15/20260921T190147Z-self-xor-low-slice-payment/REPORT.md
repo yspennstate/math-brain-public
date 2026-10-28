@@ -8,7 +8,6 @@ TASK: B15 ACCOUNT: account02 RUN: 2026-09-21T19:01:47.792390Z — FEI spectral r
 
 ## 0. Fresh state and mandatory pivot
 
-The authenticated fleet control read for this invocation was `yspennstate/math-research-brain` main `b36fd376b482ecb59af433ca4f8d66530a5c7d50`, OWNER CONTROL revision `2026-09-21.1`; a concurrent operational write advanced main after the read, and control is rechecked before final delivery. The protected README Git blob on the inspected control snapshot was `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`. The live direct order is `FEI-FULL-PROOF-PROGRESS-2026-09-21-174421Z`: B12--B18 are FEI tasks and B15 is the spectral-remainder slot.
 
 Fresh scientific master on entry was `005117d95f146d0f47c3272149d7aaaed5f6e9ab`; it advanced during the run and was refreshed before writing. I read the current P03 README, the complete latest B15 packet reports, the interactive centered-critical-budget report, B17's self-XOR/Hellinger bridge, B18's current physical mask/Radon integration, and the September-20 spectral-lattice / centroid-and-carries state through the current README. The inherited facts retained here include:
 

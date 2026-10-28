@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. Continuity is proved only on the overlap-squar
 
 ## 1. Source boundary and corrections
 
-Fresh `math-research-brain` control was resolved before this write. OWNER CONTROL remains revision `2026-09-22.15`, active programme `QFORM-DENSITY-3EIG-20260922`, with QFORM as the sole research target and no later stop/reassignment. The live correction inbox was reread immediately before publication.
 
 No step below uses post-rotation independence, an arbitrary-joint coarea bound, a conditional projection-density supremum, moment/support assumptions, law-uniform pointwise quadratic-phase decay, or deletion of a small nonzero quadratic/cross term as a random perturbation. Every conditioning operation is on ORIGINAL coordinates. Deterministic rotations are used only to describe a bounded-density joint projection after the product source has already been kept intact.
 

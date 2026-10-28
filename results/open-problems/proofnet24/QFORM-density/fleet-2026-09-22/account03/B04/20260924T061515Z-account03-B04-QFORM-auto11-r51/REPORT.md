@@ -6,7 +6,6 @@ attacking: the operator-selected overlap-two tiny-pair branch by splitting its c
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: Product Fourier rearrangement  
 Run: `20260924T061515Z-account03-B04-QFORM-auto11-r51`  
-Control: OWNER CONTROL revision `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW SUPPORTING COMPILER / OPERATOR-H2 TRANSVERSE SUBBRANCH PAID CONTINUOUSLY / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN**.
 
@@ -14,7 +13,6 @@ The unrestricted conjecture is not proved or disproved here. Every random variab
 
 ## 1. Fresh source-pinned frontier
 
-Fresh `math-research-brain/main` was read at run start, together with `AGENTS.md`, the full owner message in `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, and the QFORM shared manifest/current-research/claims/correction/memory/assignment files. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and the full theorem remains OPEN.
 
 The immediate analytic input from this slot is
 

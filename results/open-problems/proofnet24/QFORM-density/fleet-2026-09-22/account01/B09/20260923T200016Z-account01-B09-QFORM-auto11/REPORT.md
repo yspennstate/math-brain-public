@@ -17,7 +17,6 @@ A second top-three refinement pays examples whose full rank-four leverage equals
 
 ## 1. Fresh sources and correction discipline
 
-Fresh `math-research-brain/main` was re-read before publication. At the final pre-write refresh its head was `8d4c4edd5895e8ce83a31f46a6402d4a6ee4a41a`; `scheduled_tasks/README.md` still carried OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, no account01/B09 pause, and continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The decisive receiver is the completed account01/B20 theorem
 

@@ -5,7 +5,6 @@ attacking: uniform square-root small-ball control for an arbitrary-diagonal phys
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly  
-**Owner control read at startup:** `yspennstate/math-research-brain@1068581415b9064b6b20d3fc3e26bf7c184f7426`, OWNER CONTROL revision `2026-09-22.15`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / NEW SUPPORTING ANALYTIC THEOREM / TARGET-LEVEL COLLAR IMPROVED / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.
 

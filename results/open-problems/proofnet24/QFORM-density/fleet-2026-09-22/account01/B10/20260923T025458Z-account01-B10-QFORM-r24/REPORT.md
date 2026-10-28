@@ -12,7 +12,6 @@ The full exact-rank-three theorem is **not** proved here. This run proves a new 
 
 ## 1. Fresh source state and correction discipline
 
-Fresh `main` control was read at startup with OWNER CONTROL revision `2026-09-22.15`, QFORM-only. Immediately before publication the protected README remained unchanged (blob `fca13a89d221115332ce5e60d49554ee0e213efa`), and the live correction inbox was refreshed (blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`).
 
 The current correction record is enforced. In particular, this report does **not** use arbitrary-joint rank-three coarea, a positive conditional projection-height moment, post-rotation independence, a uniform pointwise quadratic-phase decay estimate, a fiber supremum, or a uniformly good single physical minor. It also respects `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`: a conditional density cap for the hyperbolic variable does not by itself replace independence when the square variable is allowed to be correlated with it.
 

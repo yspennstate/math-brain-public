@@ -15,7 +15,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. Orthogonal opera
 
 ## 1. Fresh source-pinned frontier
 
-Fresh owner control on `yspennstate/math-research-brain/main` remains QFORM-only under OWNER CONTROL revision `2026-09-22.15`.
 
 The immediate same-slot structural source is account03/B20 r51:
 

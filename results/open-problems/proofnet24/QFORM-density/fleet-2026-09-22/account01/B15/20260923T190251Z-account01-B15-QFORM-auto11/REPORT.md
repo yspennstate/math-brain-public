@@ -4,7 +4,6 @@ attacking: zero-loss closure to smooth/analytic cap-one sources and generic phys
 # account01/B15 auto11 — zero-loss generic/analytic core for the exact QFORM constant
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, activation revision `2026-09-22.5`.
-Fresh control read before mathematics: `yspennstate/math-research-brain@d17c1533474a2107cc16189027e53776911e1d2d`, then rechecked on newer main `9f4943c284ef94dabf8c3337b9accb825b45e59f`; OWNER CONTROL revision remains `2026-09-22.15` and no later B15 stop appeared.
 Execution context: `WITHOUT_VERIFIED_BRAIN`.
 Status: `NEW TARGET-LEVEL REGULARITY LEMMA / ZERO-LOSS DENSE CORE / FULL QFORM OPEN`.
 

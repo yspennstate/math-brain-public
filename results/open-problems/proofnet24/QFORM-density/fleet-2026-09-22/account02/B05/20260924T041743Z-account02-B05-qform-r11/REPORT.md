@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. First unpaid implication
 
-Fresh owner control was resolved from `math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. I reread the live QFORM manifest/current research/claims/deltas/corrections/pathways/memory protocol, the proof-first and latest-Claude requests, this slot assignment, the required pinned `e5f71d79...` RESULTS/FOURIER_ROUTE_REPORT/COUNTEREXAMPLE_SEARCH, the prior account02/B05 memory snapshot, and the newest compatible account03/B05 r39 report.
 
 The new account03/B05 theorem `QFORM-PAIR-ANCHORED-DETSTAR-COAREA-v1` changes the heavy-null obstruction materially: every literal pair carrying aggregate principal-triple star `T_I` has
 
@@ -300,7 +299,6 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity
 
 ## 8. Source pins
 
-- Fresh owner/control source at run start: `math-research-brain@c05e34d9e65883f9e6fb22159e9dbce3f6aea9d3`, OWNER CONTROL revision `2026-09-22.15`.
 - Required pinned compatible source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`; current compatible descendant at source read: `47deae65829b8cae5282751e32d7aa0fb07c51c9`.
 - Fresh partner: account03/B05 r39, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260924T033744Z-account03-B05-QFORM-r39/REPORT.md` at descendant `47deae65829b8cae5282751e32d7aa0fb07c51c9`.
 - Structural Witt source: account01/B05 `20260924T015848Z-account01-B05-QFORM-auto11/REPORT.md` and `STRUCTURAL_ADDENDUM.md`.

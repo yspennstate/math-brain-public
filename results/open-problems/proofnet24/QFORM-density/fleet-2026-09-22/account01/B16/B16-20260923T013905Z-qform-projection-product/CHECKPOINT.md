@@ -6,7 +6,6 @@ attacking: projection-product interaction: absorb the scalar Schur-aligned squar
 Status: SUPPORTING LEMMA DERIVED; full QFORM remains OPEN. This is the required early mathematical checkpoint, not a proof-status promotion.
 
 Pinned inputs actually used:
-- brain control source initially yspennstate/math-research-brain@764b0565f89dd5c388d430f16f17566cf99980bb, OWNER CONTROL revision 2026-09-22.15;
 - Claude mixed-Fresnel proof: yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md, especially the twisted L^p lemma and Theorem MF;
 - designated partner account02/B16 r21: yspennstate/math-open-problems@45bff099504543528c3c7c78fba03f1b8cafeb16, proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260923T003232Z-account02-B16-QFORM-r21/REPORT.md.
 

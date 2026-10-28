@@ -208,7 +208,6 @@ Any such proof automatically yields the full arbitrary-rough, arbitrary-degenera
 
 ## 13. Source discipline
 
-Fresh control source at run start: `yspennstate/math-research-brain@5e2abaf310158324b67ee1272f4fc795a22942c2`, OWNER CONTROL revision `2026-09-22.15`.
 
 Partner theorem actually read and applied: account04/B15 r8 at `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 

@@ -348,4 +348,3 @@ In particular, the difficult case is when every physical square candidate with u
 - Primary: Rudelson--Vershynin, arXiv:1402.4492v2, Theorem 1.2 and proof of Theorem 8.1 equation (8.4).
 - Latest compatible designated partner: `yspennstate/math-open-problems@5c462c1aa1cd2ce2fd59eae1fbe4ac2c6136c0d6`, account03/B18 auto18; PASS check `46a6d528974534e55be0617a4bfa2a1beee34d98`.
 - Required pinned source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
-- Fresh owner control observed before publication: OWNER CONTROL revision `2026-09-22.15`; full QFORM target still open; no later B18 stop observed.

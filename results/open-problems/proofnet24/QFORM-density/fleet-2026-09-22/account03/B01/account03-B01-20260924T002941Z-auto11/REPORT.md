@@ -19,7 +19,6 @@ Immediately before publication the control branch was refreshed at
 
 `yspennstate/math-research-brain@241a2237302d7069aa9b25660a73075266f866c6`,
 
-with OWNER CONTROL revision `2026-09-22.15`, QFORM-only scope, and no applicable pause or reassignment. The live correction inbox was also refreshed. In particular this run does not use the false law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, conditional projected-density caps, post-rotation independence, a uniformly large fixed physical minor, or deletion of a small random quadratic tail.
 
 The full conjecture remains OPEN.
 

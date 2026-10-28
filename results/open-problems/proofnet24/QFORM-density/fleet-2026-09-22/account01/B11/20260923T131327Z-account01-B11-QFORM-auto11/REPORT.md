@@ -10,7 +10,6 @@ The result below closes the exact rank-one residual endpoint of the finite-share
 
 ## 1. Source-pinned starting point
 
-Fresh owner control was read from `yspennstate/math-research-brain@178f58be7851340924df600c97d194fb040572b6`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only.
 
 The designated partner source is
 

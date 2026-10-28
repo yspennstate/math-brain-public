@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. All random coordinates used below ar
 
 ## 1. Source boundary and immediate debt
 
-Fresh owner control was read from `yspennstate/math-research-brain@50ee12b7dd6ccc68497d6cafa22416d66468cbc0`, later refreshed before publication. OWNER CONTROL revision is `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, and QFORM remains the sole research target.
 
 The immediate same-slot predecessor is
 

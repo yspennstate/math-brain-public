@@ -66,7 +66,6 @@ The designated partner account04/B13 independently proves the same optimizer-fre
 
 ## 2. Fresh source-pinned inputs
 
-Fresh owner control at startup was `math-research-brain@f6dd1579b5fb8d7b08ad66e4091bc85c37f9e2f4`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only and unpaused. The live programme state still marks the full conjecture and full-target continuity OPEN.
 
 The mathematical inputs actually used are:
 

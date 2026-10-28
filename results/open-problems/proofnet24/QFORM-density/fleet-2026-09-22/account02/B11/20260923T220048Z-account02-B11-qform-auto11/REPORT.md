@@ -3,7 +3,6 @@ attacking: the r43 unique-heavy-row/two-diffuse-star survivor; determine whether
 
 # account02/B11 — r43 same-hub two-star obstruction and source-disjoint square splice
 
-Programme: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`.
 Status: **ESSENTIAL_STEP_APPLIED / proof-interface obstruction + target-valid normalization closure / full unrestricted QFORM OPEN**.
 Regularity: essential boundedness only in the positive scoped family below; no full-target continuity claim.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
@@ -147,6 +146,5 @@ Closing this exact-rank-three implication would still leave the separate arbitra
 
 ## 5. Source and correction discipline
 
-Fresh brain controls were read through main `b8450d7f190783eea0b0375d55710844b6800a2a`, OWNER CONTROL revision `2026-09-22.15`; the live correction inbox blob remained `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3` immediately before publication.  Relevant prohibitions retained: no post-rotation independence, no arbitrary-joint coarea shortcut, no conditional-density-cap substitution, no X-ray-only two-sheet conclusion, and no replacement of a small matrix coefficient by a small random perturbation.
 
 The earlier `EARLY_CALC.md` in this same run remains a correct r42-era localized-heavy-triple calculation, but r43 is the later designated-partner reduction and supersedes it as the active first-unpaid interface.  No full-QFORM solution or counterexample is claimed.

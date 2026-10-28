@@ -25,7 +25,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh controls and completed inputs actually used
 
-Fresh brain controls retain programme `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, no B09 pause, and the later owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The same-hour canonical login already existed from the distinct r36 run and was preserved rather than overwritten, exactly as the new owner continuation requires.
 
 The mathematical inputs actually used at equations are:
 

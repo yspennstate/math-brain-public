@@ -6,7 +6,6 @@
 
 ## 0. Version/change summary
 
-The later OWNER MESSAGE at control revision `2026-09-22.2` supersedes the older posterior-crossing-only assignment as the substantive FEI target and directs all FEI workers to converge on the all-gate formulation. This run therefore does not reopen the false prescribed-coordinate erasure route. It uses the existing physical-restriction machinery against the fixed candidate `LIMIT-PRIME-GATE-LIFT-v1`.
 
 The old interface-A facts remain preserved exactly:
 

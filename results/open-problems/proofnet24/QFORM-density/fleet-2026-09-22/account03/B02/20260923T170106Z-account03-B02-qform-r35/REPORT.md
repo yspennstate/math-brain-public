@@ -15,7 +15,6 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, ident
 
 ### 1.1 Current owner/correction state
 
-Fresh `math-research-brain/main` was read at startup and again before this publication. OWNER CONTROL remains revision `2026-09-22.15`; the current continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; QFORM remains the sole target and the full conjecture remains open. The live correction ledger still forbids post-rotation independence, law-uniform pointwise van der Corput decay, arbitrary-joint coarea, worst conditional-height shortcuts, fixed-good-minor inference, and deletion of coefficient-small quadratic terms under unbounded fragmented inputs.
 
 ### 1.2 Sharp third-volume Fourier theorem
 

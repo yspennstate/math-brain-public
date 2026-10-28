@@ -328,7 +328,6 @@ Continuity is proved in the new balanced robust-recolor branch through the two F
 
 ## 9. Source pins
 
-- fresh brain control read before the write: `yspennstate/math-research-brain@8cfcd097f9b4d5d6011b87066004186f330e66c0`, OWNER CONTROL revision `2026-09-22.15`;
 - designated partner account04/B11: `yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`, path above;
 - exact-rank-one recoloring and its scale-free obstruction: account01/B08 report present at `yspennstate/math-open-problems@81d042c1d5c1c0e4c861ab9f55c3d4564b05323d`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B08/20260923T033753Z-account01-B08-QFORM-auto11/REPORT.md`;
 - fractional three-volume theorem: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;

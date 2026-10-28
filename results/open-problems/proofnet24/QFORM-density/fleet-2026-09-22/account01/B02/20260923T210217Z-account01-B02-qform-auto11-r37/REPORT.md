@@ -10,7 +10,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target remains unchanged: independent ORIGINAL real coordinates with one-dimensional probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussian, log-concave, moment, compact-support, connected-support, iid, diagonal-basis, post-rotation-independence, arbitrary-joint coarea, conditional-cap, fiber-supremum, one-good-minor, or small-tail-deletion assumption is introduced.
 
-Fresh control before publication remains OWNER CONTROL revision `2026-09-22.15`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, QFORM-only.
 
 ## 1. Source-pinned inputs actually used
 

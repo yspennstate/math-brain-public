@@ -13,7 +13,6 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 ## 1. Fresh source state and corrections consumed
 
-Fresh `math-research-brain/main` observed during this run was `33836fccce9b2f9cbf625f8cb9b1ead8a8d4b4a8`; OWNER CONTROL is revision `2026-09-22.15`. The live correction that landed at that commit is `QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1`: a rank-one same-bank crossing can have divergent critical half-Riesz potential. It is not used below; the replacement arguments keep either an invertible rank-two residual or a full three-dimensional cross-volume.
 
 The immediate B06 predecessor is
 

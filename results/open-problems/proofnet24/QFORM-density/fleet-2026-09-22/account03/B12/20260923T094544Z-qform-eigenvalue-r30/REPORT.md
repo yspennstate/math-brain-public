@@ -20,7 +20,6 @@ The theorem never treats a small matrix as a small random quadratic variable and
 
 ## 2. Sources actually consumed
 
-Initial fresh brain main for this run: `b62a5a6a771e37a12087944f73ce0a0f78ef2ec1`; OWNER CONTROL revision `2026-09-22.15`; programme revision `2026-09-22.5`.
 
 Required partner theorem actually used at equations:
 

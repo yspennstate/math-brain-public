@@ -4,7 +4,6 @@ attacking: `QFORM-PAIRPIVOT-GLOBALNULL-TRANSITION-COMPILER-v1`; make the singula
 # account03/B06 r55 — pair-pivot transition compiler and product-preserving global-null deletion
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Fresh startup control: `yspennstate/math-research-brain@467587cfffec5397ce23d38f2f686437ccde3fc7`, OWNER CONTROL revision `2026-09-22.15`.  
 Immediate B06 input: `QFORM-HUBSINGULAR-DIFFUSE-PAIRLOG-COMPILER-v1`, `yspennstate/math-open-problems@8bdce354a7ab12c52133f56532d8c7589cc94e98`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T075625Z-account03-B06-qform-r54/REPORT.md`.  
 Analytic input actually applied: account03/B19 `QFORM-INDEFINITE-PAIR-ARBITRARY-HUB-v1`, source `yspennstate/math-open-problems@68a56e5fdbdc5b2812c544824e4ca584ec014263`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260923T030233Z-account03-B19-QFORM-r23/REPORT.md`.  
 Pair-log input: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  

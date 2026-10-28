@@ -163,7 +163,6 @@ Continuity is not asserted as part of Theorem 1; the theorem gives an essential 
 
 ## 5. Source pins
 
-- Owner/control package: \`yspennstate/math-research-brain\` fresh main, OWNER CONTROL revision \`2026-09-22.15\`.
 - Required Claude package begins at \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
 - Prior rough ruled/two-sheet B05 report: \`math-open-problems@ae670b9085d4bb7ab01c54021cd89f620aa2f0b3\`.
 - Completed account01/B05 input: \`math-open-problems@ad88bc891f3094c84b4e7c3be104d407c8ed032f\`.

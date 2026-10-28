@@ -6,7 +6,6 @@ attacking: an exact countable-core reduction for the universal height problem, k
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B15`  
 Run: `20260923T163043Z-account03-B15-qform-auto23`  
-Fresh control before publication: `yspennstate/math-research-brain@dbca08a6ad1efaa70bbb9c5124bdb22dfc1fc874`, OWNER CONTROL revision `2026-09-22.15`  
 Live correction inbox blob at refresh: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`  
 Execution context: `WITHOUT_VERIFIED_BRAIN`  
 Status: `NEW EXACT TARGET REDUCTION / PARTNER APPLIED / FULL UNIVERSAL HEIGHT OPEN`.

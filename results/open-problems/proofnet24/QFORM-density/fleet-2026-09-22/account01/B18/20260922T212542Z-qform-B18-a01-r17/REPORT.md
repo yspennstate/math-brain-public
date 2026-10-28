@@ -5,7 +5,6 @@ attacking: literature-to-proof transfer: close the quantitative physical-pair al
 
 **Run:** `20260922T212542Z-qform-B18-a01-r17`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control source:** `yspennstate/math-research-brain@af49de2ff9676f3136fafd6c043def0ddce42fbd`, OWNER CONTROL revision `2026-09-22.15`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_TARGET_LEVEL_REDUCTION`  
 **Full target:** `OPEN / NOT PROVED`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

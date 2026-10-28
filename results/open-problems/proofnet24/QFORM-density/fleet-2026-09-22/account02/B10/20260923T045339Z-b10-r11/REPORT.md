@@ -5,7 +5,6 @@ attacking: the true-near-coloop exact-rank-three collar after the designated par
 
 **Programme:** QFORM-DENSITY-3EIG-20260922  
 **Role:** Rank-three coupled case; complementary constructions/source-valid counterexamples  
-**Control read:** `yspennstate/math-research-brain@1fe4828112f08195f6f1f912b64c12e827853e66`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `NEW SUPPORTING STRUCTURAL LEMMA + TARGET-VALID INTERMEDIATE-MECHANISM FALSIFIER / FULL QFORM OPEN`.
 

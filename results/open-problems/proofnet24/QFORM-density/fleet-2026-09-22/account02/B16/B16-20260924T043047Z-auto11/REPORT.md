@@ -11,7 +11,6 @@ Regularity: essential boundedness and absolute continuity are proved in the stat
 
 ## 1. Fresh boundary and first unpaid implication
 
-Fresh brain control was resolved at `math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and no account02/B16 pause or redirect is present. A final control refresh before publication again showed the same owner revision and target. The unrestricted conjecture remains OPEN / NOT PROVED / NOT DISPROVED.
 
 The required pinned source was consumed at
 

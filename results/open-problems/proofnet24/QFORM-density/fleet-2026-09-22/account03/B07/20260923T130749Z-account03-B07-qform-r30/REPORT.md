@@ -8,7 +8,6 @@ Assignment: coordinate minor selection / GEOMETRY
 Run: `20260923T130749Z-account03-B07-qform-r30`  
 Initial control commit: `yspennstate/math-research-brain@59383df8077cb277b6ba91f56b93a642872bdb3e`  
 Pre-publication main observed: `yspennstate/math-research-brain@9c69e96e9ef6095c411efe2801498cabdbd7bb16`  
-OWNER CONTROL revision: `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING AGGREGATE-MINOR COMPILER / DESIGNATED PARTNER APPLIED / ONE SUBBRANCH ESSENTIALLY BOUNDED / FULL QFORM OPEN / FULL CONTINUITY OPEN**.
 

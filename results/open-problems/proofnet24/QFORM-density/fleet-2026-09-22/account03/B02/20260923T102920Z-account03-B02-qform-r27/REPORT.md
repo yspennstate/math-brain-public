@@ -15,7 +15,6 @@ attacking: the literal-residual-minor concentrated endpoint by conditioning the 
 
 The target remains: independent ORIGINAL real coordinates with scalar densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No moments, Gaussianity, log-concavity, bounded/connected support, post-rotation independence, or deletion of small coefficients is used.
 
-Fresh control was read on `yspennstate/math-research-brain` and refreshed before publication at main `1aa1cf80f102c9d9cfdb82b3062a1dc79008bee8`; OWNER CONTROL remained revision `2026-09-22.15` with no later stop. The live correction inbox was reread. In particular this report does not use law-uniform pointwise quadratic-phase decay, the false arbitrary-joint coarea lemma, a conditional projection density cap, or the false rule that one cross minor automatically gives a good TRUE symmetric Schur pair.
 
 The analytic input is this slot's completed arbitrary-law mixed-volume theorem from r26:
 

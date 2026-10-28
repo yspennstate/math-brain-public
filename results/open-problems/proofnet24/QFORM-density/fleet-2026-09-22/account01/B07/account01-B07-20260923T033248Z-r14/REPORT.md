@@ -10,7 +10,6 @@ The full conjecture is not proved here. The result below is a supporting reducti
 
 ## 1. Sources and correction boundary actually used
 
-Fresh control before publication: `yspennstate/math-research-brain@b843043239faef761d407578ccef778013611d8b`, OWNER CONTROL revision `2026-09-22.15`. Live correction inbox blob: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The proof uses these completed/scoped inputs.
 

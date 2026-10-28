@@ -23,7 +23,6 @@ This is narrower than the preceding “near-rank-one / localized” label: the r
 
 ## 2. Fresh source boundary and exact state
 
-Fresh brain control at startup was `math-research-brain@afa9bb85c5b43d0e4e371a84390b70af65c12df1`; a later pre-write refresh reached `a2faa2bb1b66d0d14c2ef756024c39a89a3ae277`. The OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live full-target claims remain OPEN.
 
 The required fixed source was read at exactly
 

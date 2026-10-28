@@ -4,7 +4,6 @@ attacking: decoupled time integral — remove the exact-zero hub restriction by 
 # account03/B03 r25 — arbitrary hub diagonal via parabolic fibers and quarter-Riesz energy
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-OWNER CONTROL: `2026-09-22.15`  
 Status: `SUPPORTING THEOREM PROVED / FULL QFORM OPEN`  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

@@ -15,7 +15,6 @@ The proof stays in original physical coordinates. It does not use law-uniform po
 
 ## 1. Source-pinned inputs
 
-Fresh startup control was `yspennstate/math-research-brain@f2f8d36acc5e99ed143e7fecbd7ef6ba2998aaf4`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live correction inbox, memory protocol, and the B09 assignment were reread from that fresh main before this calculation.
 
 The immediate B09 predecessor is
 

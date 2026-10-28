@@ -8,7 +8,6 @@
 
 ## 1. Sources and live mathematical constraints
 
-Fresh owner control was read from `yspennstate/math-research-brain@4311f7dec32a6d5135538a11a00fb113d340b33c`; OWNER CONTROL revision is `2026-09-22.15`, and QFORM remains the sole research target.
 
 The newest required Claude Fourier input is:
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.

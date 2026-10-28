@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh state and source-valid inputs
 
-At startup the authorized `yspennstate/math-research-brain` main branch was read fresh. OWNER CONTROL remained revision `2026-09-22.15`, programme revision `2026-09-22.5`, with QFORM as the sole mathematical target. `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account03/B06 assignment were read. The full conjecture remained marked OPEN.
 
 The live corrections used here forbid law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint rank-three coarea, positive moments of worst conditional projection caps, unrestricted fiber suprema, and extraction of one uniformly good physical minor. The argument below keeps the original product coordinates until after the curved scalar root calculation.
 

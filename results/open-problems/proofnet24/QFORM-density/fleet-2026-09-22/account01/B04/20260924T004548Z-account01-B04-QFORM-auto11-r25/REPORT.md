@@ -14,7 +14,6 @@ No random coordinate is rotated. Every conditioning step fixes only original ind
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain` main was resolved at the start and again before this write. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and the full conjecture remains open.
 
 The immediately preceding B04 run is
 

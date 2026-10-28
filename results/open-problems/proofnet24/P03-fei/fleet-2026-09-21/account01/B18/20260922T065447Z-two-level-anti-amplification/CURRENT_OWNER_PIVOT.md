@@ -6,7 +6,6 @@
 
 ## 1. Why this addendum supersedes the run's earlier conditional selector emphasis
 
-The fresh OWNER MESSAGE is later and narrower than the older execution-reset subroute: for the current read-once potential, either prove that the binding correction margin is attained by a decomposable/AND gate, or falsify that claim with a gate and bias vector asking for more.
 
 The exact later peer result account03/B12
 
@@ -46,7 +45,6 @@ Thus, whenever `W_G>0`, the correction requested by a gate is
 \tag{2.2}
 \]
 
-A common correction `c` is safe only if `c>=c_G(p)` for every gate/bias pair. Therefore the binding gate is the **maximum** of `c_G`, not the minimum. The OWNER MESSAGE phrase "minimum of c_G" is inconsistent with its own displayed sign convention and with its statement that genuine gates had previously asked for *less*. The intended extremality statement is that AND/decomposable gates attain the largest requested margin.
 
 ## 3. Exact composition-prime falsifier applied
 

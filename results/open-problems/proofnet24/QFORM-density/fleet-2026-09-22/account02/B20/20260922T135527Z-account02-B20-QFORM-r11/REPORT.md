@@ -188,5 +188,3 @@ After exact rank three is closed, arbitrary additional spectral directions remai
 - Assigned partner account03/B20: `yspennstate/math-open-problems@e06f8c89c1f99a6a021fc9687af0168b8ad50399`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B20/20260922T131539Z-account03-B20-qform-r11/REPORT.md`.
 - account02/B11 heavy minority/near-null theorem: `proofnet24/QFORM-density/fleet-2026-09-22/account02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md` on current master snapshot.
 - account04/B20 aggregate hyperbolic-square theorem: `proofnet24/QFORM-density/fleet-2026-09-22/account04/B20/20260922T132134Z-account04-B20-QFORM-r1/REPORT.md`.
-- account02/B19 synthesis handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B19/20260922T123814Z-account02-B19-qform-r11.md`.
-- account01/B01 random-slope cross-packet handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account01/B01/20260922T124907Z-b01-qform-auto11.md`.

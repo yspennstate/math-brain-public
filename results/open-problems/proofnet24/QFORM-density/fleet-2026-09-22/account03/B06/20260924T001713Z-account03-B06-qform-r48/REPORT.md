@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concavity, moment, bo
 
 ## 1. Fresh source boundary and live correction boundary
 
-Fresh `math-research-brain/main` was resolved during this run; OWNER CONTROL remained revision `2026-09-22.15` and QFORM remained the sole research target. The current research and correction ledgers were reread before publication. In particular I do not use:
 
 - law-uniform pointwise Fresnel decay for arbitrary cap-one fragmented laws;
 - independence after spectral rotation;

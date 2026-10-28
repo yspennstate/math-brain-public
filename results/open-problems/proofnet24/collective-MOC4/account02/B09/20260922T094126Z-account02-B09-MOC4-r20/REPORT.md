@@ -15,7 +15,6 @@ The target is the `n=4` complex-normal Marcus–de Oliveira statement: for every
 
 including singular and repeated-spectrum cases.
 
-Fresh owner controls were reread from `yspennstate/math-research-brain` immediately before the scientific write. The coherent control commit was `21ba3b9d7ffe4fec3d6179f80a5b3aa454a89879`; OWNER CONTROL remained revision `2026-09-22.2`, B09 remained assigned to MOC4, and the later collective-open-problems allocation continued to supersede historical installation/benchmark text. No later B09/account02 stop was observed. Exact connector-visible Git blob IDs were available for the protected files; byte-exact SHA-256 of the rendered README/OWNER MESSAGE was not independently extractable and is not fabricated.
 
 The latest complete campaign-lead report actually consumed was account03/B07 `20260922T074824Z-account03-B07-MOC4-r13`, report blob `7724d19f793eb934c5fcc2b469bb9d0a108da4eb`. Its current generic strict-interior split is `MSQR` versus `NDI`; on `MSQR` a pair-Hessian kernel is a full-Hessian kernel and the Lyapunov–Schmidt quartic reserve acquires the exact nonnegative cross-split Schur-complement term. That remains the lead's first generic interior obstruction.
 

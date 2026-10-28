@@ -11,9 +11,7 @@
 
 The target is unchanged: for every dimension, independent real inputs with probability densities bounded by one, and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a universal dimension-free essential-density bound for `X^T A X`, or give a valid target-level counterexample.
 
-Fresh owner control at the pre-write refresh was `yspennstate/math-research-brain@163d4282f9f9b050f16069c124e1a0fab8ede4a4`, OWNER CONTROL revision `2026-09-22.8`. The proof-first continuation asks workers to close genuine full-target gaps and the preserved OWNER MESSAGE proposes, as one route, conditioning on the complementary spectral coordinates and then using a universal bound on the conditional three-dimensional active projection density. That proposed conditional-density implication is tested first below.
 
-The designated partner result actually consumed is account03/B17, handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/20260922T160432Z-account03-B17-QFORM-r12.md`, canonical mathematics `yspennstate/math-open-problems@d53ca1d541b2b2dbf861ec39fda699209b267158`. It proves a `2*pi` finite density bound when the three active spectral vectors have pairwise disjoint physical supports, and gives the exact six-variable rotated witness
 
 `p(0)=91/36+(13/6)log 2 = 4.0295966689909926...`.
 

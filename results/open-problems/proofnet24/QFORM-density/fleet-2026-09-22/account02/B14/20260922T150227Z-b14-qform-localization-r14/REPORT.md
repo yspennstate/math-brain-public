@@ -219,7 +219,6 @@ This is the first unpaid connection. No claim of full solution is made.
 
 - fresh control snapshot before scientific write: `yspennstate/math-research-brain@da8225a364f8b6ff706a10485f1f5ff7f1bf5729`;
 - owner programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
-- exact assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account02/B14.json`;
 - completed partner localization theorem actually applied: `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`, account03/B14 select-before-localize;
 - completed partner obstruction actually applied: `yspennstate/math-open-problems@54f2d04e936d0dfefe345d17ee18a46b35039d7e`, account03/B14 no-fixed-fragment-count theorem;
 - preceding account02/B14 acyclic packing theorem: `yspennstate/math-open-problems@d358b89ba78735cee238c01e83c2c3ca9ec66352`.

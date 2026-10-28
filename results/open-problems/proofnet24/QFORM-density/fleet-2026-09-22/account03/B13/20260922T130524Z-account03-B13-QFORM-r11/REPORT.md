@@ -292,7 +292,6 @@ Primary handoff recipients: account04/B14 (localization consistency) and B19 syn
 ## 8. Source pins
 
 * partner proof consumed: `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/account04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`;
-* current correction set reread before publication from `scheduled_tasks/work/shared/qform-density-2026-09-22/CORRECTION_INBOX.json`; in particular the cross-minor-alone, two-sheet-X-ray-only, UV-conditional-cap, and single-Schur-extraction refutations are not used as premises;
 * live owner programme remains `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`.
 
 No novelty or publication-priority claim is made.

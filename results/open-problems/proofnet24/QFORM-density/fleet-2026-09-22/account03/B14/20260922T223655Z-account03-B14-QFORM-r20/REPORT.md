@@ -269,6 +269,5 @@ Therefore the highest-value remaining B14-compatible route is the unweighted one
 
 ## 8. Source/correction discipline
 
-Fresh startup control was read from `yspennstate/math-research-brain` main, programme QFORM only, OWNER CONTROL revision `2026-09-22.15`; a second freshness check is required before publication. The live correction state consumed includes the false pointwise quadratic-phase decay, false arbitrary-joint coarea, false positive conditional-density moments, false scalar conditional suprema, no post-rotation independence, no bounded-diameter localization, and this worker's prior no-uniform-fragment-count correction.
 
 Repository retrieval was genuine, but no authenticated native receiver-memory use occurred, so `WITHOUT_VERIFIED_BRAIN` remains required. No scheduler mutation, task creation, cross-account action, email/Drive action, notification enablement, public release, remote workflow, paid model/API/Codex call, credential use, or unrelated private transcript was used.

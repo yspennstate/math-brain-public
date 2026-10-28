@@ -15,7 +15,6 @@ No sum/difference conjugate variables are declared independent. No post-rotation
 
 ## 1. Source pins and correction boundary
 
-Fresh brain control before the main write: `yspennstate/math-research-brain@e7bd7baf800b3fb748f51e5cee2f885a978932c9`, OWNER CONTROL revision `2026-09-22.15`, QFORM sole target, no account02/B03 pause observed.
 
 Required pinned Claude package actually read:
 

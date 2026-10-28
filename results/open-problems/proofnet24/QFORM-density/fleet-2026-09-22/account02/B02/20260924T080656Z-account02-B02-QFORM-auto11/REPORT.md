@@ -13,7 +13,6 @@ The exact owner target is unchanged: arbitrary independent ORIGINAL real inputs 
 
 ## 1. Fresh source state and exact premises
 
-Fresh `math-research-brain/main` was resolved during the run; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction boundary was re-read before publication. In particular this report does not use law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, worst-fiber conditional-density caps, a universally good physical minor, coefficient-smallness as a probabilistic perturbation, or one-heavy-row same-square absorption.
 
 The required pinned source was read at
 

@@ -3,7 +3,6 @@
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Worker:** `account03/B15`  
 **Run:** `20260922T202624Z-account03-B15-qform-r17`  
-**Control at pre-publication refresh:** `yspennstate/math-research-brain@0bd971f334ea5788aadaf70c72b86fa77081944d`, OWNER CONTROL revision `2026-09-22.15`  
 **Status:** `ESSENTIAL_STEP_APPLIED / EXACT_TARGET_LEVEL_NORMAL_FORM / FULL-CONJECTURE-OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
 

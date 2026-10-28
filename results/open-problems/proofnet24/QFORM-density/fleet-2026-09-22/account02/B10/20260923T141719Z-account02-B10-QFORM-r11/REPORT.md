@@ -20,7 +20,6 @@ A second conclusion below is negative but useful: the natural one-sided scalar-s
 
 ## 2. Source boundary and completed inputs actually used
 
-Fresh owner control remained QFORM-only at OWNER CONTROL revision `2026-09-22.15`. The required interactive source is
 
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
 

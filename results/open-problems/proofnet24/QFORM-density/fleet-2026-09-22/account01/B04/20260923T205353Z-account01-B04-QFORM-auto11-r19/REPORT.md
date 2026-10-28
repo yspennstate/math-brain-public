@@ -19,7 +19,6 @@ Immediately before publication, `math-research-brain` main was refreshed to comm
 
 `acdaa8bd7856ada64a4d250502177789b4c8fc52`.
 
-The owner continuation is still `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole target and the full theorem open. The live correction inbox was reread at that same commit. Its newest event, `QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1`, says that an indefinite two-hub core plus a slope innovation does not absorb an arbitrary completed remainder. The theorem below does not use that false mechanism: it first obtains a genuine product-space `L^3` density estimate for the *entire* Schur residual, with arbitrary same-bank quadratic terms retained, and only then uses the already-proved dependent physical-square lemma.
 
 Pinned mathematical inputs:
 

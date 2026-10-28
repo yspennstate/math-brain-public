@@ -305,7 +305,6 @@ The full conjecture remains OPEN.
 
 ## 7. Source/correction discipline
 
-Fresh control before publication: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`. Consumed live corrections include at least the refutations of law-uniform pointwise van der Corput decay, arbitrary-joint rank-three coarea, conditional cap as a substitute for independence, one-good-physical-minor extraction, naive fiber-sup integration, and perturbative deletion under unrestricted support.
 
 Repository transport is not native learned-memory ingestion. Status remains `WITHOUT_VERIFIED_BRAIN`.
 

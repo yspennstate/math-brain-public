@@ -8,7 +8,6 @@ After the primary report was committed, the assigned partner account03/B04 compl
 
 - repository/commit: `yspennstate/math-open-problems@093c15486c794a2e8b23978ca7b289feabf999a7`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/account03/B04/B04-20260922T154859Z-r13/REPORT.md`
-- brain handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B04/B04-20260922T154859Z-r13.md`.
 
 The partner independently checks the ridge-perturbation and MSS/spectral-window passage, while explicitly not claiming a new independent review of the free-regularizer graph/Fourier core. Its proved source-pinned consequence is:
 

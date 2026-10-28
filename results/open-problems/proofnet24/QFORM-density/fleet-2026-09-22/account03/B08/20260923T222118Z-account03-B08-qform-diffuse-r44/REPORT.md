@@ -18,7 +18,6 @@ The final prepublication owner refresh is
 
 `yspennstate/math-research-brain@49901dcc9030ec296df489a19fd7be41e21c09a7`,
 
-with OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, and the full theorem still OPEN. The live `CORRECTION_INBOX.json` at the same source was reread. In particular, this proof does not condition on rotated eigen-coordinates and does not infer a density bound from a bounded projection density alone.
 
 The analytic engine actually used is the independently reviewed grouped projected-crossing theorem
 

@@ -4,7 +4,6 @@
 **Full uniform-cube FEI:** **OPEN / NOT PROVED.**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-The fresh OWNER MESSAGE is later and narrower than the older selector subroute. Its operative current question for the read-once base potential is whether the gate requiring the largest quadratic correction is decomposable/AND, or whether a genuine gate asks for more. The latter has already been proved by an exact other-account artifact, so this run applies that falsifier instead of continuing to optimize the failed fixed candidate.
 
 ## 1. Actual sign of the gate margin
 

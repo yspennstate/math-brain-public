@@ -6,7 +6,6 @@
 
 ## 0. Control, target, and movement
 
-Control source at run start: `yspennstate/math-research-brain` main `4c5e944cf6e45bb81e65ab0c6bdce0f437bd7e14`, OWNER CONTROL revision `2026-09-22.2`. Scientific source was refreshed during the run; one observed `math-open-problems` master was `3ea4b1cd9f7c55a9e1b84850be775eff6f34831c`, and later concurrent commits were preserved rather than overwritten.
 
 The owner target is the all-gate inequality `(G)` from `proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md`. Its balanced-uniform specialization is the support-deficit currency
 

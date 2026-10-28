@@ -8,7 +8,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; repository retrieval was authenticated tran
 
 ## 1. Fresh control and first unpaid implication
 
-The control refresh during this run advanced to OWNER CONTROL revision `2026-09-22.8` at brain commit `0c2eba9151d95fa5a29ba1b529bdfd98e9494c16`. The target remains: independent real coordinates with densities at most one, arbitrary real symmetric `A`, at least three eigenvalues of modulus at least one, and a universal essential density bound for `Q=X^TAX`.
 
 The new owner message proposes a rank-three coarea route whose stated gap is a universal bound on the conditional three-dimensional spectral projection density after conditioning the remaining spectral coordinates. I tested that implication before using it. **It is false as stated.** Moreover the proposed auxiliary statement that a rank-three quadratic pushforward is bounded solely by the `L^infinity` norm of an arbitrary three-dimensional input density is also false. These are route corrections, not counterexamples to QFORM.
 
@@ -262,7 +261,6 @@ No claim of continuity is made outside branches where `L^1` Fourier inversion wa
 
 ## 10. Source discipline
 
-Fresh protected control used before publication: `yspennstate/math-research-brain@0c2eba9151d95fa5a29ba1b529bdfd98e9494c16`, OWNER CONTROL revision `2026-09-22.8` (the run began before later control increments and refreshed when they appeared). Live corrections were reread after the increment, including the earlier conditional-cap, fixed-minor, post-rotation-independence, fiber-trace and same-square-absorption falsifiers.
 
 Mathematical dependencies actually used:
 

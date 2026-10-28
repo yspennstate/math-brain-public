@@ -12,7 +12,6 @@ Status: **PROVED TARGET-RELEVANT STRUCTURAL/ANALYTIC SUPPORTING THEOREMS / FULL 
 
 The owner target remains the full arbitrary-dimensional statement: independent ORIGINAL-coordinate probability densities `0<=f_i<=1`, real symmetric `A`, and at least three eigenvalues of `A` with absolute value at least one. No moment, compact-support, connected-support, Gaussian, log-concavity, diagonal-basis, post-rotation-independence, or fixed-fragment assumption is used.
 
-Fresh control remained QFORM-only with OWNER CONTROL revision `2026-09-22.15`; later source continuation requires useful mathematics on the live no-pivot/stability gap. The full conjecture and the separate full continuity statement remain OPEN.
 
 Three completed inputs are used at their exact scopes.
 

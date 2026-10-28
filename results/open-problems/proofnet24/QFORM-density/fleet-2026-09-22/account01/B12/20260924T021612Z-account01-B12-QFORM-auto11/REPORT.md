@@ -291,6 +291,5 @@ A private finite check of 5,000 random full-column-rank matrices and random rank
 ## 10. Source/control record
 
 Fresh prepublication brain main: `2d599946833908744e03e005cc46016e2e3048e7`.  
-OWNER CONTROL: `2026-09-22.15`; programme revision `2026-09-22.5`.  
 Consumed corrections include the refutations of universal pointwise quadratic-phase decay, arbitrary-joint coarea, conditional positive-density moments, universal good-minor/cross-rank extraction, and dimension-free naive fiber-supremum reduction.  
 Execution state: `WITHOUT_VERIFIED_BRAIN`.

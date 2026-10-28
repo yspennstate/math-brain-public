@@ -14,8 +14,6 @@ including singular and repeated spectra. This report concerns only the `n=4` tar
 
 At invocation start I resolved `yspennstate/math-research-brain` main at
 `155e49dfac91e21183ba89e61cf4321780a0a47f` and read `AGENTS.md`, the complete
-`scheduled_tasks/README.md` OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`,
-plus the collective `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json`. OWNER CONTROL is
 revision `2026-09-22.2`; B09 remains assigned to MOC4 and older installation/benchmark
 work remains stopped.
 

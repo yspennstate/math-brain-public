@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target remains the unrestricted statement for independent ORIGINAL-coordinate real variables with scalar densities bounded by one and arbitrary real symmetric A satisfying `sigma_3(A)>=1`. No Gaussianity, log-concavity, moment, compact-support, connected-support, iid, diagonal-basis, or post-rotation-independence hypothesis is introduced.
 
-Fresh brain control at run start had OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM as the sole research target and no account01/B09 pause. The continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. In particular, this report does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, positive conditional projection moments, a uniformly good single minor, or deletion of a small matrix coefficient as a small random quadratic error.
 
 Two completed source results are used at actual inequalities:
 

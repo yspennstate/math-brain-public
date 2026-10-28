@@ -13,7 +13,6 @@ All coordinates below are literal ORIGINAL coordinates. No random coordinate is 
 
 ## 1. Fresh frontier and exact partner input
 
-Fresh owner controls were read from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole active research programme, and the source-backed corrections against pointwise decay, worst-fibre/conditional-cap arguments and post-rotation independence remain live.
 
 The newest compatible completed designated partner is account03/B20 r51:
 

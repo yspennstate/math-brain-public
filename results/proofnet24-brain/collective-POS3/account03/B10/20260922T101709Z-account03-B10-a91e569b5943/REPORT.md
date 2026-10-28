@@ -187,7 +187,6 @@ First remaining obligation: prove a bounded-range shallow-mixture transport/sele
 
 ## 10. Execution/provenance
 
-- Fresh main controls and OWNER MESSAGE were read before research; later-stop checks were repeated during the run.
 - GitHub source access and repository writes were authenticated, but no genuine native mathematical-brain retrieval/context use was established; status therefore remains `WITHOUT_VERIFIED_BRAIN`.
 - Model self-report: `GPT-5.6 Sol`.
 - Reasoning effort requested by this invocation: `UNSPECIFIED`; configured provider effort: `UNKNOWN/NOT EXPOSED`; provider reasoning-token/thinking-time usage: `UNKNOWN/NOT EXPOSED`.

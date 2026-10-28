@@ -11,7 +11,6 @@ attacking: sharpen the nonzero/zero spectral-coloop interpolation by retaining t
 
 ## 1. Source pins and correction boundary
 
-Fresh controlling source during this run: `yspennstate/math-research-brain@94b4debdef11b95db019db3f7406e3781bb517ad`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only.
 
 The source-valid predecessor sharpened here is account01/B16 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1`, canonical report
 

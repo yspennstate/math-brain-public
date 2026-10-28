@@ -16,7 +16,6 @@ The unrestricted target remains OPEN: for arbitrary finite dimension, independen
 
 No moment, Gaussian, log-concave, compact-support, connected-support, iid, spectral-coordinate-independence, law-uniform scalar Fresnel-decay, arbitrary-joint coarea, positive conditional projection-height moment, fiber-supremum, or one-good-minor hypothesis is used.
 
-Fresh control at startup was `yspennstate/math-research-brain@b3e2c3d7f37e3f09e945afee8ce351dcee384426`; before the mathematical write the branch had advanced to `9a062b46ddb9369896056cfc6a3fcd05aa8e960d`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM only. The current-hour canonical login was created at `scheduled_tasks/status/account03/logins/2026-09-23T06Z/B08.json`.
 
 The immediate predecessor is
 

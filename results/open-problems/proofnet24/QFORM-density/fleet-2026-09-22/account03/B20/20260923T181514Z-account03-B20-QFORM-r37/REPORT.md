@@ -10,7 +10,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 ## 1. Fresh source frontier
 
-Fresh protected control was resolved before the mathematics from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and the live correction inbox was consumed. No post-rotation independence, pointwise quadratic-phase decay, arbitrary-joint coarea cap, worst-fiber supremum, one-good-minor selection, or small random-tail deletion is used below.
 
 The immediate synthesis source is account03/B19 r37,
 

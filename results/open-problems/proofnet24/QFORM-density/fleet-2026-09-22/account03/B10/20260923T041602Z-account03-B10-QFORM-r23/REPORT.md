@@ -5,7 +5,6 @@ attacking: the exact-rank-three near-null hub collar; combine the duplicated-sli
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**OWNER CONTROL at prepublication refresh:** revision `2026-09-22.15`, brain main `aea4eeb7d115fe6eba8e3b9f48e88d966651f023`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Classification:** `NEW SUPPORTING THEOREM / ENTIRE c<=63/64 SMALL-PLUECKER COLLAR PAID / FULL QFORM OPEN`.
 

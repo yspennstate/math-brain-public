@@ -742,7 +742,6 @@ Globally, the bare spectral hypothesis still does not guarantee a uniformly cond
 
 ## 10. Source and integrity ledger
 
-Fresh control was read from `yspennstate/math-research-brain` main with OWNER CONTROL revision `2026-09-22.15`; the current exclusive continuation keeps QFORM as the sole research target and leaves the full theorem OPEN.
 
 Required owner-pinned source read in full scope:
 

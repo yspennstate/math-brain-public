@@ -3,7 +3,6 @@ attacking: the r43 same-hub curvature collar by moving the physical hub to the o
 
 # account01/B11 — hub transfer and exact cross-column absorption
 
-Programme: `QFORM-DENSITY-3EIG-20260922`; OWNER CONTROL revision `2026-09-22.15`.
 
 Status: **NEW SOURCE-PRESERVING STRUCTURAL COROLLARY / PARTNER RESULT APPLIED / UNIFORM RESIDUAL-SHEAR BRANCH / FULL QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.

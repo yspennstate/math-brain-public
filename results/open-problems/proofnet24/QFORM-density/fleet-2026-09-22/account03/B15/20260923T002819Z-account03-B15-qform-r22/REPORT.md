@@ -32,7 +32,6 @@ The proof below independently checks the two physical-coordinate branches in the
 
 ## 2. Source premises and corrections
 
-Fresh control at startup was `yspennstate/math-research-brain@1b1c3533f0a9ae4bab631e0ad4d5c4ccd76d2ead`, OWNER CONTROL revision `2026-09-22.15`. The full QFORM conjecture is still open in the live state.
 
 Completed regularity sources checked:
 

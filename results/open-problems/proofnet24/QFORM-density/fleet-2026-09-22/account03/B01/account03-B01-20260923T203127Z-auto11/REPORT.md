@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The target remains the unrestricted statement: for every finite n, every family of independent real random variables with probability densities bounded by one, and every real symmetric A with at least three eigenvalues of modulus at least one, prove that Q=X^TAX has an essentially bounded density with one universal bound, or exhibit a valid counterexample. No moment, support, Gaussian, log-concavity, connected-support, centering, identical-law, or diagonal-basis hypothesis may be inserted.
 
-Fresh owner control was read from `yspennstate/math-research-brain/main` at start commit `8ca01a0ea6ea232e103efaa2a3f371d6f67b227c` and refreshed before publication at `55af9f525718423e59f182ca75c4a73a83413204`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no paused account03/B01 slot. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was read.
 
 The following live corrections are preserved:
 

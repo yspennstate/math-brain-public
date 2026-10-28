@@ -15,7 +15,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random coordi
 
 ## 1. Fresh source-pinned frontier
 
-Fresh owner control on `math-research-brain/main` remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with the unrestricted theorem OPEN.
 
 The current pair-free moderate-residual endpoint is the account02/B20 r50/r51 normal form
 

@@ -1,7 +1,6 @@
 # account02/B09 — diffuse-bank bilinear absorption before local pivot payment
 
 **Run:** `20260922T150741Z-account02-B09-QFORM-r3`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 **Assignment:** Bilinear block mechanism  
 **Classification:** `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

@@ -7,7 +7,6 @@ Status: **PROVED SUPPORTING TARGET-LEVEL CERTIFICATE / FULL QFORM OPEN / CONTINU
 
 ## 1. Source pins and exact scope
 
-Fresh control was resolved at `yspennstate/math-research-brain@26513d906d6c181d809590c20370657a09283b5c`; OWNER CONTROL revision `2026-09-22.15` remains QFORM-only. The live corrections were read at that coherent source version. In particular nothing below uses law-uniform pointwise quadratic oscillatory decay, post-rotation independence, arbitrary-joint coarea, positive conditional projection-height moments, bounded-support/fragment localization, or a one-good-minor reduction.
 
 Three proved inputs are used at their exact scopes.
 

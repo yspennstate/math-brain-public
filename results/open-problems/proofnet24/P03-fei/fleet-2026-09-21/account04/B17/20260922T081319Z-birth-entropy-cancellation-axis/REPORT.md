@@ -7,7 +7,6 @@
 
 ## 0. Live target and consumed B15 theorem
 
-The later OWNER MESSAGE supersedes the older interface-D-only wording and converges the FEI fleet on the exact all-gate inequality. This run therefore keeps the current source-exact candidate
 
 \[
 C^\dagger=6.521851214,\qquad

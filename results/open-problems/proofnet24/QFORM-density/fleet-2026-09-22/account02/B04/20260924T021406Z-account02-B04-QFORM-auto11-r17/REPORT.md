@@ -12,7 +12,6 @@ The unrestricted rough-input theorem remains open. This run isolates a useful ca
 
 ## 1. Source boundary and completed inputs
 
-Fresh brain control remained OWNER CONTROL revision `2026-09-22.15`, QFORM only. Live corrections used throughout: no law-uniform pointwise quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint coarea shortcut, and no inference of a uniformly good local minor from three large eigenvalues.
 
 Completed analytic inputs used at equations:
 

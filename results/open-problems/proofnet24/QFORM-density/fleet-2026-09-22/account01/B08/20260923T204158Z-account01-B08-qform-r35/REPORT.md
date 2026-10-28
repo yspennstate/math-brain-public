@@ -265,7 +265,6 @@ The full universal theorem is not claimed.
 
 ## 6. Source pins consumed
 
-- current control: `math-research-brain@b7b7358edbf6bc3a089d26aa3c89386268f2ec3d`, OWNER CONTROL `2026-09-22.15`;
 - designated partner half-cut/receiver: `math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`, `account02/B08/20260923T153836Z-account02-B08-qform-r28/REPORT.md`;
 - literal-cross volume stability: `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `interactive/20260923T002323Z-volume-stability/REPORT.md`;
 - all-sign scalar pivot: current `interactive/20260923T192150Z-all-sign-scalar-pivot/REPORT.md`;

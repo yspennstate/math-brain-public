@@ -8,7 +8,6 @@ Run: `20260923T092051Z-account01-B10-QFORM-auto11`.
 Status at checkpoint: supporting analytic lemma + product-bank reduction; full target OPEN.
 Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control was read on `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; the full QFORM target remains sole. The live corrections against post-rotation independence, arbitrary-joint coarea, conditional-cap substitution, pointwise law-uniform quadratic-phase decay, and local-minor selection are retained.
 
 Required current sources actually used:
 

@@ -5,7 +5,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Status: `NEW_SUPPORTING_THEOREM`; full QFORM remains **OPEN / NOT PROVED**. Full-target continuity remains separately open.  
 Execution context: scheduled automation; `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh pre-write source: `yspennstate/math-research-brain` main observed through commit `82fae37e4028645a13616a93075a54da0897c0da`; OWNER CONTROL revision `2026-09-22.15`; control README blob `fca13a89d221115332ce5e60d49554ee0e213efa`; fresh correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. The proof below uses none of the refuted arbitrary-joint coarea, post-rotation independence, uniform pointwise oscillatory decay, conditional-cap, fiber-supremum, fixed-fragment-count, one-minor, or universal-cross-cut interfaces.
 
 ## 1. New theorem
 

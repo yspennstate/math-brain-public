@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target is unchanged: independent ORIGINAL real coordinates with one-dimensional probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussianity, log-concavity, moment, bounded/connected support, iid hypothesis, post-rotation independence, conditional-density cap, scalar pointwise quadratic van-der-Corput estimate, or deletion of a small quadratic tail is used.
 
-Fresh source control immediately before publication was `yspennstate/math-research-brain@90750bd84d3839b7ad6174d8e9bbb47af42896fe`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread at that ref. The full unrestricted conjecture and full-target continuity remain OPEN.
 
 ## 1. Source-pinned inputs actually used
 

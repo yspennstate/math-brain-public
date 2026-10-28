@@ -14,7 +14,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact target remains: independent real coordinates with scalar densities bounded by one, arbitrary real symmetric coefficient matrix, and at least three eigenvalues of modulus at least one. No moments, compact support, connected support, Gaussianity, log-concavity, iid assumption, or independence after a spectral rotation is used.
 
-Fresh control was resolved from `yspennstate/math-research-brain/main`; OWNER CONTROL is `2026-09-22.15`, programme revision `2026-09-22.5`. The current `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and this assignment card were read. In particular, I do not use the false pointwise quadratic-phase decay, arbitrary-joint coarea, conditional-density-moment, naive fiber-supremum, or post-rotation independence interfaces.
 
 The designated partner actually applied below is account02/B12:
 

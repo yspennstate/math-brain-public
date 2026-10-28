@@ -1,6 +1,5 @@
 # Source/status addendum — account03/B05 r22
 
-Prepublication control refresh: `yspennstate/math-research-brain@bd39b541bfc852473ee5220331de0fb6ef6678d6`, OWNER CONTROL revision `2026-09-22.15`; sole target remains QFORM. Live `CORRECTION_INBOX.json` was reread after the mathematics. No later stop/reassignment was found.
 
 Pinned dependencies actually used:
 

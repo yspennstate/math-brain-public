@@ -13,7 +13,6 @@ attacking: consume the diffuse q=0 double-incident third-volume packet directly,
 
 The unrestricted target remains open: independent ORIGINAL real coordinates with one-dimensional densities bounded by one, and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one. No moment, compact-support, connected-support, Gaussian, iid, log-concavity, spectral-coordinate independence, law-uniform pointwise Fresnel decay, arbitrary-joint coarea bound, conditional projection-height moment, or one-good-minor principle is used.
 
-Fresh control was read from `yspennstate/math-research-brain@c277e86597f99a665f892a530daa930e259e668d`; the later OWNER CONTROL remains revision `2026-09-22.15` and keeps QFORM as the sole target.
 
 The immediate B08 predecessor is
 

@@ -11,7 +11,6 @@ Regularity: the new endpoint proves absolute continuity and an essential `L^infi
 
 The owner target is unchanged: the coordinates are independent ORIGINAL real coordinates with one-dimensional density caps one, and `A` is arbitrary real symmetric with at least three eigenvalues of modulus at least one. No moment, Gaussian, log-concavity, compact-support, connected-support, iid, post-rotation independence, law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea bound, worst-fiber supremum, or deletion of a small random coefficient is used.
 
-Fresh control at the start was `yspennstate/math-research-brain@f85b683585831275d8562208d886a51e98b176df`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction ledger and current research state were read before the argument; full QFORM is still OPEN.
 
 ## 1. Source-valid inputs
 

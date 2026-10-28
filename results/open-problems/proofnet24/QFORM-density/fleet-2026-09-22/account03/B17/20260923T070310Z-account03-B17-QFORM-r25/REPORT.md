@@ -9,7 +9,6 @@ This report proves a sharp supporting theorem for **all Gaussian quadratic forms
 
 It does **not** prove the full arbitrary-input QFORM conjecture. The universal density upper bound for arbitrary independent cap-one inputs remains open, and the requested full-target continuity conclusion remains open.
 
-Fresh source before publication: `yspennstate/math-research-brain` main `374d16383adf7d8edaee793edf94ff31e564d073`, OWNER CONTROL revision `2026-09-22.15`. Live corrections were consumed; no arbitrary-joint coarea estimate, conditional projection moment, pointwise van-der-Corput decay, post-rotation independence, fiber-supremum principle, or one-small-minor principle is used.
 
 The centered Gaussian theorem used below is worker-owned prior result
 `yspennstate/math-open-problems@9ccec4009fa3289188c7bd7344b299cab3be56ce`,

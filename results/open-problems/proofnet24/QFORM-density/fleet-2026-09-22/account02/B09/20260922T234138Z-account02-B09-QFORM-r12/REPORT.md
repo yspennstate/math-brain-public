@@ -27,11 +27,9 @@ The important new point is that branch 1 needs **no separate lower bound on the 
 
 ## Sources and corrections consumed
 
-Fresh brain control was read at `yspennstate/math-research-brain@a8293374154bdde63ae77be6877476933763f51d` and refreshed before publication. OWNER CONTROL is revision `2026-09-22.15`; QFORM remains the sole target. The current state still marks the full theorem open.
 
 The live negative constraints were retained: law-uniform pointwise quadratic-phase decay is false; spectral-fiber suprema can lose dimension; spectral rotations do not preserve independence; the arbitrary-joint 3D coarea bound and positive conditional-projection-density moments are false; one good cross minor or one Schur rank-two extraction is not forced; and overlapping square curvature need not be an external smoother.
 
-The newer Claude synthesis was also consumed from the brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/interactive/20260922T225732Z-claude-synthesis.md`: its reduction leaves a no-small-physical-pivot class `N3` as a sufficient remaining global target. The theorem below is useful precisely because it works at **aggregate bank scale** and therefore does not require a large physical pivot.
 
 Related completed square-plus-one-hyperbolic smoothing: `yspennstate/math-open-problems@4098649c3810c9c525c6d357b3d2c5417a333f6b:proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T182919Z-account03-B02-qform-r12/REPORT.md`. The proof below is self-contained in its narrower pure-Schur-hyperbolic scope and improves the constant there by avoiding an `L^3` interpolation.
 

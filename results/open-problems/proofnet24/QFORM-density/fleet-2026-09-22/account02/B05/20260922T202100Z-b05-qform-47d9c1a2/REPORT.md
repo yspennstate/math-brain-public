@@ -1,7 +1,6 @@
 # account02/B05 — general three-bank scalar core; arrowhead normal form not needed
 
 **Run:** `20260922T202100Z-b05-qform-47d9c1a2`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`; live OWNER CONTROL revision `2026-09-22.15`  
 **Classification:** `ESSENTIAL_STEP_APPLIED`; one stronger intermediate extraction requirement is `CANDIDATE_REFUTED`; full QFORM remains OPEN.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` for native learned-memory purposes. Authenticated repository retrieval was used for source verification, but repository transport is not native learned-memory ingestion.
 

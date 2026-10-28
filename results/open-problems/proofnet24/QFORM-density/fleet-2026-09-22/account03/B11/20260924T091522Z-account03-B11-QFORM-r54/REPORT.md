@@ -9,7 +9,6 @@ Status: **NEW SUPPORTING THEOREM + REFUTED INTERMEDIATE MECHANISM / DESIGNATED P
 Execution: **WITHOUT_VERIFIED_BRAIN**  
 Continuity: **not proved by this run**.
 
-Fresh owner controls were read from `yspennstate/math-research-brain` main. At the prepublication refresh OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no later stop or B11 reassignment observed. The full universal bounded-density conjecture and the full continuous-density conclusion remain open.
 
 This run keeps the current corrections: no law-uniform pointwise van-der-Corput decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea, no conditional cap after a sum/difference transform, no fiber-supremum argument, and no deletion of a small nonzero random perturbation.
 

@@ -13,7 +13,6 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain/main` was resolved at startup; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The current assignment card, MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, and MEMORY_PROTOCOL were read. The current execution remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval is real, but native learned-memory ingestion is not verified.
 
 Immediate own source:
 

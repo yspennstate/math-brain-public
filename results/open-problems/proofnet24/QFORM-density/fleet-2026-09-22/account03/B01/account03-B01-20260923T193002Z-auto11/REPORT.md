@@ -15,7 +15,6 @@ The full target is unchanged: for every finite `n`, every independent real `X_i`
 
 Fresh control was read from `yspennstate/math-research-brain/main` at start commit
 `12cf271a0a54404d06f9cd54cc0630bc7a0fdc68` and refreshed before publication at
-`74d9d27ac15202296478999e802d1421ac814fa1`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no paused accounts/slots. The live correction inbox was re-read before publication.
 
 The following corrections are retained throughout:
 

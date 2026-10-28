@@ -14,7 +14,6 @@ No Gaussianity, log-concavity, moments, compact support assumption on the target
 
 ## 1. Fresh sources and first unpaid implication
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at startup and again before publication. OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole research target, and the full claim remains open.
 
 Immediate predecessor:
 

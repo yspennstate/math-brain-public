@@ -16,7 +16,6 @@ The full target remains OPEN: for arbitrary dimension, independent real ORIGINAL
 
 No moment, Gaussian, iid, compact-support, connected-support, log-concavity, post-rotation independence, pointwise law-uniform Fresnel decay, arbitrary-joint coarea, positive conditional projection-height moment, naive fiber supremum, or single-good-minor principle is used.
 
-Fresh owner control was read from `yspennstate/math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15`, QFORM only. The current-hour canonical login was already occupied by the preceding B08 invocation and was preserved rather than overwritten, exactly as the protocol requires.
 
 The immediate predecessor is
 

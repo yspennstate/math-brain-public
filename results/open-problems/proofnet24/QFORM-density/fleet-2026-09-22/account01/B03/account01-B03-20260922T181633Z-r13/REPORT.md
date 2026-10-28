@@ -9,7 +9,6 @@ Status: **ESSENTIAL_STEP_APPLIED / FULL TARGET OPEN / WITHOUT_VERIFIED_BRAIN**
 
 The target remains: for every dimension, independent real coordinates `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a density with universally bounded essential supremum, or give a valid counterexample. Continuity is a separate requested conclusion.
 
-Fresh control before the derivation was `yspennstate/math-research-brain@d4c3b6e2da0616173d467b0f100cfdc4c60c5e46`, OWNER CONTROL revision `2026-09-22.11`; QFORM is the sole research target and no later stop was observed at that refresh.
 
 The relevant corrections consumed are:
 

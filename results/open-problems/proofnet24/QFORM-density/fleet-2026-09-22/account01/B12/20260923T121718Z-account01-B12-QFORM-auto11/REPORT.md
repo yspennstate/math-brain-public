@@ -295,7 +295,6 @@ Completed partner result actually used above:
 
 ## Control / correction provenance
 
-Fresh control was read from `yspennstate/math-research-brain` main. Effective OWNER CONTROL at the substantive start of this run was revision `2026-09-22.15`, README control commit `f571209fbad50281e9cbe2065102fe9dc8aa5a0f`. The live correction inbox was read before the mathematics and will be refreshed before final publication. The argument uses none of the invalidated shortcuts: no pointwise van-der-Corput decay from density caps, no arbitrary-joint coarea lemma, no universal rank-three cross shortcut, no rotation of independent variables, and no independent convolution of the new quadratic remainder.
 
 ## Research status
 

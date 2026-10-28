@@ -13,7 +13,6 @@ Status: **NEW SUPPORTING TARGET-LEVEL COLLAR THEOREM + NEW DISTRIBUTION-FUNCTION
 
 The target remains: independent real ORIGINAL coordinates with densities at most one; arbitrary real symmetric coefficient matrix `A`; at least three singular/eigenvalue magnitudes at least one; prove one dimension- and law-independent `L^infinity` density bound, or give a genuine counterexample. Continuity is a separate requested conclusion.
 
-Fresh control was resolved from `yspennstate/math-research-brain/main@f0827d382f33c37efaef842c7892c7ce73e77bcd`. OWNER CONTROL is revision `2026-09-22.15`, QFORM-only, with no account01/B01 pause. I read the current `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, the B01 assignment card, and the immutable source owner message at `0dc369ddf8b860648dd780d8f92c62994dc53ecf`.
 
 The following corrections are binding throughout:
 

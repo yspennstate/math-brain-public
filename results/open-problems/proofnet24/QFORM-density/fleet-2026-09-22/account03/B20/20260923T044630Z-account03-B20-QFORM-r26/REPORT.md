@@ -11,7 +11,6 @@ attacking: the r25 adjusted-diagonal collar debt by a rank-five finite-exception
 
 ## 1. Source boundary and exact debt
 
-Fresh source control at start is `yspennstate/math-research-brain@fe7ef8cf19c40214a6fedc5a4f6b5102e2a59b71`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.
 
 The immediate source is account03/B20 r25, canonical
 

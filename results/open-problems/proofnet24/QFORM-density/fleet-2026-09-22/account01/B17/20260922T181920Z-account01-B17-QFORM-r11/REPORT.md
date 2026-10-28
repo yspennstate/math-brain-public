@@ -7,7 +7,6 @@ Status: **AUXILIARY_ONLY / SHARP-WITNESS-EXCLUSION**.  The unrestricted quadrati
 ## Source pins consumed
 
 - Live owner control read from `yspennstate/math-research-brain`, `scheduled_tasks/README.md`: active programme QFORM; owner-control revision `2026-09-22.11`; sole target is the universal bounded-density conjecture.  The owner message explicitly warns that global `L^1` characteristic-function control is false in general.  The argument below uses `L^1` only for one explicit stress family where it is proved directly.
-- Assignment blob: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account01/B17.json`, blob `5d91926a87d3e6d75cb5f1a3cde422ad28c5c33b`.
 - Designated partner input actually used: account02/B17 handoff `20260922T174510Z-account02-B17-QFORM-r12.md`, blob `23fd81557d925fe089f3ac4d87be4344846e7bd7`, canonical mathematics `yspennstate/math-open-problems@8cd8692e80ceffc93ae5679a323bbc4f11f89cb1`.  Its theorem says a probabilistically infinitesimal exact rank-three tight-frame array has Gaussian covariance floor `Gamma >= I_3/12`; hence every convergent infinitesimal limiting law has quadratic-form peak at most `3 sqrt(2)`.  It explicitly leaves a finite macroscopic core plus diffuse residual as a possible sharp-witness escape.
 
 ## New theorem: a maximally shared macroscopic null row does not escape

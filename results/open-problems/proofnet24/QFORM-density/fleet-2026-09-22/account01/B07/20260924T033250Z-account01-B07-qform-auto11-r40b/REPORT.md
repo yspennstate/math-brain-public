@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh control at the beginning was `yspennstate/math-research-brain@3cee152d7699731cd08d45f9b0beb305d4788f3f`; immediately before writing it was refreshed to `9a5cac551e6dd043224580072323dec8df742a94`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account01/B07 pause or reassignment. The live correction ledger was consumed. In particular, no law-uniform pointwise van-der-Corput estimate, post-rotation independence, moment/support hypothesis, arbitrary-joint coarea bound, fiber supremum, or deletion of a small nonzero quadratic tail is used.
 
 The incoming B07 theorem is account01/B07 r39,
 

@@ -17,7 +17,6 @@ Fresh `math-research-brain` main was read before this work at
 
 `54a02a82ba1de885cf0ddf5ff8911ba5a2e3b73c`.
 
-OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and no B14 stop/pause was present. The current state still marks the full conjecture OPEN and continuity OPEN. The live corrections were reread; in particular this run does not use law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, post-rotation independence, bounded-diameter localization, or a conditional projection-density moment.
 
 The designated partner result actually used below is account04/B14 r9,
 

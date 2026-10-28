@@ -12,7 +12,6 @@ The owner target remains the unrestricted one: independent original real coordin
 
 ## 1. Fresh source boundary and corrections
 
-Fresh brain control for this invocation resolved to `math-research-brain@47c898b0105849d0727ab54f1248a6dec73aff1f`; OWNER CONTROL remains revision `2026-09-22.15` and QFORM is the sole active programme for this slot. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and its newer-source chain were read.
 
 The corrections used below are the current ones: no law-uniform pointwise quadratic-phase decay, no worst-fibre supremum, no arbitrary-joint coarea replacement, no conditional-cap-as-independence, no independence after rotating the source variables, no deletion of a nonzero small matrix tail on unbounded inputs, and no inference of one uniformly good physical minor from aggregate volume without proof.
 

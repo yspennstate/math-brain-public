@@ -16,7 +16,6 @@ Fresh prepublication control was resolved at
 
 `yspennstate/math-research-brain@091792e12e2fea4f0deeed6d8d6111e5617b0e55`,
 
-OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, with no applicable account01/B03 pause or stop. The live programme corrections and memory protocol were reread before this write. In particular this proof does **not** use any of the refuted interfaces: law-uniform pointwise quadratic-phase decay; arbitrary-joint rank-three coarea; conditional density caps for the dependent conjugate variables `X-X'` and `X+X'`; post-rotation independence; a uniformly good single physical minor; or dimension-free naive fiber-sup integration.
 
 The one-dimensional integrated Fourier input actually used is the completed e5/Claude package
 

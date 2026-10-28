@@ -8,7 +8,6 @@ attacking: the near-coloop collar by a second heavy physical pivot in the strong
 **Status:** `NEW SUPPORTING THEOREM / HEAVY STRONG-COMPLEMENT PART OF THE NEAR-COLOOP COLLAR CLOSED / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh controls were read from `yspennstate/math-research-brain` main. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, and the current continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The full theorem and full-target continuity remain OPEN. The live correction inbox was reread; this proof does not use law-uniform pointwise quadratic-phase decay, independence after spectral rotation, conditional density caps for conjugate sums/differences, the false arbitrary-joint coarea lemma, or a uniformly good single spectral minor.
 
 The canonical predecessor is
 

@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. The new defect-area payment proves essential b
 
 ## 1. Source boundary and corrections
 
-Fresh `math-research-brain` controls were read at the start and again before publication. OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with QFORM as the sole target and no later owner/platform stop or reassignment observed.
 
 The proof below never rotates the original coordinates and then declares them independent. All conditioning is on ORIGINAL coordinates. It uses no moment, support, log-concavity, connected-support, Gaussian, or compactness hypothesis. It does not use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint 3D coarea, conditional projection-density cap, fiber-supremum argument, or deletion of a small nonzero coefficient as a small random perturbation.
 

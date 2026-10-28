@@ -4,7 +4,6 @@ attacking: close the exact-rank-three nested-heavy projection branch by combinin
 # account03/B16 — nested-heavy pair/pivot closure
 
 Run: `20260922T182132Z-account03-B16-QFORM-r14`  
-Control source: `yspennstate/math-research-brain@600ccff62ec7409870f7d7cc57ba09f979eb1f44`, OWNER CONTROL revision `2026-09-22.11`.  
 Assignment: Projection-product interaction.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Status: `PROVED SUPPORTING THEOREM / EXACT-RANK-THREE NESTED-HEAVY BRANCH CLOSED / FULL QFORM OPEN`.

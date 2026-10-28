@@ -5,7 +5,6 @@ attacking: the fresh affine-shear caveat in the curved two-sheet tube; retain a 
 
 Programme `QFORM-DENSITY-3EIG-20260922`; full target OPEN.
 
-Fresh control commit: `math-research-brain@48596c878caf620484499cd94cc1958139d4c258`, OWNER CONTROL revision `2026-09-22.15`. The fresh interactive tube correction shows that an arbitrary induced affine shear `dL` destroys the stronger `O(a r^2)` dyadic tube estimate by a saddle example of size `a r^2 log(1/r)`. This checkpoint records a weaker but summable product-preserving repair.
 
 ## Candidate theorem already proved at calculation level
 

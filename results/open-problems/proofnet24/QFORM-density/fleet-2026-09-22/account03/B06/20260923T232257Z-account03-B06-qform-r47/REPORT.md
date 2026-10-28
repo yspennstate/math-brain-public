@@ -17,7 +17,6 @@ Fresh `math-research-brain/main` at startup was
 
 `4f02efd0c35bb09e6fc4a2faa82db9e5d58df285`,
 
-with OWNER CONTROL revision `2026-09-22.15` and QFORM as the sole research target.
 
 The live corrections retained include:
 

@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh `main` controls were read from `yspennstate/math-research-brain`; the current OWNER CONTROL is revision `2026-09-22.15`, with QFORM as the sole research target and no account03/B15 pause. The full conjecture remains open.
 
 The completed designated-partner results used below are:
 

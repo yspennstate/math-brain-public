@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh scope and source pins
 
-Fresh owner control was re-resolved on `yspennstate/math-research-brain@6e799fa5db4ada5ce47eae56067a881c8c1c2361`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM only. The live QFORM status remains `FULL_CONJECTURE_OPEN`; the arbitrary-joint coarea gate, positive conditional projection-height moment gate, post-rotation independence, and worst-fiber-normalization shortcuts remain forbidden.
 
 The completed source theorem strengthened here is account03/B01 `QFORM-GROUPED-BILINEAR-2D-RECEIVER-v1`, canonical report
 

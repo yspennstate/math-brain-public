@@ -14,7 +14,6 @@ The exact owner target remains unchanged: arbitrary independent real ORIGINAL co
 
 ## 1. Fresh source pins and the actual first implication
 
-Fresh control was resolved from `yspennstate/math-research-brain`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with the continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` active.
 
 The immediate same-slot predecessor is account03/B20 r34, present at
 

@@ -10,7 +10,6 @@ attacking: literature-to-proof transfer for a fully diffuse three-bank zero-pivo
 
 The owner target remains open: for every finite `n`, independent real original-coordinate variables `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove one dimension-free finite bound on the essential supremum of the density of `X^T A X`, or give a valid target counterexample. Continuity is tracked separately.
 
-Fresh control at this run was `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`. The live corrections against post-rotation independence, arbitrary-joint coarea, positive conditional projection-density moments, worst conditional-density gates, fixed-good-minor extraction, pointwise law-uniform quadratic-phase decay, and near-zero-half-Riesz perturbation remain binding. None is used below.
 
 ## 1. Primary-source audit
 
@@ -295,4 +294,3 @@ Designated partner proof actually applied:
 - `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T182500Z-account04-B18-QFORM-r2/REPORT.md`.
 
 Fresh control source for this run:
-- `yspennstate/math-research-brain@38b2e0766a6d8394cb53e9a7fe3c4520770d3309`, OWNER CONTROL revision `2026-09-22.15` at mathematical start. Final control/correction refresh is recorded separately in the run receipt.

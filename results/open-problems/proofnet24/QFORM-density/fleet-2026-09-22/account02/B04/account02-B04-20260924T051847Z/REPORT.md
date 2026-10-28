@@ -14,7 +14,6 @@ A completed marginal-free aggregate-E3 compiler already exists (account03/B02 r3
 
 ## 1. Source-pinned inputs and live corrections
 
-Fresh `math-research-brain/main` and owner control were read; OWNER CONTROL remains revision `2026-09-22.15`, QFORM is the sole target, and there is no applicable later stop. The live corrections still forbid law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea shortcuts, independence after spectral rotation, and inference of a universally good single physical minor.
 
 Pinned source required by the owner:
 

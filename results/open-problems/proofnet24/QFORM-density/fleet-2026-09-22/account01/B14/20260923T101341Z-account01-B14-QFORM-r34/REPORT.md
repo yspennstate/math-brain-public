@@ -11,7 +11,6 @@ attacking: anchor-recoalescence localization—combine account02/B14 r33 random-
 
 ## 1. Sources actually consumed
 
-Fresh control remained OWNER CONTROL revision `2026-09-22.15`, sole target QFORM, no paused account/slot relevant here. I read fresh `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `ORDER.md`, and `assignments/account01/B14.json`.
 
 The designated partner actually applied below is the newly completed account02/B14 r33:
 

@@ -11,7 +11,6 @@ The unrestricted conjecture is not proved here. The new result is a deterministi
 
 ## 1. Sources and live scope
 
-Fresh protected controls before publication remained OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, with no B07 pause/stop. The live correction inbox was refreshed. In particular this proof does not use law-uniform pointwise quadratic decay, independence after spectral rotation, arbitrary-joint rank-three coarea, a positive conditional-density moment, or a reciprocal bound for one tiny coordinate minor.
 
 The current B07 input is the preceding account01/B07 r17 bundle
 

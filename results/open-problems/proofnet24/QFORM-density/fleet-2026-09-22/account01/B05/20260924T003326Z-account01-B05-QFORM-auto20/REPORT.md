@@ -325,7 +325,6 @@ This formulation isolates the precise missing factor for B05: **one-dimensional 
 
 ## 8. Sources actually applied
 
-1. Fresh owner/control state: `yspennstate/math-research-brain` main, current OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`.
 2. Designated partner null-hub theorem: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md`, theorem `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`.
 3. Newest designated partner cofactor compiler: `yspennstate/math-open-problems@592ae3869873b6cf71cc375758b11655b1630aac`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T232530Z-account02-B05-QFORM-r11a/REPORT.md`.
 4. Previous B05 overlap obstruction and independent-square repair: `yspennstate/math-open-problems@e4bf40b7376380c069ccee64a530fd2297ef04e3`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T233435Z-account01-B05-QFORM-auto17/RECONCILIATION.md`.

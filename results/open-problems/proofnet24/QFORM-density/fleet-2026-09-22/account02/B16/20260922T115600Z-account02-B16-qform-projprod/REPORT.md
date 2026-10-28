@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; no native learned-memory receiver was used.
 
 Fresh owner controls were read from `yspennstate/math-research-brain` main commit `00bd16396410aae9a7bc394e03e733be30a801a6`, control revision `2026-09-22.5`. This later owner order supersedes the stale FEI text attached to the scheduler: all workers are on the quadratic-form bounded-density conjecture.
 
-The live card is `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account02/B16.json`, blob `1f4749a812a9ff49e7d0bf2496e9cf95a675883c`, title **Projection-product interaction**. Its task is to combine the bounded-density projection theorem with nonlinear quadratic integration while retaining dependence; a bounded joint projection density alone is known not to control indefinite level-set integrals.
 
 The scientific source repository was resolved at `yspennstate/math-open-problems` master commit `92717ee3ab720389cb84a8941c62810b5a2fd605` before the derivation.
 

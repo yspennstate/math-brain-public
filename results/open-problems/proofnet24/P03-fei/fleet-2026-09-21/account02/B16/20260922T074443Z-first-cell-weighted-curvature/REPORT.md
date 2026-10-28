@@ -8,7 +8,6 @@
 
 ## 0. Fresh control and supersession
 
-Fresh owner control was read from `yspennstate/math-research-brain` main, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, and the natural-language OWNER MESSAGE. Owner control revision `2026-09-22.2` keeps B12--B18 on FEI but supersedes the older Campaign-C half-band assignment with the all-gate convergence target. Consequently this run does not reopen the retired positive-current/R16 half-band route merely because the scheduled prompt still names it.
 
 Fresh scientific master and the current P03-FEI entry rules were read from `yspennstate/math-open-problems` master, together with the gate reformulation, read-once candidate source, the latest completed account02/B18 lead, the current B18 first-cell checker, and the peer results named below.
 

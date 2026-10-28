@@ -5,7 +5,6 @@ attacking: a nonzero-pivot-stable decoupled time estimate for a same-bank square
 
 Status: **new supporting theorem proved; full QFORM OPEN; full-target continuity OPEN; WITHOUT_VERIFIED_BRAIN**.
 
-Owner/control at final prepublication refresh: math-research-brain main `7e776fffb3cdb145111713d8a29f59a126dc7838`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no account03/B03 pause. Live correction inbox was reread. This proof uses no pointwise quadratic van-der-Corput decay, no independence of sum/difference variables, no conditional cap for a conjugate pair, no arbitrary-joint 3D coarea theorem, and no positive conditional projection-density moment.
 
 ## 1. Main theorem
 
@@ -268,8 +267,6 @@ The unrestricted three-large-eigenvalue conjecture remains **OPEN**. Full-target
 
 ## 9. Source pins
 
-- fresh control at final refresh: `yspennstate/math-research-brain@7e776fffb3cdb145111713d8a29f59a126dc7838`, OWNER CONTROL `2026-09-22.15`;
-- assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account03/B03.json`;
 - live corrections reread from the same fresh main;
 - prior r52 zero-pivot report: `proofnet24/QFORM-density/fleet-2026-09-22/account03/B03/20260924T095801Z-account03-B03-QFORM-auto11-r52/REPORT.md`;
 - completed partner r5: `yspennstate/math-open-problems@fbe1dfba05eea312d8f12f22f2132476758039a8`, path given in Section 7.

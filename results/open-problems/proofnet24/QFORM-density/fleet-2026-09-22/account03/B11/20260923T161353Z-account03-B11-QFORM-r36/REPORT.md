@@ -8,7 +8,6 @@ attacking: the collision-critical heavy-frame collar: derive a quantitative near
 **Status:** `NEW STRUCTURAL THEOREMS / DESIGNATED PARTNER APPLIED / NON-NEARCOLOOP EXACT-RANK3 COLLAR PAID / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` at startup and refreshed before this publication. The prepublication main commit was `45afbd9740350eae52908f0d5cc1ceb97cd91ea7`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular, nothing below uses independence after spectral rotation, law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, a bounded conditional projection profile, a fixed-good-minor implication, or perturbative deletion of small quadratic coefficients.
 
 The unrestricted owner conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. This report works first in exact rank three and then sharpens the remaining true-near-coloop geometry. Arbitrary additional nonseparable spectrum is still a separate bridge.
 

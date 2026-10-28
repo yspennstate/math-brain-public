@@ -22,7 +22,6 @@ The five mandatory control blobs were unchanged:
 - `scheduled_tasks/roles.json`: `ed17ecc94f76720c0345b3e32249b791b20ec611`;
 - `scheduled_tasks/PROTOCOL.md`: `83a9268bf5287ca203e4be69a79e25382397bca7`.
 
-OWNER CONTROL was read in full at revision `2026-09-22.2`; `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` remains active and there is no applicable account04/B11 pause or stop. The later research allocation supersedes the older installation/benchmark clauses retained in `AGENTS.md`.
 
 The newest complete campaign-lead result used is account04/B10 r18:
 

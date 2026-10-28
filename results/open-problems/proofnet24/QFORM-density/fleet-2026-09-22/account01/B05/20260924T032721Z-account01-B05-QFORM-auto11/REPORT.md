@@ -5,7 +5,6 @@ attacking: the near-coloop Witt product-projection Borel tube; use original-coor
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Role:** quadratic coarea / equivalent interval bound preserving arbitrary product densities.  
-**Control:** OWNER CONTROL revision `2026-09-22.15`; QFORM-only.  
 **Status:** `NEW_PRODUCT_PRESERVING_PAIRWISE_TUBE_THEOREM / PARTNER_MAXCUT_APPLIED / TARGET_VALID_DIMENSION_LOSS_EXHIBITED / FULL_QFORM_OPEN`.  
 **Regularity:** the new paid branches prove an essentially bounded density; continuity for the full target is not proved here.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

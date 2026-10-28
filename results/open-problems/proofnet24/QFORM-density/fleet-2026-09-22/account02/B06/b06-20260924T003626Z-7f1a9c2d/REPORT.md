@@ -11,7 +11,6 @@ The unrestricted theorem remains OPEN / NOT PROVED / NOT DISPROVED. Essential bo
 
 ## 1. First unpaid implication, source boundary, and corrections
 
-Fresh brain control was resolved before this calculation. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole active research target. The live correction inbox blob at the final pre-write refresh is `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 The newest designated partner account03/B06 result is r48:
 
@@ -271,7 +270,6 @@ Full QFORM remains OPEN. Global continuity remains OPEN. No scheduler, task, ema
 
 ## 8. Source pins
 
-- Fresh brain main before final write: `yspennstate/math-research-brain@332aee7e8c39f7f0223820f54f4cc83450b6d52e`; OWNER CONTROL `2026-09-22.15`.
 - Live correction inbox blob: `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 - Newest designated partner account03/B06 r48: `yspennstate/math-open-problems@a4090a876e18635918b87f87a7af42726b29337a`, exact REPORT path above.
 - Required pinned package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.

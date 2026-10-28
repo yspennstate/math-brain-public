@@ -14,7 +14,6 @@ Continuity: **proved for the fixed-physical-core density corollary below; full t
 
 The target is unchanged: for every dimension, every product law of independent original coordinates with scalar probability densities bounded by one, and every real symmetric coefficient matrix with at least three eigenvalues of modulus at least one, prove a dimension-free universal density bound, or give a valid counterexample.
 
-Fresh owner control was reread immediately before publication at `math-research-brain/main` head `8f0a6944b6a8c5ac75092ac77829bc89c433fe16`, OWNER CONTROL `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction inbox at that refresh had blob `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`. The current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. No later pause or scope change was present.
 
 The same UTC-hour canonical login path already belonged to this slot's earlier real run `20260923T231212Z-qform-eigenvalue-r43`; it was preserved rather than overwritten, exactly as the current continuation requires. This r44 run has its own unique immutable run/start/finish records.
 

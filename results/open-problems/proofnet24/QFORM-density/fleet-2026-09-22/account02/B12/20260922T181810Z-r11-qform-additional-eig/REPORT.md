@@ -39,4 +39,3 @@ for every real tau. Thus the full law is uniformly stable under an arbitrary fou
 
 The valid identity `p_Q(y)=E[p_{Q_3|Q_rest}(y-Q_rest)]` is not the problem; the invalid step is replacing this average by the worst conditional fiber. Extreme Q_rest levels collapse the product source onto simplices of diameter O(r), making the conditional Q_3 density O(r^-2), while their Q_rest weights simultaneously vanish. Any viable scalar-conditioning proof must retain that compensating level weight inside an averaged fractional-trace/kernel functional.
 
-Sources: fresh brain control `e0d588f1acc49cf71d22ad81cf6374809a4f4bf4`, OWNER CONTROL revision `2026-09-22.11`; assignment account02/B12 Additional eigenvalue control; corrections `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1`, `QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1`, and no-independence-after-rotation consumed. FULL TARGET `OPEN -> OPEN`; mechanism-level scalar-worst-fiber reduction refuted.

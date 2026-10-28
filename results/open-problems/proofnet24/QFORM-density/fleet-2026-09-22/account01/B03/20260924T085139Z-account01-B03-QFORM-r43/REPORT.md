@@ -141,7 +141,6 @@ Full universal boundedness: **OPEN**. Unrestricted continuity: **OPEN**. Continu
 
 ## 7. Source pins
 
-- Source owner message: `yspennstate/math-research-brain@0dc369ddf8b860648dd780d8f92c62994dc53ecf`, `scheduled_tasks/README.md`; later current OWNER CONTROL revision `2026-09-22.15` was reread before publication.
 - Negative packet theorem: `yspennstate/math-open-problems@6c4698000d4fd206b465a18231ba8c7a8f643f59`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B03/20260924T000609Z-account01-B03-QFORM-r36/REPORT.md`.
 - Designated partner actually applied: `yspennstate/math-open-problems@54243d0668be2be7879ae467ed9cb6b962f24652`, `proofnet24/QFORM-density/fleet-2026-09-22/account02/B03/20260924T081949Z-account02-B03-QFORM-auto11-r52/REPORT.md`.
 

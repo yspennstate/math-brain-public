@@ -12,7 +12,6 @@ The full QFORM conjecture remains OPEN. Continuity of the full output density is
 
 ## 1. Source state and partner result actually used
 
-Fresh control at the beginning was `yspennstate/math-research-brain@d4f8428a00da0cc6c910263e4ec53758b627af0a`, OWNER CONTROL revision `2026-09-22.15`. The sole target remains the arbitrary-law quadratic-form density conjecture. The live current state explicitly refutes the arbitrary-joint rank-three coarea bound and every fixed positive conditional projection-height moment interface. I do not use either claim.
 
 The designated partner result actually used is account04/B16, run `20260922T191443Z-account04-B16-QFORM-r3`, canonical report
 

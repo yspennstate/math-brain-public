@@ -12,7 +12,6 @@ attacking: overlapping grouped-square innovations — replace disjointness betwe
 
 The owner target remains the unrestricted statement: for independent real original-coordinate inputs with probability densities at most one and an arbitrary real symmetric matrix with at least three eigenvalues of modulus at least one, prove one dimension-free bound for the essential supremum of the density of `Q=X^T A X`, or produce a genuine target counterexample. No moment, compact-support, log-concavity, connected-support, Gaussian, centering, or post-rotation independence assumption is introduced.
 
-Fresh control at the beginning of this run was `yspennstate/math-research-brain@57f48e76948c8b179017113c686a18674d1d8351`, OWNER CONTROL revision `2026-09-22.15`. The current `CURRENT_RESEARCH.md` still marks the full conjecture OPEN.
 
 The following corrections are retained throughout:
 

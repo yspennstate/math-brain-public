@@ -12,7 +12,6 @@ This run deliberately changes mechanism after the preceding row-cap/third-volume
 
 ## 1. Source-pinned inputs and live corrections
 
-Fresh owner control on `yspennstate/math-research-brain/main` was read with OWNER CONTROL revision `2026-09-22.15`, QFORM only. `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account01/B04 assignment were reread. In particular:
 
 * law-uniform pointwise van-der-Corput decay is false;
 * post-rotation coordinates must not be declared independent;

@@ -10,7 +10,6 @@ STATUS: PARTIAL. Full uniform-cube Friedgut--Kalai Fourier entropy-influence (FE
 Fresh authenticated control at entry:
 yspennstate/math-research-brain main
 ff6423d33daf35a8e4413a30956b6f8d0b26b31c,
-OWNER CONTROL revision 2026-09-21.1.
 The live directive is FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z plus the
 FEI-FULL-PROOF-PROGRESS continuation.  Account02/B17 is assigned new proof
 mechanisms / exact Boolean adversaries for shared interface B.  No later

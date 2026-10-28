@@ -2,7 +2,6 @@
 
 Status: `AUXILIARY_ONLY / SHARP-WITNESS_EXCLUSION`. The full unrestricted quadratic-form bounded-density conjecture remains OPEN / NOT PROVED. Continuity is separate and is not claimed here.
 
-Source control used at run start: `yspennstate/math-research-brain@f571209fbad50281e9cbe2065102fe9dc8aa5a0f`, OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`. Required live corrections were consumed before this derivation; in particular no arbitrary-joint coarea bound, conditional projection-density moment, pointwise oscillatory decay, or post-rotation independence is used.
 
 Designated partner actually applied: account02/B17, theorem `QFORM-TWO-ORTHOGONAL-SAMESIGN-HEAVY-NOESCAPE-v1`, handoff commit `bfce8a62af9b865ff5ae0fa6a7ed3234707d14a0`, canonical report `yspennstate/math-open-problems@26ab15f7356940c8c4ef5c6eab412a38f5bb9498:proofnet24/QFORM-density/fleet-2026-09-22/account02/B17/B17-20260922T184751Z-r12/REPORT.md`. The exact input used below is its one-coordinate cap-one square-Laplace inequality
 

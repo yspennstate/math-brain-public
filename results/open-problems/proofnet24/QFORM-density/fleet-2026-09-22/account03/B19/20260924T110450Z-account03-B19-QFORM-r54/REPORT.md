@@ -13,7 +13,6 @@ All sets below are literal ORIGINAL-coordinate sets. Orthogonal transformations 
 
 ## 1. Source-pinned frontier and conditional proof assembly
 
-Fresh owner control from `yspennstate/math-research-brain/main` remains QFORM-only under OWNER CONTROL revision `2026-09-22.15`. `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account03/B19 assignment were reread during this run. The unrestricted theorem remains OPEN.
 
 The immediate same-slot input is r51:
 

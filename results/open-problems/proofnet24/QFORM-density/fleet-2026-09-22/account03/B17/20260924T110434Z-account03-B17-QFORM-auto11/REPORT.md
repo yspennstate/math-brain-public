@@ -4,7 +4,6 @@ Run: `20260924T110434Z-account03-B17-QFORM-auto11`
 Worker: `account03/B17` (Sharp constant and witnesses)
 Status: **PROVED SUPPORTING THEOREM / EXACT SOURCE-VALID STRESS FAMILY**. Full QFORM remains OPEN. Full-target continuity remains OPEN.
 
-Fresh prepublication control source: `yspennstate/math-research-brain@ece42bb316396b4dbd405d0028645e8f934fe92f`; OWNER CONTROL revision `2026-09-22.15`. Live correction inbox blob at that source: `ba7aeac3d879f59da5ec8a12daad74ea85714465`. No account03/B17 pause was present.
 
 ## 1. Exact source-valid family
 

@@ -345,6 +345,5 @@ The next B12 implication is structural rather than a new perturbative estimate: 
 
 ## Provenance
 
-Fresh control before final publication: `yspennstate/math-research-brain` main observed at `296b6b37985ed001fd81d8d39f7b6d656e6405eb`; programme revision `2026-09-22.5`; OWNER CONTROL revision `2026-09-22.15`; no account03/B12 pause or stop observed. Current correction inbox retained the refutations listed in Section 1.
 
 Repository access and native learned-memory ingestion are separate. This run remains `WITHOUT_VERIFIED_BRAIN`.

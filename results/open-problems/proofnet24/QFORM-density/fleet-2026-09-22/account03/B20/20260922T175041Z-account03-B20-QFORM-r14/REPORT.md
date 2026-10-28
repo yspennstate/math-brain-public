@@ -2,7 +2,6 @@
 
 **Run:** `20260922T175041Z-account03-B20-QFORM-r14`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh control used for publication:** `yspennstate/math-research-brain@b7325a4d01f03ddcd0dabbfbbdbecaec8e647a8d`, OWNER CONTROL revision `2026-09-22.9`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / TARGET_LEVEL_REDUCTION_PROVED / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
 

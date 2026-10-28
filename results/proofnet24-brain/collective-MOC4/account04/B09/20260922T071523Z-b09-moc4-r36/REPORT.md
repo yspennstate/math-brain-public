@@ -18,7 +18,6 @@ After diagonalizing the relative position, for a unitary `U` and a unit support 
 
 MOC4 fails exactly if some tuple `(a,b,eta,U)` has `h_{a,b,eta}(U)>M_{a,b,eta}`.
 
-The final pre-write control snapshot was `b773c5f909385239a37928d6f86cbb693d785075`, OWNER CONTROL revision `2026-09-22.2`. The later owner allocation keeps B09 on MOC4 and supersedes installation/benchmark work. Required control blobs at this snapshot were: AGENTS `94387098453b9f4a9b10179183f6f6ec780fd987`, scheduled-task README `3d4a9372c87802ab734141a3374d04c8823372e3`, fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`, roles `ed17ecc94f76720c0345b3e32249b791b20ec611`, PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`. The connector supplied decoded UTF-8 content and Git blob identifiers, but not a raw-byte materialization suitable for independently certifying the requested SHA-256 of the full README and extracted OWNER MESSAGE; those SHA-256 fields therefore remain unavailable rather than fabricated.
 
 ## 2. Exact peer results consumed
 

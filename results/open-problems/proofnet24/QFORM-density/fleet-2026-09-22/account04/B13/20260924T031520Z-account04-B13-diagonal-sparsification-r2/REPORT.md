@@ -11,7 +11,6 @@ All coordinates are original physical coordinates. There is no post-rotation ind
 
 ## 1. Sources and live scope
 
-Owner control remains QFORM-only under OWNER CONTROL revision \`2026-09-22.15\`. The required Claude package was retained at
 \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`,
 \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
 No valid counterexample is known there, and the full theorem is not claimed.

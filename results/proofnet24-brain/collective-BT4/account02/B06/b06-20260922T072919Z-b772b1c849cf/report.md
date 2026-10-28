@@ -7,7 +7,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## Directive / control acknowledgment
 
-This run implements `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` under OWNER CONTROL revision `2026-09-22.2`. Fresh controls were resolved from `yspennstate/math-research-brain` main, including `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md` including OWNER MESSAGE, and the collective `ORDER.md`, `TARGETS.md`, `ASSIGNMENTS.json`. B06 remains BT4 adversarial reduction research; older installation/benchmark work is stopped. No authenticated brain retrieval/context was used.
 
 Initial control main: `392c75947d5d48a716bd6da0b9393c3c1bc308d0`. Start refresh main: `3727d194e85c390fb573ec9a09d626ee2b383ccf`.
 

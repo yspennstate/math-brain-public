@@ -11,7 +11,6 @@
 
 ## 0. Version/change summary and the exact live implication
 
-The later OWNER CONTROL revision `2026-09-22.2` keeps B12--B18 on FEI and supersedes older route-specific duties with the all-gate formulation. For a Boolean gate `G` at independent product biases `p=(p_1,...,p_n)`, let
 
 \[
 V_u=4u(1-u),\qquad

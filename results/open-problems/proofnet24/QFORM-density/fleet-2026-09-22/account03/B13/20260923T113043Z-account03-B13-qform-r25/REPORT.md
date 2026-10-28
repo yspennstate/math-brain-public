@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 Full QFORM: **OPEN / NOT PROVED / NOT DISPROVED**.  
 Full continuity: **OPEN**.
 
-Fresh owner control at run start was `yspennstate/math-research-brain@41da05cfaafd1a5e6b407992a5a0f5560566c271`, later refreshed during the run. OWNER CONTROL was revision `2026-09-22.15`, QFORM only.
 
 This run deliberately changes mechanism from the preceding local-matrix compilers. The point is to exploit the already-proved extremal-product reduction and work directly on the geometric product-set slab inequality. The live correction that small coefficients cannot be deleted uniformly on arbitrarily translated/fragmented supports is respected: every perturbation below is measured against the *centered diameter of the actual bounded extreme witness and the actual slab width*.
 

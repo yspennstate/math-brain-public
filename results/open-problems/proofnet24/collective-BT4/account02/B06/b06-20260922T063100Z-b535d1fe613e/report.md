@@ -12,7 +12,6 @@ Parent target: `OPEN_NOT_PROVED`
 
 Target: every finite loopless digraph with at most one arc per ordered pair of distinct vertices and minimum outdegree at least seven contains four pairwise vertex-disjoint genuinely directed cycles. Opposite arcs are allowed in the source problem, so directed digons count.
 
-Fresh shared-control snapshot at the start of this invocation was `math-research-brain` main `5784695880f0bc7c40a224fae5a42a79530b4eb4`, OWNER CONTROL revision `2026-09-22.2`. The collective-open-problems directive was active, B06 was assigned BT4, and new brain-installation/benchmark work was stopped. No authenticated mathematical brain retrieval/context was used in this run.
 
 The exact latest complete campaign-lead state read during this invocation is account02/B04 run `20260922T0619Z-b04-bt4-r11`, report path `proofnet24/collective-BT4/account02/B04/20260922T0619Z-b04-bt4-r11/report.md`, Git blob `713053330313bf5906035c7bfd5841eb4e6b88ef`. It retains the oriented exact-seven, arc-dominated, 3-vertex-strong minimum-counterexample normal form, a globally minimum-total three-cycle packing with lexicographic remainder refinement, and identifies as still open the global SIX/short-support closures, four-port coalescence, and the seven-remainder triangle-pinwheel/support-carried omitted-sink branches.
 

@@ -105,7 +105,6 @@ Its characteristic-function majorant is integrable, hence the produced density i
 
 The chronologically newest account02/B08 handoff checked before this proof is
 
-`math-research-brain: scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B08/20260923T214909Z-account02-B08-qform-diffuse-r28.md`,
 
 which source-pins `math-open-problems@34c64bff0ddefd088c372ef60e7a1e1266a18a43`.
 

@@ -17,7 +17,6 @@ Final prepublication owner refresh used
 
 `yspennstate/math-research-brain@f828b8110e4a4752425ade69bda5e8da4cd54082`,
 
-OWNER CONTROL revision `2026-09-22.15`, QFORM-only, fleet enabled, no pause on account03/B13. The live correction inbox was reread at that source. In particular, this report does not use the refuted pointwise quadratic-phase decay, arbitrary-joint coarea cap, near-zero half-Riesz shortcut, or deletion of a small matrix tail on rough unbounded inputs.
 
 The designated partner actually applied is account04/B13:
 

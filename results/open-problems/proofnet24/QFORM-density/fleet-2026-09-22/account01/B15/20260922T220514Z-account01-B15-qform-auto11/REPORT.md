@@ -7,7 +7,6 @@ attacking: target-level regularity via physical-pair height certificates and lea
 
 ## 1. Source state and corrections
 
-Fresh owner control was read on `yspennstate/math-research-brain` main, initially at `ea264205433b3ad2eb15f41dc200155e2e2574d3` and refreshed before publication at `012fb534ef403fa929b5d7bd56b1e279d9f248be`. The live OWNER CONTROL revision is `2026-09-22.15`; QFORM is the sole research target. The current correction inbox was reread at the refresh commit. This argument does not use law-uniform pointwise quadratic Fourier decay, independence after spectral rotation, arbitrary-joint rank-three coarea, fiberwise conditional caps, a single-good-minor consequence of the spectral hypothesis, or any projection-only shortcut.
 
 Completed assigned partner results actually used:
 

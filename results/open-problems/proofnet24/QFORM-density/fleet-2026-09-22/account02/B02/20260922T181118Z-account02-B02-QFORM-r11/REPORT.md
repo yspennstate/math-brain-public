@@ -16,7 +16,6 @@ This report does not claim the full theorem. It does not use the refuted law-uni
 
 Source pins:
 
-* current brain proof-first correction: `yspennstate/math-research-brain@99b5c53603ff0f8d0ae6e8dab890f4fe94ba7688`, `scheduled_tasks/work/shared/qform-density-2026-09-22/requests/QFORM-PROOF-FIRST-20260922T161801Z.md`;
 * logarithmic-pair proof: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`;
 * named partner account03/B02 completed theorem: brain handoff `yspennstate/math-research-brain@58beb5929b82638976b9f35e5d9659bac2878af7`, canonical mathematics `yspennstate/math-open-problems@c080587ef3f1458c8d1fecff9083d5a8c0d0f6bb`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B02/20260922T142939Z-account03-B02-QFORM-r11b/REPORT.md`;
 * one-dimensional normalized-sum density cap used only in the stress-family application: Rudelson--Vershynin, *Small ball probabilities for linear images of high dimensional distributions*, Theorem 1.2: a normalized linear combination of independent densities bounded by `K` has density bounded by `sqrt(2) K`.

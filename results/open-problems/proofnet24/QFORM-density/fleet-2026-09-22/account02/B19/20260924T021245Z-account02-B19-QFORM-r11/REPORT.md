@@ -12,7 +12,6 @@ The exact target remains: independent real ORIGINAL coordinates with one-dimensi
 
 ## 1. Sources actually consumed
 
-Fresh owner control at startup was `math-research-brain@7cf1634e4f95be0030b1485d77ef830f410b17de`, OWNER CONTROL revision `2026-09-22.15`, with the QFORM-only continuation active and no later stop. The newest completed designated partner at the first source refresh was account03/B19 r46:
 
 `yspennstate/math-open-problems@628222e360badf19079bf4e36c2122d894669e57`,
 `proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260924T010216Z-account03-B19-QFORM-r46/REPORT.md`.

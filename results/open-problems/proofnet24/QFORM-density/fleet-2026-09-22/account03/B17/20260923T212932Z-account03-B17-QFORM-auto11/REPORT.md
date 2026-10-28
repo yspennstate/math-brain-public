@@ -9,7 +9,6 @@ This report proves a new source-valid supporting theorem for an exact genuinely 
 
 This does **not** prove the unrestricted QFORM conjecture. In particular, the first two original-coordinate laws are specialized to centered uniforms. Full-target continuity also remains open.
 
-Fresh prepublication control: `yspennstate/math-research-brain` main `0d9de6f826eb226fb44d5c52fbefcc51c594ca55`, OWNER CONTROL revision `2026-09-22.15`; live correction inbox blob `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3` was refreshed. No post-rotation independence, arbitrary-joint coarea bound, law-uniform pointwise quadratic decay, conditional-density positive-moment gate, fixed-fragment reduction, or Monte Carlo claim is used.
 
 The designated partner result actually applied is account04/B17:
 

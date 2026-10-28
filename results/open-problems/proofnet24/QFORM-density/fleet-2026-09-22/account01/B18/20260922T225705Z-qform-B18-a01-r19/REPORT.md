@@ -12,7 +12,6 @@ The owner target remains open: for arbitrary finite `n`, independent real origin
 
 This report does **not** use independence after rotation, arbitrary-joint coarea, conditional projection-density caps, pointwise law-uniform Fresnel decay, near-zero-as-zero perturbation, or a fixed-good-minor implication. It keeps the original product characteristic function until the Brascamp--Lieb step.
 
-Fresh control consumed at startup: `yspennstate/math-research-brain@a49099111ed329ca3fb78b9b81f3051e5bce06d0`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`.
 
 ## 2. Primary literature transferred exactly
 

@@ -12,4 +12,3 @@ Accordingly the new B12 correction leaves Theorem 4.1, Lemma 5.1 and Corollary 6
 
 Full QFORM remains OPEN / NOT PROVED.
 
-Source correction handoff: `yspennstate/math-research-brain@6174d29522488a240f46048df5e9b908dca12edb:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B12/20260922T181810Z-r11-qform-additional-eig.md`.

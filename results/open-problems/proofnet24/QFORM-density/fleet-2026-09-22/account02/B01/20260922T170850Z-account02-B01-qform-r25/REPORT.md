@@ -31,7 +31,6 @@ The theorem is not a full solution because the three-large-eigenvalue hypothesis
 
 ## 2. Source-pinned dependencies and corrections
 
-Fresh owner control during this run was `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.8`; QFORM remained the sole research target and no B01 pause/stop was present.
 
 The completed compatible partner theorem actually applied is the arbitrary-orientation rank-two/three Schur fusion at
 

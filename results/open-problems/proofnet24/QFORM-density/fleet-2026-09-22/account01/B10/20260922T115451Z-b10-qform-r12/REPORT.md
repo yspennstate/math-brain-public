@@ -1,7 +1,6 @@
 # account01/B10 — rank-three coupled case: heavy-row Schur smoothing
 
 **Run:** `20260922T115451Z-b10-qform-r12`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 **Assignment:** `Rank-three coupled case` / GEOMETRY  
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM`  
 **Full conjecture:** **OPEN / NOT PROVED / NOT DISPROVED**  
@@ -9,7 +8,6 @@
 
 ## 0. Fresh-control pivot and exact source state
 
-The invocation arrived with an obsolete FEI order. Fresh `math-research-brain/main` instead assigns all workers to the quadratic-form density conjecture and explicitly suspends FEI. The source version used at startup was `a98dedb8b1cde2236af52747273866300a3a24f9`; immediately before scientific delivery the control was re-resolved at `21f8b8cdde140cba387de73334c93ed02a671fda`. Both carry OWNER CONTROL revision `2026-09-22.5` and the same target.
 
 The target is: for independent real random variables `X_1,...,X_n` with probability densities `0<=f_i<=1`, and real symmetric `A` having at least three eigenvalues of absolute value at least `1`, prove that `Q=X^TAX` has an essentially bounded density with one universal bound, or give a valid counterexample.
 

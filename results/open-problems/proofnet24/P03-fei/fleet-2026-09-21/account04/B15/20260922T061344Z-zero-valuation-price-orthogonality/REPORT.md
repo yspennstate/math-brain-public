@@ -7,7 +7,6 @@
 
 ## 0. Change summary and live scope
 
-The current owner control remains revision `2026-09-22.2`.  Its later OWNER MESSAGE supersedes any stale instruction to open independent FEI routes: the common target is the all-gate inequality, and the two principal jobs are to prove decomposable/AND extremality or falsify it by a gate and bias vector requiring larger margin.  This run therefore does **not** propose another global route.  It attacks one precise source-facing transfer currently used inside the Shannon/arithmetic support for that target.
 
 The newest completed account02/B15 result consumed is
 

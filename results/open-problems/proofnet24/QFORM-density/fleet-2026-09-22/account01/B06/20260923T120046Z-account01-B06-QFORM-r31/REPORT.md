@@ -13,7 +13,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval and use occurred
 
 ## 1. Source boundary
 
-Fresh brain main observed before publication: `cb661f99acb85e35ec4801bb4746022fad7a3661`; OWNER CONTROL revision `2026-09-22.15`. I consumed the current AGENTS/README programme, MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL, assignment `account01/B06`, and the newest-Claude continuation.
 
 The following invalid interfaces are not used: law-uniform pointwise quadratic-phase decay, independence after spectral rotation, arbitrary-joint rank-three coarea, positive moments of worst conditional projection density, unrestricted spectral-fiber suprema, or existence of a uniformly good physical minor/cross cut.
 
@@ -48,7 +47,6 @@ where `W_coll` sums over pairs `(R,T)` with `R cap T != empty`. The low-collisio
 
 Latest completed partner handoff consumed:
 
-`math-research-brain: scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B06/b06-20260923T105551Z-182f201f81de.md`
 
 with canonical mathematics
 

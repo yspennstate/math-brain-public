@@ -13,7 +13,6 @@ I acknowledge owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The 
 
 ## 1. Fresh source graph
 
-Fresh control at startup was resolved from `yspennstate/math-research-brain@1617b10dbff578e8ed984875384c10ba317d655d`; OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole target and no later stop for account03/B20 observed at startup.
 
 The immediate fresh assembly input is account03/B19:
 

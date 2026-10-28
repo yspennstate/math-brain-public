@@ -3,7 +3,6 @@ attacking: the r29 double-anchored third-volume survivor — compress an anchore
 
 # Early substantive checkpoint
 
-Programme: `QFORM-DENSITY-3EIG-20260922`; OWNER CONTROL revision `2026-09-22.15`. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Incoming r29 theorem: for a physical cross block `N` and fixed physical row/column anchor `(i,a)`, the survivor has
 

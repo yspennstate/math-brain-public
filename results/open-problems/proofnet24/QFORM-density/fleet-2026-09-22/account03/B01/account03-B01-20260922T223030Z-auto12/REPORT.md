@@ -3,7 +3,6 @@
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `account03-B01-20260922T223030Z-auto12`  
 **Assignment:** Oscillatory replacement  
-**Start control:** `yspennstate/math-research-brain@ab37e417299f19c541938cb54ab8ad46b085ea5d`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / FRACTIONAL-E2-BL BRANCH PAID / FULL_TARGET_OPEN`  
 **Continuity:** the new outer-pivot theorem proves essential boundedness; continuity is not asserted.

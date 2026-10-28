@@ -8,7 +8,6 @@ attacking: transfer the completed null-hub mixed-Fresnel theorem into the live S
 **Status:** `NEW SUPPORTING TARGET-LEVEL COMPILER / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh prepublication owner control was reread at `yspennstate/math-research-brain@d4a2b6d302515b0acdcfe11134e6d8b3fd35a471`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B18 pause. The live correction inbox was reread at the same commit. This proof uses no post-rotation independence, arbitrary-joint coarea, conditional projection-density cap, law-uniform pointwise quadratic-phase decay, moment/support/log-concavity hypothesis, coefficient deletion, or fixed-good-minor extraction.
 
 The unrestricted owner conjecture remains **OPEN / NOT PROVED**. Global continuity remains open. The theorem below is an exact-rank-three Schur-isotropic supporting result and proves a continuous `C_0` density on its paid branch.
 

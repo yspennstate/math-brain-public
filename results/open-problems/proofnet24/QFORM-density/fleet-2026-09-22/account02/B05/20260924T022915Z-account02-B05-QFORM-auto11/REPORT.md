@@ -5,7 +5,6 @@ attacking: correct the heavy-null puncture normalization, extract a source-disjo
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: quadratic coarea bound / complementary constructions and source-valid obstructions  
-Control at start: `math-research-brain@117b0dd6f073ea7fda63625a5808341c17529022`, OWNER CONTROL revision `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **PROVED SUPPORTING GEOMETRIC REDUCTION + TWO ENDPOINT PAYMENTS / FULL QFORM OPEN**  
 Continuity: separate; the new endpoint payments below assert essential boundedness only unless inherited from the cited source theorem.

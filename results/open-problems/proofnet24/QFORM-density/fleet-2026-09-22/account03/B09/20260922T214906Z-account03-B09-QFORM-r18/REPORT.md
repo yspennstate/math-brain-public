@@ -6,8 +6,6 @@ attacking: the one-strong-cross full-curvature residual via a two-transverse-dir
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B09` — Bilinear block mechanism  
 Run: `20260922T214906Z-account03-B09-QFORM-r18`  
-Control at start: `yspennstate/math-research-brain@178952e6e7a927b6c28497cb6e2e6f794400b2ba`, OWNER CONTROL revision `2026-09-22.15`  
-Prepublication control refresh: `yspennstate/math-research-brain@1f3304e825f778e0691b72d42e26cb0b5bf5e070`, OWNER CONTROL revision `2026-09-22.15`  
 Outcome: **SUPPORTING_THEOREM_PROVED / DEFINITE TRANSVERSE-RANK-TWO BANK PAID / INDEFINITE JOINT-CAP EXTENSION REFUTED / FULL TARGET OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**
 

@@ -1,7 +1,6 @@
 # account01/B03 — decoupled time integral via a mixed coordinate minor
 
 **Run:** `B03-20260922T115130Z-qform-decoupled-time`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 **Assignment:** `Decoupled time integral`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / TARGET_SUPPORTING_LEMMA / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
@@ -12,8 +11,6 @@ The live target is the full arbitrary-dimensional conjecture: independent real `
 
 Control/source snapshot used at the start of the proof:
 
-- `yspennstate/math-research-brain@544c895602a41304c19ebc10cec6572bc5f58351`, OWNER CONTROL `2026-09-22.5`;
-- same commit, `scheduled_tasks/work/shared/qform-density-2026-09-22/CURRENT_RESEARCH.md`;
 - same commit, `CLAIMS.json`, `MEMORY_PROTOCOL.md`, `ORDER.md`, `PATHWAYS.md` and `assignments/account01/B03.json`;
 - fresh `CORRECTION_INBOX.json` was empty at the checked source snapshot.
 
@@ -25,7 +22,6 @@ That report proves two facts used below: (i) the sum/difference variables in the
 
 A fresh later correction event from account02/B09 was also checked before publication:
 
-- `scheduled_tasks/work/shared/qform-density-2026-09-22/events/account02/B09/20260922T115241Z-account02-B09-QFORM-r1/QFORM-CROSSMINOR-ALONE-FALSE.json` at brain commit `dc49a02baaf0eebcb1129411cd9907f3f0be66ec`.
 
 It refutes a *two-by-two* cross-minor-only density claim. The theorem below starts exactly at block size three; the `m=2` estimate is only `|t|^{-1}` and is deliberately not promoted to a density bound, so the correction is respected.
 

@@ -7,7 +7,6 @@
 
 ## Control and source state
 
-This run implements owner programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` under OWNER CONTROL revision `2026-09-22.2`. The later owner allocation supersedes the old B19 brain-installation/benchmark duties; no new installation or benchmark work was performed.
 
 Fresh control at invocation start was `yspennstate/math-research-brain` main `d3a1a4b135baea144f335c2ff8e76e83eb3f9c59`. The exact control blobs read were README `3d4a9372c87802ab734141a3374d04c8823372e3`, fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`, roles `ed17ecc94f76720c0345b3e32249b791b20ec611`, PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`, ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`, and TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`.
 

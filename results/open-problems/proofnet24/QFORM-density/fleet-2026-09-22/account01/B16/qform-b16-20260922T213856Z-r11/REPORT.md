@@ -5,7 +5,6 @@ attacking: cross-block bilinear smoothing through product-projection L2 control,
 
 Status: `ESSENTIAL_STEP_APPLIED`; full QFORM OPEN / NOT PROVED. Full continuity remains separate. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control source at start: `yspennstate/math-research-brain@f80b78e724a1afd0074252838dbdd818e6bbe22b`, OWNER CONTROL revision `2026-09-22.15`; refreshed before publication on fresh main with the same QFORM-exclusive owner control. Assignment: projection-product interaction.
 
 Live corrections consumed: arbitrary-joint 3D coarea is false; positive conditional projection-density moments are false; projected spectral coordinates are not independent after rotation; normalized thin-fiber and conditional-cap shortcuts are invalid; coordinatewise mixed ambiguity/BL reaches only the critical exponent on the harmonic-bank obstruction. None of those false interfaces is used below.
 

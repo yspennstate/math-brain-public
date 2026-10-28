@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Assignment: curved fiber integration / quantitative inequalities and rigorous computations  
 Startup control commit: `yspennstate/math-research-brain@d5fea91584899bb4ce292dfcc49410064c552ac9`  
 Publication control refresh observed: `yspennstate/math-research-brain@5eae7feafe693618083d0e2342554d2c4af06ee4`  
-OWNER CONTROL revision: `2026-09-22.15`; programme revision: `2026-09-22.5`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: `NEW WEIGHTED RANK-THREE CROSSING THEOREM + LOW-DISJOINTNESS THREE-HUB CERTIFICATE + DESIGNATED PARTNER APPLIED / FULL QFORM OPEN`
 

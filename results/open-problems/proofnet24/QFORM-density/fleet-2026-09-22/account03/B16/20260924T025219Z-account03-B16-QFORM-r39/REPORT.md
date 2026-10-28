@@ -14,7 +14,6 @@ attacking: QFORM-MIXED-VOLUME-OVERLAP-TTSTAR-v1 — convert the two-bank mixed P
 
 The owner target remains the unrestricted statement: independent real original coordinates with scalar probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussian, log-concave, moment, compact-support, connected-support, iid, centering, or post-rotation independence assumption is added.
 
-Fresh controls were read from `yspennstate/math-research-brain/main`; at the final pre-write refresh the branch head was `bd27a6750c52510f9ad307e5ed3249e14883be9e` and OWNER CONTROL remained revision `2026-09-22.15`, with QFORM as the sole research target and no B16 pause. The live corrections are retained: no law-uniform pointwise quadratic stationary-phase bound, no worst conditional projection-density cap, no arbitrary-joint indefinite coarea estimate, no naive fiber-sup argument, and no independence after rotation.
 
 The completed mathematical inputs actually used are:
 

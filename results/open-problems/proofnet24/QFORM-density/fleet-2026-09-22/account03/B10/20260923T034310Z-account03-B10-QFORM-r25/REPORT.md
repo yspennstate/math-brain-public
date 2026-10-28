@@ -5,7 +5,6 @@ attacking: the exact-rank-three small-Pluecker-mass near-null hub/star collar; p
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**OWNER CONTROL:** revision `2026-09-22.15` at fresh source read; QFORM only  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Classification:** `NEW SUPPORTING THEOREMS / SECOND-HEAVY O3 SUBBRANCH PAID / FULL TARGET OPEN`.
 

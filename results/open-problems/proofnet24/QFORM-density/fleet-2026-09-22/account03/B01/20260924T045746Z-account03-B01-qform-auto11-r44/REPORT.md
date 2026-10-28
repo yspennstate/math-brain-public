@@ -334,10 +334,7 @@ so (5.2) and (5.5) are also valid averaged-frequency bounds. This is stronger th
 
 ## 12. Source pins consumed
 
-- Owner/control: fresh `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`.
-- Assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account03/B01.json`.
 - Live corrections: pointwise quadratic decay false; arbitrary-joint coarea false; conditional projection moments/caps false; no post-rotation independence; no moment-based small-error disposal.
 - Designated partner actually applied: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425:proofnet24/QFORM-density/fleet-2026-09-22/account04/B01/20260924T012155Z-account04-B01-lr-residual-r1/REPORT.md`.
-- Previous B01 handoff whose exact open interface is closed here: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/20260924T033002Z-account03-B01-qform-auto11-r42.md`.
 
 No task/schedule, notification, permission, public-release, cross-account-authentication, or paid-model/API state is changed by this run.

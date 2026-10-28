@@ -2,7 +2,6 @@
 
 Run: `B09-20260922T181557Z-r15`  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Control read: `yspennstate/math-research-brain@7101e2f7e0f2b3554d91735773651ae4e81ec4c3`, OWNER CONTROL revision `2026-09-22.11`  
 Assignment: Bilinear block mechanism  
 Outcome: **ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**

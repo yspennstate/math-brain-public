@@ -13,7 +13,6 @@ All random coordinates below are the original independent physical coordinates. 
 
 ## 1. Source-pinned inputs and the exact debt
 
-Fresh owner control remains `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with full QFORM open.
 
 The designated partner `account04/B13` supplied two completed inputs.
 

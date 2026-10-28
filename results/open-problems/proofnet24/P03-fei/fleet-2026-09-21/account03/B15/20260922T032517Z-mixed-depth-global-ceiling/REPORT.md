@@ -3,7 +3,6 @@
 **Outcome:** `ESSENTIAL_STEP_APPLIED` to the previous mixed-depth replacement obligation.  
 **Full unrestricted uniform-cube FEI:** **OPEN / NOT PROVED.**  
 **Execution:** **WITHOUT_VERIFIED_BRAIN**; authenticated repository sources were read, but no authenticated cognitive/mathematical-brain retrieval or receiver-context activation entered this proof.  
-**Owner-control revision:** `2026-09-22.2`. The live natural-language OWNER MESSAGE supersedes the older packet-only B15 wording and sends the FEI fleet to the all-gate formulation.
 
 ## 1. Exact candidate version and predecessor consumed
 

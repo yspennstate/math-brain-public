@@ -13,7 +13,6 @@ The unrestricted conjecture is not proved here. All coordinates remain literal o
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain` main was resolved during this invocation; OWNER CONTROL remains revision `2026-09-22.15`, exclusively QFORM, with the full theorem open and the live correction discipline active.
 
 The analytic receiver used below is the completed marginal-free cross-third-volume theorem from account03/B04 r42, source
 

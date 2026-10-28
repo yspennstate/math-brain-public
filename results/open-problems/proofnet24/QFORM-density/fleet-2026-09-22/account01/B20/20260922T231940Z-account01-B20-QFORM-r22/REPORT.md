@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The target remains the unrestricted one: for every finite `n`, every vector of independent real coordinates with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite essential-supremum bound, or give a target-valid counterexample. Continuity is tracked separately.
 
-Fresh control at the actual run start was `yspennstate/math-research-brain@478f13d9acc001ea3934d8104966f033c57734b5`, OWNER CONTROL revision `2026-09-22.15`. The required newest-Claude source was read at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The subsequent mathematical review of that package was also read at `proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
 
 The newest completed designated proof-closure partner used here is account02/B20 r20, canonical source `yspennstate/math-open-problems@2c967d975f242fa53556b8ec132ac668dcf003a0`, theorem `QFORM-LOCALIZED-HIGHWINDOW-COMPLETE-PAYMENT-v1`. It proves that a source-valid physical outer pivot with
 

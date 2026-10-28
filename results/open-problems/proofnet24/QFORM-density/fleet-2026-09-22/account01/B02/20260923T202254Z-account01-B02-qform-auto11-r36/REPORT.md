@@ -10,7 +10,6 @@ Execution/memory status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh scope and exact sources
 
-Fresh owner control on `yspennstate/math-research-brain` main remained OWNER CONTROL revision `2026-09-22.15`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, QFORM only. I reread `AGENTS.md`, the full OWNER MESSAGE in `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `roles.json`, `PROTOCOL.md`, the programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the `account01/B02` assignment. No later stop/reassignment was found.
 
 The full target remains: independent real original coordinates with scalar densities at most one and arbitrary real symmetric `A` with `s_3(A)>=1`; prove one universal essential density bound for `Q=X^TAX`, or a valid counterexample. No moment, support, Gaussian, log-concave, iid, sign or diagonal-basis assumption is added.
 

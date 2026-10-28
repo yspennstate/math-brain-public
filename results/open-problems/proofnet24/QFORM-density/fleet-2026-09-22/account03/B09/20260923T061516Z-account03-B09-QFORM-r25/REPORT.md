@@ -14,7 +14,6 @@ No moment, compact-support, connected-support, Gaussian, log-concave, identical-
 
 ## 1. Fresh sources and the first missing implication
 
-Fresh owner control remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`. The live corrections were reread before this proof; in particular the argument does not use law-uniform pointwise Fresnel decay, arbitrary-joint coarea, conditional spectral-density suprema, or a fixed-good-minor implication.
 
 The newest compatible B09 peer theorem actually used is account02/B09,
 

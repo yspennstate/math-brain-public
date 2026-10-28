@@ -1,6 +1,5 @@
 # r26 prepublication correction refresh
 
-Fresh control was reread at `yspennstate/math-research-brain@92094aa64e6fb1ccf6d2d2f7e8b5c9286ef8d8a9`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM only, with account03/B08 still assigned to the diffuse-eigenvector case.
 
 Two fresh correction events are especially relevant and are explicitly consumed:
 

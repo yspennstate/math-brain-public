@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 0. Fresh control and exact sources
 
-Fresh brain control was resolved during the run; the latest observed `main` commit before the mathematical publication pass was `16e6e697a39271698ab2c46a0dcbdcaba05f3ca6`, OWNER CONTROL revision `2026-09-22.15`. I consumed `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B14.json`. The live correction set continues to prohibit uniform pointwise quadratic Fourier decay, independence after rotation, bounded-diameter localization, fixed fragment-count localization, and the arbitrary-joint coarea shortcut. None is used here.
 
 The completed designated-partner theorem actually used below is account02/B14 r41, read from the source snapshot
 

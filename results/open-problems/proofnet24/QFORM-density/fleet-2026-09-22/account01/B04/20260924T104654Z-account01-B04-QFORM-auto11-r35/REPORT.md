@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source boundary
 
-Fresh brain control remains OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The full arbitrary-law, arbitrary-dimension theorem remains open, and the full-target continuous-density conclusion remains open.
 
 The key completed analytic dependency is account02/B14 r34:
 

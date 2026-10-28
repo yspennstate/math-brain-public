@@ -11,7 +11,6 @@ attacking: the first unresolved B19 rank-two-cross near-range branch, by paying 
 
 ## 1. Fresh source boundary and the exact debt attacked
 
-Fresh source control at run start was `yspennstate/math-research-brain@720bec1039353e54a6929d9426fff74a4c893c62`, OWNER CONTROL revision `2026-09-22.15`, QFORM only.
 
 The immediate proof-assembly source is account03/B19 r26:
 

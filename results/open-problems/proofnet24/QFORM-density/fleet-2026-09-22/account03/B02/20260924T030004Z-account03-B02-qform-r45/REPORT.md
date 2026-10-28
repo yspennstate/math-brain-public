@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target is unchanged: independent ORIGINAL real coordinates with one-dimensional probability densities at most one; arbitrary real symmetric `A`; at least three eigenvalues of modulus at least one. No Gaussianity, log-concavity, moment, compact/connected support, iid, diagonal-basis independence, post-rotation independence, conditional projection-density cap, or deletion of a small quadratic random term is used. Rotations below are coefficient algebra only.
 
-Fresh prepublication owner control was `yspennstate/math-research-brain@a6c5df914db20a8632819cf68d05972b9f3ed425`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. The full conjecture and full-target continuity remain OPEN.
 
 ## 1. Source-pinned inputs actually used
 

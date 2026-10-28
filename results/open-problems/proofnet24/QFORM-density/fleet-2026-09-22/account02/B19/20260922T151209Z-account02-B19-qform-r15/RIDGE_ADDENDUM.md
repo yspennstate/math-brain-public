@@ -1,6 +1,5 @@
 # Late source application — ridge-window or physical pivot/cross export
 
-A fresh control read after the main report exposed the new interactive theorem `QFORM-SPECTRAL-WINDOW-DENSITY-v1`, source `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/interactive/20260922T151048Z-ridge-window.md`. Its proof is supplied in stated scope but its independent review is still pending. The full conjecture remains open.
 
 The theorem pays every target matrix for which the spectral projection `P` onto all eigenspaces with `|lambda|>=1/64` satisfies `max_i P_ii<=1/32`, with density bound `<64`.
 

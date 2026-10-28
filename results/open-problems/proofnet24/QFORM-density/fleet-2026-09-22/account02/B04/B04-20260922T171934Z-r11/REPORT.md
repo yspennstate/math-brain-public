@@ -1,7 +1,6 @@
 # account02/B04 — rank-one star bank aggregation through the partner rank-two Schur theorem
 
 **Run:** `B04-20260922T171934Z-r11`  
-**Programme:** `QFORM-DENSITY-3EIG-20260922`; later OWNER CONTROL revision `2026-09-22.8` applied  
 **Assignment:** Product Fourier rearrangement / complementary constructions and source-valid counterexamples  
 **Outcome:** `ESSENTIAL_STEP_APPLIED`; full target remains `OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

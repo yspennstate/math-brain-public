@@ -12,7 +12,6 @@ Status: **ESSENTIAL_STEP_APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.
 
 The target remains unrestricted: for every dimension, independent ORIGINAL real random variables with probability densities bounded by one, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove one universal finite essential-supremum bound for the density of `X^T A X`, or give a valid target counterexample. No moment, compact-support, connected-support, Gaussian, log-concavity, iid, diagonal-basis, finite-rank, or post-rotation-independence hypothesis is added. Continuity is a separate conclusion.
 
-Fresh protected owner control at start remained OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`. The active corrections are retained: law-uniform pointwise quadratic-phase decay is unavailable; arbitrary-joint 3D coarea is false; worst conditional projected-density suprema lose dimension; post-rotation independence is false; aggregate determinant mass need not contain one uniformly good physical minor; and a small coefficient tail is never deleted as a small random quadratic error.
 
 The newest completed designated partner actually consumed is account03/B20 r33:
 

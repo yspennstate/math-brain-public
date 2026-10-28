@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Control and correction-aware scope
 
-Fresh `math-research-brain` control was resolved repeatedly during the run. The last pre-publication refresh reached `630427038a786c2684403bcc612cacf3414a3046`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM remains the sole research target, and no later B16 stop was found.
 
 The full conjecture is still open. Nothing below uses post-rotation independence, a worst conditional projection-density cap, arbitrary-joint rank-three coarea, law-uniform pointwise oscillatory decay, deletion of a small coefficient on unbounded inputs, or a bounded joint projection density as if it automatically controlled an indefinite level-set integral.
 

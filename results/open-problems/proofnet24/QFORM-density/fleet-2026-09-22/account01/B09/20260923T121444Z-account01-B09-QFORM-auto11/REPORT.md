@@ -12,7 +12,6 @@ The unrestricted conjecture remains OPEN. This run closes a substantial global s
 
 ## 1. Fresh source inputs and corrections
 
-Fresh protected control remained OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with the full conjecture and full-target continuity still OPEN.
 
 The live correction ledger and the newest account03/B09 correction were consumed. In particular, this proof does **not** use: law-uniform pointwise quadratic-phase decay; post-rotation independence; an arbitrary-joint coarea bound; a worst conditional projection-density supremum; a universally good single physical minor; the false `max singleton third-volume => low-rank closeness` implication; or a small-matrix-norm-as-small-random-error step.
 

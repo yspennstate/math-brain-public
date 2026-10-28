@@ -8,7 +8,6 @@
 
 ## 0. Later-owner precedence and current target
 
-The fresh owner control is revision `2026-09-22.2`. Its natural-language OWNER MESSAGE
 supersedes the older posterior-crossing-only wording and directs all FEI workers to the
 equivalent all-gate inequality. I therefore keep the exact restriction identities and
 counterexamples as invariants, but use them only to guide the current all-gate target.
@@ -56,7 +55,6 @@ B_A\ge
 \]
 The source-to-next-arrow use is structural and exact: **a viable induction/restriction
 argument may not discard the nonmodular child/crossing credit.** The gate-reformulation
-OWNER MESSAGE says the naive arity induction fails for the same reason: dropping child
 slack loses too much. In the truth-table perturbation calculation below I therefore
 retain the entire signed positional term \(Q(x)-Q(y)\) instead of replacing it by an
 unsigned or coordinatewise surrogate.

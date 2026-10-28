@@ -1,7 +1,6 @@
 # account01/B17 — quantitative one-heavy-row central gap and exact finite transfer
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Owner control actually read:** `yspennstate/math-research-brain@1fb11111bbe5261fae1bc0854aa89fb0fa9c7feb`, OWNER CONTROL revision `2026-09-22.8`  
 **Run:** `QFORM-B17-20260922T174045Z`  
 **Assignment:** Sharp constant and witnesses  
 **Classification:** `AUXILIARY_ONLY / QUANTITATIVE_ONE_HEAVY_CENTRAL_GAP`  

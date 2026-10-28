@@ -14,7 +14,6 @@ No law-uniform pointwise quadratic van-der-Corput estimate, no post-rotation ind
 
 ## 1. Fresh sources actually consumed
 
-1. Fresh owner/control state was read from `yspennstate/math-research-brain` main. OWNER CONTROL is revision `2026-09-22.15`, QFORM-only, with no pause or stop for account03/B03. The latest continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` requires actual mathematics and fresh use of the projected-crossing checkpoint.
 
 2. Fresh projected crossing source:
 

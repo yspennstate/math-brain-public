@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted target remains: independent real coordinates with one-dimensional densities bounded by one; real symmetric `A` with at least three eigenvalues of absolute value at least one; prove a universal output-density bound or give a valid counterexample. No moments, compact support, log-concavity, connected support, identical laws, Gaussianity, or independence after rotation is assumed.
 
-Fresh control before this run was read from `yspennstate/math-research-brain` main, with OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live corrections used here include, in particular, `QFORM-UV-CONDITIONAL-CAP-FALSE` and `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`: conditional caps cannot be substituted for product independence when proving an `L^infinity` output bound.
 
 The live near-coloop debt consumed here is the exact-rank-three null-pivot representation in
 

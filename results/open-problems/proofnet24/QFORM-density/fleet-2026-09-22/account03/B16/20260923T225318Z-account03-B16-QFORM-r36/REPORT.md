@@ -13,7 +13,6 @@ attacking: the epsilon-uniform vector TT* bridge in the exact-rank-three shared-
 
 The exact owner target remains: independent real original-coordinate inputs with one-dimensional probability densities bounded by one; arbitrary real symmetric `A`; at least three eigenvalues of `A` have modulus at least one; prove one universal finite density bound, or give a valid counterexample. No moment, compact-support, connected-support, Gaussian, log-concavity, iid, diagonal-basis, or post-rotation-independence assumption is used below.
 
-Fresh control at run start was `yspennstate/math-research-brain@3ab7c190bf7672ed80bebac86bb004c755b33c87`, OWNER CONTROL revision `2026-09-22.15`, with QFORM still the sole assignment. The live corrections were read, including the failures of arbitrary-joint coarea, conditional projection-height moments, fiberwise trace control, pointwise law-uniform quadratic-phase decay, and independence after rotation.
 
 The analytic input actually used is the checked grouped projected-crossing theorem
 

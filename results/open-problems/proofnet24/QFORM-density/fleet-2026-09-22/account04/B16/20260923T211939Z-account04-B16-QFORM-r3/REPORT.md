@@ -13,7 +13,6 @@ Execution: WITHOUT_VERIFIED_BRAIN
 
 The target remains the full conjecture for arbitrary independent real cap-one coordinate laws and arbitrary real symmetric matrices with at least three eigenvalues of modulus at least one. No iid, support, moment, sign, exact-rank, smoothness, or post-rotation independence assumption is added to that target.
 
-Fresh brain control was read through math-research-brain main near commit 53871ef4e899d8bf129673e1c482f138bfe87749, including OWNER CONTROL revision 2026-09-22.15, the live correction inbox, MEMORY_PROTOCOL, the B16 assignment, and QFORM-CLAUDE-LATEST-20260922T225732Z. The actual login was committed at 28e3f8d2529df15e5d65e5229f7f077536122d96. The math source wave was checked through math-open-problems commit 83235f9a0262d82f93035128a93214e184da3539.
 
 The following completed inputs are used.
 

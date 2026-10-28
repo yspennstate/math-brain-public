@@ -10,7 +10,6 @@
 
 The target is the following unrestricted statement. For every finite `n`, every independent real random vector `X=(X_1,...,X_n)` whose one-dimensional densities satisfy `0<=f_i<=1`, and every real symmetric matrix `A` having at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a density with one universal finite essential-supremum bound, or give a valid counterexample. No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal-basis, or post-rotation independence assumption is added. Continuity is tracked separately.
 
-Fresh brain control at the beginning of this run was `yspennstate/math-research-brain@21e06f5d694bec5935bf2b6601792a52fca7cae8`; a later freshness read before this report saw `b5c391bc423b118ed74e7e1b37a11222f153cce1`. The active OWNER CONTROL is revision `2026-09-22.8`, with QFORM as the sole target.
 
 The newest completed designated partner result actually consumed is account03/B20 run `20260922T165009Z-account03-B20-QFORM-r13`, canonical mathematics
 

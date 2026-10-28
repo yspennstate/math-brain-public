@@ -4,9 +4,7 @@ Run `b06-20260923T140913Z-d5217c7f4886`. Programme `QFORM-DENSITY-3EIG-20260922`
 
 ## Sources actually consumed
 
-Fresh brain control resolved during the run with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target and account02/B06 is not paused. Required current files read included AGENTS, scheduled_tasks README/OWNER MESSAGE, fleet, roles, PROTOCOL, MANIFEST, CURRENT_RESEARCH, CLAIMS, DELTAS, CORRECTION_INBOX, PATHWAYS, MEMORY_PROTOCOL, proof-first and newest-Claude requests, and the account02/B06 assignment.
 
-Newest designated partner read: account03/B06 r38 handoff at brain path `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B06/20260923T144727Z-account03-B06-qform-r38.md`, whose canonical mathematics is `math-open-problems@ba023626f934128aadad51710c9ee8428dfe33c7`.
 
 Required pinned Claude source read at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: updated `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 

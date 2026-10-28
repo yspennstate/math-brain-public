@@ -11,7 +11,6 @@ The unrestricted conjecture is not proved or disproved here. The new work is a d
 
 ## 1. Fresh source boundary and inputs actually used
 
-Fresh owner control in `yspennstate/math-research-brain` remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. The active owner continuation `QFORM-CLAUDE-LATEST-20260922T225732Z` requires every worker to consume the current volume-stability package and attack the first genuinely unpaid compatible implication.
 
 The designated partner result used at equations is the newest completed account02/B07 report visible in the mathematical archive:
 

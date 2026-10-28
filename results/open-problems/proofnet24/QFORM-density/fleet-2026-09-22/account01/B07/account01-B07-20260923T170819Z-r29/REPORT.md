@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Role: coordinate minor selection / GEOMETRY  
 Run: `account01-B07-20260923T170819Z-r29`  
 Owner continuation acknowledged: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
-Initial control: `math-research-brain@2f78f7136fc7bd3188198ed6749e77e196236480`; prepublication refresh: `math-research-brain@040cea5990b92a843de4ef56b19221f4f3b90c72`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, no B07 stop/reassignment.  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.  
 Status: **NEW PLUCKER ONE-HUB COMPILER / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN / CONTINUITY OPEN**.
 

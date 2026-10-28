@@ -8,7 +8,6 @@ attacking: dependence-safe Plancherel selectors — keep an entire dependent coe
 **Status:** `NEW SUPPORTING THEOREM / LINEAR OUTPUT SMALL-BALL PACKET / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control at this run remained OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target. The current correction state was read before the derivation: no law-uniform pointwise quadratic-phase decay, no post-rotation independence, no conditional cap for one sum/difference coordinate given its conjugate, no arbitrary-joint rank-three coarea bound, and no small-matrix-error-as-small-random-error step is used below.
 
 The unrestricted theorem and unrestricted continuity conclusion remain open.
 

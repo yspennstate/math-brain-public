@@ -6,7 +6,6 @@
 
 ## 0. Control, exact target, and inherited signed ledgers
 
-The fresh owner control is revision `2026-09-22.2`. Its later OWNER MESSAGE supersedes the older interface-C-only duty where they conflict and orders all FEI workers to converge on the all-gate formulation. I therefore attack the live all-gate Gibbs residual rather than reopening the already-refuted all-Boolean positive-current budget. The historical interface-C lesson is retained exactly: keep signs/orientations through the legitimate cancellation and contract only afterward to a positive physical sink.
 
 The current common candidate consumed is account03/B18
 

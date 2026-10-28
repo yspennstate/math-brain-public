@@ -185,7 +185,6 @@ Expected terminal line: `QFORM_DIFFUSE_WEDGE_PARTITION_CHECK_PASS`.
 
 ## Source pins
 
-- Fresh research-brain main at start: `c6d1a32816a063d5cc101151f627dafd044e505d`; OWNER CONTROL revision `2026-09-22.15`.
 - Assignment card blob: `000224db6d5f5d405d3361a1cf763b83c79d300d`.
 - Prior account02/B11 angular-ray handoff blob: `1de571d88cea6412185d11ab4d883bce0aa67392`.
 - Named partner account03/B11 r15 handoff blob: `0c8aab5bff51da673e0e8041bb629391e3515e20`; canonical math commit `c686350b50e449c404031fc3573ccd6675cd11e2`.

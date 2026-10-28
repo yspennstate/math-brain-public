@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Scope and source pins
 
-Fresh owner control was read from `yspennstate/math-research-brain@20b732a648b4cc8e441b27a6f592c037ac050cdd`; OWNER CONTROL revision is `2026-09-24.1`. The sole research target remains QFORM.
 
 Pinned analytic baseline:
 - `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`

@@ -12,7 +12,6 @@ All coordinates below are literal ORIGINAL coordinates. No random variable is ro
 
 ## 1. Fresh source-pinned proof graph
 
-Fresh owner control from `yspennstate/math-research-brain/main` remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`; the live correction inbox was reread before this write.
 
 The newest account03/B19 compiler used for global context is r50:
 

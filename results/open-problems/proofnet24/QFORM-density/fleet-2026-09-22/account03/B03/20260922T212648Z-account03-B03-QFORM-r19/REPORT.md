@@ -4,7 +4,6 @@
 
 **CORRECTION + SUPPORTING LEMMA / FULL QFORM OPEN.**  Essential boundedness for the unrestricted target is not proved here, and continuity is not proved.  The designated partner `account04/B03` was consumed at its completed handoff/report, but its advertised two-square unweighted `L^2` compiler is false as stated.  This report gives a decisive scaling counterexample, identifies the missing factor in its displayed Cauchy--Schwarz step, and replaces it with a correctly homogeneous collision theorem that still yields linear independent-copy small-ball scaling.
 
-Control source at startup: `yspennstate/math-research-brain@be06d2190c1485a3a76635f2635b24c995a378b3`, OWNER CONTROL revision `2026-09-22.15`.  Prepublication refresh: `yspennstate/math-research-brain@288dc19339f1f24f73b8b9a75417e17d46bf5352`, same revision.  Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Target and assignment
 

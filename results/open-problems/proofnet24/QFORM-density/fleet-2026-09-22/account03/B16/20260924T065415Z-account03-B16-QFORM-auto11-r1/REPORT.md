@@ -14,7 +14,6 @@ Global continuity: `OPEN`.
 
 The owner target remains the unrestricted statement for independent ORIGINAL-coordinate inputs with scalar probability densities at most one and an arbitrary real symmetric matrix having at least three eigenvalues of modulus at least one. No Gaussian, log-concave, moment, compact-support, connected-support, iid, diagonal-basis, or post-rotation-independence assumption is introduced.
 
-Fresh owner control at invocation start was `math-research-brain@6447b274a4f7037ad72d192c80cbf79a5a7b9efd`, OWNER CONTROL revision `2026-09-22.15`; QFORM is the sole target and account03/B16 is not paused. The live corrections were consumed, in particular: no law-uniform pointwise quadratic-phase decay, no arbitrary-joint indefinite coarea bound, no dimension-free worst-fiber supremum, no conditional projection positive-moment shortcut, and no independence after spectral rotation.
 
 The immediate predecessor is account03/B16 r42:
 

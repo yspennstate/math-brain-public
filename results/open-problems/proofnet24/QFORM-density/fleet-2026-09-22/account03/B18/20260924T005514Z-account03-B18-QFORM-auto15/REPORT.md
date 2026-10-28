@@ -14,7 +14,6 @@ The full owner target remains open: independent real coordinates with probabilit
 
 This run does not rotate random coordinates and declare them independent; does not use arbitrary-joint coarea; does not infer independence from a conditional density cap; does not use the refuted law-uniform pointwise quadratic van-der-Corput bound; and does not assert that the three-large-eigenvalue hypothesis forces the structural block below.
 
-Fresh prepublication control: `yspennstate/math-research-brain@e54bb99afabe21870e4be39fac48783b9556cc56`, OWNER CONTROL revision `2026-09-22.15`; live correction inbox blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
 
 ## 2. Primary literature transfer
 

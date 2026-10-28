@@ -1,6 +1,5 @@
 # account03/B18 r23 — final correction refresh addendum
 
-Final pre-handoff refresh was performed against `yspennstate/math-research-brain@a94f895943ac45ac8e8d72a8de07a1a2254495b0`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only.
 
 The following late correction events were explicitly checked after the main report was written:
 

@@ -5,7 +5,6 @@ attacking: an unnormalized sum/difference slice identity for the independent-cop
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Decoupled time integral  
-**Fresh owner control at entry:** `yspennstate/math-research-brain@ede85a19bad5a88f325dfc7f23d6a7f401a9bfd2`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`.
 

@@ -13,7 +13,6 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 ## 1. Fresh controls and immutable mathematical sources actually used
 
-Fresh `math-research-brain/main` was resolved at startup. OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. `AGENTS.md`, the full `scheduled_tasks/README.md` owner message, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B02.json` were read. The requested root paths `fleet.json`, `roles.json`, and `PROTOCOL.md` were not present at those literal root locations in the resolved repository; no contents are invented for them.
 
 The immediate account01/B02 predecessor is source-pinned at
 

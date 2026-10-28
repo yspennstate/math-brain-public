@@ -13,7 +13,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random variab
 
 ## 1. Source-pinned frontier
 
-Fresh owner control was read from `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, and QFORM remains the sole research programme.
 
 Newest compatible completed designated partner: account03/B20 r50,
 

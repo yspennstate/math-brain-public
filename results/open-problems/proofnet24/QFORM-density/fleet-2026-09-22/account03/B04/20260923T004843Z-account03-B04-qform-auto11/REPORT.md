@@ -11,13 +11,11 @@ attacking: two-sided rank-one cross leakage via product rearrangement and a weig
 
 ## 1. Scope and fresh source boundary
 
-Fresh control was resolved from `yspennstate/math-research-brain` at run start, commit `1856ae91980b3e2ff5034d9052737efda8c43b34`, OWNER CONTROL revision `2026-09-22.15`. QFORM remains the sole research target. The live mathematical corrections were also read: no law-uniform pointwise Fresnel decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea bound, no positive conditional-projection-density moment, no naive fiber supremum, and no single-good-minor implication is used below.
 
 The exact target remains open: for every dimension, every independent original-coordinate product law with one-dimensional densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove one universal essential bound for the density of `X^T A X`, or give a target-valid counterexample. Continuity is tracked separately.
 
 The designated partner is `account04/B04`. Fresh direct lookups of both
 
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account04/B04`
 
 and
 

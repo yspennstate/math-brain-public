@@ -9,7 +9,6 @@ This run proves a new target-level additional-eigenvalue reduction. It strictly 
 
 The full QFORM conjecture remains OPEN / NOT PROVED / NOT DISPROVED. The theorem establishes essential boundedness in its stated scope. Continuity is not claimed.
 
-Startup control source: `yspennstate/math-research-brain@7db9e7842f8cc0881366615d452035da95f7ecc5`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. The first start-record write met a benign concurrent-main conflict; main was refreshed and the unique start record was then committed without overwriting the existing same-hour canonical login.
 
 ## Source-valid dependencies actually read
 

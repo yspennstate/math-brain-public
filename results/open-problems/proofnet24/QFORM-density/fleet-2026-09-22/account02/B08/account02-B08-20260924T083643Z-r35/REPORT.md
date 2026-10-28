@@ -49,7 +49,6 @@ The next compiler must pay the scalar branch or one of these two source-valid br
 
 ## 2. Fresh sources and exact scopes
 
-Fresh owner control was resolved before work; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no later stop or B08 reassignment observed at start.
 
 The required fixed source was read exactly at
 

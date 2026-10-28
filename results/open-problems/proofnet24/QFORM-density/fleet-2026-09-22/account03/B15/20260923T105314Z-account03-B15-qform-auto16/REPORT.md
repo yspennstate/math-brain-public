@@ -13,7 +13,6 @@ The unrestricted universal QFORM density bound remains **OPEN**. This run proves
 
 ## 1. Sources and exact dependencies
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at commit `3bdcacf42e9612c7fd6d1fc720e70fa2784a763c`; OWNER CONTROL revision remained `2026-09-22.15`, QFORM-only, with no account03/B15 pause. The current B15 delivery obligation is to supply a precise rough-law limit or trace justification used by a new density estimate, with continuity kept separate from the central height problem.
 
 The assigned completed partner result actually applied below is account04/B15:
 

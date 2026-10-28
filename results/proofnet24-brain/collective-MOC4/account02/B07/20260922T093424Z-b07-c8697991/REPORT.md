@@ -9,7 +9,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Scope and live authority
 
-Fresh live controls were read from `yspennstate/math-research-brain` before research. OWNER CONTROL revision `2026-09-22.2` remains active; B07 is assigned to MOC4 support-functional / second-variation work, account03/B07 is campaign lead, and account03/B08 is the named partner. The later collective-open-problems allocation supersedes old installation/benchmark work. No benchmark payload, sealed answer, or unrelated private material was used.
 
 A second protected-control check before immutable science writes found the same blobs:
 

@@ -13,7 +13,6 @@ The unrestricted theorem is still OPEN. No Gaussian, moment, compact-support, co
 
 ## 1. Sources actually consumed
 
-Fresh owner control at the start of this run was `yspennstate/math-research-brain@0ca160119f6385f92605c6b5b61ea31d854880ab`, OWNER CONTROL revision `2026-09-22.15`.
 
 The immediate B19 predecessor is
 

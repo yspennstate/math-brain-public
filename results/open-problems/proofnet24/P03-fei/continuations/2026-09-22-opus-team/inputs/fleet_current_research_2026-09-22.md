@@ -18,7 +18,6 @@ The [five-report assistance package](https://github.com/yspennstate/math-open-pr
 
 **Correction15 is mandatory whenever FEI work resumes:** a universal fixed positive reserve `D_Gamma-lambda C_occ>=0` is false for every fixed `lambda>0` at every finite potential center. Recursive ternary majority gives `C_occ/I` unbounded; an independent B01 two-flip dictator family gives `K_occ/(I-1)` unbounded. The sparse suspension defeats every nonempty root block under the additional elementary-child-validity hypothesis. The exact signed identities survive. This is neither a disproof of FEI nor a refutation of lambda=0, state-dependent reserves or nonlinear credit use.
 
-The existing [B01 original correction](https://github.com/yspennstate/math-research-brain/blob/3d58ad7eb133864911ee04c71dfe1e1c2f382059/scheduled_tasks/work/shared/fei-all-team-2026-09-22/events/account01/B01/20260922T110917Z-account01-B01-fei11/FEI-B01-FIXED-CREDIT-RESERVE-NOGO-v1.json) is preserved and crosslinked by correction15. Its pending inbox pointer is not silently removed.
 
 ## Exact continuation obligation
 

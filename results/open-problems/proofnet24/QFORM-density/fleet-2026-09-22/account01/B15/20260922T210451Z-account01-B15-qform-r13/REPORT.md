@@ -6,7 +6,6 @@ attacking: target-wide regularity closure and a zero-loss analytic-Schwartz norm
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Worker:** `account01/B15`  
 **Run:** `20260922T210451Z-account01-B15-qform-r13`  
-**Fresh control used before publication:** `yspennstate/math-research-brain@d237d41561430eafd611bbcc7a2999e2908a9eeb`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / EXACT_REGULARITY_NORMAL_FORM / FULL UNIVERSAL HEIGHT OPEN`
 

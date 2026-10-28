@@ -2,7 +2,6 @@
 
 **Run:** `20260922T164046Z-account03-B10-QFORM-r12`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh owner control at start:** `yspennstate/math-research-brain@3a836e866d71c0daca005e741539db07a93481af`, OWNER CONTROL revision `2026-09-22.7`  
 **Assignment:** Rank-three coupled case  
 **Status:** supporting theorem proved; full QFORM target **OPEN / NOT PROVED**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (repository retrieval/write is not native learned-memory ingestion)

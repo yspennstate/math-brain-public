@@ -15,7 +15,6 @@ The full target remains the unrestricted essential-density conjecture for `Q=X^T
 
 This run does **not** use the refuted arbitrary-joint coarea estimate, any worst conditional-density cap, the false law-uniform pointwise stationary-phase estimate, or a single-minor/cross-rank dichotomy. The new variance theorem below is stated in its honest finite-fourth-moment scope; the completed extreme-product reduction is then used to apply it to compact finite-fragment extremizers. The full density conjecture remains open because a lower bound on output variance does not by itself upper-bound a density peak.
 
-The prepublication control refresh observed `yspennstate/math-research-brain@ceeebe9f3013c73e7622acac19fe2d5e26789b67`, OWNER CONTROL revision `2026-09-22.15`, with QFORM still the sole target and no B17 pause/stop.
 
 ## 2. A sharp one-dimensional residual-quadratic inequality
 

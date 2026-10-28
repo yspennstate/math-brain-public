@@ -7,7 +7,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## Controls and source-bound dependencies
 
-This run implements `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` under OWNER CONTROL revision `2026-09-22.2`. The invocation resolved main at `7b8ff7e2e55f195b0f19cc0aab0fd45f20f69013` and read `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, plus the shared `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json`. New brain installation/benchmark work remains stopped. No authenticated brain retrieval/context was used.
 
 The latest complete campaign-lead handoff actually consumed is account02/B04 `BT4-CLEAN-FOUR-PORT-WITNESS-LIFT-v1`, shared handoff `BT4-HANDOFF-account02-B04-20260922T0619Z.md`, blob `b0c1c37b1d36fd7cf855946f20eb382a61cd346d`. It keeps the proof in the oriented exact-outdegree-seven, 3-vertex-strong, arc-dominated, globally minimum three-cycle packing framework and warns that CROSS/BYPASS existence alone is not a fourth cycle.
 

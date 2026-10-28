@@ -11,7 +11,6 @@ Continuity: not claimed by the global pair-log bound below; the unrestricted con
 
 ## 1. Fresh boundary and first unpaid implication
 
-Fresh brain control was read from main and refreshed before publication; OWNER CONTROL remains revision `2026-09-22.15`, QFORM remains the sole target, and no stop or pause applies to account02/B16. The current live correction from designated partner account03/B16 is r43, canonical commit `6f62a39a272ff590cd13d6dfd2de98651bb9d99d`, which disproves the proposed universal `L2` hub-star mixed-norm closure on a strict target family while preserving the exact hub-star Plancherel identity.
 
 The required pinned package was read at exactly `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular, the completed ruled one-sheet theorem is applied below to a real strict-target inequality. No independence after projection is inferred.
 

@@ -5,7 +5,6 @@ attacking: generic-matrix zero-loss localization: remove exact Schur/pivot degen
 
 Run: `20260924T024425Z-account03-B14-QFORM-auto11`.
 Programme: `QFORM-DENSITY-3EIG-20260922`.
-Publication control snapshot: `yspennstate/math-research-brain@9aa7edd2013d3c7f8bd656471b074d63a2bf062c`, OWNER CONTROL revision `2026-09-22.15`.
 Status: **NEW SUPPORTING LOCALIZATION THEOREM / PARTNER RESULT APPLIED / FULL QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

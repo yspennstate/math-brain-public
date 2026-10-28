@@ -6,7 +6,6 @@ attacking: the two-star near-leaf branch — absorb arbitrary residual curvature
 **Run:** `20260922T223302Z-account02-B07-QFORM-ddc6a5`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
-**Fresh control:** `yspennstate/math-research-brain@9a4bf1f62bd7f133a86f3c147eb34213f61f9c82`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Classification:** **ESSENTIAL_STEP_APPLIED + CANDIDATE_REFUTED (intermediate arbitrary-self one-star extension); FULL TARGET OPEN**.
 

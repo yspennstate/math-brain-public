@@ -10,7 +10,6 @@ Status: **PROVED SUPPORTING STABILITY/REDUCTION THEOREM / FULL QFORM OPEN**
 Continuity: **not proved by this branch**. The concrete end-to-end receiver below establishes essential boundedness only.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control immediately before publication retained OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, and the full QFORM target. The live correction inbox was reread. No post-rotation independence, convolution with a spectral remainder, pointwise van-der-Corput decay, arbitrary-joint coarea, fiber supremum, or Monte Carlo inference is used.
 
 ## 1. First missing implication attacked
 

@@ -12,7 +12,6 @@ The unrestricted conjecture remains open.  The result below is an explicit targe
 
 ## 1. Sources and correction boundary
 
-Fresh owner control was read from `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`, including `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, the programme state, live correction inbox, memory protocol, and the account02/B04 assignment.  The full target is still the arbitrary rough cap-one product-law theorem.
 
 The pinned Claude/e5 source is
 

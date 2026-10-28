@@ -9,13 +9,11 @@ Execution context: **WITHOUT_VERIFIED_BRAIN**
 ## 1. Control, exact target, and continuity
 
 Fresh control was resolved from `main`; the latest pre-publication reread used commit
-`7059831cb57e07f2d79cf033028d4423a94929e2`. OWNER CONTROL revision is
 `2026-09-22.2`, active programme is
 `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, and this slot remains assigned to
 FOREST. No applicable later stop or pause was present. The current
 `scheduled_tasks/README.md` Git blob is
 `3d4a9372c87802ab734141a3374d04c8823372e3`. Exact connector-to-native byte
-SHA-256 for the complete README and isolated OWNER MESSAGE is not exposed here,
 so it is recorded as unknown rather than inferred from an older run.
 
 The target is the source-exact Grimmett--Winkler unit-weight unrooted-forest

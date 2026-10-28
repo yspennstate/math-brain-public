@@ -7,7 +7,6 @@ TASK: B13 ACCOUNT: account02 RUN: 2026-09-21T14:24:11.725662Z — product-block 
 
 ## 0. Fresh control/dependencies and research moves
 
-The governing control was resolved fresh from `yspennstate/math-research-brain` main. OWNER CONTROL revision is `2026-09-21.1`; the direct owner order `FEI-SEVEN-TASKS-2026-09-21` supersedes the stale provisional B13 benchmark row in `roles.json`. No later B13/account02 stop was present at entry. The FEI files were read in the required order: `TASKS_2026-09-21.md`, certified read-once `REPORT.md`, `APPROACHES.md`, then the fresh P03 README and `FLEET_RULES.md`.
 
 Immediate scientific dependencies used here are the prior B13 prefix/Beta run, which isolated
 \[

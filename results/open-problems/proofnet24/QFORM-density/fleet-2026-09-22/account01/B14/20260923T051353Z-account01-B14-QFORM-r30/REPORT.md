@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Role: translations and localization. S
 
 ## 1. Sources actually used
 
-Fresh control was read at `yspennstate/math-research-brain@9011e0ba5678c9b27e618fbf70d2cb1aae5688e8`; `scheduled_tasks/README.md` still has OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole target, and no paused account/slot relevant here.
 
 The assigned partner result actually applied below is `account02/B14` r26:
 

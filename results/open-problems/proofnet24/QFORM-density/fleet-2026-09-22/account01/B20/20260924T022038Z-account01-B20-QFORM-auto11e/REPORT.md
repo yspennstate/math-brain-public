@@ -19,7 +19,6 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only. The live corr
 
 The newest completed designated account02/B20 result actually consumed is
 
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B20/20260924T020212Z-account02-B20-auto11.md`,
 
 with canonical mathematical report
 

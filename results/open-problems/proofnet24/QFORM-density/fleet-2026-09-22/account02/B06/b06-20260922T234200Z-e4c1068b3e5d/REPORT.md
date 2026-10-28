@@ -10,7 +10,6 @@ attacking: the two-sided-curvature/rank-two logarithmic obstruction after an out
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
 
-Fresh start control was `yspennstate/math-research-brain@a8293374154bdde63ae77be6877476933763f51d`; prepublication refresh reached `8dd9195eeb54c9ac675a472a027c27783dd328f4`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B06 pause. Live corrections retained: no post-rotation independence, no unrestricted fiber supremum, no arbitrary-joint rank-three coarea bound, no positive moment of a worst conditional projection cap, no law-uniform pointwise Fresnel decay, and no small-tail characteristic-function truncation.
 
 ## 1. Source-valid inputs
 

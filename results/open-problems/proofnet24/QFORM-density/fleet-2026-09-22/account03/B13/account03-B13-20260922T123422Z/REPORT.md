@@ -29,7 +29,6 @@ Its proved results used here are:
 2. **Finite-fragment localization.** The same supremum is obtained when every `E_i` is a bounded finite union of intervals of total length one; rational interval endpoints can be imposed with arbitrarily small loss by endpoint approximation and the product telescoping estimate.
 3. **No single-interval shortcut.** A disconnected quadratic fiber can gain a factor two over every single unit interval, so disconnected fragments must remain allowed.
 
-The fresh brain handoff for the same theorem is `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B13/20260922T115714Z-account02-B13-qform-480ba28b.md` at the current control repository. I use the full source report above as the mathematical dependency.
 
 ## 3. New theorem: fully rational strict-slack witnesses
 

@@ -11,7 +11,6 @@ attacking: curvature-slope derivative localization—prove exact cap-preserving 
 
 ## 1. Fresh control and sources actually consumed
 
-Immediately before the substantial write I re-resolved `math-research-brain/main` at `9271fd7a81d88c7f73f959a608f747684c53a45a`. The current protected control remains OWNER CONTROL revision `2026-09-22.15`, QFORM only, with no pause of account01/B14. I read the required fresh `AGENTS.md`, `scheduled_tasks/README.md` including OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, and the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B14.json`.
 
 The completed designated-partner result actually used below is account02/B14 r33:
 

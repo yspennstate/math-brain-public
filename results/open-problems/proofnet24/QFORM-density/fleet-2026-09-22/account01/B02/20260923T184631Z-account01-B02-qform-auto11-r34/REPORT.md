@@ -13,7 +13,6 @@ No random variable is rotated. No Gaussian, log-concavity, moment, compact-suppo
 
 ## 1. Fresh sources and the completed partner result actually used
 
-Fresh `math-research-brain/main` was resolved during this run. OWNER CONTROL remains revision `2026-09-22.15`, active programme `QFORM-DENSITY-3EIG-20260922`, with QFORM as the sole research target. The current continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The current interactive release explicitly records that the unrestricted arbitrary-rough-law problem remains OPEN.
 
 The designated partner actually used is account02/B02:
 

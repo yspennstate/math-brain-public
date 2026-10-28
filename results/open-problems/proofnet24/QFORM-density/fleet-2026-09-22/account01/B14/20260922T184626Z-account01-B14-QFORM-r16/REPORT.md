@@ -5,7 +5,6 @@ attacking: translation-uniform indefinite-pair smoothing by a mass-weighted boun
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Classification: `ESSENTIAL_STEP_APPLIED / SUPPORTING_LOCALIZATION_COMPILER`. Full QFORM remains OPEN. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Control source used: `yspennstate/math-research-brain@00c2e0f7f944eb39a3ed29defa72695ed344db4f`, OWNER CONTROL revision `2026-09-22.11`, programme revision `2026-09-22.5`; immediately before publication main had advanced only by worker records and the correction-inbox blob remained `6335a8d51fc8081123635a8d0848738b615cb082`. No later stop was found.
 
 ## 1. Exact dependencies actually read and applied
 

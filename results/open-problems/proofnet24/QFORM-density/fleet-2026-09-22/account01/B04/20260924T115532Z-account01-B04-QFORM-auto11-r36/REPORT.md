@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and dependencies
 
-Fresh brain control at start was OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The full arbitrary-law, arbitrary-dimension theorem and its full-target continuity enhancement remain open.
 
 The analytic inputs used here are already completed source-pinned results:
 

@@ -10,7 +10,6 @@ attacking: near-coloop transition — test whether conditioning on the weak leak
 
 ## 1. Fresh control and source boundary
 
-Fresh brain control was resolved on `math-research-brain@d7748640bb76fc5bb756dd19b8871d2bf8a59cf3`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM only. No B16 stop or redirect was observed. The exact target remains: arbitrary independent original-coordinate densities bounded by one, symmetric `A`, at least three eigenvalues with modulus at least one, prove one universal essential-density bound for `X^T A X` or give a valid counterexample.
 
 Required pinned completed source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially
 

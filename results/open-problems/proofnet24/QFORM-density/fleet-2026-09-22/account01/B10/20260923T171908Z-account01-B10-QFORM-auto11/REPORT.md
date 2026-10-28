@@ -16,7 +16,6 @@ together with the already-known near-null condition `|a|D<2^(-12)`. The new theo
 
 ## 1. Fresh source state and inherited hard chamber
 
-Fresh prepublication control: `yspennstate/math-research-brain@caf0ae2e225b563bfd62c1d3d3d633abd4e8b9f9`, OWNER CONTROL revision `2026-09-22.15`. The latest owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; QFORM remains the sole target. The live correction inbox was re-read before this report. In particular, no law-uniform pointwise quadratic-phase decay, post-rotation independence, conditional-density-supremum substitute for independence, arbitrary-joint coarea cap, or absolute full Wiener integral is used below.
 
 Work in the exact-rank-three representation
 
@@ -306,7 +305,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal
 ## 10. Source ledger
 
 Fresh control before publication:
-`yspennstate/math-research-brain@caf0ae2e225b563bfd62c1d3d3d633abd4e8b9f9`, OWNER CONTROL revision `2026-09-22.15`.
 
 Designated account02/B10 result actually applied:
 `yspennstate/math-open-problems@144e391e6a0aed00bb8ded766cf5609d88d260b2`,

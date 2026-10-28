@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Fresh sources and exact obligation
 
-Fresh `math-research-brain` main was resolved during this run; the final pre-publication control read still has OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research target, and no later stop. The live correction inbox was reread and remained at blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The newest required volume-stability source used below is
 

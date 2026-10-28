@@ -7,7 +7,6 @@ Status: **PROVED SUPPORTING STRUCTURAL THEOREM / FULL-QFORM OPEN / CONTINUITY OP
 
 ## 1. Source pins and scope
 
-Fresh owner control was resolved in `yspennstate/math-research-brain` and remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`. Prepublication source commit used for this run: `2c197d6fe04a7a5d97f6ba3fc0b457c68919421a`. The live correction inbox blob was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The designated partner result actually used is `account02/B13` r15:
 

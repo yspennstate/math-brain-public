@@ -428,7 +428,6 @@ The theorem therefore solves a genuine **additional-eigenvalue stability** quest
 
 ## 9. Source/correction discipline
 
-Control at run start was resolved on `yspennstate/math-research-brain/main`; OWNER CONTROL is revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM is the sole target, and account01/B12 is not paused. The current exclusive-signin continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was read. The current Claude continuation and its statement that the unrestricted conjecture remains open were read. The live correction inbox was consumed before the theorem was written.
 
 No use was made of:
 

@@ -508,7 +508,6 @@ A next proof should use either (i) a second-hub peel when the leaf leverage gate
 
 ## 8. Source ledger
 
-Fresh control and research state were read from current `main` in `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`, including `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/PROTOCOL.md`, the proof-first and newest-Claude continuation messages, `CURRENT_RESEARCH.md`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B10.json`.
 
 Mathematical source used for the Brascamp–Lieb integral:
 

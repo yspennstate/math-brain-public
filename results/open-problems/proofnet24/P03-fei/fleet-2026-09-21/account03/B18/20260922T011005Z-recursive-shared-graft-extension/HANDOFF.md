@@ -1,7 +1,6 @@
 # B18 handoff — recursive shared-graft extension
 
 - `status`: `ESSENTIAL_STEP_APPLIED`; scalar re-lifts frozen at the preceding `F_2` or `F_3` balanced caps are `CANDIDATE_REFUTED`; full FEI remains `OPEN / NOT PROVED`.
-- `exact_candidate_version`: all-gate inequality `(G)` under OWNER CONTROL `2026-09-22.2`; adversarial successor tested here is the natural minimal scalar re-lift after account01/B18's `F_2` cap.
 - `consumed_peer_artifact`: account01/B18 `20260922T0117Z-recursive-shared-graft/REPORT.md`, commit `b9b63c908139fcd280a4913229afd7ab62ca50aa`, blob `cbe682d84b52232ab4e91367b08bbfe73d74a39e`; account02/B17 `20260922T004442Z-gate-composition-cocycle/REPORT.md` supplies the prime-factor reduction.
 - `old_missing_implication`: after each known balanced obstruction, prove the minimally re-lifted gate inequality on all composition-prime gates/all biases.
 - `new_proved_inference`: the same source-valid balanced monotone shared-core transform applies twice more. It gives genuine finite Boolean gates `F_3,F_4` with exact-rational interval certificates

@@ -30,7 +30,6 @@ then every cap-one product input, with arbitrary coordinate-separable measurable
 The permission for arbitrary coordinate-separable perturbations is essential below.
 
 The control state was refreshed at
-`math-research-brain@fefb58614a8e459d8f760fed7ba8377898c60a56`; OWNER CONTROL remains revision `2026-09-22.15`. The Claude baseline `e5f71d79eff325201dd0274053d20268ce65b837` and its later correction boundary are retained.
 
 ## 2. Conditional child-window lemma
 

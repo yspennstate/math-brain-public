@@ -13,9 +13,7 @@ Execution remains `WITHOUT_VERIFIED_BRAIN`: authenticated repository retrieval a
 
 ## 1. Fresh sources and corrections consumed
 
-Fresh `math-research-brain/main` controls were read at this invocation. OWNER CONTROL remains revision `2026-09-22.15`; the sole target is `QFORM-DENSITY-3EIG-20260922`; no account01/B09 pause or stop was observed.
 
-Programme sources consumed: `AGENTS.md`, the full `scheduled_tasks/README.md` OWNER MESSAGE, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B09.json`.
 
 Corrections actively enforced include:
 

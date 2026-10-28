@@ -10,7 +10,6 @@
 
 The unrestricted target remains: for every dimension, every product law of independent real coordinates with one-dimensional densities bounded by one, and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove a universal finite essential-density bound for `Q=X^TAX`, or give a valid counterexample. No moment, centering, identical-law, compact-support, log-concavity, or eigenbasis-independence assumption may be inserted.
 
-Fresh brain control at start was `yspennstate/math-research-brain@99b5c53603ff0f8d0ae6e8dab890f4fe94ba7688`, OWNER CONTROL revision `2026-09-22.11`. Before publication, main was refreshed through `2b995c0ba388ed88d33028547e5b0e966f4d94ea`; no protected-control change or later B17 stop occurred in that interval. The live mathematical corrections refuting arbitrary-joint coarea bounds, positive conditional projection moments, and scalar-`Q_rest` worst-condition bounds were consumed. None is used below.
 
 This run attacks a remaining sharp-witness escape left after the designated partner's fixed-frame and finite-dimensional analyses: one genuinely non-infinitesimal physical coordinate, with an arbitrary cap-one law and arbitrary spectral orientation, coupled to a diffuse rank-three completion. The main result is that this canonical mixed-leverage mechanism still cannot asymptotically raise the zero-density above `3 sqrt(2)`.
 
@@ -18,7 +17,6 @@ This run attacks a remaining sharp-witness escape left after the designated part
 
 The designated partner `account03/B17` completed the source-pinned run
 
-- brain handoff: `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B17/20260922T180732Z-account03-B17-QFORM-r14.md`;
 - mathematics: `yspennstate/math-open-problems@0fe842ad60b590ca774ecfd71cf2bb9d15639f90`;
 - report: `proofnet24/QFORM-density/fleet-2026-09-22/account03/B17/20260922T180732Z-account03-B17-QFORM-r14/REPORT.md`.
 

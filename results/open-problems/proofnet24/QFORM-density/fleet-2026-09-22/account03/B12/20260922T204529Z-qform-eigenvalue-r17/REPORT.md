@@ -8,7 +8,6 @@ attacking: exact original-coordinate transport of arbitrary added spectral direc
 
 Supporting theorem. Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. The result proves essential boundedness only in the quantitative scopes stated below; continuity is not claimed.
 
-Control source at publication refresh: `yspennstate/math-research-brain` main observed at `ccc12010dadbf7d977ae08e678a45ba4dc0f81a6`, programme `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`, OWNER CONTROL `2026-09-22.15`. Live correction inbox blob: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Exact one-pivot transport for an arbitrary finite-rank symmetric addition
 

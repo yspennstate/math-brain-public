@@ -13,7 +13,6 @@ The unrestricted conjecture and its global continuity conclusion remain open. Ev
 
 ## 1. Source-pinned inputs actually used
 
-Fresh control before the run was `yspennstate/math-research-brain@21a3b3edd393a7e9e8a1e8f411c587c0ae3c6848`, with OWNER CONTROL revision `2026-09-22.15`; a second control refresh immediately before publication observed main `5e118717683c2f6a3b69517ee6f302734acd413f` with the same active QFORM programme and no later stop.
 
 The current programme state still records the unrestricted target as OPEN and records the law-uniform pointwise oscillatory-decay shortcut as refuted.
 

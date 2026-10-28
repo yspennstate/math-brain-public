@@ -80,7 +80,6 @@ The three deliberately different FLEET_RULES moves were:
 - **#12 FIND WHAT IS CONSERVED:** fold by a cube character and keep the physical coordinate path metric. This reveals `D(lambda)` as the invariant that survives arbitrary q-flip directions.
 - **#27 SWAP THE QUANTIFIERS:** instead of bounding one complicated compiler frame, characterize which fixed nonnegative pivot frames admit a uniform bound for *every* Boolean function.
 
-Fresh owner control was read from `yspennstate/math-research-brain` main `38ff83fd75cfdf405faeb342648dc72ba2b08d4f`, OWNER CONTROL revision `2026-09-21.1`, including the natural-language OWNER MESSAGE. The live owner message keeps seven FEI workers/account and explicitly asks for creative FEI work rather than audits. Fresh `yspennstate/math-open-problems` master entering the scientific work was `5c9ba3bd107e843efa16109b57d7ea1907629ac4`.
 
 The required current FEI state was read, including:
 

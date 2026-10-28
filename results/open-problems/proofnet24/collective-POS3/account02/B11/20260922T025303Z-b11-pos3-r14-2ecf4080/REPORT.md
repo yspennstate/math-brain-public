@@ -7,7 +7,6 @@
 
 ## 1. Fresh control and source-bound state
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main before substantive work. OWNER CONTROL remains revision `2026-09-22.2`; `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` is active; the later stop on new installation/benchmark work remains in force. This slot remains POS3 and no benchmark work was resumed.
 
 The current lead result actually consumed is account04/B10 run
 `20260922T011127Z-account04-B10-POS3-r11`, report blob

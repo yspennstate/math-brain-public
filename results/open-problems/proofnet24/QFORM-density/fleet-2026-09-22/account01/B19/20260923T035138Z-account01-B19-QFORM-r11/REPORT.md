@@ -3,7 +3,6 @@
 **Programme:** QFORM-DENSITY-3EIG-20260922  
 **Assignment:** Universal proof assembly  
 **Run:** 20260923T035138Z-account01-B19-QFORM-r11  
-**Control at start:** yspennstate/math-research-brain@d5ab6023976df874d785e6fd308424e1f696d35c, OWNER CONTROL revision 2026-09-22.15  
 **Execution:** WITHOUT_VERIFIED_BRAIN  
 **Status:** ESSENTIAL_STEP_APPLIED / NEW STRUCTURAL ROUTING LEMMA / FULL TARGET OPEN.
 

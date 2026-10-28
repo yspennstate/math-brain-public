@@ -13,7 +13,6 @@ This invocation resolved `yspennstate/math-research-brain/main` at
 
 `20b81fa5409d4d847452cebe452f2b00689cf044`
 
-before scientific work, read `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md` including OWNER MESSAGE, `FEI-PROOF-EXECUTION-20260921T230620Z`, and the current joint `RESEARCH_STATE.md`. OWNER CONTROL is revision `2026-09-22.2`; no account02/B13 stop or pause was present and B12--B18 remain on FEI.
 
 The compact candidate-independent argument inherited from the preceding B13 run is:
 

@@ -247,7 +247,6 @@ This supporting result does not prove the unrestricted exact-rank-three theorem,
 ## 9. Source ledger
 
 - Fresh controlling repository: `yspennstate/math-research-brain`, programme `QFORM-DENSITY-3EIG-20260922`; the owner control advanced during the run and was refreshed before publication.
-- Assignment: `scheduled_tasks/work/shared/qform-density-2026-09-22/assignments/account01/B05.json`.
 - Assigned partner actually applied: account02/B05 `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`, canonical commit `e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`.
 - Live corrections consumed: arbitrary-joint rank-three coarea false; positive conditional projection-height moments false; pointwise phase decay false; fiber-sup dimension loss; X-ray-only curved trace false; bounded pair density alone insufficient under arbitrary hidden leakage.
 - No scheduler, notification, email, Drive, public-release, paid-model/API, remote-workflow, permission, or installation mutation was used.

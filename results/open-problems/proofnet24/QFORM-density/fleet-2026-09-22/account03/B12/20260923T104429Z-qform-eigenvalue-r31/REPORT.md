@@ -21,7 +21,6 @@ An early checkpoint in this same immutable run explored a weaker improvement of 
 
 ## 2. Sources actually consumed
 
-Initial fresh brain main was `0514e90b0e7b09bfcaa7371988d7b622297453ec`. Before final publication the controls were refreshed at main `d630bdc30c8bcd181fee484bb0d3dbfa988b5b87`; OWNER CONTROL remained revision `2026-09-22.15`, programme revision `2026-09-22.5`, with no pause or stop for account03/B12. The live correction inbox was re-read at the refreshed control.
 
 The designated partner result actually used is:
 

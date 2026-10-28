@@ -7,7 +7,6 @@
 
 ## 0. Candidate version, old gap, and mechanism change
 
-The later natural-language OWNER MESSAGE supersedes the older campaign-A restriction-policy wording for this invocation and asks every FEI worker to converge on the all-gate inequality
 
 \[
 \Gamma(p_{\rm out})+\widetilde H_G(p)

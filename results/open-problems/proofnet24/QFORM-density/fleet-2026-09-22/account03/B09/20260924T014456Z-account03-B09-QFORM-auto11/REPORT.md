@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh owner control before publication remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with no pause or reassignment for account03/B09. The live correction inbox was reread. Nothing below uses uniform pointwise quadratic-phase decay, post-rotation independence, an arbitrary-joint coarea bound, a worst conditional projection density, deletion of a small quadratic remainder, or the assertion that aggregate determinant mass contains one universally large physical minor.
 
 The immediate same-slot predecessor is
 

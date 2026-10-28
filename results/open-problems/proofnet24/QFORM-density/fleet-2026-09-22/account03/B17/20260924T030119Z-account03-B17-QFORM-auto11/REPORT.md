@@ -7,7 +7,6 @@ Run: `20260924T030119Z-account03-B17-QFORM-auto11`
 Status: `PROVED_SUPPORTING_SHARP_WITNESS_THEOREM`; full QFORM remains OPEN / NOT PROVED.  
 Programme: `QFORM-DENSITY-3EIG-20260922`.
 
-Fresh prepublication control: `yspennstate/math-research-brain@599be2c9808080aa057d90328ea82c83bcce6744`, OWNER CONTROL revision `2026-09-22.15`. Live correction inbox blob: `a884b835aba929c5376e6417ae5cfcd44c0f7a76`. Assignment blob: `4a88d5ecea6f08d84f4b077edc8018cf9e1343ce`. Memory protocol blob: `0d902d56688f4b5c575f5b921ddf9f6709e88312`.
 
 No post-rotation independence for the original inputs is used below. The Gaussian theorem is explicitly a theorem about centered Gaussian rank-three comparators/limits, not a Gaussian assumption on the full conjecture. No pointwise van-der-Corput estimate, arbitrary-joint coarea bound, conditional projection-density moment, compact-support reduction, connected-support assumption, or Monte Carlo argument is used.
 

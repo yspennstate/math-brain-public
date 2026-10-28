@@ -12,7 +12,6 @@ The unrestricted conjecture remains **OPEN**. Full-target continuity remains **O
 
 ## 1. Fresh scope and source pins
 
-Fresh owner control from `yspennstate/math-research-brain/main` remains OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target. I reread `AGENTS.md`, `scheduled_tasks/README.md`, the programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, and the account01/B08 assignment card before this work. In particular, the pointwise quadratic-phase decay shortcut, arbitrary-joint coarea shortcut, and naive fiber-supremum route remain unavailable.
 
 The immediate own inputs are:
 

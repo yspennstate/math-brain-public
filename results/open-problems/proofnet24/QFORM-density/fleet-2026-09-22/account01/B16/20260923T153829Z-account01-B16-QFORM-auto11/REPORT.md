@@ -10,7 +10,6 @@ attacking: remove the partner rank-two diagonal-side leverage gate by a capacita
 
 ## 1. Fresh control and pinned mathematical sources
 
-Fresh control was read on `yspennstate/math-research-brain/main`; OWNER CONTROL remains revision `2026-09-22.15`, programme revision `2026-09-22.5`, QFORM only. The full conjecture remains `OPEN / NOT PROVED`. I consumed the live corrections forbidding arbitrary-joint coarea, conditional projected-density caps, and independence after rotation.
 
 The actual bounded-density projection and Fourier inputs used below are source-pinned at
 

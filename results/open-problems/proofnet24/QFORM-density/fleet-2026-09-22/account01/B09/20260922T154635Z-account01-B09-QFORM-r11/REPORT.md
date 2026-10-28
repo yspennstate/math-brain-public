@@ -1,7 +1,6 @@
 # account01/B09 — moving-center cross-square absorption and exact light-cone rank-three reduction
 
 Run: `20260922T154635Z-account01-B09-QFORM-r11`  
-Programme: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 Assignment: `Bilinear block mechanism`  
 Outcome: `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`  
 Execution context: `WITHOUT_VERIFIED_BRAIN`

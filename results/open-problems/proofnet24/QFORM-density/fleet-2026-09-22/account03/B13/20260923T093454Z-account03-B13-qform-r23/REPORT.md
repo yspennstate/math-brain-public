@@ -8,7 +8,6 @@ Assignment: Extremal product laws
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW TARGET-RELEVANT THEOREM PROVED / FULL QFORM OPEN / FULL CONTINUITY OPEN**
 
-Fresh owner control before publication: `yspennstate/math-research-brain@d06763f7d50a801a3961bd2e0110ffcea80a82e8`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The live correction inbox was reread. In particular, this run does **not** use a cross minor alone, post-rotation independence, a conditional-cap shortcut, bounded support/diameter, fixed fragment count, perturbative deletion of small coefficients, or a law-uniform scalar van-der-Corput estimate.
 
 Designated completed partner actually applied below: account04/B13 no-attainment product purification, `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260922T231352Z-account04-B13-rough-geometric-transfer-r5/REPORT.md`.
 

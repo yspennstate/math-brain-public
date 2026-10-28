@@ -8,7 +8,6 @@ Assignment: Literature-to-proof transfer
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **PROVED SUPPORTING TARGET-LEVEL BRANCH / FULL QFORM OPEN**.
 
-Fresh owner control before publication remained OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target. The live correction set was refreshed before publication. The argument below uses no post-rotation independence, no arbitrary-joint coarea lemma, no positive conditional projection-density moment, no worst conditional-density supremum, no fixed good physical minor, and no law-uniform pointwise quadratic-phase decay.
 
 ## 1. The exact literature transfer
 

@@ -3,7 +3,6 @@ attacking: grouped-hub / three-leaf transverse curvature, eliminating reciprocal
 
 # account01/B13 — grouped hub volume times three-leaf transverse curvature
 
-Programme: `QFORM-DENSITY-3EIG-20260922`. Control: OWNER CONTROL revision `2026-09-22.15`. Execution: `WITHOUT_VERIFIED_BRAIN`. Full QFORM: **OPEN / NOT PROVED / NOT DISPROVED**. Continuity of the unrestricted target: **OPEN**.
 
 No rotation of the random variables is declared independent. No pointwise law-uniform quadratic oscillatory decay, unrestricted joint coarea bound, projection-density-only shortcut, bounded support diameter, single-interval extremality, or bounded fragment count is used.
 

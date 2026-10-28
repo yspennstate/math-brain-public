@@ -13,7 +13,6 @@ The full quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED**
 
 ## 1. Sources and live corrections actually used
 
-Fresh control resolved to `yspennstate/math-research-brain@ced020f1463b04c309fa1e58559451b84f3c31b3`, OWNER CONTROL revision `2026-09-22.11`. QFORM is the sole programme. The current source correction invalidating a universal rank-three pushforward estimate from a bare 3D density cap was explicitly retained; nothing below uses such a claim or a conditional positive moment of a spectral-fiber density.
 
 The designated partner `account04/B13` completed the fixed-volume random-set representation and continuity transfer at the source-pinned report
 

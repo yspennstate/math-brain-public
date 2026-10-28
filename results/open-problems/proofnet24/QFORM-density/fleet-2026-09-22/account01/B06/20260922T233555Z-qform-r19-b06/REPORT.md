@@ -12,7 +12,6 @@ attacking: weighted curved-fiber aggregation before local pair supremum; isolate
 
 The target remains: for every `n`, independent real coordinates `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has an essentially bounded density with one universal bound, or give a valid counterexample. Continuity is a separate requested conclusion and is **not** proved here.
 
-Fresh owner control at startup was `yspennstate/math-research-brain@28da0563b07215c374490fee72c3e61618f5dd40`, OWNER CONTROL revision `2026-09-22.15`, QFORM only. The newest owner continuation requires use of `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. I use two completed ingredients from that source:
 
 1. `COUNTEREXAMPLE_SEARCH.md`, item 1: the physical-coordinate fibre identity
 

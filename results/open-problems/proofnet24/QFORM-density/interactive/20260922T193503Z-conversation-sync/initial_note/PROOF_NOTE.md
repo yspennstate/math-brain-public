@@ -358,6 +358,5 @@ The full target therefore remains unproved in this note. No conditional implicat
 
 [3] The existing diffuse-rank argument being extended: private research archive `yspennstate/math-open-problems`, commit `0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, file `proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T113624Z-qform11/REPORT.md`, blob `212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0a`. Its unperturbed Fourier/Brascamp-Lieb calculation was read directly. The new step is the complex product amplitude retaining arbitrary separable phases, followed by the principal-block conditioning corollary.
 
-[4] Exact target, diagonal control, and pointwise-decay correction: private coordination archive `yspennstate/math-research-brain`, snapshot `df47cd8f7a0dd4bf831ff4e659d4dc064528f72d`, file `scheduled_tasks/work/shared/qform-density-2026-09-22/CURRENT_RESEARCH.md`, blob `c8e8cd4d7065799e210a55810a500bbf589cd103`.
 
 A finite algebraic sanity check accompanies this note; it verifies the explicit example and scalar prefactors only. It is not a proof of the universal conjecture or a substitute for review of Theorem 3. This interactive derivation is not an independent scheduled-worker review and is not native learned-memory ingestion.

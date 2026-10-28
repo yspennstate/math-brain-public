@@ -13,7 +13,6 @@ All random variables remain in their ORIGINAL independent coordinates. No post-r
 
 ## 1. Source-pinned state and live packet
 
-Fresh `math-research-brain/main` was resolved at publication refresh as `459779426a057791cb685f27eb1a2461a1dd7553`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The current exclusive continuation, assignment, memory protocol, claims and live corrections were reread.
 
 Immediate predecessor:
 

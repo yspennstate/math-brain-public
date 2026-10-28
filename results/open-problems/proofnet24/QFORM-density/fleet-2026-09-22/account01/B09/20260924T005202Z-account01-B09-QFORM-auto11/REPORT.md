@@ -13,7 +13,6 @@ The unrestricted conjecture remains OPEN / not proved / not disproved. Full-targ
 
 ## 1. Source-pinned premises
 
-Fresh control at startup was `yspennstate/math-research-brain/main@d8582d7c48a489ed23147d480fed5c21991fa1ee`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no account01/B09 pause or stop.
 
 The full target and continuity claims are still OPEN in the current `CLAIMS.json`. Live corrections used here include the failure of law-uniform pointwise quadratic-phase decay, the prohibition on post-rotation independence, the failure of naive fiber-sup dimension-free bounds, and the fact that aggregate Frobenius minor mass does not by itself furnish a uniformly large single physical minor.
 

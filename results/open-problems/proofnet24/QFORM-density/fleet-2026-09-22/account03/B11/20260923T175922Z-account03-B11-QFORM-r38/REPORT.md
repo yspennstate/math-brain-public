@@ -370,7 +370,6 @@ The unrestricted owner target remains OPEN. Global continuity remains OPEN.
 
 ## 6. Sources actually used
 
-1. Fresh owner controls and continuation: `yspennstate/math-research-brain`, current main, OWNER CONTROL revision `2026-09-22.15`, including `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 2. account03/B11 r37 exact graph boundary: `yspennstate/math-open-problems@60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260923T171407Z-account03-B11-QFORM-r37/BOUNDARY_CHECKPOINT.md`.
 3. designated partner account04/B11 disjoint-volume/pair-area compiler: `yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B11/20260923T111608Z-account04-B11-disjoint-volume-compiler-r5/REPORT.md`.
 4. projected-crossing Fourier normalization and product-projection caps: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.

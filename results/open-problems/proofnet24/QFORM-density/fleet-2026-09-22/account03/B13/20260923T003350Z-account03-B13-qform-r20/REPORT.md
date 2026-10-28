@@ -10,7 +10,6 @@ Status: **NEW STRUCTURAL/ANALYTIC SUPPORTING THEOREM / FULL QFORM OPEN / FULL CO
 
 The target is the full owner conjecture: for every finite `n`, arbitrary independent real coordinates with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove a dimension-free finite essential density bound for `Q=X^T A X`, or give a genuine counterexample. No moment, compact-support, connected-support, log-concavity, Gaussian, or post-rotation-independence assumption is used here.
 
-Fresh owner control was read from `yspennstate/math-research-brain`; immediately before the mathematical write the control commit was `98a729103250c230bc762bebbafd96ca254231f3`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no account03/B13 pause or stop. The live correction inbox was refreshed at that commit. In particular, this argument does not use the refuted arbitrary-joint rank-three coarea assertion, a law-uniform pointwise quadratic-phase estimate, a bounded-diameter/fixed-fragment extremal reduction, a universally good single physical minor, or conditional independence after spectral rotation.
 
 Three completed inputs are used at their exact scopes.
 

@@ -5,7 +5,6 @@ attacking: grouped product projection before the curved quadratic pushforward, w
 
 Status: `ESSENTIAL_STEP_APPLIED`; full QFORM OPEN / NOT PROVED; continuity open in full generality. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Source controls at start: `yspennstate/math-research-brain@b02969f5b8e9c9313119bc8cc62bb41a4d09983d`, OWNER CONTROL revision `2026-09-22.15`; refreshed before publication at `4b9e16afc8d1cbd72e438e6468b065451b2c437b`, same programme. Assignment: projection-product interaction. Live corrections consumed: arbitrary-joint coarea false; positive conditional projection-height moments false; projected coordinates are not independent after rotation; scalar residual conditional-sup gate false; absolute phase-Wiener and coordinatewise mixed-BL routes cannot be used as universal interfaces.
 
 Designated partner actually consumed: account02/B16 `20260922T203148Z-account02-B16-QFORM-auto11`, canonical report `yspennstate/math-open-problems@484069f14f49a3303befbe62863d950e67c809e1:proofnet24/QFORM-density/fleet-2026-09-22/account02/B16/20260922T203148Z-account02-B16-QFORM-auto11/REPORT.md`. It proves (i) the mixed ambiguity/section-mass BL sufficient estimate, (ii) the exact barrier `Theta<=4` on `A_m=[1] direct_sum J_m/m direct_sum (-J_m/m)`, and (iii) the source-grouped bound `||p_Qm||_infinity<=pi sqrt(2)`. The present theorem implements its prescribed repair: group original product coordinates before taking an absolute Fourier norm.
 

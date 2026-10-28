@@ -6,7 +6,6 @@
 
 ## 0. Live target and mechanism change
 
-The current owner control is revision `2026-09-22.2`. Its natural-language OWNER MESSAGE supersedes the older interface-B row-coding prompt for substantive FEI work and directs every FEI worker to the all-gate potential inequality
 
 \[
 \Gamma(p_{\rm out})+H_t(G;p)

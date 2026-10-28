@@ -8,7 +8,6 @@ Role: Coordinate minor selection / complementary constructions and source-valid 
 Run: `account02-B07-20260923T100305Z-r11`  
 Start brain control: `b6e14315c387982135fb075d936a39ff56c3d533`  
 Pre-publication brain refresh: `d496d87720267c27b9728e8d659dc02d2ebeafb2`  
-OWNER CONTROL revision: `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW SUPPORTING FRACTIONAL-VOLUME COROLLARY + EXACT TARGET-CLASS OBSTRUCTION TO E2-THROUGH-SCHUR / FULL QFORM OPEN**.
 

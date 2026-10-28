@@ -13,7 +13,6 @@ The exact owner target is unchanged. All random coordinates remain ORIGINAL coor
 
 ## 1. Source-pinned state actually used
 
-Fresh control at invocation start was `yspennstate/math-research-brain@7afbaf67002a197b340cd34c244a8371147eb075`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. I read `AGENTS.md`, the owner message, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, and this slot's assignment card.
 
 Immediate predecessor:
 

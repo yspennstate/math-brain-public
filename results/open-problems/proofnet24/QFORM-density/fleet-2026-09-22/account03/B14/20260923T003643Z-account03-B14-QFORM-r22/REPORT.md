@@ -12,7 +12,6 @@ Execution: WITHOUT_VERIFIED_BRAIN
 
 The target remains: for every n, independent real X_i with probability densities 0<=f_i<=1, and every real symmetric A with at least three eigenvalues of modulus at least one, prove that Q=X^TAX has a density with universal essential-supremum bound, or give a valid counterexample. Continuity is a separate desired conclusion.
 
-Fresh owner control was read from yspennstate/math-research-brain main at 69eb6bb1a2994e7aaf4831580b96cbeb59fc0832; OWNER CONTROL revision 2026-09-22.15 keeps QFORM as the sole research target and has no B14 pause. The live correction state was consumed. In particular, no arbitrary-joint coarea lemma, post-rotation independence, bounded support diameter, bounded fragment count, pointwise van-der-Corput decay, or conditional-density-moment gate is used.
 
 The designated partner input is account04/B14's affine-family localization compiler, with canonical proof
 

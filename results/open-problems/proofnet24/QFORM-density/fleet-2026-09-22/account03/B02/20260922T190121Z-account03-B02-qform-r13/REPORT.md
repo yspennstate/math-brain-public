@@ -337,7 +337,6 @@ That route uses the curvature forced into off-diagonal couplings when the scalar
 
 ## 11. Source pins and integrity
 
-Fresh owner/control repository at the decisive refresh: `yspennstate/math-research-brain@9dd55b53aa85edb8fe7d1d4c9cf0787c877ca092`, OWNER CONTROL revision `2026-09-22.13`. `CURRENT_RESEARCH.md` at that commit continues to mark the arbitrary-joint coarea lemma false and the full conjecture open.
 
 Applied analytic dependency:
 

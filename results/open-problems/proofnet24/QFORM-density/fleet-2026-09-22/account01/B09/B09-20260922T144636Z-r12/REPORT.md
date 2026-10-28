@@ -1,7 +1,6 @@
 # account01/B09 — overlap-one Schur-cut aggregation
 
 Run: `B09-20260922T144636Z-r12`  
-Programme: `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.5`  
 Assignment: `Bilinear block mechanism`  
 Outcome: `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`  
 Execution context: `WITHOUT_VERIFIED_BRAIN`

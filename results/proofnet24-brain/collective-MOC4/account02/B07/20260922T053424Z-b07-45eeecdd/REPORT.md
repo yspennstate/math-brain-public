@@ -7,7 +7,6 @@
 
 ## Sources actually consumed
 
-- Fresh protected controls were read at `main` commit `fffe684ee8c52f2fbfe8ce45316d50d8fcb7a533`, OWNER CONTROL revision `2026-09-22.2`; a later compare through `db7810ef4f6510888517f25c36ed4872fa0bbaf7` showed no protected-control change.
 - Campaign lead account03/B07 latest complete version found by UTC ordering: run `20260922T043708Z-account03-B07-MOC4-r11`, theorem `MOC4-TRANSPOSE-SUBGROUP-CUBATURE-v1`, report blob `c286ea3e5ec5a72902fbff82e94db343f2bbc543`, shared handoff commit `68e6da319010c9611a6e7d647010689d72072670`.
 - Named partner account03/B08: run `20260922T051819Z-account03-B08-MOC4-r11`, theorem `MOC4-PAIR-BLOCH-ENVELOPE-v1`, report blob `f39236fa1e63c1af4ebeb89a1f243a49a9aa44a6`, shared handoff commit `86ade870bb739fe4d52b3a54fe90e2c87522a807`.
 - Essential inherited dependency explicitly used below: account04/B08 `MOC4-PAIR-SYMMETRIZED-COMMON-LIFT-v1`, report blob `ccc5358d81a9432f3764a9a89be9a01c6bb54e26`, handoff commit `db7322e4995935e482d4a8204c0ff07b42d8e5d7`.

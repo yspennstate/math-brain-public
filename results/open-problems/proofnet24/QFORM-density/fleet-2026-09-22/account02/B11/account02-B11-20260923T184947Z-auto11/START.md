@@ -1,4 +1,0 @@
-SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account02, slot B11, 2026-09-23T18:49:47Z.
-attacking: the punctured double-graph indefinite collar and the one-hub exact-rank-three null endpoint; test whether a residual third cross direction can be absorbed as an affine-z shear without paying its tiny singular scale.
-
-First unpaid implication: preserve the account03/B11 r39 rank-two crossing + internal-bilinear dyadic bound under an additional residual scalar coupling 2*kappa*z*W when W is an independent original-coordinate scalar/bank statistic. Conditioning on W converts this term to the affine z term already allowed by r39, so the bound should be uniform in kappa. The key question is then exactly whether the general collar admits such an independent residual-scalar realization; if not, isolate the dependence obstruction rather than divide by the tiny third singular value.

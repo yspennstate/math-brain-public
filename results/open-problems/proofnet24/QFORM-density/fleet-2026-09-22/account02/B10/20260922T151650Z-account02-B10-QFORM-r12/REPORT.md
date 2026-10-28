@@ -10,7 +10,6 @@
 
 The exact target remains: for independent real physical coordinates `X_i` with densities bounded by one and symmetric `A` having at least three eigenvalues of modulus at least one, prove a universal density bound for `X^T A X`, or give a genuine counterexample. No rotation of the random vector is used below.
 
-Fresh control was read from `yspennstate/math-research-brain` main at observed commit `e0104e46d936cc6feb6540364e1944ae05a122db`; OWNER CONTROL revision is `2026-09-22.5`. Required live corrections consumed include the failures of law-uniform pointwise Fresnel decay, fiber-sup dimension-free reduction, independence after rotation, the single-cross-minor route, conditional-cap replacement of independence, and single-triple reciprocal aggregation.
 
 Completed named-partner result actually applied:
 

@@ -255,4 +255,3 @@ Internal complete analytic dependencies:
 - `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 - designated partner: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061:proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260922T182500Z-account04-B18-QFORM-r2/REPORT.md`.
 
-Fresh pre-write owner control observed at `yspennstate/math-research-brain@fefb05123132e6da7545f39b9b72905900ea9b6d`, OWNER CONTROL revision `2026-09-22.15`; the live correction inbox was reread at that head before this report was committed.

@@ -11,7 +11,6 @@ attacking: the current small-Pluecker collar's second-gradient/rank-one-alignmen
 
 ## 1. Fresh source boundary
 
-Fresh publication control is `yspennstate/math-research-brain@e8a9f6d7b937e36d4c491a2872dad2c281341436`, OWNER CONTROL revision `2026-09-22.15`, QFORM only, no B20 pause.
 
 The immediate collar source is account03/B19 r23, canonical `yspennstate/math-open-problems@80403bc0adff2c5e8278848674c81448e9782e44`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/account03/B19/20260923T030233Z-account03-B19-QFORM-r23/REPORT.md`.  In the remaining exact-rank-three small-Pluecker collar it supplies an ORIGINAL physical hub `i` such that

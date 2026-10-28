@@ -11,7 +11,6 @@ Regularity: the new theorem proves absolute continuity and an essential density 
 
 The target is unchanged: the coordinates are independent ORIGINAL real coordinates with one-dimensional density caps one, and `A` is arbitrary real symmetric with at least three eigenvalues of modulus at least one. No Gaussian, moment, log-concavity, compact-support, connected-support, iid, diagonal-basis, post-rotation independence, arbitrary-joint coarea, fiber-supremum, or law-uniform scalar pointwise quadratic-phase decay hypothesis is introduced.
 
-Fresh control before publication was resolved from `yspennstate/math-research-brain@9153bff456817c9ae7bfc914b3e74594d38da409`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The new `QFORM-TWOJACOBIAN-TRANSVERSALITY-ONLY-FALSE-v1` correction concerns dependence-blind Jacobian/coarea information and does not affect this product-coordinate argument.
 
 ## 1. Two source-valid analytic inputs
 

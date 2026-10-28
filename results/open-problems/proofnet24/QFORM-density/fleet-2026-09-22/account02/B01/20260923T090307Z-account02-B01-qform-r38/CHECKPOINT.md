@@ -2,7 +2,6 @@
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full conjecture remains OPEN.
 
-Fresh brain control at run start: `59b0b20a1d578e8e01ea566ec1d0f1643494dc9f`, OWNER CONTROL `2026-09-22.15`, QFORM-only. Required pinned Claude/Fourier source `e5f71d79eff325201dd0274053d20268ce65b837` was read. The phase-aligned fragmented-support construction still forbids law-uniform scalar pointwise quadratic-phase decay.
 
 Substantive checkpoint. Let a conditional form split over disjoint original-coordinate banks as
 

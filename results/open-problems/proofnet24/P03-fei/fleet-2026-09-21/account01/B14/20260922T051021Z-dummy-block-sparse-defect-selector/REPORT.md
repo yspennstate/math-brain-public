@@ -40,7 +40,6 @@ This report does **not** prove that universal statement.
 
 I consumed the fresh account02/B18 handoff
 
-`scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/handoffs/account02-B18-20260922T051105Z-random-depth-barycenter.md`,
 
 whose scientific source is
 

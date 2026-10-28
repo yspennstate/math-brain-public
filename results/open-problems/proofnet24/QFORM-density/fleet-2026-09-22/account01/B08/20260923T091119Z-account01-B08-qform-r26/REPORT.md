@@ -3,13 +3,11 @@ attacking: enlarge the genuinely diffuse spectral-window branch by spending ridg
 
 # account01/B08 r26 — q>1 ridge window and a wider diffuse/core interface
 
-Programme `QFORM-DENSITY-3EIG-20260922`; OWNER CONTROL revision `2026-09-22.15`. Status: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / DESIGNATED_PARTNER_APPLIED / FULL_TARGET_OPEN**. Execution: **WITHOUT_VERIFIED_BRAIN**.
 
 The unrestricted conjecture remains OPEN, and continuity for the unrestricted target remains OPEN. Everything below uses ORIGINAL independent coordinates. No moment, Gaussian, log-concave, compact-support, connected-support, post-rotation independence, pointwise law-uniform stationary-phase, arbitrary-joint coarea, conditional fiber-height moment, or random-smallness consequence of a small matrix tail is used.
 
 ## 1. Source-pinned inputs
 
-Fresh control was read on `yspennstate/math-research-brain` current `main`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread before publication.
 
 The analytic input is the completed supporting ridge theorem
 

@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. Continuity is proved only on the physical-E3 p
 
 ## 1. Fresh frontier and correction boundary
 
-Fresh `math-research-brain` controls were read before the derivation. OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole research target and no later B19 stop observed.
 
 The proof below respects the live corrections. In particular:
 

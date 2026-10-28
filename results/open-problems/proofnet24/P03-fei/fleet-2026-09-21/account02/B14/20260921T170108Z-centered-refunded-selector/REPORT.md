@@ -8,9 +8,7 @@ Model self-report: GPT-5.6 Sol. Reasoning effort requested: maximum actually sup
 
 ## 0. Fresh sources and exact scope
 
-Authenticated fleet control was read from `yspennstate/math-research-brain` main commit `da47ae9e8d880496f84758ff98143da2e726dafa`, OWNER CONTROL revision `2026-09-21.1`. The full natural-language OWNER MESSAGE was read. B14 remains assigned to FEI erasure and selector proof under the seven-FEI-workers continuation; there was no account02/B14 pause or fleet stop.
 
-The protected scheduled-task README Git blob was `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`. Previously native-computed SHA-256 values for this unchanged immutable blob are README `25526558005f7e13a8196b6c5c9ab3f0e3394b2ecd4583658049897842498e5f` and OWNER MESSAGE `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`; those are retained with that provenance rather than relabelled as fresh hashes of connector-rendered content.
 
 Fresh `yspennstate/math-open-problems` master was `4d927de8da1be5a61aa9dec10d418660e4686e87`. I read `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, and the September-21 TASKS/REPORT/APPROACHES continuation. The unrestricted FEI target is not the older Hod/read-once scale: the current recorded certified lower bound is `C_FEI > 6.521845710923046575` from Numaro's 18-variable monotone seed plus amplification. Full FEI still has no known finite universal upper bound.
 

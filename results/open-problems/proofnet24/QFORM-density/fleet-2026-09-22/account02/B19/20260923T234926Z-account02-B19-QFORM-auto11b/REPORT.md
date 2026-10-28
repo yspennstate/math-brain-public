@@ -12,7 +12,6 @@ Continuity: **not claimed for the full target**.
 
 The target remains: independent original real coordinates `X_i`, each with a probability density bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of `A` with modulus at least one. Prove one universal essential density bound for `X^T A X`, or give a valid counterexample. No moments, support bounds, log-concavity, iid hypothesis, diagonal-basis assumption, or independence after spectral rotation is used.
 
-Fresh brain control retained OWNER CONTROL revision `2026-09-22.15` and the later owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; the full theorem remains open. The current canonical B20 login existed this hour, so this B19 run made no keeper/scheduler mutation.
 
 The designated partner actually used is account03/B19 r43:
 

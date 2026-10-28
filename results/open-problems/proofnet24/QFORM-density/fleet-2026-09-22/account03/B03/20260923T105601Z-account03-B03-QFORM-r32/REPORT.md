@@ -8,7 +8,6 @@ attacking: close the positive-disjoint-basis part of the exact angular-cancellat
 **Status:** `NEW SUPPORTING THEOREMS / POSITIVE-DISJOINT-BASIS ENDPOINT PAID / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control before this run was the current `math-research-brain` main line under OWNER CONTROL revision `2026-09-22.15`, QFORM-only. Before publication I refreshed the control/correction line again. The unrestricted theorem remains open, and the unrestricted continuity claim remains open.
 
 This report never rotates the independent physical coordinates into eigen-coordinates, never treats `X-X'` and `X+X'` as independent, never applies a conditional cap to one given the other, and never uses law-uniform pointwise van-der-Corput decay. All product Fourier estimates are performed in original coordinates.
 

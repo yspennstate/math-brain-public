@@ -17,7 +17,6 @@ The target is unchanged: for every finite `n`, independent real coordinates with
 
 for every interval `J`, or give a genuine counterexample. No moments, bounded support, log-concavity, iid assumption, diagonal-basis assumption or post-rotation independence is used below.
 
-Fresh brain control was resolved before this run and again before publication; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no account02/B13 stop observed. The live correction inbox was reread and the known false interfaces (pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint rank-three coarea, worst conditional projection-density moments, bounded-diameter/fixed-fragment bathtub localization and universal single-minor selection) are not used.
 
 The completed inputs actually applied are:
 

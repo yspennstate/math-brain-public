@@ -13,7 +13,6 @@ Continuity: proved on the new branch (`C_0(R)`); full-target continuity remains 
 
 The unrestricted target is still open: for every dimension, every family of independent real inputs with probability densities at most one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal `L^infinity` bound for the density of `X^T A X`, or give a target-valid counterexample.
 
-Fresh brain control was read from `yspennstate/math-research-brain` main and remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only, with no later pause or reassignment. The live correction inbox blob at the pre-write refresh was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The phase-aligned correction remains binding. For any prescribed `s>0` and small `delta>0`, choose a finite union `E` of total length one inside
 

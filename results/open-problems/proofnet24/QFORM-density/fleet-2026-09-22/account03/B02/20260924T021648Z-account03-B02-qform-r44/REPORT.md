@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.
 
 The exact owner target remains unchanged: independent ORIGINAL real coordinates with one-dimensional densities bounded by one; arbitrary real symmetric `A`; at least three eigenvalues of modulus at least one. No Gaussian, log-concave, moment, compact-support, connected-support, iid, diagonal-basis, or post-rotation-independence hypothesis is used.
 
-Fresh prepublication control was read from `yspennstate/math-research-brain@688b231566233da29c83ab0089eaf0bf17a7bbd6`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. In particular, nothing below uses law-uniform scalar quadratic van der Corput, arbitrary-joint coarea, conditional projection caps, fiber suprema, one-good-minor extraction, or deletion of a nonzero quadratic/cross tail.
 
 ## 1. Source-pinned inputs
 

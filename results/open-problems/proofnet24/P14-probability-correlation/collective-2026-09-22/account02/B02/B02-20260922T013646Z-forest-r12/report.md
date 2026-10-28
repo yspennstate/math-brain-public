@@ -10,7 +10,6 @@
 ## 1. Control and scope
 
 Fresh owner controls were read from `yspennstate/math-research-brain` at initial main
-`718ccc34f060bbd8da399976a4c9af637c65d829`. OWNER CONTROL revision is
 `2026-09-22.2`; active directive is
 `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; B02 is assigned FOREST research.
 Older brain-installation and benchmark work is stopped. A final freshness comparison to

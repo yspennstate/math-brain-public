@@ -1,6 +1,5 @@
 # r22 correction refresh addendum
 
-Fresh prepublication control remains QFORM-DENSITY-3EIG-20260922 with OWNER CONTROL revision 2026-09-22.15 and no later stop.
 
 Two relevant correction events were consumed after the main report was written:
 

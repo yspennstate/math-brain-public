@@ -9,7 +9,6 @@ attacking: the exact-null scalar pivot: prove a weak-L3/2 product-projection rec
 **Continuity:** proved only on the diffuse transverse branch below; the null-pivot weak-L3/2 branch gives essential boundedness only.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control was resolved from `yspennstate/math-research-brain` at `347870e89a4cd6128bee63b692a4cd2a0bbbe169` initially and refreshed to `19b70c1dacd27bf465d3f862acc0482b2b4a1717` before publication. OWNER CONTROL remains revision `2026-09-22.15`; programme revision remains `2026-09-22.5`; QFORM is the sole target. The current correction ledger was reread. This report does not use post-rotation independence, arbitrary-joint coarea, a worst conditional projection-density moment, a law-uniform pointwise Fresnel estimate, a single good minor, near-zero coefficient deletion, or an unrestricted fiber supremum.
 
 ## 1. Source-valid inputs actually used
 

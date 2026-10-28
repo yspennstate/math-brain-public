@@ -23,7 +23,6 @@ The exact-line finite-diagonal-support endpoint is discharged below; the remaini
 
 ## 2. Fresh source-pinned premises
 
-Fresh owner control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`, with no stop for account02/B13. The full theorem remains open.
 
 The latest completed compatible designated-partner result is account03/B13 r41, canonical report at
 

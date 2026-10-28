@@ -13,7 +13,6 @@ Global continuity is **not** proved. The new conclusions are essential-density b
 
 ## 1. Fresh controls and completed inputs actually used
 
-Fresh control at the run start was `yspennstate/math-research-brain@d08c395aa5fae41bbae55d73746f2801839155a1`; OWNER CONTROL revision was `2026-09-22.15`, later than the source prompt's `2026-09-22.5`, so the later revision governs. QFORM remained the sole fleet target. The live corrections consumed include:
 
 - no law-uniform pointwise quadratic-phase decay from a density cap;
 - no independence after rotating to spectral or other linear coordinates;

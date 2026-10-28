@@ -17,7 +17,6 @@ The target remains: for every `n`, independent real ORIGINAL-coordinate inputs `
 
 No Gaussianity, moments, compact support, connected support, log-concavity, iid assumption, diagonal-basis assumption, or post-rotation independence is used. In particular, no matrix remainder below is called a small random quadratic error merely because its operator norm is small. Operator norm is used only to preserve deterministic singular-value gates of the coefficient matrix. The false law-uniform pointwise quadratic-phase estimate, arbitrary-joint coarea cap, worst-fiber supremum route, and conditional-cap-as-independence shortcuts are not used.
 
-Fresh source control at the start was `math-research-brain@7a0d97f43e2bd0ed8e16b1b09df220eea4805924`; the prepublication refresh moved to `fd833b8e184d76d66929db61837a07f3ca3c7574` without changing OWNER CONTROL `2026-09-22.15`, QFORM exclusivity, or this assignment. The owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. The latest Claude continuation and the new projected-crossing theorem were read at their committed source paths.
 
 The completed designated partner used here is account04/B12 run
 

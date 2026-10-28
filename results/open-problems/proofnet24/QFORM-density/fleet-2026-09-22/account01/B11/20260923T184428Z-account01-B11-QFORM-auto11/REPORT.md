@@ -12,7 +12,6 @@ The full unrestricted conjecture remains OPEN. No Gaussianity, log-concavity, mo
 
 ## 1. Fresh source state
 
-Fresh main control was read before this run. OWNER CONTROL remains revision `2026-09-22.15`, programme QFORM only, and the current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The current correction inbox was reread; in particular, bounded conditional density is not treated as independence and the false law-uniform pointwise quadratic-phase decay is not used.
 
 The immediate predecessor is account01/B11
 

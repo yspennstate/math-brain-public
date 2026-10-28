@@ -16,7 +16,6 @@ Fresh prepublication control was resolved at
 
 `yspennstate/math-research-brain@763726107461c2d17900102bcd9b35026da01eb3`,
 
-OWNER CONTROL revision `2026-09-22.15`, with QFORM as the sole research target and no applicable pause/stop. The live correction boundary was reread. In particular, the argument below does **not** use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, post-rotation independence, a conditional cap for conjugate sum/difference variables, or a uniformly good single physical minor.
 
 ### 1.1 Required newest Claude/e5 input
 

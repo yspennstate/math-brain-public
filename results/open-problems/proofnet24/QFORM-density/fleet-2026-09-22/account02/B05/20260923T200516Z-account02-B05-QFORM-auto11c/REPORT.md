@@ -4,7 +4,6 @@ attacking: the fresh affine-shear caveat in the curved two-sheet tube; prove a B
 # account02/B05 — affine-shear Borel tube and null-hub receiver
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**OWNER CONTROL:** revision `2026-09-22.15`; fresh control commit at run start `math-research-brain@48596c878caf620484499cd94cc1958139d4c258`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `PROVED_SUPPORTING_THEOREM / NEW PARTNER-PLANE CHAMBER CLOSED / FULL QFORM OPEN`.  
 **Regularity:** essential boundedness is proved in the stated scope; continuity is not claimed.

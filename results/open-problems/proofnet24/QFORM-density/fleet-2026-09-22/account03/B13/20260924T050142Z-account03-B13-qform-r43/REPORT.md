@@ -13,7 +13,6 @@ All random coordinates below remain the original independent physical coordinate
 
 ## 1. Fresh source-pinned premises
 
-Fresh owner control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`; the live correction inbox was reread before publication.
 
 ### 1.1 Designated partner account04/B13 — diagonal fifth-order sparsification and optimizer-free reduction
 

@@ -9,7 +9,6 @@ Run `20260922T185057Z-account01-B10-QFORM-r16`.
 
 The full quadratic-form bounded-density conjecture remains OPEN. This report does not claim continuity. Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control at startup had OWNER CONTROL revision `2026-09-22.11`; QFORM remained the sole research target. The live state explicitly refutes arbitrary-joint rank-three coarea and positive conditional-height shortcuts. A still newer correction observed before publication, account02/B15 `QFORM-SCALAR-QPRIME-WEIGHTED-23-MOMENT-FALSE-v1`, independently confirms that positive moments of conditional profile heights can diverge even when the actual quadratic output remains controlled. The argument below is a different, exact-rank-three heavy-null version tailored to B10's current leakage step.
 
 ## 1. Conditional end-to-end route being tested
 

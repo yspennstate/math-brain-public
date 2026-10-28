@@ -10,7 +10,6 @@ STATUS: PARTIAL. Full uniform-cube Friedgut--Kalai Fourier entropy-influence con
 Fresh authenticated control at entry:
 yspennstate/math-research-brain main
 570a765d71a26461e94221a75508c992a8bc72ab,
-OWNER CONTROL revision 2026-09-21.1.
 The live owner order was FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z,
 with account02/B17 assigned the exact Boolean adversary for interface B
 (quantitative joint-derivative stability).

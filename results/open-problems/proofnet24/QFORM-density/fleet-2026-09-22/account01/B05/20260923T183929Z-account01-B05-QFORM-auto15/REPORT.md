@@ -16,7 +16,6 @@ The central correction consumed here is the current one: interval-only square-ro
 
 ## 1. Sources actually used
 
-Fresh owner control was read from `yspennstate/math-research-brain` main under OWNER CONTROL revision `2026-09-22.15`, current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 The immediate B05 state is the preceding run
 

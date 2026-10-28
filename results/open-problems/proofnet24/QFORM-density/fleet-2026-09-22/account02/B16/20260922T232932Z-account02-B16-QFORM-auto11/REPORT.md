@@ -5,7 +5,6 @@ attacking: intersecting-Pluecker support—classify the zero-disjoint-mass branc
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Projection-product interaction  
-**Fresh brain control before scientific work:** `yspennstate/math-research-brain@47aa7b3bfd15934d39efd1b759888ef6312dbd01`; OWNER CONTROL revision `2026-09-22.15`.  
 **Math repository head observed before write:** `yspennstate/math-open-problems@3709de1a3f1ed1a498dcadd7d85d8de143331a36`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `NEW SUPPORTING THEOREM + STRUCTURAL REDUCTION / FULL QFORM OPEN`.

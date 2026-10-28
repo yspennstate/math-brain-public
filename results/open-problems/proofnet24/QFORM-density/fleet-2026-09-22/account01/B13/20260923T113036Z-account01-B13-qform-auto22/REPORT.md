@@ -12,7 +12,6 @@ The unrestricted conjecture is not proved or disproved here. This run closes no 
 
 ## 1. Fresh scope and immutable premises
 
-Fresh brain control was read on `yspennstate/math-research-brain` with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target and `QFORM-FULL` remains OPEN. The live correction inbox was refreshed immediately before this report. In particular, nothing below uses law-uniform pointwise quadratic oscillatory decay, independence after rotation, arbitrary-joint quadratic coarea, a conditional projection-density cap, bounded-diameter localization, fixed fragment count, or perturbative deletion of small coefficients on arbitrary translated supports.
 
 The following completed source results are used exactly in their proved scopes.
 

@@ -271,10 +271,8 @@ No counterexample to the owner conjecture is produced.
 
 ## 10. Sources actually used
 
-1. Fresh control: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`; full QFORM and full continuity claim OPEN.
 2. Previous account01/B05 scalar-pivot obstruction: `yspennstate/math-open-problems@b2459adaa430f8a8df8c703544128b283e49a3c4:proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T085700Z-account01-B05-QFORM-auto11/REPORT.md`.
 3. Designated partner endpoint: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md`.
 4. Newest compatible account02/B05 crossing compiler: `yspennstate/math-open-problems@8b902bf20457a12c8ad394ece3808c9a0130a95b:proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260924T075515Z-account02-B05-QFORM-r12/REPORT.md`.
-5. Live corrections consumed from `scheduled_tasks/work/shared/qform-density-2026-09-22/CORRECTION_INBOX.json`, including the failures of law-uniform pointwise quadratic decay, arbitrary-joint 3D coarea, conditional-cap-as-independence, fiberwise trace bounds, and pair-first reciprocal-minor strategies.
 
 No schedule, task-state, notification, permission, repository-visibility, public-release, cross-account authentication, or paid-model/API setting is changed by this report.

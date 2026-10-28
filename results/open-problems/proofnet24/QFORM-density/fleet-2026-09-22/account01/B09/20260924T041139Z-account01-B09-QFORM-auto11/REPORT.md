@@ -225,7 +225,6 @@ in the exact singular-pair/rank-one-cross endpoint, pay either the newly localiz
 
 ## 6. Source/control status
 
-Fresh prepublication control observed `yspennstate/math-research-brain@2755497a51a140b9def951a176819c6263a08e52`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no account01/B09 pause/reassignment. `CLAIMS.json` still records `QFORM-FULL` and full-target continuous representative as OPEN. The live correction inbox was reread and all relevant corrections above were respected.
 
 Execution remains `WITHOUT_VERIFIED_BRAIN`: authenticated repository retrieval, mathematical receiver use, and repository readback are available, but separate native learned-memory retrieval/receiver ingestion was not independently exposed or verified.
 

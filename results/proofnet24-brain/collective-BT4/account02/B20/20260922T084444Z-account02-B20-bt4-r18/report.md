@@ -13,7 +13,6 @@ The derivation below is inside the inherited normalized oriented exact-seven min
 
 ## Fresh controls and scientific dependencies actually consumed
 
-Fresh protected control was resolved from main before this run. OWNER CONTROL remained revision `2026-09-22.2` with `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` active; new brain-installation and benchmark work remain stopped; B12–B18 remain on FEI.
 
 Latest complete campaign lead actually consumed:
 - account02/B04, `BT4-CLEAN-FOUR-PORT-WITNESS-LIFT-v1`, canonical report commit `14b8affcde6130bdbacbdfbd03888816b96d61ef`, shared handoff Git blob `b0c1c37b1d36fd7cf855946f20eb382a61cd346d`.

@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.
 Status: **NEW SUPPORTING DENSITY/TIME THEOREM; FULL QFORM OPEN; FULL-TARGET CONTINUITY OPEN.**
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh source control at startup: `yspennstate/math-research-brain@5b2462256dc607a1360bc0fc8125b6e9c37699c3`; prepublication refresh: `09c0bcc010a1927fa2fd4dc8a7a06238a94fdec8`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B03 pause/stop. The live correction inbox was reread. In particular this proof does not condition one rotated projection on another, does not assert independence after rotation, does not use arbitrary-joint rank-three coarea, and does not use law-uniform pointwise quadratic-phase decay.
 
 The immediate source target is account03/B16's fresh overlap frontier `QFORM-OVERLAPPING-PROJECTEDSQUARE-RANK2-PREABSOLUTE-v2`, canonical source
 

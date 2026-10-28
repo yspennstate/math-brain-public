@@ -3,7 +3,6 @@ attacking: the punctured near-coloop collar; prove that the third internal curva
 
 # account03/B11 r41 — persistent third internal curvature and diffuse hub-leaf extension mass
 
-Programme: `QFORM-DENSITY-3EIG-20260922` (OWNER CONTROL revision `2026-09-22.15`; continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`).
 Status: **two new exact structural lemmas / designated-partner result applied / full unrestricted QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Regularity: this run does not close the punctured collar, so it proves no new unrestricted continuity statement. Existing exact-graph continuity from r39 remains valid.

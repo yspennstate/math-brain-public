@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Assignment: `Decoupled time integral`  
 Classification: **ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
-Initial coherent source: `yspennstate/math-research-brain@22493404ffe16de33beabf0042871d5e1f5c6b0d`; prepublication refresh source observed during derivation: `4e71960c8b08452cc31afbfda4228a28f55d2314`; OWNER CONTROL revision `2026-09-22.15`.
 
 ## 1. Exact target and correction boundary
 

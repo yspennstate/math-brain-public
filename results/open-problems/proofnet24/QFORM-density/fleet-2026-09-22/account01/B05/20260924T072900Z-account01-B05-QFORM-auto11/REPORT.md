@@ -5,7 +5,6 @@ attacking: QFORM-WITT-RANKTWO-TAIL-GLUE-v1; first test whether the apparent sigm
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`.  
 **Assignment:** quadratic coarea / equivalent interval bounds preserving arbitrary original-coordinate product densities.  
-**Control:** refreshed immediately before publication from `math-research-brain` head `8d31791cf57790e327f27bd814c4c26cd9fd375f`; OWNER CONTROL revision `2026-09-22.15`, QFORM-only.  
 **Status:** `NEW SYNTHESIS CLOSURE OF THE B05 HIGH-LEVERAGE NULL-PIVOT EXACT-RANK3 SURVIVOR / FULL QFORM OPEN`.  
 **Regularity:** essential boundedness is uniform on the whole branch; continuity is proved on the transverse-diffuse half, but is not established by the pair-star theorem on the complementary half. Full-target continuity remains OPEN.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

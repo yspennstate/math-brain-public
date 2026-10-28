@@ -5,7 +5,6 @@ attacking: convert the completed arbitrary-self two-hub Fourier receiver into a 
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `20260923T220429Z-account03-B13-qform-r35`  
-Control read: `yspennstate/math-research-brain@45d3f241942b819b875ad1dc7ac293eb6bbb9cc9`, OWNER CONTROL revision `2026-09-22.15`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Status: **new supporting theorem proved; full QFORM OPEN / NOT PROVED / NOT DISPROVED; global continuity separately OPEN.**
 

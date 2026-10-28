@@ -13,7 +13,6 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random coordi
 
 ## 1. Fresh source-pinned inputs and current frontier
 
-Fresh owner controls were read from `yspennstate/math-research-brain/main`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM remained the sole active programme, and no later stop/reassignment of account02/B20 was found at startup.
 
 The newest compatible completed designated partner was account03/B20 r51:
 

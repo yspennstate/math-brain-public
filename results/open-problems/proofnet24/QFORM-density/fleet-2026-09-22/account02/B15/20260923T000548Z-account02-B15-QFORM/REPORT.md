@@ -311,7 +311,6 @@ The live correction `QFORM-TWOSHEET-XRAY-ONLY-FALSE` is respected: bounded two-d
 
 ## 7. Sources consumed
 
-- Fresh owner control at start: `yspennstate/math-research-brain@2094cf585e548df0e67244033d06558fc61cf943`, OWNER CONTROL revision `2026-09-22.15`.
 - Required newest Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 - Completed designated partner applied and independently checked: `yspennstate/math-open-problems@b4c8edd512776799decc9a16a40a3b37afba45b6`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B15/20260922T233101Z-account03-B15-qform-r21/REPORT.md`.
 - Corrections consumed include the false arbitrary-joint coarea route, false positive conditional-density moment route, no-independence-after-rotation, and `QFORM-TWOSHEET-XRAY-ONLY-FALSE`.

@@ -11,7 +11,6 @@ Regularity: every branch of the new theorem has an integrable characteristic-fun
 
 The owner target remains the unrestricted one: independent ORIGINAL real coordinates, each with density bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No Gaussianity, moments, support assumptions, log-concavity, connected support, iid hypothesis, diagonal-basis independence, pointwise scalar quadratic-phase decay, arbitrary-joint coarea, or worst-fiber supremum is used.
 
-Fresh control before this write was `yspennstate/math-research-brain@1d5b87714ce4165e5ee4cd9f4c2e946da797e189`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live correction inbox blob read before publication was `ba7aeac3d879f59da5ec8a12daad74ea85714465`. Full QFORM is still OPEN.
 
 ## 1. Source-valid inputs and the first missing implication
 

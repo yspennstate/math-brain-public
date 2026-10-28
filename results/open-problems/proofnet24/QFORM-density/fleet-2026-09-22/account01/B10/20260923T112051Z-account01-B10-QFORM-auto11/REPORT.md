@@ -5,7 +5,6 @@
 **Run:** `20260923T112051Z-account01-B10-QFORM-auto11`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case, arbitrary orientation, independent cap-one physical coordinates.  
-**Control read at start:** `yspennstate/math-research-brain@e2240492444afb95fb7eddb092c23d3c9d79078d`, OWNER CONTROL revision `2026-09-22.15`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
 The full conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. This report proves a new dependence-tolerant analytic receiver, upgrades the exact-null-coloop endpoint from mere essential boundedness to a continuous density, preserves the useful mathematics from the preceding interrupted attempt, and applies the designated `account02/B10` collinear-bank theorem to an explicit true-collar inequality. No rotated-coordinate independence is used.
@@ -556,9 +555,7 @@ The full arbitrary exact-rank-three QFORM theorem remains **OPEN**. The owner-le
 Fresh owner/control sources read from `yspennstate/math-research-brain@e2240492444afb95fb7eddb092c23d3c9d79078d`:
 
 - `AGENTS.md`;
-- `scheduled_tasks/README.md` including the full OWNER MESSAGE;
 - `fleet.json`, `roles.json`, `PROTOCOL.md` as governed by the owner control;
-- `scheduled_tasks/work/shared/qform-density-2026-09-22/MANIFEST.json`;
 - `CURRENT_RESEARCH.md`;
 - `CLAIMS.json`;
 - live `CORRECTION_INBOX.json`;

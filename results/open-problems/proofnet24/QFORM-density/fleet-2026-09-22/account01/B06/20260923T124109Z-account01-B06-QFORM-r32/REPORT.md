@@ -13,7 +13,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used, but no
 
 ## 1. Source boundary and actual partner use
 
-Fresh brain control at startup was `yspennstate/math-research-brain@1f6b37b05db5c37224220c3fddf9e6409d48c54f`, OWNER CONTROL revision `2026-09-22.15`. QFORM remained the sole target. The current programme corrections were consumed: no law-uniform pointwise quadratic-phase decay, no post-rotation product independence, no arbitrary-joint rank-three coarea bound, no positive moment of worst conditional projection-density caps, no unrestricted curved-fiber supremum, and no inference of one good physical minor from aggregate determinant mass.
 
 The immediate predecessor is account01/B06 r31,
 

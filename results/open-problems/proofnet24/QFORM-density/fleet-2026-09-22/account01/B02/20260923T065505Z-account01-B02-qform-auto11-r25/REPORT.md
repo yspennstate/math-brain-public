@@ -13,7 +13,6 @@ Continuity is proved on every branch where the `L^1_t` conclusion is obtained. I
 
 ## 1. Sources used at equations
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. I consumed the live `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `PROTOCOL.md`, and this B02 assignment before deriving the result, and refreshed control before this publication.
 
 The designated partner result used first is account02/B02:
 

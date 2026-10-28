@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Role: rank-three coupled case / complementary constructions and source-valid counterexamples  
 Status: `NEW SUPPORTING THEOREM + NEW STRUCTURAL OBSTRUCTION / FULL EXACT-RANK3 OPEN / FULL QFORM OPEN`.
 
-Fresh final control was read from `yspennstate/math-research-brain@c4e419e20c5df6d84eac82d3f0e217f755587496`; OWNER CONTROL is still revision `2026-09-22.15`, all slots remain exclusively on QFORM, and no later stop was observed. The same-hour create-only account02/B10 login already existed and was preserved. Repository retrieval was authenticated in this invocation, but no native learned-memory receiver was established, so operational brain status remains `WITHOUT_VERIFIED_BRAIN`.
 
 The live correction boundary is retained throughout: no independence after spectral rotation, no arbitrary-joint coarea cap, no worst conditional-density supremum, no law-uniform pointwise quadratic-phase decay, no moment/support/log-concavity assumption, and no deletion of a small random quadratic term on rough unbounded laws.
 

@@ -13,7 +13,6 @@ The unrestricted QFORM conjecture remains **OPEN**. This report applies the late
 
 ## 1. Fresh control and premises actually used
 
-Fresh control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`; no later B15 stop was observed before this write. The live corrections used here are: no law-uniform pointwise quadratic Fourier decay, no independence after spectral rotation, no arbitrary-joint coarea shortcut, no projection/X-ray-only replacement for the two-sheet part, and no assumption that one physical minor is uniformly conditioned.
 
 The completed assigned-partner result actually applied is `account02/B15`, current report
 

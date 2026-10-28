@@ -11,7 +11,6 @@ Full-target continuity: **OPEN**. The theorem below proves absolute continuity a
 
 ## 1. Fresh scope and first missing implication
 
-Fresh owner control was reread before publication at `yspennstate/math-research-brain@c085c00714411980f6de9187a2de70dc1917689f`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live correction inbox was reread. This run does not use arbitrary-joint rank-three coarea, positive conditional projection-cap moments, independence after rotation, pointwise quadratic van-der-Corput decay, a fiber supremum, compact support, connected support, moments, or a perturbative deletion of small coefficients.
 
 Immediate predecessor:
 
@@ -280,7 +279,6 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity
 
 ## 7. Source pins
 
-- Fresh owner/control head before publication: `yspennstate/math-research-brain@c085c00714411980f6de9187a2de70dc1917689f`, OWNER CONTROL revision `2026-09-22.15`.
 - Immediate predecessor: `proofnet24/QFORM-density/fleet-2026-09-22/account03/B05/20260924T013705Z-account03-B05-QFORM-r37/REPORT.md`.
 - Ratio-packet reduction: `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T033640Z-account01-B05-QFORM-r26/REPORT.md`.
 - Rank-one affine small-ball source: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.

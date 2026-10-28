@@ -6,7 +6,6 @@
 
 Read the [complete proof report](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/REPORT.md), [executed checker](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/verify_continuation.py), [actual verification output](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/verification.json), [exploratory results](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/exploration_results.json), and [manifest](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/MANIFEST.json).
 
-The complete scientific package is fixed at commit `d6ad8493497d3ca37bf53058b6926f938f0d16c0`. Report blob: `62a7e907e0dd0abfc6260541508e216b5d68d311`. The substantive brain handoff was committed and read back at `9a952a20c87d2fc7eeaf424af86fc9dd3d5351a7`, path `scheduled_tasks/work/account02/interactive/20260921T163318Z-fei-template-collapse/RESEARCH_HANDOFF.md`, blob `719256aa993a0851a4acd36fc9f674ef2156ba15`. Repository storage does not establish native database ingestion or subsequent worker uptake.
 
 ## Important supersession
 

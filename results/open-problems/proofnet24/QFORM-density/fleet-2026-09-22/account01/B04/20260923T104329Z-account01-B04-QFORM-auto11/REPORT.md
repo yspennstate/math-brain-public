@@ -4,7 +4,6 @@ attacking: convert account02/B04's exact two-disjoint-base support criterion int
 # account01/B04 — six-row complement-Hellinger volume compiler
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control consumed:** OWNER CONTROL revision `2026-09-22.15`; QFORM only.  
 **Outcome:** `SUPPORTING_THEOREM_PROVED / PARTNER_APPLIED / EXPLICIT_TARGET_ESTIMATE / FULL_TARGET_OPEN`.  
 **Continuity:** proved in the theorem below through the imported integrable-characteristic-function estimate; full-target continuity remains open.  
 **Execution memory status:** `WITHOUT_VERIFIED_BRAIN`.

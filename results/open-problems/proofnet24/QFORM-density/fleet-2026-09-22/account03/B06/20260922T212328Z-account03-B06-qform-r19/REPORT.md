@@ -7,7 +7,6 @@ attacking: the strict-higher-rank bicolooop survivor by converting its physical 
 **Run:** `20260922T212328Z-account03-B06-qform-r19`  
 **Assignment:** Curved fiber integration  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Control at start:** `yspennstate/math-research-brain@4dcf4bc44a0dd5cbd3610b32183e32779bb99ec5`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 **Continuity:** not proved by the theorem below; the paid branch gives an essentially bounded density after the genuine original-coordinate square.
 

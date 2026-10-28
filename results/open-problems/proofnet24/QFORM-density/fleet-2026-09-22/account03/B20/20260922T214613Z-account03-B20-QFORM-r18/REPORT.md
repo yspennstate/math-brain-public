@@ -4,7 +4,6 @@ attacking: the heavy physical Schur-edge alternative left by the uniform-near-ra
 # account03/B20 QFORM r18 — heavy Schur edge closure
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh control before publication:** OWNER CONTROL revision `2026-09-22.15`; fresh `math-research-brain` main observed at `87b38a1e34c9b77a03d34ab98d35df8813d7fb0b`.  
 **Classification:** `ESSENTIAL_STEP_APPLIED / STRUCTURAL BRANCH CLOSED / FULL TARGET OPEN`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.  
 **Continuity:** not proved by this branch; only existence of an essentially bounded density is claimed.
@@ -20,7 +19,6 @@ This run uses only original-coordinate conditioning and exact Schur identities. 
 ### 2.1 account02/B20 r18: the heavy-edge alternative
 
 Source handoff: `math-research-brain@3bbe882a1095601d04d6ada8a36c3bb9b8e2d0cf`, path
-`scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B20/20260922T200120Z-account02-B20-QFORM-r18.md`.
 
 In the retained physical-pivot branch there is an original coordinate `i` with
 

@@ -90,7 +90,6 @@ constant, so this route needs >= 6.52. Delta_i H <= JS(p_0,p_1) + h(Inf_i) <= 1 
 
 **Scoped results and refuted routes** from the scheduled fleet (80 workers, 17-22 September) are indexed in
 `README.md` (this folder's parent), `continuations/2026-09-21-readonce-certificate/APPROACHES.md` (fourteen routes),
-and the brain state at https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md
 (local copy of that file: `inputs/fleet_current_research_2026-09-22.md`). Do not re-derive what is listed there as
 proved; do not revive what is listed as refuted.
 

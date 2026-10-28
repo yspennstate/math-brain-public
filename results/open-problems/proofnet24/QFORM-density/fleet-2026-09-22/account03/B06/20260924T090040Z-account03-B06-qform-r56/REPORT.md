@@ -4,7 +4,6 @@ attacking: the exact rank-one / rank-zero localized three-hub endpoint by aggreg
 # account03/B06 r56 — kernel-area compiler for rank-one and rank-zero three-hub faces
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Fresh prepublication control snapshot: `yspennstate/math-research-brain@d0dd8a67f07e770639d443230a811b354a51e279`, OWNER CONTROL revision `2026-09-22.15`.  
 Immediate B06 input: account03/B06 r54, `yspennstate/math-open-problems@8bdce354a7ab12c52133f56532d8c7589cc94e98`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B06/20260924T075625Z-account03-B06-qform-r54/REPORT.md`.  
 Rank-two crossing half-Riesz input: account01/B06 `QFORM-RANK2-CROSS-HALFRIESZ-v1`, source snapshot `yspennstate/math-open-problems@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, `proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260923T213616Z-account01-B06-QFORM-r40/REPORT.md`.  
 Rank-three crossing input: `QFORM-THREE-HUB-JOINT-PLANCHEREL-v1`, `yspennstate/math-open-problems@f98635ec90f47da9c38e40516896462bb423f3c6`.  

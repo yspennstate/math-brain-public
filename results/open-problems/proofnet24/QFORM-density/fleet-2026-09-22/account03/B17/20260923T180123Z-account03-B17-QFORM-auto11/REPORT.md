@@ -10,7 +10,6 @@ Status: **NEW SUPPORTING ANALYTIC WITNESS CONSTRAINT; FULL QFORM OPEN**
 Continuity: not claimed here.  
 Brain status: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh source control before publication: `yspennstate/math-research-brain@727175f596fbf6b65c1483b45e0c2e15d62aedef`, OWNER CONTROL revision `2026-09-22.15`. The live corrections were refreshed. No post-rotation independence, arbitrary-joint coarea cap, conditional-density moment, pointwise van-der-Corput decay, histogram inference, moment assumption, or bounded-fragment extremality is used.
 
 ## 1. Base dense witness and designated-partner input
 

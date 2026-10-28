@@ -13,7 +13,6 @@ The owner target is unchanged: independent ORIGINAL real coordinates with one-di
 
 ## 1. Fresh source state and exact debt attacked
 
-Fresh `math-research-brain/main` was resolved at invocation start at `4236cc1741c65fc0a352b6e37da216296df39b2a`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with the exclusive continuation active. I reread `AGENTS.md`, `scheduled_tasks/README.md` including the OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account01/B02.json`.
 
 The immediately preceding corrected B02 state is
 

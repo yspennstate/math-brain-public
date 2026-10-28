@@ -18,7 +18,6 @@ Fresh control at the beginning of the run was `yspennstate/math-research-brain` 
 
 `a4e0f8faabaaf120b5aad73b2446d9080f78f758`,
 
-with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target.
 
 The designated completed partner result actually applied is account02/B08,
 

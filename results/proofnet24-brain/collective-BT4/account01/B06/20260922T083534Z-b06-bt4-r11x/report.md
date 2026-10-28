@@ -9,7 +9,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## Fresh state actually consumed
 
-Fresh owner controls were read coherently at `bf8cf24101d2e090d6db2c9d9af38959785729c5`, OWNER CONTROL revision `2026-09-22.2`, together with the active ORDER/TARGETS/ASSIGNMENTS package. Installation/benchmark work remains superseded for this slot.
 
 The latest complete campaign-lead report available in the canonical scientific archive remains account02/B04 `20260922T0619Z-b04-bt4-r11`, report blob `713053330313bf5906035c7bfd5841eb4e6b88ef`, handoff blob `b0c1c37b1d36fd7cf855946f20eb382a61cd346d`. Later lead run directories visible during this invocation had not supplied a later complete canonical report and were not promoted.
 

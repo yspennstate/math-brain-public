@@ -8,7 +8,6 @@ Assignment: indefinite signatures / quantitative inequalities and rigorous compu
 Status: `NEW AMBIENT SUPPORTING THEOREM / LOCALIZED INDEFINITE 3x3 BRANCH CLOSED / FULL QFORM OPEN`  
 Execution: `WITHOUT_VERIFIED_BRAIN`
 
-Fresh prepublication control resolved `yspennstate/math-research-brain/main` to `1cb2da79c9805011e50232897bd09d88a14a6dd2`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. I re-read the live correction inbox immediately before this write. The proof below does not use arbitrary-joint coarea, post-rotation independence, law-uniform pointwise quadratic-phase decay, a conditional projection-density cap, a fiber supremum, or a Monte Carlo density claim.
 
 The first essential implication attacked is:
 

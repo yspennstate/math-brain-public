@@ -13,7 +13,6 @@ The unrestricted owner conjecture remains OPEN. Nothing below assumes moments, c
 
 ## 1. Fresh sources and the mechanism switch forced by duplicate detection
 
-Fresh control was read from `yspennstate/math-research-brain`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live correction inbox, `MEMORY_PROTOCOL.md`, and the account01/B11 assignment were reread before publication.
 
 The following mathematical sources were consumed at their exact scopes.
 

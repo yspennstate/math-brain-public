@@ -6,7 +6,6 @@ Run: `20260923T000738Z-qform-lit-transfer-r11`.
 
 Control/source pins used in this run:
 
-- owner-controlled QFORM programme, brain main initially `479698f6f86a6326999e5029f1a6fed52d622b72`, refreshed before this write to `0917491a60dd05825bee164093a76b9010771b3e`, OWNER CONTROL revision `2026-09-22.15`;
 - pinned owner synthesis package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`;
 - completed partner account03/B18 r19, canonical proof `yspennstate/math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260922T225637Z-account03-B18-QFORM-r19/ADDENDUM_CROSSBLOCK.md`;
 - primary source Madiman–Melbourne–Xu, *Rogozin's convolution inequality for locally compact groups*, arXiv:1705.00642, Theorem 1.5 and §2.1;

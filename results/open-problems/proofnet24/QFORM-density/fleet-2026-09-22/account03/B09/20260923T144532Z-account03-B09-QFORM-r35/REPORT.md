@@ -17,7 +17,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source state and completed inputs
 
-Fresh `yspennstate/math-research-brain/main` was resolved at `571a17ecdb3d2f4896fa979f989f633ba8405427`; OWNER CONTROL remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, with no pause of account03/B09. The current state still marks `QFORM-FULL` and full-target continuity OPEN.
 
 Corrections retained: law-uniform pointwise quadratic-phase decay is false; arbitrary-joint 3D coarea is false; normalized conditional projection caps cannot be used as independence; fiber-sup arguments can lose dimension; one universally good physical cross minor is false; and a small coefficient cannot be deleted under arbitrary unbounded supports.
 

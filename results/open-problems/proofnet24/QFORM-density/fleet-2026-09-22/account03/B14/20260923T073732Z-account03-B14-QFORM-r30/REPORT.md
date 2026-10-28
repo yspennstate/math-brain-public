@@ -19,7 +19,6 @@ The result is not the full conjecture because the bare condition `s_3(A)>=1` doe
 
 ## 2. Sources actually used
 
-Fresh startup control was read from `yspennstate/math-research-brain@93d5e64cab69d47a00eb4fd140862a55c7930cc1`; final pre-publication control refresh was `yspennstate/math-research-brain@e662b45c1964ab30736e22d27a1d3f9d1463d5b1`, OWNER CONTROL revision `2026-09-22.15`. The live correction inbox was refreshed at that commit. In particular, this proof does not use post-rotation independence, an arbitrary-joint coarea estimate, normalized conjugate-fiber density caps, a bounded-diameter localization, or a universally good physical minor.
 
 Two completed mathematical inputs are used at actual inequalities.
 

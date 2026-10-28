@@ -5,7 +5,6 @@ attacking: the partner r32 star-star plus aggregate-E2 survivor — regenerate a
 
 Status: `NEW_STAR-E2-TO-E3-OR-R2TUBE_COMPILER / DESIGNATED_PARTNER_APPLIED / BOUNDED-SUPPORT CORE PAID / EXACT TARGET STRESS / FULL_QFORM_OPEN / WITHOUT_VERIFIED_BRAIN`.
 
-Fresh owner control before this write: `yspennstate/math-research-brain@06de7635862ca416dc52deb2d305c2c50d1106e5`; OWNER CONTROL revision `2026-09-22.15`, QFORM-only, no B07 pause/reassignment. Required Claude/Fourier source was read at the pinned base `e5f71d79eff325201dd0274053d20268ce65b837` and at compatible master `cf899d49f739244e9df6759c1cda8fdc5ead5c6b`. The latest designated-partner handoff used below is account03/B07 r32, canonical mathematics `math-open-problems@b684b8edb29274a17fd5e8ed7fc8049ce12a4595`.
 
 ## First unpaid implication after this result
 

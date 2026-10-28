@@ -9,7 +9,6 @@ Outcome: **NEW SUPPORTING TARGET-LEVEL THEOREM + COMPLETED PARTNER INEQUALITY / 
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Continuity: proved on the new diffuse principal-core branch and on the partner private-bank subbranch below; full-target continuity remains open.
 
-Fresh owner/control snapshot consumed before mathematics: `math-research-brain@e4ed831a6d0f47cc7670880ff52104db9a92cf31`, including `AGENTS.md`, `scheduled_tasks/README.md`/OWNER MESSAGE, `fleet.json`, `roles.json`, `PROTOCOL.md`, and QFORM `ORDER.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, `assignments/account01/B18.json`. The owner target remains exactly: arbitrary independent cap-one one-dimensional densities and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. The unrestricted theorem is not yet proved.
 
 ## 1. Sources used at literal hypotheses
 

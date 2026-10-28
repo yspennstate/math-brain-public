@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction boundary
 
-Fresh control was resolved from `yspennstate/math-research-brain` main and refreshed before publication. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole research target and the full conjecture remains open. The current live correction inbox was consumed. In particular this report does **not** use independence after a spectral rotation, an arbitrary-joint coarea bound, a conditional projection-height bound, pointwise van-der-Corput decay, moment assumptions, compact/connected support, finite fragmentation, or deletion of a small random perturbation.
 
 The immediate account01/B10 predecessor is
 

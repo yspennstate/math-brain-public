@@ -11,7 +11,6 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, post-rot
 
 ## 1. Fresh source state and premises
 
-Fresh control was resolved from `yspennstate/math-research-brain` main. The initial control commit for this run was `81e68d0e18515b078c03537538a2a7c87acfb00a`; a pre-write refresh reached `f3648d6896766b9fc0cc5a3444fa42bb06f6c90e`. In both, OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, fleet enabled, account03/B13 unpaused. The full conjecture remains explicitly OPEN.
 
 The live correction inbox was consumed, including `QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE`, `QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1`, and the newer `QFORM-GSTAR-SCALE-FORCING-FALSE-v1`. The argument below does not invoke any of the refuted mechanisms.
 

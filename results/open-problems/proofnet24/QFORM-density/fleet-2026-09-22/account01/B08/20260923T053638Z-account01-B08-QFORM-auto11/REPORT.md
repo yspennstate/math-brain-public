@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; repository retrieval/write is not native le
 
 The unrestricted quadratic-form bounded-density conjecture remains OPEN. The new result is a genuine diffuse branch: it assumes a rank-three reducing spectral subspace whose physical-coordinate leverage is bounded, and it keeps every coefficient and every spectral direction outside that subspace inside the actual physical child/cross blocks. It does not assume moments, compact support, connected support, iid laws, Gaussianity, log-concavity, or independence after a spectral rotation. Continuity is asserted only on the explicitly paid partner branches below.
 
-Fresh owner control was read from `yspennstate/math-research-brain@dc95d149ba6057b0cea20701ab5017e4decccfcf`; OWNER CONTROL remains revision `2026-09-22.15`, with QFORM the sole research target. The live correction inbox was refreshed at that source. In addition, the fresh structural correction `QFORM-BALANCED-FIXED-PACKET-EXTRACTION-FALSE-v1` was read from `yspennstate/math-open-problems@551cf0474a03aec13d999ee9632619ede59c17ff`: the bare three-large-eigenvalue hypothesis does not force a fixed-scale finite physical packet, even in an exact-rank-three balanced-sign chamber. The theorem below does not make that forbidden inference; it first aggregates curvature at the level of a full physical cut.
 
 ## 1. Sources actually used
 

@@ -10,7 +10,6 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Exact inputs consumed
 
-Fresh controls were read coherently from `yspennstate/math-research-brain` at commit `fb0e91bc2d1f29336912283ffa2f0fbcf0bb7d08`, OWNER CONTROL revision `2026-09-22.2`. Subsequent comparison showed only worker/status artifacts before the mathematical derivation; no protected control change was used.
 
 Controlling lead: account02/B04 `BT4-CLEAN-FOUR-PORT-WITNESS-LIFT-v1`, canonical report
 

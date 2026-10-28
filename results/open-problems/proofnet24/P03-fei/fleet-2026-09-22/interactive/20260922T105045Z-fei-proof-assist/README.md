@@ -36,7 +36,6 @@ The robust-clique argument supplies real child slack, and the Hall argument prev
 
 Each report includes complete proofs and immutable links to the team results it uses. Adjacent checkers operate on genuine Boolean truth tables and exact integer Walsh data where applicable; entropy evaluations are numerical diagnostics, not universal computational proofs. The [independent reviews](reviews/) distinguish analytic review from executed checks. No formal proof-assistant verification or publication-level novelty determination is claimed.
 
-The mathematical source state was read alongside the current owner order and correction feed. The [research brain](https://github.com/yspennstate/math-research-brain/tree/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22) contains the current claim projection, mandatory corrections, new worker handoffs, and the status/adoption evidence. This directory contains the complete immutable mathematics.
 
 ## Prior work
 

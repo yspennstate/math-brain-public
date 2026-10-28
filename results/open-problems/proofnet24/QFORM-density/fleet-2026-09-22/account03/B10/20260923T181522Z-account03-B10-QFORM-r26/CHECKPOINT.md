@@ -4,7 +4,6 @@ attacking: the positive-leakage near-null physical-hub collar; first force every
 # Early substantive checkpoint
 
 Programme: `QFORM-DENSITY-3EIG-20260922`.
-Control source at start: `yspennstate/math-research-brain@6831428e0be00570f90a3559ea42d16594fc930f`, OWNER CONTROL revision `2026-09-22.15`.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Work in the live exact-rank-three near-coloop collar already reduced by B10. Thus

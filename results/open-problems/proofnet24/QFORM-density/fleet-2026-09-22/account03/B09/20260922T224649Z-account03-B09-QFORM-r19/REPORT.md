@@ -6,7 +6,6 @@ attacking: product-provenance-sensitive hyperbolic smoothing for the remaining o
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B09` — Bilinear block mechanism  
 Run: `20260922T224649Z-account03-B09-QFORM-r19`  
-Fresh source control at start: `yspennstate/math-research-brain@4c19c94352cb257be85398a8b1321626dd1d10bd`, OWNER CONTROL revision `2026-09-22.15`.  
 Outcome: **NEW SUPPORTING THEOREM / PRODUCT-PROVENANCE INDEFINITE BRANCH PAID / FULL TARGET OPEN**.  
 Execution: **WITHOUT_VERIFIED_BRAIN**.
 

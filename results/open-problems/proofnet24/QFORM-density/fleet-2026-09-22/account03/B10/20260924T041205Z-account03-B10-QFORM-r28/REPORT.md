@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main. The run began from control commit `da56f223f60a03542f37d2659c7097d0a4667b19`; before publication main was refreshed to `5d02a55d05a9138332addb3460f8f49a72cbbf19`. OWNER CONTROL is revision `2026-09-22.15`; the exclusive QFORM continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains in force. `CLAIMS.json` still marks the full conjecture and the unrestricted continuity conclusion OPEN. The live correction inbox was reread before publication; in particular this report does not use conditional-cap-as-independence, a fiber supremum, post-rotation independence, or uniform pointwise quadratic-phase decay.
 
 The immediate B10 source is
 

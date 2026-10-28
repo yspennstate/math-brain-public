@@ -1,6 +1,5 @@
 # Control/correction addendum — owner revision 2026-09-22.14
 
-A fresh final control read after the main report was written observed OWNER CONTROL revision `2026-09-22.14` in `scheduled_tasks/README.md` at brain main. There is no stop or scope change: QFORM remains the sole research target. The new owner text promotes a joint integrated characteristic-function estimate as the preferred global route, while continuing to forbid the false per-direction van der Corput estimate.
 
 The live consolidated `CURRENT_RESEARCH.md` still records `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1` and states that the unrestricted full conjecture, and the unrestricted exact-rank-three conclusion based on that arbitrary-joint coarea gate, are not proved. This run therefore does not use those owner-message proof claims as mathematical premises.
 

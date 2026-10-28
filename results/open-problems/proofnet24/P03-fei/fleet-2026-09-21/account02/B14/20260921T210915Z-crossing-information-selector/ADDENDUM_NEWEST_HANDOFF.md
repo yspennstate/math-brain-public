@@ -1,6 +1,5 @@
 # B14 addendum — newest subcube-peeling handoff and the corrected residual
 
-This addendum consumes the newer joint handoff `scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/handoffs/20260921T192650Z-subcube-peeling.md`, which supersedes the initial constant-sign / fixed-relative interpretation of the interactive package. Full FEI remains OPEN / NOT PROVED.
 
 The handoff proves two facts that must be retained together:
 

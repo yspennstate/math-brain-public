@@ -300,6 +300,5 @@ The lemma proves existence of an essentially bounded density and the displayed a
 
 ## 7. Correction discipline and next mechanism
 
-Fresh source control at the pre-publication refresh remained OWNER CONTROL revision `2026-09-22.15`, QFORM-only.  The proof uses none of the refuted interfaces: no law-uniform pointwise van-der-Corput decay, no independence after rotation, no arbitrary-joint coarea theorem based only on \(\|\rho\|_\infty\), no conditional projection-density moment, no fixed-fragment extremality, and no naive fiber-sup integration.  The extra Euclidean support radius in Lemma 2 is explicit and is the entire reason the arbitrary-joint counterexample does not apply.
 
 The finite all-heavy three-dimensional centered-cube orientation frontier is therefore closed below \(3\sqrt2\).  A stronger witness must leave at least one of these constraints: use genuinely non-Gaussian multiscale/fragmented support, nontrivial mesoscopic or diffuse banks, translations/affine structure, growing dimension, unequal spectral scales, or additional spectrum.  The next B17 mechanism should test a multiscale fragmented three-bank construction while retaining exact product provenance, because both the pure finite 3D cube and the Gaussian endpoint are now separated from any value above \(3\sqrt2\).

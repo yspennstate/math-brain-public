@@ -10,7 +10,6 @@ attacking: QFORM-HIGHLEVERAGE-MIXED-VOLUME-HEAVYSET-COMPILER-v1 — convert the 
 **Regularity:** a continuous `C_0` density is proved on the new diffuse-light branch; the pair-star and designated definite-pair branches give essential boundedness. Full-target continuity remains open.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh startup control was read from `yspennstate/math-research-brain@5dc5b6cd2344d32a1f0f516bd6156a91409d484a`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The live programme state and correction inbox were read before this proof and will be refreshed again before publication. No step below uses law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, conditional projection-density caps, post-rotation probabilistic independence, a dimension-growing fiber supremum, moment/support assumptions, or deletion of a small random quadratic term.
 
 The immediate same-slot source is
 

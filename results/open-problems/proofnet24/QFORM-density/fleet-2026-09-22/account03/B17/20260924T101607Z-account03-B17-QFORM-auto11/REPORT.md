@@ -3,7 +3,6 @@
 Run: `20260924T101607Z-account03-B17-QFORM-auto11`  
 Worker: `account03/B17` (Sharp constant and witnesses)  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh control used: `yspennstate/math-research-brain@74bc5221e13544c025e96616cf8c563bcffbdeeb`, OWNER CONTROL revision `2026-09-22.15`.  
 Status: supporting theorem proved; full QFORM remains OPEN. Essential boundedness is proved for the family below; continuity of the cube pushforward is not claimed.
 
 ## 1. Statement

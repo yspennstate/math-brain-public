@@ -15,7 +15,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used, but no
 
 ## 1. Fresh source boundary and inputs actually used
 
-Fresh brain control remained QFORM-only under OWNER CONTROL revision `2026-09-22.15`. The live correction boundary is retained: no law-uniform pointwise quadratic-phase decay; no independence after a spectral rotation; no arbitrary-joint rank-three coarea inequality; no positive moment of worst conditional projection-density caps; no unrestricted fiber supremum; and no claim that aggregate determinant mass automatically supplies one uniformly good physical minor.
 
 The source inputs used are:
 

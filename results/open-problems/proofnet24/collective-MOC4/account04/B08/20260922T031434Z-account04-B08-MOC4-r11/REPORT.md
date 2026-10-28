@@ -28,7 +28,6 @@ and for a true unitary `U`,
 h(U)=\Re\!\left(\eta\det(D_a+UD_bU^*)\right).
 \]
 
-The exact source boundary is the MOC4 target in `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`, which records the checked 2025 Bebiano–da Providencia survey, Drury's weakened n=4 result, and the 2026 variational obstruction. No unrestricted Marcus–de Oliveira claim is made.
 
 The current chain uses these completed campaign inputs.
 

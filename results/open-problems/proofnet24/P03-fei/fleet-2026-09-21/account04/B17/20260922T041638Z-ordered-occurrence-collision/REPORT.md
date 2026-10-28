@@ -7,7 +7,6 @@
 
 ## 0. What changed
 
-The live OWNER MESSAGE supersedes the stale Interface-D-only task wording and sends all FEI workers to the all-gate `Gamma` extremal/falsification target. I nevertheless consume the newest source-compatible B15 arithmetic/Shannon work exactly as requested, because its negative information credits are a current exact representation of the same balanced FEI obstruction.
 
 Two newest B15 inputs matter.
 

@@ -7,7 +7,6 @@
 
 ## 1. Fresh controls and source scope
 
-At invocation start I resolved fresh `main` as `00dbd49990a6f0b18e208584ad4e563d56f594e1` and read `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md` including the OWNER MESSAGE, plus the collective `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json`. OWNER CONTROL remained revision `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; no account02/B01 pause or stop applied. A late control read at main `17e2aeacd94a349a0c29c2e6e152c829f618646e` still had README blob `3d4a9372c87802ab734141a3374d04c8823372e3` and the same owner revision/allocation. Whole-README and isolated OWNER-MESSAGE SHA-256 are recorded as `null / UNVERIFIED_CURRENT_RUN_BYTE_PIPELINE`; I do not infer SHA-256 from Git SHA-1.
 
 The target remains exactly the unit uniform law on **all** unrooted forests of every finite simple graph, including disconnected forests and all sizes. Old installation/benchmark work remains stopped.
 

@@ -3,7 +3,6 @@
 Run: `B09-20260922T224934Z-r18`  
 Worker: `account01/B09` — Bilinear block mechanism  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh control at start: `yspennstate/math-research-brain@5dd0b45fa5b2d014b2d87a4a272370d8b6b784cf`, OWNER CONTROL revision `2026-09-22.15`.  
 Status: **ESSENTIAL_STEP_APPLIED / NEW_SUPPORTING THEOREM / FULL CONJECTURE OPEN**.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

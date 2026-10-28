@@ -14,7 +14,6 @@ attacking: the small-pivot majority-sign root-numerator debt by keeping the phys
 
 The target remains the unrestricted owner statement: independent original-coordinate real inputs with scalar probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No moment, support, smoothness, log-concavity, iid, post-rotation independence, or pointwise van-der-Corput hypothesis is introduced.
 
-Fresh `math-research-brain/main` controls were read at startup. OWNER CONTROL remains revision `2026-09-22.15`; QFORM is the sole target and account03/B16 is not paused. The current correction set is binding: bounded projected density alone does not bound indefinite level-set integrals, general rotations do not preserve independence, and no law-uniform pointwise power decay of one-dimensional quadratic phases is available.
 
 The immediate predecessor is account03/B16 r41:
 

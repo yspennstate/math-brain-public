@@ -12,7 +12,6 @@ attacking: the innovation-free majority-sign physical-hub branch; keep the same 
 
 ## 1. Fresh scope, corrections and source pins
 
-Fresh owner control was resolved on `yspennstate/math-research-brain/main`; the first observed head was `902704c95242487ea32f9b16b691b159eb75e304`, and the last pre-publication refresh was `8c75f9f09485bd4cf8a70f5729f5e720fa62c425`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM only, with no later stop for account01/B16.
 
 The full statement remains OPEN: arbitrary independent original-coordinate inputs with probability densities at most one, arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, arbitrary signs and additional spectrum, no moment/support/iid/log-concavity assumptions, and no independence after spectral rotation.
 

@@ -6,7 +6,6 @@ attacking: coordinate-minor aggregation — turn the nested high-tail E2 survivo
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
 **Run:** `20260923T073755Z-account03-B07-qform-r28`  
-**Start control:** fresh `yspennstate/math-research-brain` main observed through `60294c53198b9a4f219a36f7124b46c996eba063`; OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Status:** `NEW SUPPORTING NESTED-E2 COMPILER / ONE SUBBRANCH CONTINUOUSLY PAID / FULL QFORM OPEN`.
 

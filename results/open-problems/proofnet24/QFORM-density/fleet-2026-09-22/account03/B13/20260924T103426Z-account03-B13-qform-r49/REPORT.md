@@ -36,7 +36,6 @@ For `K=1_{x^T A x in J}`, (1.1) is exactly the geometric sublevel formulation re
 
 ## 2. Source-pinned inputs actually used
 
-Fresh pre-run control was read from `yspennstate/math-research-brain` main; the current OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B13 pause. The full conjecture and full-target continuity remain OPEN.
 
 The mathematical inputs are:
 

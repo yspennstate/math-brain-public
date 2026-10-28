@@ -12,7 +12,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target remains the unrestricted statement: independent real coordinates with probability densities at most one, arbitrary symmetric `A` with at least three eigenvalues of modulus at least one, no moments, no centering, no identical-law assumption, no connected-support assumption, and no independence after spectral rotation.
 
-Fresh brain control was read on `main`; OWNER CONTROL is revision `2026-09-22.15`, with QFORM as the sole research target and no later B14 stop observed. Live corrections excluding law-uniform pointwise quadratic-phase decay, fixed-diameter/fixed-fragment localization, arbitrary-joint rank-three coarea, worst conditional projection caps, and post-rotation independence were retained.
 
 The designated partner result actually used is the completed `account02/B14` r37 report:
 

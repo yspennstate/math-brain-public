@@ -13,7 +13,6 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Inputs actually used
 
-Fresh controls were read from `yspennstate/math-research-brain` main with OWNER CONTROL revision `2026-09-22.15`; `CURRENT_RESEARCH.md` still marks the full conjecture OPEN and the pointwise van-der-Corput shortcut false.
 
 The analytic compiler used below is the completed account03/B09 theorem
 `QFORM-GROUPED-CROSS-RANK-r-SMOOTHING-v1`, canonical source

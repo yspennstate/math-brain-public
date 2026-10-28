@@ -3,7 +3,6 @@
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B03`  
 Run: `20260922T190034Z-account03-B03-QFORM-r18`  
-Initial fresh control: `yspennstate/math-research-brain@c8735ec7f6108704f37ed2a4d1e03ca0c3950b36`, OWNER CONTROL revision `2026-09-22.11`  
 Execution status: `WITHOUT_VERIFIED_BRAIN`  
 Full target status: **OPEN / NOT PROVED**.  
 Continuity: **not proved** by the new theorem below.

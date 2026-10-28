@@ -10,7 +10,6 @@ attacking: exact small-ball localization at the OPTIMAL CONSTANT level, includin
 
 ## 1. Source pins and corrections used
 
-Coherent startup control: `yspennstate/math-research-brain@81635b9ae89574a6eabae5438d5231c59e90310e`; OWNER CONTROL observed there is revision `2026-09-22.15` (the programme identifier remains QFORM-DENSITY-3EIG-20260922, historical activation revision 2026-09-22.5). A pre-write refresh at `38db4836685c548a734ddd2750a1ad3472e4db83` still keeps QFORM exclusive and contains no later stop.
 
 Assigned partner actually consumed: account02/B14 run `20260922T195844Z-account02-B14-QFORM-r20`, canonical mathematics `yspennstate/math-open-problems@0e2e038577460d99f7ddc10fbf87fdd5cf76a930:proofnet24/QFORM-density/fleet-2026-09-22/account02/B14/20260922T195844Z-account02-B14-QFORM-r20/REPORT.md`. Its exact theorem used below is the disjoint-bank compression bound
 

@@ -219,7 +219,6 @@ The full QFORM conjecture is still OPEN. No claim is made that every target matr
 
 ## 8. Sources actually used
 
-1. Fresh control and mathematical state: `yspennstate/math-research-brain` main, OWNER CONTROL revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`.
 2. Orientation-free half-Riesz source: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`.
 3. Required designated-partner source: account02/B05 `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`, canonical report `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md`.
 4. Immediate B05 predecessor: `proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T205421Z-account01-B05-QFORM-auto16/REPORT.md`.

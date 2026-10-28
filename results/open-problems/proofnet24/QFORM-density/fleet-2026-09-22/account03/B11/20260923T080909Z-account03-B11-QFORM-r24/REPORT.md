@@ -12,7 +12,6 @@ The full target remains open: for arbitrary independent real coordinates with de
 
 This run preserves the live corrections: no post-rotation independence, no arbitrary-joint rank-three coarea bound, no conditional-density-cap substitute for independence, no law-uniform pointwise van-der-Corput estimate, and no claim that one uniformly good physical minor is forced by the three-large-eigenvalue hypothesis. The result below is instead an **aggregate-before-inversion** statement: it first measures all physical two-row spectral areas and only then decides whether localization is forced.
 
-Fresh startup control was `yspennstate/math-research-brain@58a179d3c57e90e8f591b833e17b785396beb24b`, OWNER CONTROL revision `2026-09-22.15`. The live correction inbox blob at startup was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The localized receiver used below is account03/B11 `QFORM-LOCALIZED-3BLOCK-REPAIR-v1`, canonical source `yspennstate/math-open-problems@a9f23a3a387c9be219fcaf08ef66079f8c124e0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/account03/B11/20260922T192514Z-account03-B11-QFORM-r14/REPORT.md`. It states that an ORIGINAL-coordinate principal `3 x 3` block of smallest singular value at least `s0>0` gives
 

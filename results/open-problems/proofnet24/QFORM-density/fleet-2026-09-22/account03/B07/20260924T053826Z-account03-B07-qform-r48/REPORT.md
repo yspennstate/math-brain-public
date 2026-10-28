@@ -12,7 +12,6 @@ No Gaussianity, moments, log-concavity, compact or connected support, iid assump
 
 ## 1. Fresh controls and exact incoming branch
 
-Startup control was read at `yspennstate/math-research-brain@8747f22e1ed3735a241d4cc4c396eeb585fbd1eb`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account03/B07 pause or reassignment. The current claim ledger continues to mark both the unrestricted bounded-density conjecture and the full-target continuity conclusion OPEN.
 
 The exact incoming theorem is account03/B07 r44:
 

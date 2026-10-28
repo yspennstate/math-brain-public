@@ -11,7 +11,6 @@ attacking: line-plane product-bank closure near the coloop boundary—use the ac
 
 ## 1. Fresh control and correction boundary
 
-Fresh `math-research-brain` main was re-resolved immediately before this report at `98232add6085cddccdd7621ff9a01e37ef338411`. OWNER CONTROL remains revision `2026-09-22.15`; the sole target is still the unrestricted three-large-eigenvalue quadratic-form density conjecture, and no later stop was encountered.
 
 The live corrections were reread. In particular this report does **not** use: arbitrary-joint rank-three coarea; positive moments or suprema of conditional projection-density heights; independence after spectral rotation; a law-uniform pointwise stationary-phase estimate; a bounded joint projection density by itself for an arbitrary nonzero scalar pivot; or a small coefficient as a small random perturbation. The latter point is crucial: the nonzero-pivot receiver-cap counterexample remains valid, so the small-pivot branch below retains the additional cross-transverse determinant resource.
 

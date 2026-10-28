@@ -7,7 +7,6 @@ attacking: an exact positive Maxwell/tent multiscale representation of density h
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Worker:** `account03/B15`  
 **Run:** `20260922T221924Z-account03-B15-qform-r20`  
-**Control at prepublication refresh:** `yspennstate/math-research-brain@78b0f129dfb2de98f50a01532b97c066b35ac250`, OWNER CONTROL revision `2026-09-22.15`  
 **Status:** `ESSENTIAL_STEP_APPLIED / TARGET_EQUIVALENT_POSITIVE_REGULARIZATION`  
 **Full universal QFORM:** **OPEN / NOT PROVED**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

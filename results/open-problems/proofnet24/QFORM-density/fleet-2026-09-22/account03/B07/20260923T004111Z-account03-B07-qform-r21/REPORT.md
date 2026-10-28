@@ -6,7 +6,6 @@ attacking: finite-bank overlap receiver and no-pivot residual-bank packet — re
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Coordinate minor selection / GEOMETRY  
 **Run:** `20260923T004111Z-account03-B07-qform-r21`  
-**Fresh owner control at start:** `yspennstate/math-research-brain@5d064dc0a591457d0da4cf92b111d1de857d7e99`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN` (`full_brain_connected=false`)  
 **Classification:** `ESSENTIAL_STEP_APPLIED / NEW STRUCTURAL PACKET / FULL TARGET OPEN`.
 

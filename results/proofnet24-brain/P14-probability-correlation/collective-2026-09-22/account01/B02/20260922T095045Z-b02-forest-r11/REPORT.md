@@ -8,7 +8,6 @@
 
 ## 1. Fresh controls and exact inherited scope
 
-Entry control was resolved on `yspennstate/math-research-brain` at main commit `9555145556c1f22710ae9eef0226c73a0c229598`. The five required control files and the collective `ORDER.md`, `TARGETS.md`, and `ASSIGNMENTS.json` were read there. Before substantive external writes, main was re-resolved at `6ae935fa7444624b94c35c7abea206ce0f85f90b`; OWNER CONTROL remained revision `2026-09-22.2`, programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, with B02 on FOREST and no later applicable stop. Brain installation and benchmark work remained stopped.
 
 The latest complete campaign-lead version actually read is account01/B01 candidate `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`, canonical report revision `79044b575c4b689248892f37b9930e983dddabca` and source-bound handoff blob `4cee205cb7d254caf785692838111988a0b8a155`. I use only its source-safe edge-minimal triangle-conditioning localization: contracting a triangle edge `g=uv` creates weight 2 exactly on the star edges corresponding to common neighbors of `u,v`. I do **not** use its rank-degree complete-log-concavity claim; the preceding B02 run supplied the explicit K3 obstruction showing that rank-degree homogenization is not the cited CLC theorem.
 

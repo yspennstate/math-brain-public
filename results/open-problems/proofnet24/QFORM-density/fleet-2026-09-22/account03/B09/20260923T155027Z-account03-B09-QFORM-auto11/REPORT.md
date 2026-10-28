@@ -15,7 +15,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source state and exact dependencies
 
-Fresh owner control remains programme `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, with no pause for account03/B09. The current programme state still marks the full conjecture and full-target continuity OPEN. The live corrections against law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, worst-fiber suprema, universally good single physical minors, and deleting a small coefficient under unbounded supports are retained.
 
 The proof actually consumes the following completed sources.
 

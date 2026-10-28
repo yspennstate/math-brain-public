@@ -10,7 +10,6 @@ attacking: the double-small leakage chamber via an exact Cauchy--Binet mixed-pac
 
 The full owner conjecture remains OPEN. All inputs below are the original independent real coordinates with density caps at most one. No moment, compact-support, Gaussian, log-concavity, or post-rotation independence hypothesis is used.
 
-Fresh control was resolved at `yspennstate/math-research-brain@19c4c8d5a107dd437f340087666c78922efd0700`; OWNER CONTROL revision remained `2026-09-22.15`, QFORM-only. The live corrections against arbitrary-joint rank-three coarea, positive conditional projection-height moments, law-uniform pointwise quadratic-phase decay, conditional-cap-as-independence, fiber-supremum reduction, and reciprocal-single-minor completion are retained.
 
 ## 1. Completed partner state actually used
 

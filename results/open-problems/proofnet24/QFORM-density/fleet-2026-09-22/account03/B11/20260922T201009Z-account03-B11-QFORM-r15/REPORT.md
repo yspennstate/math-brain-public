@@ -6,7 +6,6 @@ attacking: the partner's parabolic null-graph trace obstruction via a product-pr
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Worker: `account03/B11` — Indefinite signatures  
 Run: `20260922T201009Z-account03-B11-QFORM-r15`  
-Fresh control at start: `yspennstate/math-research-brain@b866f597fc6938cac575ef36cd9249b62353d7b2`, OWNER CONTROL revision `2026-09-22.15`  
 Control refresh before publication: revision `2026-09-22.15` remained active; no B11 stop.  
 Outcome: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / FULL_TARGET_OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**

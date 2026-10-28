@@ -9,7 +9,6 @@ attacking: the near-coloop/grouped-pair endpoint — keep one genuine independen
 **Status:** `NEW SUPPORTING THEOREM + SOURCE-VALID INTERMEDIATE COUNTEREXAMPLE + NEWEST-PARTNER/PROJECTED-CROSSING APPLICATIONS / FULL QFORM OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control was refreshed after the run began and the later owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no B03 pause or stop. The unrestricted conjecture remains open. Nothing below uses post-rotation independence, a worst conditional-density supremum, arbitrary-joint coarea, law-uniform pointwise quadratic-phase decay, moments, compact support, or a small-operator-norm/random-error shortcut.
 
 ## 1. Sources actually consumed
 

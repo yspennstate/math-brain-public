@@ -13,7 +13,6 @@ The unrestricted quadratic-form bounded-density conjecture remains OPEN, and con
 
 ## 1. Source-pinned inputs actually used
 
-Fresh owner control was read from `yspennstate/math-research-brain` on current `main`; OWNER CONTROL remained revision `2026-09-22.15`, with QFORM as the sole target and no later stop observed before this report. The current slot instruction is to join diffuse volume exits to high-leverage / low-cross-rank survivors while retaining the full spectrum.
 
 The immediate B08 predecessor is
 

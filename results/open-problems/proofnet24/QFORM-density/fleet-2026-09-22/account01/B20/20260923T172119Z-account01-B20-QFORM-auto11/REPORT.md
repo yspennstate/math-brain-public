@@ -13,7 +13,6 @@ The unrestricted conjecture is not claimed proved or disproved. The new paid bra
 
 ### 1.1 Owner/correction state
 
-Fresh `yspennstate/math-research-brain/main` was read at start and before publication. OWNER CONTROL is revision `2026-09-22.15`; the latest owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; QFORM is the sole research target and the full theorem remains OPEN.
 
 ### 1.2 Required completed partner account02/B20
 

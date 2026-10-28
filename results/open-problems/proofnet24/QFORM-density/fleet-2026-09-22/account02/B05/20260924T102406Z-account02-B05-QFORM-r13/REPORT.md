@@ -17,7 +17,6 @@ Fresh owner control was resolved from `yspennstate/math-research-brain/main` at 
 
 `e77cb487f09dc2224415a17c34ca01a3ef271883`,
 
-with OWNER CONTROL revision `2026-09-22.15`, QFORM-only.  The current exclusive-sign-in continuation, proof-first request, mutable Claude/Fisher continuation, programme MANIFEST/CURRENT_RESEARCH/CLAIMS/DELTAS/CORRECTION_INBOX/PATHWAYS/MEMORY_PROTOCOL, `fleet.json`, `roles.json`, `PROTOCOL.md`, and `assignments/account02/B05.json` were read fresh.
 
 The latest compatible designated partner account03/B05 result is r44; the path-local commit stream was checked through its 09:59:13Z receipt commit
 

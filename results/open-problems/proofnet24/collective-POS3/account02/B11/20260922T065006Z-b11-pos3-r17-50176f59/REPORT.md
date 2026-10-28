@@ -15,7 +15,6 @@ All probabilities below are for the original uniform law on full linear extensio
 ## 1. Fresh source state and conditional route
 
 Fresh owner controls were resolved at `yspennstate/math-research-brain` commit
-`77352e264285d13126b74509a70920fe48b9c4d1`, OWNER CONTROL revision
 `2026-09-22.2`. The collective POS3 allocation remains active.
 
 The latest complete campaign-lead result consumed is account04/B10 r15:

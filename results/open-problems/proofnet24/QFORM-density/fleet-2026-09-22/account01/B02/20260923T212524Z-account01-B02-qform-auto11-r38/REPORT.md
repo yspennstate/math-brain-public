@@ -11,7 +11,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact owner target is unchanged: independent ORIGINAL real coordinates with one-dimensional probability densities bounded by one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussian, log-concave, moment, compact-support, connected-support, iid, diagonal-basis, post-rotation-independence, arbitrary-joint coarea, conditional-cap, fiber-supremum, single-good-minor, or small-random-tail deletion is used.
 
-Fresh prepublication control was resolved at `yspennstate/math-research-brain@1ab0ec1d2862fc015de66661e301f123718d5c51`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` active and no later stop observed. The live correction inbox was reread at that same commit.
 
 ## 1. Source-pinned inputs actually used
 
@@ -310,7 +309,6 @@ These checks concern constants only; the proof is the exact argument in Section 
 
 ## 6. Source status
 
-Control source used for publication: `yspennstate/math-research-brain@1ab0ec1d2862fc015de66661e301f123718d5c51`, OWNER CONTROL revision `2026-09-22.15`.
 
 Correction package consumed: live `CORRECTION_INBOX.json` at the same control commit. In particular the proof does not invoke `QFORM-CROSSMINOR-ALONE-FALSE`, post-rotation independence, a conditional-density cap, arbitrary-joint coarea, pointwise van-der-Corput decay, or deletion of a small nonzero quadratic tail.
 

@@ -22,7 +22,6 @@ This is narrower than partner r40's `QFORM-TAUCLEAN-E2-WEIGHTED-4CYCLE-OR-STAR-v
 
 ## 2. Fresh source-pinned premises
 
-Fresh owner control remained QFORM-only, OWNER CONTROL revision `2026-09-22.15`, with no pause/stop on account02/B13. The full theorem remains open. The latest completed compatible designated-partner result is account03/B13 r40, canonical report commit
 
 `2dc90715428202b4218a60df0d3efe79bfff4055`,
 

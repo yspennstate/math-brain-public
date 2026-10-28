@@ -35,7 +35,6 @@ is **withdrawn as unsupported**: its last step used the now-refuted arbitrary-jo
 
 The named partner result used in the derivation is account02/B15 r6:
 
-- brain handoff `scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account02/B15/20260922T185309Z-account02-B15-qform-r6.md`;
 - canonical mathematics `yspennstate/math-open-problems@d00907b4362875219cc3525ceb04f90186b8c065`, path `proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T185309Z-account02-B15-qform-r6/REPORT.md`.
 
 It gives a fixed algebraically generic target matrix and cap-one product inputs for which the scalar-conditioned positive moment diverges while the actual QFORM output remains bounded by a fixed-matrix certificate. This forces any surviving scalar-conditioning proof to retain the *translation of the conditional profile* before taking a supremum.

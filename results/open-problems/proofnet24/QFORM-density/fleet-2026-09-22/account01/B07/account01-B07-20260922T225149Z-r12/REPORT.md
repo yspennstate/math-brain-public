@@ -6,7 +6,6 @@ attacking: coordinate-minor selection by transferring two-sided high ridge lever
 **Run:** `account01-B07-20260922T225149Z-r12`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** coordinate minor selection / analytic derivation and exact structural identities  
-**Control at start:** OWNER CONTROL revision `2026-09-22.15`; QFORM sole target.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.  
 **Classification:** **ESSENTIAL_STEP_APPLIED / SUPPORTING STRUCTURAL THEOREM; FULL QFORM OPEN.**
 

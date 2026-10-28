@@ -14,7 +14,6 @@ attacking: the slope-dominant punctured near-coloop by locating its third projec
 
 The unrestricted owner target remains OPEN: independent real original coordinates with scalar probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No moment, support, Gaussian, log-concave, iid, connected-support, centering, or post-rotation independence hypothesis is added.
 
-Fresh control was read from `yspennstate/math-research-brain/main`, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and this B16 assignment. OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole research target. Repository access is not native learned-memory ingestion, so this run remains `WITHOUT_VERIFIED_BRAIN`.
 
 The live corrections are retained throughout. In particular, no arbitrary-joint indefinite coarea estimate, conditional projection-height moment, pointwise law-uniform quadratic stationary-phase estimate, worst-fiber supremum, or independence after rotation is used.
 

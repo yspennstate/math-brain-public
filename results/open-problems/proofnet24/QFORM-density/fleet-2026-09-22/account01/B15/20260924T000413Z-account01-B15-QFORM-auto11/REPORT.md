@@ -4,7 +4,6 @@ attacking: a general C0 regularity compiler from Lp residual control, and a sour
 # account01/B15 — an L^p square-kernel C0 compiler and a fully coupled physical-triple receiver
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, activation revision `2026-09-22.5`.
-Fresh owner control observed on `yspennstate/math-research-brain` main; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop seen before publication.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Full unrestricted QFORM status: `OPEN_NOT_PROVED`.
 

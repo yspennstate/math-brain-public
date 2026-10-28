@@ -1,6 +1,5 @@
 # account01/B07 — final control revision 2026-09-22.15 addendum
 
-After the main report was committed, fresh `math-research-brain` main advanced to `5911d85bd4183e123e8a6464a1a6ea536378ff36`, whose OWNER CONTROL is revision `2026-09-22.15`. There is no stop: QFORM remains the sole research target.
 
 Revision `.15` promotes a joint integrated-characteristic-function route and adds a proposed decoupled `L^3`/Holder template. The theorem proved in this run is compatible with that priority: `QFORM-PROJECTION-CROSS-PLANCHEREL-v1` gives an explicit `L^1` characteristic-function majorant whenever a physical cross block has exact rank at least three, and yields the aggregate rank-three bound
 

@@ -8,7 +8,6 @@ FULL FEI STATUS: OPEN / NOT PROVED
 
 # 0. Fresh state and route
 
-This run followed the current FEI owner order, not the superseded handoff role. Fresh `math-research-brain` control was read at main `2a5161ccadc959e9768c84643fc81545b1eb801d`, OWNER CONTROL revision `2026-09-21.1`, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, the natural-language OWNER MESSAGE and `scheduled_tasks/work/shared/brain-benchmark-fei-2026-09-21/ORDER.md`. No account02/B18 pause or stop was present. The protected README Git blob was `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`; its previously exact-byte-verified SHA-256 is `25526558005f7e13a8196b6c5c9ab3f0e3394b2ecd4583658049897842498e5f`. The OWNER MESSAGE SHA-256 on that unchanged README blob is `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`. These SHA-256 values retain their prior exact-byte provenance; they are not relabelled as fresh connector-text hashes.
 
 Fresh `math-open-problems` master was observed at `0cb5cad0698c4e84db435228f5b26ba13200ee9f` and then `db4a4a3ec92a2dd6cf8d0f84ae54f5dd0afad854`. I read the current `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, the owner-required read-once `TASKS_2026-09-21.md`, `REPORT.md`, and `APPROACHES.md`, then the newest compatible B16/B18/B13 reports. The current unrestricted lower-bound target is already above `6.521845710923046575`; the old `6.4547837` unrestricted target is obsolete. Full FEI remains open.
 

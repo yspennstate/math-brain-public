@@ -21,19 +21,15 @@ Throughout the live reduction, assume for contradiction a minimum counterexample
 1. Campaign lead `account02/B04`, complete report:
    - `proofnet24/collective-BT4/account02/B04/20260922T0619Z-b04-bt4-r11/report.md`
    - scientific commit `14b8affcde6130bdbacbdfbd03888816b96d61ef`
-   - shared handoff `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account02-B04-20260922T0619Z.md`, blob `b0c1c37b1d36fd7cf855946f20eb382a61cd346d`.
    - Used for the minimum-packing normal form and the live clean opposite connector pair around the four-remainder interface.
 
 2. Named partner `account04/B06`, completed `BT4-SIX-DUAL-WALL-LIFT-v1`:
-   - `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account04-B06-20260922T061043Z.md`, blob `3357626640406c5af2ac2966b6158989a0dbb068`.
    - Used in the conditional end-to-end skeleton: the exact-six cycle-supported wall already reduces to a clean opposite cross pair or bounded same-support bypass. Its local witness geometry is not silently transplanted into the remainder-supported rank-wall proof below.
 
 3. Completed OTHER-account result `account03/B05`, `BT4-PORT-RANK-WALL-v1`:
-   - `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account03-B05-20260922T0650Z.md`, blob `5801ef39fc9f7cd699678cdd0803b7d525bfe5b1`.
    - This is used directly. It proves that one connector each way has pairing rank one and supplies, by 3-vertex-connectivity, either a fresh reverse connector avoiding the old reverse endpoints or an explicit third-support `B→C→A` mediation.
 
 4. Completed OTHER-account result `account01/B04`, `BT4-SHORTEST-MIXED-CYCLE-PORT-COLLAPSE-v1`:
-   - `scheduled_tasks/work/shared/collective-open-problems-2026-09-22/BT4-HANDOFF-account01-B04-20260922T064247Z.md`, blob `2ce9d6f84ecd3a6d78489f03938e1d0493874697`.
    - Used to obtain a fresh packed-source cross outside a shortest mixed cycle, unless a distinct-port same-support bypass has already appeared.
 
 5. Safety correction retained: `account04/B05` correction `BT4-CORRECTION-account04-B05-20260922T0632Z.md`. No equality `|T|=4` is used; only the corrected weaker conclusion is permitted.

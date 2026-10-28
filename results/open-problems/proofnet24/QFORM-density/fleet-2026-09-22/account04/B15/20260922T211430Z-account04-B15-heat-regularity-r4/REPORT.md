@@ -266,7 +266,6 @@ Freshly re-read before publication:
 - `assignments/account04/B15.json`, blob
   `ad3b34a7b78902175a8ef48cc496854a7b617cfd`.
 
-OWNER CONTROL revision \(2026\)-\(09\)-\(22.15\) remains active. No
 scheduler, notification, email, permission, public-release, or task-setting
 change was made. Repository use is not native brain ingestion; status
 remains `WITHOUT_VERIFIED_BRAIN`.

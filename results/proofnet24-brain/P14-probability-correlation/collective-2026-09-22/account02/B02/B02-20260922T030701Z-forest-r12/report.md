@@ -7,7 +7,6 @@ Context: `WITHOUT_VERIFIED_BRAIN`
 
 ## 1. Control and scope
 
-Fresh control read: OWNER CONTROL revision `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`, B02 role FOREST polynomial/probabilistic comparison, named partner `account03/B03`, campaign lead `account01/B01`. Protected control blobs used this invocation: AGENTS `94387098453b9f4a9b10179183f6f6ec780fd987`, README `3d4a9372c87802ab734141a3374d04c8823372e3`, fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`, roles `ed17ecc94f76720c0345b3e32249b791b20ec611`, PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`, ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`, TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`, ASSIGNMENTS `fe144a4be3522d57f8cb2dc40b1fc57df7c7fda`. No later B02/account02 stop was observed through the final protected-control freshness read used before this report.
 
 The canonical actual-hour login path write was attempted and denied by the platform safety layer, so no login success is claimed. The unique run start was written successfully before substantive work.
 

@@ -15,7 +15,6 @@ The target remains: for every dimension, every independent real product law with
 
 No Gaussian, moment, compact-support, log-concavity, connected-support, spectral-coordinate-independence, or small-random-error hypothesis is introduced below. Every probabilistic use is on an actual ORIGINAL-coordinate physical core after conditioning on the other original coordinates.
 
-Fresh brain control was read first at `math-research-brain@182a56de647964ce5fa829c747182d80c5c9d29d`, then refreshed before publication at `math-research-brain@c8f2bfe5014de52599c6773bcff734db727e3db4`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only. The live correction inbox was re-read at that final refresh.
 
 The completed designated partner result used at an equation is:
 

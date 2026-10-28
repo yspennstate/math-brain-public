@@ -23,4 +23,3 @@ These bounded scripts check scalar identities, finite matrix examples, the rulin
 
 ## Worker continuation
 
-The existing shared directive is `scheduled_tasks/work/shared/qform-density-2026-09-22/requests/QFORM-CLAUDE-LATEST-20260922T225732Z.md` in `yspennstate/math-research-brain`. All twenty native prompts accessible in account04 were updated successfully to require that directive and newer source commits; the other three accounts' coordinators were directed to perform their own local rollout. Configuration, actual adoption, mathematical results, and successful delivery remain separate evidence classes. No claim is made that all eighty native schedules were directly modified from this account.

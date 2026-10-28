@@ -9,7 +9,6 @@ Run: `20260924T012115Z-account01-B12-QFORM-auto11`
 Status: **PROVED SUPPORTING THEOREM / FULL QFORM OPEN**.  
 Continuity: **not proved by this branch**; the partner six-mode theorem used below only guarantees essential boundedness in all of its exits.
 
-Fresh prepublication control was read from `yspennstate/math-research-brain` main at `d492006b984d185c88d8f75d79feb8e63602f6bd`; OWNER CONTROL remains `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction inbox was reread. In particular this proof does not use post-rotation independence, law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, fiber-sup integration, or any assertion that a small matrix tail gives a uniformly small random quadratic remainder.
 
 ## 1. Compact end-to-end implication
 

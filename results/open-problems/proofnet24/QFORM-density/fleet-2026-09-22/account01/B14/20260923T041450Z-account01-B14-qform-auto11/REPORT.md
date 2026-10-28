@@ -4,7 +4,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Role: translations and localization. S
 
 ## Source pins actually used
 
-1. Fresh brain control before the substantial write: `yspennstate/math-research-brain@8d35c8b57c7b9c53986591502cc93c5f0fba80ff`; OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research target and no B14 stop was observed.
 2. Completed physical-pair logarithmic envelope: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. The only part used below is the exact pair envelope
    
    `p(t) <= 2 sqrt(2)/r + D^(-1/2) E log_+(2r^2/(kappa |t-R|))`.

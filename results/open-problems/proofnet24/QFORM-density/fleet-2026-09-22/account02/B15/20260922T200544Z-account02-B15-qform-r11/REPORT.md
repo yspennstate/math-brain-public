@@ -6,7 +6,6 @@ attacking: the qualitative regularity closure independently; verify and complete
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Worker:** `account02/B15`  
 **Run:** `20260922T200544Z-account02-B15-qform-r11`  
-**Fresh control before publication:** `yspennstate/math-research-brain@200ae47caf9830c8810adcf4c513470ba03c8d6d`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution context:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `TARGET_LEVEL_REGULARITY_PROOF / UNIVERSAL_HEIGHT_OPEN`
 

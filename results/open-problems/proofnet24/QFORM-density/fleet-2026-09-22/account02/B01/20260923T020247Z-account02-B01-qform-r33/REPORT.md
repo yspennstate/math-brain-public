@@ -23,7 +23,6 @@ can be used as an admissible density, giving
 
 Nothing below asserts a law-uniform pointwise `|s|^{-1/2}` estimate. The new decay is obtained only after a **two-dimensional random slope is averaged first** and a separate curvature direction is Fresnel-linearized jointly with it.
 
-Fresh controlling sources read in this run include brain main `a48393abae12b38c5daf8ecd71879993d752c4c5` at startup and later `d95a6be276e4ad4c524853041c8118006f3e310d`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no account02/B01 pause or stop. The newest-Claude source used below is
 
 `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
 

@@ -26,4 +26,3 @@ Thus the vague balanced hidden-minority survivor has a scale-free dichotomy: a p
 
 Next in this run: quantify when the rank-one baseline u_S u_T^T lifts a rank-two defect cross block to actual third cross-volume; non-lift should force one-sided alignment/grouped-bank geometry. Then apply a completed account04/B11 result on the frustrated-sign complement and record the exact remaining gap.
 
-Source control refreshed before this write: math-research-brain main b876a4590e19ecac249244c80cd242d801e32501, OWNER CONTROL revision 2026-09-22.15. Execution label WITHOUT_VERIFIED_BRAIN.

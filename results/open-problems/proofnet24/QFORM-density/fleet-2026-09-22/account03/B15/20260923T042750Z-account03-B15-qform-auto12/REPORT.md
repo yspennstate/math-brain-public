@@ -269,7 +269,6 @@ The result is compatible with all live corrections: it does not rotate independe
 
 ## 10. Sources actually consumed
 
-- fresh owner controls on `yspennstate/math-research-brain`, OWNER CONTROL revision `2026-09-22.15`;
 - `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account03/B15.json`;
 - assigned partner account04/B15 heat-height theorem: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - latest account02/B15 minority/annular analysis: `yspennstate/math-open-problems@a7306ce944dac158ce39d8f8e224b6ce9d127b45`;

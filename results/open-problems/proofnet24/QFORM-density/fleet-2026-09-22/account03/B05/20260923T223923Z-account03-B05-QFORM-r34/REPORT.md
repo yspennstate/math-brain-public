@@ -6,7 +6,6 @@ attacking: QFORM-HEAVY-PLUECKER-ENDPOINT-RECEIVER-v1 — bypass the r33 near-ran
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: quadratic coarea / equivalent interval bound with original-product provenance  
 Startup control: `yspennstate/math-research-brain@55c83b4ecbd8234367b84a1abdc8511acec25165`  
-Prepublication control observed before this report: OWNER CONTROL revision `2026-09-22.15`, QFORM-only  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW SUPPORTING PRODUCT-PRESERVING DENSITY THEOREM; FULL QFORM OPEN / NOT PROVED / NOT DISPROVED**  
 Continuity: proved on the new exact-cross branch; not supplied by the designated exact-slope partner branch; full-target continuity remains open.

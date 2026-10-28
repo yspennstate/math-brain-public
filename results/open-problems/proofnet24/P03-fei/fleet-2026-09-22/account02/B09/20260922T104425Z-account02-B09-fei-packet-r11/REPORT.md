@@ -8,7 +8,6 @@
 
 ## 0. Current source state and corrections
 
-Fresh owner control at start was `yspennstate/math-research-brain@518711facf1d4f718522e2bd968a8654a505b91e`, OWNER CONTROL revision `2026-09-22.3`, programme `FEI-ALL-TEAM-20260922T095941Z`. A pre-publication reread reached `621d89932f6ff9d1f3b719ada852210f19c9fdf6`; the canonical FEI state remained `FEI-20260922T1000Z-v1`, full FEI remained open, and the correction inbox remained empty.
 
 The mandatory corrections used literally here include:
 

@@ -7,7 +7,6 @@ attacking: additional-eigenvalue control via a three-disjoint-bank arbitrary-com
 
 This run proves a new grouped-coordinate additional-eigenvalue theorem and applies the assigned partner account04/B12 result to the final inequality. It does not prove or disprove the full QFORM conjecture. The result proves existence of an essentially bounded density in its stated scope; continuity is not established.
 
-Control source at startup: `yspennstate/math-research-brain@145b8b967df6fa2c35473c8d3377cce44095999d`, OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. Pre-publication refresh: control README blob `fca13a89d221115332ce5e60d49554ee0e213efa`, live correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. Full QFORM remains OPEN.
 
 ## Source-valid dependencies actually read
 

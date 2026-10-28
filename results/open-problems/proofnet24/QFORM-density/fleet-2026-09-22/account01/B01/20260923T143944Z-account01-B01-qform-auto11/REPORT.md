@@ -11,7 +11,6 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction boundary
 
-Fresh prepublication control was `yspennstate/math-research-brain@93ddfe864ffb68a24e7b4c258e1388a8e0dae5e3`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, with no B01 pause or stop. The live correction inbox was reread at that ref. In particular, this report does **not** use:
 
 - law-uniform pointwise `|t|^{-1/2}` decay for scalar quadratic phases;
 - independence after a spectral rotation;

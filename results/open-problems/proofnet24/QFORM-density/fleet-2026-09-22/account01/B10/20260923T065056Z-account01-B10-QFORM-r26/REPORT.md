@@ -12,7 +12,6 @@ The unrestricted QFORM conjecture remains OPEN. This report proves a new nonzero
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain` control was read from main with OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole target. The current proof-first/newest-Claude continuation assigns B10 to the **near-null nonzero coloop interpolation**, distinct from the already-paid exact-null endpoint.
 
 Current required sources consumed in this run include:
 

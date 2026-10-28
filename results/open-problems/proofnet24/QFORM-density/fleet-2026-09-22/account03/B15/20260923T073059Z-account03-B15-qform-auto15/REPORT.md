@@ -6,7 +6,6 @@ attacking: a mode-restricted regularity reduction for the fixed-Gaussian formula
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Absolute continuity and regularity  
 **Run:** `20260923T073059Z-account03-B15-qform-auto15`  
-**Fresh source control before the mathematical write:** `yspennstate/math-research-brain@c73bd7b17ddc8eaca6d62c6503e4a7f9a728d52e`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `ESSENTIAL_STEP_APPLIED / MODE_RESTRICTED_SMALL_BALL_COMPILER / FULL_TARGET_OPEN`
 

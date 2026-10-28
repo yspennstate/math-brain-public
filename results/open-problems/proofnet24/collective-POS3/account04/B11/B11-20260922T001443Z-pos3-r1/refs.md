@@ -2,7 +2,6 @@
 
 ## Current target and inherited repository state
 
-- Current owner-selected POS3 target: `yspennstate/math-research-brain/scheduled_tasks/work/shared/collective-open-problems-2026-09-22/TARGETS.md`, target section **POS3 — balanced pairs in width-three posets**.
 - Inherited source claim: `operations/claims/I0122.md` in this repository. It records the general 1/3–2/3 conjecture and the exact all-posets-through-14 frontier; that finite frontier is not a width-three proof.
 - Assigned partner: `proofnet24/collective-POS3/account01/B19/B19-20260921T235148Z-pos3-r01/REPORT.md`, exact chain insertion/deletion recurrence and weighted induced law.
 - Connected-core reduction: `proofnet24/collective-POS3/account02/B11/20260921T235736Z-b11-44e20585/REPORT.md`, exact ordinal factorization by incomparability components.

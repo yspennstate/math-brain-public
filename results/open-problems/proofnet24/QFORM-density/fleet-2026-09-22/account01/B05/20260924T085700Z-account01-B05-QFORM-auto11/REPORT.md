@@ -12,7 +12,6 @@ attacking: the nonzero/near-zero physical-pivot collar; test the first scalar co
 
 The preceding B05 run closed the exact-rank-three, high-leverage, literal zero-pivot branch by combining the null-hub transverse theorem with a physical pair-star coarea theorem. The natural neighboring debt is therefore the punctured physical-pivot collar.
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main through commit `ac0fdcc181f69bd0e4bc07ee538452e6ef43e04a`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The full conjecture and unrestricted continuity remain OPEN. The live correction inbox was reread before publication; nothing below uses post-rotation independence, an arbitrary-joint coarea bound, a conditional-density-as-independence step, a fiber supremum, or law-uniform pointwise quadratic-phase decay.
 
 The first essential implication tested here is the most tempting punctured-pivot route: complete the square in one literal physical coordinate, replace the conditional square density by its one-sided half-Riesz kernel, and then estimate the Schur remainder. I prove that this mechanism is intrinsically nonuniform even on a three-dimensional exact-target family whose *actual* densities are uniformly bounded and continuous. Thus the nonzero-pivot collar cannot be closed by sharpening constants inside that scalar peel; a cancellation between the pivot chirp and the third curvature must be retained before the half-Riesz majorant is taken.
 
@@ -250,7 +249,6 @@ The result is therefore a **mechanism obstruction and a precise missing-factor d
 
 ## 8. Source list actually used
 
-1. Owner/control state: `yspennstate/math-research-brain` main through `ac0fdcc181f69bd0e4bc07ee538452e6ef43e04a`, OWNER CONTROL revision `2026-09-22.15`.
 2. Previous B05 zero-pivot closure: `yspennstate/math-open-problems@1ca1fc77ae8435274325c25657c496fd703c0b51:proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260924T072900Z-account01-B05-QFORM-auto11/REPORT.md`.
 3. Rank-two + independent-square bridge: `yspennstate/math-open-problems@e4bf40b7376380c069ccee64a530fd2297ef04e3:proofnet24/QFORM-density/fleet-2026-09-22/account01/B05/20260923T233435Z-account01-B05-QFORM-auto17/REPORT.md`.
 4. Required designated-partner theorem: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/account02/B05/20260923T200516Z-account02-B05-QFORM-auto11c/REPORT.md`.

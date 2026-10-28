@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Status: **NEW SUPPORTING THEOREM / FUL
 
 This addendum is intentionally additive to the already-published r47 cancelled-twist shear report. It treats a different rank-one-carrier subregime: no large diagonal twist is needed. Everything stays in ORIGINAL independent coordinates and assumes only `0<=f_i<=1`.
 
-Fresh final control: `yspennstate/math-research-brain@67340898014b6d913e553869c3cf306b34b9ceef`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM remains the sole research target, and the live correction inbox was reread.
 
 ## 1. Source-valid inputs
 

@@ -51,7 +51,6 @@ where `P_j=(I-tau_{j,0}tau_{j,1})/2` is the **coarse signed gate derivative**, n
 
 ## 1. Fresh control and exact admission-gate source
 
-The run read the current owner/control files from `math-research-brain` at entry main `8af036847c779b46d7c5599466964681e8cc97f1`; OWNER CONTROL is revision `2026-09-22.1`.  No later account02/B18 pause or stop was present at entry.  The new collective allocation explicitly preserves B12--B18 on FEI and the current FEI execution reset makes B18 campaign-C lead.
 
 The scientific master was refreshed before derivation.  The exact campaign-C source consumed is:
 

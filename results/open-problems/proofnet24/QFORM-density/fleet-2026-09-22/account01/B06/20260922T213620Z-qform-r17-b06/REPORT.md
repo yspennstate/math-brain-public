@@ -13,7 +13,6 @@ Assignment: curved fiber integration; retain product structure and avoid unrestr
 
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh source used for the mathematical derivation: `yspennstate/math-research-brain@a401040c6d176da10e7aa9b9035d4ba82b1acef3`; OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. The full target remains OPEN / NOT PROVED / NOT DISPROVED. The separate continuity conclusion is not proved by the new theorem below.
 
 The exact full target is unchanged: independent original coordinates have densities bounded by one, and a real symmetric matrix has at least three eigenvalues of modulus at least one. No moment, support, log-concavity, Gaussianity, diagonal-basis, or post-rotation-independence hypothesis is added.
 

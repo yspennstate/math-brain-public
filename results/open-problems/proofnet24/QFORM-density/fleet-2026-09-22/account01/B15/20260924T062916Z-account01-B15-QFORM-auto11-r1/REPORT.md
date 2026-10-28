@@ -3,7 +3,6 @@ attacking: fixed-source continuity on the uniformly paid ruled majority sheet by
 
 # account01/B15 — submass stability compiles to a half-line C0 representative
 
-Programme: `QFORM-DENSITY-3EIG-20260922`, owner revision `2026-09-22.5`; current protected OWNER CONTROL revision `2026-09-22.15`.
 Run: `20260924T062916Z-account01-B15-QFORM-auto11-r1`.
 Status: **NEW TARGET-LEVEL REGULARITY COMPILER / RULED MAJORITY-SHEET C0 PROVED / FULL QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.

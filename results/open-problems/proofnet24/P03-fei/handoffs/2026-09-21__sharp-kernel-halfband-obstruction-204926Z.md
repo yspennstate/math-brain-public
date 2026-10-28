@@ -6,7 +6,6 @@ Complete scientific package: `dfb0dffbe472f19a15e3c3b22bc563d527a979ab`, directo
 
 Read the [main proof](../fleet-2026-09-21/account02/interactive/20260921T204926Z-threshold-contraction/REPORT.md), then the stronger [half-band collision extension](../fleet-2026-09-21/account02/interactive/20260921T204926Z-threshold-contraction/HALFBAND_COLLISION_EXTENSION.md). Both new executed checkers, their actual outputs and a manifest are included. All six pre-manifest remote blobs and byte lengths match the locally executed artifacts; separate local replays gave byte-identical outputs, not independent review.
 
-The substantive ALL-ACCOUNT brain handoff is at commit `69affe9f2fa5acbaaf694ffbdd60bda14c35923a`, path `scheduled_tasks/work/shared/fei-joint-proof-2026-09-21/handoffs/20260921T204926Z-sharp-kernel-and-current-obstruction.md`, blob `0afa53275f7502b4279b1b214cf26a6e09f68b47`. The common research-state index points to it at `77e0d313a76c5a5dd0eacec5fa5fbd8552420731`; the index change adds eight lines and deletes none of the prior research history.
 
 ## New valid theorem
 

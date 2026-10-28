@@ -310,7 +310,6 @@ The live X-ray-only and conditional-cap corrections show why this final step can
 
 ## 10. Source status
 
-Fresh control remained on OWNER CONTROL revision `2026-09-22.15`, sole programme `QFORM-DENSITY-3EIG-20260922`, at the last pre-write refresh. No later stop was observed.
 
 Completed account02/B15 sources applied:
 

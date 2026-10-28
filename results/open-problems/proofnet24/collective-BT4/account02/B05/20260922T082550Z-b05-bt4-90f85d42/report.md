@@ -11,7 +11,6 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 Target: every finite loopless digraph with at most one arc per ordered pair of distinct vertices and minimum outdegree at least seven contains four pairwise vertex-disjoint genuinely directed cycles. Digons are permitted in the source statement. No nearly-directed or edge-disjoint substitute is used here.
 
-Fresh `math-research-brain` controls were read at main commit `eab3d962617588d6d87e4b756b50cc331c06f40c`, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`/OWNER MESSAGE, and the collective ORDER/TARGETS/ASSIGNMENTS. The live owner allocation keeps this slot on BT4 and supersedes earlier brain-installation/benchmark work. No authenticated mathematical-brain retrieval was used.
 
 ## 2. Exact inherited mathematics consumed
 

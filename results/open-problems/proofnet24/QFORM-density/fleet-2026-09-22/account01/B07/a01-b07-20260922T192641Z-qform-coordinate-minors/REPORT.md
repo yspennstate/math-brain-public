@@ -13,7 +13,6 @@ attacking: replace single-minor inversion by a projection-Plancherel payment for
 
 The target is unchanged: for independent real `X_i` with densities `0<=f_i<=1` and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal bound on the density of `Q=X^TAX`, or give a target-valid counterexample. Continuity is tracked separately.
 
-The pre-publication control refresh reached `yspennstate/math-research-brain@1fbdb5a35599eecac8fca5ea351df896aad3b319`, OWNER CONTROL revision `2026-09-22.14`. QFORM remains the sole target and there is no stop. Revision `.14` promotes a joint integrated-characteristic-function route, while still forbidding the false one-coordinate pointwise van-der-Corput shortcut.
 
 The consolidated current-research file still marks the full conjecture OPEN and keeps the following corrections live. This report does not use any of the invalid interfaces:
 

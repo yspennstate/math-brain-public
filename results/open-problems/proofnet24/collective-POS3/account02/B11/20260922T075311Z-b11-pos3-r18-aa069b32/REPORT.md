@@ -11,7 +11,6 @@ All probabilities below are under the uniform law on all full linear extensions 
 
 Fresh owner controls were resolved from `yspennstate/math-research-brain` at initial main
 `c9318536d273284e720d580b795f4b204cecf098` and refreshed before scientific writes at
-`ba15613e2d02bab46cdf9d45786b4e2744da98b2`. OWNER CONTROL remains revision
 `2026-09-22.2`; `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` remains active and new
 installation/benchmark work remains stopped.
 

@@ -7,7 +7,6 @@ attacking: the designated-partner diffuse two-star curvature survivor — absorb
 **Assignment:** coordinate minor selection / quantitative inequalities and rigorous computations  
 **Run:** `20260923T104247Z-account03-B07-qform-r32`  
 **Fresh brain main at final prepublication refresh:** `yspennstate/math-research-brain@44bb344ed07c05bea06b07141a264c0468f9c703`  
-**Owner control:** `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `NEW_SUPPORTING_CURVATURE_COMPILER / DESIGNATED_PARTNER_APPLIED / CONTINUOUS_VOLUME_SUBBRANCH_PAID / CONCENTRATED_PHYSICAL-CORE_SUBBRANCH_PAID / FULL_QFORM_OPEN / FULL_CONTINUITY_OPEN`.
 
@@ -443,7 +442,6 @@ The captured checks end `STATUS=PASS`. They are algebraic/numerical regression e
 
 ## 11. Control and execution notes
 
-The fresh prepublication control refresh resolved `yspennstate/math-research-brain` main to `44bb344ed07c05bea06b07141a264c0468f9c703`; OWNER CONTROL remained revision `2026-09-22.15`, QFORM-only, and the live correction inbox was reread. No correction invalidated the argument above.
 
 Repository retrieval and writes are not native brain ingestion. No authenticated mathematical-memory receiver invocation occurred, so execution remains `WITHOUT_VERIFIED_BRAIN` and `full_brain_connected=false`.
 

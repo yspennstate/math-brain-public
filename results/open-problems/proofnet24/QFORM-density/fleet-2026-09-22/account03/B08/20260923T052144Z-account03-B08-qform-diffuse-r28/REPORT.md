@@ -13,7 +13,6 @@ attacking: extend the self-matched mixed-minor Fourier branch from the 1/2 occup
 
 The unrestricted target remains open: for independent ORIGINAL real coordinates with one-dimensional densities bounded by one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal finite density bound for `Q=X^T A X`, or produce a valid counterexample. No Gaussian, moment, compact-support, connected-support, log-concavity, iid, or diagonal-basis hypothesis is added. Independence is never transferred through a general rotation.
 
-Fresh control was read from `yspennstate/math-research-brain` main at `7d2e7c8ec01c8843fd226292ab75bdb17385abae`; the later OWNER CONTROL is revision `2026-09-22.15` and keeps QFORM as the sole target.
 
 The live corrections used here include the failure of law-uniform pointwise quadratic Fresnel decay, the failure of arbitrary-joint rank-three coarea, the failure of positive conditional projection-density moments, dimension loss from naive fiber suprema, and the fresh `QFORM-COHEAVY-SINGLE-ROW-EXTRACTION-FALSE-v1`. The last correction is especially relevant: fixed aggregate determinant mass need not contain one physical row/minor of universal size. Every argument below keeps determinant currency aggregated before inversion.
 

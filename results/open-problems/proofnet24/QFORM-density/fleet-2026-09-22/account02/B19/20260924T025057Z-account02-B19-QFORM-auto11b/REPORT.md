@@ -13,7 +13,6 @@ The exact target remains: arbitrary independent ORIGINAL real coordinates with o
 
 ## 1. Fresh source graph
 
-Fresh owner control on `math-research-brain/main` was reread during this invocation, latest observed before publication at `103969b6525b0c09fe00dfd2bdf70dd749d00a7a`. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only, with no later stop or reassignment observed. The same-hour canonical account02/B19 login already existed and was preserved rather than overwritten.
 
 The previous B19 result is
 

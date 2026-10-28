@@ -8,7 +8,6 @@ attacking: coordinate-minor selection via a sharp compound-order transfer E3 -> 
 **Assignment:** coordinate minor selection / GEOMETRY  
 **Initial control commit:** `yspennstate/math-research-brain@4ccdb6c551bc0372651374b3da132ff3ae8a7067`  
 **Pre-write refresh:** `yspennstate/math-research-brain@a0ca57f8ad2170f13c1de4dee842239fcd80f420`  
-**OWNER CONTROL:** revision `2026-09-22.15`; sole target QFORM  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / SUPPORTING STRUCTURAL THEOREM / FULL TARGET OPEN`.
 

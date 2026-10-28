@@ -11,7 +11,6 @@ Continuity: proved on the E3-paid branches below; not claimed for the common-pla
 
 ## 1. Fresh control, target and correction ledger
 
-Fresh `math-research-brain/main` was resolved at invocation start from `cefbd06101acc6a682b61ff34bd0a2a13424a59c` and refreshed before publication after newer same-hour worker commits; OWNER CONTROL remained revision `2026-09-22.15`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remained live and no later B19 stop or pause was found.
 
 The exact target remains: for arbitrary independent real scalar inputs with densities bounded by one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite `L^infinity` density bound for `X^T A X`, or give a valid counterexample. Continuity is tracked separately.
 

@@ -13,7 +13,6 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`
 
 The unrestricted target remains open: independent real coordinates with densities at most one, arbitrary dimension, and real symmetric `A` with at least three eigenvalues of modulus at least one. Nothing here inserts moment, support, centering, or post-rotation independence assumptions into that full target.
 
-Fresh owner control at invocation start was `yspennstate/math-research-brain@5733ca0e4607880ed32e682af76d984c53555475`; before the substantive write it was refreshed to `04edff7e43fb4b59d74d5d73f84d12926a4073af`. OWNER CONTROL remained revision `2026-09-22.15`, QFORM was the sole target, and no B17 pause/stop was present. The proof-first continuation and live correction state were consumed. This proof does not use the refuted arbitrary-joint coarea lemma, conditional-projection positive moments, worst scalar conditional-density gates, law-uniform pointwise oscillatory decay, or post-rotation independence.
 
 The previous B17 theorem used below only for provenance of the finite stress family is `yspennstate/math-open-problems@3ebad57a9816b238c1f04dc3894971f10066d89b`, same account/slot, run `B17-20260922T214456Z-r11`.
 

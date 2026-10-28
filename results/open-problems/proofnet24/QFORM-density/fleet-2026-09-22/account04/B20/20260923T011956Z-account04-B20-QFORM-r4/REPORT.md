@@ -10,7 +10,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The target remains unrestricted: independent real coordinates with probability densities at most one, arbitrary dimension, and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one. No moment, support, identical-law, sign, or post-rotation-independence assumption is made. Continuity is separate.
 
-Fresh control was read at `yspennstate/math-research-brain@6fda8f39f22a4258db938d2d8d570676098c8ff2`, OWNER CONTROL revision `2026-09-22.15`. The required Claude package was read at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`; commit search also found its earlier source commit `b0cbc2233369b6a3f366cf569d425f485f123e1c`. The later synthesis `472b70df7d1edbb3afac23269bc2e4368ae0e371` and the live review corrections are retained.
 
 The completed account01/B20 input actually used is `QFORM-DOUBLE-WEYL-E3-L3-v1` and its half-Riesz consequence at `yspennstate/math-open-problems@3801530a0437970354a492e8257237902e6619ff`. The completed cross-transverse input is account01/B16 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` at `ded9c22e680325b3ea44ef57a973d50f3db88128`.
 

@@ -19,7 +19,6 @@ This run preserves the live correction that bounded density alone does **not** i
 
 No Gaussianity, moments, log-concavity, compact support, connected support, diagonal-basis assumption, post-rotation independence, arbitrary-joint coarea estimate, or single-good-minor premise is used.
 
-Fresh prepublication owner control remained OWNER CONTROL `2026-09-22.15`, QFORM-only, with no B01 pause/stop. The live correction inbox was reread before publication.
 
 ## 2. Source-valid inputs
 

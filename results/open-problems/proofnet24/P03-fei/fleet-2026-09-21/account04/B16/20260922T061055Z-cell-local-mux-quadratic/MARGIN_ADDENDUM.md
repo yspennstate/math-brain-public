@@ -1,6 +1,5 @@
 # Margin addendum — convert the lifted-candidate reserve to the owner's comparable gate margin
 
-The OWNER MESSAGE requests reporting the comparable gate margin
 \[
 c_G=-D_{\Gamma_0}(G;p)/Q_G(p),
 \qquad

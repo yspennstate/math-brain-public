@@ -6,7 +6,6 @@ attacking: aggregate coarea curvature before reciprocal local-core inversion, wi
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Quadratic coarea bound  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Control at start:** OWNER CONTROL revision `2026-09-22.15`; QFORM remains the sole research programme.  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED.  
 **Continuity:** not proved by the new coarea theorem below; only an essentially bounded density is asserted.
 

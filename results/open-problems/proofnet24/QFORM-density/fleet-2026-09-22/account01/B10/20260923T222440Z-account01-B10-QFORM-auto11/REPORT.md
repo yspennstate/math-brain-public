@@ -11,7 +11,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction boundary
 
-Fresh brain control was resolved from `yspennstate/math-research-brain` main at the start of this run and refreshed before publication. OWNER CONTROL remains revision `2026-09-22.15`, with QFORM as the sole research target. The full unrestricted theorem and unrestricted continuity claim remain open.
 
 This report explicitly preserves the live corrections: no independence is inferred after a spectral rotation; no arbitrary-joint coarea cap, conditional projection-density supremum, pointwise van-der-Corput decay, moment assumption, support regularity, fragment-count bound, or small-random-perturbation deletion is used. The argument below uses independence only between disjoint ORIGINAL-coordinate banks.
 

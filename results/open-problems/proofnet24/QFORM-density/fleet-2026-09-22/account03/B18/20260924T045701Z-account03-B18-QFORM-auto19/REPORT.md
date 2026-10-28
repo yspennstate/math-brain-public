@@ -236,5 +236,3 @@ Fleet sources actually used:
 
 - designated partner account04/B18: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/account04/B18/20260924T032058Z-account04-B18-QFORM-r6/REPORT.md`;
 - continuity supplement account03/B18: `yspennstate/math-open-problems@3d3c43d327b37347cc67c937d4daae8d28bf433f`, `proofnet24/QFORM-density/fleet-2026-09-22/account03/B18/20260924T030202Z-account03-B18-QFORM-auto17/CHECK.json` and sibling report.
-
-Fresh prepublication brain control commit: `293626f938153424f19b485e0dfa58228a0193e7`; OWNER CONTROL revision `2026-09-22.15`. Full conjecture status remains OPEN.

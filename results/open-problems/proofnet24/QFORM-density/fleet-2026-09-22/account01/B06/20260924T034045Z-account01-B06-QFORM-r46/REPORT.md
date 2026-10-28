@@ -11,7 +11,6 @@ The unrestricted conjecture remains open. This run addresses the heavy-carrier o
 
 ## 1. Sources and allowed premises
 
-Fresh control is QFORM-only at OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`. The live correction state continues to forbid law-uniform pointwise one-dimensional quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, and unrestricted spectral-fiber suprema.
 
 Immediate predecessor:
 

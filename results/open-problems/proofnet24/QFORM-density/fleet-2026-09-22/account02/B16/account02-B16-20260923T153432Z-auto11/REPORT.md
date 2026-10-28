@@ -7,7 +7,6 @@ attacking: arbitrary same-side curvature in the superdiffuse near-coloop survivo
 **Assignment:** Projection-product interaction  
 **Status:** `NEW SUPPORTING THEOREMS + NEW MECHANISM OBSTRUCTION / FULL QFORM OPEN`  
 **Regularity:** the fresh-square and transverse-low-rank branches below have continuous densities; the bare L^{3/2} cross theorem is only a characteristic-function estimate.  
-**Control:** fresh brain main was resolved during the run; OWNER CONTROL remained revision `2026-09-22.15` and no later B16 stop was found before publication.
 
 ## 1. First unpaid implication and source discipline
 

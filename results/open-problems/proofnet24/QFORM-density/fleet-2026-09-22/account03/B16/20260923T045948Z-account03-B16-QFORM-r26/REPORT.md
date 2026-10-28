@@ -13,7 +13,6 @@ attacking: close the two-coordinate approximate-cocircuit branch by replacing th
 
 The owner target remains the unrestricted statement: for every finite `n`, independent real original-coordinate variables `X_k` with probability densities `0<=f_k<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite `L^infinity` bound, or give a valid counterexample. No moment, compact-support, connected-support, log-concavity, Gaussianity, or spectral-coordinate independence assumption is made.
 
-Fresh owner control was read from `yspennstate/math-research-brain@8be2516e16b25148c91fe571f08dbf44cc2eedfe`; OWNER CONTROL is revision `2026-09-22.15`, QFORM only. The live correction inbox was reread. In particular, this report does not use arbitrary-joint 3D coarea, conditional projection-height moments, worst-fiber suprema, small-coefficient deletion, or law-uniform pointwise one-dimensional van der Corput decay.
 
 The immediate B16 predecessor is
 

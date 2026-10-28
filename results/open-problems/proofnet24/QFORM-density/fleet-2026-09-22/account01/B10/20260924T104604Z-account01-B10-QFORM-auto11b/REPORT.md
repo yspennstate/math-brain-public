@@ -4,7 +4,6 @@
 
 **PROVED SUPPORTING THEOREM / NEW SIXTH-ROOT NEAR-COLOOP COMPILER / DESIGNATED PARTNER ENDPOINT APPLIED / FULL EXACT-RANK3 OPEN / FULL QFORM OPEN.**
 
-Programme: `QFORM-DENSITY-3EIG-20260922`. Fresh control was resolved from `yspennstate/math-research-brain` main during this run; OWNER CONTROL remains revision `2026-09-22.15`, and the full conjecture remains open. The proof below preserves the live corrections: no law-uniform pointwise van-der-Corput estimate, no post-rotation independence, no arbitrary-joint coarea lemma, no conditional-density-moment gate, and no fiber-supremum shortcut are used.
 
 The new point is a mixed-norm replacement for the previous one-hub residual Wiener bound. If a physical hub has leverage `h` and the remaining normalized leaf frame satisfies a weaker *duplicated-slice leverage* gate, then the punctured near-coloop density cost is only
 

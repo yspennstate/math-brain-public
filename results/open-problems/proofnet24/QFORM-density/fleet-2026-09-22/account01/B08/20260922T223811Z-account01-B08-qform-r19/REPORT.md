@@ -6,7 +6,6 @@ attacking: compare volume-sampling and one-scale ridge certificates on the same 
 **Outcome:** `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_STRUCTURAL_THEOREM / REFUTED_INTERMEDIATE_EXHAUSTIVE_ALTERNATIVE / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Initial fresh control:** `yspennstate/math-research-brain@f190b630c9b79c2faac1d7b890e803eb0bdb959b`, OWNER CONTROL revision `2026-09-22.15`.
 
 The unrestricted target remains OPEN: for every finite `n`, every independent real product input with one-dimensional probability densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite essential bound for the density of `X^TAX`, or give a target-valid counterexample. No Gaussian, moment, compact-support, connected-support, log-concavity, spectral-coordinate independence, or diagonal-basis assumption is added. Continuity remains a separate issue.
 

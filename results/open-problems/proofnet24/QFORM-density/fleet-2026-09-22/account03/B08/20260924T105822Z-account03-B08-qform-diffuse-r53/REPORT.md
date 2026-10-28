@@ -12,7 +12,6 @@ The unrestricted conjecture remains **OPEN** and global continuity remains **OPE
 
 ## 1. Fresh controls and source pins
 
-Fresh owner control was resolved from `yspennstate/math-research-brain/main` before the mathematics. OWNER CONTROL remains revision `2026-09-22.15`, QFORM-only. I reread `AGENTS.md`, the full OWNER MESSAGE in `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, and the QFORM `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/account03/B08.json`.
 
 The current-hour canonical account03/B08 login already existed from the immediately preceding run, so it was preserved rather than overwritten, as required by `PROTOCOL.md`; this run has its own unique start/finish records.
 

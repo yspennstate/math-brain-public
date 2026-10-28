@@ -11,7 +11,6 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 The unrestricted conjecture remains OPEN. This report does not claim a universal proof. It closes the diffuse part of the exact physical cut-rank-one leaf geometry while retaining all diagonal same-bank curvature and all outside couplings. When the cut-rank classification is applied to the entire physical complement of one hub, it also excludes the triangle exception inside the strict no-pivot class `N3(1/128)`. The remaining exact low-cut-rank obstruction is either exact alignment or a frame whose transverse wedge is concentrated on at most three physical rows.
 
-Fresh owner control at startup was QFORM-only, OWNER CONTROL revision `2026-09-22.15`. The live correction ledger was read before the proof. In particular nothing below uses pointwise law-uniform van der Corput decay, post-rotation independence, arbitrary-joint three-dimensional coarea, a conditional projection-height moment, deletion of small coefficients, or a single-good-minor implication.
 
 ## 1. Sources actually used
 

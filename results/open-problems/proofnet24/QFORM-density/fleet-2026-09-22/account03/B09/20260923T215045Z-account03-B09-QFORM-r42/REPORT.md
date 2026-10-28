@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target is unchanged: for every finite n, independent original-coordinate real variables with densities at most one, and every real symmetric A with at least three eigenvalues of modulus at least one, prove a universal bound on the density of Q=X^TAX or give a valid counterexample. No moments, compact support, connected support, Gaussianity, log-concavity, iid hypothesis, diagonal-basis hypothesis, or post-rotation independence is introduced.
 
-Fresh owner control before publication was `math-research-brain@946ca1f4c663f45772a094cbce05726214f49c03`, OWNER CONTROL revision `2026-09-22.15`, still QFORM-only with no B09 pause. The live correction inbox blob was `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`. In particular, nothing below uses law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, post-rotation conditional density caps, deletion of small quadratic terms on unbounded inputs, or a claim that one physical minor has universal scale.
 
 The immediate predecessor is account03/B09 r41:
 
@@ -452,7 +451,6 @@ These finite checks support arithmetic and algebra only; they are not universal 
 
 ## 10. Source pins and status
 
-- Fresh prepublication control: `yspennstate/math-research-brain@946ca1f4c663f45772a094cbce05726214f49c03`, OWNER CONTROL revision `2026-09-22.15`.
 - Live correction inbox blob consumed: `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
 - r41 predecessor: `yspennstate/math-open-problems@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1` at the path stated in Section 1.
 - Designated account04/B09 partner: `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682` at the path stated in Section 1.

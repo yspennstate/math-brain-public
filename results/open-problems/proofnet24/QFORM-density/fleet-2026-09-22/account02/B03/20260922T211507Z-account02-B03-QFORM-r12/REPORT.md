@@ -7,7 +7,6 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Assignment: `Decoupled time integral`  
 Classification: **ESSENTIAL_STEP_APPLIED + CANDIDATE_REFUTED / FULL_TARGET_OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
-Fresh control at start: `yspennstate/math-research-brain@b97cf63a6311eaaf117726452631e026e2d61d9d`; pre-publication refresh: `1d81fec9aa4b8a84883ab068a2b288e6884331c1`; OWNER CONTROL revision `2026-09-22.15`.
 
 ## 1. Target and source discipline
 

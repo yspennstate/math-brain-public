@@ -7,7 +7,6 @@
 
 ## 0. Latest owner target and source binding
 
-The current OWNER MESSAGE converges all FEI workers on the gate reformulation
 
 \[
 \Gamma(p_{\rm out})+H_t(G;p)\le
@@ -163,7 +162,6 @@ This does **not** refute the gate reformulation, existence of some other finite-
 
 ## 4. Source-to-next-arrow use
 
-The exact new frontier is now narrower than the OWNER MESSAGE's pre-counterexample wording:
 
 - B15 supplies a source-valid all-gate violation at cap 6.4548.
 - B13 proves any future all-gate candidate need only be checked on composition-prime gates, because gate slack composes exactly.

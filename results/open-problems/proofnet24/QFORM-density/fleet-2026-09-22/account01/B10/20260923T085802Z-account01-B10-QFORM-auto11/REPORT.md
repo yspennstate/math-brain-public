@@ -13,7 +13,6 @@ The unrestricted target remains OPEN: arbitrary finite `n`, independent original
 
 ## 1. Fresh live state and exact sources actually used
 
-Fresh owner control remained `QFORM-DENSITY-3EIG-20260922`, OWNER CONTROL revision `2026-09-22.15`, QFORM-only. The live corrections excluding law-uniform pointwise oscillatory decay, post-rotation independence, arbitrary-joint rank-three coarea, worst-fiber/conditional-density substitutions, and single-minor pigeonholing remain in force.
 
 The newest completed designated-partner result actually used is account02/B10 auto11:
 

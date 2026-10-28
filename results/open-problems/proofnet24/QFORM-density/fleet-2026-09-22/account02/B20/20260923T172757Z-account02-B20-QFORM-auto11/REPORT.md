@@ -14,7 +14,6 @@ Continuity: separate; not claimed globally.
 
 The target is unchanged. For every dimension `n`, every independent real ORIGINAL-coordinate input `X_i` with density `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite essential density bound for `X^T A X`, or give a valid counterexample. No moments, compact support, connected support, iid, Gaussianity, log-concavity, diagonal-basis assumption, or post-rotation independence is introduced.
 
-Fresh protected source control at publication still has OWNER CONTROL revision `2026-09-22.15`, QFORM as the sole research programme, and the current continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The following live corrections are explicitly retained throughout:
 
 - no law-uniform pointwise quadratic-phase decay;
 - no dimension-free worst spectral-fiber supremum;

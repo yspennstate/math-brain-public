@@ -3,7 +3,6 @@
 **Programme:** QFORM-DENSITY-3EIG-20260922  
 **Worker:** account03/B17  
 **Run:** 20260922T170559Z-account03-B17-QFORM-r13  
-**Control at start:** yspennstate/math-research-brain `1d592be85fec31522f1583c06994dbc0d2035860`, OWNER CONTROL revision `2026-09-22.8`  
 **Classification:** SUBCLASS SHARP-CONSTANT CONSTRAINT / NEW WITNESS EXCLUSION; **not** a proof of full QFORM  
 **Brain status:** WITHOUT_VERIFIED_BRAIN
 

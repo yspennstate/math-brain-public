@@ -13,7 +13,6 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The owner target is unchanged: independent real original coordinates, each with probability density at most one; arbitrary real symmetric `A`; at least three eigenvalues of `A` have absolute value at least one; prove a dimension- and law-independent density bound or give a genuine counterexample. The desired continuity conclusion is separate.
 
-Fresh prepublication control was read from `yspennstate/math-research-brain/main@7a82d6111b54996f55c295e9be8a145210fbf785`. OWNER CONTROL remains revision `2026-09-22.15`, fleet enabled, QFORM-only, with no account01/B01 pause or stop. The live correction inbox at blob `a884b835aba929c5376e6417ae5cfcd44c0f7a76` was reread before this publication.
 
 The phase-aligned fragmented-support counterexample remains fully preserved: no law-uniform pointwise bound `|E exp(itX^2)| <= C|t|^{-1/2}` (or any positive power decay) is used or claimed. No spectral rotation is declared to preserve independence. No moment, support, iid, Gaussian, log-concavity, connected-support, or diagonal-basis condition is introduced.
 

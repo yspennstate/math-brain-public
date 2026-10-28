@@ -4,7 +4,6 @@ Status: `PROVED_SUPPORTING_THEOREM / SHARP_ENDPOINT_OBSTRUCTION / PARTNER_APPLIE
 
 Run: `20260922T220724Z-account02-B01-qform-r28`.
 
-Control source consumed before the mathematics: `yspennstate/math-research-brain@3290f29a3c319f449c346431430151cccd34fb38`, OWNER CONTROL revision `2026-09-22.15`. The exact target is the bounded-density conjecture for arbitrary independent cap-one input densities and symmetric matrices with at least three eigenvalues of modulus at least one. The live corrections excluding arbitrary-joint coarea, positive conditional-fiber moments, pointwise single-phase Fresnel decay, and fixed-minor shortcuts were consumed. Execution is `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. New theorem: arbitrary-pivot physical-row Fourier gate
 
@@ -100,7 +99,6 @@ In particular
 
 This is a product-preserving averaged/distributional replacement exactly in the near-singular-pivot regime left open by the preceding B01 run. It does **not** assert an `L^1` characteristic-function bound or bounded density from one row alone.
 
-Source pin for the linear concentration premise and the exact-zero row context: `yspennstate/math-research-brain@3290f29a3c319f449c346431430151cccd34fb38:scheduled_tasks/work/shared/qform-density-2026-09-22/handoffs/account03/B01/account03-B01-20260922T202731Z-r18.md`, whose canonical proof source is `yspennstate/math-open-problems@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2`.
 
 ## 3. The `L^2` endpoint genuinely fails
 

@@ -11,7 +11,6 @@ Regularity: essential boundedness proved; continuity is **not** claimed by this 
 
 ## 1. Sources and live restrictions
 
-Fresh owner control was reread on `math-research-brain/main`: OWNER CONTROL revision `2026-09-22.15`; the later fixed-multiplicity audit/improvement objective remains controlling for this invocation. The live correction inbox was reread immediately before publication.
 
 The proof below does **not** use:
 - independence after an orthogonal rotation;

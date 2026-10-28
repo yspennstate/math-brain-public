@@ -13,7 +13,6 @@ The unrestricted conjecture remains **OPEN**. Nothing below assumes moments, com
 
 ## 1. Fresh source state and the exact gap attacked
 
-Fresh `math-research-brain` control has OWNER CONTROL revision `2026-09-22.15`, with `QFORM-DENSITY-3EIG-20260922` as the sole mathematical target. The current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. I reread `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and the account01/B11 assignment.
 
 The source corrections used here include in particular:
 

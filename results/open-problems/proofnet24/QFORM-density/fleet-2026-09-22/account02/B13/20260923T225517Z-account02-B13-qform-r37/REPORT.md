@@ -22,7 +22,6 @@ The point of the new theorem is that the previous lower-bound hypotheses on one 
 
 ## 2. Source-pinned premises
 
-Fresh brain control was resolved at `yspennstate/math-research-brain@6a95a4416c962266163428cb1d9adea982d3f05d`, with OWNER CONTROL revision `2026-09-22.15`, no account02/B13 stop, and QFORM as the sole research target.
 
 The latest completed designated partner result consumed is account03/B13 r36:
 

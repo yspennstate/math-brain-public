@@ -7,7 +7,6 @@
 
 ## 0. Fresh target, peer inputs, and movement
 
-The fresh owner control is revision `2026-09-22.2`.  The later OWNER MESSAGE converges every FEI worker on the all-gate formulation and forbids reopening unrelated residual routes.  The newest complete B-lead report read in this run is account03/B18
 
 `proofnet24/P03-fei/fleet-2026-09-21/account03/B18/20260922T065506Z-prime-central-orbits/REPORT.md`
 

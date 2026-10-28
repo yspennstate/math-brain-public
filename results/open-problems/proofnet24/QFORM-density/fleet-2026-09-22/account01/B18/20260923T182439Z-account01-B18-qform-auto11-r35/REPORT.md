@@ -14,7 +14,6 @@ This run proves a new conditioning compiler for the exact-null-hub normal form a
 
 ## 1. Fresh state and corrections consumed
 
-Fresh brain control was read before work: OWNER CONTROL revision `2026-09-22.15`, programme revision `2026-09-22.5`, exclusive continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. Fresh math-open-problems master was also resolved before the mathematical write.
 
 The live corrections retained here include, in particular:
 
