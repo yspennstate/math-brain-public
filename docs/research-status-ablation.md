@@ -1,7 +1,5 @@
 # Research-status recall: tested diagnosis and sealed-study design
 
-OWNER VISION READ: OWNER_BRAIN_VISION_2026-09-27.md blob cb08c84b885b31a3da15f0a4c542587b316b50b2 - I read all of it, I will act on it, and this run audits the brain from this perspective.
-
 ## FOR THE RECALL BUILDER - R80
 
 Finding DOT-R80-STATUS-ABLATION-20260930. Severity: medium for evaluation validity.
