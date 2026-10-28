@@ -36,7 +36,13 @@ has to sit above the context a session carries right after a compaction. Here th
 140,000 to 160,000 tokens: the summary, the kept tail of the conversation, the system prompt, tool
 definitions and hook output. A 200,000-token window tried for headless workers sat close enough to
 that baseline that sessions compacted every few minutes and the harness reported that auto-compact
-was thrashing. Measure the baseline before choosing a window.
+was thrashing. Measure the baseline before choosing a window: it is the input of the first model call
+after a compaction (input plus cache creation plus cache read in that call's usage).
+
+A window too close to the baseline also costs more per message. Headless sessions at 200,000 compacted
+every 15 messages or so (184 compactions in 2,843 messages) and read about 50,000 input-equivalent tokens a
+message; interactive sessions at 300,000 compacted every 56 messages (552 in 31,113) and read about 43,000,
+before counting the compaction calls themselves.
 
 ## Compacting by task, not only by size
 
@@ -58,6 +64,16 @@ Each hook has a cooldown, at most one fires per action, small routine commands s
 are logged to `~/.claude/brain_graph/compactions/hook_fires.jsonl`. `compact_math.py` selects hooks for
 mathematical work: a finished proof, a Lean compile or a resume pulls a compaction hook, an unrelated
 computation does not.
+
+A hook can only tell the session; it cannot compact it. For interactive sessions a `Stop` hook therefore
+starts a small windowless helper when the turn closed a task and the context is past 150,000 tokens. The
+helper waits until the session is idle and types `/compact` into that session's own console input buffer,
+never into the focused window. Idle means the last assistant turn has ended, no queued prompt or scheduled
+loop firing comes after it (a new turn shows first as a queue record; the user record reaches the transcript
+only with the first reply), and there has been no keyboard or mouse input for 15 seconds. It gives up if a
+new prompt arrives while it waits and fires at most once per 20 minutes per session. A `/compact` typed into
+a busy session is queued by the harness, not lost. Headless workers compact best by ending: one task per
+session, a NEXT line, and the next session seeded from it.
 
 Since no hook can compact a session, `compact_on_task_end.py` does it from outside. On `Stop`, when the
 turn closed a task (a checklist `done` command outside a heredoc, or the end-of-task line) and the
@@ -128,7 +144,9 @@ each time.
 - Busy sessions dropped (14 October). The backfill matched a transcript compaction to a hook row
   within 600 seconds by time alone, so a worker that compacted two or three times in ten minutes lost
   the later ones: 1,012 of 1,764 between 2 and 11 October. A match now needs 80 percent text overlap
-  within 120 seconds, and targeted saves restored the missing nodes.
+  within 120 seconds, and targeted saves restored the missing nodes. The cut sits in a measured gap: a
+  node's own compaction scored at least 0.811 (median 1.00), and the 3,070 other compactions of the same
+  sessions within 30 minutes scored at most 0.730 (99th percentile 0.53).
 - Wrong session (12 October). A subagent's compaction reaches the hook with the parent's session id
   and no agent id, and the agent's own compact record is appended only after `PostCompact` returns. A
   late pass and the sweep now file it under the right agent (84 repaired). Workflow stream agents had
@@ -149,9 +167,33 @@ each time.
 ## Measuring a compaction
 
 The `postTokens` field of a compaction record (median about 19,000 tokens) is not what the next call
-reads. The next call carries the summary plus the kept tail of the conversation and the hook output,
-about 165,000 tokens in the sessions checked. Measure both sides from the API usage of the calls
-around the boundary. Removed context is not billed tokens saved: that depends on the later calls,
-caching and the cost of writing the summary. Appendix I of the paper gives the aggregates (8,416
-compactions in 1,254 transcripts, a median reduction factor of 13.8) together with what they do and
-do not measure.
+reads. The next call carries the summary plus the kept tail of the conversation and the hook output.
+Measure both sides from the usage of the assistant messages around the boundary (input plus cache read
+plus cache write), counting each API call once by its message id, since a call is logged once per
+content block, and skipping sidechain records. Over 1,256 transcripts and 8,617 compactions (8,536
+measurable) the medians were:
+
+| | tokens |
+|---|---|
+| last model call before the compaction | 264,360 |
+| `postTokens` recorded by the harness | 18,980 |
+| first model call after the compaction | 166,019 (cache read 33,224, cache write 133,525) |
+
+The median ratio of the call before to the call after was 1.52 (1.63 for automatic compactions, 1.25
+for manual ones). A ratio built on `postTokens` comes out about nine times larger. Appendix I of
+`papers/math-brain-2026-10-24` tabulates the recorded fields, so its before-over-after median of 13.8
+describes the summary side only. Most of what is re-read after a compaction is fixed context, so
+shrinking the fixed context is the other lever, and unlike compacting more often it loses no working
+detail. Removed context is not billed tokens saved: a cost estimate prices the re-read tokens as cache
+reads and writes at their own rates, and adds the cost of writing the summary.
+
+## Checks
+
+- Coverage: compactions in the transcripts against nodes in the index, per runtime.
+- Reach: the share of anchors in the recall index and the share with graph edges. Both lag the nodes by
+  one index refresh and one graph build; if the graph build stops (on a starved disk, for example), new
+  anchors are still saved but get no edges.
+- Links: the share of new anchors with at least one related link, by day. A fall means the linker is
+  failing or starved.
+- The month-old test: ask recall, in ordinary words, about ten pieces of work from a month ago. The
+  compaction that did the work should come back with its request, its task and its files.
