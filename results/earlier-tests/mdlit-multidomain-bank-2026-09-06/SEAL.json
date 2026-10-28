@@ -1,0 +1,26 @@
+{
+ "schema": "mdlit-key-seal/v1",
+ "bank_version": "mdlit_v1",
+ "key_records": 4144,
+ "solver_items": 4144,
+ "merkle_root_rfc6962_over_canonical_key_records": "fa2691b8bc74d808662b71d556afa3a3eccbf1b702017cb86a941c624360f179",
+ "artifact_sha256": {
+  "BUILD_REPORT.json": "56e3e936489c0b57712639e2a93e28d258ff74475e6e5d18a3cee3f14609c590",
+  "PROTOCOL_MDLIT.md": "913cd0afa11e599bbfe2ed6526bd0d64b940253184eb5197e6766884da848a30",
+  "VALIDITY_REVIEW.json": "0810b97f2189d786b1340f3fd41f5c85e03f01dd93b88cde892b4180d1b93303",
+  "arxiv_harvest_md.py": "015fe69afd7d70ab8b4d80c319f94d231bafd74fb4cf55fbd174d28e3d583f9d",
+  "build_bank_md.py": "fefa9ee6e0822b1d4fef40114ac8acdbd73c58cb518e03babc3b58bb4bfbc944",
+  "extract_proofs_md.py": "2bcc02232ef4651c6b65baa8c37538f1536d066f582c2e95256a442629d14bc8",
+  "items/mdlit.jsonl": "2037ccede49ca515130cd2d65e712d52b70c24e6d14455528612b7ec4e54fda1",
+  "keys/NO_INGEST.md": "f2d9dd3bbdc4d7a59809d672949d56046a18fe3e5e8f944b87df6291dd703498",
+  "keys/mdlit_keys.jsonl": "491b08ff23d5f17fa58547040650fe8985184c3fab9ed53d7887de335aac3d5a",
+  "mutate_md.py": "d9945900345d5115b3dc27a147d9320ab9910cb332405274539fc42d53918835",
+  "review_sample_md.py": "787ba78ba1f07389295022ddc531d8d29b127f82a160f95ffce6364a6ad7bbb5",
+  "seal_md.py": "911f9065b0768f48d62ed0748db81c307d17e0e3d2e400c7f65fc323e81195f2"
+ },
+ "sealed_at": "2026-09-06T14:33:49+03:00",
+ "sealed_by": "campaign-2026-09-06-multidomain-bank-f4",
+ "recompute": "python seal_md.py --verify",
+ "what_this_seal_does": "commits the exact bytes of every key record and of every artifact in this lane, so later tampering is detectable by recomputation",
+ "what_this_seal_does_not_do": "it does not encrypt or access-control the keys; the quarantine directory is a convention"
+}
