@@ -136,6 +136,15 @@ without). The report reads this with two earlier tests: retrieving notes about a
 uses that result correctly. The per-item verdicts, the sample's item list and the per-item fault labels are not
 included.
 
+## codex-20h-audit-2026-09-07: a twenty-hour audit of the proof hook and the store's proof notes
+
+A Codex agent re-derived two earlier results from their rows by a second code path and read every note the proof hook
+can serve. The proof hook's pooled gain (63 against 53 of 74 flawed-proof pairs, p = 0.006) comes mostly from the
+easier tiers; on the hard tier it is 25 against 21 of 33 (p = 0.125). Twelve stored notes were wrong or stronger than
+the theorem, each shown so by a counterexample; `corrections.jsonl` holds every one before and after. The hook's
+wording, its note clipping and the Lean checker (which passed `sorry` and a false axiom) were fixed; the checker's
+controls are in the folder. A five-arm pilot on 12 items is reported as a pilot.
+
 ## bank10k-replication-2026-08-22: right notes against scrambled notes, 160 paired proof audits
 
 A replication of an 80-item test from 17 Aug on a second, difficulty-screened bank. A Haiku solver audited flawed and

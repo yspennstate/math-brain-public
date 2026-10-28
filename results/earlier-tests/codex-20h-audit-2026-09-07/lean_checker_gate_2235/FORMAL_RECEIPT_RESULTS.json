@@ -1,0 +1,109 @@
+{
+  "as_of": "2026-09-07T21:38:09.210716+00:00",
+  "compiler_version": "Lean (version 4.29.1, x86_64-w64-windows-gnu, commit f72c35b3f637c8c6571d353742168ab66cc22c00, Release)",
+  "compiler_sha256": "ab2545b2704f9d7845aa2bb1f410c6a7f28f04eb85e3708b4e82a4376b5e7fbb",
+  "rows": [
+    {
+      "case": "closed",
+      "source_sha256": "e56b7f1022f7971493ddd889611e7c11d4d4ebfd8ee1aa2c7bdf00736befe021",
+      "compiler_exit_code": 0,
+      "compiler_output": "'ProbeClosed' does not depend on any axioms\n",
+      "result": {
+        "status": "FORMAL_TARGET_VERIFIED",
+        "formal_target_verified": true,
+        "target": "ProbeClosed",
+        "source_reviewed": true,
+        "translation_reviewed": false,
+        "axioms": [],
+        "mathematical_falsity_established": false
+      },
+      "expected_status": "FORMAL_TARGET_VERIFIED",
+      "control_pass": true,
+      "legacy_would_call_this_PASS": true,
+      "seconds": 0.884
+    },
+    {
+      "case": "admitted",
+      "source_sha256": "3838a6d08c64a703471577a2c11320a24728eafd52113c125a96136a88944576",
+      "compiler_exit_code": 0,
+      "compiler_output": "<HOME>\\.codex-worktrees\\math-brain-20h-20260907\\formal_receipt_controls\\admitted.lean:1:8: warning: declaration uses `sorry`\n'ProbeAdmitted' depends on axioms: [sorryAx]\n",
+      "result": {
+        "status": "ADMITTED_TARGET",
+        "formal_target_verified": false,
+        "target": "ProbeAdmitted",
+        "source_reviewed": true,
+        "translation_reviewed": false,
+        "axioms": [
+          "sorryAx"
+        ],
+        "mathematical_falsity_established": false
+      },
+      "expected_status": "ADMITTED_TARGET",
+      "control_pass": true,
+      "legacy_would_call_this_PASS": true,
+      "seconds": 0.983
+    },
+    {
+      "case": "custom_axiom",
+      "source_sha256": "eb32c1d81da877a30d7cf93260628e6ab42aad7d4108426c23f9d77887b187c9",
+      "compiler_exit_code": 0,
+      "compiler_output": "'ProbeDependent' depends on axioms: [PrivateAssumption]\n",
+      "result": {
+        "status": "UNAPPROVED_AXIOMS",
+        "formal_target_verified": false,
+        "target": "ProbeDependent",
+        "source_reviewed": true,
+        "translation_reviewed": false,
+        "axioms": [
+          "PrivateAssumption"
+        ],
+        "mathematical_falsity_established": false
+      },
+      "expected_status": "UNAPPROVED_AXIOMS",
+      "control_pass": true,
+      "legacy_would_call_this_PASS": true,
+      "seconds": 0.855
+    },
+    {
+      "case": "unused_admission",
+      "source_sha256": "8eebdee87ff6539f4d2e625ac137d4186ae356cc31f0b6b2acbdaaa6bbc7ee1a",
+      "compiler_exit_code": 0,
+      "compiler_output": "<HOME>\\.codex-worktrees\\math-brain-20h-20260907\\formal_receipt_controls\\unused_admission.lean:1:8: warning: declaration uses `sorry`\n'ProbeIndependent' does not depend on any axioms\n",
+      "result": {
+        "status": "FORMAL_TARGET_VERIFIED",
+        "formal_target_verified": true,
+        "target": "ProbeIndependent",
+        "source_reviewed": true,
+        "translation_reviewed": false,
+        "axioms": [],
+        "mathematical_falsity_established": false
+      },
+      "expected_status": "FORMAL_TARGET_VERIFIED",
+      "control_pass": true,
+      "legacy_would_call_this_PASS": true,
+      "seconds": 1.611
+    },
+    {
+      "case": "missing_target",
+      "source_sha256": "e246e77304b4cc26189ddae2228c1fff2e6f0c8e632d6fcddfc0577210935e04",
+      "compiler_exit_code": 0,
+      "compiler_output": "Nat : Type\n",
+      "result": {
+        "status": "TARGET_EVIDENCE_MISSING_OR_AMBIGUOUS",
+        "formal_target_verified": false,
+        "target": "ProbeMissing",
+        "source_reviewed": true,
+        "translation_reviewed": false,
+        "axioms": null,
+        "mathematical_falsity_established": false
+      },
+      "expected_status": "TARGET_EVIDENCE_MISSING_OR_AMBIGUOUS",
+      "control_pass": true,
+      "legacy_would_call_this_PASS": true,
+      "seconds": 11.27
+    }
+  ],
+  "all_controls_pass": true,
+  "scope": "Manually reviewed fixtures; stdout parsing is not an adversarial untrusted-source certificate",
+  "production_deployed": false
+}
