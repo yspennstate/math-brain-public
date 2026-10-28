@@ -114,6 +114,13 @@ The 130 locate questions put to Sonnet 5 four ways: the served block plus file t
 (100), the served block alone (129), nothing (3). Paired, both against files is 30 to 0 (p = 1.9e-9); the files arm
 lost by searching the wrong place, at three times the cost. `python recompute.py` rebuilds the table.
 
+## trap-bank-four-arms-2026-09-25: superseded, unanswerable and join questions, four arms
+
+34 questions an agent working from a changing record gets wrong in three ways: an older answer a later entry
+replaced, a question the record cannot answer, and an answer split across two places. Right out of 34: brain
+connected 31, records with the recall tool run by hand 31, records alone 30, nothing 10. The records decide the score;
+the connection adds nothing measurable here and costs about twice as much. README only: the items are about private records.
+
 ## mathbrain-10d-landings-2026-09-24: twenty landings of the math hook in five days
 
 The twenty packages of the 24-28 September campaign that changed the live math hook, in the order the file hashes fix:

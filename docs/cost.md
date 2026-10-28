@@ -81,6 +81,29 @@ not solutions, and the referee pass in
 [2026-10-10-two-agents-cross-family-referee](../results/frontier-2026-10/2026-10-10-two-agents-cross-family-referee/README.md)
 is what sorted those claims.
 
+## Building and testing the store (6-17 October 2026)
+
+For twelve days headless Claude sessions built the store and ran its tests: 357 runs, 347 hours of
+session time, 2.91 billion cache-read tokens, 171 million cache-write tokens and 28.3 million output
+tokens, 18.5 million of them thinking. At list prices that is 2,495.52 dollars. Priced as if every
+input token were uncached it would have been 12,705.81, so prompt caching took 80 percent off. The
+runs went through subscriptions, so these are list-price equivalents, not bills.
+
+142 of the runs ended flagged as errors, mostly at their turn cap or at an account limit, and they
+carried 77 percent of the spend. A flagged run is not necessarily wasted, since the workers wrote to
+disk as they went, but a turn cap set too low spends most of a run's tokens on context it then drops.
+
+## What better recall bought
+
+Most of the gain came from how the store prints, not from what it holds. The same retrieval scored
+34 of 100 printed as snippets, 83 printed as whole cards with their identifiers and links, and 86 when
+the agent gave two or three wordings in one call. On 64 questions about the agents' own past work the
+answer came first for 24 in September and for 46 in October. On 1,000 items that each need a fact held
+as a card, agents answered 538 without the brain and all 1,000 with it. Walking a card's links reached
+the same answers as searching again on about half the uncached tokens, and in the three-arm test a
+brain-arm session cost 58 percent of a repository-arm session. Section 9 of
+[the paper](../papers/math-brain-2026-10-24) gives each test in full, the losses included.
+
 ## Long sessions
 
 A long session re-reads its whole context on every call. One measured session on 9 October carried
