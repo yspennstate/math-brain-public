@@ -283,6 +283,14 @@ class InferenceConfig:
         }
 
 
+# A configuration may lower the solver-response budgets but not lift them past these (scheduled audit
+# B17-R79-EVALUATION-RESPONSE-LIMITS-UNBOUNDED-20260929: only depth had a ceiling). The shipped
+# configurations use 512 KiB, 12,000 nodes, 16 KiB strings and 10**12.
+RESPONSE_BYTES_CEILING = 8 * 1024 * 1024
+RESPONSE_NODES_CEILING = 1_000_000
+RESPONSE_INTEGER_CEILING = 10**18
+
+
 @dataclass(frozen=True, slots=True)
 class ResponseLimits:
     maximum_bytes: int
@@ -299,6 +307,17 @@ class ResponseLimits:
         _integer(self.maximum_integer_abs, "maximum response integer magnitude", minimum=1)
         if self.maximum_depth > 64:
             raise ValueError("maximum response depth may not exceed 64")
+        if self.maximum_bytes > RESPONSE_BYTES_CEILING:
+            raise ValueError(f"maximum response bytes may not exceed {RESPONSE_BYTES_CEILING}")
+        if self.maximum_nodes > RESPONSE_NODES_CEILING:
+            raise ValueError(f"maximum response nodes may not exceed {RESPONSE_NODES_CEILING}")
+        if self.maximum_integer_abs > RESPONSE_INTEGER_CEILING:
+            raise ValueError("maximum response integer magnitude may not exceed 10**18")
+        # a string or a node takes at least one byte of the response
+        if self.maximum_string_bytes > self.maximum_bytes:
+            raise ValueError("maximum response string bytes may not exceed maximum response bytes")
+        if self.maximum_nodes > self.maximum_bytes:
+            raise ValueError("maximum response nodes may not exceed maximum response bytes")
 
     def to_dict(self) -> dict[str, int]:
         return {
@@ -4118,6 +4137,45 @@ class BenefitDecision:
     worst_tier_regression: float
     failed_gates: tuple[str, ...]
 
+    @property
+    def status(self) -> str:
+        return benefit_status(self.failed_gates)
+
+    @property
+    def ineligible_gates(self) -> tuple[str, ...]:
+        return tuple(gate for gate in self.failed_gates if gate not in OUTCOME_GATES)
+
+
+# helped=False used to mean either "the brain did not help" or "this run cannot say" (scheduled audit
+# B08-R79-STRICT-BENEFIT-VERDICT-UNREACHABLE-20260929). These are the gates a run fails because of the effect
+# it measured; every other gate, including any added later, says the evidence cannot support a verdict.
+# On the current app-server transport two evidence gates fail whatever a run does: the output budget is sealed
+# as unenforced (the request can neither carry nor attest max_output_tokens), and the runner never verifies
+# the served model (its events carry no response-side attestation). Until a transport attests both, every
+# strict verdict is "ineligible", and the paired statistics are descriptive only.
+OUTCOME_GATES = frozenset(
+    {
+        "primary_delta",
+        "bootstrap_lower_bound",
+        "exact_randomization_p",
+        "nonnegative_pairs",
+        "clean_specificity",
+        "tier_regression",
+    }
+)
+BENEFIT_STATUSES = ("helped", "not_shown", "ineligible")
+
+
+def benefit_status(failed_gates: tuple[str, ...]) -> str:
+    """helped: every gate passed; not_shown: the evidence held and the effect missed a gate;
+    ineligible: an evidence gate failed, so the run cannot say whether the brain helped."""
+
+    if not failed_gates:
+        return "helped"
+    if all(gate in OUTCOME_GATES for gate in failed_gates):
+        return "not_shown"
+    return "ineligible"
+
 
 def decide_benefit(run: EvaluationRun) -> BenefitDecision:
     """Apply only the executable, config-hashed pre-registered gates."""
@@ -4373,6 +4431,7 @@ __all__ = [
     "accepted_runtime_config_digest",
     "aggregate",
     "batch_output_schema",
+    "benefit_status",
     "build_full_plan",
     "codex_evidence_for_batch",
     "codex_output_schema_json",

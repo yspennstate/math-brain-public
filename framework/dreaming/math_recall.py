@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the
-cards it links to (claude-4a88bc43, 11 Oct 2026; leaner printout claude-4a88bc43-f03, 12 Oct 2026).
+cards it links to (11 Oct 2026; leaner printout 12 Oct 2026).
 
     python ~/.claude/dreaming/math_recall.py "<words>" [--or "<other words>" ...] [--limit 8] [--chars 4000]
     python ~/.claude/dreaming/math_recall.py --id <card id> [<card id> ...]     walk: one card whole, every link
@@ -350,6 +350,183 @@ def strength_edges(edges, S, typed):
     return out, kinds
 
 
+# Possessive names (28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
+# "Janson's Inequality" indexes the term janson's, and the question "Janson inequality" (term janson) never meets it:
+# the card was not in the top 8 for that wording, while three cards about a different Janson result were. Of the
+# lexical index's 98,255 terms, 1,138 are possessives (talagrand's 64 cards, hall's 54, jensen's 116, janson's 19).
+# Each wording gets the other form of a name added: base -> base's when base's is at least 0.5 pct of base's own
+# document count and in 2 or more cards (that keeps group's, graph's, function's out), and base's -> base always.
+# Meta words are skipped. OFF by default since the 28 Oct A/B (mixed result); MATH_RECALL_POSSESSIVE=1 turns it on. Changing the two tokenizers instead would need the
+# prefilter index and the signal cache rebuilt.
+_POSS_SKIP = {"paper", "author", "agent", "page", "image", "wikipedia", "claim", "source", "model", "campaign",
+              "worker", "collector", "card", "lemma", "theorem"}
+
+
+def possessive_variants(queries, lex, ratio=0.005, min_df=2, swap=False):
+    from math_brain.retrieval import tokenize, _content_terms
+
+    def df(t):
+        b = lex.get(t)
+        if b is None:
+            return 0
+        try:
+            import fastrecall
+            return len(fastrecall._unints(b)) // 2
+        except Exception:
+            return 1
+    out = []
+    for q in queries:
+        terms = set(_content_terms(tokenize(q)))
+        extra = []
+        for t in sorted(terms):
+            if t.endswith("'s"):
+                base = t[:-2]
+                if len(base) >= 3 and base not in terms and base in lex:
+                    extra.append(base)
+            elif t not in _POSS_SKIP and (t + "'s") not in terms:
+                p = df(t + "'s")
+                if p >= min_df and p >= ratio * max(1, df(t)):
+                    extra.append(t + "'s")
+        if swap:   # one wording with each name in its other form, in place
+            if extra:
+                rep = {}
+                for e in extra:
+                    rep[e[:-2] if e.endswith("'s") else e + "'s"] = e
+                words = re.split(r"(\s+)", q)
+                sw = "".join(rep.get(w.lower(), w) if w.strip() else w for w in words)
+                if sw != q:   # nothing swapped in place (a name glued to punctuation): no wording rather than a sum
+                    out.append(sw)
+            continue
+        out.append(q + " " + " ".join(extra) if extra else q)
+    return out
+
+
+_TUP = re.compile(r"\(\s*-?\d+(?:\s*,\s*-?\d+)+\s*\)")
+_NUM = re.compile(r"(?<![\w.])-?\d+(?![\w.])")
+LIT_MAX = int(os.environ.get("MATH_RECALL_LITERAL", "3") or 0)   # cards the literal lane may put first; 0 turns it off
+LIT_POOL = 40   # a tuple set held by more cards than this says too little to pick one
+
+
+class _LitHit(object):
+    """A card the words did not rank but whose coordinate tuples hold every tuple of the wording."""
+    def __init__(self, node):
+        self.node, self.total_score, self.trace = node, 0.0, []
+
+
+def _lit_parts(text):
+    tups = [re.sub(r"\s+", "", t) for t in _TUP.findall(text or "")]
+    nums = set(_NUM.findall(_TUP.sub(" ", text or "")))
+    return tups, nums
+
+
+def _lit_index(P, nodes, store_path):
+    """card id -> (its tuples, the numbers outside them), for every current card with two or more tuples; cached per
+    store state beside the prepared state (about 2,000 cards of the 2026 store, most of them walk-on-a-strip counts)."""
+    import hashlib
+    import json
+    fr = _fast_module()
+    try:
+        # keyed to the prepared state when there is one: a state served behind the store (fastrecall STALE_S) is one
+        # card set, and the live stamp would rebuild this index on every call while the store moves
+        key = (repr(P.key) if getattr(P, "key", None) else
+               repr(fr._store_key(store_path)) if fr is not None else repr(os.stat(store_path)[6:9]))
+    except Exception:
+        key = repr(os.stat(store_path)[6:9])
+    cdir = (fr.cache_dir() if fr is not None else os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache"))
+    path = os.path.join(cdir, "literal_%s.json" % hashlib.sha1((key + "|v1").encode()).hexdigest()[:16])
+    try:
+        with open(path, encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        pass
+    if nodes is None:
+        nodes = P.all_nodes()
+    idx = {}
+    for n in nodes:
+        tups, nums = _lit_parts(n.body)
+        if len(tups) >= 2:
+            idx[n.id] = [sorted(set(tups)), sorted(nums)]
+    try:
+        os.makedirs(cdir, exist_ok=True)
+        tmp = path + ".%d.tmp" % os.getpid()
+        with open(tmp, "w", encoding="utf-8") as f:
+            json.dump(idx, f)
+        os.replace(tmp, path)
+        # one file per store state: keep the newest four (29 had piled up by 27 Oct, about 0.47 MB each)
+        old = sorted((os.path.join(cdir, f) for f in os.listdir(cdir)
+                      if f.startswith("literal_") and f.endswith(".json")), key=os.path.getmtime)[:-4]
+        for f in old:
+            try:
+                os.remove(f)
+            except OSError:
+                pass
+    except OSError:
+        pass
+    return idx
+
+
+def literal_lane(queries, P, nodes, title, superseded_by, store_path, found_by=None):
+    """[(card id, wording number)]: for a wording with two or more coordinate tuples, the current cards whose tuples
+    hold every one of them in any order (the word search matches tuples a pair of numbers at a time, so a card listing
+    the same sites in another order was missed; 27 Oct). Best first: more of the wording's other numbers matched, fewer
+    tuples beyond the wording's; at most LIT_MAX cards in all, none when more than LIT_POOL cards qualify."""
+    if LIT_MAX <= 0:
+        return []
+    want = []
+    for qi, q in enumerate(queries, 1):
+        tups, nums = _lit_parts(q)
+        qt = set(tups) - {"(0,0)"}
+        if len(qt) >= 2:
+            want.append((qi, qt, nums))
+    if not want:
+        return []
+    idx = _lit_index(P, nodes, store_path)
+    out, seen = [], set()
+    for qi, qt, nums in want:
+        pool = []
+        for cid, (ct, cn) in idx.items():
+            if cid in superseded_by:
+                continue
+            cts = set(ct)
+            if qt <= cts:
+                nm = len(nums & set(cn))
+                extra = len(cts - qt - {"(0,0)"})
+                wr = min([r for q, r in (found_by or {}).get(cid, []) if q == qi] or [99])
+                # a card the words already put first stays first: the literal match agrees with it
+                pool.append((0 if wr == 1 else 1, -(nm - extra), -nm, wr, cid))
+        if not pool or len(pool) > LIT_POOL:
+            continue
+        for *_k, cid in sorted(pool):
+            if cid not in seen and len(out) < LIT_MAX:
+                seen.add(cid)
+                out.append((cid, qi))
+    return out
+
+
+TIP_MIN = int(os.environ.get("MATH_RECALL_TUPLE_TIP", "3") or 0)   # 0 turns the tip off
+
+
+def tuple_tip(queries, hits, P, nodes, store_path):
+    """One hint line, or "": no wording names a site tuple other than (0,0), yet TIP_MIN or more of the printed cards list them.
+    Such cards (most of them walk-on-a-strip counts) differ only by their site lists, so words alone cannot pick one;
+    the tuple lane can, once the sites are in a wording (27 Oct: an agent asked for 'strip width 3, length 13, avoid
+    sites' without naming the sites and got a neighbour's card)."""
+    if TIP_MIN <= 0 or not hits:
+        return ""
+    if any(set(_lit_parts(q)[0]) - {"(0,0)"} for q in queries):   # any named site: the agent knows its sites
+        return ""
+    try:
+        idx = _lit_index(P, nodes, store_path)
+    except Exception:
+        return ""
+    n = sum(1 for h in hits if h.node.id in idx)
+    if n < TIP_MIN:
+        return ""
+    return ("TUPLE TIP (a hint): %d of these cards list coordinate tuples and differ by them. If you know the sites, "
+            "write them as (x,y) tuples in a wording, e.g. (1,0), (2,1): the tuple lane then puts first the card that "
+            "lists exactly those, in any order." % n)
+
+
 def main(argv=None):
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(
@@ -465,6 +642,12 @@ def main(argv=None):
                 why_kinds.update(learned_kinds)
                 why_edges = dict(edge_by_id)
                 why_edges.update({e.id: e for e in edges_s[len(edges):]})
+        _poss = os.environ.get("MATH_RECALL_POSSESSIVE", "0")
+        if P is not None and _poss == "1":
+            queries = possessive_variants(queries, P.s.get("lex") or {})
+        elif P is not None and _poss == "swap":   # the other form as its own wording: fused by rank, never summed
+            queries = queries + [v for v in possessive_variants(queries, P.s.get("lex") or {}, swap=True)
+                                 if v not in queries]
         found_by, best, results = {}, {}, []
         for qi, q in enumerate(queries, 1):
             kw = dict(edges=edges_s, limit=a.limit * 2, min_support_score=0.0, min_margin=0.0, graph_depth=a.depth,
@@ -484,8 +667,20 @@ def main(argv=None):
                 best.setdefault(h.node.id, h)
         def order(h):   # best rank, then found by more wordings, then the earlier wording; the id breaks exact ties
             fb = found_by[h.node.id]
+            if h.node.id in lit_pos:   # the literal lane's own order, ahead of every word-ranked card
+                key = (lit_pos[h.node.id] - 1000, 0, 0)
+                return key if a.full else key + (h.node.id,)
             key = (min(r for _, r in fb), -len(fb), min(q for q, _ in fb))
             return key if a.full else key + (h.node.id,)
+        lit = literal_lane(queries, P, nodes, title, superseded_by, a.store, found_by)
+        for cid, qi in lit:   # cards that hold every coordinate tuple of a wording go first, best literal match first
+            if cid not in best:
+                node = by_id[cid] if by_id is not None else next((n for n in nodes if n.id == cid), None)
+                if node is None:
+                    continue
+                best[cid] = _LitHit(node)
+            found_by[cid] = [(qi, 0)] + [x for x in found_by.get(cid, []) if x[1] > 0]
+        lit_pos = {c: j for j, (c, _q) in enumerate(lit)}
         hits = sorted(best.values(), key=order)[:a.limit]
         hit_learned = int(os.environ.get("MATH_RECALL_LEARNED", "2") or 0)
         if S is not None and not a.list:
@@ -513,6 +708,9 @@ def main(argv=None):
                                                          float(getattr(h, "total_score", 0.0) or 0.0)))
             if len(queries) > 1:
                 print("    found by wording %s" % ", ".join("%d (rank %d)" % qr for qr in found_by[n.id]))
+            if n.id in lit_pos:
+                print("    found by its coordinate tuples: it lists every tuple of wording %d, in any order"
+                      % found_by[n.id][0][0])
             for line in why_lines(h, title, why_edges, why_kinds, sid, compact=not a.full, S=S):
                 print("    " + line)
             body = " ".join((n.body or "").split())
@@ -544,6 +742,9 @@ def main(argv=None):
                 note = " (superseded by %s)" % sid(superseded_by[other]) if other in superseded_by else ""
                 print("    ~ used together (no link of its own; learned from use): %s (id: %s)%s %s"
                       % ((title.get(other) or other)[:160], sid(other), note, ms.tag(info)))
+        tip = tuple_tip(queries, hits, P, nodes, a.store)
+        if tip:
+            print(tip)
         if weak:
             from math_brain.retrieval import tokenize, _content_terms
             corpus_low = P.corpus_low() if P is not None else "\n".join(

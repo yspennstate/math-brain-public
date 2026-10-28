@@ -107,6 +107,31 @@ def log(folder, line):
         pass
 
 
+_RUN_LOCK = []
+
+
+def hold_run_lock(folder):
+    """True when this process now holds prebuild.lock (kept until exit); False when another live run holds it."""
+    try:
+        os.makedirs(folder, exist_ok=True)
+        fh = open(os.path.join(folder, "prebuild.lock"), "a+b")
+    except OSError:
+        return True  # the lock is a courtesy; a folder we cannot write is the old behaviour
+    try:
+        if os.name == "nt":
+            import msvcrt
+            fh.seek(0)
+            msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except OSError:
+        fh.close()
+        return False
+    _RUN_LOCK.append(fh)
+    return True
+
+
 def main(argv):
     if "--status" in argv:
         mr_folder = os.environ.get("MATH_RECALL_CACHE_DIR") or os.path.join(HERE, "cache", "math_recall")
@@ -117,6 +142,12 @@ def main(argv):
                     print(line.rstrip())
         except OSError:
             pass
+        return 0
+    # One run at a time. The task's 10-minute limit kills the wscript wrapper but not this child, so the task's
+    # IgnoreNew policy never sees a long build and starts another every 5 minutes: on 27 Oct 22:47-23:58 five to seven
+    # builds ran at once on a starved disk, each 1.5-2 h, and their "opens" (written only at the end) never reached
+    # the stand-aside check below. The OS drops the lock when the holder exits, crash or kill included.
+    if not hold_run_lock(os.environ.get("MATH_RECALL_CACHE_DIR") or os.path.join(HERE, "cache", "math_recall")):
         return 0
     proc = below_normal()
     t0 = time.time()
@@ -148,16 +179,18 @@ def main(argv):
         state["last_result"] = "standing aside: %d opens in the last hour" % len(recent)
         write_state(state_path, state)
         return 0
-    state["opens"] = recent + [round(time.time(), 1)]
+    # only a build counts toward the six an hour; a load of a state under 15 min behind the store is cheap
     t1 = time.time()
-    P = fr.open_prepared(store, R, mr.derive_tool, mr.__file__)
+    P = fr.open_prepared(store, R, mr.derive_tool, mr.__file__, stale_s=900)
+    if fr.STATUS.get("built"):
+        state["opens"] = recent + [round(t1, 1)]
     st = dict(fr.STATUS)
     secs = time.time() - t1
     if P is not None and st.get("fast"):
         after = hashlib.sha256(("%s|%s|%s|%s|%s" % (
             sys.version, fr._code_key(R, mr.__file__), fr._env_key(),
             os.path.normcase(os.path.abspath(store)), fr._store_key(store))).encode("utf-8")).hexdigest()[:24]
-        result = "built" if st.get("built") else "loaded"
+        result = ("built" if st.get("built") else "loaded") + (", %d s behind the store" % st["stale_s"] if st.get("stale_s") else "")
         if after == sig:
             state["good_sig"], state["path"] = sig, st.get("path")
         else:

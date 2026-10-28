@@ -7,7 +7,9 @@ finding classes and locations so a detected credential is not echoed into logs.
 
 from __future__ import annotations
 
+import bisect
 import fnmatch
+import json
 import re
 import tomllib
 from collections.abc import Iterable
@@ -56,14 +58,56 @@ _FILE_URI_RE = re.compile(r"\bfile://(?:localhost/)?[^\s'\"`<>]+", re.IGNORECASE
 _POSIX_ABSOLUTE_RE = re.compile(
     r"(?<![:/A-Za-z0-9_])/(?!/)(?:[A-Za-z0-9._~-]+/)+[A-Za-z0-9._~+-]+"
 )
+_ABSOLUTE_PATTERNS = (
+    _WINDOWS_ABSOLUTE_RE,
+    _UNC_ABSOLUTE_RE,
+    _FILE_URI_RE,
+    _POSIX_ABSOLUTE_RE,
+)
+
+# A JSON file is scanned twice: as its raw text, and as the strings it holds once their escapes are decoded. The raw
+# pass alone misses a correctly escaped UNC path (four backslashes in the file), a path written with escaped slashes
+# and anything spelled with \u escapes. The decoded pass only adds findings: it never removes a raw one, because an
+# under-escaped path in hand-written JSON (a share name starting with b, f, n, r or t after a single backslash) is
+# visible only to the raw pass; it decodes to a control character and no path.
+_JSON_SUFFIXES = (".json", ".jsonl", ".ipynb")
+# JSON forbids raw control characters inside a string, so on a file that parses this matches exactly its strings
+_JSON_STRING_RE = re.compile(r'"(?:[^"\\\x00-\x1f]|\\.)*"')
 
 _SECRET_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     ("private-key", re.compile(r"-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----")),
-    ("aws-access-key", re.compile(r"\bAKIA[0-9A-Z]{16}\b")),
+    # AWS access key ids: AKIA long-term, ASIA temporary (STS)
+    ("aws-access-key", re.compile(r"\b(?:AKIA|ASIA)[0-9A-Z]{16}\b")),
+    # the conventional AWS credential fields with a value assigned, in env, JSON, YAML or TOML form; a
+    # secret key or session token has no fixed prefix, so the field name is what refuses it
+    (
+        "aws-credential-field",
+        re.compile(
+            r"(?<![A-Za-z0-9])aws_(?:access_key_id|secret_access_key|session_token|security_token)"
+            r"['\"]?\s*[:=]\s*['\"]?[^\s,'\";]{8,}",
+            re.IGNORECASE,
+        ),
+    ),
+    ("google-oauth-client-secret", re.compile(r"\bGOCSPX-[A-Za-z0-9_-]{24,}")),
+    ("huggingface-token", re.compile(r"\bhf_[A-Za-z0-9]{30,}\b")),
+    ("telegram-bot-token", re.compile(r"\b[0-9]{8,10}:AA[A-Za-z0-9_-]{33}\b")),
     ("github-token", re.compile(r"\bgh[pousr]_[A-Za-z0-9]{24,}\b")),
+    # fine-grained personal access tokens (github_pat_ + 22 + _ + 59); a looser tail so a
+    # truncated or re-wrapped token still refuses the export
+    ("github-fine-grained-token", re.compile(r"\bgithub_pat_[A-Za-z0-9_]{22,}")),
     ("provider-token", re.compile(r"\bsk-(?:proj-|ant-)?[A-Za-z0-9_-]{20,}\b")),
     ("google-api-key", re.compile(r"\bAIza[0-9A-Za-z_-]{35}\b")),
     ("slack-token", re.compile(r"\bxox[baprs]-[A-Za-z0-9-]{20,}\b")),
+    # an incoming-webhook, workflow or trigger URL is the credential itself: whoever holds it can post to the channel
+    # (account04/B15, B15-R79-SLACK-INCOMING-WEBHOOK-URL-UNSCANNED-20260929-01: the host is public, so no other check
+    # refused it). Two path segments at least, so a bare documentation host does not fire.
+    (
+        "slack-webhook",
+        re.compile(
+            r"\bhooks\.slack(?:-gov)?\.com/(?:services|workflows|triggers)/[A-Za-z0-9_-]{6,}/[A-Za-z0-9_-]{6,}",
+            re.IGNORECASE,
+        ),
+    ),
     (
         "jwt",
         re.compile(r"\beyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]{8,}\b"),
@@ -71,8 +115,9 @@ _SECRET_PATTERNS: tuple[tuple[str, re.Pattern[str]], ...] = (
     (
         "assigned-secret",
         re.compile(
+            # the optional quote after the name admits a JSON key ("password": "...")
             r"\b(?:api[_-]?key|access[_-]?token|secret|password|credential)\b"
-            r"\s*[:=]\s*['\"]?[^\s,'\";]{8,}",
+            r"['\"]?\s*[:=]\s*['\"]?[^\s,'\";]{8,}",
             re.IGNORECASE,
         ),
     ),
@@ -122,6 +167,66 @@ def _finding(
     return ScanFinding(code, path, line, column, message)
 
 
+def _line_findings(
+    line: str,
+    *,
+    category_context: bool,
+    policy: ScanPolicy,
+) -> list[tuple[str, int, str]]:
+    """(code, zero-based column, message) for each finding in one line; the matched text is never kept."""
+
+    found: list[tuple[str, int, str]] = []
+    for pattern in _ABSOLUTE_PATTERNS:
+        for match in pattern.finditer(line):
+            found.append(("absolute-path", match.start(), "absolute local path is not publishable"))
+    for kind, pattern in _SECRET_PATTERNS:
+        for match in pattern.finditer(line):
+            found.append(("secret", match.start(), f"possible {kind} detected; matched value suppressed"))
+    if category_context:
+        return found
+    for category in sorted(policy.forbidden_categories):
+        pattern = re.compile(
+            rf"(?<![A-Za-z0-9_]){re.escape(category)}(?![A-Za-z0-9_])",
+            re.IGNORECASE,
+        )
+        for match in pattern.finditer(line):
+            found.append(("forbidden-category", match.start(), "content contains a forbidden category marker"))
+    return found
+
+
+def _decoded_json_strings(text: str, normalized_path: str):
+    """(line, zero-based start, zero-based end, decoded) for each string of a parsing JSON file that holds an escape.
+
+    Lines are counted as str.splitlines counts them, like the raw pass. A file that does not parse yields nothing and
+    is scanned raw only."""
+
+    if not normalized_path.casefold().endswith(_JSON_SUFFIXES):
+        return
+    try:
+        if normalized_path.casefold().endswith(".jsonl"):
+            for row in text.splitlines():
+                if row.strip():
+                    json.loads(row)
+        else:
+            json.loads(text)
+    except (ValueError, RecursionError):
+        return
+    starts = [0]
+    for piece in text.splitlines(keepends=True):
+        starts.append(starts[-1] + len(piece))
+    for match in _JSON_STRING_RE.finditer(text):
+        literal = match.group(0)
+        if "\\" not in literal:
+            continue
+        try:
+            decoded = json.loads(literal)
+        except ValueError:
+            continue
+        index = bisect.bisect_right(starts, match.start()) - 1
+        line_start = starts[index]
+        yield index + 1, match.start() - line_start, match.end() - line_start, decoded
+
+
 def scan_text(
     text: str,
     *,
@@ -149,50 +254,28 @@ def scan_text(
                 )
                 break
 
-    absolute_patterns = (
-        _WINDOWS_ABSOLUTE_RE,
-        _UNC_ABSOLUTE_RE,
-        _FILE_URI_RE,
-        _POSIX_ABSOLUTE_RE,
-    )
+    raw_columns: dict[int, list[tuple[str, int]]] = {}
     for line_number, line in enumerate(text.splitlines(), start=1):
-        for pattern in absolute_patterns:
-            for match in pattern.finditer(line):
+        for code, column, message in _line_findings(line, category_context=category_context, policy=policy):
+            findings.append(_finding(code, normalized_path, line_number, column + 1, message))
+            raw_columns.setdefault(line_number, []).append((code, column))
+    for line_number, start, end, decoded in _decoded_json_strings(text, normalized_path):
+        # a kind the raw pass already reported inside this string is not reported twice
+        reported = {code for code, column in raw_columns.get(line_number, ()) if start <= column < end}
+        for decoded_line in decoded.splitlines():
+            for code, _column, message in _line_findings(
+                decoded_line, category_context=category_context, policy=policy
+            ):
+                if code in reported:
+                    continue
+                reported.add(code)
                 findings.append(
                     _finding(
-                        "absolute-path",
+                        code,
                         normalized_path,
                         line_number,
-                        match.start() + 1,
-                        "absolute local path is not publishable",
-                    )
-                )
-        for kind, pattern in _SECRET_PATTERNS:
-            for match in pattern.finditer(line):
-                findings.append(
-                    _finding(
-                        "secret",
-                        normalized_path,
-                        line_number,
-                        match.start() + 1,
-                        f"possible {kind} detected; matched value suppressed",
-                    )
-                )
-        if category_context:
-            continue
-        for category in sorted(policy.forbidden_categories):
-            pattern = re.compile(
-                rf"(?<![A-Za-z0-9_]){re.escape(category)}(?![A-Za-z0-9_])",
-                re.IGNORECASE,
-            )
-            for match in pattern.finditer(line):
-                findings.append(
-                    _finding(
-                        "forbidden-category",
-                        normalized_path,
-                        line_number,
-                        match.start() + 1,
-                        "content contains a forbidden category marker",
+                        start + 1,
+                        message + " (in a JSON string, once its escapes are decoded)",
                     )
                 )
     return tuple(findings)

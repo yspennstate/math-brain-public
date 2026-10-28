@@ -13,7 +13,7 @@ import json
 import re
 import secrets
 from concurrent.futures import FIRST_COMPLETED, Future, ThreadPoolExecutor, wait
-from dataclasses import dataclass, replace
+from dataclasses import dataclass, field, replace
 from pathlib import Path
 from typing import Any
 
@@ -279,19 +279,33 @@ class PreparedChallengeStudy:
         }
 
 
+_EVIDENCE_DIGEST = re.compile(r"sha256:[0-9a-f]{64}")
+_BUILT_BY_EXECUTION = object()
+"""Set only by execute_prepared_study, after it has re-read every terminal record and selected outcome."""
+
+
 @dataclass(frozen=True, slots=True)
 class StudyExecution:
-    """Fully persisted and only then unblinded/scored study evidence."""
+    """Fully persisted and only then unblinded/scored study evidence.
+
+    Constructing one checks its shape: canonical digests, unique slot ids, a complete terminal universe, and matching
+    terminal and outcome slots. Whether its digests are the ledger's is a separate fact. The summary says the ledger is
+    verified only when execute_prepared_study built the object (it reads every record back before building it) or when
+    verify_against_ledger has just rechecked it against the ledger. Until 29 Sep the summary said verified for any
+    object the constructor accepted, and the constructor accepted repeated slot ids and non-digest strings (scheduled
+    audit account03/B09, B09-R79-STUDYEXECUTION-VERIFIED-SUMMARY-UNBOUND-20260929).
+    """
 
     run: EvaluationRun
     ledger_digest: str
     terminal_record_digests: tuple[tuple[str, str], ...]
     outcome_object_digests: tuple[tuple[str, str], ...]
+    built_by: object = field(default=None, compare=False, repr=False)
 
     def __post_init__(self) -> None:
         if not isinstance(self.run, EvaluationRun):
             raise ValueError("study execution requires an exact EvaluationRun")
-        if not re.fullmatch(r"sha256:[0-9a-f]{64}", self.ledger_digest):
+        if not isinstance(self.ledger_digest, str) or not _EVIDENCE_DIGEST.fullmatch(self.ledger_digest):
             raise ValueError("study execution ledger digest is invalid")
         if len(self.terminal_record_digests) != len(self.run.plan.spec.required_pair_ids) * 2:
             raise ValueError("study execution terminal universe is incomplete")
@@ -299,13 +313,50 @@ class StudyExecution:
             slot for slot, _digest in self.outcome_object_digests
         ):
             raise ValueError("terminal and outcome slot universes differ")
+        slots = [slot for slot, _digest in self.terminal_record_digests]
+        if len(set(slots)) != len(slots) or not all(isinstance(slot, str) and slot for slot in slots):
+            raise ValueError("study execution slot ids must be unique nonempty text")
+        for _slot, digest in self.terminal_record_digests + self.outcome_object_digests:
+            if not isinstance(digest, str) or not _EVIDENCE_DIGEST.fullmatch(digest):
+                raise ValueError("study execution record digests must be sha256: followed by 64 lowercase hex digits")
 
-    def privacy_safe_summary(self) -> dict[str, Any]:
+    def verify_against_ledger(self, ledger: AttemptLedger) -> bool:
+        """Recheck this evidence against the durable ledger, reading only: the same ledger, the same ordered slot
+        universe, and for every slot a terminal state whose terminal record and selected outcome carry exactly these
+        digests."""
+
+        if not isinstance(ledger, AttemptLedger) or ledger.ledger_digest != self.ledger_digest:
+            return False
+        if tuple(commitment.slot_id for commitment in ledger.slots) != tuple(
+            slot for slot, _digest in self.terminal_record_digests
+        ):
+            return False
+        for (slot, terminal_digest), (_slot, outcome_digest) in zip(
+            self.terminal_record_digests, self.outcome_object_digests
+        ):
+            if ledger.state(slot) not in {SlotState.RETURNED, SlotState.FAILED}:
+                return False
+            stored = ledger.selected_outcome(slot)
+            if stored is None or stored.object_digest != outcome_digest:
+                return False
+            # the slot is terminal, so finalize returns its existing record and writes nothing
+            if ledger.finalize(stored).record_digest != terminal_digest:
+                return False
+        return True
+
+    def privacy_safe_summary(self, ledger: AttemptLedger | None = None) -> dict[str, Any]:
+        if self.built_by is _BUILT_BY_EXECUTION:
+            verified, how = True, "execute_prepared_study"
+        elif ledger is not None and self.verify_against_ledger(ledger):
+            verified, how = True, "rechecked against the ledger"
+        else:
+            verified, how = False, "not verified"
         result = summarize_run(self.run)
         result.update(
             {
                 "attempt_ledger_digest": self.ledger_digest,
-                "attempt_ledger_verified": True,
+                "attempt_ledger_verified": verified,
+                "attempt_ledger_verification": how,
                 "outcome_object_digests": dict(self.outcome_object_digests),
                 "terminal_record_digests": dict(self.terminal_record_digests),
             }
@@ -690,6 +741,7 @@ def execute_prepared_study(
         ledger_digest=ledger.ledger_digest,
         terminal_record_digests=tuple(terminal_digests),
         outcome_object_digests=tuple(outcome_digests),
+        built_by=_BUILT_BY_EXECUTION,
     )
 
 
@@ -714,8 +766,10 @@ def summarize_run(run: EvaluationRun) -> dict[str, Any]:
     return {
         "brain_off_primary": off_score.primary,
         "brain_on_primary": on_score.primary,
+        "benefit_status": decision.status,
         "failed_gates": list(decision.failed_gates),
         "helped_strict": decision.helped,
+        "ineligible_gates": list(decision.ineligible_gates),
         "infrastructure_complete": run.infrastructure_complete,
         "nonnegative_pairs": decision.nonnegative_pairs,
         "pair_deltas": {
