@@ -27,6 +27,16 @@ The pages in this folder, grouped by what you came to do.
 | [brain-building/keep-working-stop-hook.md](brain-building/keep-working-stop-hook.md) | stop hooks that send an agent back to its open work after a compaction or during a timed job, and the rules that keep them from looping |
 | [cost.md](cost.md) | what the brain costs in tokens, each figure beside the accuracy it bought |
 
+## Notes that reach an agent while it works
+
+| page | what it covers |
+|---|---|
+| [../framework/hooks/README.md](../framework/hooks/README.md) | the hook templates, the wake ritual at session start and how the bootstrap installs them |
+| [../framework/docs/NOTES_ARE_HINTS.md](../framework/docs/NOTES_ARE_HINTS.md) | why a served note is a hint and not a verdict, and the one line of confidence each note carries |
+| [../framework/docs/mistake-first-recall.md](../framework/docs/mistake-first-recall.md) | ranking the records of past mistakes ahead of ordinary notes when a prompt comes near them |
+| [../framework/dreaming/graph_fire/DESIGN.md](../framework/dreaming/graph_fire/DESIGN.md) | the layer that decides when a stored warning fires, including on the agent's own outgoing text |
+| [../framework/docs/heeding-gates.md](../framework/docs/heeding-gates.md) | what to do when a warning fires and is read past: gates that ask for an answer instead of showing it again |
+
 ## What the tests measured
 
 | page | what it covers |
