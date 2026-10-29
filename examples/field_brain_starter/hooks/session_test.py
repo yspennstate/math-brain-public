@@ -12,6 +12,7 @@ session is the ordinary one:
     record written     new_record.py    the agent files the lesson
     stop               request_hook     --stop links the new record to the request as produced
     same request       request_hook     the second ask says it was asked before and what it produced
+    wiring             print_wiring     the Claude Code and Codex blocks parse and name all five hooks
 
 Everything runs on a scratch copy of memory/ with its own state folder and ledger, so the real store is not
 touched. Exit 0 when every step behaves, 1 otherwise.
@@ -124,6 +125,18 @@ def main():
     said = context(run("hooks/request_hook.py", dict(prompt, session_id=session + "-later"), env=env))
     check("request: asked again, it says so and names what the first ask produced",
           "asked 2x" in said and "produced" in said, said)
+
+    for runtime in ("claude", "codex"):
+        out = subprocess.run([sys.executable, os.path.join(HERE, "print_wiring.py"), "--runtime", runtime],
+                             capture_output=True, text=True, timeout=60).stdout
+        try:
+            wired = json.dumps(json.loads(out)["hooks"])
+        except (ValueError, KeyError):
+            wired = ""
+        missing = [h for h in ("wake_hook", "recall_hook", "request_hook", "scar_hook", "write_back_hook")
+                   if h + ".py" not in wired]
+        check("wiring: the %s block parses and names all five hooks" % runtime, wired and not missing,
+              "missing " + ", ".join(missing) if wired else out[:200])
 
     shutil.rmtree(work, ignore_errors=True)
     bad = results.count(False)
