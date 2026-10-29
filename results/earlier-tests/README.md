@@ -349,3 +349,7 @@ wrappers were harmless while synthetic typos and instruction text broke 66 and 3
 fixes were measured against real prompts and dropped. Of 47 REFUTES edges about 19 leave their target standing, and the
 hook serves refuted targets with their refuters. No confidence threshold on the meaning channel admits the right
 refused questions without admitting wrong ones. Counts only.
+
+## semantic-scope-2026-10-04: how much the semantic channel loses by ranking before the pool filter
+
+The channel takes its top 50 over the whole store before keeping the BM25 pool's 300 candidates. On 218 fresh-bank questions no answer was reachable by the semantic order alone, and on 120 reworded open-problem questions two were. The 50-word template put 24 of 40 answers in the semantic top 50 though the pool held all 40. Counts only.
