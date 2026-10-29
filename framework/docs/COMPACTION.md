@@ -187,6 +187,31 @@ shrinking the fixed context is the other lever, and unlike compacting more often
 detail. Removed context is not billed tokens saved: a cost estimate prices the re-read tokens as cache
 reads and writes at their own rates, and adds the cost of writing the summary.
 
+## How the Codex path was tested (9 October)
+
+The Codex path was built on copies of the live helpers, and no candidate went live before it passed.
+The fifth candidate passed all of the following:
+
+- 66 focused unit tests covering the manual save, the metadata-only boundary nodes and the sweeper's
+  session identity (`framework/dreaming/test_codex_*.py`).
+- 61 controls from four older compaction suites, rerun against the candidate, and the 20 tests of the
+  math solver's compaction export.
+- A save through the real command line and the real mesh API on a synthetic file tree. It checked
+  interactive and worker saves, task links, that a second save changes nothing, that a private summary
+  stays out of the index, that a refused claim leaves no partial files, and that a save for the wrong
+  worker is refused.
+- Four real encrypted compaction records from one Codex thread. They became four metadata nodes with
+  full session ids and task and previous links, and no retained message was copied.
+- The three patches, applied with fixed line-ending settings, reproduce the candidate byte for byte.
+  The first check ran with git's default `autocrlf`, which turned LF into CRLF.
+
+Two earlier runs of the legacy suites failed and were kept. One wrapper passed a keyword argument
+before a positional one. Paths inside nested temporary folders ran past Windows' 260-character limit;
+a short fixture root with a depth guard under 250 fixed that. The check for flashing console windows
+was not conclusive. Three probes saw no new visible console window, but the longest gap between their
+samples was 131 to 535 ms, longer than a 100 ms flash, so they do not rule one out. A separate reviewer
+kept the candidate on function. The helper records compactions; it does not shrink the native context.
+
 ## Checks
 
 - Coverage: compactions in the transcripts against nodes in the index, per runtime.
