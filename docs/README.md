@@ -10,6 +10,7 @@ The pages in this folder, grouped by what you came to do.
 | [brain-in-an-afternoon.md](brain-in-an-afternoon.md) | the short road: an empty folder at lunch, a brain agents search by evening, and a first measurement |
 | [everything-is-a-node.md](everything-is-a-node.md) | what becomes a record and how records are linked, so requests, compactions, mistakes, files and code all land in the store |
 | [prompts-as-nodes.md](prompts-as-nodes.md) | keeping the requests themselves, so the store records why work was done as well as what was found |
+| [brain-building/compactions-as-brain-nodes.md](brain-building/compactions-as-brain-nodes.md) | keeping each compaction summary as a linked record, since it is the densest account a long session ever writes of what it was asked, did and left open |
 | [brain-building/everything-to-brain-10-day-loop.md](brain-building/everything-to-brain-10-day-loop.md) | a prompt for an agent on a schedule: bring material in, link it, test recall, every ten minutes for ten days |
 | [../examples/field_brain_starter/](../examples/field_brain_starter/README.md) | a complete small brain (a film studio's) with recall, hooks, a dream and a ten-question test; `new_field.py` turns it into an empty brain for any other field |
 | [../framework/dreaming/README.md](../framework/dreaming/README.md) | the nightly pass in full: the agenda, the filing, connecting and nap dreams, and how to add a section for your field |
@@ -21,6 +22,8 @@ The pages in this folder, grouped by what you came to do.
 | [../AGENTS_GUIDE.md](../AGENTS_GUIDE.md) | the recall tools, the configuration for Claude Code and Codex, and what each choice was worth in the tests |
 | [agency.md](agency.md) | the working habits that turn faster recall into finished work: a next-step note on disk, leases on shared state, an audit before each report, results written back |
 | [codex-hooks-quickstart.md](codex-hooks-quickstart.md) | the hook files that put the brain in front of an agent at the right moment, for Codex and Claude Code |
+| [brain-building/owner-words-reach-every-agent.md](brain-building/owner-words-reach-every-agent.md) | a hook that hands every session the person's own recent requests, repeated ones first, so an agent does not work from an out-of-date picture of what it was asked |
+| [brain-building/task-checklist.md](brain-building/task-checklist.md) | one shared, dated checklist every agent writes to: who took which request, when it was done, and a seen mark only the person sets |
 | [cost.md](cost.md) | what the brain costs in tokens, each figure beside the accuracy it bought |
 
 ## What the tests measured
