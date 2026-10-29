@@ -1,8 +1,28 @@
 # Giving an agent the store
 
-This note says how to connect a coding agent (Claude Code, Codex, or any client that speaks MCP) to the store in this repository, what to tell it, and how it should search. Each recommendation comes with the measurement behind it. The tests themselves are in [TESTS.md](TESTS.md).
+This note says how to connect a coding agent (Claude Code, Codex, or any client that speaks MCP) to the store in this repository, what to tell it, and how it should search. The default workflow below is the operating procedure for agents using this store; its evidence and limits are stated alongside it. The tests themselves are in [TESTS.md](TESTS.md).
 
 The short version: an agent with the store answers questions about past work faster and with less reading than an agent that has to search the same records as files, and its misses are mostly timeouts or abstentions rather than wrong answers. On 988 lookup and audit items with 600 seconds an item, Claude agents with the store answered 95.4 percent, agents with read access to the same repositories 82.0 percent, and the model alone 18.9 percent. Where both of the first two finished in time they were tied (99.3 against 99.4 percent on 806 items). The store's lead is speed: the agents with it took 120 seconds an item on average against 211, and timed out on 3.7 percent of items against 17.5. Codex agents, given 900 seconds an item, went the other way: the repository arm scored 97.0 percent of 394 items, the store arm 94.7 and the model alone 21.6; the gap between the first two is one the test does not settle. The store arm's misses there were mostly abstentions, on items that need several records found at once (section 4).
+
+## Start here: the default recall workflow
+
+**Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips.** A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
+
+1. **Search deliberately with two or three alternative wordings in one call.** Name the object, theorem or method, symbol, or author that the answering card would use. These are alternative phrasings, not a three-word limit. The agent supplies them; the tool does not generate them.
+2. **Read the relevant cards whole by ID, then follow useful linked IDs.** Check the statement, hypotheses, source and verification status before relying on a result. Do not answer from a title or snippet alone.
+3. **Reword weak matches; stop when the evidence answers the question.** A hook note is a lead, not a verdict. After three unsuccessful rounds, report that the search did not find an answer; this does not prove the store contains none. Use authorized source-file search when appropriate, especially for numeric tables.
+4. **Keep fast recall enabled and automatic spreading at depth 0 by default.** Multi-wording search improves query coverage; the prepared fast-recall state speeds up those same searches. Read linked cards deliberately rather than enabling deeper spreading without evidence. For newly added cards, refresh the prepared state or use the freshness controls in [the tool guide](agent_tools/README.md#fast-recall).
+5. **Copy the full card ID when citing a result.** Read it from the whole-card output, preserve its source and status, and distinguish stored evidence from your own inference.
+
+After the setup below, make one search call such as:
+
+```bash
+python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff" --or "mixing time random transpositions"
+```
+
+Through MCP, send the same alternatives in the `wordings` array (up to three), then use `ids` to read the relevant cards.
+
+**Evidence, not a universal guarantee:** on the reported 100-question held-out comparison, multiple wordings scored 86 versus 76 for one wording per call. Whole cards with IDs scored 83 versus 34 for titles and snippets. Reading cards and walking links preserved similar accuracy (82 versus 83) with about half the uncached input. These are separate comparisons, not additive gains. See [the agent guide](AGENTS_GUIDE.md#3-what-to-tell-the-agent) and [tests](TESTS.md).
 
 ## 1. Build the store
 
@@ -63,7 +83,7 @@ Each clause is there for a reason measured on held-out recall questions (100 a c
 | treat a WEAK MATCH line as a signal to reword | with that line showing, the answering card had been printed for 4 of 21 questions; without it, for 49 of 79 |
 | leave spreading through the links (`--depth`) at 0 | 79 against 80, with 46 percent more tokens |
 
-Two more instructions are worth adding. First, after three rounds of wordings with nothing useful, the agent should say that the store does not hold the answer rather than reach for one. In the three-arm test this is what the agents with the store did: of the 19 items a Codex agent with the store lost to the repository arm, 16 were abstentions and 3 timeouts, and none a wrong value. Second, when the agent quotes a card's id in its answer, it should copy the full id from the card printed by `--id`, since search output shortens ids to a prefix.
+Apply these two instructions as part of the default workflow. First, after three rounds of wordings with nothing useful, the agent must say that its search did not find the answer rather than invent one; an unsuccessful search is not proof of absence. In the three-arm test this is what the agents with the store did: of the 19 items a Codex agent with the store lost to the repository arm, 16 were abstentions and 3 timeouts, and none a wrong value. Second, when the agent quotes a card's id in its answer, it should copy the full id from the card printed by `--id`, since search output shortens ids to a prefix.
 
 ## 4. Where search falls short
 
