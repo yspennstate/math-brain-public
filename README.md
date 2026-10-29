@@ -8,6 +8,26 @@ This repository contains the brain's code, a dated export of the store, the tool
 
 Nothing in the method is specific to mathematics. To build a brain for a company, a film studio, a lab or a support desk, start with [examples/field_brain_starter/](examples/field_brain_starter/): twenty example records, a search tool, a prompt hook for Claude Code and Codex, a nightly dream with a runner for Linux, macOS and Windows, and a ten-question test that measures whether the records help. [docs/brain-in-an-afternoon.md](docs/brain-in-an-afternoon.md) takes a team from an empty copy of that folder to a measured brain in a day, [docs/build-your-own-brain.md](docs/build-your-own-brain.md) covers each part in full, [docs/everything-is-a-node.md](docs/everything-is-a-node.md) says what goes into the store and how it is linked, [docs/agency.md](docs/agency.md) describes how agents should work with a brain so that better recall turns into progress on long tasks, and [docs/brain-building/everything-to-brain-10-day-loop.md](docs/brain-building/everything-to-brain-10-day-loop.md) is a prompt that has an agent keep building and testing one on a schedule for ten days. Every page in `docs/` is listed by purpose in [docs/README.md](docs/README.md).
 
+## Start here: the default recall workflow
+
+**Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips.** A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
+
+1. **Search deliberately with two or three alternative wordings in one call.** Name the object, theorem or method, symbol, or author that the answering card would use. These are alternative phrasings, not a three-word limit. The agent supplies them; the tool does not generate them.
+2. **Read the relevant cards whole by ID, then follow useful linked IDs.** Check the statement, hypotheses, source and verification status before relying on a result. Do not answer from a title or snippet alone.
+3. **Reword weak matches; stop when the evidence answers the question.** A hook note is a lead, not a verdict. After three unsuccessful rounds, report that the search did not find an answer; this does not prove the store contains none. Use authorized source-file search when appropriate, especially for numeric tables.
+4. **Keep fast recall enabled and automatic spreading at depth 0 by default.** Multi-wording search improves query coverage; the prepared fast-recall state speeds up those same searches. Read linked cards deliberately rather than enabling deeper spreading without evidence. For newly added cards, refresh the prepared state or use the freshness controls in [the tool guide](agent_tools/README.md#fast-recall).
+5. **Copy the full card ID when citing a result.** Read it from the whole-card output, preserve its source and status, and distinguish stored evidence from your own inference.
+
+After the setup below, make one search call such as:
+
+```bash
+python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff" --or "mixing time random transpositions"
+```
+
+Through MCP, send the same alternatives in the `wordings` array (up to three), then use `ids` to read the relevant cards.
+
+**Evidence, not a universal guarantee:** on the reported 100-question held-out comparison, multiple wordings scored 86 versus 76 for one wording per call. Whole cards with IDs scored 83 versus 34 for titles and snippets. Reading cards and walking links preserved similar accuracy (82 versus 83) with about half the uncached input. These are separate comparisons, not additive gains. See [the agent guide](AGENTS_GUIDE.md#3-what-to-tell-the-agent) and [tests](TESTS.md).
+
 ## How agents build on one another's work
 
 Many agents use the brain at once: interactive Claude and Codex sessions, fleets of headless workers, and scheduled GPT tasks. None of them remembers anything from one session to the next. Their work adds up because every agent reads the store before it works and writes to it when it finds something, so each one starts where the others stopped. The agents that use the brain are the ones that build it, in the course of their research. The study of this loop, a memory that agents read, test and correct while they work, is what we call Mathematical pseudo-Cognitive Dynamics; the paper in `papers/pseudo-cognitive-dynamics-2026-09-23/` develops it.
@@ -121,7 +141,7 @@ The conjecture is open. The campaign proved that H ≤ 2(I − Var) + 2U for eve
 pip install -e .
 python tools/import_store.py --out local/population/brain.sqlite3
 export MATHBRAIN_STORE=local/population/brain.sqlite3 MATHBRAIN_BUILD_SRC=src
-python agent_tools/math_recall.py spectral gap of the random transposition walk
+python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
 python agent_tools/math_recall.py --id <card id>
 python agent_tools/math_walk.py <card id> --toward "mixing time lower bound"
 ```
