@@ -1,0 +1,21 @@
+T354 general case (agent A, 21 Oct 2026): check of the frozen-x drift bound on a nonconvex finite sum in d = 2.
+f_i(x) = a_i |x|^2/2 + b_i.x + c_i (cos x_1 + cos x_2), sum b_i = 0, skewed b (B3 != 0), mean c > mean a (nonconvex).
+At frozen x, Adam with reshuffling drives m, v through linear filters of the gradient stream g_{pi(t)}(x) (bias correction
+dies geometrically), so h(x) = E[m/(sqrt v + eps)] is a time average over a long reshuffled stream. The claim, coordinate j,
+with phi(v) = 1/(sqrt v + eps), B2 = mean g_j^2:
+    h_j = d_j f phi(B2) + phi'(B2) Cov(m_j, v_j) + R_j,   |R_j| <= G_j C2_j Var(v_j),
+    |Cov(m_j, v_j)| <= (1 - b2) |Cov(g_j, g_j^2)| [(1 - b1)/(1 - b1 b2) + n/(n - 1)],  Var(v_j) <= (1 - b2)/(1 + b2) Var(g_j^2),
+the remainder split at v = B2/4 (Taylor constant above, Hoeffding tail below; see Rbound), G_j = max_i |g_ij|. Then an Adam run with step
+eta/sqrt(k) is compared with the zero of the first-order drift. argv: b1 b2 eps n T seed steps
+b1 0.9 b2 0.99 eps 1e-08 n 16 T 1000000 seed 5; mean a 1.024 mean c 1.979
+x [ 0.3 -0.2] j 0: h -3.369339e-01  0th -3.370820e-01  1st -3.369098e-01  |h-1st| 2.41e-05 <= Rbound 6.80e-02  |h-0th| 1.48e-04  Cov -1.922e-04 (bound 1.789e-03)  Var v 8.802e-05 (bound 1.616e-03)
+x [ 0.3 -0.2] j 1: h +3.871116e-01  0th +3.877508e-01  1st +3.870655e-01  |h-1st| 4.61e-05 <= Rbound 1.16e-01  |h-0th| 6.39e-04  Cov +1.569e-04 (bound 1.466e-03)  Var v 1.742e-05 (bound 3.190e-04)
+x [1. 2.] j 0: h -6.015088e-01  0th -6.021840e-01  1st -6.014257e-01  |h-1st| 8.32e-05 <= Rbound 1.61e-01  |h-0th| 6.75e-04  Cov -1.828e-03 (bound 1.700e-02)  Var v 4.691e-04 (bound 8.590e-03)
+x [1. 2.] j 1: h +2.807641e-01  0th +2.813564e-01  1st +2.807150e-01  |h-1st| 4.91e-05 <= Rbound 2.22e-01  |h-0th| 5.92e-04  Cov +8.924e-04 (bound 8.269e-03)  Var v 2.725e-04 (bound 4.981e-03)
+x [-2.5  0.7] j 0: h -7.750589e-01  0th -7.755575e-01  1st -7.749886e-01  |h-1st| 7.03e-05 <= Rbound 9.96e-02  |h-0th| 4.99e-04  Cov -6.363e-03 (bound 5.906e-02)  Var v 2.435e-03 (bound 4.452e-02)
+x [-2.5  0.7] j 1: h -7.202808e-01  0th -7.207880e-01  1st -7.202032e-01  |h-1st| 7.77e-05 <= Rbound 1.15e-01  |h-0th| 5.07e-04  Cov -5.423e-04 (bound 5.018e-03)  Var v 1.018e-04 (bound 1.853e-03)
+Adam-RR 2000000 steps, eta0 0.05/sqrt(k): endpoint [ 1.85452916 -1.85476657]  grad f [-0.0001044  -0.00027039]
+first-order zero [ 1.85452043 -1.85475221]: grad f [-0.00011817 -0.00024773]; predicted residual -phi'Cov/phi = [-0.00012126 -0.00025112]
+bound on the residual (sqrt B2 + eps)(1 - b2) Q: [0.16182745 0.24894244]
+endpoint - first-order zero: [ 8.72698962e-06 -1.43544300e-05]  (|grad f(endpoint)| / |grad f(zero)| = [0.88343314 1.09148791])
+DONE

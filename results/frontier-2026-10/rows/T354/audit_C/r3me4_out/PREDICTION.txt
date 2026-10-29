@@ -1,0 +1,5 @@
+Written 10-20 11:29:03 before any run. eps 3, b (6,2,-1) w (.1,.1,.8), n d 2. Closed form c(2) = -0.481919
+(eps 1 gives -0.408672, eps 0 -0.226842, so the test separates eps 3 from both).
+beta1 0: rows below -0.4819, rising toward it; order-2 Richardson within 1e-3 of -0.4819.
+beta1 0.9: rows above -0.4819, falling monotonically with d; gap at d 0.01 between 0.15 and 0.35; order-3 Richardson within 2e-3.
+A miss of more than 5e-3 at the highest order on either beta1 would count against "c is beta1-free at eps > 0" beyond eps 1.

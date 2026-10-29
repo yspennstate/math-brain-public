@@ -1,0 +1,15 @@
+1. E S^2, E S^3, E S^4: brute force vs formula, n 5..7, max rel diff 2.55e-13
+   coefficient of s2^2 A2^2: max over n>=4 14.0000 (at n 4); of m4 A4: 13.3333; the note's 14 covers both
+2. E[b (Z_k+W)^2] / |E b Z^2| (note: <= 8) and d E[b (Z_k+W)^3] (note: O(1)), exact over all permutations
+   n 6 beta2 0.50: ratio -0.710   d E[b(Z+W)^3] -1.9648
+   n 6 beta2 0.50: ratio 0.710   d E[b(Z+W)^3] 0.0227
+   n 7 beta2 0.80: ratio 0.429   d E[b(Z+W)^3] 0.0019
+   n 7 beta2 0.80: ratio 0.429   d E[b(Z+W)^3] -0.0005
+   n 8 beta2 0.90: ratio 0.315   d E[b(Z+W)^3] 0.2396
+   n 8 beta2 0.90: ratio 0.315   d E[b(Z+W)^3] 0.1117
+   n 8 beta2 0.99: ratio 0.182   d E[b(Z+W)^3] 0.0110
+   n 8 beta2 0.99: ratio 0.182   d E[b(Z+W)^3] 0.0062
+3. E2(x)/d^2 at x = 0.1, n d = 1 (note: bounded); E2/(x d) alongside
+   n 100 d 0.0100: E2 6.1143e-04   E2/d^2 6.114   E2/(x d) 0.6114
+   n 200 d 0.0050: E2 2.4386e-04   E2/d^2 9.754   E2/(x d) 0.4877
+   n 400 d 0.0025: E2 1.0696e-04   E2/d^2 17.114   E2/(x d) 0.4279

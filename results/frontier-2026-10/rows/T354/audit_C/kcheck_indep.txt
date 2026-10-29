@@ -1,0 +1,5 @@
+closed form vs first-principles lag sum, n 2..400, b1 0/.5/.9, b2 .9/.99/.999: max |diff| 1.44e-11
+MC n 50 b1 0 b2 0.99: K_mc 0.5757 +- 0.0002   closed 0.5757   iid 1.0000
+MC n 500 b1 0 b2 0.99: K_mc 0.8422 +- 0.0021   closed 0.8410   iid 1.0000
+MC n 50 b1 0.9 b2 0.99: K_mc 0.3935 +- 0.0007   closed 0.3932   iid 0.9174
+MC n 200 b1 0.5 b2 0.995: K_mc 0.6253 +- 0.0009   closed 0.6249   iid 0.9950
