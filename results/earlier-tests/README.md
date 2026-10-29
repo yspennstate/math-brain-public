@@ -353,3 +353,7 @@ refused questions without admitting wrong ones. Counts only.
 ## semantic-scope-2026-10-04: how much the semantic channel loses by ranking before the pool filter
 
 The channel takes its top 50 over the whole store before keeping the BM25 pool's 300 candidates. On 218 fresh-bank questions no answer was reachable by the semantic order alone, and on 120 reworded open-problem questions two were. The 50-word template put 24 of 40 answers in the semantic top 50 though the pool held all 40. Counts only.
+
+## pilot-own-test-and-recall-checks-2026-10: a four-arm pilot, two with/without pairs and three recall checks
+
+A 7 October four-arm Codex pilot found no brain advantage (21.7 and 15.0 of 27 with the brain, 23.0 and 11.0 without, the spread mostly timeouts); a 22-23 October recall pair was lost to timeouts on an overloaded machine; one Opus 5.5 agent answered 19 of 20 with the brain and 9 without (p = 0.002). Following links one step (`--depth 1`) found nothing the words missed, on the general bank after the 28 October links and on a bank built to favour it, and a cap on compactions per recall list was measured and dropped. Counts only.
