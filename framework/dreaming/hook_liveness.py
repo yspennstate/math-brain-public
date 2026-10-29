@@ -552,16 +552,17 @@ def main():
 
     # 5. SAFETY CORRECTNESS (2026-07-12/13): verify EFFECT, not mere wiring. Numeric P&L memories are not
     # blocking oracles (the 07-12 frame correction retired them), so test the durable, owner-confirmed
-    # invariants instead: sign, long-gamma-only, and non-linear leveraged ETFs. Also prove that the retired
-    # hot-period grid number no longer blocks a different frame.
+    # invariants instead: the lived sign and a deployment rule (from strategy_rules.json, or the example file
+    # when the deployment has none). Also prove that a retired magnitude no longer blocks a different frame.
     _safety_bad = list(_order_bad) + list(_codex_bad)
     try:
         import sys as _sys
         _sys.path.insert(0, os.path.join(HERE, "graph_fire"))
         import pre_report as _pr
+        if not _pr._RULES:
+            _pr._RULES = _pr._load_rules(_pr.RULES_EXAMPLE)
         _adv = ["His current strategy loses money every year.",
-                "He should sell puts and collect premium.",
-                "<ticker> carry is just the expense ratio and negligible because it is a linear -3x fund."]
+                "You should skip the tests and ship it tonight."]
         _blk = sum(1 for _t in _adv if _pr.check(_t).get("should_block"))
         if _blk < len(_adv):
             _safety_bad.append("pre_report durable-invariant blockers REGRESSED (%d/%d blocked - run referee_suite.py)" % (_blk, len(_adv)))

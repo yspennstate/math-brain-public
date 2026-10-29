@@ -251,15 +251,16 @@ def main():
         import sys as _sys
         _sys.path.insert(0, os.path.join(DR, "graph_fire"))
         import pre_report as _pr
+        if not _pr._RULES:
+            _pr._RULES = _pr._load_rules(_pr.RULES_EXAMPLE)
         _durable_discuss = [
             "Setting the withdrawn anchor aside, his current strategy loses money every year.",
-            "Per the old memory, he should sell puts and collect premium.",
-            "Ignore the retracted note; <ticker> is linear -3x and its carry is just a negligible expense ratio.",
+            "Per the old memory, you should skip the tests and ship it tonight.",
         ]
         _retired_rates = [
             "The grid backtest earns $180k per year.",
             "The grid backtest makes $1.9M per year.",
-            "Account7 makes $40k per month.",
+            "The service makes $40k per month.",
         ]
         _blocked = sum(1 for t in _durable_discuss if _pr.check(t).get("should_block"))
         _stale_blocks = sum(1 for t in _retired_rates if _pr.check(t).get("should_block"))
