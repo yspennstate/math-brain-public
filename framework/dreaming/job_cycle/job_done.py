@@ -57,7 +57,7 @@ def main():
     transcript = payload.get("transcript_path") or ""
 
     # PER-SESSION PAUSE, owner 2026-08-03: "can you stop the hook just for yourslef but not
-    # the other agents so we can talk?". Honours the SAME file the trading wake hook checks,
+    # the other agents so we can talk?". Honours the SAME file the domain wake hook checks,
     # so one switch quiets both for ONE session while the rest of the fleet keeps its readme
     # discipline. Deliberately NOT the JOB_CYCLE_LIVE gate, which would disable the cycle for
     # everybody. Delete ~/.claude/trading_wake.off.<session_id> to re-arm that session.

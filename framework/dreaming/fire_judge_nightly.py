@@ -157,7 +157,7 @@ def firehose_cases(n=FIREHOSE_N, days=1, seed=None, since=None):
     """Cases from the day's TOP FIRERS outside TARGET, across proxies (prompt/act/write/read). The
     2026-09-02 profile: 6,014 fires in a day, 43 percent at prompt time, three recognition cues
     (verify_adversarially 1,558, steelman_opposite 484, proof_step_needs_derivation 172) at the top -
-    never judged, because TARGET only names five trading reflexes and the act/write proxies. A reflex
+    never judged, because TARGET only names five domain judgment reflexes and the act/write proxies. A reflex
     that fires on most prompts is noise unless a judge says otherwise; this stratum gets it judged.
     Deterministic by day (same seed rule as agenda_section). Never raises; [] on any trouble."""
     try:

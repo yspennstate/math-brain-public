@@ -17,7 +17,7 @@ Three mechanisms, in order of measured leverage:
      act (write / non-readonly command) re-fires it fresh. 'claim' reflexes (a sim number, a risk
      figure, a confident conclusion, the measured record's sign) live in the reasoning itself and are NEVER
      suppressed - they SHOULD fire on a read/prompt. This split is the robust specificity signal; it is
-     NOT frequency (the coarseness lesson, mention_vs_act_too_coarse_2026_07_12: the trading overrides
+     NOT frequency (the coarseness lesson, mention_vs_act_too_coarse_2026_07_12: the domain overrides
      fire on off-domain acts too, so act% != targeting% - never rank them by mention/fire frequency).
 
  (b) IDF down-weight (bounded). Rank co-firing reflexes with a small IDF penalty on the ranking charge,
@@ -69,7 +69,7 @@ DANGER_SURFACE = {
     "concurrent_races": "act",                    # push/force/robocopy shared state
     "premortem": "act",                           # rm -rf / force-push / deploy / migrate
     "heavy_compute_remote": "act",                 # running a heavy/GPU fit locally
-    "no_local_privileged_stack": "act",                    # RUNNING a local trading/approval process (edit is safe)
+    "no_local_privileged_stack": "act",                    # RUNNING a local privileged/approval process (edit is safe)
     "preserve_before_destroy": "act",             # redeploy / wipe / rotate persistent state
     "figure_filename_clobber": "act",             # savefig onto a claimed generic path
     "pinned_file_two_tripwires": "act",           # editing/swapping a pinned guarded file

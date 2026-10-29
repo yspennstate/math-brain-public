@@ -41,7 +41,7 @@ What each agenda section means for you:
   report.
 - **G (imaginative seed):** two vivid memories from different corners, almost nothing in
   common. Actually try the bisociation — is there a real analogy, a transfer, a shared
-  shape (this is where math↔trading transfer has come from before)? **Most nights the
+  shape (this is where cross-domain transfer has come from before)? **Most nights the
   honest answer is "no," and you say so and move on.** Once in a while it's a genuine idea
   — then write it in the journal (or a `daydream_<date>.md` if it's substantial), clearly
   labeled as a hunch, not a result. Never manufacture a connection to look clever; a

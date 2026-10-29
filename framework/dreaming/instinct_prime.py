@@ -322,9 +322,9 @@ def _ranking_doc():
     charge-saturation tie: charge is 1.00 for 37/45 reflexes, so it can't rank co-firing reflexes -
     surface the RARE/specific one (high weight) over the always-on generic (low). Measured: 25% fewer
     generics in the top-3 on real actions, no named-case regression. Since 2026-07-16 the same file
-    also carries context_damp: {id: charge-damp} for DOMAIN-INVERTED trading-topical reflexes -
+    also carries context_damp: {id: charge-damp} for DOMAIN-INVERTED domain-topical reflexes -
     measured to fire 2.2-2.7x over exposure on the brain's own surfaces (whose files quote their
-    trigger vocabulary) and at/below exposure on the trading domain they exist for. The damp applies
+    trigger vocabulary) and at/below exposure on the domain they exist for. The damp applies
     ONLY when the acted-on surface is self-referential (fire_surface.py): damping, never deletion -
     the reflex still fires everywhere else at full strength, and still fires here when it wins top-3
     among what matched. Fail-safe: missing/bad file -> {} for both (exact prior behaviour)."""
@@ -1425,7 +1425,7 @@ def _augment_graph(text, data, instincts, fired):
 
 # A picture-maker work order is a fully specified image job for a headless Codex worker. Over the week to 2026-09-24,
 # 1,080 reflex notes landed on these prompts from 58 reflexes, two of them about pictures; the rest were prose-voice,
-# recall, verification and trading scars. Codex runs this engine twice on a prompt (through codex_reflex_hook.py and
+# recall, verification and domain scars. Codex runs this engine twice on a prompt (through codex_reflex_hook.py and
 # directly, the 09-09 reflex trio), so the skip lives here, where both paths meet. Since 09-23 17:27 the briefs also
 # open "You are THE picture maker", which the first form missed (10 fires in the log by 09-24 19:40).
 _IMAGE_WORK_ORDER = re.compile(r"^\s*(?:\[headless-worker\]\s*)?You are (?:a|the) picture maker\b", re.I)

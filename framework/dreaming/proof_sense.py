@@ -10,7 +10,7 @@ then Lean against the local Mathlib). It is general: written from the classes of
 can carry, never from any test item, so it applies to any argument in any paper.
 
 Why a separate lane (2026-09-07): the general gut caps at two fires ranked by scar charge, so on a proof the
-trading scars and the exact-clauses reflex won the slots and told the solver to copy steps verbatim; measured
+domain scars and the exact-clauses reflex won the slots and told the solver to copy steps verbatim; measured
 on the probability bank the brain arm then called flawed proofs valid MORE often than a sterile solver. A
 proof needs the opposite posture, and this lane gives it without competing with the scars.
 
