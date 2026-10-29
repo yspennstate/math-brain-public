@@ -1,0 +1,9 @@
+p0 == (mu-beta)((mu+beta)^2 - mu k^2): True
+(1,1) cofactor: mu*(delta**2 - 4*delta + 4*mu + 4)/4
+F(mu0) == u(2ax - x^2 - a d^2/4) + d^2/16: True
+mu0 - beta == d(3-d)/4: True
+coefficient of x^2: -16*(delta - 4)*(delta - 3)
+x = d^2/4  numerator: -delta**2*(delta**3 - 9*delta**2 + 26*delta - 22)  roots in [0,1]: [0, 0]  value at d=1/2: 2.78125
+x = 1  numerator: -(delta**6 - 11*delta**5 + 40*delta**4 - 20*delta**3 - 212*delta**2 + 496*delta - 320)/4  roots in [0,1]: []  value at d=1/2: 31.33203125
+min (1 - rho_HB)/delta over 3000 points: 0.3342 (claim >= 0.25)
+min speedup-over-SGD-ceiling / min(max(1,B h_max/trH), sqrt kappa): 0.0835 (claim >= 1/16 = 0.0625)
