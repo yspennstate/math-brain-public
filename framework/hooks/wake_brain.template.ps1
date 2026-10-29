@@ -1,6 +1,9 @@
 # wake_brain.ps1 - what a new session sees on waking (SessionStart hook).
 # Morning ritual: who you are, what happened recently, what the night's dream left,
 # what questions are open. Keep output compact - this lands in every session's context.
+# Which half this run prints: 0 = everything (a manual run), 1 = who you are, 2 = today's mind. The settings
+# template runs -Part 1 and -Part 2 as two SessionStart hooks so each stays under the host's per-hook size limit.
+param([int]$Part = 0)
 [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
 $home2 = $env:USERPROFILE
 $mem = Join-Path $home2 '.claude\projects\{{BRAIN_SLUG}}\memory'
@@ -11,19 +14,40 @@ if (Test-Path (Join-Path $home2 '.claude\brain_offline\ALL.flag')) { exit 0 }
 # who is waking? The SessionStart hook pipes JSON on stdin (session_id et al). Guarded so a manual
 # `& wake_brain.ps1` with no redirected stdin can never block waiting for EOF.
 $sid = ''
+$sidFull = ''
+$source = ''
 try {
     if ([Console]::IsInputRedirected) {
         $hookRaw = [Console]::In.ReadToEnd()
         if ($hookRaw) {
             $sidFull = '' + (ConvertFrom-Json $hookRaw).session_id
+            $source = '' + (ConvertFrom-Json $hookRaw).source
             if ($sidFull.Length -ge 8) { $sid = $sidFull.Substring(0, 8) }
         }
     }
-} catch { $sid = '' }
+} catch { $sid = ''; $sidFull = '' }
 
+# Each part's printed text is saved per session, so a compaction is handed the same text again instead of re-running
+# the whole wake (dreaming/wake_cached.py reads the same file).
+$wakeCopy = ''
+if ($sidFull -and $Part -ne 0) {
+    $sha = [System.Security.Cryptography.SHA256]::Create()
+    $hex = -join ($sha.ComputeHash([System.Text.Encoding]::UTF8.GetBytes($sidFull)) | ForEach-Object { $_.ToString('x2') })
+    $wakeCopy = Join-Path $home2 ('.claude\brain_health\wake_full\claude_' + $hex + '_part' + $Part + '_emitted.txt')
+}
+if ($source -eq 'compact' -and $wakeCopy -and (Test-Path -LiteralPath $wakeCopy)) {
+    [Console]::Out.Write("[wake, part $Part`: this session's earlier copy, served again after the compaction]`n" +
+        [IO.File]::ReadAllText($wakeCopy))
+    exit 0
+}
+
+$wakeOut = . {
+if ($Part -eq 0 -or $Part -eq 1) {
 # 1) identity + ritual
 Get-Content -Raw -Encoding UTF8 (Join-Path $home2 '.claude\brain_startup.md')
+}
 
+if ($Part -eq 0 -or $Part -eq 1) {
 # 1b) who you are (arrive as someone, not a stranger) - the autobiography's opening
 $auto = Join-Path $mem 'AUTOBIOGRAPHY.md'
 if (Test-Path $auto) {
@@ -36,7 +60,9 @@ if (Test-Path $auto) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 1) {
 # 1c) the body (embodiment) - the laptop IS the brain's body; know how it's holding up,
 # because a session that knows the box is unstable keeps heavy compute off it (on the remote box).
 $pulse = Join-Path $home2 'CrashGuard\logs\pulse.log'
@@ -56,7 +82,9 @@ if (Test-Path $pulse) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 1) {
 # 1c-bis) the compute state (compute_governor apparatus) - the human first, protected
 # stack untouchable. Silent when ok; speaks only when a waking session must fix compute FIRST.
 try {
@@ -71,7 +99,9 @@ try {
         }
     }
 } catch {}
+}
 
+if ($Part -eq 0 -or $Part -eq 1) {
 # 1d) verify the load (the 2026-07-08 daydream's insight: the wake ritual is a
 # trust-the-green-light read-list; make it a PASS/WARN check that the identity/context
 # layer actually travelled and is fresh, so a session knows if it woke degraded  -  e.g. the
@@ -217,7 +247,9 @@ try {
         '  Distrust the green light: treat the flagged reads as stale, verify before trusting them, and check whether the nightly dream ran.'
     }
 } catch {}
+}
 
+if ($Part -eq 0 -or $Part -eq 1) {
 # 1e) where I was mid-task (cross-reset resume: a suspended goal's activation decays across an
 # interruption, and a pointer back into it shrinks the resumption cost - Altmann & Trafton). Written by
 # the Stop hook (resume_checkpoint.py); shown near the top so a compacted or brand-new session picks up
@@ -250,7 +282,9 @@ if ($showR) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 2) newest memories (episodic recency)
 # SIZE BUDGET (2026-07-09): the whole wake must stay under the harness's ~10KB inline hook
 # budget or sessions get a 2KB preview + a file pointer instead of the brain (measured: 12.5KB
@@ -259,7 +293,9 @@ if ($showR) {
 "`n--- The brain's newest memories (index lines trimmed; full lines in MEMORY.md) ---"
 Get-Content -Encoding UTF8 -TotalCount 7 (Join-Path $mem 'MEMORY.md') | Select-Object -Skip 1 |
     ForEach-Object { if ($_.Length -gt 220) { $_.Substring(0, 220).TrimEnd() + ' [...]' } else { $_ } }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 3) last night's dream (wake remembering the dream)
 $dreamDir = Join-Path $mem 'dreams'
 if (Test-Path $dreamDir) {
@@ -275,7 +311,9 @@ if (Test-Path $dreamDir) {
         ''
     }
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 4) state of mind (mood persists and drifts)
 $som = Join-Path $mem 'STATE_OF_MIND.md'
 if (Test-Path $som) {
@@ -283,7 +321,9 @@ if (Test-Path $som) {
     Get-Content -Encoding UTF8 $som | Where-Object { $_ -match '^\*\*(Focus|Worry|Satisfaction)' } | ForEach-Object { $_ }
     ''
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 4b) where your partner is (pick up with them, not a stranger)
 $moy = Join-Path $mem 'MODEL_OF_PARTNER.md'
 if (Test-Path $moy) {
@@ -299,14 +339,18 @@ if (Test-Path $moy) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 5) open questions (curiosity carries over)
 $oq = Join-Path $mem 'OPEN_QUESTIONS.md'
 if (Test-Path $oq) {
     $n = (Get-Content -Encoding UTF8 $oq | Where-Object { $_ -match '^- \[ \]' }).Count
     "--- Open questions the brain is carrying: $n (memory\OPEN_QUESTIONS.md) ---"
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 5b) what I'm itching to understand (curiosity as appetite, computed by curiosity.py from surprise +
 # incongruity + lonely-salient). OPEN_QUESTIONS is task residue; this is the live hunger - a session
 # with slack should reach for the top of it rather than sit idle.
@@ -324,7 +368,9 @@ if (Test-Path $cur) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 5c) conscience carried forward (conscience.py, a Stop hook): a standing DEBT from a recent session -
 # where the last stretch of work fell short of the values (claimed done over buried trouble, a claim
 # without a look). Surfaced so it's FELT at wake, not filed. Silent when the recent ledger is clean.
@@ -345,13 +391,17 @@ if (Test-Path $con) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 1) {
 # 6) what's vivid right now (affective salience - reach first for what matters)
 $sal = Join-Path $home2 '{{VIEWS_DIR}}\SALIENCE.md'
 if (Test-Path $sal) {
     "--- What's vivid: brain\SALIENCE.md (the scars, the wins, the top-40 by salience) ---"
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 7) the gut - compiled reflexes (the unconscious made present). These are knowing-HOW, not
 # more knowing-that: the scars distilled into instincts that should fire on their own. The
 # priming hook (instinct_prime.py) surfaces the matching one the instant you act; they ride
@@ -372,7 +422,9 @@ if (Test-Path $itsv) {
         }
     } catch {}
 }
+}
 
+if ($Part -eq 0 -or $Part -eq 2) {
 # 8) what the brain expects (predictive processing: arrive holding a forecast, so a violation is FELT
 # the moment reality lands, not noticed in hindsight). Reads brain/PREDICTIONS.md, written by predict.py.
 $pred = Join-Path $home2 '{{VIEWS_DIR}}\PREDICTIONS.md'
@@ -391,3 +443,15 @@ if (Test-Path $pred) {
         }
     } catch {}
 }
+}
+}
+$wakeText = ($wakeOut | Out-String -Width 4096)
+if ($wakeCopy) {
+    try {
+        $dir = Split-Path -Parent $wakeCopy
+        New-Item -ItemType Directory -Force -Path $dir | Out-Null
+        [IO.File]::WriteAllText($wakeCopy + '.tmp', $wakeText, (New-Object System.Text.UTF8Encoding $false))
+        Move-Item -Force -LiteralPath ($wakeCopy + '.tmp') -Destination $wakeCopy
+    } catch { }
+}
+[Console]::Out.Write($wakeText)
