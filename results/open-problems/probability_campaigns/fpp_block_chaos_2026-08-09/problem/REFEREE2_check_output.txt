@@ -1,0 +1,18 @@
+q'(x) = x*exp(x) + exp(x) - 1  -> nonneg on x>=0: True
+sup_{x in (0,1]} q(x)/x^2 = 1.718281828459045  (= e-1 = 1.718281828459045 )  <= 2: True
+sup_{x in (0,1/2]} q(x)/x^2 = 1.2974425414002564
+BLM form  max(LHS-RHS) over lambda for two-point {1,2}              =  0.000e+00  at lam= 0.00   -> holds: True
+BLM form  max(LHS-RHS) over lambda for two-point skew {1,2}         =  0.000e+00  at lam= 0.00   -> holds: True
+BLM form  max(LHS-RHS) over lambda for uniform grid [1,2] (11 pts)  =  0.000e+00  at lam= 0.00   -> holds: True
+BLM form  max(LHS-RHS) over lambda for heavy-ish {0,1,5}            = -2.220e-16  at lam= 0.00   -> holds: True
+BLM form  max(LHS-RHS) over lambda for sum of 8 iid two-point       =  0.000e+00  at lam= 0.00   -> holds: True
+a0=1: A(lambda) = 2*b**2*lambda**2 ; A at lambda=1/(2b) = 1/2
+walk's Ent coefficient (via A/(1-A) <= 2A): 4*b**3*r/a_w   == 4 b^3 r / a_w : True
+WALK   : lam* = a_w*u/(8*b**3*r)   exponent = -a_w*u**2/(16*b**3*r)   u_max = 4*b**2*r/a_w
+WALK   : exponent at u = t sqrt(r) : -a_w*t**2/(16*b**3)   == -a_w t^2/(16 b^3): True
+WALK   : t_max = 4*b**2*sqrt(r)/a_w   == 4 b^2 sqrt(r)/a_w: True
+DIRECT : lam* = a_w*u/(4*b**3*r)   exponent at u=t sqrt(r) : -a_w*t**2/(8*b**3)   t_max = 4*b**2*sqrt(r)/a_w
+s8_lower/det_upper = a_w**2/(16*b**2)  -> < 1 iff a_w < 4b (equality solution for a_w: [4*b] )
+r*=z^2/(2b^2):  r*/s8_lower = 8*b**2/a_w**2  (>1 iff a_w^2 < 8b^2);   det_upper/r* = 2
+overlap sweep failures: NONE (all (a_w,b,z) covered, incl. every integer r>=1)
+toy (m=40, weights {1,2}): max_lambda [exact psi_c - entropy-method bound] = -3.149999998029651e-06 -> bound valid: True

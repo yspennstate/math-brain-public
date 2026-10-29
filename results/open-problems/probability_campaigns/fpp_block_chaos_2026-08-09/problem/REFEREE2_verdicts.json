@@ -1,0 +1,130 @@
+{
+  "referee": "referee 2 of 3 - the entropy walk's named attack surfaces, S8 as applied, iter-116 brackets",
+  "date": "2026-08-10",
+  "targets": {
+    "walk": "problem/I3_entropy_route_walk_iter86.md",
+    "prior_referee": "problem/WALK_V3_REFEREE_iter94.md",
+    "consumer": "problem/C1_corner_route_attempt_iter60.md section 3"
+  },
+  "method": "every constant re-derived from the definitions before comparison with the printed value; symbolic re-derivation and numerical cross-checks in referee2_check.py",
+  "main": "No arithmetic defect. The iter-98 repair is correct as executed and all four printed constants are exact. Three text-level defects, one of which (S9-a's iter-98 sentence) currently prints a covering argument that does not cover. A strictly better constant is available and recommended.",
+  "items": [
+    {
+      "id": "1",
+      "step": "S3",
+      "subject": "tensorization over the subgraph-indexed product; conditioning convention",
+      "verdict": "CONFIRMED",
+      "basis": "DERIVED",
+      "findings": [
+        "Convention is Ent(f) <= Sum_i E[Ent^{(i)}(f)] with Ent^{(i)} integrating coordinate i only, all others frozen - exactly the convention under which BLM 6.15 applies conditionally.",
+        "T_+ is a minimum over a fixed path set, not a law conditioned on an event; the half-plane therefore cannot break the product structure.",
+        "Localization re-derived: minimisers lie in the l1-ball of radius 2(b/a_w) r (a path reaching l1-distance R has >= 2R - r edges, time >= 4br - a_w r > br at R = 2(b/a_w) r), and the bound survives resampling since tau' <= b. The box is deterministic, so there is no random index set.",
+        "Ent^{(i)} = 0 outside the box; the count #G_+ and the tensorization sum use the same index set."
+      ]
+    },
+    {
+      "id": "2",
+      "step": "S5",
+      "subject": "intersection of ALL geodesics under non-uniqueness, in H; measurable selection",
+      "verdict": "CONFIRMED",
+      "basis": "DERIVED",
+      "findings": [
+        "The implication (T'-T)^+ > 0 => e in intersection-of-all-H-geodesics never uses uniqueness; non-uniqueness shrinks the intersection and can only help.",
+        "No measurable selection is needed anywhere: membership has the closed form e in G_+ <=> T_+^{avoid e} > T_+, a Borel set in the finite localized problem. C1 section 0's selection convention is compatible and idle.",
+        "H is strictly easier than the full plane: existence of a minimiser is by finiteness of the H-path set in the box (non-empty because the wall segment is an H-path), where the full-plane survey needs a genuinely random exponential-moment estimate.",
+        "S6 re-derived: (T'-T)^+ <= tau'_i <= b; the walk's use of tau'_i rather than the tighter (tau'_i - tau_i)^+ is required to keep independence from sigma(tau) for the decoupling step."
+      ]
+    },
+    {
+      "id": "3",
+      "step": "S8",
+      "subject": "constant chase as applied",
+      "verdict": "CONFIRMED",
+      "basis": "DERIVED + symbolic + numeric",
+      "constants_checked": {
+        "E q(lambda tau') <= 2 lambda^2 b^2": "CORRECT (sup q(x)/x^2 on (0,1] = e-1 = 1.71828; on the window actually used, x <= 1/2, it is 1.29744)",
+        "a0 E q <= 1/2 for lambda <= 1/(2b) with a0 = 1": "CORRECT, equality at lambda = 1/(2b)",
+        "log E exp(#G_+/a0) <= (b/a_w) r/a0": "CORRECT, deterministic from Claim 4 (#G_+ <= T_+/a_w <= br/a_w)",
+        "Ent <= 4 lambda^2 b^3 (r/a_w) E e^{lambda T_+} on (0, 1/(2b))": "CORRECT, reproduced symbolically",
+        "P(T_+ - E T_+ >= t sqrt(r)) <= exp(-a_w t^2/(16 b^3))": "CORRECT, reproduced symbolically",
+        "range t in (0, 4 b^2 sqrt(r)/a_w)": "CORRECT, reproduced symbolically; the two agree at the endpoint (both give exp(-br/a_w)), an independent consistency check"
+      },
+      "additional": [
+        "The survey display Ent <= [aEq/(1-aEq)] log E exp(#G/a) E U was re-derived from entropy duality, so the walk no longer depends on the extraction's fidelity at p.49.",
+        "Sanity check on a degenerate toy (fixed path of m edges, weights on {1,2}, m=40): the entropy-method bound is never violated by the exact log-mgf, loose by ~64x - a too-small constant would have surfaced here."
+      ],
+      "improved_constant": {
+        "statement": "P(T_+ - E T_+ >= t sqrt(r)) <= exp(-a_w t^2/(8 b^3)) for t in (0, 4 b^2 sqrt(r)/a_w)",
+        "route": "Claim 4 bounds #G_+ deterministically, so the variational step is unnecessary: Ent <= Eq . (b/a_w) r . E U = 2 lambda^2 b^3 (r/a_w) E U on the wider window lambda in (0, 1/b].",
+        "gain": "exponent constant improved by a factor 2; identical t-range",
+        "structural_point": "it deletes the parameter a whose mis-setting (a = r) was the original defect, so the mechanism of that bug leaves the architecture rather than merely being set to a safe value"
+      }
+    },
+    {
+      "id": "4",
+      "step": "S9-a + C1 section 3",
+      "subject": "iter-116 overlap bracket and candidate instantiation",
+      "verdict": "CONFIRMED",
+      "basis": "DERIVED + symbolic + numeric sweep",
+      "findings": [
+        "Deterministic branch empties the event for r < (z/b)^2 (T_+ - E T_+ <= (b - a_w) r <= b r).",
+        "S8 branch admits t = z for r > (a_w z/(4 b^2))^2.",
+        "Overlap iff a_w < 4b, always true since a_w <= b; the threshold ratio is a_w^2/(16 b^2) <= 1/16, so the overlap is at least a factor-16 window in r, for every (a_w, b) and every z > 0.",
+        "Integer check the walk does not make and should: if (z/b)^2 <= 1 the deterministic branch covers no integer, but then z <= b and the S8 floor is <= 1/16 < 1, so S8 alone covers every integer r >= 1. Coverage of all integer r >= 1 at all z > 0 holds.",
+        "r* = z^2/(2 b^2) is admissible (needs a_w < 2 sqrt(2) b, weaker than a_w <= b).",
+        "NO smallness condition on delta is needed for coverage - the overlap condition contains neither z nor r.",
+        "Robust to either reading of C1's union: applying the tail at the common deviation z sqrt(R) instead of each pair's own r gives thresholds r > a_w z sqrt(R)/(4b^2) and r < z sqrt(R)/b, overlapping under the same condition a_w < 4b."
+      ],
+      "instantiation_match": {
+        "S_+(r) = sqrt(r)": "matches",
+        "theta = 2": "matches",
+        "C = 1": "matches on both branches (deterministic branch contributes probability 0)",
+        "c = a_w/(16 b^3)": "matches the re-derived constant exactly",
+        "strict vs non-strict event": "C1 asks for the open event, the walk bounds the closed one - the stronger direction"
+      },
+      "distinction_to_keep": "C1's union bound still needs delta > 0 STRICTLY so that exp(-c n^{2 delta}) beats the poly(n) pair count. That is a positivity requirement from C1's own counting (already implicit at C1 line 293), not a smallness requirement from the walk; the two must not be conflated."
+    },
+    {
+      "id": "5-extra",
+      "step": "S9 / C1 sweep",
+      "subject": "lower tail of T_+ non-consumption (walk asks its referee to confirm)",
+      "verdict": "CONFIRMED",
+      "basis": "independent enumeration of every probability statement in C1 (lines 84, 146, 157, 352, 364-365)",
+      "findings": [
+        "Only two tails are consumed, both at line 146: free time LOWER (I2) and confined time UPPER (I3). No lower deviation of T_+ appears anywhere; line 364's probability is a geodesic-touching event, not a passage-time tail."
+      ]
+    }
+  ],
+  "minor_defects": [
+    {
+      "id": "6.1",
+      "severity": "minor, but it is a covering argument that does not cover",
+      "location": "S9-a, the iter-98 sentence",
+      "text": "\"for r <= r* the deterministic bound T_+ - E T_+ <= b r <= b r* empties the deviation event once z sqrt(r) > b r*\"",
+      "problem": "the condition is evaluated at the wrong r: for r <= r*, z sqrt(r) is smallest at small r, so 'z sqrt(r) > b r*' fails precisely on the part of the branch it must cover",
+      "fix": "replace 'b r*' by 'b r' (equivalently, state the branch as r < (z/b)^2) or strike the clause - the iter-116 bracket two sentences later already states it correctly"
+    },
+    {
+      "id": "6.2",
+      "severity": "minor, presentational",
+      "location": "S9",
+      "problem": "\"INSIDE the restricted range with room to spare\" is true only at the top scale r ~ n^kappa; at r = O(1) the deviation is far outside the Gaussian range and it is S9-a that carries the pair",
+      "fix": "add 'at the top scale', or order S9-a after S9"
+    },
+    {
+      "id": "6.3",
+      "severity": "minor",
+      "location": "S8",
+      "problem": "the q-linearisation's precondition lambda tau' <= 1 (i.e. lambda <= 1/b) is used but never stated; it is implied by the printed window so nothing is wrong, but it is the hypothesis that pins the window's shape",
+      "fix": "one clause"
+    },
+    {
+      "id": "6.4",
+      "severity": "not a defect - slack worth naming",
+      "location": "S9-a",
+      "problem": "the deterministic ceiling is (b - a_w) r, not b r, since E T_+ >= a_w r; the true deterministic branch is r < (z/(b - a_w))^2 and the overlap margin is larger than claimed",
+      "fix": "optional"
+    }
+  ],
+  "ledger_recommendation": "The walk's S8 and S9-a are deliverable as printed. (H-I3)'s candidate closure by the entropy route stands on the constants a_w/(16 b^3) and 4 b^2/a_w, and C1 section 3's iter-116 instantiation quotes them correctly. Recommended for v4: the improved constant a_w/(8 b^3) on the same range (which also removes the parameter that carried the original defect) and the three text fixes."
+}
