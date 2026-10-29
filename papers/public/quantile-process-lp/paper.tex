@@ -1,0 +1,388 @@
+\documentclass[11pt]{amsart}
+
+\newcommand{\AUTHORNAME}{Yitzchak Shmalo}
+\newcommand{\AFFILIATION}{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\newcommand{\AUTHOREMAIL}{yitzchak.shmalo@gmail.com}
+\newcommand{\FUNDING}{The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).}
+\newcommand{\ACKNOWLEDGMENTS}{The final manuscript was audited by Claude Opus~5.5 (Anthropic), which checked the proofs and the cited results against the sources. }
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{remark}{Remark}{Remarks}
+\crefname{example}{Example}{Examples}
+\crefname{section}{Section}{Sections}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\ind}{\mathbf{1}}
+\newcommand{\dd}{\,\mathrm{d}}
+\newcommand{\Lp}{L^p(0,1)}
+\newcommand{\weak}{\rightsquigarrow}
+\DeclareMathOperator{\Law}{Law}
+
+\begin{document}
+
+\title[The quantile process in $L^p$]{A necessary and sufficient condition for convergence of the quantile process in $L^p(0,1)$}
+
+\author{\AUTHORNAME}
+\address{\AFFILIATION}
+\email{\AUTHOREMAIL}
+
+\subjclass[2020]{Primary 62G30, 60F17; Secondary 62G20}
+\keywords{Quantile process, empirical quantile function, convergence in distribution, $L^p$ spaces, Wasserstein distance, Brownian bridge}
+
+\begin{abstract}
+Let $Q$ be the quantile function of a probability measure $P$ on the real line and let $Q_n$ be the empirical quantile function of an i.i.d.\ sample of size $n$ from $P$. For $1\le p<\infty$ we show that $\sqrt n(Q_n-Q)$ converges in distribution in $L^p(0,1)$ if and only if $Q$ is locally absolutely continuous on $(0,1)$ and $\int_0^1 Q'(t)^p\,[t(1-t)]^{p/2}\,dt<\infty$. The limit is $Q'B$, where $B$ is a Brownian bridge. No density is assumed and atoms are allowed. The case $p=1$ is a theorem of Beare and Kaji. For $p>1$ the sufficiency part relies on a moment bound of Bobkov and Ledoux for empirical Wasserstein distances, which we extend to signed perturbations of the quantile function, and the necessity part combines the result of Beare and Kaji with Fernique's theorem. This answers a question posed by del Barrio, Gonz\'alez-Sanz, Loubes and Rodr\'iguez-V\'itores.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $X_1,X_2,\dots$ be independent random variables with common law $P$ on $\R$, distribution function $F$ and quantile function
+\[
+Q(t)=\inf\{x\in\R: F(x)\ge t\},\qquad 0<t<1.
+\]
+Let $F_n$ be the empirical distribution function of $X_1,\dots,X_n$ and let
+\[
+Q_n(t)=\inf\{x\in\R:F_n(x)\ge t\}=X_{(\lceil nt\rceil)},\qquad 0<t<1,
+\]
+be the empirical quantile function, where $X_{(1)}\le\dots\le X_{(n)}$ are the order statistics. The quantile process is $\sqrt n(Q_n-Q)$. Its behaviour in $L^p(0,1)$ is tied to the Wasserstein distance: when $\int|x|^p\dd P<\infty$, $\|Q_n-Q\|_{L^p}=W_p(P_n,P)$ for the empirical measure $P_n$, so statements about the quantile process in $L^p$ are statements about the fluctuations of $W_p(P_n,P)$ and of the optimal transport map from the uniform law to $P_n$.
+
+Throughout, $w_p(t)=[t(1-t)]^{p/2}$ for $0<t<1$. A function $h:(0,1)\to\R$ is \emph{locally absolutely continuous} if its restriction to every compact subinterval of $(0,1)$ is absolutely continuous. For such $h$ we write $h'$ for a Borel version of its almost everywhere derivative, so that $h(t)-h(s)=\int_s^t h'(r)\dd r$ for all $0<s<t<1$, and we set
+\[
+D_p(h)=\int_0^1 |h'(t)|^p\,w_p(t)\dd t\in[0,\infty],\qquad J_p(Q)=D_p(Q).
+\]
+When $Q$ is locally absolutely continuous we write $q=Q'\ge0$. Random elements of $\Lp$ are Borel measurable maps into this separable Banach space, and convergence in distribution (written $\weak$) refers to its norm topology. $B$ denotes a standard Brownian bridge on $[0,1]$ and $c_p=\E|N|^p$ for a standard normal $N$.
+
+\begin{theorem}\label{thm:main}
+Let $1\le p<\infty$. The following are equivalent.
+\begin{enumerate}
+\item[(a)] $\int|x|^p\dd P(x)<\infty$, and $\sqrt n(Q_n-Q)$ converges in distribution in $\Lp$.
+\item[(b)] $Q$ is locally absolutely continuous on $(0,1)$, and
+\[
+J_p(Q)=\int_0^1 q(t)^p\,[t(1-t)]^{p/2}\dd t<\infty .
+\]
+\end{enumerate}
+In that case $\sqrt n(Q_n-Q)\weak -qB$ in $\Lp$; the limit has the same law as $qB$, and $\E\|qB\|_{L^p}^p=c_p\,J_p(Q)$.
+\end{theorem}
+
+The moment condition in (a) is there only to make the statement meaningful. Indeed $\int|x|^p\dd P<\infty$ holds exactly when $Q\in\Lp$ (\cref{lem:measurability}); since $Q_n$ is a bounded step function, $\sqrt n(Q_n-Q)$ lies in $\Lp$ for one (equivalently every) sample if and only if this moment is finite. Conversely, (b) alone already forces $\int|x|^p\dd P<\infty$, for every $1\le p<\infty$, by a Hardy-type inequality (\cref{lem:hardy}). So the theorem may be read without any moment hypothesis: $\sqrt n(Q_n-Q)$ is an $\Lp$-valued random element that converges in distribution if and only if (b) holds.
+
+Condition (b) admits a description in terms of $P$. If $P$ is not a point mass, $Q$ is locally absolutely continuous if and only if the support of $P$ is an interval (bounded or not) and Lebesgue measure on that interval is absolutely continuous with respect to $P$ \cite[Proposition~A.17]{BobkovLedoux2019}. Atoms of $P$ give flat pieces of $Q$ and are allowed, and so is a singular continuous component; gaps in the support give jumps of $Q$ and are excluded.
+
+\subsection*{Background}
+For $p=1$, \cref{thm:main} is due to Beare and Kaji \cite{BeareKaji2025}. Their Theorem~3.1 shows that if $Q$ is locally absolutely continuous and $\int_0^1\sqrt{u(1-u)}\dd Q(u)<\infty$ (their Property~Q, which is (b) with $p=1$), then $\sqrt n(Q_n-Q)\weak -qB$ in $L^1(0,1)$. Their Theorem~3.2 shows that if $Q\in L^1(0,1)$ and $\sqrt n(Q_n-Q)$ converges in distribution in $L^1(0,1)$ to some $L^1(0,1)$-valued random variable, then Property~Q holds.
+
+For $p>1$ only sufficient conditions were known, all of them involving the density of $P$. For $p=2$, del Barrio, Gin\'e and Utzet \cite{dBGU2005} proved convergence in $L^2(0,1)$ when $P$ is supported on an interval on which it has a positive differentiable density $f$ satisfying a Cs\"org\H{o}--R\'ev\'esz type condition, together with $J_2(Q)<\infty$; see also the restatement in \cite[Theorem~5.2]{BobkovLedoux2019}. Earlier, Mason \cite{Mason1984} gave sufficient conditions for weak convergence in $L^2(0,1)$ of weighted versions of the quantile process. For general $p\ge1$, the survey of del Barrio, Gonz\'alez-Sanz, Loubes and Rodr\'iguez-V\'itores \cite[Theorem~2.4]{dBGSLRV2025} states convergence in $\Lp$ under the assumptions that $P$ has a continuous density $f$ with $f\circ Q$ continuous on $(0,1)$ and monotone near $0$ and $1$, and $J_p(Q)<\infty$. The authors remark that the monotonicity might not be necessary, as the case $p=1$ shows, and ask \cite[Section~7, Problem~2]{dBGSLRV2025} for necessary and sufficient conditions for weak convergence of the quantile process in $\Lp$. \Cref{thm:main} answers this question.
+
+The quantity $J_p$ was studied in depth by Bobkov and Ledoux \cite{BobkovLedoux2019}. They proved that
+\[
+n^{p/2}\,\E W_p^p(P_n,P)\le(5p)^pJ_p(Q)
+\]
+\cite[Theorem~5.3]{BobkovLedoux2019} and, for $p>1$, that the standard rate $\E W_p(P_n,P)=O(n^{-1/2})$ requires $Q$ to be absolutely continuous on $(0,1)$ \cite[Theorem~5.6]{BobkovLedoux2019} and is governed from below by $J_p$ \cite[Theorem~5.9]{BobkovLedoux2019}. These are statements about moments. They do not give tightness of the quantile process in $\Lp$, and they do not show that $J_p(Q)<\infty$ is needed for convergence in distribution, which says nothing about moments.
+
+\subsection*{What is new and what is borrowed}
+For $p>1$, \cref{thm:main} removes every assumption on the density of $P$ from the known sufficient conditions, allows atoms, and adds the necessity of (b). The proof is short because it rests on two published results. Sufficiency (\cref{sec:sufficiency}) uses the moment inequality of Bobkov and Ledoux, which we extend from quantile functions to differences of quantile functions (\cref{prop:signed}); this gives an approximation estimate that is uniform in $n$, and the classical convergence of the uniform quantile process does the rest. Necessity (\cref{sec:necessity}) reduces to $L^1(0,1)$, where the theorem of Beare and Kaji identifies the limit as $-qB$; the limit is then shown to be a Gaussian random element of $\Lp$, and Fernique's theorem gives $\E\|qB\|_{L^p}^p<\infty$, which is $c_pJ_p(Q)<\infty$. The proof of sufficiency also works for $p=1$ and gives another proof of the convergence statement in \cite[Theorem~3.1]{BeareKaji2025}; the necessity for $p=1$ is \cite[Theorem~3.2]{BeareKaji2025}.
+
+\section{Preliminaries}\label{sec:prelim}
+
+\subsection{Measurability and moments}
+
+\begin{lemma}\label[lemma]{lem:measurability}
+Let $1\le p<\infty$. Then $\int|x|^p\dd P(x)=\int_0^1|Q(t)|^p\dd t$. If this is finite, then for each $n$ the map $\omega\mapsto\sqrt n(Q_n-Q)$ is a random element of $\Lp$. If it is infinite, then $\sqrt n(Q_n-Q)\notin\Lp$ for every $n$ and every realisation of the sample.
+\end{lemma}
+
+\begin{proof}
+For $U$ uniform on $(0,1)$ and $x\in\R$ we have $Q(U)\le x$ if and only if $U\le F(x)$, so $Q(U)$ has law $P$; this gives the identity. The map $S_n:\R^n\to\Lp$ sending $(x_1,\dots,x_n)$ to $\sum_{k=1}^n x_{(k)}\ind_{((k-1)/n,k/n]}$ is continuous, since sorting is continuous on $\R^n$ and the remaining map is linear on $\R^n$. As $Q_n=S_n(X_1,\dots,X_n)$ and $Q\in\Lp$ is fixed, $\sqrt n(Q_n-Q)$ is Borel measurable. Since $Q_n$ is bounded, $Q_n-Q\in\Lp$ if and only if $Q\in\Lp$.
+\end{proof}
+
+\begin{lemma}\label[lemma]{lem:hardy}
+Let $1\le p<\infty$ and let $h$ be locally absolutely continuous on $(0,1)$ with $D_p(h)<\infty$. Then $h\in\Lp$ and
+\[
+\int_0^1|h(t)-h(1/2)|^p\dd t\le p^p D_p(h).
+\]
+In particular, if $Q$ satisfies (b) of \cref{thm:main}, then $\int|x|^p\dd P(x)<\infty$.
+\end{lemma}
+
+\begin{proof}
+Put $g=|h'|$ and $G(t)=\int_t^{1/2}g(r)\dd r$ for $0<t\le1/2$, so that $|h(t)-h(1/2)|\le G(t)$. Fix $0<\varepsilon<1/2$. On $[\varepsilon,1/2]$ the function $G$ is absolutely continuous, bounded and nonnegative, with $G'=-g$ almost everywhere and $G(1/2)=0$. Since $x\mapsto x^p$ is Lipschitz on bounded subsets of $[0,\infty)$, the function $t\mapsto tG(t)^p$ is absolutely continuous on $[\varepsilon,1/2]$, with derivative $G^p-p\,t\,G^{p-1}g$ almost everywhere (for $p=1$ read $G^{p-1}=1$). Integrating,
+\[
+\int_\varepsilon^{1/2}G(t)^p\dd t=-\varepsilon G(\varepsilon)^p+p\int_\varepsilon^{1/2}t\,g(t)\,G(t)^{p-1}\dd t\le p\int_\varepsilon^{1/2}t\,g(t)\,G(t)^{p-1}\dd t .
+\]
+For $p=1$ this reads $\int_\varepsilon^{1/2}G\le\int_\varepsilon^{1/2}t\,g(t)\dd t$. For $p>1$, H\"older's inequality with exponents $p$ and $p/(p-1)$ bounds the right side by $p(\int_\varepsilon^{1/2}t^pg^p)^{1/p}(\int_\varepsilon^{1/2}G^p)^{(p-1)/p}$; the last integral is finite, so after dividing (there is nothing to prove if it vanishes) we get $\int_\varepsilon^{1/2}G^p\le p^p\int_0^{1/2}t^pg(t)^p\dd t$. In both cases we let $\varepsilon\downarrow0$ and use monotone convergence. For $0<t\le1/2$ we have $t\le1-t$, hence $t^p\le[t(1-t)]^{p/2}=w_p(t)$, and so
+\[
+\int_0^{1/2}|h(t)-h(1/2)|^p\dd t\le p^p\int_0^{1/2}|h'(t)|^pw_p(t)\dd t .
+\]
+The same argument on $[1/2,1)$, with $\int_{1/2}^t g$ in place of $G$ and $(1-t)^p\le w_p(t)$, gives the corresponding bound there. Adding the two bounds proves the inequality, and $h\in\Lp$ follows. The last assertion follows from the first applied to $h=Q$ together with \cref{lem:measurability}.
+\end{proof}
+
+\subsection{Monotone transformations of a uniform sample}
+
+Let $U_1,U_2,\dots$ be independent and uniform on $(0,1)$, with values in $(0,1)$, and let $U_{(1)}\le\dots\le U_{(n)}$ be the order statistics of $U_1,\dots,U_n$. Put
+\[
+V_n(t)=U_{(\lceil nt\rceil)},\qquad 0<t<1,
+\]
+the empirical quantile function of the uniform sample. For a Borel function $h$ on $(0,1)$ set
+\[
+A_nh=\sqrt n\,(h\circ V_n-h).
+\]
+The operator $A_n$ is linear in $h$ and vanishes on constants. If $h\in\Lp$, then $A_nh$ is a random element of $\Lp$, because $h\circ V_n=\sum_{k=1}^nh(U_{(k)})\ind_{((k-1)/n,k/n]}$ is a continuous function of the random vector $(h(U_{(1)}),\dots,h(U_{(n)}))$.
+
+\begin{lemma}\label[lemma]{lem:monotone}
+Let $a:(0,1)\to\R$ be nondecreasing and let $\nu$ be the law of $a(U_1)$.
+\begin{enumerate}
+\item[(i)] The empirical quantile function of $a(U_1),\dots,a(U_n)$ is $a\circ V_n$.
+\item[(ii)] If $a$ is also continuous, the quantile function of $\nu$ is $a$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(i) Since $a$ is nondecreasing, $(a(U_{(1)}),\dots,a(U_{(n)}))$ is a nondecreasing rearrangement of $(a(U_1),\dots,a(U_n))$, ties included. The empirical quantile function at $t$ is the $\lceil nt\rceil$-th smallest of these values, that is $a(U_{(\lceil nt\rceil)})=a(V_n(t))$.
+
+(ii) Let $G(x)=\Prob(a(U_1)\le x)$ and fix $t\in(0,1)$. Every $u\le t$ has $a(u)\le a(t)$, so $G(a(t))\ge t$. Let $x<a(t)$. The set $\{u:a(u)\le x\}$ is an interval with left end $0$; let $s$ be its right end. Every $u$ in it satisfies $a(u)\le x<a(t)$, hence $u<t$, so $s\le t$; and continuity gives $a(s)\le x<a(t)$ when $s>0$, so $s\ne t$. Thus $G(x)\le s<t$. Hence $\inf\{x:G(x)\ge t\}=a(t)$.
+\end{proof}
+
+Applied to $a=Q$, part (i) shows that if $X_i=Q(U_i)$, which have law $P$ by the proof of \cref{lem:measurability}, then $Q_n=Q\circ V_n$ identically, whether or not $P$ has atoms. Consequently
+\begin{equation}\label{eq:coupling}
+\sqrt n(Q_n-Q)=A_nQ\qquad\text{when }X_i=Q(U_i).
+\end{equation}
+
+\subsection{Two external inputs}
+
+The first input is the moment bound of Bobkov and Ledoux. For probability measures $\mu,\nu$ on $\R$ with finite $p$-th moments, $W_p^p(\mu,\nu)=\int_0^1|F_\mu^{-1}(t)-F_\nu^{-1}(t)|^p\dd t$, where $F_\mu^{-1},F_\nu^{-1}$ are the quantile functions \cite[Theorem~2.10]{BobkovLedoux2019}.
+
+\begin{proposition}[Bobkov and Ledoux]\label[proposition]{prop:BL}
+Let $1\le p<\infty$ and let $\nu$ be a probability measure on $\R$ with finite $p$-th moment, whose quantile function $u$ is locally absolutely continuous on $(0,1)$. Let $\nu_n$ be the empirical measure of $n$ independent observations from $\nu$. Then, for every $n\ge1$,
+\[
+\E W_p^p(\nu_n,\nu)\le\Big(\frac{5p}{\sqrt{n+2}}\Big)^p\int_0^1|u'(t)|^p\,w_p(t)\dd t .
+\]
+\end{proposition}
+
+This is \cite[Theorem~5.3]{BobkovLedoux2019}, where the right side is written as $(5p/\sqrt{n+2})^pJ_p(\nu)$ with $J_p(\nu)$ expressed through the density of the absolutely continuous part of $\nu$; \cite[Corollary~A.22]{BobkovLedoux2019} identifies $J_p(\nu)$ with $\int_0^1|u'|^pw_p$ whenever $u$ is absolutely continuous. In \cite{BobkovLedoux2019}, absolute continuity of a quantile function on $(0,1)$ means absolute continuity on each compact subinterval (see the proof of \cite[Proposition~A.17]{BobkovLedoux2019}), which is our local absolute continuity. The proof of \cite[Theorem~5.3]{BobkovLedoux2019} combines the beta representation of \cite[Theorem~4.6]{BobkovLedoux2019} with \cite[Proposition~B.13]{BobkovLedoux2019}, a Poincar\'e-type inequality stated for an arbitrary absolutely continuous function $u$ on $(0,1)$. Nothing else is assumed about $\nu$; in particular $\nu$ may have atoms or a singular continuous part.
+
+The second input is the classical behaviour of the uniform quantile process.
+
+\begin{proposition}\label[proposition]{prop:uniform}
+There are a probability space, carrying for every $n\ge1$ independent uniform random variables $\xi_{n1},\dots,\xi_{nn}$, and a Brownian bridge $B$, such that, with $G_n^{-1}$ the empirical quantile function of $\xi_{n1},\dots,\xi_{nn}$,
+\[
+\sup_{0<t<1}\big|\sqrt n\,(G_n^{-1}(t)-t)+B(t)\big|\to0\qquad\text{almost surely.}
+\]
+\end{proposition}
+
+This is part of the special construction of Shorack and Wellner \cite[Theorem~3.1.1]{ShorackWellner1986}, which gives almost sure uniform convergence of the uniform empirical process to a Brownian bridge and of the uniform quantile process to its negative; see also \cite{Csorgo1983} and, for the passage from a process to its inverse, \cite{Vervaat1972}. The supremum is measurable because $G_n^{-1}$ is a step function with jumps at the fixed points $k/n$. Since $B$ and $-B$ have the same law, the sign convention plays no role below.
+
+\subsection{Gaussian facts}
+
+\begin{lemma}\label[lemma]{lem:gausslimit}
+If $\xi_k$ are centered Gaussian random variables (variance zero allowed) and $\xi_k\to\xi$ in probability, then $\xi$ is centered Gaussian.
+\end{lemma}
+
+\begin{proof}
+Let $\sigma_k^2=\operatorname{Var}\xi_k$. For each $s$, $e^{-\sigma_k^2s^2/2}=\E e^{is\xi_k}\to\varphi(s)=\E e^{is\xi}$. If $\sigma_k\to\infty$ along a subsequence, then $\varphi(s)=0$ for $s\ne0$ while $\varphi(0)=1$, which contradicts continuity of $\varphi$. So $(\sigma_k)$ is bounded, and along a subsequence $\sigma_k^2\to\sigma^2$, whence $\varphi(s)=e^{-\sigma^2s^2/2}$.
+\end{proof}
+
+\begin{lemma}\label[lemma]{lem:gaussfunctional}
+Let $\psi:(0,1)\to\R$ be Borel with $\int_0^1|\psi|\,w_1<\infty$. Then $\int_0^1|\psi(t)B(t)|\dd t<\infty$ almost surely, and $\int_0^1\psi(t)B(t)\dd t$ is a centered Gaussian random variable.
+\end{lemma}
+
+\begin{proof}
+Since $B(t)$ is centered normal with variance $t(1-t)$, Tonelli's theorem gives $\E\int_0^1|\psi B|=c_1\int_0^1|\psi|\,w_1<\infty$. Because $w_1\le1/2$, we can choose continuous functions $\psi_k$ with compact support in $(0,1)$ such that $\int_0^1|\psi-\psi_k|\,w_1\to0$: approximate $\psi\ind\{|\psi|\le k\}\ind_{[1/k,1-1/k]}$ in $L^1(0,1)$ and use dominated convergence for the truncation. By continuity of the paths, $\int\psi_kB$ is the almost sure limit of the Riemann sums $N^{-1}\sum_{j=1}^{N}\psi_k(j/N)B(j/N)$, which are centered Gaussian; by \cref{lem:gausslimit}, $\int\psi_kB$ is centered Gaussian. Finally $\E|\int\psi B-\int\psi_kB|\le c_1\int|\psi-\psi_k|\,w_1\to0$, and \cref{lem:gausslimit} applies again.
+\end{proof}
+
+\begin{lemma}\label[lemma]{lem:weightedbridge}
+Let $1\le p<\infty$ and let $r:(0,1)\to\R$ be Borel with $\int_0^1|r|^pw_p<\infty$. Then $\int_0^1|r(t)B(t)|^p\dd t<\infty$ almost surely, the process $rB$ (set equal to $0$ on the exceptional null event) is a random element of $\Lp$, and
+\[
+\E\|rB\|_{L^p}^p=c_p\int_0^1|r(t)|^pw_p(t)\dd t .
+\]
+\end{lemma}
+
+\begin{proof}
+The identity follows from Tonelli's theorem and $\E|B(t)|^p=c_pw_p(t)$; the integrand $(t,\omega)\mapsto|r(t)B(t,\omega)|^p$ is jointly measurable because $B$ has continuous paths. So $\Omega_0=\{\int|rB|^p<\infty\}$ is an event of probability one. Let $r_k=r\ind\{|r|\le k\}\ind_{[1/k,1-1/k]}$. Multiplication by $r_k$ is a bounded linear map from $C[0,1]$ to $\Lp$, so $r_kB$ is a random element of $\Lp$. On $\Omega_0$, $r_kB\to rB$ in $\Lp$ by dominated convergence. A pointwise limit of Borel maps into a metric space is Borel.
+\end{proof}
+
+\subsection{\texorpdfstring{Laws on $L^p$ and on $L^1$}{Laws on Lp and on L1}}
+
+Let $\iota:\Lp\to L^1(0,1)$ be the inclusion; it is continuous, with $\|\iota z\|_{L^1}\le\|z\|_{L^p}$, and injective. For $\varphi\in L^\infty(0,1)$ and $z\in L^1(0,1)$ write $\langle\varphi,z\rangle=\int_0^1\varphi z$.
+
+\begin{lemma}\label[lemma]{lem:lawsL1}
+Let $1\le p<\infty$, and let $Y,Y'$ be random elements of $\Lp$ such that $\iota Y$ and $\iota Y'$ have the same law in $L^1(0,1)$. Then $Y$ and $Y'$ have the same law in $\Lp$.
+\end{lemma}
+
+\begin{proof}
+For $p=1$ there is nothing to prove, so let $p>1$ and $p'=p/(p-1)$. Let $\mathcal C$ be the $\sigma$-field on $\Lp$ generated by the maps $z\mapsto\langle\varphi,z\rangle$, $\varphi\in L^\infty(0,1)$. For $\varphi_1,\dots,\varphi_k\in L^\infty$, the vector $(\langle\varphi_j,Y\rangle)_{j\le k}$ is a continuous function of $\iota Y$, so it has the same law as $(\langle\varphi_j,Y'\rangle)_{j\le k}$. The finite-dimensional cylinder sets form a $\pi$-system generating $\mathcal C$, so $Y$ and $Y'$ have the same law on $\mathcal C$. It remains to show that $\mathcal C$ contains the Borel sets of $\Lp$. Bounded functions in the unit ball of $L^{p'}(0,1)$ are dense in that ball, and $L^{p'}(0,1)$ is separable, so there is a countable set $\mathcal D\subset L^\infty$ of such functions that is dense in the unit ball of $L^{p'}$. By duality and H\"older's inequality, $\|z\|_{L^p}=\sup_{\varphi\in\mathcal D}\langle\varphi,z\rangle$ for $z\in\Lp$. Hence each closed ball $\{z:\|z-y_0\|_{L^p}\le\rho\}=\bigcap_{\varphi\in\mathcal D}\{z:\langle\varphi,z\rangle\le\rho+\langle\varphi,y_0\rangle\}$ belongs to $\mathcal C$. Since $\Lp$ is separable, every open set is a countable union of such balls, and the claim follows.
+\end{proof}
+
+In particular, if $\sqrt n(Q_n-Q)$ converges in distribution in $\Lp$, the law of its limit is determined by the law of the corresponding limit in $L^1(0,1)$.
+
+\section{A moment bound for signed perturbations}\label{sec:signed}
+
+The next proposition is the main technical step. For a nondecreasing $h$ it is \cref{prop:BL} applied to the law of $h(U_1)$; the point is that it holds for differences of such functions, with no monotonicity, no continuity of $h'$ and no condition at the endpoints.
+
+\begin{proposition}\label[proposition]{prop:signed}
+Let $1\le p<\infty$ and let $h$ be locally absolutely continuous on $(0,1)$ with $D_p(h)<\infty$. Then $h\in\Lp$ and, for every $n\ge1$,
+\[
+\E\|A_nh\|_{L^p}^p\le2^{p-1}(5p)^p\Big(\frac n{n+2}\Big)^{p/2}D_p(h)\le2^{p-1}(5p)^pD_p(h).
+\]
+If $h$ is nondecreasing, the factor $2^{p-1}$ can be omitted.
+\end{proposition}
+
+\begin{proof}
+That $h\in\Lp$ is \cref{lem:hardy}. Let $g=h'$ and define, with oriented integrals,
+\[
+a(t)=\int_{1/2}^tg^+(r)\dd r,\qquad b(t)=\int_{1/2}^tg^-(r)\dd r,\qquad 0<t<1 .
+\]
+Both integrals are finite because $g$ is integrable on compact subintervals. The functions $a$ and $b$ are continuous, nondecreasing and locally absolutely continuous, with $a'=g^+$ and $b'=g^-$ almost everywhere, and $h=h(1/2)+a-b$. Since $|g|^p=(g^+)^p+(g^-)^p$ pointwise, $D_p(a)+D_p(b)=D_p(h)$.
+
+Consider $a$. By \cref{lem:hardy}, $a\in\Lp$, so the law $\nu$ of $a(U_1)$ has finite $p$-th moment. By \cref{lem:monotone}(ii), the quantile function of $\nu$ is $a$, which is locally absolutely continuous; by \cref{lem:monotone}(i), the empirical quantile function of the sample $a(U_1),\dots,a(U_n)$ from $\nu$ is $a\circ V_n$. By \cite[Theorem~2.10]{BobkovLedoux2019}, $W_p^p(\nu_n,\nu)=\|a\circ V_n-a\|_{L^p}^p$, so \cref{prop:BL} gives
+\[
+\E\|A_na\|_{L^p}^p=n^{p/2}\,\E W_p^p(\nu_n,\nu)\le(5p)^p\Big(\frac n{n+2}\Big)^{p/2}D_p(a).
+\]
+The same holds for $b$. The samples $a(U_i)$ and $b(U_i)$ are built from the same uniforms; no independence between them is needed. By linearity, $A_nh=A_na-A_nb$, and $|x-y|^p\le2^{p-1}(|x|^p+|y|^p)$ gives
+\[
+\E\|A_nh\|_{L^p}^p\le2^{p-1}\big(\E\|A_na\|_{L^p}^p+\E\|A_nb\|_{L^p}^p\big)\le2^{p-1}(5p)^p\Big(\frac n{n+2}\Big)^{p/2}D_p(h).
+\]
+If $h$ is nondecreasing then $b$ is constant, $A_nh=A_na$, and the factor $2^{p-1}$ is not needed. All expectations here are of nonnegative measurable quantities, so Tonelli's theorem justifies the interchanges.
+\end{proof}
+
+\section{Sufficiency}\label{sec:sufficiency}
+
+\begin{theorem}\label{thm:sufficiency}
+Let $1\le p<\infty$. Assume that $Q$ is locally absolutely continuous and $J_p(Q)<\infty$. Then $\int|x|^p\dd P<\infty$, $qB$ is a random element of $\Lp$ with $\E\|qB\|_{L^p}^p=c_pJ_p(Q)$, and $\sqrt n(Q_n-Q)\weak-qB$ in $\Lp$.
+\end{theorem}
+
+\begin{proof}
+The first assertion is \cref{lem:hardy} and the second is \cref{lem:weightedbridge} with $r=q$. The law of $\sqrt n(Q_n-Q)$ depends only on $P$, so by \eqref{eq:coupling} we may and do assume that $X_i=Q(U_i)$ and $\sqrt n(Q_n-Q)=A_nQ$. On the same probability space we let $B$ be a Brownian bridge (for instance on a product space; its relation to the $U_i$ plays no role).
+
+\emph{Step 1: smooth approximation.} We claim there are $g_m\in C_c^\infty(0,1)$ with $\int_0^1|q-g_m|^pw_p\le1/m$. Let $f_k=q\ind\{q\le k\}\ind_{[1/k,1-1/k]}$. Then $|q-f_k|^pw_p\le q^pw_p$, which is integrable, and $f_k\to q$ pointwise, so $\int|q-f_k|^pw_p\to0$. Fix $k$ with $\int|q-f_k|^pw_p\le2^{-p}/m$. Mollifying $f_k$ with a smooth kernel supported in $(-\delta,\delta)$, $\delta<1/(2k)$, gives functions in $C_c^\infty(0,1)$ that converge to $f_k$ in $L^p(0,1)$ as $\delta\to0$; since $w_p\le1$, they also converge in the weighted norm. Choosing $\delta$ so that the weighted error of the mollification is also at most $2^{-p}/m$, and using $|x+y|^p\le2^{p-1}(|x|^p+|y|^p)$ proves the claim. Now put
+\[
+Q_m(t)=Q(1/2)+\int_{1/2}^tg_m(r)\dd r .
+\]
+Each $Q_m$ is constant near $0$ and near $1$ and extends to a $C^\infty$ function on $[0,1]$. The difference $Q-Q_m$ is locally absolutely continuous with derivative $q-g_m$, so \cref{prop:signed} and linearity of $A_n$ give, with $C_p=2^{p-1}(5p)^p$,
+\begin{equation}\label{eq:unif}
+\sup_{n\ge1}\E\|A_nQ-A_nQ_m\|_{L^p}^p\le C_p\int_0^1|q-g_m|^pw_p\le\frac{C_p}{m}.
+\end{equation}
+By \cref{lem:weightedbridge} with $r=q-g_m$, and since $(q-g_m)B=qB-g_mB$ almost surely,
+\begin{equation}\label{eq:unifB}
+\E\|qB-g_mB\|_{L^p}^p=c_p\int_0^1|q-g_m|^pw_p\le\frac{c_p}{m}.
+\end{equation}
+
+\emph{Step 2: fixed $m$.} We show $A_nQ_m\weak-g_mB$ in $\Lp$ as $n\to\infty$. The law of $A_nQ_m$ is that of a fixed measurable function of $n$ independent uniforms, so we may compute it on the probability space of \cref{prop:uniform}, where $V_n=G_n^{-1}$. Let $\varepsilon_n(t)=V_n(t)-t$. Taylor's theorem for $Q_m\in C^2[0,1]$ gives, for $0<t<1$,
+\[
+\big|A_nQ_m(t)-g_m(t)\sqrt n\,\varepsilon_n(t)\big|\le\tfrac12\|g_m'\|_\infty\sqrt n\,\varepsilon_n(t)^2\le\frac{\|g_m'\|_\infty}{2\sqrt n}\big(\sqrt n\|\varepsilon_n\|_\infty\big)^2 .
+\]
+By \cref{prop:uniform}, almost surely $\|\sqrt n\varepsilon_n+B\|_\infty\to0$; in particular $\sqrt n\|\varepsilon_n\|_\infty\to\|B\|_\infty<\infty$, so the right side tends to $0$. Since $\|z\|_{L^p}\le\|z\|_\infty$ on $(0,1)$,
+\[
+\|A_nQ_m+g_mB\|_{L^p}\le\frac{\|g_m'\|_\infty}{2\sqrt n}\big(\sqrt n\|\varepsilon_n\|_\infty\big)^2+\|g_m\|_\infty\|\sqrt n\varepsilon_n+B\|_\infty\to0
+\]
+almost surely. Almost sure convergence implies convergence in distribution.
+
+\emph{Step 3: passage to the limit.} Let $f:\Lp\to\R$ satisfy $|f|\le1$ and $|f(y)-f(z)|\le\|y-z\|_{L^p}$. With $Z_n=A_nQ$, $Z_{n,m}=A_nQ_m$, $Y_m=-g_mB$ and $Y=-qB$, all defined on our probability space,
+\[
+|\E f(Z_n)-\E f(Y)|\le\E\|Z_n-Z_{n,m}\|_{L^p}+|\E f(Z_{n,m})-\E f(Y_m)|+\E\|Y_m-Y\|_{L^p}.
+\]
+By \eqref{eq:unif}, \eqref{eq:unifB} and $\E\|\cdot\|\le(\E\|\cdot\|^p)^{1/p}$, the first and last terms are at most $(C_p/m)^{1/p}$ and $(c_p/m)^{1/p}$, for every $n$. By Step 2 the middle term tends to $0$ as $n\to\infty$. Hence $\limsup_n|\E f(Z_n)-\E f(Y)|\le(C_p/m)^{1/p}+(c_p/m)^{1/p}$ for every $m$, and therefore $\E f(Z_n)\to\E f(Y)$.
+
+\emph{Step 4: conclusion.} By scaling, $\E f(Z_n)\to\E f(Y)$ for every bounded Lipschitz $f$. For a closed set $C\subset\Lp$ and $k\ge1$, the function $f_k(z)=\max\{0,1-k\operatorname{dist}(z,C)\}$ is bounded and Lipschitz, with $\ind_C\le f_k\downarrow\ind_C$. Hence $\limsup_n\Prob(Z_n\in C)\le\lim_n\E f_k(Z_n)=\E f_k(Y)$ for each $k$, and letting $k\to\infty$ gives $\limsup_n\Prob(Z_n\in C)\le\Prob(Y\in C)$. By the portmanteau theorem \cite[Section~2]{Billingsley1999}, $Z_n\weak Y=-qB$.
+\end{proof}
+
+\begin{remark}\label[remark]{rem:tightness}
+The bound $\sup_n\E\|A_nQ\|_{L^p}^p<\infty$, which is \cref{prop:BL} for $Q$ itself, does not by itself give tightness in $\Lp$; mass can escape to the endpoints. What \cref{prop:signed} adds is the bound \eqref{eq:unif} for the non-monotone differences $Q-Q_m$, uniformly in $n$. This is what makes the endpoint behaviour uniformly small without any assumption on $q$ near $0$ and $1$.
+\end{remark}
+
+\section{Necessity}\label{sec:necessity}
+
+\begin{theorem}\label{thm:necessity}
+Let $1\le p<\infty$ and assume $\int|x|^p\dd P<\infty$. If $\sqrt n(Q_n-Q)\weak Y$ in $\Lp$ for some random element $Y$ of $\Lp$, then $Q$ is locally absolutely continuous, $J_p(Q)<\infty$, and $Y$ has the law of $-qB$ in $\Lp$.
+\end{theorem}
+
+\begin{proof}
+Write $Z_n=\sqrt n(Q_n-Q)$. By \cref{lem:measurability}, $Q\in\Lp\subset L^1(0,1)$.
+
+\emph{Step 1: reduction to $L^1$.} The inclusion $\iota:\Lp\to L^1(0,1)$ is continuous, so the continuous mapping theorem gives $\iota Z_n\weak\iota Y$ in $L^1(0,1)$. The maps $\iota Z_n$ are Borel measurable (\cref{lem:measurability}), so this is convergence in distribution in the sense used in \cite{BeareKaji2025} as well.
+
+\emph{Step 2: the theorem of Beare and Kaji.} Since $Q\in L^1(0,1)$ and $\iota Z_n$ converges in distribution in $L^1(0,1)$ to the $L^1(0,1)$-valued random variable $\iota Y$, \cite[Theorem~3.2]{BeareKaji2025} shows that $Q$ has Property~Q: $Q$ is locally absolutely continuous and $\int_0^1\sqrt{u(1-u)}\dd Q(u)<\infty$. As $Q$ is locally absolutely continuous, this Lebesgue--Stieltjes integral equals $\int_0^1q\,w_1=J_1(Q)$. Then \cite[Theorem~3.1]{BeareKaji2025} gives $\iota Z_n\weak-qB$ in $L^1(0,1)$. Limits in distribution in a metric space are unique, so
+\begin{equation}\label{eq:L1law}
+\Law(\iota Y)=\Law(-qB)\qquad\text{in }L^1(0,1).
+\end{equation}
+For $p=1$ this already proves the theorem, so let $p>1$ from now on.
+
+\emph{Step 3: $Y$ is a Gaussian random element of $\Lp$.} Let $\varphi\in L^\infty(0,1)$. Then $z\mapsto\langle\varphi,z\rangle$ is a continuous linear functional on $L^1(0,1)$, and $\langle\varphi,Y\rangle=\langle\varphi,\iota Y\rangle$. By \eqref{eq:L1law}, $\langle\varphi,Y\rangle$ has the law of $-\int_0^1\varphi qB$. Since $\int|\varphi q|w_1\le\|\varphi\|_\infty J_1(Q)<\infty$, \cref{lem:gaussfunctional} shows that this is a centered Gaussian variable. Now let $\varphi\in L^{p'}(0,1)$, $p'=p/(p-1)<\infty$, and put $\varphi_k=\varphi\ind\{|\varphi|\le k\}$. By dominated convergence $\varphi_k\to\varphi$ in $L^{p'}$, so for every outcome
+\[
+|\langle\varphi_k,Y\rangle-\langle\varphi,Y\rangle|\le\|\varphi_k-\varphi\|_{L^{p'}}\|Y\|_{L^p}\to0 .
+\]
+By \cref{lem:gausslimit}, $\langle\varphi,Y\rangle$ is centered Gaussian. Every continuous linear functional on $\Lp$ has this form, so $Y$ is a centered Gaussian random element of the separable Banach space $\Lp$. This is the step that uses $p>1$, through $p'<\infty$.
+
+\emph{Step 4: Fernique's theorem.} By Fernique's theorem \cite{Fernique1970}, see also \cite[Theorem~2.8.5]{Bogachev1998}, there is $\alpha>0$ with $\E\exp(\alpha\|Y\|_{L^p}^2)<\infty$. In particular $\E\|Y\|_{L^p}^p<\infty$.
+
+\emph{Step 5: transfer of the $p$-th moment.} Define $N_p:L^1(0,1)\to[0,\infty]$ by $N_p(z)=\int_0^1|z|^p$. For $M>0$ the function $x\mapsto\min(|x|^p,M)$ is Lipschitz on $\R$ with constant $pM^{(p-1)/p}$, so $z\mapsto\int_0^1\min(|z|^p,M)$ is Lipschitz on $L^1(0,1)$. By monotone convergence $N_p$ is the increasing limit of these functionals as $M\to\infty$, hence Borel. Clearly $N_p(\iota Y)=\|Y\|_{L^p}^p$. Applying \eqref{eq:L1law} and then Tonelli's theorem with $\E|B(t)|^p=c_pw_p(t)$,
+\[
+\E\|Y\|_{L^p}^p=\E N_p(-qB)=\E\int_0^1|q(t)B(t)|^p\dd t=c_p\int_0^1q(t)^pw_p(t)\dd t=c_pJ_p(Q).
+\]
+The left side is finite by Step 4 and $c_p>0$, so $J_p(Q)<\infty$.
+
+\emph{Step 6: the limit in $\Lp$.} By \cref{lem:weightedbridge}, $-qB$ is now a random element of $\Lp$, and $\iota(-qB)$ is the $L^1$-valued variable in \eqref{eq:L1law}. \Cref{lem:lawsL1} gives $\Law(Y)=\Law(-qB)$ in $\Lp$. (Alternatively, \cref{thm:sufficiency} gives $Z_n\weak-qB$ in $\Lp$, and uniqueness of limits gives the same conclusion.)
+\end{proof}
+
+\section{Proof of the main theorem, and examples}\label{sec:proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+If (b) holds, \cref{thm:sufficiency} gives $\int|x|^p\dd P<\infty$ and $\sqrt n(Q_n-Q)\weak-qB$ in $\Lp$, so (a) holds. If (a) holds, \cref{thm:necessity} gives (b) and identifies the limit as $-qB$. The process $-qB$ has the law of $qB$ because $-B$ is a Brownian bridge, and $\E\|qB\|_{L^p}^p=c_pJ_p(Q)$ by \cref{lem:weightedbridge}.
+\end{proof}
+
+\begin{corollary}\label[corollary]{cor:wasserstein}
+Let $1\le p<\infty$ and assume (b) of \cref{thm:main}. Then
+\[
+n^{p/2}\,W_p^p(P_n,P)\weak\int_0^1q(t)^p|B(t)|^p\dd t,
+\]
+and the limit has mean $c_pJ_p(Q)$.
+\end{corollary}
+
+\begin{proof}
+By \cite[Theorem~2.10]{BobkovLedoux2019}, $n^{p/2}W_p^p(P_n,P)=\|\sqrt n(Q_n-Q)\|_{L^p}^p$. Apply the continuous mapping theorem to $z\mapsto\|z\|_{L^p}^p$ and use \cref{thm:main}.
+\end{proof}
+
+\begin{remark}\label[remark]{rem:largep}
+For $p>2$, condition (b) forces $P$ to have bounded support. Indeed, by H\"older's inequality,
+\[
+\int_{1/2}^1q\le J_p(Q)^{1/p}\Big(\int_{1/2}^1[t(1-t)]^{-p'/2}\dd t\Big)^{1/p'},
+\]
+and the last integral is finite when $p'<2$, that is $p>2$; the same holds near $0$. For $1<p<2$ unbounded quantile functions are allowed: $Q(t)=(1-t)^{-\beta}$ satisfies (b) when $0<\beta<1/p-1/2$.
+\end{remark}
+
+\begin{example}\label[example]{ex:laws}
+(1) For the uniform law on $[0,1]$, $q=1$ and (b) holds for every $p$. (2) For the standard exponential law, $q(t)=1/(1-t)$, and $q^pw_p$ behaves like $(1-t)^{-p/2}$ near $1$; so (b) holds exactly when $p<2$. (3) For the standard normal law with density $\phi$, $q(t)=1/\phi(Q(t))$, and $\phi(Q(t))\sim t\sqrt{2\log(1/t)}$ as $t\downarrow0$; thus $q^pw_p$ behaves like $t^{-p/2}(2\log(1/t))^{-p/2}$ near $0$, and (b) holds exactly when $p<2$. In particular the quantile process of the normal law does not converge in distribution in $L^2(0,1)$; the case $J_2=\infty$ was studied in \cite{dBGU2005}. (4) For $P=\theta\delta_0+(1-\theta)\,\mathrm{Unif}[0,1]$ with $0<\theta<1$, $Q$ vanishes on $(0,\theta]$ and equals $(t-\theta)/(1-\theta)$ on $(\theta,1)$, so (b) holds for every $p$. This law has an atom and no density, so it is not covered by the earlier sufficient conditions. (5) For $P=\theta\delta_0+(1-\theta)\delta_1$, $Q$ jumps at $\theta$ and (b) fails. Directly, if $\theta_n$ is the proportion of zeros in the sample, then $|Q_n-Q|=1$ between $\theta$ and $\theta_n$ and $0$ elsewhere, so $\|\sqrt n(Q_n-Q)\|_{L^p}^p=n^{p/2}|\theta_n-\theta|$, which is not tight when $p>1$.
+\end{example}
+
+\section*{Acknowledgements and funding}
+\ACKNOWLEDGMENTS\FUNDING
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In October 2026 OpenAI GPT models, running as research tasks of that project, proposed the proof of \cref{thm:main} for $p>1$. Claude Opus~5.5 (Anthropic), working in Claude Code, audited the proof three times against the sources, reduced the moment hypothesis to \cref{thm:main}(b), and wrote the paper. These checks are not peer review. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\bibliographystyle{amsplain}
+\bibliography{references}
+
+\end{document}

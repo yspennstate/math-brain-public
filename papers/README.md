@@ -6,6 +6,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 
 | Paper | Repository |
 |---|---|
+| A necessary and sufficient condition for convergence of the quantile process in L^p(0,1) | [quantile-process-lp](https://github.com/yspennstate/quantile-process-lp) |
 | Arc-transitive graphs that mimic the cycle | [arc-transitive-graphs-that-mimic-the-cycle](https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle) |
 | Ballisticity for positive excited random walks without bounded cookie stacks | [positive-cookie-ballisticity](https://github.com/yspennstate/positive-cookie-ballisticity) |
 | The binary and ternary harmonic measures of the Cantor set are mutually singular | [cantor-harmonic-codings-singular](https://github.com/yspennstate/cantor-harmonic-codings-singular) |
