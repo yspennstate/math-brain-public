@@ -114,12 +114,12 @@ MUST_STAY_SILENT = [
     ("short prompt", "hello there"),
     ("code, not mathematics",
      "the function returns None when the config file is missing, add a default"),
-    # The options Greeks are deliberately NOT anchors: on this machine alpha, beta, gamma,
-    # delta, theta, rho, sigma and vega belong to trading, and admitting them cost +21.95pp
+    # Eight letter names are deliberately NOT anchors: on the source machine alpha, beta, gamma,
+    # delta, theta, rho, sigma and vega were mostly finance words, and admitting them cost +21.95pp
     # of false fires when measured. This proves the exclusion still holds.
-    ("trading, not mathematics",
-     "set the target beta to 0.30 on the hedged book and check the delta and theta on the "
-     "<ticker> leg before the roll"),
+    ("finance words, not mathematics",
+     "set the target beta to 0.30 in the release config and check the delta and theta "
+     "columns in the weekly report before the roll-out"),
     # "eta" matches ETA and lit the gate 21 times on a food-delivery assistant prompt.
     ("delivery ETA, not mathematics",
      "tell the customer the eta for the order is twenty minutes and offer a refund option"),

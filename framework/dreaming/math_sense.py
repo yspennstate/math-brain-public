@@ -286,9 +286,9 @@ EXTRA_ANCHORS = re.compile(
 # because on THIS machine most of the alphabet is not mathematics:
 #
 #   all 21 names          +21.95pp, 6,171 new fires - alpha, beta, gamma, delta, theta, rho,
-#                         sigma and vega are the options Greeks and saturate the trading
-#                         traffic; the new fires were loop ticks and sleep instructions
-#   minus options Greeks   +0.25pp, 70 new fires - still bad, and for a reason no
+#                         sigma and vega are also finance quantities and saturate the
+#                         non-mathematical traffic; the new fires were loop ticks and sleep instructions
+#   minus those eight      +0.25pp, 70 new fires - still bad, and for a reason no
 #                         hand-written negative would produce: "eta" matches ETA, so a
 #                         food-delivery assistant prompt lit the gate 21 times. "nu" and
 #                         "xi" fired on non-ASCII table text rather than on mathematics.
