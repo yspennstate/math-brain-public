@@ -92,7 +92,7 @@ def main():
     print("\n=== adversarial mention-vs-act probe (all SHOULD be block=False) ===")
     adv = [
         ("We should NOT report the pipeline as $123k per year - that's ~10x under the lived ~$1.5M/yr ledger.", False),
-        ("The owner's correction: a 60-85% drawdown claim on the demo book is wrong; lived worst is far smaller.", False),
+        ("The owner's correction: a 60-85% drawdown claim on the demo book is wrong; the measured worst is far smaller.", False),
         ("The old memory claimed the current strategy loses money every year - the flattering-sim error, retracted.", False),
         ("I am NOT recommending you sell puts; the mandate is long gamma only, so we only buy them.", False),
         ("Earlier I wrongly said the pipeline earns $123k/year on the backtest; ignore that, it undershot.", False),

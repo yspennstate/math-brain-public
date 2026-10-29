@@ -3,7 +3,7 @@
 
 Catches the brain's costliest and least-detected error: a confident QUANTITATIVE claim in a money /
 market / risk domain, handed to the owner as a settled number, with NO provenance label and NO
-reconciliation to the lived book. The ERN (error_monitor) only sees MECHANICAL failures (tracebacks);
+reconciliation to the measured record. The ERN (error_monitor) only sees MECHANICAL failures (tracebacks);
 reality_monitor only sees RUNTIME-SUCCESS claims ("it works / deployed"). Neither sees a price PROXY
 stated as the book number, an anchor to a withdrawn figure, or a decision-relevant $/mo handed over
 un-reconciled. That whole class can leave ZERO trace in outcomes.jsonl - only the owner's corrections
@@ -13,7 +13,7 @@ recommendation, both later withdrawn).
 Rule: turn ends on a decision-relevant MONEY figure ($ amount, or a /mo|/yr money rate) with NO
 provenance-or-hedge qualifier anywhere in the message (proxy / estimate / ~ / a range / measured /
 pending / from the statement / roughly / should / assume ...) -> block ONCE with a targeted nudge:
-"label how you know it, or reconcile to the lived book, before you hand him a hard number."
+"label how you know it, or reconcile to the measured record, before you hand him a hard number."
 
 Disciplined exactly like reality_monitor - money domain + decision-figure shape only, qualifier-aware,
 loop-safe (stop_hook_active), one block per session, fail-safe silent. A noisy alarm gets tuned out, so
@@ -104,7 +104,7 @@ def assess(text):
         return None
     if is_discussion(t):        # a figure being discussed/attributed/quoted, not handed over as a fresh claim
         return None
-    return "a decision-relevant money figure stated as a settled number, with no provenance label (proxy/measured/estimate) and no hedge or reconciliation to the lived book"
+    return "a decision-relevant money figure stated as a settled number, with no provenance label (proxy/measured/estimate) and no hedge or reconciliation to the measured record"
 
 
 def _dedup_ok(sess):
@@ -167,7 +167,7 @@ def main():
                   "are exactly this shape - a price PROXY stated as the book number, a switch that 'saves "
                   "$X' before the cash was reconciled. Before you sign off: label how you know it "
                   "(proxy / measured / estimate), or reconcile it to the actual account / statement / "
-                  "lived book - and if it IS a proxy, say so and give a range, not a point. If it's already "
+                  "measured record - and if it IS a proxy, say so and give a range, not a point. If it's already "
                   "grounded and labeled, say that in one line and stop.")
         # SHADOW-first: log the would-block; only ACTUALLY block if .reasoning_guards_live exists (opt-in;
         # the shadow log proves fire rate/precision on real sessions before it can disrupt one).

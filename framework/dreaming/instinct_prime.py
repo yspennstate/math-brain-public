@@ -918,7 +918,7 @@ def _render(fired):
         _top_esc = max(_esc, key=lambda it: it.get("_count", 1)) if _esc else None
         for it in danger:
             lv = ("  (low-validity domain: this is a place intuition is known to lie - flag it and verify "
-                  "against the lived book, do NOT act on the hunch)") if it.get("validity") == "low" else ""
+                  "against the measured record, do NOT act on the hunch)") if it.get("validity") == "low" else ""
             lines.append(f"  - {_clip(it['gut'], RENDER_MAX_GUT)}{lv}")
             lines.append("    (" + _hint(it.get("id", ""), prec, it.get("_via")) + ")")
             # mindware-override escalation: the ONE high-stakes instinct you've read past most this session -

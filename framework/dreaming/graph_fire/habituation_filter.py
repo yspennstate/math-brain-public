@@ -15,7 +15,7 @@ Three mechanisms, in order of measured leverage:
      vocabulary is a FALSE fire - and, worse, it spends the 600s dedup window so the reflex is silent
      when the REAL act arrives. We drop an 'act' reflex on a mention surface, BEFORE dedup, so the real
      act (write / non-readonly command) re-fires it fresh. 'claim' reflexes (a sim number, a risk
-     figure, a confident conclusion, his lived-book sign) live in the reasoning itself and are NEVER
+     figure, a confident conclusion, the measured record's sign) live in the reasoning itself and are NEVER
      suppressed - they SHOULD fire on a read/prompt. This split is the robust specificity signal; it is
      NOT frequency (the coarseness lesson, mention_vs_act_too_coarse_2026_07_12: the trading overrides
      fire on off-domain acts too, so act% != targeting% - never rank them by mention/fire frequency).
@@ -41,7 +41,7 @@ import re
 #   act   -> dangerous only at a write/run/deploy; a read/prompt/analysis MENTION is a false fire, and
 #            the real act re-fires it. Suppress on mention surfaces.
 #   claim -> the danger is a number / conclusion / reasoning that legitimately appears in a read or a
-#            prompt (a sim result, a risk figure, a confident 'done', his lived-book sign). NEVER suppress.
+#            prompt (a sim result, a risk figure, a confident 'done', the measured record's sign). NEVER suppress.
 #            Domain overrides (sim_flatters, risk_vs_measured_record, leveraged_etf_is_not_linear, ...) are 'claim'
 #            deliberately - the coarseness memory proved their act% is not targeting; do not touch them here.
 # Anything unlisted defaults to 'claim' (conservative: an unknown reflex is never suppressed).

@@ -70,14 +70,14 @@ INSTINCTS = [
       source="scar_check_the_brain_before_you_simulate_2026_07_08"),
  dict(id="risk_vs_measured_record", mode="fire", validity="low",
       # widened 07-11 (fleetgraph verified gap, scaled-validated 0.42% owner-prompt rate): the risk words
-      # missed a BARE reported P&L in his actual phrasing - his #1 correction shape (a number vs his
-      # lived book) sailed past. Do not encode a remembered magnitude in the warning prose itself.
+      # missed a BARE reported P&L in the owner's actual phrasing - the #1 correction shape (a number vs the
+      # measured record) sailed past. Do not encode a remembered magnitude in the warning prose itself.
       # Second branch fires on a reported $-per-period / signed-amount-last-period / X%-a-year. NOTE: this
       # also fires on DISCUSSION of a P&L, so the pre_report BLOCK side needs afec84b0's discuss-gate to
       # stay precise - the trigger only NUDGES; the block precision is the firing layer's.
       trigger=r"(?:\b(drawdown|max ?dd|risk of ruin|near[- ]?ruin)\b)|(?:\b(leverage|lever(ed)?|20x|10x|blow ?up|worst[- ]?case)\b[^\n]{0,60}(?:book|account|acct|portfolio|nlv|p ?& ?l|pnl|equity|margin|puts?|leaps?|grid|market|drawdown|sharpe|hedge|letf|vix|vxn|\biv\b|option|\$))|(?:(?:book|account|acct|portfolio|nlv|p ?& ?l|pnl|equity|margin|puts?|leaps?|grid|market|drawdown|sharpe|hedge|letf|vix|vxn|\biv\b|option|\$)[^\n]{0,60}\b(leverage|lever(ed)?|20x|10x|blow ?up|worst[- ]?case)\b)|(?:(?:makes?|earns?|made|nets?|profit(?:s|ed)?|returns?|pull(?:ed|s|ing)? in|took in|bring(?:s|ing)? in|clear(?:ed|s)?) .{0,20}?[+-]?\$?\d[\d,.]* ?(?:k|m|million)? ?(?:per |a |/ ?|last |this |each )?(?:day|week|month|year|yr|mo|quarter)\b|[+-] ?\$?\d[\d,.]* ?(?:k|m|million)? (?:last|this|per|a|each) (?:day|week|month|year|yr|mo|quarter)\b|\$\d[\d,.]* ?k?/ ?(?:day|mo|yr|month|year|week)\b|\bmade \d[\d,.]* ?%|\d+ ?% (?:a |per )?(?:year|return|month)\b|(?:(?:makes?|made|earn(?:s|ed)?|net(?:s|ted)?|profit(?:s|ed)?|return(?:s|ed)?) [^\n]{0,20}?[+-]?\$?\d[\d,.]* ?(?:k|m|million)? ?in ?(?:under|about|just|less than|only)? ?\d* ?(?:day|week|month|year|yr|mo|quarter)s?\b))",
-      gut="When a risk estimate contradicts the owner's lived book, treat the estimate as suspect, not authoritative. Never naively scale a modeled worst case; reproduce the mechanics and validate against current lived records before reporting.",
-      sting="A prior leverage extrapolation predicted catastrophic drawdowns that contradicted the owner's lived experience; the mistake was promoting a scaled modeled worst case into current-book truth.",
+      gut="When a risk estimate contradicts the measured record, treat the estimate as suspect, not authoritative. Never naively scale a modeled worst case; reproduce the mechanics and validate against current measured records before reporting.",
+      sting="A prior leverage extrapolation predicted catastrophic drawdowns that contradicted the measured record; the mistake was promoting a scaled modeled worst case into current-book truth.",
       source="scar_dont_naively_scale_a_worst_case_2026_01_01"),
  dict(id="green_not_trusted", mode="fire",
       # widening tightened to afec84b0's referee-validated shape (0/1763 over-fire): fire only on the
@@ -246,7 +246,7 @@ INSTINCTS += [
       # "therefore" and a shell line with "clearly" / "it works" stay silent. Bench: campaign
       # 2026-09-03_20h/rewrite_bench.py.
       trigger=r"(?i)\b(the answer is|i (am|'m) confident|i conclude|(this|which|that) (shows|proves|confirms|establishes) that|no doubt|definitely|obviously|beyond doubt|conclusively|it is (clear|certain|settled|obvious) that|the verdict is|case closed|qed)\b",
-      gut="Before you commit to a confident conclusion, write the STRONGEST version of the case that you are WRONG, and name one concrete check that would confirm it. Generating reasons against your answer improves calibration; reasons for it don't. This is the humble move on the two things he corrects most - a claimed 'done' and a number that fights his book.",
+      gut="Before you commit to a confident conclusion, write the STRONGEST version of the case that you are WRONG, and name one concrete check that would confirm it. Generating reasons against your answer improves calibration; reasons for it don't. This is the humble move on the two things he corrects most - a claimed 'done' and a number that fights the measured record.",
       sting="",
       source="MISTAKES"),
  dict(id="disconfirm", mode="guide", validity="high",

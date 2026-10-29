@@ -21,7 +21,7 @@ QUANT = re.compile(r"\d+(\.\d+)?\s*%|\bsharpe\b|\d+(\.\d+)?\s*x\b|x\s*RV\b|\bdra
                    r"\bbps\b|\bpercentile\b|\bp\d{2}\b|\bcarry\b|\breturns?\b\s*(of\s*)?\d|\bwin[- ]?rate\b", re.I)
 # any of these means the figure is sourced (how it's known is stated)
 PROV = re.compile(r"measured|observed|simulat|modell?ed|\bmodel\b|assumed|owner (said|states|told|corrected)|"
-                  r"from the tape|on the box|\blive\b|backtest|verified|reproduc|his book|lived|per the|"
+                  r"from the tape|on the box|\blive\b|backtest|verified|reproduc|the record|lived|per the|"
                   r"according to|estimat|\bguess\b|hand-?tuned|OOS\b|in[- ]?sample|\bREADME\b", re.I)
 
 

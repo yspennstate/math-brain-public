@@ -2,8 +2,8 @@
 """pre_report_check.py - Stop hook: run the gut on the OUTGOING message before it reaches the owner.
 
 Hooks see tool I/O, never the assistant's prose, so the worst class of mistake - a wrong number or an
-over-claimed 'done' reported to the owner - had no firing surface (his #1 correction on 2026-07-11 was a
-grid backtest reported ~10x under his lived book, with the reflexes silent because the number was in
+over-claimed 'done' reported to the owner - had no firing surface (the #1 correction on 2026-07-11 was a
+grid backtest reported ~10x under the measured record, with the reflexes silent because the number was in
 prose). reality_monitor.py proved a Stop hook can read the last assistant message and block; this adds the
 two checks it doesn't do, using the graph-firing engine + explicitly promoted report oracles:
 
@@ -212,14 +212,14 @@ def main():
                           "period. Reframe around BUYING it. (Running a comparison he explicitly asked for is "
                           "fine; drifting into 'he should sell' is a correction he's made more than once.)")
             elif s and s["kind"] == "drawdown":
-                reason = ("[pre-report] You're about to report a ~%d%% drawdown/loss on his book - but his "
-                          "lived worst windowed maxDD is ~-11%% (median ~-1%%). A risk number that dwarfs his "
-                          "lived book is YOUR model failing: drawdown is sublinear in leverage for the "
+                reason = ("[pre-report] You're about to report a ~%d%% drawdown/loss - but the measured "
+                          "worst windowed maxDD in the anchors is far smaller. A risk number that dwarfs the "
+                          "measured record is YOUR model failing: drawdown is sublinear in leverage for the "
                           "delta-neutral book. Reconcile against the book he has actually run before reporting."
                           % s.get("reported_pct", 0))
             elif s and s["kind"] == "sign":
-                reason = ("[pre-report] You're about to report his profitable strategy LOSING (a P&L sign "
-                          "against the robust sign of his lived NAV). That's your model failing, not his book: "
+                reason = ("[pre-report] You're about to report the measured, profitable system LOSING (a P&L sign "
+                          "against the robust sign of the measured record). That's your model failing, not the record: "
                           "you've likely modeled the delta-neutral drag and omitted the long-biased grid. The "
                           "old account3/walk-forward MAGNITUDES are contaminated and must not be quoted; rebuild "
                           "on the reconciling harness and verify the current magnitude from source.")

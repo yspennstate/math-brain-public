@@ -46,7 +46,7 @@ SEED = [
             r"(?:lever|20\s?x|\bXYZ\b|the book).{0,60}(?:drawdown|max ?dd|draw ?down)",
      "ack": r"crash.?tail|worst.?case|\brare\b|\bmedian\b|unlevered|sublinear|not (?:a )?(?:typical|expected)",
      "memory": "example_retraction_2026_01_02",
-     "note": "a -60 to -85% drawdown for the levered XYZ book is WITHDRAWN - that was a crash-tail naively scaled by leverage; the real windowed number is far smaller. When your risk number contradicts the owner's lived book, YOUR number is wrong"},
+     "note": "a -60 to -85% drawdown for the levered XYZ book is WITHDRAWN - that was a crash-tail naively scaled by leverage; the real windowed number is far smaller. When your risk number contradicts the measured record, YOUR number is wrong"},
 ]
 # ACK = the value is being CITED as retracted, or COMPARED/REVISED away from - not asserted as current.
 # Both forms must suppress (a disconfirming corpus test caught a false alarm on "$95k, above the

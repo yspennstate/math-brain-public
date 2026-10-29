@@ -28,9 +28,9 @@ MIN_COFIRE = 3     # draw an edge only when two reflexes co-fired at least this 
 META_LINES = [
     (["sim_flatters", "risk_vs_measured_record", "sim_sign_vs_lived_nav", "leveraged_etf_is_not_linear", "stale_mark_banks"],
      "his-domain / production",
-     "You're modeling his book. A sim that disagrees with his LIVED book in either direction - sign OR "
+     "You're modeling a measured system. A sim that disagrees with the MEASURED record in either direction - sign OR "
      "magnitude - is the sim lying, not the book. Reconcile against the actual account/tape before you "
-     "report a number; his instinct on his own book is a strong prior."),
+     "report a number; the owner's instinct on a system they run is a strong prior."),
     (["verify_adversarially", "steelman_opposite", "disconfirm", "outside_view", "reach_across_domains"],
      "epistemic discipline",
      "Before you believe this: write the strongest case you're WRONG and name the check that would confirm "

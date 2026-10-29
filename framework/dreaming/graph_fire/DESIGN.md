@@ -7,7 +7,7 @@ This is the FIRING layer of the gut - it decides when a reflex fires. It does no
 ## The problem it solves
 
 The brain's reflexes are good; they just weren't firing at the moment of the mistake. The day's worst
-correction - a grid backtest reported ~10x under the lived book - happened with `sim_flatters` and
+correction - a grid backtest reported ~10x under the measured record - happened with `sim_flatters` and
 `risk_vs_measured_record` both defined and both silent, because the number lived in assistant prose, a surface
 the old regex hook never watched. Coverage on paper is not firing in practice. Three gaps:
 
@@ -66,12 +66,12 @@ the cross-layer priming demonstrably changes firing, the thing three dreams flag
 inside a dream.
 
 **Report-surface structural checks** (`pre_report.py`) - where precision actually lives, because the
-number/claim is present. Each compares a reported statistic to his lived book (`lived_anchors.json`) and
+number/claim is present. Each compares a reported statistic to the measured record (`lived_anchors.json`) and
 BLOCKS once/session at 0-0.3% false-fire:
-- a $ figure contradicting his book by >2x either way (undershoot is as damning as flatter);
-- a drawdown far worse than his lived worst (-11%);
-- a P&L sign contradicting his profitable NAV;
-- a recommendation to SELL/short vol (he is long-gamma-only, buys puts, never sells);
+- a $ figure contradicting an anchor by >2x either way (undershoot is as damning as flatter);
+- a drawdown far worse than the measured worst in the anchors;
+- a P&L sign contradicting the measured, profitable record;
+- a recommendation that breaks a stated strategy rule (for example, selling what the rule says is buy-only);
 - an ungrounded completion claim (finalized/populated with no verifying observation this turn).
 
 **Forward-feed** (`forward_feed.py`): a Bash command with a real `C:\...` drive path (Git Bash mangles it -

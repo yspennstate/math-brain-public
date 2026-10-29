@@ -13,7 +13,7 @@ Two signals, combined:
      sim_flatters / risk_vs_measured_record, plus the deployment's own rule reflexes).
   2. LIVED-ANCHOR MISMATCH: a reported $ figure (with a period) contradicts one of the stated anchor numbers
      by >2x in EITHER direction, when the text names that anchor's subject. Undershoot is as damning as
-     flatter - 'a sim that disagrees with the lived book in either direction is lying' (MISTAKES.md 07-11).
+     flatter - 'a sim that disagrees with the measured record in either direction is lying' (MISTAKES.md 07-11).
 
 check() returns the fires + a should_block flag. Used by the Stop hook and the shadow eval. Fail-safe.
 """

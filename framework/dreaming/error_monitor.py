@@ -48,7 +48,7 @@ SIGS = [
     ("a possible LEAKED SECRET", r"sk-[A-Za-z0-9]{20}|ghp_[A-Za-z0-9]{20,}|-----BEGIN [A-Z ]*PRIVATE KEY-----"),
     ("a PowerShell parse error", r"ParserError|Unexpected token|missing (statement|closing|terminator)"),
     ("a SyntaxError", r"SyntaxError:|IndentationError:"),
-    ("an implausible magnitude (numbers like this have flattered a sim before - reconcile against the lived book/tape, don't report it)",
+    ("an implausible magnitude (numbers like this have flattered a sim before - reconcile against the measured record/tape, don't report it)",
      r"(?i:sharpe\D{0,12}([5-9]\.\d|[1-9]\d[.\s])|\b\d{3,}(\.\d+)?\s*%\s*(std|standard|vol)|hedg\w*\D{0,20}\d{2,}\s*(million|\bmn\b)|\b\d{3,}\s*%\s*(a month|monthly|return))"),
 ]
 
