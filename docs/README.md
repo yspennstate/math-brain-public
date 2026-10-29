@@ -25,6 +25,9 @@ The pages in this folder, grouped by what you came to do.
 | [brain-building/owner-words-reach-every-agent.md](brain-building/owner-words-reach-every-agent.md) | a hook that hands every session the person's own recent requests, repeated ones first, so an agent does not work from an out-of-date picture of what it was asked |
 | [brain-building/task-checklist.md](brain-building/task-checklist.md) | one shared, dated checklist every agent writes to: who took which request, when it was done, and a seen mark only the person sets |
 | [cost.md](cost.md) | what the brain costs in tokens, each figure beside the accuracy it bought |
+| [brain-building/owner-words-reach-every-agent.md](brain-building/owner-words-reach-every-agent.md) | a hook that hands every session the owner's recent requests, repeated ones first, in parts small enough to be delivered |
+| [brain-building/task-checklist.md](brain-building/task-checklist.md) | one dated record of every request, the agent on it, done, and a seen mark only the owner sets |
+| [brain-building/compactions-as-brain-nodes.md](brain-building/compactions-as-brain-nodes.md) | keeping each compaction summary as a linked node, and the hooks before, after and at stop that keep work from being lost |
 
 ## What the tests measured
 
