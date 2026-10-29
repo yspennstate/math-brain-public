@@ -7,7 +7,30 @@ Set two variables first:
 - `MATHBRAIN_STORE`: the path to the SQLite store;
 - `MATHBRAIN_BUILD_SRC`: the path to this repository's `src/`.
 
-The tools have no defaults that work outside the machine they were written on.
+`math_recall.py`, `math_walk.py`, `math_sense.py` and `frontier_digest.py` fall back to `src/` and `local/population/brain.sqlite3` in this checkout when the variables are unset, so after the import in the top-level README they run from the repository root as they are. The other tools need both variables.
+
+## Fast recall
+
+`fastrecall.py` is on by default; nothing has to be installed or run to use it. The first search against a store builds a prepared state (the parsed cards, the term tables and the link maps, about 70 MB for this store) in the recall cache, and every later search loads it instead of reading the store again. On a fresh clone of this repository, on a busy laptop, the first search took 27 seconds, each later one 5 to 6 seconds with two wordings, and the same search with `MATH_RECALL_FAST=0` took 25 seconds every time. The results are the same either way.
+
+- The state is keyed to the store, the recall code and the dials, so a changed store or a new version of `math_recall.py` builds a new one on its next search.
+- A search may answer from a state up to 45 minutes behind the store while the new one is built, so that a store being written to does not rebuild on every call. Cards added in that window are not found until the rebuild. After you re-import or add cards and want them found at once, set `MATH_RECALL_FAST_STALE_S=0` for the next call, or run `python agent_tools/math_recall_prebuild.py`, which builds the state ahead of time with the same paths and environment a search would use, so the next search finds it ready (a scheduled run every few minutes keeps the first search after a change fast; a run against an unchanged store stops at once). It writes its lock and log under `agent_tools/cache/math_recall/`; `--status` prints them. The copy under `framework/dreaming/` belongs to the general framework and warms that folder's own `math_recall.py`, not this one.
+- `MATH_RECALL_CACHE_DIR` moves the cache. Old states are not removed automatically; delete the directory's older `recall_*.m` files when the store has moved on.
+
+## How to search
+
+These are the habits that scored best in the tests; [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) gives the numbers.
+
+```
+python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
+python agent_tools/math_recall.py --id claim_03ca421f claim_7e623698
+```
+
+- Give two or three wordings in one call, each after its own `--or`, worded the way a card would say it: the object, the theorem or method by name, a symbol, an author.
+- Then read the cards it printed with `--id` and follow their links, rather than searching again.
+- Stop when a card answers. A `WEAK MATCH` line means reword. After three rounds of wordings with nothing, say the store does not hold it.
+- Leave `--depth` at 0.
+- Search output shortens ids to a unique prefix. When an id goes into an answer or a record, copy the full id from the `--id` card.
 
 | Script | What it does |
 |---|---|
