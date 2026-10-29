@@ -268,3 +268,69 @@ Forty-eight proof audits. GPT single agents 37 (brain block) and 35 (none); GPT 
 crux block, 35; pairs of two GPT models 36 and 35, at four to six times the tokens; a Claude single agent 42. Two
 copies of one model were both wrong on the same 12 items, ten of them with the same wrong answer; Claude solved 8 of
 those 12. The same solver-and-referee arrangement on open problems is summarised beside it. Counts only.
+
+## research-bank-b12-2026-09-01: a research-grade fault bank, and notes from the store against no notes
+
+Two tests of whether notes served from the math store help a solver find the faulty step in an argument.
+Both come out null. The bank built for the second is the larger of the store's proof-audit banks.
+
+## fresh-bank-2026-09-03: a fresh bank of plain questions, and the older audit-brief bank
+
+Measurements of the math hook on two banks, taken on a store that grew from 4,732 to 4,895 nodes over the
+evening. The later reruns in `locate-and-proof-banks-2026-09-11` compare against these numbers.
+
+## harder-bank-and-own-facts-2026-09-05: a harder fault bank, and questions only the store can answer
+
+Two tests run on the same evening, each under a protocol sealed before serving. One was a null at the
+ceiling. The other gave the first controlled positive for the math hook.
+
+## multidomain-bank-2026-09-06: a literature proof bank outside probability
+
+A sealed fault-location bank built from published proofs in analysis, algebra, number theory, combinatorics,
+geometry, topology, logic and learning theory. It is the sibling of the probability literature bank used in
+`agents100-2026-09-07` and shares its item shape, runner and scoring rule. The bank was built, sealed and
+checked for validity. Its powered comparison was never served, so it has no brain-against-control result.
+The twenty proof audits in `papers/pseudo-cognitive-dynamics-2026-09-23` were drawn from it.
+
+## hook-rewrites-2026-10-04: does the math hook survive a reworded question?
+
+A metamorphic test of the math brain's prompt hook. Each of the 218 questions of the fresh bank (178 whose
+answer is in the store, 40 whose answer is not) was rewritten in ways that keep its meaning, and the live hook
+was run on every version, 1,427 calls in all. A rewrite should not change whether the hook serves the stored
+answer, and it should not make the hook fire on a question the store cannot answer. The bank's questions are not
+published.
+
+## meaning-channel-probes-2026-10-04: the meaning channel inside the math hook: three probes
+
+The math hook ranks cards by BM25 over a prefilter pool of 300 candidates. Beside it sits a meaning channel: the
+question is embedded and compared by cosine with a vector for every claim in the store. Three probes asked what that
+channel can and cannot do for the hook. None ran a solver; they read the store and the hook's own functions.
+
+## answer-bearing-values-2026-10-04: answer-bearing values in recall
+
+When a question asks for a value, recall can rank a card that only restates the question above the card that states
+the answer. A scheduled diagnosis on six delivery cases found two faults behind this. On three of the six, the one-hit
+cut went to a short layout or notation card that repeated the question's words, with the answer card at rank 2 every
+time; the square-root length divisor in every channel and the title-phrase bonus put it there. On four of the six, the
+passage served from the right card held the problem's opening rather than the closing sentence that states the result.
+
+## hard1k-v3-six-arms-2026-10-05: a hard computation bank, six arms, and the calculator inside the brain arm
+
+The bank hard1k_v3 holds 1,000 generated problems in 25 families over algebra, combinatorics, games, geometry,
+graphs, linear algebra, number theory and probability, each at three difficulty tiers, with exact answers. The
+first 300 in id order were served to every arm. Claude Sonnet solved, ten minutes a problem. Every stream was
+scanned for leak markers and none was flagged. The problems and keys are not published.
+
+## reasoning-pilots-and-house-banks-2026-10-05: reasoning pilots, house banks and hook versions v5 to v8
+
+A series of small preregistered banks run over two days to find where documents, recall or the math brain can
+help a solver that already reasons well. Every bank was frozen with its own snapshot of the store and the
+documents before any arm ran, every prediction was written before the answers were read, and every solver
+stream was scanned afterwards for markers of the bank, its keys or its authors. No stream in any arm touched
+one. The items and keys are not published.
+
+## query-term-weighting-2026-10-06: query term counts in the math hook: linear or binary
+
+The math hook scores a stored card against the problem by the query terms they share. The question was whether
+a term repeated in the problem should count once (binary) or once per occurrence (linear, the production
+setting).

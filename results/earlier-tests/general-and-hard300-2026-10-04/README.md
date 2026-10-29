@@ -36,6 +36,14 @@ because their text shares words with stored proofs rather than because a stored 
 where it fired, the note alone turned 2 wrong answers right and 6 right answers wrong: not significant, but in
 the wrong direction, and paid for in tokens on every problem where it fired.
 
+A note served to many unrelated problems carries no information about any of them. The next day the hook was
+probed for such notes on 100 problems of the hard computation bank (25 families, seed 5). It fired on 92 and
+filled 257 note slots. The ten notes served most often filled 81 of them, and nine of the ten matched the
+bank's own families: bipartite matching, Hall's theorem, the Andrasfai-Erdos-Sos theorem, multiplicative order,
+divisibility, Euler's and Fermat's theorems, Wilson's theorem and Euclid's lemma. The tenth, a research attempt on a
+scaling limit in the discrete Gaussian free field, was served on 7 problems that have nothing to do with it, and the
+Beurling-Deny decomposition of a Dirichlet form, just below the ten, on 6.
+
 ## The hard 300
 
 Built so that an arm can fail and so that what the store holds matters:
@@ -82,3 +90,39 @@ Failures and cost by arm on the hard 300:
 | served note only | 53 | 14 | 12 | 0.011 | 16 |
 | documents and recall | 2 | 1 | 8 | 0.017 | 16 |
 | math brain | 38 | 33 | 3 | 0.030 | 28 |
+
+## Later versions of the math brain arm
+
+Two follow-ups were written after the main results and are not part of the preregistered test. Version 3 looks the
+answer up first and prices each check; it scored 248 of 300 (41 of 70 on the recorded counts), against 288 for
+documents and recall (8 to 48, p = 5e-8), and ran about three hours after that arm rather than beside it. Version 4
+finishes when Lean cannot run: Lean is optional, a failed Lean check sends the solver back to the record, and it searches
+the memory notes as well as its own recall, lookup first. On the 110 store problems it scored 102 against 104 for
+documents and recall (6 to 8, p = 0.79). Version 1 had scored 50 on these problems.
+
+The versions were then run side by side on the store problems, at the same time on the same machine, with the old
+prompts run again because by then the machine had the memory for Lean to start:
+
+| comparison | problems | n | right (first / second) | only first / only second | p | out of time | Lean calls |
+|---|---|---|---|---|---|---|---|
+| v4 against v3 | recorded counts | 70 | 67 / 41 | 26 / 0 | 3e-8 | 3 / 20 | 12 / 42 |
+| | two records | 40 | 35 / 21 | 14 / 0 | 0.0001 | 2 / 16 | 14 / 27 |
+| v4 against v1 | recorded counts | 70 | 67 / 28 | 39 / 0 | 4e-12 | 3 / 18 | 12 / 69 |
+| | two records | 40 | 35 / 31 | 9 / 5 | 0.42 | 2 / 2 | 14 / 36 |
+| v3 against v1 | recorded counts | 70 | 41 / 28 | 19 / 6 | 0.01 | 20 / 18 | 42 / 69 |
+| | two records | 40 | 21 / 31 | 3 / 13 | 0.02 | 16 / 2 | 27 / 36 |
+| new checks only against v1 | recorded counts | 70 | 30 / 28 | 9 / 7 | 0.80 | 21 / 18 | 56 / 69 |
+| | two records | 40 | 20 / 31 | 2 / 13 | 0.007 | 15 / 2 | 32 / 36 |
+
+Looking up first helped on the recorded counts and cost on the two-record questions, where version 3 ran out of time
+on 16 of 40; the change that closed the gap was letting the solver finish without Lean.
+
+## Faults found during the run
+
+- 22 calls never reached the model: a Claude process read the shared settings file while another was rewriting it and
+  exited at once. The driver now retries that case, and every affected problem was asked again before grading.
+- The recall command crashed on Windows whenever a result held a Greek letter or a German sharp s (60 titles and 1,149
+  statements in the store). With the fix, and a fix to the passage search behind it, the right passage reached the
+  reader on 99 per cent of 9,813 cases drawn from the store, against 70 per cent before.
+- 12 calls on the hard 300 returned the account's usage-limit message instead of an answer. They were set aside and
+  asked again, and the driver now waits and retries when the limit is hit.
