@@ -334,3 +334,10 @@ one. The items and keys are not published.
 The math hook scores a stored card against the problem by the query terms they share. The question was whether
 a term repeated in the problem should count once (binary) or once per occurrence (linear, the production
 setting).
+
+## symbol-channel-2026-10-06: which notation tokens the recall symbol channel should count
+
+A ranking test on 328 labelled questions from seven banks, eight token sets. Dropping punctuation and the subscript
+sign put the known card first on 250 questions against 237 (18 gained, 5 lost, top ten unchanged at 317); dropping digits as
+well cost 26 first places. The change was reverted from the live build on 7 October after it lost four content
+questions on the nightly gate's bank. Bank-level counts only.
