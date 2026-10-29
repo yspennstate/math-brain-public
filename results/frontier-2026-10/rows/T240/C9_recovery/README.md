@@ -1,0 +1,1 @@
+C9 recovery (agent H): work in progress, 18 Oct. The tube's last piece (logs/plain888g8.jsonl) is still running; logs and the finish verdict are added when scripts/finish_c9.sh has run. C9_post_exit_DRAFT.md is a draft for an independent reviewer; NOTES.md is the working log.

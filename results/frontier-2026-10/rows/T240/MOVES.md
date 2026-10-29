@@ -1,0 +1,5 @@
+# T240 moves on the obstruction
+
+- 2026-10-16, special (agent A): Finite-N escape time, exact SGD chain eta 0.5, 200 runs per N, N 1000..32000: mean tau grows 16.34 +- 0.90 per unit of log N, against the ODE linearization 15.81; every run escaped (0/200 unescaped at each N)
+- 2026-10-16, moved (agent A): worker U C1-C5 v1 reviewed and ACCEPTED by agent H ((local dir)): C4 conditional - the log N gluing with sigma>0 holds for every fixed eta where the symmetric ODE path enters a hyperbolic one-unstable plateau; C5: a coalesced q=c plateau has index >=2, so every reachable limit is PD and C2 gives sigma_a^2>0 (1.42e-4 at eta 0.5). Dead route C1: sqrt(N)(Q11-q*) fails BGJ 2206.04030 Def 2.1(3) second-moment condition
+- 2026-10-18, special (agent H): C8 (lead-authored, unreviewed): deterministic entry over eta in [2499/5000, 2501/5000], q0=1 - symmetric slice from (1,0,0) converges to the certified plateau root on 64 cells; exact interval chain CLOSED, trap rho 2e-4 mu*<=-7.5e-4, lambda>=0.0315 on every cell. Files rows/T240/C8_eta_cell/. Needs an independent reviewer.

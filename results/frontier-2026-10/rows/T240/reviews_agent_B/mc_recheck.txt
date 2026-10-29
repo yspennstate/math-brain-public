@@ -1,0 +1,7 @@
+x=(0.6000,0.2000,0.3000) eta=0.4998 MC [-0.0273452 -0.0494273  0.0672804] +- [2.38e-05 2.48e-05 2.38e-05] closed [-0.027335  -0.0494015  0.0672903] z [-0.43 -1.04 -0.41]
+Traceback (most recent call last):
+  File "(local file)", line 5, in <module>
+    m, s = mc(q, c, r, eta, reps=40); cl = cs.closed(q, c, r, eta)[3:]
+           ~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "<string>", line 18, in mc
+numpy._core._exceptions._ArrayMemoryError: Unable to allocate 61.0 MiB for an array with shape (2000000, 4) and data type float64

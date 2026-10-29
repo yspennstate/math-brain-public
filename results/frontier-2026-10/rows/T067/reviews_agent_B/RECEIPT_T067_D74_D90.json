@@ -1,0 +1,122 @@
+{
+ "reviewer": "agent B",
+ "requested_by": "agent J-r1017",
+ "at": "2026-10-17T20:35:37+03:00",
+ "verdict": "PASS",
+ "scope": "correctness of the exact versions; envelope arithmetic replayed exactly by an independent engine; novelty not judged; ALL-REGULAR PASS is for the composition only (it is as strong as its inputs, d=5..73 rows not re-audited here)",
+ "claims": {
+  "T067-BAND74-001": {
+   "version": "v1",
+   "sha256": "9855dd5293377b0ee166ee99dc99e20c9bd70228aa9a9af87f4956d60ece7f2f"
+  },
+  "T067-BAND74-UPPER-001": {
+   "version": "v1",
+   "sha256": "4461f8ed85d7a5b097b1de8a4205ebb02e47c90a15d74cbc740c44083d4f9157"
+  },
+  "T067-BAND77-001": {
+   "version": "v1",
+   "sha256": "b71701410317c562a5c26e303d71e8c7e4014943d80292d3f69de9c69e67ef60"
+  },
+  "T067-BAND77-UPPER-001": {
+   "version": "v1",
+   "sha256": "8ec4d5187b375c217a2ba5d77cf3a7809d70a3bc65196f04c289b3cf9b444bf6"
+  },
+  "T067-BAND80-001": {
+   "version": "v1",
+   "sha256": "59dc124542069757b3f378c60890f5aad53b168879df0e8b7a185dbac47465a7"
+  },
+  "T067-BAND80-UPPER-001": {
+   "version": "v1",
+   "sha256": "8065f22b4ad3d0f674b6fce17fc41a052bab2273eb982080c7ca59a5c85c0919"
+  },
+  "T067-BAND84-001": {
+   "version": "v1",
+   "sha256": "2770f52f4909cd8c557761153340b533c2b4b204ad9a44bc0ea612a2921113c2"
+  },
+  "T067-BAND84-UPPER-001": {
+   "version": "v1",
+   "sha256": "a68241cb63682428d56ca2639dd50c89dc2a3b3794dc47732ef8099ea236a76c"
+  },
+  "T067-BAND89-001": {
+   "version": "v1",
+   "sha256": "c86f2a630607e2a23f55b6f0d1e0cac992628811874de7331e12810caf9a052f"
+  },
+  "T067-BAND89-UPPER-001": {
+   "version": "v1",
+   "sha256": "4b16b3ff34d4dbc2b5d3e68c44903586c6946517d164133e3d46104be329cdc4"
+  },
+  "T067-EXPLICIT-CUTOFF80-001": {
+   "version": "v1",
+   "sha256": "219ccfcb66a8839adb367677ee47a245ad9c77dcd4ad9df157aab54a6a723a4a"
+  },
+  "T067-Q3-ALL-REGULAR-001": {
+   "version": "v1",
+   "sha256": "607a7828237c77b468263b8ad9841d11aad5dce2bedaff170216c6e6548a6ae5"
+  }
+ },
+ "replays": {
+  "76": {
+   "artifact_sha256": "48e47bfab3e58e2a75764897e079af00d3315536192f34602a65e28a15421a69",
+   "depths_replayed": 16,
+   "depths_in_artifact": 16,
+   "every_depth_signal_and_node_mass_equal": true,
+   "final_x_mine": "531277441825/4947802324992",
+   "final_x_artifact": "531277441825/4947802324992",
+   "final_masses_equal": true,
+   "eta": "5/43",
+   "artifact_eta": "5/43"
+  },
+  "79": {
+   "artifact_sha256": "526edadbe84a71d23010c5e7a4dd1660106f0b7f3313ced62652fde69c7f8a7e",
+   "depths_replayed": 16,
+   "depths_in_artifact": 16,
+   "every_depth_signal_and_node_mass_equal": true,
+   "final_x_mine": "177412024601/1649267441664",
+   "final_x_artifact": "177412024601/1649267441664",
+   "final_masses_equal": true,
+   "eta": "31/272",
+   "artifact_eta": "31/272"
+  },
+  "83": {
+   "artifact_sha256": "8651c6b89068f0c9cdc5702d8efb9ed106c2a12577a5d499a912b3dcf43149ec",
+   "depths_replayed": 66,
+   "depths_in_artifact": 66,
+   "every_depth_signal_and_node_mass_equal": true,
+   "final_x_mine": "2075411390651/19791209299968",
+   "final_x_artifact": "2075411390651/19791209299968",
+   "final_masses_equal": true,
+   "eta": "35/313",
+   "artifact_eta": "35/313"
+  },
+  "88": {
+   "artifact_sha256": "f81f41045a749f9ff43916923746d4329c1c34cbbf0a75aa8f88e871ddf21ee8",
+   "depths_replayed": 19,
+   "depths_in_artifact": 19,
+   "every_depth_signal_and_node_mass_equal": true,
+   "final_x_mine": "2346313218091/19791209299968",
+   "final_x_artifact": "2346313218091/19791209299968",
+   "final_masses_equal": true,
+   "eta": "37/339",
+   "artifact_eta": "37/339"
+  },
+  "90": {
+   "artifact_sha256": "19a28665a9a53cad26272b46b8db3e33061693ca930534108693656efb75a283",
+   "depths_replayed": 11,
+   "depths_in_artifact": 11,
+   "every_depth_signal_and_node_mass_equal": true,
+   "final_x_mine": "581906566811/4947802324992",
+   "final_x_artifact": "581906566811/4947802324992",
+   "final_masses_equal": true,
+   "eta": "529999/5000000",
+   "artifact_eta": "529999/5000000"
+  }
+ },
+ "arithmetic_all_true": true,
+ "files": {
+  "check_arith.py": "a5e471db20f4ca613137bb9a623dce4ddc3a6527f1a98b6e14a9a0bd758717ec",
+  "compare.py": "df2732473ab74d2b6f2638bcd8b2780ede75fa67d85034c783b29d4be0996231",
+  "make_receipt.py": "2e817cbc01e508fcb9b6f48c7fca3ed0d048debf355ad88dceea5e478fa5ac45",
+  "REVIEW_T067_D74_D90.md": "54d5b51cb1dfdbc936c4b9c0e83fbdc4cd9c1c223790439f7b6f90e6a41c3e48",
+  "uf_engine.py": "73edc6e144de0e01341d9fa7c6e2c44b02600af3ae2c111d6257b93443bc1f4a"
+ }
+}

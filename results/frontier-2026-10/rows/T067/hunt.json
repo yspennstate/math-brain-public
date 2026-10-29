@@ -1,0 +1,26 @@
+{
+ "id": "T067",
+ "solved_already": "partly",
+ "solved_evidence": "T067 is absent from ROWS.jsonl; assumed scope is KS tightness for q=3 and ferromagnetic q=4 symmetric channels, including regular/Galton–Watson trees and the SBM. Mossel–Sly–Sohn (2022 preprint; Ann. Probab. 2025), Theorems 1.5 and 1.12, pp. 3 and 5 of arXiv v2, settle sufficiently large degrees. Their Theorem 1.13 proves non-tightness for q>=5 and for antiferromagnetic q=4 at sufficiently small degrees; KS tightness without these qualifications is false. https://arxiv.org/abs/2212.03362",
+ "frontier": [
+  {
+   "arxiv": "2212.03362",
+   "title": "Exact Phase Transitions for Stochastic Block Models and Reconstruction on Trees",
+   "authors": "Elchanan Mossel, Allan Sly, Youngtak Sohn",
+   "year": 2025
+  },
+  {
+   "arxiv": "0811.1208",
+   "title": "Reconstruction of symmetric Potts models",
+   "authors": "Allan Sly",
+   "year": 2011
+  }
+ ],
+ "shape": "LARGE_PARAMETER",
+ "condition": "“if d ≥ d₀ and dλ² ≤ 1” — Mossel–Sly–Sohn, arXiv:2212.03362v2, Theorem 1.5, p. 3. No numerical value of d₀ is supplied. Theorem 1.12, p. 5, is the corresponding Galton–Watson statement under Assumptions 1.10–1.11.",
+ "obstruction": "Section 5 replaces the log-posterior recursion by a Gaussian recursion with an error vanishing as d→∞; this drives the magnetization into the region controlled by the Taylor expansion. At small d the Gaussian approximation error need not be dominated by the negative drift, especially for q=4 where the quadratic term vanishes and the leading drift is cubic.",
+ "compute_plan": "First make every normal-approximation, small-magnetization, and remainder constant effective, then seek certified contraction for the remaining degrees and lambda intervals. Appendix B, pp. 50–54, already proves g₄(s)<s using a Taylor bound and finite numerical integration; recertifying its grid (equations 135–140) verifies an ingredient of an existing theorem, not the open small-degree extension.",
+ "compute_size": "Unknown for the open problem. The appendix gives quadrature grids n=200 or 100 on a three-dimensional truncated Gaussian domain, so its existing certificate is reproducible but can be expensive. No finite list of unresolved degrees is specified.",
+ "risks": "Theorem 1.12 covers whole offspring-law families; that domain is infinite-dimensional. Poisson/SBM average degree d is real, so small d is also a continuum. General-tree extensions are different unsolved questions. q=4 antiferromagnetic KS tightness is false below the explicit threshold d* (about 22.2694 for Poisson, 24.408 for regular offspring). Exact T067 statement missing.",
+ "confidence": "medium"
+}
