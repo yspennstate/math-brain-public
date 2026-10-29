@@ -100,3 +100,20 @@ Per Claude Sonnet session in the three-arm test, at list price: 0.053 USD with t
 ## 6. Writing back
 
 The store grows from packets: a result, an attempt or a mistake written as a card with its links and its provenance, then checked and imported. The packets, cards, links and mistakes in `export/population/` show what an accepted contribution looks like, and the `PACKET_DELTA.json` files under `results/fei/` are packets as agents wrote them during a campaign. An agent that writes one should state how sure it is (verified or provisional) and what the claim rests on, so that the next agent reading the card knows how far to trust it.
+
+For a single card in your own working copy of the store (the one built by `tools/import_store.py` above), the command line is enough:
+
+```
+export PYTHONPATH=$PWD/src
+python -m math_brain.cli add-claim local/population/brain.sqlite3 \
+  "The random transposition walk on the symmetric group S_n has spectral gap 2/n." \
+  --kind theorem --domain "probability/random walks"
+```
+
+It prints the new card's id and digest. The kind is one of `concept`, `definition`, `lemma`, `theorem`, `proof_attempt`, `conjecture`, `computation`, `heuristic`, `example` and `counterexample`. A card added this way enters unverified and carries no links; links and provenance come with a packet. To see the card at once, search with the prepared state switched off for that call:
+
+```
+MATH_RECALL_FAST_STALE_S=0 python agent_tools/math_recall.py "spectral gap of the random transposition walk"
+```
+
+Without that setting a search may answer from a state up to 45 minutes old and miss the new card ([fast recall](agent_tools/README.md#fast-recall)). Section 7 of the paper ([07_writeback.tex](papers/math-brain-2026-10-24/sections/07_writeback.tex)) describes the gates a packet passes before it joins the shared store; a card added with `add-claim` passes none of them and stays in your copy.
