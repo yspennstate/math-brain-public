@@ -2,6 +2,26 @@
 
 These are the scripts agents call while they work. Each one reads a store built from `export/population/` with `tools/import_store.py`.
 
+## Start here: the default recall workflow
+
+**Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips.** A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
+
+1. **Search deliberately with two or three alternative wordings in one call.** Name the object, theorem or method, symbol, or author that the answering card would use. These are alternative phrasings, not a three-word limit. The agent supplies them; the tool does not generate them.
+2. **Read the relevant cards whole by ID, then follow useful linked IDs.** Check the statement, hypotheses, source and verification status before relying on a result. Do not answer from a title or snippet alone.
+3. **Reword weak matches; stop when the evidence answers the question.** A hook note is a lead, not a verdict. After three unsuccessful rounds, report that the search did not find an answer; this does not prove the store contains none. Use authorized source-file search when appropriate, especially for numeric tables.
+4. **Keep fast recall enabled and automatic spreading at depth 0 by default.** Multi-wording search improves query coverage; the prepared fast-recall state speeds up those same searches. Read linked cards deliberately rather than enabling deeper spreading without evidence. For newly added cards, refresh the prepared state or use the freshness controls in [the tool guide](#fast-recall).
+5. **Copy the full card ID when citing a result.** Read it from the whole-card output, preserve its source and status, and distinguish stored evidence from your own inference.
+
+After the setup below, make one search call such as:
+
+```bash
+python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff" --or "mixing time random transpositions"
+```
+
+Through MCP, send the same alternatives in the `wordings` array (up to three), then use `ids` to read the relevant cards.
+
+**Evidence, not a universal guarantee:** on the reported 100-question held-out comparison, multiple wordings scored 86 versus 76 for one wording per call. Whole cards with IDs scored 83 versus 34 for titles and snippets. Reading cards and walking links preserved similar accuracy (82 versus 83) with about half the uncached input. These are separate comparisons, not additive gains. See [the agent guide](../AGENTS_GUIDE.md#3-what-to-tell-the-agent) and [tests](../TESTS.md).
+
 Set two variables first:
 
 - `MATHBRAIN_STORE`: the path to the SQLite store;
@@ -19,7 +39,7 @@ Set two variables first:
 
 ## How to search
 
-These are the habits that scored best in the tests; [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) gives the numbers.
+Follow this default workflow on every store lookup; [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) gives the numbers.
 
 ```
 python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
@@ -28,7 +48,7 @@ python agent_tools/math_recall.py --id claim_03ca421f claim_7e623698
 
 - Give two or three wordings in one call, each after its own `--or`, worded the way a card would say it: the object, the theorem or method by name, a symbol, an author.
 - Then read the cards it printed with `--id` and follow their links, rather than searching again.
-- Stop when a card answers. A `WEAK MATCH` line means reword. After three rounds of wordings with nothing, say the store does not hold it.
+- Stop when a card answers. A `WEAK MATCH` line means reword. After three unsuccessful rounds, report that the search did not find an answer, not that the store necessarily contains none.
 - Leave `--depth` at 0.
 - Search output shortens ids to a unique prefix. When an id goes into an answer or a record, copy the full id from the `--id` card.
 
