@@ -7,25 +7,24 @@ construction. All detectors are STRUCTURAL (assertion shape + anchor-subject adj
 external ground bit), never discussion-vocabulary excuses - the mention-vs-act referee showed
 vocabulary discrimination opens false-negative holes, so none is used here.
 
-Classes (mined from MISTAKES.md recurrence, ranked):
+Classes (mined from the recurring entries of the mistakes log, ranked):
   A stale_dead_assert   - PRESENT-TENSE negative-existence/brokenness claim about a NAMED artifact
                           (adjacent identifier), unhedged, in a turn with NO tool observation
-                          (observed=False from the Stop hook). The uncaught 07-12 pattern (3x in one
-                          session: 'the prevent-guard is unbuilt' etc.) + 06-16 'impossible after one
-                          wall' + 07-11 black-screenshot 'impossible' + 06-09 stale-baseline assert.
+                          (observed=False from the Stop hook). Typical shape: 'the guard is unbuilt',
+                          'that is impossible', said about a thing nobody looked at this turn.
                           The ground bit is STRUCTURAL: you may declare a thing dead in a turn where
                           you actually LOOKED; only a look-free declaration blocks.
   B settled_while_pending - a settled conclusion/number co-present with a 'verifier still pending'
                           marker in the SAME message: an internal contradiction, provable from the
-                          text alone (07-11 HIGH carry: answered $57-77k/mo before the adversarial
-                          worker returned; hedges do NOT excuse - answering-before-the-check IS the sin).
-  C unmeasured_regime_timing - 'IV/VIX/vol is low/high' state assertion + act-now recommendation with
-                          NO measurement token (percentile/z/number) adjacent (07-11 'long-term IV is
-                          low, load ~1y puts now' at actual p66/p100 rich; 07-02 'you said it is high').
-  D implausible_stat    - a book-context statistic outside any lived range asserted as a finding:
-                          Sharpe >= 5 (lived 0.5-2.7) or std >= 300% (06-20/21 'this table is wrong':
-                          Sharpe 7.67, 950.7% std). Upgrades the existing surface-only sharpe flag to
-                          a block, still book-gated and hedge-respecting.
+                          text alone (a figure handed over before the adversarial check returned;
+                          hedges do NOT excuse - answering-before-the-check IS the sin).
+  C unmeasured_regime_timing - '<state variable> is low/high' assertion + act-now recommendation with
+                          NO measurement token (percentile/z/number) adjacent. The state words are the
+                          deployment's own (BRAIN_REGIME_WORDS); the default is generic.
+  D implausible_stat    - a result-context statistic outside any measured range asserted as a finding:
+                          Sharpe >= 5 or std >= 300%, values a real pipeline almost never produces
+                          and a broken one often does. Upgrades the surface-only flag to a block,
+                          still context-gated and hedge-respecting.
 
 Fail-safe: every public function returns [] on ANY error. stdlib only. check_extra(text, observed)
 is the single entry point for the Stop hook.
@@ -415,20 +414,23 @@ def settled_while_pending(text, observed=None):
 
 
 # ---------------------------------------------------------------- C: unmeasured_regime_timing
+# Words naming a state the deployment acts on ("demand is low, buy now"). Set BRAIN_REGIME_WORDS to a
+# regex alternation of your domain's state variables; the default is generic.
+_REGIME_WORDS = os.environ.get("BRAIN_REGIME_WORDS") or (
+    r"demand|supply|price|cost|latency|traffic|volume|rate|vol(?:atility)?|premium|risk")
 _REGIME = re.compile(
-    r"\b(vix|vxn|iv|implied\s+vol\w*|vol(?:atility)?|term\s+structure|skew|premium|carry)\b"
+    r"\b(" + _REGIME_WORDS + r")\b"
     r"[^.!?\n]{0,25}\b(is|are|looks?|sits?)\s+(really\s+|very\s+|quite\s+|extremely\s+|historically\s+)?"
     r"(low|high|cheap|rich|expensive|elevated|depressed)\b", re.I)
-_ACT_NOW = re.compile(r"\b(load(\s+up)?|buy|enter|add|roll|lock\s+in|now\s+is\s+the\s+time|time\s+to|"
+_ACT_NOW = re.compile(r"\b(load\s+up|buy|enter|add|scale\s+up|switch|lock\s+in|now\s+is\s+the\s+time|time\s+to|"
                       r"do\s+it\s+now|act\s+now)\b", re.I)
 _MEASURED = re.compile(r"\bp\s?\d{1,3}\b|percentile|z-?score|\btrailing\b|full-?history|"
                        r"\d+(\.\d+)?\s*%|\bat\s+\d+(\.\d+)?\b|\bvs\.?\s+\d", re.I)
 
 
 def unmeasured_regime_timing(text, observed=None):
-    """Block-class C: a NOW-state vol-regime assertion driving an act-now recommendation with no
-    measurement token adjacent. 07-11: 'long-term IV is low, load cheap ~1y puts' when iv_2y was
-    p66 full-history / p100 trailing (RICH) - the regime was inferred, never measured. Fail-safe -> []."""
+    """Block-class C: a NOW-state regime assertion driving an act-now recommendation with no
+    measurement token adjacent - the regime was inferred, never measured. Fail-safe -> []."""
     try:
         t = _s(text)
         if not t:
@@ -447,10 +449,10 @@ def unmeasured_regime_timing(text, observed=None):
         return [{
             "kind": "unmeasured_regime_timing", "reflex": "verify_current_value_before_timing_advice",
             "span": m.group(0)[:48],
-            "reason": ("[pre-report] You're asserting a vol regime ('%s') and recommending acting NOW "
-                       "without a measured percentile adjacent. 07-11: 'long-term IV is low, load ~1y "
-                       "puts' - iv_2y was actually p66 full-history / p100 trailing-2y (RICH), and VIX "
-                       "is not VXN. Measure the RIGHT variable's current percentile first, then advise."
+            "reason": ("[pre-report] You're asserting a regime ('%s') and recommending acting NOW "
+                       "without a measured percentile adjacent. A level that feels low is often rich "
+                       "against its own history, and a nearby series is not the same series. Measure "
+                       "the RIGHT variable's current percentile first, then advise."
                        % m.group(0)[:48]),
         }]
         return []
@@ -469,9 +471,8 @@ _BIGSTD = re.compile(r"\b(std|stdev|standard\s+deviation|annuali[sz]ed\s+vol\w*)
 
 
 def implausible_stat(text, observed=None):
-    """Block-class D: a book-context statistic no measured range contains, asserted as a finding:
-    Sharpe >= 5 (his configs live 0.5-2.7) or std >= 300% (the 06-21 'this table is wrong' shipped
-    Sharpe 7.67 + 950.7% std). Book-gated + hedge-respecting. Fail-safe -> []."""
+    """Block-class D: a result-context statistic no measured range contains, asserted as a finding:
+    Sharpe >= 5 or std >= 300%. Context-gated + hedge-respecting. Fail-safe -> []."""
     try:
         t = _s(text)
         if not t or not _BOOKCTX.search(t) or _HEDGE.search(t):
@@ -484,9 +485,8 @@ def implausible_stat(text, observed=None):
                 if v >= 5:
                     out.append({
                         "kind": "implausible_stat", "reflex": "sim_flatters", "stat": "sharpe", "value": v,
-                        "reason": ("[pre-report] You're reporting Sharpe %.2f on his book - outside any "
-                                   "measured range (his configs live ~0.5-2.7; the 06-21 table he called "
-                                   "wrong shipped Sharpe 7.67). A statistic no lived range contains is "
+                        "reason": ("[pre-report] You're reporting Sharpe %.2f - outside any measured "
+                                   "range for real configurations. A statistic no lived range contains is "
                                    "YOUR pipeline failing - recompute/reconcile before reporting." % v),
                     })
             except Exception:
@@ -498,9 +498,9 @@ def implausible_stat(text, observed=None):
                 if v >= 300:
                     out.append({
                         "kind": "implausible_stat", "reflex": "sim_flatters", "stat": "std", "value": v,
-                        "reason": ("[pre-report] You're reporting a %.0f%% std/vol on his book - an "
-                                   "outside-any-measured-range statistic (the 06-21 wrong table shipped "
-                                   "950.7%% std). Sanity-check the units/annualization before reporting." % v),
+                        "reason": ("[pre-report] You're reporting a %.0f%% std/vol - an "
+                                   "outside-any-measured-range statistic. Sanity-check the "
+                                   "units/annualization before reporting." % v),
                     })
             except Exception:
                 pass
@@ -524,14 +524,14 @@ def check_extra(text, observed=None, hedged=None):
 
 
 def _selftest():
-    # recorded REAL claim texts (quoted in memories/MISTAKES.md), not authored: A must fire on the
-    # 07-12 stale-read wording; B on the 07-11 pending-answer shape; C on the 07-11 IV-low wording.
+    # shapes taken from recorded claim texts: A must fire on the stale-read wording, B on the
+    # pending-answer shape, C on an unmeasured regime call, D on an impossible statistic.
     pos = [
         ("the duplicate-PREVENT guard is unbuilt - hand it to 0c44dd79", False, "stale_dead_assert"),
         ("The error_graph builder never fired; error_graph_runtime is empty.", False, "stale_dead_assert"),
         ("So the saving is $61k a month; the adversarial worker is still running.", None, "settled_while_pending"),
-        ("long-term IV is low, load cheap ~1y puts now", None, "unmeasured_regime_timing"),
-        ("The symmetric grid backtest comes out at Sharpe 7.67 with 950.7% std.", None, "implausible_stat"),
+        ("long-term demand is low, buy the extra capacity now", None, "unmeasured_regime_timing"),
+        ("The strategy backtest comes out at Sharpe 7.67 with 950.7% std.", None, "implausible_stat"),
     ]
     neg = [
         ("I ran ls: the file is missing from the staging dir.", True, "observed turn -> no A"),
@@ -539,8 +539,8 @@ def _selftest():
         ("Is the watcher process dead?", False, "question -> no A"),
         ("It looks like the builder never fired - let me verify.", False, "hedged -> no A"),
         ("The audit is still pending; I will not hand over a number until it returns.", None, "no settled -> no B"),
-        ("iv_2y sits at p66 full-history - rich, not low; do not load puts yet.", None, "measured -> no C"),
-        ("His validated config runs Sharpe 1.35 on the walk-forward.", None, "in-range -> no D"),
+        ("demand sits at p66 full-history - high, not low; do not buy capacity yet.", None, "measured -> no C"),
+        ("The validated config runs Sharpe 1.35 on the walk-forward.", None, "in-range -> no D"),
         ("", False, "empty"),
     ]
     b_pos = [

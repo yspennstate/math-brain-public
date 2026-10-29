@@ -57,7 +57,7 @@ def main():
         "B: settled + PENDING still blocks (no regression)")
 
     # C attributed-claim leak (weaker/optional): relaying someone else's claim may be exempted.
-    rec("unmeasured_regime_timing" not in kinds("his memo claims IV is low and says to load puts now"),
+    rec("unmeasured_regime_timing" not in kinds("his memo claims demand is low and says to buy capacity now"),
         "C: attributed claim does NOT block (OPTIONAL)", "mention-leak; your call")
 
     # baseline no-regression: the four canonical POS cases must still block, the NEG stay clean.
