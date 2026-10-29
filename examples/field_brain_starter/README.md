@@ -31,6 +31,7 @@ production, a lab or a support desk.
 | `hooks/scar_hook.py` | a tool hook that warns the agent, once a session, when the command it is about to run resembles a recorded mistake |
 | `hooks/write_back_hook.py` | a stop hook that asks the agent once to file a record when its turn ended on a lesson and nothing was written |
 | `hooks/request_hook.py` | a prompt hook that writes each request into the request ledger and tells the model when the same request was asked before, and whether it was answered; under Stop with `--stop` it links the records the turn wrote to that request |
+| `hooks/print_wiring.py` | prints the hook block for `~/.claude/settings.json` or `~/.codex/hooks.json` with this folder's absolute paths, ready to paste |
 
 Everything in the records is invented. The studio, its films and its director do not exist.
 
@@ -180,7 +181,8 @@ version, with heartbeats, mailboxes and handoffs, for a team of agents working a
    carries the finding, not a description of it. `new_record.py` writes the file and the index line for you and
    refuses a link to a record that does not exist.
 2. Wire the hooks in `hooks/` into your agent runtime (`docs/codex-hooks-quickstart.md` has the settings for
-   Codex and Claude Code), so every session starts with the index, recall runs before work instead of after a
+   Codex and Claude Code; `python3 hooks/print_wiring.py --runtime claude` or `--runtime codex` prints the block
+   with your own paths filled in), so every session starts with the index, recall runs before work instead of after a
    mistake, and a lesson is filed before the turn ends. `python3 hooks/session_test.py` runs one session through
    all five the way a runtime calls them (JSON on stdin, a scratch copy of the store) and says which step misbehaves;
    run it again after you point the hooks at your own records. `framework/bootstrap/` installs the larger set the full
