@@ -24,6 +24,7 @@ The pages in this folder, grouped by what you came to do.
 | [codex-hooks-quickstart.md](codex-hooks-quickstart.md) | the hook files that put the brain in front of an agent at the right moment, for Codex and Claude Code |
 | [brain-building/owner-words-reach-every-agent.md](brain-building/owner-words-reach-every-agent.md) | a hook that hands every session the person's own recent requests, repeated ones first, so an agent does not work from an out-of-date picture of what it was asked |
 | [brain-building/task-checklist.md](brain-building/task-checklist.md) | one shared, dated checklist every agent writes to: who took which request, when it was done, and a seen mark only the person sets |
+| [brain-building/keep-working-stop-hook.md](brain-building/keep-working-stop-hook.md) | stop hooks that send an agent back to its open work after a compaction or during a timed job, and the rules that keep them from looping |
 | [cost.md](cost.md) | what the brain costs in tokens, each figure beside the accuracy it bought |
 
 ## What the tests measured
