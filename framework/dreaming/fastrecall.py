@@ -371,6 +371,7 @@ class Prepared:
         from math_brain.models import EdgeKind, GraphEdge, GraphNode, NodeKind
         self.s = state
         self.key = key
+        self.heavy_key = key   # the key the link file on disk carries; self.key moves when extend() runs
         self.heavy_path = heavy_path
         self.store_path = store_path
         self.R = R
@@ -400,7 +401,7 @@ class Prepared:
             h = None
             try:
                 h = marshal.loads(_read(self.heavy_path))
-                if not isinstance(h, dict) or h.get("key") != self.key:
+                if not isinstance(h, dict) or h.get("key") != self.heavy_key:
                     h = None
             except Exception:
                 h = None
@@ -681,6 +682,56 @@ def _stale_window(stale_s):
         return STALE_S
 
 
+DELTA = os.environ.get("MATH_RECALL_DELTA", "1").strip().lower() not in ("0", "off", "false")
+DELTA_CALL_MAX = int(os.environ.get("MATH_RECALL_DELTA_CALL_MAX", "2000") or 2000)   # cards indexed in one call
+DELTA_MAX_AGE_S = float(os.environ.get("MATH_RECALL_DELTA_MAX_AGE_S", "21600") or 21600) if DELTA else 0.0
+
+
+def _bring_up_to_date(prepared, store_path, R, derive, path, heavy_path, folder, key, window):
+    """A state behind the store: index the cards it has not seen (fastrecall_delta.extend, in memory only - the
+    prebuild stays the one writer of states on disk). Refused or off: within the window serve it as it is, past the
+    window build as before."""
+    why = "off"
+    if DELTA:
+        try:
+            import fastrecall_delta as FD
+            FD.MAX_CARDS = min(FD.MAX_CARDS, DELTA_CALL_MAX)
+            short_ids = getattr(sys.modules.get(getattr(derive, "__module__", "")), "short_ids", None)
+            t0 = time.time()
+            n, why = FD.extend(prepared, store_path, short_ids)
+            if n is not None:
+                STATUS.update(extended=n, extend_s=round(time.time() - t0, 3), stale_s=0)
+                # the extended state is this store state: caches keyed by P.key (the literal lane) must not serve the old one
+                prepared.key = key
+                _debug("fast: extended by %d card(s) in %.2f s" % (n, time.time() - t0))
+                return prepared
+        except Exception as exc:
+            why = "%s: %s" % (type(exc).__name__, str(exc)[:200])
+            # extend() may have failed half way: never serve a half-extended state
+            prepared = None
+    STATUS["extend_refused"] = why
+    if not STATUS.get("past_window") and prepared is not None:
+        return prepared
+    if prepared is None and not STATUS.get("past_window"):
+        state = marshal.loads(_read(path))
+        return Prepared(state, state["key"], heavy_path, store_path, R)
+    t_read = time.time()
+    built, heavy = build(store_path, R, derive)
+    if built is None:
+        STATUS["why"] = heavy
+        return None
+    if _store_key(store_path) != key.split("|", 1)[1]:
+        STATUS["moved"] = True
+    built["key"] = heavy["key"] = key
+    built["read_at"] = t_read
+    os.makedirs(folder, exist_ok=True)
+    _write(heavy_path, heavy)
+    _write(path, built)
+    _prune(folder)
+    STATUS.update(built=True, stale_s=0)
+    return Prepared(built, key, heavy_path, store_path, R)
+
+
 def open_prepared(store_path, R, derive, caller, stale_s=None):
     """The prepared state for this store, code and environment: loaded, or built and written. None when the fast path
     is off or must not be used (STATUS["why"] says why).
@@ -723,9 +774,11 @@ def open_prepared(store_path, R, derive, caller, stale_s=None):
                     state = got
                 elif window > 0 and got["key"].split("|", 1)[0] == name:
                     age = time.time() - float(got.get("read_at") or os.path.getmtime(path))
-                    if 0 <= age <= window:
+                    # RECALL-10X lead 2: a state past the window is still used when extend() can bring it up to date
+                    if 0 <= age <= max(window, DELTA_MAX_AGE_S):
                         state, state_key = got, got["key"]
                         STATUS["stale_s"] = int(age)
+                        STATUS["past_window"] = age > window
         except Exception:
             state, state_key = None, key
         if state is None:
@@ -750,6 +803,10 @@ def open_prepared(store_path, R, derive, caller, stale_s=None):
             state = built
             STATUS["built"] = True
         prepared = Prepared(state, state_key, heavy_path, store_path, R)
+        if state_key != key and not STATUS["built"]:
+            prepared = _bring_up_to_date(prepared, store_path, R, derive, path, heavy_path, folder, key, window)
+            if prepared is None:
+                return None
         _MEMO.clear()
         _MEMO[key] = prepared
         STATUS["fast"] = True
