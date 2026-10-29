@@ -34,8 +34,8 @@ MEM = bm25.MEM
 QUICK = "--quick" in sys.argv
 SLUG = "zz_bm25_lane_selftest_control_delete_me"
 CONTROL = os.path.join(MEM, SLUG + ".md")
-QUERIES = ["restart box 3", "vix strike offset two above", "put premium at entry at most 1x equity",
-           "flatten the grid at the close", "google upload is not free per object",
+QUERIES = ["restart the research server", "pick the first listed value two above", "cost at entry at most 1x the budget",
+           "reset the counter at the end of the day", "cloud upload is billed per object",
            "feeder reads the old queue after sed -i"]
 fails = 0
 
