@@ -341,3 +341,11 @@ A ranking test on 328 labelled questions from seven banks, eight token sets. Dro
 sign put the known card first on 250 questions against 237 (18 gained, 5 lost, top ten unchanged at 317); dropping digits as
 well cost 26 first places. The change was reverted from the live build on 7 October after it lost four content
 questions on the nightly gate's bank. Bank-level counts only.
+
+## hook-robustness-probes-2026-10-04: rewrites, refuted targets, and the meaning channel at the gate
+
+Three probes of the live math hook. Over 1427 meaning-preserving rewrites of 218 questions, real misspellings and
+wrappers were harmless while synthetic typos and instruction text broke 66 and 30 of 158 served questions; both
+fixes were measured against real prompts and dropped. Of 47 REFUTES edges about 19 leave their target standing, and the
+hook serves refuted targets with their refuters. No confidence threshold on the meaning channel admits the right
+refused questions without admitting wrong ones. Counts only.
