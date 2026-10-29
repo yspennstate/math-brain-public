@@ -2576,6 +2576,14 @@ def _display_rows(scored, n, floor=0.02, floor_break=False):
     and hid later tail rows above the floor (scheduled audit account01/B02 R1). floor_break=True keeps that old stop
     (BRAIN_RECALL_FLOOR_BREAK=1)."""
     out = []
+    # Compaction anchors can be a third of the memory files, and one session's compactions repeat the same words, so
+    # on some questions they fill half the rows. BRAIN_RECALL_COMPACTION_PER_SESSION keeps the best-placed N per
+    # session; 0 (the default) means no cap. A cap of 3 measured no better than none, so it stays off.
+    try:
+        cap = int(os.environ.get("BRAIN_RECALL_COMPACTION_PER_SESSION", "0"))
+    except ValueError:
+        cap = 0
+    per = {}
     for row in scored:
         if len(out) >= n:
             break
@@ -2583,8 +2591,17 @@ def _display_rows(scored, n, floor=0.02, floor_break=False):
             if floor_break:
                 break
             continue
+        if cap > 0:
+            m = _COMPACTION_SLUG.match(row[4])
+            if m:
+                if per.get(m.group(1), 0) >= cap:
+                    continue
+                per[m.group(1)] = per.get(m.group(1), 0) + 1
         out.append(row)
     return out
+
+
+_COMPACTION_SLUG = re.compile(r"^compaction_((?:claude|codex)_[0-9a-z]+)_\d{8}T\d{6}$")
 
 
 def recall(query, n=8):
@@ -3347,6 +3364,48 @@ def _recall_body(query, n=8):
             ub = 1.0 + 0.15 * _usage.get(slug, 0.0)   # usage tilt (boost-only), same knob as bm25 path
             scored.append((score * salb * ub * _STATUS_WEIGHT.get(status, 1.0), ls, gs, ss, slug, status))
         scored.sort(reverse=True)
+
+    # GATED QUESTION-LANE MERGE. When the question lane's own top match stands clear of its second (cosine margin
+    # >= BRAIN_RECALL_GATE_T, e.g. 0.02), the top twenty shown are merged with the lane's top 200 by reciprocal rank
+    # (k=10); otherwise nothing changes. The z fusion above takes the lane at weight 0.3, so a memory the lane is sure
+    # of can still sit at 2 or 3 under bm25 neighbours, mostly fresh memories whose words the body has not seen
+    # repeated. An ungated merge loses (the lane's rank 1 trusted whatever its margin); the margin is the guard. On
+    # questions about recent memories the gate helped (one pre-registered set of 39: hit@1 18 -> 24, none lost); on a
+    # bank of older questions it moved one answer. Off by default: BRAIN_RECALL_GATE_T=0 keeps the order unchanged.
+    try:
+        _gate_t = float(os.environ.get("BRAIN_RECALL_GATE_T", "0") or 0)
+    except Exception:
+        _gate_t = 0.0
+    if _gate_t > 0 and scored and _qlane_on():
+        try:
+            _gsc = _query_semantic_scores(query, k=200)
+            _gD, _gC = [], []
+            for _s in sorted(_gsc, key=lambda s: -_gsc[s]):
+                _cur = _current_slug(_s, superseded, known_slugs)
+                if _cur not in _gD:
+                    _gD.append(_cur)
+                    _gC.append(_gsc[_s])
+            if len(_gC) > 1 and _gC[0] - _gC[1] >= _gate_t:
+                _gD = [s for s in _gD if s not in sr.SKIP and s not in disabled and tier.get(s) != "unconscious"]
+                _gL = [r[4] for r in _display_rows(scored, 20)]
+                _grr = {}
+                for _lst in (_gL, _gD):
+                    for _j, _s in enumerate(_lst):
+                        _grr[_s] = _grr.get(_s, 0.0) + 1.0 / (10 + _j + 1)
+                _gtop = sorted(_grr, key=lambda s: -_grr[s])[:len(_gL)]
+                _rows = {r[4]: r for r in scored}
+                _vals = sorted((_rows[s][0] for s in _gL), reverse=True)
+                _new = []
+                for _i, _s in enumerate(_gtop):
+                    _r = _rows.get(_s)
+                    if _r is None:
+                        _ls, _gs, _ss = components.get(_s, (0.0, 0.0, 0.0))
+                        _r = (0.0, _ls, _gs, _ss, _s, _status_from_index(_s, idx))
+                    _new.append((_vals[_i],) + tuple(_r[1:]))
+                _taken = set(_gtop)
+                scored = _new + [r for r in scored if r[4] not in _taken]
+        except Exception as _gate_exc:
+            print("  [warn] gated lane merge skipped (%s: %s)" % (type(_gate_exc).__name__, _gate_exc))
 
     _dump = os.environ.get("BRAIN_RECALL_DUMP_SCORED")          # evaluation only: the list the display reads, in order
     if _dump:
