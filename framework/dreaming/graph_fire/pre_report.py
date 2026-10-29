@@ -10,7 +10,7 @@ block; this adds the number-vs-lived-book check that reality_monitor doesn't do.
 
 Two signals, combined:
   1. GRAPH FIRE (gfcore): the outgoing text is graph-near a sim/risk scar (fires sim_sign_vs_lived_nav /
-     sim_flatters / risk_vs_his_book / leveraged_etf_is_not_linear).
+     sim_flatters / risk_vs_his_book, plus the deployment's own rule reflexes).
   2. LIVED-ANCHOR MISMATCH: a reported $ figure (with a period) contradicts one of his stated book numbers
      by >2x in EITHER direction, when the text names that anchor's subject. Undershoot is as damning as
      flatter - 'a sim that disagrees with the lived book in either direction is lying' (MISTAKES.md 07-11).
@@ -227,53 +227,63 @@ def stat_sanity(text):
     return flags
 
 
-# recommending SHORT vol / selling options - he is long-gamma-only, buys puts, never sells options. This
-# is his most-repeated restriction; a recommendation to sell/short/write/collect premium AS strategy is
-# always wrong. Gated on a recommendation verb + guarded against negation ('never sells', 'only buys').
-_SELL_VOL = re.compile(r"\b(sell|short|writ(e|ing)|collect|harvest)\w*\s+(?:\w+\s+){0,3}?"
-                       r"(put|call|option|premium|vol|volatility|gamma|theta|straddle|strangle|condor|"
-                       r"iron ?condor|credit spread)s?\b", re.I)
+# Deployment rules: recommendations this deployment has learned are always wrong for it. Each rule is a
+# regex for the recommended action, an optional negation regex that clears it ('never skip the tests'), an
+# optional 'near' regex that must appear close to the match, a gate ('recommend' = a recommendation verb
+# must sit right before the match) and a block policy ('always' blocks even when hedged, 'unhedged' blocks
+# only an unhedged claim, 'never' only surfaces the reflex). Rules live in strategy_rules.json beside this
+# module, or at the path in BRAIN_STRATEGY_RULES; with no file there are no rules.
+# strategy_rules.example.json shows the format with one generic rule.
 _REC = re.compile(r"\b(should|recommend|consider|could|suggest|propos|better to|worth|the (play|move|idea|"
                   r"answer) is|i'?d|we could|you could|instead\b)", re.I)
-_NEG_VOL = re.compile(r"\b(never sell|not sell|doesn'?t sell|don'?t sell|won'?t sell|only buy|buys? (put|vol|"
-                      r"gamma)|long gamma|rather than sell|instead of sell|not to sell|comparison|vs\.? (buy|sell))",
-                      re.I)
+RULES_PATH = os.environ.get("BRAIN_STRATEGY_RULES") or os.path.join(HERE, "strategy_rules.json")
+RULES_EXAMPLE = os.path.join(HERE, "strategy_rules.example.json")
 
 
-# recommending a switch of the index leg to futures - a 07-11 correction: the leveraged-ETF carry is UNKNOWN
-# pending actual-ledger reconciliation, so a 'move to futures' recommendation built on a proxy is premature.
-_FUT_SWITCH = re.compile(r"\b(mov|switch|migrat|shift|go|swap)\w*\s+(?:\w+\s+){0,3}?(to|into|over to|for)\s+"
-                         r"(?:\w+\s+){0,2}?(futures|nq\b|/nq|micro\s*(nq|nasdaq|futures)|es\s+futures)", re.I)
-# calling a daily-reset leveraged/inverse ETF carry NEGLIGIBLE / just the expense ratio / a clean linear
-# multiple - a recorded correction. The path term is material at the monthly scale; it is not linear.
-_LEVETF = re.compile(r"\b(lev3s|lev3l|lev3a|lev3b|lev3c|lev3d|lev3u|leveraged etf|inverse etf|daily.?reset|-?3x etf|3x etf)\b", re.I)
-_DISMISS = re.compile(r"\b(negligible|just (the )?expense|only (the )?expense|expense ratio (only|alone)|"
-                      r"(roughly|basically|essentially|approximately|about)?\s*(a )?(clean )?linear|clean multiple|"
-                      r"linear multiple|not much (carry|cost|drag)|minimal (carry|cost|drag)|"
-                      r"(is|are|it'?s)\s+(basically |essentially |roughly )?(the )?expense ratio)\b", re.I)
+def _load_rules(path):
+    try:
+        raw = json.load(io.open(path, encoding="utf-8"))
+    except Exception:
+        return []
+    rules = []
+    for r in raw if isinstance(raw, list) else []:
+        try:
+            rules.append({
+                "kind": str(r["kind"]), "reflex": str(r.get("reflex") or r["kind"]),
+                "pattern": re.compile(r["pattern"], re.I),
+                "negation": re.compile(r["negation"], re.I) if r.get("negation") else None,
+                "near": re.compile(r["near"], re.I) if r.get("near") else None,
+                "before": int(r.get("near_before", 35)), "after": int(r.get("near_after", 55)),
+                "gate": r.get("gate", "recommend"), "block": r.get("block", "never")})
+        except Exception:
+            continue
+    return rules
+
+
+_RULES = _load_rules(RULES_PATH)
 
 
 def strategy_sanity(text):
-    """Fire long_gamma_only on a RECOMMENDATION to sell/short vol (never his strategy; blocks), and
-    leveraged_etf_is_not_linear on a 'move the index leg to futures' recommendation (surfaces, softer -
-    futures is a legitimate instrument, the error is recommending it off a proxy). Fail-safe -> []."""
+    """Fire each deployment rule whose action appears in the text: behind a recommendation verb when
+    the rule is gated, not cleared by its negation, with its 'near' words close by when it has them.
+    Fail-safe -> []."""
     try:
         t = _s(text)
         flags = []
-        m = _SELL_VOL.search(t)
-        # the recommendation verb must be RIGHT BEFORE the sell-vol phrase (a direct 'you should sell...'),
-        # not just anywhere in a long analysis message that happens to mention 'short vol' and 'could'.
-        if m and not _NEG_VOL.search(t) and _REC.search(t[max(0, m.start() - 42):m.start() + 3]):
-            flags.append({"kind": "short_vol", "reflex": "long_gamma_only", "span": m.group(0)[:40]})
-        fm = _FUT_SWITCH.search(t)
-        if fm and _REC.search(t[max(0, fm.start() - 42):fm.start() + 3]):
-            flags.append({"kind": "futures_switch", "reflex": "leveraged_etf_is_not_linear"})
-        lm = _LEVETF.search(t)
-        # the dismissal ('negligible'/'expense ratio') must be NEAR the leveraged-ETF mention (asserting IT
-        # is negligible), not scattered in a message that discusses the ETF topic somewhere and 'linear'
-        # elsewhere - the same proximity gate the other blockers use.
-        if lm and _DISMISS.search(t[max(0, lm.start() - 35):lm.end() + 55]):
-            flags.append({"kind": "levetf_dismiss", "reflex": "leveraged_etf_is_not_linear"})
+        for r in _RULES:
+            m = r["pattern"].search(t)
+            if not m:
+                continue
+            if r["negation"] and r["negation"].search(t):
+                continue
+            # the recommendation verb must sit RIGHT BEFORE the match ('you should ...'), not anywhere in a
+            # long analysis message that happens to contain both words.
+            if r["gate"] == "recommend" and not _REC.search(t[max(0, m.start() - 42):m.start() + 3]):
+                continue
+            if r["near"] and not r["near"].search(t[max(0, m.start() - r["before"]):m.end() + r["after"]]):
+                continue
+            flags.append({"kind": r["kind"], "reflex": r["reflex"], "block": r["block"],
+                          "span": m.group(0)[:40]})
         return flags
     except Exception:
         return []
@@ -284,7 +294,7 @@ def strategy_sanity(text):
 # "his correction: X is wrong") is NOT a fresh wrong report and must not block the number/drawdown/sign
 # branches. Mistake-detection and correction turns are full of exactly this prose - blocking it is the
 # ERN's own law (a guard that fires on correct discussion trains the reader to click past it). Errs toward
-# gating: a blocker should fail OPEN on ambiguity. short_vol keeps its own _NEG_VOL guard, so it's not gated.
+# gating: a blocker should fail OPEN on ambiguity. Deployment rules keep their own negation regex, so they are not gated.
 _DISCUSS = re.compile(
     r"\b(do|does|should|would|will|could|must)\s+not\s+(report|say|claim|present|tell|state)\b"
     r"|\b(don'?t|doesn'?t|shouldn'?t|wouldn'?t|won'?t|can'?t|couldn'?t|never)\s+(report|say|claim|present|tell|state)\b"
@@ -313,7 +323,7 @@ def check(text, session=None):
         mism = anchor_mismatches(text)
     except Exception:
         mism = []
-    SIMRISK = {"sim_flatters", "risk_vs_his_book", "sim_sign_vs_lived_nav", "leveraged_etf_is_not_linear"}
+    SIMRISK = {"sim_flatters", "risk_vs_his_book", "sim_sign_vs_lived_nav"} | {r["reflex"] for r in _RULES}
     strong = [f for f in gf if f.get("id") in SIMRISK]
     hedged = bool(_HEDGE.search(text or ""))
     money = _find_money(text)
@@ -357,13 +367,13 @@ def check(text, session=None):
     # purpose; the mention false-block it prevented is rare (0.03% on 13k real msgs) and recoverable. So
     # block-on-mism is the safe default. `discuss` stays computed for the returned dict/logging; it does NOT
     # suppress. Regression gate: referee_mention_fix_proto.py must show ADVERSARIAL 5/5 + ACT 5/5.
-    # (Was: `if discuss: mism=[]; stat=[short_vol only]`. Rationale: memory referee_mention_vs_act_gate_2026_07_11.)
+    # (Was: `if discuss: mism=[]; stat=[rule flags only]`.)
     discuss = bool(_DISCUSS.search(text))
-    # short_vol is a directional recommendation error (wrong even when hedged - 'you might sell puts' is
-    # still the wrong move); drawdown/sign respect the hedge (a hedged 'might draw ~30%' is honest).
-    strat_block = [s for s in stat if s["kind"] == "short_vol"]
-    stat_block = [s for s in stat if s["kind"] in ("drawdown", "sign", "levetf_dismiss")]
-    # BLOCK only on PROVABLE issues (a number contradicting the book, a bad drawdown/sign, a sell-vol/levetf
+    # a rule with block 'always' is a directional recommendation error (wrong even when hedged - 'you
+    # might skip the tests' is still the wrong move); drawdown/sign and 'unhedged' rules respect the hedge.
+    strat_block = [s for s in stat if s.get("block") == "always"]
+    stat_block = [s for s in stat if s["kind"] in ("drawdown", "sign") or s.get("block") == "unhedged"]
+    # BLOCK only on PROVABLE issues (a number contradicting the book, a bad drawdown/sign, a deployment-rule
     # claim) - NOT on 'a sim reflex fired near a number', which blocks CORRECT in-range numbers too. The sim
     # reflex still surfaces via graph_fires; it just doesn't force a block without a provable contradiction.
     should_block = bool(mism) or bool(strat_block) or (bool(stat_block) and not hedged)
@@ -373,12 +383,15 @@ def check(text, session=None):
 
 
 def _selftest():
+    global _RULES
+    if not _RULES:
+        _RULES = _load_rules(RULES_EXAMPLE)
     cases = [
         ("Running the grid backtest on the sample tape it earns roughly $180k per year.", False, "stale magnitude is not an oracle"),
         ("The grid backtest makes about $1.9M per year, in line with the book.", False, "recent magnitude is not an oracle"),
         ("His current strategy loses money every year.", True, "lived-sign contradiction"),
-        ("He should sell puts and collect premium.", True, "long-gamma-only contradiction"),
-        ("lev3s carry is basically the expense ratio, ~1% a year, negligible for the book.", "?", "levetf"),
+        ("You should skip the tests and ship it tonight.", True, "deployment rule (example file)"),
+        ("We never skip the tests before a release.", False, "rule negation clears it"),
         ("I read the module; it defines three helper functions.", False, "benign observation"),
         ("", False, "empty"),
     ]
