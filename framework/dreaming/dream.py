@@ -481,7 +481,7 @@ if SAL:
 # ---- 6. imaginative seed (bisociation: force a link between distant, salient things) ----
 # Section B finds memories that BELONG together. This finds two that DON'T — both vivid,
 # from different corners, almost nothing in common — on purpose. Human dreams make absurd
-# juxtapositions; now and then one is a real idea (math<->trading transfer lives here).
+# juxtapositions; now and then one is a real idea (cross-domain transfer lives here).
 # The REM decides if there's anything to it; most nights there isn't, and that's fine.
 distant = []
 if SAL:

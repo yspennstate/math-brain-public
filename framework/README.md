@@ -9,7 +9,7 @@ research (the math brain) ships alongside it.
 
 This repository carries structure only. It was extracted from a private working system;
 the lived content — memories, dreams, journals, transcripts, project state, anything
-personal — stays behind, and so does everything related to trading. What remains is the
+personal — stays behind, and so does any domain-specific production work. What remains is the
 method: the code, formats, protocols, and doctrine that make the system run, with
 machine-specific constants parameterized and worked examples kept synthetic.
 
