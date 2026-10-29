@@ -66,10 +66,13 @@ DAMP_AMOUNT = 0.15
 DAMP_MIN_FIRES = 40          # below this the shares are noise
 DAMP_SELF_RATIO = 1.8        # fires-on-brain-surface share >= 1.8x exposure share
 DAMP_DOMAIN_RATIO = 1.2      # AND market-surface share <= 1.2x exposure share
-_TRADING_PROBE = ("backtest sharpe drawdown sim simulate pnl equity curve cagr walk-forward "
-                  "leverage 20x risk of ruin worst-case blow up IB mark fair value mid-nlv "
-                  "valuation regime lookahead in-sample feature predictor forward-fill "
-                  "stale mark carried mark final nlv vxn term structure tenor slope long iv")
+# Words typical of the deployment's own domain work. A reflex whose trigger matches them is
+# "domain-topical" and can take part in the inversion test below. Set BRAIN_DOMAIN_PROBE to
+# your domain's vocabulary; the default is generic simulation and evaluation language.
+_DOMAIN_PROBE = os.environ.get("BRAIN_DOMAIN_PROBE") or (
+    "backtest drawdown sim simulate walk-forward risk worst-case blow up fair value "
+    "valuation regime lookahead in-sample feature predictor forward-fill stale mark "
+    "carried mark term structure tenor slope")
 NEVER_DAMP = SAFETY_FLOOR_IDS | {
     "his_never_is_machinery", "secrets_in_git", "no_local_privileged_stack",
     "preserve_before_destroy", "pinned_file_two_tripwires", "gate_tool_needs_env",
@@ -125,7 +128,7 @@ def build_context_damp(days, quiet):
         if rid in NEVER_DAMP:
             continue
         try:
-            if not re.search(trig, _TRADING_PROBE, re.I):
+            if not re.search(trig, _DOMAIN_PROBE, re.I):
                 continue   # trigger vocabulary is not market-topical; inversion test meaningless
         except Exception:
             continue
@@ -151,7 +154,7 @@ def build_context_damp(days, quiet):
 
 def _safe_probe_match(trig):
     try:
-        return bool(re.search(trig, _TRADING_PROBE, re.I))
+        return bool(re.search(trig, _DOMAIN_PROBE, re.I))
     except Exception:
         return False
 

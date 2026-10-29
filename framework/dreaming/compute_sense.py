@@ -23,7 +23,7 @@ SEEN_FILE = os.path.join(STATE_DIR, ".compute_sense_seen.json")
 STALE_SEC = 600          # governor heartbeat older than this = governor itself is down
 DEDUP_DISTRESS = 600     # re-remind at most every 10 min per session while distress persists
 DEDUP_WARN = 1800
-DEDUP_TRADING = 21600    # operational observation, not a compute-pressure interrupt
+DEDUP_PROTECTED = 21600    # operational observation, not a compute-pressure interrupt
 DEDUP_STALE = 14400      # governor-down nag: once per session per 4h
 
 LOCAL_GPU_DENY_REASON = (
@@ -1007,7 +1007,7 @@ def main():
                 _clear_protected_dedup(seen, sid)
             elif _protected_alert_can_emit(status, ctx):
                 if _dedup(
-                    seen, sid + "|protected-health|" + protected_sig, DEDUP_TRADING
+                    seen, sid + "|protected-health|" + protected_sig, DEDUP_PROTECTED
                 ):
                     ctx = (ctx + "\n" + protected_ctx) if ctx else protected_ctx
 
