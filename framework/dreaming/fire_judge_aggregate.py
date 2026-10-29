@@ -32,7 +32,7 @@ for fn in sys.argv[1:]:
         verdicts[v["case_id"]] = v
 
 print("judged %d / %d cases" % (len(verdicts), len(cases)))
-TRIO = {"sim_flatters", "risk_vs_his_book", "ib_marks"}
+TRIO = {"sim_flatters", "risk_vs_measured_record", "ib_marks"}
 
 by = collections.defaultdict(lambda: {"n": 0, "dom_yes": 0, "dom_no": 0, "dom_unclear": 0,
                                       "fol_yes": 0, "fol_no": 0, "fol_noop": 0})

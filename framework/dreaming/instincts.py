@@ -68,7 +68,7 @@ INSTINCTS = [
       gut="A sim that flatters is lying. If a number surprises you or beats the live book, distrust the SIM first, not the book - reproduce against the tape or the live book before you believe it or report it.",
       sting="Wrong twice in one day (07-08): daily-returns understated -14%, raw 1-min crossings overstated +2700% on quote noise.",
       source="scar_check_the_brain_before_you_simulate_2026_07_08"),
- dict(id="risk_vs_his_book", mode="fire", validity="low",
+ dict(id="risk_vs_measured_record", mode="fire", validity="low",
       # widened 07-11 (fleetgraph verified gap, scaled-validated 0.42% owner-prompt rate): the risk words
       # missed a BARE reported P&L in his actual phrasing - his #1 correction shape (a number vs his
       # lived book) sailed past. Do not encode a remembered magnitude in the warning prose itself.

@@ -8,7 +8,7 @@ This is the FIRING layer of the gut - it decides when a reflex fires. It does no
 
 The brain's reflexes are good; they just weren't firing at the moment of the mistake. The day's worst
 correction - a grid backtest reported ~10x under the lived book - happened with `sim_flatters` and
-`risk_vs_his_book` both defined and both silent, because the number lived in assistant prose, a surface
+`risk_vs_measured_record` both defined and both silent, because the number lived in assistant prose, a surface
 the old regex hook never watched. Coverage on paper is not firing in practice. Three gaps:
 
 1. Surface: the old `instinct_prime` fired only on tool calls (Bash/Edit), never on the outgoing message.

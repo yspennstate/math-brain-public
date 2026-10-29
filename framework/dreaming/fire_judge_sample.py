@@ -24,7 +24,7 @@ FIRELOG = os.path.join(DREAM, "instinct_fires.tsv")
 PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
 OUT = os.path.join(os.getcwd(), "judge_cases.jsonl")
 
-TARGET = {"sim_flatters", "risk_vs_his_book", "ib_marks",
+TARGET = {"sim_flatters", "risk_vs_measured_record", "ib_marks",
           "vxn_long_tenor_state", "stale_mark_banks"}
 PER_CELL = 5          # per (reflex, surface-group) cell
 DAYS = 4

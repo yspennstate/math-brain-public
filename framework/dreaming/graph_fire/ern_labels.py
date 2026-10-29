@@ -11,7 +11,7 @@ corrections. This produces ern_labels.tsv with stated coverage.
 METHOD, two sources, both conservative:
   rule - definitional signature/content maps only, where the failure IS the family:
          mojibake -> utf8_text_surgery; leaked secret -> secrets_in_git;
-         implausible magnitude -> sim_flatters (risk_vs_his_book secondary);
+         implausible magnitude -> sim_flatters (risk_vs_measured_record secondary);
          ssh + eaten backslash escapes -> the ssh-backslash-eater family;
          a backslashed C:\\ path inside a bash command -> the drive-path family.
          No stretching: a generic traceback or non-zero exit is NOT evidence of any
@@ -42,7 +42,7 @@ RULES = (
     # (test on (sig_lower, tool_lower, cmd), label, secondary, why)
     (lambda s, t, c: "mojibake" in s, "utf8_text_surgery", "", "mojibake IS the encoding family"),
     (lambda s, t, c: "leaked secret" in s, "secrets_in_git", "", "secret exposure IS the family"),
-    (lambda s, t, c: "implausible magnitude" in s, "sim_flatters", "risk_vs_his_book",
+    (lambda s, t, c: "implausible magnitude" in s, "sim_flatters", "risk_vs_measured_record",
      "implausible-number signature is the sim-vs-lived family"),
     (lambda s, t, c: ("ssh" in c.lower() and re.search(r"sed\s+.?s/\\+r|\\\\r|\\r\$//", c) is not None),
      "ssh_backslash_escape_eater", "", "ssh + CR-strip escapes: the quoting-eater family"),

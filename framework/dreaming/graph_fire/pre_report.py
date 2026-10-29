@@ -10,8 +10,8 @@ block; this adds the number-vs-lived-book check that reality_monitor doesn't do.
 
 Two signals, combined:
   1. GRAPH FIRE (gfcore): the outgoing text is graph-near a sim/risk scar (fires sim_sign_vs_lived_nav /
-     sim_flatters / risk_vs_his_book, plus the deployment's own rule reflexes).
-  2. LIVED-ANCHOR MISMATCH: a reported $ figure (with a period) contradicts one of his stated book numbers
+     sim_flatters / risk_vs_measured_record, plus the deployment's own rule reflexes).
+  2. LIVED-ANCHOR MISMATCH: a reported $ figure (with a period) contradicts one of the stated anchor numbers
      by >2x in EITHER direction, when the text names that anchor's subject. Undershoot is as damning as
      flatter - 'a sim that disagrees with the lived book in either direction is lying' (MISTAKES.md 07-11).
 
@@ -204,15 +204,15 @@ def stat_sanity(text):
             near = tl[max(0, m.start() - 28):m.end() + 8]
             if val >= max(40, round(_LIVED_WORST_DD * 40 / 11)) and re.search(_ddp, near):
                 flags.append({"kind": "drawdown", "reported_pct": val, "lived_worst_pct": _LIVED_WORST_DD,
-                              "reflex": "risk_vs_his_book"})
+                              "reflex": "risk_vs_measured_record"})
                 break
-        # sign contradiction: his lived strategy reported LOSING. Tight (real analysis prose mentions
+        # sign contradiction: the measured, profitable system reported LOSING. Tight (real analysis prose mentions
         # backtests + losses constantly): needs an explicit money-loss AND a recurring temporal AND
         # attribution to HIS strategy/grid/book - all three, or it false-fires on ordinary discussion.
         if (re.search(r"los(e|es|ing)\s+money|unprofitable|negative (return|pnl|p&l)|loses? (money )?(every|each)|"
                       r"lost money (every|each)", tl)
                 and re.search(r"every (single )?year|each year|annually|every month", tl)
-                and re.search(r"\b(his|the|current)\s+(strateg(?:y|ies)|grid|book)|his book", tl)):
+                and re.search(r"\b(the|current|our)\s+(" + _RESULT_WORDS + r")\b", tl)):
             flags.append({"kind": "sign", "reflex": "sim_sign_vs_lived_nav"})
         # implausible Sharpe
         m = re.search(r"sharpe\D{0,10}(\d+(?:\.\d+)?)", tl)
@@ -323,7 +323,7 @@ def check(text, session=None):
         mism = anchor_mismatches(text)
     except Exception:
         mism = []
-    SIMRISK = {"sim_flatters", "risk_vs_his_book", "sim_sign_vs_lived_nav"} | {r["reflex"] for r in _RULES}
+    SIMRISK = {"sim_flatters", "risk_vs_measured_record", "sim_sign_vs_lived_nav"} | {r["reflex"] for r in _RULES}
     strong = [f for f in gf if f.get("id") in SIMRISK]
     hedged = bool(_HEDGE.search(text or ""))
     money = _find_money(text)
@@ -348,7 +348,7 @@ def check(text, session=None):
     if _DONE.search(text) and not hedged and not any(f.get("id") == "he_will_look" for f in gf):
         gf = list(gf) + [{"id": "he_will_look", "score": None, "charge": 1.0, "src": "MISTAKES",
                           "validity": "high", "mode": "fire", "via": "completion_claim"}]
-    # block when the number provably contradicts his book, OR a strong sim/risk reflex fired on an
+    # block when the number provably contradicts the measured record, OR a strong sim/risk reflex fired on an
     # unhedged reported number. Hedged ('roughly', 'need to reconcile') never blocks - it's honest.
     try:
         stat = (stat_sanity(text) or []) + (strategy_sanity(text) or [])

@@ -4,7 +4,7 @@
 Shared by precision_audit.py (measurement), build_reflex_ranking.py (nightly context_damp
 computation) and instinct_prime.py (applying the damp) so all three mean the same thing by
 "brain-system surface". Built 2026-07-16 from the fire-precision measurement: the market
-judgment reflexes (sim_flatters, risk_vs_his_book, ib_marks, ...) fired 2.1-2.7x OVER
+judgment reflexes (sim_flatters, risk_vs_measured_record, ib_marks, ...) fired 2.1-2.7x OVER
 exposure on brain-system surfaces - the brain's own code/memos/tests carry their trigger
 vocabulary - and at-or-below exposure on the market domain they exist for (sim_flatters:
 56% of act/write fires on brain-sys vs 21% exposure; 8% on market vs 8% exposure).

@@ -15,7 +15,7 @@ vocabulary lives as text) and fails to concentrate on the domain it exists for:
 First measurement (2026-07-16, whole log, exposure n=2208 over 60 transcripts:
 self-ref 21%, market 8%):
     sim_flatters      56% self-ref (2.7x)   8% market (1.0x)   INVERTED
-    risk_vs_his_book  47% (2.2x)            6% (0.8x)           INVERTED
+    risk_vs_measured_record  47% (2.2x)            6% (0.8x)           INVERTED
     ib_marks          46% (2.2x)            4% (0.5x)           INVERTED
     lookahead         46% (2.2x)            4% (0.5x)           INVERTED (safety-floored)
     his_never_is_mach 45% (2.1x)            4% (0.5x)           INVERTED (never-suppress)
@@ -38,7 +38,7 @@ FIRELOG = os.path.join(HERE, "instinct_fires.tsv")
 PROJ = os.path.join(os.path.expanduser("~"), ".claude", "projects", "{{BRAIN_SLUG}}")
 EXPOSURE_CACHE = os.path.join(HERE, "exposure_scan_cache.json")
 
-JUDGMENT = ["sim_flatters", "risk_vs_his_book", "his_never_is_machinery", "ib_marks",
+JUDGMENT = ["sim_flatters", "risk_vs_measured_record", "his_never_is_machinery", "ib_marks",
             "lookahead", "sim_sign_vs_lived_nav", "vxn_long_tenor_state",
             "stale_mark_banks", "check_the_brain_first"]
 MECHANICAL = ["ps1_hook_edit", "utf8_text_surgery", "secrets_in_git", "windows_backslash_path"]
@@ -238,7 +238,7 @@ def main():
     if a.by_mechanism:
         # per-layer view: which mechanism produces each reflex's fires (rows before the
         # column exist are labeled pre-column). The full-text audit found ib_marks mostly
-        # graph-fired while risk_vs_his_book was mostly regex-fired - opposite repair
+        # graph-fired while risk_vs_measured_record was mostly regex-fired - opposite repair
         # paths; this makes that visible per night without a corpus build.
         per_m = collections.defaultdict(collections.Counter)
         cutoff = 0 if a.all else time.time() - a.days * 86400

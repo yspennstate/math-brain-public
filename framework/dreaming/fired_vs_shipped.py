@@ -211,7 +211,7 @@ def main():
                      tot["miss_exp"], 100.0*tot["miss_exp"]/mt))
             print("  (%d/%d corrections had no confident corpus match - unmapped, honestly not scored.)" % (n - mt, n))
             print("  CAVEAT (eyeballed): the expected-reflex is a TOKEN-OVERLAP nearest-neighbor to the corpus,")
-            print("  which returns SPURIOUS matches (a 'forget the mouse' scope correction matched risk_vs_his_book).")
+            print("  which returns SPURIOUS matches (a 'forget the mouse' scope correction matched risk_vs_measured_record).")
             print("  So this cut is DIRECTIONAL - it confirms 'surfaced' != 'right reflex' (flaw 2 is real) but the")
             print("  RATE is not trustworthy. A reliable mistake->reflex map needs semantic embeddings or hand-labels,")
             print("  not token overlap - that is genuinely the hard part fleetgraph flagged. Trust the HEEDING cut.")

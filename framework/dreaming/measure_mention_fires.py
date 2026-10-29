@@ -44,7 +44,7 @@ READONLY = re.compile(r"^\s*(grep|rg|cat|less|head|tail|ls|find|wc|diff|sed -n|a
 # a judgment call - erring toward calling a reflex advisory, so the flag stays conservative.)
 ADVISORY = {"work_the_clock", "he_will_look", "confirm_the_target", "his_never_is_machinery",
             "his_call_is_final", "broker_truth", "measure_one_before_promising_n", "dont_extrapolate_past_range",
-            "ib_marks", "risk_vs_his_book", "live_time_pressure", "green_not_trusted", "sim_flatters",
+            "ib_marks", "risk_vs_measured_record", "live_time_pressure", "green_not_trusted", "sim_flatters",
             "stale_mark_banks", "long_gamma_only", "lookahead", "voice_human", "premortem"}
 
 

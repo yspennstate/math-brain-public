@@ -26,7 +26,7 @@ MIN_COFIRE = 3     # draw an edge only when two reflexes co-fired at least this 
 # layer surfaces THIS once, plus the family's most-specific fired member, instead of N diluting sub-reflexes).
 # Matched to a derived family by signature-member overlap, so the labels survive membership drift.
 META_LINES = [
-    (["sim_flatters", "risk_vs_his_book", "sim_sign_vs_lived_nav", "leveraged_etf_is_not_linear", "stale_mark_banks"],
+    (["sim_flatters", "risk_vs_measured_record", "sim_sign_vs_lived_nav", "leveraged_etf_is_not_linear", "stale_mark_banks"],
      "his-domain / production",
      "You're modeling his book. A sim that disagrees with his LIVED book in either direction - sign OR "
      "magnitude - is the sim lying, not the book. Reconcile against the actual account/tape before you "

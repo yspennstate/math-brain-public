@@ -42,7 +42,7 @@ import re
 #            the real act re-fires it. Suppress on mention surfaces.
 #   claim -> the danger is a number / conclusion / reasoning that legitimately appears in a read or a
 #            prompt (a sim result, a risk figure, a confident 'done', his lived-book sign). NEVER suppress.
-#            Domain overrides (sim_flatters, risk_vs_his_book, leveraged_etf_is_not_linear, ...) are 'claim'
+#            Domain overrides (sim_flatters, risk_vs_measured_record, leveraged_etf_is_not_linear, ...) are 'claim'
 #            deliberately - the coarseness memory proved their act% is not targeting; do not touch them here.
 # Anything unlisted defaults to 'claim' (conservative: an unknown reflex is never suppressed).
 # ---------------------------------------------------------------------------
@@ -78,7 +78,7 @@ DANGER_SURFACE = {
     "healer_first_do_no_harm": "act",             # deploying/running a watcher that acts
     "stamp_only_on_delivery": "act",              # a sender that stamps dedup state (code write)
     # --- claim (never suppress; danger lives in the reasoning/number) ---
-    "sim_flatters": "claim", "risk_vs_his_book": "claim", "sim_sign_vs_lived_nav": "claim",
+    "sim_flatters": "claim", "risk_vs_measured_record": "claim", "sim_sign_vs_lived_nav": "claim",
     "leveraged_etf_is_not_linear": "claim", "vxn_long_tenor_state": "claim", "lookahead": "claim",
     "stale_mark_banks": "claim", "ib_marks": "claim", "broker_truth": "claim",
     "his_hand_in_the_tape": "claim", "conventions_are_read_not_guessed": "claim",

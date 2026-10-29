@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 PROJ = os.environ.get("BRAIN_PROJECT_DIR") or os.path.join(
     os.path.expanduser("~"), ".claude", "projects", os.environ.get("BRAIN_PROJECT_SLUG", "default"))
 OUTLOG = os.path.join(HERE, "judged_nightly.jsonl")
-TARGET = ("sim_flatters", "risk_vs_his_book", "ib_marks",
+TARGET = ("sim_flatters", "risk_vs_measured_record", "ib_marks",
           "vxn_long_tenor_state", "stale_mark_banks")
 N_CASES = 4
 

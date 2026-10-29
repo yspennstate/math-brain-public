@@ -96,7 +96,7 @@ def main():
     print("  reflexes: %d specific (thr<=1.3, fire readily) | %d broad (thr>=3.0, high bar)"
           % (n_specific, n_broad))
     # show a few calibrated thresholds
-    ex = ["leveraged_etf_is_not_linear", "sim_flatters", "risk_vs_his_book", "confirm_the_target",
+    ex = ["leveraged_etf_is_not_linear", "sim_flatters", "risk_vs_measured_record", "confirm_the_target",
           "he_will_look", "lookahead", "secrets_in_git", "vxn_long_tenor_state"]
     for rid in ex:
         if rid in model:
