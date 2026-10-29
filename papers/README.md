@@ -15,6 +15,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Correlation of leaf heights at mesoscopic separation in the critical beta-splitting tree | [beta-splitting-leaf-correlation](https://github.com/yspennstate/beta-splitting-leaf-correlation) |
 | Cover-time fluctuations beyond the maximal hitting-time scale | [cover-time-fluctuations](https://github.com/yspennstate/cover-time-fluctuations) |
 | Degree fluctuations in bilateral preference random graphs | [bilateral-preference-degree-limits](https://github.com/yspennstate/bilateral-preference-degree-limits) |
+| The discrepancy of Sylvester-Hadamard matrices in odd dimension | [hadamard-discrepancy-odd](https://github.com/yspennstate/hadamard-discrepancy-odd) |
 | Doubling and jamming: a universal Chern Hamiltonian on triangulated surfaces with boundary (numerics) | [Doubling-and-Jamming-A-Universal-Chern-Hamiltonian-on-Triangulated-Surfaces-with-Boundary](https://github.com/yspennstate/Doubling-and-Jamming-A-Universal-Chern-Hamiltonian-on-Triangulated-Surfaces-with-Boundary) |
 | The drawn length of the critical beta-splitting tree grows linearly | [beta-splitting-drawn-length](https://github.com/yspennstate/beta-splitting-drawn-length) |
 | Entropy and singularity of spectral and pivotal sets in planar percolation | [percolation-crossing-entropy](https://github.com/yspennstate/percolation-crossing-entropy) |

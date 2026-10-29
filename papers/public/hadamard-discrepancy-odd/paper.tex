@@ -1,0 +1,201 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\F}{\mathbb{F}_2}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\NL}{\operatorname{NL}}
+
+\title{The discrepancy of Sylvester--Hadamard matrices in odd dimension}
+\author{Yitzchak Shmalo}
+\date{}
+
+\begin{document}
+
+\begin{abstract}
+Let $H_k$ be the $2^k\times 2^k$ Sylvester--Hadamard matrix and let
+$\disc(H_k)$ be the minimum of $\|H_kx\|_\infty$ over sign vectors $x$. It is known that
+$\disc(H_k)=2^{k/2}$ for even $k$, and it has been conjectured that
+$\disc(H_k)=2^{(k+1)/2}$ for every odd $k$. We show that
+$\disc(H_k)=2^k-2\rho(1,k)$, where $\rho(1,k)$ is the covering radius of the
+first-order Reed--Muller code of length $2^k$. Known values and bounds for this
+covering radius then show that the conjecture holds for $k\le 7$ and fails for
+every odd $k\ge 9$; in fact $\disc(H_k)\le \tfrac78\,2^{(k+1)/2}$ for every odd
+$k\ge 9$. Determining $\disc(H_k)$ for odd $k\ge 9$ is therefore equivalent to
+determining $\rho(1,k)$.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+For a real $m\times n$ matrix $A$ the discrepancy is
+\[
+\disc(A)=\min_{x\in\{-1,1\}^n}\|Ax\|_\infty .
+\]
+Index the rows and columns of the Sylvester--Hadamard matrix $H_k$ by $\F^k$,
+so that $(H_k)_{a,y}=(-1)^{a\cdot y}$. By Parseval every $x\in\{-1,1\}^{2^k}$
+satisfies $\|H_kx\|_2^2=2^{2k}$, hence $\|H_kx\|_\infty\ge 2^{k/2}$, and
+$\disc(H_k)=2^{k/2}$ when $k$ is even. The problem list \cite{RS101} records the
+odd case as open and states the following.
+
+\medskip
+\noindent\textbf{Conjecture} (\cite[Conjecture 13]{RS101}).
+For every odd $k$, $\disc(H_k)=\sqrt2\,\sqrt{2^k}=2^{(k+1)/2}$.
+\medskip
+
+The value $2^{(k+1)/2}$ is what one obtains from $H_{k-1}$ and a bent function,
+and the question is whether it can be improved. The answer is a statement about
+Boolean functions that is classical in coding theory. For $f\colon\F^k\to\F$ let
+\[
+W_f(a)=\sum_{y\in\F^k}(-1)^{f(y)+a\cdot y}
+\]
+be its Walsh transform, and let $\NL(f)$ be the Hamming distance from $f$ to the
+set of affine functions. The covering radius of the first-order Reed--Muller code
+$RM(1,k)$, the code of affine functions, is $\rho(1,k)=\max_f\NL(f)$.
+
+\begin{theorem}\label{thm:main}
+For every $k\ge1$, $\disc(H_k)=2^k-2\rho(1,k)$.
+\end{theorem}
+
+\begin{corollary}\label{cor}
+\begin{enumerate}
+\item $\disc(H_k)=2^{(k+1)/2}$ for $k\in\{1,3,5,7\}$.
+\item $\disc(H_9)\le 28<32=2^{5}$.
+\item For every odd $k\ge9$, $\disc(H_k)\le \tfrac78\,2^{(k+1)/2}$. In particular the
+Conjecture fails for every odd $k\ge 9$.
+\item For every odd $k\ge15$, $\disc(H_k)\le \tfrac{27}{32}\,2^{(k+1)/2}$.
+\end{enumerate}
+\end{corollary}
+
+\section{Proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Every $x\in\{-1,1\}^{\F^k}$ is $x=(-1)^f$ for a unique $f\colon\F^k\to\F$, and then
+$(H_kx)_a=\sum_y(-1)^{a\cdot y+f(y)}=W_f(a)$. Writing $d(f,g)$ for Hamming
+distance,
+\[
+d(f,a\cdot y)=\tfrac12\bigl(2^k-W_f(a)\bigr),\qquad
+d(f,a\cdot y+1)=\tfrac12\bigl(2^k+W_f(a)\bigr),
+\]
+so the distance from $f$ to the affine functions is
+$\NL(f)=\tfrac12\bigl(2^k-\max_a|W_f(a)|\bigr)$. Hence
+\[
+\|H_kx\|_\infty=\max_a|W_f(a)|=2^k-2\NL(f),
+\]
+and minimizing over $x$ is maximizing $\NL(f)$ over $f$.
+\end{proof}
+
+\begin{lemma}\label{lem:sum}
+Let $f\colon\F^k\to\F$ and let $b\colon\F^m\to\F$ be bent ($m$ even). The function
+$g(y,z)=f(y)+b(z)$ on $\F^{k+m}$ satisfies $\max|W_g|=2^{m/2}\max|W_f|$.
+Consequently $\disc(H_{k+m})\le 2^{m/2}\disc(H_k)$ for every even $m\ge0$.
+\end{lemma}
+
+\begin{proof}
+The sum defining $W_g(a,c)$ factors as $W_f(a)\,W_b(c)$, and $|W_b(c)|=2^{m/2}$
+for every $c$ because $b$ is bent. Bent functions exist in every even
+dimension \cite{Rothaus}. The second statement follows from
+Theorem~\ref{thm:main}, applied with $f$ of maximal nonlinearity.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor}]
+(1) The covering radii are $\rho(1,1)=0$ and $\rho(1,3)=2$ by inspection,
+$\rho(1,5)=12$ \cite{BW}, and $\rho(1,7)=56$ \cite{Mykkeltveit}. Theorem~\ref{thm:main}
+gives $\disc(H_k)=2,4,8,16$ for $k=1,3,5,7$, which is $2^{(k+1)/2}$ in each case.
+
+(2) Kavut and Y\"ucel \cite{KY} found nine-variable Boolean functions of
+nonlinearity $242$, so $\rho(1,9)\ge242$ and
+$\disc(H_9)\le 512-484=28$. (Nonlinearity $241$, found earlier by Kavut, Maitra
+and Y\"ucel \cite{KMY}, already gives $\disc(H_9)\le30$.)
+
+(3) Every odd $k\ge9$ is $9+m$ with $m$ even. By Lemma~\ref{lem:sum} and (2),
+$\disc(H_k)\le 28\cdot 2^{m/2}=\tfrac{28}{32}\,2^{(9+m+1)/2}$.
+
+(4) Patterson and Wiedemann \cite{PW} showed $\rho(1,15)\ge16276$, so
+$\disc(H_{15})\le 32768-32552=216=\tfrac{27}{32}\cdot 256$. Lemma~\ref{lem:sum}
+carries this to every odd $k\ge15$.
+\end{proof}
+
+\section{Remarks}
+
+\begin{remark}
+Part (4) uses only results available since 1983, so the Conjecture was false for
+$k\ge15$ before it was stated. The first odd dimension in which it fails is $k=9$.
+\end{remark}
+
+\begin{remark}
+By Theorem~\ref{thm:main} the odd case of the problem in \cite{RS101} is the
+problem of the covering radius of $RM(1,k)$ for odd $k$, open since the 1970s.
+For odd $k$ the known bounds are
+\[
+2^{k/2}<\disc(H_k)\le 2^{(k+1)/2},
+\]
+where the strict lower bound is the classical fact that bent functions exist only in
+even dimension, and the upper bound is improved by the constructions above for every
+odd $k\ge9$. Any new lower bound on $\rho(1,k)$, and any upper bound on
+$\rho(1,k)$, transfers to $\disc(H_k)$ through Theorem~\ref{thm:main} without loss.
+\end{remark}
+
+\begin{remark}
+The list \cite{RS101} also states Conjecture 12,
+$\limsup_{n\to\infty}\sup_{A\in\{\pm1\}^{n\times n}}\disc(A)/\sqrt n>1$, and
+notes that Conjecture 13 would imply it through $H_k$, $k$ odd. By
+Theorem~\ref{thm:main}, Sylvester--Hadamard matrices witness Conjecture 12 if and
+only if
+\[
+\limsup_{k\ \mathrm{odd}}\ \bigl(2^k-2\rho(1,k)\bigr)\,2^{-k/2}>1 .
+\]
+Corollary~\ref{cor} bounds this $\limsup$ by $\tfrac{27}{32}\sqrt2\approx1.19$; whether it
+exceeds $1$ is a question about the covering radius of $RM(1,k)$ that the present
+note leaves open.
+\end{remark}
+
+\begin{remark}
+The repository that accompanies this note contains \texttt{check.py}, which
+verifies Theorem~\ref{thm:main} by exhaustive search for $k\le4$ and checks the
+product identity of Lemma~\ref{lem:sum} on random functions.
+\end{remark}
+
+\begin{thebibliography}{9}
+
+\bibitem{RS101}
+Randomstrasse101, \emph{Open problems of 2024}, arXiv:2504.20539, 2025.
+
+\bibitem{BW}
+E.~R.~Berlekamp and L.~R.~Welch, Weight distributions of the cosets of the
+$(32,6)$ Reed--Muller code, \emph{IEEE Trans. Inform. Theory} 18 (1972), 203--207.
+
+\bibitem{Mykkeltveit}
+J.~J.~Mykkeltveit, The covering radius of the $(128,8)$ Reed--Muller code is $56$,
+\emph{IEEE Trans. Inform. Theory} 26 (1980), 359--362.
+
+\bibitem{PW}
+N.~J.~Patterson and D.~H.~Wiedemann, The covering radius of the $(2^{15},16)$
+Reed--Muller code is at least $16276$, \emph{IEEE Trans. Inform. Theory} 29 (1983),
+354--356.
+
+\bibitem{KMY}
+S.~Kavut, S.~Maitra and M.~D.~Y\"ucel, Search for Boolean functions with excellent
+profiles in the rotation symmetric class, \emph{IEEE Trans. Inform. Theory} 53 (2007),
+1743--1751.
+
+\bibitem{KY}
+S.~Kavut and M.~D.~Y\"ucel, $9$-variable Boolean functions with nonlinearity $242$
+in the generalized rotation symmetric class, \emph{Inform. and Comput.} 208 (2010),
+341--350.
+
+\bibitem{Rothaus}
+O.~S.~Rothaus, On ``bent'' functions, \emph{J. Combin. Theory Ser. A} 20 (1976),
+300--305.
+
+\end{thebibliography}
+
+\end{document}
