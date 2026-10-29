@@ -1,19 +1,16 @@
 #!/usr/bin/env python3
-"""task_checklist_hook.py - the owner's checklist of what he asked every agent, kept by every agent.
+"""task_checklist_hook.py - the owner's checklist of what they asked every agent, kept by every agent.
 
-Owner order, 2026-09-18 12:17 (his clock): "sometimes i ask multiple agents multiple things, and then
-they work on it without realizing that other agents are involved, or I forget what i asked agents.
-I want you to create a checklist in the brain, and a hook, where all agents add what they are working
-on, and what i asked them to work on, to the checklist, and check it off when it is done. but also
-there should be a checkmark for if i have seen it. that way if i ask for information about tasks i
-have given agents they can tell me the checklist. and there should be a hook for every agent working
-to get information for the checklist, reading it, writing in it and so on. everything should be dated
-and very organized."
+Design note: an owner who runs many agents at once asks different agents different things, and two failures
+follow. Agents work on one ask without knowing another agent holds a related one, and the owner forgets what was
+asked of whom. The checklist is the shared answer: every ask the owner gives an agent becomes a dated entry under
+that agent, the agent checks it off when it is done, and a second checkmark records that the owner has seen the
+result. When the owner asks what the agents are doing, an agent answers from the list, not from memory.
 
 One file, three faces:
 
   hook mode   (--hook, stdin = the harness payload; Claude through hook_dispatch, Codex through hooks.json)
-      UserPromptSubmit : an ask from the owner becomes a dated entry under this session's agent, in his
+      UserPromptSubmit : an ask from the owner becomes a dated entry under this session's agent, in the owner's
                          words; a short follow-up ("ok do it") is attached to the session's open entry;
                          a question about tasks ("what did i ask the agents?") prints the whole checklist
                          so the agent answers from it. Every registration also prints what OTHER agents
@@ -25,12 +22,12 @@ One file, three faces:
       the commands agents and the owner use by hand.
   selftest    (--selftest) positive and negative controls on a temporary store.
 
-The store is one folder in the brain tree (TASK_CHECKLIST_HOME overrides it):
+The store is one folder in the brain tree, ~/brain-repo/12_cognitive_architecture/task_checklist (TASK_CHECKLIST_HOME overrides it):
       ledger.jsonl   append-only, every event with its time, agent, runtime and session
       state.json     the folded state, rewritten atomically under a lock
-      CHECKLIST.md   the rendered view he reads: open / done-not-seen / seen, grouped by date
+      CHECKLIST.md   the rendered view the owner reads: open / done-not-seen / seen, grouped by date
 
-Two checkmarks per entry: [x] done (the agent's) and [x] seen (the owner's). Times are his clock.
+Two checkmarks per entry: [x] done (the agent's) and [x] seen (the owner's). Times are the owner's local clock.
 Never blocks, never raises out: any error -> silent exit 0.
 """
 import io
@@ -55,20 +52,19 @@ MESH_DB = os.path.join(HOME, ".agents", "coordination", "agent_mesh.sqlite3")
 CLI = "python %s" % os.path.abspath(__file__).replace("\\", "/")
 MIN_ASK_CHARS = 25
 MAX_QUESTION_CHARS = 160      # longer than this and it is an ask that mentions the list, not a question about it
-                              # (his questions run 20-90 characters; his asks 200-900)
+                              # (questions run 20-90 characters; asks 200-900)
 DIGEST_MAX_OTHERS = 8
 # Claude Code hands the model at most 10,000 chars of one hook command's output inline; above that it persists the
 # text to a file and shows a 2 KB preview (measured 2026-09-20). The whole list is 290 KB, so the hook prints the
 # top of it - open entries first - under this cap and names the file for the rest. The dispatcher merges this hook
 # with the sense hooks on the same prompt, hence well under 10,000.
 CONTEXT_CAP = 7000
-# an automated delivery probe of a hook (this fleet's own test prompt) is never one of his asks
+# an automated delivery probe of a hook (this fleet's own test prompt) is never one of the owner's asks
 PROBE_RX = re.compile(r"^\s*(\[probe\]|Automated delivery probe of a hook\b"
-                      # a headless worker's batch prompt is the fleet's, not his (2026-09-23: one entry per picture batch)
-                      # (2026-09-24: any picture-maker brief - "for YouTube thumbnails" named no documentary and put
-                      # seven Codex briefs on his list as his asks, T-20260924-080..083 and 090..092)
+                      # a headless worker's batch prompt is the fleet's, not the owner's (one entry per picture batch)
+                      # (any picture-maker brief: a worker's image brief once put seven entries on the owner's list)
                       r"|\[headless-worker\]|You are (?:a|the) picture maker\b"
-                      # the harness's continuation turn after a usage-limit reset (2026-09-23: one entry per session)
+                      # the harness's continuation turn after a usage-limit reset (one entry per session)
                       r"|Your claude\.ai usage limit has reset\b)", re.I)
 
 QUESTION_RX = re.compile(
@@ -88,8 +84,8 @@ _CMD_NAME = re.compile(r"<command-name>(.*?)</command-name>", re.S)
 _CMD_ARGS = re.compile(r"<command-args>(.*?)</command-args>", re.S)
 _CMD_STDOUT = re.compile(r"<local-command-stdout>.*?</local-command-stdout>", re.S)
 _NOISE = ("<task-notification>", "[SYSTEM NOTIFICATION - NOT USER INPUT]", "<local-command-caveat>")
-# <cross-session-message> is the form a peer's relay takes since the 2026-09-24 restart (T-20260924-042 and five more
-# were filed from one as "his" asks under the receiving agents)
+# <cross-session-message> is the form a peer's relay takes (six entries were once filed from one as the owner's
+# asks under the receiving agents)
 _MACHINE_TURN_RX = re.compile(r"^\s*(<agent-message\b|Another Claude session sent a message\b|<hook_prompt\b|<agent-notification\b"
                               r"|<cross-session-message\b)", re.I)
 
@@ -143,12 +139,40 @@ class _Lock(object):
             pass
 
 
+def _backup_path():
+    """The hourly copy forced to disk; see save_state. Read from STATE at call time: selftest() rebinds STATE to a temp
+    store, and a path fixed at import let its 513-byte test state overwrite the live 15 MB copy (23 Oct 13:48)."""
+    return STATE + ".hourly"
+
+
+def _read_json(path):
+    with io.open(path, encoding="utf-8") as fh:
+        return json.load(fh)
+
+
+def _fallback_state():
+    """state.json exists but does not parse. The 23 Oct 11:46 crash left it so; the old code went on with {} and the
+    list lost 5,600 entries while the day's ids restarted at 001. Load the newest readable copy instead."""
+    import glob
+    cands = [p for p in [_backup_path()] + glob.glob(STATE + ".*.tmp") if os.path.exists(p) and os.path.getsize(p) > 1024]
+    for p in sorted(cands, key=os.path.getmtime, reverse=True):
+        try:
+            st = _read_json(p)
+            if isinstance(st, dict) and st.get("entries"):
+                log("state.json unreadable; loaded %s (%d entries) - ledger events after %s are not in it, run "
+                    "restore_after_crash.py" % (p, len(st["entries"]), time.ctime(os.path.getmtime(p))))
+                return st
+        except Exception:
+            continue
+    log("state.json unreadable and no readable copy; starting empty (ids still follow the ledger, see new_id)")
+    return {}
+
+
 def load_state():
     try:
-        with io.open(STATE, encoding="utf-8") as fh:
-            st = json.load(fh)
+        st = _read_json(STATE)
     except Exception:
-        st = {}
+        st = _fallback_state() if os.path.exists(STATE) and os.path.getsize(STATE) > 0 else {}
     st.setdefault("entries", {})
     st.setdefault("sessions", {})
     st.setdefault("seq", {})
@@ -168,11 +192,56 @@ def _replace_retrying(tmp, dest, tries=60):
             time.sleep(0.05 + 0.01 * k)
 
 
+def _sweep_stale_tmps(keep=2, age=3600):
+    """A writer killed mid-dump (a hook timeout on a busy disk) leaves its 17 MB state.json.<pid>.tmp behind: 33 in one
+    hour on 24 Oct, about half a gigabyte an hour. After a good save, remove those older than an hour, keeping the newest
+    `keep` for _fallback_state."""
+    import glob
+    try:
+        olds = sorted(glob.glob(STATE + ".*.tmp"), key=os.path.getmtime, reverse=True)[keep:]
+        now = time.time()
+        for p in olds:
+            try:
+                if now - os.path.getmtime(p) > age:
+                    os.remove(p)
+            except OSError:
+                pass
+    except Exception:
+        pass
+
+
 def save_state(st):
     tmp = "%s.%d.tmp" % (STATE, os.getpid())     # one temp file per writer: two writers never share a temp
-    with io.open(tmp, "w", encoding="utf-8") as fh:
-        json.dump(st, fh, ensure_ascii=False, indent=1, sort_keys=True)
-    _replace_retrying(tmp, STATE)
+    try:
+        with io.open(tmp, "w", encoding="utf-8") as fh:
+            json.dump(st, fh, ensure_ascii=False, indent=1, sort_keys=True)
+        _replace_retrying(tmp, STATE)
+    except BaseException:
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        raise
+    _sweep_stale_tmps()
+    # Once an hour, a copy forced to disk: a power cut can leave state.json as zeros (23 Oct 11:46), and an fsync of
+    # 15 MB on every prompt would hold the lock past other hooks' 4 s wait, so the hourly copy carries durability.
+    try:
+        bak = _backup_path()
+        if not os.path.exists(bak) or time.time() - os.path.getmtime(bak) > 3600:
+            old_n = os.path.getsize(bak) if os.path.exists(bak) else 0
+            if old_n > 2 * os.path.getsize(STATE) + 4096:
+                # never let a much smaller state replace a big copy: that is a wiped or wrong store, not the list
+                log("hourly backup kept: state.json (%d bytes) is under half the copy (%d bytes)"
+                    % (os.path.getsize(STATE), old_n))
+                return
+            btmp = bak + ".%d.tmp" % os.getpid()
+            with io.open(btmp, "w", encoding="utf-8") as fh:
+                json.dump(st, fh, ensure_ascii=False, sort_keys=True)
+                fh.flush()
+                os.fsync(fh.fileno())
+            _replace_retrying(btmp, bak)
+    except Exception as exc:
+        log("hourly backup failed: %r" % (exc,))
 
 
 def append_ledger(event):
@@ -180,9 +249,25 @@ def append_ledger(event):
         fh.write(json.dumps(event, ensure_ascii=False) + "\n")
 
 
+def _ledger_max_today(day):
+    """The highest id the ledger has issued today, from its last 2 MB (a day runs ~0.5-1.5 MB). If state.json is ever
+    lost again, ids still never repeat: on 23 Oct the reset restarted at 001 and reused 44 ids in two hours."""
+    try:
+        with open(LEDGER, "rb") as fh:
+            fh.seek(0, 2)
+            fh.seek(max(0, fh.tell() - 2 * 1024 * 1024))
+            tail = fh.read().decode("utf-8", "replace")
+        hits = re.findall(r'"kind": "add", "id": "T-%s-(\d+)"' % day, tail)
+        return max(int(h) for h in hits) if hits else 0
+    except Exception:
+        return 0
+
+
 def new_id(st):
     day = time.strftime("%Y%m%d")
-    n = int(st["seq"].get(day, 0)) + 1
+    n = max(int(st["seq"].get(day, 0)), _ledger_max_today(day)) + 1
+    while "T-%s-%03d" % (day, n) in st["entries"]:
+        n += 1
     st["seq"][day] = n
     return "T-%s-%03d" % (day, n)
 
@@ -194,8 +279,8 @@ def clean_prompt(prompt):
     p = prompt
     if "mechanical header, injected by run_dream" in p:
         return ""
-    # a relayed agent message, a Codex hook's own prompt or a peer's turn text arrives as a user turn and is not his
-    # (T-20260919-011 and -116 were registered from such text; found in the hourly block 2026-09-20)
+    # a relayed agent message, a Codex hook's own prompt or a peer's turn text arrives as a user turn and is not the owner's
+    # (two entries were once registered from such text)
     if _MACHINE_TURN_RX.match(p):
         return ""
     for mk in _NOISE:
@@ -206,7 +291,7 @@ def clean_prompt(prompt):
         args = _CMD_ARGS.search(p)
         n = (name.group(1).strip() if name else "")
         a = (args.group(1).strip() if args else "")
-        # a /goal IS an ask, in his words; every other slash command is machinery
+        # a /goal IS an ask, in the owner's words; every other slash command is machinery
         p = a if n.strip("/") == "goal" else (n + " " + a).strip()
     p = _SYSREM.sub("", p)
     p = _CMD_STDOUT.sub("", p)
@@ -235,7 +320,7 @@ _PASTE_RX = re.compile(r'["{}\[\]]\s*[:,]|^\s*[{\[]|"[A-Za-z_]+":\s')
 
 
 def ask_and_paste(text):
-    """Split a prompt into his words and any pasted material (command output, JSON, a log, an email).
+    """Split a prompt into the owner's words and any pasted material (command output, JSON, a log, an email).
 
     Returns (ask, pasted_chars). A prompt whose first line is prose followed by a paste keeps the prose as the
     ask; a prompt that is ONLY a paste (it starts mid-token or with a brace) has no ask of its own.
@@ -258,7 +343,7 @@ def ask_and_paste(text):
 def last_said(transcript_path, tail_bytes=96 * 1024, full=False):
     """The agent's latest words, from the tail of its own transcript (Claude Code JSONL). '' if unavailable.
 
-    So his list shows what each agent last reported without the agent doing anything - most entries carried
+    So the owner's list shows what each agent last reported without the agent doing anything - most entries carried
     "(not yet stated by the agent)" in the first two hours because agents do not run `working` by hand.
     """
     try:
@@ -348,7 +433,7 @@ def nudge(st, session, except_id=None):
     olds = older_open_for_session(st, session, except_id)
     if not olds:
         return ""
-    return ("  Still open on your list: %s - if any of those is finished, `%s done <id> \"<result>\"` now (he reads the list)."
+    return ("  Still open on your list: %s - if any of those is finished, `%s done <id> \"<result>\"` now (the owner reads the list)."
             % (", ".join(e["id"] for e in olds[-4:]), CLI))
 
 
@@ -493,7 +578,7 @@ def entry_to_close(st, session, said, latest):
 
 def entry_named(st, session, said):
     """The open entry of this session that an agent's closing line names by its minute: the one asked then, else the
-    one whose follow-up ('he said: ...') or repeat ('asked again') came then, one minute either way. None when the
+    one whose follow-up ('owner said: ...') or repeat ('asked again') came then, one minute either way. None when the
     minute belongs to no open entry of this session - an ask already done, another session's, a slip. A Stop records
     the agent's activity on this entry only: after the 27 Sep repair above, a line naming a done ask still stamped the
     session's older open entry with that report's words, a fresh activity time and a stop event (found by the
@@ -518,7 +603,7 @@ def entry_named(st, session, said):
             return x
     for x in mine:
         for u in reversed(x.get("updates") or []):
-            if (u.get("note") or "").startswith(("he said:", "asked again")) and near(u.get("at")):
+            if (u.get("note") or "").startswith(("owner said:", "asked again")) and near(u.get("at")):
                 return x
     return None
 
@@ -578,7 +663,7 @@ def render(st):
     out = []
     out.append("# Task checklist - what you asked the agents, what they are doing, what is done, what you have seen")
     out.append("")
-    out.append("Updated %s (his clock). %d open, %d done and not yet seen, %d seen." % (now_min(), len(open_), len(done_unseen), len(seen)))
+    out.append("Updated %s (owner's clock). %d open, %d done and not yet seen, %d seen." % (now_min(), len(open_), len(done_unseen), len(seen)))
     out.append("Every agent registers each ask here through the checklist hook; mark yours seen with `%s seen <id|all>`." % CLI)
     out.append("")
     for title, group in (("## Open (%d)" % len(open_), open_),
@@ -641,14 +726,14 @@ def digest(st, session=None, exclude_session=None, max_others=DIGEST_MAX_OTHERS)
 def commands_help(tid=None):
     t = tid or "<id>"
     return ("  Update yours: %s working %s \"<one line: what you are doing>\" | note %s \"<dated progress>\" | done %s \"<result>\" | blocked %s \"<why>\"" % (CLI, t, t, t, t)
-            + "\n  He marks seen: %s seen <id|all>. List: %s list" % (CLI, CLI))
+            + "\n  The owner marks seen: %s seen <id|all>. List: %s list" % (CLI, CLI))
 
 
 # ----------------------------------------------------------------------------- hook mode
 
 def hook_main(runtime_arg):
     # The harness hands the payload as UTF-8 bytes; a text read on Windows decodes it as the console
-    # code page and turns every em dash in his prompt into mojibake. Read bytes, decode UTF-8.
+    # code page and turns every em dash in the prompt into mojibake. Read bytes, decode UTF-8.
     try:
         raw = sys.stdin.buffer.read().decode("utf-8", "replace")
     except Exception:
@@ -665,9 +750,9 @@ def hook_main(runtime_arg):
         payload = {}
     event = str(payload.get("hook_event_name") or "")
     session = str(payload.get("session_id") or payload.get("thread_id") or "")
-    # A HARNESS IS NOT HIM (2026-09-23, round 5). Every real Claude and Codex session carries a uuid-shaped id; the
+    # A HARNESS IS NOT THE OWNER. Every real Claude and Codex session carries a uuid-shaped id; the
     # regression gate, the brain studies and the dispatcher controls send test prompts through this hook with ids like
-    # "regression-gate", "brainstudy-a" and "r5-env-int-C". Nine such prompts sat in his checklist as open asks from
+    # "regression-gate", "brainstudy-a" and "r5-env-int-C". Nine such prompts sat in the checklist as open asks from
     # agents that do not exist ("State the triangle removal lemma precisely."). On the live store, a session whose id is
     # not uuid-shaped registers nothing and prints nothing; the selftest's temp store is unaffected, and
     # TASK_CHECKLIST_ALLOW_HARNESS=1 lifts it.
@@ -730,8 +815,8 @@ def hook_main(runtime_arg):
     text = redact(clean_prompt(str(payload.get("prompt") or payload.get("user_prompt") or payload.get("text") or "")))
     if not text:
         return 0
-    # a /goal is an ask in his words, whichever way the harness delivers it - the XML command form (handled in
-    # clean_prompt) or plain text "/goal keep watching the movie ..." (his 16:00 prompt, skipped as a slash command)
+    # a /goal is an ask in the owner's words, whichever way the harness delivers it - the XML command form (handled in
+    # clean_prompt) or plain text "/goal keep watching the movie ..." (once skipped as a slash command)
     m_goal = re.match(r"^/goal\b\s*(.*)$", text, re.S)
     if m_goal:
         text = m_goal.group(1).strip()
@@ -739,8 +824,8 @@ def hook_main(runtime_arg):
             return 0
     elif text.startswith("/") and not text.startswith("/checklist"):
         return 0
-    # pasted output, JSON, a log or an email is context, not the ask: keep his sentence, note the paste; a prompt
-    # that is only a paste is attached to the session's open entry (T-20260918-054 was a subscription listing
+    # pasted output, JSON, a log or an email is context, not the ask: keep the owner's sentence, note the paste; a prompt
+    # that is only a paste is attached to the session's open entry (a pasted subscription listing was once
     # registered verbatim as an ask)
     if PROBE_RX.match(text):
         return 0
@@ -751,7 +836,7 @@ def hook_main(runtime_arg):
             latest = latest_open_for_session(st, session)
             if not ask:
                 if latest:
-                    note(st, latest["id"], "he pasted %d characters of output" % pasted, agent)
+                    note(st, latest["id"], "the owner pasted %d characters of output" % pasted, agent)
                     save_state(st)
                     write_view(st)
                 return 0
@@ -759,14 +844,14 @@ def hook_main(runtime_arg):
 
     # A question about the tasks is SHORT. A long prompt that merely mentions the checklist ("...then go back and
     # audit this checklist...") is an ask and must be registered - the first version read the word and printed the
-    # list instead of registering the ask (caught on the owner's own 14:07 prompt, 2026-09-18).
+    # list instead of registering the ask (an early version did exactly that).
     # ...and a SHORT imperative that mentions the list ("audit and make sure the agents are using the checklist") is
-    # an ask too (caught on his 15:35 prompt the same day). So the question path needs the FORM of a question: it
+    # an ask too. So the question path needs the FORM of a question: it
     # starts with an interrogative, or ends in "?", or is the /checklist command - and it is short.
-    # "mark all seen" / "i've seen it" is HIS checkmark, whatever its form - tell the agent to run `seen`, register nothing
+    # "mark all seen" / "i've seen it" is the owner's checkmark, whatever its form - tell the agent to run `seen`, register nothing
     if SEEN_RX.search(text) and len(text) <= MAX_QUESTION_CHARS:
         st = load_state()
-        print("[checklist] He is marking entries SEEN - that checkmark is his. Run `%s seen <id|all|today>` for the ones he "
+        print("[checklist] The owner is marking entries SEEN - that checkmark is theirs. Run `%s seen <id|all|today>` for the ones the owner "
               "names (all = every done entry not yet seen), then confirm which ids moved. The list:" % CLI)
         print(render_for_context(st))
         return 0
@@ -774,8 +859,8 @@ def hook_main(runtime_arg):
     is_question = bool(INTERROGATIVE_RX.match(text)) or text.rstrip().endswith("?") or text.startswith("/checklist")
     if mentions and is_question and (len(text) <= MAX_QUESTION_CHARS or text.startswith("/checklist")):
         st = load_state()
-        print("[checklist] He is asking about the tasks he gave agents. Answer FROM the checklist below, "
-              "in his words per entry, dated; then, if he says he has seen some, run `%s seen <id|all>`." % CLI)
+        print("[checklist] The owner is asking about the tasks they gave agents. Answer FROM the checklist below, "
+              "in the owner's words per entry, dated; then, if they say they have seen some, run `%s seen <id|all>`." % CLI)
         print(render_for_context(st))
         return 0
     print_list_too = bool(mentions)      # an ask ABOUT the checklist still gets the list, after it is registered
@@ -785,21 +870,21 @@ def hook_main(runtime_arg):
         latest = latest_open_for_session(st, session)
         if len(text) < MIN_ASK_CHARS or FOLLOWUP_RX.match(text):
             if not latest:
-                # "keep working" after the entry was ticked done: he is continuing that task - reopen it
+                # "keep working" after the entry was ticked done: the owner is continuing that task - reopen it
                 latest = newest_for_session(st, session)
                 if latest and latest["status"] != "open":
                     set_status(st, latest["id"], "open", agent, "")
                     st["sessions"].setdefault(session[:12], {})["latest"] = latest["id"]
             if latest:
-                note(st, latest["id"], "he said: " + short(text, 200), agent)
+                note(st, latest["id"], "owner said: " + short(text, 200), agent)
                 save_state(st)
                 write_view(st)
-                print("[checklist] His follow-up is on %s (%s): \"%s\"" % (latest["id"], latest["status"], short(text, 80)))
+                print("[checklist] The owner's follow-up is on %s (%s): \"%s\"" % (latest["id"], latest["status"], short(text, 80)))
             return 0
         if latest and latest["asked_words"] == " ".join(text.split()):
             return 0
         # The same words again from the same session - a /loop tick, a re-ask - is ONE entry with a dated update
-        # log, reopened per tick, not a new line on his list each time (a 3-minute loop would add 480 a day).
+        # log, reopened per tick, not a new line on the owner's list each time (a 3-minute loop would add 480 a day).
         again = repeated_ask(st, session, text)
         if again:
             n = sum(1 for u in again["updates"] if u["note"].startswith("asked again")) + 2
@@ -809,13 +894,13 @@ def hook_main(runtime_arg):
             st["sessions"].setdefault(session[:12], {})["latest"] = again["id"]
             save_state(st)
             write_view(st)
-            print("[checklist] His repeated ask is %s (time %d), reopened: \"%s\"" % (again["id"], n, short(text, 120)))
+            print("[checklist] The owner's repeated ask is %s (time %d), reopened: \"%s\"" % (again["id"], n, short(text, 120)))
             print("  Close each round with: %s done %s \"<result>\" - the rounds stay as dated updates on the one entry." % (CLI, again["id"]))
             return 0
         e = add(st, text, agent, runtime, session, working=(short(mesh_task, 200) + " (from the agent mesh)") if mesh_task else "")
         save_state(st)
         write_view(st)
-        print("[checklist] Registered his ask as %s under agent %s: \"%s\"" % (e["id"], agent, short(text, 160)))
+        print("[checklist] Registered the owner's ask as %s under agent %s: \"%s\"" % (e["id"], agent, short(text, 160)))
         print("  Before substantive work state what you will do: %s working %s \"<one line>\"; when finished: %s done %s \"<result>\"." % (CLI, e["id"], CLI, e["id"]))
         if print_list_too:
             print(render_for_context(st))
@@ -831,8 +916,8 @@ def hook_main(runtime_arg):
 
 def _who(args):
     """Who made a CLI change. An agent that leaves --by off is named from its own session before anything else: the
-    old fallback joined the runtime to the Windows USERNAME, which on this machine is "owner", so every agent note,
-    working line and done without --by was recorded as "cli-owner" (2,910 ledger rows by 28 Sep) and read as his."""
+    old fallback joined the runtime to the OS user name, which on a single-user machine is the owner's own account,
+    so every agent note, working line and done without --by was recorded under the owner's name and read as theirs."""
     by = getattr(args, "by", None) or os.environ.get("TASK_CHECKLIST_AGENT")
     if by:
         return by
@@ -847,15 +932,15 @@ def _who(args):
 
 def cli_main(argv):
     import argparse
-    ap = argparse.ArgumentParser(prog="task_checklist", description="the owner's checklist of what he asked every agent")
+    ap = argparse.ArgumentParser(prog="task_checklist", description="the owner's checklist of what they asked every agent")
     sub = ap.add_subparsers(dest="cmd")
-    p = sub.add_parser("add", help="register an ask (his words) under an agent")
-    p.add_argument("--asked", required=True, help="his words, verbatim")
+    p = sub.add_parser("add", help="register an ask (the owner's words) under an agent")
+    p.add_argument("--asked", required=True, help="the owner's words, verbatim")
     p.add_argument("--working", default="", help="what the agent will do, one line")
     p.add_argument("--by", default=None, help="agent id (mesh id if you have one)")
     p.add_argument("--runtime", default="", help="claude | codex | headless")
     p.add_argument("--session", default="", help="session or thread id")
-    p.add_argument("--asked-at", default=None, help="YYYY-MM-DD HH:MM, his clock (default now)")
+    p.add_argument("--asked-at", default=None, help="YYYY-MM-DD HH:MM, the owner's clock (default now)")
     for name, hlp in (("working", "state what you are doing on an entry"), ("note", "dated progress note"),
                       ("done", "check it off, with the result in one line"), ("blocked", "why it is blocked"),
                       ("drop", "dropped, with why"), ("reopen", "reopen a done entry")):
@@ -976,7 +1061,7 @@ def selftest():
     st = load_state()
     check("an ask registers one entry", len(st["entries"]) == 1 and "Registered" in out)
     tid = list(st["entries"])[0]
-    check("entry carries his words verbatim", st["entries"][tid]["asked_words"] == ask)
+    check("entry carries the owner's words verbatim", st["entries"][tid]["asked_words"] == ask)
     out2 = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessA0001", "prompt": ask})
     check("the same ask again does not duplicate", len(load_state()["entries"]) == 1 and out2 == "")
     run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessA0001", "prompt": "ok do it"})
@@ -987,7 +1072,7 @@ def selftest():
              "Owner's order for every film agent: narration keeps today's normal voice.\n</cross-session-message>")
     out3b = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessB0002", "prompt": relay})
     check("a peer's <cross-session-message> relay registers nothing", len(load_state()["entries"]) == 1 and out3b == "")
-    check("his own words that merely mention a cross-session-message still count",
+    check("the owner's own words that merely mention a cross-session-message still count",
           clean_prompt("why are <cross-session-message> relays filed as my asks? fix the checklist") != "")
     out4 = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessB0002", "prompt": "what did i ask the agents to do today?"})
     check("a question about tasks prints the full checklist and registers nothing", "Task checklist" in out4 and tid in out4 and len(load_state()["entries"]) == 1)
@@ -1002,13 +1087,13 @@ def selftest():
     cli_main(["done", tid, "audited, rewritten, emailed", "--by", "agentA"])
     e = load_state()["entries"][tid]
     check("done ticks the box with the time and the result", e["status"] == "done" and e["done_at"] and e["result"].startswith("audited"))
-    check("done is not seen until he says so", e["seen"] is False)
+    check("done is not seen until the owner says so", e["seen"] is False)
     cli_main(["seen", tid])
     e = load_state()["entries"][tid]
     check("seen ticks the owner's box with the time", e["seen"] is True and bool(e["seen_at"]))
     md = io.open(VIEW, encoding="utf-8").read()
     check("the rendered view has the three sections and both checkmarks", "## Open (1)" in md and "## Seen in the last 7 days (1)" in md and "[x] done" in md and "[x] seen" in md)
-    check("the rendered view quotes his words", ask in md)
+    check("the rendered view quotes the owner's words", ask in md)
     out6 = run_hook({"hook_event_name": "SessionStart", "session_id": "sessC0003"})
     check("SessionStart prints the digest with the other agent's open task", "[checklist] 1 open" in out6 and "sessB" in out6 or "T-" in out6)
     cli_main(["done", "T-%s-002" % time.strftime("%Y%m%d"), "film built", "--by", "agentB"])
@@ -1019,12 +1104,12 @@ def selftest():
           len(st_rep["entries"]) == 2 and "reopened" in out_rep and st_rep["entries"]["T-%s-002" % time.strftime("%Y%m%d")]["status"] == "open")
     out7 = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessC0003",
                      "prompt": "<command-name>/goal</command-name><command-args>keep the boxes running all night and report hourly</command-args>"})
-    check("a /goal counts as an ask in his words", len(load_state()["entries"]) == 3 and "keep the boxes" in out7)
+    check("a /goal counts as an ask in the owner's words", len(load_state()["entries"]) == 3 and "keep the boxes" in out7)
     out7b = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessH0008",
                       "prompt": "/goal keep watching the movie, get everything ready for rendering, start rendering what you can tonight"})
-    check("a /goal delivered as plain text registers too (his 16:00 prompt was skipped as a slash command)",
+    check("a /goal delivered as plain text registers too (one was once skipped as a slash command)",
           len(load_state()["entries"]) == 4 and "keep watching the movie" in out7b)
-    # the 2026-09-18 14:07 defect: a long ask that mentions the checklist must REGISTER, not print the list
+    # an early defect: a long ask that mentions the checklist must REGISTER, not print the list
     long_ask = ("check box 3 and make sure the cores run legal lanes only, no more calendar spread lanes, queue 15 days of "
                 "new work that was not done before, new data, proportions, holding periods, moneyness, push the library to "
                 "the brain, then go back and audit this checklist and the system and make sure it is working and part of "
@@ -1036,7 +1121,7 @@ def selftest():
     out_q = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessD0004", "prompt": "show me the checklist"})
     check("a short question about the checklist prints the list and registers nothing",
           len(load_state()["entries"]) == n_before + 1 and "Task checklist" in out_q)
-    # his 15:35 prompt: a SHORT imperative that mentions the checklist is an ask, and it gets the list as well
+    # an early case: a SHORT imperative that mentions the checklist is an ask, and it gets the list as well
     out_imp = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessE0005",
                         "prompt": "audit and make sure the agents are using the checklist and it is working"})
     check("a short imperative that mentions the checklist REGISTERS (and still prints the list)",
@@ -1067,12 +1152,12 @@ def selftest():
     eF = latest_open_for_session(load_state(), "sessF0006")
     check("prose followed by a paste keeps the prose as the ask and notes the paste size",
           bool(eF) and eF["asked_words"].startswith("here is the output") and "pasted characters" in eF["asked_words"])
-    # his checkmark, in any form, is never registered as an ask
+    # the owner's checkmark, in any form, is never registered as an ask
     nS = len(load_state()["entries"])
     out_seen = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessF0006", "prompt": "mark all seen"})
     check("'mark all seen' tells the agent to run seen and registers nothing",
           len(load_state()["entries"]) == nS and "marking entries SEEN" in out_seen)
-    # a follow-up after the entry was ticked done reopens it (his "keep working")
+    # a follow-up after the entry was ticked done reopens it ("keep working")
     cli_main(["done", eF["id"], "deployment fixed", "--by", "agentF"])
     out_kw = run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessF0006", "prompt": "keep working"})
     eF2 = load_state()["entries"][eF["id"]]
@@ -1137,7 +1222,7 @@ def selftest():
     with _Lock():
         st = load_state()
         eL = add(st, "keep improving the brain for two days", "agentL", "claude", "sessL0012", asked_at="2026-09-26 20:46")
-        eL["updates"].append({"at": "2026-09-27 04:34", "by": "agentL", "note": "he said: keep working"})
+        eL["updates"].append({"at": "2026-09-27 04:34", "by": "agentL", "note": "owner said: keep working"})
         eL["last_activity"] = "2025-01-01 00:00"
         eM = add(st, "tidy the logs", "agentM", "claude", "sessM0013", asked_at="2026-09-27 06:00")
         eM["last_activity"] = "2025-01-01 00:00"
@@ -1170,7 +1255,7 @@ def selftest():
           load_state()["entries"][eN["id"]]["status"] == "done")
     with _Lock():
         st = load_state()
-        eC = add(st, "check the nightly jobs", "agentI", "claude", "sessI0009", asked_at="2026-09-27 09:10")
+        eC = add(st, "check the rebalancing bots", "agentI", "claude", "sessI0009", asked_at="2026-09-27 09:10")
         eD = add(st, "audit the paper", "agentJ", "claude", "sessJ0010", asked_at="2026-09-27 08:00")
         eE = add(st, "audit the paper again", "agentJ", "claude", "sessJ0010", asked_at="2026-09-27 09:00")
         save_state(st)
@@ -1180,9 +1265,10 @@ def selftest():
     stop_with("sessJ0010", "Done.\n\nREPORT - audited; nothing stopped.")
     check("a bare REPORT line never closes the fallback (an older open entry)",
           load_state()["entries"][eD["id"]]["status"] == "open")
-    # The planted credential is assembled at runtime rather than written out: a file carrying the
-    # literal shape is quarantined by every secret scanner that reads it, including the one the
-    # push discipline runs, and a control nobody can publish is a control nobody runs.
+    # The fixture is SYNTHETIC but it is shaped like a credential, and a file carrying that shape
+    # trips every secret scanner this repository's push discipline runs - a control nobody can
+    # publish is a control nobody runs. Assembled here so the file carries no token shape while
+    # the control still plants a real one at runtime and still fails if the redaction regresses.
     planted = "ghp_" + "abcdefghijklmnopqrstuvwxyz" + "0123456789"
     run_hook({"hook_event_name": "UserPromptSubmit", "session_id": "sessG0007",
               "prompt": "use this key to push the repo and then tell me when it is done: token=" + planted})
