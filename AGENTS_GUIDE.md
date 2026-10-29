@@ -89,11 +89,13 @@ Apply these two instructions as part of the default workflow. First, after three
 
 Recall ranks cards by the words they share with the query, by meaning, and by links. It does poorly on records made mostly of digits and punctuation, such as a table of walk counts, where words give it little to match. In the Codex runs the repository arm won nineteen items the store arm lost: ten asked for arithmetic on the page numbers of several ledger entries, seven for spreads or growth differences of walk counts and two for the odd source out. All nineteen need several records found at once; in sixteen the agent with the store gave up rather than answer, and in three it ran out of time. If an agent is likely to need such records, give it read access to `export/population/` as well, so it can fall back on a text search. We have not tested this combined setup.
 
+The seventeen questions the store arm had lost by 28 October were asked again in three reruns, and it answered fifteen of them correctly in at least one. Most of its first misses came while the recall tool was rebuilding its prepared state, and once the harness checked that recall answered before each question, six of the eleven items that had timed out came back, all correct. So before a timed task, check that recall answers a probe query, and if it is slow, wait for it rather than give up.
+
 The store also adds nothing to a task the model can do on its own. On proof audits, where the answer is stored nowhere, all three arms scored between 92 and 99 percent.
 
 ## 5. What it costs
 
-Per Claude Sonnet session in the three-arm test, at list price: 0.053 USD with the store, 0.092 USD with the repositories, and 0.010 USD for the model alone. The agents with the store read about a quarter as many input tokens as those searching the repositories and wrote about two fifths as many output tokens. Most of an agent's input tokens are re-reads of the session on every turn, so fewer and better calls save more than shorter answers. [docs/cost.md](docs/cost.md) has the other cost measurements, including where a connected question's tokens go when the brain arrives as standing instructions and hooks rather than as a tool.
+Per Claude Sonnet session in the three-arm test, at list price: 0.053 USD with the store, 0.092 USD with the repositories, and 0.010 USD for the model alone. Counted per correct answer on a shard run with both time limits, the store cost 0.074 USD and the repositories 0.153. The agents with the store read about a quarter as many input tokens as those searching the repositories and wrote about two fifths as many output tokens. Most of an agent's input tokens are re-reads of the session on every turn, so fewer and better calls save more than shorter answers. [docs/cost.md](docs/cost.md) has the other cost measurements, including where a connected question's tokens go when the brain arrives as standing instructions and hooks rather than as a tool.
 
 ## 6. Writing back
 
