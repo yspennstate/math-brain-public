@@ -73,3 +73,40 @@ and keeps the proposals in a review queue, so a proposal that keeps coming back
 unattended is visible as such; see [nightly-pass.md](nightly-pass.md). The
 requests that prompted the work are kept as nodes of their own and consolidated
 in the same pass; see [prompts-as-nodes.md](prompts-as-nodes.md).
+
+## Where recall time goes
+
+These measurements were taken in late October 2026 on a store of about 87,000
+records, with the 100-question recall bank.
+
+Re-ranking what the query words already found does not pay. Four changes were
+tried on the same bank: spreading one hop along the 76,000 deterministic links
+added that month, down-weighting records reached in two hops, dropping weakly
+connected records from the frontier, and capping how many session summaries one
+session may contribute. Each moved the score by zero or one question. The
+wording of the query sets the ceiling, and the walk only re-orders what it found.
+Asking in two or three wordings in one call remains the change that moves the
+score.
+
+The time is in the prepared state. A call that rebuilds its index takes
+minutes, and a call that opens a prepared index takes seconds. The prepared
+index carries a stamp of the store's state, and an early version accepted only
+an exact match. On a busy machine the store's write-ahead log moved every minute
+or two, no prepared state ever matched, and every call rebuilt, at 200 to 380
+seconds a call. Accepting a prepared state up to 45 minutes old brought calls to
+24 to 60 seconds. The price is that a record written since the last build cannot
+be found until the next one. The remedy is a small side index of recent records
+searched alongside the prepared one, not a faster full build.
+
+A recall tool that starts slowly is missing. In one run of the test that
+compares agents with and without the store, the recall server took long enough
+to start that the agent never saw the tool, and those questions were answered
+without the store. Starting the server ahead of time, or running the search
+inside the calling process (about five times faster per call than starting a
+new interpreter for each call), removes that loss.
+
+Printing less is cheaper but not yet shown to be as good. A listing with the
+title, a short id and the matched words for each hit used seven to eight times
+fewer tokens at the same wall time. Whole cards scored 83 of 100 against 34 for
+snippets on the bank, so a short listing helps only if the agent then reads the
+cards it picks with `--id`.
