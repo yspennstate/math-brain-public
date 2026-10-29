@@ -169,33 +169,41 @@ def anchor_mismatches(text):
     return out
 
 
-# his-book context: a statistic only contradicts HIS book if it's actually about his book/strategy
-_BOOKCTX = re.compile(r"\b(book|strateg(?:y|ies)|grid|portfolio|leverag|delta.?neutral|\bnav\b|the account|account\d|"
-                      r"backtest|his (book|strategy|return)|the (book|strategy))\b", re.I)
+# result context: a statistic only contradicts the measured record if it is about the system being measured.
+# Set BRAIN_RESULT_CONTEXT to a regex alternation naming your own system; the default is generic.
+_RESULT_WORDS = os.environ.get("BRAIN_RESULT_CONTEXT") or (
+    r"book|strateg(?:y|ies)|portfolio|leverag|backtest|pipeline|the (system|model|account|book|strategy)")
+_BOOKCTX = re.compile(r"\b(" + _RESULT_WORDS + r")\b", re.I)
+# the worst drawdown the measured record has actually seen, in percent (BRAIN_LIVED_WORST_DD)
+try:
+    _LIVED_WORST_DD = float(os.environ.get("BRAIN_LIVED_WORST_DD") or 11)
+except ValueError:
+    _LIVED_WORST_DD = 11.0
 _LOSS_SIGN = re.compile(r"\b(los(e|es|ing|s)\b|negative return|unprofitable|loses? money|in the red|"
                         r"bleeding money|down every (year|month)|lost money (every|each))\b", re.I)
 _DD_CTX = re.compile(r"draw.?down|drop|loss|lose|decline|crash|ruin|wipe|blow.?up|down\b", re.I)
 
 
 def stat_sanity(text):
-    """Structural sanity of reported STATISTICS against his lived book - the classes beyond raw $ that he
-    corrects most: a drawdown far worse than his lived worst (-11%), a P&L SIGN contradicting his profitable
-    NAV, an implausible Sharpe. Gated on book-context so a generic stats discussion doesn't fire. Fail-safe."""
+    """Structural sanity of reported STATISTICS against the measured record - the classes beyond raw $ that
+    get corrected most: a drawdown far worse than the worst ever measured, a P&L SIGN contradicting a
+    profitable record, an implausible Sharpe. Gated on result context so a generic stats discussion
+    doesn't fire. Fail-safe."""
     flags = []
     try:
         t = _s(text)
         if not _BOOKCTX.search(t):
             return []
         tl = t.lower()
-        # drawdown: a STRONG drawdown phrase within ~28 chars of a >=40% figure. His lived worst windowed
-        # maxDD is -11%, so a 40%+ drawdown claim is the naive-worst-case-scaling error he corrects; the
-        # tight phrase+proximity+magnitude keeps ordinary '30% of X' analysis prose from tripping it.
+        # drawdown: a STRONG drawdown phrase within ~28 chars of a figure at least ~3.6x the worst measured
+        # drawdown (40% against the default 11%): the naive worst-case-scaling error. The tight
+        # phrase+proximity+magnitude keeps ordinary '30% of X' analysis prose from tripping it.
         _ddp = r"draw.?down|max.?dd|\bmaxdd\b|drew down|draws? down|drawn down|blow.?up|wiped? out|near.?ruin"
         for m in re.finditer(r"(\d{2,3})(?:\s*(?:to|-)\s*(\d{2,3}))?\s*%", t):
             val = max(int(m.group(1)), int(m.group(2)) if m.group(2) else int(m.group(1)))
             near = tl[max(0, m.start() - 28):m.end() + 8]
-            if val >= 40 and re.search(_ddp, near):
-                flags.append({"kind": "drawdown", "reported_pct": val, "lived_worst_pct": 11,
+            if val >= max(40, round(_LIVED_WORST_DD * 40 / 11)) and re.search(_ddp, near):
+                flags.append({"kind": "drawdown", "reported_pct": val, "lived_worst_pct": _LIVED_WORST_DD,
                               "reflex": "risk_vs_his_book"})
                 break
         # sign contradiction: his lived strategy reported LOSING. Tight (real analysis prose mentions
