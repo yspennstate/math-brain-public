@@ -294,9 +294,23 @@ def main():
         if a.apply:
             io.open(outp, "w", encoding="utf-8", newline="\n").write(t)
         print(f"  hook wiring -> {outp}")
-        print("  merge its 'hooks' object into <home>/.claude/settings.json by hand,")
-        print("  then install wake_brain: copy hooks/wake_brain.template.ps1 (expanded) as the")
-        print("  SessionStart hook target and hooks/brain_startup.template.md to .claude/brain_startup.md")
+        print("  merge its 'hooks' object into <home>/.claude/settings.json by hand")
+
+    # The wiring above points SessionStart at <home>/.claude/wake_brain.ps1, so write it (and the startup note it
+    # reads) here rather than leave the tokens for the reader. An existing file is kept and the new one goes beside it.
+    for src, name in (("wake_brain.template.ps1", "wake_brain.ps1"), ("brain_startup.template.md", "brain_startup.md")):
+        sp = os.path.join(REPO, "hooks", src)
+        if not os.path.exists(sp):
+            continue
+        dest = os.path.join(claude, name)
+        if os.path.exists(dest):
+            dest += ".new"
+            print(f"  {os.path.join(claude, name)} exists and is left alone; the new one goes to {dest}")
+        else:
+            print(f"  {src} -> {dest}")
+        if a.apply:
+            os.makedirs(claude, exist_ok=True)
+            io.open(dest, "w", encoding="utf-8", newline="\n").write(expand(io.open(sp, encoding="utf-8").read(), tok))
 
     if not a.apply:
         print("\ndry-run only; re-run with --apply to write")

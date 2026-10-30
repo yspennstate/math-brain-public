@@ -16,9 +16,12 @@
    templates), and generates `bootstrap/settings.hooks.generated.json`.
 
 3. Wire the hooks: merge the generated `hooks` object into `~/.claude/settings.json`.
-   Install the wake ritual: copy the expanded `hooks/wake_brain.template.ps1` to
-   `~/.claude/wake_brain.ps1` and `hooks/brain_startup.template.md` to
-   `~/.claude/brain_startup.md`, and point a SessionStart hook at the wake script.
+   The installer has already written the wake ritual, `~/.claude/wake_brain.ps1` and
+   `~/.claude/brain_startup.md`, with the tokens filled in, and the generated wiring points
+   SessionStart at it. If either file already existed it is left alone and the new one is
+   written beside it with `.new` added. To see what a session will receive, run
+   `powershell -NoProfile -File ~/.claude/wake_brain.ps1` (on Linux and macOS,
+   `python3 hooks/wake_brain.py`).
    The installer renders `bootstrap/templates/CLAUDE.template.md` into
    `~/.claude/CLAUDE.md`, your global agent instructions (`--partner NAME` names the person
    the brain works with). An existing `CLAUDE.md` is left alone and the rendered copy goes
