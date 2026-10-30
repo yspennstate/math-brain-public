@@ -5,7 +5,8 @@ says whether it helps. It uses the starter in `examples/field_brain_starter/`, w
 else. [build-your-own-brain.md](build-your-own-brain.md) covers the full design; this page is the first day.
 
 The example is an invented software company with a billing and support team. Every command below was run on an
-empty copy of the starter, and the output shown is what it printed.
+empty copy of the starter, and the output shown is what it printed. Your record names will carry today's date, and
+the recall scores depend on how many records the store holds, so yours will not match them exactly.
 
 ## 1. Copy the starter and empty it (ten minutes)
 
@@ -174,15 +175,33 @@ sees each request and hands it the records that match, so the agent gets them ev
 `python hooks/recall_hook.py --selftest` shows what the model would receive.
 
 Recall answers questions; it does nothing when the agent is about to act. `hooks/scar_hook.py` runs before each tool
-call and compares the command with the records of mistakes and rules only. Here it is on the starter's own records,
-which belong to a small film studio, with a command an agent short of disk space might reach for:
+call and compares the command with the records of mistakes and rules only. Every feedback record is one of them, so
+the refund rule from section 2 already counts. In `acme_brain`:
 
 ```
-echo '{"session_id": "s1", "tool_name": "Bash", "tool_input": {"command": "rm -rf footage/harbour/raw"}}' | python hooks/scar_hook.py
+echo '{"session_id": "s2", "tool_name": "Bash", "tool_input": {"command": "billing refund 700 dollars to customer 4411, no second approver"}}' | python hooks/scar_hook.py
 ```
 
 The hook prints one line of JSON for the agent tool; the text in its `additionalContext` field is what the model
 receives, before the command runs:
+
+```
+[brain] This action resembles something that went wrong before. A scar is a question, not an order: check
+whether it applies here before you go on.
+- refunds_over_500_dollars_need_a_second_approver_2026_03_02 [provisional]
+  Refunds over 500 dollars need a second approver
+
+  **Why:** a refund went to a closed account and could not be recovered
+  **How to apply:** ask for the second approver before you issue it
+```
+
+The starter's own records, which belong to a small film studio, show the same with a command an agent short of disk
+space might reach for. Run this one inside `examples/field_brain_starter`; the new brain does not have those records,
+so there the hook stays silent:
+
+```
+echo '{"session_id": "s1", "tool_name": "Bash", "tool_input": {"command": "rm -rf footage/harbour/raw"}}' | python hooks/scar_hook.py
+```
 
 ```
 [brain] This action resembles something that went wrong before. A scar is a question, not an order: check
