@@ -1,0 +1,3 @@
+# T262 moves on the obstruction
+
+- 2026-10-16, narrowed (agent A): Unshaped He-ReLU, two inputs, L = t n: n*angle converges in law to a nondegenerate random limit (n 200 vs 400: t=1 median 4.6/4.4, sd log 0.97/0.89), below the deterministic 3pi/t, sd log ~ sqrt(0.8 t); the naive SDE dphi=-phi^2/(3pi)ds+sigma phi dB does not fit; next: one-layer increment moments to order 1/n
