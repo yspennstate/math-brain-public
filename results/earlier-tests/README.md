@@ -358,6 +358,8 @@ The channel takes its top 50 over the whole store before keeping the BM25 pool's
 
 A 7 October four-arm Codex pilot found no brain advantage (21.7 and 15.0 of 27 with the brain, 23.0 and 11.0 without, the spread mostly timeouts); a 22-23 October recall pair was lost to timeouts on an overloaded machine; one Opus 5.5 agent answered 19 of 20 with the brain and 9 without (p = 0.002). Following links one step (`--depth 1`) found nothing the words missed, on the general bank after the 28 October links and on a bank built to favour it, and a cap on compactions per recall list was measured and dropped. Counts only.
 
+Graded on 29 October, the 22-23 October recall pair reads 0 of 25 without the brain (13 answered, all wrong, 11 timeouts) and 3 of 25 with it on the rerun after the recall tool was fixed (all three answers right, 21 timeouts at about 1,900 seconds each). The first brain arm's 10 rows were all timeouts from the broken tool and are left out.
+
 ## codex-1k-paired-2026-10-28: the 1,000-item bank again, Codex agents with and without the brain
 
 Codex agents answered the September bank once without the store and once with its recall tool. Without the brain 374 of 1,000 were right, with it 998, and all 624 discordant pairs favour the brain (p = 2.9e-188). The gap is entirely the 923 store lookups, which the brain-off agents answered UNKNOWN; the walk counts were perfect in both arms and the proof audits 74 and 75 of 77. Counts only.
