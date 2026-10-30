@@ -1,6 +1,6 @@
 """Population integrator: draft JSON bundles -> validated, sealed, signed, ingested.
 
-Codex agents author simple draft bundles (see math-brain-inbox/BUNDLE_SPEC.md).
+Agents author simple draft bundles (the format is in docs/adding-cards.md).
 This tool performs every piece of ceremony the overlay ingestion contract needs:
 statement/proof excerpt digests, per-source artifact bindings, the transitive
 source manifest, core pins, the store build seal, and the population-gate MAC.

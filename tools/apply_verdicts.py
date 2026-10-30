@@ -8,15 +8,14 @@ prior proof exists the kind is demoted to concept, honestly. The parent still
 reads the generated draft before activation: output is .part.
 
 A verdict for a node the review did not contain is refused, and no bundle is
-written: a verdict file can only correct what its round sampled (scheduled audit
-fleet01/B16, B16-R13-QA-SAMPLE-RERUN-ERASES-COVERAGE-011, 29 Sep 2026).
+written: a verdict file can only correct what its round sampled (from an audit of
+the QA sampler, 29 Sep 2026).
 
 Each correction names the review that produced it: the round from the review's
 file name, and the first 16 hex characters of the SHA-256 of the review and of
 the verdict file, in its source revision. Until 29 Sep every correction said
 "round 3" and "qa-corrected-2026-08-02-r3" whatever it came from, so none could
-be traced to its review (scheduled audit fleet01/B18,
-B18-R13-QA-CORRECTION-BUNDLE-UNBOUND-TO-REVIEW-GENERATION-20260929).
+be traced to its review (from an audit of the correction bundles, 29 Sep 2026).
 
     python tools/apply_verdicts.py VERDICTS.json REVIEW.json OUT_NAME
 """
