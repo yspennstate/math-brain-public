@@ -14,6 +14,7 @@ production, a lab or a support desk.
 | `memory/MEMORY.md` | the index: one line per record, newest first, loaded into every agent session |
 | `memory/MISTAKES.md` | dated corrections; the dream cycle turns a mistake that recurs into a reflex |
 | `new_record.py` | write one record with its frontmatter, add its index line, and mark the record it supersedes |
+| `import_docs.py` | bring a folder of existing .md and .txt documents in at once, one provisional reference record per file; `--dry-run` lists them first, and a second run skips what is already there |
 | `recall.py` | search the records (BM25 over description and body; standard library only) |
 | `ledger.py` | read and write the request ledger: list the open requests, record one, link a record that answers it, drop it |
 | `claims.py` | let several agents share the store: claim a record or a piece of work before changing it, release it after; a second agent is refused and told who holds it |
