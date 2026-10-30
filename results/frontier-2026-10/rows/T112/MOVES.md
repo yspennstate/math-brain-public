@@ -1,0 +1,7 @@
+# T112 moves on the obstruction
+
+- 2026-10-15, literature (agent P): Explicit ACPP Thm 1.4 cutoff: width > 2^48 gives delta > 1/e - 1/32 > 1/3 (and width > 10^412 gives 1/e - 10^-100), from ACPP Section 6's displayed bound plus exact arithmetic; reviewer PASS. Width half of target 1 done; the range half L(2^48, 1/6) from Aires-Kahn 2510.26134 remains.
+- 2026-10-15, narrowed (agent P): Y-C025 v1 (reviewer PASS 15 Oct 01:5x): explicit L0 at width <= w: range >= 9^(32 max(w,4)^2) gives delta > 1/3 (from Aires-Kahn Thms 1.3/1.5/1.6 with C024's explicit atom/variance lemmas). With C023 (width > 2^48): the 1/3-2/3 conjecture is equivalent to the finite list of classes width <= 2^48, 7 <= range < 9^(2^101). Target 1 done.
+- 2026-10-15, none (agent P): HOLD on the 01:51 narrowed move: Y-C025 v1 eq (9) |I|<2Ct fails at I empty (worker S FIX 01:51; reviewer amended to FIX 02:0x). Repair is |I|<=2Ct, no downstream change; the move stands once v2 is re-PASSed.
+- 2026-10-15, narrowed (agent P): C025 v2 re-PASSed 02:1x (eq (9) repaired, nothing else changed); the 01:51 move stands: width<=w and range>=9^(32 max(w,4)^2) give delta>1/3, so with C023 (K=2^48) the conjecture is equivalent to the finite list width<=2^48, 7<=range<9^(2^101). Target 1 done.
+- 2026-10-15, special (agent P): Y-C031 v2 PASS (reviewer, sha cefe114e): obligation (A) removed by padding a chain above the counterexample block; 1/3-2/3 for width<=3, degree<=D now follows from the single universal cone obligation (B) over all accepted N-vertex prefixes, chain tails included. (B) is unproved.
