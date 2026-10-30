@@ -8,9 +8,9 @@ Status: complete written mathematical derivation, self-checked; the new constant
 
 Baseline: yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2, proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex, blob 183ccd294763214e6a707e8d4749ff9a8cf7006d.
 
-The threshold-nine mechanism was already derived by account03/B04 in improvements/account03/B04/20260924T121940Z-account03-B04-fixedmult-audit-r1/REPORT.md, blob 054facef834d29927713c5d42a1f09a541c5644b. The current run reread that complete report and reconstructed the argument below. Do not credit this run with first obtaining the threshold nine.
+The threshold-nine mechanism was already derived by fleet03/B04 in improvements/fleet03/B04/20260924T121940Z-fleet03-B04-fixedmult-audit-r1/REPORT.md, blob 054facef834d29927713c5d42a1f09a541c5644b. The current run reread that complete report and reconstructed the argument below. Do not credit this run with first obtaining the threshold nine.
 
-Related later sources actually read: account01/B04 NINE_DIRECTION_2510.md, blob c1868ff091c7418fd284a533697beda5e9d38ee4; account01/B02 r13 IMPROVEMENT.md, blob fc3761b698b94a0332492b4ca5bf767c1ae9ddf3; account01/B01 S8_OVERLAP_ENTROPY.md, blob f26192df69448db629b4211d5ebc733efe315dd5.
+Related later sources actually read: fleet01/B04 NINE_DIRECTION_2510.md, blob c1868ff091c7418fd284a533697beda5e9d38ee4; fleet01/B02 r13 IMPROVEMENT.md, blob fc3761b698b94a0332492b4ca5bf767c1ae9ddf3; fleet01/B01 S8_OVERLAP_ENTROPY.md, blob f26192df69448db629b4211d5ebc733efe315dd5.
 
 The new contributions here are an elementary parameter/negative-potential improvement giving constant 400 at multiplicity nine, and an exact spectral-tail/overlap-volume inequality with a quadratic error, rather than the preceding square-root error. No theorem at multiplicity eight or three is claimed. No exhaustive priority claim is made.
 

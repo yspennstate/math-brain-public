@@ -1,0 +1,64 @@
+{
+  "snapshot_utc": "2026-10-11T23:35:02.378539+00:00",
+  "canonical_edits_performed": false,
+  "status_changes_required_by_two_corrections": [],
+  "A096": {
+    "source_run": "20261011T215017Z-fleet05-A096-live-gap-ledger",
+    "old_line": "J_X=H(X)-H(X|T)<=h2(r)-h2(delta)-M_X",
+    "correct_line": "J_X=H(X)-H(X|T)<=h2(r)-h2(delta)+M_X",
+    "reason": "M_X+H(X|T)>=h2(delta) implies H(X|T)>=h2(delta)-M_X. Subtracting reverses the sign of M_X.",
+    "formal_claim_status": "Both A096 v1 formal statements are unchanged and retain independent-review-pending status; report proof text needs corrigendum. No declared external theorem depends on A096 in this snapshot.",
+    "dependent_versions": [
+      "A029-CHILD-DEFICIT-BENCHMARKS",
+      "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+      "A096-SHARP-FIXED-PAIR-BIASED-ENDPOINT",
+      "A096-UNIFORM-SINGLETON-HALF-TAX",
+      "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+      "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO-v1",
+      "B19-REVIEW-B05-SPARSE-ACTIVATION-NOGO-v1"
+    ]
+  },
+  "B05": {
+    "accepted_statement": "For every finite K,A,B>=0 there exists an actual Boolean split violating the all-coordinate local fixed-price bound.",
+    "scope_not_implied": [
+      "failure of existential good-coordinate selection",
+      "failure of every adaptive stopping tree",
+      "failure of aggregate downward L<=K I",
+      "disproof of Shannon FEI"
+    ],
+    "L_symbol_warning": "B05 local L is the node erasure B_i; C018 downward L is a different aggregate functional.",
+    "affected_declared_claims": [
+      {
+        "claim_id": "A029-CHILD-DEFICIT-BENCHMARKS",
+        "version": 1,
+        "decision": "KEEP_AUTHOR_PROVED_SCOPED_PENDING_REVIEW",
+        "reason": "Uses B05 construction only, and proves a positive child-slack payment; no universal no-go inference."
+      },
+      {
+        "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+        "version": 1,
+        "decision": "KEEP_LOCAL_CERTIFICATE_CHECKED_PENDING_REVIEW",
+        "reason": "Keeps exact accepted local scope and explicitly unpaid universal premises."
+      },
+      {
+        "claim_id": "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO",
+        "version": 1,
+        "decision": "KEEP_ACCEPTED_AT_STATED_SCOPE",
+        "reason": "Original B19 proof and canonical registry already exclude existential, nonlocal and full-FEI refutations."
+      },
+      {
+        "claim_id": "B19-REVIEW-B05-SPARSE-ACTIVATION-NOGO-v1",
+        "version": 1,
+        "decision": "KEEP_ACCEPTING_REVIEW_AT_LOCAL_SCOPE",
+        "reason": "Original review states all exclusions."
+      }
+    ],
+    "textual_consumer_examples": {
+      "A099": "No mathematical status change: source assembly explicitly renames local L as B_y and keeps C018/C019 open.",
+      "A097": "No mathematical status change: compatible-reference identity remains conditional on erasure-minus-credit payment.",
+      "A098": "No mathematical status change: partial KL review does not accept the full A097 theorem.",
+      "A012/A026/A028/A037/A061/A063/A087": "Retain original restricted statements; textual citation alone is not a dependency refutation."
+    }
+  },
+  "handoff": "Supervisor may adopt this source-bound correction delta; A096 must repair its own text. A090/A094 should verify closure against future claims. This run sends no messages and edits no foreign folder."
+}

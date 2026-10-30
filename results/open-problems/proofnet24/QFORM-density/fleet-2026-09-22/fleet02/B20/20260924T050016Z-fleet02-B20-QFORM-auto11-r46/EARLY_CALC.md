@@ -1,0 +1,12 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account fleet02, slot B20, 2026-09-24T05:00:16Z.
+attacking: the newest fleet03/B20 three-cut rank-two carrier by equalizing all three physical cut defects at 2^-16, then identifying the exact zero-tail four-bank rank.
+
+Early substantive calculation.
+
+Newest completed designated partner fleet03/B20 r46 gives, in its fully diffuse four-bank branch, one balanced physical cut with rank-two Frobenius defect <2^-16, and two checkerboard cuts paid at threshold 2^-12. Its exact constants are Gamma_C=0.0015731590808890220994289..., c0=0.00059854918071748917048684..., and the full-ambient receiver ||p_Q||_inf <= C_E3 E3(M)^(-1/6), C_E3=8.4530212255281768747049....
+
+Retune the two checkerboard gates to eta=2^-16. For W2, E3(W2) > Gamma_C^2 eta^2/3 = 1.9207204799040475e-16 whenever dist_F(W2,rank<=2)>=eta, hence ||p_Q||_inf <3519.125. For W3, E3(W3)>c0^2 eta^4/3 =6.473791441749589e-27 whenever dist_F(W3,rank<=2)>=eta, hence ||p_Q||_inf<195802.775. Thus an unpaid fully diffuse state has all three balanced physical cross blocks within 2^-16 in Frobenius norm of rank two. Re-running the partner's exact identity S1+S2+S3=2 S_off gives a rank-at-most-12 K with ||S_off-K||_op < (3/2)2^-16=3/131072=0.00002288818359375.
+
+Exact zero-tail lemma to prove in the final report: for a symmetric four-bank off-diagonal matrix S, if each of the three balanced two-bank cut matrices has rank <=r, then rank S<=4r. For r=2 this is rank<=8. It follows from submodularity of the symmetric cut-rank function rho(X)=rank S[X,X^c]: rho(X)+rho(Y)>=rho(X intersect Y)+rho(X union Y). Applying this to X=A union B, Y=A union C gives rho(A)+rho(D)<=2r; the complementary singleton pair gives rho(B)+rho(C)<=2r; stacking the four row-bank blocks yields rank S<=sum_i rho(i)<=4r.
+
+Sharpness candidate: take four m-coordinate banks, isometries U_i:R^2->R^m with flat rows of squared norm 2/m, zero within-bank blocks, and S_ij=U_i U_j^T. Every balanced cross cut is [U_i;U_j][U_k;U_l]^T of rank exactly two with singular values 2,2, while the nonzero spectrum of S is that of (J_4-I_4) tensor I_2: {3,3,-1,-1,-1,-1,-1,-1}. Hence rank 8 is sharp even in a diffuse target-valid family. The owner-pinned general Theorem F applies for m>=4: full active-frame leverage is 2/m<=1/2 and product |lambda|=9, so ||p_Q||_inf <= (4*8/(8-2))*9^(-1/8)=(16/3)3^(-1/4)=4.052456990141827. This confirms the sharp rank-eight family is not a QFORM counterexample.

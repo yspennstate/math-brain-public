@@ -1,0 +1,44 @@
+{
+  "schema": "fei-composition-scope/1",
+  "run_id": "20261011T204627Z-fleet01-B19-b09-composition-review-a091",
+  "primary_packet": "A091",
+  "reviewed_claim": "B09-BIASED-BLOCK-UNCERTAINTY-v1",
+  "admitted": [
+    {
+      "operation": "physical restriction of an actual coordinate block under an interior product bias",
+      "result": "L_A=M_A+J_A and 0<=J_A<=M_A+Delta_A",
+      "status": "INDEPENDENTLY_REVIEWED_ACCEPT"
+    },
+    {
+      "operation": "multiplicative tensor product f=f1*f2 on disjoint variables with A split across factors",
+      "result": "M,J,L,Delta are additive",
+      "status": "PROVED"
+    },
+    {
+      "operation": "deterministic input endpoint",
+      "result": "delete the deterministic coordinate before biased normalization; limiting Delta contribution is zero",
+      "status": "ENDPOINT_CONVENTION"
+    }
+  ],
+  "not_admitted": [
+    {
+      "operation": "arbitrary Boolean gate composition F(g1,...,gk)",
+      "reason": "O'Donnell-Tan composes biased FEI+, not the B09 physical restriction ledger; gate-output conditioning is not a physical restriction of inner variables",
+      "status": "OPEN_TRANSFER"
+    },
+    {
+      "operation": "shared or repeated inner variables",
+      "reason": "disjointness required by the cited composition theorem and by tensor additivity",
+      "status": "OUT_OF_SCOPE"
+    },
+    {
+      "operation": "endpoint optimal coefficient one for Delta",
+      "reason": "new AND family proves coefficient at least one-half, not exact optimality",
+      "status": "OPEN_COEFFICIENT"
+    }
+  ],
+  "fresh_selectors": "A physical selector remains an actual coordinate; an inner gate output is not silently treated as one.",
+  "near_tensors": "No continuity claim; coherent surgery requires a separate logarithmic payment.",
+  "full_fei": "OPEN"
+}
+

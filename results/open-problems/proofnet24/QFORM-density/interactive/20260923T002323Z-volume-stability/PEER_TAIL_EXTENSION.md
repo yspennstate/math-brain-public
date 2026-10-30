@@ -4,9 +4,9 @@ Programme QFORM-DENSITY-3EIG-20260922. Same interactive record 20260923T002323Z-
 
 ## 1. The actual worker result consumed
 
-Account01/B20, run `20260922T234545Z-account01-B20-QFORM-auto11`, source
+Fleet01/B20, run `20260922T234545Z-fleet01-B20-QFORM-auto11`, source
 
-`math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/account01/B20/20260922T234545Z-account01-B20-QFORM-auto11/REPORT.md`,
+`math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`,
 
 blob `c6cf36bad49f4ea1b49a38b1e92ca83c6dd0fa74`, proves
 
@@ -75,4 +75,4 @@ The bound (4) also permits arbitrary self blocks in A, even when these cannot be
 
 If T2 tends to zero without a compensating increase in s1 or s2, the bound in (4) deteriorates. If the top-two projection is heavy on an original coordinate, the diffuse gate in (3) may fail. Those are precisely the low-tail/hub cases for which the worker's near-rank-two and nested-anchor programme remains relevant. A small Frobenius tube is not automatically covered, and no uniform continuity in the input law or perturbation has been assumed.
 
-Use this extension to remove the explicitly covered collective-tail case before attacking those remaining alternatives. The exact-null-coloop scalar/pair theorem already available from account02/B16 should likewise be consumed rather than repeatedly rediscovered; its near-null nonzero case and arbitrary nonseparable additional spectrum remain separate obligations.
+Use this extension to remove the explicitly covered collective-tail case before attacking those remaining alternatives. The exact-null-coloop scalar/pair theorem already available from fleet02/B16 should likewise be consumed rather than repeatedly rediscovered; its near-null nonzero case and arbitrary nonseparable additional spectrum remain separate obligations.

@@ -1,10 +1,10 @@
 # FEI continuation: global phase-cost collapse and a coupled Shannon estimate
 
-21 September 2026. Interactive account02 continuation. **Full FEI remains OPEN / NOT PROVED.** Analytic proofs and the rational scalar certificate are self-checked; independent review and publication-priority clearance are pending.
+21 September 2026. Interactive fleet02 continuation. **Full FEI remains OPEN / NOT PROVED.** Analytic proofs and the rational scalar certificate are self-checked; independent review and publication-priority clearance are pending.
 
 ## Complete source and brain delivery
 
-Read the [complete proof report](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/REPORT.md), [executed checker](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/verify_continuation.py), [actual verification output](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/verification.json), [exploratory results](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/exploration_results.json), and [manifest](../fleet-2026-09-21/account02/interactive/20260921T163318Z-template-collapse/MANIFEST.json).
+Read the [complete proof report](../fleet-2026-09-21/fleet02/interactive/20260921T163318Z-template-collapse/REPORT.md), [executed checker](../fleet-2026-09-21/fleet02/interactive/20260921T163318Z-template-collapse/verify_continuation.py), [actual verification output](../fleet-2026-09-21/fleet02/interactive/20260921T163318Z-template-collapse/verification.json), [exploratory results](../fleet-2026-09-21/fleet02/interactive/20260921T163318Z-template-collapse/exploration_results.json), and [manifest](../fleet-2026-09-21/fleet02/interactive/20260921T163318Z-template-collapse/MANIFEST.json).
 
 
 ## Important supersession

@@ -12,7 +12,7 @@ This does not refute the original Boolean derivative granularity theorem, any ac
 
 Consumed source:
 
-    proofnet24/P03-fei/fleet-2026-09-21/account03/B12/
+    proofnet24/P03-fei/fleet-2026-09-21/fleet03/B12/
     20260921T174232Z-prefix-granularity-suppression/REPORT.md
 
 Git blob: 01c1f95c1dbb03e0ff6f0e352aa41ce389f06f0b.
@@ -34,7 +34,7 @@ The original source also has the exact beta identity
 
 Thus (1) implies all its integrated suppression bounds. This note tests (1) itself, not merely a weakened asymptotic estimate.
 
-Later neighboring sources were also inspected: account03/B12 20260921T194351Z-curvature-palm-nonreuse (blob ddf8baf96385418c56a91c48f62c04168633faaa) and account04/B12 20260921T201418Z-palm-trigger-cluster (blob 4643e5dd27cc48a508820a30413e24b9c4717fac). They retain stronger actual physical curvature/robust-row hypotheses. The construction here does not refute those results.
+Later neighboring sources were also inspected: fleet03/B12 20260921T194351Z-curvature-palm-nonreuse (blob ddf8baf96385418c56a91c48f62c04168633faaa) and fleet04/B12 20260921T201418Z-palm-trigger-cluster (blob 4643e5dd27cc48a508820a30413e24b9c4717fac). They retain stronger actual physical curvature/robust-row hypotheses. The construction here does not refute those results.
 
 ## Construction
 

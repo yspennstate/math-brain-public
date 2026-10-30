@@ -18,13 +18,13 @@
 - Certified cyclic overlapping-window benchmark n=10,width2,threshold1: H/I=3.89243855524..., B/I=3.15519599472..., B/H=0.81059622392.... First-child min prices are 3.033739939... and 2.647247133.... Recursive Maj3 depth2, after one free query, has positive minimum child price 0.842929269... on either branch; root zero does not persist.
 - Rational log certificate implementation should aggregate repeated integer terms before Fraction arithmetic and round each enclosure outward to a shared dyadic denominator. v1/v2 reached runtime guard; v3 passed the unchanged 69-function domain in 2.066s. Failed pilots are resource failures, not mathematical counterexamples or substantive stagnation.
 
-Stage3 durable facts (20261013T214810Z-account05-A026-good-coordinate-erasure):
+Stage3 durable facts (20261013T214810Z-fleet05-A026-good-coordinate-erasure):
 - Actual-rest odd balanced encoder: F=A+gD, delta=E D^2, gamma=ghat_i,d=I_i(g) gives B_i=sum Phi(Ahat^2,gamma^2 Dhat^2) and B_i/I_i<=(gamma^2/d)log2(e/(gamma^2 delta)). Histories outside intact g may be arbitrarily biased; histories inside invalidate balance.
 - For the specified B05 outer influence types and M=2k^2 2^(2k+2)+1, any adaptive at-most-one-query-per-block prefix preserves cheap intact bits at B_i/I_i<55/256 and I_i>I/(2d), while selector remains unique maximum. General proof uses q rho<3/32 density domination, not reused uniform outer spectra.
 - Sliced inner h: B_i(A+hD)=delta[B_i(h)-Phi(mu^2,gamma^2)]+sum Phi((Ahat+mu Dhat)^2,gamma^2 Dhat^2). Maj3 after first query has inherited B_i=1,d=1/2; omitting this charge is false.
 - Prefix theorem retains E H(leaf). All blocks touched is the first unpaid node, and arbitrary delta makes the scalar log(1/delta) unbounded. No universal C018/C019 or biased selector-erasure divergence is inferred.
 
-Stage4 durable facts (20261014T011337Z-account05-A026-good-coordinate-erasure):
+Stage4 durable facts (20261014T011337Z-fleet05-A026-good-coordinate-erasure):
 - Sharp scalar signed-row excess: Phi((a+b)^2,c^2)-Phi(a^2,c^2)-Phi(b^2,c^2)<=log2(32/27)c^2, equality a=b=c/sqrt8. A one-turn derivative proof establishes the continuum; a grid alone does not.
 - Arbitrary biased Boolean h, actual rest f=A+zD: B_i(A+hD)<=delta B_i(h)+gamma^2 B_z(f)+delta gamma^2[log2(1/gamma^2)+kappa]. The negative empty-row term cancels rowwise; residual <=[kappa+2/(e ln2)] physical query influence. Bias conversion is paid, inherited/shadow/terminal bills are not.
 - Encoder-only fixed-shadow prefixes have Q_shadow=B_z(f)[Var(h_root)-E Var(h_leaf)] exactly. Complete-policy charge is query-order invariant. Quadratic-bent one-point-flip f_k has B_z/Inf_z>=k-1; fixed Maj3 yields Q_shadow/encoder_spend>=2(k-1)/3 for every complete encoder-only policy. This refutes that bank funding rule, not FEI or existential actual-coordinate selection.

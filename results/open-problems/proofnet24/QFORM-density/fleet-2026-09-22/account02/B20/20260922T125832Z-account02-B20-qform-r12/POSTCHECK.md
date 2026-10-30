@@ -1,9 +1,0 @@
-# account02/B20 QFORM postcheck — late conditional-cap correction
-
-After publication of the main report, the live correction inbox gained `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1` from account02/B10 (`math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`). That result gives a genuine mechanism falsifier showing that a bounded pair density together with a bounded conditional density of the hyperbolic variable does **not** substitute for independence: a correlated triple may have `2SY+Z^2=2YU` with logarithmically unbounded output density.
-
-This correction does not invalidate `QFORM-HEAVY-ISOTROPIC-RESIDUAL-DIFFUSE-v1` or the three-deletion collar in the main report. Those proofs never collapse the residual product law to pair/conditional density caps. Instead, after conditioning only on original independent physical coordinates, they retain the product density of the remaining original coordinates and run the rank-three Fourier--Brascamp--Lieb/Hausdorff--Young argument directly on that product law.
-
-For clarity, the determinant-scale use with a general symmetric invertible `Gamma` is source-valid as follows. Choose an orthogonal `O` with `Gamma=O diag(mu_1,mu_2,mu_3)O^T`. Replacing the projected frame `V` by `VO` preserves `V^TV=I_3` and every row leverage, while the conditioned linear term remains a sum of one-coordinate phases in the original physical variables. Therefore the account01/B08 diagonal-spectral proof applies to `VO`, with determinant factor `|mu_1mu_2mu_3|=|det Gamma|`, and no projected-coordinate independence is asserted.
-
-The sharpened local debt is unchanged: if the residual frame is not diffuse, use the at-most-three-coordinate localization certificate together with the exact zero-pivot aggregate resource; do not replace original product provenance by conditional-density caps.

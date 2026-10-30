@@ -1,6 +1,6 @@
 # A countable extreme-product-law test class for the QFORM density conjecture
 
-Status: proved reduction; **no universal density bound follows from this reduction alone**. This is a finite-interval refinement of the existing nonattained coordinatewise purification in [account04/B13](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/fleet-2026-09-22/account04/B13/20260923T121154Z-account04-B13-nonattained-bathtub-r1/REPORT.md), §2–3. In particular, we do not claim the earlier bathtub lemma as new.
+Status: proved reduction; **no universal density bound follows from this reduction alone**. This is a finite-interval refinement of the existing nonattained coordinatewise purification in [fleet04/B13](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md), §2–3. In particular, we do not claim the earlier bathtub lemma as new.
 
 ## Statement
 

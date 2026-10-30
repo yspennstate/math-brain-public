@@ -1,0 +1,35 @@
+# exact target, quantifiers, hypotheses and units
+
+Stage18 closes the prescribed mixed-history reference bill for every bent seed/two distinct edits in all even m>=4, while z stays hidden. Entropy, CE and KL are bits. Actual fair nested controls, shared data, original pi, and the once-owned boundary reserve R are retained. With fixed old debit0<=U<=m/8 and expected data depth D<=m/4, every adaptive mixed stopping frontier has E[4I_D-CE-U-R]>=1+m/32. This extends the previous control-first root theorem to actual nonflat source restrictions and full reference conversions. It is an author proof with exact checks, pending independent-person review; full FEI is OPEN.
+
+# sources actually read, revisions and theorem locators
+
+Read EXECUTION_PROTOCOL.json in full, revision2026-10-11-execution-v2; current campaign indices and earlier source intake inherited from stage17. Refreshed BOARD snapshot2026-10-23 02:23UTC, B05 notes v2, own rolling files, A028 REPORT and DERIVATION in run20261022T205915Z-fleet03-A028-stopping-tree-payment, A029 REPORT and DERIVATION in run20261022T221752Z-fleet03-A029-child-deficit-transport. A021/A022 latest substantive REPORTs informed the original-source/full-KL constraints. A028/A029's signed normalized-sector telescope is consistent with our finite mixture checks; their JS-only bill does not supply this prescribed CE conversion. No blanket acceptance of their entire claims is asserted. Prior paper and brain intake is contextual, not a new literature audit or a proof premise. Current explicit campaign deadline overrides the archived date.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md supplies the complete theorem. Prescribe q_h=(P_original_seed_restriction+uniform)/2, and the ORIGINAL controller reference marginalized only when a control axis is deleted. This reference is normalized with full actual support at every history. Controller CE is a martingale at data queries and a supermartingale at controls; no reset to the child's actual marginal is permitted. The data reference floor gives C_h<=m-d_h+1+C_Y(h), including every signed nonflat conversion. Physical influence telescopes give E I_D>=I_D(root)-D. The SAME pair-product bank R is a supermartingale under data and control queries; physical edge identities prove each averaged release.
+
+Original bent source supply is I_D(root)>=1+m/2-m*2^-m, controller CE starts H(nu_root)<1, R_root=(3m/2-eta/2)2^-m<=3m/32. Therefore E B>=m+1-3D-U-R_root>=1+m/32. Every old debit, remaining R, actual full terminal CE and both KL terms are still present. The exact local signed booking and full physical entropy/influence telescope appear in PROOF sections5-6. No positive-part clipping occurs. At canonical m>=8, stop at the first data1 or after all zeros; D=2(1-2^-m) qualifies, while the all-zero leaf bank is strictly negative. Its full physical reach and KL are retained in the paid expected frontier.
+
+First unsupported universal line: arbitrary Boolean sources have no proved replacement for this explicit bent linear original-source surplus. The present source theorem also forbids querying z; the next stage tests that precise restriction. No universal FEI conclusion follows from a reference identity alone.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen specs precede both jobs. Integer FWHT/Fraction/prime-log arithmetic checked all1449 declared shallow physical states: canonical m4, v0, every w1..15; m6,w1,3; all partial controls and at most one data fixation. Dynamic programming minimizes over every allowed stop/query policy for these17 roots. A separate m8 first-one stopping tree adds17 states and retains the negative deep leaf. Primary output: 70145 exact assertions, 1466 states, 139 rational interval sign certificates, PASS in 7.488591s. No all-bent finite exhaustion is claimed; arbitrary bent seeds and dimensions are handled by the analytic proof.
+
+The second implementation imports neither production spectrum code nor the old helper. Direct Fourier character sums and independent physical edges reconstruct17 selected states, including ALL9 leaves of the deep frontier. It compares H, full CE, controller CE, full KL, bank, actual influences, pi and R exactly: 190 checks PASS in 0.306894s. This is independent code/representation by the same author, not independent-person review. Commands: python -X utf8 runs\20261023T022946Z-fleet03-A023-amortized-rarity-budget\code\check.py and code\independent.py. Both frozen60second jobs finished; estimates160MB and80MB, no >300MB job, automatic escalation, GPU or detached work. No Lean compiler ran and no formal theorem certificate is claimed.
+
+# proof dependencies and changed downstream conclusions
+
+Version6 extends the same existing candidate rather than opening another broad pending claim. Prior scopes remain unchanged. New source lower bounds, the corrected R adjacency factor, smoothing floor and physical release identities are derived directly. The inherited own helper is used only for exact prime-log arithmetic with rigorous atanh tails. The A028/A029 normalized sector H=T+J+L stays intact: CE=T+J+L+KL, with no additional donor credit. Their signed-telescope work is consumed rather than repeated as the main result. A023's previous arbitrary-bent H<=4I remains valid; this stage additionally funds actual prescribed mixed-history references from the same owner.
+
+# one next mathematical action and independent reviewer
+
+Allow the balancing sign z to be physically revealed; retain the ORIGINAL projected Q, full KLs, same R and old U, and pay its exact4-bit owner withdrawal from the sharper original bent surplus. A028/A029/A087/A094 review.
+
+# actual persistence receipts or precise save blocker
+
+All four protocol files, complete proof, frozen specs, checkers, exact outputs and SHA256 receipts are saved inside A023. Rolling STATUS has exactly two lines; WORKLOG/LEARNED record the expected-only invariant and negative-leaf guard. Schema/digest/file-size checks are executed by finalize.py. Local persistence is verified; supervisor mirrors, independent-person acceptance and downstream use remain unverified. Brain self-care is degraded: owner-model and state-of-mind notes are stale; current explicit instructions govern.
+
+**Universal bridge:** This stage advances C019 stopping payment and C024 history transfer from a control-first bent root bill to complete prescribed full-support reference conversions at EVERY adaptive mixed frontier with E data depth<=m/4, in all even dimensions and for arbitrary bent seeds. One original DATA owner pays once, retaining old U, full KLs and the SAME remaining R, with at least1+m/32 balance; a negative actual branch rules out unjustified conditional promotion. What remains is removal of the hidden-z restriction and replacement of the explicit bent surplus by an arbitrary-source supply. NEXT prices the exact missing physical query from the sharper unused original account, directly testing restriction induction rather than adding an unrelated family.

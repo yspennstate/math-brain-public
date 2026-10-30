@@ -51,7 +51,7 @@ TALKERS = os.path.join(STATE_DIR, "talkers")      # live_inbox.py send/event tou
 TALK_WINDOW_S = 6 * 3600    # a session that sent or was shown inbox mail in the last 6 h is offered a waiter
 NUDGE_EVERY_S = 2 * 3600    # at most one waiter offer per session per 2 hours
 # A request, warning or handoff shown once and still unacknowledged is listed again 30 min, 2 h and 8 h after its
-# delivery, then left to the inbox (account04/B20, 4 Oct: the hook dropped ack-required mail after delivery while the
+# delivery, then left to the inbox (fleet04/B20, 4 Oct: the hook dropped ack-required mail after delivery while the
 # mesh kept it pending). Only mail delivered in the last day: 2,553 of the 2,601 such rows on 4 Oct were older than a
 # week and addressed to sessions and boxes long gone. The relay's own reminders are not reminded about.
 ACK_AFTER_S = (1800, 7200, 28800)
@@ -409,7 +409,7 @@ def main():
         st["last_check"] = 0                               # look again at the next tool call
         _log(f"{agent} {event} read failed: {type(e).__name__}: {str(e)[:160]}")
     # Messages an earlier look showed but could not stamp delivered (the mesh was locked past its 0.6 s) are stamped
-    # now and kept out of this look, so a message is never shown twice. account04/B10 (4 Oct): 135 of 2,157 stamps had
+    # now and kept out of this look, so a message is never shown twice. fleet04/B10 (4 Oct): 135 of 2,157 stamps had
     # failed since 1 Oct, and 37 of 302 inbox files were shown to the same session more than once. A crash before
     # this record is written leaves the message unstamped and it is shown again, which is the safe side.
     pending = {r[0] for r in rows}
@@ -508,7 +508,7 @@ def main():
     sys.stdout.flush()
     if inbox_files:                                       # the sender learns within one relay pass that it was seen
         try:
-            # each row names the mesh messages it covers and the digest of the text shown (account04/B10), so a second
+            # each row names the mesh messages it covers and the digest of the text shown (fleet04/B10), so a second
             # row for one file can be told apart from a replay of the same text
             digest = hashlib.sha256(text.encode("utf-8")).hexdigest()[:16]
             ids_by_file = {}

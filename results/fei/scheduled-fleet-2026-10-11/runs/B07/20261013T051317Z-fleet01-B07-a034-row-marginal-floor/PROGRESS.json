@@ -1,0 +1,34 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261013T051317Z-fleet01-B07-a034-row-marginal-floor",
+  "stream": "B07",
+  "primary_packet_id": "A034",
+  "attempt_id": "A034-attempt-row-marginal-floor",
+  "control_revision": "2026-10-12.1",
+  "control_source_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+  "prior_status": "The K3 address marginal was bounded by 4 I_A+8 I_Y, with only conditional data-row entropy R_Y unpaid; row-monomial rows gave constant 8.",
+  "new_status": "Author-proved proper-class closure pending review: a row marginal floor beta gives constant 8+h2(beta)/beta, and fair/frozen marginals give constant 10 in arbitrary data dimension.",
+  "mathematical_delta": "Paid the entire conditional row entropy by entropy subadditivity without assuming row independence. Extended row-monomial K3 to exponentially supported, correlated, arbitrary-phase row laws with a fixed marginal floor. Derived an exact logarithmic obstruction as beta tends to zero.",
+  "claim_version": "B07-A034-ROW-MARGINAL-FLOOR-v1",
+  "gap_id": "B07-K3-RARE-ROW-MARGINAL",
+  "acceptance_evidence": {
+    "analytic_proof": "ROW_MARGINAL_FLOOR_CLOSURE.tex",
+    "checker": "verify_row_marginal_floor.py",
+    "output": "CHECK.out",
+    "scope": "all dimensions analytically; exhaustive 3-address+1-data audit and bent substitutions computationally"
+  },
+  "independent_review": "PENDING_A088_OR_A094",
+  "next_consumers": ["A088", "A094", "B20"],
+  "remaining_obstacle": "The coefficient h2(beta)/beta diverges logarithmically. Boolean compatibility must pay rare row marginals from address/granularity reserves without reusing the 8 I_Y label payment. General k also retains exponential truth-table distance loss.",
+  "next_action": "Freeze one rare-marginal product row, couple its smallest marginal to the K3 odd/even granularity reserves, and prove an aggregate charge or produce a genuine Boolean falsifier.",
+  "delivery": {
+    "local_canonical": true,
+    "local_brain_mirror": false,
+    "remote_canonical": true,
+    "remote_brain_mirror": true,
+    "canonical_package_commit": "951cf520d93066489c6bea2c19b885ca4f77eb0d",
+    "brain_package_commit": "e22e2d4ff8c0b5ca9e77e702b6213ed0dfd35d95",
+    "readback": "all seven files fetched nonempty at the stated package commits"
+  },
+  "full_fei": "OPEN"
+}

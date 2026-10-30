@@ -50,7 +50,7 @@ G7 is the monotone gate on inputs 0..6 with minimal true sets
 
     {1,3}, {0,4}, {2,3,4}, {0,1,5}, {1,4,6}, {2,4,6}, {1,5,6}
 
-It has 72 true points of 128. It is the restriction of Numaro's g with core coordinates 0..6 free, x7 = 0 and x8 = 1, auxiliaries 14, 15, 16 true and the other auxiliaries false. The checker confirms this against `inputs/numaro18_pm1_table.npy`. G7 is composition-prime: for every block A with 2 <= |A| <= 6 the cofactors over x_A take at least three distinct functions (`code/inspect_g7.py`; criterion of fleet account01/B16, Lemma 2.1).
+It has 72 true points of 128. It is the restriction of Numaro's g with core coordinates 0..6 free, x7 = 0 and x8 = 1, auxiliaries 14, 15, 16 true and the other auxiliaries false. The checker confirms this against `inputs/numaro18_pm1_table.npy`. G7 is composition-prime: for every block A with 2 <= |A| <= 6 the cofactors over x_A take at least three distinct functions (`code/inspect_g7.py`; criterion of fleet fleet01/B16, Lemma 2.1).
 
 Exact evaluation (`code/exact_gate.py`): biased Walsh weights are exact rationals, w_T = R_T^2 prod_{i in T} p_i(1-p_i), where R_T comes from the matrix [[1-p, p], [1, -1]], and Parseval is checked exactly. Logarithms use ln r = e ln 2 + 2 atanh((m-1)/(m+1)), with directed rounding to 2^-400 and an explicit tail bound. Gamma is taken exactly as stored: s times the piecewise-linear interpolant of the stored doubles in x = log2(1/s), with x enclosed rigorously.
 
@@ -75,7 +75,7 @@ Gamma_RO equals the AND-chain slack at dyadic measures and rises steeply around 
 
 A gate whose output measure sits on a shoulder of the dip at 1/2 pays about 0.047 more in Gamma(p_out) than a balanced gate at uniform bias. G7 sits on the shoulder (p_out = 0.50244).
 
-Two kinds of search cannot see this. The balanced uniform slice, searched exhaustively by the fleet (account01/B17: no balanced restriction of Numaro's g below essential arity ten beats the cap), puts p_out exactly at the bottom of the dip. Random bias vectors almost never land on the shoulder: under a logit-normal bias distribution G7 exceeds the AND value on 1e-5 of the draws.
+Two kinds of search cannot see this. The balanced uniform slice, searched exhaustively by the fleet (fleet01/B17: no balanced restriction of Numaro's g below essential arity ten beats the cap), puts p_out exactly at the bottom of the dip. Random bias vectors almost never land on the shoulder: under a logit-normal bias distribution G7 exceeds the AND value on 1e-5 of the draws.
 
 ## 4. Evidence that seven is the smallest fan-in (NUMERICAL)
 

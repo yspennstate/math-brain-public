@@ -1,0 +1,60 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T015108Z-fleet05-A027-block-selection",
+  "stream": "B06",
+  "packet_id": "A027",
+  "gap_id": "G-R-SELECT",
+  "attempt_id": "A027-G-R-SELECT-004",
+  "method": "Condition one original input event to project interleaved point controls onto an actual core tree; retain a single signed endpoint activation potential and separate queried core/control budgets",
+  "mathematical_delta": "All-order projected-core transport: exact Q_core=p Pi_I(U), signed overhead in [-kappa Q_core_live,kappa Q_core_live+C0 Q_control], kappa<22,C0<6. Complete terminal-inclusive conditional selection, and exact nonuniform-active-weight witness.",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT; EXTENDED_CANDIDATE_REVIEW_PENDING",
+  "mathematical_status": "PROVED_INTERLEAVED_TRANSPORT; UNIVERSAL_PROPER_CORE_SELECTION_AND_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@2 (local core correction; prior components retained unchanged)",
+    "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@2 sections1-2 (one-bit scalar correction; scoped independent reconstruction in A027 stage3 INDEPENDENT_REVIEW.md)",
+    "C006/B06-R2 actual physical-tree entropy/influence conservation"
+  ],
+  "claims_created_or_changed": [
+    "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@3"
+  ],
+  "source_artifacts": [
+    "DERIVATION.md",
+    "WEIGHT_WITNESS.md",
+    "FROZEN_SPEC.json",
+    "VALIDATION_AMENDMENT.json",
+    "VALIDATION_REFINEMENT.json",
+    "code/setup.py",
+    "code/exact.py",
+    "code/check.py",
+    "code/finalize.py",
+    "code/weight_witness.py",
+    "out/HELPER_PIN.json",
+    "out/pilot.json",
+    "out/pilot_refined.json",
+    "out/validation.json",
+    "out/WEIGHT_WITNESS.json",
+    "out/RUNTIME_FAILURE.md",
+    "out/timeout_checkpoint.json",
+    "SOURCE_READS.json"
+  ],
+  "next_consumers": [
+    "A028",
+    "A029",
+    "A030",
+    "A038",
+    "A048",
+    "A064",
+    "A082",
+    "A087",
+    "A094"
+  ],
+  "next_action": "Use the exact projected terminal-slack ledger at the first core split of a rare biased activation to derive a necessary/sufficient admission criterion from actual certified child slacks, preserving the remaining control reserve. Seek an eligible proper core split rather than another transport or isolated controller class; A029 supplies the signed-terminal interface.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "A universally eligible proper core partition with certified actual terminals remains unproved",
+    "Independent acceptance of A027 version3 and supervisor mirrors unobserved"
+  ],
+  "packet_ids": [
+    "A027"
+  ]
+}

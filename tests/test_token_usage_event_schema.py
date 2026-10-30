@@ -1,4 +1,4 @@
-"""thread/tokenUsage/updated is eligible only when its payload matches the app-server schema (account04/B14,
+"""thread/tokenUsage/updated is eligible only when its payload matches the app-server schema (fleet04/B14,
 B14-R79-TOKEN-USAGE-PAYLOAD-UNVALIDATED-20260929-01; the auditor's T-R79-TOKEN-USAGE-EVENT-SCHEMA).
 
 Until 30 Sep the runner checked only this event's thread and turn ids: a missing, scalar or extended payload kept the

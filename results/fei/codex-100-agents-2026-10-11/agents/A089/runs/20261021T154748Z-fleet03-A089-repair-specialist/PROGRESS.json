@@ -1,0 +1,47 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261021T154748Z-fleet03-A089-repair-specialist",
+  "stream": "B18",
+  "packet_id": "A089",
+  "gap_id": "G-R-MISMATCH",
+  "attempt_id": "A089-stage6-third-query-sibling-transfer",
+  "method": "exact signed-capacity repair; direct-DFT independent representation; no rate/debit reset",
+  "mathematical_delta": "Three of seven active third-query alternatives refute untouched-selected-owner continuation. Sharp minimal other-owner transfer tau=max(0,T-B) pays all7 at unchanged4; required fraction in(1/4,13/50) for3. Full terminals retained.",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "mathematical_status": "SCOPED_PROOF_AND_EXACT_CERTIFICATES_REVIEW_PENDING_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "source": "agents\\A089\\runs\\20261014T061326Z-fleet05-A089-repair-specialist\\CLAIMS.json",
+      "sha256": "858966e81a3f1ce0d6ee9427d5a396ba6d3ef40742d930a148583f90fe19e5cd"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A089-CORRECTED-CAPACITY-SIBLING-TRANSFER",
+      "version": 1
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "out/REPAIRED_CASES.json",
+    "out/THIRD_QUERY_CASES.json",
+    "out/INDEPENDENT_REPRODUCTION.json",
+    "out/SOURCE_INVENTORY.json"
+  ],
+  "next_consumers": [
+    "A072",
+    "A074",
+    "A075",
+    "A092"
+  ],
+  "next_action": "Query an OTHER core in the sibling just charged2tau; retain spent amount, zero-remainder sibling and all earlier terminals; prove signed eligibility against this heterogeneous account.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "uniform eligibility and arbitrary-core transfer unpaid",
+    "independent review and supervisor mirror pending",
+    "Lean helper RUNTIME_UNVERIFIED; no formal certification"
+  ],
+  "packet_ids": [
+    "A089"
+  ]
+}

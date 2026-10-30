@@ -1,0 +1,48 @@
+[
+  {
+    "claim_id": "A005-ARBITRARY-AFFINE-FRONTIER-DEFICIT-RETENTION",
+    "version": 1,
+    "exact_statement": "For a finite uniform Boolean sign g let e(g)=(1-max_S abs(ghat(S)))/2. Every invertible affine input map and output-character multiplication preserves e and H; each actual physical single-coordinate restriction satisfies E_b e(g_b)<=e(g), and every directional minority probability is at most min(2e(g),1/2). Put phi(x)=h2(x)+2x/ln2 and a=min(2e(root),1/2). For EVERY finite adaptive tree of maximum single-coordinate query depth r, permitting arbitrary branch-dependent affine/character resets, all complete original terminal reaches retained, H(root)-E H(leaves)<=r phi(a). If each reset does not increase actual influence, then E D_K(leaves)>=D_K(root)-r phi(a), K>=0. For activation F=1+1[k controls=0](g^tensor(t)-1), k>=2,p=2^-k, a canonical full-span affine-minimal seed g with H0=H(g),q=I(g), and every such frontier, E D_K(leaves)>=p[t(H0-Kq)-(10+2K)k-15-2r(k+3/ln2)]. With t2^k and rk/2^k->0 this retains seed deficit in expectation despite bounded-I/L2 escape; with t2^l,k2l and rl/2^l->0 it retains normalized deficit while I(root)->0 and the seed ratio survives. A positive seed deficit therefore forces at least one violating complete leaf, even after full affine resets, and all-terminal nonviolation requires maximum depth at least [t(H0-Kq)-(10+2K)k-15]/[2(k+3/ln2)] when its numerator is positive. The actual point8 seed at K15/4,k20,t2^20 gives expected complete terminal deficit>595/1048576 for EVERY admissible frontier of maximum depth64. Constant inactive-control leaves are retained; every-leaf positivity is not asserted.",
+    "hypotheses": [
+      "Uniform finite Boolean signs and normalized real Walsh coefficients; entropy bits; K>=0",
+      "r is MAXIMUM number of queried single coordinates on any path, not expected depth or number of multi-coordinate blocks",
+      "Affine resets are actual invertible maps in the current remaining-variable chart plus output characters; may mix data/controls and change the next partition",
+      "All complete terminal reaches and entropies retained; stopped leaves padded with idle accounting levels",
+      "Entropy bound allows any affine reset; deficit bound requires each reset not increase actual child I",
+      "Seed application uses positive-entropy canonical seed; seed-positive deficit implications are conditional unless a specified source deficit is exactly certified",
+      "Activation k>=2; rates stated explicitly, no uncontrolled infinite optimizer or interchange of infinite sums",
+      "Point8 scalar certificate never constructs its large root truth table; every terminal positivity is NOT claimed"
+    ],
+    "statement_sha256": "6e4e8875e88143282be9d47a0ece110291678082486ad8ddb1962bc771e4d8a3",
+    "contributors": [
+      "fleet03/A005"
+    ],
+    "proof_source": [
+      "DERIVATION.md Sections1--4",
+      "code/check.py",
+      "code/independent.py",
+      "out/CHECK.json",
+      "out/INDEPENDENT.json"
+    ],
+    "proof_dependencies": [
+      "CLAUDE-B11-R1@1: established single-coordinate JS<=2 Inf/ln2; together with B_i<=h2(Inf_i) gives the consumed local entropy bound",
+      "A051-AFFINE-MINIMUM-BASIS-CRITICAL-REDUCTION@1: previously reviewed finite affine canonicalization criterion",
+      "A051-TAIL-CERTIFIED-FINITE-APPROXIMATION-AND-ESCAPE@1: COMPACTNESS Sections2--3 exact activation profile p(10k+15), tensor/affine full-span preservation; independently accepted by A002 at this scope",
+      "Elementary character approximation, physical restrictions, concavity of h2 and finite entropy/influence telescopes; no FEI premise"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A002",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

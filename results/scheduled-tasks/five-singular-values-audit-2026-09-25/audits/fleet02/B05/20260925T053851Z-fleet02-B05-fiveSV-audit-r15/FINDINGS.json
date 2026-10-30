@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "account": "fleet02",
+  "slot": "B05",
+  "run_id": "20260925T053851Z-fleet02-B05-fiveSV-audit-r15",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "verdict": "LOCAL_REPAIRABLE_GAPS; no fatal theorem counterexample found",
+  "new_finding": {
+    "id": "C10",
+    "lines": "148",
+    "page": 3,
+    "status": "GAP",
+    "summary": "Padded singular-value approximation identity is true, but the printed kernel/span converse needs a separate trivial case when j exceeds the shorter matrix dimension.",
+    "repair": "If j>min(m,n), s_j(T)=0 and B=T is admissible because rank(T)<j. Use the printed SVD argument only in range.",
+    "downstream": "All manuscript uses are in range; no theorem or constant change."
+  },
+  "line222": "PASS: 'factors ... are at most one' means factor values <=1; any number of zero-beta factors can be dropped.",
+  "lower_threshold_research": false
+}

@@ -1,0 +1,55 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T074909Z-fleet05-A001-quantifier-audit",
+  "stream": "B01",
+  "packet_id": "A001",
+  "gap_id": "C024/INCOMING-REFERENCE-SAME-BANK",
+  "attempt_id": "A001-NEUTRAL-DATA-1",
+  "method": "Consume A004 next non-point history; independently replay full physical data/encoder tree and exact signed amplitude reference transport; preserve original bank and full terminal debt",
+  "mathematical_delta": "All six proper data exposures on the neutral AND3 edit fit the original full-terminal quota with margin>0.634309 bits. Active frozen-terminal shortcut fails by>0.028551 bits; actual terminal release repairs it. Positive encoder interaction explicitly retained; no fresh bank or floor.",
+  "deliverable_status": "COMPLETE_LOCAL_PENDING_SUPERVISOR_ADOPTION",
+  "mathematical_status": "SCOPED_FINITE_HISTORY_CLOSED_PENDING_REVIEW; UNIVERSAL_REFERENCE_TRANSFER_AND_FEI_OPEN",
+  "claim_versions_used": [
+    "A004-POINT-EDIT-TERMINAL-LEDGER@1 (fixture/dispatch; locally reconstructed six-bit profile, no full census review)",
+    "A003-RETAINED-POINT-SHADOW-SHARP-ALLOWANCE@1 (already paid baseline, not repeated)",
+    "A096-NONFLAT-POINT-QUOTIENT-REMAINDER@1 and CHILD-BANK-PRICE-FIVE-OBSTRUCTION@1 (existing A082 review consumed as dispatch evidence)"
+  ],
+  "claims_created_or_changed": [
+    "A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER@1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "DERIVATION.md",
+    "out/FROZEN_SPEC.json",
+    "out/SPEC_REVISION.json",
+    "out/SPEC_REVISION_3.json",
+    "out/SPEC_REVISION_4.json",
+    "out/PILOT_FAILURE.json",
+    "out/ENCODER_DIAGNOSTIC.json",
+    "out/CHECK.json",
+    "out/COMPACT_INTERVALS.json",
+    "out/SOURCE_MANIFEST.json",
+    "code/check.py"
+  ],
+  "next_consumers": [
+    "A004",
+    "A003",
+    "A096",
+    "A087",
+    "A094",
+    "A027",
+    "A099",
+    "B01",
+    "B20"
+  ],
+  "next_action": "Transport the SAME actual phase/reference state and original remaining bank through a second proper data query on a surviving branch, preserving terminal release and encoder interaction, without a new S4.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Arbitrary prescribed-reference transport and arbitrary non-point core payment are unproved",
+    "Repeated-history one-use surplus remains unproved; this certificate covers one data query",
+    "New certificate independent review, registry and mirror adoption unverified"
+  ],
+  "packet_ids": [
+    "A001"
+  ]
+}

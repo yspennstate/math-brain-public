@@ -1,6 +1,6 @@
 # FEI continuation: parity-profile obstruction and quadratic-phase entropy
 
-Full FEI: OPEN / NOT PROVED. Interactive account02 continuation; self-checked results, independent review pending, no publication-priority claim.
+Full FEI: OPEN / NOT PROVED. Interactive fleet02 continuation; self-checked results, independent review pending, no publication-priority claim.
 
 
 ## New mathematical content

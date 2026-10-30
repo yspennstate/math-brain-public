@@ -1,0 +1,38 @@
+[
+  {
+    "claim_id": "A077-ONE-SHARED-BIT-SIGNED-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For every uniform Boolean pair G(s,X),H(s,Y) sharing at most one physical data bit s, with disjoint private blocks X,Y and fresh selector z, F=(G+H)/2+z(G-H)/2 satisfies at each data query B_i(F)=(B_i(G)+B_i(H))/2+D_i with |D_i|<=2 Inf_i(F). The factor two is sharp at G=-1,H=s. Every finite adaptive data-only prefix T, z unqueried and arbitrary stopping leaves, has B_T(F)=(B_T(G)+B_T(H))/2+D_T and sum_v w_v |D_v|<=2 Pi, Pi=I(F)-E I(F_leaf). Its exact terminal entropy is E[H(G_leaf)+H(H_leaf)]/2+E R_leaf with R defined by the common-frequency formula in PROOF.md (8). For K=2+2/ln2<5, |R_root-E R_leaf|<=K Pi and 0<=R<=K I_data(F), I_data(F)=(I(G)+I(H))/2. A partial prefix plus optional selector suffix splits one K I_data reserve; inherited core erasure and terminal entropies remain explicit. For private queries, the exact paired-row upper comparison is D_i<=sum_C Phi(h_C^2,d_C^2)/2, and the corresponding negative comparison is retained.",
+    "hypotheses": [
+      "all original physical inputs independent and uniform; Boolean sign cores; bits",
+      "fresh selector z remains unqueried during the data prefix",
+      "at most one common physical data coordinate s; private X,Y disjoint; irrelevant coordinates allowed",
+      "finite adaptive prefixes with arbitrary actual stopping leaves",
+      "Phi(p,q)=phi(p)+phi(q)-phi(p+q), phi(p)=p log2(1/p), continuous boundaries",
+      "R is the exact common-frequency entropy potential; inherited core costs are not assumed paid"
+    ],
+    "statement_sha256": "8f5ca1299f32745eef2370dc661407da8cc1f79467d5f165b50b51a37cb4e759",
+    "contributors": [
+      "A077/fleet05"
+    ],
+    "proof_source": "PROOF.md sections 1-6; SPARSE_DEFECT_TOWERS.tex; code/check.py; out/full.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A086",
+      "A091",
+      "A064",
+      "A097",
+      "A092",
+      "A088",
+      "claude/B16",
+      "B20"
+    ]
+  }
+]

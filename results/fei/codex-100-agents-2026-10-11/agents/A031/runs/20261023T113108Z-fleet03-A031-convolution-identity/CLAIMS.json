@@ -1,0 +1,103 @@
+[
+  {
+    "claim_id": "A035-ALL-QUERY-TERMINAL-KL-ENVELOPE",
+    "version": 1,
+    "exact_statement": "For every L>=1 in the actual equal-width Boolean triangle, let W=17 I_private(root), D=M(root)+B_x+mean_x B_b, and C2=D+mean_xb CE(p_xb,Fair_a(p_xb))<W-7/8 as in A031 v1. From each x,b parent take ANY finite complete adaptive physical query tree, allowing a/c exposure and all other coordinates. Give every terminal a complete normalized same-space reference Q with full D(p_leaf||Q)<=1+delta, for fixed 0<=delta<1/8. Then the complete original-source bill D+all reached erasures+all terminal CE is <W-(1/8-delta). In particular the prescribed retained-private-j Fair_j reset after exposing a and c is paid with >1/8 spare, and arbitrary terminal mixtures (31/32)Fair_j(p)+(1/32)R retain >1/16. All old debits and siblings remain. Positive local c-reset charges occur on actual L3 children. Removing the cap is false: at L64, retaining five private bits and prescribing their complete uniform spectral reference at every terminal costs at least5>17 I_private. This refutes unrestricted reference payment, not FEI or a necessary-conversion claim.",
+    "hypotheses": [
+      "Uniform normalized actual signed Boolean triangle spectra; entropies and full KL in bits",
+      "A031-RETAINED-MARKER-EXPOSURE-SAME-ORIGINAL-BANK v1 strengthened source C2<W-7/8",
+      "Finite complete adaptive physical trees with all outcomes and original reaches; no coordinate queried twice on a path",
+      "Every terminal reference is a complete normalized same-space law containing the actual support, with FULL KL<=1+delta",
+      "Historical reference conversions retain signs and conditional refunds; no claim about positive-part reset turnover",
+      "Untouched spectators retain M(g)+CE(p_g,Q_g) with coefficient1 on both sides; triangle KL cap applies only to its factor"
+    ],
+    "statement_sha256": "6a48d2704720b9e32025914f8767e5f678caee51c6a2c06b6df638364f48bbfb",
+    "contributors": [
+      "fleet03/A035"
+    ],
+    "proof_source": {
+      "path": "agents\\A035\\runs\\20261023T110610Z-fleet03-A035-signed-cancellation-countersearch\\DERIVATION.md",
+      "sha256": "126171401271a6ffde2acdd9fac0879940d06acfb99c3faf5e1e2a9a7f97357a"
+    },
+    "proof_dependencies": [
+      "A031-RETAINED-MARKER-EXPOSURE-SAME-ORIGINAL-BANK v1 strengthened source substatement",
+      "Actual signed physical-mixture identity; entropy chain rule and nonnegative Jensen-Shannon divergence",
+      "Complete reference identity CE=H+KL; exact mixture density domination"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A031",
+        "status": "ACCEPT_AT_STATED_SUPPLIED_SOURCE_SCOPE",
+        "source_statement_sha256": "6a48d2704720b9e32025914f8767e5f678caee51c6a2c06b6df638364f48bbfb",
+        "source_proof_sha256": "126171401271a6ffde2acdd9fac0879940d06acfb99c3faf5e1e2a9a7f97357a",
+        "artifact": "out/REVIEW_A035.json",
+        "scope": "Endpoint identity/original-source subtraction reconstructed and finite policies checked independently. Strengthened source originally A031; no claim of independent full-chain review. No universal initial-source conclusion."
+      }
+    ],
+    "status": "SCOPED_ENDPOINT_TRANSFER_REVIEW_HOLDS_SOURCE_DEPENDENCY_RETAINED",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered local candidate: every prescribed c-to-private-marker reset has Delta<=rho",
+      "Unregistered unrestricted candidate: the same original rate17 pays arbitrary complete terminal reference costs"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A031",
+      "A096",
+      "A033",
+      "A088",
+      "A094",
+      "B07 lead",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A031-SHARP-COMPATIBLE-PROFILE-GHOST-CAPACITY",
+    "version": 1,
+    "exact_statement": "Let p,q be complete finite probability laws with CE(p,q)<infinity, pi a partition, and prescribed child profiles r+,r- with mean pi(q). Among complete references R+,R- with pi(Rtau)=rtau and (R++R-)/2=q, the mean CE increase is minimized by minimizing -(1/2) sum_{p(s)>0} p(s) log2(1-t(s)^2), subject to Rtau(s)=q(s)(1+tau*t(s)) and sum_{pi(s)=z}q(s)t(s)=Delta(z)=(r+(z)-r-(z))/2. Its minimum is zero iff |Delta(z)|<=g(z)=sum_{pi(s)=z,p(s)=0}q(s) for every block. Beyond that capacity, ghost tilts saturate at sign Delta and the unique occupied minimizer satisfies p(s)t(s)/(1-t(s)^2)=lambda(z)q(s), with lambda fixed by the block constraint; fully one-sided occupied boundaries have infinite cost. If p,q have matching conditionals in each occupied block, the minimum equals -(1/2)sum_z pi(p)(z) log2(1-((r+(z)-r-(z))/(2*pi(q)(z)))^2). For every coherent Boolean controller G=a+sigma*(1-a^2)*parity4 on disjoint variables, the explicit complete references of DERIVATION section4a achieve a prescribed nonempty profile change, proper only if E(1-a^2)>0, at zero CE increment after querying the fourth seed bit, with zero erasure, JS, occupancy refund and phase products. The incoming source is supplied; no initial source admission or necessity of the prescribed class for universal FEI is claimed.",
+    "hypotheses": [
+      "Finite complete reference laws and finite parent CE; all ghosts and both children retained.",
+      "The prescribed branch profiles and full-mean compatibility are explicit additional obligations.",
+      "The simple block logarithm requires matching occupied-block conditionals; the general ghost-capacity solution does not.",
+      "Coherent controller a takes values in {-1,0,1}, b=1-a^2, seed and controller variables disjoint, sigma in {-1,1}.",
+      "No universal necessity of these reference obligations and no initial Boolean source bound are assumed proved."
+    ],
+    "statement_sha256": "5154fe677197066ec18283a4b119a2c82855bc0ccf5a5d4a924d1df395e44cc1",
+    "contributors": [
+      "A031"
+    ],
+    "proof_source": [
+      "DERIVATION.md sections2-6",
+      "code/check_calibration.py",
+      "code/reproduce.py",
+      "code/check_ghost.py",
+      "code/reproduce_ghost.py"
+    ],
+    "proof_dependencies": [
+      "Elementary CE/KL chain rule and convexity, proved in DERIVATION.",
+      "Signed physical Boolean child amplitudes u+/-v; actual witnesses checked by full Walsh convolution.",
+      "A035-ALL-QUERY-TERMINAL-KL-ENVELOPE v1 is consumed as a separate reviewed frontier, not required for the variational theorem."
+    ],
+    "review_records": [
+      {
+        "reviewer": "A031 author self-check",
+        "verdict": "ANALYTIC_PROOF_AND_EXACT_CERTIFICATES_PASS_EXTERNAL_REVIEW_PENDING",
+        "artifact": "out/GHOST_REPRODUCE.json",
+        "scope": "Independent implementation, same author; not independent peer review."
+      }
+    ],
+    "status": "PROVED_BY_AUTHOR_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "An unrestricted claim that positive prescribed block-profile change forces positive conversion cost even when reference-only capacity suffices."
+    ],
+    "first_unproved_line": "A universal proof must supply its mathematically necessary admissible reference class and pay its minimum full-KL price from an actual unused source, or provide influence-priced initial reference admission for arbitrary signed Boolean cores.",
+    "next_consumers": [
+      "B07 Claude lead",
+      "A035",
+      "A096",
+      "A097",
+      "C019/C024 universal bridge reviewers"
+    ]
+  }
+]

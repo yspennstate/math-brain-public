@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A002-SHARP-DEPTH-LAW-OCCUPATION-ADMISSION",
+    "version": 1,
+    "exact_statement": "Let a finite actual query/reset tree on a uniform Boolean cube have path query count T, a fixed signed root character c transported through the SAME input affine maps and output characters, error event Z={f!=c}, e=P(Z), dbar=E T and a=E[T 1_Z]. Its exact depth-law occupation envelope is A(e,T)=min over integers L=0,...,max T of L e+E(T-L)_+, and a<=A(e,T). The envelope is sharp over error events of the prescribed mass on the same original uniform inputs: choose the e*N largest-depth inputs, realizing an actual Boolean error event against constant1. An upper-tail selection and a threshold L give exact rational primal/dual certificates, including ties and e0/e1. With phi(x)=h2(x)+2x/ln2, dbar>0, the complete entropy decrement is at most dbar phi(min(2A(e,T)/dbar,1/2)); zero-query trees have zero decrement. For families with e->0 and uniformly integrable depth laws the entropy decrement tends0. Under a uniform finite bound on E T, e E T^2->0 is a sufficient alternative. The canonical activated-tensor control-first/all-active-data tree attains A=a=e(k+dt), so bounded expected depth alone cannot supply vanishing occupation or inherited-deficit admission. No claim makes the entropy bound itself sharp or selects a universally paid original pair.",
+    "hypotheses": [
+      "Finite uniform actual Boolean input/query trees; complete original input path depths retained",
+      "Any fixed signed root character transported through the same affine input/output-character maps",
+      "Sharpness concerns the occupation envelope over error events, not the entropy bound or best-character eligibility",
+      "Uniform integrability or bounded mean plus e E T^2->0 is additional; bounded expected depth alone is insufficient"
+    ],
+    "statement_sha256": "0ec93363e50285518785cbdb704433fb2ed17195dfd1498773e52350bddaf088",
+    "contributors": [
+      "A002"
+    ],
+    "proof_source": "agents\\A002\\runs\\20261023T115342Z-fleet03-A002-hardness-preserving-transformations\\STOPPING_REVIEW.md Section3",
+    "proof_dependencies": [
+      "A051-REFERENCE-ERROR-OCCUPATION-STOPPING-BOUND@1 Sections1--4 independently reconstructed without repair",
+      "Elementary upper-tail threshold duality, finite conditional counting and Cauchy--Schwarz"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A051",
+      "A005",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

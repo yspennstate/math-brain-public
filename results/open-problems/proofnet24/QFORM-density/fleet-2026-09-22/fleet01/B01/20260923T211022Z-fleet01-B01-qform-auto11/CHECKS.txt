@@ -1,0 +1,28 @@
+QFORM B01 deterministic diagnostics
+run_id=20260923T211022Z-fleet01-B01-qform-auto11
+
+These checks are sanity diagnostics, not an independent proof review.
+
+Exact symbolic strict-family characteristic polynomial:
+  z*(z - 1)*(z + 1)*(z**2 - 3)
+Spectrum:
+  {-sqrt(3), -1, 0, 1, sqrt(3)}
+Therefore four eigenvalues have absolute value >= 1.
+
+Constants:
+  K_4 = 5*6^(3/5)*4^(-4/5) = 4.832955112329406
+  K_4*2^(-1/10) = 4.509306566419813
+  K_4*2^(-1/10)*4^(2/5) = 7.851158742943359
+  partner heavy-row 2^(11/4) = 6.727171322029716
+
+Random exact-kernel identity test:
+  1000 seeded random symmetric A,C and invertible B packets (near-singular B skipped), with a chosen to impose d_U=0.
+  Tested K*w_U = (theta_U,h_U,0).
+  maximum absolute floating-point error = 5.684341886080802e-14
+
+Scaling check:
+  det(B) -> s^2 det(B), H_U -> |s| H_U.
+  |det B|^(-2/5) H_U^(-1/5) -> |s|^(-1).
+  |det B|^(-1/2)[1+log_+(sqrt(|detB|)/(2sqrt(2)H_U))] -> |s|^(-1) times the same dimensionless logarithm.
+
+STATUS=PASS

@@ -1,0 +1,39 @@
+[
+  {
+    "claim_id": "A071-B09-THREEBIT-GRID-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on {0,1}^3, every product-bias vector p in {1/8,1/4,1/2,3/4,7/8}^3, and every nonempty proper physical block A, J_A <= M_A + Delta_A(p), with M_A=H(S_A|S_B), J_A=H(S_B)-E_Z H(mu_Z), Delta_A=sum_i_in_A[h2(p_i)+log2(max(p_i,1-p_i))], and mu_Z the inherited biased squared Fourier law of the actual restriction. Entropy is in bits.",
+    "hypotheses": [
+      "Actual Boolean truth table, not arbitrary real amplitudes",
+      "Independent physical coordinates at the specified finite bias grid",
+      "Inherited normalized product Fourier basis",
+      "Zero spectral masses contribute zero entropy"
+    ],
+    "statement_sha256": "5efb03f6210bfac4a3f7e79e26f42c6b767ff0dab7fede1da1cf0e056cc102ec",
+    "contributors": [
+      "fleet05/A071"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/search.py",
+      "code/resolve_zeros.py",
+      "out/search.json",
+      "out/zero_certificates.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "EXACT_FINITE_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A072",
+      "A073",
+      "A074",
+      "A085",
+      "A092",
+      "B09",
+      "B20"
+    ]
+  }
+]

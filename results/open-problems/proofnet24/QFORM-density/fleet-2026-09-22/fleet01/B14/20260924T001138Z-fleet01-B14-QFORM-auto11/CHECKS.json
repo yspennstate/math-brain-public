@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T001138Z-fleet01-B14-QFORM-auto11",
+  "status": "FINITE_NUMERICAL_ALGEBRA_CHECK_ONLY_NOT_INDEPENDENT_PROOF_REVIEW",
+  "checks": {
+    "target_constant_exact": "4 + 2 log 2",
+    "target_constant_decimal": 5.386294361119891,
+    "boundary_lambda_eq_4a": "both optimized probability branches equal 4/|a|",
+    "optimization_grid_samples": [
+      {"abs_a":1,"abs_lambda":1,"grid_min":5.386294362304058,"formula":5.386294361119891},
+      {"abs_a":1,"abs_lambda":4,"grid_min":4.000000001184167,"formula":4.0},
+      {"abs_a":1,"abs_lambda":16,"grid_min":2.828427188946243,"formula":2.8284271247461903},
+      {"abs_a":2,"abs_lambda":1,"grid_min":3.039720771432002,"formula":3.039720770839918},
+      {"abs_a":10,"abs_lambda":1,"grid_min":0.7688879455298104,"formula":0.7688879454113937}
+    ],
+    "grid_parameter": "q over logspace(1e-4,1e4,20000); objective |a|^{-1}[q^{-1}+2 psi(4q sqrt(|a|/|lambda|))] for probability laws",
+    "max_target_argument": "For |a|,|lambda|>=1: lambda>=4a branch <=4; lambda<=4a branch is maximized at lambda=1 and then decreases for a>=1, so supremum is 4+2log2 at a=lambda=1."
+  }
+}

@@ -1,4 +1,4 @@
-# FEI joint interface-C handoff — account01/B16 relation-resolved Borel payment
+# FEI joint interface-C handoff — fleet01/B16 relation-resolved Borel payment
 
 **Run:** `20260921T230508Z-b16-fei-c11`  
 **Full FEI:** OPEN / NOT PROVED.  
@@ -6,9 +6,9 @@
 
 ## Named peer result consumed
 
-Substantively used account03/B17
+Substantively used fleet03/B17
 
-`proofnet24/P03-fei/fleet-2026-09-21/account03/B17/20260921T223248Z-relation-orientation-lift/REPORT.md`
+`proofnet24/P03-fei/fleet-2026-09-21/fleet03/B17/20260921T223248Z-relation-orientation-lift/REPORT.md`
 
 (blob `ba900d4cc7cb6c7e2757b8983b3c1960577dea0e`). Its even-relation translation theorem gives, for the authentic relation vector `V_s`,
 
@@ -17,7 +17,7 @@ Substantively used account03/B17
 \le J(f)N x\Pr[\mathrm{Bin}(N-1,x)\ge3],\quad x=\sin^2(s/N).
 \]
 
-Also used account04/B16's exact low/high/outside no-reuse Borel split and account02/B16's Hodge--Shapley ordered-flag gap.
+Also used fleet04/B16's exact low/high/outside no-reuse Borel split and fleet02/B16's Hodge--Shapley ordered-flag gap.
 
 ## New proved result
 
@@ -83,7 +83,7 @@ with arbitrary dummy coordinates and the `e_1,e_2` plaquette, the relation frust
 The Borel corridor is no longer the source-side obstruction on the centered relation subspace. The exact next interface-C task is:
 
 1. prove the authentic refunded relation -> active-syndrome/Hodge-parent operator has dimension-free `l2` norm on `V_s-EV_s`;
-2. prove account02/B16's compiler-authorized nonreusing Hodge cover maps the corresponding means to the ordered physical q-flips, so the identity above sends them to `p_i(w)<=kappa_i(w)`;
+2. prove fleet02/B16's compiler-authorized nonreusing Hodge cover maps the corresponding means to the ordered physical q-flips, so the identity above sends them to `p_i(w)<=kappa_i(w)`;
 3. keep terminal Hodge defects, `0/4` and `2/2` square sectors, high/outside pieces and negative R32 credits co-located and nonreused.
 
 If (1) fails, produce an admissible centered relation packet with operator amplification. If (2) fails, produce the smallest genuine doubled-parent syndrome whose source mean cannot be represented by its ordered parent flag.
@@ -92,7 +92,7 @@ If (1) fails, produce an admissible centered relation packet with operator ampli
 
 Full report and checker:
 
-`proofnet24/P03-fei/fleet-2026-09-21/account01/B16/20260921T231631Z-relation-borel-oscillation/`
+`proofnet24/P03-fei/fleet-2026-09-21/fleet01/B16/20260921T231631Z-relation-borel-oscillation/`
 
 Checker source SHA-256: `7067190827be0fefd6d3091f8b00b1be7f2113dae1097edec89fd68514df3cf2`  
 Checker stdout SHA-256: `2d9ecea62c1035bc199bf0173123864e3bf27ab7541ff12a4b4a34c2ebccba0a`.

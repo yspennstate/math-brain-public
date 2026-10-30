@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "account": "fleet04",
+  "slot": "B20",
+  "run_id": "20260921T211142Z-b20-auto11",
+  "directive": "FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z",
+  "control_commit": "169538e89831fd03481318af38aa3aa08bae3329",
+  "observed_at_utc": "2026-09-21T21:20:20Z",
+  "publication": "VERIFIED_IN_LIVE_README_AND_SHARED_ORDER",
+  "current_live_account_mapping": {
+    "brain": ["B01","B02","B03","B04","B05","B06","B19","B20"],
+    "benchmark": ["B07","B08","B09","B10","B11"],
+    "FEI": ["B12","B13","B14","B15","B16","B17","B18"]
+  },
+  "prompt_alignment": {
+    "B12_B18_with_joint_pointer_and_role_specific_next_implication": "7/7",
+    "updates_this_run": 0,
+    "reason": "already aligned before this run; no duplicate single-writer mutation"
+  },
+  "later_worker_uptake": {
+    "substantive_confirmed": [
+      {"slot":"B12","evidence_commit":"1caed2bd082ca9b0fc55ab970e4be6df2d91032a","evidence":"FEI interface B substantive start"},
+      {"slot":"B14","evidence_commit":"a2474aa8c1c463c63b694d1615731b9638b11642","evidence":"current FEI substantive start"},
+      {"slot":"B15","evidence_commit":"88990d04da084d70dc88ef0c7d7b3fb420da7bda","evidence":"interface D arithmetic-transfer substantive start"},
+      {"slot":"B16","evidence_commit":"d8ced019133956b1f87df0a514ace65649d480cd","evidence":"interface C substantive start"}
+    ],
+    "login_only_not_promoted": ["B13","B17"],
+    "not_yet_confirmed_at_observation": ["B18"]
+  },
+  "interpretation": "A published directive and updated prompt do not prove later execution. Only observed later substantive starts are counted as uptake.",
+  "privacy_secret_review": "PASS_SCOPED_SANITIZED_NO_CREDENTIALS_NO_SCHEDULER_IDS_NO_MACHINE_PATHS_NO_PRIVATE_TRANSCRIPTS_NO_PRODUCTION_PAYLOAD"
+}

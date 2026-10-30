@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "run_id": "fleet03-B05-20260922T104025Z-fei",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment_id": "FEI-20260922-fleet03-B05",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "id": "FEI-A03B05-C3-EXACT-BARRIER-v1",
+      "status": "SOURCE_REPORTED_PROOF_AWAITING_INDEPENDENT_REVIEW",
+      "statement": "For C3=cone{F2,F4,F*}, where F2=(1-m^2)/4, F4=(1-m^4)/8 and F*=1-m^4-(453773/20000000)(1-m^2)^3, the strong-Numaro payment/centre ratio is at most the exact F* ratio 14089027843865471581106016370764179/13559290218974564299889599750078464. Therefore any fixed-seed repair of the certified strong witness by C3 has centre strictly greater than 6.558445282109503... .",
+      "scope": "Necessary barrier for additive repairs of Gamma^dagger inside the explicit nonnegative conic hull C3; not a lower bound on FEI.",
+      "dependencies": [
+        "fleet04/B13 universal singleton-safe shaped direction",
+        "fleet02/B17 certified strong-prime witness and exact payment currencies"
+      ],
+      "verification": "Analytic convex-combination proof plus exact Fraction arithmetic in CHECK.py; no independent reviewer yet."
+    },
+    {
+      "id": "FEI-A03B05-SHAPE-FAMILY-CEILING-v1",
+      "status": "SOURCE_REPORTED_PROOF_AWAITING_INDEPENDENT_REVIEW",
+      "statement": "Within F_epsilon=1-m^4-epsilon(1-m^2)^3, strong-witness efficiency is strictly increasing in epsilon, while the genuine two-input obstruction forces epsilon<=10625/468288 for universal safety. Hence efficiency is at most 329886005658347604989102040382751/317482521792392773356227464790016 and every fixed-seed repair in this family has centre >6.558445282106016... .",
+      "scope": "Necessary family barrier only. Endpoint universal safety is not asserted.",
+      "dependencies": [
+        "FEI-A03B05-C3-EXACT-BARRIER-v1",
+        "fleet04/B13 exact two-input obstruction"
+      ],
+      "verification": "Exact rational derivative sign and Fraction arithmetic in CHECK.py."
+    },
+    {
+      "id": "FEI-A03B05-SINGLETON-SAFE-INFINITE-BARRIER-v1",
+      "status": "SOURCE_REPORTED_PROOF_AWAITING_INDEPENDENT_REVIEW",
+      "statement": "For the explicit singleton-restriction-safe cone CSR defined by the local realizable singleton inequality, the strong-witness payment/centre ratio is at most 279387/261632. Consequently any fixed-seed repair in CSR has centre >305344778449951/46564500000000 = 6.557458545672153... .",
+      "scope": "Infinite-dimensional local singleton-safe cone only. This repairs the hypothesis of the challenged broad safe-cone argument but does not extend it to every globally gate-safe direction.",
+      "dependencies": [
+        "fleet02/B12 finite tent-orbit arithmetic, used only after local singleton inequalities are assumed directly",
+        "fleet01/B14 and fleet04/B13 literal singleton-restriction telescoping mechanism"
+      ],
+      "verification": "Direct realizable-selector proof of the two local inequalities plus exact orbit fractions; broad global-to-local necessity is not assumed."
+    },
+    {
+      "id": "FEI-A03B05-GLOBAL-TO-LOCAL-NECESSITY",
+      "status": "OPEN",
+      "statement": "Determine whether global gate safety of an additive direction implies, or can be approximated by, the realizable local singleton inequalities defining CSR.",
+      "scope": "First unpaid implication; precisely the missing extension needed to broaden the infinite-dimensional barrier to the full global safe cone.",
+      "dependencies": [
+        "partner fleet04/B05 current necessity assignment"
+      ],
+      "verification": "No compatible completed partner FEI result was available at this run's prepublication scan."
+    }
+  ],
+  "source_pins": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "c50e06733fc1e7f109e20dbb1a0013d67aa71dc7",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f5946fb64d336ed7369de279159643944efc47af",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "96f577fb8f469710897ea8c2a208e927283cb1e9",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T101139Z-infinite-safe-direction-barrier/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "96f577fb8f469710897ea8c2a208e927283cb1e9",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B16/20260922T0913Z-sextic-safe-direction-barrier/REPORT.md"
+    }
+  ]
+}

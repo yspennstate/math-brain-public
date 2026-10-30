@@ -1,0 +1,56 @@
+# A058 stage 2: coherent shared-anchor repair and independent capped-bank review
+
+## exact target, quantifiers, hypotheses and units
+
+Follow B12 lead v2: identify the first two private anchors, derive coherent amplitude pairing, and test an influence price for the full collision/posterior correction. All gates and functions are Boolean signs on the uniform cube; entropy uses bits and includes empty atoms. Exactly one private anchor is removed by identifying two coordinates. COHERENT_FIBER_REPAIR.md gives complete definitions and proof. This operation is a shared-variable contraction, not an actual one-coordinate physical restriction. No physical-query stopping telescope is assigned to the contraction.
+
+Result: the coherent ledger is exact, but every proposed anchor-only price in its listed scope is false on explicit actual Boolean examples. The anchored theorem remains valid; the lead's correction that it is a transfer theorem rather than a debt payment is incorporated. At the review cap, this run repairs the existing A058 version and independently reviews A057's current capped-bank version, rather than opens another broad class candidate. Full FEI remains OPEN.
+
+## sources actually read, revisions and theorem locators
+
+Read BOARD.md, supervisor snapshot 2026-10-12 02:12 UTC, especially B04/B05/B06/B12/B18/B19/B20 updates; B12 STREAM_NOTES.md v2, 2026-10-11 23:30 UTC, in full; own STATUS.md, LEARNED.md and WORKLOG.md; execution protocol 2026-10-11-execution-v2 in full. Read A057 reports and claims from v1 run 20261011T220314Z and stage-2 run 20261012T003930Z, then stage-2 PROOF.md in full. The earlier v1 reviews already hold and were not repeated. Review target is A057-CAPPED-RECENTERED-ACTIVATION-TREE-BANK@1: PROOF.md sections Actual shifted empty-control row, Scalar envelope, Nonreuse, and Complete control suffix. A056's biased interface is reconstructed through the actual activation positive-sector identity, rather than assumed in the reviewer implementation. Existing X004/X009 sources and prior stage's source ledger provide calibration, not new accepted premises. out/SOURCE_RECEIPTS.json pins source bytes/SHA256; focused reads are not asserted to be an audit of every agent report.
+
+## complete derivation or exact first unsupported line
+
+Write a_T=Fhat(T), h_T=product of odd shared incidences and v_T(S)=a_T hhat_T(S). Private frequency phi identifies the first two membership bits by XOR; partners are T and T xor {1,2}. Actual coefficient c=v_T+v_partner. The latent law ell=v^2 pushes to Q=v^2+v_partner^2; actual P=(v+v_partner)^2=Q+delta. Both laws normalize: sum delta=E(h_1 h_2)sum_T a_T a_partner=0 by outer Booleanity. Hence H(P)=H(old)-B_lat-K+R, B_lat=H_ell(T|Y), K=KL(P||Q), R=-sum delta log2 Q. P<=2Q proves 0<=K<=1; posterior fibers of size two give 0<=B_lat<=1.
+
+The bent-core family uses F=-1 only at (+1,-1), children xb_k and -xb_k, and b_k a product of k quadratic two-bit bent gates. Exact values: H(old)=k+2, H(new)=2k, R=k, B_lat=K=1, I_anchor=1, old I_data=k/2 and new I_data=k. Thus positive entropy increment k-2 and R cannot have any finite dimension-independent anchor-only price. A separate identical-literal child control has actual constant output, posterior 1 bit and anchor influence zero, refuting even the literal posterior-only price. This does not refute FEI: the bent family's H/I=2k/(k+1)<2. X004 is replayed as actual xy, H=0, I=2; X009 replays actual bent point splices and their selector influence, without presenting their existing asymptotic as new work.
+
+The correct nonreuse interface counts the lost private pair: Delta I=sum delta(Y)(|phi(T)|+|S|)-L, L=2Pr_ell(both first labels selected). For D_C=CI-H,
+
+    Delta D_C=C Delta I+B_lat+K-R.
+
+The exact first unsupported universal line is a physical, ancestry-valid payment of positive G_C=R-B_lat-K-C Delta I with a conserved terminal deficit. Charging the full new data influence again would reuse the old budget. On the bent family G_2=-2 and on the zero-anchor constant control G_2=0; neither control refutes this properly retained deficit mechanism. The independent direct original/merged Walsh checker also certifies this influence-change identity on 4,224 cases with 75,009 exact assertions in 34.785s; no new universal sign or stopping theorem is claimed.
+
+REVIEW_A057.md independently reconstructs the current cap: combine p^2t log2(1/v) with pt log2(v/t) before discarding the negative variance term; conserve sum w beta^2 and sum w physical influence separately; reserve rp(1-Eu) control influence once. Every complete fresh point-control core-first tree has capped-bank cost <=(4+2/(e ln2))pI(u)+5rp(1-Eu)<=(4+2/(e ln2))I(activation). This HOLDS at source scope; nonempty inner decrement and terminal entropy remain unpaid. No repair was supplied, so A058 is an independent reviewer of that version.
+
+## executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json precedes the pilot and main. Pilot enumerates all 16 two-bit outer gates, all 16 two-bit shared gates, all 4 incidence rows and both second-input signs: 2,048 cases. Main fixes outer arity three in advance: all 256 outer truth tables, all 16 shared gates, all 8 incidence rows and both signs, 65,536 cases. No symmetry reduction or automatic dimension growth. Maximum merged physical dimension is four; first-helper memory estimate 30 MB. The original main reached its 180-second guard after a complete checked prefix of 15,872 cases in 183.997s. No assertion failed. The prefix was saved. A separately frozen remainder spec retained the same domain, cached exact entropy mass histograms and reduced checkpoint I/O, with 70 MB estimate and 600-second guard (under the 30-minute job limit). Its 49,664 disjoint remaining cases passed in 386.248s. No >300 MB job or GPU was started; no memok gate was required.
+
+Commands from A058:
+
+    python -X utf8 runs/20261012T020138Z-fleet05-A058-overlapping-compositions/code/check_coherent.py --mode pilot
+    python -X utf8 runs/20261012T020138Z-fleet05-A058-overlapping-compositions/code/check_coherent.py --mode main
+    python -X utf8 runs/20261012T020138Z-fleet05-A058-overlapping-compositions/code/check_coherent.py --mode main --resume
+    python -X utf8 runs/20261012T020138Z-fleet05-A058-overlapping-compositions/code/review_cap.py
+
+Pilot PASS: 86,509 exact assertions, 0.194s. Complete prefix/suffix union PASS: 65,536 cases, 4,634,797 exact assertions, 570.245s across the two jobs. Integer Walsh coefficients check against actual merged truth tables, dyadic normalization and pointwise P<=2Q are exact, entropy/posterior/KL/cross-surprisal use integer prime-log signatures, and actual physical influences are independently counted cube edges. The all-k counterfamily is proved analytically; k=1,2,3,4 are also exactly replayed. X009 core dimensions 2,4,6 are fixed controls, not dimension escalation.
+
+Review frozen separately in out/REVIEW_FROZEN_SPEC.json: all 16 Boolean two-bit cores, control counts r=1,2,3, both core orders, 96 actual activation trees. Result PASS: 1,010 exact assertions/certificates, 3.734s. This code independently verifies the actual physical positive-sector identity including its negative empty-core pair, influence/variance conservation, and capped cost with rational atanh log and factorial e enclosures. Correct signed division takes all four rational interval corners. Displayed runtimes are diagnostic; no floating-point sign decision is used. Finite checks support the reviewed analytic proof and do not prove it for all dimensions.
+
+The additional deficit identity check was separately frozen in out/DEFICIT_FROZEN_SPEC.json: all two- and three-bit outer gates, all one-row incidences and both signs, with one fixed shared two-bit bent gate (4,224 cases, no symmetry). Direct Walsh transforms of original and merged physical truth tables certify the lost-coordinate formula. Command: python -X utf8 runs/20261012T020138Z-fleet05-A058-overlapping-compositions/code/check_deficit.py. Memory estimate 20 MB and runtime cap 60 seconds; this is an exact identity check, not a sign theorem.
+
+## proof dependencies and changed downstream conclusions
+
+A058 repair uses elementary Fourier/Boolean XOR identities, Parseval, chain rules, and KL; all are reconstructed. The prior anchored theorem is preserved, not refuted. Its complete private tags must not be presented as proof of a payment when tags are removed. The lead's suggested anchor-only payment is now retired at the explicit quantifiers above. No dependent universal accepted claim is known to rely on it. A057 capped-bank v1 has a new local independent ACCEPT_AT_STATED_SCOPE record; shared registries and original source files are unchanged. Its actual fresh-control scope remains intact and cannot be reused for shared controls without common ownership. A059/A060/A091/B12/B20 receive the exact signed deficit and the two distinct controls, so they can replace a scalar anchor price by the named terminal-inclusive residual rather than assume a posterior credit pays all collision.
+
+## one next mathematical action and independent reviewer
+
+Derive G_C and a single common terminal-deficit reserve on an actual two-core priority activation whose events share one physical control coordinate. Keep both actual terminal core entropies, and use physical ancestry so a shared-variable contraction is not silently treated as a coordinate query. This combines the precise interference correction with A057's now independently reconstructed reserve only after its fresh-control multiplicities are rederived. Primary reviewer A091, alternate A090, should independently reconstruct the normalization cancellation, coherent ledger and influence-change loss L. B12 lead may audit the retired anchor-only statement immediately. A058's own repair has not received independent acceptance.
+
+## actual persistence receipts or precise save blocker
+
+Saved required REPORT.md, CLAIMS.json, PROGRESS.json and byte-identical PACKET_DELTA.json with packet_ids=[A058], proof/repair, independent review, frozen specs, helper code, exact outputs, source receipts and rolling files. out/PERSISTENCE.json gives readback SHA256 and byte counts. Every artifact is under 20 MB. Only A058 was written; source trees, shared registries, other agent folders, brain stores and repository state were untouched. No git, mail, windows, GPU or detached process was used. Supervisor copying, mirror verification and adoption remain pending and are not inferred from local acceptance.
+
+Universal bridge: This stage moves the B12 coherent-collision target and C019 by eliminating a false anchor-only payment, deriving the exact terminal-deficit increment Delta D_C=C Delta I+B_lat+K-R including lost-coordinate cost, and independently accepting the capped fresh-control bank at K=4+2/(e ln2). It does not pay generic positive G_C, arbitrary inner entropy or shared-control terminal reserves; the contraction itself is not a physical-query stopping rule. NEXT is the first genuine common-budget two-core shared-control test, because it checks whether the already paid fresh-control price and actual collision correction coexist under one physical ancestry and one terminal reserve, rather than recensus a closed anchored class or charge an already paid data core twice.

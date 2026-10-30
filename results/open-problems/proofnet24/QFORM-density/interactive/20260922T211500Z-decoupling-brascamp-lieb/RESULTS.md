@@ -257,7 +257,7 @@ as eps grows (star_family.py, star_family_output.txt); at n = 3 the largest valu
 - The two-coordinate step of Section 7 is PAIR_LOG_THEOREM.md of that record; FULL_MATRIX_PAIR_EXTENSION.md
   extends it to arbitrary rank, and its random-sign argument (Section 3 there) finds a cross block of norm
   >= ||S||/4 for any zero-diagonal S.
-- The heavy-coordinate obstruction of the account03/B10 handoff is the hub configuration of Section 5.
+- The heavy-coordinate obstruction of the fleet03/B10 handoff is the hub configuration of Section 5.
   Theorem H settles it when the light block is low rank plus diagonal; star + rank one + eps W is the case
   still open.
 

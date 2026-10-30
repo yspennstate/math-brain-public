@@ -1,0 +1,40 @@
+{
+  "version": "A075-third-core-v1",
+  "source_helper_pins": {
+    "agents\\A084\\runs\\20261023T035136Z-fleet03-A084-continuum-parameters\\code\\joint.py": "811799d513545465e930f99690b02dd16983dcfad79b9cf8b8652bae9d7a1a92",
+    "agents\\A084\\runs\\20261023T035136Z-fleet03-A084-continuum-parameters\\code\\arithmetic.py": "88744793fda842dee0f3f2304406ca58ac1754fbcbe6c88ed56d102e22e92382",
+    "agents\\A084\\runs\\20261023T035136Z-fleet03-A084-continuum-parameters\\REPORT.md": "96fabd1cd9dfbb0c3e2c4b2244519d0c3049bd111a50d00adf2bffdc13296e68",
+    "agents\\A084\\runs\\20261023T035136Z-fleet03-A084-continuum-parameters\\CLAIMS.json": "3d3539533f8f82d71fc565133a37651176b946a81f97cd4e38457021a07d8644",
+    "agents\\A084\\runs\\20261023T035136Z-fleet03-A084-continuum-parameters\\out\\JOINT_CASES.json": "18b68fd77b698a7445f598d3ab3195a41d6a6872d3454f09a3fe306536d28ed2"
+  },
+  "family": "Fplus=J(-1,+1,g,g,g,g), original six-bit g negative {0,1,2}, J=-h(x xor1), h negative {0,1,2,4,8,16,32,6,17,40}",
+  "pilot": {
+    "cores": [
+      2,
+      4
+    ],
+    "profile_states": 144
+  },
+  "triples": [
+    [
+      2,
+      3,
+      4
+    ],
+    [
+      2,
+      3,
+      5
+    ]
+  ],
+  "profile_states_per_triple": 1728,
+  "cuts": "for each triple, all three admitted source pairs and all144 pair-profile states; propagate actual minimum carried credit through every source-pair envelope allocation; compare full triple stopping hull",
+  "symmetry": "only literal outer swaps2<->4 and3<->5, checked at all16 outer inputs; no unproved orbit quotient",
+  "arithmetic": "exact rational prime-log forms, exact cancellation, directed192-bit logarithm intervals with proved atanh tail",
+  "memory_estimate_mb": 240,
+  "pilot_max_seconds": 55,
+  "maximum_runtime_per_triple_seconds": 300,
+  "automatic_dimension_escalation": false,
+  "root_credit": "same exact -S(Fplus), all stopped full functions and original donor bookings unchanged",
+  "failure_policy": "save first unresolved comparison/runtime or credit failure; no theorem inferred from floats or absent failures outside declared finite domain"
+}

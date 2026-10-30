@@ -1,0 +1,22 @@
+{
+  "command": [
+    "python",
+    "-B",
+    "-X",
+    "utf8",
+    "lean_check.py",
+    "--core",
+    "--file",
+    "agents\\A035\\runs\\20261027T003541Z-fleet04-A035-signed-cancellation-countersearch\\code\\Cauchy.lean",
+    "--target",
+    "a035_cleared_cauchy",
+    "--reviewed-sha256",
+    "551ec6a5ce48cb002eaa5bac7c053b078e5aa296de6c0f53e94b6137bd7e961d",
+    "--timeout",
+    "45",
+    "--json"
+  ],
+  "exit_code": 2,
+  "stdout": "{\n  \"result\": {\n    \"status\": \"RUNTIME_UNVERIFIED\",\n    \"formal_target_verified\": false,\n    \"target\": \"a035_cleared_cauchy\",\n    \"source_sha256\": \"551ec6a5ce48cb002eaa5bac7c053b078e5aa296de6c0f53e94b6137bd7e961d\",\n    \"source_review_assertion\": \"551ec6a5ce48cb002eaa5bac7c053b078e5aa296de6c0f53e94b6137bd7e961d\",\n    \"target_kind\": \"UNVERIFIED\",\n    \"target_identity_verified\": false,\n    \"axioms\": null,\n    \"axiom_name_trees\": null,\n    \"allowed_axioms\": [\n      \"Classical.choice\",\n      \"Quot.sound\",\n      \"propext\"\n    ],\n    \"translation_fidelity\": \"UNVERIFIED\",\n    \"mathematical_falsity_established\": false,\n    \"threat_model\": \"Explicitly reviewed source and trusted compiler/dependencies; not a sandbox\"\n  },\n  \"compiler_exit_code\": null,\n  \"compiler_output\": \"\",\n  \"seconds\": 47.091,\n  \"compiler_sha256\": \"af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d\",\n  \"generated_sha256\": \"d29f5be21601c9867b23f154d0132068694ce2fc3f322b7ddf513a4cdd121676\",\n  \"environment\": {},\n  \"evidence_integrity\": true,\n  \"source_path\": \"agents\\\\A035\\\\runs\\\\20261027T003541Z-fleet04-A035-signed-cancellation-countersearch\\\\code\\\\Cauchy.lean\",\n  \"receipt_directory\": \"agents\\\\A035\\\\runs\\\\20261027T003541Z-fleet04-A035-signed-cancellation-countersearch\\\\out\\\\lean\\\\00994dbcfb9e474b84424273954f225c\"\n}\n",
+  "stderr": ""
+}

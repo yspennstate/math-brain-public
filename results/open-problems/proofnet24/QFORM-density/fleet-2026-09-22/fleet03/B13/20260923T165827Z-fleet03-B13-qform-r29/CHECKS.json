@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T165827Z-fleet03-B13-qform-r29",
+  "claim": "QFORM-BIHUB-VOLUME-CASCADE-CLOSURE-v1",
+  "constants": {
+    "C3": 25.70102107534928,
+    "kappa": 21.400807898015497,
+    "stage1_receiver_constant": 9.39913188784886,
+    "stage2_receiver_constant_before_heavy_factor": 5.345392308842036,
+    "stage1_contradiction_factor": 0.4391951898563813,
+    "stage2_contradiction_factor": 0.2803632474340551,
+    "stage3_contradiction_factor": 0.2497752577526625
+  },
+  "identities_checked": [
+    "C3 = 9*sqrt(3e)",
+    "kappa = C3/3^(1/6) = 3^(7/3)*sqrt(e)",
+    "stage1 = 3*2^(7/6)*e^(1/3)/kappa < 1",
+    "stage2 = 6/kappa < 1",
+    "stage3 = 3*2^(5/6)/kappa < 1"
+  ],
+  "result": "QFORM_B13_R29_VOLUME_CASCADE_CONSTANTS_PASS",
+  "note": "Numerical arithmetic checks only; the proof is analytic."
+}

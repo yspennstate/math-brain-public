@@ -1,0 +1,22 @@
+fleet03/B04 r20 finite arithmetic check
+
+sqrt(2*pi*e) = 4.132731354122493
+2*sqrt(2)*(2*pi*e)^(1/4) = 5.749943550416816
+example bound for a=2, sigma1=sigma2=3 = 2.3474046247213805
+rigorous singular-value lower certificate:
+  2 - (1+sqrt(65))/16 = (31-sqrt(65))/16 = 1.4336088907313407 > 1
+
+Numerical check only (not used as target proof):
+eigenvalues(A_*) =
+  -3.36819688
+  -2.64036817
+   1.92353572
+   2.69142732
+   3.51860200
+minimum absolute numerical eigenvalue = 1.92353572
+
+Exact proof certificate in REPORT.md uses:
+- B=3 H2 with H2 orthogonal, hence all singular values of [[0,B],[B^T,0]] are 3;
+- ||C||=1/sqrt(2), hence s_min(S)>=3-1/sqrt(2)>2;
+- square-overlap perturbation norm=(1+sqrt(65))/16;
+- Weyl: s_min(A_*) >= (31-sqrt(65))/16 >1.

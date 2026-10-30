@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T195244Z-fleet03-B04-auto11-r40",
+  "status": "PASS",
+  "check_marker": "QFORM_B04_R40_CHECK_PASS",
+  "exact": {
+    "characteristic_polynomial": "(lambda^2-5)(lambda^3-5lambda^2-9lambda+5)",
+    "cubic_signs": {"f(-2)": -5, "f(-1)": 8, "f(6)": -13, "f(7)": 40},
+    "compound_overlap_masses_C0_C1_C2_C3": [0, 484, 1728, 198],
+    "anchored_C1_masses": [84, 124, 76, 124, 76],
+    "pivot_coordinate_one_based": 2,
+    "pivoted_Schur_disjoint_E2_mass_D": 124,
+    "chosen_residual_cut": {"J": [1,5], "K": [3,4]},
+    "chosen_cross_block": [[0,-2],[-3,-5]],
+    "chosen_cross_determinant": -6,
+    "chosen_E2": 36
+  },
+  "constants": {
+    "sharp_E2_Fourier_K": 10.567016002364247,
+    "L2_density_squared_coefficient": 6.727171322029716,
+    "one_copy_half_Riesz_coefficient": 10.374716437208077,
+    "pivoted_C1_front_coefficient": 14.67206469127474,
+    "explicit_example_uniform_bound": 6.628853526064557,
+    "explicit_example_exact_rank2_peer_comparison": 3.6144080144393793
+  },
+  "notes": [
+    "All determinant and compound-mass assertions were checked with exact rational arithmetic.",
+    "The characteristic-polynomial factorization was certified by exact determinant evaluation at eight points, more than the six required for a degree-five polynomial identity.",
+    "The numerical constants are evaluations of exact expressions stated in REPORT.md."
+  ]
+}

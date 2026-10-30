@@ -1,0 +1,21 @@
+fleet03/B07 QFORM r18 deterministic checks
+
+1. Product-L2 layer cake:
+   int_0^(1/2) 4 ds = 2
+   int_(1/2)^infinity s^(-2) ds = 2
+   total = 4, hence ||p_(XY)||_2 <= 2 for cap-one independent X,Y.
+
+2. Scaling:
+   ||p_(kappa X Y)||_2 <= 2 sqrt(M N / |kappa|).
+
+3. Clean two-star reserve with ||r||^2||c||^2 > 1/384 and normalized-bank caps <= sqrt(2):
+   ||p_R||_infinity < 2 sqrt(2) 384^(1/4)
+                    = 12.520676640586299.
+
+4. General density-cap to half-Riesz conversion:
+   H_(1/2) <= inf_rho [4 M sqrt(rho)+rho^(-1/2)]
+            = 4 sqrt(M), attained at rho=1/(4M).
+   For M=12.520676640586299:
+   H_(1/2) < 14.153827265067946.
+
+STATUS=PASS

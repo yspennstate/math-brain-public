@@ -1,6 +1,6 @@
 """A validated ambient status is judged the same before and after turn/completed.
 
-Scheduled audit account03/B05, B05-R79-AMBIENT-EVENT-ORDER-SENSITIVE-ISOLATION-056: the three suppressed ambient
+Scheduled audit fleet03/B05, B05-R79-AMBIENT-EVENT-ORDER-SENSITIVE-ISOLATION-056: the three suppressed ambient
 methods were inert before the turn completed and a policy violation one record later, by position alone. Their
 payload checks still apply wherever they sit, and item, tool and active-status events after completion stay refused.
 """

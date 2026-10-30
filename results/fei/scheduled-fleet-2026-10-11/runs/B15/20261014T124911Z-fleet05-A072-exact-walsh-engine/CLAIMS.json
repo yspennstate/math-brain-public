@@ -1,0 +1,81 @@
+[
+  {
+    "claim_id": "A072-ONEFLIP-RARE-ESCAPE-PRICE",
+    "version": 1,
+    "exact_statement": "For every nonconstant uniform Boolean g with 0<p=P(g=-1)<=1/16, iteration of J=-h(x xor1) on six disjoint copies, stopped at the first minority probability above1/16, terminates at G with 1/16<P(G=-1)<1/4, E(G)>=E(g)-(3/16)log2(192e)>E(g)-111/64 and H(G)/I(G)<=H(g)/I(g)+45/22. E=min over relevant physical coordinates of H(S_i|S_-i)/Inf_i. Every step retains H(F)=Q H(g)+C, I(F)=Q I(g), C=H_p(J)-Q h2(4p(1-p)).",
+    "hypotheses": [
+      "h is negative exactly on {0,1,2,4,8,16,32,6,17,40} in little-endian six-bit indexing.",
+      "All six copies at each step have disjoint physical inputs; entropy units are bits."
+    ],
+    "statement_sha256": "f6539baf29e435f3a61b32a470d2ad37880e47851b70d151c5e15269ce66e356",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "~\\brain_workers\\FEI100_20261011\\agents\\A072\\runs\\20261014T020611Z-fleet05-A072-exact-walsh-engine\\PROOF.md",
+      "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T060751Z-fleet05-A074-independent-reproducer\\INDEPENDENT_PROOF.md"
+    ],
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A074",
+        "kind": "Independent direct bitset-character spectra versus binary Moebius occupied-pattern expansion; separate combinatorial edge-isoperimetry proof; analytic Phi and signed entropy telescope reconstruction",
+        "result": "ACCEPT unchanged statement/hypotheses/version/hash;17742 exact checks,16384 physical coefficient matches,all6 unequal block roles,arbitrary-dimensional analytic loss<111/64 and retained H/I upper bill<=45/22",
+        "reviewed_at": "2026-10-14T06:22:24.416232+00:00",
+        "artifacts": [
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T060751Z-fleet05-A074-independent-reproducer\\INDEPENDENT_PROOF.md",
+          "~\\brain_workers\\FEI100_20261011\\agents\\A074\\runs\\20261014T060751Z-fleet05-A074-independent-reproducer\\out\\VALIDATION.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A075",
+      "A089",
+      "A074",
+      "A092",
+      "B15"
+    ]
+  },
+  {
+    "claim_id": "A072-BOOKED-PHYSICAL-OWNER-TRANSFER",
+    "version": 1,
+    "exact_statement": "Let h on6 bits be negative on{0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor1), and g6 negative on{0,1,2}. In actual F=J(g6^6) on disjoint uniform blocks, take the zero-spine block0 query order[2,0,1,3,4,5], stopping at each nonzero child. Preserve separately the exact A089 root/second-query K4 debit allocations (D0=2e1, then each label proportional to q0 S4 of the two grandchildren), and use fixed K=9/2 for later signed query increments. The explicit full-child-surplus proportional allocation of PROOF.md preserves every old label, leaves positive balances at all13 states and7 final terminals, and at tag00000* pays selected-to-outer transfer T in(1/10,11/100) despite other-owner margin M<-1/10, leaving more than12/25 there. The final mean remaining balance equals S_(9/2)(F)-(1/2)[Inf_root+(1/2)Inf_second]>11/10. Alternatively replace only the last block0 query by block1 coordinate0, retaining the SAME incoming labels and5 stopped siblings. Both new core children are nonconstant (bias1/16 and1/32), the full rate9/2 query excess is positive and is paid with positive child balances; the same7-terminal mean remaining bound>11/10 holds. These are alternative finite histories, not simultaneous debits or a universal FEI assertion.",
+    "hypotheses": [
+      "Actual finite uniform Boolean sign functions and physically disjoint blocks; entropy and account amounts in bits.",
+      "Tags give original coordinate order0..5; every query has true conditional reach1/2, including the dummy third query.",
+      "Exact original K4 debit labels are defined by full entropy decrements including C; later rates are fixed at the previously proposed9/2, without a rate sweep.",
+      "Full S_K positivity and per-owner capacities are independently checked on the stated finite states; no arbitrary-core eligibility assumption or physical all-history payment is asserted."
+    ],
+    "statement_sha256": "97aec4ae0b2c60a06945a0779a0f32f981a19c1d74bb83fec9d227501eced624",
+    "contributors": [
+      "A072"
+    ],
+    "proof_source": [
+      "PROOF.md",
+      "out/ledger.json",
+      "out/SOURCE_AND_LABEL_AUDIT.json",
+      "out/heterogeneous.json"
+    ],
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_FINITE_EXACT_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A075",
+      "A089",
+      "A074",
+      "A092",
+      "A084",
+      "B15",
+      "B20"
+    ]
+  }
+]

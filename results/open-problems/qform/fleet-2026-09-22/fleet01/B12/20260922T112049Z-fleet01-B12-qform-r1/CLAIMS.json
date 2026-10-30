@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T112049Z-fleet01-B12-qform-r1",
+  "full_target_status": "OPEN_NOT_PROVED",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "claims": [
+    {
+      "id": "QFORM-PRODUCT-L3-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "For independent real X,Y with probability densities bounded by 1, the density of XY satisfies ||p_{XY}||_3 <= 2^(8/3)."
+    },
+    {
+      "id": "QFORM-HYPERBOLIC-L3-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "For U=2aXY+bX+cY with a nonzero and X,Y independent densities bounded by 1, ||p_U||_3 <= 4 |a|^(-2/3), uniformly in b,c."
+    },
+    {
+      "id": "QFORM-HYPERBOLIC-PAIR-PLUS-SQUARE-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "If a real symmetric quadratic form has, in three original independent coordinates, principal block [[0,a,0],[a,0,0],[0,0,lambda]] with |a|,|lambda|>=1, while all couplings to remaining coordinates are arbitrary, then its value on independent inputs with densities <=1 has density bounded by 8 |a|^(-2/3)|lambda|^(-1/3) <=8."
+    }
+  ],
+  "consumed_sources": [
+    {
+      "source": "fleet03/B17",
+      "commit": "c64fcff680b0a252a3c92002c60eedba02bbb9ec",
+      "path": "qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md",
+      "use": "coordinate-diagonal pi theorem and pointwise-decay correction; used to avoid duplicate diagonal work and to formulate the complementary non-diagonal block"
+    },
+    {
+      "source": "fleet01/B08",
+      "commit": "aa81e06a1ea739fc6ec7895469ce9f8551b7d840",
+      "path": "proofnet24/quadratic-form-bounded-density/fleet01/B08/20260922T110731Z-fleet01-B08/REPORT.md",
+      "use": "square-density endpoint ||p_{lambda Z^2+dZ}||_{3/2} <= 2 |lambda|^(-1/3)"
+    }
+  ],
+  "next_unpaid_implication": "Extract a product-preserving controlled coordinate block from the three-large-spectral-direction hypothesis, or prove a nonlinear Brascamp-Lieb estimate for the generic coupled three-coordinate conditional quadratic polynomial."
+}

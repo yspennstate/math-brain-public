@@ -1,0 +1,23 @@
+Exact verification replay for fleet03/B08 MOC4 r11b
+
+The companion verifier logic was executed in this invocation with exact integer/Fraction arithmetic.
+Relevant output:
+
+UPPER_FACET_MAX 44569469 PERM 4321
+THREE_U 135459685
+UPPER_FACET_VIOLATION 1751278 => u(F)-M = 1751278/3
+FOREST_GIVENS_TREE_WORDS 96
+FOREST_GIVENS_NONZERO_MU_TERMS 768
+FOUR_CYCLE_MIN_MU -186624/9765625
+PASS
+
+Checks covered:
+- 24 distinct exact Gaussian-integer permutation products and 24 distinct real parts for the upper-facet witness;
+- unique maximum at permutation 4321;
+- exact positive exceptional-facet gap 1751278/3;
+- all 16 labeled K4 spanning trees and all six orders of their three edges (96 symbolic real-Givens words);
+- exactly eight nonzero quasidistribution monomials per tree word, all coefficient +1 with even gate-variable exponents;
+- symbolic total quasidistribution equal to product_k(c_k^2+s_k^2);
+- exact rational four-cycle word with total quasidistribution one and minimum coefficient -186624/9765625.
+
+The finite symbolic checks support the proof in REPORT.md. The arbitrary-complex-phase forest-Givens theorem is established there by induction, not inferred from the real symbolic census.

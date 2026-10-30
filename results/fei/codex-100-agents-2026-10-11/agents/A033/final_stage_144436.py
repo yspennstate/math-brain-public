@@ -4,10 +4,10 @@ import json, hashlib, time, copy
 
 BASE=Path(__file__).resolve().parent
 if BASE.name=='code': BASE=BASE.parents[2]
-RUNID='20261023T144436Z-account03-A033-derivative-hierarchy'
+RUNID='20261023T144436Z-fleet03-A033-derivative-hierarchy'
 RUN=BASE/'runs'/RUNID
-SRC=BASE.parent/'A031'/'runs'/'20261023T135224Z-account03-A031-convolution-identity'
-SRC35=BASE.parent/'A035'/'runs'/'20261023T132111Z-account03-A035-signed-cancellation-countersearch'
+SRC=BASE.parent/'A031'/'runs'/'20261023T135224Z-fleet03-A031-convolution-identity'
+SRC35=BASE.parent/'A035'/'runs'/'20261023T132111Z-fleet03-A035-signed-cancellation-countersearch'
 def sha(b): return hashlib.sha256(b).hexdigest()
 def read(p): return p.read_text(encoding='utf-8-sig')
 def write(p,s): p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8')
@@ -159,7 +159,7 @@ write(RUN/'REPORT.md',report)
 write(BASE/'STATUS.md','STATE: Final stage saved: A031 sharp fine tariff/A035 arbitrary-mean criterion independently HOLD; A031 accepted A033 criterion unchanged; exact certificates PASS; full FEI OPEN.\nNEXT: A096/A097 specify REQUIRED compatible arbitrary-core class and SAME unused original payer, or noncircular O(I(core)) initial reference; A094 audits old KL/JS/occupancy/full terminals.\n')
 for name,line in [('WORKLOG.md',f'\n2026-10-23 final14:44 stage: consumed fresh14:50 board; avoided duplicating A035 generalization. Independently reconstructed A031 optimal quantitative tariff and A035 criterion without repair; exact bounded certificates PASS. Incoming A031 acceptance of prior A033 theorem preserved. Campaign deadline passed before source intake; saved final scoped handoff, no new broad search. Full FEI OPEN. Brain wake degraded and disclosed. Run{RUNID}.\n'),('LEARNED.md','\n2026-10-23 final: A031 quantitative bound (M-L)ln2>=sum_double ||r+kappa+ +r-kappa- -2m||1^2/[4 sum r_tau^2/a_tau]+sum_single a_tau*(sum(r_tau*kappa_tau-2m)_+)^2/r_tau^2 independently reconstructed. Universal multiplier1 sharp even actual Boolean f=x*pointdefect2, but sharpness full transaction0 after old KL. A035 already proves arbitrary-mean equality criterion. If both prescribed profiles equal inherited coarse mean, unchanged full references are feasible, so min net<=-actual occupancy KL. A positive fine gap cannot alone be a new required debit.\n')]:
  with (BASE/name).open('a',encoding='utf-8') as f:f.write(line)
-sourcepaths=[SRC/'DERIVATION.md',SRC/'CLAIMS.json',SRC35/'DERIVATION.md',BASE/'runs'/'20261023T123045Z-account03-A033-derivative-hierarchy'/'CLAIMS.json',Path(r'BOARD.md'),Path(r'claude\B07\STREAM_NOTES.md')]
+sourcepaths=[SRC/'DERIVATION.md',SRC/'CLAIMS.json',SRC35/'DERIVATION.md',BASE/'runs'/'20261023T123045Z-fleet03-A033-derivative-hierarchy'/'CLAIMS.json',Path(r'BOARD.md'),Path(r'claude\B07\STREAM_NOTES.md')]
 js(RUN/'out'/'SOURCE_MANIFEST.json',[{'path':str(p),'sha256':sha(p.read_bytes())} for p in sourcepaths])
 assert set(progress)==set(x.split(' (')[0] for x in proto['required_per_run']['progress_fields'])
 for c in selected:assert set(c)==set(proto['required_per_run']['claim_fields'])

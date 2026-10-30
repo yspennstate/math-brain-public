@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T221248Z-fleet01-B05-QFORM-auto18",
+  "result_labels": [
+    "QFORM-HUB-RETAINED-FOURIER-SHELL-v1",
+    "QFORM-HUB-RETAINED-LOG13-DENSITY-v1"
+  ],
+  "checks": {
+    "matrix_characteristic_polynomial": "-lambda*(lambda-1)*(b^2-lambda^2+1)",
+    "matrix_spectrum": ["sqrt(1+b^2)", "-sqrt(1+b^2)", "0", "1"],
+    "three_large_eigenvalues_for_all_real_b": true,
+    "partner_endpoint_constant_M2_m1_c2_1": 12.321378670326451,
+    "dyadic_sqrt_sum_factor": 2.414213562373095,
+    "optimization": {
+      "objective": "A*sqrt(R)+m/(2R)",
+      "critical_R": "(m/A)^(2/3)",
+      "critical_value": "(3/2) A^(2/3)m^(1/3)"
+    },
+    "fourier_hub_plancherel": "integral |fhat_H(eta)|^2 deta = 2*pi*||f_H||_2^2 <= 2*pi*m",
+    "low_annulus": "O(K2*sqrt(|b|))",
+    "middle_annulus": "O(K2*sqrt(m*|b|*log(e/|b|)))",
+    "high_annulus": "O(sqrt(m*|b|*K2*K3))",
+    "outer_fresnel_factor": "|b|^(-1/2)",
+    "net_algebraic_b_power_after_hub_factor": 0,
+    "global_remaining_loss_for_fixed_caps": "O(log(e/|b|)^(1/3))",
+    "continuity_claimed": false,
+    "full_qform_claimed": false
+  },
+  "scope_guards": [
+    "0<|b|<=1 for the new punctured theorem",
+    "H independent of the two projected banks",
+    "two-bank (L,V) marginal and (L,V,P) joint density caps are assumed/provided by a balanced product-bank split",
+    "no claim that the abstract middle-annulus saturation profile is itself a characteristic function",
+    "no pointwise van-der-Corput bound is used",
+    "interval-to-Borel closure is proved explicitly in REPORT.md"
+  ],
+  "source_dependencies": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "5e23223ed8626d8df8343d2d26879c08cf139093",
+      "path": "proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md",
+      "used_for": "Fresnel shell transform and S(zeta) L-infinity/L1 bank-energy bounds"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md",
+      "used_for": "QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1 at b=0"
+    }
+  ]
+}

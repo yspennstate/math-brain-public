@@ -1,0 +1,257 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), slot B14, 2026-09-22T22:06:04Z.
+attacking: translation-uniform leakage averaging—compress any zero-self cross branch to its top two physical cross singular directions before paying the critical reciprocal coefficient.
+
+# fleet02/B14 — top-d cross averaging and a radial leakage localization compiler
+
+**Run:** `20260922T220604Z-fleet02-B14-QFORM-r21`  
+**Programme:** `QFORM-DENSITY-3EIG-20260922`  
+**Assignment:** Translations and localization / complementary constructions and source-valid counterexamples  
+**Execution:** `WITHOUT_VERIFIED_BRAIN`  
+**Status:** `NEW SUPPORTING TARGET-LEVEL THEOREMS / FULL QFORM OPEN`.
+
+## 1. First unpaid implication attacked
+
+The preceding B14 run proved a translation-uniform negative-moment theorem for arbitrary product-linear images and used it to average singular-block leakage before a worst-case supremum. The remaining structural debt was to turn that compiler into a concrete branch that does not deteriorate when a cross block has many tiny singular values.
+
+The key change here is to **project the random coefficient to only its strongest d-dimensional physical cross image before taking a reciprocal norm**. Because projection can only decrease the coefficient norm, this produces an upper bound, while the product-safe linear-image theorem pays only the selected singular values. In particular, a rank-two cross block is enough: no determinant of the entire cross block and no product of all nonzero singular values is needed.
+
+This directly addresses arbitrary shifts and support geometry: the coefficient translation is arbitrary, and the estimate uses only cap-one product structure. No moments, centering, support diameter, fragment count or tail bound enters.
+
+## 2. Source-pinned inputs actually used
+
+### 2.1 Previous B14 negative-moment theorem
+
+`QFORM-LINEAR-IMAGE-NEGATIVE-MOMENT-v1` is proved at
+
+`yspennstate/math-open-problems@bb8c96bbe6b2eca1ed7aa4aa5554e9863b43238a`,
+
+path
+
+`proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T210120Z-fleet02-B14-QFORM-r21/REPORT.md`.
+
+For independent cap-one coordinates `X`, a rank-d linear map `L`, `G=LL^T`, arbitrary translation `a`, and `0<alpha<d`, it proves
+
+`E |LX-a|^{-alpha}
+ <= [d/(d-alpha)] v_d^{alpha/d} e^{alpha/2}
+    [det(LL^T)]^{-alpha/(2d)}`.                                  (2.1)
+
+The proof uses the completed product-safe projection density cap and radial bathtub rearrangement; it preserves original-coordinate product provenance.
+
+### 2.2 Assigned partner fleet03/B14 r19
+
+The newest completed assigned-partner theorem is fleet03/B14 run
+`20260922T213821Z-fleet03-B14-QFORM-r19`, canonical proof
+
+`yspennstate/math-open-problems@ce3ad39f7e4be58b1339ced5fe1f17ca2720fe9d`,
+
+path
+
+`proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T213821Z-fleet03-B14-QFORM-r19/REPORT.md`.
+
+I use two of its completed facts.
+
+1. `QFORM-WEIGHTED-FOURIER-EXTREME-LOCALIZATION-v1`: every nonnegative weighted Fourier budget has exactly the same worst-case supremum over all cap-one product laws as over compact finite-fragment unit-indicator product laws.
+2. Its small-ball corollary: for every measurable polynomial `P`, the exact worst-case interval-density constant over all cap-one product laws equals that over compact finite-fragment extreme product laws.
+
+Thus proving any bound below on the finite-fragment extreme class transfers to arbitrary shifts, distant fragments and unbounded supports with **the identical constant**. The proof below is in fact direct for arbitrary laws, but this partner theorem supplies the requested zero-loss localization interface for the exact same branch and for any later weighted-Fourier refinement.
+
+### 2.3 Corrections preserved
+
+No argument below uses independence after rotation, arbitrary-joint rank-three coarea, positive moments of conditional projection-density suprema, pointwise law-uniform oscillatory decay, a bounded-diameter or bounded-fragment-count reduction, fragmentwise renormalization, or a single uniformly good physical minor. The rank-one obstruction in Section 6 is a counterexample to an intermediate smoothing extension, not a counterexample to QFORM.
+
+## 3. Radial leakage bathtub compiler
+
+The power theorem (2.1) is one instance of a more useful exact localization inequality.
+
+### Theorem 3.1 — `QFORM-RADIAL-LEAKAGE-BATHTUB-v1`
+
+Let `X=(X_1,...,X_n)` have independent densities bounded by one. Let `L:R^n->R^d` have rank `d`, set `G=LL^T`, and let `a in R^d` be arbitrary. Put
+
+`Y=G^{-1/2}(LX-a)`.
+
+Let `psi:[0,infinity)->[0,infinity]` be nonincreasing and Borel. Define
+
+`M_d=e^{d/2}` and `r_d=(M_d v_d)^(-1/d)=e^{-1/2}v_d^{-1/d}`.
+
+Then
+
+`boxed:
+ E psi(|Y|)
+ <= M_d d v_d int_0^{r_d} psi(r) r^{d-1} dr. `                 (3.1)
+
+The estimate is uniform in `a`, hence in arbitrary deterministic shifts generated by outside coordinates. It has no support, moment, location or fragment parameter.
+
+### Proof
+
+The normalized map `T=G^{-1/2}L` satisfies `TT^T=I_d`. By the completed product-safe projection theorem, `TX` has a probability density bounded by `M_d=e^{d/2}`. Translation by `G^{-1/2}a` does not alter that cap. Among all probability densities `g<=M_d`, the integral of a radial nonincreasing kernel `psi(|y|)` is maximized by `g=M_d 1_{|y|<=r_d}`, where `M_d v_d r_d^d=1`; this is the bathtub principle. Polar integration gives (3.1). QED.
+
+### Power and logarithmic specializations
+
+For `psi(r)=r^{-alpha}` with `0<alpha<d`, (3.1) recovers exactly
+
+`E |Y|^{-alpha}
+ <= [d/(d-alpha)] v_d^{alpha/d} e^{alpha/2}.`                    (3.2)
+
+For the critical logarithmic kernel `psi(r)=log_+(rho/r)`, define `a_rho=min(rho,r_d)`. Then
+
+`boxed:
+ E log_+(rho/|Y|)
+ <= M_d v_d a_rho^d [ log(rho/a_rho)+1/d ].`                    (3.3)
+
+Equivalently,
+
+- if `rho<=r_d`, the right side is `(rho/r_d)^d/d`;
+- if `rho>=r_d`, it is `log(rho/r_d)+1/d`.
+
+Thus even in image dimension one a logarithmic leakage singularity is uniformly integrable after normalization, whereas a reciprocal singularity is exactly critical there. This distinction is useful for the live pair-log/heavy-star branches.
+
+## 4. Top-d cross averaging theorem
+
+Consider a split into disjoint original-coordinate blocks `U in R^m` and `V in R^k`, all coordinates mutually independent with densities bounded by one. Let
+
+`Q(U,V)=2 U^T C V + R(V) + ell_U^T U + ell_V^T V + c`,          (4.1)
+
+where `C` is an arbitrary real `m x k` matrix, `R` is any measurable function of `V` (in particular an arbitrary quadratic form), and the affine coefficients are arbitrary. There is **no quadratic self-term in U**. Let the nonzero singular values of `C` be
+
+`s_1(C)>=...>=s_r(C)>0`.
+
+### Theorem 4.1 — `QFORM-TOP-d-CROSS-AVERAGING-v1`
+
+For every integer `d` with `2<=d<=r`, the law of `Q` has an essentially bounded density satisfying
+
+`boxed:
+ ||p_Q||_infinity
+ <= c_d [prod_{j=1}^d s_j(C)]^{-1/d},
+ c_d = [e d/(2(d-1))] v_d^{1/d}.`                               (4.2)
+
+Consequently
+
+`boxed:
+ ||p_Q||_infinity
+ <= min_{2<=d<=r}
+    c_d [prod_{j=1}^d s_j(C)]^{-1/d}.`                           (4.3)
+
+In particular, **only the top two cross singular values are needed**:
+
+`boxed:
+ ||p_Q||_infinity
+ <= e sqrt(pi) / sqrt(s_1(C)s_2(C))
+ < 4.819 / sqrt(s_1(C)s_2(C)).`                                  (4.4)
+
+This is uniform over `R`, all affine shifts, all input supports, arbitrary distant fragments, unbounded supports and all moments.
+
+### Proof
+
+Condition on the original outside block `V=v`. Because no `U`-self quadratic term is present,
+
+`Q | (V=v) = q(v)^T U + const(v),
+ q(v)=2Cv+ell_U`.                                                (4.5)
+
+For any deterministic nonzero coefficient vector `q`, the product-safe one-dimensional projection theorem gives
+
+`||p_{q^T U}||_infinity <= sqrt(e)/|q|`.                          (4.6)
+
+The zero set of `q(V)` has probability zero once we project to any rank-d cross image below, so the corresponding interval inequality may be averaged directly. Hence
+
+`||p_Q||_infinity <= sqrt(e) E |2CV+ell_U|^{-1}.`                (4.7)
+
+Let `P_d` be orthogonal projection onto the span of the top `d` left singular vectors of `C`. Since orthogonal projection decreases norm,
+
+`|2CV+ell_U|
+ >= 2 |P_d C V + (1/2)P_d ell_U|`.                               (4.8)
+
+Identify `Range(P_d)` with `R^d` and put `L=P_d C`. This rank-d map has singular values exactly `s_1(C),...,s_d(C)`, so
+
+`det(LL^T)=prod_{j=1}^d s_j(C)^2`.                               (4.9)
+
+Apply (2.1) with `alpha=1` and arbitrary translation `-(1/2)P_d ell_U`:
+
+`E |P_d C V +(1/2)P_d ell_U|^{-1}
+ <= [d/(d-1)] v_d^{1/d} e^{1/2}
+    [prod_{j=1}^d s_j(C)]^{-1/d}.`                              (4.10)
+
+Combining (4.7)--(4.10) gives (4.2). Taking the minimum gives (4.3); for `d=2`, `v_2=pi`, giving (4.4). QED.
+
+A measure-theoretically clean small-ball formulation avoids any concern at coefficient zero: for every interval `I`, conditionally on `V=v`,
+
+`P(Q in I | V=v) <= |I| sqrt(e)/|q(v)|`
+
+for almost every `v`; the expectation on the right is finite by (4.10). Thus `P(Q in I)<=C|I|` for all intervals and Lebesgue domination gives the stated density bound.
+
+## 5. Target-level matrix corollary
+
+Let an ambient symmetric matrix have the original-coordinate block form
+
+`A = [[0,C],[C^T,D]]`,                                            (5.1)
+
+where `D` is arbitrary. Let the input coordinates be arbitrary independent cap-one laws. If `s_2(C)>0`, then
+
+`boxed:
+ ||p_{X^T A X + ell^T X + c}||_infinity
+ <= e sqrt(pi) [s_1(C)s_2(C)]^{-1/2}.`                           (5.2)
+
+More generally all bounds (4.2)--(4.3) apply. This strictly strengthens the earlier B14 zero-self cross theorem that paid the geometric mean of **all** nonzero singular values: adding arbitrarily many tiny cross singular values can no longer worsen the bound. The branch depends only on a strong two-dimensional cross image.
+
+For example, if `s_1(C),s_2(C)>=1`, then
+
+`||p_Q||_infinity <= e sqrt(pi) <4.819`,                          (5.3)
+
+regardless of the rank, size or conditioning of the remaining cross directions and regardless of the entire outside self-block `D`.
+
+This is a genuine target-level supporting theorem: if a product-preserving structural reduction from `s_3(A)>=1` exposes a zero-self original-coordinate block with `s_1(C)s_2(C)>=c_0>0`, that branch closes immediately with universal constant `e sqrt(pi)/sqrt(c_0)`.
+
+## 6. Sharp obstruction to rank-one reciprocal smoothing
+
+The requirement of at least two leakage dimensions is not an artifact of the proof. Let `X,Y` be iid Uniform[-1/2,1/2] and
+
+`Q=2XY`.                                                         (6.1)
+
+This is exactly a zero-self cross form with cross rank one. Its density has the familiar logarithmic singularity at zero; equivalently
+
+`E |Y|^{-1}=infinity`.                                           (6.2)
+
+Therefore no universal extension of (4.4) can replace `s_1 s_2` by only a positive rank-one singular value while retaining a raw reciprocal-coefficient argument. This is an intermediate-mechanism obstruction, not a counterexample to the three-large-eigenvalue QFORM conjecture.
+
+The radial compiler explains the right replacement: in one leakage dimension a **logarithmic** kernel is still integrable by (3.3), while the reciprocal kernel is critical. Thus a live heavy-star branch with only one independent leakage direction must first soften its conditional singularity to logarithmic order (or exploit cancellation/another smoothing source) before averaging.
+
+## 7. Application of the assigned partner localization
+
+Partner r19 proves that the exact worst-case small-ball constant for (4.1) over all cap-one product laws is unchanged if every one-dimensional law is restricted to a compact finite union of intervals with indicator density one. Therefore Theorem 4.1 may be certified on that finite-fragment extreme class and transfers with **exactly the same constants (4.2)--(4.4)** to arbitrary unbounded supports and arbitrarily distant fragments. No truncation radius, fragment count, normalization factor or moment is introduced.
+
+The same partner theorem applies to any future weighted-Fourier strengthening of this branch: a bound of the form
+
+`int w(t)|phi_Q(t)| dt <= M`
+
+for nonnegative `w`, proved uniformly on the finite-fragment extreme class, transfers with the identical `M`. Thus localization is not the remaining obstruction in this cross branch.
+
+As a compatible positive-copy consequence, if (4.2) gives density cap `C`, then for two independent copies `Q,Q'`, the difference density has cap at most `C`; hence the Fejer collision kernel from partner r19 obeys
+
+`E K_T(Q-Q') <= 2 pi C`                                           (7.1)
+
+for every `T>0`. This is consistent with the partner's positive-multicopy localization and requires no sum/difference conditional-cap assumption.
+
+## 8. Remaining connection to full QFORM
+
+The full conjecture is **not solved**. The new theorem closes any zero-self cross branch carrying two quantitatively strong singular directions, but the bare hypothesis `s_3(A)>=1` does not itself produce such a block with zero active self-curvature.
+
+The first unpaid implication is now sharper:
+
+`QFORM-RANK2-LEAKAGE-OR-LOG-STAR-BRIDGE-v1` — from the remaining product-preserving structural branches under `s_3(A)>=1`, show that either
+
+1. a zero-self/or legitimately conditioned cross block has `s_1(C)s_2(C)>=c_0` and apply (5.2); or
+2. the surviving rank-one leakage branch admits a conditional kernel with at most logarithmic singularity in one genuinely independent linear image and apply (3.3); or
+3. an already-proved bank/ridge/diffuse mechanism applies.
+
+The heavy-star cases identified by fleet03/B14 r19 remain delicate when the normalized linear innovation and the quadratic leakage are carried by the **same original-coordinate bank**. The present linear-image average cannot be applied there by pretending independence. Partner r19's positive-copy compiler is the natural next interface because it localizes before any invalid conjugate conditioning.
+
+## 9. Scope/status
+
+- Full QFORM: OPEN.
+- New proved theorem: `QFORM-RADIAL-LEAKAGE-BATHTUB-v1`.
+- New proved theorem: `QFORM-TOP-d-CROSS-AVERAGING-v1` and zero-self matrix corollary.
+- New rigorous barrier: raw reciprocal smoothing is critical in cross rank one (`2XY`).
+- Arbitrary shifts: controlled uniformly.
+- Distant fragments/unbounded supports: exact zero-loss localization via fleet03/B14 r19; direct proof also has no support parameter.
+- Moment assumptions: none.
+- Post-rotation independence: never used.
+- Native brain ingestion: not verified; status remains `WITHOUT_VERIFIED_BRAIN`.

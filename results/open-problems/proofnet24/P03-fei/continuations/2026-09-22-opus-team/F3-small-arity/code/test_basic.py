@@ -1,6 +1,6 @@
 """Cross-checks of fgate.py against numbers published elsewhere in the repository.
 1. AND gate: c_AND(p,q) against the certificate's own -Phi/((1-p)(1-q)) (fei_cert_vi.E_fun), Pr = probability of true.
-2. G10 (account03/B12 restriction of Numaro's g) at uniform bias: c = 4(H/(I-1) - C0) > 0.0182891265514229.
+2. G10 (fleet03/B12 restriction of Numaro's g) at uniform bias: c = 4(H/(I-1) - C0) > 0.0182891265514229.
 3. Numaro's g at p1 = 3/8 under Gamma_dagger = Gamma_0 + 0.268204856 p(1-p): D = -0.01761141995580175...
 4. Numaro's g at p1 = 223/456 under the same potential: -0.038023735 < D < -0.038023734.
 """

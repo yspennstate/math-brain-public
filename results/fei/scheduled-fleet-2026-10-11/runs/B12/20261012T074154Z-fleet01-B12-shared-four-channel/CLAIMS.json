@@ -1,0 +1,59 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T074154Z-fleet01-B12-shared-four-channel",
+  "primary_packet_id": "A057",
+  "claims": [
+    {
+      "claim_id": "B12-A057-SHARED-FOUR-CHANNEL-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "For every finite cube, every Boolean triple g_+,g_-,h on the same cube, and every physical coordinate i, the exact natural-log entropy decrement of F=(g_++g_-)/2+h(g_+-g_-)/2 equals S_i+X_i+qD_i(h)+R_i^sh with the four channels defined in SHARED_FOUR_CHANNEL.tex.",
+      "hypotheses": [
+        "g_+, g_-, h are genuine Boolean signs",
+        "all products are physical products on the shared cube",
+        "zero entropy terms use 0 log(1/0)=0"
+      ],
+      "parameter_dependence": "exact identity; no dimension, depth, bias, overlap, or collision-separation constant",
+      "proof_artifact": "SHARED_FOUR_CHANNEL.tex",
+      "verification_artifact": "check_signed_shared_remainder.py",
+      "review_status": "PENDING_A091_A090",
+      "full_fei_implication": "NONE_WITHOUT_A_DEPTH_UNIFORM_COUPLED_CHANNEL_PAYMENT"
+    },
+    {
+      "claim_id": "B12-A057-SIGNED-REMAINDER-BELLMAN-FALSIFIER-v1",
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+      "scope": "The universal one-step inequality R_i^sh <= Delta_i{C_*qI(h)+Var(h)E_raw(b)} with C_*=4+2ln2+2/e is false, even for an activation-irreducible three-bit genuine Boolean shared composition.",
+      "witness": {
+        "g_plus": [-1,-1,1,1,-1,-1,1,-1],
+        "g_minus": [-1,-1,-1,1,-1,-1,-1,-1],
+        "h": [-1,-1,1,-1,-1,1,-1,1],
+        "coordinate_zero_based": 1,
+        "disagreement_support": [2,6],
+        "selector_signs_on_support": [1,-1]
+      },
+      "exact_values": {
+        "R_shared": "-(11/4)ln2+(25/32)ln5+(9/16)ln3",
+        "delta_qI": "-1/16",
+        "delta_VZ": "(7/16)ln2",
+        "delta_installed_potential": "-1/4-1/(8e)+(5/16)ln2",
+        "separation": "R_shared > -1/32 > delta_installed_potential"
+      },
+      "proof_artifact": "SHARED_FOUR_CHANNEL.tex",
+      "verification_artifact": "check_signed_shared_remainder.py",
+      "review_status": "PENDING_A091_A090",
+      "does_not_claim": [
+        "no refutation of full FEI",
+        "no refutation of blockwise coupled-channel gauges",
+        "no refutation of the preceding disjoint theorem"
+      ]
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY-v7",
+      "status": "OPEN",
+      "scope": "Dimension-free payment of the complete coupled shared-coordinate coherent ledger over arbitrary adaptive physical hierarchies.",
+      "prior_obstruction": "old two-term product potential and output-only local corrections lose constant-output gauge cancellation",
+      "new_obstruction": "the exact signed shared remainder is identifiable, but paying it separately by the installed product-potential drop fails on an activation-irreducible Boolean table",
+      "next_action": "derive the two-step block identity and keep S_i, X_i, and R_i^sh coupled under future activation"
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261012T044913Z-fleet01-B19-b05-separated-hierarchy-review-a094",
+  "claims": [
+    {
+      "claim_id": "B19-A094-REVIEW-B05-SEPARATED-TWO-CORE-U-v1",
+      "version": "v1",
+      "exact_statement": "Independent reconstruction accepts B05-A023-SEPARATED-TWO-CORE-U-IDENTITY-v1: for arbitrary genuine Boolean children on disjoint physical blocks and a fresh d-bit one-word selector, equation (2) of the B05 proof is the exact upper-set U identity, including deterministic and balanced endpoints.",
+      "hypotheses": [
+        "finite uniform Boolean cubes",
+        "disjoint complete child variable sets",
+        "fresh d-bit one-word selector",
+        "base-two upper-set entropy"
+      ],
+      "contributors": ["B19"],
+      "review_target": "B05-A023-SEPARATED-TWO-CORE-U-IDENTITY-v1",
+      "review_target_commit": "72824efa4229ee109fc344f1a021840982509ee5",
+      "proof_source": "REPORT.md sections 2-3 and INDEPENDENT_CHECK.py",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "does_not_prove": ["the shared-variable identity", "full FEI"],
+      "next_consumers": ["A023", "A087", "A094", "B20"]
+    },
+    {
+      "claim_id": "B19-A094-REVIEW-B05-SEPARATED-HIERARCHY-v1",
+      "version": "v1",
+      "exact_statement": "Independent reconstruction accepts B05-A023-SEPARATED-HIERARCHY-PAYMENT-v1: for every finite fresh one-word selector tree with disjoint complete sibling variable sets and arbitrary genuine Boolean leaves, U(Froot)-sum_leaf w_leaf U(g_leaf)<=C_sep I_sel(Froot), with C_sep=3+4(1+2/e)/ln2+2/ln2+2/(e ln2)<16.964, independently of depth, rarity, leaf dimension, and the number of core changes.",
+      "hypotheses": [
+        "finite physical tree",
+        "fresh nonreused control variables",
+        "disjoint complete variable sets across siblings",
+        "arbitrary genuine Boolean leaves retained by reach weight"
+      ],
+      "contributors": ["B19"],
+      "review_target": "B05-A023-SEPARATED-HIERARCHY-PAYMENT-v1",
+      "review_target_commit": "72824efa4229ee109fc344f1a021840982509ee5",
+      "proof_source": "REPORT.md sections 2-5, SECOND_CHAIN_CHALLENGE.md, INDEPENDENT_CHECK.py",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "does_not_prove": [
+        "shared-variable sibling hierarchies",
+        "reused selector or address variables",
+        "a universal bound on retained leaf U",
+        "full FEI"
+      ],
+      "first_unproved_line": "Control the signed upper-mass overlap defect when sibling Fourier coefficients share physical frequencies, without reusing pivotal events.",
+      "next_consumers": ["A023", "A027", "A064", "A087", "A094", "B20"]
+    }
+  ],
+  "reviewer_contribution_to_target_proof": "NONE",
+  "full_fei_status": "OPEN"
+}

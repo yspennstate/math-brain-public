@@ -1,0 +1,54 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T223308Z-fleet05-A009-fractional-incidence-optimization",
+  "stream": "B02",
+  "packet_id": "A009",
+  "gap_id": "G-J-COST",
+  "attempt_id": "A009-fixed-posterior-logweight-v1",
+  "method": "convex log-weight primal; direct Gibbs coordinate-price dual; rational KKT; shared-core actual forest continuation",
+  "mathematical_delta": "Fixed-law exact dual and actual (1,2) KKT; joint posterior convexity fails on duplicate dictators; all-r,m singleton-petal residual <=8I/prior<=10I. New lead direction: geometric sunflower pressure <41I; affine-plane positive pressure >=7I log((Q+1)/2) for ALL feasible global weights.",
+  "deliverable_status": "COMPLETE_LOCAL_CONTINUATION_EVIDENCE_PENDING_REVIEW",
+  "mathematical_status": "PROVISIONAL_SOURCE_COMPLETE_SCOPED_PROOF; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "source": "source_material/reductions/paper/forests.tex",
+      "locator": "thm:posteriorforest",
+      "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a"
+    },
+    {
+      "source": "SEED_LEMMAS.md",
+      "locator": "Section 2 complete-reference prior",
+      "sha256": "7381273c5e374727f6069a06390e60a6463bccead35c46a9ff1f652e55366dc3"
+    }
+  ],
+  "claims_created_or_changed": [],
+  "source_artifacts": [
+    "REPORT.md",
+    "INCIDENCE_OPTIMIZATION.tex",
+    "WEIGHT_CERTIFICATE.json",
+    "FROZEN_SPEC.json",
+    "LEAD_FROZEN_SPEC.json",
+    "code/check.py",
+    "code/lead_check.py",
+    "out/CHECK.json",
+    "out/LEAD_CHECK.json",
+    "out/SOURCES.json"
+  ],
+  "next_consumers": [
+    "A006",
+    "A007",
+    "A010",
+    "A014",
+    "A086",
+    "A094"
+  ],
+  "next_action": "A086/A094 reconstruct continuation and affine-plane obstruction; then test PI-J whole-set posterior on affine-plane prime implicants, retaining all labels/ranks/congestion.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "B02 pending broad-candidate cap: no new registry claim opened; independent review/adoption pending.",
+    "Universal arbitrary-base structural expectation remains unpaid."
+  ],
+  "packet_ids": [
+    "A009"
+  ]
+}

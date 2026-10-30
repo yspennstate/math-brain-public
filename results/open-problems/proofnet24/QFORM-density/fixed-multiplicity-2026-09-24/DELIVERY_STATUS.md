@@ -16,7 +16,7 @@ The previously missing proof_map.csv, SOURCE_MANIFEST.json, verify.py and checks
 
 ## Native assignment verification
 
-A fresh inventory in the currently connected account showed all twenty account01/B01–B20 tasks enabled with hourly schedules, the fixed-multiplicity audit objective in their prompts, and both email and push notifications disabled. B19 and B20 were included. No native prompt update was necessary in this verification pass. Other accounts' native schedulers were not inspected from this account.
+A fresh inventory in the currently connected account showed all twenty fleet01/B01–B20 tasks enabled with hourly schedules, the fixed-multiplicity audit objective in their prompts, and both email and push notifications disabled. B19 and B20 were included. No native prompt update was necessary in this verification pass. Other accounts' native schedulers were not inspected from this account.
 
 ## Actual audit-submission snapshot
 
@@ -24,13 +24,13 @@ Pinned audit-root tree: 73e101b0a67ca451ba8bda0106a3eda95080aab6. Its four accou
 
 | Account | Slots with audit submissions in this snapshot | Count |
 | --- | --- | --- |
-| account01 | B01 B02 B03 B06 B07 B09 B10 B11 B12 B14 B15 B18 B19 B20 | 14 |
-| account02 | B02 B03 B04 B05 B06 B07 B08 B09 B10 B13 B14 B16 B19 B20 | 14 |
-| account03 | B01 B02 B03 B04 B05 B06 B07 B08 B09 B10 B11 B13 B14 B15 B16 B18 B19 B20 | 18 |
-| account04 | B15 | 1 |
+| fleet01 | B01 B02 B03 B06 B07 B09 B10 B11 B12 B14 B15 B18 B19 B20 | 14 |
+| fleet02 | B02 B03 B04 B05 B06 B07 B08 B09 B10 B13 B14 B16 B19 B20 | 14 |
+| fleet03 | B01 B02 B03 B04 B05 B06 B07 B08 B09 B10 B11 B13 B14 B15 B16 B18 B19 B20 | 18 |
+| fleet04 | B15 | 1 |
 
-Account-tree pins: account01=5515f3e784bf51e0e6f3ecc99825a3cead860a88; account02=c75ce668d1d37999499e83e73972d6df0296a9e1; account03=60af686538ec9b3141cfa4a5f735ddb6e9061aae; account04=2e68dc66306507ab9df039ce493f09025785ac03.
+Account-tree pins: fleet01=5515f3e784bf51e0e6f3ecc99825a3cead860a88; fleet02=c75ce668d1d37999499e83e73972d6df0296a9e1; fleet03=60af686538ec9b3141cfa4a5f735ddb6e9061aae; fleet04=2e68dc66306507ab9df039ce493f09025785ac03.
 
 This is a lower-bound snapshot of submissions, not a claim that all 47 are simultaneously executing or that all their audits pass. Reports can arrive later or elsewhere. The remaining slots are UNCONFIRMED from this snapshot, not declared offline. Each keeper should reconcile those slots against actual newer artifacts and request substantive adoption at the next real invocation, never manufacture acknowledgments.
 
-The account01/B20 full reconstruction and account04/B15 report were read directly and explicitly address the pinned manuscript. They report passing mathematical reconstructions while flagging presentation/package issues. The B18 proposed fixed-threshold Schur clarification and B20's acceptance of the existing moving-threshold argument should be reconciled explicitly. Preserve both reports; do not infer a theorem failure or unanimous approval from one label. The baseline source is unchanged in this delivery pass and the release gate remains under review.
+The fleet01/B20 full reconstruction and fleet04/B15 report were read directly and explicitly address the pinned manuscript. They report passing mathematical reconstructions while flagging presentation/package issues. The B18 proposed fixed-threshold Schur clarification and B20's acceptance of the existing moving-threshold argument should be reconciled explicitly. Preserve both reports; do not infer a theorem failure or unanimous approval from one label. The baseline source is unchanged in this delivery pass and the release gate remains under review.

@@ -11,10 +11,10 @@ Paths below are relative to proofnet24/QFORM-density.
 
 | Source | Blob SHA | Results used |
 |---|---|---|
-| fleet-2026-09-22/account01/B01/20260923T161404Z-account01-B01-qform-auto11/REPORT.md | fd9a501bce903ff071362a0181835108a1e06bb3 | Sharp product-density L2 identity; critical two-hub packet plus independent scalar L2 remainder; affine hyperbolic-edge corollary |
-| fleet-2026-09-22/account04/B15/20260923T151702Z-account04-B15-pivoted-convolution-r6/REPORT.md | aa50353da124122aa6ba3d424aa3b974e819e4b0 | All-p Lp pair bound independent of the first diagonal coefficient; square L3/2 bound; pair-plus-square constant6 and C0 |
-| fleet-2026-09-22/account01/B15/20260923T160313Z-account01-B15-QFORM-auto11/REPORT.md | 3e9b1b3a238066e482008271fe146909af3f02e3 | Arbitrary fixed-kernel equality for the universal constant; fixed-width box formulation and weak stability |
-| fleet-2026-09-22/account03/B15/20260923T163043Z-account03-B15-qform-auto23/REPORT.md | 75b312446268e192ef14881bf48f8dc2bd017d8c | Countable Gaussian-heat formulation, unit-measure rational unions, generic rational matrices |
+| fleet-2026-09-22/fleet01/B01/20260923T161404Z-fleet01-B01-qform-auto11/REPORT.md | fd9a501bce903ff071362a0181835108a1e06bb3 | Sharp product-density L2 identity; critical two-hub packet plus independent scalar L2 remainder; affine hyperbolic-edge corollary |
+| fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md | aa50353da124122aa6ba3d424aa3b974e819e4b0 | All-p Lp pair bound independent of the first diagonal coefficient; square L3/2 bound; pair-plus-square constant6 and C0 |
+| fleet-2026-09-22/fleet01/B15/20260923T160313Z-fleet01-B15-QFORM-auto11/REPORT.md | 3e9b1b3a238066e482008271fe146909af3f02e3 | Arbitrary fixed-kernel equality for the universal constant; fixed-width box formulation and weak stability |
+| fleet-2026-09-22/fleet03/B15/20260923T163043Z-fleet03-B15-qform-auto23/REPORT.md | 75b312446268e192ef14881bf48f8dc2bd017d8c | Countable Gaussian-heat formulation, unit-measure rational unions, generic rational matrices |
 
 Two earlier regularity records were fetched separately from master and
 are preserved verbatim, with separate metadata, under
@@ -23,8 +23,8 @@ and agree exactly with the fetch results:
 
 | Additional source | Blob SHA | Local copy |
 |---|---|---|
-| fleet-2026-09-22/account02/B15/20260922T200544Z-account02-B15-qform-r11/REPORT.md | b1b64ee58174080fb6fd1738ccfd4473131263fb | continuity_rank3_r11_REPORT.md |
-| fleet-2026-09-22/account02/B15/20260922T150242Z-account02-B15-qform-r3/REPORT.md | 0dab7a20a37f66f28a623e0e5dd6837c0be6a02f | continuity_rank3_r3_REPORT.md |
+| fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md | b1b64ee58174080fb6fd1738ccfd4473131263fb | continuity_rank3_r11_REPORT.md |
+| fleet-2026-09-22/fleet02/B15/20260922T150242Z-fleet02-B15-qform-r3/REPORT.md | 0dab7a20a37f66f28a623e0e5dd6837c0be6a02f | continuity_rank3_r3_REPORT.md |
 
 Their retrieval is not represented as part of the earlier initial tree.
 Metadata: source_snapshot/additional_claude/ADDITIONAL_CONTINUITY_SOURCES.json.

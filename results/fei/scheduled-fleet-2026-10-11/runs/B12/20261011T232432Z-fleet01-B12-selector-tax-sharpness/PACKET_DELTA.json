@@ -1,0 +1,163 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T232432Z-fleet01-B12-selector-tax-sharpness",
+  "stream": "B12",
+  "native_stream": "B12",
+  "packet_id": "A060",
+  "packet_ids": [
+    "A060"
+  ],
+  "gap_id": "FEI-B12-A060-SELECTOR-TAX-SHARPNESS",
+  "attempt_id": "B12-A060-ATTEMPT-001",
+  "method": "Freeze the constant-versus-Boolean fresh-selector tax, evaluate it on an exact three-bit point defect, and compare the local additive coefficient with the disjoint-tensor FEI ratio.",
+  "mathematical_delta": {
+    "previous": {
+      "quantity": "infimum universal c in H(K)<=H(D)/2+c I_x(K) for constant-versus-Boolean fresh-selector splices",
+      "value": "no exact B12 lower bound recorded",
+      "status": "OPEN"
+    },
+    "new": {
+      "quantity": "same local scalar tax coefficient",
+      "lower_bound": "c>=12-(9/4)log_2(9)>4.867",
+      "witness": "a genuine three-bit Boolean point defect",
+      "tensor_stable_fei_ratio": "16/3-(3/4)log_2(9) in (2.955,2.956)",
+      "status": "PROVED_FINITE_SHARPNESS_WITNESS"
+    },
+    "movement": "Coefficient 4 is rigorously refuted for the exact standalone selector-tax helper. The larger local tax is proved not to tensor-amplify into the same FEI lower bound; disjoint tensor powers preserve only the smaller actual H/I ratio."
+  },
+  "deliverable_status": "DELIVERED_FOR_REVIEW",
+  "mathematical_status": "PROVED_RESTRICTED",
+  "packet_complete": false,
+  "claim_versions_used": [
+    "B12-A060-SELECTOR-TAX-SHARPNESS-v1",
+    "B12-A060-SELECTOR-TAX-COEFFICIENT-4-v1",
+    "B12-A058-SPARSE-QUOTIENT-OVERLAP-v2",
+    "O-BENT-SPLICE",
+    "O-OVERLAP-PRODUCT"
+  ],
+  "claims_created_or_changed": [
+    "B12-A060-SELECTOR-TAX-SHARPNESS-v1",
+    "B12-A060-SELECTOR-TAX-COEFFICIENT-4-v1: REFUTED"
+  ],
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/CURRENT_STATUS.md",
+      "blob": "8c9c63579ecdd4afa385bb94caf79ee6296addcf"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/STREAM_PACKET_INDEX.json",
+      "blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/assignments/B12.json",
+      "blob": "40935ac651643a17815d0addf664ec4c1c0313cc"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/EXECUTION_PROTOCOL.json",
+      "blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/PACKET_STATUS.json",
+      "blob": "3a5ca0894678a9fd9908aae9596923d3038a03f8"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/CLAIM_REGISTRY.json",
+      "blob": "6a3e1aa94f81ec01841a083c97449739b9e72baa"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/OBSTRUCTION_REGISTRY.json",
+      "blob": "dd482025647aed25166b46cc217a7ed77dcaa767"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/runs/B12/20261011T221926Z-fleet01-B12-effective-support-v2/REPORT.md",
+      "commit": "95656134e2a6938fe46bbbcab713f5628156391b",
+      "blob": "5c4617a30ac16c2ebf114e53e4830163b61b4c65"
+    },
+    {
+      "repository": "yspennstate/math-research-brain",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261011T221926Z-fleet01-B12-effective-support-v2/REPORT.md",
+      "commit": "274bab188e13dc16e06ef944dec2839ad90ebe64",
+      "blob": "5c4617a30ac16c2ebf114e53e4830163b61b4c65"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "reports/fei-2026-10-11/source_material/reductions/paper/restrictions.tex",
+      "blob": "55986205ce92bf93bbb2863b5064af001829844a",
+      "locator": "Proposition prop:bentsplice"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "path": "research_pushes/2026-10-11-full-fei-100-agents/sources/OVERLAPPING_PRODUCT_NOTE.md",
+      "blob": "4d9e18018cce12d361df613b1c6dbc80bb9627f1"
+    }
+  ],
+  "acceptance_evidence": [
+    "Exact genuine-Boolean three-bit witness",
+    "Exact Fourier entropy, total influence, coordinate influence, means, and branch correlation",
+    "Rigorous rational-interval certificate showing the local tax coefficient exceeds 4.867",
+    "Coefficient-4 helper preserved and explicitly refuted",
+    "Disjoint tensor calculation separating the local additive coefficient from the multiplicative FEI ratio",
+    "Explicit nonorthogonality and shared-variable scope audit"
+  ],
+  "acceptance_missing": [
+    "Independent full-source reconstruction by A090",
+    "Independent full-source reconstruction by A091",
+    "B20 registry reconciliation"
+  ],
+  "review_requests": [
+    {
+      "packet": "A090",
+      "request": "Recompute the two Walsh spectra and verify the exact selector-tax coefficient and rational logarithm interval certificate from source.",
+      "observed": false
+    },
+    {
+      "packet": "A091",
+      "request": "Adversarially verify that the local additive tax does not imply a tensor-stable FEI lower bound, and audit all selector/correlation hypotheses.",
+      "observed": false
+    }
+  ],
+  "next_consumers": [
+    "A090",
+    "A091",
+    "B20"
+  ],
+  "next_action": "Obtain independent reconstruction of the finite certificate. If it survives, enumerate other prime Boolean gates only for the same frozen local-tax functional to determine whether 12-(9/4)log_2(9) is sharp or merely a lower bound; do not generalize it to arbitrary overlap or to the universal FEI constant.",
+  "stagnant_substantive_attempts": 0,
+  "unchanged_obstruction_count": 0,
+  "blockers": [
+    "Independent review is unavailable within this contributor stream.",
+    "The finite witness constrains a local decomposition coefficient but does not pay arbitrary overlapping compositions."
+  ],
+  "failed_approaches": [
+    "Coefficient 4 for the exact standalone selector-tax term is refuted by the archived Boolean witness.",
+    "Tensorizing the witness does not preserve the larger tax coefficient; it preserves only H(K)/I(K), so it cannot turn this example into an FEI counterfamily.",
+    "No shared-variable product conclusion is permitted by the disjoint tensor calculation."
+  ],
+  "artifacts": {
+    "REPORT.md": "dbee7a2d179b57a46b82fcabba0a1ac1500b1215dc54946f0ed3a72676783034",
+    "COMPOSITION_SHARPNESS.tex": "a6452e5a33d03330bd62e7f09d8ae1c117b3bfbacfa1fc564fd67d3d68aacc47",
+    "CONSTANT_SCOPE.json": "8c285ac02b0521f1995feaf22f35048caf826f7d9465ee436d8aa2310139da4e",
+    "check_selector_tax_sharpness.py": "c2350bf134fa6de4fc9c53267d85f5949a23a2d06d0f452260ede6ee5811a028",
+    "check_selector_tax_sharpness.out": "91fc5c0bd5d7b2d1a1845119c0313a1421d3deed35f1a622634f42196fd83f8e"
+  },
+  "execution": {
+    "bounded_pilot_seconds_observed": 0.039,
+    "randomness": "NONE",
+    "python": "3.12.14",
+    "model_id": "NOT_EXPOSED",
+    "reasoning_effort": "NOT_EXPOSED",
+    "new_workers": 0,
+    "schedule_changes": 0,
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}

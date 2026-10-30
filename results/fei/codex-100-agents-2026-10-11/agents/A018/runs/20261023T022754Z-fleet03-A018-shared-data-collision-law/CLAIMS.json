@@ -1,0 +1,170 @@
+[
+  {
+    "claim_id": "A019-FORCED-BIASED-EMPTY-ROW-DEBT",
+    "version": 1,
+    "exact_statement": "For every integer k>=2 let epsilon=2^-k, E=1[v=0] on k uniform bits, and hplus=(1-E)u+E, hminus=(1-E)u-E. Supply Qb=(Pb+delta_empty)/2 and the actual conditional queried-frequency lift of their average as incoming Qh. Activate with the fixed nonlinear two-bit mask s of mean1/2 and exact flat reference Qs. Both children are nonconstant, have means +/-epsilon and identical squared spectra, and disagree with probability epsilon. The exact net reference surcharge Lambda=average Dchild-Dparent-Dcore/2 equals D_(1/4)(epsilon^2,(1+epsilon^2)/2), lies strictly between1/32 and1/8, and tends to (1/2)log2(9/8). For h0=u,h1=(1-E)u+E, disagreement epsilon/2 and one child balanced, the same prescribed reference surcharge tends to (1/2)log2(18/17)>0, with Dcore=(epsilon^2/2)log2((2+epsilon^2)/(1+epsilon^2)). Thus no finite K universally bounds Lambda by K times disagreement even with one balanced child and both children nonconstant.",
+    "hypotheses": [
+      "Uniform Boolean physical cubes; entropy and KL in bits",
+      "Fixed specified incoming core conditional lift; supplied contaminated child references",
+      "Fixed exact nonlinear two-bit mask reference; no support substitution",
+      "Integer k>=2; limits are k->infinity"
+    ],
+    "statement_sha256": "5d753457bcf2edb5f2566827a597b42c5a672199f66de0733e2d5c54de8cbf5a",
+    "contributors": [
+      "A019 fleet03"
+    ],
+    "proof_source": {
+      "path": "agents\\A019\\runs\\20261022T221313Z-fleet03-A019-orthogonality-extensions\\REPORT.md",
+      "derivation": "agents\\A019\\runs\\20261022T221313Z-fleet03-A019-orthogonality-extensions\\out\\DERIVATION.md",
+      "certificates": [
+        "out/CERTIFICATE.json",
+        "out/ONE_BIASED_CERTIFICATE.json",
+        "out/DIRECT_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A018/fleet03",
+        "independent": true,
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "claim_id": "A019-FORCED-BIASED-EMPTY-ROW-DEBT",
+        "version": 1,
+        "statement_sha256": "5d753457bcf2edb5f2566827a597b42c5a672199f66de0733e2d5c54de8cbf5a",
+        "source_file_sha256": "645e88f259d17a0430aa59ba7efe1e843aa3fcc310141a9e841cb5665184cf01",
+        "proof_source": "agents\\A018\\runs\\20261023T022754Z-fleet03-A018-shared-data-collision-law\\REPORT.md",
+        "scope": "Full original statement and hypotheses; radial/log-sum reconstruction, own literal Boolean spectra/edges/CE and all-k analytic bank bounds. No material repair. New sharpened envelope/full-query extension is separate A018 author work.",
+        "substantive_repair": false,
+        "certificates": [
+          "out/CHECKS.json",
+          "out/OWNED_CHECKS.json",
+          "out/BOUNDARIES.json"
+        ],
+        "reviewed_at": "2026-10-23T02:49:34.146078+00:00"
+      }
+    ],
+    "status": "INDEPENDENT_A018_HOLDS_AT_ORIGINAL_SCOPE_SHARED_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Universal Lambda<=K*d for the specified inherited core-reference hierarchy"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A092",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A019-OWNED-EMPTY-REFERENCE-PAYMENT",
+    "version": 1,
+    "exact_statement": "For arbitrary Boolean core children with supplied finite complete references Qb satisfying Pb(empty)<=Qb(empty), the same exact nonlinear two-bit mask reference, and the prescribed incoming parent conditional lift, put A0=average Qb(empty), cb=CE(Pb,Qb), and sbar=average(K I(hb)-cb). The exact signed activation-reference surcharge obeys Lambda<=1/2 log2(1+A0/4). Given already-booked U>=0, if sbar>=2U+log2(1+A0/4), its positive part is paid from the same remaining original half-core bank sbar/2-U, retaining both complete activation child terminals and the core entropy decrement. In the explicit opposite-mean family of the preceding claim at K=4, after any old booking 0<=U<=1/8, more than1/4 remains after paying Lambda; in the one-balanced-child family more than3/4 remains for k>=2. No new core or mask reference is substituted.",
+    "hypotheses": [
+      "Both supplied references normalized with finite complete cost",
+      "Empty core true mass dominated by empty supplied reference mass in each child",
+      "Qs=Ps for the nonlinear two-bit mask, so Qs(empty)=(E s)^2=1/4",
+      "Incoming parent core reference is the specified conditional lift before querying",
+      "Any existing bookings are explicitly deducted from the same original bank"
+    ],
+    "statement_sha256": "7874f97e3a52dc5568cf5d7ec3d21f5557fd3fe512e2d6902d9c5e1b486232b5",
+    "contributors": [
+      "A019 fleet03"
+    ],
+    "proof_source": {
+      "path": "agents\\A019\\runs\\20261022T221313Z-fleet03-A019-orthogonality-extensions\\REPORT.md",
+      "derivation": "agents\\A019\\runs\\20261022T221313Z-fleet03-A019-orthogonality-extensions\\out\\DERIVATION.md",
+      "certificates": [
+        "out/CERTIFICATE.json",
+        "out/ONE_BIASED_CERTIFICATE.json",
+        "out/DIRECT_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A018/fleet03",
+        "independent": true,
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "claim_id": "A019-OWNED-EMPTY-REFERENCE-PAYMENT",
+        "version": 1,
+        "statement_sha256": "7874f97e3a52dc5568cf5d7ec3d21f5557fd3fe512e2d6902d9c5e1b486232b5",
+        "source_file_sha256": "645e88f259d17a0430aa59ba7efe1e843aa3fcc310141a9e841cb5665184cf01",
+        "proof_source": "agents\\A018\\runs\\20261023T022754Z-fleet03-A018-shared-data-collision-law\\REPORT.md",
+        "scope": "Full original statement and hypotheses; radial/log-sum reconstruction, own literal Boolean spectra/edges/CE and all-k analytic bank bounds. No material repair. New sharpened envelope/full-query extension is separate A018 author work.",
+        "substantive_repair": false,
+        "certificates": [
+          "out/CHECKS.json",
+          "out/OWNED_CHECKS.json",
+          "out/BOUNDARIES.json"
+        ],
+        "reviewed_at": "2026-10-23T02:49:34.146078+00:00"
+      }
+    ],
+    "status": "INDEPENDENT_A018_HOLDS_AT_ORIGINAL_SCOPE_SHARED_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A092",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A018-UNEQUAL-MEAN-RADIAL-LEDGER",
+    "version": 1,
+    "exact_statement": "For arbitrary Boolean core children with means beta_b, any independent Boolean mask s, supplied normalized finite-cost complete references Q_b,Q_s, and incoming core reference fixed as actual queried-frequency conditional lift of average Q_b (absent on zero true rows), let beta=average beta_b,r=average beta_b^2,nu=beta^2/r (nu=1 if r=0),m=(E s)^2,t=Qs(empty),a_b=Qb(empty),a=average a_b,p=m*r,z=t*a,A(p,z)=[p log2(p/z)+(1+p)log2((1+z)/(1+p))]/2 and G=A(p,z)-A(nu*p,nu*z), with continuous zero conventions. Decompose core-label KL Dc=E0+Erest by its empty row, and let Kplus=average(1+m beta_b^2)log2((1+m beta_b^2)/(1+t a_b))-(1+p)log2((1+p)/(1+z)). Exactly Lambda=G-[(1-m)E0+Erest+Kplus]/2, with E0,Erest,Kplus,G>=0. If p<=z, Lambda<=G<=log2((1+z)/(1+nu*z))/2<=(1-nu)log2(1+z)/2. For p,z>0 always G<=(1-nu)[p log2(p/z)+(z-p)/ln2]/2. In the original one-balanced point-event family h0=u,h1=(1-E)u+E, epsilon=2^-k,k>=2,Qb=(Pb+delta_empty)/2, exact nonlinear two-bit mask, the SAME original half-average core bank B=average(4I_b-c_b)/2>1 pays the COMPLETE rate4 query excess T=Delta CE_F-4Inf_q(F)<1/4 after any old0<=U<=1/8, leaving B-U-max(T,0)>5/8. Lambda alone is<1/16 and leaves>13/16. All complete child references, core entropy and profile terms are retained; arbitrary next inherited query remains open.",
+    "hypotheses": [
+      "Uniform independent finite physical cubes; Boolean signs; all entropy/CE/KL in bits.",
+      "Mask and private core blocks disjoint; one fresh gate; supplied references normalized and finite complete cost.",
+      "Incoming parent core reference fixed before querying as the stated conditional child-mixture lift; no unrelated incoming-reference reset; absent convention on zero true rows.",
+      "Phase-sensitive logarithmic envelope assumes average combined empty-row domination p<=z only; unconditional likelihood bound assumes p,z>0 and zero boundaries handled separately.",
+      "Concrete bank clause uses exactly the specified one-balanced point-event family, k>=2, original contaminated references and exact signed nonlinear two-bit mask; original old debit0<=U<=1/8.",
+      "No arbitrary supply of terminal banks or preservation after another physical query is asserted."
+    ],
+    "statement_sha256": "cb9b7679c68363fc8daaeb7f6d6bee5d07ee9a2cc5d1d41cf5bf85da4e6785ea",
+    "contributors": [
+      "A018/fleet03"
+    ],
+    "proof_source": {
+      "path": "agents\\A018\\runs\\20261023T022754Z-fleet03-A018-shared-data-collision-law\\REPORT.md",
+      "locators": [
+        "complete derivation sections1-4"
+      ],
+      "certificates": [
+        "out/CHECKS.json",
+        "out/OWNED_CHECKS.json",
+        "out/BOUNDARIES.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A018 physical-label activation reference identity (rederived here)",
+      "Finite KL log-sum and displayed one-variable derivative identities",
+      "A019-FORCED-BIASED-EMPTY-ROW-DEBT@1 and A019-OWNED-EMPTY-REFERENCE-PAYMENT@1 (original bank fixtures; independently reconstructed here)"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A018/fleet03",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_PROOF_EXACT_CHECKED",
+        "assertions": 83958,
+        "formal_status": "NOT_LEAN_CHECKED; required memok refused compiler"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A019",
+      "A020",
+      "A090",
+      "A092",
+      "A094",
+      "B04-lead",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261013T202018Z-fleet01-B12-spectral-sector-composition",
+  "stream": "B12",
+  "primary_packet_id": "A056",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A056-SPECTRAL-SECTOR-CHAIN-RULE",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "For every pair of genuine Boolean endpoints u,v and every genuine Boolean selector h on a disjoint block, with r=min(Pr[h=+1],Pr[h=-1]), delta=4r(1-r), and beta=Pr[u!=v], the selected function F satisfies H(F)<=(1-r)H(u)+rH(v)+beta H(h)+2 delta h2(beta)+8 beta h2(r).",
+      "scope": "All finite dimensions, all selector biases, all endpoint disagreement densities and correlation gaps; fresh disjoint selector/data blocks."
+    },
+    {
+      "claim_id": "B12-A056-DISJOINT-SLICE-FEI-CLOSURE",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "statement": "If H(u)<=C I(u), H(v)<=C I(v), and H(h)<=C I(h), then the same disjoint selected function satisfies H(F)<=(C+8)I(F).",
+      "scope": "One compositional node; constant 8 is sufficient and not claimed sharp."
+    },
+    {
+      "claim_id": "GU-JOINT-OUTER-CHILD-PAYMENT",
+      "version": "v3",
+      "status": "OPEN",
+      "statement": "The one-node parameter dependence is removed, but no one-use telescope is proved for the local disagreement/activation reserves over an arbitrary changing adaptive hierarchy, and shared-coordinate overlap remains unpaid."
+    }
+  ]
+}

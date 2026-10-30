@@ -1,0 +1,24 @@
+{
+  "schema_version": 2,
+  "stream_id": "B07",
+  "primary_packet_id": "A031",
+  "claims": [
+    {
+      "claim_id": "B07-A031-ADAPTIVE-ROOT-NONREUSE-v1",
+      "version": 1,
+      "gap_id": "G-GU-SIGNED-KL",
+      "exact_statement": "For every genuine Boolean f and every adaptive physical restriction tree that never queries a coordinate twice on a path, sum_v Pr(E_v) K^(0)_{i_v}(f_v) <= (2/ln 2) sum_v Pr(E_v) fhat_v({i_v})^2 <= (2/ln 2) Var(f) <= (2/ln 2) I(f). A complete tree has equality in the middle energy ledger.",
+      "hypotheses": ["finite uniform Boolean cube", "physical cylinder restrictions", "queried coordinate is live at its node"],
+      "contributors": ["fleet01/B07"],
+      "proof_source": "ADAPTIVE_ROOT_NONREUSE.tex",
+      "proof_dependencies": ["B07-A031-SHARP-ROOT-KL-v2", "Boolean convolution f^2=1"],
+      "review_records": [],
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Compare parent nonempty rows with descendant root rows while retaining the signed correlation and terminal-U remainder.",
+      "next_consumers": ["A035", "A087", "A094", "A099"]
+    }
+  ]
+}
+

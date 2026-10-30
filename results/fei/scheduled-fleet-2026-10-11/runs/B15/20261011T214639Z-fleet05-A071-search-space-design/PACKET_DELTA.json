@@ -1,0 +1,52 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T214639Z-fleet05-A071-search-space-design",
+  "stream": "B15",
+  "packet_id": "A071",
+  "gap_id": "G-BIASED-TAX",
+  "attempt_id": "A071-G-BIASED-TAX-001",
+  "method": "Exhaustive bounded actual-Boolean truth tables; rational weighted spectra; rigorous atanh intervals; exact prime-log equality resolution",
+  "mathematical_delta": "Frozen complete finite family and certified 20736 representatives of 192000 raw cases; 20136 interval passes plus 600 exact cancellations; no violation. Does not close the universal B09 lemma or full FEI.",
+  "deliverable_status": "COMPLETE_LOCAL_SAVED",
+  "mathematical_status": "FINITE_GRID_CERTIFIED_UNREVIEWED; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B09-BIASED-BLOCK-UNCERTAINTY@1 (target only, not proof dependency)",
+    "B09-TAXFREE-AND-COUNTEREXAMPLE-REPAIRED@1 (calibration only)"
+  ],
+  "claims_created_or_changed": [
+    "A071-B09-THREEBIT-GRID-CERTIFICATE@1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "SEARCH_DOMAIN.json",
+    "SEARCH_BUDGET.md",
+    "FROZEN_SPEC.json",
+    "ZERO_RESOLUTION_SPEC.json",
+    "code/search.py",
+    "code/resolve_zeros.py",
+    "out/pilot.json",
+    "out/search.json",
+    "out/zero_certificates.json"
+  ],
+  "next_consumers": [
+    "A010",
+    "A032",
+    "A047",
+    "A072",
+    "A073",
+    "A074",
+    "A085",
+    "A092",
+    "B09",
+    "B20"
+  ],
+  "next_action": "A085/A092 independently reconstruct grid coverage and log certificate; A074 reproduce the minimum-positive case using centered tensor transforms. B09 may use the family to test an explicitly versioned sharper singleton tax; do not raise n automatically.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "B15 lead STREAM_NOTES.md absent at stage start; no direction inferred",
+    "Independent review and supervisor copy/mirror not yet observed"
+  ],
+  "packet_ids": [
+    "A071"
+  ]
+}

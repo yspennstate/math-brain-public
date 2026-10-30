@@ -1,4 +1,4 @@
-"""What an expansion build says it found (account04/B03, 29 Sep 2026).
+"""What an expansion build says it found (fleet04/B03, 29 Sep 2026).
 
 Until 30 Sep the memory directory defaulted to one machine's absolute user path, and a build with that directory unset
 or missing returned an empty expansion exactly like a store with nothing to expand, so a misconfigured index build

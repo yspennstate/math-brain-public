@@ -1,0 +1,144 @@
+[
+  {
+    "claim_id": "A069-SAME-REFERENCE-ADAPTIVE-CORE-TERMINAL-BANK",
+    "version": 1,
+    "exact_statement": "For every integer m>=1, on a finite uniform cube with disjoint c,u, m-bit Z and three-bit Y, let q2=-1 exactly on c=0,Z=0 and let G have ordered Boolean cores (Maj3,y0,-y0,-Maj3) indexed by c+2u. Start with common frequency reference R=(8/13,2/13,1/26,1/26,1/26,1/26,1/26,1/26). Use the stage5 five-cell control law with weights (1/4,1/4,1/16,7/20,7/80), uniform inside each cell, and the actual control-occupancy prior. Through every physical core query carry R by frequency marginalization to the SAME reference for both children and all four cores. For every core-only adaptive restriction history with no repeated coordinate on a path, complete each path to three core queries. Every node has signed excess e=max(0,Delta C_Q-4 Inf_i)<=1/4. Every complete actual terminal has 4I-C_Q>1 and remains nonconstant. Allocate each node excess to its final descendants with their physical conditional probabilities: the cumulative debit on any final terminal is <=3/4 from its ONE inherited complete terminal surplus, leaving >1/4. The exact signed telescope therefore proves H(F)<=C_Q(F)<4I(F)-1/4 for F=q2G, all m. At m=1, after Y1=0, the relevant query Y2 has 1/100<Delta C_Q-4 Inf_Y2<1/40, and both actual child core pairs are nonconstant. No arbitrary-core, control-query, depth-independent or universal FEI assertion is made.",
+    "hypotheses": [
+      "Uniform finite Boolean cube; entropy and reference cross entropy in bits.",
+      "Exactly the paired majority/literal cores and positive normalized core reference specified.",
+      "m>=1, event c=0,Z=0; fixed cell weights and actual flag prior retained.",
+      "Only physical Y queries, distinct along each branch; all actual terminal costs retained.",
+      "All negative query prices allocated cumulatively against one original complete terminal reserve; no reset."
+    ],
+    "statement_sha256": "59ab2b4d6ce4cf4e0e40e81cb85facbcb0aacd5380f7b751ac3c2127f88c0ee3",
+    "contributors": [
+      "fleet03/A069"
+    ],
+    "proof_source": {
+      "path": "agents\\A069\\runs\\20261021T151946Z-fleet03-A069-geometric-transfer\\DERIVATION.md",
+      "sha256": "1941c30c61c8f302619e5079b5e4bb68645271b54a2fa30fb6d35ced06ff6231",
+      "locators": "equations (1)-(5), thinning argument and terminal allocation"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet03/A070",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "reviewer_conflict": false,
+        "source_claim_file": "agents\\A069\\runs\\20261021T151946Z-fleet03-A069-geometric-transfer\\CLAIMS.json",
+        "source_file_sha256": "0ab0538bfd0ee75ce9085f1f6e55a0ecd6f7525915409ceb7333cf7c373f06ff",
+        "review_source": "agents\\A070\\runs\\20261021T173219Z-fleet03-A070-analytic-route-referee\\DERIVATION.md",
+        "validation_source": "agents\\A070\\runs\\20261021T173219Z-fleet03-A070-analytic-route-referee\\out\\CHECK.json",
+        "method": "Independent exact Walsh/pivotal/full-reference implementation plus complete analytic reconstruction; no author-code import",
+        "registry_adoption": "UNVERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_BY_A070_AT_FULL_SCOPE_PENDING_B20",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A067",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A088-CONDITIONAL-FLAG-REFUND-LOCAL-PRICE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer m>=2, on uniform bits w,Y_1,...,Y_(2m) and sign control z, let b_m(Y)=(-1)^(sum_j Y_(2j-1)Y_(2j)), G_m=b_m(Y)+1{w=0,Y=0}(z-1), delta=2^(-(2m+1)). These are actual Boolean outputs in the two-fixed-controller branch algebra, reached by restricting c=0 in P_m=(-1)^(cw+sum_j Y_(2j-1)Y_(2j))+1{c=w=0,Y=0}(z-1). For actual spectral core label T and control-occupancy flag V, alpha=I_z(G_m)=delta, and replacing a global flag prior by the actual conditional flag law refunds exactly I(T;V), leaving H(V|T). This retained conditional flag entropy satisfies H(V|T)/I_z(G_m)>=m+3/2, so no finite universal local K pays it by queried-control influence after arbitrary first-core exposure. Meanwhile I(G_m)=m+(2m+2)delta and H(G_m)/I(G_m)<=3. Both actual core terminals remain; this is a conditional-flag-only payment obstruction, not a FEI disproof or a refutation of weighted tree/slack payment.",
+    "hypotheses": [
+      "Finite uniform actual Boolean signs; Y,w,c are0/1 bits and z is a sign bit; entropy bits",
+      "One actual physical core restriction c=0; complementary fixed controllers on z; core Fourier labels retain informative w occupancy",
+      "Complete normalized joint law and actual conditional flag law; no deletion or renormalization on derivative support",
+      "The refuted shortcut prices every reachable local flag remainder solely by its queried z influence; no signed child surplus assumed"
+    ],
+    "statement_sha256": "47b1d4ec65284df25fa3a901c4acbc2d1dba1fbe71fb21a8cb99ffec80c543b1",
+    "contributors": [
+      "fleet05/A088; bent point-attachment mechanism credited to A066/A073, used here for the post-core-query conditional spectral flag"
+    ],
+    "proof_source": "agents\\A088\\runs\\20261014T053751Z-fleet05-A088-booleanity-referee\\CONDITIONAL_FLAG_OBSTRUCTION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet03/A070",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "reviewer_conflict": false,
+        "source_claim_file": "agents\\A088\\runs\\20261014T053751Z-fleet05-A088-booleanity-referee\\CLAIMS.json",
+        "source_file_sha256": "703212a51fb2afb8891833cbd0c1f6f57ab817d39f950c6da6af0535452683eb",
+        "review_source": "agents\\A070\\runs\\20261021T173219Z-fleet03-A070-analytic-route-referee\\DERIVATION.md",
+        "validation_source": "agents\\A070\\runs\\20261021T173219Z-fleet03-A070-analytic-route-referee\\out\\CHECK.json",
+        "method": "Independent exact Walsh/pivotal/full-reference implementation plus complete analytic reconstruction; no author-code import",
+        "registry_adoption": "UNVERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_BY_A070_AT_FULL_SCOPE_PENDING_B20",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered universal local H(control-tail flag | full core Fourier label)<=K I_queried after every first physical core query, even for four-branch fixed-controller Boolean outputs"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A066",
+      "A070",
+      "A038",
+      "A039",
+      "A094",
+      "A096",
+      "B14",
+      "B18",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-SINGLE-GATE-FLAG-HISTORY-AND-SIGNED-CORE-RESERVE",
+    "version": 1,
+    "exact_statement": "For arbitrary Boolean a,b on a finite uniform core cube, m>=1, t=2^(-2m), and F=q2G with paired cores (a,b,-b,-a) indexed by c+2u, q2 negative on c=0,Z=0, fix one positive common core reference and the five-cell law (1/4,1/4,1/16,7/20,7/80). In every adaptive physical core-only tree with distinct queries per path, carry the common reference by frequency marginalization and retain the actual flag prior. With d_v=Pr(a!=b|v), p_v the physical node probability, and J_v=h2(t d_v)-E_child h2(t d_child), the total expected flag decrement equals h2(t d_root)-E_leaf h2(t d_leaf) and is at most t h2(d_root)<=t, independent of depth. Consequently total positive complete-reference query excess over K times queried influence is at most total positive core-reference excess plus t h2(d_root). All terminal reference costs and prior debits remain. For the fixed Maj3/y0 cores and inherited R=(8/13,2/13,1/26,...,1/26), preserving the signed core prices yields 4I(F)-C_Q(F)>9/4 for all m>=1. No arbitrary-core payment of the retained positive excess or universal FEI theorem is asserted.",
+    "hypotheses": [
+      "Uniform finite Boolean cubes and physical adaptive core-only queries; entropy and complete cross entropy in bits.",
+      "m>=1 and paired zero-sum cores are used to identify actual empty-control mass=t Pr(a!=b).",
+      "One common positive core reference, marginalized at each query; fixed five-cell weights and all actual terminal bills retained.",
+      "Tree stopping/query choices depend only on actual physical history; the single auxiliary thinning gate is independent of the whole input/history.",
+      "The >9/4 corollary is restricted to the exact A069 majority/literal reference and unused terminal bank. It does not recertify spent slack at partial children."
+    ],
+    "statement_sha256": "02b3b916b85588562c3b8cd98c540aabc4b6dbbc23963df9526a5aeacc45da7e",
+    "contributors": [
+      "fleet03/A070"
+    ],
+    "proof_source": {
+      "path": "agents\\A070\\runs\\20261021T173219Z-fleet03-A070-analytic-route-referee\\DERIVATION.md",
+      "sha256": "9f34e85557d2cc829a98806d6d953704591fa3f9ba00f35a9cd9c45e8aa166d5",
+      "locators": "Sections2-3; Section5 Booleanity guard"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A069-SAME-REFERENCE-ADAPTIVE-CORE-TERMINAL-BANK",
+        "version": 1,
+        "statement_sha256": "59ab2b4d6ce4cf4e0e40e81cb85facbcb0aacd5380f7b751ac3c2127f88c0ee3",
+        "acceptance": "A070 independent unchanged-scope review this run",
+        "scope": "Only fixed-core >9/4 corollary: complete reference formulas and terminal>1 bank; abstract history identity is self-contained"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CERTIFICATES_PASSED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A069",
+      "A088",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  }
+]

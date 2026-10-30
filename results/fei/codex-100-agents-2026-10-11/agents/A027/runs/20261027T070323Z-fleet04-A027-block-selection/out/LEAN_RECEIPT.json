@@ -1,0 +1,22 @@
+{
+  "returncode": 2,
+  "stdout": "{\n  \"result\": {\n    \"status\": \"RUNTIME_UNVERIFIED\",\n    \"formal_target_verified\": false,\n    \"target\": \"a027_ledger\",\n    \"source_sha256\": \"c140e1471401714ff726c07abc14cf11a96dedb78321b758aa4e1dfaaeb5d52d\",\n    \"source_review_assertion\": \"c140e1471401714ff726c07abc14cf11a96dedb78321b758aa4e1dfaaeb5d52d\",\n    \"target_kind\": \"UNVERIFIED\",\n    \"target_identity_verified\": false,\n    \"axioms\": null,\n    \"axiom_name_trees\": null,\n    \"allowed_axioms\": [\n      \"Classical.choice\",\n      \"Quot.sound\",\n      \"propext\"\n    ],\n    \"translation_fidelity\": \"UNVERIFIED\",\n    \"mathematical_falsity_established\": false,\n    \"threat_model\": \"Explicitly reviewed source and trusted compiler/dependencies; not a sandbox\"\n  },\n  \"compiler_exit_code\": null,\n  \"compiler_output\": \"\",\n  \"seconds\": 25.504,\n  \"compiler_sha256\": \"af49bacfabaa1fea71332ca0feae0fa1a60912219d5902291adc79f905bffb8d\",\n  \"generated_sha256\": \"ba6d2d60cb9fe3e01545b5009e3c75d39d07f178e5e6677b90bea7c14b35e51b\",\n  \"environment\": {},\n  \"evidence_integrity\": true,\n  \"source_path\": \"agents\\\\A027\\\\runs\\\\20261027T070323Z-fleet04-A027-block-selection\\\\code\\\\Ledger.lean\",\n  \"receipt_directory\": \"agents\\\\A027\\\\runs\\\\20261027T070323Z-fleet04-A027-block-selection\\\\out\\\\lean\\\\41619023abf742a4be6832b8cac3d05e\"\n}\n",
+  "stderr": "",
+  "elapsed_seconds": 26.31706780003151,
+  "translation": "integer cancellation ONLY; prose entropy theorem not Lean-certified",
+  "command": [
+    "C:/Python314/python.exe",
+    "-B",
+    "lean_check.py",
+    "--file",
+    "agents\\A027\\runs\\20261027T070323Z-fleet04-A027-block-selection\\code\\Ledger.lean",
+    "--core",
+    "--target",
+    "a027_ledger",
+    "--reviewed-sha256",
+    "c140e1471401714ff726c07abc14cf11a96dedb78321b758aa4e1dfaaeb5d52d",
+    "--timeout",
+    "25",
+    "--json"
+  ]
+}

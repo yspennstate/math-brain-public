@@ -36,17 +36,17 @@ The concurrent F-role supplement is reconciled as advisory mathematical methods 
 
 ### B05 and independent B19 review — first matching deliverables adopted
 
-The original B05 run is `20261011T193057Z-account01-B05-rare-restrictions`, open-problems commit `80cc2e5027efa56d79c4ecdf7d4949759ef2068b`, under `runs/B05/20261011T193057Z-account01-B05-rare-restrictions/`. Its full Brain mirror is at `532e0b5ddb5b3b320b46beb155ee8b2be7e97761`.
+The original B05 run is `20261011T193057Z-fleet01-B05-rare-restrictions`, open-problems commit `80cc2e5027efa56d79c4ecdf7d4949759ef2068b`, under `runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/`. Its full Brain mirror is at `532e0b5ddb5b3b320b46beb155ee8b2be7e97761`.
 
 It proves that no finite fixed nonnegative K,A,B make `L <= K*d + A*V_post + B*M_inf` valid at every actual Boolean split. The sparse bent point-defect family has `d=2^(-3k)`, `L/d=k+log2(e)+o(1)`, `V_post/d<=4*2^(-k)`, and `M_inf/d=12*k*2^(-3k)`. This refutes the local all-coordinate helper; it does not refute existential selection, suitable stopping trees, nonlocal transport or FEI.
 
-B19 independently accepted that scope at commit `7955d427222392911dc6af2e4ee3aa8aab67ac8c`, run `runs/B19/20261011T195038Z-account01-B19-independent-review/`; Brain mirror `b57496edc22cb5b0dc058fb183bde2b787dc9d42`. Its source-level algebra covers all even k, and its separate integer-Walsh/Fraction witness reports 16,404 assertions passed. Decimal entropy values are numerical support; the analytic argument supplies the all-k theorem. Recovery's mathematical auditor also reconstructed the analytic no-go independently.
+B19 independently accepted that scope at commit `7955d427222392911dc6af2e4ee3aa8aab67ac8c`, run `runs/B19/20261011T195038Z-fleet01-B19-independent-review/`; Brain mirror `b57496edc22cb5b0dc058fb183bde2b787dc9d42`. Its source-level algebra covers all even k, and its separate integer-Walsh/Fraction witness reports 16,404 assertions passed. Decimal entropy values are numerical support; the analytic argument supplies the all-k theorem. Recovery's mathematical auditor also reconstructed the analytic no-go independently.
 
 The matching first deliverables of A025 and A092 are accepted in the revised packet index. They remain useful continuing research/review roles. **Next B05 step:** compare control-first and selector-first physical restriction trees, including terminal entropy and nonreusing creation/spending of logarithmic credit.
 
 ### B09 — saved, review pending
 
-The nine-file B09 bundle is at open-problems commit `adb671ffcda143fa68347806bb96e8c305621a7d`, run `runs/B09/20261011T195500Z-account01-B09-biased-restriction-uncertainty/`; Brain mirror `bfe8eafa2194feb32cb3881957ef844b8fe30de0`. Its original report was read. It authors a biased physical-block uncertainty lemma and a rational-interval two-bit AND counterexample to a tax-free helper.
+The nine-file B09 bundle is at open-problems commit `adb671ffcda143fa68347806bb96e8c305621a7d`, run `runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/`; Brain mirror `bfe8eafa2194feb32cb3881957ef844b8fe30de0`. Its original report was read. It authors a biased physical-block uncertainty lemma and a rational-interval two-bit AND counterexample to a tax-free helper.
 
 Independent review has not yet accepted it. In particular, section 5(4) cannot infer impossibility of every O(p) replacement solely from the asymptotic of an available upper-bound tax; that needs a lower-bound family or a narrower claim. Exact tensor additivity must also be distinguished from broader composition. B09/B19 should review the core lemma, fixed certificate and stronger consequences separately. This source is not an accepted premise for a full-FEI argument.
 

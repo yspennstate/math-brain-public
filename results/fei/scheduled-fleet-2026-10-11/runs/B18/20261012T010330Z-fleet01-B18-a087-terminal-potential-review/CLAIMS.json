@@ -1,0 +1,40 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T010330Z-fleet01-B18-a087-terminal-potential-review",
+  "claims": [
+    {
+      "claim_id": "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY",
+      "version": 1,
+      "review_status": "ACCEPTED_BY_INDEPENDENT_A087_AT_EXPLICIT_SCOPE",
+      "statement": "For every Boolean one-point defect q_n, n>=3, each physical coordinate has strictly negative complete L+Q first credit; both factor-coordinate classes of q_4 tensor q_5 also have negative L, Q, and L+Q credits.",
+      "evidence": [
+        "RESTRICTION_REVIEW.md",
+        "independent_phase_reconstruction.py",
+        "CHECK.out"
+      ],
+      "scope_exclusions": [
+        "No universal local sign across Boolean gates.",
+        "No refutation of globally chosen trees.",
+        "No FEI counterexample."
+      ]
+    },
+    {
+      "claim_id": "B20-A096-TERMINAL-COMPENSATION",
+      "version": 1,
+      "review_status": "ACCEPTED_BY_INDEPENDENT_A087_FOR_CANONICAL_QN_CHAIN",
+      "statement": "For N>=3 on the canonical exceptional-child chain, D_N=2^{-(N-2)}D_2+sum_{n=3}^N 2^{-(N-n)} Gamma_n^D, with the terminal q_2 packet retained.",
+      "scope_exclusions": [
+        "Does not define D(f_l) for arbitrary stopped Boolean descendants.",
+        "Does not prove a universal terminal-budget inequality."
+      ]
+    },
+    {
+      "claim_id": "B18-A087-COHERENT-TREE-LEDGER",
+      "version": 1,
+      "status": "PROVED_BY_CONTRIBUTOR_PENDING_FRESH_REVIEW",
+      "statement": "For any finite fair physical restriction tree with a scalar potential assigned coherently to every node, the potential and total-influence recurrences telescope with exact path weights. Local credit bounds and terminal potential bounds against the parallel influence ledger imply a global nonreusing bound.",
+      "proof": "TREE_LEDGER_REPAIR.tex",
+      "remaining_obstacle": "Construct a useful coordinate-coherent potential for arbitrary Boolean descendants and prove the required local and terminal inequalities."
+    }
+  ]
+}

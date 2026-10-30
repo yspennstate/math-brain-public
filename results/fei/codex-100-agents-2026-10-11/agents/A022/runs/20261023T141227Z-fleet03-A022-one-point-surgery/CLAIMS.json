@@ -1,0 +1,76 @@
+[
+  {
+    "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+    "version": 10,
+    "exact_statement": "Refinement of A022 ledger v9, whose stated scopes are retained. For ANY Boolean DATA seed b on k>=1 bits, ANY adjacent vertices v,w, and ANY dependent Boolean controllers a,c_raw on the SAME independent m-bit cube, put delta=2^-k, epsilon=b(v)b(w), c=epsilon*c_raw, h(y,z)=a(z) if y=0 else c(z), V=U-phi(mean^2), J_y=p_h({y})log2(pi_h({y})/p_h({y})), R=Delta_yV(h)-J_y. Let E(F) be the NONEMPTY DATA/empty CONTROL upper-set contribution. Exactly: V(F)=E(F)+delta[V(a)+V(c)]+2delta R+delta(k-1)[Var(a)+Var(c)]/2 and G_z V(F)=delta[GV(a)+GV(c)]+2delta G_zR+delta(k-1)[W1(a)+W1(c)]/2+G_zE(F). Both physical outcomes and the singleton term are retained. R>=0 and G_zR<=0 are FALSE in general: two-bit masks(1,8) give R=-1/2,G_zR=-3/2; masks(0,1) give R=3/16,G_zR=1/8. For actual m-bit point defect a_m=-1 only0,c=1, r=2^-m, R=r-r^2 and G_zR=mr^2>0, every m>=1. For antipodal point-positive a,c, R=-2r+4r^2*1_modd and G_zR=m[-4r+4r^2(1+1_modd)], while actual selector influence d=2r; hence |G_zR|/d=2m-2mr(1+1_modd) is unbounded. This refutes only absolute interference payment by selector disagreement, NOT signed GU or FEI. All256 ordered two-bit pairs are exactly classified: R signs176positive/24negative/56zero; G_zR168positive/48negative/40zero. Combined signed residual (7), arbitrary adjacent stable GU payment and universal FEI remain OPEN. Also EVERY antipodal-mux coordinate has Delta_iV=R, hence GV(h)=(m+1)R<0 for m>=2. For the actual g tensor2 seed, flipping vertices0 and1 produces EXACTLY28 zero Fourier rows from a seed with full Fourier support: hat f(S)=hat b(S)-(1/16)*1_{first coordinate in S}; zero iff first coordinate lies in S and its second block is nonempty. Thus the former relative amplitude<=1/2 argument cannot be reused at this t2 corner. This does not refute the signed adjacent GU inequality.",
+    "hypotheses": [
+      "Uniform DATA and shared CONTROL cubes; actual Boolean functions; bits; every physical child retained",
+      "Analytic identities for all k>=1,m>=0, arbitrary seed and adjacent vertices; epsilon absorbed into c",
+      "Antipodal and point/constant guards: m>=1; no approximation or FEI premise",
+      "Conditional GU extension requires BOTH bound(7) and endpoint V(F)>=delta[V(a)+V(c)]; neither is claimed universally paid"
+    ],
+    "statement_sha256": "4db0c5b97900030c39472287a647d94098948eb6db56f1c8aa4d4d9fa45257d3",
+    "contributors": [
+      "A022 fleet03 stage11; original upper-set reduction authors/referees remain credited in v9"
+    ],
+    "proof_source": {
+      "main": "PROOF.md Sections1--7",
+      "finite_outputs": [
+        "out/selector_pilot.json",
+        "out/selector_main.json",
+        "out/selector_adjacent.json",
+        "out/independent.json",
+        "out/antipodal.json",
+        "out/corner.json"
+      ],
+      "standalone_reconstruction": "code/independent.py and code/antipodal.py",
+      "sufficient_universal_implication": "agents\\A022\\runs\\20261023T120109Z-fleet03-A022-one-point-surgery\\GU_PROOF.md Sections5--6",
+      "corner_certificate": "code/corner.py; out/corner.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 9,
+        "statement_sha256": "873c5aeda6a49b7224df3a50364eb592977fea0fe916b4abb4f97c9353bdb450",
+        "scope": "source exact adjacent interface and sufficient universal V criterion; pending external review; Sections1--4 identities rederived here"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A022 author",
+        "independent_person": false,
+        "status": "ANALYTIC_DERIVATION_AND_DISTINCT_IMPLEMENTATION_PASS",
+        "assertions": 1581,
+        "scope": "all-dimensional identities/counterfamilies; direct-character reproduction of finite signs and both analytic guard families"
+      }
+    ],
+    "status": "SCOPED_ANALYTIC_IDENTITIES_AND_HELPER_REFUTATIONS; EXTERNAL_REVIEW_PENDING; SIGNED_ADJACENT_GU_AND_FEI_OPEN",
+    "supersedes": {
+      "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+      "version": 9
+    },
+    "refutes": [
+      {
+        "proposed_statement": "R(a,c)>=0 for all Boolean pairs",
+        "witness": "two-bit masks1,8: R=-1/2"
+      },
+      {
+        "proposed_statement": "G_zR(a,c)<=0 for all Boolean pairs",
+        "witness": "point/constant family: G_zR=m4^-m>0, all m>=1"
+      },
+      {
+        "proposed_statement": "There exists finite K with |G_zR(a,c)|<=K Inf_y(h) for all Boolean pairs",
+        "witness": "antipodal point-positive family, all m>=1: ratio2m-2m2^-m(1+1_modd) tends to infinity"
+      }
+    ],
+    "first_unproved_line": "PROOF(7): the combined signed DATA/interference/singleton-variance residual has not been paid by ONE unchanged original influence owner, with both endpoints; universal GU/FEI remains open.",
+    "next_consumers": [
+      "A025",
+      "A028",
+      "A021",
+      "A087",
+      "A094",
+      "B05"
+    ]
+  }
+]

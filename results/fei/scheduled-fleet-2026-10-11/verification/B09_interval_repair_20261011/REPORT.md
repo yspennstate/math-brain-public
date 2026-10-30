@@ -10,16 +10,16 @@ This packet does not accept the full B09 auxiliary theorem or any full-FEI claim
 ## Exact source and preservation
 
 The original natural B09 run is
-`20261011T195500Z-account01-B09-biased-restriction-uncertainty`.
+`20261011T195500Z-fleet01-B09-biased-restriction-uncertainty`.
 
 - Open-problems commit:
   https://github.com/yspennstate/math-open-problems/commit/adb671ffcda143fa68347806bb96e8c305621a7d
 - Source directory:
-  `reports/fei-2026-10-11/runs/B09/20261011T195500Z-account01-B09-biased-restriction-uncertainty/`
+  `reports/fei-2026-10-11/runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/`
 - Brain mirror commit:
   https://github.com/yspennstate/math-research-brain/commit/bfe8eafa2194feb32cb3881957ef844b8fe30de0
 - Brain directory:
-  `research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B09/20261011T195500Z-account01-B09-biased-restriction-uncertainty/`
+  `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/`
 - Original script: `check_biased_and_counterexample.py`.
 - Original script Git blob: `d8a3849f1fed3f2c879aa4c6cd12407d08e6f383`.
 - Original script SHA256:

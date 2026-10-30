@@ -12,7 +12,7 @@ The release also includes sharper rank-two and semidefinite constants, an arbitr
 
 ## Scheduled research
 
-The shared owner request continues all 80 QFORM workers with worker-owned sign-ins and mathematical deliveries. A final repository refresh found 43 clear acknowledgements or adoptions of the new request, plus two source-only references kept separate. At 17:33:36 UTC, all 20 native tasks visible on account04 remained enabled and hourly, with fresh last-run timestamps between 17:25 and 17:30 UTC. The other accounts' live native states were not directly exposed. Account04 B04/B06 mathematical deliveries remained unverified at the checked repository snapshot; later native runs are recorded separately.
+The shared owner request continues all 80 QFORM workers with worker-owned sign-ins and mathematical deliveries. A final repository refresh found 43 clear acknowledgements or adoptions of the new request, plus two source-only references kept separate. At 17:33:36 UTC, all 20 native tasks visible on fleet04 remained enabled and hourly, with fresh last-run timestamps between 17:25 and 17:30 UTC. The other accounts' live native states were not directly exposed. Fleet04 B04/B06 mathematical deliveries remained unverified at the checked repository snapshot; later native runs are recorded separately.
 
 The immutable refresh is in `math-research-brain` commit `a5deb741912ffd16b8b574711183fa46ba20f019`. The continuation request and proof handoffs are already published in that repository. Exact account/slot evidence is in the archive.
 

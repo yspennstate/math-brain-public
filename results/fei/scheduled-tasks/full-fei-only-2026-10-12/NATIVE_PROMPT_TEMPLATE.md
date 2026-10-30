@@ -6,9 +6,9 @@ Revision **2026-10-14.1**. Programme FULL-FEI-ONLY-20261012. The owner explicitl
 
 Read [ORDER.md](ORDER.md) and the complete [GU_LASER_FOCUS_20261014.md](GU_LASER_FOCUS_20261014.md). Use that contract's specific B-stream obligation and relevance gate within the existing five A packets. Retain productive on-target work and every applicable evidence/access limit. Do not restore broader old CASE_TARGETS goals that lack a displayed implication to this target.
 
-The local account01 twenty-task adoption is already recorded in receipts/ACCOUNT01_GU_LASER_20261014.json. Do not redo it or count the same physical task set as another cohort. Other owning coordinators must verify their actual native bindings and acquire the existing exclusive create-only account/hour lease before title/prompt-only changes. A conflict is a blocker, not permission for competing writes.
+The local fleet01 twenty-task adoption is already recorded in receipts/FLEET01_GU_LASER_20261014.json. Do not redo it or count the same physical task set as another cohort. Other owning coordinators must verify their actual native bindings and acquire the existing exclusive create-only account/hour lease before title/prompt-only changes. A conflict is a blocker, not permission for competing writes.
 
-Preserve the exact native identity marker, for example `BRAIN-FLEET v1 account=account01 slot=B01` ONLY for that verified binding. Other dots retain their own actual identity and output routes. Preserve cadence, offsets, timezone, enabled state, notifications, email settings, usage limits and existing endpoint. No new tasks, forced runs or ten-day reset.
+Preserve the exact native identity marker, for example `BRAIN-FLEET v1 account=fleet01 slot=B01` ONLY for that verified binding. Other dots retain their own actual identity and output routes. Preserve cadence, offsets, timezone, enabled state, notifications, email settings, usage limits and existing endpoint. No new tasks, forced runs or ten-day reset.
 
 ## Required prompt sections
 

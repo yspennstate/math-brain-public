@@ -1,0 +1,137 @@
+[
+  {
+    "claim_id": "A007-RETAINED-OWNERSHIP-TAIL-AND-ROOT-BUDGET",
+    "version": 1,
+    "exact_statement": "For every integer s,N>=1 and gamma=6/5, normalize the exact original full-cell surrogate posterior W(k,v)=binom(N,k)N^-k(s)_(k-1)[s!/prod v_i!]prod(v_i/s)^(gamma v_i) over ordered positive v summing to s, 1<=k<=min(N,s). Its ownership entropy H(v/s) obeys Pr(H>=h)<=min(1,C_s*2^(-s*h/5))<=min(1,6^(s-1)*2^(-s*h/5)) for every real h>=0, where C_s=sum_k binom(s-1,k-1)(s)_(k-1)/k!, and E H<=5log2(6)<13 uniformly in s,N. For the original fixed full-cell conjunction cover with common full orders and lambda=1/N, fresh common-core activation F=2A_r B-1 satisfies Psi_dist<=p Var(g)log2[D'/(pD)]+(pr/2)Var(g)log2(6)<=(1-b)log2(6)I_core(F), with b=E B, p=2^-r and inherited complete residual pR_g retained. For arbitrary selected intersections kappa_l between s_l and s, the same occupation sum has log2 Z_tau(u)>=-uH(sizes/s)/5-(6/5)K_tau(u), with nonnegative exact K_tau defined in GENERAL_BUDGET.md and its proved tangent bound. The complete general signed budget keeps beta labels, factorial actual-event credit and all old root rarities except the largest as a valid credit. No universal payment of inherited R_g or arbitrary-support Psi_dist is asserted; W is not an actual queue-probability posterior.",
+    "hypotheses": [
+      "uniform finite cube; all logs in bits except explicitly natural logs; gamma=6/5",
+      "full-cell scope: N distinct positive signed conjunction full cells on m coordinates, N<2^m; common full orders, lambda=1/N",
+      "full-cell covers need not be prime for arbitrary B; parity satisfies literal full-prime-table scope",
+      "ownership sizes ordered by increasing used gate ID, strictly positive and sum s; SAME original surrogate posterior including finite-N labels and actual chronological factorial moments",
+      "fresh positive conjunction core r>=1; p=2^-r; full-cell beta=1; arbitrary-support fixed positive feasible lambda and beta sum lambda<=1",
+      "general budget uses eligible assignments with s_l<=kappa_l<=s and original permissible root sets; no sampled-set-dependent reference choice",
+      "surrogate B mass distinguished from actual size/subset/count/multiset queue probabilities; complete base cost pR_g remains unpaid"
+    ],
+    "statement_sha256": "b27f4aa89f6f72b79be6ff8bcc640a3723181daf615b4f398ea68fc108175fd8",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T043228Z-fleet05-A007-root-normalization\\POSTERIOR_TAIL.md",
+      "general_extension": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T043228Z-fleet05-A007-root-normalization\\GENERAL_BUDGET.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T043228Z-fleet05-A007-root-normalization\\out\\EXACT_CHECK.json",
+      "general_certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T043228Z-fleet05-A007-root-normalization\\out\\GENERAL_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A007-DISTRIBUTED-CORE-COMPONENT-LIFT",
+        "version": 1,
+        "statement_sha256": "d098009e6a0d306a1a627bc12cf92d8dcc345befadb682bb4e8c7072aa318c6b",
+        "status": "A015_INDEPENDENT_ACCEPTANCE_CONSUMED_AT_UNCHANGED_SCOPE"
+      },
+      {
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261014T031846Z-fleet05-A015-minterm-barrier-analysis\\OCCUPATION_ENVELOPE.md",
+        "sha256": "802d99a32b5b7b1ff703896d1a4efbe0056b3257bb98362b8ff2c07b18c0d71c",
+        "locators": [
+          "fixed-assignment envelope",
+          "sharpness",
+          "exact posterior owned-size law"
+        ],
+        "status": "A007_WHOLE_ARTIFACT_RECONSTRUCTED_NO_REPAIR",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T043228Z-fleet05-A007-root-normalization\\REVIEW_A015.md"
+      },
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "locators": [
+          "eq:forestcost",
+          "eq:forestconditioning",
+          "thm:posteriorforest"
+        ],
+        "status": "SOURCE_COMPLETE_BASELINE"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A015",
+        "verdict": "HOLDS_AT_ORIGINAL_DOWNSTREAM_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261014T062347Z-fleet05-A015-minterm-barrier-analysis\\REVIEW_A007.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A015\\runs\\20261014T062347Z-fleet05-A015-minterm-barrier-analysis\\out\\EXACT_CHECK.json",
+        "method": "Independent coefficient/path recurrence and exact multinomial damping; reconstruct tail integration, general K tangent and root/factorial signed budget",
+        "reviewer_supplied_substantive_repair": false,
+        "upstream_authorship_disclosure": "A015 authored the upstream occupation envelope/size law; this downstream review is not a second independent acceptance of that upstream artifact or its full dependency chain",
+        "timestamp_utc": "2026-10-14T06:40:05.411462+00:00"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_DOWNSTREAM_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A015",
+      "A006",
+      "A008",
+      "A009",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A007-EXACT-ROOT-TILTED-OCCUPATION",
+    "version": 1,
+    "exact_statement": "For gamma=6/5, every actual old partition forest rho with used gates V, roots R, c=|R|, owned sizes s_l and selected intersections kappa_l has the following exact rank-stripped common-core distributed-lift multiplier for each integer u>=1. Let a(l) be its actual tree-component root, pi_a its old rarity and f_l(z)=sum_{v=0}^u [((s_l+v)/(kappa_l+u))^(gamma(s_l+v))/(s_l/kappa_l)^(gamma*s_l)] z^v/v!. If c=1, G_rho(u)=beta^|V| u! [z^u]prod_l f_l. If c>=2, G_rho(u)=beta^|V|(u+1)_(c-2)u!/[prod_R pi] [z^u]sum_l pi_a(l) z f_l' prod_{h!=l}f_h. Under the SAME original conditional surrogate posterior J_dist,U(T)=E_eta_T G_rho(|U|). These are selected-family equalities, not complete activated mass or queue probability. At u=1 the root average is weighted by susceptibility t_l=(s_l+1)^(gamma(s_l+1))/(s_l^(gamma*s_l)(kappa_l+1)^gamma), not owned sizes. The actual overlapping two-prime Boolean OR with supports {0,1,4},{2,3,4,5}, selected T={0,1,2}, lambda=(1/2,1/2), beta=1 has forced old ownership (2,1), root rarities (1/8,1/16), ghat(T)=-1/32, and susceptibility-weighted root mean strictly below the owned-size mean 5/48. Thus replacing susceptibility by the owned-size mean in the lower refund is false. Nevertheless its exact J=16*2^(-6/5)+8*(4/9)^(6/5)>8, while one-core conditioning D'/(pD)=97/98. The complete signed all-sector budget and inherited pR_g remain unpaid universally.",
+    "hypotheses": [
+      "fixed positive feasible fractional weights and globally fixed beta with beta sum lambda<=1",
+      "nonempty selected data T; every used gate has positive owned size and s_l<=kappa_l",
+      "actual old chronological partition forests, not separate SCC moment factors; pi_a>0",
+      "fresh positive common conjunction core; gamma=6/5; logs bits; rising factorial convention",
+      "surrogate and rank-stripped selected lift distinguished from full mass and actual queue output"
+    ],
+    "statement_sha256": "f1af3cd06bfbf3effdd57691e97bb5c8ffe6b67eaf9fecd47f3f5ab39581835c",
+    "contributors": [
+      "A007"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T100124Z-fleet05-A007-root-normalization\\JOINT_OCCUPATION.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T100124Z-fleet05-A007-root-normalization\\out\\EXACT_CHECK.json",
+      "witness": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T100124Z-fleet05-A007-root-normalization\\out\\WITNESS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A007-DISTRIBUTED-CORE-COMPONENT-LIFT",
+        "version": 1,
+        "statement_sha256": "d098009e6a0d306a1a627bc12cf92d8dcc345befadb682bb4e8c7072aa318c6b",
+        "status": "A015_NO_REPAIR_ACCEPTANCE_CONSUMED_PREVIOUS_STAGE",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T014217Z-fleet05-A007-root-normalization\\DISTRIBUTED_LIFT.md"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "Replace sum_l pi_a(l)t_l/sum_h t_h by sum_l pi_a(l)s_l/s in the u=1 lower root refund",
+        "scope": "additional shortcut, no existing registered claim refuted",
+        "witness": "~\\brain_workers\\FEI100_20261011\\agents\\A007\\runs\\20261014T100124Z-fleet05-A007-root-normalization\\out\\WITNESS.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A015",
+      "A006",
+      "A008",
+      "A009",
+      "A010",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  }
+]

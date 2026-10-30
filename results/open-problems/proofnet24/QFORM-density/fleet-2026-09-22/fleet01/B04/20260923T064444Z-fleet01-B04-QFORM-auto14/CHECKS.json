@@ -1,0 +1,48 @@
+{
+  "run_id": "20260923T064444Z-fleet01-B04-QFORM-auto14",
+  "theorem": "QFORM-E2-NONHUB-COMPILER-v1",
+  "status": "supporting_theorem_full_target_open",
+  "constants": {
+    "delta0": 0.0016,
+    "eta0": 0.0581685424949238,
+    "r0": 0.1918314575050762,
+    "C_disjoint": 13.946483944492215,
+    "C_triangle": 13.949982726975489,
+    "C_star": 13.949982726975489
+  },
+  "exact_constant_formulas": {
+    "delta0": "1/625",
+    "eta0": "1/625 + sqrt(2)/25",
+    "r0": "1/4 - 1/625 - sqrt(2)/25",
+    "C_disjoint": "4*sqrt(2e)*25^(1/8)",
+    "C_triangle": "6*sqrt(2e)*(3/4)^(1/4)*(3*r0)^(-1/8)"
+  },
+  "rotated_example": {
+    "R0": [[1,0],[0,"sqrt(2)"],["1/sqrt(2)",1]],
+    "right_rotation": "pi/8",
+    "squared_minors": [2,1,1],
+    "Z2": 4,
+    "canonical_row_marginals": [0.75,0.75,0.5],
+    "disjointness_delta": 0,
+    "optimized_q": "4/3",
+    "optimized_weights": ["1/3","1/3","1/3"],
+    "G2": "3*2^(1/3)",
+    "partner_bound": 11.025434960874854,
+    "canonical_first_admissible_bound_q_3_over_2": 14.17333042761808,
+    "gram_eigenvalues": ["(9+sqrt(17))/4","(9-sqrt(17))/4"],
+    "singular_values_numeric": [1.811291364304599,1.1041845831180514]
+  },
+  "double_heavy_identity": {
+    "premise": "canonical E2 row marginal >3/4 and column marginal >3/4",
+    "joint_volume": "> Z2/2",
+    "nonzero_pivot": "Zij = a^2 ||N-c r^T/a||_F^2",
+    "zero_pivot": "Zij = ||c||_2^2 ||r||_2^2"
+  },
+  "scope": {
+    "input_laws": "independent real coordinates, each density <=1",
+    "same_bank_curvature": "arbitrary, retained through partner theorem",
+    "density": "essentially bounded in scalar-square splice",
+    "continuity": false,
+    "full_qform_proved": false
+  }
+}

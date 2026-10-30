@@ -1,0 +1,56 @@
+[
+  {
+    "claim_id": "A003-VACUUM-CALIBRATION-ABSORPTION",
+    "version": 1,
+    "exact_statement": "For a normalized finite reference S, vacuum calibration C_p(S), and any positive mass-preserving frequency map M fixing the empty point mass, C_r(M C_p(S))=C_r(M S) whenever p<1 and the final calibration is admissible; the constant-parent case p=1 also holds for physical Boolean descendants, which necessarily have r=1. Consequently every finite adaptive physical-query policy returning repeatedly to the direct marginal of ONE fixed original source followed by vacuum calibration is pathwise identical to calibrating the CURRENT inherited reference after its first reset, provided intervening operations are only physical frequency deletions and vacuum calibrations. Under the explicitly supplied A096 likelihood hypotheses, all erasures and full terminal cross entropies therefore remain bounded by c+(1-m^2)log2(1/gamma), with zero surcharge for the number of returns. This supplies neither a universally influence-priced reference nor a likelihood floor for arbitrary Boolean functions.",
+    "hypotheses": [
+      "Finite normalized references; finite CE on actual Boolean support; full normalizers and reference-only atoms retained.",
+      "M is positive and mass preserving and sends delta_empty to delta_empty; physical maps delete queried frequency coordinates.",
+      "ONE fixed original source throughout each exit; no new edit floor, nonempty-shape change or source replacement between calibrations.",
+      "At p=1 only physically admissible constant descendants r=1 are claimed; no q=1,p<1 calibration.",
+      "For the transfer consequence only: D(empty)=m=P_g(empty), total D<=1, finite c=CE(P_g,D), S>=D, Q(empty)>=m, Q(T)>=gamma D(T), gamma in (0,1]."
+    ],
+    "statement_sha256": "eae891504525bc258746900115643f249fcde92d20afde807551c07569a861d4",
+    "contributors": [
+      "A003; A096 original supplied-likelihood transfer credited"
+    ],
+    "proof_source": [
+      "DERIVATION.md",
+      "MINIMAL_TARGET.md",
+      "code/verify_absorption.py",
+      "out/VALIDATION.json",
+      "code/verify_transport.py",
+      "out/TRANSPORT_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER",
+        "version": 1,
+        "statement_sha256": "8b8a71cb40c53d689cc4939c1b157a41d6c345a377c865d963a587da89bfc7da",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261023T010221Z-fleet03-A096-live-gap-ledger\\CLAIMS.json",
+        "scope": "Only the explicit original first-frontier supplied-likelihood theorem; proof reconstructed in DERIVATION.md section3. Absorption identity has no external dependency."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A003 author reconstruction and source-scope repair",
+        "verdict": "AUTHOR_PROOF_AND_EXACT_FINITE_CHECKS; independent acceptance pending",
+        "independence": "Fresh array implementation and generic stochastic-map cases; A003 is contributor to repaired extension and does not count as an independent accepting reviewer."
+      }
+    ],
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A085",
+      "A094",
+      "A097",
+      "A073",
+      "A099",
+      "B01 lead",
+      "B20"
+    ]
+  }
+]

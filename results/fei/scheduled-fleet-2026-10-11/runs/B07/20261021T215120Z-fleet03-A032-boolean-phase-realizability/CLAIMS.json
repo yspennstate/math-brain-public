@@ -1,0 +1,102 @@
+[
+  {
+    "claim_id": "A079-FIXED-NONFAIR-SIBLING-SEED-TRANSPORT",
+    "version": 1,
+    "exact_statement": "There exist fixed complementary ternary/indicator rows a,b on four uniform physical bits, with E a^2=5/8 and E b^2=3/8, such that for every Boolean seed h on a disjoint uniform cube, F_h(z,u,x)=a(u)+z*b(u)*h(x) is Boolean, its z-frequency0 normalized squared row remains the same coordinate-product law with three fair marginals and one4:1 marginal, its other row is nonproduct, H(F_h)=5-(9/16)log2(3)+(3/8)H(h), I(F_h)=17/8+(3/8)I(h), I_z=3/8 and I_(u,x)=7/4+(3/8)I(h). With X=(z,unused d) and Y=(u,x), H(Y|X)=(5/8)[7/5+log2(5)]+(3/8)[3-(1/2)log2(3)+H(h)] and the signed address/order1/2-Renyi gap is3/4-2log2(3)-(3/8)R(h). For h_t=ell times t independent copies of any nonconstant Boolean seed f, the joint and conditional/data-influence ratios tend to H(f)/I(f), while the address/seed spectral mutual information is exactly h2(3/8). A universal FEI bound on this fixed-mask one-product-branch class therefore implies full FEI at the same constant; no unbounded-ratio Boolean seed or full-FEI proof is supplied.",
+    "hypotheses": [
+      "Actual Boolean signs on independent uniform physical cube; fixed displayed a,b on16 points",
+      "Fresh seed variables and fresh physical address z; optional second address unused",
+      "All entropies in bits; influence in original physical coordinates; R is order1/2",
+      "Limit uses nonconstant seed I(f)>0 and accounts for balancing sign ell"
+    ],
+    "statement_sha256": "9f459612f7674cd2e65de549e8fd7f36450f149c912b9a5381dd6fbb64da82b6",
+    "contributors": [
+      "A079"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A079\\runs\\20261021T153136Z-fleet03-A079-correlated-auxiliaries\\PROOF.md",
+      "sha256": "54153a0b2aaf9fc58924a2ceef3f94ab89582c8d8e4fb5497a5eca7260c8da1f",
+      "validation": [
+        "out/validation.json",
+        "out/balanced_validation.json"
+      ],
+      "formal_verification": "CORE_LEAN_ATTEMPT_RUNTIME_UNVERIFIED; no theorem certificate"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A032",
+        "at": "2026-10-21T22:21:03.524266+00:00",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A032\\runs\\20261021T215120Z-fleet03-A032-boolean-phase-realizability\\REVIEW_A079.md",
+        "method": "Independent direct character sums, physical edges, prime-log/L1 identities, tensor reconstruction; author code not imported",
+        "formal_verification": "NOT_CLAIMED; core numeric target runtime unverified"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_BY_A032_LOCAL_REGISTRY_ADOPTION_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A034",
+      "A088",
+      "A094",
+      "A096",
+      "A097",
+      "B16",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A032-FIXED-SIBLING-CONTROLLER-STOPPING-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For a=[1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1], b=1-a^2 on four uniform physical bits u and EVERY Boolean seed h on any disjoint finite uniform cube, F_h=a+z*b*h is Boolean. For EVERY adaptive tree T querying only unassigned u bits, stopping at any chosen nodes and keeping z and seed variables unqueried, the weighted sum of actual entropy drops minus four times actual queried influence has sharp maximum 1-(9/16)log2(3), strictly between1/10 and1/8, attained by querying u bit weight1 then stopping. Both complete terminal spectra are retained: at each partial assignment s, H(F_h|s)=H(F_1|s)+beta_s H(h), I(F_h|s)=I(F_1|s)+beta_s I(h), beta_s=E[b|s]; expected leaf beta remains3/8. A single1/8 reserve from original structural component7/2+(9/16)log2(3) pays all such stopping costs without assuming4I(h)>=H(h). The root physical query of u bit weight8 has influence1/2, entropy drop(9/8)log2(3)-1 and rate2 release>1/5; its child influences are7/4+3I(h)/8 and3/2+3I(h)/8. Entropy units are bits. No arbitrary seed query, prescribed nonflat-reference reset or universal FEI bound is asserted.",
+    "hypotheses": [
+      "Actual displayed Boolean completion on original independent uniform physical coordinates",
+      "Arbitrary Boolean seed h, including constants and biased seeds; no seed FEI hypothesis",
+      "History queries only the four original u bits, never z or seed; all adaptive trees and stopping cuts allowed",
+      "Complete child/terminal spectra retained; one original structural reserve without renewal",
+      "Entropy bits; total influence in original physical coordinates"
+    ],
+    "statement_sha256": "ece8fb4ce6e744704a458001a65ba0f869140ddfac51a491a215720b6134958c",
+    "contributors": [
+      "A032"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A032\\runs\\20261021T215120Z-fleet03-A032-boolean-phase-realizability\\PROOF.md",
+      "sha256": "fc9cf948d2d0326da01d9e6356bf87cdfae86b02e03a31719404ae2a1fe39a1c",
+      "certificates": [
+        "out/controller_fixtures.json",
+        "out/controller_transitions.json",
+        "out/controller_stopping.json",
+        "out/validation.json",
+        "out/replay.json"
+      ],
+      "formal_verification": "RUNTIME_UNVERIFIED; submitted core integer inequalities are only a partial translation"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A079-FIXED-NONFAIR-SIBLING-SEED-TRANSPORT",
+        "version": 1,
+        "statement_sha256": "9f459612f7674cd2e65de549e8fd7f36450f149c912b9a5381dd6fbb64da82b6",
+        "acceptance": "independently reconstructed by A032 here; exact displayed truth row also checked directly"
+      }
+    ],
+    "review_records": [],
+    "status": "EXACT_CONTROLLER_CERTIFICATE_ALL_SEED_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A034",
+      "A088",
+      "A094",
+      "A096",
+      "A097",
+      "B07-lead",
+      "B20"
+    ]
+  }
+]

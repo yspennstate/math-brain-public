@@ -1,0 +1,88 @@
+[
+  {
+    "claim_id": "A031-FOURTH-ROOT-ERASURE-CREDITS",
+    "version": 1,
+    "exact_statement": "Let A=(g+h)/2,V=(g-h)/2,F=A+iV for an actual Boolean split, u=Ahat,v=Vhat,d=Inf_i, and M_i be the mutual information of the spectral-sector law with masses u_T^2,v_T^2. Full Booleanity gives F^4=1 and I(F^2)/2=W_i=2 sum_(U nonempty)|U|(sum_T v_T v_(T xor U))^2. With R_i=W_i-d log2(1/d)>=0 and sigma(d)=log2(e)d-(1-d)log2(1/(1-d))>=0, B_i=W_i+log2(e)d-R_i-M_i-sigma(d). In particular B_i+M_i<=W_i+log2(e)d; this bound fails for the normalized non-Boolean coefficient vector (4/5,3/5). In any bound B_i<=alpha I(F^2)+C d valid for all Boolean splits with fixed finite C, necessarily alpha>=1/2, as witnessed by even-dimensional bent one-point phase surgery.",
+    "hypotheses": [
+      "Genuine Boolean sign on a finite uniform cube",
+      "One actual physical coordinate split",
+      "Entropy in bits; all zero and deterministic-sector conventions in PHASE_ERASURE.md"
+    ],
+    "statement_sha256": "774e592a8112afc1de5e4662e9fa14243edf68272324e179e236d81a9d387a72",
+    "contributors": [
+      "fleet05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T232738Z-fleet05-A031-convolution-identity\\PHASE_ERASURE.md",
+      "sha256": "d6c8611e8f2437bcb50d711a2c5f022079b6464b77836cf134e4d942b5b18930"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A035",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A035\\runs\\20261013T212341Z-fleet05-A035-signed-cancellation-countersearch\\A031_INDEPENDENT_REVIEW.md",
+        "sha256": "4260a56ba1d3fc73119bfe640852c13f28d2cfa29cb93f0bc09bbef5a3c748c5",
+        "method": "Physical disagreement reconstruction, direct character sums, exact integer signs, and sharpness via rederived chi-square.",
+        "contributor_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE_PENDING_INDEX_ADOPTION",
+    "supersedes": [],
+    "refutes": [
+      "universal coordinate bound B_i<=alpha I(F^2)+C d with alpha<1/2",
+      "admission of arbitrary normalized real vectors to the phase boundary inequality"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A094",
+      "B07",
+      "B05",
+      "A025",
+      "A064",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A035-SHARED-PHASE-PHYSICAL-CREDIT-AND-EXPOSURE",
+    "version": 1,
+    "exact_statement": "For the explicitly Boolean shared-parity family in DERIVATION.md, for every fixed finite threshold K a fixed even r yields genuinely bad selector-first nodes whose M/sigma-retained but R-dropped positive-excess prefix is not O(I) as m=L grows, even though H/I<=9/4. At r=4 and m=L even>=8, I=85m/32, raw bad prefix/I=(m+4)/85, physical R prefix=m(m-1)/32, and true joint prefix/I=(16/85)(beta-1/4)<0.014404210973, where beta=1+(39/64)log2(13)-(45/64)log2(3)-(25/32)log2(5)>1/4. A complete core-first tree has exact raw bad bill/I=4/85. For adaptive prefixes querying selectors only between completed core pairs, the selector raw bill is q/2[4L+sum E U_j] and true joint selector bill L(beta-4q)/2; terminal leaves and intervening core-node debts remain explicit. This does not refute the existential C019 bridge. A021 is credited for the prior broad EVERY-tree raw-payment no-go.",
+    "hypotheses": [
+      "Uniform independent physical cube; explicit quadratic bent/point-flip modules and shared character parity in DERIVATION.md",
+      "Entropy in bits; true physical query weights; no x-module queries during the stated adaptive prefix",
+      "Selectors are queried at completed-original-quadratic-core-pair boundaries for the adaptive formula; arbitrary complete-tree quantifier only in the precise negative statement"
+    ],
+    "statement_sha256": "1b22654b51d9751c660b1cf86db28f4720a42b1a88e562a2520c0951a2ab0ec2",
+    "contributors": [
+      "fleet05/A035"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A035\\runs\\20261013T212341Z-fleet05-A035-signed-cancellation-countersearch\\DERIVATION.md",
+      "sha256": "9a5861f4c257cc4843d6fec0463ecc6a0bb04127acf1610fb58735a16e8b32d9"
+    },
+    "proof_dependencies": [
+      "A031-FOURTH-ROOT-ERASURE-CREDITS v1, independently reconstructed in this run; exact family proof restates the needed identities",
+      "C005 entropy-drop/JS nonnegativity, explicitly reconstructed as context; no unreviewed bound used"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_AT_STATED_SCOPE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "EVERY-tree localized phase payment after retaining M and sigma but discarding R, at any fixed finite badness threshold",
+      "Treating shared-core raw localized bill as independent of query order"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B07 lead",
+      "A031",
+      "A021",
+      "A025",
+      "A088",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

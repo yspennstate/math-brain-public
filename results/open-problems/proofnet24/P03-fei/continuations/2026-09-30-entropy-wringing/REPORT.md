@@ -13,15 +13,15 @@ Entropies are in bits. Conditional versions are expectations over the conditioni
 
 For a Boolean f on the uniform physical cube, X denotes its squared-Fourier sample. Then H(X)=H(f), E|X|=I(f), and B(f)=sum_i H(X_i|X_-i), so DTC=H−B.
 
-The existing [critical block/Han report](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/account02/B14/20260921T175746Z-block-js-critical-han/REPORT.md) already establishes the all-block criticality and DTC budget. The construction below uses that source without calling it new.
+The existing [critical block/Han report](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B14/20260921T175746Z-block-js-critical-han/REPORT.md) already establishes the all-block criticality and DTC budget. The construction below uses that source without calling it new.
 
 The new bridge is motivated by [Austin, Multi-variate correlation and mixtures of product measures](https://arxiv.org/abs/1809.10272), especially the DTC chain identity and conditioning argument in Section 8. The variant here prices conditioning by actual Shannon entropy instead of the cardinality of the selected coordinate set. No literature-priority claim is made.
 
 The Boolean exact-product endpoint and the limitation of its stability argument are also prior archive results:
 
-- [Exact product spectral classification](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/account01/B18/20260921T095921Z-product-spectrum/REPORT.md)
-- [Product spectrum rigidity](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/account03/B13/20260921T183113Z-product-spectrum-rigidity/REPORT.md)
-- [Product-phase KL stability and its scale gap](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/account02/B18/20260921T103159Z-product-phase-kl-stability/REPORT.md)
+- [Exact product spectral classification](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/fleet01/B18/20260921T095921Z-product-spectrum/REPORT.md)
+- [Product spectrum rigidity](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/fleet03/B13/20260921T183113Z-product-spectrum-rigidity/REPORT.md)
+- [Product-phase KL stability and its scale gap](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260921T103159Z-product-phase-kl-stability/REPORT.md)
 
 In particular, exact product squared Fourier laws of genuine Boolean functions have marginals in {0,1/2,1}, with an even number of fair coordinates. This cannot be applied separately to the projection functions in Section 4.
 

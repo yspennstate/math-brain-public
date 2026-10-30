@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "fleet02-B04-20260923T081907Z-r11",
+  "purpose": "closed-form scalar audit for PARTNER_R28_ADDENDUM.md",
+  "parameters": {
+    "r": 0.7,
+    "theta": 0.7142857142857143,
+    "m_min": 4,
+    "gamma_ridge": 0.001,
+    "g_ridge": 1e-6,
+    "q_ridge": 1.4
+  },
+  "partner_constants": {
+    "C_H": 3.8092512274558294,
+    "K_theta": 1.818968511653173,
+    "F_theta": 33.07096956390116,
+    "C_ad_r": 21.905999830112865,
+    "C_E2_unconditional": 26.334046180759735,
+    "aggregate_adaptive_E2_bound_E16": 21.90599983011287,
+    "aggregate_unconditional_E2_bound_E16": 26.334046180759735,
+    "physical_scalar_partner_coefficient_times_sqrt_m": 15.489881028544167
+  },
+  "volume": {
+    "E3": 4.0,
+    "KL_min_q1": 0.17435338714477766,
+    "G3_opt_q1": 3.3600000000000003,
+    "e5_optimized_q1_bound": 8.083050245273677,
+    "e5_raw_natural_Dprime_bound": 33.17883601301569
+  },
+  "ridge": {
+    "L_gamma_worst_m4": 0.6999998250000437,
+    "q_over_2": 0.7,
+    "theta_gamma": 2.999995500016125,
+    "two_q": 2.8,
+    "D_gamma": 4.00001800000825e18,
+    "explicit_bound": 19.340492872499176,
+    "small_gamma_limit_certificate": 19.340308326536487
+  },
+  "algebraic_checks": {
+    "Mr_singular_values": [2.0, 2.0],
+    "pair_volume_E2": 16.0,
+    "split_cross_singular_values": [2.0, 2.0, 0.5],
+    "target_spectrum_formula": "{1, +/-sqrt(4+m^-2) each twice, (1/m) twice, 0^(m-1)}",
+    "large_eigenvalue_count_for_m_ge_4": 5,
+    "nonzero_minor_square_formula": "16*w_i*w_j/m^2",
+    "q1_optimal_pair_marginals": [0.5, 0.5, 0.5, 0.5]
+  },
+  "status": "finite_scalar_audit_only_not_independent_proof_review"
+}

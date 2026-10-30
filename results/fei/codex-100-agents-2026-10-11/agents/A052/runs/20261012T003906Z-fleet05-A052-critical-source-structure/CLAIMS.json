@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "A052-OPTIMAL-RECENTRING-SINGLETON-COLLAPSE",
+    "version": 1,
+    "exact_statement": "For every binary law on n>=2 coordinates with d_i=P(S_i=1) and sum d_i>0, define B_A=H(S_A|S_Ac), beta_A=sum_(i in A) E min(P(S_i=1|S_Ac),P(S_i=0|S_Ac)), kappa=2/ln2 and U_A=B_A+kappa beta_A. Then B_A>=sum_A B_i, beta_A>=sum_A beta_i and min_(nonempty proper A,I_A>0)U_A/I_A=min_(i:d_i>0)U_i/d_i. The analogous equality holds for Ucap_A=B_A+min(|A|,kappa beta_A), with singleton cost B_i+min(1,kappa beta_i). For Boolean uniform-cube physical restrictions L_A=B_A+J_A<=U_A; the optimized recentering certificate therefore cannot gain from block size. On the exact frozen list of 1150 saved NAND shapes at n=6..9, 265 pass U_A<=R(f)I_A and 885 fail every proper block; 479 of the failures have a directly verified proper block with L_A<R(f)I_A. All seven frozen seed/hybrid controls fail the U certificate, four despite direct strict actual descent. For F_m=product_j (-1)^(x_j y_j), m>=2, R=2, U_A/I_A=2+kappa and Ucap_A/I_A=4 for every proper block, whereas L_A=2 times the number of touched pairs and querying one full pair attains L_A/I_A=2. All physical children have ratio<=2. Products of a two-bit quadratic factor with a three-bit point defect, and their disjoint tensor powers, similarly fail every U certificate at the source ratio while admitting strict actual full-factor descent. No larger-fixed-K or high-threshold minimal-critical impossibility, FEI bound or unbounded Boolean H/I family is claimed.",
+    "hypotheses": [
+      "Entropy in bits; all zero-mass fibers contribute zero; n>=2 and sum d_i>0 for normalized minima",
+      "Physical-channel and tensor assertions use actual Boolean signs on finite uniform cubes; no non-Boolean spectral realizability is assumed",
+      "Finite decisions refer only to the frozen source-hashed family in out/FROZEN_FULL.json and explicit seed clauses",
+      "Criticality interpretation uses the exact physical-child deficit comparison, not component deletion or inherited criticality"
+    ],
+    "statement_sha256": "a893c1a0df35d2d85e067e54eec2361874c67d6648a414af3010fcb00e519039",
+    "contributors": [
+      "fleet05/A052"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261012T003906Z-fleet05-A052-critical-source-structure\\SINGLETON_COLLAPSE.md",
+      "sha256": "6afecba40aaa25c693d38980e4b06815312fde612c0b77e916b1ca95db37ef71",
+      "locator": "Distributional collapse proof, information-cap extension and exact tensor obstruction; finite certificates in out/cases and FULL_SUMMARY.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "CLAUDE-B11-R1",
+        "version": 1,
+        "statement_sha256": "5c0ebce3e0231f554a1e5f27815891cf38dc1361f1e520fac9bfc3595eb4fe7e",
+        "status": "LOCALLY_INDEPENDENTLY_RECONSTRUCTED_ACCEPT_AT_STATED_SCOPE",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A052\\runs\\20261012T003906Z-fleet05-A052-critical-source-structure\\DEPENDENCY_REVIEW.md"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal own-ratio recentring-certificate admission: every nonconstant Boolean f admits proper A with U_A<=R(f)I_A",
+      "The same admission after clipping the channel price by |A|"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "claude/B11",
+      "A051",
+      "A053",
+      "A054",
+      "A055",
+      "A018",
+      "A019",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 # Repaired five-singular-value paper: active audit package
 
-**Objective: QFORM-FIVE-270-REPAIRED-AUDIT-20260925. All eighty existing account01-account04/B01-B20 workers audit this version. Account04 explicitly included.**
+**Objective: QFORM-FIVE-270-REPAIRED-AUDIT-20260925. All eighty existing fleet01-fleet04/B01-B20 workers audit this version. Fleet04 explicitly included.**
 
 Read [ORDER.md](ORDER.md), [MANIFEST.json](MANIFEST.json) and [ASSIGNMENTS.json](ASSIGNMENTS.json). They replace the old fourteen-page audit pin and all older three-value research assignments. Later owner/platform stops always prevail.
 
@@ -20,8 +20,8 @@ Substantive reports: `audits/<account>/<slot>/<actual-run-id>/`.
 Actual acknowledgements: `acknowledgements/<account>/<slot>/<actual-run-id>.json`.
 No fabricated peers, old-source pass carryover, current-runtime claims from a repository instruction, or full Lean verification claims without a matching build.
 
-## Account04 and quiet operation
+## Fleet04 and quiet operation
 
-All twenty account04 tasks must audit this repaired paper instead of the old three-direction discovery project. Each account's existing B20 aligns only its own existing twenty native prompts under the account/hour lease, preserving task IDs, hourly offsets, states and quiet delivery. No duplicates, restarts, cross-account authentication, email, push, paid/API calls, remote workflows, public release or new installation.
+All twenty fleet04 tasks must audit this repaired paper instead of the old three-direction discovery project. Each account's existing B20 aligns only its own existing twenty native prompts under the account/hour lease, preserving task IDs, hourly offsets, states and quiet delivery. No duplicates, restarts, cross-account authentication, email, push, paid/API calls, remote workflows, public release or new installation.
 
 A shared all-80 directive, successful native prompt edits, genuine worker acknowledgements and completed proof audits are four different kinds of evidence. Rollout receipts will state only what actually occurred.

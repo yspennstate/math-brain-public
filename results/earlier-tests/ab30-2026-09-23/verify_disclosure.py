@@ -11,7 +11,7 @@ TREATMENT_COMMITMENTS.jsonl (so no event was dropped, reordered or resized in th
 Two roots are committed per run. events_root_sha256 is sha256 over one line per hook response,
 "seq<TAB>hook_name<TAB>sha256(output)<LF>". events_root_v2_sha256 adds the byte count, "seq<TAB>hook_name<TAB>bytes<TAB>
 sha256(output)<LF>". The first root left each event's output_bytes free: bytes could move between two responses of one
-hook while the root and the per-hook totals both still matched (scheduled audit account02/B19,
+hook while the root and the per-hook totals both still matched (scheduled audit fleet02/B19,
 B19-R37-AB30-PER-EVENT-SIZE-METADATA-UNBOUND-20260928). The v2 roots were added on 28 Sep by rerunning
 tools/ab30_treatment_commitments.py on the same private streams: every earlier field of all 177 rows came out
 byte-identical, the events file too, and the v2 root of each run equals the one this file's events rebuild.
@@ -20,12 +20,12 @@ byte-identical, the events file too, and the v2 root of each run equals the one 
 equals its hook_responses; their positions are exactly 0..n-1; their output bytes, summed by hook name, equal its
 hook_output_bytes; every run with events has a commitment row; and no run and no (run, seq) appears twice. Until 28 Sep a
 row without a root was skipped instead of failed, and a repeated run key was silently collapsed by the dict (scheduled
-audit account01/B19, B19-R37-AB30-MISSING-EVENT-ROOT-PASSES-VERIFIER-20260928). A root alone cannot show an event list
+audit fleet01/B19, B19-R37-AB30-MISSING-EVENT-ROOT-PASSES-VERIFIER-20260928). A root alone cannot show an event list
 is complete, because the same tool wrote both; the count and the byte totals were read from the stream in the same
-pass, so a list that lost a row after that pass fails here (account02/B19, B19-R37-AB30-EVENT-COMPLETENESS-VERIFIER-GAP).
+pass, so a list that lost a row after that pass fails here (fleet02/B19, B19-R37-AB30-EVENT-COMPLETENESS-VERIFIER-GAP).
 Completeness against the stream itself needs the stream, which is private; stream_sha256 binds it for whoever holds it.
 
---files also checks each row's own fields (28 Sep, account01/B19 R44, B19-R44-AB30-SELF-DECLARED-STREAM-MISMATCH-PASSES-
+--files also checks each row's own fields (28 Sep, fleet01/B19 R44, B19-R44-AB30-SELF-DECLARED-STREAM-MISMATCH-PASSES-
 FILES-VERIFIER-20260928; until then a row could say its stream disagreed with its counted row and still pass):
  schema     stream_sha256 and hook_context_sha256 are 64 lowercase hex digits; stream_bytes a positive integer;
             hook_responses and every hook_output_bytes value non-negative integers; a run with no hook responses commits
@@ -57,7 +57,7 @@ DUP_MEMBERS = []     # (file, line, member) for every JSON object read that name
 
 def strict_loads(text, fname, lineno):
     """json.loads, recording any object that names a member twice. Python's own loader keeps the last value silently, so
-    a row could carry a second, hidden value under a name the checks read (28 Sep, account03/B17 r67,
+    a row could carry a second, hidden value under a name the checks read (28 Sep, fleet03/B17 r67,
     B17-R44-DUPLICATE-JSON-MEMBER-SMUGGLING-013); such a file fails as duplicate_json_member before any other check."""
     def pairs(ps):
         seen = set()

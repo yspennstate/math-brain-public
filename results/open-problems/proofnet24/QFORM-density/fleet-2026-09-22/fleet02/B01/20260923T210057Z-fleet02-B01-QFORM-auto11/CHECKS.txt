@@ -1,0 +1,20 @@
+fleet02/B01 20260923T210057Z QFORM deterministic checks
+
+1. Exact threshold arithmetic
+E0 = 3969/8192 = 0.4844970703125
+E0/2 = 3969/16384 = (63/128)^2
+eta = 1/256
+Delta_min = (63/128)*(1/256) = 63/32768 = 0.001922607421875
+64*Delta_min^(-1/4) = 305.63797975140585 < 305.638
+E0-eta^2 = 31751/65536
+sqrt(E0-eta^2) = 0.6960472767876026 > 0.696047
+
+2. Scalar-Schur closure numerical identity
+For 20 deterministic random real symmetric 2x2 feature matrices C0, diagonal D, and U in R^(8x2), form A=D+U C0 U^T. For the first nonzero physical pivot a=A_ii, compare the direct Schur complement H with
+  D_-i + U_-i [C0-a^(-1)C0 u_i u_i^T C0] U_-i^T.
+Maximum absolute entry discrepancy: 1.4210854715202004e-14.
+Maximum numerical rank of H-D_-i at threshold 1e-9: 2.
+
+STATUS=PASS
+
+These finite checks are sanity checks only; the report contains the exact algebraic proof.

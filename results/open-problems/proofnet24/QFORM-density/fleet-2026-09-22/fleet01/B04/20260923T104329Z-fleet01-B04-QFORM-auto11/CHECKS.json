@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T104329Z-fleet01-B04-QFORM-auto11",
+  "theorem": "QFORM-SIXROW-COMPLEMENT-HELLINGER-VOLUME-v1",
+  "status": "exact_symbolic_checks_for_explicit_example",
+  "example": {
+    "U": [["sqrt(3)/2",0,0],["1/2",0,0],[0,"1/sqrt(2)",0],[0,"1/sqrt(2)",0],[0,0,"1/sqrt(2)"],[0,0,"1/sqrt(2)"]],
+    "V": [["6/7","-2/7","-3/7"],["-2/7","3/7","-6/7"],["-3/7","-6/7","-2/7"]],
+    "D": [4,2,1],
+    "identities": {
+      "U_transpose_U": "I_3",
+      "V_transpose_V": "I_3",
+      "det_V": -1,
+      "singular_values_M": [4,2,1],
+      "all_18_physical_cross_entries_nonzero": true,
+      "spectrum_block_symmetric_A": [4,2,1,-1,-2,-4,0,0,0]
+    },
+    "row_triple_volumes": {
+      "{1,i,j}, i in {3,4}, j in {5,6}": 12,
+      "{2,i,j}, i in {3,4}, j in {5,6}": 4,
+      "all_other_row_triples": 0
+    },
+    "Z_R": 64,
+    "C_R_exact": "32*sqrt(3)",
+    "C_R_decimal": 55.42562584220407,
+    "hellinger_affinity_exact": "sqrt(3)/2",
+    "canonical_row_marginals": ["3/4","1/4","1/2","1/2","1/2","1/2"],
+    "canonical_q1_gate": false,
+    "complement_symmetrized_row_weight": "1/8 on each of the eight nonzero row bases",
+    "complement_symmetrized_row_marginals": ["1/2","1/2","1/2","1/2","1/2","1/2"],
+    "KL_to_canonical_exact": "log(2/sqrt(3))",
+    "KL_to_canonical_decimal": 0.1438410362258906,
+    "new_density_bound_exact": "3*e*(32*sqrt(3))^(-1/6)",
+    "new_density_bound_decimal": 4.17635398765184,
+    "new_characteristic_L1_bound_decimal": 26.240806012794916,
+    "single_complement_pair_currency_exact": "8*sqrt(3)",
+    "single_complement_pair_bound_decimal": 5.261876300854946,
+    "aggregation_improvement_factor_exact": "4^(1/6)=2^(1/3)",
+    "aggregation_improvement_factor_decimal": 1.2599210498948732
+  },
+  "partner_calibration": {
+    "source": "fleet02/B04 fleet02-B04-20260923T094548Z-auto11",
+    "partner_equal_minor_example_E3": 64,
+    "partner_example_C_R": 64,
+    "compiler_bound": "3*e/2",
+    "matches_partner_global_weighted_volume_optimum": true
+  },
+  "note": "Exact finite algebra checks only; they do not independently prove the analytic weighted-volume theorem or the full QFORM conjecture."
+}

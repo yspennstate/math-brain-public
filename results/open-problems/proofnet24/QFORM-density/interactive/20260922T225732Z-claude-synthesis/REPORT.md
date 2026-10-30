@@ -192,8 +192,8 @@ If instead G_L>=2delta I, the existing diffuse Fresnel theorem applies to the ph
 The new counterexample report lists definite rank-three forms among the remaining convex cases. The existing archive already closes them:
 
     math-open-problems@f8b6f4d6763094eedf3b23b845dce57e28279c55
-    proofnet24/QFORM-density/fleet-2026-09-22/account02/B18/
-    20260922T123541Z-account02-B18-QFORM-r11/REPORT.md
+    proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/
+    20260922T123541Z-fleet02-B18-QFORM-r11/REPORT.md
 
 Its Theorem 7.1 is QFORM-RANK3-SEMIDEFINITE-v1. It proves ||p_Q||<=3e for exact rank three, all three eigenvalues of one sign and magnitude at least one. The proof is reproduced compactly to reconcile the two workers' proof maps, not to claim a new result.
 
@@ -306,7 +306,7 @@ Imported research sources, with their exact roles:
 
 1. Claude package e5f71d79eff325201dd0274053d20268ce65b837, paths and blobs in Section 1: physical-fiber idea, geometric ruling, Fourier localization split.
 2. LPP Theorem 1.1, arXiv:1507.07949v2: the cap-two two-dimensional marginal theorem. Primary source: https://arxiv.org/pdf/1507.07949 .
-3. account02/B18 20260922T123541Z-account02-B18-QFORM-r11/REPORT.md, pinned at f8b6f4d6763094eedf3b23b845dce57e28279c55: the already-completed semidefinite rank-three result, restored to the combined map.
+3. fleet02/B18 20260922T123541Z-fleet02-B18-QFORM-r11/REPORT.md, pinned at f8b6f4d6763094eedf3b23b845dce57e28279c55: the already-completed semidefinite rank-three result, restored to the combined map.
 4. Interactive separable-phase report at 773b7fb6f0e6a8142066f0bac08d228dfc164fdb: the matching sharp diffuse-frame bound, not a new claim in this note.
 5. Previous Claude-review package at 9844891a9fbe96a65e37f71122bf0300b53dcc80: scope corrections and valid numerical-law requirements.
 

@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T065704Z-fleet01-B18-qform-auto11-r49",
+  "checks": {
+    "private_HS_constant": {
+      "input": "r48 bound 8/sqrt(|a| ||M||_HS), M=2B",
+      "output": "4 sqrt(2)/sqrt(|a| ||B||_HS)",
+      "status": "PASS"
+    },
+    "diffuse_family_norms": {
+      "B_N": "N^(-1/2) I_N",
+      "HS": 1,
+      "op": "N^(-1/2)",
+      "cross_branch": "2 sqrt(pi) sqrt(N)",
+      "HS_private_branch": "4 sqrt(2)",
+      "status": "PASS"
+    },
+    "diffuse_family_spectrum": {
+      "C_eigenvalues": [2, -2, 0],
+      "spectrum_formula": [
+        "1+sqrt(1+1/N)",
+        "1-sqrt(1+1/N)",
+        "-1+sqrt(1+1/N)",
+        "-1-sqrt(1+1/N)",
+        "+/- 1/sqrt(N) repeated N-2",
+        "1"
+      ],
+      "large_eigenvalue_count_for_N_ge_2": 3,
+      "status": "PASS"
+    },
+    "partner_singleton_operator_constant": {
+      "expression": "8/sqrt(12 sqrt(3))",
+      "numeric": 1.7547653506033234,
+      "status": "PASS"
+    },
+    "curved_tail_epsilon_inverse_sqrt_N": {
+      "expression": "8/(sqrt(6) 13^(1/4))",
+      "numeric": 1.7200003042251348,
+      "status": "PASS"
+    }
+  },
+  "privacy_review": "Changed files contain only mathematical statements, public-paper identifiers, repository commit hashes and nonsecret run metadata; no credentials, personal data, financial material, signed URLs or permission changes.",
+  "full_target_status": "OPEN_NOT_PROVED"
+}

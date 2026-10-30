@@ -68,7 +68,7 @@ class PrivateLabelGuardTests(unittest.TestCase):
 
     def test_every_text_file_is_read_whatever_its_name(self):
         # .vbs was once outside the suffix list; on 2026-09-29 so were .jsonl, .log, .lock and
-        # files with no suffix (account04/B17 r13, B17-F1). The guard now reads every file that
+        # files with no suffix (fleet04/B17 r13, B17-F1). The guard now reads every file that
         # is not binary, and says how many it read.
         import contextlib
         import io

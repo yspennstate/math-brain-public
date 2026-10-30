@@ -1,0 +1,34 @@
+{
+  "recorded_at_utc": "2026-10-11T23:42:44.321834+00:00",
+  "prior_A011_review": {
+    "claim_id": "A011-BOUNDARY-RETAINING-SELECTOR-TRANSCRIPT",
+    "version": 1,
+    "statement_sha256": "b9fd46efcd19612862f2e61593de53d008c19f14f411436dd0b1a532dfda27d7",
+    "status": "INDEPENDENTLY_REVIEWED_AT_STATED_SCOPE",
+    "review_records": [
+      {
+        "reviewer": "A086/fleet05",
+        "at": "2026-10-11T22:08:04.529907+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A086\\runs\\20261011T214823Z-fleet05-A086-joint-code-referee\\JOINT_CODE_REVIEW.md",
+        "source_sha256": "eb06d14fc9647733c6333bd282a88e3c7b438a6da7113af0f6a732952405c81b",
+        "method": "Independent analytic reconstruction plus independent integer-FWHT/Fraction queue and transcript implementation; no author checker imported.",
+        "scope": "All stated content"
+      }
+    ]
+  },
+  "A012_subclaim_review": {
+    "original_claim_id": "A012-HEREDITARY-ACTIVATION-ADMISSION",
+    "version": 1,
+    "original_statement_sha256": "504db88a7c77fd5cc5e70b09a6e3f3bad5897cac0261c68a2e8af4a4ed0ea795",
+    "reviewer": "A011/fleet05",
+    "verdict": "ACCEPT_TRANSCRIPT_OBSTRUCTION_SUBCLAIM_ONLY",
+    "scope": "For literal point activation: D=2(1-p), I=p(r+1), raw cost/I=4(2^r-1)/(r+1), H(W|S)>=2(1-p)-4rp-2p log2(e) ->2. No acceptance of hereditary admission or read-once class proof.",
+    "source": "POSTERIOR_REPAIR.tex, independent reconstruction paragraph",
+    "method": "Direct Boolean Fourier coefficient count and physical leaf/edge counting; no supplied checker imported.",
+    "independence_note": "A011 authored the earlier general transcript interface, not A012's obstruction; the obstruction is reconstructed without assuming that interface.",
+    "contributor_repair": false
+  },
+  "new_repair_independent_review": "PENDING",
+  "shared_registry_changed": false
+}

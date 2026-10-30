@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "account": "fleet03",
+  "slot": "B02",
+  "run_id": "20260921T200358Z-b02-r11",
+  "joint_directive": "FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z",
+  "workstream": "brain",
+  "consumed_peer_artifacts": [
+    {"producer":"fleet01/B02","artifact":"runtime_dependency_transport_v1.json","git_blob_sha1":"b02df05e03905bcc99d24940cde9c6afb9f604c5"},
+    {"producer":"fleet04/B02","artifact":"runtime_contract_reconciliation_r39.json","git_blob_sha1":"cb68364ad36c2c5ff22c9c4f62d5554928912532"},
+    {"producer":"fleet04/B02","artifact":"runtime_contract_reconciliation_gate_v1.py","git_blob_sha1":"fc0099f1400488b51e2c3d13ae9b497e3cd1f29e"},
+    {"producer":"fleet01/B01","artifact":"reviewed_source_provenance_gap.json","git_blob_sha1":"271847d02ad55dbebba84c9dd4c20ef25da70f9d"}
+  ],
+  "applied_to_claim": "Reconciled one authoritative B02 dependency contract across accounts, executed the exact peer gate locally, and removed an unbound downstream Pydantic request from B02 blocker accounting.",
+  "executed_result": {
+    "exact_peer_gate_git_blob_match": true,
+    "contract_self_test": "PASS_6_OF_6",
+    "native_probe": "EXPECTED_FAIL_CLOSED_0_OF_4_SEMANTIC_EXACT_AND_NO_LEAN",
+    "authentic_semantic_materialization": "BLOCKED_BEFORE_BYTES_DNS",
+    "authentic_formal_materialization": "BLOCKED_BEFORE_BYTES_DNS",
+    "semantic_model_tests": "NOT_EXECUTED_AUTHENTIC_RUNTIME_BYTES_UNAVAILABLE",
+    "formal_fixture_tests": "NOT_EXECUTED_LEAN_4_30_0_UNAVAILABLE"
+  },
+  "next_recipient": "B01 common installer; B03 for approved vector lineage; B19 for descriptor-bound formal release integration",
+  "remaining_implication": "Co-materialize exact authenticated semantic wheels, BGE snapshot, approved vector lineage and direct Lean 4.30.0, then execute genuine semantic and formal positives/negatives in one receiver.",
+  "full_problem_change": "Runtime contract ambiguity reduced: exact versions/hashes agree cross-account and Pydantic is not an authoritative B02 blocker; byte materialization is now the earliest B02-owned dependency blocker.",
+  "mechanism_change": "Consumed and natively executed an exact peer reconciliation gate instead of rebuilding a duplicate checker.",
+  "report_pointer": "scheduled_tasks/runs/fleet03/B02/20260921T200358Z-b02-r11/runtime_dependency_joint_evidence.json",
+  "full_brain_connected": false
+}

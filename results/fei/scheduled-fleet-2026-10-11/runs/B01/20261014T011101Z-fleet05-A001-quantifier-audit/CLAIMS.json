@@ -1,0 +1,161 @@
+[
+  {
+    "claim_id": "A001-BOUNDED-DEGREE-REFUND-LOSS",
+    "version": 1,
+    "exact_statement": "For every fixed integer L>=0, let C_L retain each residual Fourier subset T with |T|<=L separately and merge all |T|>L into one tail. On a finite uniform Boolean cube define mu_i(T)=p_(T+i)/e_i, r_i(T)=p_T+p_(T+i), D_i^L=D(C_L mu_i||C_L r_i) and M^L=sum_i e_i[log2(1/e_i)-D_i^L], omitting irrelevant coordinates. For n>=max(6,2L+2), let f_n be the n-bit one-point defect, e=2^(1-n), m=2^floor(n/2), and G_n=f_n^tensor(m). Every Fourier coefficient of G_n is nonzero and every physical influence equals e, so I(G_n)=mn e tends to zero. Its genuine H/I<4 and M/I<=2, but M^L/I>=floor(n/2)-2-beta(n-1), beta=e sum_(j=0..L)binom(n-1,j), which diverges. The exact lost refund is M^L-M=sum_i e_i mu_i(tail)D(mu_i(.|tail)||r_i(.|tail)), and therefore its ratio is at least floor(n/2)-4-beta(n-1). No auxiliary parity or dummy coordinates are used. This refutes a universal payment using fixed low-degree atom inspection and one undifferentiated normalized tail, or weaker partitions, not the complete row KL, adaptive or structurally refined tail references, or FEI.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes, standard physical flip influence",
+      "Entropy and KL in bits; continuous zero conventions; relevant rows only",
+      "L fixed independently of n; n>=max(6,2L+2)",
+      "Complete mu_i and r_i probability laws are coarsened without conditioning on derivative support",
+      "Tensor factors use disjoint physical blocks; one-point sign is -1 at one point and +1 elsewhere"
+    ],
+    "statement_sha256": "9cf5cfc2fad8eff6d67e4878052a1dc9b9131d6aabe489a084dbfb604700a833",
+    "contributors": [
+      "A001"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\REPORT.md",
+      "locator": "complete derivation sections 2-3",
+      "immediate_derivation": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\DERIVATION.md",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\out\\TENSOR.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SCOPED_NORMALIZED_REFERENCE_OBSTRUCTION_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "For some fixed degree L, replacing complete retained KL by individually inspected low-degree atoms and one normalized tail gives M^L<=K I for all Boolean signs, even full-support signs of vanishing total influence"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A073",
+      "A099",
+      "A098",
+      "A031",
+      "A033",
+      "A086",
+      "A094",
+      "B01",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-TERMINAL-KL-REFUND-AUDIT",
+    "version": 1,
+    "exact_statement": "For every finite Boolean seed f, every m,k>=1 and ell>=2 on disjoint uniform blocks, let h=chi_Z product_b f_b, J=mI(f)+ell, F=1+A_k(h-1), q=2^-k, d=(1-q)^2+q^2. For each relevant coordinate use mu_i(T)=p_(T+i)/Inf_i and r_i(T)=p_T+p_(T+i); both normalize to one. Let M=sum_i Inf_i[log2(1/Inf_i)-D(mu_i||r_i)] and D_f be the KL divergence of the normalized joint derivative/reference laws, with I(f)D_f=0 for constants. Original core-coordinate divergences obey D_i(F)=D_i(h)+k, D_i(h)=D_i(f) on seed blocks and D_i(h)=0 on parity bits. Every control divergence is D_c=(1-q)(k-1)+q log2(q/d). Consequently I(F)=q(J+k), I(F)D_F=q[mI(f)D_f+kJ+kD_c], M(F)=qmM(f)+k[q(1-q)+q^2 log2(d/q^2)], and M_ge2(F)=qmM(f)+kq(1-kq). For every fixed ell>=2 and finite nonnegative s(N)=o(N), the supremum of M_geell/I over 0<I<=2^-s(N) equals the unrestricted supremum K_M in the extended reals. No finiteness of K_M, universal refund payment or full FEI conclusion is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs, normalized Fourier spectrum and ordinary physical influence",
+      "Uniform finite disjoint blocks; m,k>=1 and ell>=2; entropy/KL in bits",
+      "Zero terms by continuity; irrelevant coordinates omitted; constants treated by I D=0 convention",
+      "Sublinear cutoff finite nonnegative, not required monotone"
+    ],
+    "statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+    "contributors": [
+      "A096"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261013T220343Z-fleet05-A096-live-gap-ledger\\DERIVATION.md",
+      "locator": "Equations (2)-(6) and low-influence refund completeness"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A073",
+        "timestamp": "2026-10-13T23:51:48.476724+00:00",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "method": "Independent complete probability-channel/likelihood-ratio reconstruction and cutoff proof; direct normalized joint Q construction, truth-table Walsh and physical edge verification, prime-log cancellation; support-conditioning mutation",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261013T234148Z-fleet05-A073-certified-logarithms\\REFUND_REVIEW.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A073\\runs\\20261013T234148Z-fleet05-A073-certified-logarithms\\out\\REFUND_SUMMARY.json",
+        "scope": "All stated finite transport formulas and sublinear-cutoff equality in extended reals; no finite K_M or universal payment",
+        "reviewer_contributed_repair": false
+      },
+      {
+        "reviewer": "A001/fleet05",
+        "verdict": "ACCEPT_AT_FULL_ORIGINAL_STATED_SCOPE_NO_REPAIR",
+        "scope": "Every finite Boolean seed including constants; finite tensor/parity/point activation, complete row and joint KL, all listed finite formulas, every fixed ell>=2 and finite nonnegative sublinear cutoff including nonmonotone cutoffs. No universal payment theorem accepted.",
+        "method": "Independent complete-row likelihood-ratio and KL chain reconstruction; separately implemented direct physical flips/integer Walsh and exact prime-log identity checker; explicit cutoff-tail quantifier proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\REPORT.md",
+        "locator": "complete derivation section 1",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261014T011101Z-fleet05-A001-quantifier-audit\\out\\REVIEW.json",
+        "source_statement_sha256": "cb4a8a64144952a20f8810bc491b7a4202ec07d7381b7f8e361484fd3dfcbfce",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_FULL_STATED_SCOPE_BY_A073_AND_A001_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Activation rarity cancellation alone supplies a universal terminal-core retained-KL payment"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A001",
+      "A073",
+      "A090",
+      "A098",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A001-ALL-DEGREE-INFLUENCE-REFERENCE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For actual finite uniform-cube Boolean signs, the following proposed all-degree reference mechanisms cannot uniformly pay cross entropy or their stated majorants by total influence. On F_r=1+A_r(chi_{123}-1), r>=4, all r+3 influences equal delta=2^-r, H/I<4, and the complete derivative row of a data coordinate has all its energy delta at residual degrees >=2, contradicting a proposed all-degree bound 2 delta^2 ln(2/delta). The normalized nonempty product-influence reference Q(S)=prod_{i in S}Inf_i/[prod_i(1+Inf_i)-1] has nonempty cross entropy X/I>=r-2r/(r+3). On even-dimensional quadratic bent signs, B/I=2 while degree-weighted atom entropy/I=n and influence-weighted normalized derivative entropy/I=n-1. More generally, for every rule selecting a complete spectral subprobability reference using only the labeled influence vector and permutation-invariant metadata, for every integer w>=2 some coordinate permutation of OR of 2^w disjoint width-w point conjunctions has CE/I>=w/18. This last assertion also covers nonexchangeable reference rules; it does not exclude function-specific references or retained-KL corrections, and does not disprove FEI.",
+    "hypotheses": [
+      "Actual Boolean signs, finite uniform cubes, standard physical influence",
+      "Entropy and ideal complete subprobability cross entropy in bits; natural logs explicitly ln",
+      "Product reference is on nonempty subsets and its actual nonempty spectral mass is retained",
+      "Influence-only rule gives the same reference for every Boolean realization with the same labeled influence vector and permitted invariant metadata",
+      "Coordinate permutation changes the function, while the equal-influence vector in the stated tribes family is unchanged",
+      "No claim that arbitrary conditional-edge references or function-specific spectral references have unbounded cost"
+    ],
+    "statement_sha256": "f5824091a300e9fac3d0f028c7bbd0f0ebca64e58ddf0d2c25c3178060f83675",
+    "contributors": [
+      "A001"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A001\\runs\\20261013T213937Z-fleet05-A001-quantifier-audit\\REPORT.md",
+      "locator": "complete derivation sections 2-5",
+      "validation": [
+        "out/CHECK.json",
+        "out/ORBIT_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A098",
+        "timestamp": "2026-10-13T23:57:44.931703+00:00",
+        "verdict": "ACCEPT_INFLUENCE_ONLY_REFERENCE_SUBCLAIM_ONLY",
+        "scope": "A001 v1 final all-dimensional tribes orbit obstruction CE/I>=w/18, including labeled nonexchangeable influence-only rules. Earlier activated-parity, product-prior and bent-majorant clauses are not independently accepted by this record.",
+        "method": "Independent orbit minimax reconstruction, canonical pairing enumeration, character-sum versus Walsh and physical-edge checks, exact factorized binomial certificates",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A098\\runs\\20261013T235014Z-fleet05-A098-resource-reallocation\\REPORT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A098\\runs\\20261013T235014Z-fleet05-A098-resource-reallocation\\out\\ORBIT_REVIEW_CHECK.json",
+        "source_statement_sha256": "f5824091a300e9fac3d0f028c7bbd0f0ebca64e58ddf0d2c25c3178060f83675",
+        "reviewer_contributed_repair": false
+      }
+    ],
+    "status": "INFLUENCE_ONLY_REFERENCE_SLICE_INDEPENDENTLY_ACCEPTED_BY_A098; BUNDLED_OTHER_CLAUSES_PENDING_FULL_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "All-degree extension of sparse degree-one derivative suppression",
+      "Uniform payment of the normalized product-influence nonempty reference",
+      "Uniform payment of all-degree upper-atom/complete-row entropy majorants",
+      "Universal complete spectral-reference cross entropy payment using only influences and invariant metadata"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A045",
+      "A073",
+      "A096",
+      "A098",
+      "A099",
+      "A015",
+      "A086",
+      "A094",
+      "B01",
+      "B20"
+    ]
+  }
+]

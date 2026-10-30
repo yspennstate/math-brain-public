@@ -1,5 +1,0 @@
-# Final correction refresh
-
-A later correction event was read before finish: account02/B20 `QFORM-R-ROBUST-TWODIR-FREE-IMPLICATION-FALSE-v1`, brain commit `d35c83ed248fe51e5aacee10ad88eefa4d1b39af`, canonical report `math-open-problems@34a57f18778ea4be069a3f39a953801296d01864`. It refutes any universal implication from an N3 state with aggregate `E2` positive but small `E3/E5` to a fixed positive product `sigma_1(D)sigma_2(D)` on a selected physical cross block.
-
-This does **not** affect `QFORM-MIXED-HUB-D5-ROBUST-v1` or `QFORM-MIXED-HUB-DPRIME-ROBUST-v1`: both hypotheses explicitly assume a lower bound on a singular value of the dense-twist cross block (`s_{r+5}(E[I,J])>=gamma` or `s_{r+3}(E[I,J])>=gamma`) and then use the rank-perturbation inequality. Neither theorem infers a singular-value lower bound from `E2/E3/E5` aggregate currencies. The correction strengthens the interpretation of the remaining gap: aggregate low-order energy cannot be converted for free into two robust physical directions.

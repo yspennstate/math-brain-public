@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T072314Z-fleet03-B06-fiveaudit-r07",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "control_revision": "2026-09-25.1",
+  "audited_this_run": [
+    "371-407",
+    "260-370"
+  ],
+  "p2_direct_coverage": "260-638",
+  "complete_passes": 1,
+  "findings": {
+    "C02": "GAP line319; missing outer Jensen |E F|^2<=E|F|^2; repair revalidated",
+    "C08": "GAP line398; displayed density formula undefined at z=v; define representative there or state a.e."
+  },
+  "local_status": {
+    "lemma_4_2": "PASS",
+    "lemma_4_3_internal": "PASS",
+    "lemma_4_3_end_to_end": "UNCHECKED pending P2 Lemma2.1(a), Lemma3.2, Lemma3.3 and C02 repair",
+    "theorem_4_1_final_greedy": "PASS",
+    "theorem_4_1_end_to_end": "UNCHECKED pending Lemma4.3",
+    "corollary_4_4_local_constants": "PASS",
+    "corollary_4_4_end_to_end": "UNCHECKED pending earlier dependencies",
+    "lemma_5_1": "PASS modulo C08 pointwise wording"
+  },
+  "next_cursor": "175-241, then 83-138",
+  "execution": "WITHOUT_VERIFIED_BRAIN"
+}

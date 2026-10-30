@@ -65,7 +65,7 @@ def _with(vecs: np.ndarray, row: int, col: int, value: float) -> np.ndarray:
         ("a NaN coordinate", _with(GOOD, 1, 2, np.nan), IDS, "NaN or infinite"),
         ("an infinite coordinate", _with(GOOD, 0, 0, np.inf), IDS, "NaN or infinite"),
         ("a repeated identifier", GOOD, np.array(["claim_a", "claim_a", "claim_c"]), "not unique"),
-        # account04/B06 r75: one row per id, and the ids a flat list
+        # fleet04/B06 r75: one row per id, and the ids a flat list
         ("a two-dimensional identifier array", GOOD, IDS.reshape(-1, 1), "1-D"),
         ("a one-dimensional array", GOOD[:, 0].copy(), IDS, "2-D"),
     ],
@@ -88,7 +88,7 @@ class _Marker:
 
 
 def test_a_pickled_identifier_array_is_refused_without_running(lane, tmp_path: Path) -> None:
-    # account04/B17 r14, B17-R24-SEMANTIC-NPZ-ALLOW-PICKLE-CODE-EXEC-20260929
+    # fleet04/B17 r14, B17-R24-SEMANTIC-NPZ-ALLOW-PICKLE-CODE-EXEC-20260929
     marker = tmp_path / "unpickled.marker"
     ids = np.empty(3, dtype=object)
     for i in range(3):
@@ -119,7 +119,7 @@ def _top() -> str:
 
 def test_the_generation_names_the_bytes_that_were_read(lane, monkeypatch: pytest.MonkeyPatch,
                                                       tmp_path: Path) -> None:
-    # account04/B11 r4, B11-R31-SEMANTIC-LOAD-TOCTOU-20260929-01: the file is replaced between the
+    # fleet04/B11 r4, B11-R31-SEMANTIC-LOAD-TOCTOU-20260929-01: the file is replaced between the
     # generation check and the read. The loader now reads the file once, hashes those bytes and parses the
     # same bytes, so the vectors it keeps are always the ones its generation names; the next call reads the
     # replacement.
@@ -230,7 +230,7 @@ def test_retrieval_trace_shows_the_cosine(lane) -> None:
     assert traces and all("cosine" in t.detail for t in traces)
 
 
-# One store digest per row, when the file records them (account03/B12 r56,
+# One store digest per row, when the file records them (fleet03/B12 r56,
 # B12-R56-ID-ONLY-COVERAGE-CERTIFIES-UNBOUND-VECTOR-TEXT-20260929): read with the vectors, from the
 # same bytes, so a caller can check each vector against the text its claim holds now.
 def test_recorded_digests_are_read_with_the_vectors(lane, tmp_path: Path) -> None:

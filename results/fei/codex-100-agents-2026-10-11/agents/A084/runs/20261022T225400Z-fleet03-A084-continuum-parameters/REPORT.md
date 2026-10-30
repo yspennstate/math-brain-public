@@ -1,0 +1,35 @@
+# exact target, quantifiers, hypotheses and units
+
+The prior first-query correction now extends to EVERY real second-query law, after either actual first child. Different-block correction <=5/4 of the actual physical influence; same-block correction <=11/4. Finer gate-direction constants and the exceptional35/32 price are in PROOF.md. Cores have arbitrary finite dimension, initial negative probability0<p<=1/16, and disjoint supports. The bound pays the additional composition correction only. Full FEI remains OPEN.
+
+# sources actually read, revisions and theorem locators
+
+Read machine AGENTS, execution protocol/2 revision2026-10-11-execution-v2, current BOARD, B17 notesv2, own rolling files summarizing stages1--4 and the complete stage5 proof/claims. B17's original AND-map direction is stale: own stage2 already closed that target, so this resumes the saved physical-query gap. Read A072 run20261021T225156Z PROOF/REPORT and component_audit/continue_spent/third_query/arithmetic, A075 run20261021T173628Z proof/report, and the current A089/A074 run state. Their newest folders were empty at inspection, so no result is inferred from their names. Campaign indices/plan/supplement and all four paper texts were loaded; source-byte hashes and explicit encodings are in out/SOURCE_RECEIPTS.json. Relevant threshold composition/shared-data passages were inspected as background, not taken as an unproved hypothesis. Percolation background supplies no premise here. No web or literature novelty claim is made.
+
+# complete derivation or exact first unsupported line
+
+PROOF.md derives the occupied-mask entropy identity, fixed-other-law curvature C_j''=-2L, and the exact tent-kernel physical central difference. One prior query leaves a special bias t in[0,2p]. Ordinary gate directions have exact previous-positive pivotal witnesses. The initially proposed universal witness premise FAILS for J, previous0/target4; this is retained. Split Jensen on that previous variable cancels the dangerous log(1/t), giving L/q<=log2(1/p)+19/4 and price35/32, with t=0 handled by exact irrelevance. Same-block queries use selected probability<=2p and mean interval>=1/2. Monotonic endpoint estimates establish every REAL p, not a grid. All zero denominators, coefficient-zero integrals and constant children are addressed.
+
+Independent A072 accounting reconstruction HOLDS at the explicit substatement scope: mean unused child reserve equals the original parent reserve; zero nonnegative reserve is absorbing under any further feasible continuation. Positive components in saturated children are already expenditure. The full60-case optimizer is not independently accepted here. First unsupported universal line: Noncircular payment of q_j Delta H(core_j), after all old debits, from a genuinely unused source with both complete terminal entropies. Several unrelated prior bias changes are also outside this two-query theorem.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+FROZEN_SPEC and ANALYTIC_SPEC precede their jobs. Pilot4 physical cases passed401 assertions in1.3365s. Final helper, after the general-Parseval repair, passed144 physical queries/4449 assertions in16.4700s; both full children are retained. It independently compares integer FWHT with direct character sums and influence with physical edge counts.173 occupied profiles and10 physical core tables are checked, including constant earlier children and zero-pivot cases. Exact log profiles verify the complete entropy and influence cancellations. Strict signs use outward192-bit bounds,80 atanh terms and a proved geometric tail, with floats for display only.
+
+The separate analytic guards pass1617 assertions in1.1535s, reconstructing18 rational(p,t,x) cases from the actual gate's32-entry sections, all six exact h pivot polynomials, endpoint bounds and the exceptional grouped coefficients. These finite guards test the algebra; the analytic proof supplies continuum coverage. The first guard failed because a Boolean-only Parseval assertion was applied to a ternary section average; INITIAL_ANALYTIC_FAILURE records it. General Parseval and explicit physical Booleanity fix the helper; both domains were rerun. Commands from A084: python -B -X utf8 runs/20261022T225400Z-fleet03-A084-continuum-parameters/code/verify.py --pilot; verify.py; analytic.py; lean_attempt.py; persist.py. Jobs estimate120MB and have55s mathematical caps, with no dimension escalation/GPU/remote compute. Fresh memok precedes the optional core compiler. Core Lean attempt: HELD_NO_COMPILER_LAUNCHED. See out/LEAN_ATTEMPT.json; no Lean certification of the Fourier/continuum theorem is claimed.
+
+# proof dependencies and changed downstream conclusions
+
+Refines A084-RARE-PHYSICAL-TERMINAL-CURVATURE@1 to@2, preserving all first-query claims. The new second-query estimates are derived directly rather than assuming child FEI or a fresh donor. A072 saturation accounting is independently accepted only as recorded in out/REVIEW_A072.json. No arbitrary-core eligibility or full-FEI constant follows. This closes the one-heterogeneous-block analytic gap in the local correction, while leaving its inherited core debt visible.
+
+# one next mathematical action and independent reviewer
+
+A074/A092/A075 should independently check the exceptional split-group cancellation and endpoints. Then use these exact second-query prices to pay the SAME inherited core decrement from genuinely unused source capacity, keeping every old label and both terminals. Repeating the AND map or enumerating more isolated gates would leave that universal gap untouched.
+
+# actual persistence receipts or precise save blocker
+
+Four required protocol files, complete proof, frozen specifications, code, outputs and rolling files are local. out/SCHEMA_VALIDATION.json checks exact field sets and file limits; out/MANIFEST.json pins bytes and hashes. STATUS has exactly two lines. Supervisor upload, mirror verification, independent acceptance and brain ingestion remain unverified. No git, mail, shared research mutation, deletion, detached computation, trading access or process stopping. Wake completed with degraded personal-note freshness (owner model85.3h,state69.9h); this was disclosed and not used as a mathematical premise. Contract cache is stale, so no irreversible work was performed. Task T-20261023-046.
+
+# Universal bridge
+
+This stage moves C019 stopping-tree payment by closing the continuum correction step through ONE heterogeneous continuation: different-block cost<=5/4 and same-block<=11/4, including the previously uncovered J0-to4 zero-pivot face. It also independently confirms that saturation leaves no renewed donor. The arbitrary-core decrement and a truly unused inherited source remain unpaid; histories with several unrelated biases remain outside scope. NEXT targets that SAME full account under a now-certified second query, the shortest remaining route from this packet toward a dimension-independent FEI proof rather than another isolated class estimate.

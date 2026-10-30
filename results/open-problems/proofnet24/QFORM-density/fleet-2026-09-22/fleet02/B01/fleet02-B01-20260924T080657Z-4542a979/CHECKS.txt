@@ -1,0 +1,38 @@
+fleet02/B01 deterministic consistency checks
+run=fleet02-B01-20260924T080657Z-4542a979
+
+thresholds:
+delta=0.25
+rho=0.75
+rho-delta=0.5
+delta^2/rho=0.08333333333333333
+rho-delta^2/rho=0.6666666666666666
+
+branch constants:
+169*(rho-delta)^(-1/2) = 239.00209204105306
+128*rho^(-1/2) = 147.80166891254422
+169*rho^(-1/2) = 195.14439098609353
+8*rho^(-1/2)+8*4^(-1/4)*[4*(9/2)^(1/4)]*rho^(-1/4) = 44.651425737444306
+2^(13/4)*delta^(-1/2) = 19.027313840043536
+2^(23/8)*delta^(-1/2) = 14.67206469127474
+maximum = 239.00209204105306 < 240
+
+stress family S_epsilon eigenvalues (numerical sanity only):
+epsilon=0:      -1, 0, 2, 2
+epsilon=0.01:   -1.00013332, 0.0000999850, 2, 2.00003333
+epsilon=0.25:   -1.07826701, 0.05736384, 2, 2.02090317
+analytic certificate used in proof: u=(H1+H2)/sqrt(2) has eigenvalue 2; remaining cubic p(lambda)=lambda^3-lambda^2-2(1+epsilon^2)lambda+2epsilon^2 has p(2)=-2epsilon^2<=0 and p(-1)=4epsilon^2>=0, hence one root >=2 and one <=-1.
+
+stress family direct conditional bound:
+169/sqrt(2) = 119.50104602052653 < 120
+fresh partner Riesz-to-Fejer consequence:
+240/(pi*sqrt(2)) = 54.018978969426364
+(169/sqrt(2))/(pi*sqrt(2)) = 169/(2pi) = 26.897185382530314
+
+partner r46 weak-pair sanity:
+for P_epsilon=[[1,epsilon],[epsilon,0]], D=epsilon^2 and kappa=(sqrt(1+4epsilon^2)-1)/2 ~ epsilon^2, so D^(-3/10) kappa^(-1/5) ~ epsilon^(-1). Numerical valid upper-envelope values with lambda set to 1: epsilon=.25 ->57.3776; .1 ->142.0881; .01 ->1418.1117; .001 ->14180.8358.
+
+Cross-volume obstruction on 5-coordinate stress family:
+for every disjoint cut I|J, min(|I|,|J|)<=2, hence rank(A[I,J])<=2 and e3=e5=0.
+
+STATUS=PASS

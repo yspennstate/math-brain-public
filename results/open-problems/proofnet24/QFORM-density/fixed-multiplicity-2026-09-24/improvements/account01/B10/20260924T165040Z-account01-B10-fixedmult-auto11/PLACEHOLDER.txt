@@ -1,9 +1,0 @@
-account01/B10 fixed-multiplicity run report.
-
-Pinned current source: eeb752c8943536541b34b42b8bf48e924f4d3d2f / blob 19fb119877426b640b2c0dae19ec2f78a399fe11. Full 955-line paper and support package read. Baseline 790-line manuscript at 7c0d6e60946b19423e6400a12d34b473cf0591e2 / blob 183ccd294763214e6a707e8d4749ff9a8cf7006d also read in full.
-
-Source finding: current lines 598-600, and baseline lines 472-474, reuse the coordinate selected from u when treating the negative hyperbolic tail governed by w. Equal norms do not imply the same coordinate is large. Repair: select i_plus from u and independently i_minus from w, and use the existing tail argument separately. Both selected coefficients have the same lower bound, so both cutoff estimates and all constants remain unchanged.
-
-Status: literal source has one local GAP. After the repair, all mathematical source lines were checked and no second gap or false statement was found. Finite checker coverage remains diagnostic, not a proof certificate.
-
-A complete multiplicity-eight reconstruction and exact seven-direction router are recorded in companion files for this run.

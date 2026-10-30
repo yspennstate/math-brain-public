@@ -1,0 +1,110 @@
+{
+  "read_at": "2026-10-23T14:40:12.578177+00:00",
+  "files": [
+    {
+      "path": "math-open-problems/reports\\fei-2026-10-11\\EXECUTION_PROTOCOL.json",
+      "sha256": "5817c4d0df3d09678fbed838901de91d9377535173553432441ecc537b26d594",
+      "bytes": 10806
+    },
+    {
+      "path": "BOARD.md",
+      "sha256": "aa6216b89c50ab542efaa30294870678c908201506a9457c2f87f973318a8431",
+      "bytes": 65982
+    },
+    {
+      "path": "claude\\B04\\STREAM_NOTES.md",
+      "sha256": "40990cc5a57ceb05bbd85e3ec654c56401fd266438e47e6b630ad3736f113c53",
+      "bytes": 3196
+    },
+    {
+      "path": "agents\\A016\\runs\\20261023T112921Z-fleet03-A016-addressing-benchmark\\REPORT.md",
+      "sha256": "c7d0b1bfb415bfd8942de943c0eaf98313b70557722932440e4e2bbd267dc0dc",
+      "bytes": 15975
+    },
+    {
+      "path": "agents\\A016\\runs\\20261023T112921Z-fleet03-A016-addressing-benchmark\\code\\check.py",
+      "sha256": "ef314f6d3925ac7ab8b436afcee7171f799e1dd5c87d7e3a2ceb23c74688759b",
+      "bytes": 11982
+    },
+    {
+      "path": "agents\\A019\\runs\\20261023T125104Z-fleet03-A019-orthogonality-extensions\\REPORT.md",
+      "sha256": "6a9b84ce6a87582d80754937bb2ea8596c5989788910395804ca988fd22ae1f7",
+      "bytes": 14214
+    },
+    {
+      "path": "agents\\A019\\runs\\20261023T125104Z-fleet03-A019-orthogonality-extensions\\CLAIMS.json",
+      "sha256": "c4c608e96698a519ef9f130664f0aed3f26abda75d701b9b69518b6e6d17fc3f",
+      "bytes": 8961
+    },
+    {
+      "path": "agents\\A020\\runs\\20261023T132008Z-fleet03-A020-selector-boundary-tests\\REPORT.md",
+      "sha256": "4e6fb1522e38d45812369de11d22cb996a0335972018387f32cd852fec2b491a",
+      "bytes": 18865
+    },
+    {
+      "path": "agents\\A020\\runs\\20261023T132008Z-fleet03-A020-selector-boundary-tests\\CLAIMS.json",
+      "sha256": "9250bedf618f4b72b7a8da8d424803d598646714c7a5632d9756228c971ad16e",
+      "bytes": 4857
+    }
+  ],
+  "source_claim": {
+    "claim_id": "A019-AVERAGED-ADAPTIVE-GHOST-PREFIX-OBSTRUCTION",
+    "version": 1,
+    "statement_sha256": "e43587675e926a4cf1f30be1edd0c8582c5c0332bcdf96cb145014d7125a296e"
+  },
+  "downstream_A020_review": {
+    "claim_id": "A020-REVIEW-A016-ESSENTIAL-MIXED-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Independent reconstruction holds for unchanged A016-ESSENTIAL-MIXED-PADDING-OBSTRUCTION-AND-AVERAGED-REPAIR@1: its original m4,k>=5 source has a mixed terminal with seven essential coordinates,4I=51/8 or53/8 and selected code cost7(k+11)/64. Both old-Q/U reserves at k64 are<-101/64 and diverge negatively with k. Conditional reach-weighted active-leaf deficit is<5 times actual padding influence k*2^-k/16, with ratio tending to7/4. Its full distinguished padding subtree has expected reserve>155/128; its complete stated mixed policy has expected reserve>5/8. No adaptive universal or pointwise mixed eligibility claim follows.",
+    "hypotheses": [
+      "Exactly the original source, reference, old U, stated distinguished three-first-bits-all1/cleanup history and full physical padding policy from the reviewed source version; all siblings and both q signs retained.",
+      "The other seven completed tensor histories use the unchanged accepted all-adaptive tensor theorem; the distinguished pre-padding state uses the separately reconstructed first-bit bound>5/4."
+    ],
+    "statement_sha256": "3a6c55755b34888a2e8e52db07bb4edf204e753d4c6270202b96a5a9bb3da88f",
+    "contributors": [
+      "A020"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "code/check.py",
+      "out/CHECK.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A020-ALL-ADAPTIVE-TENSOR-CLEANUP",
+        "version": 1,
+        "statement_sha256": "ab62a2e48750345a45c5579e710888ecae64b5cb9f62bcc33e220389e3f60822"
+      },
+      {
+        "claim_id": "A020-REVIEW-A016-ALL-FIRST-BIT-CLEANUP",
+        "version": 1,
+        "statement_sha256": "f205d92ebce3599ffe5d970f56fefe3d08954bc43b414bb4e4a1748f91bc0744"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A020",
+        "source_under_review": {
+          "claim_id": "A016-ESSENTIAL-MIXED-PADDING-OBSTRUCTION-AND-AVERAGED-REPAIR",
+          "version": 1,
+          "statement_sha256": "40759bda62c6dcba2c20029977de7f0015948967460c345677130769d24b9642"
+        },
+        "conclusion": "HOLDS_UNCHANGED_FULL_STATED_SCOPE",
+        "method": "Separate128-point terminal Walsh/edge reconstruction; exact normalized original reference; analytic complete-cost and signed physical-tree ledger.",
+        "substantive_repair": false
+      }
+    ],
+    "status": "INDEPENDENT_RECONSTRUCTION_HOLDS",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A016",
+      "A018",
+      "A019",
+      "A090",
+      "A091",
+      "A094"
+    ]
+  }
+}

@@ -5,7 +5,7 @@
 It imports nothing from derive.py: the two files are the whole interface. A claim with no derived value, or a derived
 value with no claim, is reported and fails the check.
 
-Since 29 Sep 2026 (scheduled audit account04/B20 r37, B20-R37-MISSING-STATUS-SILENTLY-SKIPPED-20260929) the release is
+Since 29 Sep 2026 (scheduled audit fleet04/B20 r37, B20-R37-MISSING-STATUS-SILENTLY-SKIPPED-20260929) the release is
 checked as a closed package before any claim is compared:
 - every file MANIFEST.json lists must be present with its recorded size and SHA-256 (a file changed after the manifest was
   written fails here, before the comparison);
@@ -33,7 +33,7 @@ def _no_dup(pairs):
     names = [k for k, _v in pairs]
     dup = sorted({k for k in names if names.count(k) > 1})
     if dup:
-        # json.loads keeps the last of two same-named members and hides the first (account03/B17 r67,
+        # json.loads keeps the last of two same-named members and hides the first (fleet03/B17 r67,
         # B17-R44-DUPLICATE-JSON-MEMBER-SMUGGLING-013); check_release_manifest.py refuses it, and so does this
         raise DuplicateMember("duplicate_json_member %s" % dup[:4])
     return dict(pairs)

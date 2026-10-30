@@ -1,0 +1,63 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T225444Z-fleet05-A010-universal-residual-falsifier",
+  "stream": "B02",
+  "packet_id": "A010",
+  "gap_id": "G-J-COST",
+  "attempt_id": "A010-PIJ-CENSUS-1",
+  "method": "NPN census, integer Walsh and exact posterior forest mass with rational intervals; separate queue-trace replay",
+  "mathematical_delta": {
+    "finite_ceiling": "1421029/1000000",
+    "nonconstant_orbits": 238,
+    "truth_tables": 65812,
+    "top_n": 4,
+    "top_truth": 863,
+    "all_lambda_infimum": "OPEN",
+    "full_FEI": "OPEN",
+    "weight_boundary": "Fixed positive rays: coefficient of log(1/t) equals E[(minimum cover number-1) 1_{A nonempty}]",
+    "n_le_2_complete_weight_and_order_infimum": "Worst exact ratio 3/10; analytic proof includes both output orientations and limiting boundaries",
+    "compute_receipt": {
+      "seconds": 1553.953230299987,
+      "frozen_seconds": 1500,
+      "last_orbit_guard_overrun_seconds": 53.953230299987,
+      "campaign_job_seconds_limit": 1800,
+      "observed_peak_sample_RSS_bytes": 32587776,
+      "replay_seconds": 0.1288331999676302
+    }
+  },
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT",
+  "mathematical_status": "FINITE_TABLE_UPPER_BOUND_CERTIFIED; UNIVERSAL_PIJ_AND_FEI_OPEN",
+  "claim_versions_used": [
+    "forests.tex source pin in out/hashes.json; thm:posteriorforest"
+  ],
+  "claims_created_or_changed": [
+    "A010-PIJ-FINITE-TABLE-CEILING-v1",
+    "A010-PIJ-RADIAL-BOUNDARY-v1"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "SEARCH_SPEC.json",
+    "REPLAY_SPEC.json",
+    "code/search.py",
+    "code/replay.py",
+    "out/results.json",
+    "out/replay.json",
+    "out/summary.json",
+    "out/hashes.json"
+  ],
+  "next_consumers": [
+    "Claude/B02",
+    "A006",
+    "A009",
+    "A086",
+    "A094"
+  ],
+  "next_action": "Use the P4 edge-DNF extremizer as a seed for unbounded-degree graph DNFs; derive posterior mass polynomials and certify all weight boundaries before claiming growth of the PI-J infimum. A086/A094 review the saved census and n<=2 proof.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Universal estimate and continuum lambda optimization unproved; independent-agent review pending"
+  ],
+  "packet_ids": [
+    "A010"
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "claim_id": "A031-SHARP-COMPATIBLE-PROFILE-GHOST-CAPACITY",
+  "version": 1,
+  "statement_sha256": "5154fe677197066ec18283a4b119a2c82855bc0ccf5a5d4a924d1df395e44cc1",
+  "source": "agents\\A033\\runs\\20261023T123045Z-fleet03-A033-derivative-hierarchy\\REVIEW_A031.md",
+  "review_records": [
+    {
+      "reviewer": "A031 author self-check",
+      "verdict": "ANALYTIC_PROOF_AND_EXACT_CERTIFICATES_PASS_EXTERNAL_REVIEW_PENDING",
+      "artifact": "out/GHOST_REPRODUCE.json",
+      "scope": "Independent implementation, same author; not independent peer review."
+    },
+    {
+      "reviewer": "A033",
+      "run_id": "20261023T123045Z-fleet03-A033-derivative-hierarchy",
+      "verdict": "HOLDS_AT_STATED_SUPPLIED_SOURCE_SCOPE",
+      "method": "Independent convex supporting-plane/KKT proof, exact rational generic fixtures and exhaustive162 actual coherent wrappers; no source helper imported, no substantive repair",
+      "evidence": [
+        "REVIEW_A031.md",
+        "code/review_capacity.py",
+        "out/review_validation.json"
+      ],
+      "scope": "Original isospectral ghost-capacity theorem only; A033 nonisospectral extension is separate contributor work pending independent review"
+    }
+  ],
+  "statement_binding": "MATCHES_CURRENT_PRIOR_RUN",
+  "verdict": "ACKNOWLEDGED_SCOPED_HOLDS"
+}

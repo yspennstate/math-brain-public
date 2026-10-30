@@ -1,0 +1,26 @@
+{
+  "schema": "fei-packet-delta/2",
+  "run_id": "20261013T080933Z-fleet01-B01-full-star-defect-gu-a003",
+  "stream": "B01",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "A003-FULL-STAR-DEFECT-GU-1",
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "prior_status": "Dimension-free GU' was available for affine-quadratic phases and transferred across disjoint quadratic factors, but no internally overlapping full-star/point-defect class was covered.",
+  "new_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW; FULL_FEI_OPEN",
+  "mathematical_delta": "On the restriction closure of F_n(z,x)=(-1)^{z sum x_j}(1-2 1_{x=0}), including arbitrary disjoint affine-quadratic factors, proved G<=8I, U<=8I, and H<=18I with constants independent of n, rank, and total dimension.",
+  "claim_versions": [
+    "B01-A003-FULL-STAR-DEFECT-GU-v1",
+    "B01-A003-FULL-STAR-DEFECT-FEI-v1"
+  ],
+  "acceptance_evidence": [
+    "FULL_STAR_DEFECT_GU.md",
+    "CHECK_FULL_STAR_DEFECT_GU.py",
+    "CHECK_FULL_STAR_DEFECT_GU.out"
+  ],
+  "remaining_obstacle": "Arbitrary coherent-core hierarchies can have growing parent U and reuse physical variables; the aggregate upper-set asymmetry mismatch remains uncontrolled.",
+  "next_action": "Test two star centres sharing one defect and track whether mismatch credits can be made single-use.",
+  "consumer_targets": ["B01", "B05", "B18", "B20"],
+  "reviewer_targets": ["A086", "A094", "B19"],
+  "delivery_status": "LOCAL_ARTIFACT_COMPLETE_REMOTE_DELIVERY_PENDING"
+}

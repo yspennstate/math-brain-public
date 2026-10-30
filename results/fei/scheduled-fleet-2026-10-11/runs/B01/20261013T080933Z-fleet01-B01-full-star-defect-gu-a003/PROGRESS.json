@@ -1,0 +1,57 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261013T080933Z-fleet01-B01-full-star-defect-gu-a003",
+  "stream": "B01",
+  "account": "fleet01",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "A003-FULL-STAR-DEFECT-GU-1",
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "claim_versions": [
+    "B01-A003-FULL-STAR-DEFECT-GU-v1",
+    "B01-A003-FULL-STAR-DEFECT-FEI-v1"
+  ],
+  "bounded_objective": "Prove GU' with absolute a and b<1 on the first internally non-disjoint extension of the quadratic-seed class: a full quadratic star sharing every data variable with a one-point defect, including all restrictions.",
+  "prior_status": "Disjoint quadratic multiplication preserved an existing GU' constant, but arbitrary seeds had parameter-dependent constants and no shared star/defect family had a dimension-free class theorem.",
+  "new_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW; FULL_FEI_OPEN",
+  "mathematical_delta": "Proved G<=8I (a=8,b=0), U<=8I, and H<=18I on an expanding restriction-closed shared-variable full-star point-defect class, with arbitrary disjoint affine-quadratic factors.",
+  "class_parameters": {
+    "dimension": "unbounded",
+    "shared_star_degree": "n, unbounded",
+    "quadratic_rank": "unbounded on disjoint factor",
+    "defect_probability": "2^-n",
+    "overlap": "the defect shares all n data variables with the quadratic star",
+    "constants": {"a": 8, "b": 0, "U_over_I": 8, "H_over_I": 18}
+  },
+  "source_pins": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "quadratic_theorem_run": "20261013T061836Z-fleet01-B01-all-quadratic-gu-a003",
+    "quadratic_theorem_receipt": "d829fca20536446e9855c0ce13be882b9beaf11a",
+    "quadratic_transfer_run": "20261013T071542Z-fleet01-B01-quadratic-seed-transfer-a003",
+    "quadratic_transfer_canonical_receipt": "32fb7aa3ef89abb7a62bf2229966ffb387eef04f",
+    "quadratic_transfer_brain_receipt": "bdddd59b338dd97172f19cb7cb31ee62e37b2230"
+  },
+  "evidence": {
+    "proof": "FULL_STAR_DEFECT_GU.md",
+    "checker": "CHECK_FULL_STAR_DEFECT_GU.py",
+    "checker_output": "CHECK_FULL_STAR_DEFECT_GU.out",
+    "finite_scope": "F_n through n=10; defect boundaries through n=14; exhaustive affine-quadratic disjoint factors through 3 variables against F_n through n=4"
+  },
+  "acceptance_status": "PENDING_A086_A094_OR_B19",
+  "packet_complete": false,
+  "full_fei_status": "OPEN",
+  "remaining_obstacle": "The proof spends one parent U per coordinate and succeeds because U(F_n)=O(1) while I(F_n)=Theta(n). It gives no aggregate mismatch control for arbitrary changing coherent cores and reused coordinates through a hierarchy.",
+  "next_action": "Analyze two quadratic star centres sharing the same point defect; either partition the mismatch into single-use pivotal edge classes or certify growth of G/I with the number of reused centres.",
+  "consumer_targets": ["B01", "B05", "B18", "B20"],
+  "reviewer_targets": ["A086", "A094", "B19"],
+  "delivery": {
+    "canonical_path": "reports/fei-2026-10-11/runs/B01/20261013T080933Z-fleet01-B01-full-star-defect-gu-a003/",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B01/20261013T080933Z-fleet01-B01-full-star-defect-gu-a003/",
+    "canonical_commit": null,
+    "brain_commit": null,
+    "verified_readback": false,
+    "native_brain_ingestion": "NOT_CLAIMED"
+  }
+}

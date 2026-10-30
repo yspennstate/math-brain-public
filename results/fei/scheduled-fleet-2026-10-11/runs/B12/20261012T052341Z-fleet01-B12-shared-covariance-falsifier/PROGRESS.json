@@ -1,0 +1,112 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T052341Z-fleet01-B12-shared-covariance-falsifier",
+  "stream": "B12",
+  "packet_ids": ["A057"],
+  "primary_packet_id": "A057",
+  "attempt_id": "B12-A057-ATTEMPT-05",
+  "attempt_counter": 5,
+  "bounded_objective": "Derive the exact simultaneous shared-coordinate covariance formula and either prove the previous product potential remains decreasing for genuine Boolean overlaps or give an exact Boolean falsifier and repaired hypothesis.",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "stream_contract_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "canonical_source_head_read": "8e917b7f2190d0d624de3469053f5cda4625978f",
+    "brain_source_head_read": "4d0308f0be5bba148bbd0cc2be11b4e53e9c9b5a"
+  },
+  "input_handoffs_used": [
+    {
+      "description": "preceding disjoint changing-witness potential theorem",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "6cd9af0fa3ad7546a5559e504675bf750d5828e8",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T042255Z-fleet01-B12-changing-witness-potential/",
+      "proof_blobs": {
+        "REPORT.md": "1c71de9ea5cf83821aa7f0eaed69373ac5335c48",
+        "CLAIMS.json": "6ede93878f896c7bf621fba8adc43c33400cb334",
+        "PROGRESS.json": "19a296564ba03377b879c7a6224d28159b018e3a",
+        "CHANGING_WITNESS_TELESCOPE.tex": "632570123b40ce3f89ab9ecb11740c980dd30635"
+      }
+    },
+    {
+      "description": "independent acceptance of the fixed-source complete envelope; not review of the new overlap claims",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "e412fb2e8f85a78d807ff6d6c9c805254377ed88",
+      "path": "reports/fei-2026-10-11/runs/B19/20261012T034859Z-fleet01-B19-b12-envelope-review-a094/",
+      "proof_blobs": {"REPORT.md": "fc09be40dc170838a26a342206595b6337365097"}
+    }
+  ],
+  "claim_versions": [
+    "B12-A057-SHARED-COVARIANCE-FORMULA-v1",
+    "B12-A057-TWO-TERM-OVERLAP-POTENTIAL-NOGO-v1"
+  ],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY",
+  "gap_version": "v5",
+  "prior_mathematical_status": "PARTIAL_PROVED: complete coherent remainder paid for arbitrary adaptive disjoint source/child interleavings by the two-term product potential; simultaneous shared-coordinate covariance remained open",
+  "new_mathematical_status": "PARTIAL_PROVED_AND_HELPER_REFUTED: exact shared-coordinate covariance identity proved; every nonzero nonnegative rescaling of the two old potential components refuted by a genuine Boolean unbounded-dimensional family",
+  "mathematical_delta": "The overlap obstruction is now exact and coefficient-independent. The four-bit witness makes both qI and Var*E_raw have negative drop, and a bent-spectator lift amplifies the reserve deficit. A new signed, quotient, or output-split mechanism is necessary.",
+  "previous_value": "shared-coordinate drop contained unspecified covariance terms",
+  "new_value": "Delta P=A(q Inf_i-delta q delta I)+lambda(alpha_i^2 Z+bar V D_Z-delta V delta Z); an explicit Boolean witness has Delta(qI)=-1/64 and Delta(VZ)=(63 ln3-102 ln2)/512<0",
+  "unchanged_obstruction_count": 0,
+  "case_extension": {
+    "starting_class": "adaptive nonreusing restrictions on disjoint source and child blocks",
+    "new_class": "one simultaneous shared-coordinate restriction with genuine Boolean source branches and child, plus an unbounded-dimensional bent-spectator tensor lift",
+    "exact_quantifiers": "all nonnegative coefficients A,lambda not both zero; all k>=0 in the explicit tensor family",
+    "prior_constant": "C*=4+2ln2+2/e on qI plus coefficient one on Var*E_raw",
+    "new_constant": "no nonzero nonnegative coefficient pair works for all shared-coordinate restrictions",
+    "parameter_dependence": "reserve deficit equals [63 ln3-(102+24k)ln2]/512 and tends to minus infinity with spectator size",
+    "proof_status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+    "universal_gap": "construct a representation-invariant signed/output-split payment for shared-coordinate covariance"
+  },
+  "acceptance": {
+    "A057-D1": "SUBSTANTIALLY_ADVANCED: exact shared-coordinate law and sharp no-go family archived",
+    "A057-D2": "MET_FOR_BOOLEAN_REALIZABILITY_ACTIVATION_EQUIVALENCE_AND_NEAR_TENSOR_CONTROLS",
+    "criterion_complete_source_remainder": "NOT_MET_FOR_SHARED_COORDINATES",
+    "criterion_logarithmic_counterexample": "MET",
+    "criterion_nonreusing_physical_hierarchy": "MET_ONLY_FOR_PRIOR_DISJOINT_THEOREM; THIS RUN REFUTES THE DIRECT OVERLAP EXTENSION",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "scope": [
+      "exact four-bit root and two child Walsh tables",
+      "disagreement support and actual selection of both branches",
+      "exact component drops and integer sign certificate",
+      "exact output H=3 bits and I=2",
+      "bent-spectator instances k=0 through 4, with analytic all-k formula"
+    ],
+    "arithmetic": "exact Python Fraction Walsh arithmetic and rational log-prime vectors; integer sign certificate",
+    "seed": null,
+    "command": "python3 check_shared_covariance.py",
+    "output": "check_shared_covariance.out",
+    "limitation": "finite verification of the explicit base instances; the all-k lift and universal coefficient no-go are analytic consequences"
+  },
+  "failed_or_insufficient_approaches": [
+    "Increasing the coefficient on Var(h)E_raw(b) cannot work because its drop is strictly negative in the witness.",
+    "Increasing the coefficient on qI(h) cannot work because its drop is also strictly negative.",
+    "The defect is not inactive-child bookkeeping: h selects both branches on the source disagreement support.",
+    "The defect is not bounded-dimensional: bent spectators make the reserve drift arbitrarily negative.",
+    "The family is not an FEI counterfamily because its output H/I tends to 2."
+  ],
+  "review": {
+    "previous_claim_review": "B19/A094 independently accepted the fixed-source envelope only",
+    "contributor_check": "complete",
+    "independent_review": "PENDING_FOR_NEW_CLAIMS",
+    "requested_packets": ["A091", "A090"],
+    "observed_reviewer_evidence": []
+  },
+  "routing": {
+    "next_consumers": ["A058", "A059", "A091", "A090", "A097", "B20"],
+    "note": "A058 should treat all nonnegative rescalings of qI+Var*E_raw as refuted for genuine shared coordinates, while retaining the prior disjoint theorem."
+  },
+  "deliverable_status": {
+    "canonical": "COMPLETE_12_FILE_READBACK_VERIFIED_AT_76eb7a9359fb4dfc01b9e14048c9af79c0643548",
+    "brain_mirror": "COMPLETE_12_FILE_READBACK_VERIFIED_AT_fe1e63d331cd047659d3326b84741e23e75d8b2c",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "next_action": "Minimize the old potential over all Boolean branch-pair representations of the same composed output before and after the shared query; test whether this activation quotient removes both covariance debts on the exact four-bit witness and its tensor lift.",
+  "full_fei_status": "OPEN"
+}
+

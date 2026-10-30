@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T033745Z-fleet02-B08-fiveSV-audit-r4",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "findings": [
+    {"id":"C02","line":319,"page":"p7","source_status":"GAP","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"insert Jensen |E I_x|^2<=E|I_x|^2","constant_change":false},
+    {"id":"C08","line":398,"page":"p9","source_status":"GAP","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"state square-density formula only a.e./z!=v and define density version at v arbitrarily","constant_change":false},
+    {"id":"C01","line":412,"page":"p9","source_status":"FALSE","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"use open angular chart onto slit plane; omitted ray/critical point null","constant_change":false},
+    {"id":"C03","line":441,"page":"p10","source_status":"GAP","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"state q=v is two affine lines and null under joint density","constant_change":false},
+    {"id":"C09","line":613,"page":"p13","source_status":"GAP","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"define J(0)=+infinity or establish atomlessness before E J(R-a)","constant_change":false},
+    {"id":"C04","line":41,"page":"p1","source_status":"FALSE_PROSE","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"qualify random-sign conversion by no-pivot","theorem_impact":"none"},
+    {"id":"C05","line":65,"page":"p1","source_status":"FALSE_PROSE","repair_status":"INDEPENDENTLY_REPRODUCED","repair":"replace 'has a singularity' by 'admits an upper envelope'","theorem_impact":"none"},
+    {"id":"C07","line":62,"page":"p1","source_status":"UNCHECKED_EXTERNAL","repair_status":"SAFE_WORDING_AVAILABLE","repair":"say present argument does not settle the three-eigenvalue question"}
+  ],
+  "peer_comparison_after_independent_derivation": {
+    "fleet02_B05":"separately reported C08 and C09; agreement after this pass independently derived them",
+    "fleet03_B14":"separately reported J-at-zero notation issue; related-work/bibliography closure not imported as independent evidence",
+    "fleet02_B15":"separately adjudicated line 222 as PASS under factor-value reading and supplied complete source-to-PDF page partition"
+  }
+}

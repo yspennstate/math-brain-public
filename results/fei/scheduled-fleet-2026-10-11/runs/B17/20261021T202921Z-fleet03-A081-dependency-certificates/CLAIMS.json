@@ -1,0 +1,109 @@
+[
+  {
+    "claim_id": "A095-UNBOUNDED-WIDTH-SIGNED-PROFILE-HISTORY",
+    "version": 1,
+    "exact_statement": "For all integers w>=4,m>=0, let g=h_w*h_2 with h_L=1-2*1_zero on disjoint blocks, and let M select padded g and its all-zero full-point flip by a fresh fair bit. With the prescribed support-completed source-spectrum reference Q, every finite adaptive history querying only the width-w block and using normalized physical-child posterior transport satisfies CE_root<1005/256, E I_leaf>=63/64 and 4 E I_leaf-E CE_leaf>3/256. Every complete terminal cost is retained; an independent untouched arbitrary terminal remains additive outside this bank.",
+    "hypotheses": [
+      "Uniform physical cube, entropy and cross entropy in bits",
+      "All-zero edit and prescribed source R=P_g; no arbitrary-reference substitution",
+      "No repeated coordinate per path; selector,padding,width-two block and independent terminal unqueried",
+      "No descendant reset or renewal; product-compatible zero-fiber posterior for independent terminal"
+    ],
+    "statement_sha256": "f4f84c32edb7a966d91c4888d295acd10cdfc2576ad0b4252805997110073ebb",
+    "contributors": [
+      "A095"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A095\\runs\\20261021T180853Z-fleet03-A095-restricted-result-extraction\\DERIVATION.md",
+      "sections": "1-4",
+      "sha256": "85185af93d9c559b8156b56278903a881d5764f329a2ee4d18f0726d816ea83a"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A081-COMPLETE-NORMALIZED-PHYSICAL-TRANSPORT",
+        "version": 1,
+        "statement_sha256": "7ccd48ee7df771dd605e2e177dfd95518ee133e4ca4ea887a5e71e61bc8d6bd0",
+        "scope": "exact reviewed lemma; REVIEW.md",
+        "units": "bits"
+      },
+      {
+        "claim_id": "A081-A095-SIGNED-PROFILE-ROOT-AUDIT",
+        "version": 1,
+        "statement_sha256": "69311be6e2dfee80d07e13699caefdb95cc35e0b10ef24bfcb5ece857eb7d88a",
+        "scope": "exact reviewed lemma; REVIEW.md",
+        "units": "bits"
+      },
+      {
+        "claim_id": "A081-A095-ADAPTIVE-EDGE-AUDIT",
+        "version": 1,
+        "statement_sha256": "a61f89b6e771431901a5ed06af332f22237f678bb532ce58fc9864ec3df19543",
+        "scope": "exact reviewed lemma; REVIEW.md",
+        "units": "bits"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A081/fleet03",
+        "at": "2026-10-21T21:04:43.241121+00:00",
+        "verdict": "ACCEPT_AT_ENTIRE_ORIGINAL_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261021T202921Z-fleet03-A081-dependency-certificates\\REVIEW.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261021T202921Z-fleet03-A081-dependency-certificates\\out\\EXACT_CHECK.json",
+        "independence": "Independent integer Walsh/direct characters/physical edges/Fraction posterior and rational-log implementation; no author checker imported",
+        "reviewer_contributed_repair": false,
+        "rung": "analytic proof with exact finite validation; no Lean certification of full theorem"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_ENTIRE_ORIGINAL_SCOPE_BY_A081",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A094",
+      "A086",
+      "A096",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A081-VERSIONED-DEPENDENCY-CERTIFICATE",
+    "version": 7,
+    "exact_statement": "A081 stage7 graph contains 76 exact versioned nodes and preserves the prior 71 nodes, adds the complete prescribed A095 unbounded-width history proof chain and one unresolved reset leaf, has no proof cycle, and rejects all twelve declared invalid mutations. FEI remains OPEN.",
+    "hypotheses": [
+      "Finite frozen source snapshot; inherited evidence states preserved",
+      "Proof graph separate from advisory review/workflow edges; units and exact source versions retained"
+    ],
+    "statement_sha256": "37d8809894a1df6edca00ea0589890e8aa8a5d35370ca47d13498b1fd4b052a4",
+    "contributors": [
+      "A081/fleet03"
+    ],
+    "proof_source": {
+      "graph": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261021T202921Z-fleet03-A081-dependency-certificates\\PROOF_DEPENDENCIES.json",
+      "validator": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261021T202921Z-fleet03-A081-dependency-certificates\\code\\finalize.py",
+      "output": "~\\brain_workers\\FEI100_20261011\\agents\\A081\\runs\\20261021T202921Z-fleet03-A081-dependency-certificates\\out\\GRAPH_VALIDATION.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A095-UNBOUNDED-WIDTH-SIGNED-PROFILE-HISTORY",
+        "version": 1,
+        "statement_sha256": "f4f84c32edb7a966d91c4888d295acd10cdfc2576ad0b4252805997110073ebb",
+        "scope": "prescribed structural reference and wide-only histories; no reset"
+      }
+    ],
+    "review_records": [],
+    "status": "CHECKED_LOCAL_DEPENDENCY_CERTIFICATE",
+    "supersedes": [
+      "A081-VERSIONED-DEPENDENCY-CERTIFICATE@6 as current graph snapshot; prior artifact preserved"
+    ],
+    "refutes": [],
+    "first_unproved_line": "Universal prescribed-reference reset plus both terminal bills and old debit is unpaid.",
+    "next_consumers": [
+      "A094",
+      "A095",
+      "A096",
+      "A097",
+      "A099",
+      "B17",
+      "B20"
+    ]
+  }
+]

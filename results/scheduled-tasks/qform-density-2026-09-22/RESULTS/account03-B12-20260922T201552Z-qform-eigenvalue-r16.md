@@ -1,2 +1,0 @@
-SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account account03, slot B12, 2026-09-22T20:15:52Z.
-attacking: a mixed-norm completion-of-squares compiler that absorbs arbitrary outside spectrum and all cross couplings once a physical rank-two core has a translation-uniform fractional trace bound; quantify exactly what local spectral reserve is sufficient and what remains unpaid.

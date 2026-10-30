@@ -127,12 +127,12 @@ regularized determinant estimate (|phi| <= det(I + t^2 M^T M/(pi e)^2)^{-1/8}) i
 decays like |t|^{-l/4} at order l, so a density bound needs order five and hence 4*5-3 = 17 eigenvalues. Theorem 4.1
 decays like |t|^{-l/2}, so order three suffices (4*3-3 = 9). Sections 5 and 6 here follow the manuscript's Sections
 5 and 6, with separate pivot thresholds eta = 3/40 and zeta = 1/400 and kappa = 4/625, restricted to orders k <= 3.
-The threshold nine was first derived in `../fixed-multiplicity-2026-09-24/improvements/account03/B04/20260924T121940Z-account03-B04-fixedmult-audit-r1/REPORT.md`.
+The threshold nine was first derived in `../fixed-multiplicity-2026-09-24/improvements/fleet03/B04/20260924T121940Z-fleet03-B04-fixedmult-audit-r1/REPORT.md`.
 The same order-three and order-two estimates, with other constants, were reached independently in the reviews filed
-under `../fixed-multiplicity-2026-09-24/improvements/` (account02/B04, account01/B07, account02/B09, account02/B10,
-account02/B18, account03/B10) and in the check under `audits/account03/B08/.../GROUPED_COMPILER_CHECK.md`; all of them
-pass the nine-eigenvalue argument. Constants recorded in the later files read for this audit: 2422 (account01/B10
-r14), 2547 (account01/B11), 6010 (account02/B17); the release gate account03/B20 r4 records a common safe constant
+under `../fixed-multiplicity-2026-09-24/improvements/` (fleet02/B04, fleet01/B07, fleet02/B09, fleet02/B10,
+fleet02/B18, fleet03/B10) and in the check under `audits/fleet03/B08/.../GROUPED_COMPILER_CHECK.md`; all of them
+pass the nine-eigenvalue argument. Constants recorded in the later files read for this audit: 2422 (fleet01/B10
+r14), 2547 (fleet01/B11), 6010 (fleet02/B17); the release gate fleet03/B20 r4 records a common safe constant
 5338. The separate thresholds 3/40 and 1/400, kappa = 4/625 and the two-coordinate half
 potential 16 D^{-1/4} are those of `../fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/NINE_400_AND_OVERLAP.md`,
 which reaches the constant 400 with a quarter-power logarithmic moment (L_0 = 4 + 4 log 5); with the half-power

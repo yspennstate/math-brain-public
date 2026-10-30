@@ -27,7 +27,7 @@ class MemoryRegressionTests(unittest.TestCase):
             "programme_id", "control_revision", "state_revision")}
         self.manifest["mandatory_correction_ids"] = [e["id"] for e in self.deltas["events"]]
         self.snapshot = {
-            "schema_version": 1, "account": "account01", "slot": "B01", "run_id": "test-run-only",
+            "schema_version": 1, "account": "fleet01", "slot": "B01", "run_id": "test-run-only",
             "next_mathematical_step": "Attempt the unpaid implication from the assigned source.",
             "control_commit": self.head, "manifest_commit": self.head,
             "write_parent_commit": self.head,

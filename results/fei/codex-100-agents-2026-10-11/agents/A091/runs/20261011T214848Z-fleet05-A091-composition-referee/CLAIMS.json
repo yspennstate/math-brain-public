@@ -1,0 +1,138 @@
+[
+  {
+    "claim_id": "A056-DISJOINT-COMPOSITION",
+    "version": 1,
+    "exact_statement": "For every Boolean outer gate h and Boolean children g_i on mutually disjoint uniform physical blocks, after absorbing constant children, with m_i=E g_i, v_i=1-m_i^2>0, a_mu the output-product orthonormal Fourier coefficients and w_i=sum_{T containing i} a_mu(T)^2, E F=E_mu h, Var F=Var_mu h, H(F)=H_mu(h)+sum_i (w_i/v_i)(H(g_i)-h2(v_i)), and Inf_x(F)=(w_i/v_i)Inf_x(g_i) for x in block i. Balanced children specialize to H(F)=H(h)+sum_i Inf_i(h)H(g_i) and I(F)=sum_i Inf_i(h)I(g_i).",
+    "hypotheses": [
+      "Boolean signs",
+      "independent uniform physical input coordinates",
+      "mutually disjoint child blocks",
+      "entropy in bits including empty coefficient",
+      "constant children absorbed before divisions"
+    ],
+    "statement_sha256": "b7920f029377b6cbd4ddcf12fba6254c5b6af870be5b4b72c57e8d10cc5f3dc4",
+    "contributors": [
+      "fleet05/A056"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A056\\runs\\20261011T214407Z-fleet05-A056-balanced-composition\\REPORT.md",
+      "theorem_locators": "Equations (1)-(5), physical restriction section, exact witness; BALANCED_SUBSTITUTION_BASELINE.tex"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A091",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261011T214848Z-fleet05-A091-composition-referee\\REPORT.md",
+        "method": "Independent rational centered-bit moment transform on three physical product laws; direct coefficient and formal prime-log identity checks; explicit physical-restriction witness. No A056 code reused.",
+        "reviewed_statement_sha256": "b7920f029377b6cbd4ddcf12fba6254c5b6af870be5b4b72c57e8d10cc5f3dc4",
+        "full_fei_status": "OPEN"
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A018",
+      "A024",
+      "A043",
+      "A053",
+      "A057",
+      "A059",
+      "A060",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A056-PHYSICAL-RESTRICTION-SCOPE",
+    "version": 1,
+    "exact_statement": "At every fixed physical restriction, disjoint composition identities hold with newly restricted children, absorbed constants, and the outer gate reexpanded under the new child-output product law. Balance before restriction does not imply balance afterwards. For AND_2 composed with majority_3(x,a,b) and dictator z, fixing x=+1 gives E F=-1/4, I(F)=5/4, H(F)=4-(9/8)log2(3), whereas retaining the initial balanced outer law predicts -1/2, 1, and 3 respectively.",
+    "hypotheses": [
+      "Boolean signs",
+      "independent uniform physical input coordinates",
+      "mutually disjoint child blocks",
+      "entropy in bits including empty coefficient",
+      "constant children absorbed before divisions"
+    ],
+    "statement_sha256": "2ed61e691cffb3e575ae129eda2c7015dcbff1d5d0b43ad24d2a1a52e7f24093",
+    "contributors": [
+      "fleet05/A056"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A056\\runs\\20261011T214407Z-fleet05-A056-balanced-composition\\REPORT.md",
+      "theorem_locators": "Equations (1)-(5), physical restriction section, exact witness; BALANCED_SUBSTITUTION_BASELINE.tex"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A091",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261011T214848Z-fleet05-A091-composition-referee\\REPORT.md",
+        "method": "Independent rational centered-bit moment transform on three physical product laws; direct coefficient and formal prime-log identity checks; explicit physical-restriction witness. No A056 code reused.",
+        "reviewed_statement_sha256": "2ed61e691cffb3e575ae129eda2c7015dcbff1d5d0b43ad24d2a1a52e7f24093",
+        "full_fei_status": "OPEN"
+      }
+    ],
+    "status": "INDEPENDENTLY_REVIEWED_ACCEPTED_AT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "Reusing balanced gate coefficients and mean after arbitrary physical child restrictions"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A018",
+      "A024",
+      "A043",
+      "A053",
+      "A057",
+      "A059",
+      "A060",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A091-NONTENSOR-LEDGER-SCOPE",
+    "version": 1,
+    "exact_statement": "Child-ledger-only additivity of physical/spectral restriction quantities M_A=H(S_A|S_B) and J_A=I(Z;S_B) under arbitrary disjoint outer substitution is false: sign AND of two fresh uniform literal children has M_{first bit}=J_{first bit}=1 bit, while each standalone literal has M=J=0 for the aligned full/empty reveal. Additivity remains valid for aligned disjoint tensor products; a general outer-gate substitution requires a separate residual/cocycle.",
+    "hypotheses": [
+      "Boolean signs",
+      "independent uniform physical inputs",
+      "ordinary spectral Shannon entropy in bits",
+      "M,J defined by the actual physical-child/spectral experiment"
+    ],
+    "statement_sha256": "563d85c5164e2dfba98ce5d8390b3960e86f55acc3502ea066e2c3a9bb8d7877",
+    "contributors": [
+      "fleet05/A091"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261011T214848Z-fleet05-A091-composition-referee\\REPORT.md",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261011T214848Z-fleet05-A091-composition-referee\\code\\endpoints.py",
+      "output": "~\\brain_workers\\FEI100_20261011\\agents\\A091\\runs\\20261011T214848Z-fleet05-A091-composition-referee\\out\\endpoints.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Child-ledger-only additive extension to arbitrary outer gate substitution; B09 Section 5 broad wording requires a specified residual"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A043",
+      "A044",
+      "A056",
+      "A058",
+      "A090",
+      "B09",
+      "B12",
+      "B20"
+    ]
+  }
+]

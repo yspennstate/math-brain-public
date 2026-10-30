@@ -1,0 +1,250 @@
+[
+  {
+    "claim_id": "A057-COHERENT-ERASURE-SPLIT",
+    "version": 1,
+    "exact_statement": "For any disjoint balanced Boolean composition F=g(h_1,...,h_m), g=a+y_j b, q=Inf_j(g), alpha=hat h_j({i}), x=alpha^2: B_i(F)=q B_i(h_j)+L_j(x), D_i(F)=q D_i(h_j)+L_j(x)+J_j(x), where L_j=sum_T(a_T^2+x b_T^2) h_nat(x b_T^2/(a_T^2+x b_T^2)), J_j=E(a^2+x b^2)-(Eraw(a+alpha b)+Eraw(a-alpha b))/2. One has 0<=L_j<=x B_j(g)+qx ln(1/x), 0<=J_j<=2qx, so 0<=R<=x B_j(g)+qx ln(1/x)+2qx. Consequently B(F)<=sum_j q_j B(h_j)+sum_j W_1(h_j)B_j(g)+(2/e)I(F) in nats.",
+    "hypotheses": [
+      "All input cubes uniform; Boolean sign functions; Fourier coefficients normalized; all entropy formulas in natural units unless converted explicitly.",
+      "Disjoint balanced composition required for the exact coherent/erasure identities; no restriction-closure assumption."
+    ],
+    "statement_sha256": "1a5b4c0a0ae587067c184f2ba721583831b438e1897a3a633d1c05fd51fef507",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "run": "20261011T220314Z-fleet05-A057-coherent-restriction-remainder",
+      "path": "COHERENT_REMAINDER_PAYMENT.tex"
+    },
+    "proof_dependencies": [
+      {
+        "source": "out/source_proof.md",
+        "git_blob": "37626caf9f1564342f8b6edfff54b3a3491fff35",
+        "role": "exact baseline coherent formula; its algebra is reconstructed in the new proof"
+      },
+      "Elementary entropy concavity and proved JS-Hellinger scalar bound; physical influence telescope"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-12T01:07:18.207058+00:00",
+        "verdict": "HOLDS",
+        "reason": "Complete D_i identity, 0<=J<=2qx, entropy concavity allocation, derivative bound and same-tree nonreuse reconstructed with all original representation/terminal hypotheses.",
+        "independent_method": "Direct physical-child character sums, raw equal-mass entropy reconstruction, exact rational logarithm intervals and complete analytic proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261012T004155Z-fleet05-A087-restriction-referee\\REPORT.md",
+        "source_claim_path": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261011T220314Z-fleet05-A057-coherent-restriction-remainder\\CLAIMS.json",
+        "source_recorded_statement_sha256": "9a9ec7982237434f502098c0a47266b97a0477d2ba0b5461529fe16d169c59f7",
+        "local_UTF8_exact_statement_sha256": "1a5b4c0a0ae587067c184f2ba721583831b438e1897a3a633d1c05fd51fef507"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A058",
+      "A059",
+      "A091",
+      "A090",
+      "A097",
+      "A026",
+      "A064",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A057-NONREUSING-ALPHA-LOG-PAYMENT",
+    "version": 1,
+    "exact_statement": "On any finite adaptive physical-coordinate restriction tree of Boolean root f, at any subset of nodes admitting disjoint balanced composition representations, sum_v w_v q_v alpha_v^2 ln(1/alpha_v^2)<=(2/e)sum_v w_v Inf_{i_v}(f_v)<=(2/e)I(f). Also sum_v w_v R_v<=sum_v w_v alpha_v^2 B_{j_v}(g_v)+(2+2/e)sum_v w_v Inf_{i_v}(f_v). In bits divide each entropy and its constants by ln(2).",
+    "hypotheses": [
+      "All input cubes uniform; Boolean sign functions; Fourier coefficients normalized; all entropy formulas in natural units unless converted explicitly.",
+      "Disjoint balanced composition required for the exact coherent/erasure identities; no restriction-closure assumption.",
+      "Each represented node is independently certified for its actual restricted Boolean function; w_v is its physical reach probability. Queried coordinates are removed on the branch. Other nodes may be omitted."
+    ],
+    "statement_sha256": "633263d900f865f69f53748e9c27586be151b2cb92e2456c791f710ecceafb5d",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "run": "20261011T220314Z-fleet05-A057-coherent-restriction-remainder",
+      "path": "COHERENT_REMAINDER_PAYMENT.tex"
+    },
+    "proof_dependencies": [
+      {
+        "source": "out/source_proof.md",
+        "git_blob": "37626caf9f1564342f8b6edfff54b3a3491fff35",
+        "role": "exact baseline coherent formula; its algebra is reconstructed in the new proof"
+      },
+      "Elementary entropy concavity and proved JS-Hellinger scalar bound; physical influence telescope"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-12T01:07:18.207058+00:00",
+        "verdict": "HOLDS",
+        "reason": "Complete D_i identity, 0<=J<=2qx, entropy concavity allocation, derivative bound and same-tree nonreuse reconstructed with all original representation/terminal hypotheses.",
+        "independent_method": "Direct physical-child character sums, raw equal-mass entropy reconstruction, exact rational logarithm intervals and complete analytic proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261012T004155Z-fleet05-A087-restriction-referee\\REPORT.md",
+        "source_claim_path": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261011T220314Z-fleet05-A057-coherent-restriction-remainder\\CLAIMS.json",
+        "source_recorded_statement_sha256": "2af0fb23614bea69478bcf1f3d2639903f611a182e831c53bab224102ce8a6e9",
+        "local_UTF8_exact_statement_sha256": "633263d900f865f69f53748e9c27586be151b2cb92e2456c791f710ecceafb5d"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A058",
+      "A059",
+      "A091",
+      "A090",
+      "A097",
+      "A026",
+      "A064",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 2,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], where R(q)=+4c sum_{j>=3}q^j/[j(j-1)(j-2)] and 0<R(q)<=2cq^3/[3(1-q)]. Therefore [tH(b)+4k+2c-q(2k+3c)]/[tI(b)+k] <= H(F)/I(F) <= that lower bound +2cq^2/[3(1-q)(tI(b)+k)]. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero. The entropy control decrement remainder G_s=R(u)-R(2u)/2 at u=2^-s, s>=2, is negative and bounded below by -8cu^3/[3(1-2u)].",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "a34b189eb292d4bccd37ce356e30e4d94bb262d37a8a9b6ad26be45ea3bf4e80",
+    "contributors": [
+      "A021",
+      "Claude B05 lead: sign correction"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T232653Z-fleet05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "Claude B05",
+        "verdict": "ERROR_FOUND_IN_V1; CONTRIBUTOR_TO_V2",
+        "source": "~\\brain_workers\\FEI100_20261011\\claude\\B05\\runs\\20261011T225000Z-claude-B05-odd-face-transport\\REPORT.md",
+        "independent_acceptance_of_v2": false
+      },
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-12T01:07:18.207058+00:00",
+        "verdict": "HOLDS",
+        "reason": "Positive entropy tail and negative decrement tail reconstructed analytically and checked by rational intervals; no A087 repair contribution to v2.",
+        "independent_method": "Direct physical-child character sums, raw equal-mass entropy reconstruction, exact rational logarithm intervals and complete analytic proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261012T004155Z-fleet05-A087-restriction-referee\\REPORT.md",
+        "source_claim_path": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T232653Z-fleet05-A021-rare-core-asymptotics\\CLAIMS.json",
+        "source_recorded_statement_sha256": "8aa9a5e9cccb59f5a2a4f5c5d947e6bb95d449ecebad5e17575492fd4e0fc923",
+        "local_UTF8_exact_statement_sha256": "a34b189eb292d4bccd37ce356e30e4d94bb262d37a8a9b6ad26be45ea3bf4e80"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A087",
+    "supersedes": [
+      {
+        "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+        "version": 1
+      }
+    ],
+    "refutes": [
+      "A021 v1 assertion -2cq^3/[3(1-q)]<=R(q)<=0",
+      "A021 stage-1 positive decrement remainder G_s"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A026",
+      "A029",
+      "A064",
+      "A087",
+      "A094",
+      "B05",
+      "B20",
+      "A090"
+    ]
+  },
+  {
+    "claim_id": "A021-UNIFORM-RARE-CORE-EXPANSION",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean b, integers t,k>=1, q=2^-k and c=1/ln2, F=1+A_k(product_{j=1}^t b_j-1) has H(F)=q[tH(b)+4k+2c]-q^2(2k+3c)+R(q), I(F)=q[tI(b)+k], and -2cq^3/[3(1-q)]<=R(q)<=0. The exact entropy is q t H(b)+(4q-2q^2)k-2(1-q)^2 log2(1-q); variance is 2q-q^2 and minority probability q/2. If k=o(t) and 2^-k t->0 for a fixed seed, H(F)/I(F)->H(b)/I(b) with influence tending to zero.",
+    "hypotheses": [
+      "uniform physical cube",
+      "Boolean sign seed with mean zero",
+      "disjoint independent seed copies and fresh point controls",
+      "bit entropy"
+    ],
+    "statement_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de",
+    "contributors": [
+      "A021"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-fleet05-A021-rare-core-asymptotics\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A087",
+        "timestamp": "2026-10-12T01:07:18.207058+00:00",
+        "verdict": "ERROR",
+        "reason": "Narrow prior A087 acceptance: withdraw negative R and positive G components; exact spectrum/influence, limits and separate KL ledger remain accepted. Use v2 for asymptotic signs/intervals.",
+        "independent_method": "Direct physical-child character sums, raw equal-mass entropy reconstruction, exact rational logarithm intervals and complete analytic proof",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261012T004155Z-fleet05-A087-restriction-referee\\REPORT.md",
+        "source_claim_path": "~\\brain_workers\\FEI100_20261011\\agents\\A021\\runs\\20261011T214020Z-fleet05-A021-rare-core-asymptotics\\CLAIMS.json",
+        "source_recorded_statement_sha256": "cf143df5920601dcec3c3e11e0a14be3e6e217e964f3acd2250215079116d382",
+        "local_UTF8_exact_statement_sha256": "96d6b579feecbca75e161d36eb77236421b420d88429aad9656ba288a64055de"
+      }
+    ],
+    "status": "ERROR_V1_REMAINDER_SIGN_ACCEPTANCE_WITHDRAWN",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "False line: R(q)<=0; exact q=1/2 gives R=(2ln2-1)/(4ln2)>0. Associated G_s>=0 is also false.",
+    "next_consumers": [
+      "A002",
+      "A007",
+      "A012",
+      "A015",
+      "A023",
+      "A025",
+      "A026",
+      "A036",
+      "A040",
+      "A047",
+      "A048",
+      "A077",
+      "B20",
+      "A090",
+      "A094"
+    ]
+  },
+  {
+    "claim_id": "A087-NPN-PHYSICAL-ERASURE-INVARIANCE",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean f, every input permutation pi, input sign vector eta, and output sign epsilon, define fprime(x)=epsilon f(eta_1*x_pi(1),...,eta_n*x_pi(n)). The squared Fourier law of fprime at pi(S) equals that of f at S. For every coordinate i, B_pi(i)(fprime)=B_i(f) and Inf_pi(i)(fprime)=Inf_i(f), and physical children correspond under the residual signed permutation with fair branch weights preserved. Therefore min and max of B_i/Inf_i over relevant coordinates are NPN invariant. Constants have no defined relevant-coordinate ratio. This does not certify a complete NPN catalogue, its count, or invariance under arbitrary linear F2 input changes or Fourier character multiplication.",
+    "hypotheses": [
+      "Finite uniform physical cube",
+      "Boolean sign outputs",
+      "NPN means input permutation, independent input sign negations and one output sign",
+      "Ratios evaluated only on relevant coordinates; consistent entropy units"
+    ],
+    "statement_sha256": "7612c29e1c052d5df9488069d19e7f150f0b60300c8c9b2feaa0967f1f162afa",
+    "contributors": [
+      "A087: reconstruction of standard symmetry fact"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A087\\runs\\20261012T004155Z-fleet05-A087-restriction-referee\\REPORT.md",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "PROVED_STANDARD_SYMMETRY_RECONSTRUCTION_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A082",
+      "A094",
+      "B18",
+      "B20"
+    ]
+  }
+]

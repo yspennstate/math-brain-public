@@ -27,7 +27,7 @@ The Brain coordinator must materialize the documented STOP_DOTS_SPEEDUP marker i
 
 - [Full current order](ORDER.md)
 - [Case targets and complementary probes](CASE_TARGETS.md)
-- [Native 20-slot readback](receipts/ACCOUNT01_NATIVE_ADOPTION_20261012.json)
+- [Native 20-slot readback](receipts/FLEET01_NATIVE_ADOPTION_20261012.json)
 - [Delivery receipt](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/handoffs/brain-inbox/messages/REQ-20261012T031958Z-FULL-FEI-OWNER--relay-live-inbox-<machine>--delivered-20261012T032039Z-0e7429.json)
 - [Canonical FEI project entry](https://github.com/yspennstate/math-open-problems/blob/3ba6a51d89078f676e14b967857a53313bf770fb/reports/fei-2026-10-11/OWNER_FOCUS_20261012.md)
 

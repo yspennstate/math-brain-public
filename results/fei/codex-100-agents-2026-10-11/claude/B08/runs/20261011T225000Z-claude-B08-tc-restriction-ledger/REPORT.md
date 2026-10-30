@@ -16,11 +16,11 @@ Targets. (T1) exact one-step TC ledger and its tree sum. (T2) a cap on posterior
 
 - ~/mop_fei100/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json, schema fei-execution-protocol/2, revision 2026-10-11-execution-v2 (required files, report, progress and claim fields; unreviewed-claim cap 2 per stream).
 - Campaign registries read earlier in this session: PACKET_STATUS.json (B08 packets A036-A040, reviewers A088, A094), STREAM_NEXT_ACTIONS (B08 action), CLAIMS.md (C005, C006, C018, C019, C023, C024), obstructions O-B05, O-RAW-CONV, O-RENYI, O-FINITE-BOOL, SEED_LEMMAS, plan line 1319.
-- agents/A036/runs/20261011T214139Z-account05-A036-reference-law-divergence: REPORT.md, CLAIMS.json (A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY v1, sha ca9f2080...), code/check.py, out/verification.json.
-- agents/A037/runs/20261011T220010Z-account05-A037-conditional-credit-ledger: REPORT.md, CLAIMS.json (A037-CONDITIONAL-CREDIT-CONSERVATION v1 sha d23c07e7..., A037-PHYSICAL-SPECTRAL-COMMON-LIFT v1 sha aa45c0da...), code/ledger_check.py.
-- agents/A038/runs/20261011T221733Z-account05-A038-occupancy-term-audit: REPORT.md sections 1-2, CLAIMS.json (A038-OCCUPANCY-CROSSLAW-AUDIT).
-- agents/A039/runs/20261011T223903Z-account05-A039-projection-under-restrictions: REPORT.md (claims file not yet present at 23:13Z).
-- agents/A040/runs/20261011T225840Z-account05-A040-credit-insufficiency-tests: empty at 23:09Z.
+- agents/A036/runs/20261011T214139Z-fleet05-A036-reference-law-divergence: REPORT.md, CLAIMS.json (A036-POINT-DEFECT-TENSOR-NORMALIZED-PAYMENT-RECOVERY v1, sha ca9f2080...), code/check.py, out/verification.json.
+- agents/A037/runs/20261011T220010Z-fleet05-A037-conditional-credit-ledger: REPORT.md, CLAIMS.json (A037-CONDITIONAL-CREDIT-CONSERVATION v1 sha d23c07e7..., A037-PHYSICAL-SPECTRAL-COMMON-LIFT v1 sha aa45c0da...), code/ledger_check.py.
+- agents/A038/runs/20261011T221733Z-fleet05-A038-occupancy-term-audit: REPORT.md sections 1-2, CLAIMS.json (A038-OCCUPANCY-CROSSLAW-AUDIT).
+- agents/A039/runs/20261011T223903Z-fleet05-A039-projection-under-restrictions: REPORT.md (claims file not yet present at 23:13Z).
+- agents/A040/runs/20261011T225840Z-fleet05-A040-credit-insufficiency-tests: empty at 23:09Z.
 
 ## 3. Complete derivation
 

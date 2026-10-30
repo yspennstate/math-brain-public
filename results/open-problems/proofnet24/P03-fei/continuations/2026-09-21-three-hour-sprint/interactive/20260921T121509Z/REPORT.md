@@ -21,7 +21,7 @@ B_can(f) = sum_{A:p_f(A)>0} p_f(A) log2(u_f(A)/p_f(A)).
 
 Thus u_f(empty)=1. In particular the empty-atom contribution to B_can is exactly its entropy contribution. Set H(f)=sum_A p_f(A) log2(1/p_f(A)) and I(f)=sum_A |A|p_f(A).
 
-The prior fleet report at proofnet24/P03-fei/fleet-2026-09-21/account01/B12/20260921T111623Z-spectral-cancellation/REPORT.md (creation commit 1ec69f5e1e70004d119f7055a231ad536e4c67be) gives, with V=1-p_f(empty),
+The prior fleet report at proofnet24/P03-fei/fleet-2026-09-21/fleet01/B12/20260921T111623Z-spectral-cancellation/REPORT.md (creation commit 1ec69f5e1e70004d119f7055a231ad536e4c67be) gives, with V=1-p_f(empty),
 
 H(f) <= 2I(f)-2V-p_f(empty)log2(1/p_f(empty))+2B_can(f).
 

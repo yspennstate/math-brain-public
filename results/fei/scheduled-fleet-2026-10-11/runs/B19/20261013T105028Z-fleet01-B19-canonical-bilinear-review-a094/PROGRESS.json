@@ -1,0 +1,49 @@
+{
+  "schema": "fei-progress/2",
+  "run_id": "20261013T105028Z-fleet01-B19-canonical-bilinear-review-a094",
+  "stream": "B19",
+  "account": "fleet01",
+  "primary_packet_id": "A094",
+  "packet_ids": ["A094"],
+  "attempt_id": "A094-CANONICAL-BILINEAR-ROOT-REVIEW-1",
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "target_packet_id": "A003",
+  "target_claim_versions": ["B01-A003-CANONICAL-BILINEAR-ROOT-GU-v1"],
+  "prior_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "new_status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_CANONICAL_ROOT_SCOPE; ARBITRARY-MATRIX-5OVER2-EXTENSION-REFUTED; FULL_FEI_OPEN",
+  "mathematical_delta": "Reconstructed exact normalization, physical influences, graph-fiber restriction charges, scalar bound, and disjoint additivity. Accepted G<=(5/2)I for all canonical matched roots. Produced a rigorous r=3 invertible-matrix witness with G/I>2.7091165, blocking basis-free extrapolation of the same constant.",
+  "acceptance_evidence": ["REPORT.md", "PROOF_RECONSTRUCTION.md", "CHECK_REVIEW.py", "CHECK_REVIEW.out", "LITERATURE_SCOPE.md"],
+  "class_parameters": {
+    "dimension": "2r with unbounded r",
+    "bias": "uniform physical cube",
+    "weight_groups": "flat root squared spectrum; nonflat children",
+    "address_count": "not applicable",
+    "overlap": "r matched bilinear centres share one y=0 point defect",
+    "depth": "root only; disjoint products allowed",
+    "correlation_gap": "canonical matched physical basis required",
+    "constants": {"G_over_I": 2.5, "U_over_I": 1, "H_over_I": 2}
+  },
+  "attempt_counter": 1,
+  "acceptance_status": "ACCEPTED_BY_B19_A094_AT_EXACT_SCOPE",
+  "packet_complete": false,
+  "full_fei_status": "OPEN",
+  "remaining_obstacle": "No dimension-independent signed upper-set payment has been proved for the positive-codimension descendants created by repeated x restrictions.",
+  "next_action": "Use the exact rank/codimension cap law to derive every physical coordinate charge and seek a constant uniform in both parameters; retain the arbitrary-matrix witness as a basis-sensitivity guard.",
+  "consumer_targets": ["B01", "B05", "B18", "B20"],
+  "reviewer_targets": ["A090", "A085"],
+  "source_pins": {
+    "target_report_sha256": "02c2db06ade333bfa8d76e1505ad177dbd38227c5a8e0539c69313cd52d7573f",
+    "target_proof_sha256": "e76f85e21b16acb314fe287d837fa621ee7147abd125485be4d85d0920b5449a",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "odonnell_tan": "arXiv:1304.1347",
+    "potapov_plateaued": "arXiv:2609.21563"
+  },
+  "delivery": {
+    "canonical_path": "reports/fei-2026-10-11/runs/B19/20261013T105028Z-fleet01-B19-canonical-bilinear-review-a094/",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B19/20261013T105028Z-fleet01-B19-canonical-bilinear-review-a094/",
+    "canonical_commit": "8a728ee629ac5a10ee3b4f900263a72ca1fbecbe",
+    "brain_commit": "fcbd899eca2aa651374d99ccec7a3830ebc05b2a",
+    "verified_readback": true,
+    "native_brain_ingestion": "NOT_CLAIMED"
+  }
+}

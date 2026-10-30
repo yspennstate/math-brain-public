@@ -1,0 +1,286 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account fleet02, slot B12, 2026-09-23T09:30:23Z.
+attacking: a fifth-volume versus rank-reserve hybrid that absorbs arbitrary-magnitude signed low-rank spectral additions while an arbitrary dense tail is paid only at matrix level.
+
+# fleet02/B12 — D5 cross/rank-reserve hybrid for arbitrary added spectrum
+
+Programme: `QFORM-DENSITY-3EIG-20260922`  
+Run: `20260923T093023Z-fleet02-B12-QFORM-auto11`  
+Role: Additional eigenvalue control  
+Status: **PROVED SUPPORTING STABILITY THEOREM; FULL QFORM OPEN / NOT PROVED / NOT DISPROVED.**  
+Continuity: **not claimed by this branch**.
+
+## 1. Sources actually used
+
+The required pinned Claude package was read at exact commit
+
+`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+
+including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+
+The completed result used below is its fifth-volume theorem D5: for an ACTUAL original-coordinate cross block `M=A[I,J]`, with
+
+`Z5=e5(M^T M)`,
+
+one has
+
+`||p_Q||_infinity <= 5 sqrt(2e) Z5^(-1/10)`.                 (1.1)
+
+In particular, if `s5(M)>=a>0`, then
+
+`||p_Q||_infinity <= 5 sqrt(2e)/a`.                          (1.2)
+
+The theorem allows arbitrary self blocks and outside couplings and is proved in original product coordinates.
+
+The designated partner fleet03/B12 was read at
+
+`yspennstate/math-open-problems@b46affed774bb2868dcbe52e0d5c0111b1ab904f`,
+
+`proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T091613Z-qform-eigenvalue-r29/REPORT.md`.
+
+Its spectral-window complementary shield and the bounded-dimensional original-coordinate receiver are applied explicitly in Section 5.
+
+## 2. First unpaid implication
+
+The theorem below does **not** show that the bare hypothesis `s3(A)>=1` forces the needed high reserve on a bounded physical complementary bank. The remaining structural implication is:
+
+> From the no-pivot/unpaid class, force either a bounded original-coordinate block with enough complementary singular-value reserve after hostile low-rank additions are spent, or an already-paid D5/three-volume/ridge/grouped-bank/hub/physical-core/Schur exit.
+
+What is paid here is the subsequent stability problem once such reserve exists. This is strictly matrix-level; no claim of the form “small matrix norm implies a uniformly small quadratic random variable” is used.
+
+## 3. Main theorem — `QFORM-D5-CROSS-RANK-RESERVE-HYBRID-v1`
+
+Let `H=I disjoint_union J` be `m` ORIGINAL coordinates and write the baseline physical block
+
+`A0[H,H] = [[C,B],[B^T,D]]`.                                (3.1)
+
+Let `S=S^T` be any symmetric added matrix whose local compression has
+
+`rank S[H,H] <= r`,                                          (3.2)
+
+with arbitrary sign and arbitrarily large norm. Let `T=T^T` be an arbitrary dense symmetric perturbation satisfying
+
+`||T[H,H]||op <= delta`.                                     (3.3)
+
+Assume
+
+`s_(2r+11)(D) >= kappa > 2 delta`.                           (3.4)
+
+Put
+
+`C5 = 5 sqrt(2e)`, `Cm = 2 sqrt(6 pi m)`.                   (3.5)
+
+Then for the full ambient form, with every coefficient and coordinate outside `H` arbitrary,
+
+`boxed: ||p_(X^T(A0+S+T)X)||infinity`
+
+`       <= (C5+Cm)/(kappa-2 delta).`                         (3.6)
+
+The bound is independent of the signs and magnitudes in `S`.
+
+### Proof
+
+Write
+
+`S[H,H]=[[SII,SIJ],[SIJ^T,SJJ]]`
+
+and define the pre-dense final cross block
+
+`M = B+SIJ`, `b=s5(M)`.                                     (3.7)
+
+Set the balancing threshold
+
+`beta = delta + [C5/(C5+Cm)](kappa-2 delta)`.                (3.8)
+
+There are two exhaustive cases.
+
+### Case A: fifth cross singular value is large
+
+Suppose `b>=beta`. The ACTUAL final original-coordinate cross block is
+
+`M_final=M+T[I,J]`.
+
+A rectangular compression has operator norm at most the ambient/local compression norm, hence
+
+`s5(M_final) >= b-delta >= beta-delta`
+
+` = [C5/(C5+Cm)](kappa-2delta)`.                             (3.9)
+
+Apply the pinned Claude D5 theorem (1.2) directly to this final cross block. It gives
+
+`||p_Q||infinity <= C5/(b-delta)`
+
+` <= (C5+Cm)/(kappa-2delta)`.                               (3.10)
+
+This is an equation-level use of the required `e5f71d79...` result. The same-bank quadratic terms and all outside couplings remain in the final matrix.
+
+### Case B: fifth cross singular value is small
+
+Suppose `b<beta`. Let `M4` be a best rank-four approximation to `M` and put
+
+`E=M-M4`.
+
+By Eckart-Young,
+
+`rank M4<=4`, `||E||op=s5(M)=b`.                            (3.11)
+
+Now collect the large/low-rank part as
+
+`R0 = diag(SII,SJJ) + [[0,M4],[M4^T,0]]`.                   (3.12)
+
+Because both principal compressions `SII,SJJ` have rank at most `r`,
+
+`rank diag(SII,SJJ) <= 2r`,                                 (3.13)
+
+while the symmetric off-diagonal matrix generated by `M4` has rank at most `2 rank(M4)<=8`. Therefore
+
+`rank R0 <= 2r+8`.                                           (3.14)
+
+We have the exact decomposition
+
+`A0[H,H]+S[H,H]`
+
+` = diag(C,D)+R0+[[0,E],[E^T,0]]`.                          (3.15)
+
+For any matrix `K` and rank-`q` perturbation `R`, singular-value interlacing gives
+
+`s_j(K+R) >= s_(j+q)(K)`.                                   (3.16)
+
+Apply this with `j=3,q=2r+8`. Since adjoining the `C` block can only add singular values to those of `D`,
+
+`s3(diag(C,D)+R0)`
+
+` >= s_(2r+11)(diag(C,D)) >= s_(2r+11)(D) >= kappa`.        (3.17)
+
+The symmetric residual cross block in (3.15) has operator norm exactly `||E||op=b`. Restoring it and then the arbitrary dense tail costs only `b+delta` by Weyl, so
+
+`s3((A0+S+T)[H,H]) >= kappa-b-delta`
+
+` > kappa-beta-delta`
+
+` = [Cm/(C5+Cm)](kappa-2delta)`.                            (3.18)
+
+For a real symmetric matrix, singular values are absolute eigenvalues. Thus the ACTUAL final physical block has three eigenvalues of modulus at least the right-hand side of (3.18). Condition on all original coordinates outside `H`: the variables in `H` remain independent cap-one inputs, and all outside coupling becomes only affine/constant data. The bounded-dimensional physical receiver used in the current fleet03/B12 partner report gives
+
+`||p_Q||infinity <= Cm/s3((A0+S+T)[H,H])`
+
+` < (C5+Cm)/(kappa-2delta)`.                                (3.19)
+
+This proves (3.6). No random variable is spectrally rotated and no dependent quadratic remainder is convolved as though independent. QED.
+
+### Why `2r+11` appears
+
+The index has a transparent accounting:
+
+`3 desired directions + 2r diagonal-compression rank + 8 rank-four cross part`.
+
+If the cross block needs more than four large singular directions, D5 pays it instead. Thus arbitrary update magnitude is traded for finite rank, while the full-rank dense tail is paid only by operator-norm perturbation of deterministic matrix certificates.
+
+## 4. Literal arbitrary eigenvalue replacements
+
+Suppose `v_1,...,v_r` are orthonormal eigenvectors of `A0`, and set
+
+`S = sum_(a=1)^r tau_a v_a v_a^T`.                           (4.1)
+
+Then before the dense tail, the corresponding eigenvalues are literally replaced by
+
+`lambda_a -> lambda_a+tau_a`,                               (4.2)
+
+where every `tau_a` is arbitrary: smaller, larger, zero-crossing, positive or negative, with no magnitude restriction. Since `rank S[H,H]<=r`, theorem (3.6) is uniform in all these replacements whenever the baseline bank reserve (3.4) holds.
+
+This is the intended “additional eigenvalue control”: the spectral amplitudes themselves are not charged.
+
+## 5. Exact target-class stress family and direct partner application
+
+Take `I` of size five, `J` of size thirteen, so `m=18`. Let
+
+`D=2 I_13`,
+
+`B_t = t [ I_5  0_(5x8) ]`,                                (5.1)
+
+and
+
+`A_t^0 = [[0_(5x5),B_t],[B_t^T,2I_13]]`.                   (5.2)
+
+Let `v` be the thirteenth basis vector in the `J` bank. Since `B_t v=0`, `v` is an exact eigenvector of `A_t^0` with eigenvalue two. For arbitrary `tau in R`,
+
+`S_tau=tau v v^T`                                            (5.3)
+
+literally replaces that eigenvalue by `2+tau`.
+
+The five coupled `2x2` blocks have eigenvalues
+
+`1 +/- sqrt(1+t^2)`,                                        (5.4)
+
+so each supplies one positive eigenvalue at least two. Of the eight uncoupled `+2` directions, seven remain untouched by (5.3). Hence before any dense tail there are at least twelve fixed eigenvalues at least two, independently of `t,tau`. If now
+
+`||T||op <= 1/4`,                                            (5.5)
+
+then the final matrix satisfies
+
+`lambda_3^downarrow(A_t^0+S_tau+T) >= 2-1/4=7/4>1`.         (5.6)
+
+Thus this is an exact QFORM target-class family for all `t,tau in R`.
+
+For the general theorem, `r=1`, `kappa=2`, `delta=1/4`, and indeed
+
+`s_(2r+11)(D)=s_13(D)=2`.                                   (5.7)
+
+Numerically,
+
+`C5=11.658219907985622...`,
+
+`C18=36.839761486073584...`,                                (5.8)
+
+so (3.6) gives the uniform cap
+
+`boxed: ||p_Q||infinity <= 32.331987596039475...`            (5.9)
+
+for every `t`, every arbitrary signed eigenvalue replacement `tau`, every dense tail (5.5), and every independent product source with density caps one.
+
+There is also a direct application of the completed fleet03/B12 r29 spectral-window theorem on this same family. Choose its reducing protected packet `P` to span the seven untouched coordinates `J_6,...,J_12`. Then
+
+`D_P=2I_7`, `B_t P=0`,                                      (5.10)
+
+so partner parameters are `mu=2`, `rho=0`; the unprotected coupling leakage is exactly
+
+`epsilon=||B_t(I-P)||op=|t|`.                               (5.11)
+
+After the dense tail, partner r29 gives the small-cross certificate
+
+`s3(final physical block) >= 7/4-|t|`,                      (5.12)
+
+and therefore, whenever `|t|<7/4`,
+
+`||p_Q||infinity <= C18/(7/4-|t|)`.                         (5.13)
+
+On the other hand, the pinned D5 theorem applied to the final cross block gives, whenever `|t|>1/4`,
+
+`||p_Q||infinity <= C5/(|t|-1/4)`.                          (5.14)
+
+Balancing (5.13) and (5.14) occurs at
+
+`|t| = beta = 0.6105785098536194...`,                       (5.15)
+
+and both sides there equal exactly the hybrid constant (5.9). Thus the explicit family exhibits the theorem's mechanism without abstraction: low cross-coupling is paid by the partner spectral-window shield, while high cross-coupling is paid by the required Claude fifth-volume theorem. Arbitrary eigenvalue replacement amplitude and the dense tail coexist throughout.
+
+## 6. Forbidden shortcut explicitly avoided
+
+Small matrix norm is not a uniformly small random quadratic perturbation on unbounded inputs. Already
+
+`T=delta e_1 e_1^T`, `X_1 ~ Uniform[R,R+1]`
+
+gives
+
+`X^T T X = delta X_1^2 >= delta R^2` almost surely.         (6.1)
+
+The dense tail above is used only through deterministic Weyl/singular-value stability of actual final matrix certificates.
+
+## 7. Remaining gap
+
+The theorem is supporting progress, not a proof of the conjecture. The unresolved bridge is to derive from bare `s3(A)>=1` in the no-pivot survivor either:
+
+1. a bounded physical complementary bank with enough reserve to meet (3.4) after the hostile finite-rank portion is accounted for;
+2. a final original-coordinate cross block entering D5 or the completed three-volume/collective-energy gates; or
+3. another already-paid grouped-bank/hub/ridge/physical-core/Schur branch.
+
+Diffuse exact-rank-three constructions in the correction inbox prohibit simply asserting such a bounded reserved bank from the global spectral hypothesis. The new theorem instead shows that **once** reserve is available, arbitrary signs and magnitudes of finitely many added eigenvalues and a genuinely full-rank dense small tail can be handled without any hidden moment/support/log-concavity/rotation-independence assumption.

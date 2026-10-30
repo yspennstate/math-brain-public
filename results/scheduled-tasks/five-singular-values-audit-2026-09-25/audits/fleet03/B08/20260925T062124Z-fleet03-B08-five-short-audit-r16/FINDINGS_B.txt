@@ -1,0 +1,17 @@
+Pass 2 B08, exact pinned short.tex lines 444-580.
+
+No new fatal defect found.
+
+Lemma 5.4 PASS under the rough-law hypotheses. Original-coordinate conditioning is uniform in the induced affine terms; the Gaussian Fourier integrand is absolutely integrable after the Corollary 4.4(c) envelope, so no moments or support assumptions enter. Atom exclusion and logarithmic layer cake are valid.
+
+New audit strengthening: the source coefficient <19 has an elementary exact enclosure. Its coefficient simplifies to 2^(5/4)e^(3/4)Gamma(1/4). Alternating Taylor integration on [0,1] and the e^(-1) tail give Gamma(1/4)<298807/79560. Also 2^(1/4)<119/100 and e^(3/4)<53/25. Hence the coefficient is < (6307/1250)(298807/79560) = 19 - 292603/5850000 <19.
+
+Lemma 5.5 PASS; its rearrangement proof uses nonnegative layer cake/Tonelli and remains valid for extended-valued even decreasing functions.
+
+Lemma 5.6 PASS after the already recorded C01/C03 repairs. The a.e. density versions suffice. The singular h(y)=6+log_+(16/|y|) is locally integrable against the compactly supported |y|^(-1/2) kernel. Also 12+5log2<16 follows from log2<4/5, since e^(4/5)>1+4/5+(4/5)^2/2=53/25>2.
+
+Section 6 through Proposition 6.4 PASS. Finite Rademacher averaging requires no measurable selector; the two ordered-pair survivor terms are exact; the crossing singular spectrum is duplicated with zero padding. Using sqrt2<99/70 gives gamma1>517/1344>0.38, gamma2>319/1344>0.237, gamma3>121/1344>0.09.
+
+Independent comparison was done only after derivation. fleet03/B19 commit 5a3c4e54e8ee3b351b4612cca9760965904d9a2c independently reports PASS for lines 444-580 after C01/C03.
+
+Completed full manuscript passes: 1. Pass 2 next cursor: line 581. Status WITHOUT_VERIFIED_BRAIN.

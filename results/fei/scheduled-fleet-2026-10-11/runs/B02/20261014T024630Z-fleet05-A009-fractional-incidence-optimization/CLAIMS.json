@@ -1,0 +1,118 @@
+[
+  {
+    "claim_id": "A009-COMPLETE-STAR-POSITIVE-OPTIMUM-RATIONAL-GAP",
+    "version": 1,
+    "exact_statement": "For every finite nonempty graph prime table with both endpoint orders, pi=1/4 and a globally fixed positive feasible base vector, freezing its exact maximal-matching star actual-run posterior gives a convex complete log-weight objective with usage c_e computed by the multiaffine occupation mass derivative. Every c_e is positive; if the graph has at least two edges, sum c_e>Var f and the global positive minimizer is attained and unique. For one edge the complete frozen cost is weight-independent. Every rational proposed feasible vector admits an exact global gap certificate using coordinate prices and a rational mixture of its normalized nonempty root law with the singleton law c/sum c. The bit gap is bounded by twice the entirely rational root chi-square, incidence slack and edge square-error expression in WEIGHT_GAP.md. Exact independent certificates for all 63 nonempty four-vertex graph DNFs and five specified five-vertex graphs prove complete frozen cost<9I/2 and global frozen-posterior optimality gap<=I/10^7. No universal graph cost bound or jointly optimized PI-J lower bound is asserted.",
+    "hypotheses": [
+      "uniform cube; arbitrary finite positive simple graph edge prime DNF on covered coordinates",
+      "both fixed endpoint orders per gate and rarity 1/4",
+      "strictly positive coordinate-incidence-feasible base vector; actual maximal-matching star posterior frozen before changing weights",
+      "full original conditioned queue, all subset/count/multiset/root/label factors retained; costs in bits",
+      "root-law mixture is dual certificate side information, not an output-dependent reference choice",
+      "finite cost domain exactly all 63 labelled nonempty n=4 edge tables plus n=5 cycle, path, star, clique and triangle with leaves at vertices 0,1"
+    ],
+    "statement_sha256": "3cf958ee33ed60d2a6fdddd5c3486c86f4d9d9b43c2415b12866ee096c6c7be0",
+    "contributors": [
+      "A009"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T024630Z-fleet05-A009-fractional-incidence-optimization\\WEIGHT_GAP.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T024630Z-fleet05-A009-fractional-incidence-optimization\\out\\CHECK.json",
+      "independent_replay": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T024630Z-fleet05-A009-fractional-incidence-optimization\\out\\VERIFY.json",
+      "negative_charge_test": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T024630Z-fleet05-A009-fractional-incidence-optimization\\out\\MIXTURE_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-MAXIMAL-MATCHING-STAR-COMPLETE-MASS",
+        "version": 1,
+        "statement_sha256": "57407f2dc1875e64d1bf5bdfd7ef15b5486b08f36bd1fe3e7bb5c7c1ad36bab5",
+        "status": "A008_WHOLE_INDEPENDENT_ACCEPTANCE_OBSERVED; ACTUAL_PROBABILITY_LEDGER_RECONSTRUCTED_HERE"
+      },
+      {
+        "claim_id": "A008-MATCHING-OCCUPATION-MASS-COLLISION-CREDIT",
+        "version": 1,
+        "statement_sha256": "905b7f9689e68f23e9c1e3fb2ef75261095fd83eda91094cd653db0435d7f02b",
+        "status": "WHOLE_INDEPENDENT_RECONSTRUCTION_BY_A009_NO_REPAIR"
+      },
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE"
+      }
+    ],
+    "review_records": [],
+    "status": "ANALYTIC_ALL_GRAPH_OPTIMIZATION_PROVED_EXACT_FINITE_COSTS_CERTIFIED_PENDING_INDEPENDENT_AGENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B02",
+      "B03",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A008-MATCHING-OCCUPATION-MASS-COLLISION-CREDIT",
+    "version": 1,
+    "exact_statement": "For every finite nonempty simple graph G with globally fixed both endpoint orders per width-two prime gate, pi=1/4, strictly positive feasible lambda, and D=product_e(1+lambda_e/4)-1, for every covered nonempty A and inclusion-maximal matching M of G[A], set U=A minus its matched vertices and m=|M|. Put P_M(z)=product_(u in U)[sum_(v outside A,uv edge)lambda_uv/32+sum_(v matched,uv edge)lambda_uv*z_v/8]. For monomial z^h define J_M(z^h)=product_(e={v,w} in M)h_v!h_w!/((c_e+1)^2(c_e+2)), c_e=h_v+h_w. The exact original conditioned maximal-matching star output mass is Q_M=D^-1 product_(e in M)(lambda_e/24) J_M(P_M). With independent per-matching-edge T uniform[0,1], B density 2(1-b), and independent rate-one exponentials Y_v,Y_w, J_M(P)=2^-m E P(X) for X_v=TB*Y_v and X_w=TB*Y_w. For all integers a,b>=0 and c=a+b, a!b!/((c+1)^2(c+2))>=(1/2)*6^-c*2^max(c-1,0). Consequently if P=sum_h p_h z^h, k(h)=sum_e c_e and d(h)=number of matching parents with c_e>0, Q_M>=D^-1 product_(e in M)(lambda_e/48) sum_h p_h*6^-k(h)*2^(k(h)-d(h)). This retains exact occupation multiplicities and a certified collision bonus beyond the discarded-factor row-sum bound, but asserts no universal influence payment or polynomial complexity.",
+    "hypotheses": [
+      "uniform physical signs, arbitrary finite positive simple graph edge DNF",
+      "one globally fixed prime table, both endpoint orders, rarity pi=1/4 and positive feasible lambda before sampling A",
+      "A covered nonempty, M inclusion-maximal, unmatched U independent",
+      "original conditioned queue and actual chronological events; all size, subset, count, multiset, label and absent-root factors retained",
+      "integer monomial exponents, polynomial coefficients summed when neighbor choices produce identical occupation vectors",
+      "ideal output reference mass, no free physical prefix rounding or table selection"
+    ],
+    "statement_sha256": "905b7f9689e68f23e9c1e3fb2ef75261095fd83eda91094cd653db0435d7f02b",
+    "contributors": [
+      "A008"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T021605Z-fleet05-A008-gate-label-compression\\OCCUPATION_MASS.md",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T021605Z-fleet05-A008-gate-label-compression\\out\\CERTIFICATES_4.json",
+      "code": "~\\brain_workers\\FEI100_20261011\\agents\\A008\\runs\\20261014T021605Z-fleet05-A008-gate-label-compression\\code\\check.py"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-MAXIMAL-MATCHING-STAR-COMPLETE-MASS",
+        "version": 1,
+        "statement_sha256": "57407f2dc1875e64d1bf5bdfd7ef15b5486b08f36bd1fe3e7bb5c7c1ad36bab5",
+        "status": "INDEPENDENTLY_ACCEPTED_LOCALLY_BY_A008"
+      },
+      {
+        "source": "~\\mop_fei100\\reports\\fei-2026-10-11\\source_material\\reductions\\paper\\forests.tex",
+        "sha256": "d2314f2c9606a9f4b68f3f0c8a3406aa95f24647a3487e35c5b73e50bf03703a",
+        "status": "SOURCE_COMPLETE_BASELINE_READ"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A009",
+        "verdict": "HOLDS_AT_ORIGINAL_WHOLE_SCOPE_NO_REPAIR",
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T024630Z-fleet05-A009-fractional-incidence-optimization\\REVIEW_OCCUPATION.md",
+        "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A009\\runs\\20261014T024630Z-fleet05-A009-fractional-incidence-optimization\\out\\VERIFY.json",
+        "method": "independent complete probability ledger, shared-endpoint moments and balanced factorial induction; usage polynomial and root distributions independently replayed",
+        "reviewer_supplied_substantive_repair": false
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_ORIGINAL_SCOPE_LOCAL_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A009",
+      "A010",
+      "A014",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

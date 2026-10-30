@@ -20,8 +20,8 @@ This review checks logical correctness and scope, not publication priority. The 
 
 I read both complete reports used for the terminality and crossing premises at the exact cited commits:
 
-- [All-block terminal critical core](https://github.com/yspennstate/math-open-problems/blob/85ffa60db26997421d980b1f86c03d82259504ca/proofnet24/P03-fei/fleet-2026-09-21/account02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md), blob `68e838a493671ed5c27a29468dfcce7bb621d860`.
-- [Terminal trigger surplus](https://github.com/yspennstate/math-open-problems/blob/fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113/proofnet24/P03-fei/fleet-2026-09-21/account04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md), blob `d283c7b495316959312155f8ba68fb83569d9633`.
+- [All-block terminal critical core](https://github.com/yspennstate/math-open-problems/blob/85ffa60db26997421d980b1f86c03d82259504ca/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md), blob `68e838a493671ed5c27a29468dfcce7bb621d860`.
+- [Terminal trigger surplus](https://github.com/yspennstate/math-open-problems/blob/fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md), blob `d283c7b495316959312155f8ba68fb83569d9633`.
 
 The precise source charge is
 

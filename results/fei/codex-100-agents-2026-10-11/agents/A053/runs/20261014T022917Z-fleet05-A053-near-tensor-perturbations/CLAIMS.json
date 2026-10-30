@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A053-REFUND-ZEROS-AND-SPARSE-CODE-SURGERY",
+    "version": 1,
+    "exact_statement": "For a real Fourier quartet (alpha,beta,gamma,delta), both nonnegative merging refunds vanish iff Delta=alpha delta-beta gamma is zero or alpha gamma=beta delta and alpha beta=gamma delta. If Delta!=0, the latter case is exactly an opposite-diagonal support or delta=s alpha,gamma=s beta with s=+/-1, all four nonzero and alpha^2!=beta^2; the full-support exceptional physical row is supported on one parity class and has normalized collision>=1. For any Boolean F on n>=3 with spectral support distance>=3 and its one-point edit G, p=2^-n, C_i(G)<=8p,C_ij(G)<=16p and each pair total refund M_i+M_j<=16p. V_ij<=h2(3p)+3p log2(3)+16p/ln2<(3n+29)p and V_i<=h2(2p)+8p/ln2<(2n+13)p. A least-essential-dimension K-violation of this form must satisfy D_K(G)+S_ij+K(I_ij(F)-4p)<(3n+29)p, and D_K(G)+S_i+K(Inf_i(F)-2p)<(2n+13)p, where S are actual nonnegative physical child reserves. For every fixed nonconstant h, tensor t copies then substitute fresh triple parities and edit one point; t>=2 yields prime/full-support/all-essential Boolean G_t with connected cross-copy plaquette graph, total pair refunds<=16 binom(n,2)2^-n tending to0, and H(G_t)/I(G_t)->H(h)/(3I(h)). An absolute FEI bound for the union of these families implies unrestricted FEI up to factor3. The families are not admitted as minimal witnesses and do not disprove FEI.",
+    "hypotheses": [
+      "Uniform finite cubes; actual Boolean signs, entropy bits; real quartet classification is algebra only",
+      "n>=3 for point surgery with a proper pair; p=2^-n; seed Fourier support distance>=3, including infinite distance for a singleton support",
+      "Minimality exclusion assumes K>0 and least essential dimension among all Boolean K-violations; physical child reserves are retained",
+      "Arbitrary-core admission uses a fixed nonconstant seed h on k essential bits, tensor copies t>=2, and fresh triple-parity substitution before one-point surgery",
+      "No claim that these prime admission functions are dimension-critical, or that arbitrary real quartets are globally Boolean-realizable"
+    ],
+    "statement_sha256": "fd2460a7b68c36ece245d760b22c3c7f91b91a49ce8382010015510069f7b9db",
+    "contributors": [
+      "A053/fleet05"
+    ],
+    "proof_source": "REFUND_STRUCTURE_PROOF.md sections1-5; code/check_refunds.py; code/prime_tensor_certificate.py; out/EXACT_CHECK.json; out/PRIME_TENSOR_CERTIFICATE.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unversioned qualitative inference: zero pair merging refunds indicate only parent tensor cuts; primitivity/full support force a useful dimension-independent positive total refund"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B11-lead",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

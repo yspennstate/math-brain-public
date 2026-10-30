@@ -1,0 +1,102 @@
+[
+  {
+    "claim_id": "A013-AVERAGED-QUEUE-TRANSPORT",
+    "version": 1,
+    "exact_statement": "For every Boolean f on a uniform n-dimensional cube, n>=1, the positive full-minterm cover with one common physical order and the fixed first-gate tie has S=0 and averaged physically restricted label cost at most its parent label cost. With P(S)=fhat(S)^2, K=|S|, Z=1{i in S}, and inherited ranks r_j, its exact rank reset is (6/5)[E Z log2 K - Inf_i log2 r_i + sum_(r_j>r_i) Inf_j log2((r_j-1)/r_j)], and its exact rarity reset is E[(n-1)(K-Z)1{120(K-Z)<11(n-1)}-nK1{120K<11n}]. Root odds, root probabilities and vacuum-weighted normalizers retain the actual child counts as in GENERAL_RESET.md. For the actual bent-prefix family chi_[d] b_m, m=4t>=4, querying a prefix bit has influence one while the averaged combined L+S+R reset is unbounded as m increases; it exceeds 1/2 already at m=256 by an exact rational certificate. Nevertheless, for every prefix depth D the cumulative positive rank/rarity and vacuum-weighted root-normalizer increments are less than (33/16) I(b_m), and including terminal entropy uses one total reserve of (65/16) I(b_m). This refutes fixed-cover local monotonicity and any absolute queried-influence surcharge, not full FEI or optimized alternative covers.",
+    "hypotheses": [
+      "Boolean signs, uniform physical cube, bits",
+      "Positive full-minterm AND cover; common order, fixed first-gate tie; inherited order under actual restriction",
+      "For the reserve/counterfamily: quadratic bent core m divisible by four, fresh character prefix d>=0",
+      "No independently optimized gate orders or alternative covers are asserted"
+    ],
+    "statement_sha256": "af495b405b3bab44af5320b52921e9c76e89ce70ac7a4a5e408d0d35d96c011c",
+    "contributors": [
+      "A013/fleet05"
+    ],
+    "proof_source": {
+      "paths": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\GENERAL_RESET.md",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\DERIVATION.md"
+      ],
+      "sha256": [
+        "02974c884db7ed0acd8d7d8612f8ff9133074d01621932e5e36c2bf97f5c2b45",
+        "0dd46074aaf2f8429eaccff35a5d017254cfe60c01c43f5b4aa9e9f27c692512"
+      ],
+      "validation": [
+        "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\out\\GENERAL_RESULTS.json",
+        "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\out\\TRANSPORT_RESULTS.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "B03 STREAM_NOTES.md v2 target for A013: exact L,S,R do not increase under physical restriction, interpreted for inherited covers",
+      "An absolute queried-influence surcharge bounds the averaged exact inherited-cover L+S+R reset"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B03",
+      "A011",
+      "A012",
+      "A015",
+      "A039",
+      "A064",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A012-CONTROL-FIRST-POSTERIOR-REPAIR",
+    "version": 1,
+    "exact_statement": "For every balanced Boolean g, integer r>=1 and complete nonempty core spectral subprobability reference R_g of finite cost c_g, with p=2^(-r) and F=1+A_r(g-1) on fresh independent point controls, the explicit complete output subprobability reference Q_F has vacuum mass (1-p)^2, control-only nonempty mass p^2 per set, and mass p^2 R_g(T) for every control set U and nonempty data set T. It has total mass 1-p+p sum R_g and exact cost CE(P_F,Q_F)=p*c_g+A_r, A_r=2rp(2-p)+(1-p)^2 log2(1/(1-p)^2). The sharp universal selector coefficient is max_{r>=1} A_r/(rp)=C_act=15/4+(49/12)log2(8/7) in (4.536,4.537), uniquely attained at r=3. For the true control-first witness W retaining its physical stopping/core leaf J, actual leaf spectrum and queried membership bits, H(W|S)=2(1-p)+sum_{k=1}^r 2^(-(r-k)) B_k-A_r, B_k=q_k h2(epsilon_k)+(1-m_k^2)/2, m_k=1-2^(-(k-1)), q_k=(1+m_k^2)/2, epsilon_k=2^(-2(k-1))/(2(1+m_k^2)). This posterior is independent of the balanced core and tends to two bits. Disjoint-reference composition and fresh-character balancing preserve the full core bill; no arbitrary-core influence bound or shared-control transfer is assumed.",
+    "hypotheses": [
+      "Uniform finite data cube, Boolean sign g, Eg=0",
+      "r>=1 fresh independent point controls",
+      "Fixed complete nonempty spectral subprobability core reference with finite cross entropy; all costs in bits",
+      "Actual control-first coupling using the original Boolean child coefficients; zero packets omitted",
+      "Ideal cross-entropy cost; one-symbol integer prefix rounding is separate",
+      "Disjoint original variable blocks for reference-product claims"
+    ],
+    "statement_sha256": "b5b1d941a3fd7511b0ce648ad4d4f6573d0e89f7f04dffc6c1ff9a8943ba1895",
+    "contributors": [
+      "fleet05/A012"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+      "tex": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\POSTERIOR_ACTIVATION.tex",
+      "validation": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261011T234525Z-fleet05-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A013/fleet05",
+        "verdict": "HOLDS_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\A012_REVIEW.md",
+        "sha256": "f07a1d84b4f39bf26cc899281b0258d6c19454923ff0dff4647fd1d08ef44820",
+        "method": "Independent analytic reconstruction and fresh actual-child Fourier/joint-law implementation; no author code imported",
+        "validation": [
+          "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\out\\REFERENCE_RESULTS.json",
+          "~\\brain_workers\\FEI100_20261011\\agents\\A013\\runs\\20261012T010150Z-fleet05-A013-representation-stability\\out\\POSTERIOR_RESULTS.json"
+        ],
+        "scope": "Exact sharp balanced-core activation reference, all-r sharp coefficient, and control-first posterior; no universal core FEI payment."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_LOCAL",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A011",
+      "A013",
+      "A015",
+      "A039",
+      "A097",
+      "A086",
+      "A094",
+      "B20"
+    ]
+  }
+]

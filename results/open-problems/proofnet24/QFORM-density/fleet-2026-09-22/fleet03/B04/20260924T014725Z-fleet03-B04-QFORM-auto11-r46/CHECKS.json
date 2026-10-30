@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T014725Z-fleet03-B04-QFORM-auto11-r46",
+  "status": "PASS",
+  "marker": "QFORM_B04_R46_ANCHORED_E4_HUB_CHECK_PASS",
+  "method": "exact symbolic/rational enumeration plus deterministic floating evaluation of explicit constants; no Monte Carlo",
+  "example": {
+    "cross_block_shape": [9, 8],
+    "singular_values": [16, 1, 1, 1, 0.0625],
+    "E4_exact": "66305/256",
+    "anchored_H0_exact": "259",
+    "carrier_rho_exact": "66304/66305",
+    "strong_residual_row_marginal_exact": "129/259",
+    "weak_residual_row_marginal_exact": "3/518",
+    "all_residual_marginals_below_one_half": true,
+    "Gamma": 0.9989708620178627,
+    "Omega": 255.73654067657284
+  },
+  "bounds": {
+    "new_exact": 2.378720371807186,
+    "new_coarse_H": 2.8662006090751166,
+    "designated_partner_entropy": 8.13902601868726,
+    "prior_fixed_pair": 4.509577357402878,
+    "live_high_carrier_hub_branch_coefficient": 8.58443181728124,
+    "live_high_carrier_pair_branch_coefficient": 13.499907897578499,
+    "live_high_carrier_uniform_coefficient_less_than": 13.5
+  },
+  "logical_checks": [
+    "M^T M has eigenvalues 256,1,1,1,1/256,0,0,0",
+    "the symmetric pure-cross target therefore has eigenvalues plus/minus 16, plus/minus 1 three times, plus/minus 1/16",
+    "all physical cross coefficients are nonzero",
+    "anchored fourth-volume and total fourth-volume are exact rational values",
+    "conditional anchored triple marginals sum to 3 and are all below 1/2",
+    "new exact bound is strictly smaller than the prior fixed-pair and designated-partner bounds on the same matrix"
+  ]
+}

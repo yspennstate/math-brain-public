@@ -64,7 +64,7 @@ progress = {
     "claim_versions_used": ["C018 v1", "C035 v1", "A056 v1", "B05-SPARSE-ACTIVATION-VARIANCE-REFUND-NOGO v1"],
     "claims_created_or_changed": [c["claim_id"] + " v1" for c in claims],
     "source_artifacts": ["~/fourier-entropy-threshold-functions/paper/main.tex sha256 " + PAPER_SHA,
-                         "agents/A091/runs/20261011T214848Z-account05-A091-composition-referee/REPORT.md, out/constants.json"],
+                         "agents/A091/runs/20261011T214848Z-fleet05-A091-composition-referee/REPORT.md, out/constants.json"],
     "next_consumers": ["A094", "A095", "A091", "B20"],
     "next_action": "A094 to referee B19-RANKCODE-GLOBAL-ORDER-NOGO; A095 to state the largest class with R_pi <= K I and a block-adaptive reference that removes the 2(L-1) cost on XOR-of-AND blocks; A091 to review the B09 core uncertainty lemma (unchanged stream next_action).",
     "stagnant_substantive_attempts": 0,

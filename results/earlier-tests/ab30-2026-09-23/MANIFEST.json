@@ -9,7 +9,7 @@
   "PRIVATE_HOLDER_RECEIPT_2026-09-28.json": {
    "bytes": 2200,
    "sha256": "59eed14ff459c1ea8bdf4fe0ba7ded041b2637693476f014748102a79df55cf9",
-   "source": "written 28 Sep 16:5x by tools/ab30_private_holder_check.py, run by the holder of the private streams: every commitment and event row recomputed and compared (counts and hashes only); rewritten 28 Sep 17:4x by the checker's second version, which counts rows before keying them, names each failure and requires verify_disclosure.py --files to print PASS (account03/B17 r66); rewritten 28 Sep 18:4x by the third version, which also fails an object naming a member twice (account03/B17 r67)"
+   "source": "written 28 Sep 16:5x by tools/ab30_private_holder_check.py, run by the holder of the private streams: every commitment and event row recomputed and compared (counts and hashes only); rewritten 28 Sep 17:4x by the checker's second version, which counts rows before keying them, names each failure and requires verify_disclosure.py --files to print PASS (fleet03/B17 r66); rewritten 28 Sep 18:4x by the third version, which also fails an object naming a member twice (fleet03/B17 r67)"
   },
   "README.md": {
    "bytes": 9567,
@@ -19,7 +19,7 @@
   "STATUS.json": {
    "bytes": 2720,
    "sha256": "cbd7b2df2f129757afc7905b8a6a0f819ec502cf09715e8a3fbca29c1a7f8477",
-   "source": "copy of the campaign's STATUS.json (blob db35ae7787f5), 29 Sep, so the status claim does not depend on a file outside the release (account04/B20 r37); private labels replaced 24 Oct before publication"
+   "source": "copy of the campaign's STATUS.json (blob db35ae7787f5), 29 Sep, so the status claim does not depend on a file outside the release (fleet04/B20 r37); private labels replaced 24 Oct before publication"
   },
   "TREATMENT_COMMITMENTS.jsonl": {
    "bytes": 116551,
@@ -34,7 +34,7 @@
   "check.py": {
    "bytes": 7743,
    "sha256": "cdd9c7d3c1807f761110bd85a4697f3ed5533d4c7d6dcd45321b0d749480ebde",
-   "source": "written 28 Sep for this release; 29 Sep: checks the manifest before any claim, requires every claim's source, reads STATUS.json from this folder (account04/B20 r37)"
+   "source": "written 28 Sep for this release; 29 Sep: checks the manifest before any claim, requires every claim's source, reads STATUS.json from this folder (fleet04/B20 r37)"
   },
   "derive.py": {
    "bytes": 5187,
@@ -224,7 +224,7 @@
   "verify_disclosure.py": {
    "bytes": 15073,
    "sha256": "3cde0f61b5422ade9bafe9478f0a958ca0edee4ce1fe2849ca623ef558b876a4",
-   "source": "written 28 Sep for this release; 28 Sep 12:2x: requires both roots, well formed, on every run, rejects repeated rows, checks a disclosed output's length and the v2 root (account01/B19, account02/B19); 28 Sep 16:5x: checks each run's own fields and redoes the hook-bytes match from the round files; private digests reported UNVERIFIED_PRIVATE (account01/B19 R44); 28 Sep 18:4x: an object naming a JSON member twice fails as duplicate_json_member (account03/B17 r67)"
+   "source": "written 28 Sep for this release; 28 Sep 12:2x: requires both roots, well formed, on every run, rejects repeated rows, checks a disclosed output's length and the v2 root (fleet01/B19, fleet02/B19); 28 Sep 16:5x: checks each run's own fields and redoes the hook-bytes match from the round files; private digests reported UNVERIFIED_PRIVATE (fleet01/B19 R44); 28 Sep 18:4x: an object naming a JSON member twice fails as duplicate_json_member (fleet03/B17 r67)"
   }
  },
  "note": "MANIFEST.json cannot list its own hash; the commit that carries it binds it.",

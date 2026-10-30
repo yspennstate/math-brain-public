@@ -130,7 +130,7 @@ plus one flipped point has ratio at least (n - 3 log2 n)/2).
   of the measure and of I, and H to 1e-75, on five random three-level compositions (n = 10).
 - The fleet's biased point (one core input of g at Pr[true] = 3/8): p_out = 967/2048, It_1 = 855/4096,
   sum_{i>=2} It_i = 465/256, Htilde = 6.744254737056313266470..., matching
-  `fleet-2026-09-21/account03/B12/20260922T061544Z-biased-prime-candidate-refutation/REPORT.md` to every digit.
+  `fleet-2026-09-21/fleet03/B12/20260922T061544Z-biased-prime-candidate-refutation/REPORT.md` to every digit.
 - Every Walsh coefficient of g on a set of two or more auxiliary coordinates (subsets of {9,...,17}) vanishes (502 of
   502 sets), because the nine auxiliaries host disjoint cells. Hence biasing only auxiliary inputs gives
   E F = (sum_j mu_j)/256 exactly, and opposite auxiliary biases keep a composition exactly balanced with dyadic

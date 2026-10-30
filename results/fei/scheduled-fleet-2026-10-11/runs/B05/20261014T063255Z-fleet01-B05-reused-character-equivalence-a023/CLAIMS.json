@@ -1,0 +1,32 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B05",
+  "primary_packet_id": "A023",
+  "claims": [
+    {
+      "claim_id": "B05-A023-REUSED-CHARACTER-EQUIVALENCE",
+      "version": "v1",
+      "exact_statement": "For every genuine Boolean q and existing coordinate x, let r=chi_x q and T_x(q)=A(r), with only the selector fresh. Character multiplication is an involution, so the images over arbitrary q are exactly all ordinary activations A(r), and their restriction closure contains every Boolean function. The complete L_{c,eta} surcharge is equation (8) of PROOF.md. The direct half-contraction L(T_x(q))<=L(q)/2 fails for every c>0 at q=chi_x, where the residual is c/2.",
+      "hypotheses": [
+        "Finite uniform cube and genuine sign-valued Boolean q",
+        "x is an existing physical input of q",
+        "Only the fair selector z in A is fresh",
+        "c>0 for the half-contraction falsifier"
+      ],
+      "statement_sha256": "d47d8e12622d2c917d4e9266a35040a142afce22d570b6a5d3056c230079e78d",
+      "contributors": ["fleet01/B05"],
+      "proof_source": "PROOF.md",
+      "proof_dependencies": [
+        "B05-A023-ACTIVATION-SMR-v1 exact activation recurrence",
+        "B05-A023-BALANCED-PRECONDITIONED-ACTIVATION-v1 for the prior fresh-coordinate comparison"
+      ],
+      "review_records": [],
+      "status": "PROVED_ROUTE_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": "Universal direct reused-character half-contraction with the same L(q)/2 right side",
+      "first_unproved_line": "Cone preservation L(A(chi_x q))<=0 under L(q)<=0 on any nontrivial restriction-closed class, or a universal signed slice payment for equation (8).",
+      "next_consumers": ["A087", "A094", "B01", "B06", "B19", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

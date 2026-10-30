@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "run_id": "fleet02-B18-20260924T020253Z-r11",
+  "status": "PASS",
+  "supersedes_for_partner_scope": "CHECK.json",
+  "note": "The early CHECK used fleet03/B18 auto15 because auto16 had not yet appeared. This final check consumes the later compatible auto16 Hilbert--Schmidt-scale theorem, as required by later-source precedence.",
+  "claim": "QFORM-ZEROSELF-HS-D5-RANK4-FUNNEL-v1",
+  "latest_partner": {
+    "report_commit": "040ad387a0384004f328f6d9342c899ea11a247e",
+    "check_commit": "8fc3be74bf627f5a983341fb160e8149e0de3d06",
+    "theorem": "QFORM-STABLERANK-CROSS-HS-NEGATIVE-MOMENT-v1",
+    "ambient_bound": "2 sqrt(2) C_RV / ||B||HS when A_II=0 and floor(||B||HS^2/||B||op^2)>=2"
+  },
+  "checks": [
+    {
+      "id": "rv_primary_scope",
+      "status": "PASS",
+      "detail": "Primary PDF arXiv:1402.4492v2 checked: Theorem 1.2 gives sqrt(2)K for normalized scalar sums; Corollary 8.5/equation (8.12) uses independent coordinates with densities <=K and the floored stable rank, with no moment/support/log-concavity/iid/centering assumption."
+    },
+    {
+      "id": "partner_target_scale",
+      "status": "PASS",
+      "detail": "If beta=||B||op>=s/2 and r(B)>=2, then ||B||HS>=beta and the latest partner yields ||p_Q||inf <=4 sqrt(2) C_RV/s."
+    },
+    {
+      "id": "pinned_D5_scope",
+      "status": "PASS",
+      "detail": "Pinned e5f FOURIER_ROUTE_REPORT D5 gives 5 sqrt(2e) e5(B^T B)^(-1/10) for arbitrary original-coordinate cross cuts with no fifth-volume marginal gate."
+    },
+    {
+      "id": "tail_lemma",
+      "status": "PASS",
+      "detail": "For x_j=sigma_j^2 and R5=sum_{j>=5}x_j, e5(x)>=x1 e4(x2,...)>=x1(R5/4)^4."
+    },
+    {
+      "id": "rank4_threshold",
+      "status": "PASS",
+      "detail": "Z5<2^-24 beta^10 implies rank-four truncated-SVD residual HS and operator norms both <beta/4."
+    },
+    {
+      "id": "target_family",
+      "status": "PASS",
+      "detail": "B=diag(1,1/4,1/4,1/4,1/4) plus an independent +1 physical square gives spectrum {-1,+1,+1, +/-1/4 each four times}; stable rank floor is one, Z5=2^-16, so pinned D5 gives 35.34111410111027 while the latest stable-rank gate is unavailable."
+    },
+    {
+      "id": "small_cross_branch",
+      "status": "PASS",
+      "detail": "For A=[[0,B],[B^T,C]], ||A-diag(0,C)||op=||B||op, hence s3(C)>=s3(A)-||B||op. No density closure is claimed from this alone."
+    },
+    {
+      "id": "no_residual_deletion",
+      "status": "PASS",
+      "detail": "The low-rank statement retains E=B-B4 explicitly; no probabilistic perturbation claim follows merely from ||E||op or ||E||HS being small."
+    }
+  ],
+  "finite_values": {
+    "D5_target_family_bound": 35.34111410111027,
+    "D5_target_scale_branch_constant_over_s": 123.06490715293657,
+    "rank4_residual_ratio": 0.25
+  },
+  "full_QFORM_status": "OPEN"
+}

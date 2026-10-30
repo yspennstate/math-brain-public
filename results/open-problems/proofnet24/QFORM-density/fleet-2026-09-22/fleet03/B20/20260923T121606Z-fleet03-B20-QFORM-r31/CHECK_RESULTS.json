@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T121606Z-fleet03-B20-QFORM-r31",
+  "checks": {
+    "near_coloop_threshold": {
+      "identity": "(1/64)^3 = 2^-18",
+      "passed": true
+    },
+    "eighteen_heavy_pivots": {
+      "premise": "each c_j > 1/2",
+      "conclusion": "prod_j(1-c_j) < 2^-18",
+      "passed": true
+    },
+    "diffuse_bound": {
+      "expression": "192*e",
+      "decimal": 521.9101132549347,
+      "less_than_522": true
+    },
+    "partner_bound": {
+      "expression": "3*e*4^(1/3)",
+      "decimal": 12.945010302125787,
+      "less_than_12_946": true
+    }
+  },
+  "note": "Arithmetic regression checks only; the proof is analytic."
+}

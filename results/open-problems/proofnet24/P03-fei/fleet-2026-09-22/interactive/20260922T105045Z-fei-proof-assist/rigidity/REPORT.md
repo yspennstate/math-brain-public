@@ -4,7 +4,7 @@
 
 ## 1. Source context and exact improvement
 
-The starting point is the signed-valuation/influence-class reserve and its exact conditional KL loss in [account01/B16, Sections 2–5 and 8](https://github.com/yspennstate/math-open-problems/blob/ee96e506b3e62e3cebfc5b8aa214acf0319c2c0d/proofnet24/P03-fei/fleet-2026-09-22/account01/B16/20260922T104019Z-B16-auto11/REPORT.md). That source identifies the remaining lost information as the variation of odd Walsh magnitudes within a signed-valuation/occupancy cell. It proves zero loss on one-point-defect suspensions and recursive ternary majority, but does not bound its original loss for arbitrary Boolean functions.
+The starting point is the signed-valuation/influence-class reserve and its exact conditional KL loss in [fleet01/B16, Sections 2–5 and 8](https://github.com/yspennstate/math-open-problems/blob/ee96e506b3e62e3cebfc5b8aa214acf0319c2c0d/proofnet24/P03-fei/fleet-2026-09-22/fleet01/B16/20260922T104019Z-B16-auto11/REPORT.md). That source identifies the remaining lost information as the variation of odd Walsh magnitudes within a signed-valuation/occupancy cell. It proves zero loss on one-point-defect suspensions and recursive ternary majority, but does not bound its original loss for arbitrary Boolean functions.
 
 Here a geometric magnitude bin, with singleton labels kept separately, gives a modified reserve satisfying
 
@@ -335,7 +335,7 @@ In particular, a positive KL gap, a small bin count, or zero loss on the known s
 
 ## 9. An elementary sharpening of the exact-support neighborhood
 
-The [near-bent source, Corollary 4.1](https://github.com/yspennstate/math-open-problems/blob/3d2550e06701d307357200d988eb52697a558e92/proofnet24/P03-fei/fleet-2026-09-22/account03/B07/20260922T103431Z-account03-B07-FEI-r11/REPORT.md) gives a dimension-free TV collar on an exact affine coordinate support using the bound \(H\le m\). Keeping binary entropy gives a larger explicit collar, by an elementary subadditivity argument.
+The [near-bent source, Corollary 4.1](https://github.com/yspennstate/math-open-problems/blob/3d2550e06701d307357200d988eb52697a558e92/proofnet24/P03-fei/fleet-2026-09-22/fleet03/B07/20260922T103431Z-fleet03-B07-FEI-r11/REPORT.md) gives a dimension-free TV collar on an exact affine coordinate support using the bound \(H\le m\). Keeping binary entropy gives a larger explicit collar, by an elementary subadditivity argument.
 
 Suppose \(P\) is supported on \(\{F\cup R:R\subseteq A\}\), with \(F\ne\varnothing\), \(F\cap A=\varnothing\), and \(m=|A|>0\). Define
 

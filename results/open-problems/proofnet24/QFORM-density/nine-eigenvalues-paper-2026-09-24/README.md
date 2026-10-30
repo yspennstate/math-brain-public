@@ -57,6 +57,6 @@ The threshold nine is used only in the case without pivots, through Proposition 
 `../fixed-multiplicity-2026-09-24/` holds the 17-eigenvalue manuscript and its reviews; its Sections 5 and 6 (pivots
 and disjoint minors) are the basis of Sections 5 and 6 here. The order-three and order-two estimates behind the
 nine-eigenvalue threshold also appear, with other constants, in the reviews and improvements filed there under
-`improvements/*/B04`, `improvements/account01/B07`, `improvements/account02/B09`, `B10` and `B18`; the separate
+`improvements/*/B04`, `improvements/fleet01/B07`, `improvements/fleet02/B09`, `B10` and `B18`; the separate
 thresholds 3/40 and 1/400 and the two-coordinate half potential are those of
 `improvements/interactive/20260924T145418Z-nine-400/`.

@@ -1,0 +1,126 @@
+[
+  {
+    "claim_id": "A064-TERMINAL-CORRECTED-GLOBAL-DEBT",
+    "version": 2,
+    "exact_statement": "On a finite fair physical restriction tree, D_v<=C*d_v+Q_v-E[Q_child|v], E Q_root<=K*B and E[H(leaf)-Q_leaf]<=L*E I(leaf), where B=E sum queried d, imply H(f)<=max(C+K,L)*I(f). The explicit terminal-corrected reserve Q_v=H(g_v)-E[H(leaf)|v] has exact drift D, is nonnegative and has zero leaves. For arbitrary-core point activation F=1+A_r(g-1), p=2^-r, a=1-Eg, control-first Q_root<=8*r*p*a with terminal entropy pH(g) retained. Activated arbitrary bent point-splice cores on even k>=4, r>=1 have separate terminal constant below 3 and reserve certificates at 8 for control-first and 9 for selector-first. The fixed candidates c*eta*log2(1/eta) and c*I_remaining*depth fail on B05 selector roots for every fixed finite c,C>=0 (history c=0 reduces to local failure); CI-H has the wrong payment drift except at D<=C*d. No universal root resource bound or full FEI is claimed.\n\nAdditional version-2 theorem: For any finite uniform exclusive controller selecting independent disjoint Boolean cores u_j or constants, with duplicate descriptions of the same physical core merged, keep control probabilities q_j fixed during a finite adaptive data-only prefix. Suppose each core follows a prescribed finite continuation tree with a nonnegative C-priced potential r_j depending only on its own history and an initially fixed independent seed. Then R_t=sum_j q_j*r_j(t)+sum_j q_j*log2(1/q_j)*Var(u_j,t) is a nonnegative potential at price alpha=C+11/2: D_F<=alpha*d_F+R_t-E[R_next|history]. Its initial value is at most sum_j q_j*r_j(root)+2I_ctrl(F); at any partial stop sigma, E R_sigma<=R_root+C*Pi_I,data. If cores are exhausted to constants with zero core leaf reserves, R_sigma=0, while the actual remaining controller entropy is retained. Thus the least nonnegative alpha-priced prefix reserve is dominated by R_root. For a declared controller continuation on each actual complete-data frontier, let b_sigma dominate its reserve at the same alpha; adding E[b_sigma|history] grafts a valid full-rule potential with root bound sum_j q_j*r_j(root)+2I_ctrl(F)+E b_sigma. No linear bound on the last debit or arbitrary inherited core reserve is assumed. The positive outer bank uses kappa=(3+2/e)/ln2<11/2; the coherent scalar paird refund is nonnegative and is removed only as an upper bound, never from the exact identity. For arbitrary h and two independent dictator data cores, data-first retained entropy, influence and consistently sign-translated declared controller reserve equal H(h)/2, I(h)/2, Q_alpha(h,T)/2. The new lift does not imply universal FEI.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; normalized Fourier coefficients; bits",
+      "Physical fresh-coordinate tree; finite stopping; independent seed and decisions measurable in revealed history",
+      "Explicit initial and terminal assumptions in general payment theorem",
+      "Point activation uses fresh controls and arbitrary core, whose entropy remains terminal",
+      "Bent family has even k>=4 and r>=1; any bent b and vertex v; b flipped at v",
+      "History no-go is the stated complete-tree I_remaining*depth formula; physical minority is distinct from spectral minority mass",
+      "The additional theorem uses independent disjoint data cores selected by an exclusive arbitrary physical controller; shared data among distinct cores are excluded.",
+      "The additional prefix exposes data only, with fixed q_j; interleaving respects declared per-core continuation trees, whose reserves depend on own history and an initially fixed independent seed.",
+      "C>=0; all sums finite; q_j=0 terms zero; actual stopping leaves and controller continuation are retained; no initial arbitrary-core or boundary resource bound is assumed."
+    ],
+    "statement_sha256": "24810a34e194827e87ab6607315a59932d42d9b94868aa2c2b67cc04f62a7ed8",
+    "contributors": [
+      "A064; positive cap source credited to A057 and signed ledger to A087; prior activation direction credited to A023"
+    ],
+    "proof_source": {
+      "run_id": "20261013T235917Z-fleet05-A064-global-debt-potential",
+      "paths": [
+        "GLOBAL_DEBT_POTENTIAL.tex",
+        "DERIVATION.md",
+        "REPORT.md"
+      ],
+      "prior_version_source": "~\\brain_workers\\FEI100_20261011\\agents\\A064\\runs\\20261011T224431Z-fleet05-A064-global-debt-potential\\GLOBAL_DEBT_POTENTIAL.tex",
+      "validation": [
+        "out/ROOT_VALIDATION.json",
+        "out/PREFIX_VALIDATION.json",
+        "out/REVIEW_WITNESSES.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A064-TERMINAL-CORRECTED-GLOBAL-DEBT",
+        "version": 1,
+        "scope": "Prior assertions retained at exact source; author-proved pending independent review"
+      },
+      {
+        "claim_id": "A087-STOPPED-SELECTOR-SIGNED-ENTROPY-LEDGER",
+        "version": 1,
+        "scope": "Independently reconstructed in REVIEW_A087.md; exact full query decomposition and actual terminal frontier"
+      },
+      {
+        "source": "A057 PROOF.md sections1,3,4",
+        "run_id": "20261013T221645Z-fleet05-A057-coherent-restriction-remainder",
+        "scope": "Only local cap and gap with original-edge controller ownership, analytically reconstructed; unrelated suffix clause not imported"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      "A064-TERMINAL-CORRECTED-GLOBAL-DEBT v1 (same source retained)"
+    ],
+    "refutes": [
+      "fixed physical-minority rarity reserve at every coordinate",
+      "stated history I_remaining*depth reserve at every coordinate",
+      "CI-H slack as automatic debt drift on an FEI-certified class",
+      "Paid positive outer-prefix bank and zero dictator-core reserve justify discarding the actual arbitrary controller frontier"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A065",
+      "A030",
+      "A057",
+      "A087",
+      "A091",
+      "A094",
+      "A023",
+      "A029",
+      "A097",
+      "A099",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A087-STOPPED-SELECTOR-SIGNED-ENTROPY-LEDGER",
+    "version": 1,
+    "exact_statement": "In the same exclusive-controller setting, put phi(s)=s log2(1/s) and E_ne(u)=H(u)-phi((Eu)^2). On every finite adaptive interleaved data-only prefix, H(F)=E H(F_leaf)+sum_j q_j[E_ne(u_j)-E E_ne(u_j,leaf)]-sum_nodes w q_j phi(beta_node^2)+sum_nodes w(M_node+J_node). At each projected empty-core sector, M0=1-q_j(1-m^2)+q_j beta^2, M_plus/minus=M0+/-2q_j m beta and rho_plus/minus=M_plus/minus/(2M0), and J=M0 JS_rho(P_plus,P_minus)+M0[1-h2(rho_plus)], with zero-mass endpoints by continuity. The rho weights are spectral sector weights; physical query outcomes remain fair. For same-orientation priority with one private bit per event and both cores (1,1,1,-1), the data-first constant-core terminal entropy is 11/8-(9/32)log2(3)>3/4, the control-first terminal entropy. Thus the two stopping-frontier reserves cannot be interchanged.",
+    "hypotheses": [
+      "Finite uniform physical cubes; normalized Fourier coefficients; Boolean signs; entropy in bits.",
+      "Exclusive control partition independent of pairwise disjoint independent core data blocks; distinct selectors for the same physical core are merged.",
+      "Finite adaptive data-only query tree; actual partial leaves and physical reach probabilities retained; fixed control probabilities throughout prefix."
+    ],
+    "statement_sha256": "f3482d3618406e52f0a209bbf8c81d14a808bdaa4ac3b7d354ad6d52af10223a",
+    "contributors": [
+      "A087"
+    ],
+    "proof_source": {
+      "run_id": "20261013T222530Z-fleet05-A087-restriction-referee",
+      "path": "PROOF.md"
+    },
+    "proof_dependencies": [
+      "Direct physical empty/nonempty Fourier sector identity and homogeneous entropy algebra; finite actual stopping telescope"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A064",
+        "verdict": "HOLDS_AT_EXACT_STATED_SCOPE",
+        "source_run": "20261013T235917Z-fleet05-A064-global-debt-potential",
+        "source": "REVIEW_A087.md",
+        "method": "Independent raw Boolean full/child Walsh sector identities; independent direct-character-sum reproduction of both exact original mass/frontier fixtures; all-dimensional finite stopped algebra; no substantive repair",
+        "original_recorded_statement_sha256": "8f14a38fbe2faf2291a0f694a7f14ccf5288dc1e591c9c31a748ffc9d947b27b",
+        "source_claim_file_sha256": "f4b8ffcebf2e330ba6c7d8a7101605d9a5af4a007f7bab941c5b9eb983ade798",
+        "scope_exclusions": [
+          "No full FEI or arbitrary terminal payment",
+          "No acceptance of a different stopping frontier or omitted projected-sector mass"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_HOLDS_BY_A064",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A091",
+      "A064",
+      "A090",
+      "B18",
+      "B20"
+    ]
+  }
+]

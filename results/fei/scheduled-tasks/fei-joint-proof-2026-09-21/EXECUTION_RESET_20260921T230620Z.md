@@ -1,6 +1,6 @@
 # Current FEI state and assignments
 
-**FEI-ALL-TEAM-20260922T095941Z / 2026-09-22.3.** This entrypoint now routes to the unified all-team FEI programme. Every existing account01-account04/B01-B20 worker is assigned FEI. The previous allocation and historical candidate state at this path are superseded as operating instructions.
+**FEI-ALL-TEAM-20260922T095941Z / 2026-09-22.3.** This entrypoint now routes to the unified all-team FEI programme. Every existing fleet01-fleet04/B01-B20 worker is assigned FEI. The previous allocation and historical candidate state at this path are superseded as operating instructions.
 
 - [Current owner order](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22/ORDER.md)
 - [Current research and remaining proof obligations](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md)

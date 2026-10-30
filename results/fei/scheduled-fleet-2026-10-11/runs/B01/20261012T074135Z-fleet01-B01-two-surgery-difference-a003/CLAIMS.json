@@ -1,0 +1,47 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T074135Z-fleet01-B01-two-surgery-difference-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "claims": [
+    {
+      "claim_id": "B01-A003-TWO-SURGERY-CAP-LOCALIZATION",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "For two point surgeries x,y of a bent k-bit sign, the quadratic upper-cap interaction is C_R(S)=8 sigma 2^{-k}2^{-|S|}1_{R subset S}, where R=supp(x xor y) and sigma=g(x)g(y)(-1)^{|R|}.",
+      "quantifiers": "Every even k>=2, every bent Boolean g, and every distinct x,y.",
+      "proof_artifact": "TWO_SURGERY_REFUND.tex",
+      "limitations": ["This is one quadratic component of the complete coherent selector charge."]
+    },
+    {
+      "claim_id": "B01-A003-TWO-SURGERY-DIFFERENCE-REFUND",
+      "version": "v1",
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "label": "PROVED_AT_STATED_SCOPE",
+      "statement": "The difference-spectrum upper-set packet is subadditive with exact refund rho=4delta for Hamming distance one and rho=8delta-2^{4-r}delta 1_{sigma=1} for r>=2. Hence 4delta<=rho<=8delta, and rho dominates the complete flat-law first variation 8delta2^{-r} of the cross-cap.",
+      "quantifiers": "Every even k>=2, every bent Boolean g, every distinct x,y, all Hamming distances 1<=r<=k, and both possible phase signs.",
+      "proof_artifact": "TWO_SURGERY_REFUND.tex",
+      "limitations": [
+        "Does not yet bound the nonlinear coherent empty-control and retained-child residual.",
+        "Does not provide a no-double-spend rule for three or more displacement filters."
+      ]
+    },
+    {
+      "claim_id": "B01-A003-TWO-SURGERY-CHECK",
+      "version": "v1",
+      "status": "COMPUTATION_PASS_NOT_INDEPENDENT_REVIEW",
+      "label": "EXACT_CORROBORATION",
+      "statement": "Exact rational verification passed 2,188,285 assertions across 2,305 point pairs through k=12.",
+      "artifacts": ["CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "FULL-FEI",
+      "version": "campaign-current",
+      "status": "OPEN",
+      "label": "OPEN",
+      "statement": "No universal GU' estimate, full FEI proof, or genuine Boolean counterfamily with unbounded H/I is established."
+    }
+  ]
+}

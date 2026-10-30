@@ -1,0 +1,21 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261014T124300Z-fleet01-B01-width-two-bellman-a004",
+  "claims": [
+    {
+      "claim_id": "B01-A004-WIDTH-TWO-BELLMAN-REDUCTION",
+      "version": "v1",
+      "exact_statement": "Let c*=29/2+4/ln(2). If for every nonconstant finite-cube Boolean f and every inherited physical block Y of size at most two the branch-adapted Bellman residual E_2(f,Y) is nonpositive, then G(f)<=(33/2+4/ln(2))I(f) universally and H(f)<=(35+8/ln(2))I(f).",
+      "hypotheses": ["genuine Boolean functions", "uniform finite cubes", "reviewed signed orbit opening/reveal telescope", "unproved universal W2B sign"],
+      "contributors": ["fleet01/B01"],
+      "proof_source": "PROOF.md; CHECK_BELLMAN.py; CHECK_BELLMAN.out",
+      "proof_dependencies": ["B05-A023-SIGNED-ORBIT-OWNERSHIP-v1", "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1", "B05-A023-WIDTH-TWO-POINT-DEFECT-SOLD-v1", "U-UNIVERSAL-SIGNED-MISMATCH-REDUCTION"],
+      "review_records": [],
+      "status": "CONDITIONAL_REDUCTION_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "E_2(f,Y)<=0 for every nonconstant Boolean f and every inherited block |Y|<=2.",
+      "next_consumers": ["A086", "A090", "B20"]
+    }
+  ]
+}

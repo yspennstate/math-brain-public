@@ -1,0 +1,33 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2; GU-LASER-20261014 revision 2026-10-14.1",
+  "run_id": "20261014T124300Z-fleet01-B01-width-two-bellman-a004",
+  "stream": "B01",
+  "packet_id": "A004",
+  "packet_ids": ["A004"],
+  "gap_id": "GU-ASYMMETRY-MISMATCH",
+  "attempt_id": "B01-A004-WIDTH-TWO-BELLMAN-20261014-v1",
+  "method": "Import the source-bound full-block point-defect obstruction and width-two repair, then isolate the branch-adapted width-two Bellman residual whose universal sign suffices for GU with b=0.",
+  "mathematical_delta": "Eliminated the fixed-full-block aggregate and reduced the surviving route to one scalar local inequality E_2(f,Y)<=0 with all query and two child-block choices explicit. Proved its recursive implication to the pair (a,b)=(33/2+4/ln(2),0); exhaustively tested 361356 states through four inputs without a positive residual.",
+  "deliverable_status": "SAVED_AND_MIRRORED_WITH_EXACT_NONEMPTY_CONTENT_READBACK",
+  "mathematical_status": "CONDITIONAL_REDUCTION_PROVED_PENDING_INDEPENDENT_REVIEW; UNIVERSAL_W2B_OPEN; UNIVERSAL_GU_OPEN; FULL_FEI_OPEN",
+  "claim_versions_used": ["B05-A023-SIGNED-ORBIT-OWNERSHIP-v1", "B19-A094-SIGNED-ORBIT-OWNERSHIP-REVIEW-v1", "B05-A023-WIDTH-TWO-POINT-DEFECT-SOLD-v1", "U-UNIVERSAL-SIGNED-MISMATCH-REDUCTION"],
+  "claims_created_or_changed": ["B01-A004-WIDTH-TWO-BELLMAN-REDUCTION-v1"],
+  "source_artifacts": ["SOURCE_PINS.md", "PROOF.md", "CHECK_BELLMAN.py", "CHECK_BELLMAN.out"],
+  "acceptance_evidence": ["Analytic recursion and telescope in PROOF.md", "361356-state exhaustive diagnostic in CHECK_BELLMAN.out"],
+  "next_consumers": ["A086", "A090", "B20"],
+  "next_action": "Expand E_2 with Delta U=B-Gamma+KL and seek a cross-coordinate transport into the two independently maximized child orbit blocks; search all width-two Bellman states in dimension five for a genuine Boolean falsifier before proposing an aggregate proof.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": ["The universal sign E_2(f,Y)<=0 is unproved.", "Finite exhaustive survival through four inputs is not dimension-independent.", "The B05 width-two class result is pending independent review."],
+  "review_status": "PENDING_A086_OR_A090",
+  "delivery": {
+    "canonical_content_and_readback_commit": "130700c81aa6fb3cfb3587d3e8ac3bf18a9a4299",
+    "brain_content_and_readback_commit": "3f5cdbb7cc2fc4382b9632c33c208bcf0cc3d7d0",
+    "exact_readback_artifact_count_each": 8,
+    "canonical_path": "reports/fei-2026-10-11/runs/B01/20261014T124300Z-fleet01-B01-width-two-bellman-a004/",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B01/20261014T124300Z-fleet01-B01-width-two-bellman-a004/"
+  },
+  "model": "Codex",
+  "reasoning_effort": "UNKNOWN",
+  "full_fei_status": "OPEN"
+}

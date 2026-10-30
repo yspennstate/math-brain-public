@@ -1,0 +1,84 @@
+[
+  {
+    "claim_id": "A002-AGGREGATE-ERASURE-TRANSPORT",
+    "version": 1,
+    "exact_statement": "The exact aggregate-B tensor, balancing, coding, point-activation and balanced-selector formulas in ERASURE_LEDGER.md hold for all stated finite uniform Boolean signs. Economical activation and balanced selectors of arbitrary seed tensors preserve their B/H limit; systematic nonzero-column coding kills local erasure. For F=f^tensor m times a bent function on 2r fresh bits, D(F)=mD(f), H=mH(f)+2r and I=mI(f)+r; if D(f)>0 and B(F)/H(F)->1 then H(F)/I(F)->2. The actual parity-block bent family of dimension 2t+2r has H=2+2r, B=2r, I=t+r, TC=2t-2 and TV from its coordinate-product marginals equal to 1-2^(2-2t). These formulas do not establish high-ratio near-erasure admission.",
+    "hypotheses": [
+      "Finite Boolean signs, uniform independent physical inputs",
+      "Entropy in bits; B=sum H(S_i|S_-i)",
+      "All tensor and auxiliary blocks physically disjoint",
+      "Activation p=2^-s with integer s>=1; selector core balanced",
+      "Pareto limit assumes H(f)>0 and D(f)>0; correlated family t>=2,r>=1"
+    ],
+    "statement_sha256": "c779e2ab2d3a0cbc18b9426562566b5737c3d9cea2c991f69723f3054120ca11",
+    "contributors": [
+      "fleet05/A002"
+    ],
+    "proof_source": "ERASURE_LEDGER.md sections 1-3",
+    "proof_dependencies": [
+      "A002-EXACT-HARDENING-LEDGER@1 (H/I spectral interfaces, independently checked here)",
+      "A005 coordinate activation ledger, 20261011T225209Z REPORT sections 3-4 (independently reconstructed)"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_SCOPED_EXTENSION_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Near-one aggregate erasure forces uniform total-variation closeness to the product of coordinate marginals",
+      "Near-one aggregate erasure forces dimension-independent bounded TC/H"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "A003",
+      "A005",
+      "A031",
+      "A033",
+      "A051",
+      "A055",
+      "A078",
+      "A086",
+      "A094",
+      "B08",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A002-NEAR-ERASURE-MAX-CONSTANT-BRIDGE",
+    "version": 1,
+    "exact_statement": "Fix epsilon in (0,1) and finite C_epsilon>=0. If every finite uniform Boolean sign f with B(f)>=(1-epsilon)H(f) satisfies H(f)<=C_epsilon I(f), then every finite uniform Boolean sign satisfies H(f)<=max(C_epsilon,2/(epsilon ln2))I(f). Conversely universal FEI(C) gives the near-erasure premise with C_epsilon=C. No restriction closure of the near-erasure class is assumed, and the premise remains open.",
+    "hypotheses": [
+      "Finite uniform Boolean signs",
+      "Entropy in bits",
+      "Scalar coordinate restriction JS bound JS_i<=(2/ln2)I_i",
+      "epsilon and C_epsilon fixed before dimension/function"
+    ],
+    "statement_sha256": "12cdbc798e5cd4163da7ad498219db2c25e34233e7b37b0a13d50565a1957b30",
+    "contributors": [
+      "fleet05/A002"
+    ],
+    "proof_source": "ERASURE_LEDGER.md section 4, independent minimal-violator proof",
+    "proof_dependencies": [
+      "B01-MINIMAL-VIOLATOR-STRUCTURE@1, independently reconstructed",
+      "C005 exact physical restriction H/I identities and scalar JS bound"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_SCOPED_EXTENSION_PENDING_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "A003",
+      "A005",
+      "A031",
+      "A033",
+      "A051",
+      "A055",
+      "A078",
+      "A086",
+      "A094",
+      "B08",
+      "B20"
+    ]
+  }
+]

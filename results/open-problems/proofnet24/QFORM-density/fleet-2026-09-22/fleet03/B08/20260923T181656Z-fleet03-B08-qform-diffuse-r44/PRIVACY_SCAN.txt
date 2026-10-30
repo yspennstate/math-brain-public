@@ -1,0 +1,8 @@
+Fallback scoped publication scan for the r44 changed files.
+
+Environment: connector-only repository access; no local repository checkout or repository secret-scanner command was exposed in this invocation. I therefore performed a narrow manual/source-text scan of REPORT.md, CHECKS.py, CHECKS.txt and CLAIMS.json before the final handoff.
+
+Checked for: access tokens, signed download URLs, scheduler/task IDs, machine-local paths, private account credentials, unrelated personal/company/trading/client material, and pasted private source excerpts.
+Result: none present. The files contain only mathematical statements, public/private-repository commit/path pins already authorized by the owner, logical fleet labels fleet03/B08 and fleet04/B08, and ordinary numerical constants.
+
+LIMITATION: this is a scoped fallback inspection, not a repository-wide automated secret scan.

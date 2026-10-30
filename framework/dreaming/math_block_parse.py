@@ -88,7 +88,7 @@ def card_is_complete(card):
     iter_cards yields a header whose id line is missing (node_id None) or whose tag is empty, so a caller counting
     cards can see it. A caller scoring what the brain DELIVERED must count such a card as a delivery failure, never
     as a hit or a served title: until 30 Sep the hook-path evaluator scored a header-only card as a theorem hit and
-    the health check passed eleven header-only blocks (account04/B07, B07-R79-INCOMPLETE-CARD-PASSES-REGRESSION-GATES).
+    the health check passed eleven header-only blocks (fleet04/B07, B07-R79-INCOMPLETE-CARD-PASSES-REGRESSION-GATES).
     """
     return bool(card.node_id) and bool(card.hint)
 

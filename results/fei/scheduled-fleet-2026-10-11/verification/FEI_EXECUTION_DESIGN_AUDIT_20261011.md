@@ -206,11 +206,11 @@ The live B05 output supplies an immediate test of the propagation design.
 
 Canonical source:
 yspennstate/math-open-problems at commit 80cc2e5027efa56d79c4ecdf7d4949759ef2068b,
-reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md.
+reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md.
 
 Brain full-text mirror:
 commit 532e0b5ddb5b3b320b46beb155ee8b2be7e97761,
-research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md.
+research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md.
 
 The report gives a genuine Boolean family with d=2^(-3k), delta=2^(-k), L >= (1-delta)(k-2)d, V <= 4 delta d, M=12kd^2, disproving every fixed-price one-node estimate L <= Kd+AV+BM. The complete report, checker, saved output, claims, and exact full-text mirror were read in the preceding followup. The checker reports 95 passing floating-point self-checks. This audit does not assert independent end-to-end acceptance of its theorem.
 

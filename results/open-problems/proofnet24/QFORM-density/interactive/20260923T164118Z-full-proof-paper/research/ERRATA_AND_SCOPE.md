@@ -4,7 +4,7 @@ The full unrestricted QFORM problem remains OPEN. The following corrections pres
 
 1. **Volume-skeleton expectation:** an equality in the original structural report becomes an inequality when zero-weight singular minor seeds admit nonzero extensions. The inequality is sufficient for the robust decomposition. A four-coordinate disjoint-edge example gives actual value 2 versus the claimed equality value 4. The corrected proof is in `structure.tex` and the amended `NEW_PROJECTED_CROSSING.md`.
 
-2. **Intervals versus Borel sets:** a square-root concentration bound for every interval does not imply the corresponding estimate for every Borel set of a prescribed measure. The full heavy-null density deductions in account02/B05 run `20260923T130427Z` and account04/B14 run `20260923T141430Z` use that unsupported implication. Their valid frozen-slice Fourier/interval estimates are retained; their general rough-hub closure is not a theorem of this manuscript.
+2. **Intervals versus Borel sets:** a square-root concentration bound for every interval does not imply the corresponding estimate for every Borel set of a prescribed measure. The full heavy-null density deductions in fleet02/B05 run `20260923T130427Z` and fleet04/B14 run `20260923T141430Z` use that unsupported implication. Their valid frozen-slice Fourier/interval estimates are retained; their general rough-hub closure is not a theorem of this manuscript.
 
 3. **Indefinite spectral spread:** the sufficient smallness condition is on `max_i (|A|)_{ii}`, where `|A|=(A^2)^(1/2)`. It is not merely a condition on `max_i |A_ii|`. The conservative constant is 35, avoiding downward rounding of 34.4081... to 34.4.
 

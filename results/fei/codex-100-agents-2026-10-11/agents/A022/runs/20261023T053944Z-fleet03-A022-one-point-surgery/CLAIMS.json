@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+    "version": 8,
+    "exact_statement": "Refinement of A022 ledger v7, inherited assertions retaining their original scopes: for all t>=2, arbitrary controlled single-vertex surgery of g tensor t with g negative only at000, every prescribed block-first synchronized DATA frontier d<=3floor(t/2)+2, interleaved with arbitrary finite adaptive CONTROL trees only on active data cylinders, has EXACT bank B=4I_remaining_data+delta sum_active p H(a_current)-C-U=Bpure_d+sum_executed_control p gamma_w>=13t/576. Here delta=8^-t is ORIGINAL, w=2^-d, gamma_w is the Jensen gap of J_w(s)=G_delta(s)+(1-w)log2(1-delta+delta s^2), and G_delta is defined in PROOF Section2. Controller references R_delta,a are prescribed on active leaves and frozen on inactive descendants; all DATA rounds query EVERY frontier leaf. Complete positive DATA references, old0<=U<=t/64, every complete terminal KL, original signed controller entropy spend and all prior Jensen gains are retained. B+D+E is invariant with signed DATA and CONTROL increments of PROOF(4). No source entropy is regranted. Unequal DATA-depth stopping cuts, arbitrary source entropy priced by influence, and full FEI remain OPEN.",
+    "hypotheses": [
+      "Uniform independent original DATA/CONTROL cubes; entropies in bits; t>=2",
+      "Fixed block-first data order; synchronized frontier DATA depths in paid domain",
+      "Only active DATA cylinders may query controller bits; arbitrary finite outcome-adaptive controller subtrees",
+      "Prescribed original-delta R_current on active leaves; freeze R on inactive leaves; q_h as A022@7; all complete KL and old U retained"
+    ],
+    "statement_sha256": "2068af9e40a535fe53d818446e8582772ff2410016e77669a8074b0b0600d535",
+    "contributors": [
+      "A022 fleet03 stage9",
+      "A021 stage19 supplies active-only continuation interface"
+    ],
+    "proof_source": {
+      "current": "PROOF.md",
+      "validation": [
+        "out/pilot.json",
+        "out/main.json",
+        "out/replay.json"
+      ],
+      "inherited_numerical_admission": "agents\\A022\\runs\\20261023T012352Z-fleet03-A022-one-point-surgery\\PROOF.md"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+        "version": 7,
+        "statement_sha256": "da718683e148b5ca615e427ac7e498dc060e464cfb1e09af980c3a40331034eb",
+        "scope": "original numerical data-prefix admission; pending external review"
+      },
+      {
+        "claim_id": "A021-NONFLAT-INHERITED-REFERENCE-DATA-QUERY",
+        "version": 2,
+        "statement_sha256": "f4a33f2faf59d4cedf6d004067cb8420965450797ec72aca083d5f37c581577b",
+        "scope": "active-only controller transaction and original versus conditional density; scalar and relevant identity reconstructed"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A022 author",
+        "status": "ANALYTIC_DERIVATION_AND_TWO_IMPLEMENTATIONS_CHECKED",
+        "independent_person": false,
+        "assertions": 7326,
+        "scope": "exact mixed frontier identity, signed history, same reserve; whole chain external review pending"
+      }
+    ],
+    "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": {
+      "claim_id": "A022-ODDFACE-SURGERY-GAP-LEDGER",
+      "version": 7
+    },
+    "refutes": [],
+    "first_unproved_line": "An outcome-dependent DATA stopping depth breaks the synchronized affine comparison; same-account payment for that continuation and influence-priced arbitrary controller source are not proved.",
+    "next_consumers": [
+      "A021",
+      "A025",
+      "A028",
+      "A029",
+      "A087",
+      "A094",
+      "B05"
+    ]
+  }
+]

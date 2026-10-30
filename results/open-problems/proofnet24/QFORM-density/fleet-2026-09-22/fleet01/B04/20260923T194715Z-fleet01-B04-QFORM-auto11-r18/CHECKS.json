@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T194715Z-fleet01-B04-QFORM-auto11-r18",
+  "theorems": [
+    "QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1",
+    "QFORM-DISJOINT-THIRDCOMPOUND-RANDOMCUT-v1"
+  ],
+  "exact_identities": {
+    "cross_compound": "E3(B)=e3(BB^T)=sum_{|R|=|T|=3} det(B[R,T])^2",
+    "coarse_constant": "3*2^(9/6)*(27/6)^(1/6)=6^(4/3)",
+    "random_cut": "E_I E3(A[I,I^c])=Delta3_disj(A)/64",
+    "spectral_total": "sum_{|R|=|T|=3}det(A[R,T])^2=e3(A^2)",
+    "partner_family_E3": "E3(M_L)=6L^2+4",
+    "partner_heavy_marginal": "alpha=6L^2/(6L^2+4)",
+    "partner_after_promotion": "Z2=6; F2^2=3/2; adaptive bound=3*2^(5/6)L^(-1/3)"
+  },
+  "numeric_checks": {
+    "6^(4/3)": 10.902723556992836,
+    "2*6^(4/3)": 21.80544711398567,
+    "L": 4096,
+    "new_coarse_E3_bound": 0.5055023046261697,
+    "new_exact_adaptive_bound": 0.3340870193026273,
+    "fleet02_B04_global_Dprime_bound": 1.9427546703383625,
+    "partner_over_new_coarse_factor": 3.8432162475996483
+  },
+  "scope_checks": {
+    "random_variables_rotated": false,
+    "pointwise_quadratic_decay_used": false,
+    "moments_assumed": false,
+    "compact_support_assumed": false,
+    "log_concavity_assumed": false,
+    "same_bank_quadratic_terms_retained": true,
+    "continuous_density_in_proved_branch": true,
+    "full_target_proved": false,
+    "remaining_gap": "QFORM-OVERLAP-THIRDCOMPOUND-ROUTING-v1"
+  },
+  "control_revision": "2026-09-22.15",
+  "execution_label": "WITHOUT_VERIFIED_BRAIN"
+}

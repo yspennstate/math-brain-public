@@ -1,0 +1,39 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "stream": "B03",
+  "run_id": "20261012T044514Z-fleet01-B03-a014-rank-two-collision",
+  "primary_packet_id": "A014",
+  "packet_ids": ["A014"],
+  "gap_id": "FEI-GAP-SHARED-SELECTOR-CIRCULARITY",
+  "attempt_id": "A014-RANK-TWO-COLLISION-2",
+  "attempt_counter": 2,
+  "method": "Exact Boolean rank-two classification followed by a separable two-controller construction with coherent coefficients computed before squaring.",
+  "claim_versions": ["B03-A014-RANK-TWO-COLLISION-v1"],
+  "claim_versions_used": ["B03-A014-RANK-ONE-SIGNED-OVERLAP-v1"],
+  "claims_created_or_changed": ["B03-A014-RANK-TWO-COLLISION-v1"],
+  "source_artifacts": [
+    "assignments/B03.json blob 02045d5236cbcfaee630469ed54e6022902b3dd9",
+    "prior A014 report commit 2c424ae1812091ed3620d844e5dc6efb769a7fdb blob b3bfea82cb0f54377d92efdd217c3206e9030e64",
+    "OBSTRUCTION_REGISTRY revision 2026-10-12-a096-tree-slack"
+  ],
+  "prior_status": "Rank-one Boolean overlap was classified and an unbounded-read signed-copy family had constant below four; rank two and non-disjoint spectral collision were open.",
+  "new_status": "Exact rank-two Boolean compatibility is proved. A genuine rank-two family with exactly coincident branch Fourier supports has worst read 2^(t+1), fractional congestion one, complete bounded label/rank/root costs, and H<4I for every t. Independent review remains pending; full FEI remains open.",
+  "mathematical_delta": "Extended A014 from rank one to rank two, proved every balanced rank-two branch is in {+g,-g,+h,-h}, and paid a fully colliding separable family without a disjoint-support or k-fold Cauchy-Schwarz loss.",
+  "deliverable_status": {
+    "A014-D1": "EXTENDED_PENDING_INDEPENDENT_REVIEW",
+    "A014-D2": "EXTENDED_PENDING_INDEPENDENT_REVIEW"
+  },
+  "mathematical_status": "PROVED_RESTRICTED_THEOREM_PENDING_INDEPENDENT_REVIEW",
+  "acceptance_evidence": ["REPORT.md", "RANK_TWO_COLLISION_THEOREM.tex", "COLLISION_COST_LEDGER.md", "verify_rank_two_overlap.py", "CHECK.out", "CLAIMS.json"],
+  "remaining_obstacle": "Arbitrary correlated rank-two controllers retain an unpaid joint posterior/collision spectrum; rank greater than two and approximate rank remain uncontrolled.",
+  "next_consumers": ["A009", "A068", "A086", "A094", "A097", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Independently reconstruct or falsify the rank-two classification and then quantify the joint posterior charge for a nonseparable but structurally restricted controller pair; do not open a third unrelated A014 candidate before review.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": ["The requested B02 summed-witness artifact was not located by repository code search and was not used."],
+  "delivery_status": "POSTED_AND_READ_BACK_WITH_MATCHING_BLOBS",
+  "canonical_core_commit": "f8a63fbdfa929182b6981a91f0bb598198bb6d0f",
+  "brain_core_commit": "6633f552df8a16326dd3ed89f90b3b70705fcb43",
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T070819Z-fleet03-B17-QFORM-auto11",
+  "theorem": "QFORM-GAUSSIAN-TRANSLATION-MIXTURE-RIGIDITY-v1",
+  "status": "PASS",
+  "exact_checks": {
+    "noncentral_chisquare_mixture": "chi^2_1(delta^2) is Poisson(delta^2/2) mixture of chi^2_{1+2k}; chi^2_{1+2k}=chi^2_1+chi^2_{2k} with independent summands",
+    "young_convolution": "conditional output density is p0 convolved with a probability law, hence Linfinity cannot increase",
+    "whitened_linear_term_range": "Sigma^(1/2) A m = (Sigma^(1/2) A Sigma^(1/2)) Sigma^(-1/2)m, so null spectral coordinates receive no linear term",
+    "centered_112minus_c_norm": "C0(c,s)=1/(2 s sqrt(1+c))",
+    "positive_nonzero_component_cap": "Gamma(1+k,2s), k>=1, is Gamma(2,2s) convolved with a probability law; cap <=1/(2 e s)",
+    "negative_nonzero_component_cap": "Gamma(k+1/2,2cs), k>=1, is Gamma(3/2,2cs) convolved with a probability law; cap <=exp(-1/2)/(sqrt(2 pi) c s)",
+    "zero_Poisson_weight": "exp(-D/2), D=|mu|^2/s"
+  },
+  "high_precision_values": {
+    "three_sqrt_two": "4.2426406871192851464050661726290942357090156261308",
+    "C1_at_s_1_over_12": "2.9036486942297201975739623152267278579440636488492",
+    "D_ge_quarter_ceiling": "4.0853049805403358565613400079883882361114255629190",
+    "partner_theta_point01_lower": "4.1172517052660840171536159937902179943689526668992",
+    "certified_gap": "0.031946724725748160592275985801829758257527103980208"
+  },
+  "symbolic_gap_certificate": {
+    "r_definition": "r=2 exp(-1/2)/sqrt(pi)",
+    "r_bound": "r<69/100, using exp(1/2)>41/25 and sqrt(pi)>177/100",
+    "exp_eighth_bound": "exp(-1/8)<883/1000, using exp(1/8)>1+1/8+1/128=145/128>1000/883",
+    "gaussian_ratio_bound": "r+(1-r)exp(-1/8)<0.96373",
+    "partner_ratio_bound": "exp(-3/100)>1-3/100=0.97",
+    "conclusion": "0.96373<0.97, hence Gaussian D>=1/4 ceiling is strictly below partner theta=0.01 lower certificate"
+  },
+  "partner_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "4be63022324b82f254f1d7a4353a3e883f08d10a",
+    "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260924T011922Z-fleet04-B17-QFORM-r6/REPORT.md",
+    "theorem": "QFORM-MACROFRAGMENTED-STRICTSLACK-DENSE-WITNESS-v1"
+  },
+  "scope": {
+    "full_qform": "OPEN",
+    "full_target_continuity": "OPEN",
+    "gaussian_comparison_continuity": "PROVED",
+    "native_brain": "WITHOUT_VERIFIED_BRAIN"
+  }
+}

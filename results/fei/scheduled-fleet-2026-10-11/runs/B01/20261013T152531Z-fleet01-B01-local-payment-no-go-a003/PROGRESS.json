@@ -1,0 +1,60 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T152531Z-fleet01-B01-local-payment-no-go-a003",
+  "stream_id": "B01",
+  "account": "fleet01",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "B01-A003-LOCAL-PAYMENT-NO-GO-03",
+  "stable_gap_id": "GU-ASYMMETRY-MISMATCH",
+  "claim_version": "B01_A003_LOCAL_MISMATCH_FOUR_THIRDS_NO_GO_v1",
+  "objective": "Freeze and test the direct coordinatewise payment K_i<=Gamma_i+c Inf_i suggested by Delta_iU=B_i-Gamma_i+K_i, then identify the exact nonlocal credit left after failure.",
+  "source_plan": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "order_blob": "7c5e21945adef435e6b587909603dd96794a1ebe",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "prior_nullity_two_package": "99c60c7a5554f2a435016ad100ccb5d2d10a6bd0"
+  },
+  "prior_status": "The rank-(m-2) shield class had H,U<=2I and an open G<=3I candidate; the proposed exact B-Gamma-K payment had not been analytically tested.",
+  "new_status": "PROVED_EXACT_FINITE_FALSIFIER_PENDING_INDEPENDENT_REPRODUCTION",
+  "mathematical_delta": "A genuine five-bit Boolean spectrum exactly violates Delta_iU<=B_i+(4/3)Inf_i, with ratio (Delta_iU-B_i)/Inf_i=1.3359233827... . This retires every coordinatewise K_i<=Gamma_i+c Inf_i mechanism for c<=4/3. The surviving aggregate target is sum(K-Gamma)<=I+(H-B), equivalently G<=H+I.",
+  "case_extension": {
+    "new_class": null,
+    "previous_bound": "H,U<=2I for arbitrary rank-(m-2) shields; G<=3I open",
+    "new_bound": "unchanged",
+    "certified_falsifier": "dimension 5, truth mask 1382935834, coordinate 1",
+    "local_ratio_lower_bound": "greater than 4/3 exactly",
+    "aggregate_candidate": "G<=H+I"
+  },
+  "verification": {
+    "exact_prime_exponents": {"2": -3148, "3": -276, "5": -216, "7": 588, "11": 96, "13": -540, "17": 24, "19": 624, "23": 300},
+    "exact_numerator_bits": 6089,
+    "exact_denominator_bits": 6086,
+    "exact_integer_difference_sign": 1,
+    "margin_over_four_thirds": "0.0011331466354368383948617219473264604685...",
+    "aggregate_exhaustive_functions_mod_sign_through_n4": 32906,
+    "aggregate_seeded_random_n5_to_n7": 26000,
+    "aggregate_result": "NO_VIOLATION_NUMERICAL_ONLY"
+  },
+  "acceptance_evidence": "Exact integer certificate plus reproducible truth table and independent bounded aggregate pilot; A086/A094 reproduction remains required.",
+  "remaining_obstacle": "No proof of the aggregate credit sum_i(K_i-Gamma_i)<=I+(H-sum_i B_i), even on rank-(m-2) shields; hence no new GU' pair and no proof of G<=3I on that class.",
+  "next_action": "Pivot from coordinatewise pricing to a dual-entropy amortization retaining H-sum_i B_i; derive the aggregate inequality on the rank-(m-2) repetition law or construct a genuine shield falsifier.",
+  "consumer_targets": ["B05", "B10", "B18", "B20", "A005", "A087"],
+  "reviewer_targets": ["A086", "A094"],
+  "delivery": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_path": "reports/fei-2026-10-11/runs/B01/20261013T152531Z-fleet01-B01-local-payment-no-go-a003/",
+    "brain_repository": "yspennstate/math-research-brain",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B01/20261013T152531Z-fleet01-B01-local-payment-no-go-a003/",
+    "canonical_package_commit": null,
+    "brain_package_commit": null,
+    "readback": "PENDING",
+    "status": "PENDING",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}
+

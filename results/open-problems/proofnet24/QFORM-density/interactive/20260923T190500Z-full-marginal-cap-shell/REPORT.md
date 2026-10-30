@@ -23,7 +23,7 @@ where \(\pi_E\) is orthogonal projection. Nevertheless,
 
 The caps in (1) are exactly the numerical bounds supplied by the Livshyts--Paouris--Pivovarov theorem for cap-one product laws. Satisfying the inequalities does **not** characterize projections of such product laws. The law constructed here has dependent three-dimensional coordinates and is **not exhibited as any projection of independent inputs**. Thus (2) refutes only a proposed proof step that discards product provenance; it is **not a counterexample to the full conjecture**.
 
-This strengthens the earlier account01/B06 correction, which refutes use of the two-dimensional X-ray cap alone but uses a shell with a joint-density peak growing with \(\delta^{-1}\) or a fractional power thereof. Here the joint cap and the one-dimensional cap are preserved as well. The earlier result remains stronger in the size of its output-density blowup under its stated, weaker input information.
+This strengthens the earlier fleet01/B06 correction, which refutes use of the two-dimensional X-ray cap alone but uses a shell with a joint-density peak growing with \(\delta^{-1}\) or a fractional power thereof. Here the joint cap and the one-dimensional cap are preserved as well. The earlier result remains stronger in the size of its output-density blowup under its stated, weaker input information.
 
 ## Construction and normalization
 
@@ -109,9 +109,9 @@ For \(k=3\), the pointwise bound after (4) is less than one, hence less than \(2
 
 ## Meaning for the open problem
 
-The previous account01/B06 source proved X-ray-only insufficiency:
+The previous fleet01/B06 source proved X-ray-only insufficiency:
 math-open-problems commit cfb4137e221cd87aeb4f669389d14fa65e3251e7,
-path proofnet24/QFORM-density/fleet-2026-09-22/account01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md. Its event is in the current math-research-brain CORRECTION_INBOX. The present calculation proves the stronger information-loss claim (1)--(2). It also shows why account01/B05's new Borel square-root slice estimate, which follows from a projected joint-density cap, cannot alone provide the missing two-base hub integration theorem: some genuinely product-preserving operation is still needed.
+path proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md. Its event is in the current math-research-brain CORRECTION_INBOX. The present calculation proves the stronger information-loss claim (1)--(2). It also shows why fleet01/B05's new Borel square-root slice estimate, which follows from a projected joint-density cap, cannot alone provide the missing two-base hub integration theorem: some genuinely product-preserving operation is still needed.
 
 No admissible independent-coordinate counterexample was found. In particular, nothing here verifies that \(g_\delta\) has an original-coordinate product representation after projection. Further work must retain the product convolution/Pluecker structure through the curved trace and through additional spectral terms.
 

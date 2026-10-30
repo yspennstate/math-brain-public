@@ -293,7 +293,7 @@ def main(argv: list[str] | None = None) -> int:
                 return 0
             if args.decision:
                 # search() forces the support threshold to 0 and returns hits only, so the plain
-                # output never shows an abstention (account04/B01 r3,
+                # output never shows an abstention (fleet04/B01 r3,
                 # B01-R1-CLI-DECISION-TRACE-PROJECTION-20260929-01).
                 result = retrieve(
                     args.query,

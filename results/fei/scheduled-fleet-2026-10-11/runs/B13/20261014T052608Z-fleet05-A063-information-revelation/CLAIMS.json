@@ -1,0 +1,59 @@
+[
+  {
+    "claim_id": "A063-TWO-QUERY-CENTRAL-PACKET-REFUND",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign and a fixed two-coordinate block {i,j}, under the canonical physical/spectral singleton lift, the query-order refund is R_i_then_j=I(S_j;X_i|S_remaining). For every fixed block the MU ceiling obeys B_A-J_A=2R_A+sum_h P(h)(B_h-J_h), so it is exactly the accumulated singleton MU bound. For every even k>=4, the actual B05 Boolean family F=1+A_2k(z)[b_k(x)-1-(1-y)1_{x=0}], with b_k=(-1)^(x1*x2+...), delta=2^-k and d=2^-3k, has 0<R_y_then_z1,R_z1_then_y<=32*d^2/(3 ln 2)<16*d^2. All nonempty residual Fourier packets have exactly zero refund in either order. Its selector erasure satisfies B_y>=(1-delta)(k-2)d; for even k>=6 the block MU ceiling is at least (15/32)d. Thus a single additional control-query refund cannot pay the selector logarithm at a dimension-independent price. Full terminal spectra and actual control influence remain in the ledger.",
+    "hypotheses": [
+      "Entropy and mutual information in bits; uniform finite cube; Boolean signs; omit zero spectral fibers.",
+      "Canonical kernel at a singleton query makes the deleted root spectral bit independent of the physical outcome conditional on remaining spectral label and physical history; no coordinates repeated.",
+      "Both coordinates of the fixed block are queried and their actual physical outcomes recorded; fixed order for the two-query reduction.",
+      "All-k family theorem uses even k>=4, r=2k controls active only at their binary zero vertex; sign y=+1 selects the bent core and y=-1 its actual origin flip.",
+      "Comparison to accumulated singleton uncertainty uses established J_h<=B_h; selector comparison reconstructs the source B05 lower bound. No inference that all tree debt or FEI fails."
+    ],
+    "statement_sha256": "7af5f7cccf01efa6b368146cfd8a9f4e14b98a0f25da77eabe727881773e2078",
+    "contributors": [
+      "A063"
+    ],
+    "proof_source": {
+      "run_id": "20261014T052608Z-fleet05-A063-information-revelation",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check_refund.py",
+        "out/FROZEN_SPEC.json",
+        "out/CHECK_RESULTS.json",
+        "out/FIRST_RESULT.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+        "version": 1,
+        "statement_sha256": "aa45c0dacad4b1897e4c2f62511ccd331caf0eb6dc7ecc88cddf5189e8cf2cdb",
+        "acceptance": "A063 independent reconstruction at stated scope"
+      },
+      {
+        "claim_id": "A063-QUERY-COARSENING-REFUND-AND-HALF-ENTROPY-BARRIER",
+        "version": 1,
+        "statement_sha256": "8f757badc3354b59dc3949bdfdd953cda052cf5e508390c98c978234eb703844",
+        "acceptance": "author-proved baseline; Claude B13 v2 checks singleton consequence; broader interface independent review pending"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Universal one-selector-plus-one-control refund payment B_y<=K*d+M*R_A for finite fixed K,M>=0 on the B05 family"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A037",
+      "A039",
+      "A064",
+      "A087",
+      "A094",
+      "A097",
+      "B20"
+    ]
+  }
+]

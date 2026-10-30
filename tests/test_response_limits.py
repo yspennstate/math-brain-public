@@ -1,6 +1,6 @@
 """A configuration can lower the solver-response budgets but not lift them past the repository ceilings.
 
-Scheduled audit account04/B17, B17-R79-EVALUATION-RESPONSE-LIMITS-UNBOUNDED-20260929: only depth had a
+Scheduled audit fleet04/B17, B17-R79-EVALUATION-RESPONSE-LIMITS-UNBOUNDED-20260929: only depth had a
 ceiling, so 10**18 bytes, nodes and string bytes and a 1,001-digit integer bound were accepted and the
 parser enforced them faithfully. The parser cases run on the plan built from the shipped configuration.
 """

@@ -1,6 +1,6 @@
 """retrieve()'s support floor gives the same verdict at every limit.
 
-Scheduled audit account04/B02 r72 (29 Sep 2026), B02-R72-SUPPORT-FLOOR-REMAINS-LIMIT-DEPENDENT-20260929: the pool is ordered
+Scheduled audit fleet04/B02 r72 (29 Sep 2026), B02-R72-SUPPORT-FLOOR-REMAINS-LIMIT-DEPENDENT-20260929: the pool is ordered
 by total score, which adds warning mass to support, and the support floor judged only the first ``limit`` hits. A caution
 card reached through a negative edge could fill a one-hit output and abstain for weak support, while the same query and
 store asked for two hits served. The fixture below builds the warning mass through a real FAILS_UNDER edge from a stub

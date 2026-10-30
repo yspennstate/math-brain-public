@@ -197,7 +197,7 @@ The refutation stands; the stated value and the range "every rho >= 3" should be
 ## 8. EVIDENCE claims
 
 A2-E-exh: reproduced exactly for n <= 5 (Section 4). Not redone at n = 6. The Codex run
-`brain_workers/FEI100_20261011/agents/A032/runs/20261011T234647Z-account05-A032-boolean-phase-realizability/REPORT.md`
+`brain_workers/FEI100_20261011/agents/A032/runs/20261011T234647Z-fleet05-A032-boolean-phase-realizability/REPORT.md`
 reports an exact n = 6 closure with the same constant by a different method (common-phase mask catalogue with
 rational logarithm bounds); I read its report but did not replay it.
 

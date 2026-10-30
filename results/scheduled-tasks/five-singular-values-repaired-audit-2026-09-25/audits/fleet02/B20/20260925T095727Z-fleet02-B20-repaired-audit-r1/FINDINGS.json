@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "account": "fleet02",
+  "slot": "B20",
+  "run_id": "20260925T095727Z-fleet02-B20-repaired-audit-r1",
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "source": {
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "lines": 683,
+    "proofs": 26
+  },
+  "verdict": "MATHEMATICAL_SOURCE_PASS_WITH_UNCHECKED_RENDER_AND_EXTERNAL_METADATA",
+  "findings": [
+    {
+      "line": 511,
+      "status": "PASS",
+      "issue": "Peer B09/B12 called the lower endpoint s=0 a gap because s^{-2} is not defined there.",
+      "resolution": "Rejected. Standard notation integral_0^infinity denotes an improper/Lebesgue integral over the open integration region s>0; endpoint values are immaterial to the integral. The layer-cake identity is valid for every s>0 and needs no 0^{-2} convention.",
+      "downstream": "none"
+    },
+    {
+      "lines": "41,62,81,148,222,315,319,323,398,404,420,449,475,482,513,577,646",
+      "status": "PASS",
+      "issue": "Previously repaired clauses",
+      "resolution": "Independently reconstructed on the repaired source; repairs are sufficient and constant-neutral.",
+      "downstream": "supports theorem chain"
+    }
+  ],
+  "unchecked": [
+    "rendered PDF versus TeX visual equivalence",
+    "external bibliography/related-work metadata"
+  ],
+  "theorem_status": "No mathematical GAP/FALSE found in repaired theorem dependency chain. s5 density <=270 K^2/s and s3 half-potential <=77 K/sqrt(s) are supported by this pass.",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN"
+}

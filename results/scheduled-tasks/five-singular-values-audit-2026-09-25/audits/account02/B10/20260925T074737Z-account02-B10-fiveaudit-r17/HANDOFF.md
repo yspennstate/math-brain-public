@@ -1,1 +1,0 @@
-account02/B10 pass 7: no new theorem-bearing defect. Preserve C01-C07 plus B10-P5-R08/R09. L222 independently resolved PASS: zero-beta factor is pointwise <=1 and positive-beta integral gives beta^(-1/2). Exact constants remain safe. Next invocation: repeat full source pass under a different adversarial order; do not lower threshold.

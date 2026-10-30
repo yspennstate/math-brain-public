@@ -1,0 +1,25 @@
+fleet01/B01 deterministic checks for QFORM-ONEHUB-TWOBANK-SCHUR-L4-v1
+run_id=20260923T194759Z-fleet01-B01-qform-auto11b
+
+500 seeded random invertible 2x2 symmetric M tests:
+max |u^T M u + 2 x g.u + a x^2 - [r^T M^{-1} r + d x^2]| = 3.375077994860476e-14
+max |det([[a,g^T],[g,M]]) - det(M)*(a-g^T M^{-1}g)| = 2.1316282072803006e-14
+
+CONSTANTS
+C0 = 5*(3*sqrt(6)/8)^(4/5) = 4.67149102355819
+strict-N3 family bound = C0*16^(2/5)*4^(-2/5)*2^(-1/5) = 7.080656334711764
+
+STRICT-N3 FAMILY, m=64
+nonzero spectrum = [-2.000000000000, -1.236067977500, 3.236067977500]
+max |physical diagonal| = 6.991e-19 (exactly zero algebraically)
+max |physical 2x2 principal determinant| = 0.03125 = 2/64
+||R^T R-I_3||_F = 1.603e-16
+
+The exact symbolic 3x3 data are:
+K=[[0,2,0],[2,2,0],[0,0,-2]], det(K)=8,
+M=diag(2,-2), det(M)=-4,
+g=(2,0), alpha=g^T M^{-1}g=2, d=-2,
+spectrum(K)={1+sqrt(5),1-sqrt(5),-2}.
+
+STATUS=PASS
+These are deterministic consistency checks; the proof is REPORT.md and does not rely on numerics.

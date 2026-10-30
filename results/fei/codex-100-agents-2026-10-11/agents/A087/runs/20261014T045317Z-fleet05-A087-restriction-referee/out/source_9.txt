@@ -1,0 +1,43 @@
+[
+  {
+    "claim_id": "A030-CONDITIONAL-TWO-CORE-CONTROLLER-TRANSFER",
+    "version": 1,
+    "exact_statement": "For any finite uniform Boolean controller h and Boolean cores u,v on three mutually disjoint physical blocks, including all biased and constant endpoints, put F=((1+h)/2)u+((1-h)/2)v, b=Eh,m=Eu,n=Ev,q=(1+b)/2,p=1-q,delta=(1-mn)/2. The exact entropy decomposition is H(F)=delta H(h)+qH(u)+pH(v)+B(b;m,n), with B explicitly given in PROOF.md equation(1), B(+-1;m,n)=0 and Lipschitz constant at most22delta in b. Every physical controller query, after any prior independent-block data exposure, has d_F=delta d_h and D_F=delta D_h+B(b)-E B(child mean)<=delta D_h+22d_F. For a prescribed controller tree with nonnegative C_h-priced own-history potential r_h, delta r_h pays the controller-only prefix at price C_h+22; adding the harmonic actual core continuation reserves grafts a controls-first full policy. Conditional on the scoped reviewed A064 additional-v2 local data lift, for own-history nonnegative C_d-priced core potentials r_u,r_v and arbitrary finite fresh-coordinate interleaving respecting all three declared trees, R=q r_u+p r_v+phi(q)(1-m^2)+phi(p)(1-n^2)+delta r_h is a nonnegative potential at alpha=max(C_d+11/2,C_h+22). Initial R<=q r_u+p r_v+delta r_h+2I_ctrl(F). At any finite stop E R_stop<=R_root+C_d Pi_data+C_h Pi_ctrl, with actual H(F_stop)-R_stop retained. Full zero-reserve constant leaves give Q_alpha(F)<=R_root. Arbitrary inherited controller/core reserves, shared physical core data and many-state repeated fallbacks are not paid.",
+    "hypotheses": [
+      "Boolean signs on finite uniform independent physical blocks; entropies in bits",
+      "Exactly two independent disjoint cores and a disjoint arbitrary controller; constants permitted",
+      "Declared finite fresh-coordinate trees and independent initial seed; each potential depends only on its own block history; C_d,C_h>=0",
+      "Adaptive interleaving respects the declared per-block policies; actual terminal functions and their entropy remain",
+      "Global interleaving conclusion uses only the reviewed additional-v2 local data lift and original-edge rarity ownership, not older bundled A064 assertions"
+    ],
+    "statement_sha256": "ce0f365b6e7e8c20623ba5c7c64c122620b8bc45ac7a139edd84eec424b20d44",
+    "contributors": [
+      "A030; local data lift credited to A064/A057 and scoped acceptance to A087; existing rarity account credited to A038"
+    ],
+    "proof_source": "PROOF.md; out/VALIDATION.json; REPORT.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A064-TERMINAL-CORRECTED-GLOBAL-DEBT",
+        "version": 2,
+        "scope": "Additional-v2 local data potential and root rarity ownership only; A087 scoped acceptance in runs/20261014T020842Z-fleet05-A087-restriction-referee/CLAIMS.json; controller correction and graft theorem self-contained",
+        "recorded_statement_sha256": "24810a34e194827e87ab6607315a59932d42d9b94868aa2c2b67cc04f62a7ed8",
+        "acceptance": "PARTIAL_REVIEW_ADDITIONAL_V2_LIFT_HOLDS_BY_A087"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW_WITH_SCOPED_REVIEWED_DEPENDENCY",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A064",
+      "A038",
+      "A057",
+      "A087",
+      "A091",
+      "A094",
+      "A062",
+      "B06"
+    ]
+  }
+]

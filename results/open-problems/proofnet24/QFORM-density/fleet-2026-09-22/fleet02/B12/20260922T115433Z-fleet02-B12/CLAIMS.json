@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T115433Z-fleet02-B12",
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "QFORM-ARBITRARY-ORIENTATION-ONE-EXCEPTION-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For four independent density<=1 inputs and B=epsilon*lambda*I_4+(mu-epsilon*lambda)vv^T with arbitrary unit v, arbitrary mu, lambda>=1, arbitrary linear tilt and constant, the output density is bounded by C_orient/lambda with C_orient<24.193.",
+      "dependencies": [
+        "fleet03/B12 flat pair-triple stitching result at math-open-problems@08f387da860f00c13f30de170286a82eb13108e1",
+        "fleet02/B15 definite-pair and nonsingular-triple theorems at math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8"
+      ]
+    },
+    {
+      "id": "QFORM-CODIMENSION-ONE-SPECTRAL-STABILITY-v1",
+      "status": "PROVED_TARGET_LEVEL_SUBCLASS",
+      "statement": "For n>=4, if A has n-1 eigenvalues exactly epsilon*lambda with lambda>=1 and one arbitrary eigenvalue, with arbitrary exceptional eigenvector, then ||p_{X^TAX}||_infinity<24.193/lambda for all independent density<=1 inputs."
+    },
+    {
+      "id": "QFORM-ONE-EXCEPTION-ONE-PERCENT-STABILITY-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "A 4x4 symmetric original-coordinate block with three eigenvalues within lambda/100 of one common signed value epsilon*lambda and an arbitrary fourth eigenvalue gives an affine quadratic density bound <26.697/lambda; the same survives high-dimensional conditioning."
+    }
+  ],
+  "remaining_implication": "Extract or aggregate a quantitative four-coordinate pair/triple resource from only three arbitrary large spectral directions; fixed-minor selection is dimension-losing on delocalized rank-three projectors."
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": 2,
+  "claims": [
+    {
+      "claim_id": "B01_A003_BALANCED_ACTIVATION_CREDIT",
+      "version": "v1",
+      "exact_statement": "For every balanced Boolean sign g on every finite uniform cube, its fresh half-activation F(+1,x)=1,F(-1,x)=g(x) satisfies G(F)<=G(g)/2+1+c1 I(g), where c1=9/(8 ln 2)-1/2+1/(e ln 2); equivalently, if G(g)<=K I(g), then G(F)<=(K+2c1)I(F).",
+      "hypotheses": [
+        "g takes values in {-1,1}",
+        "g is balanced under the uniform measure",
+        "z is one fresh independent physical selector",
+        "all entropy and U logarithms are in bits"
+      ],
+      "statement_sha256": "1fbf7405c1415b4a8db7e632debfba5fe0db5ad9c1b6c899e18280b2df18b271",
+      "contributors": ["fleet01/B01"],
+      "proof_source": "PROOF.md",
+      "proof_dependencies": [
+        "Exact fresh-activation formula from B01 package commit 8344aa4aa688790494e3ebd46bb94b13f659ce18"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "No single-use ownership telescope is proved for repeating the L1+c0 W1 charge through an arbitrary hierarchy.",
+      "next_consumers": ["B05", "B18", "B20", "A005", "A087"]
+    }
+  ]
+}

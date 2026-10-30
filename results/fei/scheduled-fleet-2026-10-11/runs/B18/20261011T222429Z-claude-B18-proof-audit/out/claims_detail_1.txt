@@ -8,53 +8,53 @@ PROOF_SOURCE: "GOOD_COORDINATE_TARGET.tex; code/edge_pilot.py; code/independent_
 STATEMENT: For every finite uniform-cube Boolean sign f, let a_S=fhat(S), p_S=a_S^2, ell_S=log2(1/p_S) on positive atoms and a_S ell_S=0 otherwise, c_U=sum_S a_S a_(S xor U) ell_S, E_log=sum_(U nonempty)|U|c_U^2, and J_R=sum_(U nonempty)p_(R xor U)/|U|. Every occupied R obeys p_R[H(f)-ell_R]^2<=J_R E_log; also sum_(U nonempty)c_U^2=Var_p(ell). For a largest atom, H(f)<=ell_R+sqrt(J_R E_log/p_R).
 HYP: ["Finite uniform cube", "Genuine Boolean sign", "Entropy in bits", "Definitions and zero conventions in DERIVATION.md"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-account05-A031-convolution-identity\\DERIVATION.md", "sha256": "1d6bc376f6b158b32fa6046519470f65e7d6f8558d090a5ca1e3fcc7defddbb8"}
+PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261011T214115Z-fleet05-A031-convolution-identity\\DERIVATION.md", "sha256": "1d6bc376f6b158b32fa6046519470f65e7d6f8558d090a5ca1e3fcc7defddbb8"}
 
 ### A057-COHERENT-ERASURE-SPLIT [file of A057] PROVED_PENDING_INDEPENDENT_REVIEW
 STATEMENT: For any disjoint balanced Boolean composition F=g(h_1,...,h_m), g=a+y_j b, q=Inf_j(g), alpha=hat h_j({i}), x=alpha^2: B_i(F)=q B_i(h_j)+L_j(x), D_i(F)=q D_i(h_j)+L_j(x)+J_j(x), where L_j=sum_T(a_T^2+x b_T^2) h_nat(x b_T^2/(a_T^2+x b_T^2)), J_j=E(a^2+x b^2)-(Eraw(a+alpha b)+Eraw(a-alpha b))/2. One has 0<=L_j<=x B_j(g)+qx ln(1/x), 0<=J_j<=2qx, so 0<=R<=x B_j(g)+qx ln(1/x)+2qx. Consequently B(F)<=sum_j q_j B(h_j)+sum_j W_1(h_j)B_j(g)+(2/e)I(F) in nats.
 HYP: ["All input cubes uniform; Boolean sign functions; Fourier coefficients normalized; all entropy formulas in natural units unless converted explicitly.", "Disjoint balanced composition required for the exact coherent/erasure identities; no restriction-closure assumption."]
 FIRST_UNPROVED: None
-PROOF_SOURCE: {"run": "20261011T220314Z-account05-A057-coherent-restriction-remainder", "path": "COHERENT_REMAINDER_PAYMENT.tex"}
+PROOF_SOURCE: {"run": "20261011T220314Z-fleet05-A057-coherent-restriction-remainder", "path": "COHERENT_REMAINDER_PAYMENT.tex"}
 
 ### A057-NONREUSING-ALPHA-LOG-PAYMENT [file of A057] PROVED_PENDING_INDEPENDENT_REVIEW
 STATEMENT: On any finite adaptive physical-coordinate restriction tree of Boolean root f, at any subset of nodes admitting disjoint balanced composition representations, sum_v w_v q_v alpha_v^2 ln(1/alpha_v^2)<=(2/e)sum_v w_v Inf_{i_v}(f_v)<=(2/e)I(f). Also sum_v w_v R_v<=sum_v w_v alpha_v^2 B_{j_v}(g_v)+(2+2/e)sum_v w_v Inf_{i_v}(f_v). In bits divide each entropy and its constants by ln(2).
 HYP: ["All input cubes uniform; Boolean sign functions; Fourier coefficients normalized; all entropy formulas in natural units unless converted explicitly.", "Disjoint balanced composition required for the exact coherent/erasure identities; no restriction-closure assumption.", "Each represented node is independently certified for its actual restricted Boolean function; w_v is its physical reach probabi
 FIRST_UNPROVED: None
-PROOF_SOURCE: {"run": "20261011T220314Z-account05-A057-coherent-restriction-remainder", "path": "COHERENT_REMAINDER_PAYMENT.tex"}
+PROOF_SOURCE: {"run": "20261011T220314Z-fleet05-A057-coherent-restriction-remainder", "path": "COHERENT_REMAINDER_PAYMENT.tex"}
 
 ### A061-FAIR-TREE-PROCESS [file of A061] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
 STATEMENT: For every finite-dimensional uniform Boolean sign and fair adaptive physical restriction policy querying each coordinate at most once, with filtration given by past physical observations and an independent policy seed, H(g_t)+sum_{s<t}D_s and I(g_t)+sum_{s<t}d_s are stopped martingales, where D_s=B_s+J_s is the conditional spectral erasure plus the actual physical-child/spectral mutual information and d_s is queried influence. For tau<=n, H(f)=E H(g_tau)+E sum_{s<tau}D_s and I(f)=E I(g_tau)+E sum_{s<tau}d_s.
 HYP: ["Boolean sign output", "uniform finite input cube", "fair physical queries selected using past only", "no coordinate queried twice", "entropy in bits", "tau<=n"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: {"run_id": "20261011T214516Z-account05-A061-entropy-process", "path": "REPORT.md", "sections": "1--2"}
+PROOF_SOURCE: {"run_id": "20261011T214516Z-fleet05-A061-entropy-process", "path": "REPORT.md", "sections": "1--2"}
 
 ### A061-LOG-COMPENSATION [file of A061] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
 STATEMENT: On every such fair finite tree, lambda_t=sum_{T:b_T^2>0}b_T^2 log2((a_T^2+b_T^2)/b_T^2) satisfies D_t<=lambda_t+(3/ln(2))d_t. Therefore (3/ln(2))I(g_t)-H(g_t)-sum_{s<t}lambda_s is a supermartingale. If at every live node every positive b_T^2/(a_T^2+b_T^2)>=epsilon for fixed epsilon in (0,1], then C I(g_t)-H(g_t) is a supermartingale for C=log2(1/epsilon)+3/ln(2); hence H(f)<=C I(f)+E[H(g_tau)-C I(g_tau)].
 HYP: ["same fair finite tree as A061-FAIR-TREE-PROCESS v1", "entropy in bits", "a_T and b_T are actual parent Fourier coefficients without and with queried coordinate", "density bound required only for second supermartingale", "no universal density or logarithmic payment hypothesis claimed"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: {"run_id": "20261011T214516Z-account05-A061-entropy-process", "path": "REPORT.md", "sections": "3--4"}
+PROOF_SOURCE: {"run_id": "20261011T214516Z-fleet05-A061-entropy-process", "path": "REPORT.md", "sections": "3--4"}
 
 ### A067-LOCAL-BOOLEAN-GRANULARITY [file of A067] AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW
 STATEMENT: For every Boolean sign f on a finite uniform cube, write q_S=hat f(S)^2, v=1-q_empty and I=sum_S |S|q_S. For each nonzero nonempty coefficient define d_f(S)=max{|T|:T contains S and q_T>0}, and U=sum_nonempty q_S(d_f(S)-|S|). Then hat f(S) is a multiple of 2^(1-d_f(S)) and H(f)<=2I+2U-(2-log2(e))v. Thus U<=KI implies H<=(2+2K)I, and d_f(S)<=L|S| implies H<=2LI-(2-log2(e))v. Balanced support antichains give H<=2I-2. On ordinary addressing with a address variables, d_f(S)=a+1, U=a/2, and the bound gives exactly H<=2a, while generic full-cube level counting costs Theta(a^2). These are structural-regime results, not a universal payment of U or a novelty claim.
 HYP: ["Every finite-dimensional uniform cube", "Boolean outputs in {-1,1}", "Entropy and logarithmic constants in bits", "Zero Fourier masses omitted; constants handled explicitly"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-account05-A067-hypercontractive-refinement\\DERIVATION.md"
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-fleet05-A067-hypercontractive-refinement\\DERIVATION.md"
 
 ### A082-FINITE-TRUE-ERASURE [file of A082] PROVED_LOCAL_PENDING_INDEPENDENT_REVIEW
 STATEMENT: For every nonconstant Boolean sign f on at most four uniform physical variables there exists a relevant i with H(S_i|S_-i)<=Kstar Inf_i(f), where Kstar=4+(5/2)log2(5)-(9/2)log2(3)<107/40. Kstar is optimal over this domain.
 HYP: ["Boolean sign truth table", "uniform cube", "at most four physical variables", "entropy in bits"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 1; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-ac
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-fleet05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 1; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-ac
 
 ### A082-AFFINE4-ERASURE-BRIDGE [file of A082] PROVED_LOCAL_PENDING_INDEPENDENT_REVIEW
 STATEMENT: For every finite physical dimension, every nonconstant Boolean sign with nonzero Fourier support contained in c+V with dim_F2(V)<=4, and every disjoint product of such factors, has a relevant i with B_i<=Kstar I_i at every physical restriction, and H(f)<=(Kstar+2/ln(2))I(f).
 HYP: ["Boolean sign", "uniform finite physical cube", "affine Fourier support dimension at most four per disjoint factor", "entropy in bits"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-account05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 2; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-ac
+PROOF_SOURCE: "~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-fleet05-A082-finite-inequalities\\EXHAUSTIVENESS_LEMMA.tex, Theorem 2; ~\\brain_workers\\FEI100_20261011\\agents\\A082\\runs\\20261011T221008Z-ac
 
 ### A096-UNIFORM-SINGLETON-HALF-TAX [file of A096] ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW
 STATEMENT: For every finite Boolean sign under any interior product measure, any singleton physical block X with bias p, and Shannon entropy in bits, let M_X=H(S_X|S_residual), J_X=I(X;T) in the actual physical-child/spectral experiment, r=min(p,1-p), and delta=1-sqrt(1-r). Then J_X-M_X<=h2(r)-h2(delta). The bound is uniform in dimension, residual biases and Boolean children. Consequently lim_{p->0} sup_{all finite actual Boolean signs and all interior residual product biases}(J_X-M_X)/(p log2(1/p))=1/2. The tax expansion is (r/2)log2(1/r)+((log2(e)-1)/2)r+O(r^2 log(1/r)); exact optimal tax at arbitrary nonzero p and influence/composition payment remain unproved.
 HYP: ["Finite genuine Boolean sign", "Interior physical product biases", "Actual singleton physical restriction", "Entropy in bits"]
 FIRST_UNPROVED: None
-PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T215017Z-account05-A096-live-gap-ledger\\REPORT.md", "locator": "Uniform singleton tax, equations (5)-(9)"}
+PROOF_SOURCE: {"path": "~\\brain_workers\\FEI100_20261011\\agents\\A096\\runs\\20261011T215017Z-fleet05-A096-live-gap-ledger\\REPORT.md", "locator": "Uniform singleton tax, equations (5)-(9)"}
 

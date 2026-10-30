@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "run_id": "fleet02-B17-20260922T104426Z-eba4746f",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "claim_id": "B17-RESTRICTION-CREDIT-EXCHANGE-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "Every genuine finite Boolean function/gate, every interior product bias, every physical coordinate restriction, arbitrary symmetric finite potential for which displayed terms are finite; boundary cases by finite-alphabet limits.",
+      "statement": "Under physical restriction, the weighted first-moment Bellman term v B_inf obeys the exact two-ledger identity (REPORT (2.7)): child B terms plus selector price and potential Jensen term, minus within-pair entropy and exactly C_marg+C_erase+C_pair; the Jensen-Shannon term cancels against the exact K_occ restriction chain.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "mode": "uses_proved_identity"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "3a5fccff414043be05a0c7f2f219dabd9b44708b",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B15/b15-20260922T103236Z-restriction-iprojection-chain/REPORT.md",
+          "mode": "uses_proved_identity"
+        }
+      ],
+      "verification": {
+        "analytic_proof_in_report": true,
+        "independent_review": false
+      }
+    },
+    {
+      "claim_id": "B17-KL-INSURED-CENTER-NEUTRAL-NOGO-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "scope": "Bounded symmetric one-variable perturbations psi on (0,1) with psi(1/2)=0; genuine Boolean gates and interior product biases.",
+      "statement": "If Delta_psi D(G;p)+lambda(G,p) v K_occ(G;p)>=0 for every genuine Boolean gate and every interior product bias, for arbitrary nonnegative real multipliers lambda(G,p), then psi is identically zero.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+          "mode": "uses_binary_zero_Kocc"
+        }
+      ],
+      "verification": {
+        "analytic_proof_in_report": true,
+        "independent_review": false
+      },
+      "interpretation": "Obstructs a universal center-neutral bias-only potential direction financed solely by existing K_occ. Does not refute FEI or source-dependent/state-dependent repairs."
+    },
+    {
+      "claim_id": "B17-RM3-FULL-KL-PREFLIGHT-v1",
+      "status": "COROLLARY_OF_SOURCES",
+      "scope": "Depth-m recursive ternary majority.",
+      "statement": "K_occ(M_m)>=I(M_m)(m-4)+2 while B_inf^C(M_m)<=I(M_m)(C-m)-C+2, yet the exact full residual is (C-4)(I-1). Hence the full multiscale K_occ is essential and cancels an order-mI negative B_inf term.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md",
+          "mode": "direct_corollary"
+        }
+      ],
+      "verification": {
+        "analytic_derivation_in_report": true,
+        "checker_diagnostics": true,
+        "independent_review": false
+      }
+    },
+    {
+      "claim_id": "B17-PARTNER-QUARTERHALF-LEDGER-v1",
+      "status": "FINITE_EXACT_SOURCE_APPLICATION",
+      "scope": "The fleet03/B17 non-subcube q=1/4 quarter/half witness with branch masks 7 and 247.",
+      "statement": "Its nonempty occurrence vector is (1/4,1/6,1/6,5/12,2/3), K_occ=0.286039323730481..., and at the partner's source-exact Gamma0 base B_inf=0.070127342936185...>0. Thus that finite dyadic witness does not need KL to rescue a negative first-moment Bellman term.",
+      "dependencies": [
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "9b4814e50b1215342abb6de666809948169e8a9b",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B17/20260922T100239Z-quarterhalf-dyadic-output/REPORT.md",
+          "mode": "consumed_partner_exact_expression"
+        },
+        {
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "mode": "uses_I_projection_formula"
+        }
+      ],
+      "verification": {
+        "checker": "CHECK.py",
+        "checker_sha256": "3c6b75bfd3c6c9c2f5c31c9608b1dc7fe2de3776f815a58109b8b1ff8a3a877d",
+        "output_sha256": "e690c80a42c95db6bcb200faa2457d88fc37857b901279d8a8f490ab771c1ae7",
+        "independent_review": false
+      }
+    }
+  ],
+  "remaining_implication": "Prove a dimension-independent amortized restriction-tree inequality for the exact local total residual L_{Gamma,j}=It_j a_s+J_Gamma-JS_s-H_layer while carrying the full two-ledger (vB_inf,vK_occ) state with coefficient-one KL and no double spending; or give an actual Boolean counterexample to a proposed joint node inequality.",
+  "candidate_status": "No new universal potential claimed. Current shaped potential remains CANDIDATE_UNPROVED at its source scope.",
+  "native_memory": "unverified",
+  "repository_memory": "loaded"
+}

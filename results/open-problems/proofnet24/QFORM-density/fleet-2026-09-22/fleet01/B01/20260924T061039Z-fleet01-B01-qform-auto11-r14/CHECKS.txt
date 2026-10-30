@@ -1,0 +1,45 @@
+QFORM fleet01/B01 r14 deterministic arithmetic checks
+run_id=20260924T061039Z-fleet01-B01-qform-auto11-r14
+
+1. Outer-pivot diagonal-star v2 constants
+C2 = 27.2653244653667
+C2 * 20^(2/5) = 90.3696642083129 < 91
+eta = 2^(-24)
+8 * eta^(-1/8) = 64
+(19/20)^4 - 2^(-24) - (9/10)^2 = 0.0045061903953550475 > 0
+pair determinant lower bound = 9/10 - 1/400 = 359/400 = 0.8975
+16*sqrt(30)*(400/359)^(1/4) = 90.03720310276094 < 91
+STATUS outer-pivot constants = PASS
+
+2. Generic-edge two-square compiler
+J_(1/4) = B(1/2,1/4)+B(1/4,1/4) = 12.660413817789728
+C_edge = 3.179662567631707
+(J_(1/4)*C_edge)^(2/3) = 11.745890746379832
+homogeneity exponent sum: -1/2 -1/3 -1/6 = -1
+STATUS generic-edge constants = PASS
+
+3. Exact arrowhead stress
+A = [[0,1/sqrt(3),1/sqrt(3),1/sqrt(3)],
+     [1/sqrt(3),1,0,0],
+     [1/sqrt(3),0,1,0],
+     [1/sqrt(3),0,0,1]]
+Numerical eigenvalues:
+-0.6180339887498948
+ 1.0000000000000000
+ 1.0000000000000000
+ 1.6180339887498950
+Exact eigenvalues: {(1-sqrt(5))/2, 1, 1, (1+sqrt(5))/2}
+Three eigenvalues have modulus >= 1.
+STATUS arrowhead stress = PASS
+
+4. Scale-cancelling target family
+Q_epsilon = epsilon X0^2 + epsilon Z^2 + epsilon^(-5)(Y+W)^2 - epsilon^(-5)V^2 + T^2
+Spectrum exactly: {epsilon, epsilon, 0, 2 epsilon^(-5), -epsilon^(-5), 1}
+For 0<epsilon<=1, at least three eigenvalues have modulus >=1.
+Compiler scaling:
+epsilon^(-1/2) * epsilon^(-1/3) * (epsilon^(-5))^(-1/6)
+= epsilon^(-3/6-2/6+5/6) = 1.
+STATUS scaling family = PASS
+
+These checks are arithmetic diagnostics only. They are not an independent mathematical review and do not certify the full QFORM conjecture.
+OVERALL STATUS=PASS

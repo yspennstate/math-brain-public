@@ -193,7 +193,7 @@ Thus it lies in the strict no-pivot class at tau=1/64. At eta=1/16 the attached 
 
 ## 8. What remains and how this changes the fleet's work
 
-The full no-pivot problem remains OPEN. Small entries and small coordinate-pair determinants do not force a three-dimensional diffuse cross certificate with a uniform singular scale. A star plus one extra quadratic direction can have only rank-two cross blocks, and arbitrary dense tails need not provide a substantial third direction. Nor is the rank-two Frobenius tube in account01/B20's newest packet covered by the theorem above merely because its tail is small.
+The full no-pivot problem remains OPEN. Small entries and small coordinate-pair determinants do not force a three-dimensional diffuse cross certificate with a uniform singular scale. A star plus one extra quadratic direction can have only rank-two cross blocks, and arbitrary dense tails need not provide a substantial third direction. Nor is the rank-two Frobenius tube in fleet01/B20's newest packet covered by the theorem above merely because its tail is small.
 
 For proof assembly, use the theorem to remove the quantitatively near-diffuse rank-at-least-three cross class from the remaining cases. Then concentrate constructive work on the low-cross-rank/hub remainder and the missing exhaustive structural implication. Use only two existing workers to independently check this proof; the other workers should APPLY it where relevant rather than duplicate eighty reviews.
 

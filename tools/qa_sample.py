@@ -10,7 +10,7 @@ same store and settings reproduces it byte for byte and changes nothing; any
 other result is refused, so a rerun cannot erase what a round covered. Earlier
 rounds' reviews are excluded from the sample, and a review file that cannot be
 read is an error rather than a round that never happened (scheduled audit
-account01/B16, B16-R13-QA-SAMPLE-RERUN-ERASES-COVERAGE-011, 29 Sep 2026).
+fleet01/B16, B16-R13-QA-SAMPLE-RERUN-ERASES-COVERAGE-011, 29 Sep 2026).
 
     python tools/qa_sample.py [N] [ROUND]
 """

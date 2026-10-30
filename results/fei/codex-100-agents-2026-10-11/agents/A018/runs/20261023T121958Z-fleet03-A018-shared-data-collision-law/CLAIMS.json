@@ -1,0 +1,174 @@
+[
+  {
+    "claim_id": "A019-ARBITRARY-SPARSE-EVENT-ADAPTIVE-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every k>=8 and every Boolean event A on n<=3k uniform bits with 0<p=Pr(A)<=2^(1-k), put h0=u,h1=(1-A)u+A, supply ORIGINAL Qb=(P_hb+delta_empty)/2, exact nonlinear two-bit mask s of mean1/2 with flat P_s, and the actual q-frequency conditional lift of average Qb. Activate by F=1 at gate x0 and hs at x1. All activation references have data marginal (Rcore tensor P_s+delta_empty)/2 and their actual gate-frequency conditionals. Let B=(4I(h0)-c0+4I(h1)-c1)/4, cb=CE(P_hb,Qb), 0<=U<=1/8 and Tq=CEroot-average CEqchild-4Inf_q(F). On q1 allow ANY nonrepeating adaptive tree of event-coordinate queries; every descendant core reference is the exact frequency marginal of ORIGINAL Q1, with no support-slice renormalization or reset. Let S_prefix sum the FULL nonnegative CE decrements, including inherited-to-prescribed conditional conversion, at original physical reaches. Then every tree prefix satisfies B-U-max(Tq,0)-S_prefix>33/128, with q0 and every full stopped sibling retained and every later physical influence credit left unspent. Both original cores are rate4 eligible, and 4I(F)-CEroot>B+5/8. More generally, for any 0<p<=1/4 the same ledger remainder exceeds 9/16-3p/2+I(1-2A)/2-H(h1)/4-H(h)/2, whenever the described references/tree are used; positivity of this general sufficient bound is not asserted.",
+    "hypotheses": [
+      "Uniform independent physical blocks; units bits. No local leaf eligibility assumed. Includes unions of two width-k events of any overlap; complete proof covers arbitrary events at stated density/dimension. No new supplier or influence renewal."
+    ],
+    "statement_sha256": "0393257eae1ddd419f54eecaccf3d91a95c0a46de9a8605f095483628570c2bf",
+    "contributors": [
+      "A019/fleet03"
+    ],
+    "proof_source": {
+      "path": "agents\\A019\\runs\\20261023T105439Z-fleet03-A019-orthogonality-extensions\\REPORT.md",
+      "derivation": "agents\\A019\\runs\\20261023T105439Z-fleet03-A019-orthogonality-extensions\\out\\DERIVATION.md",
+      "certificates": [
+        "out/CHECKS.json",
+        "out/DIAGNOSTIC_CHECKS.json",
+        "out/OBSTRUCTION_CHECKS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A018-ORIGINAL-MARGINAL-ALL-DEPTH-PAYMENT",
+        "version": 1,
+        "scope": "Cumulative original-marginal interface independently reviewed; generalized derivation re-established here."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A019/fleet03",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_PROOF_EXACT_CHECKED",
+        "full_lean_status": "NOT_FORMALIZED"
+      },
+      {
+        "reviewer": "A018/fleet03",
+        "independent": true,
+        "verdict": "HOLDS_AT_FULL_ORIGINAL_STATED_SCOPE",
+        "substantive_repair": false,
+        "source": "agents\\A018\\runs\\20261023T121958Z-fleet03-A018-shared-data-collision-law\\REPORT.md",
+        "certificate": "out/CHECKS.json",
+        "method": "Independent complete-array/Walsh/edge reconstruction; all-k entropy-capacity arithmetic and tensor remainder bound reconstructed without source checker; supplied original references retained. New density-only source-ownership statement is separate author work.",
+        "reviewed_at": "2026-10-23T12:44:40.208866+00:00"
+      }
+    ],
+    "status": "INDEPENDENT_A018_HOLDS_AT_ORIGINAL_SCOPE_SHARED_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "No unsupported line in scoped theorem. The dimension/density capacity cannot simply be removed while retaining the no-new-influence rule; see the explicit tensor obstruction.",
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A016",
+      "A092",
+      "A094",
+      "B04 lead"
+    ]
+  },
+  {
+    "claim_id": "A019-NO-NEW-INFLUENCE-TENSOR-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "In the same original one-balanced hierarchy, let g3=-1 only at000, G_m the product of m disjoint g3 seeds, A=point_8*(1-G_m)/2, rho=1/256, p=rho*(1-(3/4)^m)/2. For every m>=1 the original bank B>3/4, both core codes are rate4 eligible, and the actual root surplus 4I(F)-CEroot>B+5/8. Query ALL 8+3m event coordinates with the ORIGINAL core-reference marginals and actual activation conditional lifts; keep all full physical leaves and the old debit U>=0. If S is the total complete event-query bill at original reaches, then B-S<6-rho*m/8. In particular m=16384 gives B-U-max(Tq,0)-S<-2. This refutes universal arbitrary-event payment from B when every later physical influence credit is left unspent. It is not an FEI counterexample: the core and full-root H/I limits are (4/3)[4-(9/8)log2(3)]<4.",
+    "hypotheses": [
+      "Exactly the specified actual Boolean tensor family and supplied original references; all event bits eventually queried, including irrelevant coordinates after determination; all conditional conversions and leaves retained; no change to existing A018/A020 claims."
+    ],
+    "statement_sha256": "1deef978ab29a13b75d06a5cfea19c82c441292c5285ef57186e54fba2ce708b",
+    "contributors": [
+      "A019/fleet03"
+    ],
+    "proof_source": {
+      "path": "agents\\A019\\runs\\20261023T105439Z-fleet03-A019-orthogonality-extensions\\REPORT.md",
+      "derivation": "agents\\A019\\runs\\20261023T105439Z-fleet03-A019-orthogonality-extensions\\out\\DERIVATION.md",
+      "certificates": [
+        "out/CHECKS.json",
+        "out/DIAGNOSTIC_CHECKS.json",
+        "out/OBSTRUCTION_CHECKS.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A019-ARBITRARY-SPARSE-EVENT-ADAPTIVE-PAYMENT",
+        "version": 1,
+        "scope": "Exact nonnegative-decrement/telescoping interface only; sparse capacity positivity is NOT assumed."
+      },
+      "Elementary independent tensor spectra and physical-edge influence identities in DERIVATION.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A019/fleet03",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_PROOF_EXACT_CHECKED",
+        "full_lean_status": "NOT_FORMALIZED"
+      },
+      {
+        "reviewer": "A018/fleet03",
+        "independent": true,
+        "verdict": "HOLDS_AT_FULL_ORIGINAL_STATED_SCOPE",
+        "substantive_repair": false,
+        "source": "agents\\A018\\runs\\20261023T121958Z-fleet03-A018-shared-data-collision-law\\REPORT.md",
+        "certificate": "out/CHECKS.json",
+        "method": "Independent complete-array/Walsh/edge reconstruction; all-k entropy-capacity arithmetic and tensor remainder bound reconstructed without source checker; supplied original references retained. New density-only source-ownership statement is separate author work.",
+        "reviewed_at": "2026-10-23T12:44:40.208866+00:00"
+      }
+    ],
+    "status": "INDEPENDENT_A018_HOLDS_AT_ORIGINAL_SCOPE_SHARED_ADOPTION_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered extension: arbitrary-event all-query same-bank payment with no later influence credits"
+    ],
+    "first_unproved_line": "No unsupported line in counterexample. First identify a VERIFIED unused owner after J/2 already allocated in B; price queries or change the potential without double counting, renewing a bank, or dropping old debits/full terminals.",
+    "next_consumers": [
+      "A018",
+      "A020",
+      "A016",
+      "A092",
+      "A094",
+      "B04 lead"
+    ]
+  },
+  {
+    "claim_id": "A018-DENSITY-ONLY-SOURCE-OWNERSHIP",
+    "version": 1,
+    "exact_statement": "For ANY Boolean event A of density0<p<=1/4 on any finite uniform cube, h0=u,h1=(1-A)u+A with independent sign u, exact mean1/2 two-bit mask and the original contaminated-core/conditional-selector/actual-gate reference hierarchy, put J=I(1-2A),c1=CE(P_h1,(P_h1+delta0)/2),B=7/4-p+J/2-c1/4,W=4I(F)-CEroot. Define eta(x)=-x log2x,f(p)=eta((1-p)^2),Delta(p)=f(p/2)-f(p)/2+eta(p^2)/4+2p-p^2/2,D(p)=p^2*log2((2+p^2)/(1+p^2))/2,R(p)=Aref(p^2/16,(2+p^2)/32),Aref(a,z)=[a log2(a/z)+(1+a)log2((1+z)/(1+a))]/2,phi(b)=Psi(b/2). Exactly W=B+Omega(p),Omega=3+p/2-Delta/2+D/2-phi(p/2)+R<85/64. The FULL first-selector rate4 excess Tq also depends only on p and is<1/4. Therefore on the ACTUAL A019 tensor k8,m16384, whose all-event-query bill S has B-S<-2, the same proposed expense ledger remains W-U-max(Tq,0)-S<-43/64 for every U>=0, even if ALL original root surplus is offered. In contrast, after ALL event coordinates are physically queried, INCLUDING irrelevant coordinates after determination, the complete physical signed reserve is exactly W_finish=W+Tq+S-J/2-U>2 for any old0<=U<=1/8, with q0 and every full q1 endpoint retained. The original J/2 is retired once; S is CE release in this identity, not a new source. No prefix reserve bound, universal initial reference supplier or full FEI claim follows.",
+    "hypotheses": [
+      "Uniform independent physical bits; Boolean signs; entropy, CE and KL in bits.",
+      "Original Qb=(P_hb+delta_empty)/2, parent actual q-frequency conditional lift of average child references, independent exact nonlinear mask with flat squared law, and actual gate-conditionals over (Qcore tensor P_s+delta_empty)/2.",
+      "At all later event queries use frequency marginals of ORIGINAL Q1 and actual child gate-conditionals, retaining all physical outcomes/full reference costs and the original U; no renewed source budget.",
+      "Endpoint clause requires ALL event coordinates queried, including zero-influence reference ghosts; early determined-event leaves do not satisfy its two-atom reference hypothesis.",
+      "Tensor expense-ledger clause consumes independently reviewed A019-NO-NEW-INFLUENCE-TENSOR-OBSTRUCTION@1 at its original exact Boolean family; it is not the physical influence-retiring reserve."
+    ],
+    "statement_sha256": "d1ba7a0033212119e1c4b063124d2cd92dfee33152fefa4491cf7d132ef8df0d",
+    "contributors": [
+      "A018/fleet03"
+    ],
+    "proof_source": {
+      "path": "agents\\A018\\runs\\20261023T121958Z-fleet03-A018-shared-data-collision-law\\REPORT.md",
+      "derivation": "out/DERIVATION.md",
+      "certificates": [
+        "out/CHECKS.json",
+        "out/CERTIFICATES.json"
+      ]
+    },
+    "proof_dependencies": [
+      "A018-UNEQUAL-MEAN-RADIAL-LEDGER@1, independently accepted by A019; scalar specialization rederived here",
+      "A019-NO-NEW-INFLUENCE-TENSOR-OBSTRUCTION@1, independently HOLDS here; used only exact source/witness B-S<-2",
+      "Elementary Fourier restriction and physical influence conservation, finite KL/log-sum and displayed calculus identities"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A018/fleet03",
+        "independent": false,
+        "verdict": "AUTHOR_ANALYTIC_PROOF_EXACT_CHECKED",
+        "assertions": 2431,
+        "formal_status": "NO_LEAN_CERTIFICATE_CLAIMED"
+      }
+    ],
+    "status": "AUTHOR_PROOF_EXACT_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered repair: pay arbitrary-event no-later-credit expense ledger by offering the unallocated part of original full root surplus"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A019",
+      "A020",
+      "A016",
+      "A092",
+      "A094",
+      "B04-lead",
+      "B20"
+    ]
+  }
+]

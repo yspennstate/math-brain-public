@@ -1,6 +1,6 @@
 # All-rank minority-sign Schur pivot for mixed-sign quadratic forms
 
-**Status:** Proved conditional density theorem. It extends the exact-rank-three minority pivot in account01/B11 to arbitrary rank by using the assembled semidefinite second-level concentration theorem. The unrestricted s_3(A)>=1 conjecture remains open because the size of a minority-sign physical diagonal cannot be bounded below from the spectrum alone.
+**Status:** Proved conditional density theorem. It extends the exact-rank-three minority pivot in fleet01/B11 to arbitrary rank by using the assembled semidefinite second-level concentration theorem. The unrestricted s_3(A)>=1 conjecture remains open because the size of a minority-sign physical diagonal cannot be bounded below from the spectrum alone.
 
 ## Theorem
 
@@ -79,6 +79,6 @@ This proves (1). Reflection proves the opposite-sign assertion.
 
 ## Scope and relation to existing work
 
-The exact-rank-three minority-sign Schur theorem in proofnet24/QFORM-density/fleet-2026-09-22/account01/B11/20260922T231431Z-account01-B11-QFORM-r11/REPORT.md gives a sharper determinant-aware estimate in rank three. Its proof uses an exact rank-two semidefinite Schur remainder. The argument here works at arbitrary rank, including dense residual interactions, because the semidefinite two-level theorem handles every rank and arbitrary affine terms. The bound depends on the original-coordinate pivot magnitude delta. A negative spectral eigenvector can be spread across arbitrarily many coordinates, making every negative physical diagonal small. Spectral information alone does not supply this pivot, and the theorem is not a full resolution.
+The exact-rank-three minority-sign Schur theorem in proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260922T231431Z-fleet01-B11-QFORM-r11/REPORT.md gives a sharper determinant-aware estimate in rank three. Its proof uses an exact rank-two semidefinite Schur remainder. The argument here works at arbitrary rank, including dense residual interactions, because the semidefinite two-level theorem handles every rank and arbitrary affine terms. The bound depends on the original-coordinate pivot magnitude delta. A negative spectral eigenvector can be spread across arbitrarily many coordinates, making every negative physical diagonal small. Spectral information alone does not supply this pivot, and the theorem is not a full resolution.
 
 The inputs are Proposition sd:psd-levels(2) and Lemma sd:composition(3) of proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/semidefinite.tex. This note only proves their combination with the signed Schur comparison; it does not independently reprove the global semidefinite concentration proposition.

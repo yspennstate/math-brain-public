@@ -1,5 +1,5 @@
 """test_attachment_isolation.py - one attachment bundle that fails verification no longer stops every deliberate recall
-(28 Sep 2026, claude-825b1305; scheduled audit account03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001).
+(28 Sep 2026, claude-825b1305; scheduled audit fleet03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001).
 
     python test_attachment_isolation.py [--brain BRAIN.py] [--docs NODE_DOCUMENTS.py] [--bm25 BM25.py] [--old OLD_BRAIN.py]
 

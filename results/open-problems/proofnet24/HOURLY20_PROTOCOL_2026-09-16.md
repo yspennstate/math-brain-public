@@ -2,9 +2,9 @@
 
 Effective owner order: **FEI-ALL-TEAM-20260922T095941Z**; control revision **2026-09-22.3**; initial state revision **FEI-20260922T1000Z-v1**.
 
-The older R01-R20 registry and portfolio below are historical for the redirected account01-account04/B01-B20 fleet.
+The older R01-R20 registry and portfolio below are historical for the redirected fleet01-fleet04/B01-B20 fleet.
 
-The sole target for account01-account04/B01-B20 is full uniform-cube Fourier Entropy-Influence: one finite dimension-independent C such that H(f) <= C I(f) for every finite Boolean function, with entropy in bits, or a rigorous Boolean counterfamily with unbounded H/I. Full FEI remains **OPEN**.
+The sole target for fleet01-fleet04/B01-B20 is full uniform-cube Fourier Entropy-Influence: one finite dimension-independent C such that H(f) <= C I(f) for every finite Boolean function, with entropy in bits, or a rigorous Boolean counterfamily with unbounded H/I. Full FEI remains **OPEN**.
 
 
 Allocation: Path A 32 workers (B01-B06,B13-B14 per account); Path B 28 (B07-B10,B15-B17); Path C 20 (B11-B12,B18-B20). Each slot has a distinct task, exact inputs, deliverable, acceptance condition, cross-account partner and next recipient. B20 has compact secondary keeper duties and a real FEI proof assignment.

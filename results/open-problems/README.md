@@ -20,7 +20,7 @@ folder says so, and a claimed proof is a claim until a reader checks it.
 | `research*/`, `runs/`, `artifacts/` | working runs and the files they produced |
 
 Folder names inside a problem often carry a date and a run label (for example
-`account02/B16/20260924T183053Z-...`). The label only says which of several
+`fleet02/B16/20260924T183053Z-...`). The label only says which of several
 parallel runs produced the attempt; the mathematics is in the files.
 
 ## How to read a result

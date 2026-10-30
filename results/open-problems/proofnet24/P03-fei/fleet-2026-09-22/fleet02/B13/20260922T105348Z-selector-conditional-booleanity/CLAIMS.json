@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "run_id": "fleet02-B13-20260922T105348Z-selector-conditional-booleanity",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B13-SELECTOR-TRANSPORT-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "For an arbitrary interior product bias and a genuine physical selector j, the parent biased Booleanity defects satisfy E_U=q E_U(G0)+t E_U(G1) and E_{U+{j}}=sqrt(tq)(E_U(G1)-E_U(G0)); hence the squared pair equals q E_U(G0)^2+t E_U(G1)^2 for every residual U, including normalization.",
+      "scope": "All finite Boolean gates, all interior product biases, all physical selector coordinates, all residual subsets U.",
+      "dependencies": [
+        "yspennstate/math-open-problems@603b35e74227d1c2d8ee34c0c527c439c686e30:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md"
+      ]
+    },
+    {
+      "id": "B13-CONDITIONAL-KL-BANK-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "For every residual nonempty U, q v0 K0+t v1 K1 >= c_{j,U}^2/(4 L_U^2 ln 2), where c_{j,U}^2=q g_{0,U}^2+t g_{1,U}^2 is the exact paired child reference-gap energy. No selector factor L_j occurs.",
+      "scope": "All finite Boolean gates, all interior product biases, all physical selector coordinates; constant children interpreted with zero nonempty KL and zero gap.",
+      "dependencies": [
+        "B13-SELECTOR-TRANSPORT-v1",
+        "yspennstate/math-open-problems@603b35e74227d1c2d8ee34c0c527c439c686e30:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md",
+        "yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md"
+      ]
+    },
+    {
+      "id": "B13-CONDITIONAL-ENTROPY-RECURSION-v1",
+      "status": "PROVED_IN_THIS_REPORT",
+      "statement": "The biased spectral entropy satisfies Htilde(G)=h2(t)+q Htilde(G0)+t Htilde(G1)+H(J|S)-H(B|S), with the signed interference retained in J; substituting the child I-projections and B13-CONDITIONAL-KL-BANK-v1 yields the explicit entropy upper bound in REPORT.md (4.4).",
+      "scope": "All finite Boolean gates and all interior product biases.",
+      "dependencies": [
+        "B13-CONDITIONAL-KL-BANK-v1",
+        "yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md"
+      ]
+    },
+    {
+      "id": "B13-COMBINED-SELECTOR-RESERVE-v1",
+      "status": "PROVED_FROM_SOURCE_DEPENDENCY",
+      "statement": "For the fleet03/B13 universally safe direction eta and any lambda>=0, the same selector carries q v0 K0+t v1 K1+lambda L_j >= c_{j,U}^2/(4 L_U^2 ln 2)+lambda r0 V_t delta(1-delta).",
+      "scope": "Exact scope of the fleet03/B13 safe-direction theorem plus the selector-conditional KL theorem above.",
+      "dependencies": [
+        "B13-CONDITIONAL-KL-BANK-v1",
+        "yspennstate/math-open-problems@a04dec15aa083216c437d1327aba981f5c8dbab8:proofnet24/P03-fei/fleet-2026-09-21/fleet03/B13/20260922T093915Z-safe-direction-coercivity/REPORT.md"
+      ]
+    }
+  ],
+  "next_unpaid_implication": "Compare the retained selector-conditional bank, together with exact first-moment/potential and hierarchy terms, against every negative all-gate Bellman residual; alternatively give a genuine Boolean gate/bias falsifier. The transport and selector operator-norm problem itself is paid by this run."
+}

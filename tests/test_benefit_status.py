@@ -1,6 +1,6 @@
 """The strict benefit decision says whether a run could answer, not only whether the brain helped.
 
-Scheduled audit account04/B08, B08-R79-STRICT-BENEFIT-VERDICT-UNREACHABLE-20260929: helped=False meant both "the
+Scheduled audit fleet04/B08, B08-R79-STRICT-BENEFIT-VERDICT-UNREACHABLE-20260929: helped=False meant both "the
 brain did not help" and "this run cannot say". The strongest run the test helpers can build - a sealed plan,
 every slot a parsed Codex artifact, a perfect effect - fails exactly two evidence gates, the two the current
 transport cannot pass, and must read as ineligible, never as a verdict about the brain.

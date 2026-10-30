@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet03",
+  "slot": "B04",
+  "run_id": "20260925T054924Z-fleet03-B04-fiveaudit-r15",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "finding": {
+    "id": "B04-P5-N01",
+    "tex_line": 148,
+    "pdf_page": 3,
+    "status": "GAP",
+    "statement": "Lemma 2.5 approximation-number proof omits the padded-index case j greater than the smaller matrix dimension.",
+    "repair": "For padded j, s_j(T)=0 and choosing B=T gives rank(B)<j and zero approximation error; use the printed SVD/kernel argument only for in-range j.",
+    "downstream": "Lemma statement remains true; downstream uses are in range; theorem/constants unchanged."
+  },
+  "repaired_theorem_verdict": "PASS",
+  "literal_source_defect_free": false
+}

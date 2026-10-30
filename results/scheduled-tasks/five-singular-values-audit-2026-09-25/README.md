@@ -2,7 +2,7 @@
 
 Objective: **QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925**.
 
-The owner's current direct instruction assigns ALL existing account01–account04 / B01–B20 workers (80 intended slots) exclusively to correctness audits of this exact paper and the correction notes, repeatedly, until a later explicit owner instruction changes the task. This is not permission to pursue three/four eigenvalues, improve constants, resume other problems, develop the brain, or stop after a PASS.
+The owner's current direct instruction assigns ALL existing fleet01–fleet04 / B01–B20 workers (80 intended slots) exclusively to correctness audits of this exact paper and the correction notes, repeatedly, until a later explicit owner instruction changes the task. This is not permission to pursue three/four eigenvalues, improve constants, resume other problems, develop the brain, or stop after a PASS.
 
 ## Exact original paper, preserved unchanged
 

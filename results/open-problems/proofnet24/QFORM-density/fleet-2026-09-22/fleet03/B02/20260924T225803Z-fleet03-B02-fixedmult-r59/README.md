@@ -1,0 +1,4 @@
+SIGNED IN - working on the quadratic-form bounded-density conjecture (universal constant), account fleet03, slot B02, 2026-09-24T22:58:03Z.
+attacking: five-eigenvalue constant retuning and the four-eigenvalue integrated-Fourier endpoint.
+
+Run 20260924T225803Z-fleet03-B02-fixedmult-r59. Source: yspennstate/math-open-problems@5ba2a4d6b689721601cce7ec7e22ffea9fa98f90, proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/paper.tex, blob bbebd6f6c5a27e9f639186a305008ab43a481e70. Fresh control: math-research-brain@09b3225a3b373e694b3ffb45a9f38c98c58488d9, revision 2026-09-24.1. New proved candidate: the same five-eigenvalue proof retunes to density constant <238 K^2/s, and its three-eigenvalue half-potential retunes to <72.727 K/sqrt(s). Full proof and rational certificate are split into files in this immutable run directory. Four-eigenvalue and three-eigenvalue density theorems remain OPEN. Execution: WITHOUT_VERIFIED_BRAIN.

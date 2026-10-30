@@ -1,9 +1,0 @@
-# Independent A040 review: HOLDS
-
-Source: agents\A039\runs\20261023T032407Z-account03-A039-projection-under-restrictions. Claim A039-COHERENT-A-CHILD-FACTOR-RESET@1, exact statement SHA256 cb3710e60592cb05b2fcce92557492aaff1201687e45b651fb574401a8a04f40. The statement is retained unchanged in CLAIMS.json; no source repair was supplied. This verdict covers its entire declared one-query and same-original-source scope, not an arbitrary FEI reference.
-
-PROOF sections1-4 reconstruct the full likelihood/normalizer identity and the original seven-eighths source, five-sixths first reset, signed paired surplus and old-quarter payment. In one query the source identity's positive outcome term remains essential. Sector invariance shows R and comparison B have equal own outcome normalizers; the negative erasure term plus positive outcome term is exactly minus the mean inherited comparison KL. This also gives a stronger stopping-tree extension, claimed separately with A040 as contributor; it is not a repair required for source acceptance.
-
-Independent tests: 25378 primary exact assertions on2105 ordered local histories/24 full root policies; 14203 separate assertions on1104 local histories,144 exact prime-log identities and154 saved terminal laws including37 constants. The second implementation imports no author/peer helper and uses direct character sums. Ten complete root-policy reset nodes have rigorously positive second reset charge. Finite tests corroborate; the unbounded quantifiers follow from the explicit finite-tree sector/variance proof.
-
-The failed auxiliary assertion P_h and B_h share spectator marginals belongs to A040's initial pilot and was removed without changing the reviewed source statement. Exact witness P=5/8 and B=3871/6016 appears in VALIDATION_REPAIRS and PILOT. Neither the failed assertion nor a failed run is counted as passing evidence. Full FEI, arbitrary-core admission and post-reset cumulative bills remain open.

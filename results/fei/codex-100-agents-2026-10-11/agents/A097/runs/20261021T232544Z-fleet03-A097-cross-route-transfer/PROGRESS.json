@@ -1,0 +1,58 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261021T232544Z-fleet03-A097-cross-route-transfer",
+  "stream": "B20",
+  "packet_id": "A097",
+  "gap_id": "G-R-MISMATCH",
+  "attempt_id": "stage17-mixed-active-control-original-bank",
+  "method": "Actual-control likelihood payment plus invariant reach*e=e_root and original exponential reserve; independent reconstruction of A096 active resets",
+  "mathematical_delta": "ALL eligible active/control mixed reset orders paid at SAME original rate2C0+10 (18 structurally), reserve>=5a*2^(b+r)e_root, cumulative extra<=8(r-1)e_root, remaining>=12e_root; A096 v1 independently HOLDS;9649 single-control plus5889 mixed-check assertions PASS",
+  "deliverable_status": "COMPLETE_LOCAL",
+  "mathematical_status": "SCOPED_ANALYTIC_PROOF_EXACT_VALIDATION_PENDING_REVIEW_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+      "version": 1,
+      "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+      "source": "20261014T050248Z-fleet05-A097-cross-route-transfer/CLAIMS.json"
+    },
+    {
+      "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+      "version": 1,
+      "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c",
+      "source": "agents\\A096\\runs\\20261021T210221Z-fleet03-A096-live-gap-ledger\\CLAIMS.json",
+      "review": "A097 independent reconstruction HOLDS at source scope"
+    }
+  ],
+  "claims_created_or_changed": [
+    "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR@1 independent HOLDS",
+    "A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR@1"
+  ],
+  "source_artifacts": [
+    "out/SOURCE_RECEIPTS.json",
+    "DERIVATION.md",
+    "out/VALIDATION.json",
+    "out/FROZEN_SPEC.json",
+    "out/LEAN_ADMISSION.json",
+    "out/MIXED_VALIDATION.json"
+  ],
+  "next_consumers": [
+    "A096",
+    "A094",
+    "A086",
+    "A098",
+    "A099",
+    "B20"
+  ],
+  "next_action": "Price one actual dummy-data exposure, or a canonical reset in a retained control-off branch, from SAME remaining original bank after mixed active/control debits; retain complete off-terminals and current source-reference marginal",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Full FEI and generic priced source reference remain OPEN",
+    "New control extension independent review pending",
+    "Lean not launched: memok exited1, commit free7.6GB below8GB",
+    "Supervisor adoption and remote mirrors unverified"
+  ],
+  "packet_ids": [
+    "A097"
+  ]
+}

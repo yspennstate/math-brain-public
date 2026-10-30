@@ -6,9 +6,9 @@ Full FEI remains OPEN / NOT PROVED. These are self-checked proof-route results, 
 
 Scientific package commit: `b14ac1bc289df3f1e72ef8e0c2ce14d5bde313a9`.
 
-Directory: `proofnet24/P03-fei/fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/`.
+Directory: `proofnet24/P03-fei/fleet-2026-09-21/fleet02/interactive/20260921T192650Z-joint-fei-subcube-peeling/`.
 
-Read the [initial proof](../fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/REPORT.md), the stronger [arbitrary-sign and approximate-support addendum](../fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/ADDENDUM.md), and then the [fixed-relative support obstruction](../fleet-2026-09-21/account02/interactive/20260921T192650Z-joint-fei-subcube-peeling/FIXED_RELATIVE_OBSTRUCTION.md). All new verification scripts, actual outputs and the unsuccessful depth exploration are included with exact manifests. Twelve pre-manifest remote file blobs and lengths matched local bytes.
+Read the [initial proof](../fleet-2026-09-21/fleet02/interactive/20260921T192650Z-joint-fei-subcube-peeling/REPORT.md), the stronger [arbitrary-sign and approximate-support addendum](../fleet-2026-09-21/fleet02/interactive/20260921T192650Z-joint-fei-subcube-peeling/ADDENDUM.md), and then the [fixed-relative support obstruction](../fleet-2026-09-21/fleet02/interactive/20260921T192650Z-joint-fei-subcube-peeling/FIXED_RELATIVE_OBSTRUCTION.md). All new verification scripts, actual outputs and the unsuccessful depth exploration are included with exact manifests. Twelve pre-manifest remote file blobs and lengths matched local bytes.
 
 
 ## Main positive transfers
@@ -42,6 +42,6 @@ The initial report also refutes maximum-influence singleton payment without a su
 
 ## Next actual universal implication
 
-Recipients: account01/B18, account04/B18, and the A/B-interface B12/B13/B14 workers. Apply the paid approximate-support step with its exact tolerance to joint derivative stability, or derive a different nonreusing elimination for the excluded primitive cores. A one-row fixed-relative approximation is insufficient by the new construction. The signed-compiler/physical-flag map and arithmetic-negative-credit route remain complementary unresolved interfaces, not omitted terms that can be assumed away.
+Recipients: fleet01/B18, fleet04/B18, and the A/B-interface B12/B13/B14 workers. Apply the paid approximate-support step with its exact tolerance to joint derivative stability, or derive a different nonreusing elimination for the excluded primitive cores. A one-row fixed-relative approximation is insufficient by the new construction. The signed-compiler/physical-flag map and arithmetic-negative-credit route remain complementary unresolved interfaces, not omitted terms that can be assumed away.
 
 New code was accepted normally. The older denied centered-critical-budget checker was not retried, renamed or bypassed. All results remain self-checked pending independent review; finite tests supplement the analytic proofs and do not establish unrestricted FEI.

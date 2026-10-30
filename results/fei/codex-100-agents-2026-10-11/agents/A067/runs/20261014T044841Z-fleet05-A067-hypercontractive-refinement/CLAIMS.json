@@ -1,0 +1,267 @@
+[
+  {
+    "claim_id": "A066-ARBITRARY-GATE-CONDITIONAL-REFUND-DEBIT",
+    "version": 1,
+    "exact_statement": "For any r>=1 Boolean control gate q, any even quadratic bent core dimension d>=4, delta=2^-d and F(z,y)=b_d(y)+1_{y=0}(q(z)-1), write a=qhat(empty), alpha=1-a, beta_i=qhat({i}), e_i=Inf_i(q). For a relevant control i, Inf_i(F)=delta e_i. In its complete normalized Fourier residual/derivative laws r_i and mu_i, retain every residual control subset U and discard only core T. The only nonzero conditional KL loss cell is U=empty. Put c_sigma=1-2alpha sigma sqrt(delta)+delta(alpha^2+beta_i^2), R_i=1+delta(a^2+beta_i^2-1), D0_i=sum_sigma(1+sigma sqrt(delta))/2 ln(R_i/c_sigma). Then lost weighted KL L_i=delta beta_i^2 D0_i, sum_i L_i<=(256/9)delta^2 W1(q)<=(256/9)delta I_controls(F). Actual full quotient row price is M_i^C=delta sum_(U nonempty)qhat(U+i)^2 ln((qhat(U)^2+qhat(U+i)^2)/qhat(U+i)^2)+delta beta_i^2 ln(R_i/(delta beta_i^2))=M_i(F)+L_i. Every finite adaptive control-only singleton stopping tree obeys sum_v w_v L_i(F_v)<=(256/9)delta[I(F_root)-E I(F_leaf)], retaining all leaf entropy. For one first paired-core query in original d>=6, the edited child G=b_(d-2)(Y)+1_{w=0,Y=0}(q-1) has delta0=2^(-(d-2)), theta=1/2 and point mass delta_p=theta delta0. Retaining residual U and the dummy w Fourier occupancy W gives sum_i L_i(G)<=(256/9)theta^2 delta_p I_controls(G), also hereditary under control-only stopping. For negative-AND q, deleting W as well adds exact binary conditional KL with extra local rate at least ln(7/(4delta0))/4, unbounded as d grows. These are narrow lost-refund payments only; complete retained row prices, informative flag costs and actual core/gate leaf entropy are not declared paid, and no arbitrary non-flat-core or universal FEI bound is asserted.",
+    "hypotheses": [
+      "Finite uniform actual Boolean q, any control arity; quadratic bent base at specified all-zero point",
+      "Natural-log lost KL; complete reference marginalized, never conditioned on derivative support",
+      "Base d>=4; first paired-core exposure original d>=6; no arbitrary data-query heredity asserted",
+      "Stopping trees query only controls after the specified possible first exposure; actual terminal functions and costs retained"
+    ],
+    "statement_sha256": "ed3175c9a01e5ad114b4cdc9d0c777e11b38b74a60237f6b32badfabe15f915c",
+    "contributors": [
+      "fleet05/A066; prior two-bit boundary family credited to A073; consumed A100 Jensen interface"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261014T042048Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A067",
+        "verdict": "ACCEPT_AT_FULL_STATED_SCOPE_WITHOUT_REPAIR",
+        "reviewer_contributed_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\AUDIT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\out\\REVIEWS.json",
+        "independent_method": "New actual Boolean truth tables, physical influence, hierarchy Fourier sums and complete conditional likelihood grouping; full analytic reconstruction",
+        "source_claims_file_sha256": "9c285f2b6ec31bb4ab84b1117865bc761f395e1e8cbb5c45a1c838685ab9c526"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A067_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "The same core-discarding quotient retains a uniformly small local loss after an arbitrary first physical core query, without keeping new informative occupancy"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A073",
+      "A096",
+      "A100",
+      "A001",
+      "A085",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-PARTIAL-PRIVACY-TRANSFER-AND-EXPOSED-EVENT-BOUNDARY",
+    "version": 1,
+    "exact_statement": "For compatible subcube XOR masks q=q1*q2 on disjoint nonempty C,U,V,Y with U=U0 union U1 and V=V0 union V1, U1,V1 nonempty, every Boolean source g(C,U0,V0,Y) independent of U1,V1 has visible-edge conditional mask-disagreement probability at most theta=max(a,b,a+b-2ab)<=1/2, a=2^-|U1|,b=2^-|V1|. For the fixed hierarchy T=(T_Y,(T_C,(T_U,T_V))), Gamma_T(g)<=K I(g), K>=0, implies H(gq)<=Gamma_T(gq)<=max(12,(K+12theta)/(1-theta)) I(gq)<= (2K+12)I(gq), retaining its entire source reference. Fully exposed U can invalidate every uniform ancestral-to-final influence transfer: for t>=4, C={c},U={u},|V|=|Y|=t, q1=1-2*1{c=+,u=+},q2=1-2*1{c=+,V=all+},h=1-2*1{Y=all+},g=q1*h,f=gq=q2*h, the source sees only one exclusive coordinate and Gamma_T(g)<=7I(g), yet I(g)=1+2t2^-t,I(q)=1+t2^-t,I(f)=(3t+1)2^-t, so [7I(g)+12I(q)]/I(f) diverges. The final nonconstant core h remains and H(f)<=4I(f); this is a transfer obstruction, not a FEI disproof. The abstract Boolean edge budget also fails for norm-one real g=sqrt(2)*1{x=+} and single mask flip at x=-,z1=z2=+: I(g)=I(gq)=1/2,I(q)=3/4,theta=1/4,K=M=1 would require5/4<=5/6.",
+    "hypotheses": [
+      "Finite uniform cubes; actual Boolean signs and ordinary physical influences except explicitly marked normalized-real guard; entropy/code lengths in bits",
+      "Compatible global assignments for two subcube events; sequential flips/XOR includes intersection correction",
+      "One fixed complete singleton-leaf binary hierarchy shared by source, mask and output; actual core references retained",
+      "Partial-privacy sufficient condition requires at least one source-independent coordinate in EACH exclusive block; source is arbitrary on the other indicated coordinates",
+      "Paid-source Gamma<=K I is a conditional hypothesis; no construction of arbitrary paid references or same-constant recursion asserted",
+      "Cancellation family uses nonconstant point-mask core on an independent t-bit block and binary internal block trees; t>=4",
+      "Normalized-real guard uses spectral Dirichlet influence, not Boolean pivotal counts; its source and final both have unit L2 norm"
+    ],
+    "statement_sha256": "eaebf2e1dcbac52e3dd1b9f973df942d95583a470633eef85fb9a43fe49a7b0f",
+    "contributors": [
+      "fleet05/A070"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261014T034205Z-fleet05-A070-analytic-route-referee\\DERIVATION.md Sections2-4",
+    "proof_dependencies": [
+      {
+        "claim_id": "A069-SOURCE-BLIND-SHARED-EDGE-TRANSFER",
+        "version": 1,
+        "statement_sha256": "2e84fba67dffd8f7a2120cfc07da00b6dbde27ca49bf3d9e6e1724e52f4b9145",
+        "acceptance": "Independent A070 full-scope review this run; no repair",
+        "scope": "Abstract source-independent conditional-edge influence transfer"
+      },
+      {
+        "claim_id": "A069-BOOLEAN-MASK-REFUND",
+        "version": 1,
+        "statement_sha256": "aa1a04460873eb447b856faa415cf09754940fe50811ca0ab078f305faee0851",
+        "acceptance": "A070 stage3 independent acceptance",
+        "scope": "Complete hierarchy product subadditivity and W(q)<=12I(q)"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A067",
+        "verdict": "ACCEPT_AT_FULL_STATED_SCOPE_WITHOUT_REPAIR",
+        "reviewer_contributed_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\AUDIT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\out\\REVIEWS.json",
+        "independent_method": "New actual Boolean truth tables, physical influence, hierarchy Fourier sums and complete conditional likelihood grouping; full analytic reconstruction",
+        "source_claims_file_sha256": "0f77cf21bd56eddc9f743a57d905d1286e3e353889bdd381f2341e20aa1fae68"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A067_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered extension to arbitrary private-coordinate-dependent sources: fixed finite A pays7I(g)+12I(q)<=A I(gq), even with Gamma(g)<=7I(g)",
+      "Unregistered norm-one real extension of the Boolean conditional-edge influence comparison"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A069",
+      "A088",
+      "A094",
+      "A067",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A068-IDENTIFIED-DATA-INHERITED-REFERENCE-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For regular AND2 with constant quadratic orientations (+1,-1), identify x2=x1. The parent rank reference (1/4,2/5,1/10,1/4) pushes forward to (1/2,1/2), while the output is constant -1. Complete inherited-reference cost is one bit and output entropy and influence are zero. Thus this inherited cost is not universally bounded by K times output influence for any finite K. This does not refute FEI or an adaptive output reference.",
+    "hypotheses": [
+      "Uniform parent bits; entropy and costs in bits",
+      "The specified parent reference is pushed forward, not replaced by an optimized output reference"
+    ],
+    "statement_sha256": "d84ff00539b99fc4df83ecc104f4510f1180e7f8c819827f34b4cf953451682d",
+    "contributors": [
+      "fleet05/A068"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261013T234128Z-fleet05-A068-antichain-beyond-one-order\\REPORT.md",
+      "locator": "Section 6",
+      "certificate": "~\\brain_workers\\FEI100_20261011\\agents\\A068\\runs\\20261013T234128Z-fleet05-A068-antichain-beyond-one-order\\out\\collision.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A068-QUADRATIC-CONTEXT-RANK-REFERENCE",
+        "version": 1,
+        "scope": "Reference definition only; witness checked exactly"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A067",
+        "verdict": "ACCEPT_AT_FULL_STATED_SCOPE_WITHOUT_REPAIR",
+        "reviewer_contributed_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\AUDIT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\out\\REVIEWS.json",
+        "independent_method": "New actual Boolean truth tables, physical influence, hierarchy Fourier sums and complete conditional likelihood grouping; full analytic reconstruction",
+        "source_claims_file_sha256": "2104331152ea5831d410a848ab628ef784c66132d8c1b34f64607bf72e4e7d52"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_BY_A067_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered proposed universal inherited-reference cost <= K I after data identification"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A034",
+      "A070",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-TWO-SUBCUBE-COMPLETE-CELL-REFERENCE",
+    "version": 1,
+    "exact_statement": "For all finite disjoint uniform blocks X,Z, Boolean g(X), indicators A(X),B(X), and two fixed subcube indicators p(Z),q(Z) with arbitrary fixed-coordinate sets and assignments, put E=(Ap) XOR (Bq) or E=(Ap) OR (Bq), F=g(-1)^E. Assume P_Z(E(x,Z))<=1/4 for every x. With I_X,I_Z belonging to final F and Q_access=H(F)-E_Z H(F_Z), Q_access<=K I_Z+2I_X, K=4+log2(5)+2/ln(2)<19/2. Compatible assignments permit K=6+2/ln(2)<9. After contracting controls outside the two fixed sets, one row-independent normalized complete reference on every nonempty control subset uses at most five flat cells (four when compatible) with log-cardinality<=twice conditional mean degree. The combined final mask owns the core reserve once. Every actual core entropy is retained. If every actual F_z satisfies U(F_z)<=bI(F_z), b>=0, then H(F)<=K I_Z+(4+2b)I_X<=max(K,4+2b)I(F). In particular all actual cores of Fourier degree at most two give H(F)<=K I(F), with unbounded controller widths. No arbitrary core admission or arbitrary control-dependent seed is asserted.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; entropy in bits and ordinary physical influence",
+      "Seed and event-domain flags depend on X alone; two controller subcubes fixed globally, possibly overlapping, unequal, nested or incompatible",
+      "Final combined edit-fiber probability at most 1/4 for every core assignment; XOR or union-once editing",
+      "All actual conditional core entropies retained; U certificate required on every actual core for the FEI corollary; irrelevant controls contracted",
+      "Empty edits and empty contracted control block treated separately by continuity/trivial access zero"
+    ],
+    "statement_sha256": "5493c557299fde04cc5679be907f759f35d4b5e615687515fae1ef9cde5bef6e",
+    "contributors": [
+      "fleet05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T020120Z-fleet05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-BOUNDED-FIBER-TWO-EVENT-ACCESS-RESERVE",
+        "version": 1,
+        "scope": "Accepted A088 ownership/channel identities only; no bounded-cardinality assumption reused",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261013T222025Z-fleet05-A067-hypercontractive-refinement\\DERIVATION.md",
+        "acceptance_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261013T234248Z-fleet05-A088-booleanity-referee\\AUDIT.md"
+      },
+      {
+        "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+        "version": 1,
+        "scope": "Only terminal U corollary; independently accepted A088 and A070",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-fleet05-A067-hypercontractive-refinement\\REPORT.md"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A088",
+        "verdict": "HOLDS_AT_FULL_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T024038Z-fleet05-A088-booleanity-referee\\AUDIT.md",
+        "validation_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T024038Z-fleet05-A088-booleanity-referee\\out\\CHECK.json",
+        "method": "New explicit controller/cell partition, physical final spectra, exact reference cross entropy and direct independent resampling pairs; own prior arithmetic only; no other agent code",
+        "hash_convention": "canonical statement+hypotheses",
+        "scope": "Original exact hypotheses preserved; normalized-real diagnostic failures and signed conversion guard are not Boolean FEI refutations",
+        "registry_adoption": "UNVERIFIED"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A069",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-BOOLEAN-FLAG-FOUR-BRANCH-FINAL-REFERENCE",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean output F and every coordinate block Z, with alpha=P_spectral(S_Z nonempty), h2(alpha)<=2I(F). The coefficient two is asymptotically sharp for the full-block spectral flag on Boolean point signs. For two arbitrary fixed subcube indicators p(Z),q(Z) and four arbitrary Boolean cores h_ab(X) on a disjoint block, F(X,Z)=h_(p(Z),q(Z))(X) has no edit-fiber cap or source-independence requirement within this controller algebra. A single complete final joint reference, with at most five flat nonempty control cells and the actual final core marginal, has cost at most E_Z H(F_Z)+K I_Z(F)+2I_X(F), K=4+log2(5)+2/ln2<19/2. Compatible assignments permit K=6+2/ln2<9. Thus Q_access=H(F)-E_Z H(F_Z)<=K I_Z+2I_X. All actual terminals and their physical probabilities are retained; if each accessible core has H<=C I, H(F)<=K I_Z+(C+2)I_X<=max(K,C+2)I(F). Under U<=bI on actual cores use C=2+2b; degree-two actual cores give H<=KI. This covers source-dependent cancellation when source and multiplier are functions of the same two controller states and X, provided the resulting actual core branches are certified. It neither bounds ancestral source-plus-mask influence bills by final influence nor pays arbitrary control-dependent sources or a same-C universal induction. A normalized rational real degree-one output explicitly violates the flag and no-cap access extensions.",
+    "hypotheses": [
+      "All cubes finite and uniform; actual Boolean signs except explicitly identified normalized-real counterexample; entropy/reference costs in bits and ordinary physical influences",
+      "X and Z disjoint; every output control dependence factors through the TWO fixed subcube states; assignments/fixed sets arbitrary, including conflicts, nesting and full exposure",
+      "No final edit-density or source-independent private-coordinate hypothesis; inaccessible core branches excluded from the actual terminal average",
+      "Common reference chosen from final output before spectral realization; controls outside fixed-set union contracted; empty contracted block and zero spectral tail handled separately",
+      "Terminal entropy/influence certificate applies to every actual resulting branch, not only original source branches; retained core reserve 2I_X allocated once per complete control-reveal ledger"
+    ],
+    "statement_sha256": "92eacd157bc8b527dc2e8d38d2bdb5be1dfbf179105280ad82707f5c587c1948",
+    "contributors": [
+      "fleet05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261014T044841Z-fleet05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-TWO-SUBCUBE-COMPLETE-CELL-REFERENCE",
+        "version": 1,
+        "scope": "Flat-cell span/reference and cell cardinality/mean-degree proof only; former sparse-fiber/seed assumptions NOT reused",
+        "acceptance_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261014T024038Z-fleet05-A088-booleanity-referee\\AUDIT.md"
+      },
+      {
+        "claim_id": "A067-BOUNDED-FIBER-TWO-EVENT-ACCESS-RESERVE",
+        "version": 1,
+        "scope": "Exact physical restriction identity and tensorized real channel estimate; A088 independently accepted at scope"
+      },
+      {
+        "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+        "version": 1,
+        "scope": "Only conditional U/degree-two terminal corollary; A088 and A070 independently accepted at scope"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_VALIDATION_PASSED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered normalized-real extension of h2(P_spectral(S_Z nonempty))<=2I and the no-cap two-controller access bound"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A069",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  }
+]

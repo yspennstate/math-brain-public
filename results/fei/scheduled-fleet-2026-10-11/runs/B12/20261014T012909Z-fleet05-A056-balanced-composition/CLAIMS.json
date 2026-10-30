@@ -1,0 +1,51 @@
+[
+  {
+    "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+    "version": 2,
+    "exact_statement": "The v1 disjoint-core and priority-control theorem is retained. For a Boolean sign controller a(W), c=(1-a)/2, p=Ec, V=4p(1-p), and Boolean G(S,X),H(S,Y) on mutually disjoint uniform blocks W,S,X,Y, set F=cG+(1-c)H and d=P(G!=H). With phi(r)=r log2(1/r), Hplus(a)=sum nonempty phi(ahat(U)^2), A=1/(e ln2), B=3/ln2+2, shared conditional-mean Fourier vectors u,v, vG=1-||u||2^2, vH=1-||v||2^2 and sigma=sum shared-only |uT^2-vT^2|, Pi=H(F)-pH(G)-(1-p)H(H)<=d Hplus(a)+V[A(vG+vH+sigma)+B d]. If ||u||1,||v||1<=Lambda, Pi<=d Hplus(a)+[4A(1+Lambda)+B]Vd; coefficients are <11 for one shared bit and <13 for two. I(F)=pI(G)+(1-p)I(H)+dI(a). Given normalized finite-cost seed references, calibration of EVERY shared-only atom yields one normalized compatible root reference Q with D(PF||Q)=pD(PG||RGcal)+(1-p)D(PH||RHcal), and CE(PF,Q)=p CE(PG,RGcal)+(1-p)CE(PH,RHcal)+Pi. All local assertions survive physical coordinate restrictions after recomputation; inherited-reference reset payment and universal terminal FEI are not asserted.",
+    "hypotheses": [
+      "Finite independent uniform sign blocks W,S,X,Y; only S may occur in both branches",
+      "Branches and controller sign Boolean, with arbitrary output means; entropy in bits",
+      "Seed references normalized and positive on true support; every shared-only atom calibrated; remaining terminal conditional debt retained",
+      "No arbitrary-event conditioning; restriction claims concern actual uniform subcubes",
+      "Profile norm hypotheses required only for the stated constant admission; no all-dimensional absolute collision price or reset telescope"
+    ],
+    "statement_sha256": "aa373a7ecb8c3870c9c216e718ff60f0c6dc25b831038780b7179e289a16b7e3",
+    "contributors": [
+      "fleet05/A056"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A056\\runs\\20261014T012909Z-fleet05-A056-balanced-composition\\DERIVATION.md",
+      "retained_v1": "~\\brain_workers\\FEI100_20261011\\agents\\A056\\runs\\20261013T215801Z-fleet05-A056-balanced-composition\\PROOF.md"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+        "version": 1,
+        "role": "retained disjoint and priority assertions only; new scalar and reference formulas proved directly"
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A056-TWO-BRANCH-COMMON-CONTROL-TRANSPORT",
+        "version": 1
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A057",
+      "A058",
+      "A059",
+      "A091",
+      "A090",
+      "A097",
+      "A094",
+      "A013",
+      "A095",
+      "B20"
+    ]
+  }
+]

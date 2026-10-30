@@ -1,0 +1,48 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T010330Z-fleet01-B18-a087-terminal-potential-review",
+  "stream": "B18",
+  "primary_packet_id": "A087",
+  "packet_ids": ["A087"],
+  "attempt_id": "A087-TERMINAL-POTENTIAL-REVIEW-1",
+  "attempt_counter": 1,
+  "claim_versions": [
+    "B19-A094-FULL-ORDER-SWAP-CREDIT-BOUNDARY@1",
+    "B20-A096-TERMINAL-COMPENSATION@1",
+    "B18-A087-COHERENT-TREE-LEDGER@1"
+  ],
+  "gap_versions": ["G-TERMINAL-POTENTIAL-COHERENCE@1"],
+  "source_versions": {
+    "contract_blob": "e6e014bc066a2f8b0454a1944ef6e03b969a5690",
+    "protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "packet_status_blob": "1beba565780ac4c3c1f28a00b20ca4d5e4e59ebb",
+    "claim_registry_blob": "bceaed2294e4dab574d363750858c6d3866137f8",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96",
+    "B05_report_blob": "0f097b74548e4be301b39a918774c4465638b2df",
+    "B19_report_blob": "8281ad83ec178bd98a8a9cbfac192959d7d996bd",
+    "B20_telescope_blob": "752a1bb2fd0069a1cfadda79e0a605ef088ea656"
+  },
+  "prior_status": "B19 full L+Q sign and B20 terminal telescope were contributor-proved; fresh review pending. Universal terminal-budget target was displayed without a complete tree proof.",
+  "new_status": "B19 phase/full sign independently accepted at exact point-defect and q4 tensor q5 scope; B20 q_n telescope independently accepted. First universal-tree gap identified: D is split-specific and D(f_l) is undefined at arbitrary leaves. A coherent-potential tree ledger is proved pending fresh review.",
+  "mathematical_delta": "Converted the pending phase proof into independently checked evidence and separated a valid q_n identity from the first ill-posed universal terminal line; supplied the exact potential/influence telescope needed for a nonreusing repair.",
+  "acceptance_evidence": [
+    "RESTRICTION_REVIEW.md",
+    "RESTRICTION_GAPS.json",
+    "TREE_LEDGER_REPAIR.tex",
+    "independent_phase_reconstruction.py",
+    "CHECK.out"
+  ],
+  "remaining_obstacle": "Define one coherent potential for arbitrary Boolean descendants, then prove local-credit and terminal bounds against the exact influence ledger. The current D packet depends on a chosen split.",
+  "consumers": ["A089", "A090", "A094", "A096", "A097"],
+  "reviewers": ["A094", "A085"],
+  "next_action": "A089 should repair the terminal functional on a nontrivial closed family; A090 should reconstruct the resulting full tree proof including coordinate nonreuse and terminal endpoints.",
+  "delivery": {
+    "canonical_saved": "DELIVERED_AT_069a5f38e3ff32e33b49ca0b70db956be31dc6a2",
+    "brain_mirrored": "DELIVERED_AT_c396d90e35460022c04acac2de3a5c61bc4b8fa5",
+    "readback_verified": "ALL_NINE_INITIAL_BLOBS_MATCHED_IN_BOTH_REPOSITORIES",
+    "independent_review": "B19_AND_B20_CHAIN_ACCEPTED_BY_A087; B18_REPAIR_PENDING_FRESH_REVIEW",
+    "native_ingestion": false
+  },
+  "full_fei_status": "OPEN"
+}

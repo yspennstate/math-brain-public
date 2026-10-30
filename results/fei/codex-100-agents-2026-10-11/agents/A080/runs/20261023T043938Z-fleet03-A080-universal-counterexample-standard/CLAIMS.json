@@ -1,0 +1,123 @@
+{
+  "run_id": "20261023T043938Z-fleet03-A080-universal-counterexample-standard",
+  "stream": "B16",
+  "claims": [
+    {
+      "claim_id": "A084-SAME-CREDIT-TWO-CORE-CONTINUATION",
+      "version": 1,
+      "exact_statement": "Let h:{-1,1}^6->{-1,1} be negative exactly on the bit masks {0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor 1), and g be negative exactly on {0,1,2} on six physical bits; bit 1 means sign -1. Retain the complete Boolean F_plus=J(-1,+1,g,g,g,g), S=4I-H with entropy in bits, and its supplied credit A0=-S(F_plus)>0. For any chosen pair of the four remaining disjoint physical cores, the exact conserved-credit hull over every allowed adaptive physical query and stopping policy within that pair has root R=A0. Further, after ANY prefix in one core using A072's original allocation a_b=R1(child_b)+a-mean R1, its actual incoming credit already dominates R2 at every cut, even when the second core is selected using the observed prefix. Thus all such two-core continuations require zero additional outside transfer for every real supplied initial old net debit D>=0 (incoming credit A0+D). All signed old debit labels, nonnegative credit-owner labels, other complete terminals and the outside donor books are preserved. On any finite restriction DAG the underlying account theorem holds for arbitrary nonnegative normalized real conditional weights, including zero-weight faces after removing unreachable outcomes: the exact all-policy requirement is R(v)=max(0,-S(v),max_query sum_b w_b R(child_b)). The physical Boolean application here uses only weights 1/2.",
+      "hypotheses": [
+        "The specified actual Boolean family and physical disjoint blocks; the other two whole cores remain present.",
+        "Original credit is already supplied and booked at the source terminal; no unused donor is asserted or newly renewed.",
+        "An optional initial prefix uses the actual source one-core allocation; after admission, only the chosen two cores may be queried.",
+        "All incoming credit-owner labels are nonnegative; signed old debit labels have total S+a>=0; refunds may be signed.",
+        "The general weighted-DAG statement assumes finite acyclic restriction states and fixed real S values; it makes no biased-influence identity claim."
+      ],
+      "statement_sha256": "55c7c1651b72ecb1d203f529f289ad9c72fe6fe3a29b6d166c3bc665129dc203",
+      "contributors": [
+        "A084"
+      ],
+      "proof_source": [
+        "PROOF.md",
+        "code/joint.py",
+        "code/prefix.py",
+        "code/arithmetic.py",
+        "out/JOINT_CASES.json",
+        "out/PREFIX_CUTS.json"
+      ],
+      "proof_dependencies": [
+        {
+          "claim_id": "A072-OTHER-CORE-STOPPING-CREDIT-HULL",
+          "version": 1,
+          "statement_sha256": "3232af6b6b8937dc62c1e50b57a212def54049aec44fe6ad145148fa912feb10",
+          "acceptance": "HOLDS_SUBSTATEMENT_INDEPENDENTLY_RECONSTRUCTED",
+          "scope": "Single-core S/R profiles and the actual source allocation; all24 source profiles reproduced. This does not independently review every other source financial claim."
+        }
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080",
+          "verdict": "HOLDS_AT_SUBSTATEMENT_SCOPE",
+          "source_claim_id": "A084-SAME-CREDIT-TWO-CORE-CONTINUATION",
+          "source_version": 1,
+          "source_statement_sha256": "55c7c1651b72ecb1d203f529f289ad9c72fe6fe3a29b6d166c3bc665129dc203",
+          "scope": "All432 complete S/R profile identities,2520 actual saved allocation rows, exact prime-log Bellman maxima and conserved-label scalar theorem independently reconstructed",
+          "not_reviewed": "All72 original pre-pair source-prefix cuts and earlier ancestry/donor reach bookings; full-source acceptance remains pending",
+          "repair_supplied": false,
+          "independence": "Fresh direct outer Fourier interpolation, independent fixed-point intervals, exact prime factorization identities; no A084 executable imported",
+          "artifacts": [
+            "agents\\A080\\runs\\20261023T043938Z-fleet03-A080-universal-counterexample-standard\\out\\REVIEW.json",
+            "agents\\A080\\runs\\20261023T043938Z-fleet03-A080-universal-counterexample-standard\\code\\ledger.py"
+          ]
+        }
+      ],
+      "status": "AUTHOR_PROOF_EXACT_FINITE_CERTIFICATE_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [],
+      "first_unproved_line": "None within the stated finite-family/analytic-account theorem. Universal extension: enabling a third physical core after credit already allocated jointly, and arbitrary-core admission, remain unpaid.",
+      "next_consumers": [
+        "A072",
+        "A089",
+        "A074",
+        "A092",
+        "A075",
+        "B17",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A080-FULL-FOUR-CORE-SAME-CREDIT-TENSOR",
+      "version": 1,
+      "exact_statement": "Let g be negative exactly on{0,1,2} in six uniform bits, h negative on{0,1,2,4,8,16,32,6,17,40}, J(x)=-h(x xor1), and F=J(-1,+1,g,g,g,g) on four disjoint cores. With base2 entropy and S=4I-H, the FULL physical stopping-credit hull R4(F) equals -S(F), between2857328/10^8 and2857329/10^8 bits. The original supplied credit pays ALL adaptive physical reveal/stopping policies in all four remaining cores, without new donor flow. Every nonroot restriction reachable by any of six original two-core exact least-envelope allocation rules retains credit exceeding the full four-core requirement by more379/100000 bits; if both cores have been touched, the margin exceeds63/10000 bits. Any real additional original total debit D>=0 shifts all inherited credits by D. Signed booked labels and nonnegative owner labels are conserved, including zero-total-debit boundaries. For any disjoint Boolean factors and fixed rate K, the full physical hull satisfies R_K(product f_i)<=sum R_K(f_i); hence for EVERY integer t>=1, R4(F tensor t)=t[-S(F)], while H(F tensor t)/I(F tensor t)=H(F)/I(F), strictly between4 and5. No universal FEI bound or unbounded Boolean counterfamily is asserted.",
+      "hypotheses": [
+        "Uniform finite Boolean sign functions; entropy in bits; all physical influence counted",
+        "Fresh disjoint six-bit cores; actual Fplus outer table as stated; arbitrary adaptive queries and stopping among its four remaining cores",
+        "Original two-core allocator uses exact least pair hull and equal surplus distribution, rather than a greedy current-slack reset or arbitrary past allocator",
+        "Initial credit is supplied; original spent donor, booked balance, stopped full siblings and parked reserve remain fixed",
+        "Tensorization requires disjoint physical supports; source ancestry before Fplus is not independently accepted"
+      ],
+      "statement_sha256": "653809b55e675231cb828cfc69dc77eee4aee9c60a72b86a0b96113d0c7ad22d",
+      "contributors": [
+        "A080"
+      ],
+      "proof_source": [
+        "agents\\A080\\runs\\20261023T043938Z-fleet03-A080-universal-counterexample-standard\\PROOF.md",
+        "agents\\A080\\runs\\20261023T043938Z-fleet03-A080-universal-counterexample-standard\\out\\SPECTRUM_VALIDATION.json",
+        "agents\\A080\\runs\\20261023T043938Z-fleet03-A080-universal-counterexample-standard\\out\\LEDGER_VALIDATION.json",
+        "agents\\A080\\runs\\20261023T043938Z-fleet03-A080-universal-counterexample-standard\\out\\INDEPENDENT_REPLAY.json"
+      ],
+      "proof_dependencies": [
+        "Elementary Fourier product/physical pivotal identities, independently reconstructed",
+        "Finite superharmonic envelope and conserved-label induction",
+        "A084 exact two-core rule independently reconstructed, at the scoped source version below"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A080 (author)",
+          "verdict": "AUTHOR_PROOF_EXACT_CERTIFICATE_PASS",
+          "scope": "Complete20736 profile spectrum,96768 representative rows,858 inherited prefixes, standalone241920 physical-row replay, tensorization proof",
+          "independent_external_review": "PENDING",
+          "formal_lean": "NOT_ATTEMPTED; no formal certification claimed"
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "Need for fresh donor credit at the third/fourth-core admission in this exact saved Fplus fixture under its original two-core allocator",
+        "An unbounded FEI disproof from disjoint tensor powers of this finite negative-rate4 endpoint"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A071",
+        "A072",
+        "A074",
+        "A075",
+        "A084",
+        "A089",
+        "A092",
+        "B16",
+        "B20"
+      ]
+    }
+  ]
+}

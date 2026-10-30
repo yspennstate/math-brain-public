@@ -1,0 +1,49 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T064919Z-fleet01-B19-b01-nested-activation-review-a094",
+  "stream": "B19",
+  "packet_id": "A094",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "claims": [
+    {
+      "claim_id": "B19-A094-B01-NESTED-LEDGER-REVIEW",
+      "version": "v1",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_DECLARED_SCOPE",
+      "label": "PROVED_REVIEWED",
+      "statement": "B01's retained-singleton one-layer inequality and all-depth fixed-core nested-activation G ledger are correct with the submitted constants 320 and C_chain<10324.",
+      "target_claims": [
+        "B01-A003-RETAINED-SINGLETON-TRANSFER-v1",
+        "B01-A003-NESTED-ACTIVATION-LEDGER-v1"
+      ],
+      "review_artifacts": ["REPORT.md", "SECOND_CHAIN_CHALLENGE.md", "INDEPENDENT_CHECK.py", "CHECK.out"],
+      "limitations": [
+        "One terminal core is fixed through the chain.",
+        "Changing overlapping coherent cores remain open."
+      ]
+    },
+    {
+      "claim_id": "B19-A094-B01-CLASS-OVERLAP-CORRECTION",
+      "version": "v1",
+      "status": "PROVED_SCOPE_CORRECTION",
+      "label": "KNOWN_OVERLAP",
+      "statement": "The B01 nested-parity FEI endpoint is valid but already follows more strongly from the accepted B05 separated-hierarchy theorem, which gives H<35.928I on the same class instead of the submitted H<20650I.",
+      "source": "B19 accepted B05 review at canonical commit 9c71a34eac7ec91cf058ae85e1d066fee4ebedb9",
+      "effect": "Accept mathematical truth; do not count the class as a new campaign frontier or best constant."
+    },
+    {
+      "claim_id": "B19-A094-NESTED-LEDGER-CHECK",
+      "version": "v1",
+      "status": "INDEPENDENT_COMPUTATION_PASS",
+      "label": "NUMERICAL_CORROBORATION",
+      "statement": "Independent reconstruction passed 65,536 scalar, 1,720 direct activation, and 2,377 hierarchy cases with no failures.",
+      "artifacts": ["INDEPENDENT_CHECK.py", "CHECK.out"]
+    },
+    {
+      "claim_id": "FULL-FEI",
+      "version": "campaign-current",
+      "status": "OPEN",
+      "label": "OPEN",
+      "statement": "No universal payment for changing overlapping coherent cores is established."
+    }
+  ]
+}

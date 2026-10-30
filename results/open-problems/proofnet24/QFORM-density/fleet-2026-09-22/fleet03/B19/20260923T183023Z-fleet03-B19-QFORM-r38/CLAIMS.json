@@ -1,0 +1,34 @@
+{
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T183023Z-fleet03-B19-QFORM-r38",
+  "full_target_status": "OPEN",
+  "continuity_status": "OPEN_SEPARATE",
+  "valid_target_counterexample": null,
+  "claims": [
+    {
+      "id": "QFORM-R2-PHYSICAL-TWOROW-TRANSVERSE-COMPILER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For a literal physical cross block C=A[H,L] with |H|=m>=2 and s1(C)s2(C)>=sigma, some literal row pair T has area S>=sigma/sqrt(binomial(m,2)). If rho=||C[H\\T,L](I-Pi_row(C[T,L]))||F>0, the full ambient law has a continuous C0 density with ||p_Q||infinity <=3*2^(5/6)(S rho)^(-1/3). The proof uses the grouped projected-crossing theorem when all transverse row marginals are <=1/2, and otherwise a literal three-row exact-rank-three crossing." 
+    },
+    {
+      "id": "QFORM-R5-R2-TRANSVERSE-PAYMENT-v1",
+      "status": "PROVED_TARGET_LEVEL_PAYMENT",
+      "statement": "In the fleet01/B20 finite-core rank-two branch |H|<=124, s1(A[H,L])s2(A[H,L])>1/480, if the selected literal two-row span has transverse Frobenius residual at least 1/64 then ||p_Q||infinity<743 and the density is continuous C0."
+    },
+    {
+      "id": "QFORM-R5-R2-FROBENIUS-COLLAR-v1",
+      "status": "PROVED_SUPPORTING_REDUCTION",
+      "statement": "Every still-unpaid state in that rank-two branch admits a literal row pair T with sqrt(det(C[T,L]C[T,L]^T))>1/(480*sqrt(7626)) and ||C[H\\T,L](I-Pi_row(C[T,L]))||F<1/64."
+    }
+  ],
+  "partner_application": {
+    "account": "fleet04",
+    "slot": "B19",
+    "source_run": "20260922T222052Z-fleet04-B19-QFORM-r2",
+    "statement": "In its exact-null-coloop residual-diffuse scope, ||p_Q||infinity<34 sqrt(log(e/D_res)); hence e^-8<=D_res<=1 gives ||p_Q||infinity<102. No extension to the finite-core collar is inferred."
+  },
+  "first_unpaid_implication": {
+    "id": "QFORM-FINITECORE-PHYSICAL-R2-FROBENIUS-COLLAR-PAYMENT-v1",
+    "scope": "Pay the literal two-row anchored Frobenius-near-rank-two physical cross collar while retaining its nonzero tail, arbitrary same-bank curvature, full operator residual and all extra spectrum, or route it quantitatively to an already-paid grouped/rank-one/two-source branch without treating the small coefficient tail as a small random perturbation."
+  }
+}

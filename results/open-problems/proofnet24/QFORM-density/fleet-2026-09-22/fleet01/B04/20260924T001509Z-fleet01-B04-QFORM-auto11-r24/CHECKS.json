@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T001509Z-fleet01-B04-QFORM-auto11-r24",
+  "status": "DETERMINISTIC_ARITHMETIC_CHECKS_ONLY",
+  "checks": {
+    "C_ov2": 18.82331388097627,
+    "localized_overlap2_delta": 0.015625,
+    "localized_overlap2_j": 0.006944444444444444,
+    "localized_density_bound": 99.09149694560317,
+    "H1": 7.829376757708329,
+    "coupling_packet_min_Z1": 0.8888888888888888,
+    "coupling_smallball_constant": 8.063346501398827,
+    "curvature_packet_offdiag_frobenius_min": 34.13333333333333,
+    "curvature_randomcut_Z1_min": 291.2711111111111,
+    "curvature_smallball_constant": 1.8951903621117363,
+    "partner_walsh_pair_block": [[0,1],[1,0]],
+    "partner_walsh_pair_J2_exact": "27/16",
+    "partner_same_matrix_overlap2_bound": 17.63155480921866,
+    "stress_epsilon": 0.0078125,
+    "stress_D_exact": "65537/16384",
+    "stress_m4_bound": 8.203958346289575,
+    "stress_limit_bound": 7.914183297750072
+  },
+  "analytic_identities_checked": [
+    "det A[S+{i},S+{j}] = det(B) C_ij - u_i^T adj(B) u_j",
+    "|det B| <= 5 delta^2 under |a|,|b|<=delta and |c|<=2delta",
+    "||adj(B)||_op <= 3 delta under the same hypothesis",
+    "random labelled cut captures one quarter of ordered off-diagonal Frobenius mass in expectation"
+  ],
+  "note": "These checks verify constants and exact finite identities; they are not an independent proof review."
+}

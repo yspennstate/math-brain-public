@@ -1,0 +1,95 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment_id": "FEI-20260922-fleet01-B04",
+  "run_id": "20260922T104606Z-fleet01-B04-fei",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "id": "FEI-B04-SIGNED-PACKET-BOUNDARY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For fixed genuine Boolean restrictions G0,G1 and selector bias t down to 0, Delta Htilde(t)=4 d t log2(1/t)+t(4d/ln2+Lambda0(u,v))+O_{u,v}(t^2 log(1/t)), with Lambda0 equal to the displayed finite signed support functional and with zero limiting coefficients handled separately.",
+      "scope": "Finite Boolean gate, fixed residual product biases and fixed restrictions; one selector bias tends to zero.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4ccd51ad517f425a529daa52c3352905b86ea69d",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+          "premise": "exact packet variables and Delta Htilde=B+JS identity"
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "92c75e9bcd2fe9c5dc2bedc8a032b31b4afb5484",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet01/B12/20260922T090347Z-folded-js-shannon/REPORT.md",
+          "premise": "independent exact packet entropy identity"
+        }
+      ],
+      "verification_provenance": "self-derived analytic proof in REPORT.md; no independent review claimed"
+    },
+    {
+      "id": "FEI-B04-GATE-DEFECT-BOUNDARY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If the potential has the finite one-sided derivative data specified in REPORT.md, then D_Gamma(G;t)=D0+t F0+o(t), where F0=(D1-D0)+J_Gamma(q0,q1)+d gamma0-8d-Lambda0(u,v). The corresponding t->1 formula follows by swapping the children. The sign of F0 gives a collar/refutation criterion when D0=0.",
+      "scope": "Same gate setting, under the stated finite one-sided potential derivative hypotheses.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B04-SIGNED-PACKET-BOUNDARY-v1"
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4ccd51ad517f425a529daa52c3352905b86ea69d",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+          "premise": "exact child-defect gate recursion"
+        }
+      ],
+      "verification_provenance": "self-derived analytic proof in REPORT.md; no independent review claimed"
+    },
+    {
+      "id": "FEI-B04-CONSTANT-CHILD-BOUNDARY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If the limiting child is constant, then E_const(d)=-8d+4d^2 log2(4d^2)-(1-2d)^2 log2((1-2d)^2), and for a symmetric endpoint-normalized potential D_Gamma(G;t)=t[D_Gamma(G1)+Gamma(d)+E_const(d)]+o(t); the endpoint slope cancels exactly.",
+      "scope": "Constant/nonconstant selector boundary with genuine Boolean nonconstant child.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B04-GATE-DEFECT-BOUNDARY-v1"
+        }
+      ],
+      "verification_provenance": "exact specialization proved in REPORT.md; no independent review claimed"
+    },
+    {
+      "id": "FEI-B04-BOUNDARY-TIGHT-SIGN-v1",
+      "status": "OPEN",
+      "statement": "For the exact current shaped candidate or a replacement candidate, prove F0,F1 nonnegative on every tight lower-dimensional boundary pair, or construct a genuine Boolean restriction pair with negative boundary coefficient. First subcase: determine the sign of D_Gamma(G1)+Gamma(d)+E_const(d) for all constant/nonconstant boundaries.",
+      "scope": "Current Path A all-gate potential programme.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B04-GATE-DEFECT-BOUNDARY-v1"
+        },
+        {
+          "mode": "uses_premise",
+          "claim_id": "FEI-B04-CONSTANT-CHILD-BOUNDARY-v1"
+        }
+      ],
+      "verification_provenance": "unpaid implication"
+    }
+  ],
+  "correction_scope": {
+    "consumed": "FEI-DELTA-20260922-14-SAFE-CONE-SELECTOR-GAP",
+    "effect": "The new boundary formula retains child defects explicitly and does not use the challenged local-slack deletion."
+  },
+  "partner_status": {
+    "assigned_partner": "fleet02/B04",
+    "current_partner_report_available_at_prewrite_snapshot": false,
+    "compatible_other_account_result_consumed": "fleet02/B12 / 20260922T091546Z-uniform-selector-debit-and-safe-lift"
+  },
+  "candidate_status": "No universal candidate proved; historical quadratic 0.337/0.34 repairs are not used as live premises.",
+  "independent_full_review": false
+}

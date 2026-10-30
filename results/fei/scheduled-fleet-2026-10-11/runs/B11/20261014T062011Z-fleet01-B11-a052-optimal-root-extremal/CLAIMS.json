@@ -1,0 +1,28 @@
+{
+  "schema": "fei-claims/2",
+  "claims": [
+    {
+      "claim_id": "B11-A052-OPTIMAL-ROOT-EXTREMAL",
+      "version": "v1",
+      "exact_statement": "For every genuine Boolean f and coordinate i, the root signed-KL row satisfies K_i^(0) <= (2/ln 2) min{fhat(empty)^2,fhat({i})^2}, with optimal coefficient. Consequently universal GU for (4,3/4) follows if D_+(f)+(2/ln 2)M_1(f) <= 4I(f)+(3/4)U(f) holds for every tensor-prime Boolean f with positive frozen residual.",
+      "hypotheses": [
+        "finite uniform Boolean cube",
+        "signed Boolean convolution normalization C_empty=0",
+        "positive-residual restriction only for the sufficient aggregate"
+      ],
+      "statement_sha256": "9c6f97fc758420f7a8acf96cfe23e24bd9c30c0fef70b91f7731206c3e20af85",
+      "contributors": ["fleet01/B11"],
+      "proof_source": "OPTIMAL_ROOT_EXTREMAL.tex",
+      "proof_dependencies": [
+        "B07-A031-GU-TENSOR-PRIME-v1 exact local identity and tensor additivity",
+        "source-reviewed U-universal Theorem G and GU restriction induction"
+      ],
+      "review_records": [],
+      "status": "PROVED_REDUCTION_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": "B07-A031-ROOT-KL-PAYMENT-v1 coefficient-four root estimate at the scalar-payment scope",
+      "refutes": null,
+      "first_unproved_line": "The all-dimensional nonempty-row aggregate (E) on tensor-prime positive-residual Boolean sources.",
+      "next_consumers": ["A054", "A055", "A090", "A094", "A099"]
+    }
+  ]
+}

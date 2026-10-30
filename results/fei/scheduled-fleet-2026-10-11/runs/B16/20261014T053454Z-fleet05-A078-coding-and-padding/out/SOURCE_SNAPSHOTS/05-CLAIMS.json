@@ -1,0 +1,42 @@
+[
+  {
+    "claim_id": "A078-PARITY-CODE-BASIS-TENSOR-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on the uniform m-cube, every surjective parity-input map A:F2^N->F2^m, input translation b and output parity t, F(x)=(-1)^(t.x)f(Ax+b) is actual Boolean, H(F)=H(f), and I(F)=sum_j[q_f(v_j) if t_j=0 else 1-q_f(v_j)]>=M(f), where q_f(v)=P[f(z)!=f(z+v)] and M(f) is the minimum basis sum of min(q_f(v),1-q_f(v)). Equality is attained with N=m. For disjoint Boolean tensor factors M adds exactly, so redundant full-rank parity padding cannot improve beyond the best invertible modulated seed transform and cannot amplify tensor ratios beyond the largest optimized seed ratio. Every redundant physical column can be peeled at zero entropy decrease while retaining an invertible actual Boolean terminal core and exactly subtracting its queried influence. In particular every full-rank parity code with any output modulation of every disjoint point-defect tensor with seed dimensions >=2 satisfies H<=4I. A point defect with r nonzero systematic auxiliaries each replaced by fresh majority-three has dimension m+3r, H=H(f_m)+4r*2^(-m), I=(2m+3r)*2^(-m), mean=1-2^(1-m), and H<=4I.",
+    "hypotheses": [
+      "Uniform independent physical bits and Boolean sign seed(s)",
+      "A full row rank; all physical code columns counted",
+      "Entropy in bits; no claim for rank-deficient maps with spectral collisions",
+      "Tensor factors on disjoint physical blocks",
+      "Nonlinear padding uses disjoint balanced majority-three gadgets and nonzero auxiliary masks",
+      "Zero-entropy/zero-influence factors handled without ratio division"
+    ],
+    "statement_sha256": "75bd1f90f7574db2e57afefe826ffc6220c5803811ad9c9d4a9b9291fc1eb747",
+    "contributors": [
+      "A078/fleet05"
+    ],
+    "proof_source": "CODE_PADDING_PROOF.md; BOOLEAN_CODING_PADDING.tex; PADDING_ENERGY.md; code/check.py; code/check_padding.py; out/validation.json; out/padding.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACT_CHECKED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "A claim that redundant full-rank parity padding can lower influence below the best invertible parity transform with output modulation",
+      "A claim that parity mixing of disjoint tensor factors can amplify beyond their optimized H/M ratios"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A032",
+      "A033",
+      "A079",
+      "A080",
+      "A002",
+      "A030",
+      "A052",
+      "A092",
+      "A088",
+      "A090",
+      "B20"
+    ]
+  }
+]

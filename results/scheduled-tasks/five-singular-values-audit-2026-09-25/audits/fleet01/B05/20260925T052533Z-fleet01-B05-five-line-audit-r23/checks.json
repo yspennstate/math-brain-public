@@ -1,0 +1,37 @@
+{
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "run_id": "20260925T052533Z-fleet01-B05-five-line-audit-r23",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "findings": {
+    "C08": {
+      "line": 224,
+      "status": "GAP_REPAIRABLE_LOCAL",
+      "summary": "log p(y) is used without treating p(y)=0",
+      "repair": "if p(y)=0 the bound is trivial; otherwise take logarithms"
+    },
+    "C09": {
+      "line": 398,
+      "status": "GAP_REPAIRABLE_LOCAL",
+      "summary": "square-density formula needs a version at z=v",
+      "repair": "state formula for z!=v and set p_T(v)=0"
+    }
+  },
+  "known_rechecked": [
+    "C01",
+    "C02",
+    "C03"
+  ],
+  "peer_search_after_derivation": {
+    "queries": [
+      "p(y)=0 log p(y) five-singular-values-audit",
+      "p_T(v)=0 line 398 five-singular-values-audit"
+    ],
+    "matching_results": 0,
+    "interpretation": "No indexed matching peer artifact found; this is not evidence that no peer has observed the issue."
+  },
+  "new_theorem_level_defect": false,
+  "rendered_pdf_comparison": "UNCHECKED",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

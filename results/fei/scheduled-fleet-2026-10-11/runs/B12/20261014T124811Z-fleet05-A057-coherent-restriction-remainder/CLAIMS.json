@@ -1,0 +1,134 @@
+[
+  {
+    "claim_id": "A091-SHARED-ACTIVATION-REPEATED-FALLBACK-PAYMENT",
+    "version": 1,
+    "exact_statement": "On every finite uniform cube let C_j(z) be mutually exclusive Boolean indicators, T=sum C_j, p_j=E C_j, t=E T, and let independent Boolean cores u_j occupy pairwise disjoint data blocks independent of z and of the physical Boolean fallback G. Let Y be a fresh independent fair bit and F=G+Y sum C_j(u_j-G), retaining ONE actual G on both children. If G is an exclusive selector of disjoint independent cores with Z=sum a_l Var(g_l), define the original physically merged fine selector reserve R=sum eta(q_label)Var(core_label), kappa=R-E R_child, m_j=E u_j, n=E G, V=1-n^2, h=sum C_j(m_j-n), h0=E h, and k_t=eta(1-t/2)-eta(1-t)/2. Then kappa=sum p_j Var(u_j)/2+k_t Z, actual queried influence d=sum p_j(1-m_j n)/2, and B_Y-kappa=Var(h)/2+Phi((n+h0/2)^2,(h0/2)^2)+[t(1-t)/2+Phi((1-t/2)^2,(t/2)^2)]V-k_t Z<=8d. Consequently D_Y H-kappa<=(8+2/ln2)d, with all biases, constants and t endpoints allowed, after every actual preceding restriction preserving this decomposition. For a private point-priority prefix and disjoint private point-priority fallback, arbitrary DATA-only histories followed by Y and arbitrary private controller/data continuation obey the same stopped fine U/R theorem as accepted A059 v2 at Kctrl=6+(5+ln10)/ln2<17, retaining actual unresolved H-U-R and resolved boundary<=I_leaf/ln2. Private controller queries before Y and arbitrary inherited U are not paid by this claim.",
+    "hypotheses": [
+      "Finite uniform physical cube, Boolean signs, all entropy in bits; eta(0)=0 and Phi(a,b)=eta(a)+eta(b)-eta(a+b).",
+      "The C_j may have arbitrary internal controller overlap but are mutually exclusive; their physical controller block is disjoint from all selected core and fallback blocks.",
+      "Selected u_j data blocks and all fine selected fallback g_l blocks are mutually disjoint independent physical cubes. Descriptions of the same physical nonconstant core must be merged before defining R.",
+      "Y remains unqueried, independent and fair at the node. Preceding core-data and other physical restrictions must preserve this decomposition. No independent copies of G are introduced.",
+      "The stopped graft uses a point-priority prefix and private point-priority fallback with a constant final default; no private prefix-controller queries occur before Y, while arbitrary actual DATA exposure may precede Y.",
+      "All stopping costs are literal actual function costs. U=sum q[H(core)-eta(mean^2)] remains an inherited bill; R funding is separate. No bound on generic unresolved profiles or selected-core data overlap is asserted."
+    ],
+    "statement_sha256": "ebab99d0d60bf031dd5c29d8fe6b5b09c7dba1a33372afd9c6511af0c3e7bae5",
+    "contributors": [
+      "A091"
+    ],
+    "proof_source": {
+      "run_id": "20261014T094139Z-fleet05-A091-composition-referee",
+      "path": "PROOF.md",
+      "locators": "Equations (1)-(4), full physical-frequency decomposition and stopped graft",
+      "validation": [
+        "out/CHECK.json",
+        "code/check.py"
+      ],
+      "unpaid_interface": "NEXT_IDENTITY.md; out/NEXT_CHECK.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A059-INTERRUPTED-PRIORITY-STOPPING-PAYMENT",
+        "version": 2,
+        "scope": "Independently accepted here; private controller continuation only"
+      },
+      {
+        "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+        "version": 1,
+        "scope": "Previously independently accepted A091 signed DATA lift"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A057 fleet05 B12",
+        "date_utc": "2026-10-14T13:04:49.497582+00:00",
+        "verdict": "ACCEPT_AT_EXACT_STATED_SCOPE_WITHOUT_REPAIR",
+        "source_run": "20261014T124811Z-fleet05-A057-coherent-restriction-remainder",
+        "proof": "REVIEW_A091.md: independent physical sectors, original merged G-label release, scalar packet proof, rate8 and complete scoped stopping graft",
+        "validation": "out/CHECK.json;6064 physical local evaluations verify source Y erasure, merged release and price with all declared biases including144 nonflat data-query histories",
+        "repair_supplied": false,
+        "source_statement_sha256": "ebab99d0d60bf031dd5c29d8fe6b5b09c7dba1a33372afd9c6511af0c3e7bae5",
+        "scope": "Complete source statement only; no private-before-Y payment retroactively added."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_EXACT_STATED_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A059",
+      "A087",
+      "A030",
+      "A028",
+      "A064",
+      "A065",
+      "A090",
+      "B19",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A057-PRIVATE-BEFORE-SHARED-ACTIVATION-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every finite uniform physical cube, let Y be fresh fair, A a private point indicator of probability q=2^-r with r>=1, and F=(1-Y)G+Y[A u+(1-A)H], where H=sum C_j v_j+E G, C_j exclusive indicators, E=1-sum C_j, all selected core blocks u,v_j,G disjoint independent and disjoint from controls. There is one actual G on both inactive and failed active histories. A queried A coordinate has d=q(1-Eu EH)/2 and full physical erasure B_A<=(12-4q)d<=12d, in bits. With the original merged fine-label reserve R and kappa=R_parent-E R_child>=0, D_A H(F)-kappa<=(12-4q+2/ln2)d. This holds after every actual restriction preserving the decomposition and fresh Y, including partial nonflat data exposure. If C_j form a private point-priority continuation and G a disjoint private point-priority fallback with constant final default, every finite adaptive tree that respects prefix priority before Y and postpones fallback-internal controller queries until Y is resolved, with arbitrary data interruptions and arbitrary controller order after Y, satisfies H_root<=U_root+R_root+(3/ln2)T_data+K Pi_ctrl+E[H_leaf-U_leaf-R_leaf], K=6+(5+ln10)/ln2<17. U=sum P_j[H(core_j)-phi((Ecore_j)^2)], R=sum phi(P_j)Var(core_j), phi(t)=t log2(1/t); physical occurrences of G labels are merged before phi. Root R funding is separate once-only; inherited U and unresolved actual terminal profiles remain, while resolved profiles are phi(mean_selected^2)<=I_leaf/ln2. The signed data singleton logarithm is retained exactly.",
+    "hypotheses": [
+      "Finite uniform physical cubes and genuine Boolean signs; bit entropy and phi(0)=0.",
+      "Private queried point block disjoint from Y, the C_j controller block and all selected cores. C_j may internally overlap but are exclusive as labels.",
+      "u,v_j and G occupy mutually disjoint independent physical blocks; G may itself be a fine selector of disjoint independent cores. There is one repeated physical G, merged before rarity accounting.",
+      "Local bound allows all biases, constants and actual prior restrictions preserving fresh Y. No generic correlated H,G substitute is allowed.",
+      "Stopped graft respects prefix priority before Y, postpones internal G-controller queries until Y resolves, and retains arbitrary data interleavings, full unresolved H-U-R and inherited U. Generic shared selected-core data excluded."
+    ],
+    "statement_sha256": "d0a1b35fa78bdd67534b9f4294782a5751129361edc61ad6c14fbd670681ebdb",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "run_id": "20261014T124811Z-fleet05-A057-coherent-restriction-remainder",
+      "path": "PROOF.md",
+      "locators": "Equations(1)-(11): actual nonempty cross mass, complete coherent Y rows, original merged fine release and scoped same-tree graft"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A091-SHARED-ACTIVATION-REPEATED-FALLBACK-PAYMENT",
+        "version": 1,
+        "status": "INDEPENDENTLY_ACCEPTED_HERE_AT_EXACT_SCOPE",
+        "scope": "shared-Y reveal and actual terminal identity; no private-before-Y price imported"
+      },
+      {
+        "claim_id": "A059-INTERRUPTED-PRIORITY-STOPPING-PAYMENT",
+        "version": 2,
+        "status": "INDEPENDENTLY_ACCEPTED_BY_A091_SOURCE_RUN_20261014T094139Z",
+        "scope": "private point-controller continuation after Y; previous three-test NEXT consumed rather than repeated"
+      },
+      {
+        "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+        "version": 1,
+        "status": "PREVIOUSLY_INDEPENDENTLY_ACCEPTED_BY_A091",
+        "scope": "signed data drift preserving exact singleton logarithm"
+      },
+      {
+        "claim_id": "A057-INTERLEAVED-SELECTOR-RESERVE",
+        "version": 1,
+        "status": "LOCALLY_PROVED; A056 PARTIAL_SECTION1_REVIEW_ONLY",
+        "scope": "nonresetting original fine reserve and once-only root funding; no full-chain independent acceptance inferred"
+      },
+      "Direct Fourier rows, independent Phi proof in REVIEW_A091.md, physical JS bound, Parseval, total variance, Poincare and finite physical tree telescope"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A091",
+      "A059",
+      "A087",
+      "A090",
+      "A064",
+      "A030",
+      "A038",
+      "A039",
+      "B12",
+      "B20"
+    ]
+  }
+]

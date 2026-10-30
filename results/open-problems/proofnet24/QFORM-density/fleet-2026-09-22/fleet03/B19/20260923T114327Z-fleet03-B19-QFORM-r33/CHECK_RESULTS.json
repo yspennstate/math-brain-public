@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T114327Z-fleet03-B19-QFORM-r33",
+  "theorem": "QFORM-TRIANGLE-PAIR-TRANSFER-RECONDITIONING-v1",
+  "constants": {
+    "d0": 0.2805059523809524,
+    "rho0": 0.09716019846967515,
+    "C_star": 8.911319467025024,
+    "r_threshold": 0.015625,
+    "density_bound_at_threshold": 64.01873532293244
+  },
+  "checks": {
+    "density_bound_lt_65": true,
+    "d0_gt_0": true,
+    "r_threshold_eq_1_over_64": true,
+    "if_K_psd_contraction_and_detK_d_then_lambda_minK_ge_d": true,
+    "if_det_I_minus_K_lt_1_over_64_then_lambda_maxK_gt_7_over_8": true,
+    "rho_prime_lower_bound": "rho_prime >= rho*sqrt(det(I-K))",
+    "source_reconditioning": "G_prime >= det(K)*I_3"
+  },
+  "status": "QFORM_B19_R33_TRIANGLE_TRANSFER_CHECK_PASS"
+}

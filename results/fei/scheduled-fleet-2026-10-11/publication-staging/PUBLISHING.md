@@ -12,4 +12,4 @@ Package: `fourier-entropy-threshold-functions.zip`
 
 The intended `yspennstate/fourier-entropy-threshold-functions` repository still returns 404 at this snapshot. Verify the exact repository and public visibility, preserve any existing files and concurrent work, then publish only the archive's scientific contents. If the target has another name, return its exact URL and branch. Do not copy any parent campaign files.
 
-The research plan and evidence are already saved privately in both requested repositories. All 20 existing account01 schedules are configured and verified; the first natural B05 result is saved. The 100-agent plan is hypothetical capacity, not a claim that 100 agents were launched.
+The research plan and evidence are already saved privately in both requested repositories. All 20 existing fleet01 schedules are configured and verified; the first natural B05 result is saved. The 100-agent plan is hypothetical capacity, not a claim that 100 agents were launched.

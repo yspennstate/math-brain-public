@@ -1776,7 +1776,7 @@ def retrieve(
     # support in the pool: a two-word stub titled like the query outscored the theorem it names.
     # Compared in, it let weak statements through the support floor on its score, forced an
     # abstention by standing close to the one real answer, or hid a real tie between two
-    # statements behind its own margin (account03/B03 r88, B03-R72-DEGENERATE-CONTENDER-BREAKS-
+    # statements behind its own margin (fleet03/B03 r88, B03-R72-DEGENERATE-CONTENDER-BREAKS-
     # MARGIN-SEMANTICS-001). It counts only when nothing with a statement is left to compare.
     def servable(hits_in: Iterable[SearchHit]) -> list[SearchHit]:
         hits_in = list(hits_in)
@@ -1784,7 +1784,7 @@ def retrieve(
 
     # The support floor, like the ambiguity test below, judges the servable candidates of the whole pool: the pool is
     # ordered by total score, which adds warning mass to support, so a caution card could fill a one-hit output and
-    # abstain for weak support while the same query asked for two hits served (account04/B02 r72,
+    # abstain for weak support while the same query asked for two hits served (fleet04/B02 r72,
     # B02-R72-SUPPORT-FLOOR-REMAINS-LIMIT-DEPENDENT-20260929). The verdict is now the one an unlimited request gets.
     by_support = sorted(servable(pool), key=lambda hit: (-hit.support_score, hit.node.id))
     if by_support[0].support_score < min_support_score:

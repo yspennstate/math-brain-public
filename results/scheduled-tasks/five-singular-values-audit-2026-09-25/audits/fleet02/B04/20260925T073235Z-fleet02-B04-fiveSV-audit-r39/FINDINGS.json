@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B04",
+  "run_id": "20260925T073235Z-fleet02-B04-fiveSV-audit-r39",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "source_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+  "pdf_sha256": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+  "complete_source_passes_this_run": 1,
+  "cumulative_known_B04_passes": 8,
+  "literal_source_status": "GAP_LOCAL_REPAIRABLE",
+  "repaired_argument_status": "NO_FATAL_THEOREM_DEFECT_FOUND_UNDER_DOCUMENTED_CHECKS",
+  "heat_flow_Theorem_3_1": "PASS",
+  "new_result": {
+    "line": 466,
+    "pdf_page": 10,
+    "status": "PASS",
+    "statement": "The concentration coefficient at v=1/4 is <19.",
+    "rigorous_check": "Gamma(1/4)<223829/59670, 2^(1/4)<119/100, e^(3/4)<53/25, hence 2^(5/4)e^(3/4)Gamma(1/4)<83040559/4387500<19."
+  },
+  "open_local_issues": [
+    [
+      "L148",
+      "GAP",
+      "padded-index SVD converse needs direct padded-zero case"
+    ],
+    [
+      "L398",
+      "GAP",
+      "square-map density formula should be stated a.e./off critical value"
+    ],
+    [
+      "L412",
+      "FALSE",
+      "global polar diffeomorphism wording; delete null seam ray"
+    ],
+    [
+      "L441",
+      "GAP",
+      "critical hyperbolic level null-set sentence omitted"
+    ],
+    [
+      "L613",
+      "GAP",
+      "J(R-a) used before no-atom fact makes R=a null"
+    ]
+  ],
+  "expository_or_external": [
+    [
+      "L41",
+      "FALSE",
+      "abstract no-pivot omission"
+    ],
+    [
+      "L62",
+      "UNCHECKED",
+      "current literature status"
+    ],
+    [
+      "L65",
+      "FALSE",
+      "singularity versus upper envelope"
+    ]
+  ],
+  "c02": "B04 PASS: 'averaging' is Jensen/Cauchy shorthand; latest B18 grades GAP; disagreement preserved.",
+  "pdf_raster_status": "UNCHECKED_TOOL_LIMIT",
+  "lower_threshold_research": false,
+  "constant_improvement": false
+}

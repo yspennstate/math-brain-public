@@ -6,13 +6,13 @@ Date: 23 September 2026.
 ## Source map
 
 - Diffuse Lindeberg global Gaussian ceiling:
-  `source_snapshot/fleet/account02/B17/account02-B17-20260923T1142Z-r11/REPORT.md`.
+  `source_snapshot/fleet/fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`.
 - One-heavy Gaussianized cone-tip optimizer and uniform gap:
-  `source_snapshot/fleet/account01/B17/20260923T154011Z-account01-B17-QFORM-auto11b/REPORT.md`
+  `source_snapshot/fleet/fleet01/B17/20260923T154011Z-fleet01-B17-QFORM-auto11b/REPORT.md`
   and
-  `source_snapshot/fleet/account03/B17/20260923T163000Z-account03-B17-QFORM-auto11/REPORT.md`.
+  `source_snapshot/fleet/fleet03/B17/20260923T163000Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 - Exact Householder cube tip:
-  `source_snapshot/fleet/account04/B17/20260923T081528Z-account04-B17-QFORM-r4/REPORT.md`.
+  `source_snapshot/fleet/fleet04/B17/20260923T081528Z-fleet04-B17-QFORM-r4/REPORT.md`.
 - The sharp Gaussian ceiling is reproduced directly, including arbitrary
   affine terms, from the classical Gaussian quadratic-form framework. Root
   supplied the useful explicit gamma convolution reduction, which is fully
@@ -61,7 +61,7 @@ its explicit finite-variance, mean/covariance convergence, and Lindeberg
 hypotheses. Its affine extension requires convergence of the three spectral
 linear coefficients and the scalar constant.
 
-The account02 source's peripheral rare-fragment discussion is not reproduced.
+The fleet02 source's peripheral rare-fragment discussion is not reproduced.
 Its displayed first-variation liminf alone does not imply convergence of
 the tip, although the main uniform-density theorem and the identified
 Gaussian limit do supply that conclusion. Its cap-one remote-interval

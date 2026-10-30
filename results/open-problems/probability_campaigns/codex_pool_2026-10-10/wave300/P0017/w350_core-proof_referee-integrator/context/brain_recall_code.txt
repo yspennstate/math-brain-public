@@ -57,7 +57,7 @@
 1526-    # immediately, even before the nightly BM25 rebuild. Integrity failure is a stop condition:
 1527-    # silently skipping a damaged "full notes" file recreates the exact harm this lane closes.
 1528-    # One bundle that fails verification is left out of the search and named, not a stop for every query (28 Sep,
-1529-    # scheduled audit account03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001): its text and scores never
+1529-    # scheduled audit fleet03/B02 r68, B02-R1-ATTACHMENT-CORRUPTION-GLOBAL-RECALL-STOP-001): its text and scores never
 1530-    # count, the line below says the attachment corpus is incomplete and which bundles, and the rest of recall runs.
 1531-    # Until then one broken bundle anywhere ended every deliberate recall before BM25 ranked anything.
 1532-    attachment_failures = []

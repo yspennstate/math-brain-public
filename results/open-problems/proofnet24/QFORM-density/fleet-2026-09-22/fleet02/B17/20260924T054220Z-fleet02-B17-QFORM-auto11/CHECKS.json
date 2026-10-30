@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T054220Z-fleet02-B17-QFORM-auto11",
+  "theorem": "QFORM-SYMMETRIC-SATELLITE-DIFFUSIVE-GLOBAL-BARRIER-v1",
+  "status": "PASS",
+  "checks": {
+    "target_matrix": {
+      "n": "(1,2,3)/sqrt(14)",
+      "B_m": "I-(2+1/m)nn^T",
+      "A_m": "T_m B_m T_m^T",
+      "nonzero_spectrum": ["1", "1", "-(1+1/m)"],
+      "dense_entries": "all entries nonzero for every m>=1",
+      "limit_B": "I-2nn^T",
+      "limit_B_squared": "I"
+    },
+    "source_laws": {
+      "bank_j_eps": "L_j,m/m",
+      "main_length": "1-eps",
+      "satellite_lengths": ["eps/2", "eps/2"],
+      "density_cap": 1,
+      "mean": 0,
+      "variance_exact": "ell^3/12 + eps R^2 + eps^3/48",
+      "third_absolute_exact": "ell^4/32 + eps R^3 + eps^3 R/16",
+      "tax": "tau_j,m=eps R^2 -> tau_j finite",
+      "variance_limit": "v_j=1/12+tau_j",
+      "lyapunov_key_identity": "R^2/m=tau_j,m/L_j,m -> 0",
+      "lyapunov_conclusion": "E|X|^3/(sqrt(m) sigma^3) -> 0"
+    },
+    "partner_receiver": {
+      "partner": "fleet03/B17",
+      "run": "20260924T053018Z-fleet03-B17-QFORM-auto11",
+      "commit": "7a64594fceb49b99698431a4d57b6658b49ebc28",
+      "theorem": "QFORM-SYMMETRIC-SATELLITE-NEAR-DIFFUSIVE-SHARP-WITNESS-v1",
+      "applied_items": ["exact variance identity", "exact third-absolute-moment identity", "same exact dense matrix"]
+    },
+    "pinned_receiver": {
+      "commit": "e5f71d79eff325201dd0274053d20268ce65b837",
+      "result": "Fresnel-Brascamp-Lieb Theorem F",
+      "physical_frame_row_leverage": "1/m",
+      "physical_frame_gram": "I_3",
+      "residual": "0 (diagonal)",
+      "characteristic_envelope": "|Psi_m(t)| <= min(1,(4pi)^(3/2)(1+1/m)^(-1/2)|t|^(-3/2))",
+      "common_majorant_mass": "24pi",
+      "conclusion": "L1 characteristic convergence and uniform convergence of full output densities"
+    },
+    "gaussian_barrier": {
+      "v0": "1/12",
+      "C": "V^(1/2) B V^(1/2)",
+      "eigenvalue_magnitudes": "a,b,c >= v0 by s_min(C)>=v0",
+      "global_max": "p_infinity(s) <= p_infinity(0) on both signs because the positive two-square density and one-square density are decreasing",
+      "cone_formula": "p(0)=(4pi sqrt(abc))^(-1) int_0^(2pi) [cos^2/a+sin^2/b+1/c]^(-1/2) dtheta",
+      "pointwise_denominator": "bc cos^2 + ac sin^2 + ab >= 2 v0^2",
+      "height_bound": "p(0)<=1/(2sqrt(2)v0)=3sqrt(2)",
+      "equality": "forces a=b=c=v0 and then det(V)=v0^3, hence tau_1=tau_2=tau_3=0"
+    },
+    "isotropic_profile": {
+      "v": "1/12+tau",
+      "limit_norm": "3sqrt(2)/(1+12tau)",
+      "tau_1_over_1200": 0.0008333333333333334,
+      "profile_at_tau_1_over_1200": 4.200634343682461,
+      "sharp_value": 4.242640687119286
+    },
+    "anisotropic_numeric_sanity": [
+      {
+        "taus": [0.01, 0.0, 0.0],
+        "limit_eigenvalues": [-0.084010067747, 0.083333333333, 0.092581496318],
+        "p0": 4.068849898878324
+      },
+      {
+        "taus": [0.02, 0.01, 0.03],
+        "limit_eigenvalues": [-0.106516968062, 0.098044137027, 0.104663307226],
+        "p0": 3.4457936939107157
+      },
+      {
+        "taus": [0.1, 0.2, 0.05],
+        "limit_eigenvalues": [-0.168751799069, 0.175894656212, 0.233333333333],
+        "p0": 1.820236250632499
+      }
+    ]
+  },
+  "full_target_status": "OPEN",
+  "full_target_continuity": "OPEN",
+  "monte_carlo_used": false
+}

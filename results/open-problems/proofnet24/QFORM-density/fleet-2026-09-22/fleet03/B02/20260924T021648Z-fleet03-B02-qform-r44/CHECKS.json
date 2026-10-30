@@ -1,0 +1,38 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T021648Z-fleet03-B02-qform-r44",
+  "theorem": "QFORM-R2-SUBTRACTION-FOURIER-FUNNEL-v1",
+  "parameters": {
+    "alpha": 0.5,
+    "beta": 0.25,
+    "theta": 0.25,
+    "C3": 10.3450832321475
+  },
+  "derived_constants": {
+    "secondary_cut_energy_floor": 0.03515625,
+    "secondary_cut_energy_floor_exact": "9/256",
+    "secondary_E3_floor": 6.789341568946838e-7,
+    "secondary_E3_floor_exact": "729/1073741824",
+    "fourier_density_bound": 110.34755447624,
+    "fourier_L1_bound": 693.33413296831,
+    "partner_L2_hybrid_coefficient": 63.331843799398,
+    "secondary_tail_coefficient": 1279.308032453666
+  },
+  "finite_regression": {
+    "seed_tag": "20260924-r44-secondary-cut",
+    "instances": 500,
+    "dimensions": "6 through 10",
+    "construction": "literal primary R-C rank-two crossings with sigma2 sampled in [0.15,0.45], zero-diagonal symmetric residual with R-C support removed, residual scaled until s3(A)>=1",
+    "weyl_violations": 0,
+    "minimum_weyl_slack": 0.4456475691685884,
+    "cut_floor_violations": 0,
+    "minimum_bestcut_to_floor_ratio": 42.12664092664289,
+    "proof_status": "corroborative_only"
+  },
+  "scope_notes": [
+    "The analytic proof does not depend on the finite regression.",
+    "No random-coordinate rotation or independence after rotation is used.",
+    "The low-rank alternatives retain every nonzero coefficient tail.",
+    "Continuity is claimed only on the physical-E3 Fourier-L1 exit."
+  ]
+}

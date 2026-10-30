@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A053-PACKED-POINT-SURGERY-PAID-SINGLETON",
+    "version": 1,
+    "exact_statement": "For any n>=3 Boolean F with Fourier support distance>=3 and its one-point edit G, packing gives s<=2^n/(n+1), even seed negative count, and beta_i(G)=2*2^-n exactly at every coordinate. With p=2^-n and d_v the seed pivotal degree at the edit, sum_i O_i(G)=I(F)-4p*d_v and T(G)=I(G)-2np+R_sum; each pair refund sum<=16p, giving |T(G)-I(F)|<=4np+16 binom(n,2)p. Occupied/new-row accounting yields L_i(G)<16p,V_i(G)<19p,V_pair(G)<54p. Boolean Fourier uncertainty and Poincare give I(G)>=2np, with strictness for nonconstant F and n>=4. Hence a coordinate of maximum influence satisfies L_i(G)<8Inf_i(G) and V_i(G)<(19/2)Inf_i(G). At every K>=8 this coordinate has D_K(G)+S_i=L_i-KInf_i<0 with the actual signed child reserve. If G violates K, its average immediate-child deficit is strictly larger than its root deficit, so at least one actual child violates K and G is not a least-essential-dimension violation. This is a uniform paid-root/critical-source exclusion for the one-point distance-three neighborhood, not FEI(8) for it with terminals discarded.",
+    "hypotheses": [
+      "Actual Boolean signs on finite uniform cubes; entropy bits; n>=3 named coordinates",
+      "F has Fourier support distance at least3; singleton support has infinite distance; G differs from F at exactly one physical vertex",
+      "p=2^-n; V_i=B_i+Gamma_i; L_i is actual physical entropy decrement; T is summed singleton orientation plus both merging refunds over every unordered pair",
+      "Uniform criticality exclusion is at fixed K>=8 and uses the actual immediate singleton children; no healthy-influence assumption",
+      "No unrestricted FEI(8), closed descendant class, criticality-preserving coding reduction or deficit lower bound is assumed"
+    ],
+    "statement_sha256": "3cf548f8ab419f94b688000bfcb0262405d3b92ed10d8d88156f0fc107ed51f6",
+    "contributors": [
+      "A053/fleet05"
+    ],
+    "proof_source": "PACKING_CRITICAL_EXCLUSION.md sections1-4; code/check_packing.py; out/EXACT_CHECK.json; out/CASES.json; out/SCALAR_BOUNDARIES.json",
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ANALYTIC_PROOF_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B11-lead",
+      "A051",
+      "A052",
+      "A055",
+      "A002",
+      "A005",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

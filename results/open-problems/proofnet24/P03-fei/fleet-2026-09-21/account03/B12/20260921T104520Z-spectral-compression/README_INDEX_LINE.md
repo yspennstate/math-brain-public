@@ -1,3 +1,0 @@
-Suggested dated P03 README line (not applied by this run because the connector exposes replacement-only text updates and the large shared README was returned truncated; overwriting it without a complete current byte image would violate conflict-safe preservation):
-
-- 2026-09-21 — account03/B12, spectral-sample compression: proved the generic ordered-set code `H(S) <= H(|S|)+I H(Inf/I)-E log2(|S|!)` and the Boolean Palm clustering bound `E[t^(|S|-1)|i∈S] <= Inf_i^((1-t)/(1+t))`; the strengthened sharp target `U<=beta(1/2) I` survives the executed finite/structured refutation attempts but remains OPEN. See `fleet-2026-09-21/account03/B12/20260921T104520Z-spectral-compression/REPORT.md`.

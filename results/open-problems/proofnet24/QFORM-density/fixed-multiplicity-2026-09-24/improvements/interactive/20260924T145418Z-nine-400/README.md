@@ -2,7 +2,7 @@
 
 The complete, single-file, self-contained LaTeX manuscript is `paper.tex`. It proves the written candidate bound `||p_Q||_infinity <= 400 K^2/s` when `s_9(A)>=s`, for arbitrary real symmetric A, independent coordinate densities <=K, and all affine terms. It also proves the spectral-tail/overlap inequality below. The original seventeen-eigenvalue baseline is preserved unchanged in the parent project.
 
-The threshold-nine mechanism was supplied by account03/B04 and is reconstructed fully here. This run improves the explicit constant and the overlap estimate, not the historical first occurrence of threshold nine. The new combination awaits independent review. Eight and three are not claimed solved.
+The threshold-nine mechanism was supplied by fleet03/B04 and is reconstructed fully here. This run improves the explicit constant and the overlap estimate, not the historical first occurrence of threshold nine. The new combination awaits independent review. Eight and three are not claimed solved.
 
 ## Source pin and files
 

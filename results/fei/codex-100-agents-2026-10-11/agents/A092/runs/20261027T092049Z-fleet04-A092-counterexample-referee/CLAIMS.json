@@ -1,0 +1,144 @@
+{
+  "claims": [
+    {
+      "claim_id": "A080-COMPOSITION-PRIME-APPROXIMATION",
+      "version": 1,
+      "exact_statement": "For every Boolean seed g on n bits and k>=2 with N=n+k>=3, F(x,z)=g(x)(-1)^{1[wt(x,z)<=1]} has at least three distinct truth-matrix rows on every proper block A with 2<=|A|<=N-1. For every nonconstant g, n>=1 and m>=1, choose N=8(n+m+2),k=N-n: |H(F)-H(g)| and |I(F)-I(g)| are each <=2^-m I(g), and H(F)/I(F)>=(H(g)/I(g)-2^-m)/(1+2^-m). Consequently the extended-real supremum C_prime of H/I over these composition-prime functions equals unrestricted C_FEI. For fixed K>=0 and kappa in R, let A_P=C_P+kappa I+sum_j q_j R_K(g_j) be the specific signed bank over proper disjoint single-output Boolean-core partitions P with true full stopping hulls. Then sup_{nonconstant f,dimension>=2} inf_P A_P(f)/I(f)=C_FEI+kappa. No unbounded seed family is constructed.",
+      "hypotheses": [
+        "uniform finite physical cube and actual Boolean signs",
+        "entropy in bits of complete normalized squared Fourier spectrum; total physical influence",
+        "fresh spectator bits and edits on exactly the radius-one ball",
+        "proper partition blocks are disjoint; one Boolean output per block; every block smaller than the whole domain",
+        "K>=0; true full physical stopping deficit hulls; fixed real kappa",
+        "relative-error schedule requires nonconstant seed n>=1 and accuracy index m>=1"
+      ],
+      "statement_sha256": "6bc67f200feecec2b789dae5b87770e118107c1532d7cd8c42fc4d8cdc561a6e",
+      "contributors": [
+        "A080; A071 row-compression criterion and prime Hamming-ball example are credited antecedents"
+      ],
+      "proof_source": "agents\\A080\\runs\\20261027T015619Z-fleet04-A080-universal-counterexample-standard\\PROOF.md",
+      "proof_dependencies": [
+        "Finite Boolean row-compression criterion, reconstructed from A071 stage21 section1",
+        "Parseval, Cauchy-Schwarz, finite maximal coupling and Shannon chain rule, proved/applied in PROOF.md",
+        "A080-EXACT-HULL-TENSOR-FAITHFUL-BANK@1: singleton hull is zero; independently accepted by A092 stage21; no universal FEI premise"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A092",
+          "verdict": "HOLDS_UNCHANGED_AT_STATED_SCOPE",
+          "source_claims_sha256": "c79018e1d544ca29f9eb90d1b63f7a0390279801a78ca96ce46e0cdb2e208af5",
+          "source_statement_sha256": "6bc67f200feecec2b789dae5b87770e118107c1532d7cd8c42fc4d8cdc561a6e",
+          "reconstruction": "agents\\A092\\runs\\20261027T092049Z-fleet04-A092-counterexample-referee\\PROOF.md",
+          "checks": "agents\\A092\\runs\\20261027T092049Z-fleet04-A092-counterexample-referee\\out\\RESULT.json",
+          "scope": "independent analytic reconstruction plus literal truth tables; no contribution to source version; full FEI remains open"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+      "supersedes": [],
+      "refutes": [
+        "Strategy-level hypothesis that proper disjoint scalar Boolean decomposition uniformly reduces the worst-case optimal initial bank price below C_FEI+kappa"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A071",
+        "A075",
+        "A084",
+        "A089",
+        "A092",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A071-PRIME-CHEAP-TWO-OUTPUT-SUMMARY",
+      "version": 1,
+      "exact_statement": "For every Boolean sign seed g on n>=1 uniform bits and k>=2 fresh bits, F(x,z)=g(x)(-1)^[wt(x,z)<=1] has exactly three distinct residual rows on the entire fresh block. Its minimum sum of total physical influences over all valid TWO-Boolean-output summaries of that block is exactly k^2*2^(1-k), attained by the signs of 1[wt(z)>=1] and 1[wt(z)>=2]. The separate indicators u=1[z=0],v=1[wt(z)=1] give an exact correlated three-state representation, with I(1-2u)+I(1-2v)=k(k+1)*2^(1-k); their activity-weighted bill exceeds actual fresh physical influence k(n+k-1)*2^(1-n-k) by exactly2k*2^(1-n-k). For every delta>0, the supremum of H(F)/I(F) over these composition-prime constructions with H(1-2u)+H(1-2v)+I(1-2u)+I(1-2v)+H_input(u,v)<delta is exactly C_FEI in the extended reals. No universal initial payment or divergent seed family is supplied.",
+      "hypotheses": [
+        "uniform physical cube; actual Boolean signs; all coordinates retained",
+        "n>=1,k>=2; complete squared Fourier entropy in bits",
+        "summary outputs are arbitrary functions of the fresh block only and reconstruct F with outside coordinates raw",
+        "nonconstant seed for ratio approximation; delta>0; C_FEI is unrestricted extended-real H/I supremum"
+      ],
+      "statement_sha256": "494803bb4e2609fd0e36150348127e5a4c0b47329789c448da31b10e765831df",
+      "contributors": [
+        "A071; A080 and concurrently A075 arbitrary-seed prime perturbation are credited antecedents"
+      ],
+      "proof_source": "agents\\A071\\runs\\20261027T050628Z-fleet04-A071-search-space-design\\PROOF.md",
+      "proof_dependencies": [
+        "A080-COMPOSITION-PRIME-APPROXIMATION@1; independently reconstructed unchanged here",
+        "elementary residual-row criterion, physical edge counting and finite entropy support bound"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A092",
+          "verdict": "HOLDS_UNCHANGED_AT_STATED_SCOPE",
+          "source_claims_sha256": "147d970ca48a67af25ce934862a56b9a19a2802b4326ddee367c83ddc06ed78d",
+          "source_statement_sha256": "494803bb4e2609fd0e36150348127e5a4c0b47329789c448da31b10e765831df",
+          "reconstruction": "agents\\A092\\runs\\20261027T092049Z-fleet04-A092-counterexample-referee\\PROOF.md",
+          "checks": "agents\\A092\\runs\\20261027T092049Z-fleet04-A092-counterexample-referee\\out\\RESULT.json",
+          "scope": "independent analytic reconstruction plus literal truth tables; no contribution to source version; full FEI remains open"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+      "supersedes": [],
+      "refutes": [
+        "Proposed strategy-level extension: scalar composition-primality rules out proper two-output compression (not attributed to A080)"
+      ],
+      "first_unproved_line": null,
+      "next_consumers": [
+        "A075",
+        "A080",
+        "A084",
+        "A089",
+        "A092",
+        "B20"
+      ]
+    },
+    {
+      "claim_id": "A092-EXACT-ORIGINAL-INFLUENCE-AND-SUMMARY-ONLY-NOGO",
+      "version": 1,
+      "exact_statement": "For every Boolean seed g on n>=1 uniform bits and k>=2 fresh bits, N=n+k, let F(x,z)=g(x)(-1)^{1[wt(x,z)<=1]}. Put D0=sum_i 1[g(0)!=g(e_i)] and D1=sum_{i!=j} 1[g(e_j)!=g(e_i+e_j)]. Then I(F)=I(g)+2^{1-N}[N(N-1)-2kD0-2D1]. Any deterministic finite r-bit summary E(z) from which the entire fresh-block residual row is decodable satisfies sum_j I(E_j)>=k^2*2^{1-k}; no such summary exists for r=1 and equality is attainable for every r>=2. For g=-1 only at 00, I(F_k)=1+(k^2-k+2)*2^{-k-1}, H(F_k)>1 for every k>=32, and H(F_k)->2. Hence H(F_k)/(inf_E sum_j I(E_j)) tends to infinity but H(F_k)/I(F_k)->2. This refutes only universal payment of total entropy from fresh-summary influence alone, not FEI.",
+      "hypotheses": [
+        "all physical inputs are independent uniform bits; Boolean signs; complete squared normalized Fourier entropy in bits",
+        "summary is a deterministic function of the fresh bits alone and must decode the full residual truth-matrix row",
+        "summary influence is measured on its actual fresh physical inputs; output independence is not assumed",
+        "D1 counts edges between weight one and two once; g may be constant for the exact formula",
+        "explicit counterfamily fixes the two-bit seed with its only negative value at 00; k is an integer >=2"
+      ],
+      "statement_sha256": "0593001031a86f0238c0168231506adc9d83611c8ff79df24879ab1d5fc387a0",
+      "contributors": [
+        "A092; A080 arbitrary-seed prime perturbation and A071 sharp two-output summary credited antecedents"
+      ],
+      "proof_source": "agents\\A092\\runs\\20261027T092049Z-fleet04-A092-counterexample-referee\\PROOF.md",
+      "proof_dependencies": [
+        "A080-COMPOSITION-PRIME-APPROXIMATION@1",
+        "A071-PRIME-CHEAP-TWO-OUTPUT-SUMMARY@1"
+      ],
+      "review_records": [
+        {
+          "reviewer": "A092 author",
+          "verdict": "AUTHOR_ANALYTIC_PROOF_WITH_EXACT_FINITE_VALIDATION",
+          "checks": [
+            "out/RESULT.json",
+            "out/AUDIT_RESULT.json"
+          ],
+          "formal_status": "SETUP_UNVERIFIED"
+        }
+      ],
+      "status": "PROVED_AUTHOR_INDEPENDENT_REVIEW_PENDING",
+      "supersedes": [],
+      "refutes": [
+        "PROPOSED-STRATEGY-ONLY: an absolute C with H(F)<=C inf_E sum_j I(E_j), for all fresh-block-decodable summaries; not attributed to another agent"
+      ],
+      "first_unproved_line": "For full FEI: pay the retained arbitrary original core from ONE unused original O(I) account, with old bookings and both full terminals.",
+      "next_consumers": [
+        "A071",
+        "A074",
+        "A075",
+        "A080",
+        "A084",
+        "A089",
+        "B20"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261011T220423Z-fleet01-B01-hardness-transformations-a002",
+  "claims": [
+    {
+      "claim_id": "B01-A002-ARBITRARY-MEAN-ACTIVATION-LEDGER",
+      "version": 1,
+      "exact_statement": "For every Boolean g with mean mu and every integer r>=1, p=2^-r, the genuine Boolean activation F=1+A_r(g-1) satisfies E F=1-p+p mu, Pr(F=-1)=p(1-mu)/2, I(F)=p[I(g)+r(1-mu)], and H(F)=p[H(g)-phi(mu^2)]+2rp(1-mu^2)+(2^r-1)phi(p^2(1-mu)^2)+phi((1-p+p mu)^2). Data influences are p I_i(g) and each control influence is p(1-mu). If g is nonconstant and has full Walsh support, F has full Walsh support.",
+      "hypotheses": ["uniform physical Boolean cube", "genuine sign-valued seed", "r fresh independent controls", "entropy in bits", "phi(0)=0"],
+      "statement_sha256": "1bd9894806a98eb0deacdf422434cd7f13ca2658368731f59ff17be793aed20c",
+      "contributors": ["fleet01/B01"],
+      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B01/20261011T220423Z-fleet01-B01-hardness-transformations-a002/REPORT.md", "locator": "section 5"},
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": ["The balanced-core activation formula may be applied unchanged to arbitrary-mean seeds."],
+      "first_unproved_line": null,
+      "scope_exclusions": ["Does not preserve balance.", "Does not preserve all-coordinate restriction criticality.", "Does not prove FEI."],
+      "next_consumers": ["A005", "A012", "A021", "A030", "A043", "A048", "A051", "A055", "A060", "A078", "A086", "A094", "B20"]
+    },
+    {
+      "claim_id": "B01-A002-JOINT-HARDNESS-EMBEDDING",
+      "version": 1,
+      "exact_statement": "For every nonconstant Boolean seed g and every epsilon>0 there is a genuine Boolean F with full Walsh support, I(F)<=epsilon, max_i I_i(F)/I(F)<=epsilon, Pr(F=-1)<=epsilon, and |H(F)/I(F)-H(g)/I(g)|<=epsilon. More precisely, for every eta>0 the supremum of H(F)/I(F) over nonconstant full-support F satisfying I(F)<=eta, max_i I_i(F)/I(F)<=eta, and Pr(F=-1)<=eta equals C_FEI in the extended-real sense.",
+      "hypotheses": ["uniform physical Boolean cube", "nonconstant genuine sign-valued seed", "entropy in bits"],
+      "statement_sha256": "b51d6ce90a166368d4a8d97a604254d18950a34d0af556d1ecd2b6e9827886ea",
+      "contributors": ["fleet01/B01", "prior tensor-activation and full-support sources as credited"],
+      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B01/20261011T220423Z-fleet01-B01-hardness-transformations-a002/REPORT.md", "locator": "sections 6.2 and 7"},
+      "proof_dependencies": [
+        {"claim_id": "B01-A002-ARBITRARY-MEAN-ACTIVATION-LEDGER", "version": 1, "role": "exact activation asymptotics"},
+        {"source": "COLLISION_ADMISSION.md blob 9d259f117479d325b9bddc431a85afd5639db9a9", "role": "odd-negative-count full-support surgery and entropy continuity"},
+        {"source": "Shalev arXiv:1806.03646", "role": "primary-literature low-influence reduction provenance"}
+      ],
+      "review_records": [],
+      "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": ["Full Walsh support plus small total influence, diffuse coordinate influences, and rare output define an FEI-easier universal class."],
+      "first_unproved_line": null,
+      "scope_exclusions": ["The embedded functions are not balanced.", "Cheap controls mean restriction-step criticality is not preserved.", "No numerical FEI constant is obtained."],
+      "next_consumers": ["A005", "A012", "A021", "A030", "A043", "A048", "A051", "A055", "A060", "A078", "A086", "A094", "B20"]
+    }
+  ]
+}

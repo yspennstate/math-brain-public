@@ -1,0 +1,54 @@
+[
+  {
+    "claim_id": "A038-BALANCED-CANONICAL-ADMISSION",
+    "version": 1,
+    "exact_statement": "Let h be a balanced uniform Boolean core with a supplied actual certificate H(h)<=4I(h), F_h=(-1)^a on x=0, h on x=b=1, and +1 otherwise. Let M be the completed matched-marginal canonical nonempty occupancy reference of F_h, A=KL(P||M)=(15/16)K_occ. Query b first, then any finite adaptive fresh data-only continuation in b1, retaining b0 and keeping x,a unqueried. Assume every terminal core g has a supplied actual H(g)<=4I(g) certificate. Use one unchanged original M, its actual coherent kernels and fair source-zero fallback, retaining all reference-only rows and full terminal entropy. Write S=E(4Ileaf-Hleaf), Sroot=4Iroot-Hroot, R=Iroot-EIleaf, D=Hroot-EHleaf, L=A+[D-4R]_+, and G=h2(1/4)+sum_j h2(Inf_j(h)/4). Then S-L=min(S-A,Sroot-A)>=2-A>=3+H(h)/4-G. Hence G<3+H(h)/4 is sufficient for complete same-owner payment. In particular, for h_m=chi_z*(1-2*1[y_1=...=y_m=0]), every integer m>=3 and every such finite adaptive data history have G(h_m)<85/32 and S-L>11/32+H(h_m)/4. All required core certificates hold under arbitrary data restrictions; h_m is genuinely non-flat and balanced. An already booked conservative overpayment 0<=omega<=11/32 is additionally paid as L+omega from the same S, with strictly positive remainder. At m=3 G>2, so the old sufficient marginal threshold G<2 fails while the exact source is admitted. No arbitrary-core root/terminal certificate, mixed control policy, fresh reset or universal FEI theorem is asserted.",
+    "hypotheses": [
+      "Finite uniform independent sign inputs, entropy and KL in bits; the actual root F_h and original completed canonical occupancy reference are fixed.",
+      "Balanced core h, supplied actual root H(h)<=4I(h) and supplied actual terminal core certificates; these are proved for the stated h_m family, not assumed universally.",
+      "Query b then fresh data only in b1, retaining b0 and keeping x,a unqueried; any finite adaptive stopping policy with all complete terminal laws.",
+      "Same original normalized reference is transported by the actual coherent channel, fair on every source-zero row; reference-only mass is retained. No descendant reference renewal.",
+      "S is the same genuinely available final surplus owner; prior conservative booking omega is explicitly added once. Unpaid earlier ancestor work and fresh-reference resets are outside scope.",
+      "All-dimensional instantiation m>=3 has one independent character and an m-bit point defect; all actual data restrictions remain in the certified family."
+    ],
+    "statement_sha256": "67da447e98c6780b0b6041a3063304c750a65f58c2807f1dfce52d409d73177b",
+    "contributors": [
+      "A038"
+    ],
+    "proof_source": [
+      "ANALYTIC_PROOF.md",
+      "code/balanced_check.py",
+      "out/BALANCED_CHECK.json",
+      "code/check.py",
+      "out/NONFLAT4_B_CHECK.json",
+      "code/payment.lean (written, not compiled; fresh memok denied)"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A050-NONPOINT-CANONICAL-GAP-REPAIR",
+        "version": 1,
+        "scope": "same-source KL accounting, canonical definition and terminal-selector interface; all equations used are reconstructed in ANALYTIC_PROOF, not acceptance of its whole source bundle"
+      },
+      {
+        "claim_id": "canonical nonempty occupancy projection",
+        "version": "fleet02/B15 checkpoint 2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+        "scope": "unchanged source-exact definition and maximum-entropy matching"
+      },
+      "Point-defect entropy, root Fourier sectors, min-payment identity and rational envelope proved explicitly in this run."
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_AND_EXACT_CERTIFICATES_PENDING_INDEPENDENT_REVIEW_LEAN_UNCHECKED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A050",
+      "A047",
+      "A039",
+      "A088",
+      "A094",
+      "B08",
+      "B20"
+    ]
+  }
+]

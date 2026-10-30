@@ -1,0 +1,60 @@
+[
+  {
+    "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+    "version": 5,
+    "exact_statement": "For every Boolean phase c on a three-bit shared uniform cube (c may ignore coordinates), three distinct shared rows, arbitrary possibly correlated events E0,E1,E2 on one independent finite private cube, and fresh selector z, set G=c,H=c(1-2 sum_j 1_row_j 1_Ej),F=mux_z(G,H),qj=Pr(Ej),d=sum qj/8,delta=sum qj^2/8,a=Fourier(c),b=Fourier(c sum_j qj 1_row_j). Exactly B_z=2(d-delta)+sum Phi((a-b)^2,b^2), and for ALL real q in[0,1]^3, B_z<4d for d>0, with B_z=0 at d=0. The complete entropy surcharge is at most Kd,K=4+2/ln2<7. Supplied normalized positive-support child references, calibrated on shared-only atoms while preserving the full private conditional reference, yield one normalized parent reference with D_F=D_Hcal/2 and CE_F=average calibrated child CE+Delta; actual I_F=average original physical child I+d. No private event independence or opaque terminal certification is assumed. A general finite-dimensional entropy-tangent lemma supplies convex quadratic upper bounds for B-4d with maxima at box corners; all16 phase representatives have exact complete probability-cube certificates independently reproduced with Fraction logarithms. Adding the three-row node to the v4 literal/constant certificate grammar, with BOTH actual children already certified, preserves CE<=KI, physical restriction heredity, disjoint tensors, fresh balancing and point activation, and reflects membership from rare activated balanced tensors to their original seed. The five-bit at-least-two sign remains outside this grammar. Four-to-eight independently varying shared rows, both-private middle-band branches, growing-overlap payment and full FEI remain open.",
+    "hypotheses": [
+      "finite uniform Boolean signs, entropy and complete CE in bits",
+      "one pure phase on exactly three shared physical bits (c may ignore coordinates); three distinct edit rows; private cube independent of shared coordinates",
+      "private events arbitrary and possibly correlated; selector physically fresh",
+      "normalized finite-cost references positive on true support, private conditional reference and off-target mass retained",
+      "both actual children structurally certified; no arbitrary opaque leaves; ideal probability costs"
+    ],
+    "statement_sha256": "c3dcfd3f61a66f671a599e1691fa872ff6d1d8633ff8be0ec3d8492f2f86e036",
+    "contributors": [
+      "A012/fleet03; preceding A012/fleet05 and complementary A013 two-row mechanism credited"
+    ],
+    "proof_source": {
+      "proof": "agents\\A012\\runs\\20261021T212009Z-fleet03-A012-sparse-activation-accounting\\DERIVATION.md",
+      "general_tangent": "DERIVATION.md Section2; continuum.py certificate; handwritten algebra, Lean unverified",
+      "classification": "agents\\A012\\runs\\20261021T212009Z-fleet03-A012-sparse-activation-accounting\\out\\CLASSIFICATION.json",
+      "complete_continuum": "agents\\A012\\runs\\20261021T212009Z-fleet03-A012-sparse-activation-accounting\\out\\CONTINUUM_0.json through CONTINUUM_15.json",
+      "separate_arithmetic": "agents\\A012\\runs\\20261021T212009Z-fleet03-A012-sparse-activation-accounting\\out\\VERIFY_0.json through VERIFY_15.json",
+      "Boolean_reference_fixtures": "agents\\A012\\runs\\20261021T212009Z-fleet03-A012-sparse-activation-accounting\\out\\FIXTURES.json",
+      "results": "agents\\A012\\runs\\20261021T212009Z-fleet03-A012-sparse-activation-accounting\\out\\EXACT_RESULTS.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A012-DISJOINT-PRIVATE-MUX-ADMISSION",
+        "version": 4,
+        "scope": "existing grammar and complete reference; new three-row rule extends this version; proof/reference reconstructed in DERIVATION"
+      },
+      {
+        "claim_id": "A013-TWO-ROW-ARBITRARY-EVENT-TRANSPORT",
+        "version": 1,
+        "scope": "complementary earlier two-row mechanism and rare/moderate domains; no new independent full-chain acceptance"
+      },
+      {
+        "claim_id": "C005",
+        "version": "campaign baseline",
+        "scope": "JS_z<=2 Inf_z/ln2 scalar inequality; used only after new exact B_z payment"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_WITH_EXACT_CERTIFICATES_PENDING_INDEPENDENT_AGENT_REVIEW; LEAN_UNVERIFIED",
+    "supersedes": [
+      "A012-DISJOINT-PRIVATE-MUX-ADMISSION@4 as current admission syntax; v4 remains valid"
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A011",
+      "A058",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  }
+]

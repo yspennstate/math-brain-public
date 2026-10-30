@@ -33,7 +33,7 @@ Numaro's g is in `inputs/numaro18_pm1_table.npy` (int8, entry x = f(x) in {+1,-1
 -1 means "true"). It is monotone, not self-dual, and has no coordinate-swap automorphism. Coordinates 0..8 form a
 9-variable core (512 cells); coordinates 9..17 are auxiliary: auxiliary j, when true, sets two specific core cells
 to true (the host cells are listed by `reconstruct()` in
-`fleet-2026-09-21/account01/B15/20260921T130641Z-carry-congruence-n18-profile/n18_packet_carry_profile.py`, which
+`fleet-2026-09-21/fleet01/B15/20260921T130641Z-carry-congruence-n18-profile/n18_packet_carry_profile.py`, which
 also checks the published SHA-256). Singleton coefficients: 57/256 on each core coordinate, 1/256 on each
 auxiliary, and Inf_i equals the singleton coefficient (monotone). Example: ghat({0,9}) = 0.
 
@@ -79,8 +79,8 @@ for every Boolean gate G and every product bias p. The read-once potential (file
 and `fei_cert.py`) passes every NPN class of fan-in <= 4 driven to its maximum (measured, not certified), with the
 2-input AND binding. It FAILS for Numaro's g at biased inputs: at p = (3/8, 1/2, ..., 1/2) (one core input biased),
 p_out = 967/2048, It_1 = 855/4096, sum_{i>=2} It_i = 465/256, Htilde = 6.7442547370563132664...; at p_1 = 223/456 the
-defect is larger (`fleet-2026-09-21/account03/B12/20260922T061544Z-biased-prime-candidate-refutation/REPORT.md`,
-`fleet-2026-09-21/account02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`). That shows the read-once
+defect is larger (`fleet-2026-09-21/fleet03/B12/20260922T061544Z-biased-prime-candidate-refutation/REPORT.md`,
+`fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`). That shows the read-once
 potential is not the all-gate potential; it does not by itself raise the lower bound, since the realised slack of the
 inputs is not that potential.
 

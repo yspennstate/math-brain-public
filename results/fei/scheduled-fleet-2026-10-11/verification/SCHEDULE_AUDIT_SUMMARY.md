@@ -41,9 +41,9 @@ At inspected open-problems head `7955d427222392911dc6af2e4ee3aa8aab67ac8c`, the 
 
 Substantive analytic Boolean sparse-activation counterexample to universal local fixed-price payment L<=Kd+AV+BM. No full FEI claim.
 
-- Canonical report: [reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/80cc2e5027efa56d79c4ecdf7d4949759ef2068b/reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md)
+- Canonical report: [reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/80cc2e5027efa56d79c4ecdf7d4949759ef2068b/reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md)
 - Canonical commit: `80cc2e5027efa56d79c4ecdf7d4949759ef2068b`; report Git blob: `1b7e3cb572354cac4e506d7de0a3ed8af720472b`.
-- Brain report: [research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md](https://github.com/yspennstate/math-research-brain/blob/532e0b5ddb5b3b320b46beb155ee8b2be7e97761/research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md)
+- Brain report: [research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md](https://github.com/yspennstate/math-research-brain/blob/532e0b5ddb5b3b320b46beb155ee8b2be7e97761/research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md)
 - Brain commit: `532e0b5ddb5b3b320b46beb155ee8b2be7e97761`; report Git blob: `2a3bc4488a1a5135ff49c525d81779f8a49612fe`.
 - The Brain mirror was read in full and contains the complete original report plus exact immutable pointers to the canonical claims, code and output.
 
@@ -51,9 +51,9 @@ Substantive analytic Boolean sparse-activation counterexample to universal local
 
 Substantive independent analytic review of B05 at stated scope, plus independent exact Fraction and integer-FWHT finite verification at k=4; 16404 assertions passed; local rerun reproduces committed output byte-for-byte.
 
-- Canonical report: [reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/7955d427222392911dc6af2e4ee3aa8aab67ac8c/reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md)
+- Canonical report: [reports/fei-2026-10-11/runs/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/7955d427222392911dc6af2e4ee3aa8aab67ac8c/reports/fei-2026-10-11/runs/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md)
 - Canonical commit: `7955d427222392911dc6af2e4ee3aa8aab67ac8c`; report Git blob: `dcec4cb77233a7b233b4798b25aab5f2dd5c82b6`.
-- Brain report: [research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md](https://github.com/yspennstate/math-research-brain/blob/b57496edc22cb5b0dc058fb183bde2b787dc9d42/research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md)
+- Brain report: [research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md](https://github.com/yspennstate/math-research-brain/blob/b57496edc22cb5b0dc058fb183bde2b787dc9d42/research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md)
 - Brain commit: `b57496edc22cb5b0dc058fb183bde2b787dc9d42`; report Git blob: `b749c89d4590d842f39517a461efac62bf312a1c`.
 - The Brain mirror was read in full and contains the complete original report plus exact immutable pointers to the canonical claims, code and output.
 

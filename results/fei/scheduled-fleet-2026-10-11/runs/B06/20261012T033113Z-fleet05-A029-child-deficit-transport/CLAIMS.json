@@ -1,0 +1,52 @@
+[
+  {
+    "claim_id": "A029-DEPTH-SENSITIVE-BENT-GAIN",
+    "version": 1,
+    "exact_statement": "For every m>=1 and Boolean m-bit seed g, F_g(x,y)=(-1)^(x dot y)g(y) has r1=4 and best depth-at-most-two stopping ratio2. Quadratic bent roots have best unrestricted stopping ratio2. For m=3 and g=-1 only at000, the explicit tree revealing x, stopping at x=0 and completing y elsewhere has ratio (352+9log2(3))/186<916/465; hence unrestricted gain>944/465>2.03. Its terminal deficit D2(g)/8 is the exact negative of its query credit, and disjoint tensors inherit this helper violation while retaining H/I=2.",
+    "hypotheses": [
+      "Actual Boolean signs; independent fair physical bits; entropy in bits; ordinary physical influence",
+      "Tree ratios retain actual physical terminal entropy and influence; constants have no divided ratio",
+      "Depth-two versus arbitrary-tree domains are explicitly distinct"
+    ],
+    "statement_sha256": "b7cb84f2a9e671e1e5eb3a05300b0b2ebc119c9d86cfc63b877af1cec4a0a63e",
+    "contributors": [
+      "fleet05/A029"
+    ],
+    "proof_source": [
+      "REPORT.md",
+      "DERIVATION.md",
+      "code/check.py",
+      "code/verify.py",
+      "out/checks.json",
+      "out/independent.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "B06-R2",
+        "version": "STREAM_NOTES v2, 2026-10-11 23:26Z",
+        "status": "BASELINE_USED_NOT_RECLAIMED"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SOURCE_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "exact_statement": "For every Boolean f, best single-coordinate ratio minus best unrestricted physical stopping-tree ratio is at most 2",
+        "source": "B06 STREAM_NOTES v2 A029 target; unrestricted reading of parenthetical all-bent gain exactly2",
+        "surviving_scope": "Prior n<=4 depth-two theorem, all paired-carrier depth-two equality, and quadratic bent unrestricted equality remain valid",
+        "not_refuted": "Full FEI; or the dimension-unrestricted depth-two gain bound for every Boolean function"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A030",
+      "A064",
+      "A087",
+      "A094",
+      "B06 lead",
+      "B20"
+    ]
+  }
+]

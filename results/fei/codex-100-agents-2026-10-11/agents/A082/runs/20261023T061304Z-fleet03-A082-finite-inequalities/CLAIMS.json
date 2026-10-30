@@ -1,0 +1,168 @@
+[
+  {
+    "claim_id": "A096-PHYSICAL-PHASE-FUNDED-NONEMPTY-RESET",
+    "version": 1,
+    "exact_statement": "For ANY Boolean seed h on a disjoint finite uniform cube, ANY restricted complementary controller a in {-1,0,1}, b=1-a^2, either sign sigma, and ANY normalized finite-cost source R with R(0)=(Eh)^2, supply the complete coherent reference Q(U,0)=(ahat(U)+sigma*Eh*bhat(U))^2, Q(U,T)=bhat(U)^2 R(T) for T nonempty. At a seed query j put d=E[h*x_j], C=sum ahat^2 bhat^2, D=sum ahat bhat^3, E=sum bhat^4 and Gamma=C-D^2/E>=0 (zero when E=0), x=Gamma*d^2. First coherently block-calibrate BOTH actual inherited child references. In each child of actual tail mass tau=beta*(1-mean_child^2), with beta=E b^2, change its CURRENT conditional nonempty seed profile to (1-epsilon)*M+epsilon*S for ANY prescribed normalized nonempty S, epsilon=x/(tau+x) when x,tau>0, and zero otherwise; preserve the actual signed vacuum and controller factors. The complete erasure-plus-mean-child-CE increment is <=-D_occ-x/ln2, where D_occ is the actual conditional occupancy KL. Consequently any finite adaptive mixed physical tree of these seed transactions and the prescribed paid coherent controller queries preserves the SAME supplied initial influence rate/account and all previous debits/full siblings, without an external reset-count or pathwise log-budget. Fixed A079 controller has Gamma=9/3584. This supplies neither a cheap arbitrary-seed initial reference nor a positive strength when d=0; FEI remains OPEN. Units bits.",
+    "hypotheses": [
+      "Actual Boolean independent uniform physical cubes; current coherent supplied finite reference, not arbitrary incoming wrapper",
+      "Targets prescribed on nonempty seed frequencies; both full children and every old debit retained",
+      "All mixture strengths use CURRENT actual d,tau,Gamma; no original refund reissued",
+      "At zero tail/zero energy no profile change; seed and controller endpoints use explicit point formulas"
+    ],
+    "statement_sha256": "be01db6a0985f69dbb4dd63b488601123e318a4dcdda54cd3911999c3cd34bb2",
+    "contributors": [
+      "A096; coherent wrapper and exact block-calibration baseline credited to A079/A032"
+    ],
+    "proof_source": {
+      "run_id": "20261023T053800Z-fleet03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/PILOT.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_PROFILE_WITNESS.json",
+        "out/PARITY_OBSTRUCTION.json",
+        "out/CHAIN_FROZEN_SPEC.json",
+        "out/CHAIN_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A079-POST-TAG-SECOND-TAIL-RESET-SAME-REFUND",
+        "version": 1,
+        "statement_sha256": "5cac4baac30e53630b88453f0eac7e68294f17163a19ccd8c83189aae1a2b995",
+        "source": "agents\\A079\\runs\\20261023T034945Z-fleet03-A079-correlated-auxiliaries\\CLAIMS.json",
+        "scope": "Only complete coherent wrapper invariant and nonpositive current-reference block calibrations; reconstructed in DERIVATION. No universal initial source price imported."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A082",
+        "result": "INDEPENDENT_ACCEPTANCE_UNCHANGED_AT_SUPPLIED_REFERENCE_SCOPE",
+        "source_run": "20261023T061304Z-fleet03-A082-finite-inequalities",
+        "proof": "DERIVATION.md sections1-2 and5",
+        "validation": [
+          "out/VALIDATION.json",
+          "out/OBSTRUCTION.json"
+        ],
+        "limits": "Local independent review only; no shared registry adoption, mirror or full FEI claimed."
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_A082_LOCAL_ACCEPTANCE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A085",
+      "A097",
+      "A003",
+      "A094",
+      "A050",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A096-ZERO-PHASE-QUERY-REFUND-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For A079 original four-bit controller a=(1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1), b=1-a^2, let h be parity of three seed bits, sigma=1, and supply its exact spectral reference R=P_h in the coherent signed wrapper. Query any seed bit. Its influence is one, but singleton coefficient d=0, spectral erasure B_j=0, conditional occupancy KL=0 and both complete coherent block-calibration refunds=0. Each child has seed parity on two bits. Replacing its current conditional nonempty reference point at the pair frequency by63/64 of that point plus1/64 at a singleton gives actual positive reset cost (3/8)log2(64/63) on EACH full child. Therefore no rule funding every fixed positive nonempty-profile replacement solely from this current query refund can hold on all relevant Boolean queries. This refutes that stronger local supplier only, not FEI or the phase-adaptive reset theorem, which correctly chooses zero strength here.",
+    "hypotheses": [
+      "Actual parity3 seed and fixed displayed Boolean controller",
+      "Full actual spectral incoming reference; explicit nonempty singleton target and strength1/64",
+      "Comparison is local query-refund funding, not global FEI"
+    ],
+    "statement_sha256": "587374157ed6086a310f16e58459f7af070c89b5b458eed177e18dc3ce87e200",
+    "contributors": [
+      "A096; coherent wrapper and exact block-calibration baseline credited to A079/A032"
+    ],
+    "proof_source": {
+      "run_id": "20261023T053800Z-fleet03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/PILOT.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_PROFILE_WITNESS.json",
+        "out/PARITY_OBSTRUCTION.json",
+        "out/CHAIN_FROZEN_SPEC.json",
+        "out/CHAIN_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A082",
+        "result": "INDEPENDENT_ACCEPTANCE_UNCHANGED_AT_SUPPLIED_REFERENCE_SCOPE",
+        "source_run": "20261023T061304Z-fleet03-A082-finite-inequalities",
+        "proof": "DERIVATION.md sections1-2 and5",
+        "validation": [
+          "out/VALIDATION.json",
+          "out/OBSTRUCTION.json"
+        ],
+        "limits": "Local independent review only; no shared registry adoption, mirror or full FEI claimed."
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_A082_LOCAL_ACCEPTANCE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A085",
+      "A097",
+      "A003",
+      "A094",
+      "A050",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A082-EXHAUSTIVE-CONTROLLER-PHASE-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For the fixed four-bit complementary controller a=(1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1), b=1-a^2, all physical restriction histories exhaust exactly the81 ternary coordinate faces, retaining duplicate restricted tables. For A=ahat and B=bhat define C=sum A^2 B^2, D=sum A B^3, E=sum B^4, Gamma=C-D^2/E when E>0 and0 otherwise. The exact Gamma multiset is {0:53,9/3584:1,93/3584:2,9/448:3,1/64:2,3/64:4,1/8:16}; hence its sharp positive floor is9/3584. For EVERY complementary finite controller Gamma=0 iff C=0. For beta=E b>0 the current phase energy V=sum B^2(sigma A+m B)^2 vanishes iff m=0 and C=0; on zero-Gamma faces V=m^2 E. In the supplied coherent-reference physical seed-query transaction of A096@1, replacing x=Gamma*d^2 by x=V*d^2 and using epsilon=x/(tau+x) still gives full increment<=-D_occ-x/ln2, retaining BOTH full child costs and all old debits. Thus zero uniform-mean Gram floor alone need not prevent phase-funded transport at a biased seed. This is no universal initial source supplier and FEI remains OPEN.",
+    "hypotheses": [
+      "Physical restrictions only of displayed controller for81-face census; arbitrary finite complementary controllers only for analytic zero criterion.",
+      "Independent uniform physical seed cube; normalized finite-cost supplied coherent reference with correct squared seed mean.",
+      "All profile changes use CURRENT m,d,V,tau; no change at zero x or zero actual tail; every old debit and both full terminals retained."
+    ],
+    "statement_sha256": "d54a5f16c3a09be8e735ef381cfb6f705f79aa4aae7fd5b028a1ab8a29dc7ee8",
+    "contributors": [
+      "A082; A096 credited for phase-funded transaction and A079/A032 for coherent wrapper"
+    ],
+    "proof_source": {
+      "run_id": "20261023T061304Z-fleet03-A082-finite-inequalities",
+      "files": [
+        "DERIVATION.md",
+        "code/check.py",
+        "out/CONTROLLER_FACES.json",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A096-PHYSICAL-PHASE-FUNDED-NONEMPTY-RESET",
+        "version": 1,
+        "statement_sha256": "be01db6a0985f69dbb4dd63b488601123e318a4dcdda54cd3911999c3cd34bb2",
+        "scope": "Supplied-reference transaction independently reconstructed; stronger V choice proved locally."
+      }
+    ],
+    "review_records": [],
+    "status": "EXACT_FINITE_CERTIFICATE_AND_ANALYTIC_COROLLARY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A096",
+      "A079",
+      "A085",
+      "A094",
+      "A099",
+      "B17",
+      "B20"
+    ]
+  }
+]

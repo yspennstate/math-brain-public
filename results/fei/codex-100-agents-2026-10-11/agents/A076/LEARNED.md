@@ -10,7 +10,7 @@ All entropy units are bits. Physical original inputs are uniform; t=floor(lambda
 - Thus local universal M_A<=K I_A and L_A<=K I_A require K>=4. This is necessary only; B09 helper and full FEI are not refuted or accepted by this calculation.
 - Exact checks use integer Walsh transforms and Fraction probabilities. Floating entropy output is diagnostic; analytic bounds supply infinite-family comparisons. External independent review remains pending.
 
-Source-complete proof and exact checker: runs/20261011T214703Z-account05-A076-threshold-and-tribes-controls/.
+Source-complete proof and exact checker: runs/20261011T214703Z-fleet05-A076-threshold-and-tribes-controls/.
 
 
 ## Stage 2: retained-profile transport, 2026-10-11
@@ -25,7 +25,7 @@ Source-complete proof and exact checker: runs/20261011T214703Z-account05-A076-th
 - NEXT: the first noncentral x-child is OR/AND(x,G); derive its shifted empty-core erasure-row correction with core B and terminal entropy retained. This addresses C019's universal transport rather than another solved family constant.
 - Validation: 556 all-core cases, 84 complete/stopped tree cases, 53,949 exact assertions; 24-term rational atanh logarithms with proved tails and 70-bit outward rounding. Interval-straddling zero checks are diagnostic, with analytic identities supplying sign/zero proofs.
 
-Full derivation: runs/20261011T233829Z-account05-A076-threshold-and-tribes-controls/MIXED_TREE_PROOF.md. Independent A092/A088 review pending.
+Full derivation: runs/20261011T233829Z-fleet05-A076-threshold-and-tribes-controls/MIXED_TREE_PROOF.md. Independent A092/A088 review pending.
 
 Stage3 durable fact (bits): OR/AND fresh-control wrapper has B_i(W)=B_i(G)/2+D(mu,a), D=[Phi((1+mu)^2,a^2)+Phi((1-mu)^2,a^2)]/4-Phi(mu^2,a^2)/2. The sharp upper bound D<=|a|<=Inf_i(G), lower bound D>=-|mu a|, survives arbitrary biased core restrictions. Any adaptive partial core tree pays |sum wD|<=consumed core influence, i.e. twice consumed wrapper influence; inherited B/2 is still unpaid. B_x(W)<=1-mu^2<=4Inf_x(W), with x influence a separate terminal reserve. H(W)=H(G)/2+R(mu); retain exact E R(mu_leaf) and E H(G_leaf)/2 rather than inventing a threshold leaf certificate. Three-bit point core mu=-3/4,a=1/4 gives D<0; unsigned banks lose credit. General composition split/envelope already belongs to A056/A057; new scope is sharp signed one-control transport and adaptive nonreuse. Next live obstruction: two cores sharing a physical coordinate, requiring one common reserve.
 

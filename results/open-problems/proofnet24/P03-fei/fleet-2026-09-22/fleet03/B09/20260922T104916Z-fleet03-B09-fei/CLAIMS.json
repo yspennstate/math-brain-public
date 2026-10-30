@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "run_id": "20260922T104916Z-fleet03-B09-fei",
+  "full_problem_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B-ORBIT-CARDINALITY-SUFFICIENCY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If P and Q are probability laws on nonempty subsets of [n] invariant under all coordinate permutations, then D_2(P||Q)=D_2(Law_P(|S|)||Law_Q(|S|)). In particular this applies to a permutation-symmetric Boolean squared spectral law and its equal-marginal conditional-product I-projection.",
+      "scope": "Permutation-symmetric spectral sources; boundary cases by the usual support/limit convention.",
+      "dependencies": [
+        {"claim_or_source": "IPROJ", "mode": "uses_premise", "repository": "yspennstate/math-open-problems", "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04", "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md"}
+      ],
+      "verification": "Analytic KL chain-rule proof in REPORT.md Section 2; not independently reviewed."
+    },
+    {
+      "id": "B-NESTED-CARDINALITY-EVENT-BANK-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For cardinality laws A,B on {0,...,n}, D_2(A||B)=sum_{k=0}^{n-1} A_{>=k} d_2(A_k/A_{>=k} || B_k/B_{>=k}). Thus on the orbit-symmetric class the entire K_occ is an exact sum of nested binary-event KL payments.",
+      "scope": "Finite cardinality laws with standard zero-mass conventions.",
+      "dependencies": [],
+      "verification": "Analytic sequential-encoding/KL-chain-rule proof in REPORT.md Section 3; not independently reviewed."
+    },
+    {
+      "id": "B-SYMMETRIC-SUPPORT-EXCLUSION-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "If an actual Boolean spectral law assigns probability zero to event E, then K_occ>=-log_2(1-Q_r(E)); if its whole support lies in L, K_occ>=-log_2 Q_r(L). For odd permutation-symmetric Boolean functions this gives K_occ>=log_2(2c/[1-(1-2cr)^n]).",
+      "scope": "Exact support events under the influence-matched conditional-product law; odd symmetric corollary at uniform bias.",
+      "dependencies": [
+        {"claim_or_source": "IPROJ", "mode": "uses_premise", "repository": "yspennstate/math-open-problems", "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04", "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md"}
+      ],
+      "verification": "Binary data-processing proof in REPORT.md Section 4; not independently reviewed."
+    },
+    {
+      "id": "B-SPARSE-SUSPENSION-RARE-LOG-RECOVERY-v1",
+      "status": "PROVED_IN_SOURCE",
+      "statement": "For the genuine Boolean sparse suspension F_m(y,x)=y(1-2 1_{x=0}), with p=2^{1-m}, the old-coordinate cardinality-event bank equals the full K_occ exactly. Hence it recovers Theta(m I) KL while the full unweighted signed-convolution L2 energy is only Theta(I). The single tail d_m=floor(m/2-sqrt(m ln m)) already gives a (1-o(1))m^2 p lower bound.",
+      "scope": "The exact sparse suspension family from the cited L2 obstruction; asymptotic m->infinity.",
+      "dependencies": [
+        {"claim_or_source": "L2_BARRIER", "mode": "uses_premise", "repository": "yspennstate/math-open-problems", "commit": "7ec649dfb3d1ab2f92855f2069590fca2ac956dd", "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md"},
+        {"claim_or_source": "B-BIASED-BOOLEANITY-GAP-v1", "mode": "context_and_comparison", "repository": "yspennstate/math-open-problems", "commit": "603b35e74227d1c2d8ee34c0c527c439c686e30b", "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md"}
+      ],
+      "verification": "Analytic orbit-sufficiency plus Hoeffding/union-bound proof in REPORT.md Section 5; not independently reviewed."
+    }
+  ],
+  "preflight": {
+    "source": "yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046:proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md",
+    "result": "PASSED_AS_SCOPE_CHECK",
+    "note": "The new event bank retains every cardinality scale and is not the refuted fixed/sub-half-depth labelled projection. Exact sufficiency is only claimed under full permutation symmetry, which recursive ternary majority lacks."
+  },
+  "partner_consumption": {
+    "assigned_partner": "fleet04/B09",
+    "status": "NO_COMPLETED_CURRENT_PROGRAMME_ARTIFACT_OBSERVED_BEFORE_PUBLICATION",
+    "fallback_consumed_other_account_result": "fleet04/B17 B-BIASED-BOOLEANITY-GAP-v1",
+    "reason": "Owner order directs asynchronous work from available completed evidence without waiting."
+  },
+  "next_unpaid_implication": "Construct a hierarchical nested-event chain-rule representation of child K_occ and C_hier under genuine disjoint Boolean composition, preserving all recursive-majority scales, and compare the retained KL directly with [-B_inf^Gamma]_+."
+}

@@ -1,0 +1,25 @@
+# fleet02/B18 operational receipt — 2026-09-22T03Z
+
+- account: fleet02
+- slot: B18
+- role: FEI proof integration
+- execution_mode: WITHOUT_VERIFIED_BRAIN
+- model_self_report: GPT-5.6 Sol
+- requested_effort: maximum actually supported
+- configured_or_known_effort: UNKNOWN / NOT_EXPOSED
+- provider_reasoning_usage: null / NOT_EXPOSED
+- elapsed_execution_seconds_to_receipt_snapshot: 711.285
+- elapsed_note: wall-clock execution elapsed, not pure thinking time
+- scheduler_inventory: current account-local exposed managed B01-B20 inventory showed 20/20 enabled and hourly-valid; no B18 scheduler mutation and no deficit requiring B20 action
+- scientific_result: proved the exact source-bound nine-host shared-core local target K(b) is globally capped for every signed b in [-1,1]; combined with the actual Boolean recurrence this gives R'_d <= max{R,M} for every signed selected singleton and every integer self-composition depth, and the max bound iterates under repeated same-core grafts
+- full_FEI_status: OPEN / NOT PROVED
+- artifacts:
+  - scientific_start_commit: b67d317d2e7551855ca8c02e20e67a1c29403a0f
+  - preliminary_checker_commit: 8e91ca40af9a2be99441469b85fbfcfddc1a5456
+  - preliminary_output_commit: 407e12bb0680767b3fe2c6dfbea1f5ad7f2ed4c7
+  - final_checker_commit: 21742cef9e05c07d4ad0e7540375e9a7b8a46c9d
+  - final_output_commit: 31a74bdcf2e5d46f150b8aef4dd8e66dbfc40973
+  - scientific_report_commit: d5cd0ad0ec8150617c23362ab4f85f2f7d4e6cd5
+  - source_bound_handoff_commit: 8b39035c099239e9ad3d2cc83ce1902c9aa8368e
+  - true_hour_login_commit: c295d4621562f92f27b6bc3a306a01a5db1badc8
+- privacy_review: scoped scientific/control metadata only; no credentials, scheduler identifiers, machine paths, raw transcripts, benchmark gold, email/Drive data, or unrelated private information written

@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A096-ZERO-PHASE-QUERY-REFUND-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For A079 original four-bit controller a=(1,0,0,0,-1,1,1,1,1,0,0,0,1,-1,-1,-1), b=1-a^2, let h be parity of three seed bits, sigma=1, and supply its exact spectral reference R=P_h in the coherent signed wrapper. Query any seed bit. Its influence is one, but singleton coefficient d=0, spectral erasure B_j=0, conditional occupancy KL=0 and both complete coherent block-calibration refunds=0. Each child has seed parity on two bits. Replacing its current conditional nonempty reference point at the pair frequency by63/64 of that point plus1/64 at a singleton gives actual positive reset cost (3/8)log2(64/63) on EACH full child. Therefore no rule funding every fixed positive nonempty-profile replacement solely from this current query refund can hold on all relevant Boolean queries. This refutes that stronger local supplier only, not FEI or the phase-adaptive reset theorem, which correctly chooses zero strength here.",
+    "hypotheses": [
+      "Actual parity3 seed and fixed displayed Boolean controller",
+      "Full actual spectral incoming reference; explicit nonempty singleton target and strength1/64",
+      "Comparison is local query-refund funding, not global FEI"
+    ],
+    "statement_sha256": "587374157ed6086a310f16e58459f7af070c89b5b458eed177e18dc3ce87e200",
+    "contributors": [
+      "A096; coherent wrapper and exact block-calibration baseline credited to A079/A032"
+    ],
+    "proof_source": {
+      "run_id": "20261023T053800Z-fleet03-A096-live-gap-ledger",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/check.py",
+        "out/FROZEN_SPEC.json",
+        "out/PILOT.json",
+        "out/VALIDATION.json",
+        "out/POSITIVE_PROFILE_WITNESS.json",
+        "out/PARITY_OBSTRUCTION.json",
+        "out/CHAIN_FROZEN_SPEC.json",
+        "out/CHAIN_CERTIFICATE.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A092",
+        "run_id": "20261023T061817Z-fleet03-A092-counterexample-referee",
+        "date_utc": "2026-10-23",
+        "verdict": "INDEPENDENTLY_ACCEPTED_UNCHANGED_STATEMENT_AT_LOCAL_SUPPLIER_SCOPE",
+        "method": "Reconstructed original Boolean truth tables, integer Walsh transforms, independent physical influences and both full child references; direct character check at source witness; analytic proof with exact sign. No producer implementation imported.",
+        "files": [
+          "PROOF.md",
+          "code/check.py",
+          "out/VALIDATION.json",
+          "out/WITNESS.json"
+        ],
+        "clarification": "Influence one refers to parity seed. The full displayed wrapper seed-coordinate influence is 3/8. Current local refund alone fails; no claim that original surplus is unavailable.",
+        "exclusions": [
+          "Companion A096 phase-funded theorem is not independently accepted by this review",
+          "No universal FEI counterexample",
+          "No necessity claim for the prescribed ghost target"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_LOCAL_SUPPLIER_SCOPE",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A079",
+      "A085",
+      "A097",
+      "A003",
+      "A094",
+      "A050",
+      "B20"
+    ]
+  }
+]

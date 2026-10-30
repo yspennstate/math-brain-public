@@ -1,0 +1,39 @@
+{
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T065844Z-fleet01-B20-QFORM-auto11",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "id": "QFORM-C-RANK2-TRANSVERSE-ROW-PAYMENT-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "In fleet02/B20 packet (C), if rank(C)=2, e2(CC^T)>1/1536, the B19 three-dimensional source-side hypotheses hold, and ||Br||>=1/64 for the transverse cross-null unit vector r, then the full ambient quadratic form has a continuous density with ||p_Q||_infinity<100.",
+      "source_dependency": "fleet02/B20 e2(CC^T)>1/1536 plus fleet01/B19 QFORM-RANK2-CROSS-TRANSVERSE-UNIFORM-NEARNULL-v1",
+      "scope": "original product banks; arbitrary cap-one marginals; arbitrary opposite-bank self curvature in receiver scope"
+    },
+    {
+      "id": "QFORM-ZERODIAG-CUT-DISJOINTIZATION-v1",
+      "status": "PROVED_SUPPORTING_LEMMA",
+      "statement": "Every finite real zero-diagonal matrix Z has a partition of its physical index set L union R such that ||Z[L,R]||op >= ||Z||op/4.",
+      "scope": "deterministic; nonsymmetric allowed"
+    },
+    {
+      "id": "QFORM-ANCHORED-N-PACKET-DISJOINT-CURRENCIES-v1",
+      "status": "PROVED_STRUCTURAL_REDUCTION",
+      "statement": "If N=diag(b)H-d b^T, d_j=H_jj, and ||N||op>1/(16 sqrt(6)), then disjoint physical banks L,R satisfy either ||b_L||_infinity ||H[L,R]||op>1/(128 sqrt(6)) or ||d_L||_2 ||b_R||_2>1/(128 sqrt(6)).",
+      "scope": "structural currency only; no density payment claimed"
+    },
+    {
+      "id": "QFORM-ANCHORED-T-PACKET-DISJOINT-CURRENCIES-v1",
+      "status": "PROVED_STRUCTURAL_REDUCTION",
+      "statement": "If symmetric T=aH-bb^T obeys ||T||op>1/(16 sqrt(3)), then either some |aH_jj-b_j^2|>1/(32 sqrt(3)), or disjoint physical banks L,R satisfy |a| ||H[L,R]||op>1/(256 sqrt(3)) or ||b_L||_2 ||b_R||_2>1/(256 sqrt(3)).",
+      "scope": "structural currency only; no density payment claimed"
+    },
+    {
+      "id": "QFORM-C-RANK2-NEARKERNEL-PAYMENT-v1",
+      "status": "OPEN",
+      "statement": "Pay the remaining rank-two packet-(C) state with e2(CC^T)>1/1536, a usable three-dimensional source side, C^T r=0, and ||Br||<1/64, using original-coordinate product provenance."
+    }
+  ]
+}

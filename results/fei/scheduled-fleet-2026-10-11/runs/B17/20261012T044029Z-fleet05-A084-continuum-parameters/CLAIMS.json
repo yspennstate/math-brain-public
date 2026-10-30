@@ -1,0 +1,53 @@
+[
+  {
+    "claim_id": "A084-AND-CONTINUUM-CERTIFICATE",
+    "version": 2,
+    "exact_statement": "For g(X,Y)=(-1)^(XY) under independent Bernoulli(p), Bernoulli(q), 0<p,q<1, with A={X}, the complete strict-sign regions and zero set of F=J_A-M_A are those in PROOF.md, as follows. Put psi(x)=h2(sin^2 x), theta=arcsin(sqrt(p)), alpha=atan(sqrt(p/(1-p))*(1-2q)), w=1-4pq(1-q). Then F=w[psi(theta)-psi(alpha)-psi(theta-alpha)]. There is a unique s_* in (0,pi/4) with 2psi(s_*/2)=psi(s_*); p_*=sin^2(s_*) lies strictly between 7634531/20971520 and 152690623/419430400. For G_s(x)=psi(x)+psi(s-x)-psi(s), 0<x<s<pi/2: if s>=pi/4, G_s>0; if s<s_*, G_s<0; if s=s_*, G_s<0 except G_s(s/2)=0; if s_*<s<pi/4, it has exactly two simple zeros a(s),s-a(s), with 0<a(s)<s/2, is positive between them, and negative outside. For q<1/2, F=-w G_theta(alpha). For q>1/2,p<=1/2, F<0. For q>1/2,p>1/2, let q0=1/(2p), s=pi/2-theta, b=-alpha: F=-w G_s(b) for q<q0, F=0 at q=q0, and F<0 for q>q0. Also F(p,1/2)=0. The numbers of distinct interior q zeros are respectively 1,2,3,1,4,3,2 on p in (0,p_*), {p_*}, (p_*,1/2), {1/2}, (1/2,1-p_*), {1-p_*}, (1-p_*,1). On the continuous outer edges F(0,q)=F(1,q)=F(p,0)=0 and F(p,1)=-h2(4p(1-p)). Both actual singleton choices {X} and {Y} violate J_A<=M_A for every real 0<p,q<p_*.",
+    "hypotheses": [
+      "Independent Bernoulli inputs with 0<p,q<1",
+      "Actual Boolean sign g=(-1)^(XY)",
+      "Normalized orthonormal product Fourier basis",
+      "M_A is conditional spectral entropy and J_A actual physical-child mixture mutual information",
+      "Shannon entropy in bits; outer edges mean continuous limits"
+    ],
+    "statement_sha256": "0f17a1a106633bd9dbe0ec094e2c80b855fd61905a34848686e9bce4b8cf5ec8",
+    "contributors": [
+      "A084"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A084\\runs\\20261012T044029Z-fleet05-A084-continuum-parameters\\PROOF.md",
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A084\\runs\\20261012T044029Z-fleet05-A084-continuum-parameters\\REPORT.md",
+      "certificate": "out/THRESHOLD_CERTIFICATE.json",
+      "validation": [
+        "out/GRID_CHECKS.json",
+        "out/DERIVATIVE_CHECKS.json",
+        "out/HYPERBOLA_ZERO_FIXTURES.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_TARGET_COMPLETE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A084-AND-CONTINUUM-CERTIFICATE",
+        "version": 1,
+        "reason": "Completes the same open packet from restricted rectangles to the full continuum sign map; the old restricted theorem remains valid."
+      }
+    ],
+    "refutes": [
+      "A tax-free biased J_A<=M_A theorem after existential singleton choice, even on all two-bit AND biases."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A094",
+      "B09",
+      "A041",
+      "A046",
+      "A050",
+      "A057",
+      "A064",
+      "A096"
+    ]
+  }
+]

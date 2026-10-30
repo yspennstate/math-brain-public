@@ -1,7 +1,7 @@
 """A StudyExecution is reported verified only when execute_prepared_study built it or a recheck against the ledger has
 just passed.
 
-Scheduled audit account03/B09, B09-R79-STUDYEXECUTION-VERIFIED-SUMMARY-UNBOUND-20260929: a hand-built object with
+Scheduled audit fleet03/B09, B09-R79-STUDYEXECUTION-VERIFIED-SUMMARY-UNBOUND-20260929: a hand-built object with
 repeated slot ids and non-digest strings passed construction, and its summary said the attempt ledger was verified.
 The ledger cases drive a real AttemptLedger to terminal states with the ledger tests' own helpers.
 """

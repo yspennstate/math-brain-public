@@ -59,7 +59,7 @@ T_b=H(\mu_b)-\log_2 Z_b.
 \tag{1.3}
 \]
 
-The direct predecessor is account04/B15's [critical logarithmic all-shift tariff](https://github.com/yspennstate/math-open-problems/blob/0336e6fd68a55ed75f92633e80ba668bdf124290/proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T101332Z-log-convolution-critical-tariff/REPORT.md), blob `03fbfa09b30b816137f344d926732a9ac794e193`. Its Section 4 calibrates `L/4` on sparse one-point suspensions; Section 6 asks for a support-conditioned all-source lower payment. That calibration remains correct. We refute an all-source extension, not its proved family theorem and not a version explicitly restricted to composition-prime sources.
+The direct predecessor is fleet04/B15's [critical logarithmic all-shift tariff](https://github.com/yspennstate/math-open-problems/blob/0336e6fd68a55ed75f92633e80ba668bdf124290/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T101332Z-log-convolution-critical-tariff/REPORT.md), blob `03fbfa09b30b816137f344d926732a9ac794e193`. Its Section 4 calibrates `L/4` on sparse one-point suspensions; Section 6 asks for a support-conditioned all-source lower payment. That calibration remains correct. We refute an all-source extension, not its proved family theorem and not a version explicitly restricted to composition-prime sources.
 
 To identify these quantities with the earlier nonempty I-projection convention, suspend any `g` by a fresh sign `y`: `F(y,x)=y g(x)`. Its spectral law has `y` deterministically present. Consequently every law with the required marginals is already nonempty, the maximum-entropy law is exactly the product `Q` on the old coordinates, and `K_occ(F)=K_full(g)`. Support conditioning gives exactly (1.1). Also `I(F)=1+I(g)`.
 

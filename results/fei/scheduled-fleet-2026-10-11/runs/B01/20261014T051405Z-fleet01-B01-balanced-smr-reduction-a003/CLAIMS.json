@@ -1,0 +1,57 @@
+{
+  "schema": "fei-claims/2",
+  "stream": "B01",
+  "primary_packet_id": "A003",
+  "claims": [
+    {
+      "claim_id": "B01-A003-BALANCED-SUBLINEAR-SMR",
+      "version": "v1",
+      "exact_statement": "Fix 0<eta<=1 and 0<=c<infinity. Let e_N be real numbers with |e_N|/N tending to zero. If every balanced genuine Boolean h on every N-dimensional finite uniform cube satisfies M(h)+(1+eta)U(h)<=c I(h)+e_N, then every genuine Boolean f satisfies M(f)+(1+eta)U(f)<=c I(f), hence G(f)<=(c+2)I(f)+(1-eta)U(f) and H(f)<=(2+2(c+2)/eta)I(f). Conversely, universal exact SMR implies the balanced statement with e_N=0.",
+      "hypotheses": [
+        "Uniform finite cube and genuine sign-valued Boolean functions",
+        "Absolute 0<eta<=1 and finite c>=0",
+        "Balanced-class terminal e_N obeys |e_N|/N->0",
+        "Source-reviewed identities G=B+M, B<=H, H<=2(I-Var)+2U, and the GU-to-U induction"
+      ],
+      "statement_sha256": "e5232010d85f3956d69dae02f5622b32fc35afdffbc28c29e7ea3bec50eb6c15",
+      "contributors": ["fleet01/B01"],
+      "proof_source": "PROOF.md",
+      "proof_dependencies": [
+        "B01-A003-SIGNED-MISMATCH-REFUND-v1",
+        "A002 dictator balancing H/I ledger (extended here to U/G/B/M)"
+      ],
+      "review_records": [],
+      "status": "PROVED_REDUCTION_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "Existence of any absolute c, eta and o(N) terminal satisfying BAL-SMR-o(N) on every balanced Boolean function.",
+      "next_consumers": ["A005", "A086", "A094", "B05", "B19", "B20"]
+    },
+    {
+      "claim_id": "B01-A003-SMR-2-ONE-QUARTER",
+      "version": "v2",
+      "exact_statement": "The universal helper M+(5/4)U<=2I is false; moreover its balanced restriction remains false even with any o(N) terminal.",
+      "hypotheses": [
+        "B05/B19 independently certified five-bit activation witness F",
+        "Balanced family h_t=y F^{tensor t}"
+      ],
+      "statement_sha256": null,
+      "contributors": ["fleet01/B05", "fleet01/B19", "fleet01/B01"],
+      "proof_source": "PROOF.md section 5, using B19 review blob a7cf3a357cd754a417e9f0043d023e9d1500bf48",
+      "proof_dependencies": ["B05-A023-ACTIVATION-SMR-v1", "B19 independent acceptance"],
+      "review_records": [
+        {
+          "reviewer": "fleet01/B19",
+          "scope": "Exact finite five-bit residual only",
+          "verdict": "ACCEPTED"
+        }
+      ],
+      "status": "REFUTED_UNIVERSALLY_AND_BALANCED_SUBLINEAR_TERMINAL",
+      "supersedes": "B01-A003-SMR-2-ONE-QUARTER-v1",
+      "refutes": "M+(5/4)U<=2I",
+      "first_unproved_line": null,
+      "next_consumers": ["B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

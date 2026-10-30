@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "run_id": "20260921T204926Z-threshold-contraction",
+  "full_FEI_solved": false,
+  "claim_review": "SELF_CHECKED_PENDING_INDEPENDENT_REVIEW",
+  "publication_priority": "UNVERIFIED",
+  "work_label": "WITHOUT_VERIFIED_BRAIN",
+  "native_brain_ingestion": false,
+  "scientific_readback_commit": "54cb04ad96c06fbf04e773fb122f8a80497ed145",
+  "readback": "ALL_SIX_EXACT_BLOBS_AND_LENGTHS_MATCH_LOCAL",
+  "read_order": [
+    "REPORT.md",
+    "HALFBAND_COLLISION_EXTENSION.md"
+  ],
+  "files": [
+    {
+      "path": "REPORT.md",
+      "bytes": 29868,
+      "git_blob_sha1": "3a3c9f2c1b3d2cc759fb0fd390146ae7440f4ee0",
+      "sha256": "cc213049d7c488da444cb0b1aaeb3406c3bed65786f0d8c8cfa2f5e3eb9ffe71"
+    },
+    {
+      "path": "HALFBAND_COLLISION_EXTENSION.md",
+      "bytes": 9665,
+      "git_blob_sha1": "2efc5dedf145a262700649c6e711c6a6fb91d622",
+      "sha256": "1b6a74eb9ce76634d3e97702ef63945fc06b11a159c3c116480f9b0f41da258e"
+    },
+    {
+      "path": "verify_threshold_contraction.py",
+      "bytes": 15709,
+      "git_blob_sha1": "e784ddf4fdae96c6b28e853099cda8934dd8ed23",
+      "sha256": "88aecc198981a75f4368fea411444f7213b1d427275fdfbc35b20bb336e8a52f"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 11394,
+      "git_blob_sha1": "d44aaceda7fc44f11c944bc63d8650e84fd9f6f3",
+      "sha256": "e6da2cb5131d9298edc642256141289e10541f8850b7a90f4e5ae8b1d770083b"
+    },
+    {
+      "path": "verify_halfband_collision.py",
+      "bytes": 4831,
+      "git_blob_sha1": "b291e10e1cbb51a3c1b41a1a0cb9da18a8d7dd00",
+      "sha256": "71cb62ea9569abc498179169de453af42adba07f8acf01bfe623ba67ffd0dc98"
+    },
+    {
+      "path": "halfband_collision_checks.json",
+      "bytes": 3041,
+      "git_blob_sha1": "fd549bb8a390cebab72fa19fcca6c19f22b5dd94",
+      "sha256": "6ca91181f1a0783147a17d4efec836417f794437e0637025288433c2c69e3cd5"
+    }
+  ],
+  "execution": {
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "mpmath": "1.3.0",
+    "commands": [
+      "python verify_threshold_contraction.py --part all --output verification.json",
+      "python verify_halfband_collision.py --output halfband_collision_checks.json"
+    ],
+    "separate_process_replays": "BOTH_OUTPUTS_BYTE_IDENTICAL",
+    "independent_audit": false,
+    "tool_limit_event": "One chained two-run command reached the tool wall limit; individual complete replay was then executed successfully."
+  },
+  "model_self_report": "GPT-6 Astra Pro",
+  "reasoning_effort_configured": "UNKNOWN_NOT_EXPOSED",
+  "provider_thinking_seconds": null,
+  "reasoning_tokens": null,
+  "first_instrumented_utc": "2026-09-21T20:49:26+00:00",
+  "manifest_snapshot_utc": "2026-09-21T21:24:16.944423+00:00",
+  "elapsed_wall_seconds": 2090.944,
+  "elapsed_scope": "Observed work and delivery, not pure thinking; excludes earlier source reads and later handoff delivery.",
+  "private_repositories_verified": true,
+  "privacy_review": "Explicit six-file credential/path regex scan and manual mathematical-content review, not a complete repository scan.",
+  "scope_warning": "Auxiliary all-Boolean positive-current targets are refuted, including the actual half-band finite window. FEI, valid peer identities, and signed estimates retaining their other negative credits are not refuted.",
+  "shared_recipients": [
+    "fleet01/B16",
+    "fleet02/B15",
+    "fleet02/B16",
+    "fleet02/B18",
+    "fleet03/B16",
+    "fleet03/B18",
+    "fleet04/B16"
+  ],
+  "scheduler_changes": false,
+  "peer_uptake_claimed": false
+}

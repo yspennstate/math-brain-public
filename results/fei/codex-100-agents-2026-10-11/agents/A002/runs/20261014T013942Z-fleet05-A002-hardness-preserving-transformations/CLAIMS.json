@@ -1,0 +1,109 @@
+[
+  {
+    "claim_id": "A005-POINT-EDIT-CHILD-ELIGIBILITY-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "Fix C>=0 and a nonconstant finite uniform Boolean seed f with H(f)-CI(f)>0. Pad with r dummy coordinates and flip physical vertex zero to get F_N, N=n+r. For every dummy j, average child slack sigma_j(F_N)=-(delta(f)+delta(F_(N-1)))/2 tends to -delta(f)<0. Every original coordinate slack converges to its seed slack. If all original average child slacks are strictly positive, then eventually the average-child-eligible coordinates are exactly the original coordinates and their minimum B_i/Inf_i tends to E(f), although the unrestricted minimum tends to min(E(f),2). For the three-bit point defect, N=12,C=8/3, F_N has full Fourier support, max influence<1/4 and positive delta; all original coordinates have nonnegative individual child slacks and B_i/Inf_i>5/2, while all nine dummy coordinates have both individual child slacks negative and B_j/Inf_j<5/2. Thus root selection B_i<=5Inf_i/2 does not imply selection with certified average children at C=8/3 on this class. Moreover, with Q_C(f)=min_i [B_i(f)+max(-sigma_i(f),0)]/Inf_i(f), Q_C(F_N) tends to Q_C(f) for every fixed violating seed, with no seed-child positivity assumption; every dummy corrected price is asymptotic to delta(f)*2^(N-1) and diverges.",
+    "hypotheses": [
+      "Finite uniform Boolean signs; entropy in bits; normalized Walsh coefficients",
+      "The fixed seed has only relevant inputs and I(f)>0; C fixed before r tends to infinity",
+      "B_i=H(S_i|S_-i), delta=H-CI, sigma_i=average_b(CI(child)-H(child))",
+      "Eligibility means sigma_i>=0; the limiting data-only minimum assertion requires strict positivity of every original seed average child slack",
+      "The finite example is the actual three-bit one-point defect padded by nine coordinates and flipped at physical zero; no minimal-violator hypothesis is asserted"
+    ],
+    "statement_sha256": "fe35bf07b99937d1c09d5ac1cb5287c3696ccc6aa80995f3d3b29de935fb17c4",
+    "contributors": [
+      "fleet05/A005"
+    ],
+    "proof_source": [
+      "DERIVATION.md Signed-child eligibility section",
+      "out/WITNESS_VALIDATION.json",
+      "out/DIRECT_VALIDATION.json"
+    ],
+    "proof_dependencies": [
+      {
+        "claim_id": "A061-ARBITRARY-CORE-EDIT-ADMISSION",
+        "version": 1,
+        "scope": "Independent reconstruction of B-minimum limit and H/I continuity; original all-lambda/D statement not adopted as independently accepted here."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A002",
+        "at_utc": "2026-10-14T01:54:36.996027+00:00",
+        "verdict": "HOLDS_AT_EXACT_A005_STATEMENT_SCOPE",
+        "source": {
+          "path": "~\\brain_workers\\FEI100_20261011\\agents\\A002\\runs\\20261014T013942Z-fleet05-A002-hardness-preserving-transformations\\DERIVATION.md",
+          "sha256": "03dd54234b5ffeca10f2350ef80a10464392723d9cc7b85e3e60d95467868b03"
+        },
+        "method": "Independent physical-child, mass-grouped prime-log reconstruction and self-contained continuity/packet proof; actual4096-value truth table and all24 physical child spectra certify finite witness; no repair contributed",
+        "dependency_scope": "Self-contained reconstruction of needed H/I continuity and B-minimum cap, not a verdict on the broader A061 lambda/drift theorem. Reviewer is not a contributor to A005 v1 or A061 v1; no third-party scoped review assumed as premise.",
+        "validation": "out/EXACT_CHECK.json and out/WITNESS.json",
+        "scope_guard": "No minimal-violator counterexample or universal corrected-price payment claimed"
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_AT_EXACT_A005_STATEMENT_SCOPE",
+    "supersedes": [],
+    "refutes": [
+      "For every full-Fourier-support Boolean function with max_i Inf_i<1/4 and H>(8/3)I, a coordinate with B_i/Inf_i<=5/2 and average child slack>=0 exists."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "A002",
+      "A003",
+      "A061",
+      "A064",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A002-SIGNED-PRICE-SAME-C-COMPLETENESS",
+    "version": 1,
+    "exact_statement": "Fix C>=0 and define sigma_i(f)=average_b[CI(f_i,b)-H(f_i,b)], q_C,i=(B_i+max(-sigma_i,0))/Inf_i and Q_C=min over relevant i, with constants assigned0. For any nonconstant Boolean seed f, delta=H(f)-CI(f), its t-fold disjoint tensor satisfies Q_C(f^tensor t)=min_i max(B_i/Inf_i,C+(t delta-JS_i)/Inf_i). If delta>0 then Q_C(f^tensor t)/t tends to delta/max_i Inf_i>0. Thus, for M_C(N)=sup Q_C over signs with at most N relevant inputs, universal FEI(C), finite sup_f Q_C, and M_C(N)=o(N) are equivalent at the exact same C; under FEI(C), Q_C<=C, while any violating seed on n relevant inputs gives liminf M_C(N)/N>=delta/(n max_i Inf_i). For every fixed tau,eta in(0,1), the same equivalence holds if a bounded or o(N) corrected-price envelope is required only on full-Fourier-support signs with I<=tau, max_i Inf_i<=tau and mean>=1-eta. Indeed balanced tensor point activation with k=ceil(sqrt(t)), followed by two dummies and one physical point flip, gives actual full-support E_t with N_t=tn+k+3, I->0, mean->1, H/I->seed H/I and liminf Q_C(E_t)/N_t>=delta/n. This is a same-C completeness/obstruction theorem, not a finite universal payment.",
+    "hypotheses": [
+      "Finite independent uniform physical cubes and actual Boolean signs",
+      "Normalized squared Walsh spectra, entropies in bits; B_i=H(S_i|S_-i), JS_i physical restriction divergence",
+      "C fixed before all dimensions/functions; relevant coordinates only in minima",
+      "Q_C is A005 signed-child corrected price, not the unrelated B16 tree Q functional",
+      "Tensor growth assumes a nonconstant violating seed with delta>0; arbitrary-seed transport identity itself does not assume violation",
+      "Rare/full-support class uses fixed tau,eta in(0,1); sublinear envelopes refer to actual relevant dimension N",
+      "Baseline scalar JS_i<=(2/ln2)Inf_i; no universal FEI constant is assumed"
+    ],
+    "statement_sha256": "f9c319eef7af25b0749f0f6341e387cc57d6a22abce43757ad0732c9a66ba102",
+    "contributors": [
+      "fleet05/A002"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A002\\runs\\20261014T013942Z-fleet05-A002-hardness-preserving-transformations\\DERIVATION.md",
+      "sha256": "03dd54234b5ffeca10f2350ef80a10464392723d9cc7b85e3e60d95467868b03"
+    },
+    "proof_dependencies": [
+      "A005 signed slack/tensor interface (directly reconstructed)",
+      "A061 stage4 maximum-form identity (consumed and directly derived; no broader admission theorem used)",
+      "C005 physical restriction entropy/influence identities and scalar JS bound",
+      "A002 prior balanced activation/full-support hardening ledger (direct coefficient/continuity argument retained here)"
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_SCOPED_QUANTIFIER_EXTENSION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "An unrestricted dimension-independent negative-child-slack corrected-price bound is weaker than FEI at the same C",
+      "Rare activation, weak influences or full Fourier support remove violating-seed debt from Q_C"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B01",
+      "A005",
+      "A051",
+      "A052",
+      "A055",
+      "A061",
+      "A064",
+      "A087",
+      "A094",
+      "B20"
+    ]
+  }
+]

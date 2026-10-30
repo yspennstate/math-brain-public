@@ -1,0 +1,106 @@
+[
+  {
+    "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+    "version": 1,
+    "exact_statement": "Let S,W,U,V be compatible point indicators on disjoint uniform blocks of positive widths s,L,R,T and g an independent balanced Boolean core. For F=1+[WUV OR S(U OR V)](g-1), query the separator S until first failure or completion, then resolve WUV or U OR V and stop at a constant or g. Put alpha=2^-s, q=2^-R,r=2^-T,eta=2^-(L+R+T),e=q+r-qr-eta,JB=(L+R+T)eta,JC=R q(1-r)+T r(1-q),JD=JB+JC,pi=eta+alpha e,m=ceil(log2(min(R,T)+2))+2 and M=min(s,m). Every live separator query with j>m remaining bits is strictly K=4-good. The nonnegative reserve at live state j is V_j=2^-j[min(j,m) JD+e min(j,m)(min(j,m)-1)/2+min(j,m)e I(g)], set zero after failure. Its exact physical drift V_j-V_(j-1)/2 equals the actual child-product face price c_j=2^-j[JD+(j-1)e+e I(g)] when j<=m and zero otherwise. Thus the actual localized separator bill is <=V_s<=M I_other+(M-1)I_sep/2+M I_terminal<=M I(F), where I_sep=s alpha e,I_other=(1-alpha)JB+alpha JC,I_terminal=pi I(g). Terminal entropy remains pi H(g), and H(F)<=(4+2/ln2)(I_sep+I_other)+V_s+pi H(g). This eliminates dependence on separator length s for fixed R,T, but is not a universal influence constant or terminal-core certificate.",
+    "hypotheses": [
+      "Actual Boolean signs on uniform cube; entropy and logarithms in bits",
+      "Compatible point literals; disjoint fresh separator/controller blocks independent of g",
+      "Independent balanced core; full pi H(g) retained at stopping leaves",
+      "History-measurable physical policy exactly as specified; one query per coordinate along each path",
+      "V is a cutoff-envelope reserve and may charge eligible but actually good layers; it is not renewed at descendants"
+    ],
+    "statement_sha256": "c4f09ea5b2a552f438fe64c85737ae4570e03f57453c63683f124dd3a245f2af",
+    "contributors": [
+      "A046"
+    ],
+    "proof_source": {
+      "run_id": "20261014T012528Z-fleet05-A046-current-candidate-intake",
+      "files": [
+        "PROOF.md",
+        "REPORT.md",
+        "code/layers.py",
+        "code/reserve_check.py",
+        "out/RESULTS.json",
+        "out/RESERVE_CHECK.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A040",
+        "verdict": "HOLDS",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A040\\runs\\20261014T033148Z-fleet05-A040-credit-insufficiency-tests\\REVIEW_A046.md",
+        "scope": "Full exact A046-SEPARATOR-LAYER-CUTOFF-RESERVE@1, including arbitrary balanced terminal core, cutoff, physical accounts, reserve drift and terminal-inclusive entropy bound. Independent future-layer-sum reconstruction and direct physical verification.",
+        "excluded": "Root-spectral/output conversion discussed outside this exact claim, prescribed witness/reset conversion, width-independent V bound, actual-bad-node uniformity and arbitrary terminal FEI.",
+        "repair_supplied": false,
+        "source_claims_sha256": "591f961eee295c1ffaeee07bb376ecfd9c41840505c1841d6807b9411db4acee",
+        "exact_validation_assertions": 52110
+      }
+    ],
+    "status": "INDEPENDENT_REVIEW_HOLDS",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A025",
+      "A040",
+      "A050",
+      "A064",
+      "A087",
+      "A092",
+      "B10",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A040-CUTOFF-ENVELOPE-WIDTH-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every integer h>=2, put w=2^h-2,m=h+2,s=2m,L=4m,R=T=w and g=z, an independent fair sign. For the actual Boolean sign F_h=1+[WUV OR S(U OR V)](g-1), the A046@1 cutoff equals m, with s=2m>m and zero envelope drift at its early separator layers. Its exact cutoff reserve V_s satisfies V_s/I(F_h)~m~log2(w), and V_s/I(F_h)>=m/4 for every integer h>=4. For each U or V coordinate the envelope debit divided by its actual physical influence is asymptotic to m; the core coordinate has the same asymptotic ratio; the last separator coordinate has exactly ratio m-1. Thus no finite universal K bounds this particular cutoff-envelope request V_s<=K I(F) on the family. No unbounded actual bad-only charge or H/I is asserted.",
+    "hypotheses": [
+      "Uniform Boolean cube; disjoint positive compatible point blocks S,W,U,V on the specified widths; core g=z independent and balanced.",
+      "The reserve is exactly the source-versioned A046-SEPARATOR-LAYER-CUTOFF-RESERVE@1 cutoff envelope, including eligible but actually good layers.",
+      "Physical query influences and reach probabilities; all core influence retained; terminal entropy is exactly zero for this dictator core.",
+      "No inequality reversing Q_bad<=V_s and no reference/output conversion assumption."
+    ],
+    "statement_sha256": "f4a07cb560f3cda8d9a9680087df448ddca79890d5db1ef54d94a3d8cb89b8f3",
+    "contributors": [
+      "A040"
+    ],
+    "proof_source": {
+      "run_id": "20261014T033148Z-fleet05-A040-credit-insufficiency-tests",
+      "files": [
+        "ENVELOPE_OBSTRUCTION.md",
+        "REVIEW_A046.md",
+        "code/audit.py",
+        "out/ENVELOPE_OBSTRUCTION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A046-SEPARATOR-LAYER-CUTOFF-RESERVE",
+        "version": 1,
+        "statement_sha256": "c4f09ea5b2a552f438fe64c85737ae4570e03f57453c63683f124dd3a245f2af",
+        "status": "INDEPENDENTLY_RECONSTRUCTED_BY_A040",
+        "scope": "Exact potential and physical ownership formulas; no universal bound assumed."
+      }
+    ],
+    "review_records": [],
+    "status": "PROVED_NARROW_ENVELOPE_OBSTRUCTION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unindexed proposed extension: one finite K pays V_s<=K I for every width in this exact cutoff envelope. No stated A046 claim is refuted."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A046",
+      "A025",
+      "A023",
+      "A087",
+      "A094",
+      "B08",
+      "B20"
+    ]
+  }
+]

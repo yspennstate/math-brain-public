@@ -1,0 +1,146 @@
+[
+  {
+    "claim_id": "A043-TWO-TERM-PRIME-OVERLAP-PAYMENT",
+    "version": 1,
+    "exact_statement": "For every finite Boolean sign whose positive event is the union of two conjunction terms, and every independent interior product input law, corrected entropy in bits obeys Hplus<=K*(I-Var), K=4+12/ln(2); the same K gives ordinary H<=K*I at uniform inputs and applies after deterministic contraction and output negation. If the two terms have at most one opposing shared literal, exact disjoint factorization gives the sharper Cstar=2+4/ln(2). After removing constants and irrelevant groups, the only essential nonbinary prime root shapes in this two-term class are ternary mux and T_{r,g}, r>=2, g in {0,1,2}, where T is positive at the all-one conflicting-data corner with its first guard and the all-zero corner with its second guard, with absent guards fixed true. Every T_{r,g} is prime and has the uniform all-bias bound K. The exact labeled census from pairs of consistent conjunctions has 10,52,168 essential primes at n=2,3,4, and 10,80,336 after output negation. In particular the four-input prime mask33152 is bounded over its entire bias continuum, without a sharp-optimum assertion. The prime mask56067, positive on {Y1=1,Y2=1,Z=1} or {Y1=0,Y3=1,Z=1} or {Y2=0,Y3=0}, has exact constituent deficit loss delta(F)-sum delta(fi)=-2*v1*p2*p3*p4*(1-p4), equal to -1/8 at uniform bias; no all-bias entropy theorem for this three-term prime or full FEI is asserted.",
+    "hypotheses": [
+      "Finite Boolean sign functions, normalized product Fourier basis and independent Bernoulli coordinates",
+      "v_i=4p_i(1-p_i), corrected Hplus=sum_{S nonempty}P(S)log2(v_S/P(S)); I spectral expected degree, Var=sum_{S nonempty}P(S)",
+      "Terms are conjunctions of literals; internally contradictory terms are removed, repeated literals deduplicated, empty groups treated as constants",
+      "Prime classification removes irrelevant physical coordinates and uses genuine one-bit block substitution with disjoint supports",
+      "The overlap entropy proof uses at least two opposing shared literals; zero/one-conflict cases use the explicitly stated disjoint decomposition",
+      "All quotient inequalities use interior laws; degenerate inputs contracted before normalization; zero entropy terms treated continuously",
+      "K is a proved nonsharp upper bound; no many-term/arbitrary-prime/all-dimensional claim is made"
+    ],
+    "statement_sha256": "9c6c669046197db93f434ea6e0dacefff3a7ecfe775ef1112052106bf0f71e42",
+    "contributors": [
+      "A043/fleet05"
+    ],
+    "proof_source": {
+      "run_id": "20261014T022706Z-fleet05-A043-prime-gate-decomposition",
+      "paths": [
+        "PROOF.md",
+        "DECOMPOSITION.md",
+        "NEXT_FIXTURE.md",
+        "out/checks.json",
+        "out/decomposition_checks.json",
+        "out/next_fixture.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A042-SHARP-BINARY-PRIME-ENDPOINT",
+        "version": 1,
+        "statement_sha256": "e163ebefc916767a00214eea2d54e56e53c9666821565f612f15a7ef4f17d5e8",
+        "scope": "binary corner bound and genuine disjoint conjunction closure",
+        "status": "PREVIOUSLY_SOURCE_READ_AND_RECONSTRUCTED; KNOWN_FORMULA_CONSUMED"
+      },
+      {
+        "claim_id": "A044-EQUAL-MEAN-ADDRESS-NARROW",
+        "version": 2,
+        "statement_sha256": "ce6233ea0cd04d989f05f012a86b86a446b01d0e87d26877e6382451eeb0441c",
+        "scope": "three-input mux bound Cstar only; exact disjoint composition",
+        "status": "CURRENT_SOURCE_READ; EARLIER_INDEPENDENT_MUX_RECONSTRUCTION_RETAINED; NO_FULL_PROFILE_ACCEPTANCE"
+      },
+      {
+        "claim_id": "A043-TERNARY-PRIME-CLOSURE-AND-RESERVE-OBSTRUCTION",
+        "version": 1,
+        "statement_sha256": "020b97a3820a338acb78f02d9b22287302d18dfc754cb34eabc90fcc455b0e86",
+        "scope": "universal signed singleton reserve only",
+        "status": "SOURCE_COMPLETE; A042_SCOPED_INDEPENDENT_ACCEPTANCE_CONSUMED; RECONSTRUCTED_LOCALLY"
+      },
+      {
+        "claim_id": "A042-RETAINED-SINGLETON-RESERVE-SELECTOR-ENDPOINT",
+        "version": 1,
+        "statement_sha256": "34db76116f2e3e71acdafec19f3dfa7494ce740480dca6a32187eced16171fbd",
+        "scope": "retained-slack identity and selector source review; not an arbitrary-bias premise",
+        "status": "INDEPENDENTLY_RECONSTRUCTED_AT_EXACT_STATED_SCOPE"
+      }
+    ],
+    "review_records": [],
+    "status": "SOURCE_COMPLETE_ANALYTIC_ARBITRARY_ARITY_CLASS_AND_EXACT_CENSUS_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A042",
+      "A044",
+      "A041",
+      "A045",
+      "A090",
+      "A091",
+      "B09",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A042-RETAINED-SINGLETON-RESERVE-SELECTOR-ENDPOINT",
+    "version": 1,
+    "exact_statement": "For every Boolean sign gate under any interior independent Bernoulli law, the exact unused singleton reserve is 4D-2R-E_single=sum_i v_i[2(d_i-t_i)+2t_i(1-t_i)-t_i^2 ln(1/t_i^2)], where D=I-Var, R=sum_{|S|>=3}(|S|-2)P(S), d_i=E D_i^2, t_i=|E D_i|, and D_i is the half-difference derivative. Each displayed local contribution is nonnegative, and d_i-t_i=2min(P(D_i=1),P(D_i=-1)). For the four-input prime positive exactly at assignments 7,8,15 (mask33152), with first three input probabilities 1/2 and fourth probability z in [0,1], D=(5+14z-7z^2)/16 and E=4h((1-z)/4)+3h((1+z)/4)+(z(1-z)/2)ln64, h(t)=t^2ln(1/t^2). Its full natural corrected entropy margin satisfies (4+ln4)D-E >= (10-9ln2)/8 >47/100, with equality in the first inequality at z=0. At z=0, E=(7/4)ln2+[(5/2)ln2+1/8]z+O(z^2) and Hplus/D tends to 28/5. At s=1-z=0, E=(3/2)ln2+[3/4+(3/2)ln2]s+(1/2)s^2ln(1/s)+O(s^2), and Hplus/D tends to 2. The general four-bias prime inequality and all-dimensional FEI remain open.",
+    "hypotheses": [
+      "finite Boolean sign table and normalized product Fourier basis",
+      "E=(ln2)Hplus, D spectral influence minus variance, v_i=4p_i(1-p_i)",
+      "universal reserve identity assumes interior input biases; h(0)=0 by continuity",
+      "selector-line theorem fixes the first three probabilities exactly at 1/2",
+      "deterministic selector endpoints interpreted by contraction or continuous formulas",
+      "endpoint big-O constants are for this fixed one-parameter family"
+    ],
+    "statement_sha256": "34db76116f2e3e71acdafec19f3dfa7494ce740480dca6a32187eced16171fbd",
+    "contributors": [
+      "A042/fleet05"
+    ],
+    "proof_source": {
+      "run_id": "20261014T015254Z-fleet05-A042-bias-endpoint-certificates",
+      "paths": [
+        "PROOF.md",
+        "out/CHECK_OUTPUT.json",
+        "code/check.py"
+      ]
+    },
+    "proof_dependencies": [
+      "Parseval for product Fourier basis",
+      "actual mask33152 truth table",
+      "elementary logarithm inequality ln(x)<=x-1 and Taylor theorem"
+    ],
+    "review_records": [
+      {
+        "reviewer": "A043/fleet05",
+        "at_utc": "2026-10-14T02:53:12+00:00",
+        "verdict": "HOLDS_FULL_STATED_NARROW_CLAIM",
+        "source_claim_id": "A042-RETAINED-SINGLETON-RESERVE-SELECTOR-ENDPOINT",
+        "version": 1,
+        "statement_sha256": "34db76116f2e3e71acdafec19f3dfa7494ce740480dca6a32187eced16171fbd",
+        "accepted_scope": [
+          "exact universal retained singleton-slack identity with nonnegative local terms",
+          "mask33152 fair-data selector-line spectrum, deficit and sharp absolute margin",
+          "fixed-line endpoint expansions and limits"
+        ],
+        "excluded_scope": [
+          "any inference of arbitrary-prime payment from the slack identity",
+          "arbitrary four-bias bound attributed to original source",
+          "inherited source validation counts"
+        ],
+        "method": "Independent sign-character spectrum counting; local signed derivatives and exact rational log-dictionary identity; independent analytic margin subtraction and endpoint differentiation; new centered tensor moments",
+        "repair_supplied": false,
+        "contributor_to_source_version": false,
+        "evidence": [
+          "PROOF.md section1",
+          "code/check.py",
+          "out/checks.json"
+        ]
+      }
+    ],
+    "status": "INDEPENDENTLY_RECONSTRUCTED_LOCALLY_AT_FULL_STATED_NARROW_SCOPE; ORIGINAL_SOURCE_UNCHANGED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A043",
+      "A041",
+      "A045",
+      "A090",
+      "A091",
+      "B09"
+    ]
+  }
+]

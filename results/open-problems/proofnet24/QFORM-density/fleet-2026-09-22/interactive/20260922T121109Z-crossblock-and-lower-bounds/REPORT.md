@@ -252,7 +252,7 @@ In the far region some original coordinate has |(Bx)_i|>1/sqrt(d). Condition on 
 
 The complete interval bound is therefore (2pi+3sqrt(3))eta in d=3 and (pi^2+8)eta in d=4. Interval domination implies an essentially bounded density. Restore the output scaling kappa. Finally condition on all original coordinates outside the selected block. All outside couplings become linear and constant terms, already allowed above, and averaging preserves the bound. QED.
 
-The d=3 argument is the completed account02/B15 source result listed below; the 4D shell calculation and principal-pivot extension are supplied here. Continuity for all these fixed-matrix cases is not established by this interval proof.
+The d=3 argument is the completed fleet02/B15 source result listed below; the 4D shell calculation and principal-pivot extension are supplied here. Continuity for all these fixed-matrix cases is not established by this interval proof.
 
 ## 6. What is still missing
 
@@ -263,7 +263,7 @@ The remaining task is to cover arbitrary mixed-leverage frames and arbitrary hig
 ## 7. Source pins, computations, and delivery scope
 
 - Fresh owner README: yspennstate/math-research-brain, revision 2026-09-22.5, blob 433b2d57345823967480245b59a7c47d51019c37.
-- Completed three-dimensional source: yspennstate/math-open-problems, proofnet24/QFORM-density/fleet-2026-09-22/account02/B15/20260922T110507Z-account02-B15-qform-pivot-r1/REPORT.md, blob 1da4167bbf6b2785659bd50007cab5f04b9c3084, present at archive snapshot 0605c987ff531ccc2fd5554c48df29e65b3eaaa8.
+- Completed three-dimensional source: yspennstate/math-open-problems, proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md, blob 1da4167bbf6b2785659bd50007cab5f04b9c3084, present at archive snapshot 0605c987ff531ccc2fd5554c48df29e65b3eaaa8.
 - External theorem actually applied: Livshyts--Paouris--Pivovarov, arXiv:1507.07949v2, orthogonal marginal density bound 2^(r/2). Other researched Gaussian and smooth-input theorems were not used as if they covered arbitrary bounded densities.
 - Exact symbolic checks executed: the six-variable matrix eigenvalue multiplicities; mass integral of k; p_Q(0)=2pi-7/3; a 36-coordinate rank-three frame of leverage 1/12 with both partition Gram matrices I_3/2. These calculations support only these identities, not the universal conjecture.
 - Reproducible density integral: in SymPy, with s>0, integrate((2*pi-8*sqrt(2*s)+4*s)*(sqrt(2)/sqrt(s)-2),(s,0,Rational(1,2))) returns -7/3+2*pi.

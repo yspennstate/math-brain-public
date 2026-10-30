@@ -1,0 +1,79 @@
+{
+  "schema": "fei-run-claims/2",
+  "run_id": "20261012T022322Z-fleet01-B12-biased-coherent-hierarchy",
+  "stream": "B12",
+  "primary_packet_id": "A057",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "claim_id": "B12-A057-ADAPTIVE-LOG-PAYMENT",
+      "version": "v2",
+      "status": "PROVED",
+      "scope": "For every Boolean h and every deterministic physical restriction tree querying no coordinate twice on a root-leaf path, sum_v w_v alpha_v^2 ln(1/alpha_v^2) <= (2/e) I(h).",
+      "hypotheses": [
+        "h is a genuine Boolean sign",
+        "w_v is the exact uniform cylinder probability",
+        "the queried coordinate is fresh on its path",
+        "natural logarithms; divide by ln(2) for bits"
+      ],
+      "proof_dependencies": [
+        {
+          "claim": "Boolean edge correlation is bounded by physical pivotal probability",
+          "evidence": "proved nodewise in ADAPTIVE_LOG_PAYMENT.tex"
+        },
+        {
+          "claim": "same-coordinate queried-node cylinders are disjoint",
+          "evidence": "proved by the nonreuse condition in ADAPTIVE_LOG_PAYMENT.tex"
+        }
+      ],
+      "supersedes_scope": "B12-A057-LEVEL1-LOG-PAYMENT-v1",
+      "review_status": "CONTRIBUTOR_CHECK_ONLY",
+      "independent_reviewers_requested": ["A091", "A090"]
+    },
+    {
+      "claim_id": "B12-A057-BIASED-REMAINDER",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "Exact identity D_i(a+h b)=qD_i(h)+R_mu(alpha), including the mandatory scalar mean correction -qK(mu,alpha), for every genuine Boolean disjoint splice.",
+      "proof_dependencies": [
+        {
+          "claim": "reviewed balanced coherent identity",
+          "repository": "yspennstate/math-research-brain",
+          "commit": "5d7a75c0b7ae3aab71df5abdafc31832be81321b",
+          "path": "research_pushes/2026-09-30-fei-current-route-map/ADDENDUM_11_54_BOOLEAN_PHASE_ENERGY_AND_COMPOSITION.md",
+          "blob": "4fa283ff7e3847d3b7b3c2ceead8274498de04c2"
+        },
+        {
+          "claim": "disjoint tensor entropy identity",
+          "evidence": "expanded directly in BIASED_COHERENT_IDENTITY.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY"
+    },
+    {
+      "claim_id": "B12-A057-FIXED-BIAS-COLLISION-LAW",
+      "version": "v1",
+      "status": "PROVED",
+      "scope": "For fixed finite outer Fourier arrays and fixed 0<|mu|<1, R_mu(alpha)/(alpha^2 ln(1/alpha^2)) tends to minus the exact collision energy Z_mu; at mu=0 it tends to q-Z_0.",
+      "proof_dependencies": [
+        {
+          "claim": "coefficientwise kernel representation",
+          "evidence": "proved in BIASED_COHERENT_IDENTITY.tex"
+        },
+        {
+          "claim": "fixed-x expansion K(x,alpha)=psi(alpha)+O_x(alpha^2)",
+          "evidence": "Taylor proof in BIASED_COHERENT_IDENTITY.tex"
+        }
+      ],
+      "review_status": "CONTRIBUTOR_CHECK_ONLY"
+    },
+    {
+      "claim_id": "B12-A057-COHERENT-HIERARCHY",
+      "version": "v2",
+      "status": "OPEN",
+      "scope": "Dimension-free payment of the complete biased coherent remainder over a hierarchy with changing means, near-collision gaps, and coherent activation witnesses.",
+      "exact_obstruction": "The alpha-log envelope is paid adaptively, but the kernel difference is nonuniform when mu=O(alpha) or a_T+mu b_T=O(alpha b_T), and the outer activation may change with the restricted variables."
+    }
+  ]
+}
+

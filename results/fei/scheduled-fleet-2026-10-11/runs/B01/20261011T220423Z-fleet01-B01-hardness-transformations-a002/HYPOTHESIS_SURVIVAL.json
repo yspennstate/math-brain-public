@@ -1,0 +1,72 @@
+{
+  "schema": "fei-a002-hypothesis-survival/1",
+  "run_id": "20261011T220423Z-fleet01-B01-hardness-transformations-a002",
+  "packet_id": "A002",
+  "entries": [
+    {
+      "transformation": "disjoint_tensor",
+      "truth_table": "T(x,y)=f(x)g(y)",
+      "new_dimension": "n_f+n_g",
+      "exact_ledger": {"H": "H(f)+H(g)", "I": "I(f)+I(g)", "mean": "E(f)E(g)", "directional": "I_i and Delta_iH unchanged inside each factor"},
+      "preserves": ["genuine Booleanity", "physical input independence", "full Walsh support iff both factors have it", "balance if at least one factor is balanced", "each factor's local step ratios", "H/I under identical tensor powers"],
+      "destroys_or_does_not_supply": ["No new universal bound", "Does not make an unbalanced factor balanced unless another factor is balanced"],
+      "spectral_dependence": "The two factor spectral sets are independent."
+    },
+    {
+      "transformation": "dictator_balance",
+      "truth_table": "B_g(x,y)=y g(x)",
+      "new_dimension": "n+1",
+      "exact_ledger": {"H": "H(g)", "I": "I(g)+1", "mean": "0", "fresh_coordinate": "I_y=1 and Delta_yH=0"},
+      "preserves": ["genuine Booleanity", "Fourier masses up to label shift", "physical input independence"],
+      "destroys_or_does_not_supply": ["full support in the enlarged cube", "all-coordinate restriction criticality", "exact H/I ratio at finite tensor count"],
+      "spectral_dependence": "Fresh spectral bit is deterministically present."
+    },
+    {
+      "transformation": "two_cell_selector",
+      "truth_table": "M_h=((1+h)/2)y1+((1-h)/2)y2 for balanced h",
+      "new_dimension": "dim(h)+2",
+      "exact_ledger": {"H": "2+H(h)/2", "I": "1+I(h)/2", "mean": "0"},
+      "preserves": ["genuine Booleanity", "fresh physical leaves", "arbitrary-seed H/I asymptotically after h=y0*g^tensor m"],
+      "destroys_or_does_not_supply": ["finite-m exact seed ratio", "all-coordinate restriction criticality", "automatic extension to overlapping coherent Fourier leaves"],
+      "tensor_count_limit": "dimension mn+3 and H/I=(2+mH(g)/2)/(3/2+mI(g)/2) -> H(g)/I(g)",
+      "spectral_dependence": "The proof uses exact disjoint coefficient labels from the two fresh leaves."
+    },
+    {
+      "transformation": "sparse_activation",
+      "truth_table": "F=1+A_r(g-1), A_r=product_j(1+z_j)/2, p=2^-r",
+      "new_dimension": "n+r",
+      "exact_ledger": {"H": "p[H(g)-phi(mu^2)]+2rp(1-mu^2)+(2^r-1)phi(p^2(1-mu)^2)+phi((1-p+p mu)^2)", "I": "p[I(g)+r(1-mu)]", "mean": "1-p+p mu", "minority_probability": "p(1-mu)/2", "data_influence": "p I_i(g)", "control_influence": "p(1-mu)"},
+      "preserves": ["genuine Booleanity", "physical input independence", "full Walsh support when g is nonconstant and full support", "global seed H/I asymptotically after tensoring with r=o(m)"],
+      "destroys_or_does_not_supply": ["balance", "all-coordinate restriction criticality", "factorwise spectral independence"],
+      "spectral_dependence": "Control and data spectral labels form a correlated three-type mixture."
+    },
+    {
+      "transformation": "parity_lift",
+      "truth_table": "P_g(x,z)=g(x_1z,...,x_nz)",
+      "new_dimension": "n+1",
+      "exact_ledger": {"H": "H(g)", "I": "I(g)+Pr(|S_g| odd)<=2I(g)", "mean": "E(g)", "erasure_B": "0", "restriction": "P_g|z=+1=g"},
+      "preserves": ["genuine Booleanity", "spectral masses", "physical input independence", "the seed as an actual restriction"],
+      "destroys_or_does_not_supply": ["full Walsh support", "spectral-coordinate independence", "a positive erasure payment"],
+      "spectral_dependence": "Every lifted spectral set has even cardinality, a deterministic global parity constraint."
+    },
+    {
+      "transformation": "one_point_full_support_surgery",
+      "truth_table": "Flip at most one output of g^tensor m so the negative count is odd",
+      "new_dimension": "mn",
+      "exact_ledger": {"Walsh_support": "full for mn>=2", "Fourier_l2_perturbation": "<=2^(1-mn/2)", "spectral_total_variation": "<=2^(1-mn/2)", "influence_error": "<=2mn*2^(-mn)", "mean_error": "<=2^(1-mn)"},
+      "preserves": ["genuine Booleanity", "global H and I asymptotically", "arbitrary-seed H/I asymptotically"],
+      "destroys_or_does_not_supply": ["exact tensor factorization", "local step ratios", "balance"],
+      "spectral_dependence": "No independence claim survives the point surgery."
+    },
+    {
+      "transformation": "joint_full_support_low_influence_embedding",
+      "truth_table": "F_m=1+A_r(u_m-1), r=ceil(sqrt(m)), u_m=full-support surgery of g^tensor m",
+      "new_dimension": "mn+ceil(sqrt(m))",
+      "limits": {"full_support": true, "I": "0", "max_I_i_over_I": "0", "minority_probability": "0", "H_over_I": "H(g)/I(g)"},
+      "preserves": ["genuine Booleanity", "arbitrary global FEI ratio in the limit"],
+      "destroys_or_does_not_supply": ["balance", "all-coordinate restriction criticality", "a proof of FEI"],
+      "mandatory_scope": "The optimal FEI constant on this simultaneous restricted class equals the unrestricted constant in the extended-real sense."
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

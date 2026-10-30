@@ -1,10 +1,10 @@
 # FEI continuation: centered budgets and dyadic all-profile obstruction
 
-21 September 2026. Interactive account02 continuation. **Full FEI remains OPEN / NOT PROVED.** All new results are self-checked; independent review and publication-priority clearance are pending.
+21 September 2026. Interactive fleet02 continuation. **Full FEI remains OPEN / NOT PROVED.** All new results are self-checked; independent review and publication-priority clearance are pending.
 
 ## Durable proof and delivery boundary
 
-Read the [complete analytic report](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/REPORT.md), [actual main verification output](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/verification.json), [actual succinct-construction output](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/quantized_relaxation.json), and [manifest with delivery limitations](../fleet-2026-09-21/account02/interactive/20260921T174421Z-centered-critical-budget/MANIFEST.json).
+Read the [complete analytic report](../fleet-2026-09-21/fleet02/interactive/20260921T174421Z-centered-critical-budget/REPORT.md), [actual main verification output](../fleet-2026-09-21/fleet02/interactive/20260921T174421Z-centered-critical-budget/verification.json), [actual succinct-construction output](../fleet-2026-09-21/fleet02/interactive/20260921T174421Z-centered-critical-budget/quantized_relaxation.json), and [manifest with delivery limitations](../fleet-2026-09-21/fleet02/interactive/20260921T174421Z-centered-critical-budget/MANIFEST.json).
 
 
 IMPORTANT: checker code upload was blocked by the platform because its safety status could not be determined. Code/source archives are NOT present in this package. No alternate upload route was used. Both local checker outputs did replay byte-identically, but their saved outputs do not make a remotely runnable package. The complete all-dimensional analytic proofs are in REPORT.md; do not fabricate code delivery or independent review.
@@ -26,7 +26,7 @@ IMPORTANT: checker code upload was blocked by the platform because its safety st
 
 ## Actual scheduled continuation
 
-The owner-requested continuation order is in the brain beside its handoff, `CONTINUATION_ORDER.md`, committed at `0dbae1d8b9a23f3b6ce6c34573facc0cb5d1714f`. Native prompt-only updates succeeded for the existing account02 B12-B18 FEI workers and B20 caretaker; no new task or timing/enable change was requested. They explicitly continue toward full FEI, compare three substantive runs, separate full-target movement from mechanism progress, and execute a different mechanism when the same universal gap stays unpaid. The caretaker also supervises actual coherent brain installation and independently accepted benchmark work rather than just check-in counts.
+The owner-requested continuation order is in the brain beside its handoff, `CONTINUATION_ORDER.md`, committed at `0dbae1d8b9a23f3b6ce6c34573facc0cb5d1714f`. Native prompt-only updates succeeded for the existing fleet02 B12-B18 FEI workers and B20 caretaker; no new task or timing/enable change was requested. They explicitly continue toward full FEI, compare three substantive runs, separate full-target movement from mechanism progress, and execute a different mechanism when the same universal gap stays unpaid. The caretaker also supervises actual coherent brain installation and independently accepted benchmark work rather than just check-in counts.
 
 Other accounts were NOT directly updated. This shared handoff makes the results and progress directive available; it does not prove subsequent uptake. Preserve private scope, historical artifacts, model/effort honesty, quiet delivery, all later stops and independent checking of complete candidates. A report, a valid conditional lemma and a runnable task are not a full proof.
 

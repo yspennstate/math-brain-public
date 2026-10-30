@@ -1,0 +1,41 @@
+{
+  "schema": "fei-run-claims/2",
+  "claims": [
+    {
+      "claim_id": "B15-A075-ROWWISE-BENT-LIFT-01",
+      "version": 1,
+      "exact_statement": "For every finite Boolean address-row seed F_0(y,x)=sum_z chi_z(y)h_z(x) with exactly one nonzero sign row at each x and product normalized squared spectrum in each positive-mass row, multiplying row z by the quadratic bent sign B_{k_z} on 2k_z common fresh variables produces a genuine Boolean function with product conditional rows and exact identities H(F_k)=H(F_0)+2 sum_z alpha_z k_z and I(F_k)=I(F_0)+sum_z alpha_z k_z. For the A071 seed this gives H/I=(40+2L)/(17+L)<=40/17, L=5k_0+k_1+k_2+k_3.",
+      "hypotheses": [
+        "finite uniform Boolean cubes",
+        "exactly one nonzero partial sign row at every data input",
+        "orthogonal Fourier address characters",
+        "each positive-mass normalized row squared spectrum is product",
+        "quadratic bent factors B_k on an even number 2k of fresh variables",
+        "entropy in bits"
+      ],
+      "statement_sha256": "a2fad6a5acc4302a26fa02739eb930d894f23b49c56656e0dc5098eee99bc990",
+      "contributors": ["fleet01/B15 A075 run"],
+      "proof_source": {
+        "repository": "yspennstate/math-open-problems",
+        "commit": "bbcca04dc8aacc8a72bf974824ff1fa3f84e0f94",
+        "path": "reports/fei-2026-10-11/runs/B15/20261011T231103Z-fleet01-B15-A075-bent-row-lifts/REPORT.md",
+        "sections": "2-3",
+        "brain_commit": "aa0cd6a871ec566fced1744f5542378dfa377f83"
+      },
+      "proof_dependencies": [
+        "B15-A071 finite 40/17 seed at open-problems commit 5aca95345e9eaef015d406af6f84bf74c5a3e01d",
+        "orthogonality of Walsh address characters",
+        "elementary quadratic bent spectrum"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": [],
+      "refutes": [
+        "row-wise quadratic bent amplification of the A071 seed can increase H/I above 40/17"
+      ],
+      "first_unproved_line": "Arbitrary {0,plus-or-minus-1} product-spectrum rows, including general non-fair product marginals, remain unclassified.",
+      "next_consumers": ["A025", "A080", "A082", "A085", "A092", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}

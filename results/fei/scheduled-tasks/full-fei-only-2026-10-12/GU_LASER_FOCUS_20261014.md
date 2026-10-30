@@ -2,7 +2,7 @@
 
 Revision: **2026-10-14.1 / GU-LASER-20261014**. Programme: FULL-FEI-ONLY-20261012. Source: the owner's direct instruction in the current conversation, “make sure that the scheduled tasks are laser focused on that inequality.” This is a research-priority refinement, not a new campaign or a claim of solved mathematics.
 
-This revision supersedes older broader slot targets wherever they permit work without a concrete implication for the inequality below. Preserve actual B identities, five-packet ownership, productive on-target unfinished work, original evidence, privacy/access holds, quiet delivery and each existing end date. The local account01 endpoint remains **2026-10-21T19:15:57Z**. Do not restart ten days.
+This revision supersedes older broader slot targets wherever they permit work without a concrete implication for the inequality below. Preserve actual B identities, five-packet ownership, productive on-target unfinished work, original evidence, privacy/access holds, quiet delivery and each existing end date. The local fleet01 endpoint remains **2026-10-21T19:15:57Z**. Do not restart ten days.
 
 ## The single target
 
@@ -69,12 +69,12 @@ Read applicable original reports through research_pushes/2026-10-14-fei-gap-audi
 
 Every substantive natural run, including failed proofs and blocked saves, keeps its complete work. Use unique immutable run folders and the existing schema: REPORT.md, CLAIMS.json, PROGRESS.json, compatible PACKET_DELTA.json, plus full proof/code/certificate/output artifacts.
 
-Canonical account01 destination: yspennstate/math-open-problems, master, reports/fei-2026-10-11/runs/Bnn/<UTC_RUN_ID>/.
-Math Brain mirror: yspennstate/math-research-brain, main, research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/Bnn/<UTC_RUN_ID>/.
+Canonical fleet01 destination: yspennstate/math-open-problems, master, reports/fei-2026-10-11/runs/Bnn/<UTC_RUN_ID>/.
+Math Brain mirror: yspennstate/math-research-brain, main, research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<UTC_RUN_ID>/.
 
 Verify nonempty full readback at the actual returned commit. Original producer identity must survive every mirror. If a save is blocked, preserve the full available work in the natural run response and state the exact failure; a short summary is not complete persistence and no denied operation may be bypassed. Distinguish configured, invoked, researched, saved, mirrored, independently reviewed and native-ingested states.
 
-B20 performs a bounded reconciliation of actual missing B02/B08/B13 outputs and stale B06/B20 evidence, without fabricating reports or counting peer outputs as account01. Newer saves must be checked before repeating old missing-file counts. Only B20 reconciles shared mathematical status from evidence; ordinary workers append their own outputs. No request to invent check-in-only research or spend all runs on telemetry.
+B20 performs a bounded reconciliation of actual missing B02/B08/B13 outputs and stale B06/B20 evidence, without fabricating reports or counting peer outputs as fleet01. Newer saves must be checked before repeating old missing-file counts. Only B20 reconciles shared mathematical status from evidence; ordinary workers append their own outputs. No request to invent check-in-only research or spend all runs on telemetry.
 
 Existing owning coordinators should apply the same inequality focus to their actually owned existing tasks, after fresh native binding and an exclusive create-only account/hour lease, preserving all non-title/prompt fields. Deduplicate overlapping native sets. Reply to the exact private request with adoption evidence and, separately, the first natural delivered mathematical result. Twenty local configuration updates do not establish sixty other updates or successful future runs.
 

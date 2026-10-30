@@ -6,7 +6,7 @@ SHA-256: bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3.
 
 ## Verdict
 
-No fatal mathematical gap identified in this authoring-agent reconstruction. This is a self-audit, not independent review, journal peer review, or formal verification. The threshold-nine mechanism predates this run (account03/B04); the new synthesis uses separate scalar/pair pivot thresholds, a full pair half-potential estimate, and new constants. The overlap theorem is supporting progress for eight eigenvalues, not a solution at eight.
+No fatal mathematical gap identified in this authoring-agent reconstruction. This is a self-audit, not independent review, journal peer review, or formal verification. The threshold-nine mechanism predates this run (fleet03/B04); the new synthesis uses separate scalar/pair pivot thresholds, a full pair half-potential estimate, and new constants. The overlap theorem is supporting progress for eight eigenvalues, not a solution at eight.
 
 ## Audited transitions
 

@@ -1,0 +1,28 @@
+{
+  "claims": [
+    {
+      "claim_id": "B05-A023-SIGNED-ORBIT-OWNERSHIP",
+      "version": "v1",
+      "exact_statement": "For Theta_X(f)=sum_{x in X} q(Inf_x(f))+sum_{i notin X}q(E_X^f({i})), (i) Phi(fg)<=Theta_X(f)+Theta_X(g) for Boolean factors sharing X and having disjoint private variables; (ii) revealing x in X gives E Theta_{X-{x}}(f|x)<=Theta_X(f)-q(Inf_x(f)); and (iii) arbitrary signed block openings on a physical restriction tree telescope exactly to Phi(root) minus the terminal Theta reserve. If Delta_x U<=K Inf_x+lambda(R-O) along a complete adapted tree, then U<=(K+2lambda/ln2)I and H<=(2+2K+4lambda/ln2)I.",
+      "hypotheses": [
+        "finite uniform Boolean cubes",
+        "physical restriction tree",
+        "shared-product factors have disjoint private variables",
+        "signed block-opening costs are retained"
+      ],
+      "contributors": ["fleet01/B05"],
+      "proof_source": "PROOF.md; CHECK.py; CHECK.out",
+      "proof_dependencies": [
+        "U-universal Theorem G and restriction telescopes",
+        "fixed-block orbit-energy Parseval calculation"
+      ],
+      "review_records": [],
+      "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+      "supersedes": null,
+      "refutes": null,
+      "first_unproved_line": "The nodewise signed domination Delta_x U<=K Inf_x+lambda(R-O) is not proved.",
+      "next_consumers": ["A087", "A094", "B20"]
+    }
+  ]
+}
+

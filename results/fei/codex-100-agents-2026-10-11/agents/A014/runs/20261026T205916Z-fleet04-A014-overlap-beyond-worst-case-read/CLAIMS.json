@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A014-INTERFERENCE-COMPLETE-CRITERION-AND-PP-GUARD",
+    "version": 9,
+    "exact_statement": "For every integer r>=12 let m=r^2 and G=K_r disjoint union m edges, C its independent-set indicator, f=1-2C, s=EC and I the actual total influence. Use the ORIGINAL complete edge-occupation source with fixed clique edge activities 1/(r-1), isolated-edge activities 0<lambda_j<=1, all root/attachment factors and full normalization, and actual empty/nonempty calibration. Define kappa_dil=sum_j Pr_{fhat^2}(S meets isolated edge j) log2(1/lambda_j)/I=s sum_j log2(1/lambda_j)/I. Then the ENTIRE reference cross-entropy is at most (259/32+kappa_dil) I. Local activities lambda_j=1 give kappa_dil=0 and CE<=259I/32<9I despite indispensable positive-DNF maximum read r-1 tending to infinity. In contrast the globally feasible uniform scale lambda_e=1/Delta=1/(r-1) gives complete CE/I>=(2/3)log2(r-1), which diverges on the SAME actual all-relevant Boolean family. Full H(f)/I<6, so this refutes universal payment of the globally uniform occupation source, not FEI. The exact influence is s[(4/3)r^2+2r(r-1)/(r+1)]. Both normalizers, all label/root/attachment costs and the empty wrapper are retained. For m disjoint edges alone the exact full nonempty-cost ratio is (3/4)log2(1/lambda)+(1/2)log2(32)+(1/4)log2(48)+3[1-(3/4)^m]log2[(1+lambda/12)^m-1]/m; its lambda dependence cancels at m=1. The repaired root, with general projected/calibrated references, retains all actual full-CE decrease bookings and both full terminals on every finite stopping tree. No refreshed history budget or arbitrary-query fee payment is asserted. Arbitrary connected overlaps and full FEI remain open.",
+    "hypotheses": [
+      "Uniform finite cube; sign Boolean output; base-two entropy and ideal complete reference cross-entropy",
+      "Integers r>=12,m=r^2; all actual clique-plus-matching coordinates relevant; positive activities fixed before sampling",
+      "Clique edge activities 1/(r-1); each isolated-edge activity in (0,1]; vertex incident activity sums at most one",
+      "Original maximal-matching/root/attachment occupation factors including J; F(empty)=1; entire nonempty normalizer and actual variance wrapper",
+      "Stopping statements use actual full-CE decreases only, not arbitrary query invoices"
+    ],
+    "statement_sha256": "83113abda0ef8e599b03824bdc5dd087eaf9cc4f954ef160f23e4bc4774d0b37",
+    "contributors": [
+      "A014"
+    ],
+    "proof_source": {
+      "path": "agents\\A014\\runs\\20261026T205916Z-fleet04-A014-overlap-beyond-worst-case-read\\DERIVATION.md",
+      "locators": [
+        "sections 1-2: exact factorization and global feasible source obstruction",
+        "section 3: matching identity and m=1 cancellation",
+        "sections 4 and 4a: same-construction local repair and explicit spectral congestion theorem"
+      ],
+      "certificates": [
+        "agents\\A014\\runs\\20261026T205916Z-fleet04-A014-overlap-beyond-worst-case-read\\out\\check.json",
+        "agents\\A014\\runs\\20261026T205916Z-fleet04-A014-overlap-beyond-worst-case-read\\out\\local_check.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A014-INTERFERENCE-COMPLETE-CRITERION-AND-PP-GUARD",
+        "version": 6,
+        "scope_used": "General original-reference projection/calibration and full-CE stopping identity ONLY; not needed for root inequalities."
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A014-INTERFERENCE-COMPLETE-CRITERION-AND-PP-GUARD",
+        "version": 8,
+        "scope": "New source-payment stage; previous v8 results retained in their immutable original run, not retracted."
+      }
+    ],
+    "refutes": [
+      {
+        "statement": "The fixed globally uniform feasible activity lambda=1/Delta always makes the complete original occupation reference cost <=K I for some absolute finite K on all graph edge unions",
+        "witness": "K_r disjoint union r^2 isolated edges, r>=12; all relevant; read r-1; CE/I >=(2/3)log2(r-1), while H/I<6",
+        "scope": "Global uniform occupation source only, not locally weighted sources, actual FEI or prior dense/padded theorems"
+      }
+    ],
+    "first_unproved_line": "Existence and ORIGINAL influence payment of an intrinsic locally weighted whole-set source for arbitrary connected physical overlaps; arbitrary signed-core source pricing is FEI-equivalent.",
+    "next_consumers": [
+      "A006",
+      "A007",
+      "A015",
+      "A086",
+      "A094",
+      "B03",
+      "B20"
+    ]
+  }
+]

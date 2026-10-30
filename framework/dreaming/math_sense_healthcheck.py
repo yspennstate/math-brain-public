@@ -41,7 +41,7 @@ HOOK = Path(os.environ.get("MATH_SENSE_HOOK",
 
 # A must-speak block counts only when every card in it is whole - a claim id and a trust tag - read by the shared
 # parser. Until 30 Sep a block over 120 characters passed, so eleven header-only blocks (no id, no tag) read healthy
-# (account04/B07, B07-R79-INCOMPLETE-CARD-PASSES-REGRESSION-GATES).
+# (fleet04/B07, B07-R79-INCOMPLETE-CARD-PASSES-REGRESSION-GATES).
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from math_block_parse import delivery_problem  # noqa: E402
 

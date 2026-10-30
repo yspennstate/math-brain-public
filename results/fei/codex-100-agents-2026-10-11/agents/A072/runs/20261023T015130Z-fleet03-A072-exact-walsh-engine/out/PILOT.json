@@ -1,0 +1,68 @@
+{
+  "version": "A072-stopping-credit-hull-v1",
+  "orbits": [
+    {
+      "core": 2,
+      "verdict": "SAME_INHERITED_CREDIT_SUFFICES_FOR_ALL_POLICIES",
+      "initial_credit": [
+        179357403185498056884364025987244987164764690738389307072,
+        179357403185498056884364025987244987164764690738389307344
+      ],
+      "required_credit": [
+        179357403185498056884364025987244987164764690738389307072,
+        179357403185498056884364025987244987164764690738389307344
+      ],
+      "gap": [
+        0,
+        0
+      ]
+    }
+  ],
+  "coverage": [
+    {
+      "core": 2,
+      "compressed_states": 12,
+      "labelled_restrictions": 729,
+      "labelled_query_rows": 1458,
+      "compressed_query_rows": 35
+    }
+  ],
+  "source_review": {
+    "profiles": 7,
+    "adaptive_rows": 9,
+    "source": "agents\\A071\\runs\\20261023T003633Z-fleet03-A071-search-space-design",
+    "last_stopped_accounts": [
+      {
+        "initial": 4,
+        "stop_debit": [
+          0,
+          0
+        ],
+        "stop_credit": [
+          179357403185498056884364025987244987164764690738389307095,
+          179357403185498056884364025987244987164764690738389307395
+        ],
+        "stop_reach": "1/1024"
+      },
+      {
+        "initial": 5,
+        "stop_debit": [
+          0,
+          0
+        ],
+        "stop_credit": [
+          179357403185498056884364025987244987164764690738389307095,
+          179357403185498056884364025987244987164764690738389307395
+        ],
+        "stop_reach": "1/2048"
+      }
+    ]
+  },
+  "exact_checks": 3901,
+  "engine_checks": 1337,
+  "independent_states": 18,
+  "financial_policies": 2,
+  "runtime_seconds": 5.22113660001196,
+  "scale_bits": 192,
+  "full_fei": "OPEN"
+}

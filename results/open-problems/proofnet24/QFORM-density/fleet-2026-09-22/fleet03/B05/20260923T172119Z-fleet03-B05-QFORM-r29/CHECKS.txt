@@ -1,0 +1,18 @@
+fleet03/B05 r29 symbolic algebra regression check
+role=diagnostic_only_exact_symbolic_confirmation_not_proof_substitute
+
+SymPy symbolic simplification returned zero for every residual below under Delta=a*d-c^2 !=0:
+
+TY - [L*r^2 + (a/Delta)*(alpha*s-beta*r)^2] = 0
+TZ - [L*s^2 + (d/Delta)*(alpha*s-beta*r)^2] = 0
+U  - [L*r*s + (c/Delta)*(alpha*s-beta*r)^2] = 0
+
+det(H_Y) - [a*det(C)-T_Y] = 0
+det(H_Z) - [d*det(C)-T_Z] = 0
+T_Y*T_Z-U^2 - (alpha*s-beta*r)^2*det(C) = 0
+
+det(C) - [(alpha*s-beta*r)^2/Delta + L*q^T*B^(-1)*q] = 0
+
+The quantitative currency-compensation inequality in REPORT.md is then an exact triangle-inequality consequence of the first two determinant identities and w=max(z1^2,z2^2)>=||z||^2/2.
+
+STATUS=PASS

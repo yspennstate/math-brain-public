@@ -1,0 +1,2373 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage{amsmath,amssymb,amsthm,hyperref,longtable}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}[lemma]{Theorem}
+\newtheorem{conjecture}[lemma]{Conjecture}
+\newtheorem{proposition}[lemma]{Proposition}
+\newcommand{\E}{\mathbb E}
+\newcommand{\I}{\mathcal I}
+\newcommand{\KL}{D_2}
+\newcommand{\CE}{\operatorname{CE}}
+\newcommand{\Ent}{\operatorname{Ent}}
+\title{FEI candidate assembly: proved reductions and explicit unpaid leaves}
+\author{A099, stream B20}
+\date{23 October 2026; assembly version 8}
+\begin{document}
+\maketitle
+\begin{abstract}
+We assemble the uniform-cube reduction C005--C006--C018, the
+C019 stopping-tree criterion, and A097's compatible transfer of complete
+terminal references. All proofs needed for these implications are included.
+The root and singleton-to-pair erasure layers are paid; the
+dimension-independent higher-layer payment is an explicit conjecture.
+The B05 Boolean obstruction excludes only a specified all-coordinate local
+refund. Full FEI remains open. We assemble existing arguments and refine
+low-total-influence completeness to equality of the optimal erasure constants.
+A090 independently accepts the low-influence fragment; the fixed-tail
+optimal-constant theorem has scoped A096 and A099 reconstructions.
+The complete integrated chain still awaits both independent audits.
+A paid incoming complete reference now continues through every finite
+adaptive no-reset history at its original ancestor rate. Active, dummy and eligible control resets and the specified exit-source
+conversions are paid on the stated point-source family. For every supplied Boolean source satisfying an occupied-support likelihood
+floor, arbitrary repeated returns to its original marginal followed by
+final vacuum calibration are now paid with no reset-count surcharge.
+Universal source pricing and changed nonempty-profile payment remain open.
+Historical C024 is kept separate from the
+finite-tree transfer, and no biased-measure, percolation or threshold theorem
+is silently imported.
+\end{abstract}
+
+\section{Conventions and mathematical scope}
+For every finite $n\ge0$, $f:\{-1,1\}^n\to\{-1,1\}$ is Boolean,
+$a_S=\E f\chi_S$, $P_f(S)=p_S=a_S^2$,
+$H(f)=\sum_Sp_S\log_2(1/p_S)$, and
+$I(f)=\sum_S|S|p_S=\sum_i d_i(f)$, where
+$d_i(f)=\Pr(f(x)\ne f(x^{\oplus i}))$.
+Every unmarked entropy, cross-entropy and divergence is in bits;
+$c_0=2/\ln2$. Zero entropy atoms contribute zero. Spectral conditioning
+does not mean physical restriction. We write
+\[
+ B_i(f)=H(S_i\mid S_{-i}),\quad B(f)=\sum_i B_i(f),\quad
+ \mathcal L(f)=\sum_{S:p_S>0}p_S\sum_{i\in S}
+                    \log_2(1+p_{S\setminus\{i\}}/p_S).
+\]
+The symbol $\mathcal L$ is the aggregate C018 downward charge. B05's
+quantity named $L$ is instead a single $B_i$; Section~\ref{sec:b05}
+calls it $B_y$ to prevent an erroneous substitution.
+\[
+C_{\rm FEI}=\sup_{n,f:I(f)>0} H(f)/I(f),\quad
+K_E=\sup_{n,f:I(f)>0} B(f)/I(f),\quad
+K_{\mathcal L}=\sup_{n,f:I(f)>0}\mathcal L(f)/I(f).
+\]
+These suprema may be infinite and need not be attained.
+
+\section{C005: actual singleton restrictions}
+\begin{lemma}[Entropy and influence identities, source ER Sections 1--4]
+\label{lem:single}
+For every Boolean $f$ and coordinate $i$, write $f_\pm=f_{i=\pm1}$.
+Then
+\[
+H(f)-\tfrac12(H(f_+)+H(f_-))=B_i(f)+J_i(f),\qquad
+I(f)=d_i(f)+\tfrac12(I(f_+)+I(f_-)),
+\]
+where $J_i$ is the Jensen--Shannon divergence of $P_{f_+},P_{f_-}$,
+and
+\[
+0\le J_i\le c_0\sum_{T\not\ni i}\min(p_T,p_{T\cup\{i\}})
+             \le c_0\min(d_i,1-d_i).
+\]
+\end{lemma}
+\begin{proof}
+Set $u=a_T$, $v=a_{T\cup\{i\}}$, $m=u^2+v^2$.
+The two actual coefficients are $u+v,u-v$ and their mean squared
+mass is $m$. The chain rule gives
+$B_i=\sum_T[h(u^2)+h(v^2)-h(m)]$, where $h(t)=-t\log_2t$.
+Meanwhile
+$J_i=\sum_T[h(m)-\tfrac12h((u+v)^2)-\tfrac12h((u-v)^2)]$.
+Adding cancels $h(m)$ and proves the identity. The child laws are
+normalized by Booleanity and Parseval, so $J_i\ge0$ by concavity.
+
+For $0\le z\le1$, let
+$D(z)=\tfrac12[(1+z)\ln(1+z)+(1-z)\ln(1-z)]$.
+Then $D(z)\le1-\sqrt{1-z^2}$: both vanish at zero;
+their derivatives are $\operatorname{atanh}z$ and
+$z/\sqrt{1-z^2}$, and the derivative of the difference of these
+derivatives is $(1-z^2)^{-3/2}-(1-z^2)^{-1}\ge0$.
+Continuity handles $z=1$.
+At $m>0$ the JS contribution is $mD(2|uv|/m)/\ln2$,
+at most $(m-|u^2-v^2|)/\ln2=c_0\min(u^2,v^2)$.
+Zero fibers vanish. Sum over $T$ and use
+$\sum_Tv^2=d_i$, $\sum_Tu^2=1-d_i$.
+For $j\ne i$, averaging the $j$-pivotal indicator over the fixed
+$i$ coordinate gives $d_j(f)=\tfrac12(d_j(f_+)+d_j(f_-))$.
+Summation proves the influence identity.
+\end{proof}
+
+\section{C006: actual blocks and their channel price}
+\begin{lemma}[Cube log-Sobolev inequality in the required normalization]
+\label{lem:lsi}
+For $g\ge0$ on a finite uniform cube,
+\[
+ \Ent(g^2):=\E[g^2\ln(g^2/\E g^2)]
+ \le\tfrac12\sum_i\E(g(x)-g(x^{\oplus i}))^2.
+\]
+\end{lemma}
+\begin{proof}
+On one bit, by homogeneity the required inequality for values $t,1$
+is $F(t)\ge0$, where
+\[
+F(t)=(t^2+1)\ln((t^2+1)/2)-2t^2\ln t+(t-1)^2.
+\]
+Here $F(1)=0$ and
+$F'(t)=2t\ln((t^2+1)/(2t^2))+2(t-1)$.
+For $t\ge1$, the difference
+$1-1/t-\ln(2t^2/(t^2+1))$ is zero at 1 and has derivative
+$(t-1)^2/[t^2(t^2+1)]\ge0$, proving $F'\ge0$.
+The identity $F(t)=t^2F(1/t)$ handles $t<1$, and continuity
+handles zero values.
+
+For completeness, entropy tensorization follows as follows. For a
+nonnegative $w$ with mean $m>0$, put $R(x)=w(x)2^{-n}/m$.
+Then $\Ent(w)/m=D_{\rm nat}(R\|U)$.
+The divergence chain rule writes this as the sum of the divergences
+of $R(X_i\mid X_{<i})$ from the uniform one-bit law.
+Replacing $X_{<i}$ by $X_{-i}$ increases each mean divergence,
+because conditioning decreases entropy. Direct substitution of the
+density shows that the resulting $i$th term, multiplied by $m$, is
+$\E_{U,-i}\Ent_{U,i}(w)$.
+Thus $\Ent(w)\le\sum_i\E_{-i}\Ent_i(w)$.
+Apply the one-bit bound to $w=g^2$ on each fiber. The case $m=0$
+is immediate.
+\end{proof}
+
+\begin{lemma}[Block identity and paid channel, source BR Sections 1--3]
+\label{lem:block}
+Let $A$ be a nonempty physical block, $C=[n]\setminus A$,
+$X$ a uniform assignment on $A$, and conditionally on $X=x$ let
+$T$ have the spectral law of $f_x$. Then
+\[
+H(f)-\E_xH(f_x)=B_A(f)+J_A(f),\quad
+B_A(f)=H(S_A\mid S_C),\quad J_A(f)=I(X;T),
+\]
+\[
+0\le J_A(f)\le c_0 I_A(f),\qquad
+I(f)=I_A(f)+\E_xI(f_x),\quad I_A=\sum_{i\in A}d_i.
+\]
+\end{lemma}
+\begin{proof}
+Let $v_T(x)=\E_y f(x,y)\chi_T(y)$,
+$P_x(T)=v_T(x)^2$, and $q(T)=\E_xP_x(T)$.
+Parseval in $x$ gives $q(T)=\sum_{U\subseteq A}a_{U\cup T}^2$,
+the actual $C$-marginal. Hence
+$H(f)=H(q)+H(S_A\mid S_C)$ and
+$J_A=H(q)-\E_xH(P_x)$, proving the first identity.
+For $q(T)>0$, apply Lemma~\ref{lem:lsi} to
+$g_T(x)=|v_T(x)|/\sqrt{q(T)}$, multiply by $q(T)$ and sum.
+The left side is $(\ln2)J_A$; the right side is at most
+\[
+\tfrac12\sum_{i\in A}\E_x\sum_T(v_T(x)-v_T(x^{\oplus i}))^2
+=\tfrac12\sum_{i\in A}\E_{x,y}(f(x,y)-f(x^{\oplus i},y))^2
+=2I_A(f).
+\]
+The middle equality is Parseval on $C$; the last uses Boolean
+values. Zero $q$ fibers vanish. Averaging each pivotal indicator
+on $C$ over $X$ proves influence conservation.
+\end{proof}
+
+\begin{lemma}[B06 R1: block-to-singleton, one canonical source ID]
+\label{lem:r1}
+For any law on subsets and any block $A$,
+\[
+H(S_A\mid S_{A^c})\ge\sum_{i\in A}H(S_i\mid S_{-i}).
+\]
+For Boolean $f$ with $I_A(f)>0$, a bound $B_A(f)\le KI_A(f)$
+therefore gives some relevant $i\in A$ with $B_i(f)\le Kd_i(f)$.
+A bound $\Delta_AH(f)\le KI_A(f)$ gives some such $i$ with
+$\Delta_iH(f)\le(K+c_0)d_i(f)$.
+\end{lemma}
+\begin{proof}
+Order $A$ and expand the block conditional entropy by the chain
+rule. Each term conditions only on $A^c$ and preceding bits of
+$A$; conditioning further on all other bits can only reduce it.
+Sum, then apply influence-weighted averaging. For the final
+statement $B_A\le\Delta_AH$ by Lemma~\ref{lem:block}, and
+$\Delta_iH\le B_i+c_0d_i$ by Lemma~\ref{lem:single}.
+Irrelevant coordinates have zero $B_i$.
+\end{proof}
+This is B06-LEAD-R1-BLOCK-TO-SINGLETON version 1, reproduced here.
+A block cannot rescue the same node if every singleton erasure
+rate fails; its distinct role is skipping intermediate restrictions.
+
+\section{C018: the proved equivalence and its open Boolean leaf}
+\begin{lemma}[Erasure comparison and downward charge, ER Sections 3--6]
+\label{lem:downward}
+For every Boolean $f$,
+\[
+\mathcal L(f)\le B(f)\le\mathcal L(f)+I(f)/\ln2,\qquad B(f)\le H(f).
+\]
+The coefficients also satisfy
+\[
+\sum_Sa_S^2=1,\qquad \sum_Sa_Sa_{S\triangle U}=0
+\quad(\varnothing\ne U\subseteq[n]).
+\]
+Conversely these identities for real $a$ imply its inverse Walsh
+transform is Boolean.
+\end{lemma}
+\begin{proof}
+For nonnegative $r,s$,
+$h(r)+h(s)-h(r+s)=r\log_2(1+s/r)+s\log_2(1+r/s)$,
+with continuous endpoint conventions. On each edge $(T,T\cup\{i\})$
+the second term is the downward charge. The first is at most
+$s/\ln2$, by $\ln(1+t)\le t$, including zero endpoints by continuity.
+Sum to prove the sandwich. In any coordinate order,
+$H(S_i\mid S_{-i})\le H(S_i\mid S_{<i})$; the entropy chain
+rule proves $B\le H$. Fourier transforming $f^2=1$ gives the
+convolution identities. Conversely they say all nonconstant
+coefficients of the square of the inverse transform vanish and its
+constant coefficient is 1, so its square is pointwise 1.
+\end{proof}
+
+\begin{theorem}[C018; implication proved, payment open]
+\label{thm:erasure}
+In the extended real sense,
+\[
+K_E\le C_{\rm FEI}\le K_E+c_0,\qquad
+K_{\mathcal L}\le K_E\le K_{\mathcal L}+1/\ln2.
+\]
+In particular any uniform bound $B(f)\le KI(f)$ implies
+$H(f)\le(K+c_0)I(f)$; any uniform bound
+$\mathcal L(f)\le KI(f)$ implies
+$H(f)\le(K+3/\ln2)I(f)$.
+\end{theorem}
+\begin{proof}
+The lower bound follows from Lemma~\ref{lem:downward}.
+Assume $K_E<\infty$. Summing Lemma~\ref{lem:single} gives
+$\sum_i\Delta_iH\le(K_E+c_0)I(f)$.
+Irrelevant coordinates have $B_i=J_i=\Delta_iH=0$.
+If $f$ is nonconstant, some relevant coordinate satisfies
+$\Delta_iH\le(K_E+c_0)d_i$ by weighted averaging.
+Induct on dimension, restricting that coordinate, and use the exact
+influence identity to obtain $H(f)\le(K_E+c_0)I(f)$.
+Constant functions have $H=I=0$. If $K_E=\infty$ the upper
+comparison is vacuous. The remaining comparisons and constant follow
+from the sandwich.
+\end{proof}
+
+\section{Paid universal layers and the exact remaining erasure}
+Put $\phi(r,s)=h(r)+h(s)-h(r+s)$ and define
+\[
+B_0=\sum_i\phi(a_\varnothing^2,a_{\{i\}}^2),\quad
+T_{12}=\sum_i\sum_{j\ne i}\phi(a_{\{i\}}^2,a_{\{i,j\}}^2),\quad
+R_{\ge2}=\sum_{|S|\ge2}\sum_{i\notin S}\phi(a_S^2,a_{S\cup\{i\}}^2).
+\]
+Thus $B=B_0+T_{12}+R_{\ge2}$ exactly, with each cube edge
+counted once from its lower set.
+\begin{lemma}[B20 root-pair payment, version 1]
+\label{lem:root}
+For every Boolean $f$, $B_0\le c_r I(f)$, where
+$c_r=2/(\sqrt e\ln2)$.
+\end{lemma}
+\begin{proof}
+For $r+s\le1$, $\phi(r,s)\le s\log_2(e/s)$, by
+$r\ln(1+s/r)\le s$ and $\ln((r+s)/s)\le\ln(1/s)$.
+The physical derivative identity gives $|a_{\{i\}}|\le d_i(f)$.
+The function $s\log_2(e/s)$ is increasing on $(0,1]$, so its
+value at $a_{\{i\}}^2$ is at most $d_i^2\log_2(e/d_i^2)$.
+Finally $\sup_{0<t\le1}t\log_2(e/t^2)=2/(\sqrt e\ln2)$,
+as differentiation shows; sum over $i$.
+\end{proof}
+
+\begin{theorem}[A096 universal layer payment, version 1]
+\label{thm:level12}
+For every Boolean $f$, writing
+$W_2=\sum_{i<j}a_{\{i,j\}}^2$ and
+$H_2=\sum_{i<j}a_{\{i,j\}}^2\log_2(1/a_{\{i,j\}}^2)$,
+\[
+H_2\le\frac{155600}{50301}I(f),\qquad
+T_{12}\le c_{12}I(f),\quad c_{12}=\frac{16700}{2187}<8.
+\]
+\end{theorem}
+\begin{proof}
+Let $\epsilon_i=d_i(f)$ and
+$h_i=(f_{i=+1}-f_{i=-1})/2$. Booleanity implies
+$h_i\in\{0,\pm1\}$ and $\Pr(h_i\ne0)=\E h_i^2=\epsilon_i$.
+For $L_i=\sum_{j\ne i}a_{\{i,j\}}x_j$, let
+$u_i=\E L_i^2=\E h_iL_i=\sum_{j\ne i}a_{\{i,j\}}^2$.
+Independence and $\cosh v\le e^{v^2/2}$ give
+$\E e^{t|L_i|}\le2e^{t^2u_i/2}$.
+The scalar bound follows by integrating $\tanh v\le v$.
+Conditioning on $h_i\ne0$ and applying Jensen gives
+\[
+u_i\le\epsilon_i\left(\frac{\ln(2/\epsilon_i)}t+\frac{tu_i}2\right),
+\quad\text{hence}\quad
+u_i\le2\epsilon_i^2\ln(2/\epsilon_i)
+\]
+after optimization; zero support or row energy is immediate.
+
+For $I,W_2>0$, the unordered-pair reference
+$Q(\{i,j\})=2\epsilon_i\epsilon_j/I^2$ has total mass at most
+one and is positive on all occupied pairs. Gibbs for the normalized
+level law $a_{\{i,j\}}^2/W_2$, retaining its level mass, gives
+\[
+H_2\le\sum_i u_i\log_2(1/\epsilon_i)
+                 +W_2\log_2(I^2/(2W_2)).
+\]
+Using $t=-\ln\epsilon_i$ and the maxima
+$\sup t^2e^{-t}=4/e^2$, $\sup te^{-t}=1/e$, the first sum is
+at most $[8/(e^2\ln2)+2/e]I$.
+For every $z>0$, $\ln z\le2\sqrt z/e$, so the second term
+is at most $\sqrt2 I\sqrt{W_2}/(e\ln2)\le\sqrt2 I/(e\ln2)$.
+This includes negative logarithms. Thus $H_2\le K_2I$ for
+$K_2=8/(e^2\ln2)+2/e+\sqrt2/(e\ln2)$.
+Since every edge has $r+s\le1$, its cost is at most
+$s\log_2(1/s)+s/\ln2$. Each pair is counted twice and
+$2W_2\le I$, giving $T_{12}\le(2K_2+1/\ln2)I$.
+The rational comparisons $e>27/10$, $\ln2>69/100$ and
+$\sqrt2<71/50$ follow respectively from the exponential series
+through degree five, the first two positive atanh terms at $1/3$,
+and squaring. Substitution yields
+$K_2<155600/50301$ and $2K_2+1/\ln2<16700/2187$.
+Constants or $W_2=0$ give zero contributions.
+\end{proof}
+The canonical ID is A096-UNIVERSAL-LEVEL12-ERASURE version 1.
+A098 independently accepted precisely this all-dimensional layer;
+that review does not pay the sum of all higher levels.
+
+\begin{conjecture}[OPEN-C018-HIGHER: the remaining Boolean payment]
+\label{conj:universal}
+There exists a finite $K\ge0$ such that for every integer $n\ge0$
+and every real coefficient vector $(a_S)_{S\subseteq[n]}$ satisfying
+all the convolution identities of Lemma~\ref{lem:downward},
+\[
+R_{\ge2}(f)\le K\sum_S|S|a_S^2.
+\]
+\end{conjecture}
+By the exact decomposition and C018, this yields
+$H(f)\le(K+c_r+c_{12}+c_0)I(f)$.
+Conversely FEI bounds $R_{\ge2}\le B\le H$.
+This is FEI-equivalent; neither normalization alone nor Jensen
+proves it. Jensen only gives
+$\mathcal L\le I\log_2(n/I)$ when $I>0$: weight each occupied
+oriented edge by $p_S/I$, and the weighted ratio sum is at most
+$(n-I)/I$. Independent Bernoulli spectral bits would have
+$B/I=h_2(\theta)/\theta\to\infty$; they are not an admissible
+general Boolean spectrum. Full signed Booleanity cannot be removed.
+
+\section{B20 low-total-influence completeness, strengthened version 2}
+\label{sec:low}
+For finite-valued $s:\mathbb N\to[0,\infty)$ with $s(N)=o(N)$,
+let $K_E(s)$ be the supremum $B(F)/I(F)$ over every dimension
+$N$ and every Boolean $F$ with $0<I(F)\le2^{-s(N)}$.
+\begin{theorem}[B20-ERASURE-LOW-INFLUENCE-COMPLETE, proposed version 2]
+\label{thm:low}
+In the extended reals, $K_E(s)=K_E$. Consequently
+$C_{\rm FEI}\le K_E(s)+2/\ln2$.
+\end{theorem}
+\begin{proof}
+Disjoint products have product Fourier laws; conditional entropies
+and physical influence add. For a nonconstant seed $f$ on $n\ge1$
+bits take $m$ copies and a fresh fair sign $z$, and put
+$h_m=z\prod_{j=1}^m f(x^{(j)})$.
+Then $\E h_m=0$, $B(h_m)=mB(f)$ and $I(h_m)=mI(f)+1$.
+The $z$-frequency is deterministic and its erasure is zero.
+
+Activate $h_m$ at one point of $k\ge1$ controls: $F=1+A_k(h_m-1)$,
+$\delta=2^{-k}$. The constant coefficient is $1-\delta$;
+every nonempty core coefficient is $\delta\widehat h_m(S)$
+in every control-frequency slice; empty-core/nonempty-control
+coefficients have magnitude $\delta$. Partition the core-coordinate
+edges by their residual core index. With $b_i=\widehat h_m(\{i\})^2$,
+the original root packet is $\phi(0,b_i)=0$ and
+\[
+B_{\rm data}(F)=\delta B(h_m)
+ +\delta(1-\delta)\sum_i\phi(1,b_i)
+ +\sum_i\phi((1-\delta)^2,\delta^2b_i)\ge\delta mB(f).
+\]
+Control erasures are nonnegative. Direct physical edge counts give
+$I(F)=\delta[mI(f)+1+k]$, since $h_m$ is balanced.
+
+Set $\bar s(N)=\max_{M\le N}s(M)$; it is nondecreasing and
+$o(N)$, because the finite initial maximum is $o(N)$ and the
+tail is bounded by $\varepsilon N$ for every fixed $\varepsilon>0$.
+Define $k_m=\lceil\bar s(2mn)+\log_2(3mn)\rceil+1$ and
+$N_m=mn+1+k_m$. For large $m$, $k_m\le mn-1$, $N_m\le2mn$, and
+\[
+0<I(F_m)\le2^{-k_m}3mn
+\le2^{-\bar s(2mn)}\le2^{-\bar s(N_m)}.
+\]
+If $K=K_E(\bar s)$ is finite, admissibility implies
+$mB(f)\le K[mI(f)+1+k_m]$.
+Divide by $m$ and let $m\to\infty$; $k_m/m\to0$ gives
+$B(f)\le KI(f)$. Hence
+$K_E\le K_E(\bar s)\le K_E(s)\le K_E$.
+If $K_E=\infty$, the same argument excludes finite $K_E(s)$;
+the extended-real equality follows. C018 proves the corollary.
+\end{proof}
+This refines the source's valid additive bound
+$K_E\le K_E(s)+c_r$; the original version is not refuted.
+The fresh balancing makes the root-pair correction zero, while its
+one unit of influence disappears after tensor amplification.
+The proposed version has a complete proof and exact finite identity
+validation and an independent A090 scoped acceptance; the A094 second
+review remains pending.
+This is aggregate erasure transport. It makes no same-constant
+claim about a \emph{selected} data-coordinate witness; A005's
+control-witness counterexample therefore remains applicable.
+Finiteness of the low-influence constant is still unproved.
+
+\section{A090: all fixed higher tails retain the optimal erasure constant}
+\label{sec:tail}
+For a fixed integer $\ell\ge2$ let $R_{\ge\ell}$ retain the edge costs
+$\phi(p_T,p_{T+i})$ with $|T|\ge\ell$. This is the original
+\path{A090-PARITY-TAIL-LOW-INFLUENCE-COMPLETENESS}, version 1
+\cite{A090c}. A096 and A099 independently reconstruct this scoped theorem;
+neither acceptance pays the resulting universal bill.
+\begin{theorem}\label{thm:tail}
+For every finite-valued nonnegative $s(N)=o(N)$ and fixed $\ell\ge2$,
+the supremum of $R_{\ge\ell}(F)/I(F)$ over all actual Boolean $F$
+with $0<I(F)\le2^{-s(N)}$ equals $K_E$, in the extended reals.
+\end{theorem}
+\begin{proof}
+Take any nonconstant $n$-bit seed $f$, $m$ disjoint copies,
+$h=\chi_Z f^{\otimes m}$ with $|Z|=\ell$ fresh parity coordinates,
+and $F=1+A_k(h-1)$ with $k$ fresh point controls, $q=2^{-k}$.
+The actual coefficients are $1-q$ at the empty frequency, $-q$ at
+nonempty pure-control frequencies, and $q\widehat h(S)$ on every
+control slice of each nonempty core frequency $S$.
+All occupied core frequencies contain $Z$. Thus all singleton core
+coefficients vanish, $B(h)=mB(f)$, and $I(h)=mI(f)+\ell$.
+Every data edge with positive cost has both endpoints containing $Z$.
+Homogeneity and the $2^k$ control slices give exactly $qmB(f)$,
+entirely inside the retained tail. Each parity coordinate has zero erasure
+but influence $q>0$; there are no two adjacent occupied frequencies on it.
+
+For a control coordinate, nonempty core frequencies contribute $q$
+to the erasure, since all such pairs have equal masses and their sum
+of upper masses is $q/2$. Empty-core lower control sets of size $r$
+give $\binom{k-1}{r}$ equal-mass pairs, each of cost $2q^2$.
+The exceptional pair $((1-q)^2,q^2)$ is outside the retained tail.
+Consequently
+\begin{align}
+I(F)&=q(mI(f)+\ell+k),\label{eq:tailI}\\
+R_{\ge\ell}(F)&=qmB(f)+kq+
+ 2kq^2\sum_{r=\ell}^{k-1}\binom{k-1}{r},\label{eq:tailB}\\
+R_{\ge2}(F)&=qmB(f)+2kq(1-kq).\label{eq:tailtwo}
+\end{align}
+An empty sum is zero. In particular the actual root and next layers are
+$B_0=k\phi((1-q)^2,q^2)$ and $T_{12}=2k(k-1)q^2$.
+No seed cost was removed by the fresh parity.
+
+To verify the cutoff without assuming monotonicity, put
+$\eta_m=\sup_{N\ge mn}s(N)/N$ and
+$k_m=\lceil4(n+1)m\sqrt{\eta_m}+2\sqrt m\rceil$.
+The tail supremum is finite and tends to zero, so $k_m=o(m)$.
+Eventually $N_m=mn+\ell+k_m\le(n+2)m$ and $\eta_m\le1$.
+Then $s(N_m)\le\eta_m(n+2)m\le4(n+1)m\sqrt{\eta_m}$.
+The remaining $2\sqrt m$ dominates
+$\log_2(mI(f)+\ell+k_m)\le\log_2((n+2)m)$.
+Equation~\eqref{eq:tailI} therefore meets the cutoff. Equation~\eqref{eq:tailB}
+gives a lower ratio tending to $B(f)/I(f)$, while
+$R_{\ge\ell}(F)\le B(F)$ gives the upper supremum bound $K_E$.
+Apply this to each finite seed ratio, including arbitrarily large ratios
+if $K_E=\infty$. There is no exchange of an unknown supremum and a limit.
+\end{proof}
+Thus even the unrestricted optimal constant for $R_{\ge2}/I$ equals $K_E$.
+In particular an all-dimensional bound $R_{\ge2}\le KI$ would imply
+$K_E\le K$ and $C_{\rm FEI}\le K+2/\ln2$, without the previously
+displayed additive root and level-one prices. This improves a conditional
+constant comparison and supplies no finite value of $K$.
+The relevant parity bits also give
+$\min_{i:d_i>0}B_i/d_i=0$ on these same functions: aggregate transport
+does not preserve a selected-coordinate hardness assertion.
+
+\section{A096: normalized derivative refunds retain the arbitrary seed}
+\label{sec:refund}
+The source \path{A096-TERMINAL-KL-REFUND-AUDIT}, version 1
+\cite{A096c}, calls the downward quantity $M$.
+Here it is exactly $\mathcal L$, not the marginal-entropy sum used
+elsewhere under the same letter. For $d_i>0$ set
+\[
+ \mu_i(T)=p_{T+i}/d_i,\qquad r_i(T)=p_T+p_{T+i},\quad i\notin T.
+\]
+Both are normalized probability laws. The joint laws
+$P(i,T)=p_{T+i}/I$ and $Q(i,T)=(d_i/I)r_i(T)$ have the same
+coordinate marginal $d_i/I$. Therefore
+\begin{equation}\label{eq:refundbaseline}
+ I D_2(P\Vert Q)=\sum_i d_iD_2(\mu_i\Vert r_i),\qquad
+ \mathcal L=\sum_i d_i\log_2(1/d_i)-I D_2(P\Vert Q).
+\end{equation}
+The identities follow by expanding the likelihood ratios; zero or irrelevant
+coordinates are omitted. This complete reference retains its whole normalizer.
+\begin{proposition}\label{prop:refund}
+For the actual $h,F$ in Theorem~\ref{thm:tail}, write
+$J=mI(f)+\ell$, $d=(1-q)^2+q^2$, and
+$D_f=D_2(P_f\Vert Q_f)$ with $I(f)D_f=0$ for constant seeds. Then
+\begin{align}
+ D_i(F)&=D_i(f)+k &&\text{on relevant seed coordinates},\\
+ D_z(F)&=k &&\text{on fresh parity coordinates},\\
+ D_c(F)&=(1-q)(k-1)+q\log_2(q/d),\label{eq:refundcontrol}\\
+ I(F)D_F&=q[mI(f)D_f+kJ+kD_c(F)],\label{eq:refundjoint}\\
+ \mathcal L(F)&=qm\mathcal L(f)+
+       k[q(1-q)+q^2\log_2(d/q^2)],\\
+ \mathcal L_{\ge2}(F)&=qm\mathcal L(f)+kq(1-kq).
+\end{align}
+For every fixed $\ell\ge2$ and every such cutoff $s$, the cutoff
+supremum of $\mathcal L_{\ge\ell}/I$ equals $K_{\mathcal L}$.
+\end{proposition}
+\begin{proof}
+In the tensor core, a seed row's $\mu_i$ and $r_i$ are tensored with
+the same other-block spectrum. Their likelihood ratio is unchanged.
+A parity row has $\mu_i=r_i$, hence zero divergence and zero downward cost.
+In the activated function, every occupied derivative core row is the
+old $\mu_i$ times the uniform control-subset law. On that support
+$r_i(F)$ is $q$ times the old $r_i$ times this same law. The exceptional
+constant endpoint is outside this support because the core has no singleton
+coefficients. The likelihood ratio acquires exactly the factor $1/q$,
+proving the first two formulas and $\mathcal L_i(F)=q\mathcal L_i(h)$.
+
+For a control row, the exceptional derivative atom has mass $q$ and
+reference mass $d$. All remaining atoms have likelihood ratio $1/(2q)$,
+with total derivative mass $1-q$. This proves~\eqref{eq:refundcontrol}.
+Weighting all rows by their physical influences $qd_i(h)$ and $q$
+proves~\eqref{eq:refundjoint}. Direct upper-mass summation gives
+the displayed $\mathcal L$ formula. In its higher tail, nonempty core
+frequencies contribute $q/2$ per control, and empty-core lower sets of
+size at least two contribute $q^2(2^{k-1}-k)$ per control; this gives
+the last formula. Every seed downward edge lies in the $\ell$-tail.
+Use the identical cutoff choice in Theorem~\ref{thm:tail}, the lower
+ratio $m\mathcal L(f)/(mI(f)+\ell+k)$ and the upper inequality
+$\mathcal L_{\ge\ell}\le\mathcal L$. The extended-real argument is unchanged.
+\end{proof}
+The first unpaid universal line is still, for one finite $K$ and every
+actual Boolean seed,
+\[
+ D_2(P_f\Vert Q_f)\ \ge\ \sum_i(d_i/I)\log_2(1/d_i)-K.
+\]
+It is exactly $\mathcal L(f)\le KI(f)$ by~\eqref{eq:refundbaseline},
+so it is the C018 leaf, not an additional theorem or a new named conjecture.
+The known activation refund in~\eqref{eq:refundjoint} leaves $mI(f)D_f$
+explicitly present. Source hashes and exact checks cannot pay that seed bill.
+
+
+\section{C019: finite adaptive stopping trees and one influence budget}
+At an internal node $h$, let $f_h$ be the actual remaining Boolean
+function. Choose a nonempty block $A_h$ using only the physical
+history. Query it uniformly; its child assignments $x$ each have
+conditional probability $\alpha_h=2^{-|A_h|}$.
+No previously fixed coordinate may be queried along the same path.
+The tree is finite; it may stop before reaching constants.
+Let $\pi_h$ be its actual reach probability and put
+\[
+B_h=B_{A_h}(f_h),\quad J_h=J_{A_h}(f_h),\quad
+I_{\rm rem}=\sum_{h\text{ internal}}\pi_h I_{A_h}(f_h),\quad
+I_{\rm term}=\sum_{l\text{ leaf}}\pi_l I(f_l).
+\]
+\begin{theorem}[C019 telescope and conditional endpoint]
+\label{thm:tree}
+For every such tree,
+\[
+H(f)=\sum_h\pi_h(B_h+J_h)+\sum_l\pi_lH(f_l),\quad
+I(f)=I_{\rm rem}+I_{\rm term},\quad
+\sum_h\pi_hJ_h\le c_0 I_{\rm rem}.
+\]
+If $K,C_{\rm leaf}\ge0$ satisfy
+$\sum_h\pi_hB_h\le K I_{\rm rem}$ and
+$H(f_l)\le C_{\rm leaf} I(f_l)$ for every positive-reach leaf,
+then $H(f)\le\max(K+c_0,C_{\rm leaf})I(f)$.
+\end{theorem}
+\begin{proof}
+Multiply each identity of Lemma~\ref{lem:block} by $\pi_h$.
+Since $\pi_{hx}=\pi_h\alpha_h$, all interior child terms cancel
+on the finite tree; only the root and terminal terms remain.
+Summing its channel bound proves the inequality. Substitute the
+two payment hypotheses and influence conservation. These are actual
+reach weights, not unweighted counts of nodes. Influence removed at
+ancestors is absent from the residual child budget and cannot be
+spent again.
+\end{proof}
+
+\begin{lemma}[B06 R2: leaf-partition invariance]
+\label{lem:r2}
+Write $\Pi_H=H(f)-\E_lH(f_l)$ and
+$\Pi_I=I(f)-\E_lI(f_l)$. For every real $K$,
+\[
+KI(f)-H(f)=\E_l[KI(f_l)-H(f_l)]+K\Pi_I-\Pi_H.
+\]
+Moreover $\Pi_I$ equals the expected number of queried coordinates
+that are pivotal for the original $f$ at the input on its path.
+The aggregate entropy drop and influence removed depend only on
+the actual physical leaf partition, not on the query order that
+realizes that partition. For constant leaves,
+$\sum_h\pi_hB_h\ge H(f)-c_0I(f)$.
+\end{lemma}
+\begin{proof}
+The deficit identity is subtraction of the two telescopes in
+Theorem~\ref{thm:tree}. At any node, flipping a free coordinate
+preserves its ancestor assignment, so its actual restricted pivotal
+indicator is the original pivotal indicator conditioned on that
+node. Multiplying by reach probability and summing each queried
+coordinate once proves the path interpretation, including block
+queries. For a fixed terminal assignment subcube, the residual
+function and its entropy/influence do not depend on the order of
+queries. Finally use $\Pi_H=\sum\pi(B+J)$ and
+$\sum\pi J\le c_0\Pi_I$, with zero terminal entropy/influence.
+\end{proof}
+This is B06-LEAD-R2-LEAF-PARTITION-INVARIANCE version 1,
+with the block extension derived from the same identities.
+The individual erasure/channel/posterior-credit totals need not be
+invariant: only their full entropy-drop and influence combination is.
+
+\begin{conjecture}[OPEN-C019-TREE: a certified stopping payment]
+\label{conj:tree}
+There exist finite $K,C_{\rm leaf}\ge0$ and a specified terminal
+class $\mathcal F_{\rm leaf}$ with a complete proof of
+$H(g)\le C_{\rm leaf}I(g)$ for every $g$ in that class,
+such that every finite-cube Boolean $f$ admits a finite tree of the
+above form with leaves in $\mathcal F_{\rm leaf}$ and
+$\sum_h\pi_hB_h\le KI_{\rm rem}$.
+\end{conjecture}
+No useful universal tree is provided here. A full-coordinate block
+does not supply an independent shortcut: its $B_A$ equals $H(f)$.
+The payment must retain terminal entropy whenever leaves are nonconstant.
+
+\section{A097: complete references and their compatible telescope}
+This section assembles A097 version 1, REPORT Sections 1--5,
+not an independently accepted full-FEI premise.
+For a probability $P$ and a supported subprobability $Q$, define
+\[
+\CE(P,Q)=\sum P\log_2(1/Q),\qquad
+\KL(P\|Q)=\sum P\log_2(P/Q)=\CE(P,Q)-H(P).
+\]
+Support means $Q(s)>0$ whenever $P(s)>0$. Gibbs' inequality holds
+for this generalized divergence: complete $Q$ by a failure atom
+and assign that atom zero $P$ mass.
+
+\begin{lemma}[Complete nonempty reference interface]
+\label{lem:complete}
+Let $v=P(S\ne\varnothing)$ and let $R$ be a subprobability on
+nonempty sets positive on their actual support. Put
+$Q(\varnothing)=1-v$ and $Q(S)=vR(S)$ for nonempty $S$.
+Then $Q$ is complete and
+\[
+\CE(P,Q)=h_2(v)+\sum_{S\ne\varnothing}P(S)\log_2(1/R(S)).
+\]
+For $v=0$, choose $Q=\delta_\varnothing$; for $v=1$ the empty
+mass is zero.
+\end{lemma}
+\begin{proof}
+The total mass is at most $1-v+v=1$. Expand the cross-entropy and
+collect $-(1-v)\log_2(1-v)-v\log_2v=h_2(v)$.
+\end{proof}
+
+At each leaf of a fixed physical tree choose any complete reference
+$Q_l$ supported on $P_l=P_{f_l}$. Its total mass is at most one;
+it may depend on the terminal history but is fixed before sampling
+a Fourier set. Define references recursively upwards as follows.
+At a node with block $A$, complement $C$, and $m=2^{|A|}$, write
+\[
+q(T)=\sum_{U\subseteq A}a_{U\cup T}^2=m^{-1}\sum_xP_x(T),\quad
+r(T)=m^{-1}\sum_xQ_x(T),\quad
+\theta(U\mid T)=a_{U\cup T}^2/q(T),
+\]
+\[
+Q_h(U\cup T)=\theta(U\mid T)r(T).\tag{G}\label{eq:G}
+\]
+When $q(T)=0$ fix any normalized $\theta$, for example a point
+mass at $U=\varnothing$. Reference mass on such a fiber must be
+kept, even though its true mass vanishes. At $q(T)>0$ put
+\[
+k_P(x\mid T)=P_x(T)/(mq(T)),\qquad
+k_Q(x\mid T)=Q_x(T)/(mr(T)).
+\]
+\[
+\kappa_h=\sum_Tq(T)\KL(k_P(\cdot\mid T)\|k_Q(\cdot\mid T)).
+\]
+These are normalized posteriors on each positive true fiber.
+
+\begin{theorem}[Compatible reference transfer, A097 version 1]
+\label{thm:reference}
+The recursive $Q_h$ are supported complete subprobabilities and
+\[
+\CE(P_f,Q_{\rm root})
+=\sum_h\pi_h(B_h+J_h-\kappa_h)+\sum_l\pi_l\CE(P_l,Q_l),\tag{T}
+\]
+\[
+\KL(P_f\|Q_{\rm root})
+=\sum_l\pi_l\KL(P_l\|Q_l)-\sum_h\pi_h\kappa_h.\tag{S}
+\]
+Consequently $0\le\sum_h\pi_h\kappa_h\le
+\sum_l\pi_l\KL(P_l\|Q_l)$.
+If $\CE(P_l,Q_l)\le C_{\rm leaf}I(f_l)$ and
+\[
+\sum_h\pi_h(B_h-\kappa_h)\le K I_{\rm rem},\tag{R}\label{eq:R}
+\]
+then $H(f)\le\max(K+c_0,C_{\rm leaf})I(f)$.
+\end{theorem}
+\begin{proof}
+From (G), $\sum Q_h=m^{-1}\sum_x\sum Q_x\le1$.
+If $a_{U\cup T}^2>0$, some $P_x(T)>0$; inductive support gives
+$r(T)>0$ and $Q_h(U\cup T)>0$.
+For the true/reference laws on $(x,T)$ with masses $P_x(T)/m$
+and $Q_x(T)/m$, expansion first by $x$, then by $T$, gives
+\[
+m^{-1}\sum_x\KL(P_x\|Q_x)=\KL(q\|r)+\kappa_h.
+\]
+The true parent and reference share $\theta$, whence
+$\KL(P_h\|Q_h)=\KL(q\|r)$.
+Combine this with the block entropy identity to get
+\[
+\CE(P_h,Q_h)=B_h+J_h+m^{-1}\sum_x\CE(P_x,Q_x)-\kappa_h.
+\]
+Finite telescoping proves (T). Telescope the divergence identity
+to obtain (S); nonnegativity proves the stated credit ceiling.
+Finally use $H(f)\le\CE(P_f,Q_{\rm root})$, the paid channel
+bound, (R), and influence conservation.
+\end{proof}
+
+\begin{conjecture}[OPEN-REF-TRANSFER: universal complete-reference payment]
+\label{conj:reference}
+There exist finite $K,C_{\rm leaf}\ge0$ such that for every
+$n\ge0$ and every Boolean $f$ there exist a finite actual stopping
+tree and supported complete leaf subprobabilities $Q_l$ satisfying
+$\CE(P_l,Q_l)\le C_{\rm leaf}I(f_l)$ for every leaf and (R),
+with every interior reference constructed by (G).
+\end{conjecture}
+Neither Gibbs positivity nor the existence of $Q_l$ proves (R).
+For $Q_l=P_l$, all interior references equal the actual spectra,
+all $\kappa_h$ vanish, and (T) is exactly the entropy telescope.
+Positive reference credit is constrained by terminal divergence
+slack; it is not an additional freely reusable physical influence.
+An interior reference reset is outside (G) and would require its
+own correction. C020 costs, if inserted at leaves via
+Lemma~\ref{lem:complete}, retain their empty-atom entropy, root
+normalizer, scale prior, labels, ranks, attachments and all other
+complete-description terms.
+
+\section{A097: one shared data bit and the boundary of selector payment}
+\label{sec:shared}
+This is the scoped version-1 claim
+\path{A097-ONE-SHARED-DATA-COLLISION-TRANSFER}~\cite{A097c}.
+It is included with its full proof and the original scope-bound
+A094 acceptance. Its second independent audit remains pending. Let $G(s,X),H(s,Y)$ share one fair physical bit,
+with disjoint private blocks, and let $F=(G+H)/2+z(G-H)/2$ for a fresh selector.
+Supply normalized finite-cost references $R_G,R_H$ positive on true supports.
+Let $C=\{\varnothing,\{s\}\}$ and
+$a=(\widehat G(\varnothing),\widehat G(s))$, $b$ analogously.
+Calibrate each reference separately on both atoms of $C$ to its true
+mass, and rescale its complement to the true complement mass.
+The categorical KL chain rule on these three cells gives
+\[
+ c_G-c_G^c=D_2((a_0^2,a_1^2,1-\|a\|_2^2)Vert
+          (R_G(0),R_G(s),R_G(C^c)))\ge0,
+\]
+and similarly for $H$. A zero true complement gets zero calibrated mass.
+Positive true complement ensures a positive original denominator.
+
+With $r=(R_G^c+R_H^c)/2$, $q_T=(P_G+P_H)/2$, use the actual kernel
+$K(0\mid T)=(\widehat G(T)+\widehat H(T))^2/(4q_T)$,
+$K(1\mid T)=(\widehat G(T)-\widehat H(T))^2/(4q_T)$.
+At zero true fibers fix $K(0\mid T)=1$, preserving all reference mass.
+Then $Q(U,T)=r(T)K(U\mid T)$ is normalized. On $C$ the child posterior
+agrees after calibration, and outside $C$ every true fiber identifies
+its unique child. Thus the posterior mismatch is exactly zero.
+The KL chain rule yields
+\[
+ D_2(P_F\Vert Q)=\tfrac12(D_2(P_G\Vert R_G^c)+D_2(P_H\Vert R_H^c)),
+ \qquad \CE(P_F,Q)=\tfrac12(c_G^c+c_H^c)+B_z+J_z.
+\]
+
+Write $d_z=(1-\langle a,b\rangle)/2$. Conditional means lie in $[-1,1]$,
+so $\|a\|_1,\|b\|_1\le1$. The outside collision cost is
+$(2-\|a\|_2^2-\|b\|_2^2)/2\le2d_z$.
+For real conditional means $x,y$, $|x-y|\le1-xy$ follows by squaring,
+since $(1-xy)^2-(x-y)^2=(1-x^2)(1-y^2)\ge0$.
+Consequently $\|a-b\|_\infty\le2d_z$ and
+$\sum_{T\in C}|a_T^2-b_T^2|\le4d_z$.
+For any packet, the Renyi-one-half inequality gives
+$\phi(A,B)\le2\sqrt{AB}/\ln2$:
+Jensen bounds Shannon entropy by $2\log_2(\sqrt u+\sqrt{1-u})$,
+then $\ln(1+2\sqrt{u(1-u)})\le2\sqrt{u(1-u)}$.
+Here $A=(a_T+b_T)^2/4$, $B=(a_T-b_T)^2/4$,
+so the collision cost is at most $2d_z/\ln2$.
+Lemma~\ref{lem:single} pays $J_z\le2d_z/\ln2$. Therefore
+\[
+ \CE(P_F,Q)\le\tfrac12(c_G^c+c_H^c)+(2+4/\ln2)d_z,\quad
+ I(F)=\tfrac12(I(G)+I(H))+d_z.
+\]
+The shared bit is included exactly once through averaged data influence.
+Supplied child bounds thus transfer with constant $\max(K_G,K_H,2+4/\ln2)$.
+No arbitrary bounded-cost seed references were constructed here.
+For $t$ shared bits, calibrate every shared-only atom. The same proof
+works under both conditional-mean Fourier $\ell^1$ norms at most one;
+without this admission Cauchy--Schwarz gives coefficient
+$2+(2\,2^{t/2}+2)/\ln2$.
+
+There is no absolute selector-only coefficient for unrestricted overlap.
+For even $k\ge4$, take the quadratic bent sign $b$ and its flip
+$b'=b-2\mathbf1_0$. Put $\delta=2^{-k}$, $e=\sqrt\delta$.
+Their actual Fourier coefficients are $\sigma_Te$ and $\sigma_Te-2\delta$,
+by tensoring the two-bit quadratic transform. Selecting them has influence
+$\delta$ and packets $A_T=(\sigma_Te-\delta)^2$, $B_T=\delta^2$.
+Since $e\ge4\delta$, $A_T\ge9\delta/16$ and
+$\phi(A_T,B_T)\ge B_T\log_2(A_T/B_T)$.
+Summing all $2^k$ packets gives
+\[
+ [H(F)-\tfrac12(H(b)+H(b'))]/d_z\ge B_z/d_z
+ \ge k-\log_2(16/9)\longrightarrow\infty.
+\]
+This refutes only a selector-only extension. The full terminal entropy and
+core influence of order $k$ remain. A general payment must name a
+nonreused terminal core reserve, in addition to its complete reference cost.
+
+\section{Closed B05 compatible-reference calibration, A097 version 1}
+\label{sec:b05ref}
+Let even $k\ge2$, $\delta=2^{-k}$, $\epsilon=2^{-k/2}$,
+$r=2k$, $p=2^{-r}$, and let $b$ be the quadratic bent sign
+on $k$ data bits. Set $b'=b-2\mathbf1_0$, let $h$ be their fair
+physical-selector splice, and put $F=1+A_r(h-1)$.
+The tree queries controls in order, stops at the first inactive
+assignment, otherwise queries the selector and stops at $b$ or $b'$.
+Constant leaves use $\delta_\varnothing$; seed references are either
+their true laws (mode E) or the same uniform subset law $Q(T)=\delta$
+(mode U). These are complete references fixed before sampling.
+\begin{proposition}[A097-B05-COMPATIBLE-REFERENCE-CERTIFICATE version 1]
+\label{prop:b05ref}
+On this precise tree, for every even $k\ge2$,
+\[
+ B_{\rm tree}:=\sum_h\pi_hB_h\le3 I_{\rm rem},\quad
+ I_{\rm rem}=p(rc+\delta),\quad I_{\rm term}=p(k/2+k\delta),
+ \quad c=1-\epsilon+\delta.
+\]
+Mode E has zero posterior credit. Mode U has
+\[
+0\le\frac{K_{\rm tree}}{I_{\rm rem}}
+\le\frac{8\delta(1-\delta)}{(rc+\delta)\ln2},
+\quad K_{\rm tree}=\sum_h\pi_h\kappa_h.
+\]
+Both erasure and erasure-minus-credit rates tend to 2, and
+the complete root reference satisfies
+\[
+\CE(P_F,Q_F)\le(3+c_0)I_{\rm rem}+2I_{\rm term}
+\le(3+c_0)I(F).
+\]
+\end{proposition}
+\begin{proof}
+The bent coefficients are $\sigma\epsilon$, with counts
+$N_\pm=(2^k\pm2^{k/2})/2$, and the point flip subtracts $2\delta$
+from each. The selector has coefficients $\sigma\epsilon-\delta$
+and $\delta$; hence
+\[
+q_\sigma=\delta-2\sigma\delta\epsilon+2\delta^2,\quad
+B_{\rm sel}=\sum_\sigma N_\sigma
+                    \phi((\sigma\epsilon-\delta)^2,\delta^2).
+\]
+The mean of $h$ is $\mu=\epsilon-\delta$; $c=1-\mu\in[3/4,1)$.
+At the active suffix with $s$ controls, let $u_s=2^{-s}$ and
+$d_s=u_sc$. The physical reach probability is $p/u_s$.
+The control's residual-empty squared masses are
+$(1-d_s)^2,d_s^2$, and every other packet has fair spectral
+membership. Thus with $q_s=1-2d_s+2d_s^2$,
+\[
+B_s=\phi((1-d_s)^2,d_s^2)+(1-q_s),\quad
+B_{\rm tree}=p\left[B_{\rm sel}+\sum_{s=1}^r B_s/u_s\right].
+\]
+The control influences are $pc$, the selector influence is
+$p\delta$, and the seed influences are $k/2$ and $k/2+2k\delta$
+because each neighbor of the flipped point has value $+1$.
+This proves both influence formulas, with terminal budget retained.
+
+For clarity the actual compatible reference correction is explicit.
+If $z_{s-1}$ is the active-child reference vacuum mass, (G) gives
+\[
+z_s=\frac{(1-d_s)^2}{q_s}\frac{1+z_{s-1}}2,\quad
+\kappa_s=q_s\KL\left(
+ \frac{(1,(1-2d_s)^2)}{2q_s}\,
+ \middle\|\,\frac{(1,z_{s-1})}{1+z_{s-1}}\right).
+\]
+All nonempty packets have both physical posteriors concentrated on
+the active child, hence zero correction.
+For mode E, $z_0=\mu^2$ and every correction vanishes.
+For mode U, $z_0=\delta\mu^2/q_+$ and
+$\kappa_{\rm sel}=J_{\rm sel}$, where
+$J_{\rm sel}=H(q)-[k+H(b')]/2$.
+The exact requested rate is therefore
+\[
+\frac{B_{\rm sel}-\kappa_{\rm sel}
+       +\sum_{s=1}^{2k}(B_s-\kappa_s)/u_s}{2kc+\delta}.
+\]
+
+For $d_s\le1/2$, the root-packet bound gives
+\[
+B_s/u_s\le2c+u_sc^2[\log_2e+2s-2\log_2c].
+\]
+Use $\sum u_s\le1$, $\sum su_s\le2$, and
+$B_{\rm sel}\le h_2(\delta)\le\delta(k+\log_2e)$ to obtain
+\[
+B_{\rm tree}/p\le2rc+C_0+\delta(k+\log_2e),\quad
+C_0=\log_2e+4+2\log_2(4/3)<13/2.
+\]
+The last comparison follows, for example, from
+$\ln2>69/100$ and $\ln(4/3)<3/10$:
+the latter is certified by the first five alternating terms of
+$\ln(1+1/3)$, an upper bound less than $3/10$.
+For even $k\ge6$, $rc\ge9$ and
+$\delta(k+3/2)\le15/128$, giving
+$B_{\rm tree}/I_{\rm rem}<2+(13/2+15/128)/9<3$.
+The two base cases have the rational certified upper bounds
+\[
+\begin{split}
+ k=2:\quad&B_{\rm tree}/I_{\rm rem}
+ \le\frac{1529024733915133429860119}{604462909807314587353088}<\frac{253}{100},\\
+ k=4:\quad&B_{\rm tree}/I_{\rm rem}
+ \le\frac{1419432708511339676246917}{604462909807314587353088}<\frac{235}{100}.
+\end{split}
+\]
+These are the exact A097 output intervals from its rational
+32-term atanh enclosure; provenance and copied endpoints are in
+\path{out/B05_CERTIFICATE_INTAKE.json}.
+This explicitly isolates the finite certificate dependency from
+the analytic all-$k$ tail. The lower bound
+$B_s\ge2u_sc-2u_s^2c^2$ gives
+$B_{\rm tree}/p\ge2rc-2$, proving the rate limit.
+
+For mode U, the flipped bent spectrum has
+$\chi^2(P_{b'}\|U)=16\delta(1-\delta)$:
+its atom difference is $\delta(-4\sigma\epsilon+4\delta)$,
+and the uniform mean of $\sigma$ is $\epsilon$.
+The inequality $\ln t\le t-1$ gives
+$\KL(P_{b'}\|U)\le\chi^2/\ln2$.
+The terminal slack is $p\KL(P_{b'}\|U)/2$, so (S) proves
+the credit cap and its negligible rate. Seed reference CE is at
+most $k\le2I(\text{seed})$ in both modes: for E, entropy is at
+most $k$; for U, cross-entropy equals $k$.
+Theorem~\ref{thm:reference} completes the root CE bound.
+\end{proof}
+This closes the prior assembly's B05 calibration handoff, not the
+arbitrary-core or overlapping-control payment. A097's full application
+review is still pending. Repeating more bounded-ratio calibration
+cases would not advance the remaining universal inequality.
+
+\section{B05: scope-correct Boolean local obstruction}\label{sec:b05}
+\begin{proposition}[B05 version 1; B19 accepted at stated scope]
+\label{prop:b05}
+For every finite $K,A_0,B_0\ge0$ there is a genuine Boolean
+singleton split with children $G,H$, and
+\[
+q_W=(\widehat G(W)^2+\widehat H(W)^2)/2,\quad
+e_W=(\widehat G(W)-\widehat H(W))^2/4,\quad
+\vartheta_W=e_W/q_W,\quad d=\sum_We_W,
+\]
+such that
+\[
+B_y:=\sum_Wq_Wh_2(\vartheta_W)>Kd+A_0V+B_0M,\quad
+V=\sum_Wq_W(\vartheta_W-d)^2,\quad
+M=\sum_j(d_j(G)-d_j(H))^2.
+\]
+Thus a fixed-price bound of this form cannot hold at every coordinate.
+\end{proposition}
+\begin{proof}
+Use $0/1$ physical labels for this construction; this relabeling
+does not change influence or squared Fourier coefficients.
+Let even $k\ge4$, $\delta=2^{-k}$, $p=2^{-2k}$,
+$d=p\delta=2^{-3k}$,
+\[
+b(x)=(-1)^{x_1x_2+\cdots+x_{k-1}x_k},\quad
+b'(x)=b(x)-2\mathbf1_{x=0},\quad A(z)=\mathbf1_{z=0},
+\]
+on $k$ data bits and $2k$ controls, and set
+$G=1+A(b-1)$, $H=1+A(b'-1)$.
+These are Boolean, since $b(0)=1$ and the point flip exchanges
+that value with $-1$. They disagree at one point of a $3k$ cube.
+Every Walsh coefficient $c_T$ of $b$ has magnitude $\sqrt\delta$:
+each quadratic pair has four coefficients of magnitude $1/2$,
+and the pairs tensorize. Also $c_\varnothing=\sqrt\delta$.
+The point flip and activation give a coefficient difference $2d$
+for all $2^{3k}$ residual packets, so $e_W=d^2$ and $\sum e=d$.
+For nonempty data index $T$ the coefficient midpoint is
+$p(c_T-\delta)$, and
+\[
+q_W/e_W=(c_T/\delta-1)^2+1\ge1/(4\delta).
+\]
+For empty $T$ and nonempty control index the midpoint is
+$p(\sqrt\delta-1-\delta)$, giving the same bound.
+For the all-empty index it is $1+p(\sqrt\delta-1-\delta)$,
+whose magnitude is at least $1-p$; its ratio is larger still.
+Hence $\max\vartheta\le4\delta$.
+Since $h_2(t)\ge t\log_2(1/t)$, summing just the
+$(2^k-1)2^{2k}$ nonempty-data packets gives
+$B_y\ge(1-\delta)d(k-2)$.
+Furthermore $V=\sum q\vartheta^2-d^2\le4\delta d$.
+Every one-bit neighbor of the flipped point has common value $+1$.
+Exactly one undirected edge per residual coordinate changes pivotal
+status; the directed-edge convention gives $d_j(H)-d_j(G)=2d$.
+Thus $M=3k(2d)^2=12kd^2$.
+Consequently
+\[
+(B_y-Kd-A_0V-B_0M)/d
+\ge(1-\delta)(k-2)-K-4A_0\delta-12B_0kd\longrightarrow\infty.
+\]
+Finally the parent's queried-coordinate spectral probability in
+fiber $W$ is $e_W/q_W$, so this is precisely its $B_y$.
+\end{proof}
+This does not refute Conjectures~\ref{conj:universal},
+\ref{conj:tree}, or \ref{conj:reference}. Its quantifier is an
+adversarial \emph{specified} coordinate; the reduction chooses a
+coordinate or a whole tree. Child influence is of order $kp$,
+whereas the bad local charge is of order $kp\delta$.
+No unbounded $H/I$ Boolean family follows.
+
+\section{Historical C024 and the retained frontier}
+The seed ledger's C024 is an actual-source continuous-history
+payment target in natural units, not the finite-tree reference
+identity of Theorem~\ref{thm:reference}. Its pinned route-map
+Sections 11.13--11.16 use a particular actual Boolean ancestry and
+history-integrated cost $C_{\rm path}$, with comparison
+$H_{\rm nat}-3I\le C_{\rm path}\le H_{\rm nat}+I$.
+No construction or proof of that source-specific comparison is
+imported as a premise here. The exact policy and cost must be
+reconstructed from that source before a proposed payment is applied.
+Those trajectory states are generally real multivalued functions,
+not Boolean physical restrictions, so Lemma~\ref{lem:block} cannot
+be applied to them without a separate argument.
+An explicitly defined source-aware alternate bank from RM Section
+11.13 is as follows. For $0<\theta<1$, let $\eta_i$ be independent
+signs with $\E\eta_i=\sqrt{1-\theta}$, and for each uniform sign
+vector $x$ let $\mu_\theta^x$ be the squared Fourier law of the
+actual Boolean function $\eta\mapsto f(x_1\eta_1,\ldots,x_n\eta_n)$
+in the orthonormal basis of this biased product measure. Set
+\[
+Q_{\rm bias}(f)=\int_0^1\E_x\left[
+\sum_i H_{\rm nat,\mu_\theta^x}(S_i\mid S_{-i})
+\right]\,\frac{d\theta}{\theta}.
+\]
+The integral is interpreted as a nonnegative improper integral.
+\begin{conjecture}[OPEN-C024-HISTORY: explicit biased-history bank]
+There exists a finite $K\ge0$ such that for every $n\ge0$ and
+every Boolean $f:\{-1,1\}^n\to\{-1,1\}$,
+$Q_{\rm bias}(f)\le K I(f)$ in natural units.
+\end{conjecture}
+RM reports $|Q_{\rm bias}-C_{\rm path}|\le(1+2\ln2)I$.
+This comparison has not been reconstructed here and is not a premise
+in our self-contained reduction. This leaf is an explicit target,
+not a self-contained alternate proof: no unnamed history process may
+replace the pinned one.
+The assembly's self-contained universal target is
+Conjecture~\ref{conj:universal}; the finite-tree alternative is
+Conjecture~\ref{conj:reference}. No implication from that alternative
+to the specific continuous-policy C024 cost is claimed.
+
+\section{A095: linear shared-collision tax with sharp leading coefficient}
+\label{sec:lineartax}
+This section independently reconstructs only the new shared-selector
+application in \path{A095-RANK-KL-EQUIVALENCE}, version 3~\cite{A095d}.
+The older rank-equivalence and activation clauses of that bundled ID are
+not independently accepted here. Let $G(s,X),H(s,Y)$ share $t\ge2$
+uniform bits, with arbitrary disjoint private blocks and a fresh selector $z$.
+Let $F=(G+H)/2+z(G-H)/2$, $d=\Pr(G\ne H)$ and $d_* =\min(d,1-d)$.
+\begin{theorem}\label{thm:lineartax}
+For all such actual Boolean children,
+\[
+ \Delta=H(F)-\tfrac12(H(G)+H(H))
+ \le (t+2+3/\ln2)d_*.
+\]
+Calibrating every shared-only reference atom and lifting through the
+actual selector kernel gives a single complete normalized reference with
+\[
+ \CE(P_F,Q)=\tfrac12(c_G^c+c_H^c)+\Delta,
+ \qquad D_2(P_F\Vert Q)=\tfrac12(D_2(P_G\Vert R_G^c)+D_2(P_H\Vert R_H^c)).
+\]
+Thus supplied child influence bounds transfer with constant
+$\max(K_G,K_H,t+2+3/\ln2)$. If $\kappa_t$ is the supremum of
+$\Delta/d_*$ over all such children and private dimensions, then
+\[
+ t-1-\log_2(16/9)\le\kappa_t\le t+2+3/\ln2\quad(t\ge4),
+ \qquad \kappa_t/t\longrightarrow1.
+\]
+No arbitrary terminal reference payment is asserted.
+\end{theorem}
+\begin{proof}
+Negating $H$ preserves its spectrum and interchanges the two selector
+frequency masses in every fiber. It preserves $\Delta$, changing $d$ to
+$1-d$. We may therefore fold to $d=d_*\le1/2$. If $d_*=0$, the children
+are equal or opposite on the union cube and $\Delta=0$.
+Let $C$ be the $N=2^t$ shared-only frequencies, and $a_T,b_T$ the
+embedded child coefficients. Conditional means $u(s),v(s)$ belong to
+$[-1,1]$, and private conditional independence gives $2d_*=\E(1-uv)$.
+As $|u-v|\le1-uv$, each $T\in C$ satisfies $|a_T-b_T|\le2d_*$.
+Put $m_T=(a_T^2+b_T^2)/2$, $e_T=(a_T-b_T)^2/4$, and
+$\delta_C=\sum_{T\in C}e_T$. Parseval and the coefficient cap give
+\[
+ 0\le\delta_C\le\min(d_*,N d_*^2),\qquad\sum_C m_T\le1.
+\]
+Add a dummy fiber of mass $1-\sum_C m_T$ and zero minority. Concavity
+of binary entropy then pays the complete collision cost
+$B_C=\sum_C m_T h_2(e_T/m_T)\le h_2(\delta_C)$.
+The terminology minority denotes the chosen selector sector; the
+inequality does not require it to be smaller in every individual fiber.
+Outside $C$, true nonzero fibers identify their child and the selector
+membership is fair. Hence
+\[
+ B_{\rm out}=\tfrac12(2-\E u^2-\E v^2)\le2d_*.
+\]
+
+For $d_*\ge1/N$, monotonicity of $h_2$ on $[0,1/2]$ and
+$h_2(x)\le x\log_2(e/x)$ give
+$B_C\le d_*(t+1/\ln2)$.
+For $0<d_*\le1/N$, write $x=N d_*\le1$. Since $N\ge4$,
+$\delta_C\le N d_*^2\le1/4$, and
+\[
+ B_C/d_*\le x\log_2(eN/x^2)\le\log_2(eN)=t+1/\ln2.
+\]
+For the last inequality the derivative, after multiplying by $\ln2$,
+is $\ln N-1-2\ln x>0$ on $(0,1]$, and the limit at zero is zero.
+Lemma~\ref{lem:single} gives $J\le2d_*/\ln2$, proving the tax.
+
+The calibration and reference proof in Section~\ref{sec:shared} applies
+to all shared-only atoms separately: it decreases each cost by exactly
+the categorical KL of those singleton atoms and the complement.
+The actual kernel preserves reference mass even at zero true fibers.
+On $C$ true and reference child posteriors agree; outside $C$ the active
+child is unique. Thus the displayed full KL and CE identities follow.
+Sign folding permutes the selector kernel and does not change the
+calibrated references or terminal bills. Physical influence remains
+$I(F)=\tfrac12(I(G)+I(H))+d$, counting shared coordinates once, so
+$d_*\le d$ proves the conditional child-bound consequence.
+
+For even $t\ge4$, the actual bent/point-flip boundary in
+Section~\ref{sec:shared} gives $\kappa_t\ge t-\log_2(16/9)$.
+For odd $t\ge5$ use that construction on $t-1$ bits and one dummy shared
+bit. This gives the lower bound for all $t\ge4$. Divide both bounds by $t$.
+\end{proof}
+The old exponential estimate was valid and is not refuted. This sharper
+linear estimate still cannot become absolute using selector influence
+alone; the bent example has the matching leading coefficient.
+
+\section{Complete conditional KL: what compression must retain}
+\label{sec:compression}
+For any deterministic quotient $C_i$ of a complete derivative row,
+the KL chain rule gives the exact influence-weighted lost refund
+\begin{equation}\label{eq:quotientloss}
+ L_i(C_i)=d_i[D_2(\mu_i\Vert r_i)-D_2(C_i\mu_i\Vert C_i r_i)]
+ =d_i\sum_c\mu_i(c)D_2(\mu_i(\cdot\mid c)\Vert r_i(\cdot\mid c)).
+\end{equation}
+The coarsened downward cost is $\mathcal L_i+L_i(C_i)$.
+Marginalizing the complete reference preserves normalization but may
+discard an unbounded conditional divergence. It is distinct from
+conditioning the reference on derivative support, which also drops its
+support mass and invalidates the complete-reference identity.
+
+\begin{proposition}[A001 fixed-degree obstruction]\label{prop:degree}
+Fix $L\ge0$ and keep each residual subset of size at most $L$ individually,
+merging all larger subsets into one tail. For the one-point sign $f_n$,
+let $e=2^{1-n}$, $m=2^{\lfloor n/2\rfloor}$ and $G_n=f_n^{\otimes m}$,
+with $n\ge\max(6,2L+2)$. Every Fourier coefficient is nonzero, every
+coordinate has influence $e$, and $I(G_n)=mn e\to0$. Yet
+\begin{align*}
+ H(G_n)/I(G_n)&<4,\qquad\mathcal L(G_n)/I(G_n)\le2,\\
+ \mathcal L^{L}(G_n)/I(G_n)
+ &\ge\lfloor n/2\rfloor-2-\beta(n-1)\longrightarrow\infty,\\
+ \beta&=e\sum_{j=0}^L\binom{n-1}{j}.
+\end{align*}
+This is \path{A001-BOUNDED-DEGREE-REFUND-LOSS}, version 1~\cite{A001d},
+assembled at author scope, not an FEI counterexample.
+\end{proposition}
+\begin{proof}
+The point sign has coefficient $1-e$ at empty and magnitude $e$ elsewhere.
+Every influence is $e$. Its row downward price is
+$e-e^2+e^2\log_2(((1-e)^2+e^2)/e^2)$, giving ratio at most
+$1+2(n-1)e\le2$. With $a=(1-e)^2$, $W=1-a=2e-e^2$, its entropy is
+$-a\log_2 a+2(n-1)W\le2e/\ln2+4(n-1)e<4ne$.
+Product spectra add $H,I,\mathcal L$, proving the genuine tensor bounds.
+There are no auxiliary parity factors or dummy coordinates.
+
+In a row of $G_n$, the seed derivative is uniform on $2^{n-1}$ atoms,
+each of mass $e$. Both row laws have the same independent spectator
+factor. The individually kept low-atom derivative mass is at most $\beta$.
+Every likelihood ratio is at most $1/e$, so their total signed KL
+contribution is at most $\beta(n-1)$.
+The reference tail contains the event that exactly one spectator block
+has degree greater than $L$ and all other spectators are empty.
+This has mass $(m-1)z a^{m-2}$ with
+$z=e^2\sum_{j=L+1}^n\binom nj\ge e$ by binomial symmetry.
+Since $me\le1/4$, $m-1\ge m/2$ and Bernoulli's inequality gives
+$a^{m-2}\ge1-2e(m-2)\ge1/2$, the tail reference mass is at least
+$me/4=2^{-(\lceil n/2\rceil+1)}$.
+Its KL term is at most $\log_2(1/r_{\rm tail})\le\lceil n/2\rceil+1$,
+including when the signed term is negative. Subtract these divergence
+bounds from $\log_2(1/e)=n-1$. For fixed $L$, $\beta(n-1)$ is an
+exponentially decaying polynomial, proving divergence.
+Equation~\eqref{eq:quotientloss} shows that all the loss is the
+within-tail conditional KL. Discarding only the independent spectators
+instead preserves the seed likelihood ratio and loses zero KL.
+\end{proof}
+
+\begin{proposition}[A096 informative partner]\label{prop:partner}
+Replace each physical coordinate $i$ in $J$ by a fresh disjoint parity pair
+$u_i v_i$. Then
+\[
+ H(F_J)=H(f),\quad I(F_J)=I(f)+\sum_{i\in J}d_i,
+ \quad\mathcal L(F_J)=\mathcal L(f)-\sum_{i\in J}\mathcal L_i(f).
+\]
+Each duplicated row has zero erasure and zero downward price.
+Deleting its partner loses exactly $\mathcal L_i(f)$ of weighted KL;
+retaining only its partner loses zero. These are the full scoped identities
+of \path{A096-SINGLE-SPECTATOR-REFUND-OWNERSHIP}, version 1~\cite{A096d},
+independently reconstructed by A073~\cite{A073d}.
+\end{proposition}
+\begin{proof}
+Character expansion embeds every selected frequency into both fresh bits,
+injectively. The $H,I$ identities follow; unchanged rows retain their pairs.
+For a duplicated row write $A_T=p_T$, $B_T=p_{T+i}$.
+Its complete reference atoms are $r(T,0)=A_T$, $r(T,1)=B_T$ and its
+derivative atoms are $\mu(T,0)=0$, $\mu(T,1)=B_T/d_i$.
+The likelihood ratio is $1/d_i$ on the entire derivative support, giving
+$D=\log_2(1/d_i)$, zero downward price, and no adjacent occupied pair.
+Deleting the partner yields the original laws $A+B$, $B/d_i$ and thus
+loses $\mathcal L_i(f)$ by~\eqref{eq:quotientloss}.
+Retaining it yields $(0,1)$ against $(1-d_i,d_i)$; given partner one,
+both remaining laws are $B_T/d_i$, so the loss is zero.
+An arbitrary common independent spectator factor cancels conditionally.
+\end{proof}
+The associated local-payment no-go is an actual correlated Boolean row.
+Let $b$ be the even-$d$ quadratic bent sign, $\delta=2^{-d}$, $t=\sqrt\delta$,
+and $g(s,y)=b(y)-\mathbf1_0+s\mathbf1_0$. Its selector row has masses
+$A_T=(\sigma_Tt-\delta)^2$, $B_T=\delta^2$, with influence $\delta$.
+As $A_T+B_T=\delta(1-2\sigma_Tt+2\delta)\ge\delta/2$,
+$\delta(d-1)\le\mathcal L_s(g)\le\delta d$, the upper bound following
+from complete KL nonnegativity. Both signs $\sigma_T$ occur, so the partner
+and core are genuinely correlated. Duplicating only $s$ gives two
+influences $\delta$ whose deletion losses each lie in this interval.
+Every core influence is $1/2+\delta$: the point flip adds a pivotal edge
+in each direction. Thus $I=d/2+(d+2)\delta$ and $H/I\le3$.
+No absolute allowance using only the queried/erased pair pays the loss.
+This excludes that local reserve, not a source-owned terminal budget.
+
+\section{A073: positive-erasure binary remainder with dedicated reserve}
+\label{sec:binary}
+This is \path{A073-NONZERO-ERASURE-BINARY-REMAINDER}, version 1,
+with the exact source-bound A098 review~\cite{A073d,A098d}.
+For even $d\ge2$, set $\delta=2^{-d}$, $t=\sqrt\delta$, let $b$ be
+the quadratic bent sign and let the two-bit gate $q(u,v)$ be $-1$ only
+at the binary input $(1,1)$. The actual Boolean function is
+$F_d=b(y)+\mathbf1_{y=0}(q(u,v)-1)$.
+Its four amplitudes over each core frequency are
+\[
+ \sigma_Tt-\delta/2,\quad\delta/2,\quad\delta/2,\quad-\delta/2.
+\]
+They are all nonzero, so both queried erasures are positive. The signs
+occur $N_\pm=(2^d\pm2^{d/2})/2$ times, by summing coefficients at zero.
+For query $u$ put $e=\delta/2$ and retain only partner occupancy $V$.
+The complete laws are
+\[
+ \mu(T,0)=\mu(T,1)=\delta/2,\quad
+ r(T,0)=\delta c_\sigma,\quad r(T,1)=\delta^2/2,
+ \qquad c_\sigma=1-\sigma t+\delta/2.
+\]
+Hence $\mu_V=(1/2,1/2)$ and $r_V=(1-e,e)$.
+Conditional on $V=1$, both core laws are uniform. Conditional on $V=0$,
+the derivative is uniform and reference masses are $\delta c_\sigma/(1-e)$.
+The KL chain rule gives exactly
+\[
+ D_{\rm full}=D_2((1/2,1/2)\Vert(1-e,e))+D_0/2,
+ \quad D_0=\sum_{\sigma=\pm}N_\sigma\delta
+       \log_2\frac{1-e}{c_\sigma},\quad L_u=eD_0/2.
+\]
+The same holds for $v$. Both sign counts are positive and $c_+\ne c_-$,
+so strict KL nonnegativity gives $D_0>0$.
+For $0<t\le1/2$,
+$7(1-t+t^2/2)-5(1-t^2/2)=(2-3t)(1-2t)\ge0$,
+so each conditional likelihood ratio is at most $7/5$ and
+\[
+ 0<L_u/e\le\tfrac12\log_2(7/5)<63/256=1/4-1/256.
+\]
+The strict last inequality is the exact integer certificate
+$7^{128}<2^{63}5^{128}$, rechecked in this run.
+The two losses together are less than $\delta/4$.
+Every core influence is $(1+\delta)/2$, as the gate flips zero on one
+quarter of its assignments, adding $\delta/2$ to each bent influence.
+Since $\delta\le1/4$, $\delta/4\le(1+\delta)/20=d_{y_1}/10$.
+Thus a dedicated tenth of one physical core influence pays these two
+losses once, if it is reserved exclusively for them. No other entropy,
+terminal or query charge is allocated to this fraction.
+
+The retained price remains large:
+\[
+ \mathcal L_u/e=1+\tfrac12\log_2((1-e)/e)-D_0/2>d/2+3/4.
+\]
+Here $(1-e)/e=2^{d+1}-1\ge2^d$ and $D_0/2<1/4$.
+Total influence is $d/2+(d/2+1)\delta$ and $H\le d+2$,
+giving $H/I\le2+4/d\le4$. Paying a quotient remainder does not pay
+this retained cost or construct a globally available terminal reserve.
+The universal normalized KL lower bound in Section~\ref{sec:refund}
+therefore remains the first unpaid C018 line.
+
+\section{A supplied source bank pays a negative-cell floor}
+\label{sec:floor}
+This is A097's version-1 theorem, independently accepted at its full stated
+scope by A098 and reconstructed here by A099~\cite{A097e,A098e}. All costs are in bits. It
+does not supply hereditary references for an arbitrary physical tree.
+
+Let $a\ge1,b\ge0,n=a+b,r\ge1$, $s=2^{-a},t=2^{-n},p=2^{-r}$.
+Let $A_j$ indicate a fixed point of a $j$-cube, and put
+\[
+ g=1-2A_a,\qquad F=g+2A_rD_n=1-2A_a(1-A_rA_b).
+\]
+Here $D_n$ is any specified negative data point of $g$; cube translations
+reduce it to the displayed point without changing squared spectra.
+Write $\mu=1-2s$, $\rho=4pt$, $\lambda=2p2^{-b}=\rho/(2s)\le1$.
+The coefficients of $g$ are $\mu$ at the vacuum, $-2s$ on nonempty
+active subsets, and zero elsewhere. Direct expansion of the point edit
+therefore gives the data spectral marginal
+\[
+ q=(1-\lambda)P_g+\lambda\mu\delta_\emptyset+\rho U_n.
+\]
+These are nonnegative weights summing to one. Take any normalized source
+reference $R$ positive on the source support, with finite supplied cost
+$c=\operatorname{CE}(P_g,R)$. Calibrate its vacuum mass to $\mu^2$,
+preserving the conditional nonempty reference, obtaining $R_0$. The
+binary chain rule gives
+\[
+ c_0=\operatorname{CE}(P_g,R_0)
+ =c-D_{\rm Ber}(\mu^2\Vert R(\emptyset))\le c.
+\]
+Set $R'=(1-\lambda)R_0+\lambda\mu\delta_\emptyset+\rho U_n$,
+and lift by the actual conditional control kernel:
+$Q(U,T)=R'(T)P_F(U,T)/q(T)$. This is a complete normalized reference.
+The uniform floor makes every data normalizer positive. References with
+zeros off the original source support are allowed.
+
+\begin{theorem}\label{thm:floor}
+Let $C=2ptb$, $E=2pta$, $J=2rpt$. Then
+\[
+ I(F)=I(g)+C-E+J,\quad I(g)=2as,\quad
+ \operatorname{CE}(P_F,Q)\le c+10(C+E+J).
+\]
+For $K\ge10$, the supplied bank $S_K=KI(g)-c$ satisfies
+\[
+ KI(F)-\operatorname{CE}(P_F,Q)
+ \ge S_K+(K-10)C-(K+10)E+(K-10)J.
+\]
+In particular, $c\le C_0I(g)$ implies
+$\operatorname{CE}(P_F,Q)\le(2C_0+10)I(F)$. The structural choice
+$R=P_g$ gives $\operatorname{CE}(P_F,Q)\le18I(F)$.
+\end{theorem}
+\begin{proof}
+Physical edge counting gives each active influence $2s-2pt$, each dummy
+influence $2pt$, and each control influence $2pt$, proving the influence
+identity. Use the same three mixture labels for the true and reference
+data laws. Their posterior divergence is
+$\kappa=\sum_Tq(T)D(\pi_P(\cdot\mid T)\Vert\pi_R(\cdot\mid T))$.
+The chain rule and the common actual conditional kernel give exactly
+\[
+ D(P_F\Vert Q)=(1-\lambda)D(P_g\Vert R_0)-\kappa,
+\]
+\[
+ \operatorname{CE}(P_F,Q)=(1-\lambda)c_0+\rho n+
+ H(\text{labels})-H(\text{labels}\mid T)-\kappa+
+ H(S_{\rm controls}\mid S_{\rm data}).
+\]
+The labels are analytical mixture labels, not a fair physical history.
+
+For $a\ge2$ let $v=1-\mu^2$, $q_0=\mu^2+\rho(\mu+t)$,
+$M=1-q_0$, $A=(1-\lambda)v$, $B_0=\rho(1-t)$.
+Then $R'(\emptyset)=q_0$, $M=A+B_0\le v$.
+On nonempty data sets retain the source conditional reference and the
+uniform nonempty reference. The complete-reference mixture inequality,
+followed by dropping only $(A-v)$ times the nonnegative source conditional
+cross entropy, yields, with $\eta(x)=-x\log_2x$,
+\begin{align*}
+ \operatorname{CE}(q,R')-c_0
+ &\le\eta(q_0)-\eta(\mu^2)+\eta(M)-\eta(v)\\
+ &\quad+B_0\log_2(2^n-1)+(A+B_0)h_2(B_0/(A+B_0)).
+\end{align*}
+The mixture inequality follows directly by adjoining its label: joint
+cross entropy is the weighted component cost plus label entropy; its
+marginal cross entropy cannot be larger. Thus no source debt was erased.
+Since $\mu^2\ge1/4$, $\eta'\le1$ on the vacuum interval and
+$q_0-\mu^2\le\rho$. Since $\eta'\ge-1/\ln2$ everywhere,
+$\eta(M)-\eta(v)\le\rho/\ln2$. Their sum is at most $4\rho$.
+Also $v\le4s$, $B_0\ge3\rho/4$, and
+$M/B_0\le(4/3)2^{b+r}$. The inequality
+$h_2(x)\le x\log_2(e/x)$ gives the label bill at most
+$\rho(b+r+2)$; the subset bill is at most $\rho n$.
+Hence $\operatorname{CE}(q,R')\le c+\rho(n+b+r+6)$.
+Each nonempty control set has marginal mass $4p^2t$, so their total mass
+is $V=\rho(1-p)$. Consequently
+\[
+ H(S_{\rm controls})=h_2(V)+V\log_2(2^r-1)
+ \le\rho(n+2r).
+\]
+Indeed the preceding binary bound gives
+$\rho(1-p)(n+2r-2+1/\ln2)$, which is no larger than the displayed
+bound. Combining costs gives $c+\rho(2n+b+3r+6)$.
+Because $b\le n$ and $n+r\ge3$, this is at most
+$c+5\rho(n+r)=c+10(C+E+J)$.
+
+For $a=1$, $\mu=0$ and $\lambda=\rho$. The data marginal is simply
+$(1-\rho)P_g+\rho U_n$. The joint-label bound gives
+$\operatorname{CE}(q,R')\le c+\rho n+h_2(\rho)
+\le c+\rho(2n+r)$, since $\log_2(1/\rho)=n+r-2$ and
+$1/\ln2<2$. Adding the control bill gives
+$c+3\rho(n+r)=c+6(C+E+J)$, including $n=r=1$.
+
+Subtract the cost bound from the physical influence identity to obtain
+the signed bank inequality. Since $E/I(g)=p2^{-b}\le1/2$, setting
+$K=2C_0+10$ leaves
+$S_K-(K+10)E\ge[K-C_0-(K+10)/2]I(g)=0$;
+the created-edge and control terms are nonnegative. The source bank is
+spent once for both the changed reference and the erased edges.
+For $R=P_g$, at $a\ge2$ the source entropy is
+$\eta(\mu^2)+4s(1-s)(2a-2)<8as=4I(g)$, using
+$\eta(\mu^2)\le4s(1-s)/\ln2$; at $a=1$ it is zero.
+This proves the structural constant $18$.
+\end{proof}
+
+For any independent Boolean terminal $h$ with supplied normalized finite
+reference $R_h$, use its product with $Q$. Then exactly
+\[
+ \operatorname{CE}_{\rm total}=c_h+\operatorname{CE}(P_F,Q),\quad
+ D_{\rm total}=D_h+(1-\lambda)D(P_g\Vert R_0)-\kappa,
+ \quad I_{\rm total}=I(h)+I(F).
+\]
+Thus $c_h\le C_hI(h)$ gives constant $\max(C_h,2C_0+10)$;
+the terminal is retained, rather than funding the floor. This algebraic
+product clause is included in both full scoped reconstructions.
+
+\paragraph{First unsupported hereditary line.}
+After an actual active-bit query, construct the descendant reference
+from the incoming $Q$, with its normalizer and reset paid by the same
+remaining bank. The Boolean child's membership in the point-edit family
+does not establish this reference statement. Positive-cell edits and
+arbitrary cores are not admitted by the nonnegative mixture above.
+
+\section{A root remainder allowance is not unused child surplus}
+\label{sec:childbank}
+The following complete derivation is A096 version 1 at author scope~\cite{A096e};
+its two new claims have not acquired independent full scoped acceptance.
+Let $b$ be any $d$-bit Boolean core, $d\ge1$, $b(0)=1$, and let $g$ be
+any $r$-bit Boolean gate. Put $\delta=2^{-d}$, $c=b-2\mathbf1_0$ and
+$F=b+\mathbf1_0(g-1)$. Write $\beta_T=\widehat b(T)$ and
+$a_V=\widehat g(V)$. Then
+\[
+ \widehat F(T,V)=\beta_T\mathbf1_{V=\emptyset}
+       +\delta(a_V-\mathbf1_{V=\emptyset}),\qquad
+ e_i=\delta\operatorname{Inf}_i(g),
+\]
+and $I_X=\delta I(g)$,
+$I_Y=((1+a_0)I(b)+(1-a_0)I(c))/2$, by conditioning the physical gate.
+For a gate query $i$, retaining $(V,\beta_T)$ retains the complete KL:
+its likelihood ratio is constant on each cell. This alphabet need not
+have bounded size. Retaining only $V$ loses KL only in the vacuum gate
+cell. Put
+\[
+ \rho_i=1-\delta+\delta(a_0^2+a_i^2),\qquad
+ q_i(T)=\frac{(\beta_T+\delta(a_0-1))^2+\delta^2a_i^2}{\rho_i}.
+\]
+Parseval and $\sum_T\beta_T=b(0)=1$ prove normalization. If $a_i\ne0$
+then $q_i$ is positive, and the exact weighted loss is
+$L_i=\delta a_i^2D(U_d\Vert q_i)$; for $a_i=0$ it is zero.
+All other gate cells have constant core weights and zero conditional
+loss. Since $\rho_i\le1$ and $q_i\ge\delta^2a_i^2$,
+\[
+ \sum_iL_i\le\delta d W_1+\delta\Lambda_1,\quad
+ W_1=\sum_i a_i^2,\quad
+ \Lambda_1=\sum_i a_i^2\log_2(1/a_i^2).
+\]
+The derivative identity gives $|a_i|\le\operatorname{Inf}_i(g)$;
+$u\ln(1/u)\le1/e$ therefore gives
+$\Lambda_1\le[2/(e\ln2)]I(g)<(9/8)I(g)$.
+Every nonconstant $d$-cube Boolean function has at least $d$ boundary
+edges, hence influence at least $2d\delta$. To see the boundary bound,
+split a nonempty proper subset into two halves. If both are nontrivial,
+induction gives $2(d-1)\ge d$ for $d\ge2$. If one is trivial and the
+other nontrivial, its internal boundary gives $d-1$ and at least one
+cross edge gives the last edge. Opposite trivial halves have $2^{d-1}
+\ge d$ cross edges; dimension one starts the induction.
+If $b,c$ are nonconstant, $I_Y\ge2d\delta$ and $W_1\le1$, so
+$\delta dW_1\le I_Y/2$. If $b\equiv1$ or $c\equiv-1$, then
+$I_Y=d\delta(1\mp a_0)$ and $W_1\le1-a_0^2$ gives
+$\delta dW_1\le2I_Y$. Consequently
+\[
+ \sum_iL_i\le2I_Y+\frac{2}{e\ln2}I_X,
+\]
+with $2I_Y$ replaced by $I_Y/2$ when both cores are nonconstant.
+This spends fresh root influence only on the quotient remainder.
+
+\paragraph{Sharp loss-only child-bank threshold.}
+For $d\ge2$ take $b=-1+2\mathbf1_0$, $c=-1$, $g(x)=x$.
+The output is a $(d+1)$-bit point sign, $e=\delta$, $I_Y=d\delta$,
+$I_F=(d+1)\delta$, and all functions satisfy $H\le4I$.
+The exact vacuum-cell loss is $L=\delta D_0$, where
+\[
+ D_0=(1-\delta)(d-1)+\delta\log_2(\delta/z),\quad
+ z=(1-\delta)^2+\delta^2,\quad d-2\le D_0\le d.
+\]
+The lower bound follows from $z\le1$ and $(2d-1)2^{-d}\le1$;
+the upper follows from $\delta/z\le1$. The actual averaged child bank
+at a certified constant $C\ge4$ is
+\[
+ S_C=\tfrac12(CI(b)-H(b)),\quad
+ H(b)=\eta((1-2\delta)^2)+(4\delta-4\delta^2)(2d-2).
+\]
+Thus $0\le S_4\le4\delta+4(d-1)\delta^2\le5\delta$ and
+$S_C=S_4+(C-4)d\delta$. It follows that
+\[
+ (L-S_C)/e\ge(5-C)d-7.
+\]
+Every $4\le C<5$ therefore fails $L\le S_C+Ke$ for any fixed $K$,
+although the actual Boolean family satisfies FEI with constant four.
+At $C=5$, $S_5\ge d\delta\ge L$: five is sharp for this loss-only
+bank. The full source entropy bound follows, for every point-sign
+dimension $m\ge2$, from
+$\eta((1-2^{1-m})^2)\le4\epsilon(1-\epsilon)/\ln2$
+and the other mass $4\epsilon(1-\epsilon)(2m-2)$,
+$\epsilon=2^{-m}$; dimension one is a character.
+
+To make both query children nonconstant, tensor an independent point
+sign on $2d$ bits. It has influence $4d\delta^2$ and entropy at most
+four times that influence. Its common spectral factor cancels in both
+KL laws, so $L/e$ is unchanged, while the actual bank gains exactly
+$CI(h)-H(h)$. Hence the deficit is at least
+$(5-C)d-7-4Cd\delta$, still unbounded for $C<5$. At $C=5$ it
+still pays the loss. This is a tensor attachment, not a single edit on
+the combined cube. Neither variant disproves FEI or the possibility of
+a more generous certified terminal bank.
+
+\section{Jensen sharpens the positive-erasure remainder}
+\label{sec:jensen}
+A100 independently accepted the original A073 family statement~\cite{A100e}; this
+does not change its version or its original digest convention. Together
+with A098 this supplies two full scoped acceptances of that statement.
+For A100's separate refinement, put $w_\sigma=(1+\sigma\sqrt\delta)/2$
+in the exact $D_0$ formula of Section~\ref{sec:binary}. Concavity gives
+\[
+ D_0\le\log_2R(\delta),\qquad
+ R(\delta)=\frac{1+\delta-3\delta^2/4}{1+\delta^2/4}.
+\]
+Indeed summing $w_\sigma/(1-\sigma\sqrt\delta+\delta/2)$ and
+multiplying by $1-\delta/2$ gives this rational function exactly.
+For $0<\delta\le1/4$, the derivative numerator
+$1-2\delta-\delta^2/4\ge31/64$ is positive, so
+$R\le R(1/4)=77/65$. The integer certificate $77^4<2\cdot65^4$
+implies $L_i/e=D_0/2<1/8$. Also
+$(1+\delta)(1+\delta^2/4)-(1+\delta-3\delta^2/4)
+=\delta^2+\delta^3/4>0$. Therefore
+\[
+ L_u+L_v=\delta D_0/2<\frac{\delta^2}{2\ln2},\qquad
+ L_u+L_v<\delta/8\le\operatorname{Inf}_{y_1}(F)/20.
+\]
+An actually common independent spectator cancels from the full and
+conditional KL ratios, so the improvement also holds for that tensor
+extension with its entire terminal cost retained. The retained row cost
+still exceeds $(d/2+3/4)e$. A099 independently reconstructs this separate
+refinement at its full stated scope; its second independent review is
+pending. The twentieth of core influence is a dedicated remainder
+allowance, not a free entropy bank.
+
+\paragraph{Review scope.}
+The negative-cell floor has two independent full scoped reconstructions,
+A098 and A099, with no statement repair. The Jensen improvement has one,
+A099. The two new non-flat/child-bank claims above remain at author scope.
+Neither an integrated manuscript audit nor a hereditary reference theorem
+is inferred from any of these scoped reviews. The four named universal
+open leaves in the dependency ledger remain conjectures.
+
+
+\section{A paid reference survives every finite no-reset history}
+\label{sec:conservative}
+The following identities use complete normalized references. They refine
+the continuation boundary of the supplied-source floor above; they do not
+construct an inexpensive reference for an arbitrary Boolean function.
+The source is A096, \emph{A paid reference can be carried without resetting it},
+run \path{20261014T094929Z-fleet05-A096-live-gap-ledger},
+\path{DERIVATION.md}, Sections 1--4, original version 1.
+
+\begin{lemma}[Conservative complete-reference transport]
+For every finite Boolean sign $f$, let $P(S)=\widehat f(S)^2$ and
+let $Q$ be a probability law on all subsets with $Q(S)>0$ whenever
+$P(S)>0$. For a physical query $j$, set
+\[
+ m_T=P(T)+P(T+j),\qquad v_T=Q(T)+Q(T+j).
+\]
+Give both actual children the same reference $v$. Then
+\[
+ \CE(P,Q)=B_j(f)+\tfrac12\sum_{\epsilon=\pm1}
+                  \CE(P_{f_\epsilon},v)+R_j,
+ \qquad R_j=D_2(P\Vert Q)-D_2(m\Vert v)\ge0.
+ \tag{NR1}
+\]
+Every finite outcome-adaptive tree, using only these inherited
+references, therefore satisfies
+\[
+ \CE(P_f,Q)=\sum_{u\text{ internal}}w_u(B_{j_u}(f_u)+R_u)
+                  +\sum_{\ell\text{ leaf}}w_\ell\CE(P_{f_\ell},Q_\ell),
+ \qquad w_u=2^{-\operatorname{depth}(u)}.
+ \tag{NR2}
+\]
+\end{lemma}
+\begin{proof}
+Write $a_T=\widehat f(T)$ and $b_T=\widehat f(T+j)$.
+The actual child coefficients are $a_T+\epsilon b_T$, hence their
+mean squared masses are $a_T^2+b_T^2=m_T$. Parseval for the actual
+Boolean children proves their normalization. If $v_T=0$, both
+parent coefficients and both child coefficients vanish, so every
+displayed cost is finite. The reference $v$ has total mass one,
+including all reference-only atoms.
+
+For $m_T>0$, disintegrate $P(T,b)$ and $Q(T,b)$ into their
+marginal and conditional laws. The conditional cross entropy is
+$H(P(b\mid T))+D_2(P(b\mid T)\Vert Q(b\mid T))$.
+Multiplication by $m_T$ and summation give (NR1), because the first
+conditional entropy sum is $B_j$ and cross entropy is linear in
+its true-law argument. Unoccupied fibers contribute zero.
+The conditional divergence is nonnegative by
+$\ln x\le x-1$ applied to $x=q_b/p_b$ on occupied atoms:
+$\sum p_b\ln(p_b/q_b)\ge\sum_{p_b>0}(p_b-q_b)\ge0$.
+This also covers reference mass at unoccupied conditional atoms.
+
+Multiply (NR1) at each internal node by its physical reach
+probability. Every child's weighted cost cancels once against
+its parent's child term. Finite depth makes the cancellation exact,
+without any limit exchange. This proves (NR2). Signed coefficients
+are required to determine each child law, even though marginalizing
+the reference itself needs no phase information.
+\end{proof}
+
+\begin{proposition}[One original paid source account]
+For the supplied negative-cell floor above, assume $c\le C_0 I(g)$.
+For every finite no-reset physical history on the edited block,
+\[
+ \sum_u w_uB_{j_u}(F_u)+
+ \sum_\ell w_\ell\bigl[H(F_\ell)+D_2(P_{F_\ell}\Vert Q_\ell)\bigr]
+ \le (2C_0+10)I(F).
+ \tag{NR3}
+\]
+The structural source gives rate $18$. An independent untouched
+terminal with prescribed reference cost $c_h$ adds exactly $c_h$
+to both root and terminal costs and supplies no edit budget.
+\end{proposition}
+\begin{proof}
+Use the supplied-source floor price already proved above in (NR2)
+and discard only the nonnegative $R_u$ terms. In a tensor product,
+the inherited reference is the edited-block marginal times the
+untouched reference. Cross entropy adds, and leaf reach weights
+sum to one. Thus the untouched cost is retained with coefficient one.
+\end{proof}
+
+\begin{proposition}[A matching root does not give local leaf prices]
+On the three-bit truth table $(1,1,1,1,-1,1,1,1)$, with coordinate
+0 the least significant input bit, let $Q=P_f$. Query coordinate 0
+and take outcome 1. The child is constant $+1$, but its inherited
+reference is $(5/8,1/8,1/8,1/8)$. Its complete cost is
+$\log_2(8/5)>0$, although its influence is zero.
+\end{proposition}
+\begin{proof}
+The root has mean $3/4$; all seven nonempty Fourier coefficients
+have magnitude $1/4$. Thus $Q(\varnothing)=9/16$ and every
+other mass is $1/16$. Marginalizing one membership bit gives
+the displayed reference. All negative truth-table entries have
+coordinate 0 equal to zero, so the stated child is constant.
+The complete cost of a point law is minus the logarithm of its
+reference mass. Here $5/8<1$, proving strict positivity.
+\end{proof}
+
+\section{The signed reset bill is the remaining account test}
+\label{sec:resetbill}
+Fix a stopped frontier whose complete expected reference cost is
+$T$, an ancestor quota $A$, and an already executed debit $d$.
+Define the genuinely unused balance $U=A-d-T$.
+After further no-reset queries, write $b$ for their expected erasure
+bill, $r$ for their expected conditional refunds, and $T'$ for
+their full expected terminal cost. Equation (NR2) gives
+$T=b+r+T'$.
+
+Suppose selected final references $Q'_\ell$ are now replaced by
+specified normalized references $\widetilde Q_\ell$ which also
+support their actual terminal laws. Define the signed full reset
+bill
+\[
+ Z=\sum_\ell w_\ell\sum_S P_\ell(S)
+                \log_2\frac{Q'_\ell(S)}{\widetilde Q_\ell(S)}.
+ \tag{RS1}
+\]
+Unchanged terminals are included by taking
+$\widetilde Q_\ell=Q'_\ell$. Then exactly
+\[
+ A-(d+b)-\sum_\ell w_\ell\CE(P_\ell,\widetilde Q_\ell)
+       =U+r-Z.
+ \tag{RS2}
+\]
+Indeed the new complete terminal cost is $T'+Z$, and substitution
+of $T=b+r+T'$ proves the identity. A negative reset bill releases
+capacity; a positive bill consumes it. This is bookkeeping, with
+no assertion that the sign or magnitude is favorable. It keeps
+every complementary terminal and every executed debit.
+
+For this specified erasure-and-terminal account, the precise
+necessary and sufficient admission is $Z\le U+r$. No-reset
+continuation has $Z=0$ and is therefore automatic once the root
+account is paid. A construction that additionally charges the
+channel term $J_j$ or a code for a reference label must include
+that extra debit as well; (RS2) does not pay it implicitly.
+
+The universal missing statement is the existence of useful,
+noncircularly chosen references and physical histories for arbitrary
+Boolean sources, with one dimension-independent initial price and
+all required resets, channel terms and complete terminals paid by
+the same influence account. The four universal conjectures above
+remain open. Neither marginalization nor (RS2) proves any of them.
+The integrated dependency chain still requires two independent
+audits. A099's reconstruction of A096 is a scoped review of (NR1)--(NR3)
+and the constant-child boundary, not an acceptance of full FEI.
+
+\section{Mixed canonical resets and prescribed source resets at exits}
+\label{sec:mixedexits}
+The no-reset continuation of Section~\ref{sec:conservative} is now
+supplemented by the active-reset proof of A096 and the control and
+dummy substitutions of A097 and A073. Their exact source versions
+are recorded in the accompanying claim ledger. The statement below
+also permits a specified reset at the root of a retained exit branch.
+It retains the same original ancestor quota.
+The source locators are A096, run
+\path{20261021T210221Z-fleet03-A096-live-gap-ledger},
+\path{DERIVATION.md}, Sections 1--3; A097, run
+\path{20261021T232544Z-fleet03-A097-cross-route-transfer},
+\path{DERIVATION.md}, Sections 1--7; and A073, run
+\path{20261022T211534Z-fleet03-A073-certified-logarithms},
+\path{DERIVATION.md}, Sections 1--4. The exit-source conversion
+below has an A085 independent scoped acceptance; the full integrated
+candidate still awaits both audits.
+
+Let $a\ge1$, $b\ge0$, $r\ge1$, $n=a+b$, $d=b+r\ge2$,
+$s=2^{-a}$, $t=2^{-n}$, $e=2^{1-n-r}$, and $\mu=1-2s$.
+On active, dummy-data and control bits respectively, set
+\[
+ g=1-2A_a,\qquad F=1-2A_a+2A_{a+b+r}.
+\]
+Here $A_k$ denotes the all-zero point event on its specified $k$ bits.
+Supply a normalized reference $R_{\rm raw}$ with finite source cost
+$c_{\rm raw}\le C_0 I(g)$. Calibrate its empty mass to $\mu^2$,
+obtaining $R$ and $c=\CE(P_g,R)\le c_{\rm raw}$.
+The canonical complete floor has data marginal
+\[
+ R_e(T)=(1-e/s)R(T)+(e/s)\mu\,1_{T=\varnothing}+2et
+\]
+and the actual conditional control spectrum. Its complete cost is
+at most $W=c+10e(a+b+r)$, by the supplied-source floor lemma above.
+
+\begin{lemma}[The three local substitutions]
+At a proper active query ($a\ge2$), marginalize and calibrate the
+source for the on-child, and retain the complementary inherited
+reference. Then $B_j(F)+(k+W_{\rm on})/2\le W-e$.
+At $a=1$, use the explicit point spectrum at the final on-child;
+the full substitution costs at most $W$.
+At a dummy query ($b\ge1$), or a control query ($r\ge2$), retain
+the inherited off-reference and reset the on-child to its specified
+canonical floor. Then
+\[
+ B_j(F)+(c_{\rm off}+W_{\rm on})/2<W+8e.
+ \tag{MX1}
+\]
+\end{lemma}
+\begin{proof}
+For the active query the exact nonvacuum erasure difference from
+$g$ is $-2e(1-4s+e)\le0$. The vacuum pair transfers amplitude
+from $2s$ to $\mu\ge2s$, which decreases
+$\phi(x^2,y^2)$ when $x\ge y$. To check the latter assertion,
+put $z=x/y\ge1$: $L(z)=\ln(1+z^2)-z\ln(1+z^{-2})$ vanishes
+at one and has
+$L'(z)=2(z+1)/(1+z^2)-\ln(1+z^{-2})>0$.
+Indeed $\ln(1+z^{-2})\le z^{-2}$ and the resulting numerator
+is $2z^3+z^2-1>0$. Thus $B_j(F)\le B_j(g)$.
+
+Write $v=R(\{j\})$ and
+$\kappa=(2s-e)^2/(4s^2-4se+2et)$. The complementary constant
+child has inherited vacuum mass
+$q_*(v)=(\mu+e)^2+\kappa[(1-e/s)v+2et]$.
+The ratio $(\mu^2+v)/q_*(v)$ increases with $v$ and is maximized
+at $v=1-\mu^2$. At this endpoint, $1-q_*\le6e$ and, writing
+$h=e/s$, the exact bound is
+\[
+ q_*\ge1-5h/4+13h^2/16
+       =27/52+(13/16)(h-10/13)^2>1/2.
+\]
+For completeness, $1-\kappa\le e/s$ gives
+$q_*\ge1-sh(6-4h)+s^2h(4-3h)$; its minimum over
+$0<s\le1/4$ is at $s=1/4$ because its difference from that
+endpoint is $(1/4-s)h[(6-4h)-(s+1/4)(4-3h)]\ge0$.
+The bracket is at least $4-5h/2>0$. The signed complementary
+excess over the source constant-child cost is therefore less
+than $18e$, using $\ln2>2/3$. Source-reference disintegration and
+empty calibration pay $B_j(g)$ and both source-child costs from
+$c$. Since $e_{\rm on}=2e$ and the dimension falls by one,
+the floor surcharge releases $10e$, against less than $9e$ of
+complementary excess. This proves the proper active inequality.
+At $a=1$ the on-child is $-1+2A_{b+r}$, whose explicit true
+spectrum has vacuum $(1-2^{1-b-r})^2$ and each nonempty mass
+$2^{2-2(b+r)}$. Resetting to this law costs minus the inherited
+KL. The complementary reference is retained, so (NR1) proves
+the boundary without the false $a=1$ erasure comparison.
+
+For either non-active query, exact coefficient counting gives
+$\sum|\alpha\beta|=e(4-4s+2e-2e/s)\le4e$.
+The inequality $\ln(1+z^2)\le z$ gives
+$B_j(F)\le8e/\ln2<12e$. On an occupied nonempty source
+label, the off-child inherited likelihood is at least
+$(1-h)R(T)/(1+h/2)$, $h=e/s\le1/2$.
+For a control the multiplier is
+$[(2s-e)^2+e^2]/[4s^2-4se+2te]$; for a dummy it is
+$(2s-e)^2/[4s^2-4se+2te]$, with an additional nonnegative
+marginal term retained. Their reciprocals are at most $1+h/2$:
+use $e\le t$, $t\le s$ and
+$(2s-e)^2+e^2\ge4s(s-e)>0$ for the control, and
+$t\le s/2$ with $(2s-e)^2\ge2s^2$ for the dummy.
+The vacuum is no worse than $R(0)=\mu^2$. Thus
+\[
+ c_{\rm off}-c\le4s[2h+h/(2\ln2)]<11e.
+\]
+For a dummy, $V=R_{-j}$ has $V(0)\ge\mu^2$ and $V(0)<1$;
+the latter follows from the positive source singleton mass.
+Empty calibration gives
+$\bar R(T)=V(T)(1-\mu^2)/(1-V(0))\ge R(T)$ on occupied
+nonempty labels and leaves the occupied vacuum unchanged.
+Consequently $c_{\rm on}\le c$. For a control the source $R$
+is unchanged. Combining the erasure bound, both complete
+terminals and $W_{\rm on}\le c+20e(a+b+r-1)$ yields a surcharge
+less than $(12+11/2-10)e<8e$, proving (MX1).
+\end{proof}
+
+\begin{proposition}[A prescribed exit-source reset is paid]
+At any non-active exit created by these mixed histories, before
+any further query has been executed inside that exit branch,
+one may replace its inherited reference by the following specified
+reference: at a control exit use the current source $R$, with point
+mass on the unused controls; at a dummy exit use the current source
+marginal calibrated to $\mu^2$, again with point mass on controls.
+The root source cost of this new exit reference is at most $c$.
+One may then execute any finite physical restriction tree using
+only source-reference marginalization and empty calibration, with
+the explicit point reference on constant exits. All executed
+erasures and all terminal costs of this source tree sum to at most
+that same $c$. A positive signed exit reset is allowed; its cost
+is paid by the original envelope, not assumed nonpositive.
+\end{proposition}
+\begin{proof}
+The control exit is exactly $g$ with unused dummy coordinates.
+The proposed normalized reference has complete cost $c$ and
+supports its true law. At a dummy exit, the pointwise calibration
+argument above bounds its cost by $c$. References may have zero
+mass on controls because the true exit spectrum is concentrated
+there. No occupied atom is removed.
+
+For the subsequent pure-source tree, (NR1) pays every query by
+the incoming complete source cost. Every calibration decreases
+cost by the binary KL of its old and prescribed vacuum masses;
+the conditional nonempty law stays fixed. At a constant child,
+the explicit point reference decreases cost to zero. Finite
+telescoping therefore pays the entire pure-source continuation
+from its initial cost. This uses an explicitly inherited source
+reference, not an oracle for arbitrary Boolean spectra.
+
+At the original non-active parent, replacing the full off-cost
+in (MX1) by this complete source-tree ledger costs at most $c$.
+The substitution is now bounded by $W+2e$, since its erasure
+is less than $12e$ and the floor surcharge releases $10e$.
+In particular it still fits the old $W+8e$ charge, even when the
+signed reset from the old off-reference is positive. Main-branch
+debits already executed before the reset are unchanged.
+The exit may be retained without queries while other prescribed
+main-branch steps are booked, then converted once: the same final
+ledger comparison retains every intervening debit. This does not
+authorize a fresh reset after arbitrary prior queries inside the
+exit or a reset to an unrelated source reference.
+\end{proof}
+
+\begin{theorem}[One original quota, all eligible live mixed orders]
+For any finite adaptive live-branch history of active, dummy and
+eligible control steps, with either inherited off-references or
+the specified exit-source resets and continuations above, the
+complete erasure-plus-terminal ledger is at most
+\[
+ W_{\rm root}+8(d-1)e_{\rm root}
+ \le (2C_0+10)I(F_{\rm root})-12e_{\rm root}.
+ \tag{MX2}
+\]
+If every non-active exit uses its specified source reset, the
+coefficient 8 can be replaced by 2 and the final reserve by 18.
+An independent untouched terminal keeps its full additive cost.
+\end{theorem}
+\begin{proof}
+At every nonterminal live on-step, physical reach halves and
+$e$ doubles. Thus $\rho e=e_{\rm root}$. There are at most
+$d-1$ non-active steps before $b=0,r=1$. Proper active queries
+release capacity; the final active boundary never increases its
+envelope. Weighted substitution proves the first bound in (MX2)
+for every stopping cut. At a retained exit use its old full bill;
+at a converted exit use its entire source-tree bill. No other
+terminal is changed or omitted.
+
+Put $I_g=2as$, $E=ae$ and $X=de$. The exact physical influence
+is $I(F)=I_g+X-E$, with $E/I_g=2^{-d}\le1/4$. For
+$K=2C_0+10$ the initial reserve obeys
+\[
+ KI(F)-W\ge(C_0+10)(I_g-2E)+2C_0X\ge5I_g
+              =5a2^d e.
+\]
+For integers $d\ge2$, $5\cdot2^d-8(d-1)\ge12$; equality
+holds at two and the increment is $5\cdot2^d-8>0$.
+For the all-source-exit policy use instead
+$5\cdot2^d-2(d-1)\ge18$, with the same argument.
+Independent terminal cross entropy adds with coefficient one
+because the exit/source updates act only on the edited factor.
+Thus its entropy or KL funds none of these resets.
+\end{proof}
+
+This proposition closes the specified exit-root transaction and its
+source continuation. Section~\ref{sec:suppliedreturn} extends it to
+arbitrary exit queries and repeated original-source canonical returns
+under a supplied likelihood floor. Arbitrary incoming profiles, changed
+nonempty-profile references and a cheap initial source for every Boolean
+function remain unpaid. Extra channel and code bills are outside (MX2).
+The full conjecture and both integrated-chain audits remain open.
+
+\section{Supplied likelihood floors and arbitrary canonical-return histories}
+\label{sec:suppliedreturn}
+This section reconstructs the exact claims
+\texttt{A096-SELECTIVE-FRONTIER-LIKELIHOOD-TRANSFER@1} and
+\texttt{A097-ORIGINAL-SOURCE-CANONICAL-RETURN-COMMUTATION@1}.
+They apply to arbitrary Boolean sources, but their reference hypotheses
+are supplied. They do not construct an influence-priced source for arbitrary
+Boolean functions. Their complete supplied-reference chain has scoped
+independent reconstructions by A098 and, here, A099. Neither is an audit
+of the entire FEI assembly. The older point-source policies remain valid
+at their original narrower scopes.
+
+Write $0$ for the vacuum frequency, $M_A$ for deletion of frequency
+coordinates in the physically queried set $A$, and $\operatorname{Cal}(Q,z)$
+for the normalized law of vacuum mass $z$ preserving $Q$'s conditional
+nonempty law. For $z=1$ use $\delta_0$ explicitly. Nonconstant actual
+descendants below a finite-cost source have a positive source nonempty
+normalizer: a nonzero child Fourier coefficient requires a nonzero
+ancestor coefficient in its fiber. The average of the two squared child
+spectra is exactly the parent frequency marginal. Consequently a source
+which is positive on occupied ancestor atoms is positive on occupied
+descendant fibers. These support facts justify all divisions below.
+
+\begin{lemma}[Comparison-chain identity for a subprobability]
+\label{lem:subprob8}
+Let $D$ be a nonnegative measure of mass at most one with
+$\CE(P_f,D)<\infty$. A physical query of $j$ has frequency marginal
+$p'=M_jP_f$ and comparison marginal $D'=M_jD$. Then
+\[
+\CE(P_f,D)-\tfrac12\sum_{b=0}^1\CE(P_{f_{j=b}},D')
+=B_j(f)+\sum_Tp'(T)\KL(P_f(\cdot\mid T)\Vert D(\cdot\mid T)).
+\]
+All occupied-fiber conditional measures on the right are normalized
+probabilities. In particular the rightmost term is nonnegative, even
+though $D$ need not be normalized globally.
+\end{lemma}
+\begin{proof}
+In each occupied fiber factor $D(T,b)=D'(T)D(b\mid T)$ and
+$P_f(T,b)=p'(T)P_f(b\mid T)$. Subtracting the two cross entropies cancels
+the marginal term because the average child spectrum is $p'$.
+The remaining conditional cross entropy is its conditional entropy
+$B_j(f)$ plus its conditional KL. Finite root CE propagates as above,
+so every occupied denominator is positive. Iteration on a finite
+adaptive tree with actual reach $\pi_v$ yields
+\[
+\sum_{v\text{ internal}}\pi_v B_{j_v}(f_v)
++\sum_{\ell\text{ terminal}}\pi_\ell\CE(P_{f_\ell},M_{A_\ell}D)
+\le\CE(P_f,D).
+\]
+No independence of branches is assumed and $D$ is never a terminal
+reference actually supplied to the algorithm.
+\end{proof}
+
+\begin{theorem}[Supplied likelihood transfer at a first-reset frontier]
+\label{thm:floorfront8}
+For every finite Boolean $g$, put $m=P_g(0)=(\E g)^2$.
+Supply a subprobability $D$ with $D(0)=m$ and finite
+$c=\CE(P_g,D)$. Supply normalized complete $S,Q$ with
+\[
+S\ge D,\qquad Q(0)\ge m,\qquad
+Q(T)\ge\gamma D(T)\quad(T\ne0),\qquad 0<\gamma\le1.
+\]
+For any finite adaptive physical query tree, select any subset of
+its stopping leaves. At each selected leaf use
+$\operatorname{Cal}(M_{A_\ell}S,P_{g_\ell}(0))$; at each other leaf retain
+the full inherited $M_{A_\ell}Q$. Then total spectral erasure plus
+all complete terminal CE is at most
+\[
+c+(1-m^2)\log_2(1/\gamma).
+\]
+A sharper excess is $\log_2(1/\gamma)$ times
+\[
+\sum_{\ell\text{ retained}}\pi_\ell
+\bigl[(1-m)+m\operatorname{Var}(g_\ell)\bigr].
+\]
+In particular $m^2=(\E g)^4$ in the displayed bound.
+\end{theorem}
+\begin{proof}
+Write $D=m\delta_0+N$; initially $N(0)=0$ and $\|N\|\le1-m$.
+The hypotheses give $Q\ge m\delta_0+\gamma N$.
+Every coordinate-deletion marginal fixes $\delta_0$ and preserves
+these inequalities. At a selected leaf, source dominance decreases
+CE, and calibrating a normalized reference to its true vacuum changes
+CE by minus its binary KL. Thus its complete bill is at most
+$\CE(P_{g_\ell},M_{A_\ell}D)$.
+
+At a retained leaf put $u=(M_{A_\ell}N)(0)$, so $0\le u\le1-m$.
+The nonempty likelihood loss is at most $L=\log_2(1/\gamma)$.
+For the vacuum, weighted arithmetic--geometric mean gives
+\[
+\log_2\frac{m+u}{m+\gamma u}
+\le \frac{u}{m+u}L\le(1-m)L.
+\]
+When $m=0$ a zero unoccupied term is omitted; when $m=1$ all laws
+are the vacuum point law and the theorem is immediate. For $0<m<1$,
+$u/(m+u)$ is increasing in $u$ and is at most $1-m$.
+Writing $v_\ell=\operatorname{Var}(g_\ell)$, the full retained-leaf
+excess is therefore at most
+$L[v_\ell+(1-v_\ell)(1-m)]=L[(1-m)+mv_\ell]$.
+Combine this with Lemma~\ref{lem:subprob8} to obtain the sharper claim.
+The stopped physical conditional means satisfy finite total variance:
+$\sum_\ell\pi_\ell v_\ell\le1-m$. The retained subset has total
+reach at most one and only nonnegative summands. This gives
+$L[(1-m)+m(1-m)]=(1-m^2)L$.
+For constant leaves use $\delta_0$ explicitly; a nonconstant leaf has
+a positive nonempty source normalizer by support propagation. These
+conventions cover zero vacuum mass without a $0/0$ cancellation.
+\end{proof}
+
+\begin{lemma}[Canonical calibration absorption]
+\label{lem:absorb8}
+On every actual finite-CE Boolean descendant path,
+\[
+\operatorname{Cal}(M\operatorname{Cal}(S,z),w)
+=\operatorname{Cal}(MS,w).
+\]
+Here $z,w$ are the actual squared means at the ancestor and descendant,
+and both sides use their explicit vacuum point law at constants.
+\end{lemma}
+\begin{proof}
+For a nonconstant ancestor write
+$\operatorname{Cal}(S,z)=\alpha S+\beta\delta_0$, where
+$\alpha=(1-z)/(1-S(0))>0$ and $\beta=z-\alpha S(0)$.
+This is an affine representation of a nonnegative law; $\beta$ may
+be negative and is not a mixture probability. Marginalization fixes
+$\delta_0$, so every nonempty output atom and the total nonempty
+output mass are multiplied by the same positive $\alpha$.
+Final calibration cancels that factor exactly. At a constant child
+both sides are $\delta_0$. A constant ancestor has only constant
+descendants. If $MS=\delta_0$, finite CE and support propagation force
+the descendant constant. These cases require no division by zero.
+All reference-only atoms participate in the same cancellation.
+\end{proof}
+
+\begin{theorem}[Arbitrary repeated original-source canonical returns]
+\label{thm:repeat8}
+Under exactly the supplied hypotheses of Theorem~\ref{thm:floorfront8},
+allow resets at any nodes, including internal nodes, to
+$\operatorname{Cal}(M_AS,P_{g_v}(0))$ from the SAME original $S$.
+Between resets inherit the current complete reference by actual
+frequency marginalization. Total erasure plus all final terminal CE
+is still at most $c+(1-m^2)\log_2(1/\gamma)$, with zero reset-count
+or depth surcharge.
+\end{theorem}
+\begin{proof}
+Prune at the first reset on every path, retaining paths without a
+reset to their stopping leaves. First-reset nodes form an antichain,
+so Theorem~\ref{thm:floorfront8} pays this full pruned frontier once.
+Below a selected leaf Lemma~\ref{lem:absorb8} identifies every later
+original-source calibrated return with calibration of the current
+inherited reference. Its signed cost is exactly
+$-\KL(\operatorname{Ber}(P_{g_v}(0))\Vert
+\operatorname{Ber}(Q_{v,\mathrm{in}}(0)))\le0$.
+The complete-reference query identity pays every intervening query.
+Replacing each first-reset leaf by its whole finite continuation
+therefore never increases its bill. Every old sibling, even a
+nonconstant one, and every previous erasure remains in this ledger.
+\end{proof}
+
+\subsection{Exact point-source application and distinct policies}
+\label{sec:exitfloor8}
+We reproduce the comparison used in
+\texttt{A085-POSTQUERY-EXIT-DIRECT-SOURCE-RESET@1} and
+\texttt{A096-ARBITRARY-EXIT-FRONTIER-SAME-ANCESTOR@1}.
+Use the previous section's family
+$F=1-2A_a+2A_{a+b+r}$, $a\ge1,b\ge0,r\ge1,d=b+r\ge2$,
+with $s=2^{-a},t=2^{-(a+b)},e=2^{1-a-b-r},\mu=1-2s$.
+The source $g=1-2A_a$ has calibrated complete reference $R$,
+$R(0)=m=\mu^2$, and cost $c$.
+At an eligible dummy ($b\ge1$) or control ($r\ge2$) creating query,
+the retained exit is $g$ with one irrelevant coordinate removed.
+Its FULL inherited law $Q_{\mathrm{off}}$ obeys
+\[
+Q_{\mathrm{off}}(0)\ge m,\qquad
+Q_{\mathrm{off}}(T)\ge\gamma R(T)
+\quad\text{on occupied nonempty source labels},\qquad
+\gamma=\frac{1-h}{1+h/2},\ h=e/s\le1/2.
+\]
+There is deliberately no domination claim on reference-only labels.
+To verify this, the canonical data reference is
+$R_e(T)=(1-h)R(T)+h\mu\mathbf1_{T=0}+2et$ and the data spectrum
+denominator at an active nonempty label is
+$Z=4s^2-4se+2et>0$. For a control exit its relevant numerator is
+$N=(2s-e)^2+e^2$, with
+$(1+h/2)N-Z=2e(s-t)+e^3/s\ge0$.
+For a dummy exit one contributing numerator is $(2s-e)^2$;
+$t\le s/2$ and $e\le s/2$ imply
+$Z/(2s-e)^2-1=(2et-e^2)/(2s-e)^2\le h/2$.
+Additional packets are nonnegative. Multiplication by
+$R_e(T)\ge(1-h)R(T)$ proves the floor. At the joint vacuum the
+canonical law is exactly $(\mu+e)^2\ge\mu^2$; marginalization adds
+nonnegative packets. All denominators stay positive at $a=1$.
+Finally
+\[
+L=-\log_2\gamma<11h/4,\quad
+(1-m)L<11e,\quad (1-m^2)L<22e.
+\]
+Indeed $-\log_2(1-h)\le2h$ by the convex graph below its endpoint
+chord, $\log_2(1+h/2)\le h/(2\ln2)<3h/4$ since $\ln2>2/3$,
+and $1-m=4s(1-s)\le4s$.
+
+For the general exit tree, remove source reference-only labels to form
+an auxiliary $D$ before the creating marginal. This preserves occupied
+source CE $c$ and vacuum $m$. Let $S$ be the FULL creating-source
+marginal with point frequency on irrelevant controls. It dominates
+$D$. The floor supplies Theorem~\ref{thm:floorfront8};
+Theorem~\ref{thm:repeat8} additionally permits arbitrary repeated
+original-source canonical returns inside this exit, at the same
+exit envelope $c+22e$.
+The previous live substitutions give creating erasure $<12e$ and
+live on-child envelope $\le c+20e(a+b+r-1)$. Therefore
+\[
+B_{\mathrm{creation}}+\tfrac12(W_{\mathrm{on}}+
+ \mathrm{complete\ exit\ tree})<W+13e,
+\quad W=c+10e(a+b+r).
+\]
+Along the single edited live branch $\pi_v e_v=e_{\mathrm{root}}$.
+There are at most $d_{\mathrm{root}}-1$ eligible nonactive creations.
+Retaining the already proved active substitutions, the original bank
+$K=2C_0+10$ has surplus
+$KI(F_{\mathrm{root}})-W_{\mathrm{root}}\ge
+5a_{\mathrm{root}}2^{d_{\mathrm{root}}}e_{\mathrm{root}}$.
+Thus the enlarged exit policy leaves at least $7e_{\mathrm{root}}$,
+because $5a2^d-13(d-1)\ge7$ for $a\ge1,d\ge2$:
+the minimum is at $a=1,d=2$ and its increment in $d$ is
+$5\cdot2^d-13\ge7$.
+For the structural source $C_0=4$ this remains rate $18$.
+This application is conditional on the exact prior paid live
+substitutions and source bank, not a new descendant source quota.
+
+For completeness the narrower A085 one-query policy has a better
+reserve. Make exactly one actual query inside an unreset exit;
+reset outcome zero to the direct creating-source marginal followed
+by ONE final calibration; keep outcome one's complete old marginal.
+For an active query let $v=R(\{j\})$ and $V_0=m+v>0$.
+The retained constant sibling's old vacuum has mass
+$W_0\ge m+\gamma v$, so its excess over source-comparison CE is
+\[
+\log_2(V_0/W_0)\le(1-m)L<11e.
+\]
+The ratio is maximized at $v=1-m$, and weighted AM--GM proves the
+last non-strict likelihood bound. Source disintegration pays the
+query and both source comparison children; irrelevant-data
+marginalization and final calibration decrease the fresh child's CE.
+Thus the exit's ENTIRE query-plus-two-terminal bill is
+$<c+11e/2$. At $a=1$ the on-child is constant and uses $\delta_0$;
+$v>0$ follows from finite source CE. For an inactive query the
+erasure is zero, the fresh child costs at most $c$ and the old child
+costs $<c+11e$, giving the same bound with two nonconstant children.
+The creating transaction is consequently $<W+19e/4$.
+All such exits leave $[5a2^d-(19/4)(d-1)]e_{\mathrm{root}}
+\ge(61/4)e_{\mathrm{root}}$. Mixed inherited exits retain the earlier
+$12e_{\mathrm{root}}$ guarantee.
+The reserves $18e$, $(61/4)e$, and $7e$ belong respectively to
+immediate-source, one-inside-query, and arbitrary repeated canonical
+exit policies. They are different policy bounds at the SAME rate;
+none is a correction or improvement of a universal FEI constant.
+
+\subsection{The surviving nonempty-profile liability}
+\label{sec:shape8}
+The original-source canonical-return leaf is closed only at the
+supplied-reference scope above. The existing signed reset interface
+still has an unpaid nonempty component. For actual $P(0)=z$, incoming
+normalized $Q$ with $Q(0)=q_0$, and prescribed normalized $R$ with
+$R(0)=z$, write $P^+,Q^+,R^+$ for conditional nonempty laws. Direct
+expansion of vacuum and nonempty sums gives
+\[
+\CE(P,R)-\CE(P,Q)
+=(1-z)\E_{P^+}\log_2\frac{Q^+}{R^+}
+-\KL(\operatorname{Ber}(z)\Vert\operatorname{Ber}(q_0)).
+\]
+The complete conditional normalizers and reference-only mass are
+essential. At $z=1$ the shape term is absent. For a finite-CE incoming
+reference and a new zero on occupied nonempty support, the new bill
+is infinite, not an endpoint cancellation. This identity is the
+previous signed-reset interface, not a new broad candidate theorem.
+
+A scope falsifier is actual parity on three bits. Query one physical
+coordinate; both children are nonconstant parity on two bits, with
+spectral law $P=(0,0,0,1)$. Set incoming
+$Q=(0,1/4,1/4,1/2)$ and prescribed $R=(0,1/3,1/3,1/3)$.
+The signed reset costs $\log_2(3)-1>1/2$, since $9>8$.
+Both vacuum masses are already correct; there is no vacuum refund.
+This disproves only the extension calling arbitrary nonempty-profile
+changes free, not FEI. For fixed unused original balance $U$ and
+query refund $r$, a prescribed frontier must still satisfy the actual
+reach-weighted signed bill $Z\le U+r$, with every old debit and both
+complete terminals retained. Neither absorption nor supplied-floor
+transfer proves that inequality for a changed non-point profile.
+
+The first unsupported universal step is an influence-priced supplier
+of useful original references and occupied-support likelihood floors
+for every Boolean function, or a hereditary original-bank rule that
+pays these actual changed-profile bills. The four universal conjectures
+in the earlier sections remain conjectures. A single next transaction
+on the already paid non-point A050/A046 source is more informative
+than further vacuum-only resets or larger point-source grids.
+
+\paragraph{Source and review locators.}
+A096, run \texttt{20261023T010221Z}, \texttt{DERIVATION.md}, Sections 1--4;
+A097, run \texttt{20261023T021120Z}, \texttt{DERIVATION.md}, Sections 1--4;
+A085, run \texttt{20261022T234859Z}, \texttt{PROOF.md}, Sections 2--5;
+A098, run \texttt{20261023T031803Z}, \texttt{REVIEW.md}, Sections 1--6.
+Exact original statement hashes, scoped verdicts and source-byte hashes
+are in this run's \texttt{CLAIMS.json} and \texttt{out/SOURCE\_RECEIPTS.json}.
+The independent bounded checker uses exact butterfly Walsh spectra,
+physical edge counts, complete marginals, prime-log identities and
+outward rational logarithm intervals. Its finite cases corroborate
+these analytic proofs; they supply no finite-to-all-dimensional inference.
+
+\section{Dependencies, review and sources}
+The mathematical DAG is Lemma~\ref{lem:single} plus
+Lemma~\ref{lem:downward} to Theorem~\ref{thm:erasure};
+Lemma~\ref{lem:lsi} to Lemma~\ref{lem:block} to
+Theorem~\ref{thm:tree}; Lemma~\ref{lem:block} plus Gibbs and
+the explicit generator (G) to Theorem~\ref{thm:reference}.
+Lemma~\ref{lem:r1} and Lemma~\ref{lem:r2} are imported under their
+single B06 source IDs. Lemma~\ref{lem:root} and
+Theorem~\ref{thm:level12} pay the first two complete edge layers.
+Theorem~\ref{thm:low} is a strengthened version of the existing
+B20 reduction; Proposition~\ref{prop:b05ref} consumes the prescribed
+A097 application and its two finite certificates.
+Proposition~\ref{prop:b05} is an obstruction with its own proof,
+not a positive payment premise. Open leaves have no outgoing edge
+into an unconditional FEI theorem. Threshold/percolation results
+are contextual and are not needed for this DAG.
+
+All local source hashes, exact paths, upstream claimed validation
+outputs and review status are recorded in the accompanying
+\path{ASSEMBLY_STATUS.json} and \path{out/SOURCE_RECEIPTS.json}.
+A090 accepts Theorem~\ref{thm:low} at its exact scope; a second
+independent acceptance remains pending. Theorem~\ref{thm:tail} has
+independent A096 and A099 scoped reconstructions. Proposition~\ref{prop:refund} has independent full scoped reconstructions
+by A099, A073 and A001. The shared-data transfer in Section~\ref{sec:shared}
+has one full scoped A094 acceptance. The linear-tax application in
+Theorem~\ref{thm:lineartax} has an A099 reconstruction; its older bundled
+rank and activation clauses are not accepted by that record. The binary
+remainder in Section~\ref{sec:binary} has an exact source-bound A098
+acceptances by A098 and A100. The fixed-degree obstruction is retained at author scope.
+Both complete integrated-chain audits remain pending. B20's source check
+is not independent acceptance. This document does not inherit acceptance
+merely from a status label and asserts no novelty or formal certification.
+
+\begin{thebibliography}{9}
+\bibitem{ER} Campaign supplemental source,
+\emph{An erasure-entropy reformulation of FEI},
+\path{sources/ERASURE_REDUCTION.md}, Sections 1--6.
+Packaged under \path{research_pushes/2026-10-11-full-fei-100-agents}.
+\bibitem{BR} Campaign supplemental source,
+\emph{Block restriction identity and its exact surviving term},
+\path{sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md}, Sections 1--5.
+\bibitem{B05} fleet01/B05,
+\emph{Sparse-activation no-go for local variance-refund payment},
+run \path{20261011T193057Z-fleet01-B05-rare-restrictions},
+REPORT Sections 2--7;
+\path{math-open-problems@80cc2e5027efa56d79c4ecdf7d4949759ef2068b}.
+\bibitem{B19} fleet01/B19,
+\emph{Independent audit of the B05 sparse-activation no-go},
+run \path{20261011T195038Z-fleet01-B19-independent-review},
+REPORT Sections 2--5;
+\path{math-open-problems@7955d427222392911dc6af2e4ee3aa8aab67ac8c}.
+\bibitem{A097} A097, \emph{Complete leaf references transferred into physical
+stopping trees}, version 1,
+run \path{20261011T221240Z-fleet05-A097-cross-route-transfer},
+REPORT Sections 1--5. Local complete source; independent review pending.
+\bibitem{B06} Claude B06 lead, \emph{Block/tree reductions},
+run \path{20261011T223800Z-claude-B06-block-tree-reductions},
+\path{CLAIMS.json}, IDs \path{B06-LEAD-R1-BLOCK-TO-SINGLETON} and
+\path{B06-LEAD-R2-LEAF-PARTITION-INVARIANCE}, version 1.
+The upstream REPORT save was unavailable; proofs are reproduced here.
+\bibitem{B20} Claude B20 lead, \emph{Erasure activation transfer},
+run \path{20261011T225100Z-claude-B20-erasure-activation-transfer},
+REPORT Sections 1--4. Root and activation claims version 1;
+low-influence version 1 is strengthened here by proposed version 2.
+\bibitem{A096} A096, \emph{Universal payment of level-one-to-two erasure},
+run \path{20261011T234252Z-fleet05-A096-live-gap-ledger},
+REPORT equations (1)--(7), version 1.
+\bibitem{A098} A098, \emph{Independent acceptance of A096's layer},
+run \path{20261012T024601Z-fleet05-A098-resource-reallocation},
+REPORT independent-review proof and \path{out/REVIEW_RECORD.json}.
+\bibitem{A097b} A097, \emph{B05 leaf references inserted into the telescope},
+run \path{20261012T005449Z-fleet05-A097-cross-route-transfer},
+DERIVATION and \path{out/RESULTS.json}, application version 1.
+\bibitem{A005} A005, \emph{Noncircular endpoint referee},
+run \path{20261011T225209Z-fleet05-A005-noncircular-endpoint-referee},
+REPORT Sections 3--5: selected-coordinate witness scope guard.
+\bibitem{RM} Campaign supplemental source,
+\emph{Route map curated}, \path{sources/ROUTE_MAP_CURATED.md},
+Sections 11.13--11.16; historical C024 external interface.
+\bibitem{P} Y. Shmalo, \emph{Fourier entropy of threshold functions and
+their compositions}, current 38-page text, Sections 5 and 8,
+with 29-page earlier version retained separately. Context only.
+\bibitem{Q} Y. Shmalo, \emph{Entropy and singularity of spectral and
+pivotal sets in planar percolation}, current 30-page text,
+Theorems 3.1--3.2, with 31-page other version retained separately.
+Context only; local guard statements are lower entropy bounds.
+
+\bibitem{A090c} A090, \emph{Independent low-influence reconstruction and higher-tail completeness},
+run \path{20261013T213537Z-fleet05-A090-independent-reconstruction},
+REPORT equations (1)--(14), original claim version 1; checkpoint correction retained.
+\bibitem{A096c} A096, \emph{Terminal-inclusive conditional-edge refund audit},
+run \path{20261013T220343Z-fleet05-A096-live-gap-ledger},
+DERIVATION equations (1)--(6), claim version 1; independent acceptance of A090 tail theorem.
+\bibitem{A097c} A097, \emph{One-shared-data collision reference transfer},
+run \path{20261013T222610Z-fleet05-A097-cross-route-transfer},
+DERIVATION Sections 1--4 and BOUNDARY; scoped version 1, full scoped A094
+acceptance recorded in the audit cited in \cite{A094d}; second review pending.
+
+
+\bibitem{A095d} A095, \emph{Linear and asymptotically sharp shared-collision tax},
+run \path{20261014T010024Z-fleet05-A095-restricted-result-extraction},
+DERIVATION Sections 1--6; only the new selector application in bundled claim version 3.
+\bibitem{A001d} A001, \emph{Fixed-degree normalized refund obstruction},
+run \path{20261014T011101Z-fleet05-A001-quantifier-audit},
+DERIVATION full-support tensor subsection; claim version 1.
+\bibitem{A096d} A096, \emph{Single correlated spectator and its terminal owner},
+run \path{20261014T013836Z-fleet05-A096-live-gap-ledger}, DERIVATION Sections 2--4.
+\bibitem{A073d} A073, \emph{Complete references and a positive-erasure binary remainder},
+run \path{20261014T023508Z-fleet05-A073-certified-logarithms}, DERIVATION; both claims version 1.
+\bibitem{A098d} A098, \emph{Independent reconstruction of the positive-erasure remainder},
+run \path{20261014T024504Z-fleet05-A098-resource-reallocation}, DERIVATION and source-bound CLAIMS record.
+\bibitem{A094d} A094, \emph{Disjoint and shared-data proof-chain audit},
+run \path{20261014T001244Z-fleet05-A094-proof-chain-challenger}, AUDIT Sections 1--4;
+the adaptive-tree transfer is accepted only at its explicit one-node clause.
+\bibitem{A073r} A073, \emph{Complete terminal refund independently reconstructed},
+run \path{20261013T234148Z-fleet05-A073-certified-logarithms}, REPORT refund section;
+A001 independently accepts the same full statement in the run cited in \cite{A001d}.
+
+
+\bibitem{A097e} A097, \emph{Negative-cell floor with an actual source bank},
+run \path{20261014T050248Z-fleet05-A097-cross-route-transfer}, DERIVATION Sections 1--5; original version 1.
+\bibitem{A098e} A098, \emph{Independent full reconstruction of the negative-cell floor},
+run \path{20261014T054007Z-fleet05-A098-resource-reallocation}, DERIVATION and CLAIMS; no repair.
+\bibitem{A096e} A096, \emph{Non-flat quotient remainder and sharp loss-only child-bank threshold},
+run \path{20261014T042803Z-fleet05-A096-live-gap-ledger}, DERIVATION; two original version-1 claims at author scope.
+\bibitem{A100e} A100, \emph{Binary remainder and Jensen sharpening},
+run \path{20261014T034838Z-fleet05-A100-release-and-continuation-ledger}, REVIEW: full original A073 acceptance and separate version-1 refinement.
+\end{thebibliography}
+\end{document}

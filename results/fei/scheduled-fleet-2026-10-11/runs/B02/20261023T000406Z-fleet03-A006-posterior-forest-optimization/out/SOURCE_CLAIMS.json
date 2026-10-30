@@ -1,0 +1,111 @@
+[
+  {
+    "claim_id": "A010-GENERIC-WIDTH-TWO-FOREST-MASS",
+    "version": 1,
+    "exact_statement": "For every finite nonempty simple graph edge-prime table, both endpoint orders, and one common feasible weight 0<lambda<=1 with pi=1/4 and D=(1+lambda/4)^|E|-1, every nonempty output set A consisting of incident vertices admits a distinct actual source-SCC-rooted queue event with original probability at least (lambda/72)^|A|/D. This includes all root rarities and exclusions, block subsets, child counts, attachment compositions, fixed chronology and child labels. Any number of roots is allowed. Therefore the complete all-partitions output mass is at least this amount. This is a mass lower bound/cost upper bound, not a lower certificate for the variational infimum.",
+    "hypotheses": [
+      "Uniform physical cube; cost in bits and actual Boolean squared Fourier spectrum",
+      "Both endpoint orders, width-two positive-edge prime table, original nonempty-conditioned all-partitions queue",
+      "A single globally fixed packing-feasible weight vector; all original root exclusions, selected subsets, counts, attachments and labels paid",
+      "Every selected output coordinate is incident to some table edge; positive common lambda"
+    ],
+    "statement_sha256": "0b86fd74f2dc62f9f8cbfcd8c748e15d5f4edaeeb4650074005230e69924f96d",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261022T231523Z-fleet03-A010-universal-residual-falsifier\\GROWING_MATCHING.md",
+      "code": [
+        "code/check.py",
+        "code/verify.py"
+      ],
+      "certificates": [
+        "out/CHECK.json",
+        "out/VERIFY.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "forests.tex",
+        "use": "original queue probabilities and partition admissibility; locally reconstructed event"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "verdict": "AUTHOR_ALL_PARAMETER_DERIVATION_AND_SEPARATE_EXACT_REPLAY; NOT INDEPENDENT_AGENT_ACCEPTANCE",
+        "timestamp_utc": "2026-10-22T23:51:17.337423+00:00",
+        "formal_status": "RUNTIME_UNVERIFIED"
+      }
+    ],
+    "status": "AUTHOR_PROOF_WITH_EXACT_FINITE_VALIDATION; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A010-GROWING-DELETED-MATCHING-COMPLETE-COST",
+    "version": 1,
+    "exact_statement": "For all integers 2<=a<=b and 0<=k<=a, let G be K_(a,b) with k disjoint matching edges deleted and f_G its actual uniform Boolean edge DNF. On precisely its surviving positive edge primes, fix both endpoint orders, pi=1/4 and lambda_e=1/b. For the SAME original all-partitions queue, D=(1+1/(4b))^(ab-k)-1 and complete nonempty output cost C=sum_(A!=empty) fhat_G(A)^2 log2(1/Q_G(A)), there is an explicit distinct-run subfamily of complete cost less than1255I(f_G)/72<18I(f_G), hence the full queue cost and any variational infimum containing this admissible representation obey that upper bound. The result includes all root/leaf factors, arbitrary growing k, and the leafless subfamily a,b>=3. No added primes, private leaves, controller, sampled-set weights, optimal-weight claim, or arbitrary-deletion transfer is used.",
+    "hypotheses": [
+      "Uniform physical cube; cost in bits and actual Boolean squared Fourier spectrum",
+      "Both endpoint orders, width-two positive-edge prime table, original nonempty-conditioned all-partitions queue",
+      "A single globally fixed packing-feasible weight vector; all original root exclusions, selected subsets, counts, attachments and labels paid",
+      "2<=a<=b; deleted edges are a matching of size0<=k<=a; lambda=1/b"
+    ],
+    "statement_sha256": "02fa4ee140fa5a7db3c27ea0627f3d7036f027050c6c614e70c71bbc9d5df7e6",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261022T231523Z-fleet03-A010-universal-residual-falsifier\\GROWING_MATCHING.md",
+      "code": [
+        "code/check.py",
+        "code/verify.py"
+      ],
+      "certificates": [
+        "out/CHECK.json",
+        "out/VERIFY.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A010-GENERIC-WIDTH-TWO-FOREST-MASS",
+        "version": 1
+      },
+      {
+        "claim_id": "A008-ALL-BOOLEAN-IMPLICANT-ROOT-NORMALIZER-PAYMENT",
+        "version": 1,
+        "use": "only width-two root term, reconstructed in section4"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "verdict": "AUTHOR_ALL_PARAMETER_DERIVATION_AND_SEPARATE_EXACT_REPLAY; NOT INDEPENDENT_AGENT_ACCEPTANCE",
+        "timestamp_utc": "2026-10-22T23:51:17.337423+00:00",
+        "formal_status": "RUNTIME_UNVERIFIED"
+      }
+    ],
+    "status": "AUTHOR_PROOF_WITH_EXACT_FINITE_VALIDATION; INDEPENDENT_AGENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

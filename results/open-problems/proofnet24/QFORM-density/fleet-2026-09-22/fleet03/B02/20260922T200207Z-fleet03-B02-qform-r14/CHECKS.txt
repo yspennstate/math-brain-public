@@ -1,0 +1,27 @@
+QFORM fleet03/B02 r14 deterministic algebra checks
+
+alpha = 1/2
+beta = sqrt((1-alpha^2)/2) = sqrt(3/8) = 0.6123724356957945
+D lower coefficient = beta^2-alpha^2 = 1/8 = 0.125
+kappa lower coefficient = beta-alpha = sqrt(3/8)-1/2 = 0.1123724356957945
+
+scalar-pivot constant:
+128*alpha^(-1/4) = 128*2^(1/4) = 152.2185107203483
+
+pair constant from 3*400^(1/3)*(D^2*kappa*s)^(-1/6), after factoring c^-1:
+3*400^(1/3)*[64/(sqrt(3/8)-1/2)]^(1/6)
+= 63.63967431663448
+
+zero-diagonal designated-partner constant after |det B|>=c^3:
+3*2^(2/3) = 4.762203155904598
+
+Hence max branch constant = 128*2^(1/4) < 152.219.
+
+Matrix inequalities used symbolically:
+1. sigma_min(B)>=c => ||B e_i||>=c and |det B|>=c^3.
+2. If max_i |B_ii|<c/2, then for each i sum_{j!=i} B_ij^2 >=3c^2/4, hence some |B_ij|>=sqrt(3/8)c.
+3. For that pair P, det P<=c^2/4-3c^2/8=-c^2/8, so P is indefinite and |det P|>=c^2/8.
+4. P=[[0,b],[b,0]]+diag(B_ii,B_jj); Weyl gives sigma_min(P)>=|b|-max(|B_ii|,|B_jj|)>=(sqrt(3/8)-1/2)c.
+5. Scalar pivot Schur identity det B=a det S gives 128|a|^-1/2|det S|^-1/4=128(|a||det B|)^-1/4 <=128*2^(1/4)c^-1 when |a|>=c/2.
+
+STATUS=PASS

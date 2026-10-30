@@ -26,7 +26,7 @@ For an exact-rank-three ORIGINAL-coordinate principal block with nonzero eigenva
 
 Both scalar diagonals of B can be zero. The pair-density envelope is `2sqrt(2)/r +D^(-1/2)log_+(2r^2/(kappa|t-t0|))`. Averaging its moving critical value against a Schur-remainder bound `P(|R-t|<rho)<=H sqrt(rho)` gives `4sqrt(2H)(D*kappa)^(-1/4)`. Exact rank three leaves a rank-one Schur coefficient of magnitude at least s, so the preceding affine rank-one small-ball lemma applies with H=10/sqrt(s). A localized target with |Aij|>=1/2 and associated diagonals <=1/4 in magnitude has sharpened bound <35.
 
-This does not guarantee a uniformly conditioned physical pair under the bare spectral hypothesis, nor a rank-one remainder for arbitrary higher-rank forms. It therefore does NOT solve the unrestricted rank-three or full-matrix problem. Essential boundedness is established in the stated scope; continuity is not claimed. Existing account03/B05 and account04/B11 perform the requested mathematical reviews; other workers apply the exact scope to the remaining aggregate-before-inversion problem. Full proof and finite check sources/results are together at bundle commit `2823dfbc10490eb9b1aba6837ab6c9f9a1da1ca0`.
+This does not guarantee a uniformly conditioned physical pair under the bare spectral hypothesis, nor a rank-one remainder for arbitrary higher-rank forms. It therefore does NOT solve the unrestricted rank-three or full-matrix problem. Essential boundedness is established in the stated scope; continuity is not claimed. Existing fleet03/B05 and fleet04/B11 perform the requested mathematical reviews; other workers apply the exact scope to the remaining aggregate-before-inversion problem. Full proof and finite check sources/results are together at bundle commit `2823dfbc10490eb9b1aba6837ab6c9f9a1da1ca0`.
 
 ## New synthesis: every rank-two orientation, including arbitrary affine terms
 
@@ -38,7 +38,7 @@ Read [the complete source-pinned handoff](handoffs/interactive/20260922T161801Z-
 
 No leverage assumption and no affine-in-range restriction are imposed. Both definite and indefinite signatures are included. This is a fractional-potential estimate, NOT a bounded-density assertion for rank two. For b in range(U), including b=0, the constant improves to 16sqrt(30).
 
-The proof combines account03/B16's translated quadratic kernel with the diffuse Fourier estimate and a rank-one affine small-ball lemma. In the heavy-coordinate case the arbitrary correlated translation disappears from the quadratic part after completing the square; the remaining affine term is retained explicitly. The small nonzero residual Rayleigh coefficient cancels exactly. The beta=0 case is proved separately by affine conditioning.
+The proof combines fleet03/B16's translated quadratic kernel with the diffuse Fourier estimate and a rank-one affine small-ball lemma. In the heavy-coordinate case the arbitrary correlated translation disappears from the quadratic part after completing the square; the remaining affine term is retained explicitly. The small nonzero residual Rayleigh coefficient cancels exactly. The beta=0 case is proved separately by affine conditioning.
 
 **QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1.** For an ORIGINAL-coordinate principal block of exact rank three, A_II=V M V^T, V^T V=I_3, with physical a=A_ii!=0 and c_i=||v_i||^2,
 
@@ -46,9 +46,9 @@ The proof combines account03/B16's translated quadratic kernel with the diffuse 
 
 This includes arbitrary outside quadratic coefficients and cross couplings: induced original-coordinate affine terms are covered by the first theorem. The orthonormal Schur frame has exact determinant coefficient det N=c_i det M/a. For a full exact-rank-three target matrix, this implies 128/sqrt(|A_ii|).
 
-The former account01/B10 small-Rayleigh strip INSIDE the rank-two Schur remainder is removed in this half-Riesz route. The small/zero OUTER scalar pivot and arbitrary higher-rank Schur remainders remain unresolved outside the precisely stated supporting branches above. Do not interpret the rank-two theorem as applying to every higher-rank form with two large eigenvalues.
+The former fleet01/B10 small-Rayleigh strip INSIDE the rank-two Schur remainder is removed in this half-Riesz route. The small/zero OUTER scalar pivot and arbitrary higher-rank Schur remainders remain unresolved outside the precisely stated supporting branches above. Do not interpret the rank-two theorem as applying to every higher-rank form with two large eigenvalues.
 
-Existing account03/B16 and account01/B10 perform the two specified independent mathematical checks and record actual results. Other B10/B11/B16/B19/B20 workers should apply the stated theorem to the remaining outer-pivot and full-matrix steps rather than duplicate the reviews. Follow the current proof-first owner request in AGENTS.md; do mathematics, not a new sign-in campaign.
+Existing fleet03/B16 and fleet01/B10 perform the two specified independent mathematical checks and record actual results. Other B10/B11/B16/B19/B20 workers should apply the stated theorem to the remaining outer-pivot and full-matrix steps rather than duplicate the reviews. Follow the current proof-first owner request in AGENTS.md; do mathematics, not a new sign-in campaign.
 
 ## Authoritative source and exact quantifiers
 

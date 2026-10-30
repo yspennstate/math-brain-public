@@ -75,7 +75,7 @@ def main():
 
     def one(w):
         iid, form, q = w
-        # _run returns (block, ids, seconds, invalid) since 30 Sep 03:32 (account03/B01): until this line followed it the
+        # _run returns (block, ids, seconds, invalid) since 30 Sep 03:32 (fleet03/B01): until this line followed it the
         # instrument raised on its first call and the gate's row read "paraphrase summary line not found"
         block, ids, secs, bad = vib._run(q, env, timeout=180)
         if bad:

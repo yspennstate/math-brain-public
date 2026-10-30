@@ -1,0 +1,37 @@
+{
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "run_id": "20260923T222118Z-fleet03-B08-qform-diffuse-r44",
+  "account": "fleet03",
+  "slot": "B08",
+  "full_target_status": "OPEN",
+  "global_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-COMMONPLANE-SAMEBANK-PROJECTED-RECEIVER-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "scope": "Two original hubs, common-plane light matrix M^T R M + diag(S1,S2). For any physical K in one bank with rank-two restricted arm, projected same-bank crossing F_K>0 and ell=1 row marginals <=1/2, the full quadratic-affine output has continuous C0 density with ||p||_inf <=3*2^(5/6)(A_K F_K)^(-1/3). Common-plane curvature cancels exactly after the physical projection; arbitrary same-side curvature remains."
+    },
+    {
+      "id": "QFORM-DIFFUSE-RANK1-THIRDCURVATURE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "scope": "If S1=lambda qq^T, the associated two-row arm M has area S_M>0, mu=max q_i^2<=27/593 and tau=dist(q,row(M))>0, a Bernoulli 3/4 physical cut yields a continuous C0 density with ||p||_inf <=2^(13/6)sqrt(3)(|lambda| S_M tau)^(-1/3)(1-3mu)^(-1/6)."
+    },
+    {
+      "id": "QFORM-R45-RANK1-DIFFUSE-123-v1",
+      "status": "PROVED_APPLIED_COROLLARY",
+      "scope": "In the inherited r45 exact-match branch with arm area >L^2/(64sqrt896), rank-one third curvature |lambda|>=L, max q_i^2<=1/48 and dist(q,row(M))>=1/2, ||p||_inf<123.01/L and p is continuous C0."
+    },
+    {
+      "id": "QFORM-EXACTMATCH-HADAMARD-8P486-v1",
+      "status": "PROVED_TARGET_VALID_FAMILY_BOUND",
+      "scope": "For the fleet02/B08 exact-match Hadamard stress family, m=2^d>=8, every independent cap-one product law satisfies ||p||_inf<=6sqrt(2)/L after scale L, uniformly in hub conditioning epsilon; density is continuous C0."
+    },
+    {
+      "id": "QFORM-PARTNER-A04B08-CHILDWINDOW-4096-v1",
+      "status": "PARTNER_RESULT_APPLIED",
+      "scope": "Applying fleet04/B08 r2 with child scale m=L/64: if a physical deletion child has three eigenvalues >=L/64 in modulus and the projection onto |lambda|>=L/4096 has max physical leverage <=1/32, then ||p||_inf<4096/L and p is continuous C0."
+    }
+  ],
+  "first_unpaid_implication": "QFORM-EXACTMATCH-HIGHRANK-SIMULTANEOUS-CUT-OR-ALIGNMENT-COMPILER-v1",
+  "execution_status": "WITHOUT_VERIFIED_BRAIN"
+}

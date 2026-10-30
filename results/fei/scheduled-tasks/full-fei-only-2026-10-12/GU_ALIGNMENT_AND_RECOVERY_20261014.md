@@ -19,7 +19,7 @@ The governing overlay remains `GU_LASER_FOCUS_20261014.md` alongside `ORDER.md`,
 
 ## Native schedule operations actually completed in this interaction
 
-The native inventory exposed twenty enabled account01/B01–B20 FEI tasks. B01 was already GU-specific. Nineteen title/prompt updates, B02–B20, returned SUCCESS between 2026-10-14T03:57:30.975323Z and 2026-10-14T04:06:29.672951Z. Their returned saved records explicitly contain the universal target, complementary role, full-result persistence, and recovery requirements. B01's already-aligned prompt was retained. This is twenty locally aligned slots, NOT forty workers or twenty newly created tasks.
+The native inventory exposed twenty enabled fleet01/B01–B20 FEI tasks. B01 was already GU-specific. Nineteen title/prompt updates, B02–B20, returned SUCCESS between 2026-10-14T03:57:30.975323Z and 2026-10-14T04:06:29.672951Z. Their returned saved records explicitly contain the universal target, complementary role, full-result persistence, and recovery requirements. B01's already-aligned prompt was retained. This is twenty locally aligned slots, NOT forty workers or twenty newly created tasks.
 
 Only titles and prompts were submitted. The returned hourly cadence, offsets, timezone Asia/Jerusalem, timing mode, and enabled state remained unchanged. Notification settings were not submitted; they are not exposed in update returns. The existing endpoint remains `2026-10-21T19:15:57Z`. No task was created, forced, reactivated, disabled, or extended. No model/effort selector was available; no specific runtime duration or model allocation is claimed.
 
@@ -48,16 +48,16 @@ Only titles and prompts were submitted. The returned hourly cadence, offsets, ti
 
 Each updated worker must show the explicit implication of its work to GU, spend the majority of the run on substantive mathematics, and change mechanism after three unchanged substantive attempts without renaming the gap. No movie/image work, generic Brain-maintenance diversion, publication work or unrelated problem is assigned.
 
-Every substantive result, partial proof, falsifier and failure must include complete REPORT, CLAIMS, PROGRESS, compatible PACKET_DELTA, proof/code/certificate/output files, commands, seeds, source pins and next action. Save to private math-open-problems/master `reports/fei-2026-10-11/runs/Bnn/<run>/`; mirror all artifacts to private math-research-brain/main `research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/Bnn/<run>/`; verify complete nonempty readbacks at immutable returned commits. A summary or pointer is not a full mirror.
+Every substantive result, partial proof, falsifier and failure must include complete REPORT, CLAIMS, PROGRESS, compatible PACKET_DELTA, proof/code/certificate/output files, commands, seeds, source pins and next action. Save to private math-open-problems/master `reports/fei-2026-10-11/runs/Bnn/<run>/`; mirror all artifacts to private math-research-brain/main `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<run>/`; verify complete nonempty readbacks at immutable returned commits. A summary or pointer is not a full mirror.
 
 Configuration and returned saved prompts were verified; post-revision natural mathematical execution and successful delivery for every worker have NOT been established. A native last-run timestamp is not a research-success receipt. Concurrent GU adoption records elsewhere in this package may describe the same local set; do not sum them as distinct cohorts.
 
 ## Concrete original-content restoration
 
-B03 run `20261013T145305Z-account01-B03-a014-affine-cell-compression` had a 4,044-byte canonical REPORT but only a 1,471-byte Brain summary. The original summary was preserved. The COMPLETE canonical report was added as
+B03 run `20261013T145305Z-fleet01-B03-a014-affine-cell-compression` had a 4,044-byte canonical REPORT but only a 1,471-byte Brain summary. The original summary was preserved. The COMPLETE canonical report was added as
 
-    research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/B03/
-    20261013T145305Z-account01-B03-a014-affine-cell-compression/
+    research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B03/
+    20261013T145305Z-fleet01-B03-a014-affine-cell-compression/
     REPORT_CANONICAL_RECOVERED_20261014.md
 
 Creation and immutable full readback commit: `682e004ed016d616543f5fc8c29de783e8c21783`.
@@ -68,7 +68,7 @@ The other two local B03 packages already matched. All four local B10 packages an
 
 ## Missing historical outputs now preserved as evidence
 
-Fresh source snapshot: math-open-problems `4a16555709214b313e181c00231efe8f6ac3c187`. The inspected canonical B02, B08 and B13 streams contained peer contributions but no account01 runs, while the initial designated account01 Brain tree had no B02/B08/B13 folders. Do not relabel account05/Claude output as local completion.
+Fresh source snapshot: math-open-problems `4a16555709214b313e181c00231efe8f6ac3c187`. The inspected canonical B02, B08 and B13 streams contained peer contributions but no fleet01 runs, while the initial designated fleet01 Brain tree had no B02/B08/B13 folders. Do not relabel fleet05/Claude output as local completion.
 
 Original task-response retrieval did locate substantive local statements. The recovery package is now saved and fully read back at Brain commit `2c35977515c98c958052021d4bea604d61e56846`:
 

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-270-REPAIRED-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B10",
+  "run_id": "20260925T104830Z-fleet02-B10-repaired-r02",
+  "source": {
+    "commit": "4e530247ec0ef4101a6e5ecf621bd35a969c42aa",
+    "blob": "98e45d53d106db9a205051a4dd4917fc39dc2e3a",
+    "sha256": "90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb",
+    "lines": 683,
+    "proofs": 26
+  },
+  "findings": [
+    {
+      "line": 62,
+      "status": "FALSE_DESCRIPTIVE",
+      "id": "B10-R02-L62",
+      "issue": "The phrase 'whatever constant multiplies A' literally includes scalar 0; then the example is atomic rather than logarithmically singular.",
+      "repair": "Replace by 'whatever nonzero constant multiplies A'.",
+      "downstream": "Introduction only; no theorem dependency."
+    },
+    {
+      "line": 435,
+      "status": "GAP_REPAIRABLE_LOCAL",
+      "id": "B10-R02-L435",
+      "issue": "The signed branch determinant is epsilon/(2 sqrt(D)); the source says Jacobian 1/(2 sqrt(D)) without 'absolute'.",
+      "repair": "Say 'absolute Jacobian 1/(2 sqrt(D))'.",
+      "downstream": "Density formula already uses the correct positive factor; zero constant/theorem impact."
+    },
+    {
+      "line": 511,
+      "status": "PASS",
+      "id": "B10-R02-L511",
+      "issue": "Endpoint objection rejected: integral_0^infinity is insensitive to the single endpoint s=0.",
+      "repair": "none",
+      "downstream": "none"
+    }
+  ],
+  "primary_lens": {
+    "status": "PASS",
+    "notes": "Random-sign fourth moment rederived; exact finite sign enumeration matches printed identity; no-pivot arithmetic and five-to-three crossing extraction pass."
+  },
+  "theorem_status": "No theorem-bearing counterexample found. After the one-word L435 repair, the mathematical chain supports 270 K^2/s and 77 K/sqrt(s).",
+  "rendered_pdf": "UNCHECKED_TOOL_LIMIT",
+  "native_brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false
+}

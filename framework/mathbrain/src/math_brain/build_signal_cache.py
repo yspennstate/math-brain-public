@@ -23,7 +23,7 @@ from math_brain.retrieval import _index_signals_uncached, _signal_key
 from math_brain.store import ResearchStore
 
 # MATHBRAIN_STORE (as the hook reads it), else the population store of this checkout. Until 30 Sep one machine's
-# absolute user path was committed here, as it was in expansion.py (account04/B03).
+# absolute user path was committed here, as it was in expansion.py (fleet04/B03).
 STORE = Path(os.environ.get("MATHBRAIN_STORE", "").strip()
              or Path(__file__).resolve().parents[2] / "local" / "population" / "brain.sqlite3")
 CACHE = STORE.with_name("brain_signal_cache.pkl")

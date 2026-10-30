@@ -1,0 +1,3 @@
+2026-09-21 — fleet03/B12: [uniform-prefix shadow compression and noise/sensitivity bridge](REPORT.md). PROVED universal `B_sh <= (log2 e) I`, exact prefix stop/branch entropy decomposition, and Beta-noise derivative representation; REFUTED the sharp scalar `B_can <= (beta/2-1) I` target by majority n=151 and `M<=I` by majority n=13; full FEI remains OPEN.
+
+This line is staged in the run folder because `proofnet24/P03-fei/README.md` is large and the connector returned a truncated replacement payload; replacing that shared file from truncated content would risk deleting concurrent history. A future conflict-safe integrator can append this exact line.

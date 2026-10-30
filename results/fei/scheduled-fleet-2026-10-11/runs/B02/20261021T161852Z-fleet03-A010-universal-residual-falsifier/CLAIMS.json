@@ -1,0 +1,126 @@
+[
+  {
+    "claim_id": "A010-DENOMINATOR-CAPS-AND-JOINT-PAIR-PACKING",
+    "version": 1,
+    "exact_statement": "For every finite positive width-two graph prime table, positive globally packing-feasible lambda, nonempty k-gate subset T, and certified L>0 with sum_T lambda<=L, the conditioned used-gate root-index law obeys p_lambda(T)<=1/[(1+4k/L)^k-(4k/L)^k]. For k>=2 this strictly improves the previous min(1,4^(1-k)L^(k-1)/k^k) cap. It is a sharp supremum when equal weights L/k on T are feasible and the table is allowed positive outside weights tending to zero. For every pair of incident gates i,j in any such table, singleton probabilities p_i,p_j and pair probability r obey p_i*p_j>=4r(p_i+p_j), equivalently [[p_i-4r,4r],[4r,p_j-4r]] is positive semidefinite, yielding t^2*p_i+p_j>=4(t+1)^2*r for every rational t>=0. For exactly two incident gates, positivity, normalization and this cone characterize all feasible root laws. The positive normalized law (2/3,5/18,1/18) satisfies all sharp individual caps and both individual lambda<=1 bounds but violates packing: recovered lambda=(4/5,1/3), determinant=-2/81, t=1/2 cut=-1/18. This is a root-relaxation falsifier, not a Boolean spectral or variational-cost counterexample. On the frozen 67 full-family graph references, new cap LP gaps improve strictly in61 cases; all31 frozen star sizes m2..32 improve strictly. No universal coding-cost payment or FEI solution follows.",
+    "hypotheses": [
+      "Fixed full positive width-two prime table, both endpoint orders and original conditioned chronological queue",
+      "Uniform actual Boolean edge DNF and full distinct partition event family for finite cost certificates",
+      "All weights positive and global; p(T) indexes used-gate monomials, not the initial roots of each actual forest",
+      "L>0 certified by packing; sharpness only with stated equal-weight feasibility, as a supremum if outside gates remain positive",
+      "Two-gate sufficiency does not assert higher-gate root-law realizability; complete cost and tangent gap remain distinct"
+    ],
+    "statement_sha256": "ddc55eebe48a4483fd797bca1b36d75a01dcf7fcbf30db9bd94f2238f97feb95",
+    "contributors": [
+      "A010"
+    ],
+    "proof_source": {
+      "derivation": "PROOF.md",
+      "code": [
+        "code/check.py",
+        "code/pair.py"
+      ],
+      "certificates": [
+        "out/CHECK.json",
+        "out/PAIR.json"
+      ],
+      "formal_source": "code/PairCone.lean; NOT kernel-certified"
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-JOINT-ROOT-LAW-LOWER-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "9a0d49375a7a8ba40ae7b26ca9592229e9d3cf10310aa677e5121b90498716d5",
+        "acceptance": "previous whole source review retained; supporting inequality reconstructed"
+      },
+      {
+        "claim_id": "A006-FULL-PARTITION-INCIDENCE-CAP-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "c621815c9c2d67358d0218f7d991146f86d318183ce85fda1ac3349c83c7c00c",
+        "acceptance": "whole extension reconstructed in REVIEW_A006.md without repair"
+      }
+    ],
+    "review_records": [],
+    "status": "ELEMENTARY_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_REVIEW_PENDING; LEAN_RUNTIME_UNVERIFIED",
+    "supersedes": [],
+    "refutes": [
+      "Sufficiency of separate sharp root-subset caps, even with individual lambda<=1 conditional bounds (unregistered proposed shortcut)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A006",
+      "A008",
+      "A009",
+      "A086",
+      "Claude/B02",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A006-FULL-PARTITION-INCIDENCE-CAP-CERTIFICATE",
+    "version": 1,
+    "exact_statement": "For every finite positive width-two graph prime table with both endpoint orders and original queue, every nonempty k-edge root subset T and every nonnegative vertex-price certificate y satisfying y_u+y_v>=1 on T yield p_lambda(T)<=min(1,4^(1-k)(sum_v y_v)^(k-1)/k^k) for all positive graph-packing-feasible weights. Recomputing h from the entire distinct actual partition family and maximizing h dot p over these capped root laws gives a valid global joint weight/posterior bit-gap bound 2 Gamma_cap. For every star f_m=x0 AND OR_m, m>=2, the COMPLETE full partition numerators are W_B=lambda_B/32^k, W_{0}=sum_i lambda_i/32, and W_{0 union B}=lambda_B[a_k+b_k sum_(i outside B)lambda_i], where a_k=(k-1)!/(3*8^k*k*(k+1)), b_k=k!/(16*8^k*(k+1)*(k+2)). At uniform weights1/m the capped root LP reduces exactly to cardinalities and its bit gap is less than (91/24)I for every m. Exact rational certificates improve this to I/3 for every m=2,...,32. On all63 labelled nonempty n4 graph tables at weights1/(2 max degree), full partition recomputation and rational primal-dual certificates give bit gap less than (41/10)I, with57 strict improvements over the uncapped tangent gap. These are optimization-gap statements within the fixed full event family, not universal coding-cost payment.",
+    "hypotheses": [
+      "Uniform physical Boolean signs; spectrum is actual squared Fourier spectrum; full positive graph edge prime table",
+      "Both endpoint orders give singleton subset probability1/4 and pair probability1/6; full original chronological queue probabilities",
+      "Fixed full partition event family with one root per source SCC; distinct complete runs, no overlapping owner blocks or repeated visits",
+      "Positive weights globally packing-feasible; table/family fixed before sampling A; variance and complete bit cross-entropy distinguished from surrogate residual",
+      "Cardinality reduction applies to relaxation at uniform star reference; all-weight infimum is not restricted to symmetric weights",
+      "Finite graph census n4 only and star finite certificate m2..32 only; all-m star bound separately proved"
+    ],
+    "statement_sha256": "c621815c9c2d67358d0218f7d991146f86d318183ce85fda1ac3349c83c7c00c",
+    "contributors": [
+      "A006"
+    ],
+    "proof_source": {
+      "derivation": "FULL_PARTITION_CAPS.md",
+      "code": [
+        "code/star_full.py",
+        "code/incidence_caps.py"
+      ],
+      "certificates": [
+        "out/STAR_FULL.json",
+        "out/GRAPH_CAP_FULL.json",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "claim_id": "A006-JOINT-ROOT-LAW-LOWER-CERTIFICATE",
+        "version": 1,
+        "statement_sha256": "9a0d49375a7a8ba40ae7b26ca9592229e9d3cf10310aa677e5121b90498716d5",
+        "acceptance": "source document independently accepted by A010"
+      },
+      {
+        "claim_id": "A010-ROOT-LAW-GAP-OBSTRUCTION-AND-PACKING-CAPS",
+        "version": 1,
+        "statement_sha256": "8fe13a285543eed587ae80558a5a84279ee27e45240ee127db4b14005140ef84",
+        "acceptance": "whole unchanged claim independently reconstructed in REVIEW_A010.md; author code not imported"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A010",
+        "verdict": "HOLDS_WHOLE_EXTENSION_NO_REPAIR_UPSTREAM_AUTHOR_DISCLOSED",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A010\\runs\\20261021T161852Z-fleet03-A010-universal-residual-falsifier\\REVIEW_A006.md",
+        "source_sha256": "32584dc43bc941a1eee04373f20183ffa966f2d6dd9cd926b1c5ca654e392bc0",
+        "scope": "full-family/all-m extension and entire n4 census independently reconstructed; earlier A010 cap premise authored by reviewer"
+      }
+    ],
+    "status": "INDEPENDENT_EXTENSION_RECONSTRUCTION_ACCEPTED_LOCALLY; UPSTREAM_AUTHOR_DISCLOSED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A010",
+      "A008",
+      "A009",
+      "A014",
+      "A015",
+      "A086",
+      "A094",
+      "Claude/B02",
+      "B20"
+    ]
+  }
+]

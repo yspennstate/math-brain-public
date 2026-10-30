@@ -1,0 +1,66 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T004659Z-fleet05-A060-composition-sharpness",
+  "stream": "B12",
+  "packet_id": "A060",
+  "gap_id": "C019-exclusive-controller-signed-terminal-payment",
+  "attempt_id": "A060-stage3-sharp-signed-data-v1",
+  "method": "Consume A038/A059 reserve results, independently reconstruct signed DATA drift, prove an exact all-even-dimension bent-point saturation with geometric error and an actual balanced shared-core reserve boundary; exact finite and direct-character checks.",
+  "mathematical_delta": "The coefficient 3/ln2 in the existing full signed DATA drift is optimal, even beta^2=core influence=1; a five-bit case already exceeds 4. Fixed additive slack cannot improve it in a tensor-closed additive payment rule. Independence is essential for the same control-only variance-reserve funding: R/I_ctrl=2^t with one shared balanced data bit. No universal FEI constant improves.",
+  "deliverable_status": "COMPLETE_SAVED_LOCALLY",
+  "mathematical_status": "SCOPED_SHARPNESS_PROVED_LOCALLY; C019_CONTROLLER_TERMINAL_PAYMENT_AND_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+      "version": 1,
+      "source_statement_sha256": "751c4dfb5c28dc0715e0148810bb712da3d72761db3c29b1f46995ec2d03ab21",
+      "review_scope": "U,R identities and signed DATA bound only"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A060-SIGNED-DATA-DRIFT-SHARPNESS",
+      "version": 1,
+      "change": "new narrow sharpness and scope certificate"
+    },
+    {
+      "claim_id": "A059-INTERLEAVED-BIASED-STOPPING-RESERVE",
+      "version": 1,
+      "change": "scope-limited independent review record; whole-claim status unchanged"
+    }
+  ],
+  "source_artifacts": [
+    "INTAKE.md",
+    "PROOF.md",
+    "INDEPENDENCE_BOUNDARY.md",
+    "REVIEW_A059.md",
+    "out/SOURCE_RECEIPTS.json",
+    "out/FROZEN_SPEC.json",
+    "out/FROZEN_BOUNDARY_SPEC.json",
+    "code/check.py",
+    "code/boundary.py",
+    "out/checks_main.json",
+    "out/checks_reproduce.json",
+    "out/boundary_main.json",
+    "out/FIVE_BIT_STRICT_CERTIFICATE.json"
+  ],
+  "next_consumers": [
+    "A059",
+    "A057",
+    "A038",
+    "A058",
+    "A064",
+    "A091",
+    "A090",
+    "B12",
+    "B20"
+  ],
+  "next_action": "Price A059 equation (7) controller residual D_ctrl-kappa together with actual terminal H-U-R using a single unspent physical account; the signed DATA coefficient and independent-control reserve cannot be improved without changing the ledger. A091 primary/A090 alternate review sharpness and tensor scope.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No local access/save blocker. Universal unpaid line is controller residual plus actual retained terminal entropy from nonreused influence. Independent acceptance of new sharpness, supervisor adoption and remote mirrors unverified."
+  ],
+  "packet_ids": [
+    "A060"
+  ]
+}

@@ -1,0 +1,28 @@
+Deterministic checks for fleet02/B02 auto12
+
+Stress family coordinates (h,u1,u2,v1,v2):
+C=(1/sqrt(2))*[[1,1],[1,-1]], c=1,
+A has edges h-u1=c and U-V cross block C, all other entries zero.
+
+Computed eigenvalues (numpy eigvalsh):
+[-1.4142135623730951, -1.0, -8.326672684688674e-17, 1.0, 1.4142135623730951]
+Expected exactly: [-sqrt(2),-1,0,1,sqrt(2)].
+
+Physical cut L={h,u1,u2}, R={v1,v2}:
+singular values of N=A[L,R]: [1.0,1.0]
+so x1*x2=1 > 247/576.
+
+det(C)=-1 (floating evaluation -0.9999999999999999).
+
+Enumerated all 3^5=243 assignments of each coordinate to row side, column side, or neither. Maximum physical cross-block rank: 2. Hence numerical E3 maximum=0 and E5 maximum=0, as also follows exactly from |I|+|J|<=5 for disjoint I,J.
+
+Receiver constants for |det C|=1:
+16*sqrt(60)=123.93546707863734
+16*pi*sqrt(60)=389.35475289346675
+2/sqrt(|det C|)=2.
+
+r47 carrier-alignment data for hub h on the displayed full cut are exact:
+ell_h=0, q_h=0, d_h=0, g_h=1.
+Thus both physical-E3 escape tests fail and the family lies in the fixed carrier-aligned strong-hub survivor g_h>1/(228*sqrt(2)).
+
+PASS

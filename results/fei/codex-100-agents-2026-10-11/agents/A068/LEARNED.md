@@ -8,7 +8,7 @@ Every degree<=2 F2 phase has squared Fourier law uniform on an affine space of d
 
 Linear controls have singleton Fourier fibers and H(F)=H(h). This is already a recovered signed-translation reduction, not the stage's new mechanism. General controls make E H(a_S)<=K E I(a_S) FEI-equivalent at a dictator base, so do not silently generalize quadratic payment to arbitrary controls.
 
-Next missing structural step: identify two private data bits, deriving signed two-row collisions rather than incoherent mixture entropy. Full FEI remains open. Main proof: runs/20261011T222313Z-account05-A068-antichain-beyond-one-order/REPORT.md. Independent review pending; novelty unverified beyond local sources.
+Next missing structural step: identify two private data bits, deriving signed two-row collisions rather than incoherent mixture entropy. Full FEI remains open. Main proof: runs/20261011T222313Z-fleet05-A068-antichain-beyond-one-order/REPORT.md. Independent review pending; novelty unverified beyond local sources.
 
 2026-10-13T23:48:53.298275+00:00 | For odd q>=5 cyclic quadratic-controlled majority, padded N>=2q and any point edit, R_delta=(1-2^-N)R0+2^-N U_N has Gamma<=Creg Ix(G)+2Iz(G)-(287/1920)Ix(Fq). Balance earns H(K)<=Ix(Fq); weighted triangle pays all edit atoms. A070 independently accepts this theorem; 96 current fixtures pass outward rational intervals. Identification x2=epsilon x1 pairs coefficients a(T)+epsilon a(T xor {1,2}); pushforward reference gives Gamma_output<=2 Gamma_parent, but no output-influence payment. Regular AND2 with (+1,-1) orientations collapses to -1 while rank-reference pushforward costs1 and I=0. Refund destructive cancellation before claiming a universal collision payment. Interrupted predecessor preserved unchanged.
 

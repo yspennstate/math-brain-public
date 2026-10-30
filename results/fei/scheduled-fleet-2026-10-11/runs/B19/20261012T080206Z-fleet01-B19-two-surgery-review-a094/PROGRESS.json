@@ -1,0 +1,104 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261012T080206Z-fleet01-B19-two-surgery-review-a094",
+  "stream": "B19",
+  "packet_id": "A094",
+  "packet_ids": ["A094"],
+  "review_target_packet_id": "A003",
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "related_gap_ids": ["B05_RARE_REFUNDS", "OVERLAP_PRODUCT"],
+  "attempt_id": "A094-B01-TWO-SURGERY-REVIEW-1",
+  "bounded_objective": "Independently reconstruct B01's two-surgery principal-filter and exact refund formulas, challenge r=1, r=2 and r=k, and separate algebraic localization from a physical selector payment.",
+  "method": "Re-derive the character tail, enumerate the parity-conditioned entropy packet analytically, independently reconstruct point-flipped Walsh spectra and direct upper-set caps with exact arithmetic, and compare the claim scope with primary composition, read-k, and plateaued-function results.",
+  "prior_status": "B01-A003-TWO-SURGERY-CAP-LOCALIZATION-v1 and B01-A003-TWO-SURGERY-DIFFERENCE-REFUND-v1 were author-proved pending A086/A094 review.",
+  "new_status": "TWO_SURGERY_ALGEBRAIC_CLAIMS_INDEPENDENTLY_ACCEPTED; PHYSICAL_SELECTOR_WEIGHTED_PAYMENT_OPEN; MULTI_FILTER_OWNERSHIP_OPEN; FULL_FEI_OPEN",
+  "mathematical_delta": "The exact cross-cap and refund formulas survive independent reconstruction at all parameters. The difference packet can be retired as a positive unweighted two-surgery debt. The remaining obligation is sharpened to the selector-weighted coherent-parent/retained-child residual and, beyond two surgeries, actual no-double-spend ownership.",
+  "deliverable_status": {
+    "A094-D1": "COMPLETED_FOR_REVIEW_OBJECT: independent hard-regime reconstruction and source comparison in REPORT.md and INDEPENDENT_REVIEW.tex",
+    "A094-D2": "COMPLETED_FOR_REVIEW_OBJECT: exact accepted scope and unresolved leaf in CLAIMS.json",
+    "packet_target": "ROLLING_REVIEW_INSTANCE_COMPLETE; A094 BACKLOG NOT GLOBALLY EXHAUSTED"
+  },
+  "claim_versions_used": [
+    "B01-A003-TWO-SURGERY-CAP-LOCALIZATION-v1",
+    "B01-A003-TWO-SURGERY-DIFFERENCE-REFUND-v1"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-TWO-SURGERY-CAP-LOCALIZATION-v1 -> INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+    "B01-A003-TWO-SURGERY-DIFFERENCE-REFUND-v1 -> INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+    "B19-A094-TWO-SURGERY-PHYSICAL-PAYMENT-v1 -> OPEN"
+  ],
+  "source_plan": {
+    "source_head_at_research": "729d4c85210359e038d5239e52830fa462e5d340",
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B19.json",
+    "assignment_blob": "ee688080aba90acd2daed1b26e809e38285dcb85",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96"
+  },
+  "reviewed_source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "729d4c85210359e038d5239e52830fa462e5d340",
+    "path": "reports/fei-2026-10-11/runs/B01/20261012T074135Z-fleet01-B01-two-surgery-difference-a003/",
+    "report_blob": "fa3c339ae1cb0905dd8bb6062adc7425330a4766",
+    "proof_blob": "72f02059b795cb7d4f3699c9f77b2bee38af7e97",
+    "author_checker_blob": "5d49c14559ca9ecf5459e8a9d6d127710c601593"
+  },
+  "acceptance_evidence": [
+    "INDEPENDENT_REVIEW.tex: complete analytic reconstruction including r=1, r>=2 and phase endpoints",
+    "INDEPENDENT_CHECK.py and INDEPENDENT_CHECK.out: 963542 exact assertions across 2174 independently reconstructed point pairs",
+    "Primary-source scope comparison against arXiv:1304.1347, arXiv:1312.3003 and arXiv:2609.21563"
+  ],
+  "scope_corrections": [
+    "R is a unique minimal algebraic filter generator, not yet a disjoint physical pivotal-event owner.",
+    "The refund/first-variation comparison is unweighted; the physical selector coefficient and nonlinear coherent/retained-child residual remain mandatory.",
+    "Equation (4) has a harmless TeX comma where a multiplication space was intended."
+  ],
+  "remaining_obstacle": "Prove the complete selector-weighted two-surgery node payment, including the nonlinear coherent-parent and retained-child residual, uniformly in bias, k, r and phase; then prove no-double-spend ownership for overlapping displacement filters from three or more surgeries.",
+  "next_consumers": ["A003", "A005", "A023", "A063", "A086", "A095", "A099", "B20"],
+  "independent_reviewers": ["A090", "A085"],
+  "next_action": "Insert the binary selector factor p(1-p) into the exact refund, expand the complete two-surgery coherent/retained-child charge, and challenge p=1/2 with r=1,2 and the smaller-refund phase before attempting three-surgery overlap.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No uniform nonlinear coherent-parent/retained-child absorption theorem is proved.",
+    "No physical single-use ownership theorem is proved for overlapping displacement filters.",
+    "Universal GU' and full FEI remain open."
+  ],
+  "validation": {
+    "command": "python INDEPENDENT_CHECK.py",
+    "seed": null,
+    "arithmetic": "exact Fraction Walsh differences, literal superset-cap sums, and integer dyadic logarithms",
+    "point_pairs": 2174,
+    "assertions": 963542,
+    "direct_dimensions": [2, 4, 6, 8],
+    "scalar_endpoint_dimensions": "every even k from 2 through 200",
+    "status": "PASS",
+    "scope_note": "Finite corroboration only; INDEPENDENT_REVIEW.tex is the all-parameter proof."
+  },
+  "literature": {
+    "retrieval_date": "2026-10-12",
+    "primary_sources_checked": [
+      "O'Donnell--Tan, arXiv:1304.1347",
+      "Wan--Wright--Wu, arXiv:1312.3003",
+      "Potapov, arXiv:2609.21563"
+    ],
+    "overlap_result": "No checked theorem supplies the shared-variable two-surgery cap/refund identity or the remaining physical payment.",
+    "novelty_claim": "NONE"
+  },
+  "delivery_status": {
+    "canonical": "CORE_FILES_TO_BE_RECORDED_IN_DELIVERY_MANIFEST",
+    "brain_mirror": "CORE_FILES_TO_BE_RECORDED_IN_DELIVERY_MANIFEST",
+    "independent_review": "THIS_RUN_IS_THE_A094_INDEPENDENT_REVIEW; NO MATHEMATICAL REPAIR",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by runtime",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

@@ -20,4 +20,4 @@ python paving_checks.py
 
 The tests exercise algebra and listed finite examples only. They do not prove the universal analytic inequalities, establish the MSS partition theorem, or certify the unrestricted conjecture. `REPORT.md` states and cites the classical inputs and gives the complete argument for its actual scope.
 
-The earlier separable-phase theorem has received one passing scoped review from account02/B08. That review is not a review of the new determinant argument.
+The earlier separable-phase theorem has received one passing scoped review from fleet02/B08. That review is not a review of the new determinant argument.

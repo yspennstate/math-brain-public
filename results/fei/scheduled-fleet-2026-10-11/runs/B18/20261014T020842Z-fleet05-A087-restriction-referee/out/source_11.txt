@@ -1,0 +1,63 @@
+[
+  {
+    "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+    "version": 3,
+    "exact_statement": "Version 3 preserves all version-2 scoped results unchanged and adds the following stopping-payment interface. For any Boolean signs g,h on disjoint uniform private cubes and the point indicator A on r>=1 fresh physical bits, p=2^-r, F=A g+(1-A)h, d=(1-Eg Eh)/2, Q=2rp d, the complete control-first physical stopping-tree entropy payment Pi=H(F)-pH(g)-(1-p)H(h) is at most (71/8)Q. The width-dependent estimate is Pi<=[4+(6log2(e)+2log2(e)/e)/r]Q, while r=1 has Pi<=(6+log2(e))Q. The full influence is Q+pI(g)+(1-p)I(h). Calibrated normalized supplied core references admit one explicit complete output reference with CE_F=pCE_g_cal+(1-p)CE_h_cal+Pi and debt pD_g+(1-p)D_h. For two priority activation events sharing one same-orientation physical bit z, private point controllers A_r,B_s, and disjoint core cubes, the tree z then A then B on A-failure has terminal weights p/2 and (1-p)q/2. Its actual full entropy payment is at most (71/8) times its exclusive control influence, which equals N+pq(1-Eh)(rEg-s-1)/2, N=(r+1)p(1-Eg)/2+(s+1)q(1-Eh)/2. With supplied terminal allowances Lg I(g),Lh I(h), complete expected signed path cost plus terminal allowance is at most max(71/8,Lg,Lh)I(F). No positive-part path bill, overlapping private data, arbitrary-selector bound or universal FEI is claimed.",
+    "hypotheses": [
+      "Uniform physical cube; entropy bits; normalized Fourier spectra",
+      "Point selector fresh; private branch data/supports disjoint",
+      "Priority application shares exactly its one controller bit; all remaining private controllers and data blocks disjoint",
+      "Physical tree queries controls only, stopping at explicitly weighted terminal cores",
+      "Actual signed entropy increments; no clipping or extra mismatch/transcript bill",
+      "Any terminal FEI/reference allowance must be supplied as a checked certificate"
+    ],
+    "statement_sha256": "69d412e05c06cdacd198121923f2bd6733afbe3e84f66956fd23ff19a522777d",
+    "contributors": [
+      "A028"
+    ],
+    "proof_source": {
+      "report": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261013T223410Z-fleet05-A028-stopping-tree-payment\\REPORT.md",
+      "derivation": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261013T223410Z-fleet05-A028-stopping-tree-payment\\DERIVATION.md",
+      "checks": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261013T223410Z-fleet05-A028-stopping-tree-payment\\out\\full_validation.json"
+    },
+    "proof_dependencies": [
+      {
+        "claim": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT@2",
+        "scope": "point activation actual payment <=6Q and unchanged v2 component",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A028\\runs\\20261012T011208Z-fleet05-A028-stopping-tree-payment\\REPORT.md",
+        "sha256": "47e4154a66f39c0f4e820c268273dd42ecda9cb6fcb95401fbd890ef8819c30f",
+        "status": "LOCAL_PROOF; A027 scoped review noted on board"
+      },
+      {
+        "claim": "A012-DISJOINT-PRIVATE-MUX-ADMISSION@1",
+        "scope": "Only one-bit entropy mux bound independently reconstructed here",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A012\\runs\\20261013T220914Z-fleet05-A012-sparse-activation-accounting\\DERIVATION.md",
+        "sha256": "ae6472775751197006383a187a7e1fd3bf2c8ff84ab0043e1af2296af2abfc25",
+        "status": "ACCEPTED_AT_SUBCLAIM_SCOPE_BY_A028"
+      },
+      "A091 stage3 same-orientation exclusive influence identity, independently recounted here; no cap theorem imported",
+      "Uniform physical-tree entropy/influence conservation; direct Fourier tensor expansion and elementary scalar inequalities"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A028-UNBALANCED-ACTIVATION-STOPPING-PAYMENT",
+        "version": 2,
+        "reason": "Narrow interface extension; no previous component withdrawn"
+      }
+    ],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A027",
+      "A057",
+      "A091",
+      "A094",
+      "A012",
+      "A095",
+      "B06",
+      "B20"
+    ]
+  }
+]

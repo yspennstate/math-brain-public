@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T205421Z-fleet01-B05-QFORM-auto16",
+  "status": "PASS",
+  "checks": [
+    {
+      "name": "completion_of_square",
+      "identity": "lambda*V^2+eta*V = lambda*(V+eta/(2*lambda))^2-eta^2/(4*lambda)",
+      "result": "PASS"
+    },
+    {
+      "name": "shear_absorption",
+      "definitions": "W=V+eta/(2lambda), beta0=beta-c*eta/lambda, S=tH+bP+cW+beta0/2",
+      "identity": "2tHL+2bLP+2cLV+lambda V^2+beta L+eta V+gamma = 2LS+lambda W^2+gamma-eta^2/(4lambda)",
+      "result": "PASS"
+    },
+    {
+      "name": "target_family_characteristic_polynomial",
+      "matrix": "[[0,1,0,0],[1,0,b,0],[0,b,0,0],[0,0,0,1]]",
+      "characteristic_polynomial": "z*(z-1)*(z^2-(1+b^2))",
+      "spectrum": ["sqrt(1+b^2)", "-sqrt(1+b^2)", "0", "1"],
+      "result": "PASS"
+    },
+    {
+      "name": "constant",
+      "C_star": 7.761982175235,
+      "normalized_projection_factor": "2^(1/3)",
+      "upper_bound": 9.78,
+      "result": "PASS"
+    }
+  ],
+  "limitations": "Checks verify the algebraic identities, target-valid spectrum, and constant arithmetic. They do not independently review fleet02/B05's imported null-hub theorem or prove the full QFORM conjecture."
+}

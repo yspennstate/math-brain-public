@@ -1511,7 +1511,7 @@ def _event_binding_reasons(
 # thread/tokenUsage/updated as codex-cli 0.157.1 defines it (`codex app-server generate-json-schema`,
 # v2/ThreadTokenUsageUpdatedNotification): threadId, turnId and tokenUsage {last, total, modelContextWindow?}, each
 # breakdown five required int64 counters and an optional cacheWriteInputTokens. Until 30 Sep only the ids were checked,
-# so a missing, scalar or extended payload kept the stream eligible (account04/B14,
+# so a missing, scalar or extended payload kept the stream eligible (fleet04/B14,
 # B14-R79-TOKEN-USAGE-PAYLOAD-UNVALIDATED-20260929-01). An unknown key is refused, not read: a later protocol version
 # that adds one makes the run ineligible until this schema is updated with it.
 _TOKEN_COUNTERS_REQUIRED = frozenset(

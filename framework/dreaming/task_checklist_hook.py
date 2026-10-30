@@ -582,7 +582,7 @@ def entry_named(st, session, said):
     minute belongs to no open entry of this session - an ask already done, another session's, a slip. A Stop records
     the agent's activity on this entry only: after the 27 Sep repair above, a line naming a done ask still stamped the
     session's older open entry with that report's words, a fresh activity time and a stop event (found by the
-    scheduled audit account02/B14 r37)."""
+    scheduled audit fleet02/B14 r37)."""
     m = _NAMED_ASK_RX.search(said or "")
     if not m:
         return None

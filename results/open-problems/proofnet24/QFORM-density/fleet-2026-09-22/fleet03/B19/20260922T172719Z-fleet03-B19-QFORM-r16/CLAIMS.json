@@ -1,0 +1,66 @@
+{
+  "run_id": "20260922T172719Z-fleet03-B19-QFORM-r16",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "control_revision": "2026-09-22.8",
+  "status": "ESSENTIAL_STEP_APPLIED / O0-ANALYTIC-PAYMENT-STRENGTHENED / FULL_TARGET_OPEN",
+  "full_target_proved": false,
+  "global_continuity_proved": false,
+  "brain_status": "WITHOUT_VERIFIED_BRAIN",
+  "claims": [
+    {
+      "id": "QFORM-EXACT-CROSS-RANK-L2-v1",
+      "status": "PROVED",
+      "statement": "For disjoint original-coordinate banks with active cross block C of exact rank r>=3 and nonzero singular-value product Pi_r(C), arbitrary self terms/outside couplings and independent cap-one laws give a bounded continuous density with ||p_Q||_inf <= e*r/(r-2)*Pi_r(C)^(-1/r). If one active bank has exactly r physical coordinates the e factor improves to sqrt(e); if both are physical r-banks, ||p_Q||_inf <= r/(r-2)|det C|^(-1/r).",
+      "continuity": true
+    },
+    {
+      "id": "QFORM-PHYSICAL-3X3-CROSS-CERT-v1",
+      "status": "PROVED",
+      "statement": "For disjoint physical triples I,J, det A[I,J]!=0 implies ||p_Q||_inf <= 3|det A[I,J]|^(-1/3), with arbitrary outside spectrum/couplings and cap-one laws.",
+      "continuity": true
+    },
+    {
+      "id": "QFORM-O0-EXACT-RANK3-PAID-v1",
+      "status": "PROVED_USING_COMPLETED_O0_REDUCTION",
+      "statement": "In the fleet03/B07 O0 alternative e3(BB^T)>=1/256, if rank(B)=3 then ||p_Q||_inf <= 3e*16^(1/3)<20.549.",
+      "continuity": true
+    },
+    {
+      "id": "QFORM-O0-HEAVY-CORE-R3R4-SPLICE-v1",
+      "status": "PROVED_USING_COMPLETED_HEAVY_CORE_FACTOR",
+      "statement": "For the fleet01/B07 heavy-core factorization with |T|=r in {3,4}, either residual regularized determinant D_res>M or the physical core is paid by sqrt(e)*r/(r-2)*gamma^(-1)*(4sqrt(M)/e^(3/2))^(1/r).",
+      "continuity": true
+    }
+  ],
+  "dependencies": [
+    {
+      "source": "fleet02/B06 QFORM-WEIGHTED-AFFINE-FIBER-BL-v1",
+      "math_commit": "8dd33c1abd4fd64140f59032feda2b13d4351da5",
+      "use": "r-dimensional projection-density cap exp(r/2) in the rectangular exact-rank theorem"
+    },
+    {
+      "source": "fleet03/B07 QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1",
+      "math_commit": "685929d9daee92a164dbf6ba6f9305d2e6550826",
+      "use": "O0 e3(BB^T)>=1/256 branch"
+    },
+    {
+      "source": "fleet01/B07 QFORM-RIDGE-HEAVY-CORE-SCHUR-FACTOR-v1",
+      "math_commit": "0b704e4e040938a4707d92de6931d449dda725d6",
+      "use": "finite heavy-core determinant factorization"
+    },
+    {
+      "source": "designated partner fleet04/B19 QFORM-FINITE-UNION-CORE-v1",
+      "math_commit": "02171dc794a56c0235afb1ca394b3e614162bff4",
+      "use": "no-loss transfer of the new physical-cross interval inequality from finite-union cores to arbitrary cap-one product densities"
+    }
+  ],
+  "corrections_retained": [
+    "no uniform pointwise quadratic-phase decay",
+    "no post-rotation coordinate independence",
+    "no aggregate-minor to one-good-minor inference",
+    "no unrestricted fiber supremum",
+    "no conditional spectral-density cap"
+  ],
+  "first_unpaid_implication": "QFORM-O0-HEAVY-RESIDUAL-DETERMINANT-SPLICE-v1",
+  "first_unpaid_detail": "Pay |T|<=2 or large-D_res/small-gamma heavy O0 states by coupling at most two physical heavy directions to a residual ridge/grouped bank, forcing a third source-realizable mixed direction or an already-paid branch. O1/O2/O3 aggregate payments remain subsequent obligations."
+}

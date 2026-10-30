@@ -1,0 +1,104 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T101952Z-fleet01-B12-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "control_revision": "2026-09-22.3",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "candidate_id": null,
+  "claims": [
+    {
+      "id": "PAIR-PHYSICAL-STOPPING-NONREUSE-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every finite centered Boolean state on the uniform cube, with the source definitions F=H-P and J=sum q_i; every K>2.",
+      "statement": "For a physical pair {i,j}, Delta F <= H(X_i,X_j)-W_ij. Querying a current-source pair whenever H_ij-W_ij < K(q_i+q_j+C_ij) yields a finite physical restriction tree with F(root)-E F(leaves) < K(J(root)-E J(leaves)). Every terminal leaf satisfies I(X_i;X_j)+W_ij+K C_ij <= sigma_i(K)+sigma_j(K) for every remaining pair, and hence every matching spends pair mutual information at most once against the matched vertex surpluses.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md",
+          "result": "Exact physical block drift identities Delta_A F <= B_A-W_A and D_A=I_A+C_A; ratio-critical physical descendant theorem."
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4ccd51ad517f425a529daa52c3352905b86ea69d",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md",
+          "result": "Sections 2-4 exact genuine-coordinate conditional recursion, used only to serialize a pair block with actual child recomputation; obsolete Section 5 candidate not used."
+        }
+      ],
+      "verification": {
+        "kind": "analytic_proof_in_run_report",
+        "independent_review": false
+      }
+    },
+    {
+      "id": "CENTERED-COPAIR-MATCHING-LEDGER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Terminal leaves of PAIR-PHYSICAL-STOPPING-NONREUSE-v1, and in particular genuine minimum-dimensional ratio-critical cores.",
+      "statement": "With r_tilde_ij=P(i,j in X)-q_i q_j, I(X_i;X_j) >= (8/ln2) r_tilde_ij^2. Therefore every terminal matching M obeys sum_M r_tilde_ij^2 <= (ln2/8) sum_{v in V(M)} sigma_v(K). The centered variable is exactly zero for cross-factor pairs of an exact tensor despite positive raw orientation overlap.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md",
+          "result": "Exact r_ij=p_ij/4+o_ij identity and cross-factor tensor relation r_ij=q_i q_j."
+        },
+        {
+          "mode": "uses_premise",
+          "claim_id": "PAIR-PHYSICAL-STOPPING-NONREUSE-v1"
+        }
+      ],
+      "verification": {
+        "kind": "analytic_proof_in_run_report_plus_standard_Pinsker",
+        "independent_review": false
+      }
+    },
+    {
+      "id": "ROBUST-TRIGGER-CENTERED-MATCHING-TAX-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "A genuine centered minimum-dimensional ratio-critical core with rho=F/J>4; relative-1/16 robust derivative rows and their actual trigger coordinates.",
+      "statement": "For every robust row i and trigger k in F_i, r_tilde_ik > (13/48) q_i and I(X_i;X_k) > [169/(288 ln 2)] q_i^2 = 0.846581464966093... q_i^2. Hence every vertex-disjoint oriented robust-trigger matching M satisfies [169/(288 ln2)] sum_{(i,k) in M}q_i^2 < sum_M I_ik <= sum_{v in V(M)} sigma_v(4).",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md",
+          "result": "For eta=1/16, every trigger satisfies p_ik >= (7/4)q_i."
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "200e3fd37fe201f78d882ba8809414d201efb829",
+          "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md",
+          "result": "On a rho>4 critical core every active q_k<1/6."
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "85ffa60db26997421d980b1f86c03d82259504ca",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md",
+          "result": "Exact r_ik=p_ik/4+o_ik."
+        },
+        {
+          "mode": "uses_premise",
+          "claim_id": "CENTERED-COPAIR-MATCHING-LEDGER-v1"
+        }
+      ],
+      "verification": {
+        "kind": "analytic_proof_in_run_report",
+        "independent_review": false
+      }
+    }
+  ],
+  "unpaid_implication": "Prove a source-valid matching/cover lemma on a true ratio-critical core: extract enough vertex-disjoint robust-row/trigger edges to eliminate the medium/heavy robust load, or prove that failure of such a matching forces a different affordable physical block. Small/nonrobust rows remain a separate multiscale obligation.",
+  "refuted_routes_not_used": [
+    "raw_U4_O_J_from_terminality_plus_primitivity",
+    "unweighted_full_convolution_L2_payment",
+    "old_Gamma_dagger_and_0.337_or_0.34_quadratic_candidates",
+    "fixed_or_low_depth_KL_projection_payment"
+  ]
+}

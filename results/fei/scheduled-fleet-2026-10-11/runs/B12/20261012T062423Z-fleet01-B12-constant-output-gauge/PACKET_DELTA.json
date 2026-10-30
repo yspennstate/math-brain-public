@@ -1,0 +1,112 @@
+{
+  "schema": "fei-run-progress/2",
+  "run_id": "20261012T062423Z-fleet01-B12-constant-output-gauge",
+  "stream": "B12",
+  "packet_ids": ["A057"],
+  "primary_packet_id": "A057",
+  "attempt_id": "B12-A057-ATTEMPT-06",
+  "attempt_counter": 6,
+  "bounded_objective": "Test the activation-equivalence quotient on the audited shared-coordinate witness; if it collapses, test an actual-output split correction and archive an exact repair or falsifier.",
+  "source_registry": {
+    "owner_control_revision": "2026-10-12.1",
+    "owner_order_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "stream_contract_blob": "40935ac651643a17815d0addf664ec4c1c0313cc",
+    "canonical_source_head_read": "7cde9e8cc94e6a5d85034a4c50762de087290580",
+    "brain_source_head_read": "2ad933ebc4ced39e81dd5bc5a12c7f7fcbf1c9ce"
+  },
+  "input_handoffs_used": [
+    {
+      "description": "B12 shared-coordinate formula and nonnegative two-term no-go",
+      "repository": "yspennstate/math-open-problems",
+      "commit": "4e8c38d4faab3cdd88cae720fcacce0dd28cd4d8",
+      "path": "reports/fei-2026-10-11/runs/B12/20261012T052341Z-fleet01-B12-shared-covariance-falsifier/"
+    },
+    {
+      "description": "independent reconstruction of the preceding two B12 claims",
+      "repository": "yspennstate/math-open-problems",
+      "commit_read": "7cde9e8cc94e6a5d85034a4c50762de087290580",
+      "path": "reports/fei-2026-10-11/runs/B17/20261012T054335Z-fleet01-B17-a085-shared-covariance-audit/",
+      "proof_blobs": {
+        "REPORT.md": "a5c089fbd06c2bcac0c3272d4ec5aad8302bbf15",
+        "CLAIMS.json": "d2ed3bb0c4ba69a23f7d9983a454059e40d3e947",
+        "INDEPENDENT_RECONSTRUCTION.tex": "4c872f8525f77179907d7a893a4809886b981bda",
+        "CHECK.out": "cc540c45c4570c22438e8e3c348a53aa2a8720f2"
+      }
+    }
+  ],
+  "claim_versions": [
+    "B12-A057-ACTIVATION-QUOTIENT-COLLAPSE-v1",
+    "B12-A057-CONSTANT-OUTPUT-GAUGE-NOGO-v1"
+  ],
+  "gap_id": "B12-A057-COHERENT-HIERARCHY",
+  "gap_version": "v6",
+  "prior_mathematical_status": "Exact shared-coordinate covariance and a two-term potential no-go were contributor-proved; activation quotient or actual-output split remained proposed repairs.",
+  "new_mathematical_status": "HELPER_ROUTES_REFUTED: unrestricted activation quotient is identically zero; a genuine constant-output witness defeats the current potential and every additive output-only local correction.",
+  "mathematical_delta": "The gap is no longer merely coefficient selection. Gauge information in unselected branches can create negative coherent-potential drift while the selected output and both children are constant. Any surviving proof must retain a signed joint physical witness or sum multiple steps before taking a nonnegative envelope.",
+  "previous_value": "activation quotient and actual-output split were untested candidate repairs",
+  "new_value": "quotient reserve=0 for every F,h; explicit witness has Delta(qI)=-1/32 and Delta(VZ)=(57/64)ln2-(63/128)ln3, giving negative total drop for A>=4lambda",
+  "unchanged_obstruction_count": 0,
+  "case_extension": {
+    "starting_class": "the four-bit active-overlap obstruction with nonconstant selected output",
+    "new_class": "activation-irreducible shared-coordinate representations whose selected output and both restricted outputs are constant",
+    "exact_quantifiers": "all A,lambda>=0 not both zero satisfying A>=4lambda; all normalized output-only local potentials on the explicit step",
+    "prior_constant": "A=4+2ln2+2/e, lambda=1",
+    "new_constant": "the whole cone A>=4lambda is refuted on the witness",
+    "parameter_dependence": "three physical bits; dummy-variable extension gives every larger dimension without changing the exact deficit",
+    "proof_status": "PROVED_BY_CONTRIBUTOR_PENDING_INDEPENDENT_REVIEW",
+    "universal_gap": "construct a future-activation gauge budget or exact multi-step signed cancellation"
+  },
+  "acceptance": {
+    "A057-D1": "SUBSTANTIALLY_ADVANCED_BY_EXACT_NO_GO",
+    "A057-D2": "MET_FOR_BOOLEAN_REALIZABILITY_ACTIVATION_AND_ENDPOINT_CONTROLS",
+    "criterion_complete_source_remainder": "NOT_MET_FOR_SHARED_COORDINATES",
+    "criterion_logarithmic_counterexample": "MET",
+    "criterion_nonreusing_physical_hierarchy": "PRIOR_DISJOINT_THEOREM RETAINED; ONE-NODE OVERLAP REPAIR REFUTED",
+    "packet_complete": false
+  },
+  "finite_check": {
+    "status": "PASS",
+    "scope": [
+      "exact root and child Walsh data of the three-bit witness",
+      "exact activation support and constant selected output",
+      "exact coefficient-cone sign certificate",
+      "all 65536 selector/unselected-branch representations of F=1 on three bits at the frozen query coordinate",
+      "52670 activation-irreducible cases, of which 392 have negative current-potential drop"
+    ],
+    "arithmetic": "exact Fraction Walsh arithmetic and exact rational log-prime vectors for the witness; 80-digit Decimal census for case counting; analytic integer sign certificate",
+    "seed": null,
+    "command": "python3 check_constant_output_gauge.py",
+    "output": "check_constant_output_gauge.out",
+    "limitation": "finite census supports witness discovery and prevalence only; the quotient theorem and coefficient-cone refutation are analytic"
+  },
+  "failed_or_insufficient_approaches": [
+    "Unrestricted activation minimization collapses to g_+=g_-=F and zero reserve.",
+    "Adding output entropy or output influence cannot repair the constant-output step because their drops are zero.",
+    "Adding output-split mass or raw entropy cannot repair it because the output derivative is zero.",
+    "The negative helper drift is not an FEI counterexample; the exact signed shared remainder may still cancel it."
+  ],
+  "review": {
+    "previous_claim_review": "B17/A085 independently reconstructed and accepted the preceding shared-covariance identity and two-term no-go at their exact helper scope.",
+    "new_claim_contributor_check": "complete",
+    "new_claim_independent_review": "PENDING",
+    "requested_packets": ["A091", "A090"],
+    "observed_reviewer_evidence": [
+      "B17-A085-B12-SHARED-COVARIANCE-REVIEW-v1 for the predecessor claims only"
+    ]
+  },
+  "routing": {
+    "next_consumers": ["A058", "A059", "A085", "A091", "A090", "A094", "A097", "B20"],
+    "note": "Do not append an output-only local potential to the old gauge-dependent reserve. Preserve the exact signed shared remainder or define a future-activation physical gauge before taking nonnegative envelopes."
+  },
+  "deliverable_status": {
+    "canonical": "COMPLETE_12_FILE_READBACK_VERIFIED_AT_9d19e702ad6c218db20a2061a8c248b44a644e61",
+    "brain_mirror": "COMPLETE_12_FILE_READBACK_VERIFIED_AT_fd1055cb1ecbbfa2f3bec7c4a96e7d77f9d77e2a",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "next_action": "Define future-activation support relative to a fixed remaining physical query tree and test whether its signed gauge energy is spent at most once; first require exact cancellation on the constant-output witness, then test the independently accepted bent-spectator family.",
+  "full_fei_status": "OPEN"
+}
+

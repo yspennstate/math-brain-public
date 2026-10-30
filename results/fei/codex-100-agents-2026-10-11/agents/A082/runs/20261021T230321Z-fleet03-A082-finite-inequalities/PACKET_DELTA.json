@@ -1,0 +1,68 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261021T230321Z-fleet03-A082-finite-inequalities",
+  "stream": "B17",
+  "packet_id": "A082",
+  "gap_id": "G-R-MISMATCH-C024-PRESCRIBED-RESET",
+  "attempt_id": "A082-stage17-independent-active-reset",
+  "method": "Independent scalar rational/SOS certificate, physical spectral replay and all-tree analytic induction",
+  "mathematical_delta": "A096 canonical active-reset theorem independently holds at unchanged rate 2C0+10 with complete off-cell cost; 24 roots/228 resets/26553 assertions PASS, 507 scalar fixtures and exact a=1 countercheck. Universal FEI remains OPEN.",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT",
+  "mathematical_status": "SCOPED_INDEPENDENT_ACCEPTANCE_FULL_FEI_OPEN",
+  "claim_versions_used": [
+    {
+      "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+      "version": 1,
+      "statement_sha256": "880fb220d1fc83bf09b9dfca52d0f140e30153bf914870518799efdd2074d91c"
+    },
+    {
+      "claim_id": "A097-NEGATIVE-CELL-FLOOR-SOURCE-BANK",
+      "version": 1,
+      "statement_sha256": "67b1ea4ab05a49a28c016964eab7553aae10869565f2a70ed85c94c586cec341",
+      "source": "agents\\A097\\runs\\20261014T050248Z-fleet05-A097-cross-route-transfer\\CLAIMS.json",
+      "status": "Previously source-complete baseline; source-bound proof input, not new blanket independent acceptance"
+    },
+    {
+      "claim_id": "A096-PAID-FLOOR-NO-RESET-HISTORY",
+      "version": 1,
+      "statement_sha256": "56794970ffd9a6e18e8a2dc23d3e5cba56ef81424987b182aad015953f51a3c6",
+      "source": "agents\\A096\\runs\\20261014T094929Z-fleet05-A096-live-gap-ledger\\CLAIMS.json",
+      "status": "Previously source-complete baseline; source-bound proof input, not new blanket independent acceptance"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A096-CANONICAL-ACTIVE-RESET-SAME-ANCESTOR",
+      "version": 1,
+      "change": "A082 independent acceptance record; source statement unchanged"
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "REVIEW.md",
+    "CLAIMS.json",
+    "code/check.py",
+    "out/CHECK.json",
+    "out/FROZEN_SPEC.json",
+    "out/SOURCE_RECEIPTS.json",
+    "out/BOUNDARY.json",
+    "out/FORMAL_RECEIPT.json"
+  ],
+  "next_consumers": [
+    "A096",
+    "A097",
+    "A094",
+    "A085",
+    "A081",
+    "A090",
+    "B20"
+  ],
+  "next_action": "Pay one dummy-data/control query and prescribed reset after a spent active prefix from SAME original remaining envelope, retaining old debit and both complete terminals.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "Arbitrary source-reference construction and non-active/interleaved reset payment remain unproved; supervisor adoption/mirror/second review unverified."
+  ],
+  "packet_ids": [
+    "A082"
+  ]
+}

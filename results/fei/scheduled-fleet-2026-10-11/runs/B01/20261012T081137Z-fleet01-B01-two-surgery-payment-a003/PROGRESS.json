@@ -1,0 +1,102 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2 plus owner control 2026-10-12.1",
+  "run_id": "20261012T081137Z-fleet01-B01-two-surgery-payment-a003",
+  "stream": "B01",
+  "packet_id": "A003",
+  "packet_ids": ["A003"],
+  "gap_id": "G-UPPER-SET-ASYMMETRY",
+  "related_gap_ids": ["B05_RARE_REFUNDS", "OVERLAP_PRODUCT"],
+  "attempt_id": "A003-GUP-TWO-SURGERY-PHYSICAL-5",
+  "bounded_objective": "Restore the physical selector coefficient in the accepted two-surgery refund and uniformly bound the complete coherent-parent and retained-child one-node residual.",
+  "method": "Re-derive the exact shared-selector identity, isolate the long-log correction, use the accepted difference refund to prove it nonpositive, and bound the remaining three-variable scalar function by an explicit Hessian estimate on the full two-point perturbation box.",
+  "prior_status": "The two-surgery principal-filter and difference-refund formulas were independently accepted by A094, but the selector weight and nonlinear coherent/retained-child residual were open.",
+  "new_status": "TWO_SURGERY_COMPLETE_PHYSICAL_NODE_PAYMENT_AUTHOR_PROVED_PENDING_REVIEW; THREE_SURGERY_FILTER_OWNERSHIP_OPEN; UNIVERSAL_GU_PRIME_OPEN; FULL_FEI_OPEN",
+  "mathematical_delta": "For every even k>=8 bent core, every two-point edit, and every fresh selector depth d, the complete retained-child charge is less than 283 times physical selector influence. The bound is independent of k, d, rarity, Hamming separation and phase.",
+  "deliverable_status": {
+    "A003-D1": "ADVANCED_PENDING_REVIEW: implication graph now includes a complete two-surgery physical node payment",
+    "A003-D2": "ADVANCED_PENDING_REVIEW: residual narrowed from two-surgery nonlinear payment to three-plus-surgery overlap ownership",
+    "packet_target": "STRICTLY_LARGER_SHARED_VARIABLE_CLASS; UNIVERSAL_TARGET_OPEN"
+  },
+  "claim_versions_used": [
+    "B01-A003-TWO-SURGERY-CAP-LOCALIZATION-v1, independently accepted by A094",
+    "B01-A003-TWO-SURGERY-DIFFERENCE-REFUND-v1, independently accepted by A094"
+  ],
+  "claims_created_or_changed": [
+    "B01-A003-TWO-SURGERY-PHYSICAL-PAYMENT-v1",
+    "B01-A003-TWO-SURGERY-WEIGHTED-REFUND-v1",
+    "B01-A003-TWO-SURGERY-PAYMENT-CHECK-v1"
+  ],
+  "source_plan": {
+    "source_head_at_research": "85a6d0d5bad197f7d430421702be5ec75c48d75f",
+    "owner_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "owner_order_blob": "81b6d6f988aee4489512c6e62543253900620453",
+    "case_targets_blob": "97e41262ebb4f09eec53630a918acae09efc9a48",
+    "assignment_path": "reports/fei-2026-10-11/assignments/B01.json",
+    "assignment_blob": "ac038a028831d59ad053dd56b2b527e2a71ffdee",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "c416d4b4a83fc67965cb95d06a0cc80c5c29a520",
+    "obstruction_registry_blob": "e111933338dff1d7798c5e59b43700bbf30f7b96"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "729d4c85210359e038d5239e52830fa462e5d340",
+      "path": "reports/fei-2026-10-11/runs/B01/20261012T074135Z-fleet01-B01-two-surgery-difference-a003/TWO_SURGERY_REFUND.tex",
+      "blob": "72f02059b795cb7d4f3699c9f77b2bee38af7e97",
+      "use": "accepted algebraic two-surgery refund"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "85a6d0d5bad197f7d430421702be5ec75c48d75f",
+      "path": "reports/fei-2026-10-11/runs/B19/20261012T080206Z-fleet01-B19-two-surgery-review-a094/REPORT.md",
+      "blob": "65a9538bf284f032c661c91b6dce3ee1f8fd1b48",
+      "use": "independent acceptance and scope boundary"
+    }
+  ],
+  "acceptance_evidence": [
+    "TWO_SURGERY_PAYMENT.tex: analytic all-parameter class proof",
+    "CHECK.py and CHECK.out: 5422518 assertions across direct truth-table and theorem-range cases"
+  ],
+  "remaining_obstacle": "Control three or more coherent edits and repeated selector nodes by an actual single-use ownership theorem for overlapping displacement filters and scalar Hessian terms.",
+  "next_consumers": ["A005", "A023", "A063", "A086", "A094", "A095", "B20"],
+  "independent_reviewers": ["A086", "A094"],
+  "next_action": "Analyze three surgeries: decompose pairwise displacement filters and the triple coherence term, then test a spanning-tree ownership rule against affine triangles, adjacent triples and near-tensor placements.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No no-double-spend ownership theorem for three or more displacement filters.",
+    "No arbitrary changing-core hierarchy payment.",
+    "Universal GU' and full FEI remain open."
+  ],
+  "validation": {
+    "command": "python CHECK.py",
+    "seed": null,
+    "arithmetic": "direct Walsh truth-table reconstruction plus deterministic double-precision scalar decomposition checks",
+    "direct_truth_cases": 1242,
+    "theorem_cases": 756,
+    "assertions": 5422518,
+    "dimensions": [2, 4, 6, 8, 10, 12],
+    "selector_depths": [1, 2, 3, 4, 8],
+    "max_direct_identity_error": 6.2172e-15,
+    "max_observed_ratio": 5.106568427546,
+    "status": "PASS",
+    "scope_note": "Finite corroboration only; the theorem is analytic for every declared parameter."
+  },
+  "literature": {
+    "primary_sources_checked": ["No new literature-dependent step; campaign-internal exact identities and independently accepted source artifacts only."],
+    "novelty_claim": "NONE"
+  },
+  "delivery_status": {
+    "canonical": "CORE_FILES_TO_BE_RECORDED_IN_DELIVERY_MANIFEST",
+    "brain_mirror": "CORE_FILES_TO_BE_RECORDED_IN_DELIVERY_MANIFEST",
+    "independent_review": "NOT YET; A086/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by runtime",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "run_id": "20260924T115853Z-fleet03-B18-QFORM-fixedmult-audit-r11",
+  "objective": "QFORM-FIXED-MULTIPLICITY-AUDIT-20260924",
+  "baseline": {
+    "source_commit": "7c0d6e60946b19423e6400a12d34b473cf0591e2",
+    "source_blob": "183ccd294763214e6a707e8d4749ff9a8cf7006d",
+    "declared_sha256": "9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69",
+    "verdict": "PASS",
+    "fatal_gaps": 0,
+    "nonfatal_presentation_clarifications": 1,
+    "repository_package_gaps": 1,
+    "continuity_claim": "NOT_GLOBAL; essential boundedness only",
+    "three_eigenvalue_target": "OPEN"
+  },
+  "improvement": {
+    "statement": "s_17(A)>=s implies ||p_Q||_infinity < 1960 K^2/s",
+    "status": "PASS_SUPPORTING_IMPROVEMENT",
+    "primary_source": "Rudelson-Vershynin arXiv:1402.4492 Theorem 1.2",
+    "eta": 0.0275,
+    "q": 0.011904761904761904,
+    "kappa": 0.00014172335600907027,
+    "offdiag_h": 0.16809595474014238,
+    "diagonal_dominance_slack": {
+      "r1": 0.7567849976408101,
+      "r2": 0.5291652333768582,
+      "r3": 0.2777359453033824,
+      "r4": 0.00249713342038288,
+      "r4_exact_square_slack": 237385
+    },
+    "no_pivot_density_numeric": 1958.5809445415844,
+    "no_pivot_half_potential_numeric": 167.93917232557394,
+    "scalar_pivot_main_numeric": 1943.1598511416419,
+    "definite_pair_numeric": 18.94451650198966,
+    "indefinite_pair_coarse_numeric": 144.2668437170902,
+    "rigorous_1960_square_slack": 4900,
+    "multiplicity_improvement": false,
+    "mechanism_barrier": "order-five crossing is still needed for L1 Fourier integrability; worst seed r=4 with global rank 3r and restricted rank r still requires m>=17"
+  },
+  "checks": [
+    {"item": "all theorem quantifiers retained", "status": "PASS"},
+    {"item": "no rotated-independence use", "status": "PASS"},
+    {"item": "Fourier/Riesz normalizations", "status": "PASS"},
+    {"item": "Schur spectral-count inequality", "status": "PASS"},
+    {"item": "geometric Brascamp-Lieb heat-flow sign and limits", "status": "PASS"},
+    {"item": "decoupling and determinant exponent", "status": "PASS"},
+    {"item": "hyperbolic-pair measure domination", "status": "PASS"},
+    {"item": "nonsymmetric interpolation support/ranks", "status": "PASS"},
+    {"item": "spectral-to-volume diagonal dominance", "status": "PASS"},
+    {"item": "main four-branch case split and scaling", "status": "PASS"},
+    {"item": "projection sum line after dropping b_i=0", "status": "CLARIFY_ONLY"},
+    {"item": "proof_map.csv verify.py checks.json SOURCE_MANIFEST.json present at audited root", "status": "GAP_MISSING_FILES"}
+  ]
+}

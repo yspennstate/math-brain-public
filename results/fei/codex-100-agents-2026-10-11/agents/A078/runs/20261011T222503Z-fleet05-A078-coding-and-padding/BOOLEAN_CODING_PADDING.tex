@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}
+\newcommand{\F}{\mathbb F_2}
+\begin{document}
+\title{A078: actual Boolean coding and paid padding}\author{A078/fleet05}\maketitle
+Let $f:\F^m\to\{-1,1\}$, with uniform physical input and squared Fourier law $P_f$. Entropy is in bits. Define
+\[
+q_f(v)=\Pr[f(z)\ne f(z+v)],\quad
+d_f(v)=\min(q_f(v),1-q_f(v)),\quad
+M(f)=\min_{B\text{ basis of }\F^m}\sum_{v\in B}d_f(v).
+\]
+\begin{theorem}
+For every surjective $A:\F^N\to\F^m$, every $b,t$, the actual Boolean function
+$F(x)=(-1)^{t\cdot x}f(Ax+b)$ has $H(F)=H(f)$ and
+\[
+I(F)=\sum_{j=1}^N\bigl[(1-t_j)q_f(v_j)+t_j(1-q_f(v_j))\bigr]\ge M(f),
+\]
+where $v_j$ are the columns of $A$. The minimum over all such constructions is exactly $M(f)$, attained with $N=m$.
+\end{theorem}
+\begin{proof}
+Expanding $f$ sends coefficient $\widehat f(s)$ to
+$(-1)^{s\cdot b}\widehat f(s)$ at the injective label $A^Ts+t$, proving entropy preservation. A physical flip in position $j$ sends $Ax+b$ to $Ax+b+v_j$ and flips the external sign iff $t_j=1$, proving the influence formula. Minimizing $t$ gives $\sum_jd_f(v_j)$. The columns span $\F^m$ and contain a basis; nonnegative costs imply the lower bound. A minimizing basis and its coordinatewise minimizing $t$ attain it.
+\end{proof}
+\begin{theorem}
+For every pair of Boolean signs on disjoint physical blocks,
+$M(f\otimes g)=M(f)+M(g)$.
+\end{theorem}
+\begin{proof}
+Put $R_f(u)=\dim\operatorname{span}\{v:d_f(v)\le u\}$. The sorted independent-vector greedy algorithm selects exactly $R_f(u)$ vectors up to every cost threshold. Any basis has at most this many vectors up to that threshold. Integration of the number of basis costs above $u$ gives
+\[
+M(f)=\int_0^{1/2}(m-R_f(u))\,du.
+\]
+Autocorrelation factors on disjoint blocks, giving
+$d_{f\otimes g}(v,w)=(1-|\rho_f(v)\rho_g(w)|)/2\ge\max(d_f(v),d_g(w))$.
+Consequently every tensor sublevel vector projects into the two factor sublevel spans. Conversely all qualifying $(v,0)$ and $(0,w)$ are tensor sublevel vectors. The spans are a direct sum, so their ranks add; integrate the displayed identity.
+\end{proof}
+For any chosen physical basis columns, revealing the other columns preserves rank at every history. The only changes are seed translation and global sign. All child spectral magnitudes and remaining influences stay fixed, so every auxiliary query has zero entropy decrease. The exact physical budget is
+$I(F)=I(F_{\rm leaf})+\sum_{j\text{ queried}}\operatorname{Inf}_j(F)$.
+
+Systematic padding $F(x,z)=f(x+B^Tz)$ gives
+$H(F)=H(f)$ and $I(F)=I(f)+\sum_jq_f(B_j)\le I(f)+r\operatorname{Var}(f)$.
+For the simplex columns consisting of all $2^m-1$ nonzero directions,
+$I(F)=2^{m-1}\operatorname{Var}(f)$: every nonzero spectral label hits exactly $2^{m-1}$ columns.
+
+For the point defect $f_m=1-2\mathbf1_{z=0}$, $m\ge2$, $p=2^{-m}$, every nonzero direction has $q_f=d_f=2p$. Therefore $M(f_m)=2mp$. Its exact entropy is
+\[
+H(f_m)=-(1-2p)^2\log_2(1-2p)^2+8p(1-p)(m-1)\le8mp.
+\]
+Indeed with $v=4p(1-p)$ the first term is at most $v/\ln2$, and $\ln2\ge1/2$. Thus every full-rank modulated parity code of any disjoint point-defect tensor satisfies $H\le4I$ by tensor additivity of $H,M$.
+
+Balanced independent gadget replacement of outer coordinate $j$ with influence $c_j$ gives
+\[
+H_{\rm new}=H_{\rm old}+\sum_jc_jH(g_j),\qquad
+I_{\rm new}=I_{\rm old}+\sum_jc_j(I(g_j)-1).
+\]
+To see this, nonempty gadget blocks uniquely identify the outer support; conditional gadget spectra form a product law. Its conditional entropy adds, and conditional expected block size is $I(g_j)$. Every gadget is balanced, so there is no empty occupied block or spectral collision.
+
+Apply this to $r$ nonzero systematic auxiliaries of $f_m$, each replaced by a fresh majority-three gate. Each host has $c_j=2p$, while the gadget has $H=2$, $I=3/2$. Dimension is $m+3r$, mean is $1-2p$, and
+\[
+H=H(f_m)+4rp,\qquad I=2mp+3rp,\qquad H\le4I.
+\]
+These formulas allow repeated nonzero masks. All physical inputs are fair and independent; their spectral auxiliary memberships can be deterministically correlated.
+
+The universal inequality $H(f)\le C M(f)$ is exactly full FEI in strength: the attaining transform is Boolean, and $M(f)\le I(f)$. It remains unproved. Complete derivations, zero cases, source scope and independent finite verification are in CODE\_PADDING\_PROOF.md and REPORT.md.
+\end{document}

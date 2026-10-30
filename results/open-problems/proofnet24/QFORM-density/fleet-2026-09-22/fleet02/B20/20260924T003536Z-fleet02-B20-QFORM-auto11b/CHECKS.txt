@@ -1,0 +1,22 @@
+QFORM fleet02/B20 20260924T003536Z checks
+
+Exact-rank-two anchored-volume identity:
+- random trials: 5000
+- matrix sizes: m,k independently 3..6
+- rank-two singular values sampled log-uniformly
+- direct J_sep: sum of squared physical anchored 3x3 minors
+- formula: four-currency SVD identity
+- max absolute residual: 8.185452315956354e-12
+- max normalized residual: 4.19630125454389e-15
+
+Constants independently recomputed:
+3*2^(5/6) = 5.345392308842036
+one-transverse gate theta=1/96 gives density <= 24.475786831866067
+pinned D5 gate e5>=1/1024 gives 10*sqrt(2e) = 23.316439815971243
+sqrt(2)/64 = 0.02209708691207961
+4096/3 = 1365.3333333333333
+64*sqrt(2)/3 = 30.16988933062603
+
+Algebraic derivation is exact; numerical checks are diagnostics only.
+No post-rotation independence, moment assumption, support assumption, or deletion of a nonzero coefficient tail is used.
+STATUS=QFORM_B20_RANK2_FOURCURRENCY_CHECK_PASS

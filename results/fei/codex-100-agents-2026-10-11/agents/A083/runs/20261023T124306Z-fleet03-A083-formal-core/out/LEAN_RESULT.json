@@ -1,0 +1,25 @@
+{
+  "status": "CHECKER_RETURNED",
+  "checker_exit_code": 2,
+  "seconds": 5.5449508000001515,
+  "source_sha256": "e9720bc10a8aa196fa59689f28786dc20bc089738fa3fb9e155644603fc60bbc",
+  "target": "A083Stage20.structure_certificate",
+  "stdout": "SETUP_UNVERIFIED: Compute telemetry is stale or future-dated\n",
+  "stderr": "",
+  "command": [
+    "python",
+    "-X",
+    "utf8",
+    "lean_check.py",
+    "--file",
+    "agents\\A083\\runs\\20261023T124306Z-fleet03-A083-formal-core\\code\\Orbit.lean",
+    "--core",
+    "--target",
+    "A083Stage20.structure_certificate",
+    "--reviewed-sha256",
+    "e9720bc10a8aa196fa59689f28786dc20bc089738fa3fb9e155644603fc60bbc",
+    "--timeout",
+    "60",
+    "--json"
+  ]
+}

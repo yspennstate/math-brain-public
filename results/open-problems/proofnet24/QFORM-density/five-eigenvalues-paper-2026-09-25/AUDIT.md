@@ -78,13 +78,13 @@ lemma, used only by the old sampling argument, is removed). `QformNine3.lean` an
    E_m(A_{I,J}) >= gamma^{2m} at the rounded constants gamma = 0.09, 0.237, 0.38, where the text states strict
    inequalities at gamma_m. Section 7 uses only the rounded constants, and C_3/0.09 < 167 and
    C_2 (0.237)^{-1/2} < 26 hold as stated, so nothing downstream changes.
-5. Two independent reviews by the scheduled workers (account01/B07 and account02/B05, 24 September, both on
+5. Two independent reviews by the scheduled workers (fleet01/B07 and fleet02/B05, 24 September, both on
    paper.tex blob f3e5fc17) found the same presentation gap in the proof of Lemma 5.3: the coordinate chosen large
    for u need not be large for u' (witness u = (1/sqrt2, 0), u' = (0, 1/sqrt2)), so the negative tail needs its
    own coordinate i' with |u'_{i'}| >= rho_0/sqrt2. Since |u| = |u'|, the cutoffs and the constants are unchanged.
    The proof now chooses i and i' separately. The nine-eigenvalue paper, which this paper supersedes, has the same
    wording and is left as published.
-6. account01/B07 observed that the two-star example of Remark 8.2 has a bounded density for every b, not only for
+6. fleet01/B07 observed that the two-star example of Remark 8.2 has a bounded density for every b, not only for
    b = 0, with the same bound 4 sqrt(e). The remark now proves this: given the centre U_k = u, the rest of the k-th
    summand is a linear form in direction v(u) = 2uw + beta_k, and |v(u)| >= |2u + r| where r = beta_k . w.
    `checks/two_star_affine.py` samples five affine choices on centred coordinates, including beta_k parallel to w

@@ -1,0 +1,50 @@
+[
+  {
+    "claim_id": "A002-PAIR-ROW-LOCALIZATION-BOOLEAN-RELAXATION-OBSTRUCTION",
+    "version": 1,
+    "exact_statement": "For every finite uniform Boolean sign and physical pair i,j, Omega=L_ij-L_i-L_j equals sum_T q_T[H(XZ_T)+H(ZX_T)-H(ZZ_T)-H(XX_T)] for normalized real retained Walsh quartets and their local Hadamard measurement laws. The scalar inequality omega(a)>=-2d(a) fails at a=(3,-3,-2,-2), with exact margin (29+18log2(3)-25log2(5))/13<0. This row occurs with mass13/32 in an explicit five-bit Boolean sign with pair-slice negative counts(6,1,2,1); all other rows provide margin (27-9log2(3))/32>0 and the whole pair satisfies the rate-two inequality. The real four-bit sign-amplitude function F(x,y)=2a_y(-1)^(x dot y)/sqrt(26) has every pair slice of unit L2 norm and uniform physical query marginals, yet fails the whole rate-two inequality; it is explicitly nonBoolean. An exact exhaustive certificate proves Omega>=-2(Inf_i+Inf_j) for all labelled Boolean tables n<=4 and every pair, without an all-dimensional extrapolation.",
+    "hypotheses": [
+      "Actual Boolean roots for the row identity and finite census; all entropy in bits; zero rows omitted.",
+      "Pair quartet order00,10,01,11; normalized Hadamard transforms; d=(beta^2+gamma^2+2delta^2)/q.",
+      "The scalar and uniform-query relaxation counterexamples are not Boolean FEI counterexamples.",
+      "No minimality or signed child reserve positivity is assigned to the five-bit fixture.",
+      "The n<=4 inequality is a finite certificate only; no universal selection or payment constant follows."
+    ],
+    "statement_sha256": "2fd430c996599766a82c0f29e420c3b3f51ccf1733cfef5ea7ab678c1a64fcde",
+    "contributors": [
+      "fleet05/A002"
+    ],
+    "proof_source": [
+      "INTERACTION_PROOF.md Sections2--5",
+      "code/check.py",
+      "code/rows.py",
+      "code/independent.py",
+      "out/EXACT_n4.json",
+      "out/INDEPENDENT.json"
+    ],
+    "proof_dependencies": [
+      "Walsh Parseval and finite Shannon entropy chain rule; all identities reconstructed locally."
+    ],
+    "review_records": [],
+    "status": "NARROW_DIAGNOSTIC_PROOF_AND_EXACT_CERTIFICATE_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "statement": "The rowwise rate-two negative interaction inequality holds for every retained quartet, or follows after imposing uniform physical query marginals.",
+        "witness": "INTERACTION_PROOF.md Sections3--4; Boolean-realized row and explicit nonBoolean normalized relaxation.",
+        "scope": "Unversioned proposed proof shortcut; no existing universal Boolean theorem refuted."
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A005",
+      "A051",
+      "A052",
+      "A055",
+      "A090",
+      "A094",
+      "claude/B01",
+      "B20"
+    ]
+  }
+]

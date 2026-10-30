@@ -1,7 +1,7 @@
 ﻿from pathlib import Path
 import json, hashlib, time, datetime
 from fractions import Fraction as F
-B=Path('agents/A097'); R=B/'runs/20261023T143952Z-account03-A097-cross-route-transfer'
+B=Path('agents/A097'); R=B/'runs/20261023T143952Z-fleet03-A097-cross-route-transfer'
 for d in [R,R/'code',R/'out']: d.mkdir(parents=True,exist_ok=True)
 def save(p,x): p.write_text(json.dumps(x,indent=2) if not isinstance(x,str) else x,encoding='utf-8')
 spec={'helper_version':'signed-floor-v1','family':'arbitrary finite calibrated laws; actual Boolean three-bit equal-sign seed','domain':'t=12/16; a=1..11/16; 1<=b<ell<=11 in units1/16; candidate z>=ell on same grid; three actual-seed reference examples','case_count':605,'symmetry':'none','arithmetic':'Fraction, integer powers; no floating sign decisions','memory_estimate_MB':30,'maximum_runtime_seconds':20,'frozen_before_execution':datetime.datetime.now(datetime.timezone.utc).isoformat()}
@@ -82,8 +82,8 @@ save(R/'out/CHECK_STDOUT.txt',res.stdout);save(R/'out/CHECK_STDERR.txt',res.stde
 if res.returncode: raise RuntimeError(res.stderr)
 val=json.loads(res.stdout);save(R/'out/VALIDATION.json',val)
 protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text())
-prev=json.loads((B/'runs/20261023T121505Z-account03-A097-cross-route-transfer/PROGRESS.json').read_text())
-sourcepaths=[Path('BOARD.md'),Path('claude/B20/STREAM_NOTES.md'),B/'runs/20261023T121505Z-account03-A097-cross-route-transfer/PROOF.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+prev=json.loads((B/'runs/20261023T121505Z-fleet03-A097-cross-route-transfer/PROGRESS.json').read_text())
+sourcepaths=[Path('BOARD.md'),Path('claude/B20/STREAM_NOTES.md'),B/'runs/20261023T121505Z-fleet03-A097-cross-route-transfer/PROOF.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 sources=[]
 for p in sourcepaths:
  content=p.read_bytes();sources.append({'path':str(p),'sha256':hashlib.sha256(content).hexdigest()})

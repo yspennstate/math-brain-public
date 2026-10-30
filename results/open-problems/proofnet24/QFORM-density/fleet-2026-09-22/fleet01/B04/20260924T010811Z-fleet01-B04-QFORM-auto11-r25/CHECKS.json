@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T010811Z-fleet01-B04-QFORM-auto11-r25",
+  "status": "PASS",
+  "method": "exact algebra plus deterministic floating-point evaluation of displayed constants; no Monte Carlo",
+  "source_constant_Cstar": 8.453021225528177,
+  "smallpair_corollary": {
+    "frobenius_lower": "512/15",
+    "stable_rank_lower": 3,
+    "collision_leverage_upper": "1/2",
+    "m3_lower": "1/27",
+    "density_bound": 0.9629318385596067
+  },
+  "rotated_example": {
+    "dimension": 65,
+    "rank": 4,
+    "spectrum_nonzero": [2,2,-2,-2],
+    "heavy_leverage": "3/10",
+    "residual_leverage": "37/640",
+    "r_times_beta": "6/5",
+    "collision_leverage": "389/1280",
+    "one_minus_collision": "891/1280",
+    "e3_A2": 256,
+    "guaranteed_cross_E3": "891/320",
+    "new_density_bound": 7.126736009998208
+  },
+  "partner_application": {
+    "source_commit": "779dc7079332af772c3445c0f58dbb5a59b504cf",
+    "deleted_set": [0],
+    "gamma": "7/10",
+    "residual_beta": "37/640",
+    "r_beta_over_gamma": "37/112",
+    "g": 0.212616483224445,
+    "s3": 2,
+    "partner_density_bound": 28.397950207721763,
+    "improvement_factor": 3.984706346338891
+  },
+  "checks": [
+    "U^T U = I follows exactly from Walsh orthogonality and 3/10+7/10=1",
+    "tau = 9/100 + 64*(37/640)^2 = 389/1280",
+    "e3(A^2)=C(4,3)*4^3=256",
+    "expected random-cut E3 lower = (891/1280)*256/64 = 891/320",
+    "partner undeleted gate fails because 4*(3/10)=6/5>1",
+    "partner deleted gate passes because 37/112<1"
+  ]
+}

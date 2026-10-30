@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T104425Z-fleet02-B09-fei-packet-r11",
+  "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
+  "assignment_id": "FEI-20260922-fleet02-B09",
+  "full_fei_status": "OPEN",
+  "claims": [
+    {
+      "id": "FEI-SIGNED-PACKET-NONREUSE-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "finite probability laws; support-conditioned signed amplitude packets, with balanced-uniform Boolean convolution as the FEI application",
+      "statement": "For pairwise-disjoint source-cancelling signed packets E_j in the product-amplitude space, K(P||Q) >= -log2 Q(supp P) - (1/2)log2(1-Sum_j R_j^2/|E_j|). The overlapping version uses the exact packet-frame upper bound Lambda and divides the summed squared residual by Lambda.",
+      "proof_location": "REPORT.md Sections 1-2"
+    },
+    {
+      "id": "FEI-FULL-CONVOLUTION-HILBERT-COVER-v1",
+      "status": "REFUTED",
+      "scope": "universal closure by linear recombination/fractional covering of the standard full signed Boolean convolution equation normals in product-amplitude Hilbert space",
+      "statement": "On the genuine sparse one-point-defect suspension, the complete normal-span projection is Theta_m=2^{-m} B_m=8m 4^{-m}+o(m4^{-m}), so the resulting KL lower bound is exponentially smaller than the true K_occ=Theta(m^2 2^{-m}).",
+      "proof_location": "REPORT.md Section 3",
+      "source_dependency": "fleet04/B15 commit 7ec649dfb3d1ab2f92855f2069590fca2ac956dd"
+    },
+    {
+      "id": "FEI-LAMINAR-KL-NONREUSE-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "finite disjoint Boolean composition trees",
+      "statement": "Recursing the exact hierarchy identity gives K_occ(root)=Sum_v beta_v K_occ(G_v)+Sum_v beta_v C_hier(v)+leaf terms. Therefore any local signed-packet lower bounds can be summed with actual activation weights beta_v while every hierarchy credit is retained exactly once.",
+      "proof_location": "REPORT.md Section 4",
+      "source_dependency": "fleet04/B15 commit 2bf247373576eb406ca91bb3ea5f3ce5e5ab8588"
+    },
+    {
+      "id": "FEI-RM3-HIERARCHY-BARRIER-SURVIVAL-v1",
+      "status": "PROVED_IN_RUN",
+      "scope": "recursive ternary majority",
+      "statement": "The all-level laminar identity retains a hierarchy-credit sum at least mu_m(m-4-2 kappa_3)+2+2 kappa_3, hence Theta(mu_m m); it is not a fixed-depth projection and explicitly retains the high-scale dependence lost by the LOWLEVEL_KL barrier.",
+      "proof_location": "REPORT.md Section 5.2",
+      "source_dependency": "fleet03/B18 commit bff0d7b6c21485f386841c42582eb04f32705046"
+    },
+    {
+      "id": "FEI-PRIME-LOG-PACKET-NONREUSE-v1",
+      "status": "OPEN",
+      "scope": "composition-prime Boolean sources",
+      "statement": "Prove or refute a support-conditioned nonlinear signed-convolution packet payment at the critical rare-event scale, compatible with the laminar nonreuse ledger and without fixed-depth truncation.",
+      "proof_location": "REPORT.md Sections 6-7"
+    }
+  ],
+  "partner_status": {
+    "named_partner": "fleet03/B09",
+    "compatible_completed_result_found": false,
+    "action": "worked asynchronously; did not invent a partner premise"
+  },
+  "classification": ["ESSENTIAL_STEP_APPLIED", "CANDIDATE_REFUTED"],
+  "full_proof_candidate": false
+}

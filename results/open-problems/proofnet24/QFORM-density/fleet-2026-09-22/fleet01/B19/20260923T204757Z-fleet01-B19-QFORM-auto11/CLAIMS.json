@@ -1,0 +1,33 @@
+{
+  "run_id": "20260923T204757Z-fleet01-B19-QFORM-auto11",
+  "programme": "QFORM-DENSITY-3EIG-20260922",
+  "status": "ESSENTIAL_STEP_APPLIED_FULL_QFORM_OPEN",
+  "claims": [
+    {
+      "id": "QFORM-TWOHUB-LEAF-TRANSVERSE-AGGREGATE-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "In the fleet02/B19 two-physical-hub collar, with S=sqrt(det(MM^T)), leverages ell_i and transverse leaf heights r_i, put W=sum_i(1-ell_i)r_i^2. For W>0, one literal original-coordinate cut has E3 at least (27/256)S^2W, hence ||p_Q||inf <= 15.349 S^(-1/3)W^(-1/6), with a continuous C0 density."
+    },
+    {
+      "id": "QFORM-TWOHUB-LIVE-AGGREGATE-PAYMENT-v1",
+      "status": "PROVED_LIVE_APPLICATION",
+      "statement": "At the partner scale S>S0=1/(480 sqrt(7626)), W>=2^-20 implies ||p_Q||inf<5375. Every unpaid state therefore has sum_{ell_i<=3/4} r_i^2<2^-18, so the aggregate transverse row residual outside at most two high-leverage leaves is <1/512 in Frobenius norm."
+    },
+    {
+      "id": "QFORM-TWOHUB-AGGREGATE-COMMONPLANE-STABILITY-v1",
+      "status": "PROVED_DETERMINISTIC_COMPILER",
+      "statement": "If the low-leverage normalized frame has mu=lambda_min(V0V0^T)>=1/4, then there are a physical diagonal Delta0 and symmetric 2x2 K with ||D[J0,J0]-Delta0-V0^T K V0||F<15/512. If mu<1/4, more than 3/4 of one normalized frame direction is carried by at most two literal high-leverage leaf coordinates."
+    }
+  ],
+  "partner_applied": {
+    "account": "fleet02",
+    "slot": "B19",
+    "source_commit": "85f22101c29c831c4958eef1b2522c78e6966f84",
+    "theorem": "QFORM-TWOHUB-LEAF-TRANSVERSE-COMPILER-v1",
+    "actual_inequality": "Gamma_i^2=S^2(1-ell_i)r_i^2; summing and Bernoulli compiling gives a literal cut with E3 >= (27/256) S^2 sum_i(1-ell_i)r_i^2."
+  },
+  "continuity": "Proved only on the aggregate physical-E3 payment branch; unrestricted continuity remains open.",
+  "next_implication": "QFORM-TWOHUB-NEARCOMMONPLANE-WITH-RETAINED-RESIDUAL-v1",
+  "full_target": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "brain_status": "WITHOUT_VERIFIED_BRAIN"
+}

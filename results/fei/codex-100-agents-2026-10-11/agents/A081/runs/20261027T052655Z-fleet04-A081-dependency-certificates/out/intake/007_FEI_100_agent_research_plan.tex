@@ -1,0 +1,1405 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=0.9in]{geometry}
+\usepackage{booktabs,longtable,array,enumitem,xcolor,fancyhdr}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+\definecolor{ink}{RGB}{24,47,62}
+\pagestyle{fancy}\fancyhf{}\fancyhead[L]{\small Full FEI: ten-day research campaign}
+\fancyhead[R]{\small 11 October 2026}\fancyfoot[C]{\thepage}
+\setlength{\headheight}{14pt}\setlength{\emergencystretch}{3em}
+\setlength{\parskip}{4pt}\setlength{\parindent}{0pt}
+\setlist[itemize]{leftmargin=1.5em,itemsep=4pt,topsep=4pt}
+\setlist[enumerate]{leftmargin=1.7em,itemsep=4pt,topsep=4pt}
+\newcommand{\HH}{\mathsf H}\newcommand{\I}{\mathsf I}
+\newcommand{\E}{\mathbb E}\newcommand{\Pp}{\mathbb P}
+\newcommand{\Var}{\operatorname{Var}}\newcommand{\wh}[1]{\widehat{#1}}
+\newcommand{\bits}{\{-1,1\}}\newcommand{\KL}{\operatorname{D}}
+\newcommand{\Creg}{C_{\rm reg}}\newcommand{\Rcost}{\mathcal R_f}
+\newtheorem{proposition}{Proposition}
+\hypersetup{pdftitle={A 100-agent research plan for the full Fourier entropy-influence conjecture}}
+\begin{document}
+\begin{center}
+{\Large\bfseries\color{ink} A 100-agent research plan for the full\\[3pt] Fourier entropy--influence conjecture}\par
+\vspace{8pt}
+\vspace{4pt}
+11 October 2026\par
+\textbf{Campaign window: 11 October, 22:15:57 -- 21 October, 22:15:57}\par
+Asia/Jerusalem (UTC+3 throughout this interval)
+\end{center}
+\vspace{6pt}
+\textbf{Purpose.} Concentrate a hypothetical capacity of 100 Codex research agents on the missing mathematical estimates needed for unrestricted FEI, using the recovered threshold paper, the separate reductions manuscript, and the existing Brain obstruction archive. The same twenty research streams are assigned to the twenty existing scheduled tasks in this environment. This report is a private research plan; it is not part of the public paper.
+
+\textbf{Current mathematical status.} The recovered preprint proves structured FEI results, led by an all-threshold theorem with constant below $8.937$. The joint witness construction and exact selector identities are valid tools. A universal bound for their remaining entropy cost is unproved. Neither this report nor the computations establish full FEI. A hundred agents can substantially expand the search and review capacity; the number of agents does not supply the missing inequality or guarantee a solution within ten days.
+
+\textbf{Recommendation.} Spend the largest share of proof effort on the \emph{posterior cost of an entire Fourier-set witness} and on \emph{nonlocal restriction accounting}. Keep a substantial independent effort on signed Booleanity and product-biased gate inequalities. Use targeted falsification continuously, particularly on addressing, rare activation, near-tensor surgery, and actual Boolean realizations of proposed spectral laws. Treat every surviving universal reformulation as an unpaid obligation until its quantitative bound is proved.
+
+\tableofcontents
+\newpage
+\section{The exact target and the starting assets}
+
+For $f:\bits^n\to\bits$ under the uniform measure, set
+\[
+ P_f(S)=\wh f(S)^2,\qquad
+ \HH(f)=\sum_S P_f(S)\log_2\frac1{P_f(S)},\qquad
+ \I(f)=\sum_S |S|P_f(S).
+\]
+The campaign target is
+\begin{equation}\label{eq:full}
+ \exists C<\infty\quad\forall n\ge1\quad\forall f:\bits^n\to\bits,
+ \qquad \HH(f)\le C\I(f).
+\end{equation}
+The constant must be independent of dimension, arity, depth, overlap, probability of the minority output, and any unbounded representation parameter. An explicit large constant would settle the conjecture. Optimizing that constant is secondary to proving its finiteness.
+
+Throughout this report, entropy is in bits. Some historical Brain notes use natural logarithms and raw entropy of indicators. A coefficient in such a note cannot be copied into a sign-function statement without the corresponding conversion. Every imported result must state its measure, Fourier basis, normalization, log base, and treatment of the empty coefficient.
+
+\subsection{Recovered manuscripts and verified scope}
+
+The interrupted work supplied a 36-page version of \emph{Fourier entropy of threshold functions and their compositions}. The audited recovery and shared-data extension produce the 38-page public paper, released at repository commit \texttt{cd27aa96a5bb670a5b3ae5451095b7020db8e9d4} \cite{Threshold}. Its principal constant is
+\[
+ \Creg=\log_2(4+e)+2\log_2(e\pi)
+       =8.93647465787758\ldots.
+\]
+With $D(f)=\sum_i\min\{\I_i(f),1-\I_i(f)\}$, its Theorem A gives $\HH(f)\le\Creg D(f)$ for every regular Boolean function. Here regular means unate with a total desirability order, and therefore includes every deterministic linear threshold function with arbitrary real weights. It does not mean small or uniformly comparable weights.
+
+The proof proceeds through pivotal antichains, a relative resampling estimate, harmonic control of spectral ranks, and an Euler-product reference on Fourier levels. The proof was reconstructed in an independent audit during recovery; the product-biased threshold and bounded-overlap arguments were also independently read. No gap was identified in those audits. These are mathematical checks of a preprint, not external peer review or proof-assistant certification.
+
+The package also contains logarithmic FEI bounds for Boolean combinations of regular functions and for read-$k$ unions of structured gates, and an arity-independent corrected FEI+ estimate for symmetric thresholds under every product measure. The latter composes through read-once threshold/parity formulas. The proof of a product-biased estimate for \emph{arbitrary weighted thresholds} is not supplied.
+
+The public recovery revision includes the exact shared-data multiplexer identity from the separate reductions manuscript, with the improved regular-leaf constant. If adjacent branches are orthogonal and selectors are fresh at each node, recursive multiplexers preserve $\Creg$ even when the branch data variables overlap. This is a concrete further class theorem, with explicit hypotheses.
+
+The second recovered manuscript, \emph{Restrictions and witness coding for the Fourier entropy--influence problem} \cite{Reductions}, contains conditioned posterior forests, exact physical-restriction identities, and simultaneous hardness-preserving transformations. It supplies research targets and counterexamples for this plan. It is not silently substituted for the threshold paper or published as part of the report.
+
+\subsection{Why the literature check matters}
+
+The corrected Chakraborty--Kulkarni--Lokam--Saurabh work bounds LTF entropy by $O(\sqrt n)$; an earlier all-LTF claim was removed. The random-LTF result treats specified random models \cite{CKLS,RandomLTF}. This makes verification of the recovered deterministic theorem particularly important. The current argument must stand on its complete proof, independently of earlier abstracts or claims.
+
+Existing coding and composition theorems are essential prerequisites, especially Wan--Wright--Wu and O'Donnell--Tan \cite{WWW,ODT}. Shalev's low-influence reductions explain why rarity alone is not a structural simplification \cite{Shalev}. Recent restriction work supplies a directly relevant stopping-tree framework \cite{GMP}; the plateaued-function theorem supplies a useful structured benchmark \cite{Potapov}. The author's percolation result supplies a geometric encoding example, with spatial hypotheses that must remain explicit \cite{Percolation}.
+
+Do not spend the campaign rediscovering the generic coordinate-marginal entropy estimate as a Boolean breakthrough. Keller--Mossel--Schlank already give the relevant general estimate \cite{KMS}. A later preprint claiming an information-theoretic sharpening was withdrawn because the result already appeared there \cite{Withdrawn}. A new universal argument must use additional structure of actual Boolean spectra or a genuinely stronger global accounting mechanism.
+
+\section{The two highest-priority mathematical endpoints}
+
+\subsection{Endpoint J: bound a complete witness, including its posterior entropy}
+
+For a nonconstant Boolean function represented as a finite union of nonconstant gates with finite ordered covers of their relevant supports, the recovered queue construction generates a subprobability law on Fourier sets through finite successful runs. A partition forest assigns every coordinate of a nonempty set $A$ to a gate, visits each used gate once, and describes gate subsets, roots, attachments, and child labels. Its probability is an actual probability of the fixed random generator; failed or infinite runs contribute no mass. A Fourier-set-dependent choice of a \emph{witness} is legitimate because the reference generator itself remains fixed.
+
+The conditioned version chooses global positive weights $\lambda_l$ satisfying
+\[
+ \sum_{l:j\in R_l}\lambda_l\le1\quad\text{for every coordinate }j.
+\]
+With $\pi_l=\min(\Pp(h_l=1),1/2)$, put
+\[
+ \Lambda=\sum_l\log_2(1+\lambda_l\pi_l),\qquad
+ Z=1-2^{-\Lambda},\qquad v=\Var(f).
+\]
+For each $A$, let $\mathcal P_A$ be a law on \emph{distinct actual finite partition-forest runs} producing $A$. The recovered proof gives
+\begin{equation}\label{eq:forest}
+ \HH(f)\le h_2(v)+K_{\rm ref}\I(f)+\Rcost,
+ \qquad K_{\rm ref}=3+2\log_2 3+\log_2(6e),
+\end{equation}
+where
+\begin{equation}\label{eq:residual}
+ \Rcost=v(\Lambda+\log_2 Z)+
+ \sum_{A\ne\varnothing}P_f(A)
+ \left[\E_{r\sim\mathcal P_A}B_\lambda(A;r)-\HH(\mathcal P_A)\right].
+\end{equation}
+The cost $B_\lambda$ retains gate names, gate-order multiplicity, subset congestion, rank discrepancies, and root rarity. For reference, with $A_l$ the coordinates assigned to gate $l$, $s_l=|A_l|$, $\kappa_l=|A\cap R_l|$, roots $\mathcal R$, and $\gamma=6/5$, it has the form
+\begin{align*}
+ B_\lambda(A;r)={}&\sum_{l\text{ used}}\left[
+ \log_2\frac1{\lambda_l}+s_l\log_2 M_l
+ +\gamma s_l\log_2\frac{\kappa_l}{s_l}\right]\\
+ &+\sum_{l\in\mathcal R}\log_2\frac1{\pi_l}
+ +\frac{\gamma}{\ln2}\sum_{j\in A}F_{\tau(j)}^j(A).
+\end{align*}
+Here $M_l$ counts the ordered subsets covering the gate support, and $F_l^j(A)$ is the minimum logarithmic predecessor-rank discrepancy in those orders. The full definitions, including source strongly connected components, are in the recovered forest proof \cite{Reductions}.
+
+\textbf{The missing statement is precise:} for every Boolean $f$, construct admissible global representations and weights and admissible conditional witness laws such that $\Rcost\le K\I(f)$ for one universal $K$. Since $h_2(v)\le2\I(f)$, this would prove FEI with constant $2+K_{\rm ref}+K$. Equation~\eqref{eq:residual} is a sufficient target, not an established universal estimate or an asserted equivalence of optimal constants.
+
+The highest-value work is to find a quantitative mechanism for this bound. Merely minimizing over witnesses or invoking a logarithmic partition-sum identity leaves the same cross-entropy unpaid. A reference law may depend on the fixed function $f$, including
+its spectrum, while remaining fixed across the sampled output
+set $A$. The mathematical obligation is a proved bound on its
+expected negative log probability. Choosing $Q=P_f$ is valid
+but merely returns $\HH(f)$ as the same unpaid cost. If a
+model or codebook is instead selected separately for a sampled
+$A$, its selection must be included in the actual reference
+experiment and cost ledger.
+
+Addressing identifies one repair that is already real. With $a$ control bits,
+\[
+ \HH(\operatorname{Addr}_a)=2a,\qquad
+ \I(\operatorname{Addr}_a)=1+a/2.
+\]
+Coordinatewise gate labels can charge order $a^2$, while one complete Fourier set needs one gate label and a control subset. The repaired queue accounting is order $a$, and the exact selector identity gives the sharp family relation $\HH=4(\I-1)$. Future candidates must match this scale and then extend to a family whose relevant complexity is unbounded.
+
+\subsection{Endpoint R: choose coordinates or blocks with globally summable cost}
+
+For a physical restriction at coordinate $i$, write
+\[
+ \Delta_i\HH(f)=\HH(f)-\tfrac12\bigl[\HH(f_i^+)+\HH(f_i^-)\bigr].
+\]
+If $\mathcal S$ has law $P_f$, let
+\[
+ B_i(f)=H\bigl(1_{\{i\in\mathcal S\}}\mid\mathcal S\setminus\{i\}\bigr).
+\]
+The recovered exact calculation yields
+\begin{equation}\label{eq:decrement}
+ \Delta_i\HH(f)=B_i(f)+M_i(f),\qquad
+ 0\le M_i(f)\le\frac2{\ln2}\I_i(f).
+\end{equation}
+Influence obeys the exact telescope
+\[
+ \I(f)=\I_i(f)+\tfrac12\bigl[\I(f_i^+)+\I(f_i^-)\bigr].
+\]
+Thus a theorem asserting that every nonconstant Boolean $f$ has a relevant coordinate with $B_i(f)\le K\I_i(f)$ would settle FEI with constant $K+2/\ln2$. Conversely, a global FEI constant $C$ implies existence of such a coordinate with $K=C$, because $\sum_i B_i(f)\le\HH(f)$. This is an exact existential route to finiteness, applied at every reached restricted function; it does not assert the inequality for every coordinate. A restricted-class version requires the corresponding hereditary hypothesis or an explicitly paid stopping rule.
+
+The scalar decrement bound behaves as
+\[
+ \kappa(u)=u\log_2(1/u)+\frac{3u}{\ln2}+O(u^2)
+ \quad(u\downarrow0).
+\]
+Consequently a local influence budget can lose a logarithm. The task is to select a good coordinate, use a whole block, or amortize difficult splits against later credit. A finite restriction tree satisfies
+\begin{align*}
+ \HH(f)&=\E\sum_{v\text{ visited}}\Delta_{i(v)}\HH(f_v)
+                +\E\HH(f_{\rm leaf}),\\
+ \I(f)&=\E\sum_{v\text{ visited}}\I_{i(v)}(f_v)
+                +\E\I(f_{\rm leaf}).
+\end{align*}
+A successful stopping-tree theorem must bound the \emph{entire expected path cost} and the terminal entropy. The recovered threshold and formula classes provide useful terminal classes. The structural theorem guaranteeing cheap access to those terminals remains to be proved.
+
+
+For a fixed block $W$, the recovered block identity is
+\begin{align}
+ \Delta_W\HH(f)
+ &:=
+ \HH(f)-\E_y\HH(f|_{W=y})\notag\\
+ &=H(\mathcal S\cap W\mid\mathcal S\cap W^c)+M_W(f),
+ \label{eq:block-erasure}\\
+ 0&\le M_W(f)\le\frac2{\ln2}\sum_{i\in W}\I_i(f),\notag\\
+ \I(f)-\E_y\I(f|_{W=y})&=\sum_{i\in W}\I_i(f).\label{eq:block-influence}
+\end{align}
+The exposure is uniform physical restriction. An adaptive block rule
+must be measurable from the already revealed physical history.
+Taking $W$ to be every input makes the conditional erasure term
+$\HH(f)$ itself; it is not a reduction in difficulty.
+
+\paragraph{A sharper existing mismatch/KL bound.}
+The recovered mismatch/KL estimate is a sharper starting point for
+restriction work than the scalar profile alone \cite{BrainMismatch}.
+For the actual Boolean children $g=f_i^+$ and $h=f_i^-$, put
+\[
+ a_T=\wh g(T),\quad b_T=\wh h(T),\quad
+ q_T=\frac{a_T^2+b_T^2}{2},\quad
+ m_T=\frac{(|a_T|-|b_T|)^2}{4},\quad
+ \mu_i^{\rm mis}=\sum_Tm_T.
+\]
+Here $q$ is a probability law. If $\mu_i^{\rm mis}>0$, let
+$\nu_i(T)=m_T/\mu_i^{\rm mis}$; zero-mass terms are omitted.
+Then
+\[
+ \mu_i^{\rm mis}\le
+ \min\{\I_i(f),1-\I_i(f)\}
+\]
+and, with $D_2$ denoting KL divergence in bits,
+\[
+ \Delta_i\HH(f)\le
+ \mu_i^{\rm mis}\left[
+ \log_2\frac1{\mu_i^{\rm mis}}
+ -D_2(\nu_i\Vert q)+\frac3{\ln2}\right].
+\]
+If $\mu_i^{\rm mis}=0$, the decrement is exactly zero.
+Along a fair physical restriction tree, the terms
+$3\mu_i^{\rm mis}/\ln2$ already fit the queried-influence budget.
+The remaining proposed tree payment is
+\[
+ \E\sum_{v\ {\rm visited}}\mu_v^{\rm mis}
+ \left[\log_2\frac1{\mu_v^{\rm mis}}
+       -D_2(\nu_v\Vert q_v)\right],
+\]
+together with terminal entropy. Bounding this complete quantity
+by a universal multiple of root influence remains open.
+The mismatch mass $\mu_i^{\rm mis}$ is different from the
+influence-variation refund denoted $M$ in the B05 report.
+
+\paragraph{A newly verified local refund obstruction.}
+\label{par:b05-refund}
+For the B05 packet statistics, let $G,H$ be the actual Boolean
+children, $a_T=\wh G(T)$, $b_T=\wh H(T)$,
+$q_T=(a_T^2+b_T^2)/2$, $e_T=(a_T-b_T)^2/4$ and
+$\theta_T=e_T/q_T$, omitting $q_T=0$. Define
+\[
+ d=\sum_T e_T=\Pp(G\ne H),\quad
+ L=\sum_T q_T h_2(\theta_T)=B_y,
+\]
+\[
+ V_{\rm post}=\sum_Tq_T(\theta_T-d)^2,\qquad
+ M_{\rm inf}=\sum_j\bigl(\I_j(G)-\I_j(H)\bigr)^2.
+\]
+These two refunds differ from the mixing term $M_i$ and the
+mismatch mass $\mu_i^{\rm mis}$ above.
+The first natural B05 run supplies a further actual Boolean
+control. For even $k\ge4$, use the quadratic bent sign on $k$
+bits, its one-point flip, and activate both on one point of
+$2k$ control bits. The selector disagreement is $d=2^{-3k}$.
+For the selected physical split, its erasure cost $L=B_y$ and
+the report's two quadratic refunds satisfy
+\[
+ \frac{L}{d}=k+\log_2e+o(1),\qquad
+ \frac{V_{\rm post}}d\le4\,2^{-k},\qquad
+ \frac{M_{\rm inf}}d=12k\,2^{-3k}.
+\]
+Therefore no fixed finite nonnegative $K,A,B$ can make
+$L\le Kd+A V_{\rm post}+B M_{\rm inf}$ hold at every Boolean
+split. This retires that local payment proposal. It does not
+retire existential coordinate selection or a suitably chosen
+stopping tree. The next useful control is a full analysis of
+control-first and selector-first trees on this family, including
+their terminal entropy and the source of any logarithmic credit.
+The complete B05 original and its proof are recorded in
+\cite{B05Rare}; the displayed no-go has been independently
+checked analytically. Its floating-point self-check is
+supporting computation, not the proof of the asymptotic theorem.
+
+\section{Other routes that deserve sustained effort}
+
+\subsection{Boolean phase and conditional entropy}
+
+For an actual Boolean sign, $f^2=1$ yields the signed convolution identities
+\[
+ \sum_S\wh f(S)\wh f(S\mathbin\triangle U)=1_{\{U=\varnothing\}}.
+\]
+An arbitrary probability law on subsets need not admit signs satisfying these identities. The Brain's cyclic-label construction disproves a proposed dimension-free signed-lifetime bound for an auxiliary subset law, but that divergent law is provably non-Boolean \cite{Brain51}. It is a powerful warning against overbroad relaxations, not an FEI counterexample.
+
+Let $X,Y$ be disjoint groups of independent uniform physical input
+bits. Suppose $f(X,Y)\in\{-1,1\}$ and every nonzero full Fourier
+coefficient has $X$-degree at most an integer $d\ge1$. Define the
+$X$-marginal of its squared Fourier law by
+\[
+ p_X(S)=\sum_{T\subseteq Y}\wh f(S,T)^2.
+\]
+The reviewed estimate, converted from nats to bits, is
+\[
+ H(p_X)\le\frac2{\ln2}\I_Y(f)+2(d-1).
+\]
+The auxiliary \emph{spectral} coordinates may be correlated; the
+physical input law here remains the uniform product law.
+
+The exact chain rule is
+\[
+ H(P_f)=H(p_X)+H(\mathcal S_Y\mid\mathcal S_X).
+\]
+The conditional term remains unpaid. The Brain also records an
+embedding showing that an unrestricted conditional-completion
+theorem even for one fixed cyclic marginal is FEI-equivalent
+\cite{Brain54}. A useful restricted theorem must prove its
+structural admission or stability hypothesis; the arbitrary-tensor
+embedding remains a mandatory scope test.
+
+Fixed prefixes are already known to be insufficient in two
+distinct relaxations. The archived signed-convolution-order
+family is normalized and dyadic and passes every prescribed
+fixed cancellation order while its erasure/influence ratio
+diverges \cite{BrainBooleanOrder}. A separate cyclic construction
+passes every fixed atom-cap prefix while retaining an unbounded
+signed-lifetime ratio \cite{Brain51}. Neither is an actual Boolean
+FEI counterexample. B07 must state the exact hierarchy and
+identify an additional consequence of full Booleanity absent
+from the relevant obstruction.
+
+
+\subsection{Arbitrary biased weighted thresholds}\label{sec:weighted-guards}
+
+The public paper supplies the correct product-measure strong entropy normalization and proves it for symmetric thresholds. Extending this to arbitrary weighted thresholds with a constant uniform in weights, biases, and arity would immediately enlarge the depth-independent formula class through the established composition principle \cite{ODT,Threshold}. This is a substantial secondary target even if full FEI remains open.
+
+For clarity, in the orthonormal product Fourier basis with
+$v_i=4q_i(1-q_i)$ the target normalization is
+\[
+ \HH_\mu^+(f)=\sum_{S\ne\varnothing}\wh f_\mu(S)^2
+       \log_2\frac{\prod_{i\in S}v_i}{\wh f_\mu(S)^2},
+ \qquad
+ \Delta_\mu(f)=\I_\mu(f)-\Var_\mu(f).
+\]
+The symmetric proof uses integer-valued sums, exponential
+tilting, a mode estimate and a near-dictator regime. A weighted
+extension needs a replacement that survives the already proved
+obstructions below; a grid of biases cannot certify the
+continuum or endpoint statement.
+
+The separate reductions manuscript already supplies three
+normalization obstructions that every proposed extension must
+respect \cite{Reductions}. One is the weighted threshold
+\[
+ A_m=\left\{mX_0+\sum_{j=1}^mX_j\ge m\right\},\qquad
+ q=\Pp(X_j=1)=m^{-2},\qquad
+ q_0=\Pp(X_0=1)=\frac{(m-1)q^m}{1+(m-1)q^m}.
+\]
+For $f_m=2\mathbf1_{A_m}-1$, let
+$\alpha=\Pp(A_m)$, $Q=\mu(\cdot\mid A_m)$,
+$V=\Var_\mu(f_m)$, and let $\rho_i$ be the physical pivotal
+probabilities. With total correlation and the displayed
+logarithms measured in nats,
+\[
+ \frac{\alpha\operatorname{TC}(Q)}{\I_\mu(f_m)}
+ =\frac{\ln m+1}{8}+O\!\left(\frac{\ln m}{m}\right),
+\]
+\[
+ \frac{V\ln(1/V)-\sum_i\I_i^\mu(f_m)
+                    \ln^+(4\rho_i/V)}{\I_\mu(f_m)}
+ =\frac12\ln m-\ln2+O\!\left(\frac{\ln m}{m}\right).
+\]
+Nevertheless, its corrected entropy in bits satisfies
+$\HH_\mu^+(f_m)/(\I_\mu(f_m)-V)\to2$.
+Thus conditional total correlation is not universally paid by
+influence, and the displayed pivotal-credit estimate fails with
+coefficient one. A larger multiplier on those credits is not
+refuted by this example.
+
+The same two-branch threshold with
+$q_0=q^m/(1+q^m)$ and $q\downarrow0$ at fixed $m$ has
+\[
+ \frac{\alpha\sum_{k\ne j}I_Q(X_j;X_k)}
+      {\I_j^\mu(f_m)}\longrightarrow\frac{m\ln2}{2}
+ \quad\hbox{for every }j.
+\]
+Letting $m$ increase rules out even an existential-coordinate
+constant for this \emph{conditional physical total-correlation}
+payment. It does not refute the spectral good-coordinate
+erasure target. B09 should begin from these proved failures
+and formulate a replacement that survives them.
+
+\subsection{Shared-data composition}
+
+For uniform physical selector bits $x\in\bits^a$ disjoint from the data cube and arbitrary Boolean branches $g_b$ on that common data cube, let $F(x,y)=g_x(y)$. With $N=2^a$, set
+\[
+ R_T=N^{-1}\sum_b\wh g_b(T)^2,\qquad
+ r_T(b)=\frac{\wh g_b(T)^2}{NR_T}.
+\]
+For $R_T>0$, let $\nu_T$ be the squared normalized Walsh transform of the signed vector $\wh g_b(T)/\sqrt{NR_T}$. Omit zero-mass terms. Then
+\[
+ H(F)=a+N^{-1}\sum_bH(g_b)
+       +\sum_T R_T[H(\nu_T)-H(r_T)].
+\]
+This preserves interference exactly. If every branch satisfies
+$H(g_b)\le C\I(g_b)$, the already proved estimate
+$H(F)\le2a+N^{-1}\sum_bH(g_b)$ gives closure with constant
+$\max\{2/c,C\}$ whenever $\I_{\rm sel}(F)\ge ca$.
+Neighboring branch orthogonality yields $c=1/2$ and constant
+$\max\{4,C\}$. This quantitative corollary is completed baseline
+work. A new result must establish its hypothesis for a new
+unbounded family or control the full collision ledger when
+$\I_{\rm sel}/a$ tends to zero.
+
+For identical branches the exact formula cancels all selector
+cost. Conversely, the recovered bent-splice example has a
+one-bit selector with $\I_{\rm sel}=2^{-m}$ and
+$\Delta_{\rm sel}H/\I_{\rm sel}\ge m-1$ for even $m$.
+Thus a universal selector-only increment estimate is false;
+total-influence closure and existential coordinate selection
+are different assertions \cite{Reductions}.
+
+There is an exact interface with block restriction accounting.
+For the selector block $W$ of size $a$, the conditional erasure
+and physical mixing terms are respectively
+\[
+ B_W=\sum_T R_T H(\nu_T),\qquad
+ M_W=a-\sum_T R_T H(r_T).
+\]
+Consequently
+\[
+ \HH(F)-2^{-a}\sum_b\HH(g_b)=B_W+M_W,\qquad
+ 0\le M_W\le\frac2{\ln2}\I_W(F).
+\]
+The conditional law $\nu_T$ is the selector spectral law given
+the data spectral set; $r_T$ is a different law, on physical
+branch labels. These identities identify the shared unpaid term
+for B04, B06 and B12, rather than supply three independent
+payments. Taking $W$ to be every input gives $B_W=\HH(F)$ and is
+not a reduction in difficulty.
+
+\section{Mandatory obstruction suite and what each item rules out}
+
+Every live universal lemma receives a small relevant subset of this suite before extensive proof work. The suite is a collection of targeted mathematical tests. It is not a demand to rerun every old computation after each edit.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.23\linewidth}>{\raggedright\arraybackslash}p{0.34\linewidth}>{\raggedright\arraybackslash}p{0.35\linewidth}}
+\toprule
+Family or source & Exact lesson & Required response from a candidate \\
+\midrule\endhead
+Addressing and iterated selectors & Independent per-coordinate label charges can lose a growing logarithm. & Explain how a whole-set code shares the label and accounts for all remaining subsets. \\
+Sparse activated tensor cores & Arbitrarily small influence and minority probability preserve the optimal full-FEI constant. & Prove additional structural information; do not use rarity alone as a simplification. \\
+Separated Fourier-support coding & Bounded-depth physical restrictions can preserve entropy. & Supply a genuinely global coordinate/block/stopping mechanism. \\
+Shared-data multiplexer & Squared sums of amplitudes contain interference. & Use the exact signed collision identity or prove Fourier-support separation. \\
+Nine-bit connected components & Raw indicator entropy is not subadditive across actual connected components. & Retain the excess term or prove a stronger critical-source hypothesis. \\
+Seven-bit component-ratio witness & The union can exceed the maximum raw-entropy/energy ratio of its components. & Do not use unrestricted ratio-max pruning. \\
+Cyclic auxiliary subset laws & Natural signed-lifetime relaxations fail outside Boolean spectra. & Check realizability and preserve the complete Boolean constraints. \\
+Boolean cyclic phase realization & Paying a marginal may force auxiliary energy yet leave conditional entropy. & State and pay the conditional or joint remainder explicitly. \\
+Coherent near-tensor surgery & A remainder can contain $\alpha^2\log(1/\alpha^2)$. & Prove an amortized logarithmic payment; $O(\alpha^2)$ alone is false. \\
+Bias endpoints and near dictators & Corrected entropy and $\I-\Var$ can simultaneously degenerate. & Check limiting ratios and normalization credit analytically. \\
+Bent selector splice & A selected one-bit increment divided by selector influence can diverge. & Do not assert an all-coordinate or selector-only constant; preserve existential scope. \\
+B05 rare refunds & Fixed local prices on $d,V_{\rm post},M_{\rm inf}$ miss the rare logarithm. & Analyze a chosen complete tree or a nonlocal logarithmic credit. \\
+Weighted threshold: global TC & Conditional physical $\alpha\operatorname{TC}/\I$ grows with arity. & Prove a replacement normalization that survives Section~\ref{sec:weighted-guards}. \\
+Weighted threshold: pivotal credit & Coefficient-one pivotal logarithms leave an unbounded residual. & Keep the exact coefficient scope; larger multipliers are not refuted. \\
+Weighted threshold: local TC & Every coordinate can fail the conditional physical TC payment. & Do not identify this failed target with spectral good-coordinate erasure. \\
+Fixed convolution or cap prefixes & Distinct non-Boolean families pass every prescribed fixed prefix. & Name the hierarchy and supply an additional full-Booleanity consequence. \\
+Raw convolution tensors & Raw $L$ can grow exponentially while influence is additive. & Retain normalized $T=H(v/Z)-\log_2Z$ and its still-unpaid bound. \\
+Overlapping Boolean products & $H(fg)\le H(f)+H(g)$ is false when variables are shared. & Use an exact collision ledger; disjoint additivity remains valid. \\
+
+\bottomrule
+\end{longtable}
+
+The two component examples are exact counterexamples for raw indicator functionals with the units stated in their original records, not unbounded Boolean FEI ratios \cite{Brain44,Brain45}. The coherent-composition and cyclic conditional-scope controls are similarly limited to the statements they actually refute \cite{Brain54}. Source status must travel with the result: an unmerged archive, a finite checker, and a universal analytic proof are different forms of evidence.
+
+
+\paragraph{Normalization and retired targets.}
+For the convolution route, a normalized reference amplitude $b$
+defines $v_U=(\sum_S b_S b_{S\triangle U})^2$,
+$Z=\sum_Uv_U$ and $L=\sum_Uv_U\log_2(1/v_U)$.
+The tensor-additive statistic is
+\[
+ T=L/Z=H(v/Z)-\log_2 Z,
+\]
+not $H(v/Z)$ alone. The archived genuine Boolean tensor
+obstruction refutes fixed raw-$L$ payment; it does not refute a
+correctly normalized $T$ payment \cite{BrainNormalized}.
+Shared-variable product subadditivity is separately refuted
+\cite{BrainOverlap}. B08 must retrieve the current exact
+occupancy-credit definition and the rejected fixed-positive-reserve
+claim before proposing a replacement. An already disproved
+helper is retired at its exact quantifiers; the surviving
+universal endpoint is open until its quantitative estimate is proved.
+
+\section{Allocation of the 100-agent capacity}
+
+Use twenty squads of five agents, with one mathematical stream per squad. The existing B01--B20 scheduled tasks are the owning streams, while A001--A100 below describe a hypothetical full-capacity deployment. A scheduled invocation carries out one packet and routes requests for assistance to existing peer streams through source-bound handoffs. This mapping does not mean that each scheduled task can launch five concurrent processes or that 100 agents have been started.
+
+\begin{center}
+\begin{tabular}{p{0.57\linewidth}r}
+\toprule
+Portfolio & Agents \\
+\midrule
+Joint-cost, representation, and nonlocal restriction routes (B01--B03, B06, B08, B13) & 30 \\
+Other direct analytic routes (B05, B07, B09, B12, B14) & 25 \\
+Targeted counterfamilies, extremality, and falsification (B04, B10, B11, B15, B16) & 25 \\
+Certificates, independent audits, and mathematical synthesis (B17--B20) & 20 \\
+\midrule
+Total & 100 \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+These are initial allocations, not permanent entitlements. A route earning additional agents must produce a new accepted lemma, a significant verified extension, or a sharply localized surviving bottleneck. A route whose main helper is refuted is paused at that helper and redirected to a repaired statement or a different route.
+
+There are two independent audit squads. Their purpose is to reconstruct arguments and expose hidden assumptions, not to vote on plausibility. Two agents reading the same summary do not constitute independent verification. The decisive proof chain is reviewed from original statements, original sources, and complete computations.
+
+If 100 workers were continuously available for all 240 hours, the arithmetic ceiling would be 24,000 worker-hours. That is a capacity assumption, not an observed allocation. Twenty hourly schedules offer roughly 4,800 trigger opportunities over ten days; actual configured recurrence counts can be slightly lower because the campaign is configured after its stated start. Invocation duration, completion, tool access, and successful persistence must be measured separately. No model, reasoning level, continuous-runtime guarantee, or notification toggle is inferred from a scheduler field that does not expose it.
+
+\section{One hundred concrete research packets}
+
+Each packet below has a distinct output. Every output must
+contain a full statement, all hypotheses, a proof or precise gap,
+original source locators, and a next action. Each invocation
+freezes one candidate inequality or construction and its
+applicable falsifier before sustained work. A purported Boolean
+counterexample requires a reproducible Boolean definition and a
+certified violation; an auxiliary-law counterexample instead
+states its relaxed domain explicitly. Reproducing a known
+identity or restating an unpaid FEI-equivalent endpoint is
+baseline work, not a new quantitative result. The corresponding
+B-stream owns its five packets, avoiding duplicate work. The tests and routing contracts below are complete acceptance requirements; the adjacent JSON additionally records advisory upstream interfaces, source hashes, renewal milestones and original task provenance. Pilot cycles are bounded work units, not promised hours or prepaid computation.
+\subsection{B01: Universal reduction and gap map}
+
+\textbf{A001 --- Quantifier audit.} Write the exact all-dimensions FEI target, inventory every sufficient condition in both recovered manuscripts, and identify its first unproved implication. Separate equivalence, one-way reduction, and proved class theorem.
+
+\emph{Acceptance tests.} State one finite C independent of dimension for all nonconstant Boolean signs, and handle constants without dividing by I=0. Classify the universal witness residual as sufficient, the good-coordinate endpoint as equivalent in finiteness, and the fixed-cyclic conditional completion as FEI-strength; do not identify their optimal constants without proof. Pin each proved baseline to its complete source; reject a dependency edge whose only justification is the desired universal FEI conclusion.
+
+{\small\emph{Execution contract:} baseline audit; P0; initial cap 1 work cycles. Deliverables: \path{TARGET_QUANTIFIERS.md}; \path{GAP_MAP.json}. Independent review: A086, A094. Consumers: A003, A004, A081, A093.}
+
+\textbf{A002 --- Hardness-preserving transformations.} Reprove the tensor, balancing, sparse-activation, and auxiliary coding ledgers. Determine which extra hypotheses survive each transformation and which proposed restricted endpoints still contain arbitrary tensor factors.
+
+\emph{Acceptance tests.} Give the truth-table or circuit transformation, new dimension, H, I, mean, and parameter restrictions for every ledger entry. Explicitly display the arbitrary seed and tensor-count limit in both two-cell selector and low-influence/full-support admission tests. Separate physical input independence from correlated spectral coordinates, and include the influence cost of all new variables.
+
+{\small\emph{Execution contract:} baseline reproduction; P0; initial cap 2 work cycles. Deliverables: \path{TRANSFORMATION_LEDGER.tex}; \path{HYPOTHESIS_SURVIVAL.json}. Independent review: A086, A094. Consumers: A005, A012, A021, A030, A043, A048, A051, A055, A060, A078.}
+
+\textbf{A003 --- Minimal target formulation.} Compare the witness residual, good-coordinate erasure, and signed-Booleanity targets. Produce a formally explicit implication diagram with constants and a smallest genuinely stronger lemma for each route.
+
+\emph{Acceptance tests.} Write the full J residual including posterior entropy and root conditioning, and the R criterion with relevant-coordinate quantifier. Draw the proof implication graph independently of the advisory packet graph; an arrow must carry a proved derivation or be marked open. For each proposed minimal lemma, test arbitrary tensor-factor admission and explain what quantitative statement is stronger than merely restating FEI.
+
+{\small\emph{Execution contract:} interface derivation; P0; initial cap 2 work cycles. Deliverables: \path{ENDPOINT_INTERFACES.tex}; \path{OPEN_LEMMAS.json}. Independent review: A086, A094. Consumers: A005.}
+
+\textbf{A004 --- Constant and unit ledger.} Normalize bits versus natural logarithms, sign functions versus indicators, total versus directional influence, and empty versus nonempty entropy. Check every imported inequality at constant, dictator, parity, and nearly constant endpoints.
+
+\emph{Acceptance tests.} Convert each numerical constant with the correct ln2 factor; distinguish Shannon entropy of a normalized law from raw entropy of a subprobability. Evaluate I-Var, empty-atom contributions, and bias endpoints without taking a logarithm of zero. Check character multiplication using D(f)=min\_U I($\chi$\_U f) and confirm that this operation preserves H but not generally I.
+
+{\small\emph{Execution contract:} baseline audit; P0; initial cap 1 work cycles. Deliverables: \path{CONVENTIONS.json}; \path{ENDPOINT_CHECKS.md}. Independent review: A086, A094. Consumers: A001, A002, A016, A018, A024, A036, A042, A046, A056, A061, A062, A068, A072, A076, A081.}
+
+\textbf{A005 --- Noncircular endpoint referee.} Attempt to embed an arbitrary Boolean seed into every supposedly easier universal endpoint. Supply the embedding and limit when it exists; otherwise identify the precise obstruction and ask for its proof.
+
+\emph{Acceptance tests.} For every accepted embedding, identify the seed, balancing variables, tensor order, and limit that recovers H(seed)/I(seed). A claim that the embedding fails must point to a proved class hypothesis violated by the actual construction, not a newly assumed exclusion. Do not treat a finite violation of a candidate K or a local surcharge as a disproof of universal FEI.
+
+{\small\emph{Execution contract:} independent scope review; P0; initial cap 2 work cycles. Deliverables: \path{ENDPOINT_ADMISSION_TESTS.tex}; \path{SCOPE_VERDICTS.json}. Independent review: A086, A094. Consumers: A012, A034, A036, A043, A050, A051, A079.}
+
+\subsection{B02: Joint Fourier-set coding}
+
+\textbf{A006 --- Posterior forest optimization.} Freeze a finite family of distinct actual partition-forest runs and globally admissible weights. Compute its optimized posterior cost, retaining the entropy subtraction, then prove a new influence bound for an explicit family. A log-partition variational identity alone is already known bookkeeping.
+
+\emph{Acceptance tests.} Count only distinct actual finite runs of one fixed random generator; identical descriptions of the same run cannot inflate posterior entropy. Prove the variational identity or bound with the -H(posterior) term, including zero-probability and unsuccessful-run treatment. Obtain a quantified estimate for an explicit family beyond the already calibrated one-root addressing case, or give a certified obstruction to that estimate. Reuse the already derived normalized prior over complete reference laws. A new result must pay the expectation of the whole selected cost plus log$_2$(1/w\_j); deriving the mixture inequality alone is baseline work.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{POSTERIOR_FOREST_VARIATIONAL.tex}; \path{FOREST_WITNESS_EXAMPLES.json}. Independent review: A086, A094. Consumers: A003, A007, A009, A010, A086.}
+
+\textbf{A007 --- Root normalization.} Analyze conditioning on a nonempty initial root set and the term v log Z. Prove cancellation with rare-root costs on new overlapping families; never drop a negative normalization term before testing its mathematical role.
+
+\emph{Acceptance tests.} Retain Z=1-2\textasciicircum{}(-$\Lambda$) after conditioning on nonempty roots and include the normalization term before any inequality. Show cancellation or noncancellation with root surprisal uniformly as root probabilities tend to zero. Use one admissible representation/weight system independent of the sampled Fourier set, and say whether a bad example refutes that system or the variational infimum. When selecting a prior scale, keep its $\Lambda$\_j and witness cost together and pay log$_2$(1/w\_j) under one fixed prior. The recovered dyadic-prior normalization is a baseline, not a free adaptive choice.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{ROOT_NORMALIZATION.tex}; \path{ROOT_FAMILY.md}. Independent review: A086, A094. Consumers: A006, A014.}
+
+\textbf{A008 --- Gate-label compression.} Construct codes that communicate each shared gate label once per complete spectral set. Prove decodability and account for gate names, attachments, subset choices, root choices, and the final output ambiguity.
+
+\emph{Acceptance tests.} Describe every shared gate name at most once when the proposed code claims to reuse it, and provide a decoder for the complete Fourier set. Account for the information required to choose or transmit the codebook; knowledge of the unknown spectral law is not free side information. Prove finite successful decoding and compare total code length to the exact addressing H=2a benchmark before any new family claim.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{WHOLE_SET_CODEC.tex}; \path{CODE_COST_LEDGER.json}. Independent review: A086, A094. Consumers: A006, A011, A069, A086.}
+
+\textbf{A009 --- Fractional incidence optimization.} Choose global fractional gate weights subject to all coordinate incidence constraints. Derive an optimization dual or a verifiable certificate that bounds the expected residual for a meaningful family beyond bounded-read formulas.
+
+\emph{Acceptance tests.} Verify $\sum$\_\{l:j$\in$R\_l\} $\lambda$\_l$\le$1 for every coordinate with one global $\lambda$, including all zero/duplicate support conventions. State whether the optimization objective is convex and prove any duality assertion used; numerical solver output alone is not a bound. Exhibit a family with growing maximum read and a bounded certified cost-to-influence ratio, or isolate the exact term preventing that conclusion. When using the recovered effective-piece lemma, verify disjoint physical supports and signed fiber-antichain hypotheses, with $K_{\mathrm{eff}}=(\sum_l\sqrt{a_l})^2$. Its derivative-weighted/global expected cost remains to be bounded.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{INCIDENCE_OPTIMIZATION.tex}; \path{WEIGHT_CERTIFICATE.json}. Independent review: A086, A094. Consumers: A007, A010, A014, A086.}
+
+\textbf{A010 --- Representation-infimum falsifier.} State finite limits on gates, covers and orders before searching a bounded representation class. Certify all admissible continuous weights, including limiting boundary behavior, if claiming failure of its variational infimum. A bad single representation only refutes that representation or code.
+
+\emph{Acceptance tests.} Fix the candidate constant and all optimization freedoms before searching; certify the Boolean function independently of its representation. If claiming failure of an infimum, enumerate or bound every admissible representation in the declared finite class, not merely the first DNF. Use certified entropy comparisons for a surviving violation and distinguish a finite-domain certificate from an asymptotic family.
+
+{\small\emph{Execution contract:} targeted countersearch; P0; initial cap 2 work cycles. Deliverables: \path{RESIDUAL_SEARCH_SPEC.json}; \path{RESIDUAL_FALSIFIER.md}. Independent review: A086, A094. Consumers: A071.}
+
+\subsection{B03: Overlap and activated representations}
+
+\textbf{A011 --- Representation existence.} Construct structured gate covers for broad Boolean classes and bound their total joint description cost. An arbitrary DNF representation is only a starting point; prove the quantitative cost of its use.
+
+\emph{Acceptance tests.} Give an algorithm or existence proof constructing admissible gates for every member of the declared class. Prove the full quantitative joint cost; an arbitrary exponential DNF is not itself a constant-cost representation. State how the new class extends the published structured classes, and keep any assertion that every Boolean function belongs to it explicitly open.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{STRUCTURED_COVER.tex}; \path{COVER_COST.md}. Independent review: A086, A094. Consumers: A008, A009, A013, A014, A068, A069, A086.}
+
+\textbf{A012 --- Sparse activation accounting.} Use the exact activation formula to test whether a rare outer gate hides an arbitrary difficult core. Identify a structural admission condition that is proved, survives needed operations, and excludes this hidden-core construction.
+
+\emph{Acceptance tests.} Use the exact activation H and I formulas, including the entropy term created by the rare selector, before simplifying. If the condition excludes hidden arbitrary cores, prove the exclusion and specify the remaining class rather than calling it universal. Verify only the closure operations actually used downstream; do not assume restriction/tensor stability from a root-level property.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{ACTIVATION_ADMISSION.tex}; \path{HIDDEN_CORE_TEST.md}. Independent review: A086, A094. Consumers: A011.}
+
+\textbf{A013 --- Representation stability.} Study how a useful ordered cover changes under a physical restriction, tensor product, or multiplexer composition. Bound the extra gates, label entropy, and changes in root probabilities explicitly.
+
+\emph{Acceptance tests.} Define the transformed cover on each physical child and prove it represents that actual child. Track selector variables already present in branches; a fresh independent selector hypothesis cannot be asserted after variable reuse. Show the cumulative overhead under iteration, with explicit examples where an operation fails to preserve the useful class.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{COVER_STABILITY.tex}; \path{STABILITY_LEDGER.json}. Independent review: A086, A094. Consumers: A017, A028, A058.}
+
+\textbf{A014 --- Overlap beyond worst-case read.} Replace maximum read k by a spectral or fractional congestion quantity. Prove a theorem where k grows but the new quantity remains bounded, and supply an explicit unbounded-overlap example.
+
+\emph{Acceptance tests.} Define the spectral/fractional congestion without using H itself or an assumed universal FEI bound as an input. Exhibit k$\to$$\infty$ while the new quantity remains bounded, and prove all other terms in the theorem remain uniformly controlled. Compare the resulting H/I bound against the existing logarithmic-k theorem on that same family, including root and rank costs. Use the recovered K\_eff refinement as a baseline where its structural hypotheses hold. Prove the complete expected-cost improvement, including the remaining reference normalizers and $\sum$\_i I\_i ln K\_eff,i, rather than reprove the multiplier estimate.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{CONGESTION_REFINEMENT.tex}; \path{UNBOUNDED_READ_EXAMPLE.md}. Independent review: A086, A094. Consumers: A009, A068, A086, A097.}
+
+\textbf{A015 --- Minterm barrier analysis.} Quantify the dimension term in naive minterm coding on majority, tribes, and sparse activated cores. Prove which compression feature is missing before proposing a universal representation lemma.
+
+\emph{Acceptance tests.} Derive the order of the minterm name/subset cost separately from the actual Fourier entropy and influence. Compare at least majority, a parameterized tribes family, and a rare activated arbitrary core with correct normalization. A missing compression feature is stated as a precise unpaid term; failure of one code is not promoted to failure of all representations.
+
+{\small\emph{Execution contract:} interface derivation; P1; initial cap 2 work cycles. Deliverables: \path{MINTERM_BARRIERS.tex}; \path{COMPRESSION_REQUIREMENTS.md}. Independent review: A086, A094. Consumers: A011.}
+
+\subsection{B04: Addressing and shared-data tests}
+
+\textbf{A016 --- Addressing benchmark.} Reproduce H=2a and I=1+a/2 for a-bit addressing, and compare coordinatewise, one-root, and posterior code costs. Derive the asymptotic ratio of each proposed cost to I.
+
+\emph{Acceptance tests.} Prove H=2a and I=1+a/2 for a fresh a-bit selector and distinct data characters, including a=0. Compute coordinatewise, complete-set one-root, and posterior costs under their actual code definitions; do not assume the bad code's asymptotic loss. Treat the O(a) repair and sharp H=4(I-1) relation as existing baselines rather than new research results.
+
+{\small\emph{Execution contract:} baseline reproduction; P0; initial cap 1 work cycles. Deliverables: \path{ADDRESSING_BASELINE.tex}; \path{ADDRESSING_CONTROL.json}. Independent review: A091, A090. Consumers: A006, A008, A015, A076.}
+
+\textbf{A017 --- Recursive addressing.} Build iterated address functions with controlled input reuse. Derive exact recursive entropy and influence ledgers and identify where the same gate label can be shared across levels.
+
+\emph{Acceptance tests.} Specify at each node which coordinates are fresh selectors and which are shared data; shared control variables require a new proof. Account for cross-level coefficient collisions and selector influence, instead of multiplying disjoint-composition formulas through reuse. Show an unbounded-depth or unbounded-arity regime beyond an already proved orthogonal-selector iteration, or identify why the candidate lies within that baseline.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{RECURSIVE_ADDRESSING.tex}; \path{REUSE_CONDITIONS.json}. Independent review: A091, A090. Consumers: A013, A030, A077.}
+
+\textbf{A018 --- Shared-data collision law.} Exploit the exact Walsh collision identity for arbitrary overlapping branches. Characterize when posterior label entropy cancels the selector alphabet cost and when coherent interference adds entropy.
+
+\emph{Acceptance tests.} Prove or source-pin $\Delta$\_WH=$\sum$\_T R\_T H($\nu$\_T)+a-$\sum$\_T R\_T H(r\_T) with zero-mass T omitted and all quantities normalized. Identify B\_W=$\sum$\_T R\_T H($\nu$\_T), M\_W=a-$\sum$\_T R\_T H(r\_T), and 0$\le$M\_W$\le$(2/ln2)I\_W as the exact B04$\to$B06 interface. Reproduce complete selector-cost cancellation for identical branches and the existing bent-splice failure of a universal $\Delta$\_selH$\le$C I\_sel bound; no new constant-correlation theorem is claimed here.
+
+{\small\emph{Execution contract:} interface derivation; P0; initial cap 2 work cycles. Deliverables: \path{COLLISION_BLOCK_INTERFACE.tex}; \path{COLLISION_CONTROLS.json}. Independent review: A091, A090. Consumers: A017, A019, A020, A026, A027, A037, A057, A058, A061, A063.}
+
+\textbf{A019 --- Quantitative shared-data classes.} Start from the already proved implication $\I_{\rm sel}\ge ca\Rightarrow C_{\rm closure}=\max\{2/c,C\}$. Prove its hypothesis for a genuinely new family with unbounded arity or depth, or prove a sharper complete collision payment for an explicit structural class where $\I_{\rm sel}/a\to0$. Test the bent-splice obstruction before proposing a selector-only increment bound.
+
+\emph{Acceptance tests.} Treat C'=max\{2/c,C\} under a proved uniform neighboring disagreement c>0 as an existing corollary, not the proposed new result. Either prove a uniform c from a genuinely new unbounded-depth/arity class outside current structural hypotheses, or bound the exact collision debt under a stated structure when c$\to$0. Apply the a=1 bent-splice control with I\_sel=2\textasciicircum{}(-m) and $\Delta$\_selH/I\_sel$\ge$m-1; any valid new hypothesis must explain why its claimed payment survives or excludes that family.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{NEW_SHARED_DATA_CLASS.tex}; \path{COLLISION_PAYMENT.md}. Independent review: A091, A090. Consumers: A017, A020, A058, A060, A091.}
+
+\textbf{A020 --- Selector boundary tests.} Construct selectors with coincident Fourier supports, unequal cell sizes, affine cells, and nearly identical branches. Refute any proposed closure that silently discards interference or selector influence.
+
+\emph{Acceptance tests.} Include the recovered bent-splice family analytically, with one selector bit and divergent decrement-to-selector-influence ratio. Compute the actual shared coefficients before squaring; coincident Fourier supports are not treated as a disjoint mixture. An unequal-cell or near-identical-branch counterexample states whether it breaks separation, uniform disagreement, or a proposed new collision payment.
+
+{\small\emph{Execution contract:} targeted countersearch; P0; initial cap 2 work cycles. Deliverables: \path{SELECTOR_FALSIFIER_SUITE.tex}; \path{SELECTOR_FAILURE_SCOPE.json}. Independent review: A091, A090. Consumers: A019.}
+
+\subsection{B05: Rare restrictions and logarithmic costs}
+
+\textbf{A021 --- Rare-core asymptotics.} Use the completed B05 sparse-bent asymptotics as a baseline. For a specified new balanced tensor core and activation regime, expand the complete entropy, influence and proposed debt uniformly in both parameters. State the necessary conditions this imposes on the live global potential.
+
+\emph{Acceptance tests.} Keep tensor count and selector rarity independent until specifying the limiting regime; bound remainder terms uniformly in that regime. Retain $\mu$[log$_2$(1/$\mu$)-D$_2$($\nu$||q)] from the existing mismatch/KL theorem and distinguish its local debt from the already paid 3$\mu$/ln2 term. Show which core H/I ratio survives activation and state that rare output or small I alone is FEI-strength, not a structural simplification.
+
+{\small\emph{Execution contract:} interface derivation; P0; initial cap 2 work cycles. Deliverables: \path{RARE_CORE_EXPANSIONS.tex}; \path{POTENTIAL_NECESSITIES.md}. Independent review: A087, A094. Consumers: A002, A007, A012, A015, A023, A025, A026, A036, A040, A047, A048, A077.}
+
+\textbf{A022 --- One-point surgery.} Analyze Boolean seeds after one-point or adjacent-point flips, including bent and near-tensor seeds. Produce exact spectral formulas for the logarithmic terms that a local estimate would have to pay.
+
+\emph{Acceptance tests.} Specify the exact sign-valued truth table after each flip and retain both old coefficients and the signed perturbation. Recover the bent-splice logarithmic control before claiming a new near-tensor family; include the interaction term for adjacent flips. Separate an analytic parameter family from a finite numerical seed and identify precisely which local charge fails.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{POINT_SURGERY.tex}; \path{SURGERY_LOG_CERTIFICATE.md}. Independent review: A087, A094. Consumers: A020, A021, A053, A077.}
+
+\textbf{A023 --- Amortized rarity budget.} Compare control-first and selector-first complete restriction trees on the B05 sparse-bent family, including terminal entropy. Identify where a logarithmic credit is created and consumed once, then prove a complete extension to a specified new family.
+
+\emph{Acceptance tests.} Own only the first-revelation rarity payment for a declared nontrivial family; A029 owns child-deficit transport and A064 owns the global potential. Bound the complete expected sum of $\mu$[log$_2$(1/$\mu$)-D$_2$($\nu$||q)] plus terminal entropy, with each rarity credit spent at most once. Exhibit a uniform bound on an unbounded parameter family and state whether its stopping rule is physical, adaptive, and finite.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{RARE_REVELATION_PAYMENT.tex}; \path{RARITY_CREDIT_LEDGER.json}. Independent review: A087, A094. Consumers: A027, A028, A064, A087.}
+
+\textbf{A024 --- Means and biased-child stability.} Keep fair physical restrictions separate from bias changes: unqueried uniform input bits stay uniform, while restricting an inner gate changes its output mean and hence the outer product law in disjoint composition. Track those means and corrected entropy normalization through a specified nontrivial family.
+
+\emph{Acceptance tests.} A fair physical restriction leaves untouched originally uniform coordinates uniform; distinguish this from nonzero inner means inducing product biases at an outer gate. At zero/one input probabilities reduce deterministic coordinates before normalizing biased Fourier atoms or dividing by I-Var. Keep the mismatch/KL rebate and the corrected FEI+ normalization credit; do not charge a small child by an unsupported bounded scalar multiplier.
+
+{\small\emph{Execution contract:} interface derivation; P0; initial cap 2 work cycles. Deliverables: \path{BIAS_TRANSPORT.tex}; \path{BOUNDARY_CREDITS.md}. Independent review: A087, A094. Consumers: A021, A029, A039, A041, A042, A056, A057.}
+
+\textbf{A025 --- Rare-event counterfamily.} Treat fixed-price local variance/moment refunds as refuted by B05. Attack one precisely stated replacement, and turn a finite failure into a parameterized Boolean family. Distinguish a local or all-coordinate no-go from failure of existential selection or a chosen global tree.
+
+\emph{Acceptance tests.} Give all dimensions and rarity parameters and prove the sign of the violation for a stated infinite range. Retain the complete KL credit when refuting a candidate payment; a failure of a weaker scalar surrogate does not refute the stronger mismatch bound. Explicitly distinguish a refuted local/all-coordinate rule from existential good-coordinate selection, an optimized tree, and FEI itself. The accepted B05 fixed-price no-go is available as a completed first-instance artifact. Reuse its exact scope and move new effort to a distinct family or a constructive nonreusing tree payment; do not recount its reproof as a new result.
+
+{\small\emph{Execution contract:} counterexample family; P0; initial cap 3 work cycles. Deliverables: \path{RARE_COUNTERFAMILY.tex}; \path{REFUTED_STATEMENT.json}. Independent review: A087, A094. Consumers: A075, A080, A092.}
+
+\subsection{B06: Nonlocal restriction induction}
+
+\textbf{A026 --- Good-coordinate erasure.} Attack the existential inequality $B_i(f)\le K\I_i(f)$ at some relevant coordinate of every reached nonconstant Boolean function. Freeze a selection hypothesis or restricted class and test its hereditary scope. The universal endpoint is FEI-equivalent; neither its restatement nor an all-coordinate counterexample closes it.
+
+\emph{Acceptance tests.} For each nonconstant function select a coordinate with I\_i>0 and prove B\_i$\le$K I\_i with one stated K, or explicitly restrict the class. Use the exact mismatch/KL rebate and recovered mechanism lower-bound controls; do not restart a known-false all-coordinate or K=4 erasure claim. If a universal selection theorem is obtained, give the full physical induction and constant K+2/ln2; otherwise keep that universal target unproved.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{GOOD_COORDINATE_TARGET.tex}; \path{SELECTION_SCOPE.md}. Independent review: A087, A094. Consumers: A003.}
+
+\textbf{A027 --- Adaptive block selection.} Use the recovered block identity and exact influence telescope. Freeze a rule measurable from revealed physical history, with a proved size or structural constraint excluding the tautological all-input block. Prove its conditional erasure payment at every reached nonterminal function, or construct a parameterized failure of that precise rule.
+
+\emph{Acceptance tests.} Start with B\_W=$\sum$\_T R\_T H($\nu$\_T) and 0$\le$M\_W$\le$(2/ln2)I\_W; define I\_W as the total queried influence under the appropriate block telescope. Prove a structural rule selecting proper/adaptive blocks or paying a complete tree; selecting W=[n] leaves B\_W=H(f) and is not a simplification. State every physical conditioning law and show a quantified benefit on a coded plateau while retaining the bent-splice obstruction.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{ADAPTIVE_BLOCK_SELECTION.tex}; \path{BLOCK_CONTROLS.md}. Independent review: A087, A094. Consumers: A065, A087, A097.}
+
+\textbf{A028 --- Stopping-tree payment.} Design trees stopping at the recovered regular, bounded-overlap, or threshold-formula classes. Prove the full expected path cost plus terminal cost is at most a fixed multiple of root influence.
+
+\emph{Acceptance tests.} Prove that every leaf belongs to a published terminal class with uniformly controlled class parameters; calling a leaf a threshold/formula is insufficient without membership. Bound the complete weighted path sum and terminal H together, and identify the single root influence budget from which both are paid. Treat any assertion that all Boolean functions cheaply reach those leaves as the new theorem to prove, never an assumed representation premise.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{TERMINAL_CLASS_STOPPING.tex}; \path{PATH_AND_LEAF_PAYMENT.md}. Independent review: A087, A094. Consumers: A059, A065.}
+
+\textbf{A029 --- Child-deficit transport.} For a stated induction constant, keep the actual deficits of both physical children. Derive an explicit transport condition compensating a difficult split by child slack, test it on B05, and prove that the same slack is not spent again at descendants.
+
+\emph{Acceptance tests.} Derive D\_K(f)=average D\_K(children)+K I\_i(f)-$\Delta$\_iH(f) using the actual two children and all signs/means. State when child nonnegativity is an induction hypothesis, a proved terminal fact, or still open; zero child slack cannot be assumed. Show that one child's slack is not spent once at its parent and again at a descendant; hand the finite-tree transport interface to A064.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{CHILD_DEFICIT_TRANSPORT.tex}; \path{SLACK_FLOW.json}. Independent review: A087, A094. Consumers: A028, A052, A064, A087.}
+
+\textbf{A030 --- Restriction plateau tests.} Use separated Fourier-support coding to create functions with long entropy-preserving restriction plateaux. Determine what a global selection or stopping argument sees that bounded-depth local statistics miss.
+
+\emph{Acceptance tests.} Prove entropy preservation or its stated quantitative error for every restriction in the declared bounded-depth regime. Give the actual truth-table/circuit construction and track added influence from the auxiliary code. Distinguish an obstruction to a bounded-depth statistic from an obstruction to all global coordinate or block choices.
+
+{\small\emph{Execution contract:} interface derivation; P0; initial cap 2 work cycles. Deliverables: \path{RESTRICTION_PLATEAUX.tex}; \path{PLATEAU_SELECTION_DIAGNOSTIC.md}. Independent review: A087, A094. Consumers: A026, A027, A065.}
+
+\subsection{B07: Signed Booleanity identities}
+
+\textbf{A031 --- Convolution identity.} Use the complete signed identities $\sum_S\wh f(S)\wh f(S\triangle U)=1_{\{U=\varnothing\}}$ to derive one explicitly stated entropy-weighted inequality. Preserve the cancellation intended to pay its debt and identify the additional full-Booleanity input beyond the already refuted fixed-order relaxations.
+
+\emph{Acceptance tests.} Start from all signed convolution identities and retain the phase signs through the decisive cancellation. Specify the entropy weight and any absolute-convergence/finite-sum manipulation; Parseval or triangle inequality alone must not silently replace the needed signed conclusion. Locate the consequence absent from the fixed-order non-Boolean controls and quantify the paid term on an actual Boolean class.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{SIGNED_WEIGHTED_IDENTITY.tex}; \path{CANCELLATION_LEDGER.md}. Independent review: A088, A094. Consumers: A033, A035, A070, A088.}
+
+\textbf{A032 --- Boolean phase realizability.} Given a candidate spectral probability law, determine whether signs can produce a Boolean inverse Walsh transform. Produce exact impossibility certificates or actual truth tables, never a merely normalized vector.
+
+\emph{Acceptance tests.} An accepted realization has inverse Walsh values exactly $\pm$1, not merely norm one or values numerically close to signs. An impossibility claim specifies the complete finite phase domain or a proved algebraic obstruction; a failed heuristic search is labelled inconclusive. Provide the common realizability interface reused by uniform coding, correlated auxiliaries, and the separate biased-normalization referee.
+
+{\small\emph{Execution contract:} construction certificate; P1; initial cap 2 work cycles. Deliverables: \path{BOOLEAN_REALIZABILITY.json}; \path{REALIZABILITY_METHOD.md}. Independent review: A088, A094. Consumers: A031, A033, A034, A045, A078, A079.}
+
+\textbf{A033 --- Full Booleanity beyond fixed prefixes.} Specify the exact hierarchy being tested. Import the distinct fixed-order signed-convolution and fixed atom-cap no-go families before proposing a new estimate. Identify an additional consequence of full Booleanity absent from those examples, and prove a quantitative entropy consequence for a precisely stated class; increasing a fixed truncation order alone is retired.
+
+\emph{Acceptance tests.} Import the fixed signed-convolution-order no-go and the fixed atom-cap-prefix cyclic-law no-go as rejected baselines. State the exact hierarchy being used; increasing a fixed truncation order, dyadic coefficients, or small square defect does not constitute a new admission condition. Prove a genuinely additional consequence of full Booleanity that fails on the relevant controls and show where it could supply the missing high-degree or conditional payment.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{BOOLEANITY_HIERARCHY.tex}; \path{NEW_FULL_BOOLEANITY_CONSEQUENCE.md}. Independent review: A088, A094. Consumers: A031, A035, A067, A070, A078.}
+
+\textbf{A034 --- Conditional phase-energy transfer.} Work with disjoint uniform physical cubes $X,Y$, genuine Boolean $f$, integer $d\ge1$ and explicitly defined spectral marginal $p_X$. Retain $H(\mathcal S_Y\mid\mathcal S_X)$ and prove one restricted conditional estimate. Its structural hypothesis must pass the arbitrary-tensor embedding scope check.
+
+\emph{Acceptance tests.} Use actual Boolean f on disjoint uniform physical cubes X,Y with integer X-degree d$\ge$1; correlated spectral Y coordinates do not authorize correlated physical inputs. Retain H(S\_Y|S\_X) after using H(p\_X)$\le$(2/ln2)I\_Y+2(d-1); the marginal estimate cannot be spent twice. Test the fixed cyclic-marginal arbitrary-tensor embedding, and prove that any purportedly weaker structural condition excludes it without assuming the desired FEI conclusion.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{CONDITIONAL_PHASE_THEOREM.tex}; \path{PHASE_SCOPE.md}. Independent review: A088, A094. Consumers: A003, A079, A088.}
+
+\textbf{A035 --- Signed cancellation countersearch.} Test proposed weighted convolution payments on actual Boolean functions with severe cancellation. Separate an invalid triangle inequality or lost sign from a genuine obstruction to the target statement.
+
+\emph{Acceptance tests.} Compute the signed convolution before squaring or applying absolute values and retain the exact term where the proposed proof discards cancellation. Use actual Boolean witnesses for theorem refutations; a non-Boolean relaxation failure is recorded separately as a missing-hypothesis diagnostic. Certify the violation of the precise weighted inequality and avoid treating a bad proof step as proof that the theorem itself is false.
+
+{\small\emph{Execution contract:} targeted countersearch; P1; initial cap 2 work cycles. Deliverables: \path{SIGNED_PAYMENT_TESTS.json}; \path{CANCELLATION_FAILURE.tex}. Independent review: A088, A094. Consumers: B20.}
+
+\subsection{B08: Relative entropy and posterior credit}
+
+\textbf{A036 --- Reference-law divergence.} Choose a reference fixed across sampled spectral sets and retain cross-entropy $H(P)+D_2(P\Vert Q)$ with all normalizers. Prove a structural lower bound on divergence paying one specified excess term. For convolution references retain $T=H(v/Z)-\log_2 Z$; raw-$L$ payment is already refuted by Boolean tensors.
+
+\emph{Acceptance tests.} Define C\_b(U), v\_U=C\_b(U)$^2$, Z=$\sum$v\_U, L=$\sum$v\_U log$_2$(1/v\_U), and T=L/Z=H(v/Z)-log$_2$Z; use product-compatible completions when invoking tensor additivity. Import the Boolean tensor-power failure of fixed raw-L payment and keep lower-payment and sufficient-recovery inequalities as separate targets. Any bound K\_full$\ge$T/4-$\kappa$I on the admitted full-support low-I class remains an unproved FEI-strength target; prove a genuinely quantitative step or state a restricted scope.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{REFERENCE_DIVERGENCE.tex}; \path{NORMALIZED_COLLISION_LEDGER.md}. Independent review: A088, A094. Consumers: A037, A038, A039, A040, A048, A066, A088.}
+
+\textbf{A037 --- Conditional credit ledger.} Develop chain rules for posterior witness information across an adaptive hierarchy. Prove the total released credit is bounded by an initial resource and cannot be spent again after conditioning.
+
+\emph{Acceptance tests.} Own the posterior chain-rule/no-reuse identity; A023 owns rare first-revelation families and A029 owns physical-child deficit transport. Specify the common joint probability space before comparing posterior entropies across nodes; credits from incompatible reference laws cannot be added without a proved correction. Prove the finite-tree cumulative bound and retain a terminal credit/remainder instead of assuming it vanishes.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{POSTERIOR_CREDIT_CHAIN.tex}; \path{NO_REUSE_CERTIFICATE.md}. Independent review: A088, A094. Consumers: A023, A029, A039, A057, A063, A064, A097.}
+
+\textbf{A038 --- Occupancy credit beyond fixed reserves.} Retrieve the exact current occupancy-information or $K_{\rm occ}$ definition and the archived fixed-positive-reserve counterexample. Freeze a new nonlinear, state-dependent or otherwise explicitly changed payment, and prove a quantitative bound against a named debt or provide a source-exact counterexample.
+
+\emph{Acceptance tests.} Retrieve the original definition of K\_occ before using the symbol; the route-map is a retrieval index and cannot replace the complete candidate formula. Import the failed fixed positive occurrence-reserve rule and state whether a proposed nonlinear/state-dependent payment avoids its exact witness. Specify the debt being paid, its bias/sign/reference changes, and whether the balanced-slice target is already FEI-strength; positivity of K\_occ alone is no result.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 2 work cycles. Deliverables: \path{OCCUPANCY_TARGET_SOURCE.md}; \path{OCCUPANCY_PAYMENT.tex}. Independent review: A088, A094. Consumers: A040.}
+
+\textbf{A039 --- Projection under restrictions.} Study how an information projection changes under a physical restriction. Establish a monotonicity or compensated identity that remains valid when the two child spectra interfere coherently.
+
+\emph{Acceptance tests.} Construct the proposed stochastic map explicitly before invoking data processing; physical restriction produces coherent child spectra and need not be a channel on squared parent coefficients. Track reoptimization of the reference, its normalizer, and support changes in both children. Verify equality on an isospectral split and locate the compensating term for a non-isospectral Boolean control.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{PROJECTION_RESTRICTION.tex}; \path{COHERENT_CHILD_EXAMPLES.json}. Independent review: A088, A094. Consumers: B20.}
+
+\textbf{A040 --- Credit insufficiency tests.} Construct examples where every proposed KL term is positive but much smaller than the unpaid entropy. Require asymptotic ratios, not a statement that relative entropy is nonnegative.
+
+\emph{Acceptance tests.} Compute asymptotic credit/debt ratios after retaining Z and every support-conditioning term. Include the already known raw-L Boolean tensor-power failure and shape under-recovery example as controls, not new results. A new counterfamily must refute the stated direction and coefficient; failure of upper recovery cannot be substituted for failure of lower payment.
+
+{\small\emph{Execution contract:} counterexample family; P0; initial cap 3 work cycles. Deliverables: \path{CREDIT_TO_DEBT_RATIOS.tex}; \path{NORMALIZATION_COUNTERCONTROLS.md}. Independent review: A088, A094. Consumers: A036, A038, A054.}
+
+\subsection{B09: Product biases and prime gates}
+
+\textbf{A041 --- Weighted-threshold replacement lemma.} Start from the three explicit weighted-threshold normalization failures in Section~\ref{sec:weighted-guards}. State one replacement probability or entropy inequality with constants that survives all three. Prove it on an arity-unbounded weighted class, or construct an exact weighted-threshold counterexample. Reproducing the known failed symmetry or TC estimate is baseline work.
+
+\emph{Acceptance tests.} Import all three failures from reductions/paper/biased.tex: event total-correlation payment, coefficient-one pivotal normalization credit, and conditional-input-TC existential-coordinate payment. Test the two-branch weighted threshold A\_m=\{mX\_0+$\sum$X\_j$\ge$m\} in the stated q/q\_0 regimes before advancing any replacement; convert nats/bits exactly. Do not generalize the pivotal-credit failure beyond coefficient one, or confuse conditional-input TC with the still-open spectral B\_i selection problem. Any claimed corrected FEI+ extension must be uniform in arity, real weights, product biases, and deterministic endpoints, with a complete composition implication.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{WEIGHTED_THRESHOLD_REPLACEMENT.tex}; \path{WEIGHTED_GUARD_LEDGER.md}. Independent review: A091, A090. Consumers: A042, A044, A045, A084, A091.}
+
+\textbf{A042 --- Bias endpoint certificates.} Analyze limits as input probabilities tend to zero or one. Derive symbolic expansions for corrected FEI+ and $\I-\Var$, including zero-deficit and unit-atom cases. Test all three weighted-threshold guards and preserve the nats/bits and pivotal-credit coefficient distinctions.
+
+\emph{Acceptance tests.} For the q=m\textasciicircum{}(-2) weighted family retain the event-TC and pivotal residual divergences while the genuine corrected entropy/deficit ratio tends to its finite limit. For the separate $\eta$=1/2, q$\to$0 then m$\to$$\infty$ regime, verify the conditional-input-TC every-coordinate obstruction in its exact order of limits. Contract deterministic coordinates and state whether each expansion is uniform in m, weights, or bias; a fixed-m series cannot certify an all-arity limit.
+
+{\small\emph{Execution contract:} interface derivation; P1; initial cap 2 work cycles. Deliverables: \path{BIASED_ENDPOINT_SERIES.tex}; \path{WEIGHTED_CONTROL_LIMITS.json}. Independent review: A091, A090. Consumers: A024, A041, A044, A045, A047, A084.}
+
+\textbf{A043 --- Prime-gate decomposition.} Factor Boolean functions under genuine disjoint composition and identify remaining irreducible gates. Prove what a uniform theorem on that precisely defined prime class would imply.
+
+\emph{Acceptance tests.} Define irreducibility under genuine disjoint composition, including constants, literals, and parity conventions. Prove the decomposition terminates and the required product measures/means are inherited correctly. Show exactly what an arity-uniform theorem on the remaining primes implies, without treating the theorem on all primes as an already easier or proved input.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{PRIME_GATE_DEFINITION.tex}; \path{PRIME_ENDPOINT_IMPLICATION.md}. Independent review: A091, A090. Consumers: A044, A059, A091.}
+
+\textbf{A044 --- Non-symmetric gate classes.} Freeze a new explicit gate family and an arity-uniform corrected FEI+ target. Check any proposed normalization against the recovered weighted-threshold controls, then prove a composition corollary with all fan-in and depth dependence controlled.
+
+\emph{Acceptance tests.} Name a gate family outside the already covered symmetric-threshold/parity result and verify novelty against primary sources. Prove all normalization and boundary terms with the same constant for every allowed arity; inherited biases cannot be restricted after composition. Replay applicable weighted no-go controls and state which structural hypothesis changes their conclusion, then prove depth-independent closure.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{NEW_GATE_CLASS_FEIPLUS.tex}; \path{DEPTH_INDEPENDENT_COROLLARY.tex}. Independent review: A091, A090. Consumers: A060.}
+
+\textbf{A045 --- Biased realizability referee.} Check the orthonormal product Fourier law of an actual Boolean gate, including deterministic input limits and repeated-variable exclusions. Distinguish a product physical input law, its generally dependent event-conditioned law, and spectral conditioning. Audit all three weighted normalization no-go scopes.
+
+\emph{Acceptance tests.} Normalize coefficients in the actual product orthonormal basis and prove the inverse is a Boolean gate at every positive-mass input. Handle probability-zero/one coordinates by contraction; repeated physical variables invalidate a claimed disjoint product law unless separately proved. Replay the three weighted control failures, distinguishing conditional-input TC, spectral conditional entropy, and the coefficient-one pivotal-credit scope.
+
+{\small\emph{Execution contract:} independent scope review; P1; initial cap 2 work cycles. Deliverables: \path{BIASED_REALIZABILITY_AUDIT.md}; \path{GATE_BOUNDARY_AUDIT.json}. Independent review: A091, A090. Consumers: A041.}
+
+\subsection{B10: Potential falsification}
+
+\textbf{A046 --- Current-candidate intake.} Freeze the exact formula and quantifiers of one live potential from the campaign status file. List known falsifiers and reject obsolete numerical repairs before starting a new computation.
+
+\emph{Acceptance tests.} Choose one actual candidate with a complete formula; a name or status summary is not an intake object. Attach all applicable dated correction records, including fixed-reserve, raw-L tensor, rare-logarithm, and weighted-control failures. Record a genuinely changed formula/hypothesis before allocating a new search; cosmetic numerical repairs do not reset a refuted claim's status. Include the recovered point-defect obstruction to every fixed spectral R\'{e}nyi order $\alpha$<1; distinguish it from R\'{e}nyi quantities of an auxiliary piece distribution.
+
+{\small\emph{Execution contract:} baseline intake; P0; initial cap 1 work cycles. Deliverables: \path{FROZEN_POTENTIAL.json}; \path{KNOWN_FALSIFIERS.md}. Independent review: A092, A087. Consumers: A038, A047, A048, A071, A076.}
+
+\textbf{A047 --- Boundary search.} Search near constants, dictators, balanced seeds, and sharply unequal biases for the frozen potential. Use analytic endpoint expansions to guide finite experiments.
+
+\emph{Acceptance tests.} Test constants, dictators, near-constant seeds, and unequal bias limits under the exact candidate's domain before spending a larger search budget. Use endpoint expansions to identify the most dangerous scale and specify the bounded numerical experiment that tests it. Any apparent violation goes to exact Boolean and logarithmic certification; no missing endpoint is covered by a grid assertion.
+
+{\small\emph{Execution contract:} targeted countersearch; P0; initial cap 2 work cycles. Deliverables: \path{BOUNDARY_SEARCH_PLAN.json}; \path{BOUNDARY_ASYMPTOTICS.tex}. Independent review: A092, A087. Consumers: A049, A071.}
+
+\textbf{A048 --- Tensor stress.} Compute the potential under tensor powers and sparse activation. Determine whether its claimed budget scales linearly, accumulates an extra logarithm, or can be manipulated by an irrelevant factor.
+
+\emph{Acceptance tests.} Compute the exact potential under tensor powers before a limiting argument and retain additive, multiplicative, and logarithmic terms separately. Use T=L/Z=H(v/Z)-log$_2$Z for collision normalization; the existing exponential raw-L failure is a control, not a new discovery. Check whether adding an arbitrary independent Boolean factor changes the alleged structural admission or allows the target entropy to hide in a residual. The point-defect family has H\_$\alpha$/I$\to$$\infty$ for each fixed $\alpha$<1 but Shannon H/I$\to$4. Reject a candidate that silently substitutes a fixed lower-order spectral R\'{e}nyi bound for Shannon FEI.
+
+{\small\emph{Execution contract:} targeted countersearch; P0; initial cap 2 work cycles. Deliverables: \path{TENSOR_POTENTIAL_LEDGER.tex}; \path{TENSOR_GUARDS.md}. Independent review: A092, A087. Consumers: A040, A049.}
+
+\textbf{A049 --- Minimal falsifier extraction.} Reduce a found violation to the fewest variables, parameters, and inequalities needed to reproduce it. Produce a complete truth-table or exact circuit certificate and a rigorous sign comparison.
+
+\emph{Acceptance tests.} Preserve the exact original candidate/version while reducing variables, gates, and parameters. Claim minimality only within a completely searched or proved reduction domain; otherwise state 'reduced witness' with the performed reductions. Publish the actual Boolean definition and rigorous sign margin, then hand the witness to A074 for an independent implementation.
+
+{\small\emph{Execution contract:} counterexample certificate; P0; initial cap 2 work cycles. Deliverables: \path{MINIMAL_WITNESS.json}; \path{VIOLATION_CERTIFICATE.tex}. Independent review: A092, A087. Consumers: A025, A050, A073, A074, A075, A092.}
+
+\textbf{A050 --- Repair with scope.} Find the weakest useful additional hypothesis that repairs a failed potential and prove it. State explicitly which intended applications still satisfy that hypothesis.
+
+\emph{Acceptance tests.} State the changed hypothesis or coefficient explicitly and retain the counterexample to the original statement. Show that the repaired condition is proved for at least one intended nontrivial family and remains valid under its required operations. Do not call the condition globally weakest without proof; compare it against an explicit ordered list of tested repair hypotheses.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{SCOPED_REPAIR.tex}; \path{REPAIR_APPLICATIONS.md}. Independent review: A092, A087. Consumers: A095.}
+
+\subsection{B11: Extremal and critical structure}
+
+\textbf{A051 --- Near-extremizer definition.} Define an admissible extremality notion stable under the reductions actually used. Prove a compactness, finite approximation, or minimal-counterexample statement before assuming existence of an optimizer.
+
+\emph{Acceptance tests.} Distinguish a maximum over a fixed finite dimension from a supremum over all dimensions; the latter need not be attained. If using a minimal counterexample, state a fixed proposed constant and prove the relevant well-ordering/existence conclusion conditionally on a counterexample. Show which tensor/balancing/activation operations preserve the chosen extremality property before using them in a structural argument.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{EXTREMALITY_DEFINITION.tex}; \path{EXISTENCE_AND_LIMITS.md}. Independent review: A090, A094. Consumers: A052, A053, A055.}
+
+\textbf{A052 --- Critical-source structure.} Seek a structural restriction forced by ratio extremality under every allowed physical descendant. Test the claim against known component-pruning failures and explain why criticality changes the argument.
+
+\emph{Acceptance tests.} Derive the structural restriction from the exact ratio or deficit comparison for every allowed physical descendant. Replay the known component raw-entropy and maximum-component-ratio counterexamples; criticality must be used at a specified line. Do not assume descendants inherit full criticality or that disconnected support permits lossless pruning without a separate proof.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{CRITICAL_SOURCE_STRUCTURE.tex}; \path{PRUNING_SCOPE.md}. Independent review: A090, A094. Consumers: A054, A055.}
+
+\textbf{A053 --- Near-tensor perturbations.} Analyze point surgery on products and quantify entropy, influence, and mixed derivative curvature. Determine whether proposed primitivity or nonfactorization conditions really control hidden tensor structure.
+
+\emph{Acceptance tests.} Keep the signed Fourier perturbation terms and prove uniform remainder estimates in the tensor and defect parameters. Quantify the proposed mixed-derivative or nonfactorization statistic, rather than inferring primitivity from visual circuit connectedness. Show whether an arbitrarily hard tensor core still passes the proposed condition after tiny surgery, with all influence costs included.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{NEAR_TENSOR_PERTURBATIONS.tex}; \path{HIDDEN_TENSOR_DIAGNOSTIC.md}. Independent review: A090, A094. Consumers: A022, A054, A055.}
+
+\textbf{A054 --- Connectedness alternatives.} Replace false unrestricted component entropy or ratio inequalities by a controlled-excess theorem with an explicit interface term. Prove that the interface term can be paid in a stated critical class.
+
+\emph{Acceptance tests.} Retain the existing counterexamples to raw component entropy subadditivity and maximum component ratio as mandatory controls. Define the interface term independently of the desired conclusion; setting it equal to the unbounded unexplained entropy gap is not a payment. Prove both the component comparison and an influence payment of the interface on the stated critical class; keep universal class admission separate.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{COMPONENT_EXCESS.tex}; \path{CRITICAL_INTERFACE_PAYMENT.md}. Independent review: A090, A094. Consumers: A052.}
+
+\textbf{A055 --- Extremal obstruction referee.} Try to realize arbitrary hard cores inside every proposed critical class. Preserve all extremality tests in the embedding or identify the exact failed condition.
+
+\emph{Acceptance tests.} Preserve all declared criticality tests in an arbitrary-hard-core embedding before concluding FEI-equivalence. Distinguish mere connectedness/primitivity/all-block terminality from full ratio criticality; known failures of the former do not automatically refute the latter. If an embedding fails, locate the exact inequality and prove the failure quantitatively instead of declaring the class genuinely easier.
+
+{\small\emph{Execution contract:} independent scope review; P1; initial cap 2 work cycles. Deliverables: \path{CRITICAL_CLASS_EMBEDDINGS.tex}; \path{EXTREMAL_SCOPE_VERDICTS.json}. Independent review: A090, A094. Consumers: A005, A051.}
+
+\subsection{B12: Composition and decomposition}
+
+\textbf{A056 --- Balanced composition.} Reprove the full entropy and influence identities for balanced disjoint substitution. Track means and the precise conditions needed when a child is later physically restricted.
+
+\emph{Acceptance tests.} For disjoint balanced children prove/source-pin H(g(h))=H(g)+$\sum$\_i I\_i(g)H(h\_i) and I(g(h))=$\sum$\_i I\_i(g)I(h\_i). Track all child means after a physical restriction and identify where the balanced formula ceases to apply. Complete this baseline once; do not repeatedly claim the known chain rule as progress on overlapping or biased composition.
+
+{\small\emph{Execution contract:} baseline reproduction; P0; initial cap 1 work cycles. Deliverables: \path{BALANCED_SUBSTITUTION_BASELINE.tex}; \path{COMPOSITION_INTERFACE.json}. Independent review: A091, A090. Consumers: A013, A018, A024, A043, A053, A057.}
+
+\textbf{A057 --- Coherent restriction remainder.} Use the exact coherent-composition remainder from the Brain. Seek a summable bound that retains its $\alpha^2$ log(1/$\alpha^2$) term rather than replacing it by O($\alpha^2$).
+
+\emph{Acceptance tests.} Import the complete source remainder, including q$\alpha$$^2$ log(1/$\alpha$$^2$) and both E\_raw(a$\pm$$\alpha$b) terms, with the source's nats converted consistently. Do not replace the remainder by O($\alpha$$^2$): the recovered logarithmic counterexample must pass as a mandatory control. Prove a nonreusing sum across the actual physical hierarchy or a complete scoped theorem; equality of child spectra cannot be assumed after coherent substitution.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{COHERENT_REMAINDER_PAYMENT.tex}; \path{ALPHA_LOG_CONTROLS.md}. Independent review: A091, A090. Consumers: A058, A059, A091, A097.}
+
+\textbf{A058 --- Overlapping compositions.} Identify an explicit shared-input class with a provable complete entropy ledger. Use the selector/block collision interface or posterior information, and test the archived overlapping-product counterexample. The false inequality $H(fg)\le H(f)+H(g)$ and disjoint-block chain rules cannot replace that ledger.
+
+\emph{Acceptance tests.} Choose a class distinct from A019's fresh-selector quantitative-correlation problem---for example an overlapping non-selector outer composition or controlled reuse of selector coordinates---and define it exactly. Do not apply disjoint-block chain rules to shared physical inputs; give an actual coefficient or posterior decomposition. State and prove the structural hypothesis paying the full collision debt, with the bent-splice selector-only increment failure included when relevant.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{OVERLAPPING_COMPOSITION_CLASS.tex}; \path{OVERLAP_ENTROPY_LEDGER.md}. Independent review: A091, A090. Consumers: A059, A060, A091.}
+
+\textbf{A059 --- Decomposition depth.} Prove a factorization or stopping theorem that limits accumulated overhead without assuming bounded formula depth. Supply an explicit family of growing-depth functions covered by the theorem.
+
+\emph{Acceptance tests.} Prove termination or summability without assuming a bounded depth or bounded number of composition steps. Track each overhead term along the full decomposition; a constant per level gives a depth factor unless a proved compensation removes it. Exhibit a family of growing depth and demonstrate that the new theorem covers it outside a simple restatement of existing read-once/orthogonal closure.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{DEPTH_UNIFORM_FACTORIZATION.tex}; \path{GROWING_DEPTH_FAMILY.md}. Independent review: A091, A090. Consumers: B20.}
+
+\textbf{A060 --- Composition sharpness.} Find exact examples showing which constants or hypotheses in new closure results are necessary. Check whether a purported improvement changes only an additive constant that disappears under tensorization.
+
+\emph{Acceptance tests.} Compute H, I, means, and relevant correlations exactly for each claimed sharpness example. Distinguish an additive improvement erased by tensorization from a change in the multiplicative universal/class coefficient. Compare only examples satisfying all of the theorem's fresh-selector, bias, orthogonality, or overlap hypotheses.
+
+{\small\emph{Execution contract:} counterexample family; P1; initial cap 2 work cycles. Deliverables: \path{COMPOSITION_SHARPNESS.tex}; \path{CONSTANT_SCOPE.json}. Independent review: A091, A090. Consumers: A019.}
+
+\subsection{B13: Restriction martingales}
+
+\textbf{A061 --- Compensated restriction process.} Start from the already recovered entropy and influence processes along a fair adaptive physical restriction tree. Propose one explicit compensated process with a stated filtration and boundary values, then prove its supermartingale condition on a specified class or refute it.
+
+\emph{Acceptance tests.} Define a fair adaptive physical restriction tree with decisions measurable in the past and actual conditional Boolean functions at nodes. Derive the finite-tree entropy identity with its terminal term and separate physical branch probabilities from spectral probabilities. Treat the exact process/telescope as a recovered baseline; a new supermartingale payment requires a separately proved drift condition and belongs to A064.
+
+{\small\emph{Execution contract:} baseline interface; P0; initial cap 2 work cycles. Deliverables: \path{FAIR_TREE_ENTROPY_PROCESS.tex}; \path{PROCESS_INTERFACE.json}. Independent review: A087, A094. Consumers: A023, A026, A028, A029, A037, A062, A063, A064, A066.}
+
+\textbf{A062 --- Influence compensator.} Use the exact influence telescope to budget entropy increments. Prove optional-stopping for a finite tree first, then justify any passage to randomized stopping or unbounded depth.
+
+\emph{Acceptance tests.} Prove I(f)=E$\sum$ queried influence+E I(terminal) for the same physical tree used in the entropy process. For a fixed block, relate the query sum to the lost block influence, and distinguish this from spectral support size under an unrelated law. Any randomized or unbounded-depth passage supplies integrability/tail control; finite telescoping alone does not justify exchanging all-dimensional limits.
+
+{\small\emph{Execution contract:} baseline interface; P0; initial cap 2 work cycles. Deliverables: \path{FAIR_TREE_INFLUENCE_PROCESS.tex}; \path{STOPPING_JUSTIFICATION.md}. Independent review: A087, A094. Consumers: A023, A026, A027, A028, A029, A037, A064.}
+
+\textbf{A063 --- Information revelation.} Separate physical branch information from spectral erasure information. Derive a chain rule that measures the information actually revealed by a query rather than assuming they coincide.
+
+\emph{Acceptance tests.} Specify an actual joint probability space before assigning mutual information to a physical query and a spectral label. Derive the query's information from the stated kernel, rather than assuming physical child selection equals Fourier erasure. Show exactly which term is B\_W and which is the mixing/reference correction, including the isospectral and nearly identical branch controls.
+
+{\small\emph{Execution contract:} interface derivation; P1; initial cap 2 work cycles. Deliverables: \path{QUERY_INFORMATION_IDENTITY.tex}; \path{PHYSICAL_SPECTRAL_DISTINCTION.md}. Independent review: A087, A094. Consumers: B20.}
+
+\textbf{A064 --- Global debt potential.} Build an explicit potential that may temporarily grow on rare branches but has controlled initial and expected terminal values. Include the mismatch/KL rebate and test the B05 family; fixed-price local variance refunds are not an available repair.
+
+\emph{Acceptance tests.} State the potential explicitly with a defined sign convention; prove its initial resource bound and expected terminal bound instead of assuming them. Use only proved parts of upstream interfaces and leave their unproved global hypotheses visible; the final FEI conclusion is never an input. Show where $\mu$ log(1/$\mu$), the KL rebate, and coherent $\alpha$$^2$ log(1/$\alpha$$^2$) terms enter and demonstrate that no credit is spent twice. Allow local increases only with a proved expectation/telescoping argument on the actual tree.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{GLOBAL_DEBT_POTENTIAL.tex}; \path{POTENTIAL_OBSTRUCTION_TESTS.md}. Independent review: A087, A094. Consumers: A065, A077, A087.}
+
+\textbf{A065 --- Stopping-rule falsifier.} Stress-test a specified rule on addressing, rare activations and coded restriction plateaux. For B05 compare actual control-first and selector-first trees. Exhibit an expected whole-path debt failure if the rule fails; a bad unchosen coordinate alone does not refute an existential stopping rule.
+
+\emph{Acceptance tests.} Execute or symbolically follow the actual proposed rule, including tie-breaking and stopping conditions. Weight bad paths by their true probabilities; a large charge on one exponentially unlikely branch is not an expected-cost counterexample. Prove growth of the total unpaid expectation, retaining terminal entropy and already-earned KL/posterior credits.
+
+{\small\emph{Execution contract:} counterexample family; P0; initial cap 3 work cycles. Deliverables: \path{STOPPING_RULE_COUNTERTEST.tex}; \path{EXPECTED_COST_CERTIFICATE.json}. Independent review: A087, A094. Consumers: A030, A087.}
+
+\subsection{B14: Independent analytic routes}
+
+\textbf{A066 --- Semigroup dissipation.} Express a relevant entropy quantity through a noise semigroup and identify an integral whose universal influence bound would imply FEI. Check both small-time and large-time integrability.
+
+\emph{Acceptance tests.} Define the semigroup, normalized or unnormalized evolving law, and the entropy quantity being differentiated. Prove the integral identity with all boundary terms and dominate both t$\to$0 and t$\to$$\infty$ in the proposed scope. Identify the precise unproved influence bound that would close FEI; rewriting entropy as an integral does not pay that integral.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{SEMIGROUP_ENTROPY_REPRESENTATION.tex}; \path{TIME_BOUNDARIES.md}. Independent review: A088, A094. Consumers: A067, A070, A088.}
+
+\textbf{A067 --- Hypercontractive refinement.} Locate exactly where standard hypercontractivity loses a logarithmic degree or dimension factor. Seek a Boolean-specific improvement on a measurable regime, not a restatement of an already general real-valued bound.
+
+\emph{Acceptance tests.} Locate the exact logarithmic degree/dimension loss in a primary-source inequality or the recovered proof. State a measurable regime and prove the extra Boolean hypothesis is used; a bound valid for arbitrary real functions cannot silently gain a Boolean-only conclusion. Demonstrate a strict quantitative gain on an explicit family and replay the relevant fixed-order/near-Boolean controls. A fixed-order spectral R\'{e}nyi strengthening with $\alpha$<1 is already false on a one-point defect; any scale-dependent order/correction must be stated and its full cost proved.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{BOOLEAN_HYPERCONTRACTIVE_REFINEMENT.tex}; \path{REGIME_COMPARISON.md}. Independent review: A088, A094. Consumers: A070.}
+
+\textbf{A068 --- Antichain beyond one order.} Generalize the recovered pivotal-antichain estimate to a broader partially ordered or multi-scale geometry. Prove a rank-reference theorem for a class not already covered by desirability width.
+
+\emph{Acceptance tests.} Define the partial order or multiscale geometry and prove the pivotal property replacing the total-order antichain argument. Construct and normalize the new rank reference; code/entropy costs must include the complexity of the geometry. Give a family with an actual improvement over the published width/logarithmic-multiple-order theorem, rather than calling width by another name. The mass-sensitive K\_eff rank refinement is already derived under disjoint-support/fiber-antichain conditions; new geometry or global cost payment must go beyond rederiving that lemma.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{NEW_RANK_GEOMETRY.tex}; \path{WIDTH_SEPARATION_EXAMPLE.md}. Independent review: A088, A094. Consumers: A070.}
+
+\textbf{A069 --- Geometric transfer.} Extract an abstract encoding property from the percolation proof and ask which nongeometric Boolean families satisfy it. Prove the property directly for a new family instead of assuming spatial estimates are universal.
+
+\emph{Acceptance tests.} Read the original percolation encoding proof and separate geometric arm estimates from the abstract decoding/influence statement. Prove the extracted property directly for a named nongeometric Boolean family; spatial estimates cannot be assumed universally. Show the full entropy cost and explain whether the new family was already covered by a different published structured theorem.
+
+{\small\emph{Execution contract:} new math; P2; initial cap 2 work cycles. Deliverables: \path{ABSTRACT_GEOMETRIC_ENCODING.tex}; \path{NONSPATIAL_FAMILY_PROOF.md}. Independent review: A088, A094. Consumers: B20.}
+
+\textbf{A070 --- Analytic route referee.} Compare every new functional inequality against normalized non-Boolean spectra and known cyclic-law failures. Identify the indispensable Boolean hypothesis and test whether it is actually used.
+
+\emph{Acceptance tests.} Test each statement on its exact domain and on the strongest applicable non-Boolean relaxation as a diagnostic, labeling the two outcomes separately. Identify the line where actual Booleanity, granularity, or geometry is used; normalization and bounded L4 alone do not replace full Booleanity. Do not reject a valid Boolean theorem solely because a non-Boolean law violates it; locate the missing or sufficient hypothesis precisely.
+
+{\small\emph{Execution contract:} independent scope review; P1; initial cap 2 work cycles. Deliverables: \path{ANALYTIC_SCOPE_AUDIT.md}; \path{RELAXATION_CONTROL_RESULTS.json}. Independent review: A088, A094. Consumers: A031, A066, A067, A088.}
+
+\subsection{B15: Exact targeted countersearch}
+
+\textbf{A071 --- Search-space design.} Define a bounded Boolean circuit or truth-table family that can falsify one current lemma. Record symmetries, completeness claims, resource limits, and the reason this family targets the hypothesis.
+
+\emph{Acceptance tests.} Tie one search to a fixed lemma/version and state whether the family is complete modulo a proved symmetry reduction. Compute the actual case count before dispatch; all Boolean truth tables number 2\textasciicircum{}(2\textasciicircum{}n), so increasing n is never an automatic next step. Measure a short pilot only when an experiment is justified and set explicit CPU/RAM/runtime/case caps; prefer structured families and exact multiplicity formulas when exhaustive growth is prohibitive.
+
+{\small\emph{Execution contract:} baseline interface; P0; initial cap 1 work cycles. Deliverables: \path{SEARCH_DOMAIN.json}; \path{SEARCH_BUDGET.md}. Independent review: A085, A092. Consumers: A010, A032, A047, A072.}
+
+\textbf{A072 --- Exact Walsh engine.} Compute integer Walsh spectra and exact influences for the chosen family. Verify Parseval, sign-valued inverse transforms, and independent edge counts before any entropy comparison.
+
+\emph{Acceptance tests.} Reuse an existing checked Walsh engine where possible; document any changed normalization instead of creating another independent copy by default. For each accepted witness verify Parseval, the exact sign-valued inverse, and influence by independent edge counts. Specify n, truth-table ordering, bit/sign convention, and integer denominator; floating entropy evaluation does not replace algebraic verification.
+
+{\small\emph{Execution contract:} baseline engine; P0; initial cap 2 work cycles. Deliverables: \path{EXACT_WALSH_INTERFACE.py}; \path{ENGINE_CERTIFICATE.json}. Independent review: A085, A092. Consumers: A010, A022, A032, A035, A049, A073, A074, A082.}
+
+\textbf{A073 --- Certified logarithms.} Turn a promising entropy inequality into rational interval bounds or an exact integer-product comparison. State the margin and stop precision refinement when its sign is rigorously determined.
+
+\emph{Acceptance tests.} Start from exact algebraic masses; use outward logarithm enclosures or an exact integer-product comparison with a proved equivalence. State the certified margin and stop precision refinement once its sign is determined. Report unresolved zero/near-zero margins honestly and avoid using a grid or floating tolerance as an all-real-parameter certificate.
+
+{\small\emph{Execution contract:} numerical certificate; P0; initial cap 2 work cycles. Deliverables: \path{LOG_SIGN_CERTIFICATE.json}; \path{CERTIFIED_COMPARISON.md}. Independent review: A085, A092. Consumers: A020, A025, A035, A049, A074, A082, A085.}
+
+\textbf{A074 --- Independent reproducer.} Implement a second calculation for selected witnesses, using a different derivation or representation. Distinguish an independent implementation from rerunning the original script.
+
+\emph{Acceptance tests.} Implement from the original truth table/circuit with a different computational path, such as direct edge counts versus Fourier identities. Do not count rerunning the original checker or importing its computed spectrum as independent reproduction. Reconcile the exact rational quantities before comparing certified logarithmic margins, and record any remaining discrepancy at its first differing quantity.
+
+{\small\emph{Execution contract:} independent reproduction; P0; initial cap 2 work cycles. Deliverables: \path{INDEPENDENT_REPRODUCTION.py}; \path{REPRODUCTION_REPORT.json}. Independent review: A085, A092. Consumers: A092.}
+
+\textbf{A075 --- Search-to-theorem bridge.} Convert a recurring finite pattern into a parameterized construction and an analytic proof. If no bridge is found, archive the bounded search domain and do not present its absence of failures as a theorem.
+
+\emph{Acceptance tests.} Specify an actual Boolean family for every admissible parameter, rather than extrapolating a table of finite ratios. Prove the coefficient/multiplicity formula and the relevant entropy/influence asymptotics analytically. If a bridge is not obtained, preserve the exact searched domain and failed derivation without promoting absence of counterexamples to a theorem.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{FINITE_PATTERN_TO_FAMILY.tex}; \path{ASYMPTOTIC_PROOF.md}. Independent review: A085, A092. Consumers: A025, A080, A082.}
+
+\subsection{B16: Scalable Boolean counterfamilies}
+
+\textbf{A076 --- Threshold and tribes controls.} Derive exact or rigorous asymptotic spectra for selected threshold, tribes, and threshold-composition controls. Use them to discriminate among candidate universal payments.
+
+\emph{Acceptance tests.} Give exact multiplicities or a proved asymptotic formula with remainder for each named control family. Separate biased balancing parameters from the uniform original-input law and include all variables in influence. Evaluate the current candidate's unpaid term on the controls; merely rechecking the already proved all-threshold theorem is not a new result.
+
+{\small\emph{Execution contract:} interface derivation; P1; initial cap 2 work cycles. Deliverables: \path{STRUCTURED_CONTROLS.tex}; \path{CONTROL_DISCRIMINATION.json}. Independent review: A092, A088. Consumers: A015.}
+
+\textbf{A077 --- Sparse-defect towers.} Construct increasingly rare Boolean defects inside tensor or selector towers. Track the entropy and influence contribution of each scale separately to expose repeated use of the same budget.
+
+\emph{Acceptance tests.} Specify the full Boolean circuit/recursion with distinct physical coordinates and any declared reuse. Compute cross-scale interference and track the probability-weighted cost of every defect; additivity cannot be assumed for overlapping changes. Prove whether one candidate influence or information credit is reused across scales, and distinguish a local surcharge divergence from H/I divergence.
+
+{\small\emph{Execution contract:} counterexample family; P0; initial cap 3 work cycles. Deliverables: \path{SPARSE_DEFECT_TOWERS.tex}; \path{MULTISCALE_COST_LEDGER.json}. Independent review: A092, A088. Consumers: A022, A075, A080.}
+
+\textbf{A078 --- Coding and padding.} Build actual Boolean parity-code and auxiliary-padding constructions. Track added influence as well as preserved entropy; a formal spectral-law construction is insufficient.
+
+\emph{Acceptance tests.} Give actual Boolean inverse Walsh signs or a truth-table/circuit realization; an admissible abstract subset law is not enough. Import the existing independent-padding energy/cap barrier and include every auxiliary influence cost. State whether the construction uses independent product padding, deterministic occupied coordinates, or genuinely new dependence, and prove the exact scope of every hierarchy condition used.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{BOOLEAN_CODING_PADDING.tex}; \path{PADDING_ENERGY.md}. Independent review: A092, A088. Consumers: A032, A033, A079.}
+
+\textbf{A079 --- Correlated spectral auxiliaries.} Seek actual Boolean realizations with correlated auxiliary spectra on a uniform physical product cube. Retain the conditional auxiliary entropy and the proven marginal phase-energy cost, and apply the arbitrary-tensor embedding guard to any proposed conditional completion.
+
+\emph{Acceptance tests.} Keep the physical cube uniform with disjoint X,Y; only the spectral auxiliaries are allowed to be correlated under the existing phase-energy baseline. Verify the full Boolean realization and retain conditional auxiliary entropy rather than counting only a marginal law. Quantify why the construction differs from independent padding and test whether its proposed entropy completion hides arbitrary tensor factors.
+
+{\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{CORRELATED_AUXILIARY_CONSTRUCTION.tex}; \path{CONDITIONAL_ENERGY_LEDGER.md}. Independent review: A092, A088. Consumers: A034, A080.}
+
+\textbf{A080 --- Universal-counterexample standard.} For any candidate FEI disproof, prove a sequence of actual Boolean functions with H/I unbounded. Check that the growth survives every normalization; a finite ratio above a proposed constant is only a constant lower bound.
+
+\emph{Acceptance tests.} Require actual Boolean f\_m for an unbounded sequence of dimensions and prove H(f\_m)/I(f\_m)$\to$$\infty$. Do not substitute B/I, $\Delta$\_selH/I\_sel, witness residual/I, or a raw surrogate for the actual FEI ratio. Check every mean, sign, logarithm, added variable, and limiting regime; a finite ratio above one constant is reported only as a constant lower bound. The recovered point defect is a R\'{e}nyi obstruction with Shannon H/I$\to$4; it is an explicit control against confusing surrogate divergence with an FEI disproof.
+
+{\small\emph{Execution contract:} independent counterexample review; P1; initial cap 2 work cycles. Deliverables: \path{FEI_DISPROOF_STANDARD.md}; \path{CANDIDATE_SEQUENCE_AUDIT.tex}. Independent review: A092, A088. Consumers: A092.}
+
+\subsection{B17: Certificates and finite-to-infinite bridges}
+
+\textbf{A081 --- Dependency certificates.} Encode the accepted proof dependency graph with exact statement versions, hypotheses, units, source pins, and unresolved leaves. Reject any cycle passing through the final FEI claim.
+
+\emph{Acceptance tests.} Treat mathematical implication edges separately from advisory packet reuse and reviewer routing. Every accepted lemma has a complete source, immutable revision, hypotheses, and evidence state; an OPEN target cannot be silently treated as proved. Reject a proof cycle containing the desired FEI theorem, and preserve any genuinely conditional theorem with its unproved premise visible.
+
+{\small\emph{Execution contract:} baseline interface; P0; initial cap 1 work cycles. Deliverables: \path{PROOF_DEPENDENCIES.json}; \path{DEPENDENCY_VALIDATOR.md}. Independent review: A090, A094. Consumers: A001, A083, A090, A096, A098, A099.}
+
+\textbf{A082 --- Finite inequalities.} Produce rational or symbolic certificates for finite extremal estimates needed by an analytic argument. State separately the theorem that makes this finite domain exhaustive for the intended application.
+
+\emph{Acceptance tests.} State the finite parameter/case domain exactly and certify every extremal reduction used to shrink it. Provide rational/symbolic certificates with a checker or a complete hand-verifiable argument. If the finite domain exhausts an all-dimensional application, prove that reduction separately; without it the result remains a finite statement.
+
+{\small\emph{Execution contract:} numerical certificate; P1; initial cap 2 work cycles. Deliverables: \path{FINITE_INEQUALITY_CERTIFICATE.json}; \path{EXHAUSTIVENESS_LEMMA.tex}. Independent review: A090, A094. Consumers: A073, A075, A083, A084, A085.}
+
+\textbf{A083 --- Formal core.} Formalize one small, decisive identity or combinatorial lemma using an available proof assistant only if it reduces a concrete risk. Do not spend the campaign building unrelated formalization infrastructure.
+
+\emph{Acceptance tests.} Choose an available proof assistant and an existing small lemma whose formalization resolves a concrete identified risk. Check the exact theorem with no admitted proof holes or extra axioms asserting the target; record the trusted foundational/library assumptions. State which surrounding analytic lemmas remain outside the certificate; no global formal-verification claim follows from one formal identity.
+
+{\small\emph{Execution contract:} formal verification; P2; initial cap 1 work cycles. Deliverables: \path{FORMAL_CORE}; \path{FORMAL_SCOPE.md}. Independent review: A090, A094. Consumers: A085.}
+
+\textbf{A084 --- Continuum parameters.} Certify a compact bias or weight region by interval bounds together with analytic boundary reductions. A grid alone does not cover all real parameter values.
+
+\emph{Acceptance tests.} Cover the entire declared compact region with certified bounds; point samples do not certify intervals between them. Prove the analytic reductions at deterministic biases, vanishing deficits, unbounded weights, or large arity when those lie outside the compact region. State the exact dimension/arity range and do not infer all-arity validity from one finite-dimensional box.
+
+{\small\emph{Execution contract:} numerical certificate; P1; initial cap 2 work cycles. Deliverables: \path{CONTINUUM_REGION_CERTIFICATE.json}; \path{BOUNDARY_REDUCTION.tex}. Independent review: A090, A094. Consumers: A085.}
+
+\textbf{A085 --- Certificate adversary.} Try to invalidate every numerical-to-universal bridge through a missed endpoint, underflow, insufficient precision, or hidden dimension cutoff. Supply the smallest explicit failure or a completed scope check.
+
+\emph{Acceptance tests.} Reconstruct the exact target and domain from original inputs, including zero atoms, deterministic biases, and the largest claimed dimension. Try underflow, incorrect rounding direction, empty intervals, unsupported library-error assumptions, and unproved symmetry reductions. Distinguish a valid finite certificate from the separate all-real or all-dimensional bridge; report the first unsupported implication.
+
+{\small\emph{Execution contract:} independent certificate review; P0; initial cap 2 work cycles. Deliverables: \path{CERTIFICATE_ADVERSARY.md}; \path{CERTIFICATE_FAILURE.json}. Independent review: A090, A094. Consumers: A082, A083, A084, A098.}
+
+\subsection{B18: Independent proof audit A}
+
+\textbf{A086 --- Joint-code referee.} Read complete proofs from A001-A015 and attempt to reconstruct each code independently. Check finite success, decoding, duplicate witnesses, normalizers, and the final expectation.
+
+\emph{Acceptance tests.} Review complete original sources from the relevant A001--A015 chain, not only authors' summaries. Reconstruct finite success, decoding, distinct-run multiplicity, global codebook, normalizers, and the expectation paid by influence. Any representation-existence or universal residual statement used without proof remains an explicit gap; send one precise repair target to A089.
+
+{\small\emph{Execution contract:} independent proof review; P0; initial cap 2 work cycles. Deliverables: \path{JOINT_CODE_REVIEW.md}; \path{JOINT_CODE_GAPS.json}. Independent review: A094, A085. Consumers: A089, A090, A094, A096.}
+
+\textbf{A087 --- Restriction referee.} Audit A021--A030 and A061--A065 from exact physical children. Check fair conditional laws, averaging order, full tree and terminal costs, the mismatch/KL rebate and B05 scope. Reject reuse of influence or an inference from all-coordinate failure to existential failure.
+
+\emph{Acceptance tests.} Audit the actual A021--A030 and A061--A065 proof chain with exact physical children and the same fair-tree filtration. Preserve $\mu$ and its KL rebate, distinguish it from block mixing M\_W, and check zero-mismatch as well as rare-branch endpoints. Verify path probabilities, terminal entropy, and nonreuse of influence/credit; a valid local identity alone does not settle the stopping theorem.
+
+{\small\emph{Execution contract:} independent proof review; P0; initial cap 2 work cycles. Deliverables: \path{RESTRICTION_REVIEW.md}; \path{RESTRICTION_GAPS.json}. Independent review: A094, A085. Consumers: A089, A090, A094, A096.}
+
+\textbf{A088 --- Booleanity referee.} Audit A031--A040 and A066--A070 for an actual use of full Boolean phase constraints. Apply the distinct fixed-convolution and fixed-cap-prefix no-go controls, and distinguish correlated spectral auxiliaries from correlated physical inputs.
+
+\emph{Acceptance tests.} Reconstruct the A031--A040 and A066--A070 chain from full sources and actual Boolean inputs. Check all signs and full-Booleanity uses against the fixed-prefix controls, and retain conditional auxiliary entropy. Enforce T=H(v/Z)-log$_2$Z and distinguish raw-L failure, normalized lower payment, and sufficient recovery; verify every needed implication independently.
+
+{\small\emph{Execution contract:} independent proof review; P0; initial cap 2 work cycles. Deliverables: \path{BOOLEANITY_ANALYTIC_REVIEW.md}; \path{BOOLEANITY_GAPS.json}. Independent review: A094, A085. Consumers: A089, A090, A094, A096.}
+
+\textbf{A089 --- Repair specialist.} Take a specific failed proof step from the first three referees and prove the strongest correct replacement that preserves a useful application. Keep the original failed statement and counterexample visible.
+
+\emph{Acceptance tests.} Choose one concrete failed line and preserve its original statement and counterexample beside the repair. Prove the changed statement and explicitly recompute its implication for the intended application. As a mathematical contributor to the repair, recuse from approving it; route the revised complete chain to an uninvolved referee.
+
+{\small\emph{Execution contract:} new math repair; P0; initial cap 3 work cycles. Deliverables: \path{REPAIRED_LEMMA.tex}; \path{REPAIR_HISTORY.md}. Independent review: A094, A085. Consumers: A095.}
+
+\textbf{A090 --- Independent reconstruction.} Reprove a near-complete campaign candidate from its theorem statements and original sources, without relying on the supplied derivation. Report the first unreconstructed implication precisely.
+
+\emph{Acceptance tests.} Start from theorem statements and original baseline sources; do not copy the candidate's supplied derivation into the purported independent proof. Record the critical reconstruction before comparing it with the authors' proof and identify genuinely shared unproved assumptions. A near-complete universal candidate requires all dimensions, limit passages, terminal cases, and constant independence, not agreement on a summary.
+
+{\small\emph{Execution contract:} independent reconstruction; P0; initial cap 3 work cycles. Deliverables: \path{BLIND_RECONSTRUCTION.tex}; \path{RECONSTRUCTION_COMPARISON.md}. Independent review: A094, A085. Consumers: A094, A099.}
+
+\subsection{B19: Independent proof audit B and literature}
+
+\textbf{A091 --- Composition referee.} Audit prime-gate and shared-data closure results with all biases and overlaps explicit. Recognize the existing $\max\{2/c,C\}$ corollary as baseline, test bent splice and overlapping products, and preserve all three weighted-threshold normalization no-go scopes.
+
+\emph{Acceptance tests.} Check fresh selectors, neighboring correlation/disagreement, repeated variables, and genuine disjointness at every composition node. Recompute all constants and deterministic/near-dictator endpoints using the actual product normalization. Treat max\{2/c,C\} as baseline, replay bent-splice and all three weighted payment failures, and keep conditional-input TC separate from spectral erasure.
+
+{\small\emph{Execution contract:} independent proof review; P0; initial cap 2 work cycles. Deliverables: \path{COMPOSITION_REVIEW.md}; \path{COMPOSITION_SCOPE.json}. Independent review: A090, A085. Consumers: A044.}
+
+\textbf{A092 --- Counterexample referee.} Verify new Boolean counterexamples from original truth tables or circuit definitions. Confirm the exact target they refute and the rigorous sign of the violation.
+
+\emph{Acceptance tests.} Reconstruct the function from its original truth table/circuit before accepting any supplied spectrum or ratio. Check the sign with exact or certified arithmetic and verify the asymptotic range if an infinite family is claimed. Name the precise claim refuted; local charge, fixed coefficient, normalized relaxation, and full FEI are distinct outcomes. The existing B19 review of the B05 no-go may satisfy the first review instance when its immutable source receipt is adopted. This does not complete all future rolling reviews.
+
+{\small\emph{Execution contract:} independent counterexample review; P0; initial cap 2 work cycles. Deliverables: \path{COUNTEREXAMPLE_REVIEW.md}; \path{COUNTEREXAMPLE_SCOPE.json}. Independent review: A090, A085. Consumers: A046, A096, A100.}
+
+\textbf{A093 --- Literature and priority.} Check primary versions, corrections, and withdrawn claims relevant to each new theorem. Record theorem-level overlap and avoid a latest-best or first-result claim without sufficient evidence.
+
+\emph{Acceptance tests.} Read primary papers/preprints and their current corrections relevant to the exact theorem, rather than relying on title matches or secondary summaries. Compare assumptions, constants, normalization, and consequences theorem by theorem. Leave priority/first/latest-best claims unasserted when coverage is insufficient; record actual retrieval dates and versions.
+
+{\small\emph{Execution contract:} literature review; P1; initial cap 2 work cycles. Deliverables: \path{PRIMARY_SOURCE_OVERLAP.md}; \path{CITATION_STATUS.json}. Independent review: A090, A085. Consumers: A041, A069, A095, A099, A100.}
+
+\textbf{A094 --- Proof-chain challenger.} Challenge the strongest complete-looking argument from A086-A090, independently selecting difficult regimes and embeddings. Agreement counts only after examining the full proof chain.
+
+\emph{Acceptance tests.} Read the complete candidate proof and original dependencies independently; the first referee's verdict is not evidence for a missing step. Choose difficult limits and arbitrary-seed embeddings independently and test the exact highest-risk implications. For full FEI, verify the entire chain and all known applicable controls; ensure neither this reviewer nor the first reviewer contributed the theorem being approved.
+
+{\small\emph{Execution contract:} independent proof review; P0; initial cap 3 work cycles. Deliverables: \path{SECOND_CHAIN_CHALLENGE.md}; \path{SECOND_REVIEW_VERDICT.json}. Independent review: A090, A085. Consumers: A095, A099.}
+
+\textbf{A095 --- Restricted-result extraction.} When a universal proof fails, isolate a complete nontrivial class theorem, sharp obstruction, or useful equivalence suitable for a separate manuscript with honest scope.
+
+\emph{Acceptance tests.} Extract a statement whose entire proof is closed; do not hide the failed universal lemma in a weaker theorem's hypothesis unless that condition is explicit. Demonstrate a useful nontrivial class, sharp obstruction, or exact equivalence and compare it with existing primary results. If contributing new mathematics to the extraction, recuse from its approval and request an uninvolved full-source review.
+
+{\small\emph{Execution contract:} new math synthesis; P1; initial cap 3 work cycles. Deliverables: \path{RESTRICTED_RESULT.tex}; \path{SCOPE_AND_CONTINUATION.md}. Independent review: A090, A085. Consumers: A050, A093, A099.}
+
+\subsection{B20: Synthesis and mathematical coordination}
+
+\textbf{A096 --- Live gap ledger.} Maintain the current claim/dependency/counterexample map from complete saved reports. Select the nearest unpaid lemma and perform a substantive derivation on that lemma each work cycle.
+
+\emph{Acceptance tests.} Update the ledger only from complete saved result records, distinguishing proposed, analytically proved, finite certified, reviewed, and released states. Select one nearest unpaid inequality and contribute a concrete derivation or exact failed step; a status-only acknowledgment does not complete the packet's mathematical cycle. Keep retired/falsified versions discoverable so a renamed residual or obsolete constant does not reenter the active queue as new work.
+
+{\small\emph{Execution contract:} mathematical coordination; P0; initial cap 1 work cycles. Deliverables: \path{LIVE_GAP_LEDGER.json}; \path{NEXT_LEMMA_DERIVATION.tex}. Independent review: A090, A094. Consumers: A046, A081, A097, A098, A100.}
+
+\textbf{A097 --- Cross-route transfer.} Try to transfer a proved lemma from one route into the exact missing term of another. Write the substitution with all hypotheses and constants; analogies alone do not count.
+
+\emph{Acceptance tests.} Write the substitution algebraically and verify variables, measures, normalizers, constants, and conditional laws. Use a proved source lemma; replacing the target residual with another unproved universal endpoint is not a transfer. Quantify the amount of the target debt now paid and state the exact remaining term or structural restriction.
+
+{\small\emph{Execution contract:} new math; P0; initial cap 3 work cycles. Deliverables: \path{CROSS_ROUTE_SUBSTITUTION.tex}; \path{TRANSFER_HYPOTHESIS_CHECK.json}. Independent review: A090, A094. Consumers: B20.}
+
+\textbf{A098 --- Resource reallocation.} At each campaign checkpoint compare mathematical output against predefined milestones. Reassign packets within available authorized capacity to distinct next lemmas; do not create extra workers or schedules.
+
+\emph{Acceptance tests.} Count only the twenty existing B-stream schedules and the hypothetical 100 A-packet design; A labels do not add 100 live workers or another twenty coordinators. At each natural run choose one ready packet within the B-stream's five-item backlog, resume its exact gap, and record attempt/cycle use. Renew a pilot only after its stated mathematical milestone or a justified new attack; when review queues are full, finish/review existing candidates rather than add more. Never infer token prices, paid capacity, continuous runtime, or completed scheduled execution from this matrix.
+
+{\small\emph{Execution contract:} resource coordination; P0; initial cap 1 work cycles. Deliverables: \path{CHECKPOINT_ALLOCATION.json}; \path{ALLOCATION_RATIONALE.md}. Independent review: A090, A094. Consumers: A100.}
+
+\textbf{A099 --- Candidate assembly.} Assemble the strongest fully supported proof into a single source with complete lemmas and references. Preserve open leaves as explicit conjectures until both independent audits close them.
+
+\emph{Acceptance tests.} Assemble original complete derivations, not a chain of status summaries or undocumented cross-agent claims. Keep unresolved leaves as conjectures/conditional hypotheses, with resulting theorem scope changed accordingly. A full-FEI label requires both independent complete-chain reviews and closure of every all-dimensional, normalization, and limit obligation; a restricted theorem does not wait for full FEI to become useful.
+
+{\small\emph{Execution contract:} proof assembly; P0; initial cap 2 work cycles. Deliverables: \path{CANDIDATE_MANUSCRIPT.tex}; \path{ASSEMBLY_STATUS.json}. Independent review: A090, A094. Consumers: A093, A100.}
+
+\textbf{A100 --- Release and continuation ledger.} Prepare the final accepted-theorem list, failed-route archive, proof status, and next ten precise research questions. Verify durable private artifacts and distinguish configured, executed, saved, reviewed, and publicly released work.
+
+\emph{Acceptance tests.} Every accepted theorem and failed route links to its complete source and the relevant independent evidence. Distinguish configured, invoked, completed, saved, reviewed, and publicly released work; an assignment or upload is not a mathematical proof or execution receipt. Keep the campaign report/research in the private destinations; any later public result uses the author's applicable dissemination authorization and an actual publication receipt. Provide ten nonredundant continuation questions with precise hypotheses, target inequality, and first action.
+
+{\small\emph{Execution contract:} release record; P0; initial cap 1 work cycles. Deliverables: \path{FINAL_RESEARCH_LEDGER.md}; \path{ARTIFACT_RECEIPTS.json}. Independent review: A090, A094. Consumers: B20.}
+
+\section{Ten-day sequence, checkpoints, and reallocation}
+
+The campaign ends at 22:15:57 Asia/Jerusalem on 21 October 2026. The twenty recurrences are bounded to that window; the final scheduled occurrence for a particular slot may precede the cutoff because its hourly phase is preserved. The prompt also carries the explicit deadline.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.16\linewidth}>{\raggedright\arraybackslash}p{0.40\linewidth}>{\raggedright\arraybackslash}p{0.36\linewidth}}
+\toprule
+Window & Work to complete & Evidence required to advance \\
+\midrule\endhead
+Days 1--2 & Recover and freeze statements; reproduce decisive old controls; create exact J/R and Booleanity target ledgers; divide nonoverlapping packets. & Source-pinned baseline, no known falsifier omitted, precise first unpaid lemma for every live route. \\
+Days 3--4 & Prove restricted quantitative endpoints, construct candidate codes or stopping rules, and attack them with targeted searches. & At least one fully written new lemma or a rigorous route-killing family per productive stream. \\
+Day 5 & Compare the live routes and reallocate effort. Attempt cross-route transfer into an exact missing term. & Keep routes with a quantitative advance or a sharply surviving bottleneck; archive broad reformulations with no new bound. \\
+Days 6--8 & Concentrate proof effort on the strongest two to four surviving mechanisms; complete a substantial class theorem when possible. & Explicit constants, no unproved representation theorem hidden in a lemma, and complete treatment of difficult endpoints. \\
+Day 9 & Complete integrated independent reconstruction of full-FEI candidates and major restricted theorems after rolling reviews throughout the campaign; run only computations needed by the proof. & Two substantive independent audits, exact dependency graph, all counterexample objections resolved or the theorem narrowed. \\
+Day 10 & Complete accepted proofs, document rejected routes, and deliver the exact remaining frontier. & A self-contained final manuscript or verified partial-result package; complete private archives and concrete continuation packets. \\
+\bottomrule
+\end{longtable}
+
+Independent review starts immediately on Day 1; Day 9 is an integrated recheck of candidates and dependencies, not a first review. The end-of-day checkpoints are 13, 15, 16, 19, 20 and 21 October 2026 at 22:15:57 Asia/Jerusalem for Days 2, 4, 5, 8, 9 and 10 respectively. The synthesis stream should check progress at least at each natural invocation, but numerical quotas are not success criteria. If a difficult lemma needs several cycles, record its exact latest derivation and unresolved line. Repetition becomes useful only when a new idea, a stronger hypothesis, a different proof, or a new falsifier is introduced.
+
+\subsection{Rules for stopping an unproductive route}
+
+\begin{enumerate}
+\item If a known Boolean counterexample violates the proposed helper, stop using that helper immediately. Retain the failed statement and its certificate; attempt a repair only with a stated new hypothesis.
+\item If an arbitrary Boolean seed embeds in a proposed simplified class while preserving the target ratio, label the endpoint FEI-equivalent. It can still be pursued, but it is not counted as a reduction in difficulty without a new estimate.
+\item If a proof works for arbitrary spectral probability laws but such laws have a known counterexample, locate the missing Boolean constraint before continuing.
+\item If successive cycles only rename the same residual or add another equivalent potential, redirect some capacity to a concrete restricted theorem or a different mechanism.
+\item If a finite computation is the only evidence for a universal statement, require a finite-to-infinite theorem or lower the claim to the exact tested domain.
+\end{enumerate}
+
+These are scientific allocation rules. They do not authorize overriding access restrictions, manufacturing a tool result, or abandoning a scheduled slot. A slot with a blocked action should continue independent permitted mathematical work and preserve the actual blocker.
+
+\section{What would count as a significant result}
+
+\subsection{Primary outcome: the unrestricted theorem or a rigorous disproof}
+
+A full proof must close \eqref{eq:full} for every Boolean function and every dimension with one finite constant. It must contain its representation, selection, coding, or structural lemmas as proved statements, including any existence argument. A disproof must construct actual Boolean functions $f_m$ with $H(f_m)/I(f_m)\to\infty$. Exceeding one proposed constant or falsifying an auxiliary spectral inequality does not meet that standard.
+
+A universal good-coordinate erasure inequality, a universal
+whole-witness residual bound, or a globally summable stopping
+tree with uniformly paid terminals would close a precise route
+to \eqref{eq:full}. These are full-solution outcomes. Their
+restricted-class variants can be substantial partial results.
+
+\subsection{Major partial outcomes worth completing}
+
+\begin{itemize}
+\item A good-coordinate or fully paid stopping-tree theorem for a new explicit class, with its hereditary or admission hypothesis proved and the remaining universal obstruction identified.
+\item A bound on the whole-witness residual for a class with genuinely unbounded overlap that lies outside the existing bounded-read or orthogonal-multiplexer hypotheses. State exactly how the new parameter improves the old logarithmic loss.
+\item An arity-uniform product-biased corrected FEI+ theorem for arbitrary weighted thresholds, with its resulting depth-independent read-once formula consequence.
+\item A Boolean-specific conditional entropy or phase-energy theorem under a proved stable structural condition, together with a clear account of the remaining class outside that condition.
+\item A full FEI theorem for another broad, currently unresolved family, supported by a primary-source novelty check. Do not assert that a family is new merely because it is absent from one local manuscript.
+\item A rigorous scalable counterfamily that rules out a major live universal helper, or a corrected sharp auxiliary theorem replacing it. Such a result can save substantial research effort without being a disproof of FEI.
+\end{itemize}
+
+Improving $8.937$ to a slightly smaller number, running more random examples of an already proved identity, or producing longer exposition without a new mathematical implication is a lower priority during this campaign. These can be useful after a major theorem is secure, but they should not displace work on the unpaid global terms.
+
+\section{Coordination, artifacts, and mathematical acceptance}
+
+\subsection{A durable record for every invocation}
+
+Every invocation first reads the campaign's current status, its own most recent complete result, the relevant peer handoffs, and the accessible Brain inbox. It then works on one concrete mathematical increment in its assigned lane. At the end, it saves the complete derivation and any useful partial result, counterexample, failed attempt, computation, or precise blocked step. A status-only acknowledgment is not the substantive output of a research run.
+
+Use a unique run directory so concurrent writers do not overwrite one another. The full research route in the private open-problems repository is
+\begin{quote}\small
+\url{https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11}
+\end{quote}
+with runs under \texttt{runs/Bxx/<UTC\_RUN\_ID>/}. The complete plan is also saved in the Brain repository at
+\begin{quote}\small
+\url{https://github.com/yspennstate/math-research-brain/tree/main/research_pushes/2026-10-11-full-fei-campaign}
+\end{quote}
+with source-bound handoffs under \texttt{handoffs/fleet01/Bxx/<UTC\_RUN\_ID>/}. These are intended campaign paths implemented during recovery. Commit receipts and the live scheduler manifest record what was actually saved and configured.
+
+The current request changes the mathematical priority of this environment's twenty tasks. It does not direct changes to the other environments' tasks or require edits to the global eighty-task controls. Existing access restrictions remain effective. Previously denied content is not reconstructed or transported through the new report paths. The live intake protocol identifies fleet01 with dot:D7CB6565 and the established Claude engineer with claude:4a88bc43; use the source-bound route and actual replies rather than assuming delivery or acknowledgment.
+
+\subsection{Required record fields}
+
+Each \texttt{REPORT.md} or TeX result contains the following compact fields:
+\begin{enumerate}
+\item \textbf{Target:} exact statement, units, domain, hypotheses, and intended implication for FEI.
+\item \textbf{Inputs:} source files actually read, immutable revisions, theorem/page locators, and the exact prior open step.
+\item \textbf{Result:} full proof, counterexample, or explicitly incomplete derivation. State the first remaining unsupported line.
+\item \textbf{Validation:} original commands, code, deterministic seeds where used, exit status, tested domain, error bounds, and actual outputs. Mark unexecuted work as such.
+\item \textbf{Dependencies:} accepted lemmas, unverified lemmas, falsified candidates, and whether this result changes any upstream conclusion.
+\item \textbf{Handoff:} one next mathematical action with its expected deliverable and a distinct proposed reviewer.
+\item \textbf{Persistence:} actual repository commit and paths, plus any unresolved save, delivery, or access failure.
+\end{enumerate}
+
+The adjacent machine-readable \texttt{AGENT\_ASSIGNMENTS.json} maps every A-packet to its B-stream. The \texttt{CURRENT\_STATUS.md} file is maintained by B20 as the concise navigation layer; it never replaces the original proofs. Optimistic branch updates should use the observed parent revision and preserve unrelated concurrent changes. Failed writes do not count as saved artifacts.
+
+\subsection{Acceptance states}
+
+Use distinct states for a proposed claim, an analytically proved claim, a finite verified statement, an independently reviewed theorem, and a public release. A finite computational check can verify a finite statement exactly; it cannot by itself promote an all-dimensional theorem. A source index or repository upload does not imply native Brain ingestion or downstream use.
+
+For a complete full-FEI candidate, both audit streams must inspect the complete dependency chain and the known obstruction suite. They should independently reconstruct the critical inequalities and check all limit passages. A proof-assistant certificate is valuable when available, but absence of one is not replaced by assertions of formal verification. The author decides dissemination of future results; the present authorization publishes the recovered paper and keeps this plan and campaign research in the requested private repositories.
+
+\subsection{How the twenty scheduled streams execute the hundred assignments}
+
+The machine-readable assignment file is an execution contract: every A-packet has a work type, priority, expected artifacts, specific acceptance criteria, a bounded initial pilot, suggested upstream packets, intended consumers, and independent reviewers. Suggested upstream packets are research connections, not proved premises. An actual proof must list the exact claim versions it uses; that proof-dependency graph must be acyclic even when the research workflow has feedback loops.
+
+Each natural invocation of B01--B20 selects \emph{one} of its five A-packets. It resumes a productive unfinished derivation, consumes a useful new dependency, or starts the nearest ready obligation. It does not rotate mechanically through five topics or start five additional workers. If access or a missing input blocks that packet, it works on an independent ready packet within the same FEI stream. Assistance comes through source-bound handoffs to existing streams. The existing twenty task identities, hourly phases, recurrence counts and fixed endpoint remain unchanged.
+
+Every run records its A-packet, stable gap identifier, attempt identifier, method, exact latest derivation, and next action. Three substantive attempts on the same unresolved gap without a new quantitative bound, structural distinction, valid counterexample, or repaired proof trigger a short diagnosis and a change of method or a narrower theorem. Renaming a potential does not reset that count. An access failure or a bookkeeping-only run is recorded honestly and is not counted as a mathematical attempt.
+
+Baseline work has a finite completion event. Once a source-complete identity, convention ledger, calibration fixture, or dependency representation is accepted, later runs consume it and move to a downstream obligation. Reopening requires a concrete correction or new application. The recovered manuscript and completed audits count toward the first checkpoint; this revision does not restart two days of recovery.
+
+\subsection{Shared interfaces and output ownership}
+
+The following ownership rules prevent multiple streams from producing competing definitions of the same debt. Ownership concerns the interface and its versioned statement; other streams may improve or challenge it through new immutable reports.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.27\linewidth}>{\raggedright\arraybackslash}p{0.65\linewidth}}
+\toprule
+Packets & Distinct outputs and connection \\
+\midrule\endhead
+A023, A029, A037, A064 & A023 proves a rarity payment on an explicit model family; A029 owns the two-child deficit recurrence; A037 owns posterior credit conservation; A064 consumes these in a candidate global potential. \\
+A028, A059, A061, A062 & A061/A062 supply the common entropy and influence telescopes once. A028 proves a stopping and terminal-class theorem; A059 proves a separate composition-depth bound with an explicit overhead. \\
+A018, A019, A058 & A018 imports the exact collision identity; A019 must reach a genuinely new quantitative class or a low-energy class; A058 names a broader overlapping composition target. \\
+A032, A045, A078, A079 & Reuse realizability checks, while separating uniform phase realizability, biased normalization, actual coding constructions, and correlated auxiliary constructions. \\
+A049, A073, A074, A082, A084 & Extract the minimal Boolean witness, certify the logarithmic sign, reproduce independently, then prove a finite-domain or continuum bridge only if the theorem requires it. \\
+A001, A003, A004, A081, A096 & Fix quantifiers, logical implications, units and dependency representation; A096/B20 maintains their single concise live index. \\
+A021, A022, A053, A077 & Share sparse-defect fixtures; study activation limits, point surgery, criticality and multiscale towers as different mathematical questions. \\
+\bottomrule
+\end{longtable}
+
+\subsection{Versioned completion and refutation propagation}
+
+The adjacent files \texttt{EXECUTION\_PROTOCOL.json}, \texttt{PACKET\_STATUS.json}, \texttt{CLAIM\_REGISTRY.json}, and \texttt{OBSTRUCTION\_REGISTRY.json} implement this workflow. The claim registry also holds stable gap identifiers. Their canonical live versions are in the private open-problems campaign directory, with a Brain mirror. B20 maintains these concise indices from original run artifacts; workers save uniquely named runs instead of all overwriting the same state file.
+
+Each run saves \texttt{REPORT.md}, \texttt{CLAIMS.json}, and \texttt{PROGRESS.json}. The progress record names the packet, gap, attempt, mathematical change, proof dependencies, result sources, next consumers, and next action. A claim carries an exact statement and hypothesis hash, version, proof source, contributor list, review records and any supersedes or refutes relationship. A completed artifact, a proved mathematical target, an independent review, a saved mirror and downstream use are separate states. A final honest gap report can complete a handoff while leaving the mathematical target open.
+
+When a claim version is refuted, B20 flags its dependent conclusions as \texttt{BLOCKED\_DEPENDENCY} or \texttt{CONDITIONAL}, preserves the original witness, and routes the correction to the named consumers. A consumer records the actual repaired substitution in its next substantive report. Delivery receipts are not evidence that a correction has been used in a proof. The registry organizes evidence; it cannot certify a theorem by changing a status field.
+
+At each invocation B20 checks coverage of all hundred A-packets and all report elements: exact endpoints, representation assumptions, normalization, mandatory counterexamples, computations, reviews, class consequences and final handoff. It identifies unattended high-priority work and assigns the nearest ready step within existing capacity. Its own run must also contain a substantive synthesis or derivation. The aim is to finish every useful deliverable while retaining an accurate list of mathematically unresolved targets.
+
+\subsection{Review starts immediately}
+
+Independent review runs from Day 1. Day 9 is an integrated recheck of the strongest candidates and their repaired dependencies, not the first reading of individual proofs. A stream may hold at most two complete candidate claims awaiting review; when that queue is full, it completes a derivation, resolves an objection, verifies a witness or reviews an independent claim before opening another broad conjecture. Exploratory inferences may continue with explicit conditional status; two complete audits are reserved for full-FEI candidates and major theorems selected for acceptance.
+
+A reviewer who supplies a substantive missing proof step becomes a contributor to that version and cannot serve as its independent accepting reviewer. Re-running the author's code or reading the same summary is not an independent reconstruction. A different representation, proof route or source-level reconstruction is required for the critical claim.
+
+\subsection{Bounded computation and escalation}
+
+Before a search, freeze the helper version, actual Boolean family, parameter domain, case count, justified symmetries, arithmetic requirements, memory estimate and maximum runtime. Run an initial pilot of at most sixty seconds to measure throughput; this is a cap for the pilot, not a grant of additional computing resources. Search structured families cheaply before attempting exhaustive tables. The number of Boolean truth tables is $2^{2^n}$: $65{,}536$ for $n=4$, $4{,}294{,}967{,}296$ for $n=5$, and $18{,}446{,}744{,}073{,}709{,}551{,}616$ for $n=6$. Do not increase dimension automatically after a negative search.
+
+Use floating point for candidate discovery, then exact integer Walsh transforms or explicit analytic spectra to establish Boolean realizability, Parseval and influence. Certify a decisive logarithmic sign through rigorous intervals, an integer-product comparison, or analysis; stop increasing precision once the sign is settled. Independently reconstruct a decisive witness using a different implementation or representation. A finite-to-infinite, all-parameter or continuum theorem is a separate obligation. Record observed runtime and outputs without inventing token prices, continuous availability or unobserved execution.
+
+\subsection{Reconciliation with the concurrent mathematical supplement}
+
+The source-pinned supplement at \texttt{research\_pushes/2026-10-11-full-fei-100-agents/} in both private repositories contributes useful mathematics to this same campaign. Its \texttt{NATIVE\_MAPPING.md} explicitly maps advisory F-role groups to the installed B-streams. The F labels do not create another hundred workers or replace the A-packet backlog. Its report, counterexample archive and seed lemmas are consulted for a concrete obligation within the existing assignment.
+
+In particular, \texttt{SEED\_LEMMAS.md} already derives a normalized prior mixture of complete reference laws, an effective-piece rank refinement under explicit disjoint-support and fiber-antichain hypotheses, and a point-defect obstruction to every fixed spectral R\'enyi order below one. These are source interfaces, not new unpaid assignments to rederive indefinitely. Their applications still require the entire expected description cost, including the reference normalizer and scale choice. The supplement is pinned at open-problems commit \texttt{bfb1d10b25cb5cb2e09112357cd24b21b5b1fe5e}; its mapping, seed, and campaign files were read directly during reconciliation. Publication of the threshold paper is already complete at public commit \texttt{cd27aa96a5bb670a5b3ae5451095b7020db8e9d4}; a stale upload instruction must not consume future mathematical runs.
+
+
+\section{First actions ready to execute}
+
+These packets start from the audited baseline and seek a new
+quantitative result, rather than reproduce a retired helper:
+\begin{enumerate}
+\item \textbf{B02:} compute the entire conditioned posterior
+residual for a new explicit iterated or shared-data selector
+family, with distinct actual runs and global weights. Compare
+the bound with the original coordinatewise cost.
+\item \textbf{B05/B13:} compare full control-first and selector-first
+trees on the new sparse-bent family, including terminal entropy.
+Locate a nonreused source of logarithmic credit; fixed-price
+local variance/moment repairs are retired.
+\item \textbf{B06:} freeze one history-measurable block rule with
+a proved structural constraint. Use the existing block identity
+to prove or refute its hereditary conditional-erasure payment,
+testing a coded restriction plateau first.
+\item \textbf{B08:} retain the exact mismatch/KL rebate in one
+specified tree ledger and formulate a credit for its remaining
+logarithmic debt. Preserve normalized convolution and existing
+fixed-positive-reserve guards.
+\item \textbf{B09:} begin with all three weighted-threshold
+normalization failures and state one replacement that survives
+them. Prove it on an arity-unbounded class or refute it precisely.
+\item \textbf{B07/B16:} identify a full-Booleanity consequence
+beyond the two fixed-prefix no-go families. Prove a restricted
+conditional phase-energy estimate with the actual conditional
+spectral entropy retained and the tensor-embedding guard applied.
+\item \textbf{B12:} establish a new unbounded family satisfying
+the existing quantitative disagreement corollary, or freeze a
+structural collision payment where selector influence per bit
+vanishes. Test bent splice before claiming an increment bound.
+\item \textbf{B15/B17:} choose one current unproved helper and
+freeze an exact bounded countersearch. Certify the logarithmic
+comparison for any violation and state the tested domain.
+\end{enumerate}
+
+The governing question for each work cycle is:
+\emph{Which exact unpaid mathematical term became bounded, which
+unjustified hypothesis was eliminated, or which plausible route
+was rigorously ruled out?} A known identity reproduced and an
+unpaid FEI-equivalent endpoint renamed are recorded as baseline
+work. New results retain original proofs, actual artifacts and
+their exact acceptance scope.
+
+\section*{Preparation note}
+This report was prepared during recovery of the interrupted 11 October 2026 FEI work using OpenAI's GPT-6 Astra Pro with collaborating agents. It combines source-grounded analysis of the recovered manuscripts, accessible Brain notes, primary literature, independent mathematical audits, and explicit proposed research tasks. The A001--A100 assignments are a deployment design; they are not a claim that one hundred external Codex agents were launched. The scheduler verification record separately identifies the twenty existing tasks actually reconfigured.
+
+\begin{thebibliography}{99}
+\bibitem{Threshold} Y. Shmalo,
+\emph{Fourier entropy of threshold functions and their compositions},
+38-page public recovery revision, 11 October 2026.
+Repository commit \texttt{cd27aa96a5bb670a5b3ae5451095b7020db8e9d4}.
+\url{https://github.com/yspennstate/fourier-entropy-threshold-functions/tree/cd27aa96a5bb670a5b3ae5451095b7020db8e9d4}.
+\bibitem{Reductions} Y. Shmalo, \emph{Restrictions and witness coding for the Fourier entropy--influence problem}, recovered manuscript dated 11 October 2026, especially Sections 2--5 and the conditioned posterior forest theorem. Source archive: \texttt{FEI\_research\_sources\_and\_checks.zip}.
+\bibitem{CKLS} S. Chakraborty, R. Kulkarni, S. V. Lokam and N. Saurabh, \emph{Upper bounds on Fourier entropy}, Theoret. Comput. Sci. 654 (2016), 92--112; corrected ECCC revision 2 (2018). \url{https://eccc.weizmann.ac.il/report/2013/052/}.
+\bibitem{RandomLTF} S. Chakraborty, S. Karmalkar, S. Kundu, S. V. Lokam and N. Saurabh, \emph{Fourier entropy--influence conjecture for random linear threshold functions}. \url{https://arxiv.org/abs/1903.11635}.
+\bibitem{WWW} A. Wan, J. Wright and C. Wu, \emph{Decision trees, protocols, and the Fourier entropy--influence conjecture}, ITCS 2014. \url{https://arxiv.org/abs/1312.3003}.
+\bibitem{ODT} R. O'Donnell and L.-Y. Tan, \emph{A composition theorem for the Fourier entropy--influence conjecture}, ICALP 2013. \url{https://arxiv.org/abs/1304.1347}.
+\bibitem{Shalev} G. Shalev, \emph{On the Fourier entropy influence conjecture for extremal classes}, 2018, revised 2019. \url{https://arxiv.org/abs/1806.03646}.
+\bibitem{GMP} M. J. Gonz\'alez, P. MacManus and M. C. Pereyra, \emph{Further evidence towards the Fourier entropy--influence conjecture}, version 2, 9 June 2026. \url{https://arxiv.org/abs/2606.00246v2}.
+\bibitem{Potapov} V. N. Potapov, \emph{On the Fourier entropy--influence conjecture for Boolean plateaued functions}, 18 September 2026. \url{https://arxiv.org/abs/2609.21563}.
+\bibitem{Percolation} Y. Shmalo, \emph{Entropy and singularity of spectral and pivotal sets in planar percolation}, 2026. \url{https://arxiv.org/abs/2609.15388}; revised repository \url{https://github.com/yspennstate/percolation-crossing-entropy}.
+\bibitem{KMS} N. Keller, E. Mossel and T. Schlank, \emph{A note on the entropy/influence conjecture}, Discrete Math. 312 (2012), 3364--3372. \url{https://arxiv.org/abs/1105.2651}.
+\bibitem{Withdrawn} P. Li and G. Han, \emph{Strengthening Han's Fourier entropy--influence inequality via an information-theoretic proof}, withdrawn December 2025 because the result had already appeared in \cite{KMS}, Claim 4.1. Included here as a priority-check example, not as an additional mathematical input. \url{https://arxiv.org/abs/2512.03117}.
+\bibitem{Brain44} Math Brain, Addendum 11.44, \emph{Connected-component raw entropy subadditivity fails}, 1 October 2026. Source-bound nine-bit witness: \url{https://github.com/yspennstate/math-open-problems/blob/1517573ec0b37bd7aeb6a285562a6763059c5a20/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/separated-entropy-counterexamples/report-connected.md}.
+\bibitem{Brain45} Math Brain, Addendum 11.45, \emph{Maximum-component-ratio pruning also fails}, 1 October 2026. \url{https://github.com/yspennstate/math-open-problems/blob/31c201a0a8caef323c65abe964ff8ed4b702fc81/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/component-ratio-counterexample/REPORT.md}.
+\bibitem{Brain51} Math Brain, Addendum 11.51, \emph{Cyclic-label signed obstruction}, observed in the source-pinned route archive. \url{https://github.com/yspennstate/math-research-brain/blob/main/research_pushes/2026-09-30-fei-current-route-map/ADDENDUM_11_51_CYCLIC_LABEL_SIGNED_OBSTRUCTION.md}.
+\bibitem{Brain54} Math Brain, Addendum 11.54, \emph{Reviewed Boolean phase-energy payment and coherent-composition control}, 1 October 2026, including the conditional-completion scope guard. \url{https://github.com/yspennstate/math-research-brain/blob/main/research_pushes/2026-09-30-fei-current-route-map/ADDENDUM_11_54_BOOLEAN_PHASE_ENERGY_AND_COMPOSITION.md}.
+
+\bibitem{BrainMismatch} Math Brain / math-open-problems,
+\emph{Isospectral splicing and symmetry quotient},
+20 September 2026, Theorems 3.1--5.1.
+Source commit \texttt{fe94de760ee2b47545419a7447b492816bd16045},
+blob \texttt{3421c0cbfd22031554befb962ec92cd0c8bb45b9}.
+\url{https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md}.
+\bibitem{BrainBooleanOrder} Math Brain / math-open-problems,
+\emph{Booleanity order}, Theorem 2.1 and its strengthened
+fixed-order controls, recovered source revision
+\texttt{fe94de760ee2b47545419a7447b492816bd16045},
+blob \texttt{721f6c2216fbca989bbe1e9f48fe7cacdf9832a3}.
+\url{https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/continuations/2026-09-20-booleanity-order/REPORT.md}.
+\bibitem{BrainNormalized} Math Brain / math-open-problems,
+\emph{Normalized convolution: tensor, support-loss and surgery controls},
+source commit \texttt{fe94de760ee2b47545419a7447b492816bd16045},
+blob \texttt{43f02ba681df60762b28515540a8f851f95286ba}.
+Use the later output-enclosure correction for exported numerical
+intervals; the analytic normalization identities are the input here.
+\url{https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-normalized-convolution-0236z/REPORT.md}.
+\bibitem{BrainOverlap} Math Brain / math-open-problems,
+\emph{Overlapping-product entropy obstruction}, amended report
+and attribution correction, source commit
+\texttt{e894a01f20ba02694c099f903fbdf26cc39db0b3},
+report blob \texttt{76734ba5f15292f83784573271517c61d039ffad}.
+\url{https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md}.
+\bibitem{B05Rare} FEI campaign fleet01/B05,
+\emph{Sparse-activation no-go for local variance-refund payment},
+run \texttt{20261011T193057Z-fleet01-B05-rare-restrictions},
+11 October 2026. Complete report, claims, checker and original
+output saved at open-problems commit
+\texttt{80cc2e5027efa56d79c4ecdf7d4949759ef2068b};
+the campaign status and receipts identify the exact run paths.
+
+\end{thebibliography}
+\end{document}

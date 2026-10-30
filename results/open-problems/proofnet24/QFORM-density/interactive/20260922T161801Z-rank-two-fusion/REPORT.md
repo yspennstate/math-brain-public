@@ -56,10 +56,10 @@ The following classical inputs are used with their stated hypotheses:
 
 3. Rogozin--Ball scalar projection bound: if sum a_i^2=1, then sum a_i X_i has density at most sqrt(2). See Theorem 1.2 and its attribution to Rogozin and Ball in M. Rudelson and R. Vershynin, *Small Ball Probabilities for Linear Images of High-Dimensional Distributions*, https://arxiv.org/pdf/1402.4492 .
 
-The source of the elementary logarithmic kernel used below is the completed account03/B16 report:
+The source of the elementary logarithmic kernel used below is the completed fleet03/B16 report:
 
     yspennstate/math-open-problems@1defc84f1bfd79994a103a6d683c887d9dead1e7
-    proofnet24/QFORM-density/fleet-2026-09-22/account03/B16/
+    proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/
     B16-20260922T135620Z-r11/REPORT.md
     blob d64c5e5cfc01bf3783cdcdeac2f03dd766bbda3d.
 
@@ -71,11 +71,11 @@ The diffuse Fourier calculation extends the previously supplied separable-phase 
     proofnet24/QFORM-density/interactive/
     20260922T120815Z-separable-perturbations/REPORT.md.
 
-The rank-three residual obstruction being addressed is explicitly identified in account01/B10's handoff and supplement at
+The rank-three residual obstruction being addressed is explicitly identified in fleet01/B10's handoff and supplement at
 
     yspennstate/math-open-problems@2152b0b8c7ddc76247b46d74dd1888d93920b0dd
-    proofnet24/QFORM-density/fleet-2026-09-22/account01/B10/
-    20260922T135338Z-account01-B10-QFORM-r13/SUPPLEMENT.md.
+    proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/
+    20260922T135338Z-fleet01-B10-QFORM-r13/SUPPLEMENT.md.
 
 The classical sources and worker reports are dependencies; none is a certificate of a full solution or of independent review of this report.
 
@@ -389,7 +389,7 @@ The theorem proves essential boundedness. It does not claim that its density maj
 
 ## 9. What this closes, and what is still missing
 
-The account01/B10 supplement cited in Section 2 left an indefinite rank-two residual branch with 0<|beta|<sqrt(Delta)/5, in addition to a separate outer-pivot problem. Equation (6.6) cancels beta uniformly, including arbitrary induced original-coordinate linear terms; the exact beta=0 case is separately proved. There is therefore no residual small-Rayleigh restriction in Theorem 8.1. This is an actual completed implication in the rank-three Schur route, not just a renamed obstruction.
+The fleet01/B10 supplement cited in Section 2 left an indefinite rank-two residual branch with 0<|beta|<sqrt(Delta)/5, in addition to a separate outer-pivot problem. Equation (6.6) cancels beta uniformly, including arbitrary induced original-coordinate linear terms; the exact beta=0 case is separately proved. There is therefore no residual small-Rayleigh restriction in Theorem 8.1. This is an actual completed implication in the rank-three Schur route, not just a renamed obstruction.
 
 The unrestricted conjecture still requires work in at least the following directions:
 
@@ -403,6 +403,6 @@ No full-target universal constant, completion date, or literature-wide novelty c
 
 The analytic proof is Sections 3--8. The executable checks.py/check_results.json verify finite scalar and matrix identities and Fourier-envelope integrations. These checks are supporting diagnostics, NOT a universal proof or an independent review. An additional affine_checks.py verifies the Gaussian small-ball constant and the rank-one reduction of the affine residual.
 
-Requested existing-worker reviews: account03/B16 checks the use of its translated kernel with conditional shifts, the rank-one affine lemma, and all signs; account01/B10 checks the exact Schur frame/determinant identity, arbitrary induced affine terms, and whether the previous residual strip is indeed eliminated in the stated scope. Passing reviews must be actual source-bound records, not generated on their behalf. Other workers should apply the precise result to their next missing implication rather than reproduce all reviews.
+Requested existing-worker reviews: fleet03/B16 checks the use of its translated kernel with conditional shifts, the rank-one affine lemma, and all signs; fleet01/B10 checks the exact Schur frame/determinant identity, arbitrary induced affine terms, and whether the previous residual strip is indeed eliminated in the stated scope. Passing reviews must be actual source-bound records, not generated on their behalf. Other workers should apply the precise result to their next missing implication rather than reproduce all reviews.
 
 All work is within the authorized private mathematical programme. No new task, restart, schedule change, notification, public release, paid call, or native learned-memory-ingestion claim is involved.

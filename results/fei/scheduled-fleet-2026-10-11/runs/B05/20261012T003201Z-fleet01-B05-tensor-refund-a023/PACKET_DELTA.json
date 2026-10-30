@@ -1,0 +1,112 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261012T003201Z-fleet01-B05-tensor-refund-a023",
+  "stream": "B05",
+  "packet_id": "A023",
+  "packet_ids": ["A023"],
+  "gap_id": "B05_RARE_REFUNDS",
+  "attempt_id": "A023-TENSOR-REFUND-6",
+  "bounded_objective": "For q_a tensor q_b, exhaust each disjoint factor first in turn, include every reach probability and terminal packet, and determine whether the one-factor terminal refunds add or create a cross-factor double-spend term.",
+  "method": "Scalarize the complete L+Q selector packet by its physical disagreement probability; derive both exact factor-first telescopes; split reached credits into positive and negative parts; compute and asymptotically expand the resulting cross interaction; verify with independent exact Walsh and rational-log intervals.",
+  "prior_status": "The q_n signed terminal telescope had a B19-accepted sign-agnostic algebraic core, but near tensors such as q_4 tensor q_5 were explicitly outside its unique-branch scope. Factorwise terminal additivity and cross-factor reuse were unknown.",
+  "mathematical_delta": "Proved a complete two-factor, both-orders, single-use payment. The tensor packet equals F(2^-a+2^-b-2^(1-a-b)); its deviation Xi from D_a+D_b is nonzero and sign-changing. The exact telescope assigns Xi once to the factor revealed first, and R+negative credits=one terminal factor packet+positive credits. Naive additivity can overpay or underpay; equal rare factors have positive Xi=4^-n(4n-24+6/ln2)+O(n8^-n).",
+  "deliverable_status": {
+    "A023-D1": "EXTENDED_COMPLETE_PENDING_REVIEW: TWO_FACTOR_REFUND.tex",
+    "A023-D2": "EXTENDED_COMPLETE_PENDING_REVIEW: TENSOR_CREDIT_LEDGER.json",
+    "packet_target": "TWO-FACTOR BRANCHING FAMILY COMPLETE; MANY-FACTOR/UNIVERSAL TARGET OPEN"
+  },
+  "mathematical_status": "TWO_FACTOR_SIGNED_PAYMENT_PROVED_PENDING_REVIEW; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "B05-A023-QN-SIGNED-TERMINAL-REFUND-v1 algebraic core",
+    "B19-A094-QN-SIGNED-REFUND-ALGEBRA-REVIEW-v1"
+  ],
+  "claims_created_or_changed": [
+    "B05-A023-TWO-FACTOR-SIGNED-REFUND-v1"
+  ],
+  "source_plan": {
+    "assignment_path": "reports/fei-2026-10-11/assignments/B05.json",
+    "assignment_blob": "05447e6d999437bb82a266b427bd76a4b37266b6",
+    "stream_index_blob": "58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704",
+    "execution_protocol_blob": "457358ff62cbf1141a72096bcabdf95bf18c1be2",
+    "current_status_blob": "74f6ae761739455083804505ba0e0fd7aaf2f3e2"
+  },
+  "source_artifacts": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f36335b340a4fbebabaee041c96fbdc6005b5565",
+      "path": "reports/fei-2026-10-11/runs/B05/20261011T232707Z-fleet01-B05-signed-chain-a023/",
+      "report_blob": "21a73a3d68e9b3e3dbb47464b803340047ccad1c"
+    },
+    {
+      "repository": "yspennstate/math-research-brain",
+      "commit": "32a2634a48f09f0e8b3716a8b4ac4660d2f7ca65",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261011T232707Z-fleet01-B05-signed-chain-a023/",
+      "report_blob": "21a73a3d68e9b3e3dbb47464b803340047ccad1c"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "8346fa29a8e192517c785dd7d89f9f77cd1c5667",
+      "path": "reports/fei-2026-10-11/runs/B19/20261011T235100Z-fleet01-B19-b05-signed-chain-review-a094/",
+      "report_blob": "84dfa890b1788f0903800582f415eb5c6c4efb13"
+    }
+  ],
+  "next_consumers": ["A027", "A028", "A064", "A087", "A090", "A094", "B20"],
+  "independent_reviewers": ["A087", "A090", "A094"],
+  "next_action": "Independently reconstruct F(p), both factor-order telescopes, and the Xi asymptotic. Then test three disjoint point-defect factors and formulate a Möbius first-revelation ownership rule; do not assume additive factor payments.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "The new two-factor theorem requires independent review.",
+    "No many-factor interaction ownership theorem is proved.",
+    "No universal terminal-packet plus positive-credit bound by nonreused influence is known.",
+    "Addressing and shared-variable histories remain outside scope.",
+    "Full FEI remains open."
+  ],
+  "validation": {
+    "command": "python3 verify_tensor_refund.py",
+    "observed_runtime_seconds": 37,
+    "random_seed": null,
+    "arithmetic": "exact Fraction Walsh arithmetic and rigorous rational atanh-series log intervals",
+    "assertions": 648,
+    "walsh_factor_dimensions": "2<=a,b<=4",
+    "telescope_grid": "2<=a,b<=12, both orders",
+    "cross_sign_range": "Xi_(n,n)>0 certified for 5<=n<=60",
+    "script_sha256": "32327107eee6918b7e7992c293e579600f1bb9cf94caef95ae8655d28e887dde",
+    "output_sha256": "cecf2e8cee7e71df9b5b7a4d39b1346219dde435564630921cf7eeda94e25776",
+    "status": "PASS"
+  },
+  "literature": {
+    "primary_sources_checked": [
+      "Inherited source-bound B19 check of arXiv:2606.00246",
+      "Inherited source-bound B19 check of arXiv:1312.3003",
+      "Inherited source-bound B19 check of arXiv:1304.1347"
+    ],
+    "novelty_claim": "NONE; this is a private source-bound campaign derivation."
+  },
+  "delivery_status": {
+    "canonical": {
+      "status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-open-problems",
+      "core_complete_commit": "6a120a38bc6d634984c219d5c1acec3f7b875c3f",
+      "path": "reports/fei-2026-10-11/runs/B05/20261012T003201Z-fleet01-B05-tensor-refund-a023/",
+      "verified_files": 8,
+      "report_sha256": "07b89edc5fad15676bc7d36adc7f92b8e67a6567c0f04a0673debfda65a21d61"
+    },
+    "brain_mirror": {
+      "status": "EIGHT_FILE_SUBSTANTIVE_BUNDLE_CREATED_AND_EXACTLY_READ_BACK",
+      "repository": "yspennstate/math-research-brain",
+      "core_complete_commit": "c64d1eb708ff77d80777aac54c82987a9fd05ba9",
+      "path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B05/20261012T003201Z-fleet01-B05-tensor-refund-a023/",
+      "verified_files": 8,
+      "report_sha256": "07b89edc5fad15676bc7d36adc7f92b8e67a6567c0f04a0673debfda65a21d61"
+    },
+    "independent_review": "NOT YET; A087/A090/A094 requested",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "configuration": {
+    "model": "Codex as exposed by this run",
+    "reasoning_effort": "not exposed",
+    "subagents": 0,
+    "scheduler_or_graph_mutation": false
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T171430Z-fleet03-B18-QFORM-r31",
+  "claim": "QFORM-ZEROPIVOT-ZEROEDGE-LINEAR-SQUARE-v1",
+  "status": "PASS",
+  "checks": {
+    "null_hub_symbolic_expansion": {
+      "input": "2*(X0+li*Xi+E)*G + d*(bi*Xi+B)^2 + b0*X0 + bii*Xi + C",
+      "reduced": "2*(G+b0/2)*X0 + d*bi^2*Xi^2 + (2*li*G+2*d*bi*B+bii)*Xi + (2*E*G+d*B^2+C)",
+      "difference": "0"
+    },
+    "conditional_crossing": {
+      "linear_cap": "1/(2|H|)",
+      "quadratic_convolution_cap": "sqrt(2)/sqrt(|a||H|)",
+      "crossover": "|H|=|a|/8"
+    },
+    "bathtub_integral": {
+      "M": "sqrt(2)/gamma",
+      "case_aM_ge_4": "4 sqrt(M/|a|)",
+      "case_aM_lt_4": "M[2+log(4/(|a|M))]"
+    },
+    "optimization": {
+      "dimensionless_variable": "z=gamma^3/(sqrt(2)|a|gamma^2)",
+      "domain_second_case": "z>1/4",
+      "critical_point": "z=e/4",
+      "second_case_factor": "6 e^(-1/3)",
+      "first_case_factor_upper_bound": "4",
+      "global_factor": "6 e^(-1/3)",
+      "global_factor_decimal": 4.299187863442736
+    },
+    "null_hub_currency": {
+      "identity": "|a| gamma^2 = beta_i^2 |d| gamma^2 = beta_i^2 hD",
+      "heavy_zero_edge": "g_i=0 => q_i=beta_i^2>1/2",
+      "target_r_ge_half": "h>=1/5, D>=1 => beta_i^2 hD>1/10",
+      "target_constant": "6(10/e)^(1/3)",
+      "target_constant_decimal": 9.262319471965087
+    },
+    "designated_partner": {
+      "source_commit": "3460488b1a730f54dbac848cddc3e2761d3f348e",
+      "path": "proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T162049Z-fleet04-B18-QFORM-r4/REPORT.md",
+      "applied_inequality": "q_i>1/2 and |g_i|>=1/64 => ||p_Q||_inf<64.1795826152",
+      "combined_remaining_heavy_edge": "0<|g_i|<1/64"
+    }
+  },
+  "full_target_status": "OPEN_NOT_PROVED",
+  "continuity": {
+    "new_theorem": "PROVED_C0",
+    "full_target": "OPEN"
+  },
+  "notes": "Deterministic regression only; no Monte Carlo or histogram is used as evidence."
+}

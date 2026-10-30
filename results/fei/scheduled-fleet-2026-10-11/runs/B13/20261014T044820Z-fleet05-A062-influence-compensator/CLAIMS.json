@@ -1,0 +1,95 @@
+[
+  {
+    "claim_id": "A062-B05-MINIMAL-RESERVE-CREDIT",
+    "version": 4,
+    "exact_statement": "For every even k>=4, r>=2k, and C>=6, let F be the canonical quadratic bent k-bit function and its zero-vertex point flip, activated by r fresh point controls and selected by a fair physical selector. On the complete selector-controls-adjacent-data-pairs tree with irrelevant inputs skipped and constant leaves, the minimal nonnegative reserve Q*_v=[D_v-C Inf_v+average Q*_children]_+ vanishes at every control node and even point-edited paired-data entry. Odd edited data states have Q*<=2. For physical minority mu(g)=min(P[g=-1],P[g=+1]), every node obeys Q*_v<=4mu(g_v)log2(1/mu(g_v)); at the root Q*=[D_selector-C 2^{-(r+k)}]_+<4*2^{-k}mu(F)log2(1/mu(F))<=mu(F)log2(1/mu(F))/4 and Q*<=2^{1-k}I(F). At r=2k and fixed finite C, Q*/I(F) is asymptotic to (2/5)2^{-k}. In particular the C=6 reserve certificate gives H(F)<=(6+2^{1-k})I(F)<=49I(F)/8. Pointwise credit domination is not a local drift assertion for the rarity function, which remains false on these selector roots for fixed coefficients. Extension: For every even t>=2, every single vertex sign flip of a quadratic bent t-core, with any coordinate character phase, has zero complete increasing-pair-order entry reserve at every C>=6. For every even k>=4, T_k=b_k with sign flips at zero and e_1+e_3 has zero complete paired-entry reserve at C>=6. At its first query both children retain one edit; the expensive character-mate child has zero reserve and the other child reserve is at most two bits. If the clean core and T_k are activated by r>=2k point controls and selected by a fair bit, then all control entry reserves vanish, Q_root=[D_selector-2C*2^(-r-k)]_+, Q_root<8*2^-k*psi(mu) and Q_root<=4*2^-k*I_root; at C=6, H<=(6+4*2^-k)I<=25I/4. Its exact initial influence is 2^-r[k/2+r(1-2^(-k/2)+2^(1-k))+(2k-2)2^-k]. Original all-node rarity and asymptotic conclusions are retained only for the original one-zero-edit selector family; they are not asserted for the new phase or two-edit families. Further arbitrary-core transfer: Fix any Boolean g on r>=0 bits, any vertex v, finite prescribed complete continuation trees for g and its one-vertex sign flip g^v, and finite price C>=0; write R=Q_C(g), Rv=Q_C(g^v). For G_q obtained by appending q>=0 dummy bits and flipping only (dummy=0,x=v), use dummy-first exposure and then these prescribed core trees. With d_q=2^(1-r-q), its complete reserve R_q satisfies |R_q-R|<=E_q=2^-q|Rv-R|+d_q*q*(r-1/2+C+3log2(e)+q/2). Thus R_q tends to R as q tends to infinity at fixed r,g,v,C and continuations. For F_q equal to (-1)^z g(x) except for a sign flip at (z=0,dummy=0,x=v), query fresh z first, followed by the corresponding core trees. Put delta_q=2^(-r-q). Its exact reserve is [D_z-C(1-delta_q)+(R_q+R)/2]_+ and |Q_C(F_q)-[R-C]_+|<=E_q/2+h2(delta_q)+(C+2log2(e))*delta_q. Hence Q_C(F_q) tends to [R-C]_+, retaining arbitrary core reserve rather than assuming zero. More generally opposite branches g and -h with disagreement mass epsilon obey Q_C(separator)<=[h2(epsilon)+2log2(e)*epsilon-C(1-epsilon)+(R_g+R_h)/2]_+ for declared nonnegative child reserve bounds. This query is locally paid for epsilon<=1/2,C>=6, but child reserves remain. No universal core-reserve or changing-core limit bound is asserted. Further exact unfinished-core controller ownership: Let a be any finite Boolean seed, T any prescribed finite complete fresh-coordinate tree for it, C>=4, h=w*a with fresh independent sign w, and F=(1+h)u/2+(1-h)v/2 for disjoint parity cores u,v of at least two bits each. A fixed prefix reveals p parity coordinates while leaving each core nonconstant. Its actual frontier has complete reserve Q_C(a,T)/2 for the continuation T on seed coordinates, then w, then remaining parity coordinates; initial complete reserve including that prefix is [Q_C(a,T)-pC]_+/2. Each prefix query has D=0 and influence1/2; at every seed-query history H(F)=2+H(a)/2, D_i(F)=D_i(a)/2 and Inf_i(F)=Inf_i(a)/2. Selector probabilities remain1/2, variance-rarity reserve equals1 with controller release0, and parity-core reserves vanish. The terminal w query has D=2, influence1/2 and zero reserve precisely when C>=4. For the canonical B05 seed with even k>=4,r=2k, its selector D_s/Inf_s>=(1-2^-k)(k-2), which is preserved at the actual mixed-history lift node after a parity bit reveal. Thus a hypothetical price11 all-controller extension using only variance-rarity release and inherited parity-core reserves fails for every even k>=14; any fixed local price likewise fails eventually. A064 stated disjoint ordered-point theorem, other policies and full FEI are not refuted. The seed controller reserve is retained exactly, and preceding data costs cannot be reused at that node.",
+    "hypotheses": [
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For original retained conclusions only: Actual Boolean signs on uniform finite cubes; entropy in bits; ordinary total influence",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For original retained conclusions only: Canonical b_k=(-1)^(x1*x2+...+x_{k-1}*x_k), flipped only at zero; k even >=4",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For original retained conclusions only: r fresh point controls with r>=2k; independent fair physical selector",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For original retained conclusions only: Complete fresh-input order selector then controls then adjacent data pairs; skip irrelevant coordinates; zero constant leaves",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For original retained conclusions only: Physical output minority, not spectral minority-fiber mass; psi(0)=0",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For original retained conclusions only: Fixed finite C>=6 for the stated asymptotic; larger finite C allowed for inequalities",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: For the extension: actual Boolean signs; entropy bits; ordinary influences; C>=6",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: Single-edited core: t even >=2, quadratic bent times an arbitrary coordinate character; sign flip at any physical vertex",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: Two-edited core: canonical b_k, k even >=4, flipped at exactly 0 and e_1+e_3",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: Complete increasing adjacent-pair physical tree, skipping irrelevant coordinates and ending at constants",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: Activated-selector extension: r>=2k fresh point controls, fair fresh selector; selector then controls then paired data",
+      "For retained version-3 conclusions only: For retained version-2 conclusions only: psi(mu)=mu log2(1/mu) for physical output minority; the new credit is a root bound, not a local rarity drift claim",
+      "For retained version-3 conclusions only: For the arbitrary-core extension: finite uniform Boolean cubes, bit entropy, ordinary influence; arbitrary fixed r>=0, vertex v, finite C>=0 and two finite prescribed complete physical core continuations",
+      "For retained version-3 conclusions only: Fresh q dummy bits; one actual output sign flip at their zero assignment and the core vertex v; dummy-first prefix is part of the specified rule",
+      "For retained version-3 conclusions only: Character family uses a fresh fair z coordinate queried first; its clean opposite branch follows the consistently sign-translated original tree",
+      "For retained version-3 conclusions only: Core, price and core continuations are fixed during the q limit; no terminal uniform integrability or varying-core passage is presumed",
+      "For retained version-3 conclusions only: R_g,R_h in the general separator bound dominate the reserves of the actual prescribed physical children; they are not discarded",
+      "For new exact ownership: arbitrary finite uniform Boolean seed a and finite prescribed complete physical tree T; C>=4; entropy in bits, ordinary influence",
+      "Fresh independent sign tag w, two disjoint nonempty parity cores on at least two coordinates, and no data/controller overlap",
+      "Fixed p-query parity prefix leaves both cores nonconstant; declared controller continuation follows T on seed coordinates, then w, then selected remaining parity variables",
+      "Phase changes from prefix outcomes are retained; both actual child continuations and terminal w-mux entropy are included",
+      "Local no-go uses actual canonical B05 seed r=2k, tag w unqueried, and first seed-selector query at an unfinished-core frontier; it concerns a hypothetical all-controller extension, not the stated ordered-point theorem"
+    ],
+    "statement_sha256": "e9413ea013571f196c3426eaf2105adac35ffe6071076447f99161c95f321c6e",
+    "contributors": [
+      "A062; retained source credits unchanged; current controller gap and harmonic inherited-core clause credited to A064/A057"
+    ],
+    "proof_source": {
+      "extension": "DERIVATION.md",
+      "retained_version_3_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A062\\runs\\20261014T015800Z-fleet05-A062-influence-compensator\\DERIVATION.md",
+      "retained_version_3_proof_sha256": "7b65ca8f0e1129a515646658b742bff955bfd874237568b4b4836df4df169471",
+      "retained_source_chain": {
+        "extension": "DERIVATION.md",
+        "retained_version_2_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A062\\runs\\20261013T221705Z-fleet05-A062-influence-compensator\\DERIVATION.md",
+        "retained_version_2_proof_sha256": "db7bd8faf2ad44f7312d89ef4e0bf7f6585cde63cb154005a9989f4e88bff3a9",
+        "retained_original_proof": "~\\brain_workers\\FEI100_20261011\\agents\\A062\\runs\\20261012T003951Z-fleet05-A062-influence-compensator\\DERIVATION.md",
+        "validation": "out/EXACT_TRANSFER.json"
+      },
+      "validation": [
+        "out/EXACT_OWNER.json",
+        "out/RAW_SEED.json"
+      ]
+    },
+    "proof_dependencies": [
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "scope": "sections 1-2 exact D=B+JS, scalar min(d,1-d) bound; B<=h2(d) is binary conditional entropy monotonicity"
+      },
+      {
+        "claim_id": "A062-INFLUENCE-STOPPING-INTERFACE",
+        "version": 1,
+        "scope": "finite same-tree budgets only",
+        "review_status": "B13 lead v2 records both prior A062 claims checked and holding"
+      },
+      {
+        "source": "~\\mop_fei100\\research_pushes\\2026-10-11-full-fei-100-agents\\sources\\ERASURE_REDUCTION.md",
+        "sha256": "eab8a37cae78930ad4c252be2297e024fc585a063969b6829433fe496a6008b1",
+        "scope": "section 2 singleton JS scalar bound"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A062-B05-MINIMAL-RESERVE-CREDIT",
+        "version": 3,
+        "scope": "retain previous scoped conclusions and extend exact controller owner at unfinished core exposure"
+      }
+    ],
+    "refutes": [
+      "Hypothetical extension to all non-point controller queries of D<=11d+release(sum q*r+sum q log2(1/q)Var), even with certified zero-reserve independent parity cores; not A064-REPEATED-FALLBACK-PRIORITY-GLOBAL-DEBT v1 at its stated ordered-point scope"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A038",
+      "A039",
+      "A057",
+      "A061",
+      "A064",
+      "A065",
+      "A087",
+      "A091",
+      "A094",
+      "B13",
+      "B20"
+    ]
+  }
+]

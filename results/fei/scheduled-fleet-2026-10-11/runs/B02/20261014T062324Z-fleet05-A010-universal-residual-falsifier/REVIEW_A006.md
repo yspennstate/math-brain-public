@@ -1,0 +1,7 @@
+# Whole source-document review
+
+Source: A006/runs/20261014T035304Z-fleet05-A006-posterior-forest-optimization/ROOT_LAW_RELAXATION.md. No CLAIMS.json or REPORT.md was present at inspection, so this acceptance is bound to the exact document hash in out/SOURCES.json, not an invented registered claim/version. Verdict: HOLDS at the entire stated scope, with no repair. JOINT_EDGE_SLICE.md was read for context; this review does not claim its separate full-scope acceptance.
+
+PROOF.md reconstructs the monomial reindexing, joint output posterior, convex simplex relaxation, averaging identity, supporting lower bound, natural/bit units, zero columns, one-gate case and event-family limitation. The implementation independently reconstructs maximal-matching event coefficients by explicit neighbor choices, adds actual chronological factorials and matching-root count factors, and rechecks Q=Kp=W/D and sum p*h=v on all 63 labelled nonempty n=4 graphs at two rational weight vectors, plus seven stars. It imports or executes no A006 code. The source already warns that K is not stochastic and that the simplex may be loose; our all-weight star gap obstruction confirms those limitations rather than refuting its theorem.
+
+The precise new obstruction is Gamma>=m^m/4-1+4^-m for actual stars, uniformly over every feasible positive weight vector and every covering once-per-gate partition-event family. It refutes an influence-paid use of this tangent-gap number, not the valid lower-bound inequality. The incidence-cap replacement is separate A010 work, pending independent review.

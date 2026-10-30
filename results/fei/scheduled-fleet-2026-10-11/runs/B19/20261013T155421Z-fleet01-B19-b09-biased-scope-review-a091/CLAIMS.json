@@ -1,0 +1,100 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T155421Z-fleet01-B19-b09-biased-scope-review-a091",
+  "claims": [
+    {
+      "claim_id": "B09_BIASED_BLOCK_UNCERTAINTY",
+      "version": "v2-reviewed-scope",
+      "exact_statement": "For every finite product-biased Boolean function and physical block A, the B09 normalization satisfies L_A=M_A+J_A and 0<=J_A<=M_A+Delta_A, where Delta_A=sum_{i in A}(h_2(p_i)+log_2(max(p_i,1-p_i))).",
+      "hypotheses": [
+        "genuine Boolean function",
+        "finite product-biased input law",
+        "B09 normalized product Fourier and restriction conventions",
+        "A is a physical coordinate block"
+      ],
+      "statement_sha256": "522e1010a85009f6b92d3462d2e246ca90b5c6f67bb4eb8ee79229286f33826b",
+      "contributors": ["B09 author"],
+      "proof_source": "REPORT.md and original B09 report at adb671ffcda143fa68347806bb96e8c305621a7d",
+      "proof_dependencies": ["Maassen-Uffink entropic uncertainty relation"],
+      "review_records": [
+        {
+          "reviewer": "B19/A091",
+          "verdict": "ACCEPTED_AT_EXACT_SCOPE",
+          "source": "this run"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "supersedes": "B09 report's unseparated whole-report status",
+      "refutes": null,
+      "first_unproved_line": null,
+      "next_consumers": ["A044", "B09", "B20"]
+    },
+    {
+      "claim_id": "B09_RARE_AND_LOWER_BOUND",
+      "version": "v1",
+      "exact_statement": "For g(X,Y)=(-1)^(XY), with independent P(X=1)=p and fixed P(Y=1)=q in (0,1/2), the X-restriction gap satisfies J_X-M_X=4q(1-2q)p log_2(1/p)+O_q(p) as p tends to zero; hence no uniform additive O(p) correction is valid for this family.",
+      "hypotheses": [
+        "0<p<1",
+        "fixed 0<q<1/2",
+        "product-biased B09 normalization",
+        "genuine Boolean AND phase gate"
+      ],
+      "statement_sha256": "0b755155d2e6779f5da69322e538a3eb38045253f90820350c66f4966177a292",
+      "contributors": ["B19/A091"],
+      "proof_source": "PROOF.md; CHECK_RARE_AND_FAMILY.py is finite certified support",
+      "proof_dependencies": ["exact product-biased Fourier expansion", "binary entropy asymptotic"],
+      "review_records": [
+        {
+          "reviewer": "B19/A091",
+          "verdict": "AUTHOR_SELF_CHECK_ONLY",
+          "source": "this run"
+        }
+      ],
+      "status": "AUTHOR_PROVED_PENDING_FRESH_REVIEW",
+      "supersedes": "B09 Section 5(4) upper-bound-only rationale",
+      "refutes": "uniform J_X<=M_X+Cp for this Boolean family",
+      "first_unproved_line": null,
+      "next_consumers": ["A085", "A090", "B09", "B20"]
+    },
+    {
+      "claim_id": "B09_DISJOINT_TENSOR_ADDITIVITY",
+      "version": "v2-scoped",
+      "exact_statement": "The B09 ledger and correction are exactly additive for tensor products on genuinely disjoint physical coordinate blocks.",
+      "hypotheses": ["genuine disjoint physical coordinate blocks", "product input law"],
+      "statement_sha256": "010973a363a46859944ca2f0f7975f4579a3b4389b251fadc2bb6633c356dae4",
+      "contributors": ["B09 author"],
+      "proof_source": "REPORT.md",
+      "proof_dependencies": ["factorization of squared Fourier law", "entropy additivity"],
+      "review_records": [
+        {
+          "reviewer": "B19/A091",
+          "verdict": "ACCEPTED_AT_EXACT_SCOPE",
+          "source": "this run"
+        }
+      ],
+      "status": "INDEPENDENTLY_ACCEPTED",
+      "supersedes": "any ambiguous general-composition reading of B09 Section 5",
+      "refutes": null,
+      "first_unproved_line": null,
+      "next_consumers": ["A044", "B09", "B20"]
+    },
+    {
+      "claim_id": "B09_GENERAL_COMPOSITION_TRANSFER",
+      "version": "v1-gap",
+      "exact_statement": "The reviewed evidence does not prove a single-use B09 correction through arbitrary Boolean composition hierarchies with changing biases, repeated variables, or overlapping witnesses.",
+      "hypotheses": ["arbitrary Boolean hierarchy"],
+      "statement_sha256": "f38b8b4b30459c70fa229341e33e8d6d8923cfb8be93db8f07495d3384102eba",
+      "contributors": ["B19/A091"],
+      "proof_source": "REPORT.md scope audit",
+      "proof_dependencies": [],
+      "review_records": [],
+      "status": "OPEN_GAP",
+      "supersedes": null,
+      "refutes": "unqualified inference from disjoint tensor additivity to arbitrary Boolean composition",
+      "first_unproved_line": "construct an injective physical-credit assignment or a telescoping gate cocycle valid under changed biases and overlap",
+      "next_consumers": ["A044", "B09", "B20"]
+    }
+  ],
+  "full_fei_status": "OPEN"
+}
+

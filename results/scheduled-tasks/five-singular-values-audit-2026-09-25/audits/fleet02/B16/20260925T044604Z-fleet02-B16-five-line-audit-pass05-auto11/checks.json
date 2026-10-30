@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "objective_id": "QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925",
+  "account": "fleet02",
+  "slot": "B16",
+  "run_id": "20260925T044604Z-fleet02-B16-five-line-audit-pass05-auto11",
+  "pass_id": "pass05",
+  "source": {
+    "repository": "yspennstate/math-open-problems",
+    "commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+    "tex_blob": "c4f2a997cf336ee974e15409b5bccdd8cca039d8",
+    "tex_bytes": 58136,
+    "pdf_blob": "8be3aae36ecad7a9dc9b7c95978aad09499f32d0",
+    "pdf_bytes": 484310,
+    "pdf_sha256_manifest": "4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423",
+    "physical_tex_lines_current_fetch": 675
+  },
+  "exact_numerics": {
+    "C3": "14.8183376628429985180102625848 < 15",
+    "C2": "12.0950725707964861164342622735 < 12.2",
+    "gamma1": "0.384676376959734632874912045614 > 0.38",
+    "gamma2": "0.237362464212537231958069470176 > 0.237",
+    "gamma3": "0.0900485514653398310412268947371 > 0.09",
+    "gaussian_small_ball_coefficient": "18.2553191967670305569204263147 < 19",
+    "L0": "7.88887795833288092001805486378 < 8",
+    "diagonal_truncated_halfmoment": "75.1430750103999857769529383212 < 76",
+    "diagonal_total_halfmoment": "76.1430750103999857769529383212 < 77",
+    "diagonal_density_branch": "sqrt(12)*77 = 266.735824365607103203226736592 < 267",
+    "definite_pair_density": "16*pi = 50.2654824574366918154022941325 < 51",
+    "indefinite_pair_density": "266.951346330334036844587257364 < 269"
+  },
+  "section6_checks": [
+    "No-pivot bound |a_ij|<5/48 rederived from |a_ii|<1/12 and |a_ii a_jj-a_ij^2|<1/256.",
+    "A-DAD=2C checked entrywise.",
+    "SVD gives singular values of [[0,M],[M^T,0]] as each singular value of M twice, followed by zeros.",
+    "Rademacher fourth moment has exactly ordered pairings (p,q)=(i,j),(j,i); no missing factor two.",
+    "E||Q_epsilon||_F^2 <= 2 a^2 (sum_i |phi_i|^2)^2 checked.",
+    "Compression direction s_k(Phi^T C Phi)<=s_k(C) and Weyl perturbation index k checked.",
+    "E_m top-product extraction from e_m(MM^T) checked."
+  ],
+  "projection_product_checks": [
+    "All copied variables are literal original-coordinate banks.",
+    "D=X_J-X'_J has independent coordinates with densities <=1.",
+    "Complex hub measure is dominated by the ordinary joint law before Plancherel.",
+    "Step 4 uses one joint product-projection density estimate for the entire projected vector.",
+    "No projected-coordinate independence was used."
+  ],
+  "pdf_visual_comparison": {
+    "status": "UNCHECKED",
+    "reason": "Exact private PDF blob/size were accessible through authenticated GitHub, but the screenshot-capable web PDF path returned DisabledError; source-to-render visual comparison was not claimed.",
+    "page_map": "source-pinned B16 page map reused only as metadata, not as proof evidence"
+  },
+  "fresh_lean_compile": {
+    "status": "UNCHECKED",
+    "reason": "No fresh Lean build was run; source mathematics was reconstructed directly."
+  },
+  "peer_comparison": {
+    "performed_after_independent_derivation": true,
+    "peer": "fleet03/B16 run 20260925T035627Z-fleet03-B16-FIVE270-audit-r59",
+    "overlap": "lines 560-647",
+    "result": "agreement; no peer disagreement imported as a premise"
+  },
+  "theorem_verdict": "No fatal defect found after explicit local repairs; literal source retains FALSE/GAP/UNCHECKED clauses recorded in findings."
+}

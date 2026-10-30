@@ -12,49 +12,49 @@ The current account's native scheduler still has twenty enabled hourly tasks, an
 
 | Account | Last completed hour 09Z: files | 09Z: strict valid | Current, incomplete 10Z: files | 10Z: strict valid | 10Z logins explicitly at .3 |
 |---|---:|---:|---:|---:|---:|
-| account01 | 20 | 20 | 17 | 16 | 4 |
-| account02 | 15 | 13 | 17 | 17 | 4 |
-| account03 | 19 | 19 | 17 | 17 | 5 |
-| account04 | 20 | 19 | 19 | 18 | 1 |
+| fleet01 | 20 | 20 | 17 | 16 | 4 |
+| fleet02 | 15 | 13 | 17 | 17 | 4 |
+| fleet03 | 19 | 19 | 17 | 17 | 5 |
+| fleet04 | 20 | 19 | 19 | 18 | 1 |
 | Total | 74/80 | 71/80 | 70/80 | 68/80 | 14 |
 
 All 144 present canonical JSON files were read. Strict validation checked the ten required fields, schema version 1, matching account/slot, and a start timestamp in the folder's UTC hour. A canonical file can represent a continuing invocation. Check-in presence does not establish completion or FEI adoption. The 09Z hour precedes the programme publication and is fleet-activity evidence only.
 
-The six absent 09Z slots are account02 B05/B08/B11/B14/B19 and account03 B16. The three strict-format exceptions in present 09Z files are account02 B09/B20 (explicit carryover-style fields omit utc_start/control_commit) and account04 B11 (configured effort omitted). In 10Z, account01 B20 explicitly continues a 09:47 run and account04 B05 omits four required metadata fields. These omissions do not establish stopped work.
+The six absent 09Z slots are fleet02 B05/B08/B11/B14/B19 and fleet03 B16. The three strict-format exceptions in present 09Z files are fleet02 B09/B20 (explicit carryover-style fields omit utc_start/control_commit) and fleet04 B11 (configured effort omitted). In 10Z, fleet01 B20 explicitly continues a 09:47 run and fleet04 B05 omits four required metadata fields. These omissions do not establish stopped work.
 
-Source directories: [account01 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/account01/logins), [account02 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/account02/logins), [account03 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/account03/logins), [account04 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/account04/logins).
+Source directories: [fleet01 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/fleet01/logins), [fleet02 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/fleet02/logins), [fleet03 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/fleet03/logins), [fleet04 logins](https://github.com/yspennstate/math-research-brain/tree/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/status/fleet04/logins).
 
 ## Observed adoption artifacts
 
-- [account01/B01 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account01/B01/20260922T103250Z-account01-B01-fei-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
-- [account01/B12 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account01/B12/20260922T101952Z-account01-B12-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
-- [account02/B20 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account02/B20/20260922T103102Z-account02-B20-fei-r17/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
-- [account03/B05 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B05/account03-B05-20260922T104025Z-fei/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: not established by this snapshot.
-- [account03/B07 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B07/20260922T103431Z-account03-B07-FEI-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: not established by this snapshot.
-- [account03/B14 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B14/account03-B14-20260922T103926Z-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: not established by this snapshot.
-- [account03/B19 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B19/20260922T103024Z-b19-fei-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
-- [account04/B17 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account04/B17/20260922T102740Z-b17-fei-r17/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
+- [fleet01/B01 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet01/B01/20260922T103250Z-fleet01-B01-fei-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
+- [fleet01/B12 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet01/B12/20260922T101952Z-fleet01-B12-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
+- [fleet02/B20 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
+- [fleet03/B05 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B05/fleet03-B05-20260922T104025Z-fei/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: not established by this snapshot.
+- [fleet03/B07 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B07/20260922T103431Z-fleet03-B07-FEI-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: not established by this snapshot.
+- [fleet03/B14 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B14/fleet03-B14-20260922T103926Z-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: not established by this snapshot.
+- [fleet03/B19 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B19/20260922T103024Z-b19-fei-r11/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
+- [fleet04/B17 memory](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet04/B17/20260922T102740Z-b17-fei-r17/MEMORY_SNAPSHOT.json): .3 state loaded; all fourteen correction IDs explicitly listed: yes.
 
-All eight snapshots identify repository memory as loaded and native/full-brain integration as unverified or false. Each points to a mathematical output and an unpaid implication. account03/B05 lists four required correction IDs plus a scope note; account03/B07 and B14 do not enumerate the full correction list. Five complete lists were observed; the five acknowledgments were not treated as independent mathematical verification.
+All eight snapshots identify repository memory as loaded and native/full-brain integration as unverified or false. Each points to a mathematical output and an unpaid implication. fleet03/B05 lists four required correction IDs plus a scope note; fleet03/B07 and B14 do not enumerate the full correction list. Five complete lists were observed; the five acknowledgments were not treated as independent mathematical verification.
 
-Three of these runs already have matching finish and receipt files at the frozen snapshot: account03/B07 finished 10:45:33, B14 finished 10:49:19, and B19 finished 10:48:07. Their receipts use revision .3 and retain full FEI as open. Other snapshots may precede receipt publication; no failed-run inference is made from absence.
+Three of these runs already have matching finish and receipt files at the frozen snapshot: fleet03/B07 finished 10:45:33, B14 finished 10:49:19, and B19 finished 10:48:07. Their receipts use revision .3 and retain full FEI as open. Other snapshots may precede receipt publication; no failed-run inference is made from absence.
 
 ## New mathematical handoffs worth reading
 
 These are worker-reported results with exact source references in STATUS.json, not proof certification by this status check.
 
-- account01/B01: signed-credit Bellman transfer and a restriction nonmonotonicity obstruction; positive signed transfer remains unpaid.
-- account01/B12: physical pair-block stopping telescope and robust trigger matching tax; a realizable matching/cover or affordable-block lemma remains unpaid.
-- account02/B20: adaptive selector refund and variable block entropy cost; affordable physical block existence or universal terminal-core FEI remains unpaid.
-- account03/B05: singleton-safe direction efficiency barriers; global-to-local necessity remains open.
-- account03/B07: weighted bent-template neighbourhood and a total-variation collar; quantitative template recovery remains open.
-- account03/B14: exact selector occurrence-KL split and information-priced crossing; a dangerous-selector payment dichotomy remains open.
-- account03/B19: corrected co-pair I-projection baseline (c/v)q_i q_j and a selected-pair KL payment; a realizable selector controlling terminal deficits remains open.
-- account04/B17: balanced-suspension signed-packet transport with a finite checker; dimension-independent payment for every critical core remains open.
+- fleet01/B01: signed-credit Bellman transfer and a restriction nonmonotonicity obstruction; positive signed transfer remains unpaid.
+- fleet01/B12: physical pair-block stopping telescope and robust trigger matching tax; a realizable matching/cover or affordable-block lemma remains unpaid.
+- fleet02/B20: adaptive selector refund and variable block entropy cost; affordable physical block existence or universal terminal-core FEI remains unpaid.
+- fleet03/B05: singleton-safe direction efficiency barriers; global-to-local necessity remains open.
+- fleet03/B07: weighted bent-template neighbourhood and a total-variation collar; quantitative template recovery remains open.
+- fleet03/B14: exact selector occurrence-KL split and information-priced crossing; a dangerous-selector payment dichotomy remains open.
+- fleet03/B19: corrected co-pair I-projection baseline (c/v)q_i q_j and a selected-pair KL payment; a realizable selector controlling terminal deficits remains open.
+- fleet04/B17: balanced-suspension signed-packet transport with a finite checker; dimension-independent payment for every critical core remains open.
 
 ## ROLLOUT is behind worker artifacts
 
-[ROLLOUT.json](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/ROLLOUT.json) was last updated at 10:35:09 UTC. It records account04 native updates verified for twenty tasks at 10:32:09, account01–03 native updates pending, and worker adoption awaiting execution receipts. The last phrase is stale relative to the eight memory snapshots and three completed receipt pairs now visible.
+[ROLLOUT.json](https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/ROLLOUT.json) was last updated at 10:35:09 UTC. It records fleet04 native updates verified for twenty tasks at 10:32:09, fleet01–03 native updates pending, and worker adoption awaiting execution receipts. The last phrase is stale relative to the eight memory snapshots and three completed receipt pairs now visible.
 
 Proposed change, not applied: set worker_adoption.status to PARTIAL_WORKER_ADOPTION_OBSERVED; cite the frozen commit and observation time; record eight .3 memory snapshots across four accounts, five explicit all-fourteen acknowledgments, and three matching completed receipt pairs. Preserve full_fleet_adoption_verified=false. Preserve other accounts' native-update pending status unless their local scheduler evidence is delivered. Do not equate repository adoption with native prompt updates or native brain ingestion.
 

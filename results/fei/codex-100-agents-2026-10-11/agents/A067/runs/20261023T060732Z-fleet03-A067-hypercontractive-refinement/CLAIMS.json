@@ -1,0 +1,86 @@
+[
+  {
+    "claim_id": "A067-EDITED-INTACT-PAIR-CONDITIONAL-SOURCE-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every integer m>=2 take canonical G_m and its actual z terminals b_m,c_m of A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK@1. On the edited z=- branch successively query one member of any intact quadratic pair, stop each outcome-1 clean exit with its full inherited reference, and continue on outcome0 for any h<=m. Let Q_t be ONLY the original c_m spectrum marginalized over these t physical coordinates, P_t the actual edited-child spectrum, A=2^-m, delta=2^(-(2m+1)),delta_t=2^t delta. P_t/Q_t is 2^t except on the cell with w unoccupied and at least one exposed partner occupied, where it is 2^t A^2/(1+A^2). Hence every next intact-pair Fourier bit has equal P_t and Q_t conditionals. Its signed CE-drop-minus-2Inf debit is <=-4delta_t; with original G reaches the cumulative debit E_Q<=-2h delta. Retaining both full children, unchanged b_m, original bank S, old z debit D, and every signed terminal CE/KL bill gives S_Q(h)-(D+E_Q)=S-D=r>delta/4. Actual entropy ledger adds the SAME full weighted terminal KL to both bank and debit. The conditional equality/nonpositive-debit conclusions are not claimed for exposed-partner or w queries, prescribed reference resets, arbitrary phases or arbitrary cores; negative inherited terminal banks are not C2 leaf certificates.",
+    "hypotheses": [
+      "Finite uniform Boolean canonical quadratic phase at the all-zero marked point; m>=2",
+      "Original full normalized Q_c is marginalized, never replaced by actual child spectrum",
+      "One physical member of each intact pair on the zero-valued edited path; all exits retained with original reaches",
+      "Signed terminal banks and complete CE/entropy/KL terms are retained without clipping or renewed source quotas"
+    ],
+    "statement_sha256": "f7d1b7a7081a210246b0a73a236a981f43d499018500bb8ce95ca2716819e3f1",
+    "contributors": [
+      "fleet03/A067; A088 source acceptance, clean-history and phase-scope analysis credited"
+    ],
+    "proof_source": "agents\\A067\\runs\\20261023T015109Z-fleet03-A067-hypercontractive-refinement\\PROOF.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK",
+        "version": 1,
+        "statement_sha256": "c8972812430c4b66c2874a9746d9fe2f5305397434ca62d56dc42755c2c3bee1",
+        "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet03/A088",
+        "verdict": "HOLDS_AT_EXACT_CANONICAL_SELECTED_HISTORY_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "source": "agents\\A088\\runs\\20261023T025955Z-fleet03-A088-booleanity-referee\\PROOF.md",
+        "locator": "section 1; unchanged author statement; sections 2-6 supply positive-partner obstruction and scope guards"
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Unregistered extension of conditional source equality or nonpositive selected-query debit to every remaining physical coordinate (exact occupancy guard only)"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A070",
+      "A094",
+      "A066",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-FIRST-EXPOSED-PARTNER-PAIRED-RATE3",
+    "version": 1,
+    "exact_statement": "For every integer m>=2 take canonical b_m(Y)=(-1)^(sum_j Y_(2j-1)Y_(2j)), c_m=b_m-2*1{w=0,Y=0}, G_m with z terminals b_m,c_m, A=2^-m, d=A^2. On c_m query a=Y1, stop a=1 and query exposed partner b=Y2 on a=0; retain all three c leaves with original G reaches 1/4,1/8,1/8 and the unchanged b_m terminal. Every reference is only the corresponding marginal of the original full spectrum of c_m. For the complete two-child CE drops L0,L1, L0<=1 and L1<1+3d/(1+d). With the single rate3 chosen at the original source, the root-weighted CE debit E_Q(3)<-9d/4. The full weighted terminal KL K_F<9/16, hence actual entropy debit E_H(3)=E_Q(3)+K_F<9/16-9d/4. The original additional reserve I_X=(I(b_m)+I(c_m))/2=m+(2m+1)d/2 pays this bill after unchanged old D, with r3-E_H(3)>m-9/16. Old rate2 invoices are retained by E_Q(2)-E_Q(3)=E_H(2)-E_H(3)=1/4+d, and E_H(2)<13/16-5d/4. Full signed frontier identities S_Q=S3+E_Q(3), S_H=S_Q+K_F, S_H-(D+E_H(3))=r+I_X hold. For fixed real C, E_Q(C)->(3-C)/4, so3 is the sharp threshold for nonpositive CE debit of this exact block. No iteration, nonpositive actual entropy debit at rate3, arbitrary-core payment or full FEI is asserted.",
+    "hypotheses": [
+      "Uniform Boolean canonical quadratic phase with marked all-zero jet and dummy w; m>=2",
+      "Only the specified first intact-plus-partner stopping block, with every physical child and full Fourier label retained",
+      "A single original rate choice3 supplies exactly the original increment I_X; original D and old rate2 invoices explicitly retained",
+      "No reference reset, clipping, renewed child bank or repeated supply of I_X"
+    ],
+    "statement_sha256": "bb00d8df81335aa5ddc86d40198cae1daf754edc077d15bf535aaaf3d74a3b53",
+    "contributors": [
+      "fleet03/A067; A088 supplied independently reconstructed positive-partner obstruction and scope guard"
+    ],
+    "proof_source": "agents\\A067\\runs\\20261023T060732Z-fleet03-A067-hypercontractive-refinement\\PROOF.md",
+    "proof_dependencies": [
+      "A067-POSTCORE-BENT-FLAG-SAME-CHILD-BANK@1",
+      "A067-EDITED-INTACT-PAIR-CONDITIONAL-SOURCE-TRANSFER@1",
+      "A088 20261023T025955Z PROOF sections 2-3 for exact partner formulas and asymptotic sharpness"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_CHECKED_INDEPENDENT_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A088",
+      "A070",
+      "A094",
+      "A066",
+      "A096",
+      "B14",
+      "B20"
+    ]
+  }
+]

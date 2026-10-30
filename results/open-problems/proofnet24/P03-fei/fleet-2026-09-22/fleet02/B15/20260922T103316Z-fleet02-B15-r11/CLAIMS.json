@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T103316Z-fleet02-B15-r11",
+  "account": "fleet02",
+  "slot": "B15",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "claim_id": "B-CHAR-SUSPENSION-LOG-COMPILER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Every uniform-cube Boolean g and its balanced character suspension F(y,x)=y g(x)",
+      "statement": "For the explicit signed log-magnitude/log-product-price statistic retaining the Fourier-empty atom individually, 0 <= K_occ(F)-K_log(F) <= 2 Var(g) <= 2 I(g) = 2(I(F)-1).",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "section": "influence-marginal I-projection and K_occ identity"
+        },
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "730731281a24e70b01b4021a90ff758575414db1",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T085941Z-suspension-kl-no-loss/REPORT.md",
+          "section": "character suspension pullback"
+        }
+      ]
+    },
+    {
+      "claim_id": "B-SPARSE-DEGREE-COMPILER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "One-point-defect character suspensions F_m, every integer m>=2",
+      "statement": "Degree |T| is sufficient for the exact P/Q likelihood ratio, so its projected KL equals K_occ. Also H(g_m)<4 I(g_m); the coarse logarithmic compiler gives B_inf^6+K_log>0 and the exact degree compiler gives B_inf^4+K_degree>0.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "B-CHAR-SUSPENSION-LOG-COMPILER-v1"
+        },
+        {
+          "mode": "context",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "7ec649dfb3d1ab2f92855f2069590fca2ac956dd",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md",
+          "section": "sparse-suspension unweighted-L2 obstruction"
+        }
+      ]
+    },
+    {
+      "claim_id": "B-BLOCK-EQUAL-INFLUENCE-CELL-COMPILER-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Balanced Boolean sources whose coordinate occurrence marginals are constant on specified influence classes",
+      "statement": "The statistic (Fourier sign, Fourier magnitude, occupancy count in each equal-influence class) is sufficient for the I-projection likelihood ratio and therefore preserves K_occ exactly.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "4bd6d05f1eb8325d665f2748f4d74dcee2550a04",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md",
+          "section": "influence-marginal I-projection"
+        }
+      ]
+    },
+    {
+      "claim_id": "B-RM3-MULTISCALE-CELL-PAYMENT-v1",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Depth-d recursive ternary majority, every integer d>=1",
+      "statement": "The (Fourier sign, active-node magnitude exponent, Fourier degree) statistic preserves K_occ exactly. Moreover H(M_d)=4(I(M_d)-1), so the compiled balanced residual at C=4 is exactly zero.",
+      "dependencies": [
+        {
+          "mode": "uses_premise",
+          "claim_id": "B-BLOCK-EQUAL-INFLUENCE-CELL-COMPILER-v1"
+        },
+        {
+          "mode": "context",
+          "repository": "yspennstate/math-open-problems",
+          "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+          "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md",
+          "section": "recursive-majority low-level KL projection barrier"
+        }
+      ]
+    },
+    {
+      "claim_id": "B-GLOBAL-COMPILER-PAYMENT-v1",
+      "status": "OPEN",
+      "scope": "All balanced uniform-cube Boolean functions",
+      "statement": "Construct a source-valid retained KL statistic tildeK with K_occ-tildeK <= L(I-1) for one finite universal L, compatible with hierarchy/restriction credits, and prove the retained tildeK pays the negative first-moment term."
+    }
+  ],
+  "consumed_other_account_results": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2c1afb444c3a4fa2cbee12f73fd8c19c44af9e56",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T092409Z-complement-packet-kl-gap/REPORT.md",
+      "use": "Its c<1 complement-packet theorem is exactly incompatible with character suspensions because the deterministic suspension coordinate forces the I-projection parameter c=1; this identifies and motivates the missing corridor attacked here."
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "7ec649dfb3d1ab2f92855f2069590fca2ac956dd",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md",
+      "use": "Used as a design constraint requiring preservation of the rare-event logarithm rather than quadratic compression."
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "bff0d7b6c21485f386841c42582eb04f32705046",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md",
+      "use": "Used as the mandatory recursive-majority preflight; the new multiscale cell compiler survives the low-level projection no-go."
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "2bf247373576eb406ca91bb3ea5f3ce5e5ab8588",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md",
+      "use": "Used to identify the next global compatibility requirement: retain the nonnegative hierarchy KL under restriction/composition."
+    }
+  ]
+}

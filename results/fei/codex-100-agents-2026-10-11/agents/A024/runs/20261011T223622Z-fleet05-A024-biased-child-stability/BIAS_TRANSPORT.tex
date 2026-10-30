@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,amsthm}
+\newcommand{\HH}{\mathsf H}
+\newcommand{\EE}{\mathsf E^+}
+\newcommand{\II}{\mathsf I}
+\newcommand{\DD}{\mathsf D}
+\newcommand{\de}{\delta}
+\newcommand{\eb}{\mathsf e}
+\begin{document}
+\title{A024: exact biased-child restriction transport}
+\author{fleet05/A024}\maketitle
+All logarithms are base two. Physical inputs are independent uniform signs.
+For a Boolean sign under a product law with coordinate variances $v_i$, define
+\[
+ P(S)=\widehat f(S)^2,\quad
+ \EE(f)=\sum_{S\ne\varnothing}P(S)\log_2\frac{\prod_{i\in S}v_i}{P(S)},
+ \DD(f)=\II(f)-\operatorname{Var}(f).
+\]
+There is no output-variance numerator. Write $\eb(u)=u\log_2(1/u)$,
+with $\eb(0)=0$. On a uniform physical cube,
+$\HH(f)=\EE(f)+\eb((\mathbb Ef)^2)$.
+
+Let $F=g(f_1,\ldots,f_k)$ on disjoint physical blocks. Put
+$m_i=\mathbb Ef_i$, $v_i=1-m_i^2$, and let $\mu$ be the product law
+of their outputs. Let $D_i g=(g(y_i=1)-g(y_i=-1))/2$ and
+$a_i=\mathbb E_{\mu_{-i}}(D_i g)^2$. Contract deterministic inputs
+before forming a normalized basis; the polynomial $a_i$ also specifies
+the continuous extension at the endpoints. The exact identities are
+\[
+ \EE(F)=\EE_\mu(g)+\sum_i a_i\EE(f_i),\quad
+ \II(F)=\sum_i a_i\II(f_i),\quad
+ \DD(F)=\DD_\mu(g)+\sum_i a_i\DD(f_i).
+\tag{1}
+\]
+For completeness, the coefficient at a nonempty physical set
+$S=\bigcup_{i\in A}T_i$ is
+$\widehat g_\mu(A)\prod_{i\in A}\widehat f_i(T_i)/\sqrt{v_i}$.
+There is exactly one such decomposition. Splitting the corrected
+logarithm proves (1), including its normalization cancellation.
+
+Query physical coordinate $x$ in block $j$. Superscripts $+$ and $-$
+denote the actual restrictions, and $\de Z=Z-(Z^++Z^-)/2$.
+Set
+\[
+ \beta=(m_j^+-m_j^-)/2=\widehat f_j(\{x\}),\quad
+ d=\operatorname{Inf}_x(f_j),\quad
+ t=a_j,\quad b=\mathbb E_{\mu_{-j}}D_jg,\quad M=\mathbb EF.
+\]
+The remaining physical inputs are still uniform. Only the induced output
+law changes. For $i\ne j$, $a_i$ is affine in $m_j$, whereas $a_j=t$
+is independent of $m_j$. Hence $a_i=(a_i^++a_i^-)/2$. Also
+$M^+-M^-=2b\beta$. Subtraction of (1) gives
+\begin{align}
+ \de\EE(F)&=\de\EE_\mu(g)+t\de\EE(f_j),\\
+ \de\II(F)&=td,\\
+ \de\DD_\mu(g)&=\beta^2(t-b^2),\\
+ \de\DD(F)&=td-b^2\beta^2.
+\tag{2}
+\end{align}
+Here $\de\EE_\mu(g)$ compares the three respective output-product laws,
+not a physical biased reveal of $Y_j$.
+
+Define the signed mean-transfer cost
+\[
+ T=\de\EE_\mu(g)+\de\eb(M^2)-t\de\eb(m_j^2).
+\]
+Then exactly
+\[
+ \de\HH(F)=t\de\HH(f_j)+T,\qquad
+ \de(C\II-\HH)(F)=t\de(C\II-\HH)(f_j)-T.
+\tag{3}
+\]
+For $P_C=C\DD-\EE$, the corresponding identity is
+$\de P_C(F)=\de P_C(g)+t\de P_C(f_j)$, and
+$\de P_C(g)=C\beta^2(t-b^2)-\de\EE_\mu(g)$.
+Thus deficit slack, empty-atom reserve and full-FEI slack are distinct.
+
+There is a direct signed-erasure realization of the same $T$. Write
+$F(z,u)=A(z)+B(z)f_j(u)$; Booleanity implies $AB=0$ and
+$A^2+B^2=1$ pointwise. All $z$ are still physical uniform inputs;
+$t=\mathbb EB^2$. Define
+\[
+ L(a,c)=\eb(a^2)+\eb(c^2)-\eb(a^2+c^2).
+\]
+Homogeneity $L(ra,rc)=r^2L(a,c)$ and unique disjoint supports give
+\[
+ B_x(F)=tB_x(f_j)+R,\qquad
+ R=\sum_Z L(\widehat A(Z)+m_j\widehat B(Z),\beta\widehat B(Z))
+                  -tL(m_j,\beta).
+\tag{4}
+\]
+Indeed every nonempty residual inner Fourier set contributes $t$ times
+its inner erasure cost. The empty inner set contributes the first sum,
+in place of $tL(m_j,\beta)$. This proof includes $m_j=0$ and
+deterministic children. If $J_x$ is the physical child-spectrum JS term,
+then (3)--(4) imply $T=R+J_x(F)-tJ_x(f_j)$.
+
+For $t>0$ and $\beta\ne0$, a useful explicit upper bound is
+\[
+ R\le t\beta^2\log_2\frac{1-t+(m_j^2+\beta^2)t}{t\beta^2}
+       +t\beta^2\log_2 e-tL(m_j,\beta).
+\tag{5}
+\]
+Use $L(a,c)\le c^2\log_2((a^2+c^2)/c^2)+c^2\log_2 e$,
+then log-sum and $\sum_Z(\widehat A+m_j\widehat B)^2=1-t+m_j^2t$.
+Zero-weight terms are omitted. Equation (5) keeps the negative
+normalization credit and exposes the unpriced outer-rarity factor $t$.
+
+The existing mismatch/KL rebate applies to actual physical inner children.
+Let $q_U=(\widehat f_j^+(U)^2+\widehat f_j^-(U)^2)/2$,
+$r_U=(|\widehat f_j^+(U)|-|\widehat f_j^-(U)|)^2/4$,
+$\eta=\sum_U r_U$ and $\nu_U=r_U/\eta$. Then
+\[
+ \de\HH(F)\le
+ t\eta\left[\log_2(1/\eta)-D_2(\nu\Vert q)+3/\ln2\right]+T.
+\tag{6}
+\]
+At $\eta=0$ the inner decrement is exactly zero; $T$ need not vanish.
+At $\beta=0$, all induced means are unchanged, so $T=R=0$ and
+the entire decrement transports exactly by $t$. For a signed dictator
+outer gate $t=1$, $M=\pm m_j$, $\EE_\mu(g)=0$, again $T=0$.
+Neither endpoint requires dividing by a zero deficit.
+
+The remaining universal step is to pay the signed costs $R$ (or $T$)
+and the inner KL-log charges over an actual stopping tree, with terminal
+entropy and single-use physical influence. No such universal estimate
+is asserted here.
+\end{document}

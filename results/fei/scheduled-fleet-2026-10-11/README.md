@@ -14,7 +14,7 @@ The [owner focus and verified adoption record](OWNER_FOCUS_20261012.md) links th
 
 For routine dispatch, read the current protocol and state, then load only your own five contracts from `assignments/Bxx.json` through `STREAM_PACKET_INDEX.json`. The complete catalog preserves detailed provenance and cross-stream references.
 
-The report describes 100 logical research assignments in twenty squads of five. The twenty existing account01/B01–B20 hourly tasks execute those backlogs one focused packet at a time. The allocation does not claim that 100 concurrent workers have been launched. The original recurrence phases and finite counts remain in force; the campaign clock is not restarted by a report revision. The final revised prompts were deployed and exactly read back for all20 enabled tasks at 20:27:13 UTC on 11 October; see [the final scheduler audit](verification/FEI_SCHEDULE_CONFIGURATION_R2_MANIFEST.json). Each next natural invocation reads the current contract and state.
+The report describes 100 logical research assignments in twenty squads of five. The twenty existing fleet01/B01–B20 hourly tasks execute those backlogs one focused packet at a time. The allocation does not claim that 100 concurrent workers have been launched. The original recurrence phases and finite counts remain in force; the campaign clock is not restarted by a report revision. The final revised prompts were deployed and exactly read back for all20 enabled tasks at 20:27:13 UTC on 11 October; see [the final scheduler audit](verification/FEI_SCHEDULE_CONFIGURATION_R2_MANIFEST.json). Each next natural invocation reads the current contract and state.
 
 ## Research and execution
 
@@ -27,7 +27,7 @@ The independently audited revision removes targets already proved, adds known co
 - [Obstruction registry](OBSTRUCTION_REGISTRY.json) preserves the failed statements and valid scope of each control.
 - B20 maintains the concise indices and coverage of all hundred packets. Original derivations remain in immutable run folders.
 
-Each substantive run saves `REPORT.md`, `CLAIMS.json`, `PROGRESS.json`, and the full proof/code/output it uses. The canonical destination is `reports/fei-2026-10-11/runs/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-open-problems`. Complete source-bound handoffs are mirrored under `research_pushes/2026-10-11-full-fei-campaign/handoffs/account01/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-research-brain`.
+Each substantive run saves `REPORT.md`, `CLAIMS.json`, `PROGRESS.json`, and the full proof/code/output it uses. The canonical destination is `reports/fei-2026-10-11/runs/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-open-problems`. Complete source-bound handoffs are mirrored under `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-research-brain`.
 
 Review starts on Day 1. A stream holds at most two complete unreviewed candidates before prioritizing repair, verification or review. Full candidates require two independent complete proof-chain reconstructions. A reviewer contributing a material repair cannot independently accept that version.
 

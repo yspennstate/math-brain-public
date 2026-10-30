@@ -52,7 +52,7 @@ nothing derives, or a derived value nothing claims; it imports nothing from deri
 two in turn. On 28 Sep all 21 claims matched, and STATUS.json itself says 30; changing one expected value in a copy of
 CLAIMS.json makes check.py fail on that claim.
 
-Since 29 Sep check.py treats this folder as a closed package (scheduled audit account04/B20 r37). It first checks every file
+Since 29 Sep check.py treats this folder as a closed package (scheduled audit fleet04/B20 r37). It first checks every file
 against MANIFEST.json and compares no claim when one differs. The status counter is read from STATUS.json in this
 folder, a copy of the campaign's listed in the manifest, and a claim whose source is missing or unbound fails the
 check. REPORT.md is bound by the git blob id the claims were copied from (MANIFEST.json, "external"). The campaign's
@@ -98,7 +98,7 @@ commitment row, a repeated event row, and an event dropped with both roots regen
 round 1 verifies while the same output with its last byte changed does not. Which outputs to disclose is a decision about
 private material and is not made here.
 
-Since 28 Sep 16:5x `--files` also checks each run's own fields (account01/B19 R44): the stream and context digests are 64
+Since 28 Sep 16:5x `--files` also checks each run's own fields (fleet01/B19 R44): the stream and context digests are 64
 lowercase hex digits, the byte and response counts are whole numbers, a run with no hook responses commits the empty
 context, the status is "committed" with every matches_row value true, and matches_row carries exactly the keys the
 generator writes for the run's counted row in roundN/results.jsonl, so a disagreeing key cannot be dropped to make the rest

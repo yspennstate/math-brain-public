@@ -1,0 +1,47 @@
+[
+  {
+    "claim_id": "A089-SHARP-GEOMETRIC-SIGNED-RESERVE-REPAIR",
+    "version": 1,
+    "exact_statement": "Let Phi(a,b)=(a+b)log2(a+b)-a log2(a)-b log2(b), q=sum D>0, R(t)=sum Phi(U,tD)-q Phi(m^2,t) for a finite nonnegative packet list. If m=0 then R>=0; if m!=0, R(t)>=0 for every t in any interval (0,tmax] with tmax>0 iff L=sum D log2(U/D)-q log2(m^2)>=0, taking L=-infinity for any active zero U. For positive U, R(t)>=q[Phi(G,t)-Phi(m^2,t)] with G=product(U/D)^(D/q). For h negative exactly on {0,1,2,4,8,16,32,6,17,40}, any nonconstant actual Boolean core g of arbitrary dimension whose minority probability is M/64, 4<=M<=32, admits one common output orientation preserving every corresponding physical B_i/Inf_i under disjoint composition h(g^6): use the minority-negative orientation for M=4..15 or21..32 and its complement for M=16..20. No high-E premise is required at these biases; no off-grid, all-depth or terminal-payment conclusion follows.",
+    "hypotheses": [
+      "Entropies in bits, continuous zero convention for Phi",
+      "Finite nonnegative U,D packets; q>0; zero-D terms ignored",
+      "Actual Boolean cores under uniform independent physical inputs; identical disjoint copies in the gate application",
+      "Outer +1 encoded as physical bit zero; fixed matched six-bit gate",
+      "In application p=M/64 is exact; common orientation applies to all coordinates",
+      "Relevant coordinates only; inherited terminal H(g) and signed C_p are retained"
+    ],
+    "statement_sha256": "bef203f2a5519ce903dbe69e61c3090f1c626bd3e25fe32dd0fe07f4327d6acb",
+    "contributors": [
+      "A089"
+    ],
+    "proof_source": {
+      "run_id": "20261014T000812Z-fleet05-A089-repair-specialist",
+      "path": "REPORT.md",
+      "certificates": [
+        "out/BIAS_CERTIFICATES.json",
+        "out/CHECK.json",
+        "out/FIXTURES.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unconditional recentered reserve positivity for every actual core",
+      "Unconditional minority orientation positivity",
+      "Unconditional sign-choice preservation of E(g)>K; actual point-defect obstruction retained"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A071",
+      "A072",
+      "A075",
+      "A085",
+      "A092",
+      "B18",
+      "B20"
+    ]
+  }
+]

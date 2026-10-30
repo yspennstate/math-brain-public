@@ -52,7 +52,7 @@ claims = [
          next_consumers=["A087", "A065"]),
     dict(claim_id="B13-B05-LOCAL-POTENTIAL", status="NUMERICAL_EVIDENCE_FLOAT64",
          exact_statement="For the B05 sparse bent point-defect family (selector y, k data bits, 2k control bits): at the root H/I = 3.7084 (k=4), 3.7381 (k=6); selector D/d = 8.3001, 10.3507 with B/d - k = 1.488, 1.481 and J/d = 2.812, 2.870; min_i D_i/d_i = 3.3819, 3.8704, attained at data coordinates. For k=4 complete trees under seven rules the sandwich holds, and the minimal nonnegative potential Q*_root/I at C = 6.5218 is 0.0126 for selector_first and minInf and 0 for control_first, control_selector, data_first, greedyD, maxInf; at C = 8 it is at most 0.0021.",
-         hypotheses="B05 family as defined in runs/B05/20261011T193057Z-account01-B05-rare-restrictions (k even); float64; k=4 full trees with memo, k=6 root only",
+         hypotheses="B05 family as defined in runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions (k even); float64; k=4 full trees with memo, k=6 root only",
          proof_source="code/b05_trees.py; out/b05_trees_results.json",
          proof_dependencies=["B05 family definition (commit 80cc2e50)"],
          first_unproved_line="No proof for general k; the decay of selector-first Q*_root/I like k 2^-k is an extrapolation from (8.30-C) d_y and d_y/I = 2^-k/(2.2k) at k=4.",

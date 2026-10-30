@@ -1,0 +1,55 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261021T214405Z-fleet03-A027-block-selection",
+  "stream": "B06",
+  "packet_id": "A027",
+  "gap_id": "G-R-SELECT",
+  "attempt_id": "A027-G-R-SELECT-017",
+  "method": "Change from local signed-child funding to one global supporting-line ancestor refund; compare eligible controller curvatures; certify scalar tangent and actual positive-exit tree",
+  "mathematical_delta": "Root bias<=1/16 plus complete leaf biases<=1-1/sqrt2 makes the full signed activation correction nonpositive for untouched controllers p<=1/4 or p=1/2, including all point controllers. Every actual prefix account remains nonnegative even across positive local exits; complete terminals retained. 400 cases/12757 assertions,84 positive exits; independent direct-character replay16 assertions.",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT; VERSION6_REVIEW_PENDING",
+  "mathematical_status": "ANALYTIC_ENDPOINT_PAYMENT_WITH_EXACT_SCALAR_CERTIFICATE; LEAN_RUNTIME_UNVERIFIED; FULL_FEI_OPEN",
+  "claim_versions_used": [
+    "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@5",
+    "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@2"
+  ],
+  "claims_created_or_changed": [
+    "A027-PARTIAL-CORE-ACTIVATION-TRANSPORT@6"
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "DERIVATION.md",
+    "FROZEN_SPEC.json",
+    "FROZEN_VALIDATION.md",
+    "SOURCE_READS.json",
+    "code/exact.py",
+    "code/check.py",
+    "code/independent.py",
+    "code/finalize.py",
+    "out/pilot.json",
+    "out/validation.json",
+    "out/independent.json",
+    "out/PILOT_FAILURE.json",
+    "out/lean_attempt.json",
+    "out/memok_receipt.json"
+  ],
+  "next_consumers": [
+    "A028",
+    "A029",
+    "A030",
+    "A064",
+    "A087",
+    "A094"
+  ],
+  "next_action": "Insert one actual point-controller exposure between the saved ancestor core refund and positive selector exit; pay its channel and transfer the SAME original supporting-line account with both full terminals retained. Do not reset the account or assume core/terminal FEI.",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    "No universal paid proper core decrement and complete terminal FEI certificates",
+    "New clause requires sparse root, endpoint bias band and untouched eligible controller",
+    "Version6 independent acceptance and supervisor mirrors unobserved",
+    "Lean hook timed out; no formal certificate"
+  ],
+  "packet_ids": [
+    "A027"
+  ]
+}

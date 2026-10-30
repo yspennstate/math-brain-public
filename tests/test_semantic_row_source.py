@@ -1,5 +1,5 @@
 """The semantic loader reads how each claim vector was made (row_source) and refuses a file whose sources are not the
-closed set (scheduled audits account04/B06 r76 and account04/B14 r8,
+closed set (scheduled audits fleet04/B06 r76 and fleet04/B14 r8,
 B06-R76-LEGACY-DIGEST-MIGRATION-OPENS-UNVERIFIED-ROWS-20260929).
 
 A legacy row carries its claim's current store digest, but no text of the claim reproduces it; a caller can tell it from

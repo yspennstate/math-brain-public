@@ -1,7 +1,0 @@
-# Correction addendum — `QFORM-CROSSMINOR-ALONE-FALSE`
-
-After the main report was made immutable, the shared correction inbox acquired account02/B09 event `QFORM-CROSSMINOR-ALONE-FALSE` (canonical report commit `fa592b592c61bd1597aa8cf3270c3c9f58f410bf`). It refutes the claim that a nonsingular `2 x 2` cross block **alone**, without a condition on the pivot-side principal block, forces bounded density. The counterexample is `Q=(X1+Y1)^2-(X2+Y2)^2`, whose cross block is nonsingular but whose density has a logarithmic singularity at zero; its full matrix has only two large eigenvalues, so the owner target itself is not refuted.
-
-This correction does **not** challenge either theorem proved in the B18 report. `QFORM-BANKS-PHYSICAL-BIPARTITE-v1` assumes the entire selected physical principal block is exactly `[[0,B],[B^T,0]]`, so both same-side quadratic blocks vanish. `QFORM-BANKS-BIPARTITE-SCHUR-SMOOTHING-v1` assumes the analogous exact zero-within-side condition on the selected Schur residual. These are the hypotheses needed to make the conditioned expression genuinely bilinear before Banks Corollary 4.18 is applied.
-
-The correction strengthens the interpretation of the remaining bridge: one must extract an actual bipartite residual (or use an aggregate bilinear payment), not merely a large cross minor while uncontrolled same-side quadratic terms remain. The main scientific claims and constants are unchanged.

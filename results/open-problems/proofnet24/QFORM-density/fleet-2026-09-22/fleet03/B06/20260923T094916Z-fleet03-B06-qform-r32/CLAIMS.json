@@ -1,0 +1,43 @@
+{
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet03",
+  "slot": "B06",
+  "run_id": "20260923T094916Z-fleet03-B06-qform-r32",
+  "execution": "WITHOUT_VERIFIED_BRAIN",
+  "full_qform_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "full_continuity_status": "OPEN",
+  "claims": [
+    {
+      "id": "QFORM-AFFINE-NULL-SCALAR-WEAK32-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "If X has density cap L, is independent of a pair (C,D) of joint-density cap M, beta*gamma!=0, then 2 beta X C+alpha C^2+2 eta CD+gamma D^2+mu C+nu D+kappa has density cap 3(2LM)^(2/3)|beta^2 gamma|^(-1/3), uniformly in all other coefficients."
+    },
+    {
+      "id": "QFORM-INPLANE-SHARED-TRANSLATION-NULLPIVOT-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "For original product Z, genuine independent scalar X, U=u.Z,V=v.Z, G=det Gram(u,v), and null-pivot form 2kU(gamma X+aU+bV+h0)+beta V^2+mU+nV+r with auxiliary-independent coefficients, ||p||inf <=3*4^(2/3)L_X^(2/3)[k^2 gamma^2 |beta| G]^(-1/3)."
+    },
+    {
+      "id": "QFORM-TRANSVERSE-SHARED-TRANSLATION-CURVATURE-v1",
+      "status": "PROVED_IN_REPORT",
+      "statement": "If h=a u+b v+w with w perpendicular to span(u,v), the null-pivot Z-quadratic matrix has exact rank three for w!=0 and signed pseudodeterminant -beta k^2 detGram(u,v)||w||^2."
+    },
+    {
+      "id": "QFORM-NULLPIVOT-DIFFUSE-TRANSVERSE-EXIT-v1",
+      "status": "PROVED_BY_APPLICATION_OF_EXISTING_THEOREM",
+      "statement": "For the exact rank-three transverse residual, if its entire-range coordinate leverage is <=1/32 and s is its smallest nonzero singular value, the full affine-restored conditional product-law form has a continuous density bounded by (96e/(7sqrt2))/s <27/s."
+    },
+    {
+      "id": "QFORM-NULLPIVOT-FLEET04-SQUARE-SPLICE-v1",
+      "status": "PROVED_BY_PARTNER_TRANSFER_APPLIED",
+      "statement": "Adding a source-valid cap-one translated square a0(T+Psi)^2 to the in-plane base and applying completed fleet04/B18 gives density cap 2sqrt3*4^(1/3)L_X^(1/3)|a0|^(-1/2)[k^2 gamma^2 |beta| G]^(-1/6)."
+    }
+  ],
+  "limitations": [
+    "The in-plane theorem does not allow an arbitrary affine term transverse to span(u,v).",
+    "The transverse curvature theorem is for a linear shared translation h.Z; arbitrary nonlinear shared shifts are not covered.",
+    "The diffuse transverse exit requires the explicit <=1/32 entire-range leverage gate.",
+    "The pseudodeterminant identity alone does not lower-bound the smallest nonzero singular value.",
+    "No completed fleet04/B06 canonical theorem was available; fleet04/B18 was the compatible completed fleet04 result actually applied."
+  ]
+}

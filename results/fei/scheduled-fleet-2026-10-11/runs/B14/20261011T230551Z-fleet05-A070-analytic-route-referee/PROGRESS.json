@@ -1,0 +1,111 @@
+{
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T230551Z-fleet05-A070-analytic-route-referee",
+  "stream": "B14",
+  "packet_id": "A070",
+  "gap_id": "G-A070-STABLE-COMPLETE-ANALYTIC-CODE",
+  "attempt_id": "A070-stage1-independent-scope-reconstruction",
+  "method": "Normalized singleton and bounded-L4 relaxation controls; exact Boolean point-flip stability; independent heat/granularity/occupancy proof reconstruction; Kraft hybrid and explicit addressing lower bound",
+  "mathematical_delta": "Five imported v1 claims independently accepted at scope; hybrid partition bound reconstructed; three-reference expected-cost/I >= log2(a/2)/40 on actual Boolean point-flipped addressing; full FEI OPEN; original cyclic certificate not recovered",
+  "deliverable_status": "COMPLETE_LOCAL_ARTIFACT_PENDING_SUPERVISOR_COPY",
+  "mathematical_status": "SCOPED_REVIEWS_ACCEPTED_LOCAL_HYBRID_NOGO_PROVED_UNREVIEWED_FULL_FEI_OPEN_CYCLIC_REPLAY_GAP",
+  "claim_versions_used": [
+    {
+      "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+      "version": 1,
+      "acceptance": "A070 independent reconstruction at scope",
+      "original_statement_sha256": "6a0f129e7897d58cbfdf3d7fd67b3f9b32ce920aa72238c9b17984ac379365e6",
+      "local_protocol_statement_sha256": "86e0a303dc68c3ef7644737401b69400ce7c1d8059b4096b9ce5a85fd4b4d5f2"
+    },
+    {
+      "claim_id": "A066-NO-INTEGRABLE-HEAT-ENVELOPE",
+      "version": 1,
+      "acceptance": "A070 independent reconstruction at scope",
+      "original_statement_sha256": "e46b8cb695767e6dd284aaa8889d87e61c3f05c4da3ba0c531a8f3d4918edcfe",
+      "local_protocol_statement_sha256": "72d2501e36dd69ba43bab1e16cb0f181c10de99822e1ddd91b6ecdf316012d93"
+    },
+    {
+      "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+      "version": 1,
+      "acceptance": "A070 independent reconstruction at scope",
+      "original_statement_sha256": "f8ea9c1fe43d80907fd273e35e3fc141527789dd383a79b68595b04d86afa4a5",
+      "local_protocol_statement_sha256": "f8ea9c1fe43d80907fd273e35e3fc141527789dd383a79b68595b04d86afa4a5"
+    },
+    {
+      "claim_id": "A067-MAXIMAL-SUPPORT-ENVELOPE-NOGO",
+      "version": 1,
+      "acceptance": "A070 independent reconstruction at scope",
+      "original_statement_sha256": "a632877752249e22535f8f8a56d3c76914639c49764a6146b48dc96d4d6aa7bc",
+      "local_protocol_statement_sha256": "a632877752249e22535f8f8a56d3c76914639c49764a6146b48dc96d4d6aa7bc"
+    },
+    {
+      "claim_id": "A069-STABLE-HIERARCHY-EDIT-PAYMENT",
+      "version": 1,
+      "acceptance": "A070 independent reconstruction at scope",
+      "original_statement_sha256": "cd5f76a5bb9b392b3cd098f53516f83f2ae8e02fa78de7950f280d64c7245d4a",
+      "local_protocol_statement_sha256": "cd5f76a5bb9b392b3cd098f53516f83f2ae8e02fa78de7950f280d64c7245d4a"
+    }
+  ],
+  "claims_created_or_changed": [
+    {
+      "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+      "version": 1,
+      "change": "local independent review"
+    },
+    {
+      "claim_id": "A066-NO-INTEGRABLE-HEAT-ENVELOPE",
+      "version": 1,
+      "change": "local independent review"
+    },
+    {
+      "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+      "version": 1,
+      "change": "local independent review"
+    },
+    {
+      "claim_id": "A067-MAXIMAL-SUPPORT-ENVELOPE-NOGO",
+      "version": 1,
+      "change": "local independent review"
+    },
+    {
+      "claim_id": "A069-STABLE-HIERARCHY-EDIT-PAYMENT",
+      "version": 1,
+      "change": "local independent review"
+    },
+    {
+      "claim_id": "A070-HYBRID-SCOPE-AND-THREE-REFERENCE-NOGO",
+      "version": 1,
+      "change": "proof-complete independent reconstruction pending review"
+    }
+  ],
+  "source_artifacts": [
+    "REPORT.md",
+    "DERIVATION.md",
+    "ANALYTIC_SCOPE_AUDIT.md",
+    "RELAXATION_CONTROL_RESULTS.json",
+    "FROZEN_SPEC.json",
+    "code/check.py",
+    "out/CHECK.json",
+    "out/SOURCE_MANIFEST.json"
+  ],
+  "next_consumers": [
+    "A066",
+    "A067",
+    "A069",
+    "A088",
+    "A094",
+    "B14",
+    "B20"
+  ],
+  "next_action": "Prove complete full-support fixed-prior queue-reference cost on point-flipped addressing, paying new tail atoms; separately recover Addendum 11.51 original cyclic law for source-bound replay",
+  "stagnant_substantive_attempts": 0,
+  "blockers": [
+    {
+      "scope": "cyclic certificate replay only",
+      "reason": "Full Addendum 11.51 not in packaged twelve source notes; both read-only recall queries returned unrelated hits; Boolean hybrid proof has no dependency on this missing source"
+    }
+  ],
+  "packet_ids": [
+    "A070"
+  ]
+}

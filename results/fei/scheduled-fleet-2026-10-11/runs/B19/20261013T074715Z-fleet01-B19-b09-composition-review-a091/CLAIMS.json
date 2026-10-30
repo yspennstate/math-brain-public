@@ -1,0 +1,41 @@
+{
+  "schema": "fei-claims/2",
+  "run_id": "20261013T074715Z-fleet01-B19-b09-composition-review-a091",
+  "primary_packet_id": "A091",
+  "claims": [
+    {
+      "claim_id": "B09-BIASED-BLOCK-UNCERTAINTY-01",
+      "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE",
+      "statement": "For every finite Boolean f under an interior product measure and physical block A, L_A=M_A+J_A, J_A=I(Z;T)>=0, and J_A<=M_A+Delta_A(p).",
+      "units": "bits",
+      "source_commit": "adb671ffcda143fa68347806bb96e8c305621a7d",
+      "source_blob": "71b68e4decf9658a42fef6bb2668e19f25bd214a"
+    },
+    {
+      "claim_id": "B09-TAXFREE-BIASED-UNCERTAINTY",
+      "status": "REFUTED_BY_INDEPENDENTLY_REPAIRED_FINITE_CERTIFICATE",
+      "statement": "The universal claim J_A<=M_A at arbitrary product biases is false.",
+      "witness": "g(x,y)=(-1)^(xy), p=1/8, q=1/4, A={X}, J_A-M_A>0.1195 bits",
+      "repair_commit": "a1ff93577685acd461b154b04e0c1aa0c65645c8",
+      "repair_output_blob": "3bfcf7ddae830e0766863b41e89ebb2ef55f6ba2"
+    },
+    {
+      "claim_id": "B09-COMPOSITION-CLOSURE-01",
+      "status": "NARROWED",
+      "statement": "M,J,Delta add for exact disjoint products/tensors with aligned blocks; no general nonlinear Boolean composition transfer is proved.",
+      "countercontrol": "AND of two uniform dictators has base ledger totals zero but composite M=J=1 when one input is revealed."
+    },
+    {
+      "claim_id": "B09-ENDPOINT-ORDER-02",
+      "status": "CONTRIBUTOR_PROVED_PENDING_FRESH_REVIEW",
+      "statement": "For fixed 0<q<1/2, biased two-bit AND with p tending to zero has J-M=4q(1-2q)p log2(1/p)+O(p).",
+      "consequence": "No uniform correction O(p) can replace the rare logarithm on this family.",
+      "limitation": "Does not prove exact Delta coefficient sharp or a hierarchy payment."
+    },
+    {
+      "claim_id": "FULL-FEI",
+      "status": "OPEN",
+      "statement": "No dimension-independent universal entropy-influence constant is proved or refuted by this run."
+    }
+  ]
+}

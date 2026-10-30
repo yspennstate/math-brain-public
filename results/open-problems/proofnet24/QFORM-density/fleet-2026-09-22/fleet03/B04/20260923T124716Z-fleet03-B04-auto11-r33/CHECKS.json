@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "run_id": "20260923T124716Z-fleet03-B04-auto11-r33",
+  "method": "exact rational/symbolic arithmetic; no Monte Carlo",
+  "frame": {
+    "rows": [
+      ["2/sqrt(5)", "0", "0"],
+      ["0", "2/sqrt(5)", "0"],
+      ["1/(2sqrt(5))", "1/(2sqrt(5))", "1/2"],
+      ["1/(2sqrt(5))", "-1/(2sqrt(5))", "1/2"],
+      ["1/(2sqrt(5))", "1/(2sqrt(5))", "-1/2"],
+      ["1/(2sqrt(5))", "-1/(2sqrt(5))", "-1/2"]
+    ],
+    "UtU": "I_3"
+  },
+  "P": [
+    ["4/5", "0", "1/5", "1/5", "1/5", "1/5"],
+    ["0", "4/5", "1/5", "-1/5", "1/5", "-1/5"],
+    ["1/5", "1/5", "7/20", "1/4", "-3/20", "-1/4"],
+    ["1/5", "-1/5", "1/4", "7/20", "-1/4", "-3/20"],
+    ["1/5", "1/5", "-3/20", "-1/4", "7/20", "1/4"],
+    ["1/5", "-1/5", "-1/4", "-3/20", "1/4", "7/20"]
+  ],
+  "projection_checks": {
+    "P2_equals_P": true,
+    "rank_P": 3,
+    "spectrum_A_block": "+1 x3, -1 x3, 0 x6"
+  },
+  "pure_third_volume": {
+    "E3_P": "1",
+    "max_row_marginal": "4/5",
+    "pure_fractional_gate_fails": "for every q<3/2 because q/2<3/4<4/5"
+  },
+  "double_hub_third_family": {
+    "allocated_currency_Z3": "256/625",
+    "allocation_fraction_per_term": "1",
+    "row_marginals": ["1", "1", "1/4", "1/4", "1/4", "1/4"],
+    "column_marginals": ["1", "1", "1/4", "1/4", "1/4", "1/4"]
+  },
+  "delete_hub0_second_family": {
+    "raw_E2": "27/25",
+    "allocation_fraction_per_term": "1/2",
+    "allocated_currency_Z2": "27/50",
+    "row_marginals": ["0", "104/135", "83/270", "83/270", "83/270", "83/270"],
+    "column_marginals": ["0", "104/135", "83/270", "83/270", "83/270", "83/270"]
+  },
+  "delete_hub1_second_family": {
+    "raw_E2": "27/25",
+    "allocation_fraction_per_term": "1/2",
+    "allocated_currency_Z2": "27/50",
+    "row_marginals": ["104/135", "0", "83/270", "83/270", "83/270", "83/270"],
+    "column_marginals": ["104/135", "0", "83/270", "83/270", "83/270", "83/270"]
+  },
+  "overlap_allocation_check": {
+    "same_order_family_overlap_exists": true,
+    "fix": "each residual 2x2 term is allocated with coefficient 1/2 to each eligible deletion family; every determinant-expansion term has total allocated coefficient <=1",
+    "marginals_unchanged_by_uniform_half_allocation": true
+  },
+  "one_hub_3plus2_obstruction": {
+    "other_hub_minimum_marginal": "104/135",
+    "comparison": "104/135 > 3/4",
+    "consequence": "no admissible q<(2+theta)/2<3/2 can satisfy q/2 >= this marginal"
+  },
+  "three_family_mixture": {
+    "theta3": "31/166",
+    "theta2_delete0": "135/332",
+    "theta2_delete1": "135/332",
+    "weights_sum": "1",
+    "average_order_s": "363/166",
+    "q": "1",
+    "mixed_row_marginals": ["1/2", "1/2", "197/664", "197/664", "197/664", "197/664"],
+    "mixed_column_marginals": ["1/2", "1/2", "197/664", "197/664", "197/664", "197/664"],
+    "integrability_gap_s_minus_2q": "31/166"
+  },
+  "density_constant": {
+    "exact_expression": "(363 e/31)*[(31/166)^(31/166)*(135/332)^(135/166)]^(83/363)*(256/625)^(-31/726)*(27/50)^(-45/242)",
+    "decimal": 29.198835629278766,
+    "reported_safe_bound": 29.199
+  },
+  "checkpoint_note": "The early CHECKPOINT.md was intentionally provisional and used unverified trial currencies/weights. This corrected CHECKS.json and final REPORT.md supersede those preliminary arithmetic values while preserving the checkpoint as failed-work history.",
+  "continuity": "phi_Q in L1 on the theorem branch, hence continuous C0 density"
+}

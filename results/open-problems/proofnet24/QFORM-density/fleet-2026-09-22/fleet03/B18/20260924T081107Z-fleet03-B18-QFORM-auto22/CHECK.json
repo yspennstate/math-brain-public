@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T081107Z-fleet03-B18-QFORM-auto22",
+  "status": "PASS",
+  "scope": "supporting reduction only; full conjecture remains open",
+  "checks": {
+    "lpp_hypotheses": {
+      "status": "PASS",
+      "detail": "Applied only to orthogonal marginals of genuine original-coordinate product banks with scalar density caps <=1."
+    },
+    "conditional_linearization": {
+      "status": "PASS",
+      "detail": "Conditioning on Z leaves (2Dz+alpha)^T X+G(z), with X an untouched original-coordinate product bank."
+    },
+    "two_dimensional_density_cap": {
+      "status": "PASS",
+      "detail": "V_2^T Z has density cap <=2; affine map w=2 Sigma_2 z2+shift has determinant 4 d1 d2, hence cap <=1/(2 d1 d2)."
+    },
+    "bathtub_inverse_radius": {
+      "status": "PASS",
+      "formula": "E|W|^{-1} <= 2 sqrt(pi H)",
+      "detail": "Centered disk of density H and area 1/H maximizes the radial decreasing kernel."
+    },
+    "full_cross_density_constant": {
+      "status": "PASS",
+      "formula": "||p_Q||inf <= 2 sqrt(pi)/(d1 d2)^(1/2)"
+    },
+    "rank_one_collar": {
+      "status": "PASS",
+      "detail": "If d1 d2<theta and d2<=d1, then d2^2<=d1d2<theta; Eckart-Young gives dist_op(D,rank<=1)=d2<sqrt(theta)."
+    },
+    "partner_singular_value_comparison": {
+      "status": "PASS",
+      "detail": "P_r C=P_r D J with P_r and J contractions/isometries, so s_j(P_r C)<=s_j(D), hence c1 c2<=d1 d2."
+    },
+    "theta_2_minus_12": {
+      "status": "PASS",
+      "theta": 0.000244140625,
+      "sqrt_theta": 0.015625,
+      "new_bound": 226.87409291590603,
+      "partner_bound": 320.84841915276803
+    },
+    "target_family": {
+      "status": "PASS",
+      "matrix": "[[0,0,1,0],[0,0,0,1],[1,0,t,0],[0,1,0,0]]",
+      "exact_spectrum_description": "{1,-1} union roots of lambda^2-t lambda-1=0",
+      "three_large_for_t_ge_0": true,
+      "D_singular_values": [1,1],
+      "partner_transverse_second_singular_value": 0,
+      "density_bound": 3.5449077018110318
+    },
+    "continuity": {
+      "status": "NOT_CLAIMED",
+      "detail": "The conditional negative-moment proof establishes absolute continuity and an L-infinity density bound, not a generic continuous representative."
+    },
+    "forbidden_assumptions": {
+      "status": "PASS",
+      "items_not_used": [
+        "Gaussian inputs",
+        "log-concavity",
+        "moments",
+        "compact support",
+        "connected support",
+        "iid inputs",
+        "post-rotation independence",
+        "uniform pointwise quadratic-phase decay",
+        "arbitrary-joint coarea",
+        "conditional-cap-as-independence",
+        "deletion of small nonzero coefficients"
+      ]
+    }
+  }
+}

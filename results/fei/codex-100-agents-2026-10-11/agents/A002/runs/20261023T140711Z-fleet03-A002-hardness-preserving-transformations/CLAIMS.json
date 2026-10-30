@@ -1,0 +1,36 @@
+[
+  {
+    "claim_id": "A002-ACTUAL-PHASE-QUOTIENT-COST-BOUND",
+    "version": 1,
+    "exact_statement": "For any finite uniform Boolean signs f,P, let delta=Pr[f=-1]<=1/4, a(h) the full affine-input/output-character minimum influence, Z_P the subspace of constant-derivative directions, and r=codim Z_P=affine dimension of Fourier support(P). Assume every v outside Z_P has centered derivative cost m_P(v)>=4delta (vacuous when r=0). Then a(fP)-a(f)>=a(P)-4delta*r, H(fP)-H(f)<=r, and for every K>=0 the full-affine optimized deficit change is at most r-K[a(P)-4delta*r]. The proof extracts exactly r independent quotient rows from a minimizing full basis of fP, completes by Z_P, and retains the full f basis cost; it never sums dependent parity swaps. This sharpens the degree-only charge r(2^(1-d)-4delta) when P has GF2 degree<=d and 2^(1-d)>=4delta. For P=(-1)^(x1*x2*x3+x1*x4), r=4, min positive centered cost=1/4 and a(P)=5/4; every four-bit point-negative f with delta1/16 gets new charge1/4 versus old charge0 and deficit upper bound-1 at K20. A class-wide raw-root normal form additionally requires I(f)=a(f) and the comparison for every allowed phase. No universally paid original pair or FEI constant is proved.",
+    "hypotheses": [
+      "Finite uniform Boolean signs; normalized Walsh spectrum; H bits; K>=0",
+      "delta<=1/4 and ALL nonconstant derivative directions of P have minority>=4delta",
+      "Full affine minima include output characters; phase rank is affine spectral dimension, not physical support size",
+      "Independent quotient rows selected once; no unused reserve or history bank is created"
+    ],
+    "statement_sha256": "637584cb84095dd73e324cb4e351d69d67908584a3f964834c49f9d2e30f0385",
+    "contributors": [
+      "A002"
+    ],
+    "proof_source": "agents\\A002\\runs\\20261023T140711Z-fleet03-A002-hardness-preserving-transformations\\PHASE_REVIEW.md Section2",
+    "proof_dependencies": [
+      "Finite minimum-parity-basis formula and Fourier coset norm conservation, independently reconstructed",
+      "Elementary XOR derivative bound and quotient basis completion; self-contained Section2"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A055",
+      "A005",
+      "A051",
+      "A090",
+      "A094",
+      "B20"
+    ]
+  }
+]

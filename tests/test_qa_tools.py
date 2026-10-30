@@ -1,6 +1,6 @@
 """The QA sampler never erases a round; the verdict converter only corrects what was sampled.
 
-Scheduled audit account01/B16 (29 Sep 2026), B16-R13-QA-SAMPLE-RERUN-ERASES-COVERAGE-011:
+Scheduled audit fleet01/B16 (29 Sep 2026), B16-R13-QA-SAMPLE-RERUN-ERASES-COVERAGE-011:
 rerunning a round overwrote its review file, so nodes it had covered became eligible again; an
 unreadable review file was skipped silently; apply_verdicts accepted verdicts for nodes the review
 never contained.
@@ -100,7 +100,7 @@ def test_verdicts_outside_the_review_are_refused(sampler, tmp_path: Path,
 
 def test_a_correction_names_the_review_it_came_from(tmp_path: Path,
                                                    monkeypatch: pytest.MonkeyPatch) -> None:
-    # account01/B18, B18-R13-QA-CORRECTION-BUNDLE-UNBOUND-TO-REVIEW-GENERATION-20260929: every
+    # fleet01/B18, B18-R13-QA-CORRECTION-BUNDLE-UNBOUND-TO-REVIEW-GENERATION-20260929: every
     # correction said "round 3" and one fixed revision string, whatever review it came from.
     import hashlib
     store = tmp_path / "brain.sqlite3"

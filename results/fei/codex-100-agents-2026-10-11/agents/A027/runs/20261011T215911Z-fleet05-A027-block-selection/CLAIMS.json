@@ -1,0 +1,66 @@
+[
+  {
+    "claim_id": "A027-DATA-FIRST-PROPER-BLOCK",
+    "version": 1,
+    "exact_statement": "For every Boolean u on m>=1 uniform core bits, r>=1 fresh control bits, p=2^(-r), d=1-Eu, and F=1+A_r(u-1), the proper core block W satisfies B_W(F)<=p(2dm+2)<=6pm. I_W(F)=pI(u), expected terminal influence=rpd, and all leaves are constants or point defects satisfying H<=4I. For each fixed eta>0, I(u)>=eta*m implies H(F)<=max(6/eta+2/ln(2),4)*I(F) by a single-use physical stopping ledger.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Explicit core/control activation representation",
+      "For the constant bound only: fixed eta>0 and I(u)>=eta*m"
+    ],
+    "statement_sha256": "9f07bfbcad6bdbc37ddc431b188837a5f6b2c607322567b894938e5cf474be1e",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-fleet05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A027-CORE-BLOCK-HARDNESS",
+    "version": 1,
+    "exact_statement": "For every Boolean core u with Eu>=0, delta=(1-Eu)/2, v=1-(Eu)^2, p=2^(-r), R0=1-4p*delta+4p^2*delta, and L the entropy of the nonempty conditional core spectrum, B_W(1+A_r(u-1))/p=v*L+4*delta*(1-p)*h2(delta)+(R0/p)*h2(p^2*v/R0). Continuous zero-mass conventions apply. A uniform core-block bound B_W<=K*p*I(u) for all such cores and r>=1 implies full FEI with constant K+2. Conversely FEI with constant C implies this block bound with constant C+5.",
+    "hypotheses": [
+      "Uniform normalized Boolean Fourier spectrum; entropy in bits",
+      "Core mean nonnegative for the quantitative equivalence",
+      "Fresh point-indicator controls; W consists of all core coordinates but is proper in the full cube"
+    ],
+    "statement_sha256": "77678060db6c63d420d4c2df32186612dcb5bfbb334517329f28742cedc814be",
+    "contributors": [
+      "A027"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A027\\runs\\20261011T215911Z-fleet05-A027-block-selection\\ADAPTIVE_BLOCK_SELECTION.tex",
+    "proof_dependencies": [
+      "C006@recovered-BLOCK_RESTRICTION_IDENTITY-sections-1-3",
+      "threshold-paper@context-38pp-Proposition-8.6"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCALLY_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": null,
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A028",
+      "A029",
+      "A065",
+      "A087",
+      "A094",
+      "A097"
+    ]
+  }
+]

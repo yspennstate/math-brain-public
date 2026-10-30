@@ -1,0 +1,191 @@
+[
+  {
+    "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+    "version": 1,
+    "exact_statement": "For every Boolean sign f on a finite uniform cube and physical block B, K(f)=integral J_f=(H_nat(f)-p_empty ln(1/p_empty))/2 obeys 2[K(f)-E_y K(f_y)]=M_B^+ + C_B^+ + ell_B, where q_T=sum_{U subset B}p_{U union T}=E_y p_y(T), M_T=sum_U p_{U union T}ln(q_T/p_{U union T}), C_T=E_y p_y(T)ln(p_y(T)/q_T), plus omits T=empty, and ell_B=sum_{nonempty U subset B}p_U ln(1/p_U). All three terms are nonnegative. For B={i}, C_i^+<=2 Inf_i and ell_i<=(2/e)Inf_i. The identity telescopes in every finite physical stopping tree, with retained terminal K and cumulative channel-plus-level cost <=(2+2/e)[I(f)-E I(leaf)]. If R_nat=sum_i M_i^+ and B_nat=sum_i H_nat(S_i|S_without_i), then 0<=B_nat-R_nat<=(1+2/e)I. Moreover R_nat(y product_{j=1}^m g(x^(j)))=m B_nat(g) and I=m I(g)+1, so the optimal universal constants for R_nat/I and B_nat/I are equal. A universal R_nat<=A I implies FEI in bits with constant (A+2)/ln2 via C018; no such A is proved here.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; entropy bits = nats/ln2",
+      "Zero-mass log terms vanish",
+      "Physical restrictions and actual coherent child Fourier coefficients"
+    ],
+    "statement_sha256": "91cb0a1f21648d5372e658f92219b45f224f832a7e835cebff58f0143f5fc5bb",
+    "contributors": [
+      "fleet05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Source-bound independent A067 and A088 acceptance at stated scope; central adoption not asserted"
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261012T004014Z-fleet05-A067-hypercontractive-refinement\\REVIEW_B14_QUEUE.md",
+        "scope": "Independent analytic reconstruction; no central registry adoption asserted."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Channel-only restriction heat payment; refuted by majority calibration in second claim"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-MAJORITY-DEFECTED-ADDRESS-HEAT-CALIBRATION",
+    "version": 1,
+    "exact_statement": "For odd majority n=2m+1 and alpha=binom(2m,m)/2^(2m), every singleton physical restriction has M_i=C_i=0 and K(parent)-E K(child)=alpha^2 ln(1/alpha^2)/2, with ratio to Inf_i equal to alpha ln(1/alpha)<=1/e. Thus no finite A bounds that heat drop by A times its C006 channel term, already for Maj3. For F_{a,r}=Addr_a-2 indicator{all inputs +1} with a>=1, k=a+2^a, r>=1, D=k+r and delta=2^(-D), and any b padding coordinates, 1<=b<=r, the exact signed three-class row formulas (9)-(11) of DERIVATION.md compute the heat drop, conditional erasure, channel and level mass. For fixed a,b as r grows, M_B/I_B and C_B/I_B tend to 2ln2 and the heat-drop ratio tends to 2ln2. For b=r, rho=4^a/2^k, the erasure/channel limits are 2(1+rho)ln2 and 2(1-rho)ln2, the heat limit remains 2ln2, and the lost-level limit is 4ln2/2^k. All limits are analytic, not finite-grid extrapolations.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; entropy bits = nats/ln2",
+      "Zero-mass log terms vanish",
+      "Physical restrictions and actual coherent child Fourier coefficients"
+    ],
+    "statement_sha256": "b26985a0cdb03ecd4f45cb8145ab1ff024e42c0f2a3608cd2738f1ee7ce6bddc",
+    "contributors": [
+      "fleet05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261012T004014Z-fleet05-A067-hypercontractive-refinement\\REVIEW_B14_QUEUE.md",
+        "scope": "Independent analytic reconstruction; no central registry adoption asserted."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Universal K(f)-E K(f_y) <= A C_B for finite A, with no separate level term"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A070-HYBRID-SCOPE-AND-THREE-REFERENCE-NOGO",
+    "version": 1,
+    "exact_statement": "For any finite probability law p, atom costs a_s>=log2(1/p_s) and nonnegative Kraft lengths l_s, let m be the mass where l_s<a_s. Then H(p)<=sum_s p_s min(a_s,l_s)+m log2(1/m)<=sum_s p_s min(a_s,l_s)+h2(m). For every integer a>=8, pad the Boolean addressing function with a address and 2^a private data coordinates to N=a+2^a+2 bits and flip its all-plus input, obtaining F_a. Put c_arith(S)=2(N-1) on nonempty S and infinity on empty S, c_inf(S)=log2(e)+sum_i_in_S log2(I(F_a)/Inf_i(F_a)), and c_level(S)=-log2(r_|S|)+log2 binom(N,|S|) for any probability prior r on levels. Then E_{p_Fa} min(c_arith,c_inf,c_level)/I(F_a)>=log2(a/2)/40, while H(F_a)/I(F_a)->4. The same lower bound holds for min(c_arith,c_mix), where c_mix is the length of any fixed subprobability prior mixture of the influence and level code laws. Thus no universal O(I) expected-cost bound exists for these three references; no queue-code or FEI claim is refuted.",
+    "hypotheses": [
+      "Uniform finite sign cubes for F_a; abstract partition inequality requires only a probability law",
+      "Entropy and code lengths in bits; infinities allowed where code probability is zero",
+      "Addressing uses distinct private data variables and two dummy coordinates; edit at all plus",
+      "Level prior is normalized; code-mixture weights are fixed across atoms and sum at most one",
+      "Empty atom has an explicit code or separate charge; Boolean arithmetic not applied to empty"
+    ],
+    "statement_sha256": "427388c517d4260df96f495663b44f5b9a660d5987865715feadd58eae81cd0a",
+    "contributors": [
+      "fleet05/A070 independent reconstruction",
+      "Claude B14 lead: prior statement of hybrid and point-defected-addressing mechanism"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A070\\runs\\20261011T230551Z-fleet05-A070-analytic-route-referee\\DERIVATION.md",
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A067",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "independent": true,
+        "substantive_repair": false,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261012T004014Z-fleet05-A067-hypercontractive-refinement\\REVIEW_B14_QUEUE.md",
+        "scope": "Independent analytic reconstruction; no central registry adoption asserted."
+      }
+    ],
+    "status": "INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE_LOCAL_RECEIPT",
+    "supersedes": [],
+    "refutes": [
+      "Universal expected-cost O(I) payment of granularity plus only level and influence code references"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A067",
+      "A088",
+      "A094",
+      "B14",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A067-PADDING-STRIP-RESERVE-AND-LEAF-ACCESS",
+    "version": 1,
+    "exact_statement": "For every Boolean seed g on m>=1 uniform core coordinates, every physical vertex x0, and r>=1 dummy padding coordinates, let F_r differ from g only at (x0,all +), let d=2^(1-m-r), and let I_core=sum of the core-coordinate influences of F_r. For every physical tree that queries only padding coordinates along the unique edited branch and stops every clean branch, the total expected entropy drop Q_pad satisfies Q_pad<=4 I_queried+(1+6/ln(2)) I_core. The core reserve is allocated once across the whole tree. If every leaf satisfies U<=b I, b>=0, where U=sum_nonempty hat f(S)^2(max{|T|:hat f(T)!=0,T contains S}-|S|), then H(F_r)<=(3+2b+6/ln(2)) I(F_r); a sufficient admission is U(g)<=b I(g) and U(F_0)<=b I(F_0). For fixed finite g and r>=2, with L the number of its nonzero Fourier coefficients and p=2^(-m-r), the padding-node drop Delta_r obeys |Delta_r/(2p)-4|<=4 L p (|m+r-3|+m+3/(2ln(2))), hence the ratio tends to 4. The point-defect padding nodes satisfy 0<=Delta<=5 Inf at every dimension. Consequently dictator one-point surgery and Maj3 tensor point defects have explicit U<=I stopping trees paid at node rate 5, with full terminal entropy retained. There is no uniform padding-node rate for arbitrary varying seeds: quadratic bent seeds of even dimension m at fixed r>=2 have Delta_r/(2p)=4+2^(1-r)(m+2r-6+3/ln(2))+O(2^(-r)*2^(1-m/2-r)). These are a padding-access theorem and its scope guards, not universal admission of arbitrary Boolean core leaves.",
+    "hypotheses": [
+      "Finite uniform cubes, Boolean outputs {-1,1}; Fourier entropy in bits and standard total influence.",
+      "Physical one-vertex edit of an actual Boolean seed and dummy padding, not a spectral projection.",
+      "Trees stop clean branches and query only remaining relevant padding on the edited branch; terminal entropy is retained.",
+      "The conditional FEI certificate requires the stated U<=b I condition on every terminal restriction; it is not automatic.",
+      "The fixed-seed limit keeps seed dimension and spectrum fixed; the bent guard instead keeps r fixed while m grows."
+    ],
+    "statement_sha256": "84f33fb24c7f4cb9f910a9d7fb8f2c2c76aea32ac80e9c704bd7c498898fd5a1",
+    "contributors": [
+      "fleet05/A067"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261012T004014Z-fleet05-A067-hypercontractive-refinement\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A067-LOCAL-BOOLEAN-GRANULARITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A067\\runs\\20261011T220539Z-fleet05-A067-hypercontractive-refinement\\CLAIMS.json",
+        "acceptance_scope": "Stage-1 local granularity certificate independently accepted by A088 and A070; only used for terminal U certificate."
+      },
+      {
+        "claim_id": "C005",
+        "version": 1,
+        "acceptance_scope": "Physical singleton restriction identity and its channel <=2 Inf/ln2; reconstructed in source campaign."
+      },
+      {
+        "claim_id": "C019",
+        "version": 1,
+        "acceptance_scope": "Exact finite physical-tree entropy and influence telescopes, not the conjectural universal stopping payment."
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A070",
+      "A088",
+      "A094",
+      "A064",
+      "A069",
+      "B06",
+      "B13",
+      "B14",
+      "B20"
+    ]
+  }
+]

@@ -1,0 +1,51 @@
+{
+  "schema": "fei-a099-assembly-status/1",
+  "run_id": "20261013T051951Z-fleet01-B20-a099-spectral-moment",
+  "primary_packet_id": "A099",
+  "full_fei_status": "OPEN",
+  "closed_dependencies": [
+    {
+      "claim": "B20-A099-CRITICAL-HALF-U-v1",
+      "scope": "Fixed half-restriction criterion and constant transfer",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "source_commit": "d41dd05c667aa82d22d66f02d93c067d794d809a"
+    },
+    {
+      "claim": "B11-A052-ANNEALED-UPPERSET-v1",
+      "scope": "Annealed upper-set envelope with repaired charge domain",
+      "status": "RECONSTRUCTED_WITH_REPAIR; FRESH_A094_REVIEW_PENDING",
+      "source_commit": "4f6254ff7ea2064aed023fe9efc7c27156b51cde"
+    },
+    {
+      "claim": "B20-A099-SPECTRAL-MOMENT-v1",
+      "scope": "All-dimensional exponential level-moment majorant",
+      "status": "PROVED_PENDING_INDEPENDENT_REVIEW",
+      "source": "SPECTRAL_MOMENT_ASSEMBLY.tex"
+    }
+  ],
+  "explicit_open_leaves": [
+    {
+      "gap_id": "G-CRITICAL-HALF-U-v1",
+      "statement": "Prove F_{1/2}(fhat^2) <= kappa I(f) for every finite-dimensional H/I maximizer with one absolute kappa.",
+      "status": "OPEN"
+    },
+    {
+      "gap_id": "G-COLLISION-CORRECTED-PAYMENT-v1",
+      "statement": "Prove Lambda_{1/2}(fhat^2) <= K I(f) on Boolean maximizers, or falsify it with a genuine critical family.",
+      "status": "OPEN"
+    }
+  ],
+  "retired_or_obstructed_mechanisms": [
+    {
+      "mechanism": "Raw exponential spectral-level moment as a universal Boolean payment",
+      "status": "OBSTRUCTED",
+      "witness": "n-bit point defect: M_{3/2}/I=(2/n)((5/4)^n-1), but F_{1/2}/I -> 1/2",
+      "scope_note": "Does not refute a maximizer-only moment hypothesis or FEI."
+    }
+  ],
+  "review_evidence": {
+    "A090": "Contributor reconstruction with two repairs; not independent acceptance of repaired version",
+    "A094": "PENDING"
+  },
+  "next_action": "Pay or falsify the collision-corrected Lambda_{1/2} on Boolean maximizers while preserving the exact-cell factor m/b."
+}

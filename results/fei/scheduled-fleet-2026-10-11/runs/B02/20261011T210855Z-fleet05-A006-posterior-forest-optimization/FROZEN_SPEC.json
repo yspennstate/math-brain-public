@@ -1,0 +1,13 @@
+{
+  "helper_version": "A006-sunflower-posterior-v2 (full outside-root star collection added after the v1 pilot; domain unchanged)",
+  "actual_Boolean_family": "f_m=2*1[x0=1]*1[at least one of x1,...,xm is 1]-1",
+  "parameter_domain": {"truth_tables_m": [1,2,3,4,5,6,7,8], "queue_enumeration_m": [1,2,3,4,5,6], "rational_recurrence_m": [1,2,3,4,5,6,7,8,9,10,11,12]},
+  "case_count": "8 truth tables (1020 input evaluations); all nonempty sets and every actual partition forest in 6 fixed sunflower representations; singleton, private-root, inside-root and outside-root ordered stars exhaust this domain",
+  "symmetry": "No reduction in truth-table or trace enumeration. Binomial aggregation only after analytic proof that all private subsets of a given size have identical mass and run cost.",
+  "arithmetic": "Integer Walsh sums, Fraction Fourier probabilities and edge influences; Fraction queue checks at auxiliary weights a=2/5 and a=1/2; actual a=2^(-6/5) is bracketed by exact fifth-power comparisons, and all-m bounds proved analytically. No floating sign certificates.",
+  "memory_estimate_bytes": 20000000,
+  "maximum_runtime_seconds": 60,
+  "automatic_dimension_escalation": false,
+  "GPU": false,
+  "command": "python -X utf8 runs/20261011T210855Z-fleet05-A006-posterior-forest-optimization/code/check.py"
+}

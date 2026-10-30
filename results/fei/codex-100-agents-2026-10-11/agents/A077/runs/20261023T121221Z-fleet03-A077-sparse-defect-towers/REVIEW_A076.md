@@ -1,0 +1,11 @@
+# A077 scoped reconstruction of A076 v10
+
+Source: A076 run20261023T114019Z-fleet03-A076-threshold-and-tribes-controls, DEPTH_UNIFORM_PROOF.md, equations(1)-(10), solely its Stage10 supplied-source continuation clause in A076-STRUCTURED-SPECTRA@10. Verdict: HOLDS CONDITIONAL ON THE EXPLICIT SUPPLIED HEREDITARY THRESHOLD ENTROPY THEOREM AND VALID PREFIX.
+
+I reconstructed the split by private Fourier frequency: nonempty-private rows give U+Xi+2R minus the profile mean correction; the COMPLETE empty-private sector is E. Hence Z=E+R-p sum g(mu)+1 gives H=U+Xi+R+Z-1, including dead/constant branches. Point indicators have Fourier l1 norm1, so mean perturbation l1<=4. The elementary global derivative bound |g'|<=6 gives E<=H(h_v)+24, R<=1, and Z<=H(h_v)+26. This verifies the account independently of local-query-price estimates.
+
+The point collision account K is harmonic at common shared gates, carries exactly Xi's private drift, and is frozen in BOTH separator children. DeltaXi<=DeltaK then gives the stated physical-reach telescope with all terminal banks. Frozen bookkeeping event mass is a martingale up to separation, yielding expected K>=B-4p0. No entropy is dropped at event-dead carrier children.
+
+For majority, the maximal threshold influence in r variables is r*binom(r-1,floor((r-1)/2))/2^(r-1); even steps equal the previous odd value and the next odd step increases. The supplied paper's Theorem A equation(6), pages1-2, therefore implies Z<=9I0+26<=35I0. Retaining L<=58 and Q=96I0 gives Q-L-Z>=3I0 since I0>=15/8 and 58*(15/8)-58>0. Freeze the residual only after this ORIGINAL debit. The old expected L cancels only because it is charged against the same Q. This is an original-influence payment, not a consumed-influence theorem.
+
+No substantive repair of this scoped source clause was needed. My positive-face extension is separate and does not enter this verdict. This does NOT independently accept the threshold-paper proof, the accumulated Stages1-9, the upstream private-price/prefix proofs, a universal source-admission theorem, or full FEI. It is not two independent reconstructions of the full dependency chain. The point-prefix theorem must not be transplanted to nonpoint supports without a new check. The original point source, private input bills, old FIRST4p and D0, and all full terminals are essential hypotheses.

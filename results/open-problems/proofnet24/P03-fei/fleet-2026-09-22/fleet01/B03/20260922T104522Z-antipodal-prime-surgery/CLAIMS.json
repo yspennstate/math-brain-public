@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "run_id": "20260922T104522Z-antipodal-prime-surgery",
+  "full_fei_status": "OPEN_NOT_PROVED",
+  "claims": [
+    {
+      "id": "B03-ANTIPODAL-PRIME-FAMILY",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "For every n>=3, the two-antipode surgery f_n of a dictator is all-essential and composition-prime with respect to nontrivial disjoint-variable Boolean composition.",
+      "dependencies": [],
+      "verification": "analytic ANF-flattening and row-pattern proof in REPORT.md; finite regression n=3..8 in CHECKER.py"
+    },
+    {
+      "id": "B03-ANTIPODAL-ONECORE-DEFECT",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "Exact one-core biased spectral law, pivotality ratios, Poincare margin, and gate-defect identity (1.5) for every n>=3 and t in (0,1).",
+      "dependencies": [
+        "GATE-REFORMULATION",
+        "fleet02/B17 strong-prime normalization"
+      ],
+      "verification": "analytic derivation in REPORT.md; 992 exact rational spectral-entry regression checks in CHECKER.py"
+    },
+    {
+      "id": "B03-ANTIPODAL-FIXED-INTERIOR-MARGIN",
+      "status": "PROVED_IN_SOURCE",
+      "scope": "For fixed interior t and Gamma differentiable at t, c_{f_n}(t) -> -4(C-4); hence any fixed C>4 is asymptotically slack on this family at fixed t.",
+      "dependencies": [
+        "B03-ANTIPODAL-ONECORE-DEFECT"
+      ],
+      "verification": "Taylor expansion of exact formula in REPORT.md"
+    },
+    {
+      "id": "B03-ANTIPODAL-BOUNDARY-LAYER",
+      "status": "OPEN",
+      "scope": "Determine the sign of (1.5) for the exact current candidate when t=t_n approaches 0 or 1 at scales comparable to alpha_n or alpha_n n.",
+      "dependencies": [
+        "B03-ANTIPODAL-ONECORE-DEFECT",
+        "exact current candidate potential bytes"
+      ]
+    }
+  ],
+  "source_pins": [
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "f5946fb64d336ed7369de279159643944efc47af",
+      "path": "proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md"
+    },
+    {
+      "repository": "yspennstate/math-open-problems",
+      "commit": "a898203278af25794901b42c965816e0d9df7e11",
+      "path": "proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md"
+    }
+  ]
+}

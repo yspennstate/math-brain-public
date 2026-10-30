@@ -1,0 +1,31 @@
+fleet03/B01 deterministic checks for QFORM-ONEHUB-E2-MARGINAL-GATE-REMOVAL-v1
+run_id=fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion
+
+CONSTANTS
+C_E2=3*2^(7/6)*exp(1/3)=9.39913188784886
+C_k2e1=3*2^(5/6)=5.34539230884204
+C_outer=2*sqrt(2*C_E2)=8.67139291595018
+C_leak=C_outer*4^(1/12)=9.73330945413282
+C_exact=C_outer*2^(1/12)=9.18702077113785
+
+EXTERIOR IDENTITIES
+For c'_j=c_j-<c_j,c_i>c_i/||c_i||^2:
+sum_{j!=i}(||c_i||^2||c_j||^2-<c_i,c_j>^2)=||c_i||^2 sum_{j!=i}||c'_j||^2.
+Seeded random double-precision diagnostic over 100 packets: maximum absolute discrepancy 5.69e-14.
+For m perpendicular c_i and a_i=lambda_i m+c_i:
+det([m;a_i;a_j][m;a_i;a_j]^T)=||m||^2 (||c_i||^2||c_j||^2-<c_i,c_j>^2).
+Seeded random double-precision diagnostic over 100 packets: maximum absolute discrepancy 1.37e-12.
+
+HEAVY-ROW TARGET INSTANCE
+Q=x^2+2 y v0+4 u1 v1+2 u2 v2-2 u3 v2.
+Projected crossing rows: (0,2,0),(0,0,1),(0,0,-1).
+Z2=8; normalized E2 row marginals=(1,1/2,1/2), so the old alpha<=1/2 gate fails at u1.
+After promoting u1: two-hub singular product S=2, residual Z1=2, residual one-volume marginals=(1/2,1/2).
+Bound=3*2^(5/6)*(S^2*Z1)^(-1/6)=3.77976314968462.
+Spectrum={-2,-sqrt(2),-1,0,1,1,sqrt(2),2}; seven eigenvalues have modulus >=1.
+
+SCALING
+Under A -> lambda A: a,ell,M scale as lambda; W2 scales as lambda^6; Z2 scales as lambda^4. The near-null bound |a|^(-5/12) W2^(-1/24) Z2^(-1/12) scales exactly as |lambda|^(-1).
+
+STATUS=PASS
+Diagnostics are consistency checks only; the analytic proof is REPORT.md.

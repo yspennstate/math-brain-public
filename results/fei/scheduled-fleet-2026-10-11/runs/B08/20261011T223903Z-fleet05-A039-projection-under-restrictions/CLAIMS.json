@@ -1,0 +1,142 @@
+[
+  {
+    "claim_id": "A039-COHERENT-PROJECTION-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every finite uniform-cube Boolean sign and physical coordinate i, TC(f)=I_P(S_i;S_-i)-JS_i+Gamma_i+E TC(f_child), where Gamma_i=sum_{j!=i}[h2(Inf_j(f))-E h2(Inf_j(f_child))]. The identity telescopes over every finite adaptive fair physical tree with terminal TC retained. Applying the function-specific coherent child kernel to both the residual spectrum and its product projection gives zero channel injection and signed Bayes reset E delta=D_out+JS_i-Gamma_i. The occupancy account K_full=v K_occ+Delta has the exact signed transfer in DERIVATION.md (4). Isospectral children have JS_i=Gamma_i=0. Neither monotonic direction holds generally for TC, K_occ or Delta. For m-bit point defects a=2^(1-m), Gamma_i/a=(m-1)+O(m a), JS_i/a<=4+O(m a), and the Delta release divided by a differs from 2m-6+log2(e) by at most (12m+16)a. Consequently no finite universal c bounds Gamma_i by c Inf_i or c(JS_i+Inf_i), or the absolute expected single-step Delta change by c Inf_i.",
+    "hypotheses": [
+      "Boolean sign on a finite uniform physical cube; information in bits; d_j=P(j in spectral set)",
+      "Adaptive coordinate tree choices measurable from physical history; physical branch probabilities fair; retained terminal accounts",
+      "Supported finite KL expressions; deterministic marginal coordinates removed; common kernel on positive residual fibers and fair extension on zero fibers",
+      "Occupancy projection maximizes entropy among nonempty laws with prescribed conditional marginals; constants have zero occupancy/Delta account"
+    ],
+    "statement_sha256": "83861bba22bb5e0f759a34b2580479b5032b19eaa9d91e1e53f9c648d48354e1",
+    "contributors": [
+      "A039"
+    ],
+    "proof_source": {
+      "run_id": "20261011T223903Z-fleet05-A039-projection-under-restrictions",
+      "files": [
+        "DERIVATION.md",
+        "REPORT.md",
+        "code/baseline_check.py",
+        "code/reset_check.py",
+        "code/census4.py",
+        "out/VALIDATION.json",
+        "out/RESET_VALIDATION.json",
+        "out/CENSUS4.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_EXACTLY_VALIDATED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Finite universal Gamma_i<=c Inf_i for every Boolean physical coordinate",
+      "Finite universal Gamma_i<=c(JS_i+Inf_i) for every Boolean physical coordinate",
+      "Finite universal absolute expected Delta transfer <=c Inf_i"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A040",
+      "A057",
+      "A064",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A037-CONDITIONAL-CREDIT-CONSERVATION",
+    "version": 1,
+    "exact_statement": "For every finite adaptive transcript tree on a common finite joint law P(W,A,L), sum_h P(h) I(W;Y_h|A,h) + sum_l P(l) H(W|A,l) = H(W|A); every cut and subtree obey the same identity. For finite common-law divergences, K_h+j_h=d_h+E_P K_hy, hence sum_h P(h)d_h+sum_l P(l)K_l=K_root+sum_h P(h)j_h. Shared channels give zero injection; replacing a predicted child reference q by r adds E_p log2(q/r) on the resource side. All terminal terms are retained.",
+    "hypotheses": [
+      "Finite probability/tree spaces; bits; omit zero-probability histories",
+      "KL formulas require finite supported divergences"
+    ],
+    "statement_sha256": "d23c07e7435aeb8fe2904c4b74d672f0efe7e779185c72d177f00c606ee553c4",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": {
+      "run_id": "20261011T220010Z-fleet05-A037-conditional-credit-ledger",
+      "files": [
+        "REPORT.md",
+        "POSTERIOR_CREDIT_CHAIN.tex",
+        "NO_REUSE_CERTIFICATE.md",
+        "code/ledger_check.py",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A039",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A039\\runs\\20261011T223903Z-fleet05-A039-projection-under-restrictions\\DEPENDENCY_REVIEW.md",
+        "method": "Independent analytic reconstruction; separate exhaustive exact Bayes reference checker, not author code replay",
+        "reviewed_at": "2026-10-11T23:10:24.931129+00:00"
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_LOCALLY_BY_A039",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A029",
+      "A039",
+      "A057",
+      "A063",
+      "A064",
+      "A097"
+    ]
+  },
+  {
+    "claim_id": "A037-PHYSICAL-SPECTRAL-COMMON-LIFT",
+    "version": 1,
+    "exact_statement": "For every Boolean function on a finite uniform cube and every finite adaptive physical block restriction tree, the function-specific kernel k_h(y|S_0)=2^(-|B_h|) (f_h|B_h=y)hat(S_0 intersect C_h)^2 / sum_U f_hhat(U union (S_0 intersect C_h))^2, on positive fibers, constructs a common root spectral/physical-transcript law with actual fair physical branches and actual child spectra. It satisfies sum_h P(h) J_h=I(S_0;L) and H(S_0|L)=sum_h P(h) H(S_h intersect B_h|S_h intersect C_h,h)+sum_l P(l)H(f_l). No universal phase-blind channel on parent squared spectra exists, as witnessed by f=[1,1,1,-1], g=[1,1,-1,1].",
+    "hypotheses": [
+      "Finite probability/tree spaces; bits; omit zero-probability histories",
+      "Boolean signs, uniform inputs, adaptive block choices measurable from physical history; no rerevealed coordinates"
+    ],
+    "statement_sha256": "aa45c0dacad4b1897e4c2f62511ccd331caf0eb6dc7ecc88cddf5189e8cf2cdb",
+    "contributors": [
+      "A037"
+    ],
+    "proof_source": {
+      "run_id": "20261011T220010Z-fleet05-A037-conditional-credit-ledger",
+      "files": [
+        "REPORT.md",
+        "POSTERIOR_CREDIT_CHAIN.tex",
+        "NO_REUSE_CERTIFICATE.md",
+        "code/ledger_check.py",
+        "out/VALIDATION.json"
+      ]
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "A039",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A039\\runs\\20261011T223903Z-fleet05-A039-projection-under-restrictions\\DEPENDENCY_REVIEW.md",
+        "method": "Independent analytic reconstruction; separate exhaustive exact Bayes reference checker, not author code replay",
+        "reviewed_at": "2026-10-11T23:10:24.931129+00:00"
+      }
+    ],
+    "status": "ANALYTICALLY_PROVED_INDEPENDENTLY_REVIEWED_LOCALLY_BY_A039",
+    "supersedes": [],
+    "refutes": [
+      "Universal physical-child spectral channel determined solely by squared parent Fourier masses"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A023",
+      "A029",
+      "A039",
+      "A057",
+      "A063",
+      "A064",
+      "A097"
+    ]
+  }
+]

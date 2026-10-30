@@ -1,5 +1,5 @@
 """math_subagent_adapter.py - the math store's cards reach research subagents too (29 Sep 2026, job R70; scheduled
-audits account04/B14 r7, account01/B14 r83 and account02/B05; the interactive review MB-IMPROVEMENT-20260929-155540,
+audits fleet04/B14 r7, fleet01/B14 r83 and fleet02/B05; the interactive review MB-IMPROVEMENT-20260929-155540,
 findings MB-I01 to MB-I03).
 
 The math hook runs on prompt events, and a subagent's task never is one: the parent writes it into an Agent tool call,
@@ -34,8 +34,8 @@ The child's session id is uuid-shaped and derived from the parent's id and the t
 child as its own session and never as the parent. When the harness gives the tool call's id (tool_use_id, the same id
 its PostToolUse event carries), the child's session id takes it too and the ledger row records it: two calls of one task
 are two sessions and two rows a later event can be joined to, while the arm still comes from the cluster alone
-(account01/B05 r91, B05-R70-SUBAGENT-LEDGER-NO-TOOLUSE-JOIN-42). A math hook that exits with an error is never served,
-whatever it printed (account01/B14 r91, B14-R91-R70-NONZERO-HOOK-EXIT-STILL-INJECTS). The frame that opens a served
+(fleet01/B05 r91, B05-R70-SUBAGENT-LEDGER-NO-TOOLUSE-JOIN-42). A math hook that exits with an error is never served,
+whatever it printed (fleet01/B14 r91, B14-R91-R70-NONZERO-HOOK-EXIT-STILL-INJECTS). The frame that opens a served
 block carries the row's delivery id, "(delivery <id>)", so the child's own transcript can show that it got this block.
 
     python math_subagent_adapter.py --summary [--since HOURS]    invocations, clusters and receipt stages per arm

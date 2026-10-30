@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "run_id": "20260924T080644Z-fleet03-B17-QFORM-r12",
+  "status": "PASS QFORM_SHARED_FOLD_DISTRIBUTION_FREE",
+  "computation": "same-invocation Python math evaluation of the exact displayed expressions",
+  "values": {
+    "I_star": 81.78688343097915,
+    "C_star": 20.446720857744786,
+    "B_star": 5.468957540604168,
+    "theta_sharp": 0.46686906973655856,
+    "theta_partner_crossover": 0.7187919549032324,
+    "uniform_cone_tip_max": 2.3284271247461903,
+    "three_sqrt_two": 4.242640687119286,
+    "two_sqrt_six": 4.898979485566356
+  },
+  "assertions": [
+    "abs(B_star*theta_sharp^(1/3)-3*sqrt(2))<1e-12",
+    "abs(B_star*theta_partner_crossover^(1/3)-2*sqrt(6))<1e-12",
+    "uniform_cone_tip_max < pi < 3*sqrt(2)"
+  ],
+  "monte_carlo_used": false
+}

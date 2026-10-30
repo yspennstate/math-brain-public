@@ -1,0 +1,43 @@
+QFORM fleet01/B01 r17 deterministic checks
+Run: 20260924T080545Z-fleet01-B01-qform-auto11-r17
+These checks are diagnostics only, not an independent proof review.
+
+Threshold tau=3/8.
+
+Previous two-hub compiler constants:
+C_large_1 = 128*2^(3/4) = 215.2694823049509
+C_large_2 = 27.2653244653667*2^(3/5) = 41.32650398343757
+
+At kappa >= (3/8)s:
+C_large_1*sqrt(8/3) = 351.53359256014807 < 352
+C_large_2*(8/3)^(2/5) = 61.180942152356636 < 352
+Both scale as s^(-1/2).
+
+Small-kappa rank-two branch:
+128*sqrt(8/5) = 161.90861620062103 < 352
+
+Small-kappa mixed 3D branch:
+169*(1/4)^(-1/2) = 338 < 352
+
+High-pivot target chamber |a|>=1/64:
+352*sqrt(64) = 2816.
+Using the exact largest branch constant instead gives
+351.53359256014807*8 = 2812.2687404811845.
+
+Stress family A_epsilon on coordinates (X0,H1,H2,Y):
+A_epsilon = [[1,0,0,0],[0,2,0,epsilon],[0,0,0,0],[0,epsilon,0,2]].
+Its spectrum is exactly {0,1,2-epsilon,2+epsilon}.
+Checks:
+epsilon=0.0 -> {0,1,2,2}
+epsilon=0.2 -> {0,1,1.8,2.2}
+epsilon=1.0 -> {0,1,1,3}
+Thus for every 0<=epsilon<=1 the target has at least three eigenvalues of modulus >=1, and the peeled residual has two eigenvalues of modulus >=1.
+
+Structural identities used:
+A = (1/a)[a;r][a;r]^T + diag(0,S), S=B-r r^T/a.
+Hence rank(A-diag(0,S))<=1 and s_2(S)>=s_3(A).
+For K=[[0,bz^T],[zb^T,0]], ||K||_op=||b||_2||z||_2=kappa.
+When kappa<3s/8, s_2(diag(C,D))>=s_2(S)-kappa>5s/8.
+In the mixed allocation core B_j, the cross perturbation norm is ||b|| |z_j|<=kappa, hence s_2(B_j)>s/4.
+
+STATUS=PASS

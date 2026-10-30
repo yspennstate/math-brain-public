@@ -47,7 +47,7 @@ The report does **not** bound the entropy cost of exposing the complement of \(C
 
 All repository links below point to `yspennstate/math-open-problems`.
 
-- **Terminal core and physical block inequality:** [commit 85ffa60](https://github.com/yspennstate/math-open-problems/blob/85ffa60db26997421d980b1f86c03d82259504ca/proofnet24/P03-fei/fleet-2026-09-21/account02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md), especially §§2–4. For a physical block \(A\),
+- **Terminal core and physical block inequality:** [commit 85ffa60](https://github.com/yspennstate/math-open-problems/blob/85ffa60db26997421d980b1f86c03d82259504ca/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md), especially §§2–4. For a physical block \(A\),
   \[
   D_A=\mathcal J(f)-\mathbb E_z\mathcal J(f_z)
   =\sum_{i\in A}q_i+\sum_{j\notin A}c_j(A),
@@ -60,10 +60,10 @@ All repository links below point to `yspennstate/math-open-problems`.
   Full ratio extremality means every Boolean function on at most the chosen dimension has ratio at most \(\rho\); proper restriction children therefore have nonnegative slack \(\rho\mathcal J-\mathcal F\).
 For clarity, write \(r_j(z)=\operatorname{Inf}_j(f_z)\) before centering the child. Then \(c_j(A)=q_j-\mathbb E\min(r_j(z),1-r_j(z))=\mathbb E(2r_j(z)-1)_+\). The source uses \(U_A=\sum_{k\in A}h_2(q_k)-W_A\); all-block terminality at level \(K>2\) means \(U_A\ge KD_A\) for every nonempty physical block. The sharper \(B_A-W_A\) remains the entropy-increment upper bound used in (7.3).
 
-- **Robust rows and trigger polarization:** [commit fdbfbcc](https://github.com/yspennstate/math-open-problems/blob/fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113/proofnet24/P03-fei/fleet-2026-09-21/account04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md). Its bound \(c_i(F_i)\ge q_i-\varepsilon_i\) is used in §8.
-- **Pair-selected physical stopping:** [commit 54004a5](https://github.com/yspennstate/math-open-problems/blob/54004a5887b551482292a6a173d688da4b9fbfe7/proofnet24/P03-fei/fleet-2026-09-22/account01/B12/20260922T101952Z-account01-B12-r11/REPORT.md). The present clique structure and child slack address its missing robust-trigger cover/selection step.
-- **Canonical adaptive selector:** [commit 4a17483](https://github.com/yspennstate/math-open-problems/blob/4a1748352ae7e31c4941f91c3f6a81a5a6928421/proofnet24/P03-fei/fleet-2026-09-22/account02/B20/20260922T103102Z-account02-B20-fei-r17/REPORT.md). A block selected deterministically from the current function and decoded physical history has zero conditional address entropy. The present results require no hidden spectral selector.
-- **Selected-pair occurrence KL:** [commit fc42e79](https://github.com/yspennstate/math-open-problems/blob/fc42e79e7f6e43ba79986fda86d1f75d10ec1a20/proofnet24/P03-fei/fleet-2026-09-22/account03/B19/20260922T103024Z-b19-fei-r11/REPORT.md). Its normalized single-pair KL credit remains available, but is not summed or spent in this report.
+- **Robust rows and trigger polarization:** [commit fdbfbcc](https://github.com/yspennstate/math-open-problems/blob/fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md). Its bound \(c_i(F_i)\ge q_i-\varepsilon_i\) is used in §8.
+- **Pair-selected physical stopping:** [commit 54004a5](https://github.com/yspennstate/math-open-problems/blob/54004a5887b551482292a6a173d688da4b9fbfe7/proofnet24/P03-fei/fleet-2026-09-22/fleet01/B12/20260922T101952Z-fleet01-B12-r11/REPORT.md). The present clique structure and child slack address its missing robust-trigger cover/selection step.
+- **Canonical adaptive selector:** [commit 4a17483](https://github.com/yspennstate/math-open-problems/blob/4a1748352ae7e31c4941f91c3f6a81a5a6928421/proofnet24/P03-fei/fleet-2026-09-22/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/REPORT.md). A block selected deterministically from the current function and decoded physical history has zero conditional address entropy. The present results require no hidden spectral selector.
+- **Selected-pair occurrence KL:** [commit fc42e79](https://github.com/yspennstate/math-open-problems/blob/fc42e79e7f6e43ba79986fda86d1f75d10ec1a20/proofnet24/P03-fei/fleet-2026-09-22/fleet03/B19/20260922T103024Z-b19-fei-r11/REPORT.md). Its normalized single-pair KL credit remains available, but is not summed or spent in this report.
 
 No raw hidden-curvature bound, fixed all-gate potential, bounded trigger degree, or replacement of ratio extremality by terminality is assumed.
 

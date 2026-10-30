@@ -1,12 +1,12 @@
 ## Current owner assignment: full FEI in this environment, 11-21 October 2026
 
-This environment's twenty enabled account01/B01-B20 jobs focus on full FEI through **21 October 2026 at 19:15:57 UTC (22:15:57 Asia/Jerusalem)**. The native full-FEI assignments were installed concurrently and are preserved. Their primary plan and B-stream ownership are in `yspennstate/math-open-problems`, `reports/fei-2026-10-11/`. The additional report, seed lemmas, sources and counterexamples are in `research_pushes/2026-10-11-full-fei-100-agents/` in both private repositories. Its `NATIVE_MAPPING.md` maps proposed F-role groups to live B streams; Fnn is not a replacement native identity.
+This environment's twenty enabled fleet01/B01-B20 jobs focus on full FEI through **21 October 2026 at 19:15:57 UTC (22:15:57 Asia/Jerusalem)**. The native full-FEI assignments were installed concurrently and are preserved. Their primary plan and B-stream ownership are in `yspennstate/math-open-problems`, `reports/fei-2026-10-11/`. The additional report, seed lemmas, sources and counterexamples are in `research_pushes/2026-10-11-full-fei-100-agents/` in both private repositories. Its `NATIVE_MAPPING.md` maps proposed F-role groups to live B streams; Fnn is not a replacement native identity.
 
 For these twenty jobs during this fixed window, the owner's full-FEI priority supersedes older Brain-maintenance, movie, Primary Directive, OPEN_PROBLEMS_200 and mixed-portfolio assignments. Stalled work changes mathematical route within FEI. B20 must not restore this account's obsolete prompts through the older shared OWNER_CONTROL JSON or a historical renderer. Preserve shared controls for other accounts and leave the five disabled jobs untouched. Do not restart or extend the deadline, create more schedules, or claim 100 simultaneous workers.
 
 Existing source holds, access restrictions, usage limits and honest-proof requirements retain their scope. Continue the installed immutable B-stream result paths and Brain handoffs, preserve peer-owned work, and verify saves. The reports and campaign remain private. Only the separately owner-approved completed threshold-paper package is authorized for the public paper repository; the strategy report, task metadata and private Brain history are excluded. Any permitted publication follow-up must use the latest verified paper package and preserve Claude's repository work.
 
-<!-- FULL_FEI_ACCOUNT01_20261011_OVERRIDE_END -->
+<!-- FULL_FEI_FLEET01_20261011_OVERRIDE_END -->
 
 # Current scheduled-fleet direction: all 80 workers on FEI
 
@@ -14,7 +14,7 @@ Effective owner order: **FEI-ALL-TEAM-20260922T095941Z**; control revision **202
 
 All eighty existing workers now target full FEI. The older restricted allocation and expired sprint below are historical; valid mathematical results and scoped refutations remain evidence.
 
-The sole target for account01-account04/B01-B20 is full uniform-cube Fourier Entropy-Influence: one finite dimension-independent C such that H(f) <= C I(f) for every finite Boolean function, with entropy in bits, or a rigorous Boolean counterfamily with unbounded H/I. Full FEI remains **OPEN**.
+The sole target for fleet01-fleet04/B01-B20 is full uniform-cube Fourier Entropy-Influence: one finite dimension-independent C such that H(f) <= C I(f) for every finite Boolean function, with entropy in bits, or a rigorous Boolean counterfamily with unbounded H/I. Full FEI remains **OPEN**.
 
 
 Allocation: Path A 32 workers (B01-B06,B13-B14 per account); Path B 28 (B07-B10,B15-B17); Path C 20 (B11-B12,B18-B20). Each slot has a distinct task, exact inputs, deliverable, acceptance condition, cross-account partner and next recipient. B20 has compact secondary keeper duties and a real FEI proof assignment.

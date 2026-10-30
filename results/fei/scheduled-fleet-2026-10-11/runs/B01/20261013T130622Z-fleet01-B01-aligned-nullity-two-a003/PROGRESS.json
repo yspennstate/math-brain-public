@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "run_id": "20261013T130622Z-fleet01-B01-aligned-nullity-two-a003",
+  "stream_id": "B01",
+  "account": "fleet01",
+  "primary_packet_id": "A003",
+  "packet_ids": ["A003"],
+  "attempt_id": "B01-A003-ALIGNED-NULLITY-TWO-01",
+  "stable_gap_id": "GU-ASYMMETRY-MISMATCH",
+  "claim_version": "B01_A003_ALIGNED_NULLITY_TWO_FEI_v1",
+  "objective": "Prove the first nonflat four-point fiber payment with exact physical accounting, then determine whether removing the nullity parameter is a proper intermediate target or universal-hard.",
+  "source_plan": {
+    "control_revision": "2026-10-12.1",
+    "control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "prior_B01_positive_codimension_commit": "0f52c0b9ad97d01edbf149558dd0d95280b30081",
+    "accepted_B19_nullity_one_review_commit": "141745b7b65e7013a4b8903f4a92a979f6c1a18f",
+    "accepted_B19_nullity_one_review_claim": "B05_A023_NULLITY_ONE_SHIELD_v1"
+  },
+  "prior_status": "Nullity one arbitrary cores accepted; positive-codimension point-defect class author proved; arbitrary four-point fibers unpaid.",
+  "new_status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_delta": "Proved H<=2I and U<=2I for arbitrary changing two-bit fibers behind any full-rank shield whose kernel is spanned by two physical coordinates. Also proved that extending this to arbitrary unbounded fiber dimension with uniform FEI/U/GU' constants is exactly universal-hard via tensor amplification.",
+  "verification": {
+    "two_bit_fibers": 16,
+    "exhaustive_canonical_cores": 32904,
+    "oriented_matrix_samples": 708,
+    "direct_walsh_atoms": 1312020,
+    "direct_U_endpoint_checks": 2184,
+    "hardness_seed_identities": 8512,
+    "maximum_H_over_I": "2",
+    "random_seed": 2954494002,
+    "result": "PASS"
+  },
+  "acceptance_evidence": "Written all-parameter proof plus independent exact/direct checker; independent A086/A094 review still required.",
+  "remaining_obstacle": "The class is not restriction closed, dense kernel orientations are unpaid, and arbitrary-nullity aligned fibers contain an arbitrary Boolean tensor factor. Universal GU' remains open.",
+  "next_action": "Seek a restriction-stable structured fiber class or bound the cap-posterior alignment mismatch directly; do not treat arbitrary-nullity fiber entropy as an auxiliary lemma.",
+  "consumer_targets": ["B05", "B10", "B18", "B20", "A005", "A027", "A087"],
+  "reviewer_targets": ["A086", "A094"],
+  "delivery": {
+    "canonical_repository": "yspennstate/math-open-problems",
+    "canonical_path": "reports/fei-2026-10-11/runs/B01/20261013T130622Z-fleet01-B01-aligned-nullity-two-a003/",
+    "brain_repository": "yspennstate/math-research-brain",
+    "brain_path": "research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B01/20261013T130622Z-fleet01-B01-aligned-nullity-two-a003/",
+    "canonical_package_commit": "bfed12b19b78f606117bcb3e96a372c791b440c2",
+    "brain_package_commit": "5bfdbcf2b8ad240700acc39f6b9f994ad6be3a69",
+    "readback": "VERIFIED_EXACT_FOR_ALL_NINE_PACKAGE_FILES_AT_BOTH_COMMITS",
+    "status": "DELIVERED_AND_VERIFIED",
+    "native_brain_ingestion": "NOT_CLAIMED"
+  },
+  "full_fei_status": "OPEN"
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "run_id": "20260925T032304Z-fleet02-B05-fiveSV-audit-r13",
+  "source_commit": "ec211ba2d77a4a9850168c6af1574ea651feaa7c",
+  "findings": [
+    {
+      "id": "C04",
+      "line": 41,
+      "page": 1,
+      "status": "FALSE",
+      "repair": "qualify random-sign conversion by no-pivot",
+      "impact": "expository only"
+    },
+    {
+      "id": "C07",
+      "line": 62,
+      "page": 1,
+      "status": "UNCHECKED",
+      "repair": "safe wording: present argument does not settle...",
+      "impact": "literature-status only"
+    },
+    {
+      "id": "C05",
+      "line": 65,
+      "page": 1,
+      "status": "FALSE",
+      "repair": "replace 'has a singularity' by 'admits an upper envelope'",
+      "impact": "expository only"
+    },
+    {
+      "id": "C06",
+      "line": 148,
+      "page": 3,
+      "status": "PASS_EDITORIAL",
+      "repair": "replace 'Both' by 'These assertions'",
+      "impact": "none"
+    },
+    {
+      "id": "C02",
+      "lines": "319-322",
+      "page": "6-7",
+      "status": "GAP",
+      "repair": "insert |E F|^2 <= E|F|^2 before (4.5)",
+      "impact": "none on constants"
+    },
+    {
+      "id": "C08",
+      "line": 398,
+      "page": 9,
+      "status": "GAP",
+      "repair": "state density formula for z!=v/a.e. and define p_T(v) arbitrarily",
+      "impact": "none"
+    },
+    {
+      "id": "C01",
+      "line": 412,
+      "page": 9,
+      "status": "FALSE",
+      "repair": "use open angular chart omitting one null ray",
+      "impact": "none on constants"
+    },
+    {
+      "id": "C03",
+      "lines": "416,441",
+      "page": "9-10",
+      "status": "GAP",
+      "repair": "state q=v is two affine lines and null under the joint density",
+      "impact": "none"
+    },
+    {
+      "id": "C09",
+      "line": 613,
+      "page": 13,
+      "status": "GAP",
+      "repair": "prove P(R=a)=0 before writing J(R-a), or extend J(0)=+infinity",
+      "impact": "none on 77 bound"
+    }
+  ],
+  "adjudicated_peer_disagreement": {
+    "line": 222,
+    "page": 5,
+    "status": "PASS",
+    "peer_claim": "Some peers read 'Factors with beta_i=0 are at most one' as claiming at most one zero-beta row.",
+    "adjudication": "Rejected. The predicate is on factor values: beta_i=0 implies w_i=0 and factor f_i((Uy)_i)<=1. Any number of zero-beta rows may be dropped."
+  },
+  "repaired_argument_verdict": "PASS in two fresh r13 reconstructions for 270 density and 77 halfmoment."
+}

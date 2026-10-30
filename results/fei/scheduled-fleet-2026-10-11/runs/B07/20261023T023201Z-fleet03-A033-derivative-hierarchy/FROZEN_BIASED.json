@@ -1,0 +1,12 @@
+{
+  "helper_version": "A033-biased-continuation-direct-v1",
+  "family": "A079 actual fixed mask and actual three-bit seed [1,1,1,-1,1,1,1,-1]",
+  "domain": "Both actual tag signs, both actual bit-weight-one seed children; incoming R0=1/2 with true conditional tail; actual prior 1/8 uniform target on all seven labels; fresh 1/8 point target on remaining spectator label",
+  "case_count": 4,
+  "symmetry": "None; direct character sums, independent of main FWHT helper",
+  "arithmetic": "Fraction probabilities, direct signed Fourier character sums, exact integer-power strict inequalities and normalization checks",
+  "memory_estimate_MB": 50,
+  "max_runtime_seconds": 55,
+  "outputs": ["out/biased_continuation.json"],
+  "regenerate": "python -B -X utf8 runs/20261023T023201Z-fleet03-A033-derivative-hierarchy/code/biased.py"
+}

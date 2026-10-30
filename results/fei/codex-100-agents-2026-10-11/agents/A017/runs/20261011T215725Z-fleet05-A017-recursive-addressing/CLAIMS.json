@@ -1,0 +1,39 @@
+[
+  {
+    "claim_id": "A017-QUADRATIC-REUSED-ADDRESSING-LEDGER",
+    "version": 1,
+    "exact_statement": "For all n,a>=0, binary linear M:F2^n->F2^a and quadratic q:F2^n->F2, F(x,y)=(-1)^q(x)y_(Mx) on independent uniform physical controls and distinct data signs has 2^(2r+k) equal Fourier atoms, H(F)=2r+k, I(F)=1+(c+b)/2+d, and H(F)<=4(I(F)-1-d)<=4(I(F)-1). Here r=rank M, k=rank of the polar form restricted to ker M, c counts nonzero M columns, b counts zero M columns with nonzero polar row, and d counts zero M columns with zero polar row and linear q coefficient one. Under M_t=A_t M_(t-1)+B_t and q_t=q_(t-1)+p_t with quadratic p_t, Delta H_t=2 Delta r_t+Delta k_t and Delta I_t=(Delta c_t+Delta b_t)/2+Delta d_t, including arbitrary control reuse.",
+    "hypotheses": [
+      "uniform independent physical controls and data signs",
+      "entropy in bits",
+      "distinct terminal states name distinct physical data coordinates",
+      "q and every phase increment have degree at most two over F2",
+      "all state update matrices fixed over F2; no selector freshness required between stages"
+    ],
+    "statement_sha256": "ad01dde9a82e606356c6d1d635fa9091cec344990cf11169b07c4315940f3cc1",
+    "contributors": [
+      "A017/fleet05"
+    ],
+    "proof_source": {
+      "path": "RECURSIVE_ADDRESSING.tex",
+      "sha256": "eab0813390169b786546bfe1d5b86c8a5fcee1f9be55e3d67db1057f7dc17b2b",
+      "locator": "Rank and fiber-phase ledger theorem and Exact recursive addressing program"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A013",
+      "A030",
+      "A077",
+      "A008",
+      "A018",
+      "A058",
+      "A091",
+      "A090"
+    ]
+  }
+]

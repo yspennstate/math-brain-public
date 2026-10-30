@@ -1,0 +1,32 @@
+[
+  {
+    "claim_id": "A051-AFFINE-MINIMUM-BASIS-CRITICAL-REDUCTION",
+    "version": 1,
+    "exact_statement": "For every finite probability law S on F_2^n, influence sum_i P(S_i=1) is minimal under all invertible affine spectral maps iff p_i<=1/2 and min(P(v.S=1),P(v.S=0))>=max_{i:v_i=1}p_i for every nonzero v. Every n-bit Boolean sign f has a Boolean g on d=affdim(supp(fhat)) bits with H(g)=H(f), I(g)<=I(f), full affine spectral dimension and affine-minimal influence. Thus FEI(K), K>=0, is equivalent at the same K on this reduced class, and its finite dimension caps equal the maximum on the nonempty union of reduced classes with dimensions d<=n (individual classes can be empty). Nondecreasing-deficit affine/compression reductions preserve epsilon-nearness to the finite dimensional deficit cap. A minimal-dimension positive K witness with maximal D_K, K>0, itself has full affine spectral dimension and satisfies all the inequalities, in particular P(S_i=S_j=1)<=min(Inf_i,Inf_j)/2. Epsilon-near n-bit maxima obey p_i<=1/2+epsilon/(2K), m(v)>=p_i-epsilon/K when v_i=1, and pair overlap<=min(p_i,p_j)/2+epsilon/(2K). No physical child bank is replaced by the transformed one.",
+    "hypotheses": [
+      "Finite uniform Boolean sign cubes for compression/FEI applications; arbitrary finite probability law only for the affine-minimum equivalence",
+      "Entropy bits; influence sum of squared Fourier marginals",
+      "K>=0 for same-constant reduction and cap stability; K>0 for forced affine minimality and epsilon/K formulas",
+      "Critical application: least essential positive-deficit dimension, then exact finite maximal D_K; no arbitrary root admission"
+    ],
+    "statement_sha256": "e5b7d55818d52b67c4844061b2553f5c652e703f790476a8f6880ca9afefd1e7",
+    "contributors": [
+      "A051"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A051\\runs\\20261021T193146Z-fleet03-A051-near-extremizer-definition\\AFFINE_SELECTION.md",
+    "proof_dependencies": [
+      "A051-FINITE-VARIATIONAL-CRITICAL-SELECTION@1 (critical-selector application; selection repeated in Section1)"
+    ],
+    "review_records": [],
+    "status": "PROVED_LOCAL_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A052",
+      "A055",
+      "A090",
+      "A094"
+    ]
+  }
+]

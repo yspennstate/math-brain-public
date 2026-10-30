@@ -7,7 +7,7 @@
   "programme_id": "FEI-ALL-TEAM-20260922T095941Z",
   "control_revision": "2026-09-22.3",
   "scope": "Read-only bounded operational adoption check. No remote changes or scheduler mutations. Login, memory and matching receipt bytes read; mathematical report references not independently certified.",
-  "native_account04": {
+  "native_fleet04": {
     "observation_utc": "2026-09-22T10:51:18Z",
     "managed": 20,
     "enabled": 20,
@@ -30,7 +30,7 @@
   },
   "per_account": [
     {
-      "account": "account01",
+      "account": "fleet01",
       "hour09": {
         "present": 20,
         "strict_valid": 20,
@@ -53,7 +53,7 @@
       ]
     },
     {
-      "account": "account02",
+      "account": "fleet02",
       "hour09": {
         "present": 15,
         "strict_valid": 13,
@@ -82,7 +82,7 @@
       ]
     },
     {
-      "account": "account03",
+      "account": "fleet03",
       "hour09": {
         "present": 19,
         "strict_valid": 19,
@@ -108,7 +108,7 @@
       ]
     },
     {
-      "account": "account04",
+      "account": "fleet04",
       "hour09": {
         "present": 20,
         "strict_valid": 19,
@@ -140,121 +140,121 @@
   ],
   "strict_validation_notes": [
     "Requires schema_version=1, account and filename slot match, and utc_start in named hour. Presence is distinct from new invocation or completion.",
-    "09Z account02 B09/B20 carryover records omit utc_start and control_commit.",
-    "09Z account04 B11 omits reasoning_effort_configured.",
-    "10Z account01 B20 is an explicit across-hour continuation with utc_start 09:47:14 and control_commit_start/recheck instead of control_commit.",
-    "10Z account04 B05 omits schema_version, model_self_report, reasoning_effort_configured and execution_context."
+    "09Z fleet02 B09/B20 carryover records omit utc_start and control_commit.",
+    "09Z fleet04 B11 omits reasoning_effort_configured.",
+    "10Z fleet01 B20 is an explicit across-hour continuation with utc_start 09:47:14 and control_commit_start/recheck instead of control_commit.",
+    "10Z fleet04 B05 omits schema_version, model_self_report, reasoning_effort_configured and execution_context."
   ],
   "memory_snapshots": [
     {
-      "account": "account01",
+      "account": "fleet01",
       "slot": "B01",
-      "run_id": "20260922T103250Z-account01-B01-fei-r11",
+      "run_id": "20260922T103250Z-fleet01-B01-fei-r11",
       "explicit_all_14_corrections": true,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account01/B01/20260922T103250Z-account01-B01-fei-r11/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account01/B01/20260922T103250Z-account01-B01-fei-r11/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet01/B01/20260922T103250Z-fleet01-B01-fei-r11/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet01/B01/20260922T103250Z-fleet01-B01-fei-r11/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "b49be89db2ee2b99563dbd224613e2db66983eed",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B01/20260922T103250Z-account01-B01-fei-r11/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B01/20260922T103250Z-fleet01-B01-fei-r11/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account01",
+      "account": "fleet01",
       "slot": "B12",
-      "run_id": "20260922T101952Z-account01-B12-r11",
+      "run_id": "20260922T101952Z-fleet01-B12-r11",
       "explicit_all_14_corrections": true,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account01/B12/20260922T101952Z-account01-B12-r11/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account01/B12/20260922T101952Z-account01-B12-r11/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet01/B12/20260922T101952Z-fleet01-B12-r11/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet01/B12/20260922T101952Z-fleet01-B12-r11/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "d3c9c79ce5bcec9f656bd7e312d93511cc527bc2",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account01/B12/20260922T101952Z-account01-B12-r11/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet01/B12/20260922T101952Z-fleet01-B12-r11/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account02",
+      "account": "fleet02",
       "slot": "B20",
-      "run_id": "20260922T103102Z-account02-B20-fei-r17",
+      "run_id": "20260922T103102Z-fleet02-B20-fei-r17",
       "explicit_all_14_corrections": true,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account02/B20/20260922T103102Z-account02-B20-fei-r17/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account02/B20/20260922T103102Z-account02-B20-fei-r17/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "4a1748352ae7e31c4941f91c3f6a81a5a6928421",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account02/B20/20260922T103102Z-account02-B20-fei-r17/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account03",
+      "account": "fleet03",
       "slot": "B05",
-      "run_id": "account03-B05-20260922T104025Z-fei",
+      "run_id": "fleet03-B05-20260922T104025Z-fei",
       "explicit_all_14_corrections": false,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B05/account03-B05-20260922T104025Z-fei/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B05/account03-B05-20260922T104025Z-fei/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B05/fleet03-B05-20260922T104025Z-fei/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B05/fleet03-B05-20260922T104025Z-fei/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "cd65d22b6fcd7517accca43013d4fc588c8da2db",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B05/account03-B05-20260922T104025Z-fei/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T104025Z-fei/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account03",
+      "account": "fleet03",
       "slot": "B07",
-      "run_id": "20260922T103431Z-account03-B07-FEI-r11",
+      "run_id": "20260922T103431Z-fleet03-B07-FEI-r11",
       "explicit_all_14_corrections": false,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B07/20260922T103431Z-account03-B07-FEI-r11/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B07/20260922T103431Z-account03-B07-FEI-r11/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B07/20260922T103431Z-fleet03-B07-FEI-r11/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B07/20260922T103431Z-fleet03-B07-FEI-r11/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "2f93e998d6c947d8eedf23ed53906c7551a29720",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B07/20260922T103431Z-account03-B07-FEI-r11/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B07/20260922T103431Z-fleet03-B07-FEI-r11/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account03",
+      "account": "fleet03",
       "slot": "B14",
-      "run_id": "account03-B14-20260922T103926Z-r11",
+      "run_id": "fleet03-B14-20260922T103926Z-r11",
       "explicit_all_14_corrections": false,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B14/account03-B14-20260922T103926Z-r11/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B14/account03-B14-20260922T103926Z-r11/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B14/fleet03-B14-20260922T103926Z-r11/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B14/fleet03-B14-20260922T103926Z-r11/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "9a1ef2ec15f904839f1eb7b4e1e36ecc6d512554",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B14/20260922T103926Z-occurrence-kl-selector/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B14/20260922T103926Z-occurrence-kl-selector/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account03",
+      "account": "fleet03",
       "slot": "B19",
       "run_id": "20260922T103024Z-b19-fei-r11",
       "explicit_all_14_corrections": true,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B19/20260922T103024Z-b19-fei-r11/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account03/B19/20260922T103024Z-b19-fei-r11/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B19/20260922T103024Z-b19-fei-r11/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet03/B19/20260922T103024Z-b19-fei-r11/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "144ea823b604785a77b638b03b0c5d7909676d52",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account03/B19/20260922T103024Z-b19-fei-r11/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet03/B19/20260922T103024Z-b19-fei-r11/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     },
     {
-      "account": "account04",
+      "account": "fleet04",
       "slot": "B17",
       "run_id": "20260922T102740Z-b17-fei-r17",
       "explicit_all_14_corrections": true,
-      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account04/B17/20260922T102740Z-b17-fei-r17/MEMORY_SNAPSHOT.json",
-      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/account04/B17/20260922T102740Z-b17-fei-r17/MEMORY_SNAPSHOT.json",
+      "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet04/B17/20260922T102740Z-b17-fei-r17/MEMORY_SNAPSHOT.json",
+      "source_url": "https://github.com/yspennstate/math-research-brain/blob/8867f11c1c37cd190ec259442d5c63d59025ab2f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/memory/fleet04/B17/20260922T102740Z-b17-fei-r17/MEMORY_SNAPSHOT.json",
       "scientific_report_reference": {
         "repository": "yspennstate/math-open-problems",
         "commit": "4724c29ba5e11543763408355504049e05e4e6e3",
-        "path": "proofnet24/P03-fei/fleet-2026-09-22/account04/B17/20260922T102740Z-b17-fei-r17/REPORT.md",
+        "path": "proofnet24/P03-fei/fleet-2026-09-22/fleet04/B17/20260922T102740Z-b17-fei-r17/REPORT.md",
         "independently_read_in_this_status_check": false
       }
     }
@@ -265,9 +265,9 @@
     "explicit_all_14_correction_acknowledgments": 5,
     "completed_matching_finish_receipt_pairs": 3,
     "completed_slots": [
-      "account03/B07",
-      "account03/B14",
-      "account03/B19"
+      "fleet03/B07",
+      "fleet03/B14",
+      "fleet03/B19"
     ],
     "full_fei_proved": false,
     "full_brain_connected_supported": false,
@@ -277,10 +277,10 @@
     "path": "scheduled_tasks/work/shared/fei-all-team-2026-09-22/ROLLOUT.json",
     "updated_at_utc": "2026-09-22T10:35:09Z",
     "native_updates": {
-      "account01": "PENDING_ACCOUNT_LOCAL_KEEPER",
-      "account02": "PENDING_ACCOUNT_LOCAL_KEEPER",
-      "account03": "PENDING_ACCOUNT_LOCAL_KEEPER",
-      "account04": "UPDATED_VERIFIED_20_AT_10:32:09Z"
+      "fleet01": "PENDING_ACCOUNT_LOCAL_KEEPER",
+      "fleet02": "PENDING_ACCOUNT_LOCAL_KEEPER",
+      "fleet03": "PENDING_ACCOUNT_LOCAL_KEEPER",
+      "fleet04": "UPDATED_VERIFIED_20_AT_10:32:09Z"
     },
     "worker_adoption_status": "AWAITING_EXECUTION_RECEIPTS"
   },
@@ -295,7 +295,7 @@
       "matching_completed_receipt_pairs": 3,
       "full_fleet_adoption_verified": false
     },
-    "native_updates": "Preserve existing account01\u201303 pending status until their local native evidence exists; do not infer native updates from memory adoption.",
+    "native_updates": "Preserve existing fleet01\u201303 pending status until their local native evidence exists; do not infer native updates from memory adoption.",
     "lifecycle_status": "concurrent_newer_order_observed",
     "active_target_status": "active_target_awaiting_user_resolution",
     "newer_control_discovery": {

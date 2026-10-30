@@ -1,0 +1,41 @@
+{
+  "schema": "fei-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261011T220643Z-fleet01-B15-A071-affine-pair-reduction",
+  "stream": "B15",
+  "packet_id": "A071",
+  "packet_ids": ["A071"],
+  "gap_id": "G-BOOLEANITY",
+  "attempt_id": "A071-attempt-02-C022-affine-pair-reduction",
+  "previous_status": "FINITE_DOMAIN_EXHAUSTED_PENDING_INDEPENDENT_REVIEW",
+  "new_status": "LARGER_SIGNED_TWO_POINT_DOMAIN_REDUCED_AND_PROVED_PENDING_INDEPENDENT_REVIEW",
+  "previous_value": "Maximum 40/17 only in the constant-sign disjoint-edge family.",
+  "new_value": "Maximum 40/17 in the complete disjoint signed two-point family under C022's product-row hypothesis; non-coordinate affine pairs are inadmissible and alternating signs only add influence.",
+  "exact_claim_versions": [
+    "B15-A071-SIGNED-PAIR-PRODUCT-02-v1",
+    "B15-A071-C022-SIGNED-PAIR-MAX-02-v1"
+  ],
+  "proof_dependencies": [
+    "prior A071 finite theorem at open-problems commit 5aca95345e9eaef015d406af6f84bf74c5a3e01d",
+    "C022 statement in supplement CLAIMS.md blob d7279735b4dcfaf7552cf271b7413fc5c0f427b6",
+    "exact Walsh factorization for a signed pair"
+  ],
+  "input_handoffs_used": ["prior immutable A071 report and exact search source"],
+  "acceptance_items_met": [
+    "candidate-specific enlarged domain",
+    "complete analytic symmetry/reduction proof",
+    "case count and hard resource cap",
+    "exact Boolean and Walsh verification"
+  ],
+  "acceptance_items_missing": ["independent review by A085 or A092"],
+  "review_requests": ["A085", "A092"],
+  "review_evidence": [],
+  "failed_approaches": [
+    "Full AGL(4,2) quotient rejected because influence is not invariant under general linear changes of physical coordinates."
+  ],
+  "unchanged_obstruction_count": 0,
+  "next_action": "A075 analytic classification of higher-support dyadic product-row norms and address-degree payment.",
+  "deliverable_status": "DURABLY_SAVED_AND_READ_BACK_PENDING_INDEPENDENT_REVIEW",
+  "mathematical_status": "PROVED_FINITE_FAMILY_REDUCTION_PENDING_INDEPENDENT_REVIEW; C022_OPEN; FULL_FEI_OPEN",
+  "full_FEI": "OPEN"
+}

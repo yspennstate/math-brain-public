@@ -1,0 +1,35 @@
+{
+  "run_id": "20260923T215155Z-fleet03-B04-QFORM-auto11-r42",
+  "status": "PASS",
+  "new_results": [
+    "QFORM-CROSS-E3-OPTIMAL-THRESHOLD-v1",
+    "QFORM-NESTED-ANCHOR-INCIDENT-PAYMENT-v1"
+  ],
+  "constants": {
+    "h_star": 0.5115590081942362,
+    "C_star": 8.453021225528177,
+    "incident_coefficient": 7.559526299369239,
+    "partner_delta": 3.920490083333333e-12,
+    "partner_incident_bound": 602.0111324191176,
+    "partner_global_bound": 673.1655766271577,
+    "partner_previous_bound": 868.250297051749,
+    "explicit_rotated_bound": 3.1473451902649447
+  },
+  "explicit_matrix": {
+    "cross_block": "4x4 Sylvester Hadamard H with entries +/-1",
+    "same_bank_block": "J4/8 on each side",
+    "HHt": "4 I4",
+    "cross_E3": 256,
+    "incident_E3_each_row": 192,
+    "all_3x3_minor_abs_det": 4,
+    "unperturbed_spectrum": "+2 x4, -2 x4",
+    "same_bank_perturbation_operator_norm": 0.5,
+    "weyl_minimum_absolute_eigenvalue_lower_bound": 1.5,
+    "all_matrix_entries_nonzero": true
+  },
+  "notes": [
+    "The finite checks verify the minimax constant, partner arithmetic, Hadamard identities, minors, and the Weyl spectral margin.",
+    "The analytic implications are proved in REPORT.md and rely on the source-pinned r39 product-Fourier theorem plus the completed fleet04/B04 nested-anchor packet.",
+    "Full QFORM remains open."
+  ]
+}

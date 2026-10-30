@@ -1,0 +1,90 @@
+[
+  {
+    "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+    "version": 2,
+    "exact_statement": "The A058 v1 anchored transfer remains valid at its private-bit/disjoint-shared-block hypotheses. When the first two private bits are identified, coefficient pairs v_T(S),v_{T xor {1,2}}(S) merge coherently. With ell=v^2, Q=v^2+v_partner^2, P=(v+v_partner)^2, delta=P-Q, the exact bit ledger is H(P)=H(old)-H_ell(T|Y)-D(P||Q)-sum_Y delta(Y)log2 Q(Y), both laws normalized, 0<=D<=1 and 0<=H_ell(T|Y)<=1. Influence change is sum_Y delta(Y)(|phi(T)|+|S|)-2Pr_ell({1,2} subset T). No finite C bounds the signed cross-surprisal, or positive coherent entropy increment, by shared-anchor influence in all such Boolean compositions: quadratic bent cores give R=k, Delta H=k-2, I_anchor=1 and Delta I_data=k/2 for every k>=1. Nor is latent posterior<=C I_anchor: an off-diagonal exceptional outer with identical literal children gives posterior=1 and I_anchor=0. The exact deficit transport retains both credits and the influence change; its universal sign/payment remains open.",
+    "hypotheses": [
+      "Uniform physical cube and Boolean sign outer/shared gates; entropy in bits including empty atoms.",
+      "Original shared gates occupy pairwise disjoint blocks; Boolean repeated gates cancel modulo two before expansion.",
+      "Exactly the first two private anchors are identified, all other private anchors remain; constant signs can be absorbed into the outer gate.",
+      "The identification is a shared-variable contraction, not a physical single-coordinate query; no stopping-tree telescope for this contraction is assumed."
+    ],
+    "statement_sha256": "ae2357f76a39dd2b4b3fc486ead2e86b42eca33e484a4332d48582eab4cbd5c9",
+    "contributors": [
+      "fleet05/A058"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261012T020138Z-fleet05-A058-overlapping-compositions\\COHERENT_FIBER_REPAIR.md"
+    },
+    "proof_dependencies": [],
+    "review_records": [],
+    "status": "REPAIR_AND_OBSTRUCTION_PROVED_LOCAL_REVIEW_PENDING",
+    "supersedes": [
+      {
+        "claim_id": "A058-ANCHORED-OVERLAP-POSTERIOR-LEDGER",
+        "version": 1,
+        "scope": "Preserves the v1 theorem and corrects any interpretation that its latent posterior pays coherent collision debt."
+      }
+    ],
+    "refutes": [
+      "For one shared physical anchor there is finite C with R<=C I_anchor for every admitted Boolean composition.",
+      "For one shared physical anchor there is finite C with H(merged)-H(anchored)<=C I_anchor for every admitted Boolean composition.",
+      "For one shared physical anchor there is finite C with latent posterior<=C I_anchor for every admitted Boolean composition."
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B12",
+      "A057",
+      "A059",
+      "A060",
+      "A091",
+      "A090",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A057-CAPPED-RECENTERED-ACTIVATION-TREE-BANK",
+    "version": 1,
+    "exact_statement": "For every Boolean sign core u on a finite uniform cube, r>=1 fresh point-control bits, p=2^(-r), a=1-Eu, and F=1+A_r(u-1), any complete adaptive physical core-first tree followed by the complete control suffix has total capped current biased outer-erasure bank <=(4+2/(e ln2))p I(u)+5rp a<=(4+2/(e ln2))I(F), in bits. At a core node m=Eu_v, beta=hat u_v({i}), v=1-m^2, t=beta^2, the cap is min{M(v),(t/v)M(v)+pt log2(v/t)}, M(s)=Phi((1-p+pm)^2,p^2s)+p(1-p)Phi((1-m)^2,s), Phi(s,t)=(s+t)h2(t/(s+t)); zero-variance and zero-t caps are zero. More precisely any partial core-tree prefix costs <=[4p(1-p)+p^2/ln2+2p/(e ln2)]Pi_I(u)+2rp^2[Var(u)-E Var(u_leaf)]. The nonempty inner-decrement cost and terminal entropy are not asserted to be universally paid.",
+    "hypotheses": [
+      "Boolean +/-1 core; uniform independent physical signs; A_r indicator of one control assignment; r>=1; controls disjoint from core.",
+      "At each reached node recompute actual core mean and variance; no restriction-balancedness assumption.",
+      "Complete theorem queries core to constant leaves then controls; partial-prefix formula retains actual activated terminal functions.",
+      "Entropy units bits; influence uniform total flip influence."
+    ],
+    "statement_sha256": "ae13aaacdfe0d312200cf2ea0d9d8cfc3d0bd0d9f8dcf123ced0b3b9b11a15b3",
+    "contributors": [
+      "A057"
+    ],
+    "proof_source": {
+      "author_run": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261012T003930Z-fleet05-A057-coherent-restriction-remainder",
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A057\\runs\\20261012T003930Z-fleet05-A057-coherent-restriction-remainder\\PROOF.md",
+      "review": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261012T020138Z-fleet05-A058-overlapping-compositions\\REVIEW_A057.md"
+    },
+    "proof_dependencies": [
+      "A056 biased positive-sector split/envelope, independently reconstructed in REVIEW_A056.md",
+      "Elementary packet bound, Boolean singleton bound, physical influence and mean-variance telescopes; all price estimates proved in PROOF.md"
+    ],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A058",
+        "verdict": "ACCEPT_AT_STATED_SCOPE",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A058\\runs\\20261012T020138Z-fleet05-A058-overlapping-compositions\\REVIEW_A057.md",
+        "method": "Independent scalar-envelope and resource-telescope reconstruction; 96 actual activation trees; exact Fourier pair identities and rational log/e sign certificates; no source repair"
+      }
+    ],
+    "status": "ACCEPTED_LOCAL_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A056",
+      "A059",
+      "A091",
+      "A090",
+      "A024",
+      "A064",
+      "A097"
+    ]
+  }
+]

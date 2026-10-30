@@ -1,6 +1,6 @@
 # Current full-FEI campaign status
 
-Updated 2026-10-11T20:06:49.569536+00:00. Scope: this environment's existing twenty account01/B01–B20 streams through **21 October 2026, 22:15:57 Asia/Jerusalem**. Full FEI is **OPEN**.
+Updated 2026-10-11T20:06:49.569536+00:00. Scope: this environment's existing twenty fleet01/B01–B20 streams through **21 October 2026, 22:15:57 Asia/Jerusalem**. Full FEI is **OPEN**.
 
 ## Scientific paper: published and corrected
 
@@ -34,9 +34,9 @@ Three native streams have complete saved source-bound reports in the inspected c
 
 | Stream | Source and scope | Review state |
 |---|---|---|
-| B05 | [Sparse-activation no-go](https://github.com/yspennstate/math-open-problems/blob/80cc2e5027efa56d79c4ecdf7d4949759ef2068b/reports/fei-2026-10-11/runs/B05/20261011T193057Z-account01-B05-rare-restrictions/REPORT.md): for every finite K,A,B, a genuine Boolean split violates the universal all-node fixed-price helper `L <= K*d + A*V + B*M`. | Independently accepted at stated scope by B19. |
-| B19 | [Independent B05 reconstruction](https://github.com/yspennstate/math-open-problems/blob/7955d427222392911dc6af2e4ee3aa8aab67ac8c/reports/fei-2026-10-11/runs/B19/20261011T195038Z-account01-B19-independent-review/REPORT.md), analytic quantifier check and independently implemented integer/Fraction Walsh certificate, 16,404 checks passed. | Saved complete review, with source-bound Brain mirror. |
-| B09 | [Biased restriction uncertainty and prime-gate counterexample](https://github.com/yspennstate/math-open-problems/blob/adb671ffcda143fa68347806bb96e8c305621a7d/reports/fei-2026-10-11/runs/B09/20261011T195500Z-account01-B09-biased-restriction-uncertainty/REPORT.md); nine original files saved and mirrored. | The larger auxiliary theorem, composition scope and endpoint claims remain pending full independent review. |
+| B05 | [Sparse-activation no-go](https://github.com/yspennstate/math-open-problems/blob/80cc2e5027efa56d79c4ecdf7d4949759ef2068b/reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md): for every finite K,A,B, a genuine Boolean split violates the universal all-node fixed-price helper `L <= K*d + A*V + B*M`. | Independently accepted at stated scope by B19. |
+| B19 | [Independent B05 reconstruction](https://github.com/yspennstate/math-open-problems/blob/7955d427222392911dc6af2e4ee3aa8aab67ac8c/reports/fei-2026-10-11/runs/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md), analytic quantifier check and independently implemented integer/Fraction Walsh certificate, 16,404 checks passed. | Saved complete review, with source-bound Brain mirror. |
+| B09 | [Biased restriction uncertainty and prime-gate counterexample](https://github.com/yspennstate/math-open-problems/blob/adb671ffcda143fa68347806bb96e8c305621a7d/reports/fei-2026-10-11/runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/REPORT.md); nine original files saved and mirrored. | The larger auxiliary theorem, composition scope and endpoint claims remain pending full independent review. |
 
 B05's family has `d=2^(-3k)`, `L/d=k+log2(e)+o(1)`, `V/d <= 4*2^(-k)` and `M/d=12*k*2^(-3k)`. This rules out the specified local payment. It does not refute a suitable existential coordinate, adaptive stopping tree, nonlocal payment, or FEI.
 

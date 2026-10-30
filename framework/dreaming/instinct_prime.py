@@ -19,7 +19,7 @@ import sys, os, io, json, re, time, hashlib
 import atexit
 
 _T0 = time.time()
-# One hook call's identity (29 Sep, account02/B04 r76, B04-R27-F76-REFILL-FIRE-CLOCKS-NOT-COMPARABLE): the fire log and
+# One hook call's identity (29 Sep, fleet02/B04 r76, B04-R27-F76-REFILL-FIRE-CLOCKS-NOT-COMPARABLE): the fire log and
 # the refill A/B's assignment log carry it and _T0, formatted alike, so a refill joins its fire exactly. The two logs
 # used to stamp int(now) and '%.0f' of a later now, 1000 against 1001 at 1000.75, and two calls in one second collided.
 # Twelve hex digits of os.urandom: the 48 random bits uuid.uuid4().hex[:12] gave, without importing uuid (R24, 13 Oct).
@@ -98,7 +98,7 @@ def _log_fires(event, data, fired):
     sessions only - a test fixture piping payloads at the hook must not pollute the measurement (the
     ern_reliability fixture-count lesson, 2026-07-09).
 
-    Returns False when rows were due and were not written (29 Sep, scheduled audit account04/B04 r5,
+    Returns False when rows were due and were not written (29 Sep, scheduled audit fleet04/B04 r5,
     B04-R43-POST-EMIT-STATE-LOG-SPLIT): append_text reports a failed append by returning False, and that was
     dropped, so a fire that reached the session could vanish from every count without a trace."""
     try:
@@ -207,7 +207,7 @@ def _load_precision():
     judged_nightly.jsonl (the target stratum since 07-16, the firehose stratum since 09-02). Fail-open: no
     file, or a corrupt one, means every reflex is treated as unjudged and fires as before.
 
-    Read once per hook call (29 Sep, scheduled audit account04/B16 r11, B16-R14-REFILL-COST-AND-MISSINGNESS-001):
+    Read once per hook call (29 Sep, scheduled audit fleet04/B16 r11, B16-R14-REFILL-COST-AND-MISSINGNESS-001):
     the refill asked for it once per ranked candidate, re-parsing the 60 KB table each time. Kept by the file's
     path, mtime and size, so a table replaced during the call, or a test's fixture, is read again."""
     try:
@@ -250,7 +250,7 @@ def _stamp_seconds(s):
 
 
 def _precision_invalid(d, now=None):
-    """Why the precision table may not steer ranking, or None (29 Sep, account04/B04 r7,
+    """Why the precision table may not steer ranking, or None (29 Sep, fleet04/B04 r7,
     B04-R43-FRESHNESS-WATCH-NOT-GATE: freshness was only a liveness warning, and a stale table kept steering). A table
     with no readable build stamp, one stamped in the future, or one built more than seven days ago is ignored: every
     reflex is then unjudged and fires as it would with no table. Between 36 hours (when hook_liveness warns) and seven
@@ -298,7 +298,7 @@ _ROUTE_WORDS = {"graph": "through the graph", "ff": "through the forward feed (a
 
 def _hint(rid, prec, via=None):
     v = prec.get(rid)
-    # F159 (scheduled audit account01/B04, 27 Sep): a graph or forward-feed fire quotes ITS route's judged record
+    # F159 (scheduled audit fleet01/B04, 27 Sep): a graph or forward-feed fire quotes ITS route's judged record
     # when there is one, and names the route; the pooled record is mostly regex fires and says little about it.
     r = ((v or {}).get("paths") or {}).get(via) if via in _ROUTE_WORDS else None
     if r and r.get("judged"):
@@ -1025,7 +1025,7 @@ def _dedup(session, fired):
     return keep
 
 
-# THE BACKOFF, THE FIRE LOG AND A SHOWN REFILL ARE WRITTEN ONLY AFTER THE CONTEXT IS (28 Sep, scheduled audit account04/B04
+# THE BACKOFF, THE FIRE LOG AND A SHOWN REFILL ARE WRITTEN ONLY AFTER THE CONTEXT IS (28 Sep, scheduled audit fleet04/B04
 # r4). Until then _dedup wrote the per-session backoff and main logged the fire before rendering and output, so a failure
 # in between left a fire no session received, held that reflex for 30 minutes, and entered every study that counts
 # fires. main turns deferral on; _dedup and the refill record what they would write, and main commits it after its
@@ -1285,7 +1285,7 @@ def _refill_after_backoff(session, fired, drop_act=False):
             if arm == "held":
                 if _in_backoff(session, rid, _revision(it)):
                     # not an A/B opportunity: the backoff refuses it in either arm, so it is 'backoff', never 'ab_held'
-                    # (29 Sep, account01/B04, B04-F203: it was logged under both)
+                    # (29 Sep, fleet01/B04, B04-F203: it was logged under both)
                     _suppress(rid, "backoff")
                     _SUPPRESSED[:] = [(r, why) for r, why in _SUPPRESSED if not (r == rid and why == "cap")]
                 else:
@@ -1298,7 +1298,7 @@ def _refill_after_backoff(session, fired, drop_act=False):
                 out.extend(got)
                 added.append((rid, arm))
         if added:
-            # THE REFILL LOG IS THE A/B'S ASSIGNMENT LOG (29 Sep, scheduled audit account04/B04 r6,
+            # THE REFILL LOG IS THE A/B'S ASSIGNMENT LOG (29 Sep, scheduled audit fleet04/B04 r6,
             # B04-R43-REFILL-AB-LOGGING-BOUNDARY-ASYMMETRY). One row per refill opportunity, both arms, written here,
             # when the arm is decided and before anything is rendered or sent. From 28 Sep a shown row waited for the
             # context to go out while a held row was written at once, so a call that failed afterwards kept its held
@@ -1324,7 +1324,7 @@ def _ff_gated(rid, prec=None):
     """A forward-feed fire says 'a command like this one just failed'. It is gated by ITS OWN judged record on
     that route (reflex_precision.json 'paths': {'ff': {...}}, judged at n >= 4): below GUIDE_MIN_P it stays
     silent, like a graph fire under _graph_gated. The never-damped safety scars are exempt and the regex path of
-    the same reflex is untouched. Scheduled audit account01/B04 F158, 27 Sep: the ff precision was built nightly
+    the same reflex is untouched. Scheduled audit fleet01/B04 F158, 27 Sep: the ff precision was built nightly
     and nothing read it. Fail-open: any error -> False."""
     try:
         if rid in _NEVER_DAMP:
@@ -1625,7 +1625,7 @@ def main():
         sys.stdout.flush()
         # The context is out: now the fire log, then the backoff and the refill rows (see _DEFER_BACKOFF). An ordinary
         # reflex may co-fire with an exact owner-clause advisory; _firelog_data redacts the prompt so the fire log
-        # does not keep its first 120 characters. The fire log goes first (29 Sep, account04/B04 r5): if the process
+        # does not keep its first 120 characters. The fire log goes first (29 Sep, fleet04/B04 r5): if the process
         # dies between the two, the fire is on record and may repeat before its window, which shows in the log,
         # rather than being held off with no record of having fired. A write that fails is named in
         # instinct_emit_errors.tsv instead of vanishing.

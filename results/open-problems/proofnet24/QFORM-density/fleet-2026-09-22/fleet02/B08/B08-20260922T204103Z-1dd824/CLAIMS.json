@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "programme_id": "QFORM-DENSITY-3EIG-20260922",
+  "account": "fleet02",
+  "slot": "B08",
+  "run_id": "B08-20260922T204103Z-1dd824",
+  "classification": "ESSENTIAL_STEP_APPLIED",
+  "full_target_status": "OPEN_NOT_PROVED_NOT_DISPROVED",
+  "continuity_status": "NOT_CLAIMED_FOR_NEW_L3_PLUS_SQUARE_ENDPOINT",
+  "claims": [
+    {
+      "id": "QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1",
+      "status": "PROVED_SUPPORTING_THEOREM",
+      "statement": "For an exact-rank-two original-coordinate cross block C between disjoint physical banks and any fixed row j,column r with Delta_jr=sum_{k!=j,s!=r} det C[{j,k},{r,s}]^2>0, retaining arbitrary same-side quadratic-affine terms and outside original-coordinate conditioning, the output density obeys ||p||_3 <= 3^(2/3) 2^(1/3) Delta_jr^(-1/6)."
+    },
+    {
+      "id": "QFORM-DOUBLE-INCIDENT-RANK2-OUTER-SQUARE-v1",
+      "status": "PROVED_BY_SOURCE_PINNED_SPLICE",
+      "statement": "Under the completed dependence-safe original-coordinate outer-square hypothesis with coefficient a!=0, the same exact-rank-two bank yields ||p_Q||_infinity <= (2^(4/3)+1)sqrt(3)2^(1/4)|a|^(-1/2)Delta_jr^(-1/8)."
+    },
+    {
+      "id": "QFORM-BICOLOOP-GROUPED-EXACT-RANK2-v2",
+      "status": "PROVED_FROM_DESIGNATED_PARTNER_RESULT",
+      "statement": "Applying fleet03/B08 r20's factorized exterior-bank lower bound gives ||p_Q||_infinity < 7.711210/sqrt(|a| gamma) in its exact-rank-two residual branch, improving the prior <10.575 endpoint without single-minor selection."
+    },
+    {
+      "id": "QFORM-BICOLOOP-TOP2-GROUPED-PAYMENT-v1",
+      "status": "PROVED_AUXILIARY_COMPARATOR",
+      "statement": "In the strictly higher-rank fleet03/B08 r20 branch, the top-two SVD truncation H2 has Delta_jr(H2)>0.610403497 gamma^4, so the auxiliary form with H replaced by H2 has the grouped L3 and outer-square bounds <2.845475 gamma^(-2/3) and <7.711506/sqrt(|a|gamma), respectively. No bound for the original higher-rank form is inferred by discarding its tail."
+    }
+  ],
+  "first_unpaid_implication": "QFORM-DIFFUSE-BICOLOOP-TAIL-STABILITY-v1: transfer the grouped top-rank-two payment across the source-pinned cross tail ||H-H2||_HS<sqrt(329/3218176)gamma without moments or spectral-coordinate conditioning, or give a genuine product-source falsifier.",
+  "designated_partner_applied": {
+    "account_slot": "fleet03/B08",
+    "run_id": "20260922T201956Z-fleet03-B08-qform-diffuse-r20",
+    "math_commit": "d5547a484fcc9b62341d80e9ba902cbe2e484284",
+    "result_ids": [
+      "QFORM-BICOLOOP-NEAR-RANK2-SPECTRAL-GAP-v1",
+      "QFORM-BICOLOOP-EXTERIOR-RANKONE-COMPRESSION-v1"
+    ]
+  }
+}

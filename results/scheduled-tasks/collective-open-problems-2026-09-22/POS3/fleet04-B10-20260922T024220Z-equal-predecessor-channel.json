@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "directive": "COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z",
+  "campaign": "POS3",
+  "account": "fleet04",
+  "slot": "B10",
+  "run_id": "20260922T024220Z-B10-POS3-r39",
+  "outcome": "ESSENTIAL_STEP_APPLIED",
+  "parent_status": "OPEN_NOT_PROVED",
+  "inherited_finite_frontier": "n_bal=14 unchanged",
+  "execution_context": "WITHOUT_VERIFIED_BRAIN",
+  "source_repository": "yspennstate/math-open-problems",
+  "source_commit": "6460577837a27323108024964ad13d4f9a11f96a",
+  "source_report": "proofnet24/collective-POS3/fleet04/B10/20260922T024220Z-B10-POS3-r39/REPORT.md",
+  "source_report_blob": "c1b4721b079ea67e9176948c7f5ea4cc179c79f3",
+  "verifier_source_blob": "ef91a9ed51b2d6291f6c2bb49db48af613f71fa7",
+  "verifier_output_blob": "5ecc2c075448d0b3dd228b01bdeca376716bc4d5",
+  "named_other_account_result": {
+    "worker": "fleet01/B11",
+    "path": "proofnet24/collective-POS3/fleet01/B11/20260922T021210Z-b11-pos3-exchange-r11/REPORT.md",
+    "blob": "5fdf6f70d35fee1011b67c217b9e177fb197e81a",
+    "applied_fact": "endpoint exact identity p_xy=1-(Q+R)/(2E); in the equal-predecessor branch the new deletion channels refine E-Q into positive first-successor channels and R into the dual negative-channel total"
+  },
+  "essential_step": "For any incomparable equal-predecessor pair a,b, deleting a,b yields common-left insertion intervals of lengths r,s and exact fiber defect A_tau-B_tau=min(r,s)(s-r). The positive defect partitions over canonical first-successor Hasse blockers z of a, each channel lying inside the event a<z<b. In a width-at-most-three no-balanced candidate with a before b in the common strong-majority order, either one such blocker lies strictly between a and b in that order, giving a strictly shorter extreme incomparable span, or there are exactly two positive Hasse blockers after b and at least one channel has mass >E/6.",
+  "first_boundary_application": "For the inherited first-boundary sibling blockers s1,s2, if no lower distinguisher exists then Pred(s1)=Pred(s2), so the theorem forces span descent or a second two-cover fork. In the second-fork case width three forces the original endpoint y to be poset-below at least one new blocker.",
+  "next_missing_step": "Couple lower-distinguisher and span-descent/fork-escalation branches with delayed distinguishers plus the simultaneous >E/3 three-chain heavy slices and >E/81 central cells; prove finite escalation forces a balanced pair, a four-antichain, a proper autonomous nonchain, or a flux contradiction.",
+  "claims_not_made": [
+    "POS3 solved",
+    "finite frontier moved",
+    "novelty or priority",
+    "brain verified"
+  ]
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "claim_id": "A077-COMPLETE-EVENT-SPECTRUM-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every Boolean h on a finite uniform shared cube, event A contained in {h=1} of probability 0<p<=1/2, and balanced Boolean V on independent private inputs, F=h+1_A(V-1) satisfies H(F)<=pH(V)+2H(h)+(3/4)H(1-2*1_A)+(15/2)I(1-2*1_A), in bits. Its actual shared influence J satisfies I(h)<=2J and I(1-2*1_A)<=2J, while its private influence is pI(V). Thus supplied nonnegative carrier/event FEI rates Ch,Ce transfer at max(Cchild,4Ch+(3/2)Ce+15) through finite balanced fresh-coordinate towers. For W_A equal to a private sign on A and 1 elsewhere, the universal optimal shared-only rate K* and Boolean FEI rate C* obey C*<=K*<=2C*, allowing infinity.",
+    "hypotheses": [
+      "Uniform finite cubes; shared and private variables disjoint",
+      "A subset of h-positive vertices; 0<p<=1/2",
+      "V balanced; all mean/dummy and terminal rows retained",
+      "Numeric class closure requires supplied nonnegative carrier and event FEI certificates; no arbitrary-event certificate is assumed"
+    ],
+    "statement_sha256": "1efa805d5d6903430571d93310e74c5fc3af99df7b5b88f471e5d44c832ccb63",
+    "contributors": [
+      "A077"
+    ],
+    "proof_source": "agents\\A077\\runs\\20261027T084958Z-fleet04-A077-sparse-defect-towers\\PROOF.md",
+    "proof_dependencies": [
+      "Elementary finite Gibbs inequality, Parseval, edge isoperimetry (induction supplied), ln2>=2/3; no threshold/percolation theorem used"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROOF_CHECKED_EXACT_FINITE_VALIDATION_REVIEW_PENDING",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": "Universal supplied event/carrier source admission from the same unused original influence; already FEI-equivalent for constant carrier and one private sign. No full FEI proof.",
+    "next_consumers": [
+      "A076",
+      "A078",
+      "A092",
+      "A094",
+      "B20"
+    ]
+  }
+]

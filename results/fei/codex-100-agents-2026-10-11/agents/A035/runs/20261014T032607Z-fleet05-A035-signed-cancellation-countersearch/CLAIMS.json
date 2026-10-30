@@ -1,0 +1,93 @@
+[
+  {
+    "claim_id": "A031-LOSSLESS-THREE-STATE-COLLISION-REFUND",
+    "version": 1,
+    "exact_statement": "For every disjoint equal-width tribes sign f=2 product_(b=1..t)(1-A_w)-1, w,t>=1, q=2^-w,s=1-q,c=2s^t-1 and e=2q s^(t-1), the normalized derivative/reference pair mu_i(T)=p_(T+i)/e and r_i(T)=p_T+p_(T+i) has a lossless three-state sufficient statistic C_i: empty T, nonempty T avoiding the queried block, or T meeting its retained coordinates. Its laws are mu_C=(e,2q-e,1-2q) and r_C=(c^2+e^2,e(2q-e)(s^2+q^2)/q^2,2e(1-2q)), and D(mu_i||r_i)=D(mu_C||r_C). Therefore M_i/e=e log2((c^2+e^2)/e^2)+(2q-e)log2((s^2+q^2)/q^2)+1-2q. For w>=4,t=2^w, M/I<=1+6w2^-w<=5/2, whereas the normalized non-Boolean product law Bernoulli(1/64)^tensor64 has M/I=6. Boolean spectators preserve the old sufficient statistic and old row cost, retaining their own terminal entropy. For an arbitrary Boolean seed g with at least two fresh parity bits, tensor copies and k point-activation controls, the nonempty-residual-core flag refunds exactly k in each old data divergence; the conditional seed divergence is unchanged. A sufficient seed statistic composed with this flag remains lossless, but no universal payment for arbitrary seed divergence is asserted.",
+    "hypotheses": [
+      "Finite uniform physical cubes, genuine Boolean factor expansion; all blocks disjoint",
+      "w,t positive integers; bound 5/2 requires w>=4 and t=2^w",
+      "Normalized Fourier coefficients; entropy and KL in bits; zero states omitted by continuity",
+      "Spectators and activation variables are actual disjoint Boolean variables; arbitrary terminal core costs retained"
+    ],
+    "statement_sha256": "4b61c928556eaeac2ee1dc25855388a329b88e3581e259222f8dc7a52b974220",
+    "contributors": [
+      "fleet05/A031"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A031\\runs\\20261014T011913Z-fleet05-A031-convolution-identity\\DERIVATION.md",
+      "sha256": "2dc2adbbf77364e16dc64c0c75f44745d84bf82a7af723353a087fbe15b6b933"
+    },
+    "proof_dependencies": [],
+    "review_records": [
+      {
+        "reviewer": "fleet05/A035",
+        "verdict": "ACCEPT_PARTIAL_SCOPE_ONLY",
+        "scope": "DERIVATION sections1-4: three-state laws/sufficiency, balanced5/2 bound and guards; activation clause and A090-dependent degree corollary excluded",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A035\\runs\\20261014T032607Z-fleet05-A035-signed-cancellation-countersearch\\A031_SCOPED_REVIEW.md",
+        "sha256": "23ebdbf69e79b4b850c897e0d79a6cb123a44c8e9ae9cb40881def2c3b3c692e",
+        "method": "Independent signed expansion/pivotal proof, exact all-coordinate laws and physical spectral conservation",
+        "contributor_conflict": false,
+        "shared_registry_adoption": "PENDING_B20"
+      }
+    ],
+    "status": "PARTIALLY_INDEPENDENTLY_RECONSTRUCTED_FULL_RECORD_NOT_ACCEPTED",
+    "supersedes": [],
+    "refutes": [],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "A090",
+      "A096",
+      "A001",
+      "A073",
+      "A033",
+      "A035",
+      "A088",
+      "A094",
+      "A099",
+      "B07",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A035-LOSSLESS-SIGNED-COUNT-COLLISION-TRACE",
+    "version": 1,
+    "exact_statement": "For every even m>=2, L>=1, core point y*, and any physical selector-only restriction of the shared-phase point-surgery Boolean family in DERIVATION.md, the normalized selector derivative/reference laws mu,r have a physically defined signed count trace C with at most2+8(F+1)(J+1) states (F other free selectors, J fixed-one selectors). C records the core quadratic/point phase type, queried bent sign, whether another selector spectral frequency is present, and counts of positive bent signs in the two module groups. The actual signed row likelihood is constant on each C fiber, so D(mu||r)=D(mu_C||r_C) with the complete normalized laws in equations(6)-(7). The exact oriented price d[log2(1/d)-D] is unchanged, and Boolean spectator laws tensor both references identically while their H/I remain in the terminal ledger. The complete joint reference uses one physical coordinate marginal d_i/I. Dropping the signed module counts is not sufficient: in the actual twelve-bit m=2,L=2,y*=1 first-selector witness two rows in one reduced fiber have likelihoods288/317 and800/493, and omitted conditional KL is between0.126000433969 and0.126000433970 bits. This proves lossless structural compression and a count-deletion failure, not a universal influence payment or FEI.",
+    "hypotheses": [
+      "Uniform Boolean family and actual selector histories in DERIVATION section1",
+      "No core/data exposure during the asserted prefix; identical four-bit private bent modules",
+      "Bits, exact complete mu/r laws; signed amplitudes kept before squaring",
+      "No code-length payment inferred from state count; other-coordinate and spectator terminal costs retained"
+    ],
+    "statement_sha256": "e7c5715bc35efcba9af5d36912e5cb93666ef7b36cd4fc6b012bef541c589693",
+    "contributors": [
+      "fleet05/A035"
+    ],
+    "proof_source": {
+      "path": "~\\brain_workers\\FEI100_20261011\\agents\\A035\\runs\\20261014T032607Z-fleet05-A035-signed-cancellation-countersearch\\DERIVATION.md",
+      "sha256": "fa12287b0faf838c480e096682c546ffec396880f74b7b10e8c680d45db95454"
+    },
+    "proof_dependencies": [
+      "Self-contained signed factor proof and generic KL chain rule in DERIVATION sections1-5",
+      "A035-SHARED-PHASE-COLLISION-LEDGER v1: explicit family and terminal formulas; needed full-carrier and normalization facts reconstructed here",
+      "A031-LOSSLESS-THREE-STATE-COLLISION-REFUND v1 provides motivation; only sections1-4 reviewed; its paid bound is not a premise for new trace"
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_SCOPED_TRACE_AND_EXACT_REFUTATION_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      "Unattributed extension that the constant-size core/queried-sign/other-selector flag remains sufficient after discarding all signed factor counts"
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B07 lead",
+      "A031",
+      "A034",
+      "A096",
+      "A001",
+      "A073",
+      "A088",
+      "A094",
+      "B20"
+    ]
+  }
+]

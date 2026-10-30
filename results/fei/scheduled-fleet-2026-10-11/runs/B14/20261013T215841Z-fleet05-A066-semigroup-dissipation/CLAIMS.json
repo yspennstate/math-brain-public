@@ -1,0 +1,115 @@
+[
+  {
+    "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+    "version": 2,
+    "exact_statement": "For every Boolean sign on a finite uniform cube, with natural logarithms, K=(H_nat-p_empty ln(1/p_empty))/2=integral J, every physical block B obeys 2[K(f)-E_y K(f_y)]=M_B^++C_B^++ell_B. q_T=sum_{U subset B}p_{U union T}=E_y p_y(T), M_T=sum_U p_{U union T}ln(q_T/p_{U union T}), C_T=E_y p_y(T)ln(p_y(T)/q_T), plus omits T=empty, and ell_B=sum_{nonempty U subset B}p_U ln(1/p_U); all terms nonnegative. This identity telescopes for every finite adaptive block-query tree with terminal K retained. ONLY for singleton-query trees, the cumulative paid channel-plus-level charge is <=beta[I(root)-E I(leaf)], beta=2+2/e^2, because C_i^+<=2(Inf_i-p_{i}) and |hat f({i})|<=Inf_i. No such price is asserted for arbitrary block-query trees. Also 0<=B_nat-R_nat<=(1+2/e)I; R_nat=sum_i M_i^+, B_nat=sum_i H_nat(S_i|S_without_i). For F_m=y product_j g(x^(j)) on disjoint copies, R_nat(F_m)=m B_nat(g), I(F_m)=m I(g)+1. Hence the optimal universal constants for R_nat/I and B_nat/I coincide. A universal R_nat<=A I implies FEI bits constant (A+2)/ln2 via C018; A remains unproved.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; zero-mass log terms vanish",
+      "Actual physical restrictions; influence prices only for singleton queries unless explicit D_ref retained",
+      "Finite trees; terminal K retained"
+    ],
+    "statement_sha256": "f4e17fe2ea1958f354c32e260e8ffc5a5ae95c5c61abab893f0c307994216644",
+    "contributors": [
+      "fleet05/A066",
+      "fleet05/A088 (v1 scope objection and countercertificate; no acceptance of v2 asserted)"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-HEAT-ENTROPY-IDENTITY",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T214539Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Prior source-bound A067/A088 acceptance; finite-cube endpoint integrability and identity only."
+      },
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261011T233317Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Only sections 1-3 all-block identity, singleton proofs, and exact character/tensor admission. Unqualified serialized block-tree price rejected; replaced by v2."
+      }
+    ],
+    "review_records": [
+      {
+        "reviewer": "A088",
+        "review_source": "~\\brain_workers\\FEI100_20261011\\agents\\A088\\runs\\20261012T024518Z-fleet05-A088-booleanity-referee\\REPORT.md",
+        "reviewed_version": 1,
+        "verdict": "GAP_SCOPE_CLARIFICATION on v1; singleton components valid; new v2 not yet reviewed"
+      }
+    ],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1
+      }
+    ],
+    "refutes": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1,
+        "scope": "Serialized unqualified cumulative channel-plus-level <=(2+2/e) influence drop for all block-query trees",
+        "witness": "n128 Boolean point defect, whole relevant block; proper-block variant by dummy coordinate",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-fleet05-A066-semigroup-dissipation\\out\\CHECK_FULL.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B14",
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  },
+  {
+    "claim_id": "A066-BLOCK-REFINEMENT-HEAT-TRANSFER",
+    "version": 1,
+    "exact_statement": "For every Boolean sign and physical block B, any singleton refinement querying exactly B with the same actual children satisfies C_B^++ell_B=P_ref+D_ref, D_ref=R_ref-M_B^+, where R_ref=sum_internal w M_i^+ and P_ref=sum_internal w(C_i^++ell_i)<= (2+2/e^2)I_B. D_ref is signed and must be retained in any block-tree payment. For f_n=1-2 indicator of one vertex, I=n2^(1-n), q=2^-n, whole-cube block M_B^+=C_B^+=0, ell_B/I=4(1-1/n)(1-q)ln2. A complete singleton refinement has R_ref/I=C_ref^+/I=[2-(4/n)(1-q)]ln2, L_ref/I=(4/n)[1-(n+1)q]ln2, P_ref/I=2(1-2q)ln2. Thus the block price tends to 4ln2, refined paid price to 2ln2, and retained transfer to 2ln2. At n=128, ell_B/I>11/4>2+2/e; appending an irrelevant coordinate produces the same obstruction with B a proper ambient subset. No universal price of the retained transfer is asserted.",
+    "hypotheses": [
+      "Finite uniform cube; Boolean outputs in {-1,1}",
+      "Natural logarithms; zero-mass log terms vanish",
+      "Actual physical restrictions; influence prices only for singleton queries unless explicit D_ref retained",
+      "Finite trees; terminal K retained"
+    ],
+    "statement_sha256": "93233016c30b4eaee35cf35d050fb05743b386e9d130e0e784ad8aafa8f8b335",
+    "contributors": [
+      "fleet05/A066"
+    ],
+    "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+    "proof_dependencies": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 2,
+        "proof_source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-fleet05-A066-semigroup-dissipation\\DERIVATION.md",
+        "acceptance_scope": "Author-proved; pending independent review"
+      }
+    ],
+    "review_records": [],
+    "status": "AUTHOR_PROVED_PENDING_INDEPENDENT_REVIEW",
+    "supersedes": [],
+    "refutes": [
+      {
+        "claim_id": "A066-POSITIVE-RESTRICTION-HEAT-LEDGER",
+        "version": 1,
+        "scope": "Serialized unqualified cumulative channel-plus-level <=(2+2/e) influence drop for all block-query trees",
+        "witness": "n128 Boolean point defect, whole relevant block; proper-block variant by dummy coordinate",
+        "source": "~\\brain_workers\\FEI100_20261011\\agents\\A066\\runs\\20261013T215841Z-fleet05-A066-semigroup-dissipation\\out\\CHECK_FULL.json"
+      }
+    ],
+    "first_unproved_line": null,
+    "next_consumers": [
+      "B14",
+      "A067",
+      "A070",
+      "A064",
+      "A088",
+      "A094",
+      "B06",
+      "B20"
+    ]
+  }
+]

@@ -6,7 +6,7 @@
 
 ## 1. What is proved
 
-The recent oriented-cancellation report recovers one half of the leading dependence KL on the sparse one-point suspension. It correctly warns that independently summing binary event certificates can reuse the same credit. The recent restriction report preserves full KL through an exact signed multiscale ledger. The separate recursive-majority obstruction proves that individually labelled low Fourier levels plus a merged tail do not recover enough dependence information. These are the starting points, not claims resolved here. [Oriented-cancellation report](https://github.com/yspennstate/math-open-problems/blob/a83d4009cc98aeb739af4f40b1c2cfa8be7269d0/proofnet24/P03-fei/fleet-2026-09-22/account02/B08/B08-20260922T103745Z-0f440e/REPORT.md), [restriction ledger](https://github.com/yspennstate/math-open-problems/blob/b293d016f9bd94819fb11385986608b8acc0b83d/proofnet24/P03-fei/fleet-2026-09-22/account01/B15/b15-20260922T103236Z-restriction-iprojection-chain/REPORT.md), [coefficient-symbol correction](https://github.com/yspennstate/math-open-problems/blob/3a5fccff414043be05a0c7f2f219dabd9b44708b/proofnet24/P03-fei/fleet-2026-09-22/account01/B15/b15-20260922T103236Z-restriction-iprojection-chain/CORRECTION.md), [low-level projection barrier](https://github.com/yspennstate/math-open-problems/blob/bff0d7b6c21485f386841c42582eb04f32705046/proofnet24/P03-fei/fleet-2026-09-21/account03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md).
+The recent oriented-cancellation report recovers one half of the leading dependence KL on the sparse one-point suspension. It correctly warns that independently summing binary event certificates can reuse the same credit. The recent restriction report preserves full KL through an exact signed multiscale ledger. The separate recursive-majority obstruction proves that individually labelled low Fourier levels plus a merged tail do not recover enough dependence information. These are the starting points, not claims resolved here. [Oriented-cancellation report](https://github.com/yspennstate/math-open-problems/blob/a83d4009cc98aeb739af4f40b1c2cfa8be7269d0/proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md), [restriction ledger](https://github.com/yspennstate/math-open-problems/blob/b293d016f9bd94819fb11385986608b8acc0b83d/proofnet24/P03-fei/fleet-2026-09-22/fleet01/B15/b15-20260922T103236Z-restriction-iprojection-chain/REPORT.md), [coefficient-symbol correction](https://github.com/yspennstate/math-open-problems/blob/3a5fccff414043be05a0c7f2f219dabd9b44708b/proofnet24/P03-fei/fleet-2026-09-22/fleet01/B15/b15-20260922T103236Z-restriction-iprojection-chain/CORRECTION.md), [low-level projection barrier](https://github.com/yspennstate/math-open-problems/blob/bff0d7b6c21485f386841c42582eb04f32705046/proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md).
 
 This report constructs **one normalized hybrid reference law** on the entire spectral set. Its likelihood ratio is a single entropy-variational test. For recursive ternary majority, keeping only the bottom logarithmically many physical hierarchy scales already supplies enough KL to pay the balanced Bellman deficit at center 6. A two-sided version keeps logarithmically many bottom scales and finitely many top scales and recovers the full dependence KL to any prescribed additive \(\varepsilon I\) accuracy.
 
@@ -68,7 +68,7 @@ The exact occurrence credit is
 K_m=D_2(P_m\Vert Q_m)=H_{\max}(r,\ldots,r)-H(P_m).
 \tag{2.3}
 \]
-This normalization and I-projection identity are the existing source input. [Exact occurrence I-projection](https://github.com/yspennstate/math-open-problems/blob/4bd6d05f1eb8325d665f2748f4d74dcee2550a04/proofnet24/P03-fei/fleet-2026-09-21/account02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md).
+This normalization and I-projection identity are the existing source input. [Exact occurrence I-projection](https://github.com/yspennstate/math-open-problems/blob/4bd6d05f1eb8325d665f2748f4d74dcee2550a04/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md).
 
 ## 3. Exact local reference law at every physical scale
 
@@ -109,7 +109,7 @@ K_m=\sum_{j=1}^m\mu^{m-j}d_j.
 }
 \tag{3.3}
 \]
-The general exact hierarchy identity is already available project-locally. What follows adds a specific normalized variational certificate and a quantitative truncation theorem, rather than treating (3.3) alone as progress. [Existing hierarchy identity](https://github.com/yspennstate/math-open-problems/blob/2bf247373576eb406ca91bb3ea5f3ce5e5ab8588/proofnet24/P03-fei/fleet-2026-09-21/account04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md).
+The general exact hierarchy identity is already available project-locally. What follows adds a specific normalized variational certificate and a quantitative truncation theorem, rather than treating (3.3) alone as progress. [Existing hierarchy identity](https://github.com/yspennstate/math-open-problems/blob/2bf247373576eb406ca91bb3ea5f3ce5e5ab8588/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md).
 
 ## 4. One hybrid law prevents repeated spending
 

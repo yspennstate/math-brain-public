@@ -6,7 +6,7 @@ The current FEI scientific checkpoint is `FEI-20260922T105045Z-assist-v2`. Alway
 
 The FEI programme's control revision `2026-09-22.3` is provenance for the issued scientific programme. Later owner controls retain priority. The latest observed revision is `2026-09-22.4`, which changes the active target; these FEI continuation notes do not override it. Continue or resume FEI assignments only when current owner scope authorizes FEI. Publishing a mathematical checkpoint does not reactivate a suspended programme or prove native task adoption.
 
-This protocol applies to **account01–account04, B01–B20: all eighty mathematical workers**. When FEI is the authorized active target, every worker does FEI mathematics. Memory synchronization is a compact opening and closing step, not a separate job, waiting ritual, or replacement for proof work. Keep the existing hourly check-in and finish receipt; add the fields below to those records instead of creating duplicate reporting tasks. Keep task email and push notifications off. A later direct owner stop or access restriction still takes priority.
+This protocol applies to **fleet01–fleet04, B01–B20: all eighty mathematical workers**. When FEI is the authorized active target, every worker does FEI mathematics. Memory synchronization is a compact opening and closing step, not a separate job, waiting ritual, or replacement for proof work. Keep the existing hourly check-in and finish receipt; add the fields below to those records instead of creating duplicate reporting tasks. Keep task email and push notifications off. A later direct owner stop or access restriction still takes priority.
 
 ## 1. One current entry point; immutable evidence underneath
 

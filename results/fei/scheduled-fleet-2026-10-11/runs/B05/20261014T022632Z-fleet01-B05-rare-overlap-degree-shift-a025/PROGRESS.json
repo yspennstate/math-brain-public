@@ -1,0 +1,55 @@
+{
+    "schema": "fei-run-progress/2",
+    "stream": "B05",
+    "run_id": "20261014T022632Z-fleet01-B05-rare-overlap-degree-shift-a025",
+    "primary_packet_id": "A025",
+    "packet_ids": [
+        "A025"
+    ],
+    "attempt_id": "B05-A025-OVERLAP-DEGREE-SHIFT-01",
+    "claim_version": "B05-OVERLAP-SINGLETON-PAYMENT-v1",
+    "gap_ids": [
+        "OVERLAP_PRODUCT",
+        "B05_RARE_REFUNDS"
+    ],
+    "source_control_revision": "FULL-FEI-ONLY-20261012 / 2026-10-12.1",
+    "source_control_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+    "assignment_blob": "05447e6d999437bb82a266b427bd76a4b37266b6",
+    "relied_on_prior_artifacts": [
+        "B05 singleton theorem canonical b32a2ebfb4250805a722e9ab2839efcb2dfbe1f4",
+        "B19 independent review canonical 110b6964e3f7629d81f7c0cb91651c198a41f413"
+    ],
+    "prior_status": "A023 restricted disjoint theorem accepted; shared-variable overlap open; A025 distinct family open",
+    "new_status": "A025 AUTHOR_PROVED_COUNTERFAMILY_PENDING_INDEPENDENT_REVIEW",
+    "mathematical_delta": "Constructed a two-parameter genuine Boolean rare-event family proving that one shared coordinate can shift an unbounded block of degree-two mass into singleton potential, defeating every fixed shared-pivotal payment and the one-sided disjoint-factor Phi law. Derived exact reveal-order refunds.",
+    "acceptance_evidence": [
+        "REPORT.md",
+        "RARE_COUNTERFAMILY.tex",
+        "REFUTED_STATEMENT.json",
+        "CHECK.py",
+        "CHECK.out"
+    ],
+    "remaining_obstacle": "No degree-shift-aware signed potential has been proved to telescope through arbitrary reused-coordinate hierarchies; exact mismatch/KL payment remains open.",
+    "next_action": "Track the x-containing first-order slice through actual revelation and test a signed slice potential on two nested reused coordinates.",
+    "consumers": [
+        "A023",
+        "A064",
+        "A075",
+        "A080",
+        "A092",
+        "B20"
+    ],
+    "independent_reviewers": [
+        "A087",
+        "A094"
+    ],
+    "delivery_status": {
+        "state": "DELIVERED_AND_EXACT_READBACK_VERIFIED",
+        "canonical_full_bundle_commit": "d83a6113b9655dc828332a5c86f5ed45d3a50ba9",
+        "brain_full_bundle_commit": "0e44a9d915b0e3586104092f648e201cb70e8ba0",
+        "verified_files": 9,
+        "canonical_native_ingestion": "NOT_CLAIMED",
+        "brain_native_ingestion": "NOT_CLAIMED"
+    },
+    "full_fei_status": "OPEN"
+}

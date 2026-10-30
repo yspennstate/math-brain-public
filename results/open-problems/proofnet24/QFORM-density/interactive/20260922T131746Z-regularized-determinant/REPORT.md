@@ -240,11 +240,11 @@ This combines the partition theorem with the newly supplied regularized graph ar
 
 The existing separable-phase proof is at math-open-problems commit 773b7fb6f0e6a8142066f0bac08d228dfc164fdb, path proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md. Its constant contains |det Lambda|^(-1/r); the present Section 7 does not pay the extra tiny eigenvalues, at the price of the stronger explicit leverage threshold 1/32.
 
-The account02/B08 update at commit 84657e690f8411d99602ddc772b622686c3874ed, path proofnet24/QFORM-density/fleet-2026-09-22/account02/B08/B08-20260922T124007Z-r11/REPORT.md, supplies whitening and an independent passing review of that earlier separable-phase theorem. It does not establish the current regularized determinant result, which needs its own review.
+The fleet02/B08 update at commit 84657e690f8411d99602ddc772b622686c3874ed, path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md, supplies whitening and an independent passing review of that earlier separable-phase theorem. It does not establish the current regularized determinant result, which needs its own review.
 
-The account02/B02 cross-block theorem at commit 400f82c8b98fc5623f567581b6ccb0b4298974e8 supplies a complementary exact-rank Fourier estimate. Its product of all nonzero cross singular values can deteriorate under tiny extra directions. The current regularization eliminates that issue in the quantified branches of Sections 6--7, but has a weaker general decay exponent without the leverage hypothesis.
+The fleet02/B02 cross-block theorem at commit 400f82c8b98fc5623f567581b6ccb0b4298974e8 supplies a complementary exact-rank Fourier estimate. Its product of all nonzero cross singular values can deteriorate under tiny extra directions. The current regularization eliminates that issue in the quantified branches of Sections 6--7, but has a weaker general decay exponent without the leverage hypothesis.
 
-The account03/B10 heavy-row handoff, report commit c1af196adade03e07456c8f6e783f952b0fa0e8d, identifies an isotropic heavy coordinate with dependent residual leakage. That dependence is not removed by this report.
+The fleet03/B10 heavy-row handoff, report commit c1af196adade03e07456c8f6e783f952b0fa0e8d, identifies an isotropic heavy coordinate with dependent residual leakage. That dependence is not removed by this report.
 
 ## 9. Remaining full-target implication
 

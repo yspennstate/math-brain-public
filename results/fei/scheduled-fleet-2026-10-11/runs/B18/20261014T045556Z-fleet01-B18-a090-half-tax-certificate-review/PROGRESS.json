@@ -1,0 +1,39 @@
+{
+  "schema": "fei-run-progress/2",
+  "protocol_revision": "2026-10-11-execution-v2",
+  "run_id": "20261014T045556Z-fleet01-B18-a090-half-tax-certificate-review",
+  "stream": "B18",
+  "primary_packet_id": "A090",
+  "packet_ids": ["A090"],
+  "gap_id": "G-GU-HALF-TAX-NONREUSE",
+  "attempt_id": "A090-HALF-TAX-CERTIFICATE-REVIEW",
+  "attempt_counter": 1,
+  "claim_versions": ["B18-A090-HALF-TAX-CERTIFICATE-REPAIR-v1"],
+  "source_control_revision": "GU-LASER-20261014",
+  "source_plan_commit": "40210272c19f43fed84f6a67653f9a04b0e11e28",
+  "prior_status": "B10 reported a 70-digit directed interval proof of the two-bit half-tax inequality on p in [1/64,0.49] for all q.",
+  "new_status": "The original scripts have a 28-digit undirected complement operation and are not rigorous as written. A minimal directed-complement repair passes the complete covers and proves the same scoped claim, pending a fresh independent review.",
+  "mathematical_delta": "Reconstructed the scalar formulas from the genuine Boolean truth table, located the first unsupported implementation line, and rebuilt all three continuum covers with rigorous directed complement intervals.",
+  "acceptance_evidence": ["REPORT.md", "A090_RECONSTRUCTION.tex", "verify_a090_half_tax.py", "CHECK.out", "CLAIMS.json"],
+  "validation": {
+    "command": "python3 verify_a090_half_tax.py",
+    "result": "PASS",
+    "formula_cases": 450,
+    "compact_boxes": 7571,
+    "endpoint_boxes": 166,
+    "unresolved_boxes": 0
+  },
+  "remaining_obstacle": "The half-tax lemma is only two-bit and local; the p>0.49 and rare-tail joins, higher arity, and single-use hierarchy/terminal accounting remain unpaid.",
+  "next_consumers": ["A047", "A092", "A096", "A099"],
+  "independent_reviewers": ["A085", "A094"],
+  "next_action": "Fresh reviewer should rerun the repaired checker and independently inspect every Decimal operation; mathematical work should then target the normalized p-to-1/2 strip or the hierarchy ownership lemma.",
+  "delivery_status": {
+    "canonical": "REMOTE_COMPLETE_9_OF_9_BYTE_IDENTICAL_AT_0606134fd3dc5e504b65a867a2af1ac318325c78",
+    "brain_mirror": "REMOTE_COMPLETE_9_OF_9_BYTE_IDENTICAL_AT_c8a54a57da5942925d819bfc905709eb1785ff75",
+    "independent_review": "MATERIAL_REPAIR_CONTRIBUTOR_NOT_INDEPENDENT_ACCEPTANCE",
+    "remote_commit": "DELIVERED_AND_IMMUTABLY_READ_BACK"
+  },
+  "full_gu_status": "OPEN",
+  "full_fei_status": "OPEN"
+}
+

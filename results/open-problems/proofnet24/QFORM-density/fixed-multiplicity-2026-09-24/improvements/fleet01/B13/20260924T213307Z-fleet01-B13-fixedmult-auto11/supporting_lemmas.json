@@ -1,0 +1,25 @@
+{
+  "run_id": "20260924T213307Z-fleet01-B13-fixedmult-auto11",
+  "status": "PROVED_SUPPORTING_LEMMAS",
+  "lemmas": [
+    {
+      "id": "QFORM-LPP-SHARP-Q2-HALFPOT-v1",
+      "statement": "For a literal physical crossing block with order-two volume E2>0, arbitrary same-bank phases and cap-one product inputs satisfy sup_a E|Q-a|^(-1/2) <= 8*2^(3/8)*E2^(-1/8).",
+      "proof": [
+        "Sharp product marginals give a d-dimensional linear image cap 2^(d/2)/sqrt(det(LL^T)).",
+        "For p>=2, int |fhat|^p <=4pi/sqrt(p): take m=floor(p/2)>=p/4, identify the 2m power with the density at zero of m independent differences, and use the sharp one-dimensional projection cap.",
+        "Insert these two constants into the source grouped compiler at q=2.",
+        "After literal row-promotion losses, the three envelopes min(1,B/|t|) have B<=pi*2^(7/4)E2^(-1/4), pi*2^(5/4)E2^(-1/4), and 2pi E2^(-1/4).",
+        "The Riesz weighted integral is 8sqrt(B)/sqrt(2pi), giving coefficients 8*2^(3/8), 8*2^(1/8), and 8; the first is largest."
+      ]
+    },
+    {
+      "id": "QFORM-HYPERBOLIC-PAIR-SHARPENED-v1",
+      "source_repair": "Current paper lines 598-600 and baseline lines 472-474 choose a separate original coordinate i_minus with |w_i_minus|>=|w|/sqrt2 on the negative tail. Equal norms |u|=|w| make the repair zero-loss.",
+      "envelope": "p_q(z)<=D^(-1/2)*((15/2)log2+log_+(16 sqrt(D)/|z-v|)).",
+      "half_potential": "sup_a E|q-a|^(-1/2) <= (9+(35/4)log2) D^(-1/4).",
+      "half_potential_proof": "Normalize D=1, split at radius 1/64. The far part is 8. Centering the translated logarithmic envelope with the half-kernel maximizes the near integral, which is 1+(35/4)log2. Undo output scaling."
+    }
+  ],
+  "scope": "arbitrary rough cap-one product laws; original-coordinate independence only; arbitrary affine terms"
+}

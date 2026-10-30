@@ -1,0 +1,34 @@
+QFORM B01 r43 deterministic/numerical sanity checks
+
+Family B_k has two flat banks of size m=k^4 and one singleton leaf.
+Rows: k*u1, k*u2, k^(-2)*e_z.
+Expected singular values: k, k, k^(-2); product 1.
+Expected largest squared physical cross coefficient: 1/k^2.
+New theorem constant at Pi_3=1: 3*sqrt(2)=4.242640687119286.
+Newest fleet03/B01 local pair+rank2-Schur branch: 64*k.
+
+Executed finite checks:
+
+k=2, m=16
+singular values = [2.0, 2.0, 0.25]
+product = 0.9999999999999999
+max squared cross entry = 0.25
+partner comparison = 128
+new bound = 4.242640687119286
+
+k=3, m=81
+singular values = [3.0, 3.0, 0.1111111111111111]
+product = 1.0
+max squared cross entry = 0.1111111111111111
+partner comparison = 192
+new bound = 4.242640687119286
+
+k=4, m=256
+singular values = [4.0, 4.0, 0.0625]
+product = 1.0
+max squared cross entry = 0.0625
+partner comparison = 256
+new bound = 4.242640687119286
+
+These checks are auxiliary only; the report gives exact analytic formulas and proof.
+STATUS=PASS

@@ -1,4 +1,4 @@
-"""Lean authority is Windows-only, and a build elsewhere says so (account04/B18,
+"""Lean authority is Windows-only, and a build elsewhere says so (fleet04/B18,
 B18-R79-LEAN-POSIX-AUTHORITY-UNREACHABLE-20260929).
 
 On every platform but Windows the executable lease is opened read-only and cannot be held against replacement, so

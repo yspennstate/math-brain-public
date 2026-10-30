@@ -1,0 +1,53 @@
+fleet03/B01 run fleet03-B01-20260923T122915Z-auto11
+QFORM-INDEFINITE-PAIR-PLUS-SQUARE-LOG-v1 deterministic checks
+
+1. Pair-log/square composition.
+Pair envelope A=2sqrt(2)/r + D^(-1/2) log_+(2r^2/(kappa |t-S|)).
+Square small-ball cap c=2sqrt(2)m/sqrt(|lambda|).
+With m<=sqrt(2)/sigma and rho=|lambda|sigma^2,
+L=c sqrt(2r^2/kappa) <= 4sqrt(2) r/sqrt(kappa rho)=q r.
+PASS.
+
+2. Layer-cake integral.
+Integral_0^infinity min(1,L exp(-u/2)) du:
+- L<=1: 2L.
+- L>=1: 2 log L + 2 = 2(1+log L).
+PASS.
+
+3. Optimization.
+a=2sqrt(2), b=2D^(-1/2), q=4sqrt(2)/sqrt(kappa rho).
+R=aq/b=8sqrt(D/(kappa rho)).
+- R<=1: r=sqrt(a/(bq)), qr=sqrt(R)<=1, minimum=2sqrt(abq)=4D^(-1/2)sqrt(R).
+- R>=1: r=a/b, qr=R>=1, minimum=b(2+log R)=2D^(-1/2)(2+log R).
+Both equal 4D^(-1/2) at R=1.
+PASS.
+
+4. Low-R simplification.
+4D^(-1/2)sqrt(8sqrt(D/(kappa rho)))
+=8sqrt(2)D^(-1/4)(kappa rho)^(-1/4).
+PASS.
+
+5. Target-scale universal constant.
+If kappa>=1 and rho>=1, write D=kappa M with M>=1.
+For R<=1, rho>=64M, hence low branch <=4 kappa^(-1/2) M^(-1/2)<=4.
+For R>=1, high branch <=2 M^(-1/2)[2+log(8sqrt(M))].
+Derivative of h(M)=M^(-1/2)[2+log8+(1/2)log M] is
+h'(M)=(1/2)M^(-3/2)[1-(2+log8)-(1/2)log M] <0 for M>=1.
+Thus maximum at M=1:
+2(2+log8)=8.158883083359672 <8.159.
+PASS.
+
+6. Partner-family numerical constants at |c|=1.
+Partner: 22.385*2^(-1/12)=21.128626489379712.
+Present theorem: 2*(2+log8)=8.158883083359672.
+PASS.
+
+7. Scaling.
+Under A -> sA, D -> s^2 D, kappa -> |s|kappa, rho -> |s|rho, so R is invariant and 2D^(-1/2)Psi(R) scales as |s|^(-1), exactly the density scaling.
+PASS.
+
+8. Phase-aligned obstruction preserved.
+No step invokes a pointwise positive-power bound for E exp(itX^2); only the pair logarithmic density envelope, product-projection cap, square small-ball bound, layer cake, and signed-Fejer identity are used.
+PASS.
+
+STATUS=PASS

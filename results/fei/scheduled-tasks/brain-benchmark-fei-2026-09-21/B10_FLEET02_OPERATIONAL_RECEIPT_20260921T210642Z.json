@@ -1,0 +1,62 @@
+{
+  "schema": "brain_fleet_operational_receipt_v1",
+  "account": "fleet02",
+  "slot": "B10",
+  "role": "Benchmark independent validation",
+  "directive": "BRAIN-BENCHMARK-FEI-2026-09-21-01",
+  "observed_utc": "2026-09-21T21:06:42Z",
+  "control": {
+    "fresh_main_commit_before_receipt": "8635540300a12554bc9928caea2ecf969f7c4cd7",
+    "owner_control_revision": "2026-09-21.1",
+    "readme_blob": "0fdb1331d25a60febce1d19645df6b71ab2a9e8c",
+    "pause_or_stop_observed": false,
+    "requirements_blob": "e24271ff24c72f41cb49a85dc7d2c4b8467dc275",
+    "requirements_recovery": "R001-R030 plus fleet02 R031-R086; unavailable historical chat-only/private owner-prompt bodies are not claimed recovered"
+  },
+  "development_context": "WITHOUT_VERIFIED_BRAIN",
+  "full_brain_connected": false,
+  "work": {
+    "current_exact_payloads_reviewed": 4,
+    "b10_math_pass": 3,
+    "b10_math_reject": 1,
+    "aggregate_pass_composition": {
+      "valid_single_semantic_fault": 2,
+      "valid_clean_no_error_control": 1
+    },
+    "current_b10_passed_drafts": 3,
+    "final_bank_acceptance_delta": 0,
+    "non_answer_blocker": "One exact current payload has an accidental independent second premise/domain fault in addition to its intended/local defect. It requires a same-question rewrite and fresh exact B10/B11 review; no additional question count is permitted."
+  },
+  "artifacts": {
+    "private_validation_commit": "a9635c8f257e26c1ddb24207f9115ec32f47f3d8",
+    "private_validation_blob": "012ada4abd5bbdcbf71dc510e52fb042fc5e00cd",
+    "safe_exact_certificate_commit": "dd34f6d0e344bb576b6cdfacb00c2643f4e741f4",
+    "safe_exact_certificate_blob": "f847f119e4dbf7fccb0683dbf5ad313bc1f580b8",
+    "finish_commit": "0eccd7e89f1fcb1f7772e0adfbca66dc8c25a940",
+    "finish_blob": "e27059d95d43925c6be7d1cc2543eb2819cf9080"
+  },
+  "scheduler_inventory": {
+    "scope": "own_account_exposed_only",
+    "managed": 20,
+    "enabled": 20,
+    "hourly_valid": 20,
+    "allocation": {"brain": 8, "benchmark": 5, "fei": 7},
+    "mutations_by_b10": 0,
+    "deficits_reportable_to_b20": 0,
+    "managed_task_email_push_flags": "off",
+    "account_level_notification_preference": "NOT_EXPOSED"
+  },
+  "model_effort": {
+    "model": "GPT-5.6 Sol",
+    "model_source": "self_report_runtime",
+    "requested_effort": "maximum actually supported",
+    "configured_effort": "NOT_EXPOSED",
+    "reasoning_tokens": null,
+    "provider_thinking_time": null,
+    "exposed_usage": null
+  },
+  "elapsed_work_seconds_through_receipt_snapshot": 730,
+  "elapsed_is_not_pure_thinking": true,
+  "privacy_secret_review": "PASS_SCOPED_NONANSWER_RECEIPT: no item-level truth mapping, fault location, repair, witness, counterexample, plaintext gold, generation secret, decryption material, credentials, scheduler identifiers, machine paths, raw transcripts, email, Drive data, or public-posting payload.",
+  "downstream": "B07 global registry/family/provenance distinctness, B11 exact-current-payload difficulty/leakage/near-duplicate review, approved custody/encryption, and final release/sealing remain separate gates."
+}

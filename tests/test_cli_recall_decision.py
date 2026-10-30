@@ -1,6 +1,6 @@
 """The recall command can show retrieve()'s decision, and it never creates a store.
 
-Scheduled audit account04/B01 r3 (29 Sep 2026), B01-R1-CLI-DECISION-TRACE-PROJECTION-20260929-01:
+Scheduled audit fleet04/B01 r3 (29 Sep 2026), B01-R1-CLI-DECISION-TRACE-PROJECTION-20260929-01:
 `math-brain recall` called search(), which forces the support threshold to 0 and returns hits
 only, so no abstention, reason, exclusion or trace ever reached its output; and it opened the
 store writable, so a mistyped path became a new empty store.

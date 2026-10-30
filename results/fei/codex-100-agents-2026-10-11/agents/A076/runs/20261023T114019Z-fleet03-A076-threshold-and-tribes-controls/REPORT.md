@@ -1,0 +1,31 @@
+# exact target, quantifiers, hypotheses and units
+
+Derive an original-source continuation account for the actual two-adjacent-positive-point edited carrier, arbitrary correlated private Boolean profiles, uniform measure and entropy in bits. Permit every finite adaptive mixed continuation and arbitrary stopping, retaining actual siblings and complete terminal and input bills. Numeric source admission uses original odd central majority d>=5, explicitly ADDITIONAL original carrier quota96I0, and an already paid prefix with shared prices5/15/38. It is not a claim that the prior small collision bank alone pays this continuation.
+
+# sources actually read, revisions and theorem locators
+
+SOURCE_MANIFEST.json pins current BOARD/B16 direction, A077 scoped v9 review, A078 entire third-query proof, inherited v9 source and the supplied threshold paper. Theorem A equation(6), pages1-2, gives H<=C_reg D<=C_reg I with C_reg<8.937<9 for regular functions, explicitly including thresholds. It is an external supplied theorem dependency, not independently reproved or proved by our finite cases. Earlier campaign/percolation baseline is prior-stage provenance. Current user deadline2026-10-23 14:49UTC controls.
+
+# complete derivation or exact first unsupported line
+
+DEPTH_UNIFORM_PROOF.md gives the analytic derivation. Full Fourier expansion yields H=U+Xi+R+Z-1 with Z=E+R-p sum g(mu)+1>=0. The offset is retained on EVERY branch. Original collision K has DeltaXi<=DeltaK even at separation, so every physical query is paid by DeltaU+releaseR+DeltaK+DeltaZ. Telescope without clipping signed rises. Fourier l1 disturbance<=4 and |g prime|<=6 imply Z<=H(actual carrier)+26. The threshold theorem and monotone maximal threshold influence imply Z<=35I0 at EVERY descendant. With prior actual booking L<=58 and Q96I0, Lambda=Q-L-Z>=3I0. Freeze it after handoff. Equations9-10 retain all old debits and show arbitrary continuation; this is enlarged ORIGINAL admission, not renewed child certification.
+
+First unsupported universal line: replacing the supplied hereditary threshold entropy envelope by a general-carrier original influence bound. Non-point/many-profile disturbance control and arbitrary profile/terminal FEI also remain open. New scoped proof is pending independent review; full FEI OPEN.
+
+# executed validation with domain, arithmetic, commands and outputs
+
+Frozen out/FROZEN_SPEC.json preceded search. Pilot PASS: 19992 exact assertions, 17.429s. Main PASS: 321864 assertions, 235.213s; counts {"future_shared_nodes": 960, "handoffs": 128, "mixed_leaves": 2048, "mixed_nodes": 2044, "partial_states": 21384, "queries": 45360, "roots": 24}. Commands: python -X utf8 runs/20261023T114019Z-fleet03-A076-threshold-and-tribes-controls/code/check.py --pilot, then without --pilot. Domain: all ordered profiles on0..1 private bits with majority d5; constants d7; every labeled ternary partial restriction and every remaining coordinate query; no symmetry quotient or escalation. Two fixed donor policies include early guard, three old nonseparator bookings and two further shared queries including separation, both original x1 answers, full terminal H/I, and original-source influence conservation. Integer Walsh, Fraction and rigorous rational-log enclosures; no floating sign decisions. Runtime guards and memory estimate200MB fixed in advance; no job estimated above300MB, no detached work. Cached governor metrics were stale; no fresh resource status is claimed and no shared service was restarted. All research computations have finished.
+
+# proof dependencies and changed downstream conclusions
+
+The exact new Z identity is independent of threshold FEI. The Q96I0 admission depends on the supplied threshold theorem; inherited private curvature/original K and the A078 three-query prefix remain explicit dependencies. A077 independently accepted only the v9 first-query scope; no v10 or whole-bundle acceptance is claimed. Two existing claim bundles advance9->10. Downstream users can eliminate a fixed-depth ladder for this supplied-source family, but must retain the enlarged original quota and cannot infer a consumed-influence bound or unrestricted donor admission.
+
+# one next mathematical action and independent reviewer
+
+Replace the two-point Fourier l1 perturbation bound by an influence-controlled bound for a genuine non-point/many-profile edit, keeping the explicit original carrier quota, old K, all three previous bookings, and complete input/terminal bills. A077/A078 independently reconstruct equations2-10 first; do not repeat a fixed fourth-query case.
+
+# actual persistence receipts or precise save blocker
+
+The named run contains all four protocol files, proof, source manifest, frozen specification, exact outputs and reproducible code. STATUS is exactly two lines; WORKLOG and LEARNED record this stage. Persistence receipts re-read protocol schemas, claim digests and final report and hash artifacts. All files are below20MB. Research writes stayed inside A076; no git, mail, external research index mutation or other-agent write occurred. Supervisor remote copying/adoption remains unverified. Brain self-care is degraded/unverified: stale owner model98.1h, state of mind82.7h and dream33.4h affect confidence in personal/context recall; current instructions and mathematical sources were read directly.
+
+Universal bridge: This stage moves C024 supplied-source history transfer from three paid shared exposures to EVERY finite mixed continuation, including arbitrary later shared depth and separation, by a nonnegative complete mean-sector bank. It adds one explicit original carrier allowance96I0 and retains the SAME collision donor, FIRST4e, oldD0, all three previous shared bookings, and both full input/terminal bills; it does not prove a C019 consumed-influence bound or C018. Exactly remaining are general-carrier hereditary admission and influence-controlled non-point/many-profile perturbations, plus retained profile/terminal FEI. The next non-point edit test is the shortest route toward full FEI because the fixed-depth obstruction is now removed within this structure, while further threshold-depth cases would repeat the same supplied-source mechanism.
