@@ -130,6 +130,7 @@ Earlier papers from the same work, from July to 12 October, are in `papers/publi
 | `results/proofnet24-brain/` | work on a probability correlation problem, three collective rounds and a quadratic-form density problem |
 | `papers/` | papers that came out of this work, and copies of their public repositories |
 | `framework/` | the machinery around the store: shared memory and its nightly consolidation, the prompt hooks, the coordination layer that keeps agents from editing the same files, the supervised fleet |
+| `framework/dreaming/` | the nightly dream: the agenda scanner (`dream.py`), the recall stack and the steps that file the day's records, link them and turn repeated mistakes into reflexes; [its README](framework/dreaming/README.md) says how to run one, and a smaller dream for a new brain is in `examples/field_brain_starter/dream/` |
 
 ## The FEI conjecture
 
