@@ -106,6 +106,14 @@ Run it inside the store's write lease, then read what it prints. A bundle it ref
 every time. A licence string that starts with the wrong word is enough to leave a bundle sitting in the inbox,
 unnoticed, for days.
 
+Two behaviours catch people out. The integration ledger records every draft it has looked at by file name, rejected
+ones included, so a rejected bundle corrected in place is skipped without a word on the next run; save the corrected
+draft under a new name (`bundle_017b.json`) and integrate that. And the integrator reads the store's existing cards
+once, at the start of a run, so a draft that cites by `to_existing_logical` a card landing in the same run has that
+edge skipped as `xrel-unresolved` even when the name is right; land the cited bundle first and the citing one in a
+second run. A wrapper script that stops before it copies the bundle into the inbox (a failed lock or lease check, for
+instance) has landed nothing, whatever its own log says: the ledger line for the draft is the evidence.
+
 ## When to write a new card instead of a link
 
 Most gaps in the store are missing links, not missing cards (see [linking-the-store.md](linking-the-store.md)).
