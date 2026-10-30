@@ -56,3 +56,5 @@ These are in `opus-routes-2026-10-11/`: one folder per route, with its notes, cl
 | `BRAIN_INDEX.md` | an index of the campaign records |
 
 Related work elsewhere in this repository: the earlier attempt in `results/open-problems/proofnet24/P03-fei/`, and the paper *Fourier entropy of threshold functions and their compositions* in `papers/public/fourier-entropy-threshold-functions/`.
+
+The records are kept as the agents wrote them. Some of them link to two repositories, `math-research-brain` and `math-open-problems`, which are private working repositories and cannot be opened from here. The working files behind those links were not published, so read each record for what it says itself.
