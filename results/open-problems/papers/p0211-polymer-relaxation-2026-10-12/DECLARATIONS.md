@@ -4,7 +4,7 @@
 
 Yitzchak Shmalo  
 Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel  
-yitzchak.shmalo@gmail.com
+
 
 ## Acknowledgements and funding
 

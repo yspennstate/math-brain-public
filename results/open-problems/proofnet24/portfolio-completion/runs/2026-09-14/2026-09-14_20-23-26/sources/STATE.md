@@ -25,7 +25,7 @@ NEW VERIFIED MATH to FOLD INTO paper12 (LaTeX-ready, from agents):
 SUPERSEDED false variance reversal: this batch claimed Var(ν_m disk) was log m. Current paper5 instead proves only the Gaussian upper bound Var(ν_m(D))=O(m), with matching lower bound/constant/CLT/LLT open.
 NEW PAPER candidates: paper13 = dynamics (Agent: residual finite-horizon DC1 witnesses COMEAGER on Q^∞ + finite-horizon obstruction to full Problem 7.1 — both rigorous, new). paper14 = RANDOM Toeplitz/Hankel Matrix Spencer joining exact-moments repo + papers 5+12 (Direction A, strongest lead).
 CORPUS/REPOS (Agent 5, gh-token enumerated 21 repos): KEY feeders = toeplitz-hankel-exact-moments (exact even moments, non-crossing/Temperley-Lieb dichotomy vol=1 iff non-crossing else ≤2/3), c_star_algebra, phase_retrieval_omega (least-singular-value, Randomstrasse OP21, Bernoulli obstruction). "doubling" in geometry papers = TOPOLOGICAL double (glue surface) ≠ UDC doubling (false friend). Other repos: quantum-multiverse-theorems, relu-collapse-proof, mp-pruning-universality, RMT_pruning*, adversarial-attacks.
-DIFF-GEO TEXTBOOK: DEFINITIVELY NOT on GitHub (all 21 yspennstate+eshmalo repos enumerated via working GCM token+API). Closest=Doubling-Jamming-Chern-Hamiltonian-on-Triangulated-Surfaces = a research PAPER not a textbook. NEED owner input (repo name / other machine / not-yet-created).
+DIFF-GEO TEXTBOOK: DEFINITIVELY NOT on GitHub (all 21 yspennstate+a collaborator repos enumerated via working GCM token+API). Closest=Doubling-Jamming-Chern-Hamiltonian-on-Triangulated-Surfaces = a research PAPER not a textbook. NEED owner input (repo name / other machine / not-yet-created).
 ARCHITECTURE (Agent 10): 3 focused monographs NOT one — (I) UDC book papers 2,6-11 (spine=exponent ladder 2/(n+1)…1/n); (II) dynamics memoir 1,3,4; (5+12) structured-Toeplitz pair separate. Connective results to earn unification: C-A interpolation law in general position, C-B paper5 variance via 2nd moment, C-C discrepancy⇒stability bridge.
 
 ## SUPERSEDED historical note — BATCH 3 results 2026-06-14/15 (10 agents). Current section overrides paper5 variance status, paper12 full-bandwidth status, and paper15 curved status.
@@ -1160,11 +1160,11 @@ AVOID: MP-pruning + ReLU-collapse lanes. Other deferred: Var(ν_m(D)) Gaussian; 
 
 ## Goal contract
 Find known/publishable open problems tied to Yitzchak Shmalo's work; prove fully (theory only, NO numerics);
-PDF into C:\Users\yitzc\Downloads; then next problem. Never stop.
+PDF into ~\Downloads; then next problem. Never stop.
 
 ## Problem #1 (CURRENT): Residual Hilbert-cube theorem
 Source: Shmalo, "Strict cubical horseshoes and all-tail full complexity in non-autonomous dynamics"
-(AIMS Math submission 2026-05-29; local text: C:\Users\yitzc\math_research\shs6_text.txt, 40pp).
+(AIMS Math submission 2026-05-29; local text: ~\math_research\shs6_text.txt, 40pp).
 Section 14 states the open problem verbatim:
   "The Hilbert-cube conclusion is dense but is not asserted to be open ... A residual Hilbert-cube
    theorem with coherent all-tail symbolic codings would require an additional Baire-fusion mechanism
@@ -1230,7 +1230,7 @@ A must be shown ⊇ {g realizing some infinite scheme}; strategy forces g* ∈ A
 ## Files
 - shs6_text.txt / aims_text.txt / cover_text.txt — extracted manuscript (pypdf installed for Python 3.12).
 - paper1/ — LaTeX of my paper (TO CREATE): residual_hilbert_fusion.tex.
-- Output PDF → C:\Users\yitzc\Downloads\Residual_Hilbert_Cube_Fusion_v1.pdf (then v2...).
+- Output PDF → ~\Downloads\Residual_Hilbert_Cube_Fusion_v1.pdf (then v2...).
 
 ## Tasks (TaskList ids)
 #1 deep-read (DONE in substance — mark complete) · #2 openness (design done; write up) · #3 density/extension
