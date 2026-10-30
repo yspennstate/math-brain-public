@@ -117,3 +117,7 @@ MATH_RECALL_FAST_STALE_S=0 python agent_tools/math_recall.py "spectral gap of th
 ```
 
 Without that setting a search may answer from a state up to 45 minutes old and miss the new card ([fast recall](agent_tools/README.md#fast-recall)). Section 7 of the paper ([07_writeback.tex](papers/math-brain-2026-10-24/sections/07_writeback.tex)) describes the gates a packet passes before it joins the shared store; a card added with `add-claim` passes none of them and stays in your copy.
+
+## 7. One session, start to finish
+
+The pieces above are one loop, and an agent gets the most from the store when it runs all of it in every session. At the start, the wake step (`framework/hooks/wake_brain.py`, wired as a session-start hook by the templates in `framework/hooks/`) prints the newest memories, the last dream's summary and the checkpoint the agent left when it last stopped, so the session resumes the earlier work instead of starting cold. While it works, the agent searches as in the workflow at the top of this note, and the hooks put a card or two in front of it before it acts; each is a lead to check, not an instruction. At the end, it writes back what it found (section 6), including the attempts that failed, and leaves a one-line note saying what is done and what comes next, for the next session to read first. An agent that skips the write-back leaves the next session where this one started. [docs/agency.md](docs/agency.md) sets out the full loop, with the leases that keep several agents from overwriting each other and the audit to run before a report.
