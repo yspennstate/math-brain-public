@@ -217,8 +217,21 @@ whether it applies here before you go on.
 `ls footage/harbour` gets nothing, and the same scar fires at most once a session, so the warning stays rare enough
 to be read. For your company, the records that earn this are the ones written after something broke: the refund
 issued twice, the migration run against the live database. `hooks/write_back_hook.py`, at the end of the turn, asks
-the agent to file a lesson it has just stated and not written down.
-[codex-hooks-quickstart.md](codex-hooks-quickstart.md) shows where each hook goes in Codex and in Claude Code.
+the agent to file a lesson it has just stated and not written down. `hooks/request_hook.py` keeps a ledger of the
+requests themselves and tells the agent when the same thing was asked before.
+
+To connect all of them, print the wiring with this folder's paths filled in and merge the `"hooks"` object it
+prints into `~/.claude/settings.json` (Claude Code) or `~/.codex/hooks.json` (Codex), next to any hooks you
+already have:
+
+```
+python hooks/print_wiring.py --runtime claude
+python hooks/print_wiring.py --selftest
+```
+
+The selftest checks that both blocks parse and name files that exist. A new session picks the hooks up; one that
+is already running does not. [codex-hooks-quickstart.md](codex-hooks-quickstart.md) explains what each hook does
+in each runtime.
 
 ## 6. The first night (ten minutes to set up)
 
@@ -226,7 +239,7 @@ the agent to file a lesson it has just stated and not written down.
 python dream/make_agenda.py
 ```
 
-This writes `DREAM_AGENDA.md`: mistakes with no rule yet, the week's new records and what they might contradict,
+This writes `dream/DREAM_AGENDA.md`: mistakes with no rule yet, the week's new records and what they might contradict,
 superseded pairs and the records that still link the old one, provisional records waiting for a check, and records
 with no links. Give the agenda to an agent at the end of the day and let it work through it: link, merge, verify,
 turn a repeated mistake into a rule (`dream/README.md` says what to do with each section).
@@ -262,5 +275,7 @@ README, under "Several agents at once", has the rest.
 By now the store will have outgrown pasting, and the questions will show where recall misses. That is the point to
 move to the full framework in `framework/`: the association graph and semantic search on top of word matching,
 mistakes compiled into reflexes that fire before an agent repeats one, and the mesh for many agents writing at once.
+Its installer, `framework/bootstrap/install.py`, dry-runs by default; `--apply --merge-settings` writes the files
+and adds its hooks to `~/.claude/settings.json` after taking a dated backup, keeping the ones already there.
 [build-your-own-brain.md](build-your-own-brain.md) walks through it, and [agency.md](agency.md) describes the
 working loop that keeps an agent moving with the brain behind it.
