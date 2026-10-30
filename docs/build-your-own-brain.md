@@ -50,7 +50,7 @@ The two commands that start a store are in the starter. `python3 examples/field_
 
 ### Make it searchable
 
-Start from the recall in `agent_tools/math_recall.py` and `framework/dreaming/brain.py`, and change only the card format to suit your records. Three choices made the largest difference in our measurements, and none of them is specific to mathematics: print whole cards with their ids rather than titles (83 of 100 questions against 34), let the agent ask in two or three wordings in one call (86 against 76), and print `WEAK MATCH` when the best card is a poor fit so that the agent rewords instead of answering from it. Lexical search does poorly on records made mostly of numbers and codes; if your records are like that, give agents a plain text search over the exported files as well.
+Start from `examples/field_brain_starter/recall.py`, which is one file with no dependencies and already prints whole cards, takes several wordings and flags a weak match. For a larger store, `agent_tools/math_recall.py` and `framework/dreaming/brain.py` add the sentence encoder and the link walk. In either case change only the card format to suit your records. Three choices made the largest difference in our measurements, and none of them is specific to mathematics: print whole cards with their ids rather than titles (83 of 100 questions against 34), let the agent ask in two or three wordings in one call (86 against 76), and print `WEAK MATCH` when the best card is a poor fit so that the agent rewords instead of answering from it. Lexical search does poorly on records made mostly of numbers and codes; if your records are like that, give agents a plain text search over the exported files as well.
 
 ### Connect the agents
 
@@ -62,7 +62,7 @@ Write every correction down as a mistake record: what happened, the evidence, an
 
 ### Schedule the dream
 
-Run `framework/dreaming/run_dream.ps1` nightly, through a hidden launcher so that no window opens. The dream reads the day's records and transcripts, writes summaries, merges duplicates, compiles new reflexes and grades a sample of the day's fires. Read the dream's log for the first week: a dream that stops committing its results or a part that stops firing is the most common way such a system decays without anyone noticing, and `hook_liveness.py` exists to catch it. [framework/dreaming/README.md](../framework/dreaming/README.md) describes the agenda's sections, the three kinds of dream (filing, connecting and the midday nap) and how to add a section for your own field.
+Start with the starter's `dream/run_dream.py`, which runs on Linux, macOS and Windows with any agent command-line tool; `dream/README.md` has the cron, launchd and Task Scheduler lines, and `dream/dream_test.py` checks it with a stand-in agent before a real night is spent. `framework/dreaming/run_dream.ps1` is the full Windows version; run it nightly through a hidden launcher so that no window opens. The dream reads the day's records and transcripts, writes summaries, merges duplicates, compiles new reflexes and grades a sample of the day's fires. Read the dream's log for the first week: a dream that stops committing its results or a part that stops firing is the most common way such a system decays without anyone noticing, and `hook_liveness.py` exists to catch it. [framework/dreaming/README.md](../framework/dreaming/README.md) describes the agenda's sections, the three kinds of dream (filing, connecting and the midday nap) and how to add a section for your own field.
 
 ### Measure it
 
