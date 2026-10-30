@@ -122,8 +122,16 @@ def main():
             continue
         targets = LINK.findall(line)
         ruled = any("How to apply" in recs[t]["body"] for t in targets if t in recs)
-        out.append("%s  \n  -> %s" % (line.strip(), "has a rule for next time; check it is specific enough to act on"
-                                     if ruled else "NO rule for next time yet: write one, with its reason"))
+        missing = [t for t in targets if t not in recs]
+        if ruled:
+            note = "has a rule for next time; check it is specific enough to act on"
+        elif missing:
+            note = ("NO rule for next time yet, and it links %s, which no record is called: point the link at the"
+                    " record the mistake is about (new_record.py prints the name it wrote), then write the rule there"
+                    % ", ".join("[[%s]]" % t for t in missing))
+        else:
+            note = "NO rule for next time yet: write one, with its reason"
+        out.append("%s  \n  -> %s" % (line.strip(), note))
     out.append("")
 
     out += ["## 2. Fresh records (last %d days)" % a.fresh, ""]
