@@ -1,0 +1,61 @@
+{
+ "routes": [
+  {
+   "row": "T170",
+   "route": "Target 2(i): exact finite slab/block crossing Laplace transforms and a first-moment count of block paths for a stronger diagonal lower bound in d=5..21",
+   "status": "live",
+   "why": "Frontier check allowed this route. F route writes outside the authorized folders; this local ledger is the prescribed worker route record.",
+   "evidence": "logs/route_i_check.txt",
+   "at": "2026-10-14T21:06:54.434729+00:00",
+   "by": "worker AE/T170"
+  },
+  {
+   "row": "T170",
+   "route": "Target 2(ii): integrate independent one-edge chord weights for every three-edge hairpin of a vertex-simple geodesic, account exactly for overlapping hairpins by per-edge rate increments in a finite transfer matrix",
+   "status": "done",
+   "why": "Exact sixteen-state rational certificates saved for d=5..21; proof accounts for all shared path edges by rate increments. Prior-art and reviewer checks remain open.",
+   "evidence": "T170-AE-C003-v1; proofs/hairpin_lower_bound.md; logs/exact_certificates.json",
+   "at": "2026-10-14T21:23:42.255360+00:00",
+   "by": "worker AE/T170"
+  },
+  {
+   "row": "T170",
+   "route": "Target 2(ii): integrate independent one-edge chord weights for every three-edge hairpin of a vertex-simple geodesic, account exactly for overlapping hairpins by per-edge rate increments in a finite transfer matrix",
+   "status": "done",
+   "why": "Exact sixteen-state rational certificates saved for d=5..21; proof accounts for all shared path edges by rate increments. Prior-art and reviewer checks remain open.",
+   "evidence": "T170-AE-C003-v1; proofs/hairpin_lower_bound.md; logs/exact_certificates.json",
+   "at": "2026-10-14T21:25:34.205761+00:00",
+   "by": "worker AE/T170"
+  }
+ ],
+ "claims": [
+  {
+   "id": "T170-AE-C001",
+   "version": "1",
+   "folder": "worker AE/T170",
+   "statement": "CEG Theorem 2 gives the Euclidean-normalised diagonal lower bound sqrt(alpha^2-1)/(2 sqrt(d)), where alpha is the positive solution of coth(alpha)=alpha; the numerical coefficient is approximately 0.3313717096.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "literature"
+  },
+  {
+   "id": "T170-AE-C002",
+   "version": "1",
+   "folder": "worker AE/T170",
+   "statement": "Exploratory exact two-edge block kernel predicts mu_diag candidates above CEG for all d=5..21, by 8.3746% at d=5 and 1.7490% at d=21.",
+   "status": "numerical evidence",
+   "audit": "",
+   "kind": "moved"
+  },
+  {
+   "id": "T170-AE-C003",
+   "version": "1",
+   "folder": "worker AE/T170",
+   "statement": "For independent Exp(1) unoriented FPP on Z^d, the sixteen-state one-edge hairpin shortcut first moment and fixed exact rational certificates give Euclidean-normalised diagonal lower bounds for all d=5..21 strictly above CEG. In d=21 the certified lower rational is greater than 0.073854318247, exceeding CEG by at least 2.133946%; in d=5 it exceeds CEG by at least 10.316849%.",
+   "status": "proof (unaudited)",
+   "audit": "",
+   "kind": "moved"
+  }
+ ],
+ "at": "2026-10-15T00:34:31+03:00"
+}
