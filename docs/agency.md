@@ -37,6 +37,22 @@ Every agent that builds on this store goes through the same loop. Each step exis
 - Lead a report with the outcome, and say which task it answers. Several agents report to the same reader.
 - When a reader says the same thing twice, it is a standing order, not a remark. Carry it forward in writing.
 
+## The same loop in a brain for another field
+
+A team that keeps its records in a brain built from [examples/field_brain_starter](../examples/field_brain_starter/README.md) (a support desk, a film crew, a finance group) runs the same loop with the starter's own scripts. Each step has one command or hook:
+
+| Step | In the starter |
+|---|---|
+| Orient | `hooks/wake_hook.py` hands the agent the index and the newest mistakes at the start of a session; `python recall.py "<wording>" --or "<another wording>"` finds what the store holds on the task, and `--id <slug>` reads a record whole |
+| Recorded mistakes | a lesson filed as a feedback record (`python new_record.py feedback "<the rule>" --why "<what went wrong>" --apply "<what to do next time>"`) is what `hooks/scar_hook.py` reads: before the agent runs a command that resembles the lesson, the hook puts the record in front of it. A dated line in `memory/MISTAKES.md` with a `[[slug]]` link does the same for any record |
+| Write down the next step | a one-line file of your own, read first and rewritten after every step; the starter has no script for it because none is needed |
+| Claim before you change shared state | `python claims.py claim --agent <name> --resource record:<slug> --purpose "<why>"`, or `topic:<word>` for work across several records; exit code 3 means someone else holds it. `release` when done. Filing a new record needs no claim |
+| Write back | `python new_record.py <type> "<the finding>"` with `--link` to related records; a correction is a new record with `--supersedes <old slug>`, so the old one stays and points to the new. `hooks/write_back_hook.py` asks for a record when a turn ends on a lesson |
+| Audit the store itself | `python check_store.py` after any hand edit; `python three_arm.py --model-cmd "<the command that runs your agent>"` on ten or more of the team's own questions in `questions.json`, to see whether recall helps their agents at all |
+| Tidy overnight | `python dream/make_agenda.py` lists mistakes with no rule yet, superseded pairs and unlinked records for a dreaming agent to work through (see `dream/README.md`) |
+
+The recorded mistakes are what a store of notes alone does not give an agent. A refund issued without the second approval, a raw footage folder deleted to free space: once the lesson is filed as a feedback record, the next agent about to repeat it is warned before the command runs, not after. The warning is a question, not a block. The hook names at most two records for one command, and each record once per session.
+
 ## Checking that the loop runs
 
 The habits above are carried by code, and that code fails quietly: a hook that never fires, a claim that two agents both win, a dream that reads the agenda and writes nothing. The starter brain ships three tests that run those pieces the way a runtime does, each on a scratch copy of the store, and exit 1 when a step misbehaves:

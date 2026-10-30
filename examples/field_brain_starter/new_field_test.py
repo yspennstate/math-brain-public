@@ -5,6 +5,7 @@
                         no dream agenda, no hook or dream test that needs the studio's records
     scripts             every script copied byte for byte
     first record        new_record.py files a record, check_store.py is clean, recall.py finds it
+    first lesson        the scar hook warns before a command that repeats that feedback record, and not otherwise
     refusals            a folder that is not empty, and a folder inside the starter, are refused
     the starter         not touched
 
@@ -88,6 +89,16 @@ def main():
     rc3, s3 = run("recall.py", "refund manager approval", cwd=dest)
     check("first record: filed, the store checks clean, recall finds it",
           rc1 == 0 and rc2 == 0 and rc3 == 0 and "refunds_over_two_hundred" in s3, "\n".join([s1, s2, s3]))
+
+    def scar(command):
+        event = json.dumps({"session_id": "t", "tool_name": "Bash", "tool_input": {"command": command}})
+        res = subprocess.run([sys.executable, os.path.join("hooks", "scar_hook.py")], input=event, capture_output=True,
+                             text=True, encoding="utf-8", errors="replace", cwd=dest, timeout=120)
+        return res.stdout
+    warned = scar("python refund.py --order 4411 --amount 350 full refund, no manager")
+    quiet = scar("ls -la invoices")
+    check("first lesson: the scar hook warns on a command that repeats it, and stays quiet otherwise",
+          "refunds_over_two_hundred" in warned and quiet.strip() == "", "warned: %r\nquiet: %r" % (warned, quiet))
 
     rc1, s1 = run(os.path.join(HERE, "new_field.py"), dest)
     rc2, s2 = run(os.path.join(HERE, "new_field.py"), os.path.join(HERE, "inside"))

@@ -1,7 +1,7 @@
 """PreToolUse hook: before the agent runs a command, warn it when the command looks like one that went wrong before.
 
-A scar is a record of a mistake: a file whose type is feedback and whose slug starts with mistake_ or feedback_, or a
-record that MISTAKES.md links. The hook scores the tool call's arguments against those records only, and speaks only
+A scar is a record of a mistake or of a rule learned from one: a record whose type is feedback (new_record.py gives
+every lesson that type), a record whose slug starts with mistake_ or feedback_, or a record that MISTAKES.md links. The hook scores the tool call's arguments against those records only, and speaks only
 when one matches well. It never blocks the call: it adds one short paragraph the model reads before the tool runs.
 
     python3 hooks/scar_hook.py --selftest       # three sample commands: two that should warn, one that should not
@@ -29,7 +29,7 @@ BODY_CHARS = 500
 
 
 def scars(recs):
-    """The records that describe something that went wrong, plus every record MISTAKES.md links."""
+    """The feedback records and the records named as mistakes, plus every record MISTAKES.md links."""
     linked = set()
     path = os.path.join(MEM, "MISTAKES.md")
     if os.path.exists(path):
@@ -37,7 +37,8 @@ def scars(recs):
             linked = set(re.findall(r"\[\[([^\]]+)\]\]", fh.read()))
     out = {}
     for slug, r in recs.items():
-        if slug in linked or slug.startswith("mistake_") or slug.startswith("feedback_"):
+        if (slug in linked or slug.startswith("mistake_") or slug.startswith("feedback_")
+                or r["meta"].get("type") == "feedback"):
             out[slug] = r
     return out
 
