@@ -1,0 +1,356 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\Bin}{\operatorname{Bin}}
+\newcommand{\Poi}{\operatorname{Poi}}
+\newcommand{\Bet}{\operatorname{Beta}}
+\newcommand{\dtv}{d_{\mathrm{TV}}}
+\newcommand{\1}{\mathbf 1}
+
+\hypersetup{pdftitle={The connectivity window of bilateral preference random graphs},pdfauthor={Yitzchak Shmalo}}
+
+\title[The connectivity window of bilateral preference graphs]{The connectivity window of bilateral preference random graphs}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yitzchak.shmalo@gmail.com}
+\date{29 October 2026}
+\subjclass[2020]{05C80, 60C05, 60F05}
+\keywords{bilateral preference random graph, connectivity threshold, isolated vertices, Poisson approximation, order statistics}
+
+\begin{document}
+\begin{abstract}
+In the bilateral preference random graph $LK(n,k)$ of La and Kabkab, independent uniform scores are placed on the edges of $K_n$, each vertex prefers its $k$ incident edges of smallest score, and an edge is kept when both of its endpoints prefer it. Dabirian and Subramanian showed that $LK(n,k)$ is connected with high probability when $k\ge\log n+t\log\log n\sqrt{\log n}$ with $t>1/2$ and disconnected when $t<-1/2$, and left the window between these two conditions open. We show that for every fixed $C$, uniformly over integers $k$ with $|k-\log n|\le C$, the number of isolated vertices is asymptotically Poisson with mean $ne^{-k}$ in total variation and the probability that $LK(n,k)$ is connected is $\exp(-ne^{-k})+o(1)$. Consequently $LK(n,k)$ is connected with high probability if and only if $k-\log n\to\infty$, and disconnected with high probability if and only if $k-\log n\to-\infty$. The main estimate is that a fixed set of $r$ vertices is isolated with probability $e^{-rk}(1+o(1))$; it comes from an exact integral formula for the rejections at one vertex and a direct count of the few edges through which the vertices of the set can interact.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $n\ge3$ and $1\le k\le n-1$. Put independent scores $W_e$, uniform on $[0,1]$, on the edges $e$ of the complete graph $K_n$ on the vertex set $V=\{1,\dots,n\}$. Each vertex prefers the $k$ edges at it with the smallest scores, and the graph $LK(n,k)$ keeps an edge if and only if both of its endpoints prefer it. The model is due to La and Kabkab \cite{LK}, who conjectured that for $k=t\log n$ the graph is connected with high probability when $t>1$ and disconnected when $t<1$. Moharrami, Subramanian, Liu and Sundaresan \cite{EWT} identified its local limit for fixed $k$, the Erlang weighted tree, and studied the corresponding branching process. Dabirian and Subramanian \cite{DS} proved the conjecture of La and Kabkab in a sharper form: with high probability,
+\begin{alignat*}{2}
+&LK(n,k)\text{ is connected}&\qquad&\text{if }k\ge\log n+t\log\log n\sqrt{\log n}\text{ with }t>\tfrac12,\\
+&LK(n,k)\text{ is disconnected}&&\text{if }k\le\log n+t\log\log n\sqrt{\log n}\text{ with }t<-\tfrac12,
+\end{alignat*}
+and among their open problems \cite[Section~1]{DS} they note that it is not known whether the graph is connected when $k$ lies between these two bounds, and suggest that sharper sufficient conditions could close the gap.
+
+Let $Z_n$ be the number of isolated vertices of $LK(n,k)$ and put $\lambda_n=ne^{-k}$.
+
+\begin{theorem}\label{thm:main}
+Fix $C<\infty$. As $n\to\infty$, uniformly over integers $k$ with $|k-\log n|\le C$,
+\[
+\dtv\bigl(\mathcal L(Z_n),\Poi(\lambda_n)\bigr)\to0
+\qquad\text{and}\qquad
+\Pp\bigl(LK(n,k)\text{ is connected}\bigr)-e^{-\lambda_n}\to0 .
+\]
+\end{theorem}
+
+\begin{corollary}\label{cor:band}
+Let $k=k(n)$. If $k-\log n\to\infty$, then $LK(n,k)$ is connected with probability tending to one. If $k-\log n\to-\infty$, then $LK(n,k)$ is disconnected with probability tending to one. If $k-\log n\to c\in\mathbb R$ along a subsequence, then along it $Z_n$ converges in distribution to $\Poi(e^{-c})$ and the probability of connectivity tends to $\exp(-e^{-c})$.
+\end{corollary}
+
+So the threshold is at $\log n$ with an additive window of width $O(1)$, and inside it the only obstruction to connectivity is an isolated vertex, as in the Erd\H{o}s--R\'enyi graph. The scale $e^{-k}$ is easy to see. A vertex $v$ is isolated when each of its $k$ preferred edges is refused at the other end. If the edge to $u$ has score $x$, then $u$ refuses it when $u$ has at least $k$ other edges lighter than $x$, which in the limit has the probability $F_k(s)=\Pp(\Gamma_k\le s)$, where $s=nx$ and $\Gamma_k$ has the gamma law of shape $k$. The scaled scores at $v$ are the points $s_1<s_2<\cdots$ of a Poisson process of rate one, and Lemma~\ref{lem:ordstat} below turns $\E\prod_{j\le k}F_k(s_j)$ into
+\[
+\frac1{k!}\int_0^\infty\Bigl(\int_0^sF_k\Bigr)^ke^{-s}\,ds .
+\]
+For large $s$ the inner integral is $\E(s-\Gamma_k)_+\approx s-k$, and $\int_k^\infty(s-k)^ke^{-s}\,ds/k!=e^{-k}$ exactly. The integrand peaks at $s\approx2k$, where $s-k$ is a good approximation, so the isolation probability is $e^{-k}(1+o(1))$. At $k=\log n$ this is of order $1/n$. Every event through which several vertices interact (two of them preferring the same outside vertex, a light edge between two of the outside vertices involved) costs a further factor $(\log n)^{O(1)}/n$. Only boundedly many of them can occur at a cost comparable to $e^{-rk}$, and each removes at most a bounded number of the $rk$ refusals that isolation requires; Lemma~\ref{lem:omit} shows that removing $d$ refusals multiplies the probability by at most $(3k)^d$. This is the content of Proposition~\ref{prop:array}. Components with between $2$ and $6$ vertices are handled by the same proposition, larger components by a first-moment bound.
+
+Section~\ref{sec:one} treats one vertex, Section~\ref{sec:several} several vertices and the Poisson limit, Section~\ref{sec:comp} the components, and Section~\ref{sec:proofs} proves Theorem~\ref{thm:main} and Corollary~\ref{cor:band}. Section~\ref{sec:numerics} describes the computer checks that accompany the paper.
+
+Throughout, $C$ is fixed, $n\to\infty$, and $k$ is an integer with $|k-\log n|\le C$; in particular $k\to\infty$ and $k^a/n\to0$ for every $a$. All $o(1)$ terms are uniform in such $k$ and in the other parameters as stated. We write $(m)_j=m(m-1)\cdots(m-j+1)$ and use the Chernoff bounds for a binomial variable $X$ with mean $\lambda$,
+\begin{equation}\label{eq:chernoff}
+\Pp(X\ge t)\le e^{-\lambda\varphi(t/\lambda)}\ (t\ge\lambda),\qquad
+\Pp(X\le t)\le e^{-\lambda\varphi(t/\lambda)}\ (t\le\lambda),\qquad
+\varphi(y)=y\log y-y+1 .
+\end{equation}
+The $j$th smallest of $N$ independent uniform variables has the $\Bet(j,N-j+1)$ law, and it is at most $x$ exactly when $\Bin(N,x)\ge j$.
+
+\section{One vertex}\label{sec:one}
+
+\begin{lemma}\label{lem:ordstat}
+Let $m>k\ge1$, let $X_1<\cdots<X_k$ be the $k$ smallest of $m$ independent uniform variables on $[0,1]$, let $g\colon[0,1]\to[0,1]$ be nondecreasing and put $G(x)=\int_0^xg$. Then
+\begin{equation}\label{eq:M}
+\E\prod_{i=1}^kg(X_i)=\frac{(m)_{k+1}}{k!}\int_0^1G(x)^k(1-x)^{m-k-1}\,dx .
+\end{equation}
+If $0\le d\le k-1$ and $A\subseteq\{1,\dots,k\}$ has $k-d$ elements, then
+\begin{equation}\label{eq:omitgeneral}
+\E\prod_{i\in A}g(X_i)\le\binom{k-1}{d}\frac{(m)_k}{(k-1)!}\int_0^1g(x)G(x)^{k-1-d}x^d(1-x)^{m-k}\,dx .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Let $a_1<\cdots<a_{k-d}$ be the elements of $A$. At least $k-d-i$ elements of $A$ exceed $a_i$, so $a_i\le i+d$, and since $g$ is nondecreasing, $\prod_{i\in A}g(X_i)\le\prod_{i=d+1}^kg(X_i)$. The variable $X_k$ has density $\frac{(m)_k}{(k-1)!}x^{k-1}(1-x)^{m-k}$, and given $X_k=x$ the set $\{X_1,\dots,X_{k-1}\}$ consists of $k-1$ independent points $Y_1,\dots,Y_{k-1}$, uniform on $[0,x]$. The product $\prod_{i=d+1}^{k-1}g(X_i)$ is one of the $\binom{k-1}{d}$ products of $g(Y_b)$ over sets of $k-1-d$ indices $b$, and each such product has conditional mean $(G(x)/x)^{k-1-d}$. Hence
+\[
+\E\Bigl[\prod_{i=d+1}^kg(X_i)\Bigm|X_k=x\Bigr]\le\binom{k-1}{d}g(x)\Bigl(\frac{G(x)}x\Bigr)^{k-1-d},
+\]
+with equality when $d=0$. Integrating against the density of $X_k$ gives \eqref{eq:omitgeneral}. For $d=0$ this is an equality, and since $gG^{k-1}=(G^k)'/k$, $G(0)=0$ and $m>k$, an integration by parts gives \eqref{eq:M}.
+\end{proof}
+
+Fix $A_0<\infty$. In the rest of this section $m$ and $N$ are integers with $|m-n|\le A_0k$ and $|N-n|\le A_0k$, and
+\[
+q(x)=\Pp\bigl(\Bin(N,x)\ge k\bigr)=\Pp(B\le x),\quad Q(x)=\int_0^xq=\E(x-B)_+,\quad B\sim\Bet(k,N-k+1).
+\]
+The function $q$ is nondecreasing with values in $[0,1]$, and $Q$ is convex with $Q(0)=0$, so $Q(x)/x$ is nondecreasing. Put
+\[
+\mu=\E B=\frac k{N+1},\qquad\sigma^2=\operatorname{Var}B=\frac{k(N+1-k)}{(N+1)^2(N+2)}\le\frac{\mu^2}k ,
+\]
+and let $X_1<\cdots<X_k$ be the $k$ smallest of $m$ independent uniform variables.
+
+\begin{lemma}\label{lem:saddle}
+$\displaystyle M:=\E\prod_{i=1}^kq(X_i)=e^{-k}(1+o(1))$.
+\end{lemma}
+
+\begin{proof}
+By Jensen's inequality $Q(x)\ge(x-\mu)_+$. With the substitution $x=\mu+(1-\mu)z$,
+\begin{equation}\label{eq:M0}
+\frac{(m)_{k+1}}{k!}\int_\mu^1(x-\mu)^k(1-x)^{m-k-1}\,dx=(1-\mu)^m\frac{(m)_{k+1}}{k!}\int_0^1z^k(1-z)^{m-k-1}\,dz=(1-\mu)^m .
+\end{equation}
+Since $m\mu=k\,m/(N+1)=k+O(k^2/n)$ and $m\mu^2=O(k^2/n)$, we have $(1-\mu)^m=e^{-k}(1+o(1))$, and \eqref{eq:M} gives $M\ge e^{-k}(1+o(1))$.
+
+For the upper bound split the integral in \eqref{eq:M} at $\mu$ and at $\mu+a_1$, where $a_1=\mu k^{-1/3}$. We use $m\mu\le2k$, $m\sigma\le m\mu/\sqrt k\le2\sqrt k$ and $k!\ge(k/e)^k$. For $x\le\mu$ we have $Q(x)\le Q(\mu)=\E(\mu-B)_+\le\sigma$, so this part is at most
+\[
+\frac{m^{k+1}}{k!}\mu\sigma^k\le2k\frac{(2\sqrt k)^k}{k!}\le2k\Bigl(\frac{2e}{\sqrt k}\Bigr)^k=o(e^{-k}).
+\]
+For $x\ge\mu$ write $a=x-\mu$ and $R(x)=\E(B-x)_+$, so that $Q(x)=a+R(x)$ and $R(x)\le R(\mu)\le\sigma\le\mu k^{-1/2}$. For $a\le a_1$ this gives $Q(x)\le2\mu k^{-1/3}$, and that part of the integral is at most
+\[
+\frac{m^{k+1}}{k!}a_1(2\mu k^{-1/3})^k\le2k\frac{(4k)^kk^{-k/3}}{k!}\le2k\,(4e)^kk^{-k/3}=o(e^{-k}).
+\]
+On $a>a_1$ write $Q^k=a^k(1+\rho)^k$ with $\rho=R/a$. By \eqref{eq:M0}, the remaining part equals $(1-\mu)^m\E[(1+\rho)^k;\,a>a_1]$, where now $a=(1-\mu)\zeta$ with $\zeta\sim\Bet(k+1,m-k)$. Two estimates for $\rho$ cover this range.
+
+If $a_1<a<\mu/2$, use $(y-a)_+\le y^2/(4a)$, which holds for all real $y$ because $y^2-4a(y-a)=(y-2a)^2$. With $y=B-\mu$ it gives $R(x)\le\sigma^2/(4a)$, so $\rho\le\sigma^2/(4a_1^2)\le k^{-1/3}/4$ and $(1+\rho)^k\le e^{k^{2/3}/4}$. On the other hand $\Pp(\zeta\le y)=\Pp(\Bin(m,y)\ge k+1)$ with $y=\mu/(2(1-\mu))$, and $m y=k/2+O(k^2/n)$, so by \eqref{eq:chernoff} this probability is at most $\exp(-(k/2)\varphi(2)(1+o(1)))$, where $\varphi(2)=2\log2-1>0$. The contribution of this range to $\E(1+\rho)^k$ is therefore at most $\exp(k^{2/3}/4-k\varphi(2)/3)=o(1)$.
+
+If $a\ge\mu/2$, then $x\ge3\mu/2$. Since $x\,f_{k,N-k+1}(x)=\mu f_{k+1,N-k+1}(x)$ for the beta densities $f_{\alpha,\beta}$, we have $R(x)\le\E[B;B>x]=\mu\Pp(B^+>x)$ with $B^+\sim\Bet(k+1,N-k+1)$. Now $\Pp(B^+>3\mu/2)=\Pp(\Bin(N+1,3\mu/2)\le k)$, a binomial variable of mean $3k/2$, so by \eqref{eq:chernoff} it is at most $e^{-\gamma k}$ with $\gamma=\tfrac32\varphi(\tfrac23)=\log\tfrac23+\tfrac12>0$. Hence $\rho\le2e^{-\gamma k}$ and $(1+\rho)^k\le\exp(2ke^{-\gamma k})=1+o(1)$.
+
+Together, $\E[(1+\rho)^k;a>a_1]\le1+o(1)$, and $M\le(1-\mu)^m(1+o(1))+o(e^{-k})=e^{-k}(1+o(1))$.
+\end{proof}
+
+The value $\gamma=\log(2/3)+1/2\approx0.095$ is small, but only $\gamma>0$ is used. The next lemma removes refusals at arbitrary ranks.
+
+\begin{lemma}\label{lem:omit}
+Fix $D<\infty$. Uniformly over $0\le d\le D$ and over sets $A\subseteq\{1,\dots,k\}$ with $k-d$ elements,
+\[
+\E\prod_{i\in A}q(X_i)\le(3k)^de^{-k}(1+o(1)).
+\]
+\end{lemma}
+
+\begin{proof}
+Let $J_d=\frac{(m)_k}{(k-1)!}\int_0^1qQ^{k-1-d}x^d(1-x)^{m-k}\,dx$, so that $J_0=M$ by Lemma~\ref{lem:ordstat} and the left side is at most $\binom{k-1}dJ_d\le k^dJ_d$. For $x\ge3\mu/2$, $Q(x)\ge x-\mu\ge x/3$, so $qQ^{k-1-d}x^d\le3^dqQ^{k-1}$. For $x<3\mu/2$, the monotonicity of $Q(x)/x$ gives
+\[
+\frac{Q(x)}x\le\frac{Q(3\mu/2)}{3\mu/2}\le\frac{\mu/2+\E(\mu-B)_+}{3\mu/2}\le\frac13+\frac{2\sigma}{3\mu}\le\frac13\Bigl(1+\frac2{\sqrt k}\Bigr)=:\theta ,
+\]
+using $(3\mu/2-B)_+\le\mu/2+(\mu-B)_+$. There $qQ^{k-1-d}x^d\le x^{k-1}\theta^{k-1-d}$, and $\frac{(m)_k}{(k-1)!}x^{k-1}(1-x)^{m-k}$ is a probability density. Therefore
+\[
+J_d\le3^dM+\theta^{k-1-d}\le3^dM+3^{D+1}e^{-k\log3+2\sqrt k}.
+\]
+Since $\log3>1$, the last term is $o(e^{-k})$, and Lemma~\ref{lem:saddle} completes the proof.
+\end{proof}
+
+\section{Several vertices}\label{sec:several}
+
+Fix $r\ge1$ and a set $R=\{v_1,\dots,v_r\}$ of vertices; let $V'=V\setminus R$. For each $a\le r$ let $X_{a,1}<X_{a,2}<\cdots<X_{a,n-r}$ be the scores of the $n-r$ edges from $v_a$ to $V'$, and let $U_{a,j}\in V'$ be the other endpoint of the edge with score $X_{a,j}$. Put $T_a=X_{a,k}$ and $T=\max_aT_a$. Call the data $(X_{a,j},U_{a,j})_{a\le r,\,j\le k}$ the \emph{stars}. The following facts are standard.
+\begin{enumerate}[label=(F\arabic*),leftmargin=*]
+\item The $r$ families $(X_{a,j},U_{a,j})_{j\le k}$ are independent. In each, $(X_{a,j})_{j\le k}$ are the $k$ smallest of $n-r$ independent uniform variables, and $(U_{a,j})_{j\le k}$ is a uniformly random sequence of $k$ distinct elements of $V'$, independent of the scores.
+\item Given the stars, the remaining edge scores are independent; the score of an edge $\{v_a,w\}$ with $w\in V'\setminus\{U_{a,1},\dots,U_{a,k}\}$ is uniform on $[T_a,1]$, and every other remaining edge has a uniform score on $[0,1]$.
+\end{enumerate}
+
+For $1\le p\le k$ let $\mathcal A_R(p)$ be the event that for every $a\le r$ and $j\le p$ the vertex $u=U_{a,j}$ has at least $k$ edges other than $\{u,v_a\}$ with score less than $X_{a,j}$; that is, $u$ refuses the $j$th lightest edge from $v_a$ to $V'$. This event does not involve the edges between vertices of $R$.
+
+\begin{proposition}\label{prop:array}
+Fix $r\ge1$ and $e\ge0$. Uniformly over sets $R$ of size $r$,
+\[
+\Pp(\mathcal A_R(k))=e^{-rk}(1+o(1))\qquad\text{and}\qquad\Pp(\mathcal A_R(k-e))=O(k^{re}e^{-rk}).
+\]
+\end{proposition}
+
+\begin{proof}
+Let $S=\{U_{a,j}:a\le r,\ j\le k\}$, let $c=rk-|S|$ be the number of coincidences among the labels, and let $W=V'\setminus S$. For each $(a,j)$ with $j\le k$ let $N_{a,j}$ be the number of $w\in W$ with $W_{\{U_{a,j},w\}}<X_{a,j}$. By (F2), given the stars, the edges between $S$ and $W$ have independent uniform scores, and edges at distinct vertices of $S$ are distinct.
+
+\emph{Lower bound.} The vertex $U_{a,j}$ has at least $N_{a,j}$ edges other than $\{U_{a,j},v_a\}$ below $X_{a,j}$, because $v_a\notin W$. On the event $c=0$ the variables $N_{a,j}$ are, given the stars, independent with laws $\Bin(n-r-rk,X_{a,j})$. Hence, with $q_0(x)=\Pp(\Bin(n-r-rk,x)\ge k)$ and (F1),
+\[
+\Pp(\mathcal A_R(k))\ge\E\Bigl[\1\{c=0\}\prod_{a,j}q_0(X_{a,j})\Bigr]=\Pp(c=0)\,M_0^{\,r},
+\]
+where $M_0=\E\prod_{j\le k}q_0(X_{1,j})=e^{-k}(1+o(1))$ by Lemma~\ref{lem:saddle} with $m=n-r$ and $N=n-r-rk$. Two given labels of different vertices of $R$ coincide with probability $1/(n-r)$, so $\Pp(c=0)\ge1-r^2k^2/(n-r)=1-o(1)$.
+
+\emph{Upper bound.} Fix $B=2r+6$, so that $B-1-\log B\ge B/2>r+1$, and put $\tau=Bk/n$. By \eqref{eq:chernoff}, $\Pp(T_a>\tau)=\Pp(\Bin(n-r,\tau)\le k-1)\le e^{-k(B-1-\log B)(1+o(1))}=o(e^{-rk})$, so we may work on $\{T\le\tau\}$.
+
+Let $I$ be the set of edges with both endpoints in $R\cup S$, other than the edges between two vertices of $R$ and other than the star edges $\{v_a,U_{a,j}\}$, $j\le k$. Call an edge of $I$ \emph{light} if its score is at most $\tau$, and let $\Lambda$ be the number of light edges. Since $|I|\le(r+rk)^2\le4r^2k^2$ and, by (F2), on $\{T\le\tau\}$ each edge of $I$ is light with conditional probability at most $\tau/(1-\tau)\le2\tau$, independently,
+\begin{equation}\label{eq:light}
+\Pp(\Lambda\ge\ell\mid\text{stars})\le(8r^2k^2\tau)^\ell=(8Br^2k^3/n)^\ell\qquad\text{on }\{T\le\tau\}.
+\end{equation}
+By (F1), revealing the labels in order, each label repeats one of the at most $rk$ earlier labels of other vertices of $R$ with conditional probability at most $rk/(n-r-k)$, so
+\begin{equation}\label{eq:coll}
+\Pp(c\ge\gamma)\le\binom{rk}\gamma\Bigl(\frac{rk}{n-r-k}\Bigr)^\gamma\le\Bigl(\frac{2r^2k^2}n\Bigr)^\gamma .
+\end{equation}
+Taking $\ell=r+1$ and $\gamma=r+1$ shows that $\Pp(\Lambda\ge r+1,\,T\le\tau)+\Pp(c\ge r+1)=O(k^{3r+3}n^{-r-1})=o(e^{-rk})$, because $e^{-rk}\ge e^{-rC}n^{-r}$.
+
+Call an occurrence $(a,j)$, $j\le k$, \emph{clean} if its label $u=U_{a,j}$ is the label of no other occurrence and $u$ is not an endpoint of a light edge. At most $2c$ occurrences have a repeated label, and at most $2\Lambda$ occurrences have a label on a light edge. If $(a,j)$ is clean, then every edge from $u$ to $(R\cup S)\setminus\{u,v_a\}$ lies in $I$ and is not light: an edge $\{u,v_b\}$ with $b\ne a$ is not a star edge because $u$ is not a label of $v_b$. On $\{T\le\tau\}$ all these edges have scores above $\tau\ge X_{a,j}$. Therefore on $\mathcal A_R(p)\cap\{T\le\tau\}$ every clean occurrence $(a,j)$ with $j\le p$ has $N_{a,j}\ge k$.
+
+Fix $\ell,\gamma\le r$. Given the stars, the light edges are determined by the scores on $I$, which are independent of the scores between $S$ and $W$; the clean occurrences carry distinct labels; and $N_{a,j}$ is stochastically dominated by $\Bin(n-r,X_{a,j})$. Hence, with $q_1(x)=\Pp(\Bin(n-r,x)\ge k)$, on $\{T\le\tau,\,c=\gamma\}$,
+\[
+\Pp\bigl(\mathcal A_R(p),\,\Lambda=\ell\mid\text{stars}\bigr)\le\Pp(\Lambda\ge\ell\mid\text{stars})\max_F\prod_{(a,j)\notin F,\ j\le p,\ (a,j)\text{ unrepeated}}q_1(X_{a,j}),
+\]
+the maximum being over sets $F$ of at most $2\ell$ occurrences. At vertex $a$ the product runs over at least $k-e_a$ ranks, where $e_a=(k-p)+g_a+f_a$, $g_a$ is the number of repeated occurrences of $a$ and $f_a$ the number of occurrences of $a$ in $F$; since $q_1\le1$, the first part of the proof of Lemma~\ref{lem:ordstat} bounds it by $\prod_{i>e_a}q_1(X_{a,i})$. The vector $(f_a)$ takes at most $(2\ell+1)^r$ values. The labels are independent of the scores, so by \eqref{eq:light}, \eqref{eq:coll}, (F1) and Lemma~\ref{lem:omit} with $m=N=n-r$ and $D=re+4r$,
+\[
+\Pp\bigl(\mathcal A_R(k-e),\,T\le\tau,\,\Lambda=\ell,\,c=\gamma\bigr)\le\Bigl(\frac{8Br^2k^3}n\Bigr)^\ell\Bigl(\frac{2r^2k^2}n\Bigr)^\gamma(2\ell+1)^r(3k)^{re+2\gamma+2\ell}e^{-rk}(1+o(1)).
+\]
+For $\ell+\gamma\ge1$ this is $O(k^{re}e^{-rk}(\log n)^{O(1)}/n)$. For $\ell=\gamma=0$ every occurrence with $j\le k-e$ is clean, and the bound is $(3k)^{re}e^{-rk}(1+o(1))$; for $e=0$ it is exactly $\E\prod_{a,j}q_1(X_{a,j})=M_1^{\,r}$, where $M_1=e^{-k}(1+o(1))$ by Lemma~\ref{lem:saddle}. Summing over $\ell,\gamma\le r$ and adding the bounds for $T>\tau$, $\Lambda\ge r+1$ and $c\ge r+1$ proves both assertions.
+\end{proof}
+
+\begin{corollary}\label{cor:joint}
+Fix $r\ge1$. Uniformly over distinct vertices $v_1,\dots,v_r$, the probability that all of them are isolated in $LK(n,k)$ is $e^{-rk}(1+o(1))$.
+\end{corollary}
+
+\begin{proof}
+Let $\mathcal I$ be the event that $v_1,\dots,v_r$ are isolated, and let $\mathcal D$ be the event that for every $a$ every edge from $v_a$ to another vertex of $R$ has score greater than $T_a$. On $\mathcal D$ the $k$ edges preferred by $v_a$ are its $k$ lightest edges to $V'$, so $\mathcal I\cap\mathcal D=\mathcal A_R(k)\cap\mathcal D$. In general $v_a$ prefers at most $r-1$ edges inside $R$, so it prefers its $k-r+1$ lightest edges to $V'$, and $\mathcal I\subseteq\mathcal A_R(k-r+1)$. The event $\mathcal D$ depends on the edges inside $R$ and on the stars, and $\mathcal A_R(p)$ does not involve the edges inside $R$; by (F2) the two are independent given the stars, and $\Pp(\mathcal D^c\mid\text{stars})\le r^2T$. With $\tau$ as in the proof of Proposition~\ref{prop:array},
+\[
+\Pp(\mathcal I)\ge\Pp(\mathcal A_R(k)\cap\mathcal D)\ge(1-r^2\tau)\bigl(\Pp(\mathcal A_R(k))-\Pp(T>\tau)\bigr)=e^{-rk}(1+o(1)),
+\]
+\[
+\Pp(\mathcal I)\le\Pp(\mathcal A_R(k))+r^2\tau\,\Pp(\mathcal A_R(k-r+1))+\Pp(T>\tau)=e^{-rk}(1+o(1))+O\Bigl(\frac{k^{r^2+1}}n\Bigr)e^{-rk}.\qedhere
+\]
+\end{proof}
+
+\begin{proposition}\label{prop:poisson}
+Uniformly over $|k-\log n|\le C$, $\dtv(\mathcal L(Z_n),\Poi(\lambda_n))\to0$.
+\end{proposition}
+
+\begin{proof}
+By Corollary~\ref{cor:joint}, for each fixed $r$ the factorial moment $\E(Z_n)_r=(n)_r\Pp(v_1,\dots,v_r\text{ isolated})$ equals $\lambda_n^r(1+o(1))$, and $\lambda_n\in[e^{-C},e^C]$. Suppose the claim fails. Then there are $\varepsilon>0$ and a sequence $n_i\to\infty$ with admissible $k_i$ along which the distance stays above $\varepsilon$; passing to a subsequence, $\lambda_{n_i}\to\lambda\in[e^{-C},e^C]$. All factorial moments converge to those of $\Poi(\lambda)$, which is determined by its moments, so $Z_{n_i}$ converges in distribution to $\Poi(\lambda)$ \cite[Theorem~30.2]{Bil}, hence in total variation since the variables are integer valued. As $\dtv(\Poi(\lambda_{n_i}),\Poi(\lambda))\le|\lambda_{n_i}-\lambda|\to0$, this is a contradiction.
+\end{proof}
+
+\section{Components with at least two vertices}\label{sec:comp}
+
+Let $\tau_v$ be the $k$th smallest score at the vertex $v$, and put $a=5/32$, $b=32/5$. Let $\mathcal G$ be the event that $ak/(n-1)\le\tau_v\le bk/(n-1)$ for every $v$. By \eqref{eq:chernoff},
+\[
+\Pp(\tau_v<ak/(n-1))\le e^{-k(a-1-\log a)},\qquad\Pp(\tau_v>bk/(n-1))\le e^{-k(b-1-\log b)},
+\]
+and $a-1-\log a=1.0125\ldots$, $b-1-\log b=3.543\ldots$. A union bound over the $n$ vertices gives $\Pp(\mathcal G^c)=O(n^{-0.0125})$.
+
+On $\mathcal G$ an edge with score below $ak/(n-1)$ is preferred at both ends, hence kept, and a kept edge has score at most $bk/(n-1)$. So if a set $S$ of $s$ vertices is the vertex set of a component and $\mathcal G$ holds, then every edge between $S$ and $V\setminus S$ has score at least $ak/(n-1)$, and the kept edges inside $S$ contain a spanning tree whose edges have scores at most $bk/(n-1)$.
+
+\begin{lemma}\label{lem:large}
+The probability that $\mathcal G$ holds and $LK(n,k)$ has a component with $s$ vertices for some $7\le s\le n/2$ tends to zero.
+\end{lemma}
+
+\begin{proof}
+For a fixed set $S$ of size $s$ the two events above involve disjoint sets of edges. There are $s^{s-2}$ spanning trees on $S$, so
+\begin{equation}\label{eq:compS}
+\Pp(S\text{ is a component},\,\mathcal G)\le s^{s-2}\Bigl(\frac{bk}{n-1}\Bigr)^{s-1}\exp\Bigl(-\frac{aks(n-s)}{n-1}\Bigr).
+\end{equation}
+For $7\le s\le12$ the exponential factor is $O(n^{-as})$, and summing over the $\binom ns\le n^s$ sets gives $O(n^{1-as}k^{s-1})=O(n^{-3/32}k^{11})$, since $7a=35/32$. For $13\le s\le n/2$ we use $\binom nss^{s-2}\le(en)^s$, $(bk/(n-1))^{s-1}\le(2bk/n)^{s-1}$ and $(n-s)/(n-1)\ge1/2$, so that the exponential factor is at most $(e^{aC/2}n^{-a/2})^s$. With $y_n=2ebke^{aC/2}n^{-a/2}\to0$ the sum over these $s$ is at most
+\[
+\frac n{2bk}\sum_{s\ge13}y_n^s\le\frac{n\,y_n^{13}}{2bk(1-y_n)}=O(n^{1-13a/2}k^{12})=O(n^{-1/64}k^{12}).\qedhere
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:small}
+For each $2\le s\le6$, the probability that $\mathcal G$ holds and $LK(n,k)$ has a component with exactly $s$ vertices tends to zero.
+\end{lemma}
+
+\begin{proof}
+Fix a set $S$ of $s$ vertices and use the notation of Section~\ref{sec:several} with $R=S$. A vertex $v\in S$ has $s-1$ edges inside $S$, so among the edges it prefers are its $k-s+1$ lightest edges to $V\setminus S$. If $S$ is the vertex set of a component, none of these edges is kept, so each is refused at its other end, and $\mathcal A_S(k-s+1)$ holds. That event involves no edge inside $S$, while on $\mathcal G$ the tree event of the previous lemma involves only edges inside $S$. By Proposition~\ref{prop:array} with $r=s$ and $e=s-1$,
+\[
+\Pp(S\text{ is a component},\,\mathcal G)\le s^{s-2}\Bigl(\frac{bk}{n-1}\Bigr)^{s-1}O(k^{s(s-1)}e^{-sk})=O\bigl(k^{s^2}n^{-2s+1}\bigr),
+\]
+using $e^{-k}\le e^C/n$. Summing over $\binom ns\le n^s$ sets gives $O(k^{s^2}n^{1-s})\to0$.
+\end{proof}
+
+\section{Proofs of Theorem~\ref{thm:main} and Corollary~\ref{cor:band}}\label{sec:proofs}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The first assertion is Proposition~\ref{prop:poisson}, which also gives $\Pp(Z_n=0)=e^{-\lambda_n}+o(1)$. A disconnected graph without isolated vertices has a component with between $2$ and $n/2$ vertices, so
+\[
+0\le\Pp(Z_n=0)-\Pp(LK(n,k)\text{ connected})\le\Pp(\mathcal G^c)+\sum_{s=2}^{\lfloor n/2\rfloor}\Pp(\mathcal G,\ \text{a component with $s$ vertices}),
+\]
+which tends to zero uniformly by Lemmas~\ref{lem:large} and~\ref{lem:small}.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:band}]
+Use one array of scores for all $k$. An edge preferred at both ends for the budget $k$ is still preferred for the budget $k+1$, so $LK(n,k)\subseteq LK(n,k+1)$ and connectivity is increasing in $k$. If $k-\log n\to\infty$, fix $L>0$ and let $q_n$ be the integer in $[\log n+L,\log n+L+1)$; eventually $q_n\le k$, and Theorem~\ref{thm:main} with $C=L+1$ gives
+\[
+\liminf_n\Pp(LK(n,k)\text{ connected})\ge\liminf_n\Pp(LK(n,q_n)\text{ connected})\ge\exp(-e^{-L}),
+\]
+which tends to one as $L\to\infty$. If $k-\log n\to-\infty$, let $q_n$ be the integer in $(\log n-L-1,\log n-L]$; eventually $q_n\ge k$, and the limsup of the probability of connectivity is at most $\exp(-e^{L})\to0$. The last assertion is Theorem~\ref{thm:main} with $C=|c|+1$, since then $\lambda_n\to e^{-c}$. If $k-\log n$ does not tend to $\infty$, some subsequence has $k-\log n\to-\infty$ or $k-\log n\to c\in\mathbb R$, and along it the probability of connectivity tends to $0$ or to $\exp(-e^{-c})<1$; so connectivity with high probability holds exactly when $k-\log n\to\infty$, and in the same way disconnection with high probability holds exactly when $k-\log n\to-\infty$.
+\end{proof}
+
+Since $\log n\pm t\log\log n\sqrt{\log n}-\log n\to\pm\infty$ for every $t>0$, the corollary settles every sequence $k(n)$ in the window of \cite{DS}.
+
+\section{Computations}\label{sec:numerics}
+
+The repository \cite{code} contains two Python programs. The first, \texttt{checks.py}, verifies the numerical constants of the paper in exact rational arithmetic ($a-1-\log a>1$ for $a=5/32$, $b-1-\log b>1$ for $b=32/5$, $B-1-\log B\ge B/2$ for $B\ge6$, $\log3>1$, $\varphi(2)>0$ and $\varphi(2/3)>0$, $7a>1$, $13a/2>1$), tests \eqref{eq:M} and \eqref{eq:omitgeneral} against Monte Carlo, and evaluates $M\,e^k$ of Lemma~\ref{lem:saddle} by numerical integration for $n$ up to $10^7$.
+
+The second program, \texttt{simulate.py}, first evaluates the Poisson-process form of $M$ described in the introduction, $I_k=\frac1{k!}\int_0^\infty(\E(s-\Gamma_k)_+)^ke^{-s}\,ds$; it gives $I_ke^k=1.0297$, $1.0024$ and $1.00003$ at $k=10$, $20$ and $30$. It then samples $LK(n,k)$ directly. Table~\ref{tab:sim} compares the empirical probability of connectivity with $e^{-\lambda_n}$. In every sample with $n=3000$, and in every sample with $n=1000$ and $k\ge7$, a graph with no isolated vertex was connected.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrrrrr}
+\toprule
+$n$ & $k$ & samples & $\lambda_n=ne^{-k}$ & $\Pp(\text{connected})$ & $e^{-\lambda_n}$\\
+\midrule
+1000 & 6 & 300 & 2.479 & $0.067\pm0.014$ & 0.084\\
+1000 & 7 & 300 & 0.912 & $0.413\pm0.028$ & 0.402\\
+1000 & 8 & 300 & 0.335 & $0.713\pm0.026$ & 0.715\\
+1000 & 9 & 300 & 0.123 & $0.910\pm0.017$ & 0.884\\
+3000 & 7 & 200 & 2.736 & $0.035\pm0.013$ & 0.065\\
+3000 & 8 & 200 & 1.006 & $0.395\pm0.035$ & 0.366\\
+3000 & 9 & 200 & 0.370 & $0.705\pm0.032$ & 0.691\\
+3000 & 10 & 200 & 0.136 & $0.880\pm0.023$ & 0.873\\
+\bottomrule
+\end{tabular}
+\caption{Simulated probability of connectivity of $LK(n,k)$, with one standard error.}\label{tab:sim}
+\end{table}
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In September 2026 OpenAI GPT models, running as research tasks of that project, proposed Theorem~\ref{thm:main}, the integral formula \eqref{eq:M}, Lemma~\ref{lem:saddle}, the treatment of components in Section~\ref{sec:comp}, and a proof of the multi-vertex estimate through a canonical deletion of interacting edges. In October 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked that proof, replaced its multi-vertex part by the argument of Lemma~\ref{lem:omit} and Proposition~\ref{prop:array}, wrote the computer checks of the repository~\cite{code}, and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/bilateral-preference-connectivity-window}.
+
+\begin{thebibliography}{10}
+
+\bibitem{Bil}
+P.~Billingsley, \emph{Probability and Measure}, 3rd ed., Wiley, New York, 1995.
+
+\bibitem{code}
+Y.~Shmalo, Computations for ``The connectivity window of bilateral preference random graphs'', \url{https://github.com/yspennstate/bilateral-preference-connectivity-window}, 2026.
+
+\bibitem{DS}
+H.~Dabirian and V.~Subramanian, Connectivity of a family of bilateral preference random graphs, \emph{J. Appl. Probab.} \textbf{63} (2026), 552--579. Also arXiv:2209.05677.
+
+\bibitem{LK}
+R.~J.~La and M.~Kabkab, A new random graph model with self-optimizing nodes: connectivity and diameter, \emph{Internet Math.} \textbf{11} (2015), 528--554.
+
+\bibitem{EWT}
+M.~Moharrami, V.~Subramanian, M.~Liu and R.~Sundaresan, The Erlang weighted tree, a new branching process, \emph{Random Structures Algorithms} \textbf{64} (2024), 537--624.
+
+\end{thebibliography}
+
+\end{document}

@@ -7,8 +7,10 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Paper | Repository |
 |---|---|
 | A necessary and sufficient condition for convergence of the quantile process in L^p(0,1) | [quantile-process-lp](https://github.com/yspennstate/quantile-process-lp) |
+| A tree automaton with infinitely many rogue fixed points under every supercritical offspring law | [automaton-fixed-simplex](https://github.com/yspennstate/automaton-fixed-simplex) |
 | Arc-transitive graphs that mimic the cycle | [arc-transitive-graphs-that-mimic-the-cycle](https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle) |
 | Ballisticity for positive excited random walks without bounded cookie stacks | [positive-cookie-ballisticity](https://github.com/yspennstate/positive-cookie-ballisticity) |
+| Every geodesic spanning tree of a Cayley graph has branching number equal to the growth rate | [geodesic-tree-branching](https://github.com/yspennstate/geodesic-tree-branching) |
 | The binary and ternary harmonic measures of the Cantor set are mutually singular | [cantor-harmonic-codings-singular](https://github.com/yspennstate/cantor-harmonic-codings-singular) |
 | A Brownian piece in front of a process absolutely continuous with respect to Brownian motion | [brownian-prefix-filling](https://github.com/yspennstate/brownian-prefix-filling) |
 | The conjectured dominating pair for DP-SGD with shuffled batches is not dominating | [shuffled-ablq-dominating-pair](https://github.com/yspennstate/shuffled-ablq-dominating-pair) |
@@ -16,6 +18,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Correlation of leaf heights at mesoscopic separation in the critical beta-splitting tree | [beta-splitting-leaf-correlation](https://github.com/yspennstate/beta-splitting-leaf-correlation) |
 | Cover-time fluctuations beyond the maximal hitting-time scale | [cover-time-fluctuations](https://github.com/yspennstate/cover-time-fluctuations) |
 | Degree fluctuations in bilateral preference random graphs | [bilateral-preference-degree-limits](https://github.com/yspennstate/bilateral-preference-degree-limits) |
+| The connectivity window of bilateral preference random graphs | [bilateral-preference-connectivity-window](https://github.com/yspennstate/bilateral-preference-connectivity-window) |
 | The discrepancy of Sylvester-Hadamard matrices in odd dimension | [hadamard-discrepancy-odd](https://github.com/yspennstate/hadamard-discrepancy-odd) |
 | Doubling and jamming: a universal Chern Hamiltonian on triangulated surfaces with boundary (numerics) | [Doubling-and-Jamming-A-Universal-Chern-Hamiltonian-on-Triangulated-Surfaces-with-Boundary](https://github.com/yspennstate/Doubling-and-Jamming-A-Universal-Chern-Hamiltonian-on-Triangulated-Surfaces-with-Boundary) |
 | The drawn length of the critical beta-splitting tree grows linearly | [beta-splitting-drawn-length](https://github.com/yspennstate/beta-splitting-drawn-length) |
