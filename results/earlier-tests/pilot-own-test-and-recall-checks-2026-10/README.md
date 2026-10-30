@@ -48,6 +48,8 @@ recall calls, 291,307 characters of tool output (about 73 thousand tokens) and 1
 
 ## Recall depth after the 28 October links
 
+Before the links, at 06:00 that day, 16,243 of the store's 87,110 cards touched any edge. At 09:21, after the 76,434 mechanical links and the first 30 judged ones, 87,261 of 90,611 cards did, with 101,560 edges in all.
+
 On 28 October the store gained 76,434 links and 3,396 paper source cards (90,797 cards, 125,830 links). The question
 was whether following links one step from the printed cards (`--depth 1`) now finds answers the words miss. 98 items
 of the held-out recall bank were run at both depths; depth 1 reached its time limit after 43.
