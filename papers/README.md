@@ -11,6 +11,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Arc-transitive graphs that mimic the cycle | [arc-transitive-graphs-that-mimic-the-cycle](https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle) |
 | Ballisticity for positive excited random walks without bounded cookie stacks | [positive-cookie-ballisticity](https://github.com/yspennstate/positive-cookie-ballisticity) |
 | Every geodesic spanning tree of a Cayley graph has branching number equal to the growth rate | [geodesic-tree-branching](https://github.com/yspennstate/geodesic-tree-branching) |
+| Quadratic forms with five large singular values have bounded densities | [quadratic-form-five-eigenvalues](https://github.com/yspennstate/quadratic-form-five-eigenvalues) |
 | The binary and ternary harmonic measures of the Cantor set are mutually singular | [cantor-harmonic-codings-singular](https://github.com/yspennstate/cantor-harmonic-codings-singular) |
 | A Brownian piece in front of a process absolutely continuous with respect to Brownian motion | [brownian-prefix-filling](https://github.com/yspennstate/brownian-prefix-filling) |
 | The conjectured dominating pair for DP-SGD with shuffled batches is not dominating | [shuffled-ablq-dominating-pair](https://github.com/yspennstate/shuffled-ablq-dominating-pair) |
@@ -36,6 +37,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Hub paths and the largest component of the barely subcritical configuration model | [hub-paths-barely-subcritical](https://github.com/yspennstate/hub-paths-barely-subcritical) |
 | The Ising perceptron at nonzero margin | [ising-perceptron-margin](https://github.com/yspennstate/ising-perceptron-margin) |
 | The Ising perceptron capacity: a source-bound interval verification | [ising-perceptron-capacity](https://github.com/yspennstate/ising-perceptron-capacity) |
+| The Kesten-Stigum bound is tight for the three-state Potts model on every regular tree | [potts-kesten-stigum-small-degree](https://github.com/yspennstate/potts-kesten-stigum-small-degree) |
 | The largest box in a sparse random allocation | [sparse-allocation-largest-box](https://github.com/yspennstate/sparse-allocation-largest-box) |
 | The layer distribution of the random recursive tree and the minimum of the Poisson-weighted infinite tree | [rrt-layer-tail](https://github.com/yspennstate/rrt-layer-tail) |
 | A Lévy random drift destroys compactness for every confining power | [levy-drift-noncompact](https://github.com/yspennstate/levy-drift-noncompact) |

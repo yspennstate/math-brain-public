@@ -1,0 +1,1063 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{booktabs,longtable}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+\usepackage[capitalise,nameinlink]{cleveref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\Simp}{\Delta_3}
+
+\title[The three-state Potts model on regular trees]{The Kesten--Stigum bound is tight for the three-state Potts model on every regular tree}
+\author{Yitzchak Shmalo}
+\date{\today}
+
+\begin{document}
+
+\begin{abstract}
+A uniformly random colour from $\{1,2,3\}$ is broadcast from the root of the infinite $d$-ary tree; each
+edge keeps its parent's colour with probability $\lambda+(1-\lambda)/3$ and otherwise moves to one of the
+two other colours uniformly. We prove that for every $d\ge2$ and every $0\le\lambda\le d^{-1/2}$ the
+colours at depth $n$ carry asymptotically no information about the root. Together with the theorem of
+Kesten and Stigum this shows that the reconstruction threshold of the ferromagnetic three-state Potts
+channel on the $d$-ary tree is $\lambda=d^{-1/2}$ for every degree. Sly, and Mossel, Sly and Sohn, proved
+this for all degrees above a constant that was not made explicit. Our proof makes that constant explicit,
+$d\ge91$, by a quantitative Gaussian approximation, and covers $2\le d\le90$ by computer-assisted
+arguments: an exact finite-state upgrade of the belief-propagation recursion bounds the second moment of
+the root posterior at a finite depth, and exact polynomial certificates exclude every nontrivial
+belief-propagation fixed point below that bound.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $T_d$ be the infinite rooted $d$-ary tree, $q\ge2$ and $\lambda\in[0,1]$, and let
+$M_\lambda=\lambda I+(1-\lambda)J$ be the $q\times q$ Potts channel, where every entry of $J$ is $1/q$.
+The broadcast process gives the root $\rho$ a uniform colour $\sigma_\rho\in[q]$ and passes colours
+down each edge independently through $M_\lambda$. Write $\sigma_{L_n}$ for the colours at depth $n$. The
+process is \emph{reconstructible} if
+\[
+\lim_{n\to\infty}\E\,\big\|\PP(\sigma_\rho=\cdot\mid\sigma_{L_n})-q^{-1}\one\big\|_{\mathrm{TV}}>0
+\]
+and \emph{nonreconstructible} otherwise. Kesten and Stigum~\cite{KS66} showed that reconstruction holds
+whenever $d\lambda^2>1$. For $q=2$ the bound is sharp~\cite{BRZ95,EKPS00}. For large $q$ it is not:
+Mossel~\cite{Mos01} showed that reconstruction can hold below it, and Sly~\cite{Sly11} proved that the
+bound fails to be tight for $q\ge5$ and that it is tight for $q=3$ once $d\ge d_0$. Mossel, Sly and
+Sohn~\cite{MSS22} extended tightness to $q=4$ and to Galton--Watson trees of large mean. In both papers
+$d_0$ comes from a central limit approximation and is not computed, and Mossel, Sly and Sohn ask whether
+the result holds for $q=3$ and small $d$. Bhatnagar and Maneva~\cite{BM11} gave a computational method
+that bounds reconstruction thresholds on small trees; a finite computation of this kind cannot by itself
+reach the Kesten--Stigum bound, since at $d\lambda^2=1$ the information decays only polynomially in the
+depth.
+
+\begin{theorem}\label{thm:main}
+Let $q=3$. For every integer $d\ge2$ and every $0\le\lambda\le d^{-1/2}$, the broadcast process on $T_d$
+is nonreconstructible. Hence the reconstruction threshold of the ferromagnetic three-state Potts channel
+on the $d$-ary tree equals the Kesten--Stigum bound $\lambda=d^{-1/2}$ for every $d\ge2$.
+\end{theorem}
+
+The proof follows one plan at every degree. Let $x_n=\E\sum_i(p_i-1/3)^2$, where
+$p=\PP(\sigma_\rho=\cdot\mid\sigma_{L_n})$. The sequence $x_n$ is nonincreasing, its limit $x_\infty$
+is the second moment of a colour-symmetric fixed point of the belief-propagation map
+(\cref{sec:fixed}), and nonreconstruction is the statement $x_\infty=0$. Two estimates meet:
+\begin{enumerate}
+\item an \emph{exclusion radius} $r_d>0$: no nontrivial symmetric fixed point at the critical
+  $\lambda=d^{-1/2}$ has second moment in $(0,r_d]$ (\cref{sec:local});
+\item an \emph{entry bound}: $x_N<r_d$ for some explicit depth $N$ (\cref{sec:envelope,sec:large}).
+\end{enumerate}
+At the critical point the drift of $x$ near zero is $-\tfrac34\lambda^4d(d-1)x^2$ to leading order
+(\cite[(4.9)]{Sly11}), so the fixed-point equation leaves no room for a small nonzero solution; the work in
+(1) is to make the neighbourhood explicit. We do this with exact Bernstein-basis certificates for
+polynomial inequalities in the low moments of the fixed point. For (2) at $2\le d\le90$ we run the
+belief-propagation recursion on an information upgrade of the posterior law that is supported on a
+finite grid, in exact integer arithmetic; the upgrade can only increase $x_n$, so the computed value is an
+upper bound. For $d\ge91$ we replace the computation by a Lindeberg estimate with every constant written
+down, comparing the recursion with the Gaussian map of Sly~\cite{Sly11}, together with a certified lower
+bound on the gap between that map and the identity. Monotonicity in $\lambda$ reduces subcritical
+$\lambda$ to the critical one (\cref{sec:proof}).
+
+Table~\ref{tab:degrees} in \cref{sec:proof} lists, for each degree or band of degrees, the radius and the
+certified bound. The computations are in the accompanying repository and are described in
+\cref{sec:computations}.
+
+\section{The recursion and its fixed points}\label{sec:fixed}
+
+Throughout, $q=3$, $u=(\tfrac13,\tfrac13,\tfrac13)$, and $\Simp$ is the probability simplex in $\R^3$ with
+the Euclidean norm $|\cdot|$. The symmetric group $S_3$ acts on $\Simp$ by permuting coordinates. For a
+Borel probability measure $\mu$ on $\Simp$ write
+\[
+x(\mu)=\int|p-u|^2\,\mu(dp).
+\]
+We say that $\mu$ is \emph{symmetric} if it is $S_3$-invariant, and that $\mu$ is a \emph{posterior law} if
+there are a random colour $\sigma$, uniform on $[3]$, and a $\sigma$-algebra $\mathcal G$ such that $\mu$ is
+the law of $\PP(\sigma=\cdot\mid\mathcal G)$. A posterior law has mean $u$, and $x(\mu)=0$ only for the
+point mass $\delta_u$.
+
+\subsection{The recursion}
+Fix $d\ge2$ and $0\le\lambda<1$. For a probability measure $\mu$ on $\Simp$ with mean $u$ let
+$p^{(1)},\dots,p^{(d)}$ be independent with law $\mu$, and put
+\[
+z_i=\prod_{j=1}^d\big(1-\lambda+3\lambda p^{(j)}_i\big)\quad(i=1,2,3),\qquad S=z_1+z_2+z_3 .
+\]
+Define $T_\lambda\mu$ by
+\begin{equation}\label{eq:T}
+\int h\,d(T_\lambda\mu)=\E\Big[h\big(z/S\big)\,\frac S3\Big]
+\end{equation}
+for bounded measurable $h$. Each factor $1-\lambda+3\lambda p_i$ has mean $1$ under $\mu$, so $\E z_i=1$
+and $\E S/3=1$; thus $T_\lambda\mu$ is a probability measure, and it again has mean $u$ because
+$\int p_i\,d(T_\lambda\mu)=\E[z_i]/3=1/3$.
+
+Let $P_n=\PP(\sigma_\rho=\cdot\mid\sigma_{L_n})$ and let $\mu_n$ be its law. Thus $\mu_0$ is the uniform law
+on the three vertices of $\Simp$.
+
+\begin{lemma}\label{lem:recursion}
+$\mu_{n+1}=T_\lambda\mu_n$ for every $n\ge0$. Each $\mu_n$ is a symmetric posterior law.
+\end{lemma}
+
+\begin{proof}
+Let $v_1,\dots,v_d$ be the children of $\rho$, and let $Y_j$ be the colours at depth $n+1$ below $v_j$, so
+that $\sigma_{L_{n+1}}=(Y_1,\dots,Y_d)$. The subtree below $v_j$ is a copy of $T_d$, and $\sigma_{v_j}$ is
+uniform; hence $Q^{(j)}=\PP(\sigma_{v_j}=\cdot\mid Y_j)$ has law $\mu_n$. The $Y_j$ are not independent,
+since they share the root; we compute their joint law. By Bayes' rule with a uniform prior,
+$\PP(Y_j\mid\sigma_{v_j}=k)=3Q^{(j)}_k\,\PP(Y_j)$. Summing over the colour of $v_j$,
+\[
+\PP(Y_j\mid\sigma_\rho=i)=\sum_k M_\lambda(i,k)\,3Q^{(j)}_k\,\PP(Y_j)
+=\big(1-\lambda+3\lambda Q^{(j)}_i\big)\PP(Y_j).
+\]
+Since the subtrees are conditionally independent given $\sigma_\rho$,
+$\PP(Y_1,\dots,Y_d\mid\sigma_\rho=i)=z_i\prod_j\PP(Y_j)$ with $z$ built from the $Q^{(j)}$. The posterior of
+the root is therefore $z/S$, and, averaging over the uniform root, the joint law of $(Y_1,\dots,Y_d)$ has
+density $\tfrac13\sum_i z_i=S/3$ with respect to the product of its marginals. Since $z$ is a function of
+$(Q^{(1)},\dots,Q^{(d)})$, the vector $(Q^{(1)},\dots,Q^{(d)})$ has density $S/3$ with respect to
+$\mu_n^{\otimes d}$, which is~\eqref{eq:T}. Symmetry passes from $\mu_n$ to $\mu_{n+1}$ because
+$M_\lambda$ commutes with permutations of the colours, and $\mu_n$ is a posterior law by definition.
+\end{proof}
+
+\subsection{The tail limit}
+Let $\mathcal F_n$ be the $\sigma$-algebra generated by all colours at depth at least $n$. These
+$\sigma$-algebras decrease. Given $\sigma_{L_n}$, the root is independent of the colours below depth $n$, so
+$P_n=\PP(\sigma_\rho=\cdot\mid\mathcal F_n)$. Put $x_n=x(\mu_n)=\E|P_n-u|^2$ and
+$\mathcal F_\infty=\bigcap_n\mathcal F_n$.
+
+\begin{lemma}\label{lem:tail}
+The sequence $x_n$ is nonincreasing. The posteriors $P_n$ converge almost surely and in $L^2$ to
+$P_\infty=\PP(\sigma_\rho=\cdot\mid\mathcal F_\infty)$, whose law $\mu_\infty$ is a symmetric posterior law
+with $T_\lambda\mu_\infty=\mu_\infty$ and $x(\mu_\infty)=\lim_n x_n\le x_N$ for every $N$.
+\end{lemma}
+
+\begin{proof}
+$(P_n)$ is a reverse martingale for the decreasing filtration $(\mathcal F_n)$, so
+$P_{n+1}=\E[P_n\mid\mathcal F_{n+1}]$, and Jensen's inequality gives $x_{n+1}\le x_n$. L\'evy's downward
+theorem gives convergence almost surely, and in $L^2$ by boundedness, to $P_\infty$. Hence $\mu_n\to\mu_\infty$
+weakly and $x_n\to x(\mu_\infty)$. Symmetry passes to the limit, and $\mu_\infty$ is a posterior law by
+construction.
+
+For the fixed-point identity, each factor in $z$ is at least $1-\lambda>0$, so $S\ge3(1-\lambda)^d$, and
+the integrand in~\eqref{eq:T} is a bounded continuous function of $(p^{(1)},\dots,p^{(d)})\in\Simp^d$ when
+$h$ is bounded and continuous. Weak convergence $\mu_n\to\mu_\infty$ implies weak convergence of the product
+laws $\mu_n^{\otimes d}\to\mu_\infty^{\otimes d}$, hence $T_\lambda\mu_n\to T_\lambda\mu_\infty$ weakly. By
+\cref{lem:recursion}, $T_\lambda\mu_n=\mu_{n+1}\to\mu_\infty$, so $T_\lambda\mu_\infty=\mu_\infty$.
+\end{proof}
+
+\begin{proposition}\label{prop:reduction}
+Let $0<\lambda<1$ and $r>0$. Suppose that every symmetric posterior law $\mu$ with $T_\lambda\mu=\mu$ and
+$x(\mu)\le r$ equals $\delta_u$, and that $x_N\le r$ for some $N$. Then the broadcast process with
+parameters $(d,\lambda)$ is nonreconstructible.
+\end{proposition}
+
+\begin{proof}
+By \cref{lem:tail}, $\mu_\infty$ satisfies the hypotheses, so $\mu_\infty=\delta_u$ and $x_n\to0$. By
+Cauchy--Schwarz in $\R^3$ and Jensen,
+$\E\|P_n-u\|_{\mathrm{TV}}=\tfrac12\E\sum_i|P_n(i)-\tfrac13|\le\tfrac{\sqrt3}2\sqrt{x_n}\to0$.
+\end{proof}
+
+\subsection{Comparison of experiments}
+Write $x_n(d,\lambda)$ for $x_n$ when the parameters need to be named.
+
+\begin{lemma}\label{lem:compare}
+If $2\le d\le D$ and $0\le\lambda\le\eta<1$, then $x_n(d,\lambda)\le x_n(D,\eta)$ for every $n$.
+\end{lemma}
+
+\begin{proof}
+Both changes are garblings of the observation that do not depend on the root. If $Y=g(X,U)$ with $U$
+independent of $(\sigma_\rho,X)$, then $\PP(\sigma_\rho=\cdot\mid Y)=\E[\PP(\sigma_\rho=\cdot\mid X)\mid Y]$,
+and Jensen's inequality for the convex function $p\mapsto|p-u|^2$ shows that the second moment can only
+decrease. For the degree, $T_d$ is a subtree of $T_D$ containing the root, and the depth-$n$ colours of
+$T_d$ are a subset of those of $T_D$. For the strength, if $\eta>0$ then
+\[
+M_\lambda=\tfrac\lambda\eta\,M_\eta+\big(1-\tfrac\lambda\eta\big)J,
+\]
+and an edge of strength $\lambda$ is an edge of strength $\eta$ with probability $\lambda/\eta$ and
+otherwise gives the child a uniform colour independent of its parent. Mark each edge independently with
+probability $1-\lambda/\eta$. On the vertices joined to the root by unmarked paths, keep the colours of the
+strength-$\eta$ process; below every marked edge with no marked edge above it, put a fresh copy of the
+strength-$\lambda$ process started from a uniform colour. The result is the strength-$\lambda$ process, and
+its depth-$n$ colours are a function of the depth-$n$ colours of the strength-$\eta$ process together with
+the marks and the fresh copies, which are independent of the root and of that process.
+\end{proof}
+
+By \cref{lem:compare} with $D=d$, nonreconstruction at $\lambda=d^{-1/2}$ implies it for every smaller
+$\lambda$, and an upper bound on $x_N(D,\eta)$ with $D\ge d$ and $\eta\ge d^{-1/2}$ is an upper bound on
+$x_N(d,d^{-1/2})$. The second use lets one computation serve a band of degrees (\cref{sec:envelope}).
+
+\section{Exclusion near the uniform law}\label{sec:local}
+
+In this section $\lambda=d^{-1/2}$ unless stated otherwise. We prove that a nontrivial symmetric fixed point
+cannot have small second moment, with the radii $r_2=\tfrac{23}{2000}$, $r_3=\tfrac{3}{100}$ and, for $d\ge4$,
+\begin{equation}\label{eq:radii}
+r_d=\max\Big\{\tfrac5{36}\big(1-d^{-1/2}\big)^2,\ \varrho_d\Big\},\qquad
+\varrho_d=\begin{cases}0,&d=4,\\ \tfrac{217}{4500},&5\le d\le19,\\ \tfrac{257}{3000},&20\le d\le79,\\
+\tfrac{179}{1500},&d\ge80.\end{cases}
+\end{equation}
+
+\subsection{Fusion and moments}
+For $p\in\Simp$ write $a(p)=3p-\one$, a vector with coordinate sum zero and $|a|^2\le6$. For a symmetric
+probability measure $\mu$ on $\Simp$ put
+\[
+M(\mu)=\int|a|^2d\mu,\qquad U(\mu)=\int|a|^4d\mu,\qquad T(\mu)=\int\textstyle\sum_ia_i^3\,d\mu,
+\]
+so that $x(\mu)=M(\mu)/9$ and $0\le M\le6$. For symmetric $\mu,\nu$ define the \emph{fusion} $\mu\circledast\nu$ by
+\[
+\int h\,d(\mu\circledast\nu)=\E\Big[h\Big(\frac{p\odot r}{\langle p,r\rangle}\Big)\,3\langle p,r\rangle\Big],
+\qquad p\sim\mu,\ r\sim\nu\ \text{independent},
+\]
+where $\odot$ is the coordinatewise product. If $\mu$ and $\nu$ are the laws of the posteriors of a uniform colour
+$\sigma$ given two observations that are conditionally independent given $\sigma$, then, exactly as in the proof
+of \cref{lem:recursion}, $\mu\circledast\nu$ is the law of the posterior given both. Hence $\circledast$ is
+commutative and associative on symmetric posterior laws, and $M(\mu\circledast\nu)\ge M(\mu)$ by the argument of
+\cref{lem:compare}. Let $E_\lambda\mu$ be the law of $u+\lambda(p-u)$ for $p\sim\mu$; it is the law of the
+posterior of $\rho$ given the subtree of one child whose own posterior has law $\mu$. Since
+$1-\lambda+3\lambda p_i=3(u+\lambda(p-u))_i$,
+\[
+T_\lambda\mu=(E_\lambda\mu)^{\circledast d},\qquad
+M(E_\lambda\mu)=\lambda^2M(\mu),\quad U(E_\lambda\mu)=\lambda^4U(\mu),\quad T(E_\lambda\mu)=\lambda^3T(\mu).
+\]
+Every $p$ in the support of $E_\lambda\mu$ has $p_i\ge(1-\lambda)/3$.
+
+For $p,r\in\Simp$ put $\alpha=a(p)$, $\beta=a(r)$, $c=\langle\alpha,\beta\rangle$, $S=3+c=9\langle p,r\rangle$ and
+\[
+v=\alpha+\beta+\alpha\odot\beta-\tfrac c3\one,\qquad N=|v|^2 .
+\]
+A direct computation gives $a\big(p\odot r/\langle p,r\rangle\big)=3v/S$, so the fused vector has $a$-norm
+$9N/S^2$ and weight $S/3$.
+
+\begin{lemma}\label{lem:variance}
+Let $\mu,\nu$ be symmetric probability measures on $\Simp$ with moments $(m,V,T_\alpha)$ and $(n,W,T_\beta)$
+respectively, and suppose $S\ge s>0$ on the support of $\mu\otimes\nu$. Then
+\[
+M(\mu\circledast\nu)=m+n-\tfrac{mn}6-\tfrac13(nT_\alpha+mT_\beta)+R,\qquad 0\le R\le\frac{\E[Nc^2]}{3s},
+\]
+\[
+\E[Nc^2]=\tfrac12(nV+mW)+3T_\alpha T_\beta+\tfrac12(VT_\beta+T_\alpha W)+\tfrac1{12}VW .
+\]
+\end{lemma}
+
+\begin{proof}
+By the remark before the lemma, $M(\mu\circledast\nu)=\E[(9N/S^2)(S/3)]=3\E[N/S]$. Since
+$(\tfrac13-\tfrac c9)S=1-\tfrac{c^2}9$, we have $1/S=\tfrac13-\tfrac c9+\tfrac{c^2}{9S}$, hence
+$M(\mu\circledast\nu)=\E N-\tfrac13\E[Nc]+R$ with $R=\E[Nc^2/(3S)]$, which lies between $0$ and
+$\E[Nc^2]/(3s)$. A symmetric law of a zero-sum vector $\alpha$ with $\E|\alpha|^2=m$,
+$\E|\alpha|^4=V$, $\E\sum\alpha_i^3=T_\alpha$ has $\E\alpha=0$ and, for distinct indices $i,j,k$,
+\[
+\E\alpha_i^2=\tfrac m3,\ \E\alpha_i\alpha_j=-\tfrac m6;\quad
+\E\alpha_i^3=\tfrac{T_\alpha}3,\ \E\alpha_i^2\alpha_j=-\tfrac{T_\alpha}6,\ \E\alpha_1\alpha_2\alpha_3=\tfrac{T_\alpha}3;
+\]
+\[
+\E\alpha_i^4=\tfrac V6,\ \E\alpha_i^3\alpha_j=-\tfrac V{12},\ \E\alpha_i^2\alpha_j^2=\tfrac V{12},\
+\E\alpha_i^2\alpha_j\alpha_k=0 .
+\]
+(The second and fourth tables follow from symmetry and $\sum_i\alpha_i=0$; for the fourth, also
+$\sum_i\alpha_i^4=\tfrac12|\alpha|^4$ for zero-sum triples.) Expanding $N$, $Nc$ and $Nc^2$ as polynomials in
+$\alpha,\beta$ and contracting with these tables gives $\E N=m+n+\tfrac{mn}6$,
+$\E[Nc]=mn+nT_\alpha+mT_\beta$ and the stated formula for $\E[Nc^2]$.
+\end{proof}
+
+\subsection{Three moment inequalities}
+Fix $\eta=2887/5000$ and $\kappa=2(99/140)^4<\tfrac12+10^{-4}$.
+
+\begin{lemma}\label{lem:moments}
+Let $\mu,\nu$ be symmetric posterior laws with moments $(M_\mu,U_\mu,T_\mu)$ and $(M_\nu,U_\nu,T_\nu)$.
+\begin{enumerate}
+\item[\textup{(CF)}] $T(\mu\circledast\nu)\ge(1-\tfrac{M_\nu}6)T_\mu+(1-\tfrac{M_\mu}6)T_\nu$.
+\item[\textup{(F)}] If $\nu$ is supported on $\{r:r_i\ge(1-\eta)/3\}$, then
+$U(\mu\circledast\nu)\le U_\mu+U_\nu+5M_\mu M_\nu$.
+\item[\textup{(C)}] Under the same hypothesis, $|T(\mu\circledast\nu)-T_\mu-T_\nu|\le\tfrac53M_\mu M_\nu$.
+\item[\textup{(F1)}] If $0<\lambda\le1/\sqrt2$, then
+$\lambda^4U\big((E_\lambda\mu)^{\circledast2}\big)\le\kappa\lambda^4U_\mu+\tfrac32\lambda^4M_\mu^2$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+Each inequality is bilinear in the pair $(\mu,\nu)$ once the terms that involve one law only are multiplied by
+the total mass of the other, and the fusion is bilinear by its definition. A symmetric law is a mixture of
+uniform laws on $S_3$-orbits, so it suffices to prove each inequality when $\mu$ and $\nu$ are uniform on the
+orbits of two points. Write the sorted points as
+\[
+p(t,y)=\big(\tfrac{1-t}3,\ \tfrac{1-t}3+\tfrac{ty}2,\ \tfrac{1-t}3+t(1-\tfrac y2)\big),\qquad 0\le t,y\le1,
+\]
+and similarly $r=p(s,z)$. The fused law is then the average over the six relative permutations $\pi$ of $r$, the
+term for $\pi$ carrying weight $S_\pi/18$ and output $a$-vector $3v_\pi/S_\pi$. After clearing the positive
+denominators $S_\pi$ (in (CF) the terms with $S_\pi=0$ carry no weight), each inequality becomes the
+nonnegativity of an explicit polynomial with integer coefficients on a product of intervals in $(t,y,s,z)$.
+We prove this nonnegativity in \cref{sec:computations} by dividing out the monomial factors that vanish on the
+boundary and expanding the quotient in a Bernstein basis, all of whose coefficients are nonnegative. For (F1)
+the reduction is first made at $\lambda=99/140$; the case of smaller $\lambda$ follows by \cref{lem:compare}
+applied to the two-child tree, since the right side is then computed with the same scale.
+\end{proof}
+
+\begin{corollary}\label{cor:sign}
+If $d\lambda^3<1$, then every symmetric posterior law $\mu$ with $T_\lambda\mu=\mu$ has $T(\mu)\ge0$.
+\end{corollary}
+
+\begin{proof}
+Let $T=T(\mu)$ and let $T_j$ be the cubic moment of $(E_\lambda\mu)^{\circledast j}$, so $T_1=\lambda^3T$ and
+$T_d=T$. Suppose $T<0$. Since the coefficients in (CF) lie in $[0,1]$, (CF) gives
+$T_{j+1}\ge\min(T_j,0)+\lambda^3T$, hence $T_j\ge j\lambda^3T$ for all $j$. At $j=d$ this reads
+$(1-d\lambda^3)T\ge0$, a contradiction.
+\end{proof}
+
+\subsection{Degree two}
+
+\begin{proposition}\label{prop:local2}
+Let $d=2$ and $\lambda=2^{-1/2}$. A symmetric posterior law $\mu$ with $T_\lambda\mu=\mu$ and $x(\mu)\le r_2$
+equals $\delta_u$.
+\end{proposition}
+
+\begin{proof}
+Let $m,V,t$ be the moments of the child law $E_\lambda\mu$, so $m=M(\mu)/2=\tfrac92x(\mu)$, $V=U(\mu)/4$ and
+$\mu=(E_\lambda\mu)^{\circledast2}$. By (F1) at the fixed point, $V\le\kappa V+\tfrac32m^2$, so
+$V\le Cm^2$ with $C=\tfrac{3001}{1000}$. For a zero-sum vector, $|\sum_i\alpha_i^3|\le|\alpha|^3/\sqrt6$, so by
+Cauchy--Schwarz $|t|\le\sqrt{mV/6}\le\theta m^{3/2}$ with $\theta=\tfrac{177}{250}\ge\sqrt{C/6}$. For two child
+vectors $c\ge-3\lambda^2$, so $S\ge3/2$. \Cref{lem:variance} with both laws equal to $E_\lambda\mu$ and the
+identity $M(\mu)=2m$ give
+\[
+\tfrac{m^2}6\le\tfrac23m|t|+\tfrac29\big(mV+3t^2+V|t|+\tfrac1{12}V^2\big).
+\]
+If $m>0$, divide by $m^2$ and insert the bounds above:
+\[
+\tfrac16\le\tfrac23\theta\sqrt m+\tfrac29\big(\tfrac32Cm+C\theta m^{3/2}+\tfrac1{12}C^2m^2\big).
+\]
+For $x(\mu)\le\tfrac{23}{2000}$ we have $m\le\tfrac{207}{4000}$ and $\sqrt m\le\tfrac{91}{400}$, and the right side
+is at most $0.16516<\tfrac16$ (exact rational arithmetic). Hence $m=0$.
+\end{proof}
+
+\subsection{Degree at least three}
+Let $d\ge3$, $\lambda=d^{-1/2}$, and let $\mu$ be a nontrivial symmetric posterior fixed point with moments
+$M,U,T$. Let $\mu_j=(E_\lambda\mu)^{\circledast j}$, with moments $M_j,U_j,T_j$, so $\mu_d=\mu$ and
+$M_j\le M$. The child law has moments $M/d$, $U/d^2$, $\lambda T/d$, and its support satisfies $r_i\ge(1-\lambda)/3$
+with $\lambda<\eta$. By \cref{cor:sign} (note $d\lambda^3=\lambda<1$) and (CF), $T\ge0$ and $T_j\ge0$ for all $j$.
+For $2\le k\le d$ set
+\[
+g_k=\frac{k(k-1)}{12d^2},\qquad Z=\frac{k(k-1)}2+d(d-k),\qquad C_U=\frac{5Z}{d(d-1)},\qquad
+C_T=\frac{C_U(1+\lambda)}3,
+\]
+and let $A_k,B_k\ge0$ be the closed forms
+\[
+A_k=A_2+\frac{S_2}{72d^3}+\frac{K(C_US_1+\tfrac54S_2)}{d^3},\qquad
+B_k=B_2+K\Big[\big(3t_e+\tfrac{v_e}2\big)\Sigma_t+\big(\tfrac{t_e}2+\tfrac{v_e}{12}\big)\Sigma_u\Big],
+\]
+where $S_1=\tfrac{k(k-1)}2-1$, $S_2=\tfrac{k(k-1)(k-2)}3$, $K=\frac1{9(1-\lambda)}$, $K'=\frac d{9(d-1)}$,
+$v_e=C_U/d^2$, $t_e=\lambda C_T/d$, $\Sigma_u=(C_US_1+\tfrac52S_2)/d^2$, $\Sigma_t=\lambda C_TS_1/d+\tfrac56S_2/d^2$,
+$A_2=K'C_U/d^3$ and $B_2=K'\big[3C_T^2/d^3+\lambda C_UC_T/d^3+C_U^2/(12d^4)\big]$.
+
+\begin{lemma}\label{lem:prefix}
+Let $0<M_*\le6$ and $0<\delta<1$, and suppose that
+\begin{equation}\label{eq:criterion}
+(1-\delta)g_k-M_*A_k-M_*^2B_k\ge0\qquad(2\le k\le d).
+\end{equation}
+Then no nontrivial symmetric posterior fixed point has $M\le M_*$.
+\end{lemma}
+
+\begin{proof}
+Suppose $0<M\le M_*$. We show by induction on $k=2,\dots,d$ that
+\begin{equation}\label{eq:prefix}
+M_k\le\tfrac kdM-g_kM^2+A_kM^3+B_kM^4,
+\end{equation}
+and hence, by \eqref{eq:criterion}, $M_k\le\tfrac kdM-\delta g_kM^2<\tfrac kdM$. At $k=d$ this contradicts
+$M_d=M$.
+
+Assume $M_j\le jM/d$ for $1\le j<k$ (an equality at $j=1$). Together with $M_j\le M$ for $j\ge k$ this gives
+$\sum_{j=1}^{d-1}M_j\le M\big[\tfrac{k(k-1)}{2d}+d-k\big]=MZ/d$. Applying (F) and (C) to
+$\mu_{j+1}=\mu_j\circledast E_\lambda\mu$ and telescoping from $j=1$ to $j=d-1$,
+\[
+\big(1-\tfrac1d\big)U\le\tfrac{5M}d\sum_{j<d}M_j,\qquad(1-\lambda)T\le\tfrac{5M}{3d}\sum_{j<d}M_j,
+\]
+so, using $(1-\lambda)(1+\lambda)=(d-1)/d$, $U\le C_UM^2$ and $0\le T\le C_TM^2$. Telescoping the same
+inequalities only up to $j<k$ gives $U_j\le u_jM^2$ and $T_j\le t_jM^2$ with
+$u_j=[jC_U+\tfrac52j(j-1)]/d^2$ and $t_j=j\lambda C_T/d+\tfrac56j(j-1)/d^2$.
+
+For $k=2$, apply \cref{lem:variance} to two child laws: their vectors satisfy $c\ge-3\lambda^2$, so
+$S\ge3(d-1)/d$, and the cubic term is nonpositive since $T\ge0$. This gives \eqref{eq:prefix} at $k=2$. For the
+step from $j$ to $j+1<k+1$, apply \cref{lem:variance} with left law $\mu_j$ and right law $E_\lambda\mu$: here
+$S\ge3(1-\lambda)$ because every right coordinate is at least $(1-\lambda)/3$, the cubic term is nonpositive, and
+the bounds above give
+\[
+R\le K\Big[\tfrac{u_j}{2d}+\tfrac{jC_U}{2d^3}\Big]M^3+K\Big[3t_jt_e+\tfrac12(u_jt_e+t_jv_e)+\tfrac1{12}u_jv_e\Big]M^4 .
+\]
+The main term is $(1-\tfrac M{6d})M_j+\tfrac Md$, with a positive multiplier since $M\le6$. Inserting
+\eqref{eq:prefix} for $M_j$ and dropping the nonpositive products of the multiplier's $-M/(6d)$ with the cubic and
+quartic terms, the quadratic coefficient becomes $g_j+j/(6d^2)=g_{j+1}$, and the cubic and quartic coefficients
+grow by exactly the amounts whose sums over $j$ are the closed forms $A_k,B_k$ above.
+\end{proof}
+
+\begin{proposition}\label{prop:local3}
+Let $d\ge3$ and $\lambda=d^{-1/2}$. A symmetric posterior law $\mu$ with $T_\lambda\mu=\mu$ and $x(\mu)\le r_d$
+equals $\delta_u$.
+\end{proposition}
+
+\begin{proof}
+We verify \eqref{eq:criterion} for all integers $d\ge3$ and $2\le k\le d$ at once. Substitute $\ell=\lambda$,
+$d=\ell^{-2}$, $k=2+\rho(d-2)$ with $\rho\in[0,1]$, and $\ell=Lz$ with $z\in[0,1]$. After multiplication by a
+positive factor $D(\ell)$ the left side of \eqref{eq:criterion} becomes a polynomial in $(z,\rho)$, and every
+integer pair $(d,k)$ with $d^{-1/2}\le L$ corresponds to a point of $[0,1]^2$. The following choices are used.
+\begin{center}
+\begin{tabular}{lllll}
+\hline
+degrees & $M_*$ & $x=M_*/9$ & $\delta$ & $L$\\
+\hline
+$d\ge3$ & $27/100$ & $3/100$ & $1/100$ & $\eta=2887/5000$\\
+$d\ge4$ & $\tfrac54(1-\ell)^2$ & $\tfrac5{36}(1-\lambda)^2$ & $1/1000$ & $1/2$\\
+$d\ge5$ & $217/500$ & $217/4500$ & $1/1000$ & $559017/1250000$\\
+$d\ge20$ & $771/1000$ & $257/3000$ & $1/1000$ & $559017/2500000$\\
+$d\ge80$ & $537/500$ & $179/1500$ & $1/1000$ & $559017/5000000$\\
+\hline
+\end{tabular}
+\end{center}
+In each case $L\ge d^{-1/2}$ at the smallest degree of the row, and the Bernstein coefficients of the polynomial
+on $[0,1]^2$ are nonnegative (\cref{sec:computations}). Hence \eqref{eq:criterion} holds and \cref{lem:prefix}
+applies with $x=M/9$. For $d\ge4$ the curve dominates the constant $3/100$, since
+$(1-d^{-1/2})^2\ge\tfrac14>\tfrac{27}{125}$, so $r_d$ in \eqref{eq:radii} is the largest radius available.
+\end{proof}
+
+\section{Certified upper envelopes}\label{sec:envelope}
+
+By \cref{lem:tail}, an entry bound $x_N(d,d^{-1/2})<r_d$ is needed at one depth $N$ only. We obtain it from a
+finite computation whose output is more informative than the true posterior law at every depth, so that its second
+moment is an upper bound. The method is that of Bhatnagar and Maneva~\cite{BM11}. We state the version used here
+in full, because the certificates depend on its details: observations of probability zero, the discretization
+and the rounding of masses are all part of the argument.
+
+\subsection{Two upgrades}
+Let $\mu,\nu$ be symmetric posterior laws. Say that $\nu$ is \emph{more informative} than $\mu$ if there are
+observations $X$ and $Y$ of a uniform colour $\sigma$, with posterior laws $\nu$ and $\mu$, such that
+$Y=g(X,U)$ with $U$ independent of $(\sigma,X)$. As in the proof of \cref{lem:compare}, this implies
+$x(\nu)\ge x(\mu)$. The relation is preserved by $E_\lambda$ and by fusion with any third law, since the garbling
+can be applied to one observation and the others left alone.
+
+Fix an integer $K\ge1$ and let $G_K=\{v/K:\ v\in\mathbb Z_{\ge0}^3,\ v_1+v_2+v_3=K\}$. For $p\in\Simp$ write
+$Kp=f+r$ with $f$ integral and $0\le r_i<1$, so that $r_1+r_2+r_3\in\{0,1,2\}$. The \emph{split} of $p$ is the
+point $p$ itself if this sum is $0$; the points $(f+e_i)/K$ with weights $r_i$ if it is $1$; and the points
+$(f+\one-e_i)/K$ with weights $1-r_i$ if it is $2$. In each case the weights are nonnegative, sum to one and
+average to $p$, and the split commutes with permutations of the colours.
+
+\begin{lemma}\label{lem:split}
+Let $\mu$ be a symmetric posterior law and let $\mu'$ be the law obtained by replacing each $p$ by its split.
+Then $\mu'$ is a symmetric posterior law on $G_K$, more informative than $\mu$.
+\end{lemma}
+
+\begin{proof}
+Let $X$ be an observation with posterior $p=\sum_jw_jq_j$, the split of $p$. Given $X$ and $\sigma=i$ with
+$p_i>0$, draw a label $j$ with probability $w_j(q_j)_i/p_i$; these probabilities sum to one. If $p_i=0$ then
+$(q_j)_i=0$ whenever $w_j>0$, the pair $(X,\sigma=i)$ has probability zero, and the kernel may be chosen
+arbitrarily there. By Bayes' rule the posterior given $(X,j)$ is $q_j$, and given $X$ the label equals $j$ with
+probability $w_j$. Forgetting the label recovers $X$. The posterior law of $(X,j)$ is $\mu'$.
+\end{proof}
+
+A symmetric law on $G_K$ is determined by the masses of its $S_3$-orbits; for $K=96$ there are $817$ orbits,
+of sizes $1$, $3$ and $6$. Fix $S=2^b$. The \emph{rounding} of such a law replaces each orbit mass $w$ by
+$\lfloor Sw\rfloor/S$ and adds the total removed mass to the orbit $\{e_1,e_2,e_3\}$.
+
+\begin{lemma}\label{lem:round}
+The rounding of a symmetric posterior law on $G_K$ is a symmetric posterior law, more informative than it.
+\end{lemma}
+
+\begin{proof}
+For a posterior law, $\PP(X=p\mid\sigma=i)=3p_i\,\PP(X=p)$. The points of an orbit average to $u$, so the
+orbit containing the observation is independent of $\sigma$. On an orbit of mass $w$, keep the observation
+with probability $\lfloor Sw\rfloor/(Sw)$, independently of $\sigma$ and of the point within the orbit, and
+otherwise reveal $\sigma$ in addition. The revealed observations have posterior $e_\sigma$, and $\sigma$ is
+uniform on them because the kept fraction does not depend on $\sigma$. The refined observation has the rounded
+law, and discarding the revelation recovers the original observation.
+\end{proof}
+
+Write $\Pi$ for a split followed by a rounding. By \cref{lem:split,lem:round}, $\Pi\mu$ is more informative
+than $\mu$.
+
+\subsection{The computed laws}
+Fix $D\ge2$, a rational $\eta=A/B\in(0,1)$ in lowest terms, $K$ divisible by $3$, and $S=2^b$. Let $\nu_0$ be the
+uniform law on $\{e_1,e_2,e_3\}$. Given $\nu=\nu_n$, the law $\nu_{n+1}$ is computed in one of two ways.
+
+\emph{Sequential fusion} ($D\le5$). Put $P_2=\Pi\big(E_\eta\nu\circledast E_\eta\nu\big)$ and
+$P_{j+1}=\Pi\big(P_j\circledast E_\eta\nu\big)$ for $2\le j<D$, and set $\nu_{n+1}=P_D$. The shrunken law
+$E_\eta\nu$ enters each fusion exactly and is not split; every factor is a new copy of the child law $\nu$,
+never the partial product $P_j$.
+
+\emph{Binary fusion} ($D\ge6$). Put $\beta=\Pi(E_\eta\nu)$, $\beta_0=\beta$ and
+$\beta_{k+1}=\Pi(\beta_k\circledast\beta_k)$, where the two factors are independent copies. If
+$D=2^{k_1}+\dots+2^{k_s}$ with distinct $k_t$, the laws $\beta_{k_1},\dots,\beta_{k_s}$ are fused one at a time,
+with $\Pi$ applied after each fusion, and the result is $\nu_{n+1}$.
+
+\begin{proposition}\label{prop:dominate}
+For every $n\ge0$, $\nu_n$ is more informative than $\mu_n(D,\eta)$, and hence $x(\nu_n)\ge x_n(D,\eta)$.
+\end{proposition}
+
+\begin{proof}
+At $n=0$ the two laws are equal. Suppose $\nu_n$ is more informative than $\mu_n=\mu_n(D,\eta)$. By
+\cref{lem:recursion}, $\mu_{n+1}=(E_\eta\mu_n)^{\circledast D}$, and since fusion is associative and
+commutative on posterior laws, the right side may be grouped as in either scheme. In that grouping replace each
+factor $E_\eta\mu_n$ by $E_\eta\nu_n$, one at a time, and apply $\Pi$ where the scheme applies it. Each
+replacement and each application of $\Pi$ can only make the law more informative, so $\nu_{n+1}$ is more
+informative than $\mu_{n+1}$. The last assertion follows from the first, as in \cref{lem:compare}.
+\end{proof}
+
+No closeness of $\nu_n$ to $\mu_n$ is used: every step can only add information, and the inequality holds however
+large the losses from the grid and the rounding are. When two laws on $G_K$ are fused, pairs with
+$\langle p,r\rangle=0$ have probability zero and are dropped before normalizing.
+
+\subsection{Exact arithmetic}
+Masses are stored as integers summing to $S$, and every transition between orbits as a vector of nonnegative
+integers with a common denominator. A grid point $v/K$ shrunk by $E_\eta$ has coordinates
+$((B-A)K+3Av_i)/(3BK)$, so the split of a single shrunken point has denominator $3B$. For a fusion, fix one
+orientation of the left orbit and average over the $o\in\{1,3,6\}$ orientations of the right orbit; by
+simultaneous permutation of the colours this gives the full grouped transition. If the likelihood products
+are $z_i$ with $C=z_1+z_2+z_3$, the split weights of $z/C$ have denominator $C$, the pair has mass proportional
+to $C$, and $C$ cancels. With the factor $36/o$, which is an integer, the transitions become integer vectors with
+row sum $108K^2$ for the fusion of two grid laws, $108(BK)^2$ for the first stage of sequential fusion and
+$108BK^2$ for its later stages.
+
+A new orbit mass is the integer quotient of an accumulator $\sum m_im_jt_{ij}$ by $S$ times the row sum. All
+summands are nonnegative, so each accumulator is at most $S^2$ times the row sum. This is below $2^{128}$ in
+every row of \cref{prop:entry} except $d=2$, where the computation uses arbitrary-precision integers; the
+single-law step for binary fusion stays below $S\cdot3B<2^{64}$. The integer quotient is exactly the rounding of
+\cref{lem:round}, and the removed units go to the vertex orbit. Finally
+\[
+x(\nu_n)=\frac1S\sum_{O}m_O\,\frac{3|v_O|^2-K^2}{3K^2},
+\]
+where $v_O\in\mathbb Z^3$ is any point of the orbit $O$. No floating-point number enters a coefficient, a mass
+or a bound. The tables are checked as described in \cref{sec:computations}.
+
+\subsection{The entry bounds}
+
+\begin{proposition}\label{prop:entry}
+For each row of \cref{tab:entry}, each degree $d$ in the range and each $n\ge n_0$,
+\[
+x_n\big(d,d^{-1/2}\big)\le x(\nu_{n_0})<r_d,
+\]
+where $\nu_{n_0}$ is computed with the listed $D$ and $\eta$, $K=96$ and $S=2^b$.
+\end{proposition}
+
+{\small
+\begin{longtable}{lllllll}
+\caption{Entry bounds. The column $x(\nu_{n_0})$ is the exact rational value rounded up to five places, and the
+last column is $r_d$ at the smallest degree of the range.}\label{tab:entry}\\
+\hline
+$d$ & $D$ & $\eta$ & $n_0$ & $b$ & $x(\nu_{n_0})\le$ & $r_d$\\
+\hline
+\endfirsthead
+\hline
+$d$ & $D$ & $\eta$ & $n_0$ & $b$ & $x(\nu_{n_0})\le$ & $r_d$\\
+\hline
+\endhead
+2 & 2 & $707107/1000000$ & 500 & 40 & 0.01142 & 0.01150\\
+3 & 3 & $2887/5000$ & 106 & 40 & 0.01847 & 0.03000\\
+4 & 4 & $1/2$ & 82 & 40 & 0.02108 & 0.03472\\
+5 & 5 & $161/360$ & 25 & 32 & 0.04689 & 0.04822\\
+6 & 6 & $89/218$ & 26 & 32 & 0.04765 & 0.04863\\
+7 & 7 & $127/336$ & 22 & 32 & 0.05348 & 0.05374\\
+8 & 8 & $99/280$ & 20 & 32 & 0.05732 & 0.05804\\
+9 & 9 & $1/3$ & 18 & 32 & 0.06158 & 0.06173\\
+10 & 10 & $37/117$ & 17 & 32 & 0.06472 & 0.06494\\
+11 & 11 & $79/262$ & 17 & 32 & 0.06510 & 0.06776\\
+12 & 12 & $97/336$ & 16 & 32 & 0.06822 & 0.07028\\
+13 & 13 & $38/137$ & 15 & 32 & 0.07172 & 0.07253\\
+14 & 14 & $89/333$ & 15 & 32 & 0.07205 & 0.07457\\
+15 & 15 & $55/213$ & 14 & 32 & 0.07595 & 0.07643\\
+16 & 16 & $1/4$ & 14 & 32 & 0.07601 & 0.07812\\
+17 & 17 & $65/268$ & 14 & 32 & 0.07676 & 0.07969\\
+18 & 18 & $33/140$ & 13 & 32 & 0.08104 & 0.08113\\
+19 & 19 & $53/231$ & 13 & 32 & 0.08147 & 0.08247\\
+20--21 & 21 & $53/237$ & 21 & 32 & 0.08481 & 0.08567\\
+22--23 & 23 & $71/333$ & 24 & 32 & 0.08552 & 0.08598\\
+24--25 & 25 & $69/338$ & 21 & 32 & 0.08746 & 0.08797\\
+26--27 & 27 & $61/311$ & 19 & 32 & 0.08937 & 0.08975\\
+28--29 & 29 & $55/291$ & 18 & 32 & 0.09042 & 0.09135\\
+30--31 & 31 & $65/356$ & 17 & 32 & 0.09180 & 0.09280\\
+32--33 & 33 & $32/181$ & 16 & 32 & 0.09384 & 0.09412\\
+34--35 & 35 & $59/344$ & 16 & 32 & 0.09364 & 0.09534\\
+36--37 & 37 & $1/6$ & 15 & 32 & 0.09570 & 0.09645\\
+38--39 & 39 & $55/339$ & 15 & 32 & 0.09609 & 0.09748\\
+40--41 & 41 & $37/234$ & 15 & 32 & 0.09607 & 0.09844\\
+42--43 & 43 & $25/162$ & 14 & 32 & 0.09904 & 0.09933\\
+44--45 & 45 & $49/325$ & 14 & 32 & 0.09922 & 0.10017\\
+46--47 & 47 & $32/217$ & 14 & 32 & 0.09948 & 0.10095\\
+48--49 & 49 & $41/284$ & 14 & 32 & 0.09976 & 0.10169\\
+50--52 & 52 & $43/304$ & 19 & 32 & 0.10125 & 0.10238\\
+53--55 & 55 & $25/182$ & 18 & 32 & 0.10238 & 0.10335\\
+56--58 & 58 & $29/217$ & 17 & 32 & 0.10398 & 0.10425\\
+59--61 & 61 & $25/192$ & 17 & 32 & 0.10418 & 0.10508\\
+62--64 & 64 & $39/307$ & 17 & 32 & 0.10448 & 0.10585\\
+65--67 & 67 & $33/266$ & 16 & 32 & 0.10634 & 0.10657\\
+68--70 & 70 & $41/338$ & 16 & 32 & 0.10678 & 0.10725\\
+71--73 & 73 & $40/337$ & 16 & 32 & 0.10694 & 0.10788\\
+74--76 & 76 & $5/43$ & 16 & 32 & 0.10738 & 0.10847\\
+77--79 & 79 & $31/272$ & 16 & 32 & 0.10758 & 0.10904\\
+80--83 & 83 & $35/313$ & 66 & 32 & 0.10487 & 0.11933\\
+84--88 & 88 & $37/339$ & 19 & 32 & 0.11856 & 0.11933\\
+89--90 & 90 & $529999/5000000$ & 11 & 32 & 0.11761 & 0.11933\\
+\hline
+\end{longtable}}
+
+\begin{proof}
+In each row $D$ is the largest degree of the range and $\eta^2d\ge1$ at its smallest degree, so
+$\eta\ge d^{-1/2}$ for every $d$ in the range. By \cref{lem:tail}, \cref{lem:compare} and
+\cref{prop:dominate}, for $n\ge n_0$,
+\[
+x_n(d,d^{-1/2})\le x_{n_0}(d,d^{-1/2})\le x_{n_0}(D,\eta)\le x(\nu_{n_0}).
+\]
+The inequality $x(\nu_{n_0})<r_d$ is checked in exact arithmetic at every degree of the range; against the
+curve in \eqref{eq:radii} it is checked by squaring. Degrees $2\le d\le5$ use sequential fusion and $d\ge6$
+binary fusion.
+\end{proof}
+
+The rows are tight in places. At $d=2$ the bound is $0.011415$ against $r_2=0.0115$; at $d=9$ and $d=18$ the
+margins are about $1.5\times10^{-4}$ and $1.0\times10^{-4}$.
+
+\section{Large degrees}\label{sec:large}
+
+For $d\ge91$ we do not compute an entry bound. Instead we show that a fixed point with $T\ge0$ cannot have
+second moment $x\ge\tfrac1{10}$; together with \cref{prop:local3} this excludes every nontrivial fixed point. The
+argument compares one step of the recursion with the Gaussian map of Sly~\cite[(4.7)]{Sly11}, by replacing the
+branches one at a time, in the manner of the Lindeberg argument of \cite[Lemma~4.3]{Sly11} and
+\cite[Appendix~A]{MSS22}. The new points are explicit constants, and a cancellation of the third-order terms that
+uses a second observable.
+
+\subsection{The Gaussian experiment}
+Let $P=I-\tfrac13\one\one^{\mathsf T}$ and let $F(z)=\mathrm{softmax}(z)$, so $F_i(z)=e^{z_i}/\sum_je^{z_j}$. For
+$s\ge0$ let $Z$ be a random vector which, given $\sigma=i$, is Gaussian with mean $\tfrac{9s}2Pe_i$ and covariance
+$\tfrac{9s}2P$, with $\sigma$ uniform. The means have equal norms in the metric of the covariance, so the
+likelihood ratios are $e^{Z_i-Z_j}$ and $F(Z)$ is the posterior of $\sigma$ given $Z$. Put
+\[
+g_G(s)=\E\big[F_1(Z)\mid\sigma=1\big]-\tfrac13,\qquad U_G(s)=\E\big[|3F(Z)-\one|^4\mid\sigma=1\big].
+\]
+By calibration $g_G(s)$ is the second moment $x$ of the posterior law of $Z$. This is the map of
+\cite[(4.7)]{Sly11} for $q=3$ in our normalization: there the mean is $s(\tfrac32,-3,-3)$ before centring and the
+covariance has diagonal $3$ and off-diagonal $-\tfrac32$, which after adding $\tfrac{3s}2$ to every logit is the law
+above.
+
+\begin{lemma}\label{lem:gap}
+$s-g_G(s)\ge\max\{\tfrac9{20}s^2,\tfrac{13}{200}s\}>0$ for $\tfrac1{10}\le s\le\tfrac23$.
+\end{lemma}
+
+\begin{proof}
+For $0<a\le b$ the experiment at $a$ is a garbling of the one at $b$: if $Y_b$ has the law at $b$, then
+$\sqrt{a/b}\,Y_b+\sqrt{1-a/b}\,Y'$, with $Y'$ an independent centred copy of the noise, has the law at $a$. Hence
+$g_G$ is nondecreasing, as in \cref{lem:compare}, and for $l\le s\le r$
+\begin{equation}\label{eq:gapmono}
+s-g_G(s)\ge l-g_G(r).
+\end{equation}
+
+In coordinates, with $\xi=(\xi_1,\xi_2)$ standard Gaussian,
+\[
+g_G(s)=\E f_s(\xi)-\tfrac13,\qquad
+f_s(\xi)=\Big[1+2\exp\big(-\tfrac{9s}2-\tfrac32\sqrt{3s}\,\xi_1\big)\cosh\big(\tfrac32\sqrt s\,\xi_2\big)\Big]^{-1},
+\]
+since the two columns $(\sqrt{2/3},-1/\sqrt6,-1/\sqrt6)$ and $(0,1/\sqrt2,-1/\sqrt2)$ are an orthonormal basis of the
+plane $\one^\perp$. For $p=F(z)$ and a direction $h$ with $R=\max_ih_i-\min_ih_i$,
+\[
+D^2F_1(z)[h,h]=p_1\big((h_1-\textstyle\sum_jp_jh_j)^2-\mathrm{Var}_p(h)\big).
+\]
+The first term lies between $0$ and $p_1(1-p_1)^2R^2\le\tfrac4{27}R^2$, because
+$\tfrac4{27}-p(1-p)^2=(p-\tfrac13)^2(\tfrac43-p)$, and the variance lies between $0$ and $R^2/4$. Hence
+$|D^2F_1[h,h]|\le R^2/4\le|h|^2/2$, and the Hessian of $f_s$ has operator norm at most $\tfrac{9s}4$ everywhere.
+
+Divide $[-6,6]$ into $96$ intervals of length $\tfrac18$. For an interval $I_j$ let $w_j$ be its Gaussian mass,
+$m_j$ the conditional mean and $v_j$ the mass times the conditional variance, and put $P=\sum_jw_j$,
+$V=\sum_jv_j$. On a product cell $I_j\times I_k$ expand $f_s$ about $(m_j,m_k)$: the linear term integrates to
+zero and the remainder is at most $\tfrac{9s}8|\xi-(m_j,m_k)|^2$. Summing over the cells, whose integrated squared
+distances add up to $2PV$, and using $0\le f_s\le1$ off the square,
+\begin{equation}\label{eq:gapquad}
+g_G(s)\le\sum_{j,k}w_jw_kf_s(m_j,m_k)+\tfrac{9s}4PV+1-P^2-\tfrac13.
+\end{equation}
+Let $t_i=10/(100-i)$ for $0\le i\le85$, so that $t_0=\tfrac1{10}$ and $t_{85}=\tfrac23$. In
+\cref{sec:computations} the right side of \eqref{eq:gapquad} at $s=t_{i+1}$ is enclosed by a rational number
+$U_i$, and exact arithmetic gives
+\[
+t_i-U_i>\tfrac9{20}t_{i+1}^2,\qquad t_i-U_i>\tfrac{13}{200}t_{i+1}\qquad(0\le i<85).
+\]
+By \eqref{eq:gapmono} with $l=t_i$ and $r=t_{i+1}$, both bounds hold on $[t_i,t_{i+1}]$.
+\end{proof}
+
+\subsection{One replacement}
+Let $\mu$ be a symmetric posterior law with moments $M,U,T$ as in \cref{sec:local}, and $a=3p-\one$, $A=|a|^2$. Given
+the colour of the parent, the logarithmic likelihood vector of one branch through an edge of strength $\lambda$ is
+$P\log(1+\lambda a)$, computed coordinatewise; its Gaussian counterpart is $G\sim N(\lambda^2Mv_i,
+\tfrac{\lambda^2M}2P)$ given $\sigma=i$, where $v_i=\tfrac12(e_i-\tfrac13\one)$. For a smooth function $f$ on
+$\R^3$, invariant under adding a constant to every coordinate, suppose that at every point
+\begin{equation}\label{eq:derivs}
+\begin{gathered}
+|Df[v_i]|\le g_1,\quad |D^2f[h,h]|\le c_2|Ph|^2,\quad |D^3f[h,h,h]|\le c_3|Ph|^3,\\
+|D^3f[r,h,h]|\le c_{31}|Pr||Ph|^2,\quad |D^4f[h,h,h,h]|\le c_4|Ph|^4 .
+\end{gathered}
+\end{equation}
+For $0<L<1$ put
+\[
+B_4=\tfrac{25}{288}+\tfrac{49}{100}\tfrac L{1-L},\qquad B_3=\tfrac16+\tfrac{49}{20}LB_4,\qquad
+B_1=\tfrac5{24}+\tfrac{49}{20}LB_3,
+\]
+\begin{align*}
+\Gamma_U(f;L)&=g_1\Big(\tfrac16+\tfrac{49}{20}LB_4\Big)+\tfrac{c_2}2\Big(\tfrac1{24}+B_3\big(\tfrac1{1-L}+1+\tfrac L2\big)+\tfrac16\Big)
++\tfrac{c_{31}B_1}{2(1-L)^2}+\tfrac{c_3}6+\tfrac{c_4}{24(1-L)^4},\\
+\Gamma_M(f;L)&=\tfrac{c_2}{12}+\tfrac{5c_{31}}{24}+\tfrac{5c_3L^2}{72}+\tfrac{c_4(2+4L^2+L^4)}{24},
+\end{align*}
+and, for $\{i,j,k\}=\{1,2,3\}$,
+\begin{equation}\label{eq:ell}
+\ell_i^f=\tfrac14\Big(\textstyle\sum_rD_r^3f-D_if-(D_j-D_k)^2f\Big).
+\end{equation}
+Here $D_r=\partial/\partial z_r$, so that $D_r^3f=D^3f[e_r,e_r,e_r]$ and $(D_j-D_k)^2f=D^2f[e_j-e_k,e_j-e_k]$.
+
+\begin{lemma}\label{lem:replace}
+Let $0<\lambda\le L<1$ and let $W$ be any random vector, independent of the branch given $\sigma$. Then, given
+$\sigma=i$,
+\[
+\E f\big(W+P\log(1+\lambda a)\big)-\E f(W+G)
+\le\lambda^3T\,\E\,\ell_i^f(W)+\lambda^4\big(\Gamma_U(f;L)\,U+\Gamma_M(f;L)\,M^2\big).
+\]
+\end{lemma}
+
+\begin{proof}
+Take $i=1$; the other cases follow by permuting colours. Given $\sigma=1$, the child's point $a$ has law
+$(1+\lambda a_1)\mu(da)$. Squares and cubes of vectors below are coordinatewise. Write
+\[
+\Lambda=P\log(1+\lambda a)=\lambda a+\lambda^2b+\lambda^3c+r_4,\qquad b=-\tfrac12Pa^2,\quad c=\tfrac13Pa^3.
+\]
+Since $a_1+a_2+a_3=0$ we have $|b|=A/(2\sqrt6)$, $c=Aa/6$, $|Pa^4|^2\le\tfrac{25}{216}A^4$ and $A\le6$. The
+integral form of the remainder in $\log(1+t)=t-\tfrac{t^2}2+\tfrac{t^3}3-\dots$, valid for $t\ge-\lambda>-1$, then gives
+\begin{equation}\label{eq:logrem}
+\begin{gathered}
+|r_4|\le\lambda^4A^2B_4,\qquad|\Lambda-\lambda a-\lambda^2b|\le\lambda^3A^{3/2}B_3,\qquad|\Lambda-\lambda a|\le\lambda^2AB_1,\\
+|\Lambda|\le\frac{\lambda\sqrt A}{1-L},\qquad|\lambda a+\lambda^2b|\le\lambda\sqrt A\big(1+\tfrac L2\big).
+\end{gathered}
+\end{equation}
+Let $m=\lambda^2Mv_1$ and $C=\tfrac{\lambda^2M}2P$, so that $G\sim N(m,C)$. Condition on $W$ and expand
+$f(W+y)$ to fourth order in $y$, for $y=\Lambda$ and $y=G$; the fourth-order remainder is at most
+$c_4|Py|^4/24$. We compare the two expansions term by term. For any equivariant plane-valued function $V$,
+$\E_\mu[a_1V(a)]=v_1\E_\mu[a\cdot V(a)]$, and every radial quantity has the same mean under $\mu$ and under
+$(1+\lambda a_1)\mu$.
+
+\emph{First order.} By the identity just stated,
+$\E_1\Lambda=m-\tfrac12\lambda^3Tv_1+\tfrac16\lambda^4Uv_1+\lambda v_1\E[a\cdot r_4]$. The term in $\lambda^3$ is
+kept; by \eqref{eq:logrem} and $\sqrt6\le\tfrac{49}{20}$ the others contribute at most
+$\lambda^4Ug_1(\tfrac16+\tfrac{49}{20}LB_4)$.
+
+\emph{Second order.} The difference $\E_1\Lambda\Lambda^{\mathsf T}-\E GG^{\mathsf T}$ is
+$-\tfrac12\lambda^3T(e_2-e_3)(e_2-e_3)^{\mathsf T}$ plus a matrix of nuclear norm at most
+$\lambda^4\{U[\tfrac1{24}+B_3(\tfrac1{1-L}+1+\tfrac L2)+\tfrac16]+\tfrac16M^2\}$. Indeed,
+$\|zz^{\mathsf T}-ww^{\mathsf T}\|_*\le|z-w|(|z|+|w|)$ compares $\Lambda$ with $\lambda a+\lambda^2b$; the term
+$\lambda^4bb^{\mathsf T}$ costs $U/24$; the change of density acting on $\lambda^3(ab^{\mathsf T}+ba^{\mathsf T})$ costs
+$U/6$; and $mm^{\mathsf T}$ has norm $\lambda^4M^2/6$. With the Taylor factor $\tfrac12$ and the bound $c_2$ on
+the Hessian this gives the $c_2$ terms of $\Gamma_U$ and $\Gamma_M$.
+
+\emph{Third order.} Let $q(y)=D^3f(W)[y,y,y]$. Along the segment from $\lambda a$ to $\Lambda$,
+$|q(\Lambda)-q(\lambda a)|\le3c_{31}\lambda^4A^2B_1/(1-L)^2$. The change of density acting on $q(\lambda a)$ is at
+most $c_3\lambda^4U$, because $|a_1|\le\sqrt A$, and what remains is $\lambda^3\E_\mu q(a)$, which carries the
+cubic term. For the Gaussian, with $G=m+H$, $\E q(G)=q(m)+3\E D^3f(W)[m,H,H]$; here $\E|H|^2=\lambda^2M$,
+$|m|=\lambda^2M/\sqrt6$, $M\le6$ and $1/\sqrt6\le\tfrac5{12}$, which bound the two terms by
+$\lambda^4M^2\cdot\tfrac5{12}c_3L^2$ and $\lambda^4M^2\cdot\tfrac54c_{31}$. With the Taylor factor $\tfrac16$ this
+gives the $c_3$ and $c_{31}$ terms.
+
+\emph{Fourth order.} By \eqref{eq:logrem}, $\E_1|\Lambda|^4\le\lambda^4U/(1-L)^4$, and
+$\E|G|^4=\lambda^4M^2(2+\tfrac23\lambda^2M+\tfrac1{36}\lambda^4M^2)\le\lambda^4M^2(2+4L^2+L^4)$.
+
+Finally, the terms in $\lambda^3$ are $-\tfrac14TD_1f$ from the mean, $-\tfrac14T(D_2-D_3)^2f$ from the second
+moment, and $\tfrac16\cdot\tfrac32T\sum_rD_r^3f$ from the third, since
+$\E_\mu D^3f[a,a,a]=\tfrac32T\sum_rD_r^3f$ for a symmetric law. Their sum is $\lambda^3T\ell_1^f(W)$.
+\end{proof}
+
+\subsection{The two comparisons}
+Write $Q(z)=|3F(z)-\one|^4$. Applied to $f=F_1$ and to $f=Q$, \cref{lem:replace} needs the constants in
+\eqref{eq:derivs}.
+
+\begin{lemma}\label{lem:softmax}
+For $f=F_1$ the bounds \eqref{eq:derivs} hold with $(g_1,c_2,c_3,c_{31},c_4)=(\tfrac18,\tfrac15,\tfrac25,\tfrac12,\tfrac35)$,
+and for $f=Q$ with $(8,20,38,38,99)$.
+\end{lemma}
+
+\begin{proof}
+For $F_1$, $DF_1[v_i]=\tfrac12p_1(\delta_{1i}-p_i)$, which is at most $\tfrac18$ in absolute value. Both functions
+are invariant under adding a constant to $z$, so every derivative sees only $Ph$, and a zero direction is trivial.
+For the remaining bounds translate and rescale $h$ so that its smallest coordinate is $0$ and its largest is $1$.
+Using $h\mapsto-h$ and the symmetry between colours $2$ and $3$, it suffices to take $h=(0,t,1)$ or $h=(t,0,1)$
+with $0\le t\le1$ for $F_1$, and $h=(0,t,1)$ for the symmetric function $Q$; in all cases
+$|Ph|^2=\tfrac23(1-t+t^2)>0$. Write $p=(u,(1-u)v,(1-u)(1-v))$ with $(u,v)\in[0,1]^2$, which covers the closed
+simplex. With $m=\sum_ip_ih_i$, $r=h_1-m$ and the cumulants $k_2,k_3,k_4$ of $h$ under $p$, differentiation of
+$p_i'=p_i(h_i-m)$ gives
+\[
+D^2F_1=p_1(r^2-k_2),\quad D^3F_1=p_1(r^3-3rk_2-k_3),\quad D^4F_1=p_1(r^4-6r^2k_2-4rk_3+3k_2^2-k_4),
+\]
+and the derivatives of $Q=(9\sum_ip_i^2-3)^2$ are obtained in the same way. Each bound is then a polynomial
+inequality in $(u,v,t)\in[0,1]^3$ with rational coefficients: $\tfrac15|Ph|^2\pm D^2F_1\ge0$,
+$\tfrac4{25}|Ph|^6-(D^3F_1)^2\ge0$, $\tfrac35|Ph|^4\pm D^4F_1\ge0$, and for $Q$ the inequalities
+$8\pm\tfrac12D_1Q\ge0$, $20|Ph|^2\pm D^2Q\ge0$, $38^2|Ph|^6-(D^3Q)^2\ge0$, $99|Ph|^4\pm D^4Q\ge0$ and
+$38^2|Ph|^4-\sum_j(V_j)^2\ge0$, where $V_j=D^3Q[e_j,h,h]$. These eighteen inequalities are proved in
+\cref{sec:computations} by Bernstein expansion with exact subdivision. The last one gives the mixed bound for
+$Q$, since $V\perp\one$ and $D^3Q[r,h,h]=\sum_jr_jV_j$. For $F_1$ the mixed bound follows from the cubic one by
+polarization: for unit vectors $r,h$ in the plane,
+\[
+3D^3F_1[h,h,r]=D^3F_1[(h+\tfrac r2)^{3}]-D^3F_1[(h-\tfrac r2)^{3}]-\tfrac14D^3F_1[r^{3}],
+\]
+and $|h+\tfrac r2|^3+|h-\tfrac r2|^3\le\tfrac72$, so $|D^3F_1[h,h,r]|\le\tfrac13\cdot\tfrac25\cdot\tfrac{15}4=\tfrac12$.
+\end{proof}
+
+The third-order terms have a sign. At a point $z$ with $p=F(z)$, let $e_2=\sum_{i<j}p_ip_j$ and $e_3=p_1p_2p_3$, and
+write $\ell_i^{F_i}$ for \eqref{eq:ell} applied to $f=F_i$.
+
+\begin{lemma}\label{lem:cubic}
+At every $z\in\R^3$, with $\beta=\tfrac{49}4$,
+\[
+\sum_ip_i\ell_i^{F_i}(z)=-e_2(e_2-9e_3)\le0,\qquad
+\sum_ip_i\ell_i^{Q}(z)+9\beta\sum_ip_i\ell_i^{F_i}(z)\le0.
+\]
+\end{lemma}
+
+\begin{proof}
+Since $D_jF_i=p_i(\delta_{ij}-p_j)$, both sums are polynomials in $p$, and direct expansion gives
+\[
+\sum_ip_i\ell_i^{F_i}=-e_2(e_2-9e_3),\qquad
+\sum_ip_i\ell_i^{Q}=54\big(18e_2^3-270e_2^2e_3-5e_2^2+99e_2e_3-6e_3\big).
+\]
+By Maclaurin's inequality $e_2\ge3e_3^{2/3}$, and $e_3\le\tfrac1{27}$, so $e_2\ge9e_3$; this is the first claim.
+
+For the second, put $a=3p-\one$, $A=|a|^2$ and $J=\sum_ia_i^3$, so that $e_2=(6-A)/18$ and
+$e_3=(J+3-\tfrac32A)/81$. Substitution shows that the left side of the second inequality equals $C(A)+B(A)J$, where
+\[
+C(A)=\big(4-\tfrac\beta3\big)A+\big(\tfrac\beta{18}-4\big)A^2+\tfrac23A^3,\qquad
+B(A)=\tfrac\beta3-2+\big(3-\tfrac\beta{18}\big)A-\tfrac59A^2.
+\]
+On the simplex $0\le A\le6$. Since $a_1+a_2+a_3=0$, the discriminant identity
+$A^3/6-J^2=\tfrac13\prod_{i<j}(a_i-a_j)^2$ gives $J\le A^{3/2}/\sqrt6$, and $e_3\ge0$ gives $J\ge\tfrac32A-3$.
+If $B(A)\ge0$, put $t=\sqrt{A/6}\in[0,1]$ and use $J\le6t^3$:
+\[
+C+BJ\le-2t^2(1-t)^2\Big[48\big(t-\tfrac{23}{384}\big)^2+\tfrac{239}{3072}+60t^3\Big]\le0.
+\]
+If $B(A)<0$, use $J\ge\tfrac32A-3$:
+\[
+C+BJ\le-\tfrac1{144}(6-A)^2(24A+25)\le0.
+\]
+Both right sides are exact polynomial identities in $t$ and $A$ respectively.
+\end{proof}
+
+\begin{proposition}\label{prop:compare}
+Let $\mu$ be a symmetric posterior law with $T(\mu)\ge0$, let $d\ge1$, $0<\lambda\le L<1$, and let $x',U'$ be the
+second and fourth moments $x$ and $U$ of $T_\lambda\mu$. With $s=d\lambda^2x$, $\beta=\tfrac{49}4$,
+$f_U=\Gamma_U(F_1;L)$, $f_M=\Gamma_M(F_1;L)$, $q_U=\Gamma_U(Q;L)$ and $q_M=\Gamma_M(Q;L)$,
+\begin{align}
+x'-g_G(s)&\le d\lambda^4(f_UU+f_MM^2),\label{eq:cmp1}\\
+U'-U_G(s)+9\beta\big(x'-g_G(s)\big)&\le d\lambda^4\big((q_U+9\beta f_U)U+(q_M+9\beta f_M)M^2\big).\label{eq:cmp2}
+\end{align}
+\end{proposition}
+
+\begin{proof}
+Given $\sigma$, the logarithmic likelihood of the $d$ branches is the sum of $d$ independent copies of
+$P\log(1+\lambda a)$, and that of the Gaussian experiment at $s=d\lambda^2x$ is the sum of $d$ independent copies of
+$G$, since $d\lambda^2M/2=\tfrac{9s}2$. Replace the branches by Gaussian copies one at a time. Every intermediate
+sum is the logarithmic likelihood of a genuine symmetric experiment, since sums of independent likelihoods remain
+likelihoods, so its posterior is $F(W)$ and its law $\nu$ satisfies $\PP(W\in\cdot\mid\sigma=i)=3F_i(W)\,\nu$.
+Hence the third-order term of \cref{lem:replace} for $f=F_\sigma$, averaged over $\sigma$, is $\lambda^3T$ times
+the $\nu$-average of $\sum_ip_i\ell_i^{F_i}$, and for $f=Q$ it is $\lambda^3T$ times the $\nu$-average of
+$\sum_ip_i\ell_i^Q$. By calibration $\E F_\sigma(\cdot)=x+\tfrac13$ at both ends of the chain, with $x=x'$ for the
+branches and $x=g_G(s)$ for the Gaussian, and $Q$ is symmetric, so its conditional and unconditional means agree.
+Summing the $d$ replacements, applying \cref{lem:replace} to $F_\sigma$ for \eqref{eq:cmp1} and to $Q$ and
+$9\beta F_\sigma$ separately for \eqref{eq:cmp2}, the third-order terms are nonpositive by \cref{lem:cubic} and
+$T\ge0$, and may be dropped.
+\end{proof}
+
+\subsection{Exclusion of large fixed points}
+
+\begin{proposition}\label{prop:large}
+Let $d\ge91$ and $\lambda=d^{-1/2}$. Every symmetric posterior law $\mu$ with $T_\lambda\mu=\mu$ and $T(\mu)\ge0$
+has $x(\mu)<\tfrac1{10}$.
+\end{proposition}
+
+\begin{proof}
+Put $D=91$, $L=209657/2000000$ and $\beta=\tfrac{49}4$. Then $DL^2\ge1$, so $\lambda\le L$, and
+\cref{prop:compare} applies. Let $f_U,f_M,q_U,q_M$ be as there, at this $L$, and define
+\[
+E_d(s)=\frac{d-q_U}{f_U}\big(s-g_G(s)\big)-81\Big[\Big(1-\frac{q_U}d\Big)\frac{f_M}{f_U}+\frac{q_M}d\Big]s^2-U_G(s).
+\]
+In \cref{sec:computations} we verify, in exact rational arithmetic,
+\begin{equation}\label{eq:d91}
+D-q_U-9\beta f_U>0,\qquad q_M-q_U\frac{f_M}{f_U}>0,\qquad E_D(s)>\tfrac3{200}\quad\big(\tfrac1{10}\le s\le\tfrac23\big).
+\end{equation}
+
+Suppose $x=x(\mu)\ge\tfrac1{10}$; then $x\le\tfrac23$. At the fixed point $x'=x$, $U'=U$, $s=d\lambda^2x=x$ and
+$d\lambda^4=1/d$. Write $M=9x$, $K=U/(81x^2)$ and $\gamma=(x-g_G(x))/x^2$. Then \eqref{eq:cmp1} reads
+$K\ge(d\gamma/81-f_M)/f_U$, and \eqref{eq:cmp2} reads
+\[
+\big(d-q_U-9\beta f_U\big)K\le\frac{dU_G(x)}{81x^2}-\frac{\beta d\gamma}9+q_M+9\beta f_M.
+\]
+The coefficient on the left is positive by \eqref{eq:d91}, since $d\ge D$. Inserting the lower bound for $K$, the
+terms in $\beta$ cancel, and after multiplication by $81x^2/d$ what remains is $E_d(x)\le0$.
+
+By \cref{lem:gap}, $x-g_G(x)>0$. The coefficient $(d-q_U)/f_U$ increases with $d$, while
+$81[(1-q_U/d)f_M/f_U+q_M/d]=81[f_M/f_U+(q_M-q_Uf_M/f_U)/d]$ decreases with $d$ by \eqref{eq:d91}. Hence
+$E_d(x)\ge E_D(x)>\tfrac3{200}$, a contradiction.
+\end{proof}
+
+\begin{remark}\label{rem:ug}
+Without the second observable, \eqref{eq:cmp1} alone does not bound $U$, and the third-order term of $Q$ by itself
+has no sign: $\sum_ip_i\ell_i^Q>0$ at $p=(\tfrac25,\tfrac3{10},\tfrac3{10})$. The multiple $9\beta F_\sigma$ of the
+first observable corrects this sign everywhere on the simplex (\cref{lem:cubic}), and its contribution cancels in
+the proof of \cref{prop:large}. The value $\beta=\tfrac{49}4$ is one convenient choice; the same proof works for
+any $\beta$ for which $C(A)+B(A)J\le0$ on the feasible region and \eqref{eq:d91} holds.
+\end{remark}
+
+\section{Proof of \texorpdfstring{\cref{thm:main}}{Theorem 1.1}}\label{sec:proof}
+
+By \cref{lem:compare} with $D=d$, it suffices to take $\lambda=d^{-1/2}$. The ingredients for each degree are
+collected in \cref{tab:degrees}.
+
+\begin{table}[ht]
+\caption{The two estimates used at each degree.}\label{tab:degrees}
+\begin{tabular}{lll}
+\hline
+degrees & exclusion near $\delta_u$ & entry or exclusion away from $\delta_u$\\
+\hline
+$d=2$ & $x\le r_2=\tfrac{23}{2000}$, \cref{prop:local2} & $x_{500}\le0.011415$, \cref{prop:entry}\\
+$d=3$ & $x\le r_3=\tfrac3{100}$, \cref{prop:local3} & $x_{106}\le0.018465$, \cref{prop:entry}\\
+$4\le d\le90$ & $x\le r_d$ in \eqref{eq:radii}, \cref{prop:local3} & \cref{tab:entry}, \cref{prop:entry}\\
+$d\ge91$ & $x\le r_d$, $r_d\ge\tfrac{179}{1500}$, \cref{prop:local3} & $x(\mu)<\tfrac1{10}$ if $T(\mu)\ge0$, \cref{prop:large}\\
+\hline
+\end{tabular}
+\end{table}
+
+\begin{proof}[Proof of \cref{thm:main}]
+Let $\lambda=d^{-1/2}$.
+
+\emph{Degrees $2\le d\le90$.} By \cref{prop:entry} there is $N$ with $x_N<r_d$. By \cref{prop:local2} for $d=2$
+and \cref{prop:local3} for $d\ge3$, every symmetric posterior law $\mu$ with $T_\lambda\mu=\mu$ and
+$x(\mu)\le r_d$ equals $\delta_u$. \Cref{prop:reduction} with $r=r_d$ gives nonreconstruction.
+
+\emph{Degrees $d\ge91$.} By \cref{lem:tail}, $\mu_\infty$ is a symmetric posterior law with
+$T_\lambda\mu_\infty=\mu_\infty$. Since $d\lambda^3=d^{-1/2}<1$, \cref{cor:sign} gives $T(\mu_\infty)\ge0$, and
+\cref{prop:large} gives $x(\mu_\infty)<\tfrac1{10}$. For $d\ge80$ we have $r_d\ge\varrho_d=\tfrac{179}{1500}>\tfrac1{10}$,
+so $\mu_\infty=\delta_u$ by \cref{prop:local3}. Hence $x_n\to0$, and nonreconstruction follows as in the proof of
+\cref{prop:reduction}.
+
+Finally, for $\lambda<d^{-1/2}$, \cref{lem:compare} gives $x_n(d,\lambda)\le x_n(d,d^{-1/2})\to0$. Since
+reconstruction holds for $\lambda>d^{-1/2}$ by~\cite{KS66}, the threshold is $d^{-1/2}$.
+\end{proof}
+
+\section{The computations}\label{sec:computations}
+
+Every inequality used above that is not proved by hand is a finite list of inequalities between rational
+numbers. This section describes how each list is produced and checked. The programs are in the accompanying
+repository; each check has a producer and a separate replay that does not import the producer.
+
+\subsection{Bernstein certificates}
+\Cref{lem:moments,prop:local2,prop:local3} and \cref{lem:softmax} reduce to the nonnegativity of polynomials with
+rational coefficients on a box, which after an affine change of variables is $[0,1]^k$ with $2\le k\le4$. Where
+a polynomial vanishes on part of the boundary, the monomial factors responsible are divided out first, exactly,
+and the quotient is treated. For a polynomial $\sum_ea_ex^e$ of degree $n_j$ in $x_j$ the
+Bernstein coefficients on the box are
+\[
+b_\kappa=\sum_{e\le\kappa}a_e\prod_j\binom{\kappa_j}{e_j}\Big/\binom{n_j}{e_j},
+\]
+and the polynomial is a convex combination of them at every point of the box. If some coefficient is negative,
+the box is bisected, the coordinates taken in turn, and the coefficients on the two halves are obtained exactly by
+de Casteljau's algorithm. A certificate is a prefix-free set of dyadic subboxes of total volume one, each with
+nonnegative coefficients; a negative coefficient is never taken as a counterexample. All arithmetic is in
+integers with a common denominator. For \cref{lem:softmax} the ten inequalities for $F_1$ close with $68$ leaves
+and the eight for $Q$ with $124$ leaves. Exact negative controls show that the constants cannot be lowered to
+$\tfrac1{10}$, $\tfrac15$ and $\tfrac25$ in place of $\tfrac15$, $\tfrac25$ and $\tfrac35$: at $p=(\tfrac14,0,\tfrac34)$ and
+$h=(0,\tfrac12,1)$ one has $|Ph|^2=\tfrac12$, $|D^2F_1|=\tfrac3{32}$ and $|D^4F_1|=\tfrac{15}{128}$, and at
+$p=(\tfrac12,0,\tfrac12)$ with the same $h$, $|D^3F_1|=\tfrac18$.
+
+\subsection{Entry bounds}
+The laws $\nu_n$ of \cref{sec:envelope} are computed with integer masses, as described there, from the parameters
+in \cref{tab:entry}. The output of each row is the exact rational number $x(\nu_{n_0})$, stored as a fraction;
+the comparison with $r_d$ is made in exact arithmetic for every $d$ in the row, by squaring where $r_d$ involves
+$\sqrt d$. The computation is deterministic, and a replay recomputes each row from the parameters alone.
+
+\subsection{Gaussian quadrature}
+\Cref{lem:gap} and the third inequality in \eqref{eq:d91} need upper bounds for $g_G$ and $U_G$ at the points
+$t_i=10/(100-i)$, $0\le i\le85$. For \cref{lem:gap} they are obtained from \eqref{eq:gapquad}. For \eqref{eq:d91}
+the same quadrature is used with $192$ intervals of length $\tfrac1{16}$ on $[-6,6]$, for $F_1$ and for $Q$; for $Q$ the cell error is at most $90s\,PV$, since $|D^2Q[h,h]|\le20|Ph|^2$ and the map from $\xi$ to the
+logits has squared norm $\tfrac{9s}2$, and the tail is at most $36(1-P^2)$, since $0\le Q\le36$. For $F_1$ the
+same argument with $c_2=\tfrac15$ gives the cell error $\tfrac{9s}{10}PV$. The masses $w_j$, the moments $m_j$
+and $v_j$, the exponentials and the sums are evaluated in ball arithmetic with $160$ bits~\cite{Joh17}, with
+outward rounding throughout, and the upper endpoints of the resulting balls are exported as exact dyadic
+rationals. All further comparisons use these rationals. A replay recomputes the endpoint bounds from the stored
+cell data with independent code and, at $t_0$, $t_{42}$ and $t_{85}$, evaluates the quadrature sums afresh on all
+$192^2$ cells and checks that the two enclosures overlap.
+
+\subsection{The large-degree certificate}
+At $L=\tfrac{209657}{2000000}$ the constants of \cref{prop:compare} are
+\[
+f_U=0.27741\ldots,\quad f_M=0.17224\ldots,\quad q_U=27.0695\ldots,\quad q_M=18.0441\ldots,
+\]
+all exact rationals. Then $D-q_U-9\beta f_U=33.346\ldots$ and $q_M-q_Uf_M/f_U=1.2367\ldots$, which are the first
+two inequalities of \eqref{eq:d91}. For the third write
+$E_D(s)=\alpha s-\alpha g_G(s)-Bs^2-U_G(s)$ with $\alpha=(D-q_U)/f_U=230.458\ldots$ and
+$B=81[(1-q_U/D)f_M/f_U+q_M/D]=51.393\ldots$. The upper bounds for $g_G$ and $U_G$ give lower bounds for $E_D$ at
+the $86$ points $t_i$, and the following lemma controls $E_D$ between them.
+
+\begin{lemma}\label{lem:curv}
+For $s>0$, $|g_G''(s)|\le\tfrac{1269}{40}<32$ and $|U_G''(s)|\le\tfrac{14229}4<3600$.
+\end{lemma}
+
+\begin{proof}
+Given $\sigma=1$, the vector $Z(s)$ is a Brownian motion in the plane $\one^\perp$ with drift
+$m_0=(3,-\tfrac32,-\tfrac32)$ and covariance $\tfrac92P$ per unit time, so for a smooth function $f$ with
+bounded derivatives $\tfrac{d^2}{ds^2}\E f(Z(s))=\E\,\mathcal L^2f(Z(s))$ with
+$\mathcal L=m_0\cdot\nabla+\tfrac94\Delta_P$. Let $e,e'$ be an orthonormal basis of the plane. For a symmetric
+$4$-tensor with $|D^4f[h^4]|\le c_4|h|^4$, the identity
+$12D^4f[e,e,e',e']=D^4f[(e+e')^4]+D^4f[(e-e')^4]-2D^4f[e^4]-2D^4f[e'^4]$ gives $|D^4f[e,e,e',e']|\le c_4$, and so
+$|\Delta_P^2f|\le4c_4$. With $|m_0|^2=\tfrac{27}2$ and $|m_0|<\tfrac{15}4$,
+\[
+|\mathcal L^2f|\le\tfrac{27}2c_2+2\cdot\tfrac94\cdot2c_{31}|m_0|+\tfrac{81}{16}\cdot4c_4
+\le\tfrac{27}2c_2+\tfrac{135}4c_{31}+\tfrac{81}4c_4 .
+\]
+The constants of \cref{lem:softmax} give $\tfrac{1269}{40}$ for $f=F_1$ and $\tfrac{14229}4$ for $f=Q$.
+\end{proof}
+
+Hence $|E_D''|\le C_D=32\alpha+2B+3600=11077.4\ldots$, and on each interval $[t_i,t_{i+1}]$
+\[
+E_D(s)\ge\min\{E_D(t_i),E_D(t_{i+1})\}-\tfrac18C_D(t_{i+1}-t_i)^2 .
+\]
+For all $85$ intervals the right side, computed from the exported lower bounds, exceeds $0.01584>\tfrac3{200}$.
+Two controls are part of the check: raising the bound for $U_G$ by one at every point makes it fail, and so
+does removing one endpoint.
+
+\begin{thebibliography}{99}
+\bibitem{BRZ95} P.~M. Bleher, J.~Ruiz and V.~A. Zagrebnov, On the purity of the limiting Gibbs state for
+the Ising model on the Bethe lattice, \emph{J. Stat. Phys.} 79 (1995), 473--482.
+\bibitem{BM11} N.~Bhatnagar and E.~Maneva, A computational method for bounding the probability of
+reconstruction on trees, \emph{SIAM J. Discrete Math.} 25 (2011), 854--871; arXiv:0903.4812.
+\bibitem{EKPS00} W.~Evans, C.~Kenyon, Y.~Peres and L.~J. Schulman, Broadcasting on trees and the Ising
+model, \emph{Ann. Appl. Probab.} 10 (2000), 410--433.
+\bibitem{Joh17} F.~Johansson, Arb: efficient arbitrary-precision midpoint-radius interval arithmetic,
+\emph{IEEE Trans. Comput.} 66 (2017), 1281--1292.
+\bibitem{KS66} H.~Kesten and B.~P. Stigum, Additional limit theorems for indecomposable multidimensional
+Galton--Watson processes, \emph{Ann. Math. Statist.} 37 (1966), 1463--1481.
+\bibitem{Mos01} E.~Mossel, Reconstruction on trees: beating the second eigenvalue, \emph{Ann. Appl.
+Probab.} 11 (2001), 285--300.
+\bibitem{MSS22} E.~Mossel, A.~Sly and Y.~Sohn, Exact phase transitions for stochastic block models and
+reconstruction on trees, \emph{Ann. Probab.} (2025); arXiv:2212.03362.
+\bibitem{Sly11} A.~Sly, Reconstruction for the Potts model, \emph{Ann. Probab.} 39 (2011), 1365--1406;
+arXiv:0811.1208.
+\end{thebibliography}
+
+\end{document}
