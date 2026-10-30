@@ -86,12 +86,24 @@ STOP = set("the a an and or of to in for on with is are was were be this that it
 # Facts that are CURRENT as of 2026-07-07. Memories asserting the superseded
 # version are staleness candidates. (entity, current_truth, since_date, stale_markers)
 # since_date: memories dated on/after this ARE the current record - never flag them.
-CURRENT_FACTS = [
-    ("live protected production stack", "Azure <host-ip> (since 2026-07-04)", "2026-07-04", [r"51\.102\.126\.105", r"live.{0,20}AWS box", r"AWS box.{0,20}live"]),
-    ("tadpole product", "pivoted to Wallet/Friends/Rewards + Driver (2026-07)", "2026-07-07", [r"food.?delivery app(?!.*pivot)", r"restaurants api"]),
-    ("model default", "Fable 5 / Opus 4.8 era (2026-07)", "2026-07-01", [r"opus 4\.5", r"claude 3\.5"]),
-    ("agentA size", "5 research agents (trimmed 2026-07-07)", "2026-07-07", [r"10 headless", r"ten sessions"]),
-]
+def _load_current_facts():
+    """Read (entity, current_truth, since_date, [stale_markers]) rows from a local JSON file.
+
+    Set DREAM_CURRENT_FACTS to the file; it holds a list of 4-element lists. With no file the
+    staleness pass has nothing to compare against and flags nothing.
+    """
+    path = os.environ.get("DREAM_CURRENT_FACTS", "")
+    if not path or not os.path.exists(path):
+        return []
+    try:
+        import json as _json
+        with open(path, encoding="utf-8") as fh:
+            return [tuple(r) for r in _json.load(fh)]
+    except Exception:
+        return []
+
+
+CURRENT_FACTS = _load_current_facts()
 
 def read(p):
     try:
