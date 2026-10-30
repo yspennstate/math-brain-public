@@ -75,7 +75,10 @@ def main():
     recs = recall.load(a.dir)
     with open(a.questions, encoding="utf-8") as fh:
         items = json.load(fh)
-    arms = {"brain": lambda q: brain_context(recs, q), "docs": lambda q: docs_context(recs), "none": lambda q: ""}
+    if not items:
+        sys.exit("%s has no questions yet: write ten or more first (the format is in README.md), then run this again"
+                 % a.questions)
+    arms ={"brain": lambda q: brain_context(recs, q), "docs": lambda q: docs_context(recs), "none": lambda q: ""}
     score = {k: 0 for k in arms}
     for item in items:
         for arm, ctx in arms.items():
