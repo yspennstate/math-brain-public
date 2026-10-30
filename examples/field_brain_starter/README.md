@@ -89,6 +89,11 @@ Point the tool at your own folder with `--dir` or the `BRAIN_MEM_DIR` variable. 
 adds an association graph (built from the `[[slug]]` links) and semantic search on top of the lexical score; this
 starter keeps only the lexical part so it runs anywhere with no install.
 
+An agent can call `recall.py` as a shell command, or through the MCP connector in `agent_tools/mcp_math_recall.py`:
+copy it beside `recall.py` and change its `RECALL` line to point there. Section 8 of `AGENTS_GUIDE.md` gives the
+steps, the note to put in the agent's instructions, and the command that prints the hook wiring for Claude Code or
+Codex.
+
 ## Writing back
 
 A brain that agents only read stops growing. `hooks/write_back_hook.py` runs when a turn ends. Suppose an agent
