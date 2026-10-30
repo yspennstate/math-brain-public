@@ -121,3 +121,26 @@ Without that setting a search may answer from a state up to 45 minutes old and m
 ## 7. One session, start to finish
 
 The pieces above are one loop, and an agent gets the most from the store when it runs all of it in every session. At the start, the wake step (`framework/hooks/wake_brain.py`, wired as a session-start hook by the templates in `framework/hooks/`) prints the newest memories, the last dream's summary and the checkpoint the agent left when it last stopped, so the session resumes the earlier work instead of starting cold. While it works, the agent searches as in the workflow at the top of this note, and the hooks put a card or two in front of it before it acts; each is a lead to check, not an instruction. At the end, it writes back what it found (section 6), including the attempts that failed, and leaves a one-line note saying what is done and what comes next, for the next session to read first. An agent that skips the write-back leaves the next session where this one started. [docs/agency.md](docs/agency.md) sets out the full loop, with the leases that keep several agents from overwriting each other and the audit to run before a report.
+
+## 8. A store for another field
+
+Everything above is written for the mathematics store, but the workflow does not depend on mathematics. A brain for another field, built from [examples/field_brain_starter](examples/field_brain_starter/README.md) (records as Markdown files in a `memory/` folder), is connected to an agent the same way.
+
+**As a shell command.** The starter's `recall.py` takes the same arguments as `math_recall.py`:
+
+```
+python examples/field_brain_starter/recall.py "how long should the harbour film be" --or "festival slot length"
+python examples/field_brain_starter/recall.py --id project_harbour_film_cut_to_twelve_minutes_2026_03_10
+```
+
+Point it at your own records with `--dir` or the `BRAIN_MEM_DIR` variable. It needs nothing beyond the Python standard library.
+
+**As an MCP tool.** Copy `agent_tools/mcp_math_recall.py` into the folder that holds `recall.py` and change the file name on its `RECALL` line from `math_recall.py` to `recall.py`. Nothing else changes: the wrapper passes `wordings` as one query plus `--or` alternatives and `ids` as `--id`, which the starter accepts. Register it as in section 2, with `BRAIN_MEM_DIR` in the server's `env` if the records live elsewhere. The tool keeps the name `math_recall`; to rename it, change the name in `TOOL` and in the name check inside `main`, which must match.
+
+**What to tell the agent.** The note in section 3 with the field's own words in place of mathematics, for example:
+
+> You are connected to the project brain: the store of decisions, results, mistakes and notes from past work. Search it with the recall tool - give two or three wordings in one call, worded the way a record would say it, then pass record ids to read them whole. Stop when a record answers; a WEAK MATCH line means reword. A note from the brain is a hint, not a verdict: weigh it against the question in front of you.
+
+**Hooks.** `python examples/field_brain_starter/hooks/print_wiring.py --runtime claude` (or `--runtime codex`) prints the hook block for the wake, recall, scar, request and write-back hooks with this folder's paths filled in; paste it into the runtime's hook settings and start a new session.
+
+The rules measured on the mathematics store (two or three wordings in one call, whole records with ids, reword on WEAK MATCH, say the store does not have it after a few tries) are the ones the starter's README recommends. They were measured on mathematics; a field with records of a different kind should check them on its own questions with the starter's `three_arm.py`.
