@@ -18,6 +18,7 @@ when every step behaves, 1 otherwise.
 """
 import glob
 import hashlib
+import json
 import os
 import shutil
 import subprocess
@@ -119,11 +120,17 @@ def main():
     check("release: only the holder can release, and then the next agent gets it",
           rc1 == 3 and rc2 == 0 and rc3 == 0, "\n".join([s1, s2, s3]))
 
-    # A crashed agent: a claim of a few seconds that nobody renews.
-    once("claims.py", "claim", "--dir", claims_dir, "--agent", "crashed", "--resource", "record:refund_rule",
-         "--minutes", "0.03")
+    # A crashed agent: a claim nobody renews. Its time runs out by moving the expiry in the claim file into the past,
+    # not by sleeping: on a busy machine Python can take longer to start than a claim of a few seconds lasts.
+    once("claims.py", "claim", "--dir", claims_dir, "--agent", "crashed", "--resource", "record:refund_rule")
     rc1, s1 = once("claims.py", "claim", "--dir", claims_dir, "--agent", "next", "--resource", "record:refund_rule")
-    time.sleep(2.5)
+    sys.path.insert(0, HERE)
+    import claims
+    held = claims.path_for(claims_dir, "record:refund_rule")
+    c = claims.read(held) or {}
+    c["expires"] = time.time() - 1
+    with open(held, "w", encoding="utf-8") as fh:
+        json.dump(c, fh)
     rc2, s2 = once("claims.py", "claim", "--dir", claims_dir, "--agent", "next", "--resource", "record:refund_rule")
     check("a crashed agent: its claim holds until it runs out, then the next agent takes it over",
           rc1 == 3 and rc2 == 0, "\n".join([s1, s2]))
