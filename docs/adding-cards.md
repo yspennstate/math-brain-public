@@ -71,7 +71,7 @@ integrator ignores `.part` files. A bundle holds at most 200 entries; a contribu
 
 1. `kind` is one of `definition`, `lemma`, `theorem`, `concept`. A lemma or theorem needs a `proof_text` of at least
    twenty characters: a correct sketch of the main idea is enough, an invented one never is. A definition or concept
-   carries no proof text.
+   carries no proof text. There is no open-problem kind: an open problem is a concept titled `Open problem: ...`.
 2. `statement` is complete and self-contained, at least twenty characters, in plain text or light LaTeX. No truncation
    and no "see source". This is the text an agent will be handed in the middle of a proof, so write it the way you
    would want to receive it there.
@@ -105,6 +105,12 @@ Run it inside the store's write lease, then read what it prints. A bundle it ref
 `.rejected-note` file beside the draft listing every reason; nothing from that bundle is ingested. Read the result
 every time. A licence string that starts with the wrong word is enough to leave a bundle sitting in the inbox,
 unnoticed, for days.
+
+Take the lease for an hour, not a few minutes. After ingesting, the integrator refreshes the derived indexes, which can
+take ten minutes or more on a busy machine, and a run that outlives its lease leaves the store open to a second writer
+partway through; after a rejection, take the lease again before retrying. The lease has to cover the whole store, the
+database file included. Each bundle is sealed to the store's state at approval and checked against it at ingest, so
+another writer changing the store in between gets the bundle rejected, with its file name already spent in the ledger.
 
 Two behaviours catch people out. The integration ledger records every draft it has looked at by file name, rejected
 ones included, so a rejected bundle corrected in place is skipped without a word on the next run; save the corrected
