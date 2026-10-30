@@ -181,7 +181,8 @@ which belong to a small film studio, with a command an agent short of disk space
 echo '{"session_id": "s1", "tool_name": "Bash", "tool_input": {"command": "rm -rf footage/harbour/raw"}}' | python hooks/scar_hook.py
 ```
 
-The model receives, before the command runs:
+The hook prints one line of JSON for the agent tool; the text in its `additionalContext` field is what the model
+receives, before the command runs:
 
 ```
 [brain] This action resembles something that went wrong before. A scar is a question, not an order: check
