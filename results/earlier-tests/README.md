@@ -92,6 +92,8 @@ it 32 of 79 (47 helped, 0 harmed): 49 against 8 on stored results, 10 against 4 
 on ordinary mathematics. Three of the keys came from store cards that were wrong or out of date, and the brain arm
 answered past them; those cards are now superseded. Marks only; `python recompute.py` checks both tables.
 
+The same round changed the math hook in one way and measured a second. Cards filed after the hook's index was built had stayed invisible until the next rebuild; they are now scored when the prompt arrives, and a stale index is rebuilt within 15 minutes. On 12 conjecture prompts the hook served notes for 4 before the change and 8 after. A field gate that drops cards from the wrong area of mathematics removed 44% of the cards judged off-domain on a 54-item set and lost none judged helpful; a second blind judge agreed that all 16 removed cards were off-domain. The bar set in advance was 50%, so the gate was not switched on.
+
 ## hook-path-ablations-2026-09-23: two selection changes to the math hook, off against on
 
 Two changes measured on the hook's own path before they were switched on, on 218 prompts (89 results in two wordings
