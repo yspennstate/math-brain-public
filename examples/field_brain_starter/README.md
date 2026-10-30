@@ -128,6 +128,17 @@ python three_arm.py --write-prompts prompts/                  # read or send the
 python three_arm.py --model-cmd "your-model-cli --read-stdin"  # send each on stdin and grade the reply
 ```
 
+Before spending model calls, check the wiring with a stand-in model that hands each prompt straight back:
+
+```
+python three_arm.py --model-cmd "python -c \"import sys; sys.stdout.write(sys.stdin.read())\""
+```
+
+On the studio records this prints `brain 9/10  docs 10/10  none 0/10`. The brain arm's one miss is the rent
+question, which has no answer in the store: a stand-in that only repeats its notes cannot say that, and a real
+model should. Any other brain-arm miss means recall did not bring up the record that answers the question; look
+at that question with `recall.py` before you change anything else.
+
 On twenty records the docs arm should match the brain arm: everything fits in the prompt. The none arm should fail
 everything except, with luck, the question the store cannot answer. The test becomes informative as the store grows
 past what fits in a prompt, which is where the mathematics brain's three-arm test was run. By the night of 24
