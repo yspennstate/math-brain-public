@@ -19,10 +19,8 @@ PREFIX = [
     ("project_", "project"), ("audit_", "audit"), ("audit", "audit"),
     ("gist_", "project"), ("session_", "transient"), ("crash_", "project"),
     ("migration", "project"), ("theory_", "project"), ("open_problem", "project"),
-    ("paper", "project"), ("grid", "project"), ("acct", "project"),
-    ("account", "project"), ("aws_", "project"), ("azure_", "project"),
-    ("cnc_", "project"), ("xnd_", "project"),
-    ("codex_", "project"), ("agent", "project"), ("arnold_", "project"),
+    ("paper", "project"), ("aws_", "project"), ("azure_", "project"),
+    ("codex_", "project"), ("agent", "project"),
 ]
 
 def infer(fn):
