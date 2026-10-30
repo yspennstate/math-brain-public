@@ -15,8 +15,11 @@
    state directories, seeds the memory corpus (index, ledgers, and the seed identity
    templates), and generates `bootstrap/settings.hooks.generated.json`.
 
-3. Wire the hooks: merge the generated `hooks` object into `~/.claude/settings.json`.
-   The installer has already written the wake ritual, `~/.claude/wake_brain.ps1` and
+3. Wire the hooks: merge the generated `hooks` object into `~/.claude/settings.json`,
+   or add `--merge-settings` to the `--apply` run and the installer does it. It keeps every
+   key and hook already in the file, adds only the groups that are missing (a second run
+   adds nothing), writes a dated `settings.json.bak-*` first, and stops without writing if
+   the existing file is not valid JSON. The installer has already written the wake ritual, `~/.claude/wake_brain.ps1` and
    `~/.claude/brain_startup.md`, with the tokens filled in, and the generated wiring points
    SessionStart at it. If either file already existed it is left alone and the new one is
    written beside it with `.new` added. To see what a session will receive, run

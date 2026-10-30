@@ -12,7 +12,7 @@ memory corpus lives under <home>/.claude/projects/<slug>/memory where <slug>
 is that path with ':' and path separators replaced by '-' (the transcript-dir
 convention used by the agent runtime).
 """
-import argparse, io, json, os, shutil, sys
+import argparse, io, json, os, shutil, sys, time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -156,6 +156,41 @@ def longest_path_this_install_would_create(home, slug):
     return max(paths, key=len) if paths else ""
 
 
+def merge_hooks(settings_path, generated, apply_):
+    """Add the generated hook groups to settings.json. Keys and hooks already there are kept; a group whose
+    commands are all present already is skipped, so a second run adds nothing."""
+    cur = {}
+    if os.path.exists(settings_path):
+        raw = io.open(settings_path, encoding="utf-8").read()
+        if raw.strip():
+            cur = json.loads(raw)   # a broken settings.json stops here, before anything is written
+    have = cur.setdefault("hooks", {})
+
+    def key(h):
+        return (h.get("command"), tuple(h.get("args") or ()))
+
+    added = 0
+    for event, groups in generated.get("hooks", {}).items():
+        mine = have.setdefault(event, [])
+        present = {key(h) for g in mine for h in g.get("hooks", [])}
+        for g in groups:
+            if all(key(h) in present for h in g.get("hooks", [])):
+                continue
+            mine.append(g)
+            present.update(key(h) for h in g.get("hooks", []))
+            added += 1
+    if apply_ and added:
+        os.makedirs(os.path.dirname(settings_path), exist_ok=True)
+        if os.path.exists(settings_path):
+            bak = settings_path + ".bak-" + time.strftime("%Y%m%d-%H%M%S")
+            shutil.copy2(settings_path, bak)
+            print(f"  settings backup -> {bak}")
+        tmp = settings_path + ".tmp"
+        io.open(tmp, "w", encoding="utf-8", newline="\n").write(json.dumps(cur, indent=2) + "\n")
+        os.replace(tmp, settings_path)
+    return added
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--home", default=os.path.expanduser("~"))
@@ -166,6 +201,9 @@ def main():
     ap.add_argument("--partner", default="your partner",
                     help="the person the brain works with (fills <PARTNER> in the agent instructions)")
     ap.add_argument("--apply", action="store_true", help="write (default: dry-run)")
+    ap.add_argument("--merge-settings", action="store_true",
+                    help="also merge the generated hook wiring into <home>/.claude/settings.json "
+                         "(a dated backup is written first; hooks already there are kept)")
     a = ap.parse_args()
 
     home = os.path.abspath(a.home)
@@ -294,7 +332,12 @@ def main():
         if a.apply:
             io.open(outp, "w", encoding="utf-8", newline="\n").write(t)
         print(f"  hook wiring -> {outp}")
-        print("  merge its 'hooks' object into <home>/.claude/settings.json by hand")
+        sp = os.path.join(claude, "settings.json")
+        if a.merge_settings:
+            n = merge_hooks(sp, json.loads(t), a.apply)
+            print(f"  {n} hook group(s) {'merged' if a.apply else 'would be merged'} into {sp}")
+        else:
+            print("  merge its 'hooks' object into <home>/.claude/settings.json by hand, or re-run with --merge-settings")
 
     # The wiring above points SessionStart at <home>/.claude/wake_brain.ps1, so write it (and the startup note it
     # reads) here rather than leave the tokens for the reader. An existing file is kept and the new one goes beside it.
