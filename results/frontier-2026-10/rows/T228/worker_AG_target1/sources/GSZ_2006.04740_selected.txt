@@ -1,0 +1,338 @@
+PDF_PAGE 4
+GÜRBÜZBALABAN ET AL.
+takes the form:
+E
+
+eitX
+= exp (−σα|t|α) ,
+t ∈R,
+where σ > 0 is the scale parameter that measures the spread of X around 0, and α ∈(0, 2] is known
+as the tail-index, and SαS becomes heavier-tailed as α gets smaller. The probability density function
+of a symmetric α-stable distribution, α ∈(0, 2], does not yield closed-form expression in general
+except for a few special cases. When α = 1 and α = 2, SαS reduces to the Cauchy and the Gaussian
+distributions, respectively. When 0 < α < 2, α-stable distributions have their moments being ﬁnite
+only up to the order α in the sense that E[|X|p] < ∞if and only if p < α, which implies inﬁnite
+variance.
+Wasserstein metric. For any p ≥1, deﬁne Pp(Rd) as the space consisting of all the Borel
+probability measures ν on Rd with the ﬁnite p-th moment (based on the Euclidean norm). For
+any two Borel probability measures ν1, ν2 ∈Pp(Rd), we deﬁne the standard p-Wasserstein metric
+(Villani, 2009):
+Wp(ν1, ν2) := (inf E [∥Z1 −Z2∥p])1/p ,
+where the inﬁmum is taken over all joint distributions of the random variables Z1, Z2 with marginal
+distributions ν1, ν2.
+3. Setup and Main Theoretical Results
+We ﬁrst observe that SGD (1.3) is an iterated random recursion of the form xk = Ψ(xk−1, Ωk),
+where the map Ψ : Rd ×S →Rd, S denotes the set of all subsets of {1, 2, . . . , N} and Ωk is random
+and i.i.d. If we write ΨΩ(x) = Ψ(x, Ω) for notational convenience where Ωhas the same distribution
+as Ωk, then ΨΩis a random map and
+xk = ΨΩk(xk−1).
+(3.1)
+Such random recursions are studied in the literature. If this map is Lipschitz on average, i.e.
+E[LΩ] < ∞, with LΩ:= supx,y∈Rd ∥ΨΩ(x) −ΨΩ(y)∥
+∥x −y∥
+,
+(3.2)
+and is mean-contractive, i.e. if E log(LΩ) < 0 then it can be shown under further technical
+assumptions that the distribution of the iterates converges to a unique stationary distribution x∞
+geometrically fast (the Prokhorov distance is proportional to ρk for some ρ < 1) although the rate of
+convergence ρ is not explicitly known in general (Diaconis and Freedman, 1999). However, much
+less is known about the tail behavior of the limiting distribution x∞except when the map ΨΩ(x) has
+a linear growth for large x. The following result characterizes the tail-index under such assumptions
+for dimension d = 1. We refer the readers to Mirek (2011) for general d.
+Theorem 1 (Mirek (2011), see also Buraczewski et al. (2016)) Assume stationary solution to (3.1)
+exists and:
+(i) There exists a random matrix M(Ω) and a random variable B(Ω) > 0 such that for a.e. Ω,
+|ΨΩ(x) −M(Ω)x| ≤B(Ω) for every x;
+(ii) The conditional law of log |M(Ω)| given M(Ω) ̸= 0 is non-arithmetic;
+(iii) There exists α > 0 such that E|M(Ω)|α = 1, E|B(Ω)|α < ∞and E[|M(Ω)|α log+ |M(Ω)|] <
+∞where log+(x) := max(log(x), 0).
+Then, it holds that limt→∞tαP(|x∞| > t) = c0 for some constant c0 > 0.
+4
+
+
+PDF_PAGE 21
+THE HEAVY-TAIL PHENOMENON IN SGD
+Euler-Maruyama discretization of the following SDE:
+dxt = −∇f(xt)dt +
+p
+ηΣU(xt)dBt
+d= −
+
+A⊤Axt −A⊤y
+
+dt +
+r
+σ2η
+b diag(xt)dBt,
+(A.4)
+where
+d= denotes equality in distribution. The stochasticity in such SDEs is called often called
+multiplicative. Let us illustrate this property by discretizing this process and by using the deﬁnition
+of the gradient and the covariance matrix, we observe that (noting that Nk ∼N(0, I))
+xk+1 = xk −η
+
+A⊤Axk −A⊤y
+
++
+r
+σ2η2
+b
+diag(xk)Nk+1
+=
+
+I −ηA⊤A +
+p
+σ2η2/b diag(Nk+1)
+
+xk −ηA⊤y,
+(A.5)
+where we can clearly see the multiplicative effect of the noise, as indicated by its name. On the other
+hand, we can observe that, thanks to the multiplicative structure, this process would be able to capture
+the potential heavy-tailed structure of SGD. However, there are two caveats. The ﬁrst one is that,
+in the case of linear regression, the process is called a geometric (or modiﬁed) Ornstein-Uhlenbeck
+process which is an extension of geometric Brownian motion. One can show that the distribution of
+the process at any time t will have lognormal tails. Hence it will be accurate only when the tail-index
+α is close to the one of the lognormal distribution. The second caveat is that, for a more general cost
+function f, the covariance matrix is more complicated and hence the invariant measure of the process
+cannot be found analytically, hence analyzing these processes for a general f can be as challenging
+as directly analyzing the behavior of SGD.
+The third way of modeling the gradient noise is based on assuming that it is heavy-tailed. In
+particular, we can assume that ηUk ≈η1/αLk where [Lk]i ∼SαS(σLη(α−1)/α) for all i = 1, . . . , d.
+Under this assumption the SGD recursion coincides with the Euler discretization of the following
+Lévy-driven SDE (¸Sim¸sekli et al., 2019b):
+dxt = −∇f(xt)dt + σLη(α−1)/αdLα
+t ,
+(A.6)
+where Lα
+t denotes the α-stable Lévy process with independent components (see Section A.1 for
+technical background on Lévy processes and in particular α-stable Lévy processes). In the case of
+linear regression, this processes is called a fractional OU process (Fink and Klüppelberg, 2011),
+whose invariant measure is also an α-stable distribution with the same tail-index α. Hence, even
+though it is based on an isotropic, state-independent noise assumption, in the case of large η/b regime,
+this approach can mimic the heavy-tailed behavior of the system with the exact tail-index α. On the
+other hand, Buraczewski et al. (2016) (Theorem 1.7 and 1.16) showed that if Uk is assumed to heavy
+tailed with index α (not necessarily SαS) then the process xk will inherit the same tails and the
+ergodic averages will still converge to an SαS random variable in distribution, hence generalizing
+the conclusions of the SαS assumption to the case where Uk follows an arbitrary heavy-tailed
+distribution.
+A.1 Technical background: Lévy processes
+Lévy motions (processes) are stochastic processes with independent and stationary increments, which
+include Brownian motions as a special case, and in general may have heavy-tailed distributions (see
+21
+
+
+PDF_PAGE 22
+GÜRBÜZBALABAN ET AL.
+e.g. Bertoin (1996) for a survey). Symmetric α-stable Lévy motion is a Lévy motion whose time
+increments are symmetric α-stable distributed. We deﬁne Lα
+t , a d-dimensional symmetric α-stable
+Lévy motion as follows. Each component of Lα
+t is an independent scalar α-stable Lévy process
+deﬁned as follows:
+(i) Lα
+0 = 0 almost surely;
+(ii) For any t0 < t1 < · · · < tN, the increments Lα
+tn −Lα
+tn−1 are independent, n = 1, 2, . . . , N;
+(iii) The difference Lα
+t −Lα
+s and Lα
+t−s have the same distribution: SαS((t −s)1/α) for s < t;
+(iv) Lα
+t has stochastically continuous sample paths, i.e. for any δ > 0 and s ≥0, P(|Lα
+t −Lα
+s | >
+δ) →0 as t →s.
+When α = 2, we obtain a scaled Brownian motion as a special case, i.e. Lα
+t =
+√
+2Bt, so that the
+difference Lα
+t −Lα
+s follows a Gaussian distribution N(0, 2(t −s)).
+Appendix B. Tail-Index Estimation
+In this study, we follow Tzagkarakis et al. (2018); ¸Sim¸sekli et al. (2019b), and make use of the recent
+estimator proposed by Mohammadi et al. (2015).
+Theorem 12 (Mohammadi et al. (2015) Corollary 2.4) Let {Xi}K
+i=1 be a collection of strictly
+stable random variables in Rd with tail-index α ∈(0, 2] and K = K1 × K2. Deﬁne Yi =
+PK1
+j=1 Xj+(i−1)K1 for i ∈J1, K2K. Then, the estimator
+d
+1
+α ≜
+1
+log K1
+ 1
+K2
+K2
+X
+i=1
+log ∥Yi∥−1
+K
+K
+X
+i=1
+log ∥Xi∥
+
+,
+(B.1)
+converges to 1/α almost surely, as K2 →∞.
+As this estimator requires a hyperparameter K1, at each tail-index estimation, we used several values
+for K1 and we used the median of the estimators obtained with different values of K1. We provide
+the codes in github.com/umutsimsekli/sgd_ht, where the implementation details can be
+found. For the neural network experiments, we used the same setup as provided in the repository of
+¸Sim¸sekli et al. (2019b).
+Appendix C. Proofs of Main Results
+C.1 Proof of Theorem 2
+Proof The proof follows from Theorem 4.4.15 in Buraczewski et al. (2016) which goes back to
+Theorem 1.1 in Alsmeyer and Mentemeier (2012) and Theorem 6 in Kesten (1973). See also Goldie
+(1991); Buraczewski et al. (2015). We recall that we have the stochastic recursion:
+xk = Mkxk−1 + qk,
+(C.1)
+where the sequence (Mk, qk) are i.i.d. distributed as (M, q) and for each k, (Mk, qk) is independent
+of xk−1. To apply Theorem 4.4.15 in Buraczewski et al. (2016), it sufﬁces to have the following
+conditions being satisﬁed:
+1. M is invertible with probability 1.
+22
+
+
+PDF_PAGE 31
+THE HEAVY-TAIL PHENOMENON IN SGD
+C.6.4 PROOF OF COROLLARY 11
+Proof The result is obtained by a direct application of Theorem 1.15 in Mirek (2011) to the recursions
+(3.5) where it can be checked in a straightforward manner that the conditions for this theorem hold.
+Appendix D. Supporting Lemmas
+In this section, we present a few supporting lemmas that are used in the proofs of the main results of
+the paper as well as the additional results in the Appendix.
+First, we recall that the iterates are given by xk = Mkxk−1 + qk, where (Mk, qk) are i.i.d. and
+Mk is distributed as I −η
+b H, where H = Pb
+i=1 aiaT
+i and qk is distributed as η
+b
+Pb
+i=1 aiyi, where
+ai ∼N(0, σ2Id) and yi are i.i.d. satisfying the Assumptions (A1)–(A3).
+We can compute ρ and h(s) as follows where ρ and h(s) are deﬁned by (3.7) and (3.6).
+Lemma 16 Under Assumptions (A1)–(A3), ρ can be characterized as:
+ρ = E
+h
+log
+
+
+
+
+
+I −η
+b H
+
+e1
+
+
+
+
+i
+,
+(D.1)
+and h(s) can be characterized as:
+h(s) = E
+h
+
+
+
+
+I −η
+b H
+
+e1
+
+
+
+
+si
+,
+(D.2)
+provided that ρ < 0. Furthermore, we have
+ˆρ = E log
+
+
+
+
+
+I −η
+b H
+
+e1
+
+
+
+ ,
+ˆh(s) = E
+h
+
+
+
+
+I −η
+b H
+
+e1
+
+
+
+
+si
+(D.3)
+where ˆρ and ˆh(s) are deﬁned in (3.10).
+Proof It is known that the Lyapunov exponent deﬁned in (3.7) admits the alternative representation
+ρ := lim
+k→∞
+1
+k log ∥˜xk∥,
+(D.4)
+where ˜xk := Πk˜x0 with Πk := MkMk−1 . . . M1 and ˜x0 := x0 (see Equation (2) in Newman (1986)).
+We will compute the limit on the right-hand side of (D.4). First, we observe that due to spherical
+symmetry of the isotropic Gaussian distribution, the distribution of ∥Mkx∥
+∥x∥
+does not depend on the
+choice of x ∈Rd\{0} and is i.i.d. over k with the same distribution as ∥Me1∥where we chose
+x = e1. This observation would directly imply the equality (D.3). In addition,
+1
+k log ∥˜xk∥−1
+k log ∥˜x0∥= 1
+k
+k
+X
+i=1
+log ∥˜xi∥
+∥˜xi−1∥= 1
+k
+k
+X
+i=1
+log ∥Mi˜xi−1∥
+∥˜xi−1∥
+is an average of i.i.d. random variables and by the law of large numbers we obtain
+ρ = lim
+k→∞
+1
+k log ∥˜xk∥= E
+h
+log
+
+
+
+
+
+I −η
+b H
+
+e1
+
+
+
+
+i
+.
+31

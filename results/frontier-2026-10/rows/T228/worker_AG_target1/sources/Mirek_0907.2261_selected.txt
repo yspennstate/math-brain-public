@@ -1,0 +1,283 @@
+PDF_PAGE 1
+arXiv:0907.2261v2  [math.PR]  7 Nov 2010
+HEAVY TAIL PHENOMENON AND CONVERGENCE TO STABLE LAWS
+FOR ITERATED LIPSCHITZ MAPS
+MARIUSZ MIREK
+In memory of Andrzej Hulanicki
+Abstract. We consider the Markov chain {Xx
+n}∞
+n=0 on Rd deﬁned by the stochastic recursion
+Xx
+n = ψθn(Xx
+n−1), starting at x ∈Rd, where θ1, θ2, . . . are i.i.d. random variables taking their
+values in a metric space (Θ, r), and ψθn : Rd 7→Rd are Lipschitz maps. Assume that the Markov
+chain has a unique stationary measure ν. Under appropriate assumptions on ψθn, we will show
+that the measure ν has a heavy tail with the exponent α > 0 i.e. ν({x ∈Rd : |x| > t}) ≍t−α.
+Using this result we show that properly normalized Birkhoﬀsums Sx
+n = Pn
+k=1 Xx
+k , converge in
+law to an α–stable law for α ∈(0, 2].
+1. Introduction and Statement of Results
+We consider the Euclidean space Rd endowed with the scalar product ⟨x, y⟩= Pd
+i=1 xiyi, the
+norm |x| =
+p
+⟨x, x⟩, and its Borel σ–ﬁeld Bor(Rd). An iterated random function is a sequence of
+the form
+Xx
+n = ψ(Xx
+n−1, θn),
+(1.1)
+where n ∈N, Xx
+0 = x and θ1, θ2, . . . ∈Θ are independent and identically distributed according
+to the measure µ on a metric space Θ = (Θ, r). We assume that ψ : Rd × Θ 7→Rd is jointly
+measurable and we write ψθ(x) = ψ(x, θ). Then the sequence (Xx
+n)n≥0 is a Markov chain with
+the state space Rd, the initial Dirac distribution δx, and the transition probability P deﬁned by
+P(x, B) =
+R
+Θ 1B(ψθ(x))µ(dθ) for all x ∈Rd and B ∈Bor(Rd). Unless otherwise stated we assume
+throughout this paper that for every θ ∈Θ, ψθ : Rd 7→Rd is a Lipschitz map with the Lipschitz
+constant
+Lθ = sup
+x̸=y
+|ψθ(x) −ψθ(y)|
+|x −y|
+< ∞.
+Matrix recursions
+(1.2)
+Xx
+n = ψθn(Xx
+n−1) = MnXx
+n−1 + Qn ∈Rd,
+where θn = (Mn, Qn) ∈Gl(Rd)×Rd = Θ and Xx
+0 = x ∈Rd (Gl(Rd) is the group of d×d invertible
+matrices) are probably the best known examples of the situation we have in mind [5, 6, 14, 24, 25].
+If the Lipschitz constant Lθ is contracting in average i.e.
+R
+Θ log(Lθ)µ(dθ) < 0 and
+R
+Θ | log(Lθ)|+
+log+(|ψθ(x0)|)µ(dθ) < ∞for some x0 ∈Rd, then (1.1) has a unique (in law) stationary solution S
+with law ν. In fact, S = limn→∞ψθ1 ◦ψθ2 ◦. . . ◦ψθn(x) a.s. and does not depend on the starting
+point x ∈Rd (see [6], [27] for more details). Throughout this paper we assume that our Lipschitz
+maps ψθ’s satisfy above conditions and recursion (1.1) has the stationary solution S with law ν.
+This research project has been partially supported by Marie Curie Transfer of Knowledge Fellowship Harmonic
+Analysis, Nonlinear Analysis and Probability (contract number MTKD-CT-2004-013389) and by KBN grant N201
+012 31/1020.
+1
+
+
+PDF_PAGE 2
+2
+M. MIREK
+We are going to describe the asymptotic behavior of Birkhoﬀsums Sx
+n = Pn
+k=1 Xx
+k of (non
+independent) random variables Xx
+k .
+We prove that the sequence Sx
+n normalized appropriately
+converges to a stable law (see Theorem 1.15).
+The problem has been recently studied in [4] for the recursion (1.2) with M ∈R∗
++ × O(Rd)
+(O(Rd) is the orthogonal group) and a central limit theorem has been proved. Depending on the
+growth of M and Q, a stable law or a Gaussian law appear as the limit. In the ﬁrst case the heavy
+tail behavior of the stationary solution of (1.2) at inﬁnity is vital for the proof. (See [5]).
+On the other hand being linear is not that crucial for ψθ and so, it is tempting to generalize the
+result of [4] for a larger class of possible ψθ. Lipschitz transformations ﬁt perfectly into the scheme
+– see examples in section 2 due to Goldie [7] and Borkovec and Kl¨uppelberg [3].
+To give an idea of our result let us formulate it in the special case of the recursion
+Xx
+n = max(MnXx
+n−1, Qn),
+(1.3)
+where (Mn, Qn)n∈N ⊆R+ × R and Xx
+0 = x ∈R. For the stationary solution S of (1.3) with law ν,
+limt→∞tαP({S > t}) exists, and under appropriate assumption, it is positive [7]. Then the limit
+Theorem 1.15 is:
+Theorem 1.4. Assume that (Mn, Qn)n∈N ⊆R+ × R is the sequence of i.i.d. pairs with the law µ
+such that E(M α) = 1, and E(M α| log M|) < ∞, for some α ∈(0, 2], the conditional law of log |M|,
+given M ̸= 0 is non arithmetic, P(Q > 0) > 0, and E(|Q|α) < ∞. Let Sx
+n = Pn
+k=1 Xx
+k for n ∈N.
+Then given 0 < α < 2 (for simplicity we assume here α ̸= 1), there is a sequence dn = dn(α) and
+a constant Cα ∈C such that the random variables n−1
+α (Sx
+n −dn) converge in law to the α – stable
+random variable with the characteristic function
+Υα(t) = exp(Cαtα),
+for t > 0,
+If α = 2, there is a sequence dn = dn(2) and a constant C2 ∈R such that the random variables
+(n log n)−1
+2 (Sx
+n −dn) converge in law to the random variable with characteristic function
+Υ2(t) = exp(C2t2),
+for t > 0.
+If α ∈(0, 1), then dn = 0, and if α ∈(1, 2], then dn = nm, where m =
+R
+Rd xν(dx). Furthermore,
+ℜCα < 0 for every α ∈(0, 2].
+The paper is divided into three parts. In the ﬁrst one (section 3) we describe the support of the
+stationary law ν of (1.1) in the terms of the ﬁxed points for maps ψθ – see Theorem 3.1. Secondly,
+in section 4 we take care of the tail of ν. (See Theorem 1.8 saying that ν({x ∈Rd : |x| > t}) ≍t−α).
+Finally, sections 5 and 6 are devoted to the proof of the limit Theorem 1.15. The limit law is a
+stable law with exponent α ∈(0, 2]. Thus we generalize the results for ”ax + b” model stated
+in [15] and [4] for one dimensional and multidimensional situation respectively. The case where
+α > 2 has been widely investigated in the general context of complete separable metric spaces by
+[2, 18, 19, 20, 29] and [33]. Recently, in [22] the authors proved α – stable theorem for α ∈(0, 2) for
+additive functionals on metric spaces using martingale approximation method, but our situation
+does not ﬁt into their framework. Convergence to stable laws were also studied by [1] and [9].
+Now we are ready to formulate assumptions and to state theorems.
+1.1. Heavy tail phenomena. In this section we state conditions that guarantee a heavy tail of
+ν. Contrary to the aﬃne recursion
+(1.5)
+Xx
+n = ψθn(Xx
+n−1) = MnXx
+n−1 + Qn ∈R,
+where θn = (Mn, Qn) ∈R × R = Θ, we need more than just the behavior of the Lipschitz constant
+Lθ.
+
+
+PDF_PAGE 3
+HEAVY TAIL PHENOMENON AND CONVERGENCE TO STABLE LAWS
+3
+Assumption 1.6 (Shape of the mappings ψ). For every t > 0, let ψθ,t : Rd 7→Rd be deﬁned
+by ψθ,t(x) = tψθ(t−1x), where x ∈Rd and θ ∈Θ. ψθ,t are called dilatations of ψθ.
+(H1) For every θ ∈Θ, there exists a map ψθ : Rd 7→Rd such that limt→0 ψθ,t(x) = ψθ(x) for
+every x ∈Rd, and ψθ(x) = Mθx for every x ∈suppν. The random variable Mθ takes its
+values in the group G = R∗
++ × K, where K is a closed subgroup of orthogonal group O(Rd).
+(H2) For every θ ∈Θ, there is a random variable Nθ such that ψθ satisﬁes a cancellation
+condition i.e. |ψθ(x) −Mθx| ≤|Nθ|, for every x ∈suppν.
+To get the idea what is the meaning of (H1)–(H2) the reader may think of the aﬃne recursion
+(1.5) with θ = (M, Q) ∈G × Rd = Θ or the recursion ψθ(x) = max{Mx, Q}, where θ = (M, Q) ∈
+R∗
++ × R = Θ (see section 2).
+Then ψθ(x) = Mx or ψθ(x) = max{Mx, 0} respectively.
+It is
+recommended to have in mind ψθ(x) = max{Mx, Q} to get the ﬁrst approximation of what the
+hypotheses mean.
+Notice that for the max recursion (H2) is not satisﬁed on R, but only on
+[0, ∞) ⊇suppν.
+In one dimensional case condition (H2) has a very natural geometrical interpretation, namely it
+can be written in an equivalent form Mθx −|Nθ| ≤ψθ(x) ≤Mθx + |Nθ|. It means that the graph
+of ψθ(x)’s lies between the graphs of Mθx −|Nθ| and Mθx + |Nθ| for every x ∈suppν. This allows
+us to think that the recursion is, in a sense, close to the aﬃne recursion.
+For simplicity we write X instead of Xθ.
+Assumption 1.7 (Moments condition for the heavy tail). Let κ(s) = E|M|s for s ∈[0, s∞),
+where s∞= sup{s ∈R+ : κ(s) < ∞}. Let ¯µ be the law of M.
+(H3) G is the smallest closed semigroup generated by the support of ¯µ i.e. G = ⟨supp¯µ⟩.
+(H4) The conditional law of log |M|, given M ̸= 0 is non arithmetic.
+(H5) M satisﬁes Cram´er condition with exponent α > 0, i.e. there exists α ∈(0, s∞) such that
+κ(α) = E(|M|α) = 1.
+(H6) Moreover, E(|M|α| log |M||) < ∞.
+(H7) For the random variable N deﬁned in (H2) we have E(|N|α) < ∞.
+Conditions (H4)–(H7) are natural in this context, see [3, 4, 5, 7, 10, 11, 12, 15, 16, 24] and [32].
+Now we are ready to formulate the main result.
+Theorem 1.8. Assume that ψθ satisﬁes assumptions 1.6 and 1.7 for every θ ∈Θ. Then there
+is a unique stationary solution S of (1.1) with law ν, and there is a unique Radon measure Λ on
+Rd \ {0} such that
+lim
+g∈G,|g|→0 |g|−αEf(gS) = Λ(f).
+(1.9)
+The convergence is valid for every bounded continuous function f that vanishes in a neighbourhood
+of zero. Furthermore the recursion deﬁned in (1.1) has a heavy tail
+lim
+t→∞tαP({|S| > t}) =
+1
+αmα
+E (|ψ(S)|α −|MS|α) ,
+(1.10)
+where mα = E(|M|α log |M|) > 0. If additionally the support of ν is unbounded, and one of the
+following condition is satisﬁed
+s∞< ∞
+and
+lim
+s→s∞
+E(|N|s)
+κ(s)
+= 0,
+(1.11)
+s∞= ∞
+and
+lim
+s→∞
+E(|N|s)
+κ(s)
+ 1
+s
+< ∞,
+(1.12)
+then the measure Λ is nonzero.
+
+
+PDF_PAGE 4
+4
+M. MIREK
+Remark 1.13. Contrary to Theorems 1.15 and 3.1 the assumption that ψθ’s are Lipschitz is not
+necessary for Theorem 1.8. The same conclusion holds if ψθ : Rd 7→Rd is continuous for every
+θ ∈Θ, and the map Θ ∋θ 7→ψθ(x) ∈Rd is continuous for every x ∈Rd, 1.6 and 1.7 are satisﬁed
+and S = limn→∞ψθ1 ◦ψθ2 ◦. . . ◦ψθn(x) exists a.s. and does not depend on x ∈Rd.
+In view of Letac’s principle [27] the random variable S with law ν is a unique stationary solution
+of the recursion (1.1).
+Theorem 1.8 on one hand generalizes Theorem 1.6 of [5] for multidimensional aﬃne recursions
+and on the other, the results of Goldie [7] for a family of one–dimensional recursions modeled on
+ax + b. (H4)–(H6) were already assumed by Goldie. (H3) was introduced in [5] and the whole
+proof is based on it. (H1)–(H2) say that asymptotically (1.1) looks like an aﬃne recursion and it
+allows us to use the methods of [5].
+1.2. Limit theorem for Birhhoﬀsums. Now we introduce conditions necessary to obtain con-
+vergence in law of appropriately normalized sums Sx
+n = Pn
+k=1 Xx
+k to an α – stable distribution.
+Assumption 1.14 (For the limit theorem).
+(L1) For every θ ∈Θ, Lθ ≤|Mθ|.
+(L2) For every θ ∈Θ, there is a random variable Qθ, such that ψθ satisﬁes a smoothness
+condition with respect to t > 0, i.e. |ψθ,t(x) −ψθ(x)| ≤t |Qθ|, for every x ∈Rd.
+(L3) For the random variable Q we have E(|Q|α) < ∞.
+Clearly, if ψθ(x) = Mθx for every x ∈suppν, then (L2) implies (H1), and (L2) together with
+(L3) imply (H2) and (H7). Now we are ready to formulate the limit theorem.
+Theorem 1.15. Assume that ψθ satisﬁes assumptions 1.6, 1.7 and 1.14 for every θ ∈Θ. We
+deﬁne Sx
+n = Pn
+k=1 Xx
+k for n ∈N. Let hv(x) = E
+
+ei⟨v,P∞
+k=1 ψθk◦...◦ψθ1 (x)⟩
+for x ∈Rd, where ψθk’s
+were deﬁned in (H1) of assumption 1.6, and let ν be the stationary measure for the recursion (1.1).
+• If α ∈(0, 1)∪(1, 2), then there is a sequence dn = dn(α) and a function Cα : Sd−1 7→C such
+that the random variables n−1
+α (Sx
+n −dn) converge in law to the α–stable random variable
+with characteristic function
+Υα(tv) = exp(tαCα(v)),
+for t > 0 and v ∈Sd−1.
+• If α = 1, then there are functions ξ, τ : (0, ∞) 7→R and C1 : Sd−1 7→C such that the ran-
+dom variables n−1Sx
+n −nξ(n−1) converge in law to the random variable with characteristic
+function
+Υ1(tv) = exp(tC1(v) + it⟨v, τ(t)⟩),
+for t > 0 and v ∈Sd−1.
+• If α = 2, then there is a sequence dn = dn(2) and a function C2 : Sd−1 7→R such that
+the random variables (n log n)−1
+2 (Sx
+n −dn) converge in law to the random variable with
+characteristic function
+Υ2(tv) = exp(t2C2(v)),
+for t > 0 and v ∈Sd−1.
+If α ∈(0, 1), then dn = 0, and if α ∈(1, 2], then dn = nm, where m =
+R
+Rd xν(dx). In all the
+above cases the function Cα depends on the function hv and the measure Λ deﬁned in Theorem
+1.8. Moreover, Cα(tv) = tαCα(v) for every t > 0, v ∈Sd−1 and α ∈(0, 1) ∪(1, 2]. If
+suppΛ spans Rd as a linear space, then ℜCα(v) < 0 for every v ∈Sd−1.
+The proof of the above theorem will be based on the spectral method that was initiated by
+Nagaev in [30] and then used and improved by many authors (see [1, 4, 9, 15, 18, 19, 20] and
+the references given there). The method is based on quasi–compactness of transition operators

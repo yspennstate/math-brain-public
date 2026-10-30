@@ -1,0 +1,37 @@
+seed 1; chains 4000, steps 100000, burn 5000, thin 20; sigma = z + 0.5 tanh z, x* = e1, s = 1
+
+(d, b, eta) = (2, 1, 0.6): gamma = -0.1556
+  root of h: alpha = 1.3015, m_alpha = 0.1752  (eta0 = 0.5000)
+  samples 19,000,000 (thinned 20); median |x| = 2.63, max = 3.82e+05
+  Hill, top 1.00% (k = 190,000): alpha_hat = 1.2961
+  Hill, top 0.30% (k = 57,000): alpha_hat = 1.3080
+  Hill, top 0.10% (k = 19,000): alpha_hat = 1.3016
+  Hill, top 0.03% (k = 5,699): alpha_hat = 1.2996
+  c0 formula = 2.247 (+- 0.0068 naive se, 5,000,000 draws)
+  t = 63.75 (q 0.99): t^alpha P(|x| > t) = 2.231
+  t = 373.9 (q 0.999): t^alpha P(|x| > t) = 2.231
+  t = 2191 (q 0.9999): t^alpha P(|x| > t) = 2.227
+
+(d, b, eta) = (2, 1, 0.8): gamma = -0.0653
+  root of h: alpha = 0.4023, m_alpha = 0.0667  (eta0 = 0.5000)
+  samples 19,000,000 (thinned 20); median |x| = 12.2, max = 6.83e+18
+  Hill, top 1.00% (k = 190,000): alpha_hat = 0.4005
+  Hill, top 0.30% (k = 57,000): alpha_hat = 0.3991
+  Hill, top 0.10% (k = 19,000): alpha_hat = 0.4003
+  Hill, top 0.03% (k = 5,699): alpha_hat = 0.4101
+  c0 formula = 1.401 (+- 0.0035 naive se, 5,000,000 draws)
+  t = 2.273e+05 (q 0.99): t^alpha P(|x| > t) = 1.429
+  t = 7.139e+07 (q 0.999): t^alpha P(|x| > t) = 1.445
+  t = 2.096e+10 (q 0.9999): t^alpha P(|x| > t) = 1.421
+
+(d, b, eta) = (3, 2, 0.9): gamma = -0.0441
+  root of h: alpha = 0.3576, m_alpha = 0.0451  (eta0 = 0.6667)
+  samples 19,000,000 (thinned 20); median |x| = 23.8, max = 6.91e+17
+  Hill, top 1.00% (k = 190,000): alpha_hat = 0.3556
+  Hill, top 0.30% (k = 57,000): alpha_hat = 0.3606
+  Hill, top 0.10% (k = 19,000): alpha_hat = 0.3723
+  Hill, top 0.03% (k = 5,699): alpha_hat = 0.3974
+  c0 formula = 1.572 (+- 0.0037 naive se, 5,000,000 draws)
+  t = 1.458e+06 (q 0.99): t^alpha P(|x| > t) = 1.601
+  t = 9.641e+08 (q 0.999): t^alpha P(|x| > t) = 1.632
+  t = 4.494e+11 (q 0.9999): t^alpha P(|x| > t) = 1.469

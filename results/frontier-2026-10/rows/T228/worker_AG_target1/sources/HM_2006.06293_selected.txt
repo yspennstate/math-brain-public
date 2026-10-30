@@ -1,0 +1,171 @@
+PDF_PAGE 5
+Example 3 (Stochastic Newton). The formulation (2) is not limited to ﬁrst-order stochastic optimization.
+Indeed, for gpw, Xq “ řn
+i“1 ∇ℓpw, Xiq and Hpw, Xq “ řn
+i“1 ∇2ℓpw, Xiq, the choice Ψpw, Xq “ w ´
+γHpw, Xq´1gpw, Xq coincides with the stochastic Newton method [66].
+The iterations (2) are also sufﬁciently general to incorporate other random effects, e.g., dropout [74].
+Instead of taking the SA approach, in our analysis we will examine the original Markov chain (2), where
+hyperparameters (including step size) are ﬁxed. This will provide a clearer picture of ongoing dynamics at
+each stage within an arbitrary learning rate schedule [4]. Also, assuming reasonably rapid mixing, global
+tendencies of a stochastic optimization algorithm, such as the degree of exploration in space, can be exam-
+ined through the stationary distribution of (2).
+3
+The linear case with SGD
+In this section, we consider the special case of ridge regression, i.e., least squares linear regression with L2
+regularization, using vanilla SGD. Let D denote a dataset comprised of inputs xi P Rd and corresponding
+labels yi P Rm. Supposing that pX, Y q is a pair of random vectors uniformly drawn from D, for λ ě 0, we
+seek a solution to
+M˚ “ arg min
+MPRdˆm
+1
+2ED}Y ´ MX}2 ` 1
+2λ}M}2
+F .
+(4)
+Observing that
+B
+BM
+` 1
+2}Y ´ MX}2 ` 1
+2λ}M}2
+F
+˘
+“ MpXXJ ` λIdq ´ Y XJ,
+one can show that the solution to (4) is
+M˚ “ EDrY XJsEDrXXJ ` λIds´1.
+(Note that λ need not be strictly positive for the inverse to exist.) On the other hand, applying minibatch
+SGD to solving (4) with constant (sufﬁciently small) step size results in a Markov chain tMku8
+k“0 in the
+estimated parameter matrix. We start with the following observation, which is immediate but important.
+Lemma 1. Let n denote the size of each minibatch pXik, Yikqn
+i“1 comprised of independent and identically
+distributed copies of pX, Y q for k “ 1, 2, . . . . For Wk the vectorization of Mk, iterations of minibatch SGD
+undergo the following random linear recurrence relation
+Wk`1 “ AkWk ` Bk,
+(5)
+where Ak “ Im b pp1 ´ λγqId ´ γn´1 řn
+i“1 XikXJ
+ikq, and Bk “ γn´1 řn
+i“1 Yik b Xik. If Ak, Bk are
+non-atomic, log` }Ak}, log` }Bk} are integrable, and ED log }Ak} ă 0, then (5) is ergodic.
+From here, it immediately follows that, even in this simple setting, SGD possesses multiplicative noise
+in the form of the factor Ak, as well as additive noise in the form of the factor Bk. Under the conditions of
+Lemma 1, the expectations of (5) converge to M˚. Although the dynamics of this process, as well as the
+shape of its stationary distribution, are not as straightforward, random linear recurrence relations are among
+the most well-studied discrete-time processes, and as multiplicative processes, are well-known to exhibit
+heavy-tailed behaviour. In Appendix A, we discuss classical results on the topic. The three primary tail
+regimes are summarized in Table 1, where each α, β, λ, ρ denotes a strictly positive value. In particular, we
+have the following result.
+5
+
+
+PDF_PAGE 6
+Lemma 2. Assume that the distribution of X has full support on Rd. Then any stationary distribution of (5)
+is heavy-tailed.
+Lemma 2 suggests that heavy-tailed ﬂuctuations could be more common than previously considered.
+This is perhaps surprising, given that common Langevin approximations of SGD applied to this problem
+exhibit light-tailed stationary distributions [52, 61]. In (5), light-tailed stationary distributions can only
+occur when X does not have full support on Rd and the step size is taken sufﬁciently small. Referring to
+Table 1, there are two possible mechanisms by which the stationary distribution of (5) can be heavy-tailed.
+Most discussions about SGD focus on the additive noise component Bk [41] (presumably since the analysis
+is simpler). In this case, if Bk is heavy-tailed, then the stationary distribution of (5) is also heavy-tailed.
+This is the assumption considered in [69, 70].
+However, this is not the only way heavy-tailed noise can arise. Indeed, the multiplicative heavy-tailed
+regime illustrates how a power law can arise from light-tailed data (in fact, even from data with ﬁnite
+support). One of the most important attributes here is that the tail exponent of the stationary distribution
+is entirely due to the recursion and properties of the multiplicative noise Ak. In fact, this is true even if
+Bk displays (not too signiﬁcant) heavy-tailed behaviour. Here, the heavy-tailed behaviour arises due to
+intrinsic factors to the stochastic optimization, and they tend to dominate over time. Later, we shall go
+further and analyze factors inﬂuencing the heaviness of these tails, or more precisely, its tail exponent,
+denoted by α in Table 1. Evidently, α is dependent on the dispersal of the distribution of Ak, which is itself
+dependent (in differing ways) on the step size γ, batch size n, and the dispersal and condition number of
+the covariance matrices XXJ of the input data. These three factors have been noted to be integral to the
+practical performance of SGD [71, 80].
+4
+Power laws for general objectives and optimizers
+In this section, we consider the general case (2), and we examine how heavy-tailed stationary behaviour can
+arise for any stochastic optimizer, applied to both convex and non-convex problems. As in Section 3, here
+we are most interested in the presence of heavy-tailed ﬂuctuations due to multiplicative factors. (The case
+when heavy-tailed ﬂuctuations arise from the additive noise case is clear: if, for every w P Rd, Ψpw, Xq
+is heavy-tailed/has inﬁnite αth-moment, then for each k “ 1, 2, . . . , Wk is heavy-tailed/has inﬁnite αth
+moment also, irrespective of the dynamics of W.)
+In our main result (Theorem 1), we illustrate how power laws arise in general Lipschitz stochastic
+optimization algorithms that are contracting on average and also strongly convex near inﬁnity with positive
+probability.
+Theorem 1. Let pS, }¨}q be a separable Banach space. Assume that Ψ : SˆΩÑ S is a random function on
+S such that Ψ is almost surely Lipschitz continuous and the probability measure of Ψ is non-atomic. We let
+KΨ denote a random variable such that KΨpωq is the Lipschitz constant of Ψp¨, ωq for each ω P Ω. Assume
+that KΨ is integrable, and }Ψpwq ´ w} is integrable for some w˚ P S. Suppose there exist non-negative
+random variables kΨ, MΨ such that, with probability one,
+kΨ}w ´ w˚} ´ MΨ ď }Ψpwq ´ Ψpw˚q} ď KΨ}w ´ w˚},
+for all w P S.
+(6)
+If E log KΨ ă 0, then the Markov chain given by Wk`1 “ ΨkpWkq, k “ 0, 1, . . . , where each Ψk is
+an independent and identically distributed copy of Ψ, is geometrically ergodic with W8 “ limkÑ8 Wk
+satisfying the distributional ﬁxed point equation W8
+D“ ΨpW8q. Furthermore, if kΨ ą 1 with positive
+probability and }Ψpw˚q}α ă 8 for any α ą 0, then:
+6
+
+
+PDF_PAGE 7
+1. There exist µ, ν, Cµ, Cν ą 0 such that Cµp1 ` tq´µ ď Pp}W8} ą tq ď Cνt´ν, for all t ą 0.
+2. There exist α, β ą 0 such that }KΨ}β “ 1 and }kΨ}α “ 1 and for δ ą 0,
+0 ă lim sup
+tÑ8
+tα`ϵPp}W8} ą tq,
+and
+lim sup
+tÑ8
+tβ´ϵPp}W8} ą tq ă `8.
+3. For any p P p0, βq and k “ 1, 2, . . . , the moments of }Wk}p are bounded above and below by
+}kΨ}k
+pp}W0}p ` κ´
+p q ´ κ´
+p ď }Wk}p ď }KΨ}k
+pp}W0}p ´ κ`
+p q ` κ`
+p ,
+implying }W8}p ď κ`
+p , where
+κ´
+p “ }kΨ}p}w˚} ` }Ψpw˚q}p
+1 ´ }kΨ}p
+,
+and
+κ`
+p “ }KΨ}p}w˚} ` }Ψpw˚q}p
+1 ´ }KΨ}p
+.
+Geometric rates of convergence in the Prohorov and total variation metrics to stationarity are discussed
+in [1, 16]. From Theorem 1, we ﬁnd that the presence of expanding multiplicative noise implies the station-
+ary distribution of (2) is stochastically bounded between two power laws. In particular, this suggests that
+Lipschitz stochastic optimizers satisfying (6) and PpkΨ ą 1q ą 0 can conduct wide exploration of the loss
+landscape. As an example, for SGD satisfying (6), we have that
+kΨ “ lim inf
+}w}Ñ8 σminpI ´ γ∇2ℓpw, Xqq,
+and
+KΨ “ sup
+w }I ´ γ∇2ℓpw, Xq}.
+(7)
+Therefore, for the linear case (5), using Theorem 1, we can recover the same tail exponent seen in Theorem
+2. To treat other stochastic optimizers that are not Lipschitz, or do not satisfy the conditions of Theorem 1,
+we present in Lemma 3 an abstract sufﬁcient condition for heavy-tailed stationary distributions of ergodic
+Markov chains.
+Lemma 3. For a general metric space S, suppose that W is an ergodic Markov chain on S with Wk
+DÑ W8
+as k Ñ 8, and let f : S Ñ R be some scalar-valued function. If there exists some ϵ ą 0 such that
+infwPS Pp|fpΨpwqq| ą p1 ` ϵq|fpwq|q ą 0, then fpW8q is heavy-tailed.
+Under our model, Lemma 3 says that convergent constant step-size stochastic optimizers will exhibit
+heavy-tailed stationary behaviour if there is some positive probability of the optimizer moving further away
+from an optimum, irrespective of how near or far you are from it. Analyses concerning stochastic opti-
+mization algorithms almost always consider rates of contraction towards a nearby optimum, quantifying the
+exploitative behaviour of a stochastic optimizer. To our knowledge, this is the ﬁrst time that consequences
+of the fact that stochastic optimization algorithms could, at any stage, move away from any optimum, have
+been examined. In the convex setting, this appears detrimental, but this is critical in non-convex settings,
+where exploration (rather than exploitation to a local optimum) is important. Indeed, we ﬁnd that it is this be-
+haviour that directly determines the tails of the stochastic optimizer’s stationary distribution, and therefore,
+its exploratory behaviour. Altogether, our results suggest that heavy-tailed noise could be more common
+and more beneﬁcial in stochastic optimization than previously acknowledged.
+7

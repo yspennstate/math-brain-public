@@ -1,0 +1,1261 @@
+PDF_PAGE 60
+46
+2
+The Univariate Case
+Therefore (2.4.51) follows by letting s →∞and ε ↓0 if we can also show that
+lim
+s→∞lim sup
+x→∞
+P(|Xs| > x)
+P(|B| > x) = 0 .
+(2.4.53)
+Fix γ ∈(0, 1) and observe that
+P(|Xs| > x) ≤
+∞
+
+i=s+1
+P
+
+Πi−1 |Bi| > x (1 −γ )γ i−(s+1)
+=
+∞
+
+i=0
+P
+
+Πs+i |Bs+i+1| > x (1 −γ )γ i
+.
+We employ the Potter bounds (B.2.3) on p. 274: for given ε > 0, there exists a
+constant x0 = x0(ε) such that for any c > 0,
+P(|B| > x/c)
+P(|B| > x)
+≤
+(1 +ε) cα+ε , for c ≥1, x/c ≥x0,
+(1 +ε) cα−ε , for c < 1, x ≥x0.
+Applyingthesebounds conditional on Πs+i, weobtainfor givenε > 0, someconstant
+c0 > 0 which does not depend on i and s,
+P
+
+Πs+i |Bs+i+1| > x(1 −γ )γ i
+P(|B| > x)
+≤E
+
+Πα+ε
+s+i 1
+
+Πs+i ≥(1 −γ )γ i, x/x0 ≥Πs+i/((1 −γ )γ i)
+
+
+((1 −γ )γ i)α+ε
++E
+
+Πα−ε
+s+i 1
+
+Πs+i < (1 −γ )γ i, x ≥x0
+
+
+((1 −γ )γ i)α−ε
++P
+
+Πs+i > (1 −γ )γ ix/x0
+
+P(|B| > x)
+≤c0
+
+(E[Aα+ε])s (E[(A/γ )α+ε])i + (E[Aα−ε])s (E[(A/γ )α−ε])i
++(E[Aα+ε])s
+x−(α+ε)
+P(|B| > x) (E[(A/γ )α+ε])i
+.
+(2.4.54)
+In the last step, we used Markov’s inequality. By assumption, there exists δ > 0
+such that E[Aα+δ] < ∞. Using this fact in combination with E[Aα] < 1, there exist
+ε > 0 and γ ∈(0, 1) such that E[(A/γ )α+z] < 1 for z ∈[−ε,ε]. Combining the
+inequalities above, we obtain
+lim sup
+x→∞
+P(|Xs| > x)
+P(|B| > x) ≤c0
+
+(E[Aα+ε])s
+1 −E[(A/γ )α+ε] +
+(E[Aα−ε])s
+1 −E[(A/γ )α−ε]
+
+,
+
+
+PDF_PAGE 61
+2.4 The Tails
+47
+and the right-hand side vanishes as s →∞. Thus we proved (2.4.53). This ﬁnishes
+the proof.
+□
+2.4.4
+The Kesten–Goldie Theorem
+In his 1973 paper, Kesten [175] proved a rather astonishing result about the tails of the
+Rd-valued solution X to the ﬁxed-point equation X
+d= A X + B. Roughly speaking,
+he showed that the solution to this equation may have power-law tails in the sense that
+P(|X| > x) ∼c x−α as x →∞for some positive constant c; a detailed analysis of
+the tails in the multivariate case is given in Section 4.4. Although Theorem 2.4.2 has
+prepared us for such a result, the precision of the tail asymptotics is still surprising.
+Later, in 1991, Goldie [128] gave an independent proof of this result in the univari-
+ate case, based on implicit renewal theory. On p. 131 of his paper [128], he mentioned
+that he beneﬁtted from ideas in Grinceviˇcius [134]. Grinceviˇcius partly rediscovered
+Kesten [175] but also developed his own approach which remained incomplete in
+some arguments.
+The following result is a special case of Theorem 5 in Kesten [175] and of Theorem
+4.1 in Goldie [128] when A ≥0 a.s.; the complete result (without proof) is given as
+Theorem 2.4.7 below. Here we present Goldie’s proof. He did not only derive the
+precise power-law tail behavior but he also determined the constants in the tails.
+Theorem 2.4.4 Assume that the following conditions hold.
+1. A ≥0 a.s. and the law of log A conditioned on {A > 0} is non-arithmetic.7
+2. There exists α > 0 such that E[Aα] = 1, E[|B|α] < ∞and E[Aα log+ A] < ∞.
+3. P(Ax + B = x) < 1 for every x ∈R.
+Then the equation X
+d= AX + B has a solution X which is independent of (A, B)
+and there exist constants c+, c−such that c+ + c−> 0 and
+P(X > x) ∼c+ x−α
+and P(X < −x) ∼c−x−α ,
+x →∞,
+(2.4.55)
+The constants c+, c−are given by
+⎧
+⎪⎨
+⎪⎩
+c+ =
+1
+α mα
+E
+
+(AX + B)α
++ −(AX)α
++
+
+
+,
+c−=
+1
+α mα
+E
+
+(AX + B)α
+−−(AX)α
+−
+
+
+,
+(2.4.56)
+where mα = E
+
+Aα log A
+
+
+> 0.
+7A random variable is non-arithmetic if it is not supported on any of the sets aZ, a ≥0.
+
+
+PDF_PAGE 62
+48
+2
+The Univariate Case
+Some Comments Related to Theorem 2.4.4
+• In Section 2.5 we will study in detail the support of the distribution PX of X.
+In particular, in Theorem 2.5.5 we will prove under general conditions that the
+support of PX is either a half-line of the form (a, ∞) or (−∞, a) for some real
+a or the whole real line. In the former cases, we have either c+ > 0 and c−= 0
+or c−> 0 and c+ = 0. Both constants c+ and c−are positive if, in addition to the
+conditions of Theorem 2.4.4, we assume that the support of PX is the real line.
+This is the content of Theorem 2.4.6 below.
+• The function
+h(p) = E[Ap] = E[e p log A]
+(2.4.57)
+has a positive second derivative in (0, α) and, therefore, is strictly convex on [0, α].
+A graph of the function h(p) is shown in Figure 2.3. If A ̸= 1 a.s. and a positive
+solution to the equation h(p) = 1 exists it is unique because of strict convexity of h.
+For the same reason, h(p) < 1 on (0, α). By Jensen’s inequality,
+p E[log A] = E[log(Ap)] ≤log
+
+E[Ap]
+
+< 0 .
+Since E[log A] < 0 is the right derivative of h at zero, h decreases in an interval
+[0, p0] for some p0 > 0. On the other hand, strict convexity and h(α) = 1 imply
+that h increases in some neighborhood of α and therefore the left ﬁrst derivative
+of h at α, given by mα, is positive.
+The condition h(α) = 1 appears in numerous applied probability problems. It is
+oftenreferredtoasCramérorCramér-Lundbergconditionandplaysafundamental
+role for determining the ruin probability in a non-life portfolio in the presence
+Figure 2.3 An example of
+the convex function
+h(p) = E[Ap]; see (2.4.57).
+If A ̸= 1 a.s. and the
+equation h(p) = 1 has a
+positive solution α it is
+unique. If A ≤1 and A ̸= 1
+a.s. then h(p) < 1 for any
+p > 0, hence α does not
+exist. In the case when
+P(A > 1) > 0, a positive
+solution α does not exist if
+there is p0 > 0 such that
+h(p) < 1 on (0, p0) and
+h(p0) = ∞.
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+0.7
+0.8
+0.9
+1.0
+1.1
+p
+h(p)
+
+
+PDF_PAGE 63
+2.4 The Tails
+49
+of light tails. In this context, log Ai has interpretation as the difference between
+claim size and premium per time unit in the portfolio. Then the random walk
+Sn = n
+i=1 log Ai is the difference between the aggregated claim amount and
+premium in the ﬁrst n periods. Since E[log A] < 0, this random walk has a negative
+drift and, by the strong law of large numbers, it tends to −∞as n →∞. We refer
+to Asmussen [17], Section XIII.5, Asmussen and Albrecher [18], Chapters IV and
+VI, and Embrechts et al. [112], Section 1.2, for further reading on ruin probabilities
+and related topics in queuing theory.
+• The rate of convergence in (2.4.55) was investigated in Goldie [128] and
+Buraczewski et al. [78]. Depending on the assumptions, they found convergence
+rates of the order x−σ1 or (log x)−σ2 for positive constants σ1 and σ2. More con-
+cretely, assuming a Lebesgue density for A and E[Aα+δ] < ∞for some δ > 0,
+Goldie [128], Theorem 3.2, proved that there exists a positive constant σ1 such
+that
+(c+ + c−) −xα P(|X| > x)
+ ≤const x−σ1 ,
+x > 0 .
+Under much weaker assumptions Buraczewski et al. [78] proved that
+(c+ + c−) −xα P(|X| > x)
+ ≤const (log x)−σ2 ,
+x > 1 ,
+for some positive constant σ2.
+• In general, formula (2.4.56) does not allow one to evaluate the constants c+ and
+c−. However, there exist other formulæ which can be used to approximate these
+values in a more efﬁcient way. For example, under the conditions of Theorem 2.4.4
+with Yn = n
+i=1 Πi−1 Bi,
+lim
+n→∞
+1
+α mα
+E[|Yn|α 1(Yn > 0)]
+n
+= c+
+and
+lim
+n→∞
+1
+α mα
+E[|Yn|α 1(Yn < 0)]
+n
+= c−,
+and in turn,
+lim
+n→∞
+1
+α mα
+E[|Yn|α]
+n
+= c+ + c−;
+see Bartkowiak at al. [26] in the case B = 1 and Buraczewski et al. [79] in the
+general case. Other approximation formulæ for c± can be found in Enriquez et al.
+[115], Collamore and Vidyashankar [89], Collamore et al. [88].
+• Recently, Roitershtein [243] and Collamore [87] independently considered the
+situation when the sequence
+
+(At, Bt)
+
+t∈Z is Markov dependent (either it consti-
+tutes a stationary Markov chain [87] or is a Markov modulated process [243]).
+Under appropriate assumptions (including Harris-type conditions), applying the
+
+
+PDF_PAGE 64
+50
+2
+The Univariate Case
+techniques used in the proof below, they describe the tails of the solution to the
+equation Xt = At Xt−1 + Bt, t ∈Z.
+• The arithmetic case when log A is supported in the set aZ for some a > 0 was
+studied by Grinceviˇcius [134]. Under conditions 2 and 3 of Theorem 2.4.4 he
+proved for all but countably many y ∈R that there exists c(y) > 0 such that
+P
+
+X > e y+n a
+∼c(y) e −α (y+n a),
+n →∞.
+(2.4.58)
+This result implies in particular that there are constants c2 > c1 > 0 such that
+c1 ≤lim inf
+x→∞
+xα P(|X| > x) ≤lim sup
+x→∞
+xα P(|X| > x) ≤c2.
+If P(B ≥0) = 1 and P(B = 0) < 1 then the limit in (2.4.58) exists and is positive
+for every y.
+Next we will give the proof of Theorem 2.4.4. Following Goldie [128], we ﬁrst
+prove the tail bounds (2.4.55) and then, developing some independent arguments,
+we show positivity of c+ + c−.
+Proof (Proof of Theorem 2.4.4. The tail asymptotics.) The tail bounds (2.4.55) will
+essentially follow from the ﬁxed-point equation X
+d= AX + B and the key renewal
+Theorem A.1.1 on p. 268 which yields a description of the behavior at inﬁnity of the
+solution to an appropriate renewal equation.
+Changing variables, we intend to prove the existence of the limit
+lim
+x→∞e αx P(X > e x).
+Keeping in mind the ﬁxed-point equation for X, we write
+P(X > e x) = P(A X > e x) + ψ(x) ,
+(2.4.59)
+where
+ψ(x) = P(A X + B > e x) −P(A X > e x).
+With the convention that f (x) = P(X > e x) we can interpret (2.4.59) as a renewal
+equation8
+f (x) = ψ(x) + E[ f (x −log A)] .
+(2.4.60)
+8We refer to Appendix A for a short introduction to renewal theory.
+
+
+PDF_PAGE 65
+2.4 The Tails
+51
+Unfortunately, we cannot apply Smith’s key renewal theorem for positive random
+variables: in view of the condition E[Aα] = 1 the random variable log A assumes
+both positive and negative values with positive probability and its mean is negative;
+see the comments on p. 48. Instead we will apply a renewal theorem proved in Athreya
+et al. [19]; see Appendix A for more details. This result concerns real-valued random
+variables but requires positivity of the mean. This condition is not satisﬁed in our
+case.
+In this situation a classical trick helps: an exponential change of measure, also
+known as Esscher transform, exploiting the Cramér-Lundberg condition E[Aα] = 1.
+After this change of the probability measure, log A still assumes positive and negative
+values but its mean (with respect to the new measure) is positive. Then we will be
+able to apply the extended version of the classical renewal theorem in Appendix A.
+For any Borel set C ⊂R, we deﬁne the new probability measure
+Pα(log A ∈C) = E
+
+1(log A ∈C) e α log A
+
+E[e α log A]
+= E
+
+1(log A ∈C) Aα
+
+E[Aα]
+= E
+
+1(log A ∈C) Aα
+
+.
+Denoting the corresponding expected value by Eα, we have for integrable g,
+Eα[g(log A)] = E
+
+g(log A) Aα
+
+.
+In particular, Eα[log A] = mα which is ﬁnite by assumption and we also have mα > 0
+by convexity of the function E[Ap], p ∈[0, α]; see the comments on p. 48.
+To change the measure we multiply both sides of (2.4.60) by e αx:
+e αx f (x) = e αx ψ(x) + e αx E[ f (x −log A)] ,
+and we write fα(x) = e αx f (x), ψα(x) = e αxψ(x). Since
+e αxE[ f (x −log A)] = Eα
+
+f (x −log A) e α(x−log A)
+
+,
+we arrive at a new renewal equation by change of measure:
+fα(x) = ψα(x) + Eα[ fα(x −log A)] .
+(2.4.61)
+If we followed the patterns of classical renewal theory (see Appendix A) one
+would try to solve (2.4.61) for fα in terms of ψα and the renewal measure given by
+
+
+PDF_PAGE 66
+52
+2
+The Univariate Case
+να(C) =
+∞
+
+i=1
+Pα
+
+Si ∈C
+
+for any Borel set C ⊂R,
+(2.4.62)
+where S0 = 0, St = t
+i=1 log Ai, t ≥0, is the random walk generated by the iid
+sequence (log At). Then if ψα were directly Riemann integrable (dRi) (see p. 268
+for the deﬁnition), a typical solution of the renewal equation (2.4.61) would assume
+the form
+fα(x) =
+∞
+
+i=0
+Eα[ψα(x −Si)] = ψα(x) +
+
+R
+ψα(x −y) να(dy)
+and the key renewal theorem would describe the behavior of fα at inﬁnity:
+lim
+x→∞fα(x) = 1
+mα
+
+R
+ψα(y) dy .
+After changing the measure Pα back to P, the latter relation is exactly the upper tail
+estimate (2.4.55) with the corresponding constant c+.
+However, we are not in the position to show direct Riemann integrability of ψα in
+a direct way. Since for large values of y, Ay + B is comparable with Ay we expect
+that the symmetric difference of the events {AX + B > e x} and {AX > e x} is of
+small measure for large x. Thus the function ψα should be very small at inﬁnity. We
+do not get pointwise estimates of ψα but we can prove that ψα is integrable.
+In what follows, we will use a smoothing operator of convolution type: for any
+integrable function g and K(s) = e −s1(0,∞)(s), s ∈R, deﬁne
+˘g(s) = (K ∗g)(s) =
+ s
+−∞
+e −(s−y) g(y) dy ,
+s ∈R .
+(2.4.63)
+The smoothed function ˘g preserves the integral properties of g, for example, direct
+calculation shows
+
+R ˘g(y)dy =
+
+R g(y)dy, but ˘g also has nice local properties. It is
+continuous and even dRi. Applying the smoothing operator to both sides of (2.4.61),
+we obtain
+˘fα(s) = ˘ψα(s) + Eα[ ˘fα(s −log A)] .
+(2.4.64)
+Applying the key renewal theorem to (2.4.64), one can solve this equation explicitly
+and gets
+lim
+s→∞
+˘fα(s) = 1
+mα
+
+R
+˘ψα(y) dy = 1
+mα
+
+R
+ψa(y) dy = c+.
+(2.4.65)
+
+
+PDF_PAGE 67
+2.4 The Tails
+53
+Finally, one has to “unsmooth” this result and thus proves the desired relation
+lim
+x→∞fα(x) = c+ .
+(2.4.66)
+To ﬁll all the gaps in the above argument we divide the proof into consecutive
+steps and prove:
+Step 1. The function ψα is integrable on R, i.e.,
+
+R |ψα(y)| dy < ∞.
+Step 2. If ψα is integrable then ˘ψα is dRi.
+Step 3. The solution ˘fα to (2.4.64) satisﬁes (2.4.65).
+Step 4. The function fα(x) converges to c+ as x →∞, i.e., (2.4.66) holds.
+Step 5. The constant c+ is given by (2.4.56).
+Proof of step 1. Using the elementary inequalities for a, b ∈R, some Cα > 0,
+|a + b|α −|a|α ≤|b|α
+for α ≤1 ,
+|a + b|α −|a|α ≤Cα (|a|α−1 + |b|α−1) |b| for α > 1,
+we conclude that
+E
+|AX + B|α −|AX|α
+
+< ∞.
+(2.4.67)
+Indeed, for α ≤1,
+E
+|AX + B|α −|AX|α
+
+≤E[|B|α] < ∞,
+and for α > 1, using the independence of X and (A, B),
+E
+|AX + B|α −|AX|α
+
+≤Cα E
+
+|B|α−1 + |AX|α−1
+|B|
+
+
+= Cα
+
+E[|B|α] + E
+
+|A|α−1|B|
+
+
+E[|X|α−1]
+
+.
+WhileE[|B|α] < ∞byassumption,E
+
+|A|α−1|B|
+
+
+< ∞followsbyHölder’sinequal-
+ity. Indeed, E
+
+|A|α−1|B|
+
+
+≤(E[|A|α])(α−1)/α(E[|B|α])1/α. Finally, E[|X|]α−1 < ∞
+follows from the second part of Lemma 2.3.1, by observing that we also have
+E[|A|α−1] < 1; see the comments on p. 48. This proves (2.4.67).
+Write R = (AX + B)+ and Q = (AX)+. Then
+
+R
+|ψα(x)| dx =
+ ∞
+0
+P(AX + B > s) −P(AX > s)
+ sα−1 ds
+≤
+ ∞
+0
+P(Q ≤s < R) sα−1 ds +
+ ∞
+0
+P(R ≤s < Q) sα−1 ds .
+
+
+PDF_PAGE 68
+54
+2
+The Univariate Case
+Both integrals on the right-hand side can be computed explicitly and are ﬁnite. For
+example, by Fubini’s theorem, we have
+ ∞
+0
+P(Q ≤s < R) sα−1 ds =
+ ∞
+0
+E
+
+1(Q ≤s < R)
+
+
+sα−1ds
+= E
+
+1(Q < R)
+ R
+Q
+sα−1 ds
+
+= α−1 E
+
+1(Q < R)
+
+Rα −Qα
+
+≤α−1 E
+
+1(Q < R)
+
+|AX + B|α −|AX|α
+
+,
+≤α−1 E
+|AX + B|α −|AX|α
+
+,
+which is ﬁnite in view of (2.4.67). The same calculations without absolute value
+signs yield m−1
+α
+
+R ψα(y) dy = c+.
+Proof of step 2. We write ψα as a difference of its positive and negative parts:
+ψα = ψ+
+α −ψ−
+α . Recalling the deﬁnition of direct Riemann integrability from
+Appendix A, it sufﬁces to prove that
+˘ψ+
+α and ˘ψ−
+α are dRi. We restrict ourselves
+to the proof for ˘ψ+
+α . Observe ﬁrst that for δ > 0,
+˘ψ+
+α (s + δ) =
+ s+δ
+−∞
+e −(s+δ−u) ψ+
+α (u) du
+≥e −δ
+ s
+−∞
+e −(s−u) ψ+
+α (u) du
+= e −δ ˘ψ+
+α (s) .
+Recalling the deﬁnition of the lower sumU from Appendix A, we have for δ ∈(0, 1),
+U
+ ˘ψ+
+α , δ
+
+= δ
+
+t∈Z
+inf
+s∈[tδ,(t+1)δ]
+˘ψ+
+α (s)
+≥δ e −δ 
+t∈Z
+˘ψ+
+α (tδ)
+≥e −2δ 
+t∈Z
+ tδ
+(t−1)δ
+˘ψ+
+α (u)du
+= e −2δ
+
+R
+˘ψ+
+α (u) du .
+
+
+PDF_PAGE 69
+2.4 The Tails
+55
+In the same way we prove that the upper sum U satisﬁes the bound
+U
+ ˘ψ+
+α , δ
+
+= δ
+
+t∈Z
+sup
+s∈[tδ,(t+1)δ]
+˘ψ+
+α (s)
+≤e 2δ
+
+R
+˘ψ+
+α (u) du .
+Therefore the difference of the upper and lower sums converges to zero as δ →0.
+The same argument also shows that for any small δ > 0
+U
+ ˘ψ+
+α , δ
+
+≤e 2δ
+
+R
+˘ψ+
+α (u)du ≤e 2δ
+
+R
+|ψα(u)| du < ∞.
+Again appealing to Appendix A, we have proved the direct Riemann integrability
+of ˘ψ+
+α . In the same way we prove the direct Riemann integrability of ˘ψ−
+α .
+Proof of step 3. We recall the deﬁnition of the random walk with negative drift,
+S0 = 0, St = t
+i=1 log Ai, t ≥1. Iterating the renewal equation (2.4.64) n times, we
+obtain
+˘fα(s) = Eα[ ˘fα(s −Sn)] +
+n−1
+
+k=0
+Eα[ ˘ψα(s −Sk)] .
+(2.4.68)
+By Fubini’s theorem,
+Eα[ ˘fα(s −Sn)] =
+ s
+−∞
+e −(s−y) Eα[ fα(y −Sn)] dy
+=
+ s
+−∞
+e −(s−y) 
+e αy E[ f (y −Sn)]
+
+dy
+=
+ s
+−∞
+e −(s−y) e αy P(Πn X0 > e y) dy .
+Since Πn →0 P-a.s. we have, for every y ∈R, limn→∞P(Πn X0 > e y) = 0. Dom-
+inated convergence yields that E[ ˘fα(s −Sn)] →0 as n →∞. Therefore, letting
+n →∞in (2.4.68), we obtain
+˘fα(s) =
+∞
+
+k=0
+Eα[ ˘ψα(s −Sk)] = ˘ψα(s) +
+
+R
+˘ψα(s −y) να(dy) ,
+(2.4.69)
+where να is the renewal measure introduced in (2.4.62). Finally, an application of
+the renewal Theorem A.1.1 yields (2.4.65).
+
+
+PDF_PAGE 70
+56
+2
+The Univariate Case
+Proof of step 4. Fix a constant b > 1. Then
+bα+1 −1
+α + 1
+e αs P
+
+X > e s) = e −s
+ be s
+e s
+uα P
+
+X > es
+du
+≥e −s
+ be s
+e s
+uα P
+
+X > u
+
+du
+=
+ s+log b
+s
+e −(s−y) fα(y) dy
+= b ˘fα(s + log b) −˘fα(s)
+∼c+ (b −1) ,
+as s →∞,
+and passing with b to 1 we have
+lim inf
+s→∞sα P(X > s) ≥c+ .
+A similar argument yields
+lim sup
+s→∞
+sα P(X > s) ≤c+ .
+Thus we proved (2.4.66).
+Proof of step 5. The formula for c+ follows immediately from the deﬁnition of ψ
+and the arguments presented in the proof of step 1.
+□
+Proof (Proof of Theorem 2.4.4: Positivity of the limiting constant.) Our aim is to
+prove that c+ + c−> 0. In the case when B is almost surely positive (or negative)
+positivity of c+ (or c−) follows immediately from formula (2.4.56). However, when
+B assumes both positive and negative values this argument does not work. The proof
+of the asymptotic behavior of P(X > x) does not contain a clue about the positivity
+of c+, c−either. An appeal to the ﬁxed-point equation X
+d= AX + B is not helpful
+for our purposes. Instead we use the explicit representation
+X =
+∞
+
+i=1
+Πi−1Bi
+which is inspired by the stationary solution to the stochastic recurrence equation
+Xt = At Xt−1 + Bt, t ∈Z; see Theorem 2.1.3.
+Intuition tells us that X is large if one of the products Πi is large. This event is well
+described in the literature on ruin and queuing theory; see for example the mono-
+graphs Feller [120], Chapter XII, and Asmussen and Albrecher [18], Chapter VI.
+
+
+PDF_PAGE 71
+2.4 The Tails
+57
+By virtue of these results we have under the assumptions of the theorem, for some
+c0 > 0,
+P
+
+max
+i≥1 Πi > s
+
+∼c0 s−α ,
+s →∞;
+(2.4.70)
+see also (9.28) in Goldie [128]. We will use this result to show that there exists a
+constant c1 > 0 such that
+lim inf
+s→∞sα P(|X| > s) = c1,
+ensuring the positivity of c+ + c−.
+We proceed as follows. We choose x from the support of the distribution of X and
+consider the backward process (Y x
+t )t≥0 starting at x:
+Y x
+t = Πt x +
+t
+i=1
+Πi−1Bi ,
+t ≥0 .
+(2.4.71)
+Then we take a generic element (A, B) which is also independent of the sequence
+(At, Bt),t ≥1,andwrite Z = Ax + B.Intheﬁrststepwewillﬁndpositiveconstants
+ε, δ and c such that
+P
+
+|x −(Ax + B)| −δ(A + 1) > ε
+
+≥c .
+(2.4.72)
+Since for any x we have P(Ax + B = x) < 1, we may choose ε > 0 so small that
+2c = P(|x −Z| > 2ε) > 0. Let m be so large that P(A > m) ≤c. Then
+P(|x −(Ax + B)| > 2ε , A ≤m) ≥P(|x −Z| > 2ε) −P(A > m) ≥c ,
+and for δ = ε/(m + 1) we have
+P(|x −Z| > 2ε , A ≤m) = P(|x −Z| −δ(A + 1) > 2ε −ε(A + 1)/(m + 1), A ≤m)
+≤P(|x −Z| −δ(A + 1) > ε) .
+This proves (2.4.72).
+Next we observe that
+Y x
+t −Y Z
+t
+ = Πt |x −Z|.
+(2.4.73)
+Consider the mutually exclusive events
+Dt =
+
+Πt > 2s/ε and Πr ≤2s/ε ,
+r ≤t −1
+
+,
+t = 1, 2, . . . .
+
+
+PDF_PAGE 72
+58
+2
+The Univariate Case
+Applying (2.4.70)–(2.4.73) and using the independence of Dt and (At+1, Bt+1), we
+obtain for large values s,
+c [c0 (2s/ε)−α] ≤c P
+
+max
+t≥1 Πt > 2s/ε
+
+= c
+∞
+
+t=1
+P(Dt)
+≤
+∞
+
+t=1
+P(Dt) P
+x −(At+1x + Bt+1)
+ −δ(At+1 + 1) > ε
+
+≤
+∞
+
+t=1
+P
+Y x
+t −Y x
+t+1
+ −δ(Πt+1 + Πt) > 2s
+
+∩Dt
+
+.
+In the last inequality we used the fact that ε > 2 s/Πt on Dt. Denoting the probabil-
+ities in the last line by πt, we observe that
+πt ≤P
+Y x
+t
+ −δΠt > s
+
+∪
+Y x
+t+1
+ −δΠt+1 > s
+
+
+∩Dt
+
+≤P
+Y x
+t
+ −δΠt > s
+
+∩Dt
+
++ P
+Y x
+t+1
+ −δΠt+1 > s
+
+∩Dt
+
+.
+Therefore, again using that the events (Dt) are mutually exclusive,
+∞
+
+t=1
+πt ≤P
+
+|Y x
+t | −δΠt > s for some t ≥1
+
++P
+
+|Y x
+t+1| −δΠt+1 > s for some t ≥1
+
+≤2 P
+
+|Y x
+t | −δΠt > s for some t ≥1
+
+≤2 P
+
+inf
+u∈U |Y u
+t | > s for some t ≥1
+
+for U = [x −δ, x + δ]. For the last inequality, it is sufﬁcient to observe that (2.4.73)
+implies
+|Y x
+t | −δΠt ≤|Y x
+t −Y u
+t | + |Y u
+t | −δΠt = Πt (|x −u| −δ) + |Y u
+t | ≤|Y u
+t | ,
+u ∈U .
+So far we have shown that
+lim inf
+s→∞sα P
+
+inf
+u∈U |Y u
+t | > s for some t
+
+> 0 .
+(2.4.74)
+Theorems 2.1.1 and 2.1.3 ensure that Y u
+t
+a.s.
+→X as t →∞whatever the value of u.
+Therefore we expect that, if at some instant the trajectory of (|Y u
+t |) exceeds s, the
+limit X should exceed s as well and in (2.4.74) we should be able to replace (|Y u
+t |)u∈U
+by X. We make this intuitive argument precise.
+
+
+PDF_PAGE 73
+2.4 The Tails
+59
+We write
+X =
+∞
+
+i=1
+Πi−1 Bi =
+t
+i=1
+Πi−1 Bi + Πt Xt = Y 0
+t + Πt Xt = Y Xt
+t
+,
+where Xt = ∞
+i=t+1 Πt+1,i−1Bi is a copy of X and independent of Πt and Y 0
+t ; com-
+pare with (2.4.71). Since x was chosen as an element of the support of the distribution
+of X, we have for some positive ε0,
+P(Xt ∈U) = P(X ∈U) = ε0 > 0.
+Moreover, if |Y u
+t | > s and Xt = u for some u ∈U then |X| = |Y Xt
+t | > s.
+Consider the mutually exclusive events
+Et =
+
+inf
+u∈U |Y u
+t | > s and inf
+u∈U |Y u
+i | ≤s , i ≤t −1
+
+,
+t = 1, 2, . . . .
+Then using the independence of Xt and Et, we obtain
+ε0 P
+
+inf
+u∈U |Y u
+t | > s for some t
+
+= ε0
+∞
+
+t=1
+P(Et) =
+∞
+
+t=1
+P(Et) P
+
+Xt ∈U
+
+=
+∞
+
+t=1
+P
+
+Et ∩{Xt ∈U}
+
+≤
+∞
+
+t=1
+P
+
+Et ∩{|Y Xt
+t | > s}
+
+=
+∞
+
+t=1
+P
+
+Et ∩{|X| > s}
+
+≤P(|X| > s) .
+Combining the latter bound with (2.4.74) and the ﬁrst part of the proof, we have
+ﬁnally proved the desired positivity of the tail constants
+lim
+s→∞sα P(|X| > s) = c+ + c−> 0 .
+□
+Remark 2.4.5 Positivity of the limiting constants c+ and c−can be proved in various
+ways. The proof presented above is a reminiscent of the arguments in Goldie [128]
+and it also contains some ideas of Grinceviˇcius [134]. Below we follow an alterna-
+tive approach due to Guivarc’h and Le Page [143]. Further independent proofs are
+available in Buraczewski et al. [72] (based on results from complex analysis) and in
+Buraczewski and Mentemeier [82] (the proofs are provided in more general settings
+and exploit large deviation results and the Bahadur-Rao theorem).
+
+
+PDF_PAGE 74
+60
+2
+The Univariate Case
+Next we will deal with the case when the support of PX is the real line, supp
+PX = R. We refer to Section 2.5.3 for sufﬁcient conditions. It turns out that both
+constants c+ and c−are positive, implying that the left and right tails of PX are
+equivalent and cannot decay at different rates; cf. also the comments on p. 48.
+Guivarc’h and Le Page [143] proved the following result:
+Theorem 2.4.6 Assume the conditions of Theorem 2.4.4 and, additionally, A > 0
+a.s. and supp PX = R. Then both constants c+ and c−in (2.4.56) are positive.
+Proof The original argument of Guivarc’h and Le Page is quite difﬁcult; we present
+a different approach and prove a stronger result: if the support of PX is unbounded
+at +∞, then c+ is positive.
+Recall the explicit representation of X = ∞
+i=1 Πi−1 Bi and the backward process
+Yt = t
+i=1 Πi−1 Bi , t ≥1. We have the identity in law
+X
+d= Yt + Πt X′,
+where X′ is a copy of X independent of (Πt, Yt). Write
+Bt = max{|Bt|, 1}
+and
+Y t =
+t
+i=1
+Πi−1Bi ,
+t ≥1 .
+Obviously, |Yt| ≤Y t. Under our assumptions,
+Y t
+a.s.
+→Y =
+∞
+
+i=1
+Πi−1Bi ,
+t →∞.
+An application of the Kesten–Goldie Theorem 2.4.4 yields for some c1 > 0,
+lim
+s→∞sα P
+
+Y > s
+
+= c1 .
+In view of (2.4.70) we have for large s and any constant C > 0,
+c0
+2 s−α ≤P
+
+max
+t≥1 Πt > s
+
+= P
+
+Πt > s for some t and Y > Cs
+
++P
+
+Πt > s for some t and Y ≤Cs
+
+≤2 c1
+Cα s−α + P
+
+Πt > s and −Cs < Yt for some t
+
+.
+ChoosingalargeC suchthat2c1/Cα < c0/4,weobtainforδ = c0/4 > 0andlarges,
+P
+
+Πt > s and −Cs < Yt for some t
+
+≥δ s−α .
+(2.4.75)
+
+
+PDF_PAGE 75
+2.4 The Tails
+61
+We consider the stopping time
+Ts = inf{t : Πt > s and −Cs < Yt} .
+In view of (2.4.75) we have
+δ s−α ≤P
+
+Ts < ∞
+
+= P
+	 ∞
+
+t=1
+
+Ts = t
+
+≤
+∞
+
+t=1
+P
+
+Πt > s and −Cs < Yt
+
+∩
+
+Ts = t
+
+.
+Since PX has unbounded support we have P(X′ > C + 1) > 0. We conclude that
+δ P(X′ > C + 1) ≤sα
+∞
+
+t=1
+P
+
+Πt > s and −Cs < Yt
+
+∩
+
+Ts = t
+
+P(X′ > C + 1)
+≤sα
+∞
+
+t=1
+P
+
+Πt X′ + Yt > s
+
+∩
+
+Ts = t
+
+≤sα P(X > s) .
+This proves the result.
+□
+We mentioned before that Theorem 2.4.4 is valid in a more general setting when
+A may assume negative values with positive probability as well. Then, however,
+the constants c+ and c−coincide. What happens is that, with probability 1, Πn
+change sign inﬁnitely often and contribute in the same way both to P(X > x) and
+P(X < −x). We formulate the corresponding result (Goldie [128], Theorem 4.1) but
+refrain from giving a proof.
+Theorem 2.4.7 Assume that the following conditions hold.
+1. P(A < 0) > 0 and the conditional law of log |A| given {A ̸= 0} is non-arithmetic.
+2. Thereexistsα > 0 suchthatE[|A|α]=1,E[|B|α] < ∞andE
+
+|A|α log+ |A|
+
+
+< ∞.
+3. P(Ax + B = x) < 1 for every x ∈R.
+Then the equation X
+d= AX + B has a solution X which is independent of (A, B)
+and there exists a positive constant c+ such that
+P(X > x) ∼c+ x−α
+and P(X < −x) ∼c+ x−α ,
+x →∞,
+(2.4.76)
+
+
+PDF_PAGE 76
+62
+2
+The Univariate Case
+where
+c+ =
+1
+2 α mα
+E
+
+|AX + B|α −|AX|α
+
+and mα = E[|A|α log |A|] > 0.
+2.5
+The Support
+In this section we will study the support of the solution X to the ﬁxed-point equation
+X
+d= AX + B, where the random variable X and the two-dimensional vector (A, B)
+are independent. As usual, we write PY for the distribution of any random element Y.
+The content of this section was essentially communicated to us by Yves Guivarc’h.
+Someparts of theproof of Proposition 2.5.4werealsoclariﬁedbyRadoslawCeszkiel.
+2.5.1
+Preliminaries
+The Support of a Measure
+For our convenience, we recall the notion of support of a measure μ on Rd. Let V
+be the union of all open subsets U ⊂Rd such that μ(U) = 0. The support of μ is
+the set
+supp μ = V c = Rd \ V .
+⊛-Convolution
+In Section 2.2.4 we introduced the ⊛-convolution for any probability measure
+P0 on R:
+(P(A,B) ⊛P0)(C) =
+
+R
+P(Ax + B ∈C) P0(dx) for any Borel set C.
+(2.5.77)
+Then the ﬁxed-point equation X
+d= AX + B turns into PX = P(A,B) ⊛PX.
+The Semigroup of Afﬁne Transformations on R
+In what follows, the afﬁne transformations of the real line
+h(x) = ax + b ,
+x ∈R ,
+(2.5.78)

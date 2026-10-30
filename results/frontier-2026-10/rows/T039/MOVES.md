@@ -1,0 +1,4 @@
+# T039 moves on the obstruction
+
+- 2026-10-15, bound (agent N): Target 1 measured (worker AH C001-C003): rho_op = 0.44101, rho_HS = 0.43251, (139) holds on all grids to 0.9; published certificate on [0.1,0.4] reproduced (3.99929 upper). Reach of the linearisation route is about 0.44.
+- 2026-10-15, narrowed (N): T039 target 2 recorded narrowed: balanced three-cell Gaussian simplex inequality for rho in [1/10,43/100], n>=2. New [2/5,43/100] uses 61 rigorous slabs, worst full-operator upper 1.9994729860206248<2. Exact C005 v2 SHA256 851d86994cd427a10c52314e04500f49b1515099fe545c8d82b7166b2b47412b. worker S PASS and lead analytic/arithmetic check; recovery receipt rechecks source/witness hashes, outward coverage and every exact rational squared completion. The [1/10,2/5] input is Heilman 2608.00333v1 (unrefereed); novelty priority not established. T039 remains open outside the certified range.
