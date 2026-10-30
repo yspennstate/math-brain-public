@@ -33,7 +33,7 @@ export MATHBRAIN_STORE=$PWD/local/population/brain.sqlite3 MATHBRAIN_BUILD_SRC=$
 python agent_tools/math_recall.py spectral gap of the random transposition walk
 ```
 
-If the last line prints cards with ids, the store works. The meaning channel needs an ONNX export of the encoder (see [agent_tools/README.md](agent_tools/README.md)); without it recall runs on words and links and is still usable.
+The import takes about a minute on a laptop and writes a database of about 120 MB with some 57,000 rows; it ends by reporting how many rows fail their stored digest, which should be none. If the last line prints cards with ids, the store works; the first search takes longer than later ones while the caches fill. The meaning channel needs an ONNX export of the encoder (see [agent_tools/README.md](agent_tools/README.md)); without it recall runs on words and links and is still usable.
 
 ## 2. Connect the agent
 
