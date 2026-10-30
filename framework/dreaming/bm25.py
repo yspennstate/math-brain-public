@@ -251,7 +251,7 @@ class QueryNormalizer:
     within a DAY of shipping, 'memeory' reached df=5 and a bare `tok in df` short-circuit made his
     highest-frequency typos permanently uncorrectable - the records of the typos were protecting the
     typos. Fix: TYPO_DF_MAX/SNAP_RATIO (a rare in-vocab token corrects only to a >=50x-more-common
-    target). Canary-verified: memeory/sidcar/gride correct; ginoe/fonk/bge/tadpole/kappa/forrester/
+    target). Canary-verified: memeory/sidcar/gride correct; ginoe/fonk/bge/kappa/forrester/
     minilm (real rare terms) untouched; pool-inclusion metrics identical old-vs-new rule (n=41).
     HONEST MISS kept deliberately: a df=1 token ('mathmatically', quoted once) stays uncorrected -
     measured across all 8611 df=1 vocab tokens, loosening the floor to catch it would wrongly snap 10.1%
