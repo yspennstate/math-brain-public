@@ -361,3 +361,7 @@ A 7 October four-arm Codex pilot found no brain advantage (21.7 and 15.0 of 27 w
 ## codex-1k-paired-2026-10-28: the 1,000-item bank again, Codex agents with and without the brain
 
 Codex agents answered the September bank once without the store and once with its recall tool. Without the brain 374 of 1,000 were right, with it 998, and all 624 discordant pairs favour the brain (p = 2.9e-188). The gap is entirely the 923 store lookups, which the brain-off agents answered UNKNOWN; the walk counts were perfect in both arms and the proof audits 74 and 75 of 77. Counts only.
+
+## codex-recall-use-2026-10-17: how Codex math agents called the recall tools
+
+In 398 Codex sessions of 13 to 17 October, 29 of the 65 math sessions made no recall call, and of 395 recall outputs read up to 81 came back before the search had finished, most of them after a one-second wait. Counts only.
