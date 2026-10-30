@@ -1,0 +1,25 @@
+T357 (agent A, 21 Oct 2026): deterministic equivalents of the spectral data in k_inf (cgmt_lam0_closed.py).
+Sig = mu1^2 F F' + mus^2 I, F N x d with N(0, 1/d) entries, psi = N/d, t = mus^2/mu1^2, mt = V'(mu1 F e1). Let mu be the
+Marchenko-Pastur law of F F' (ratio psi, atom 1 - 1/psi at 0 when psi > 1), m(z) its Stieltjes transform,
+    m(z) = (1 - psi - z - sqrt((1 - psi - z)^2 - 4 psi z)) / (2 psi z),
+and G(z) = e1'F'(F F' - z)^{-1} F e1. Since F'(FF' - z)^{-1}F = I + z (F'F - z)^{-1} and F'F is rotation invariant with law
+psi mu + (1 - psi) delta_0, G(z) -> psi (1 + z m(z)), the transform of nu(dl) = psi l mu(dl). Hence, as d -> inf,
+    mean(1/S) = m(-t)/mu1^2,   rho^2 = sum mt^2/S = G(-t),
+    E_w(1/S) = G'(-t)/(mu1^2 G(-t)),   E_w(1/S^2) = G''(-t)/(2 mu1^4 G(-t)),   Var_w = E_w(1/S^2) - E_w(1/S)^2.
+Checks: (1) these closed forms against a quadrature of mu (theta substitution, smooth at psi = 1); (2) the finite-d values
+over several F seeds at two sizes (the quadratic forms fluctuate at order d^{-1/2}); (3) k_inf recomputed with the spectrum
+replaced by the quadrature measure, against cgmt_lam0_closed at d 1000 seed 100. argv: beta psi [nodes]
+beta 2.0 psi 1.0: mu1 0.605706 mus^2 0.027415 t 0.074726
+closed forms:   mean_invS 8.700930  rho2 0.761461  Ew 4.939609  Ew2 58.070158  Varw 33.670421
+quadrature (4000 nodes, mass 0.999999999660): mean_invS 8.700930  rho2 0.761461  Ew 4.939609  Ew2 58.070158  Varw 33.670421
+  d 1000 seed 100: mean_invS 8.720457  rho2 0.757704  Ew 4.802952  Ew2 56.387020  Varw 33.318669
+  d 1000 seed 101: mean_invS 8.693894  rho2 0.769079  Ew 4.918327  Ew2 56.195620  Varw 32.005682
+  d 1000 seed 102: mean_invS 8.692223  rho2 0.760144  Ew 5.182383  Ew2 63.519726  Varw 36.662635
+  d 1000 seed 103: mean_invS 8.730496  rho2 0.739348  Ew 5.148862  Ew2 64.239953  Varw 37.729175
+  d 1000 seed 104: mean_invS 8.715123  rho2 0.757727  Ew 4.978055  Ew2 60.298113  Varw 35.517083
+  d 1000 mean over 5 seeds: mean_invS 8.710439  rho2 0.756800  Ew 5.006116  Ew2 60.128086  Varw 35.046649  | sd 0.0168 0.0108 0.1591 3.8046 2.3591
+  d 3000 seed 100: mean_invS 8.701264  rho2 0.756143  Ew 4.881583  Ew2 58.131302  Varw 34.301453
+  d 3000 seed 101: mean_invS 8.701468  rho2 0.770431  Ew 4.873941  Ew2 55.002852  Varw 31.247547
+  d 3000 mean over 2 seeds: mean_invS 8.701366  rho2 0.763287  Ew 4.877762  Ew2 56.567077  Varw 32.774500  | sd 0.0001 0.0101 0.0054 2.2121 2.1594
+limit measure: rho 0.872617 mu0 1.491260 Vh 0.177216 R2/Vh 1.001257 A_mu 0.093833; D(0) 5.006283e+02 (N R2/(2 Vh) 5.006283e+02); E0''(0) 1.000800e+03; D'(0) -7.402176e+04
+k_inf on the limiting spectrum = 0.07396

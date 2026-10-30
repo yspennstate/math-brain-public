@@ -1,0 +1,30 @@
+== n=2048 d=2 k=11 seed=11
+n=2048 d=2 k=11 groups=187 m=21 P=134217757 (28 bits) key bits=26 seed tries=2
+first layer (projection + key bits): 1456 params, weights as exact fractions up to ~2^53 (roundable)
+relu nodes=2551 params(nonzero weights+biases)=8419 max |integer weight| after layer 1 ~2^54
+params by part: layer 1 1456, group lookup 1173 (6.27 per group), hash 5248, parity readout 542
+wrong=0 of 300 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=4.1108  params*log2(n)/n=45.219  lower bound n/(B+log2 W)=31
+== n=2048 d=5 k=11 seed=11
+n=2048 d=5 k=11 groups=187 m=21 P=134217757 (28 bits) key bits=24 seed tries=1
+first layer (projection + key bits): 1392 params, weights as exact fractions up to ~2^61 (roundable)
+relu nodes=2487 params(nonzero weights+biases)=8211 max |integer weight| after layer 1 ~2^52
+params by part: layer 1 1392, group lookup 1169 (6.25 per group), hash 5108, parity readout 542
+wrong=0 of 300 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=4.0093  params*log2(n)/n=44.102  lower bound n/(B+log2 W)=32
+== n=2048 d=2 k=11 seed=12
+n=2048 d=2 k=11 groups=187 m=21 P=134217757 (28 bits) key bits=23 seed tries=1
+first layer (projection + key bits): 1150 params, weights as exact fractions up to ~2^60 (roundable)
+relu nodes=2455 params(nonzero weights+biases)=7897 max |integer weight| after layer 1 ~2^51
+params by part: layer 1 1150, group lookup 1167 (6.24 per group), hash 5038, parity readout 542
+wrong=0 of 300 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=3.8560  params*log2(n)/n=42.416  lower bound n/(B+log2 W)=32
+== n=2048 d=5 k=11 seed=12
+n=2048 d=5 k=11 groups=187 m=21 P=134217757 (28 bits) key bits=25 seed tries=2
+first layer (projection + key bits): 1500 params, weights as exact fractions up to ~2^58 (roundable)
+relu nodes=2519 params(nonzero weights+biases)=8391 max |integer weight| after layer 1 ~2^53
+params by part: layer 1 1500, group lookup 1171 (6.26 per group), hash 5178, parity readout 542
+wrong=0 of 300 evaluated (all n points satisfy the GF(2) systems by construction)
+params/n=4.0972  params*log2(n)/n=45.069  lower bound n/(B+log2 W)=31
+== NEGCTRL n=512 d=4 k=9 seed=3
+wrong=256 of 512 evaluated (all n points satisfy the GF(2) systems by construction)

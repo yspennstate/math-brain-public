@@ -1,0 +1,11 @@
+beta 2.0 alpha 1000.0 N/d 1.0 d 1000 (n 1000000, N 1000); mu1 0.60571 mus2 0.02742
+  no convergence at lam 10: The iteration is not making good progress, as measured by the 
+ improvement from the last ten iterations.
+Traceback (most recent call last):
+  File "T357\rf_limit_A\rf_cgmt.py", line 73, in <module>
+    lc, lr, lf = cross(r, 4), argm(r, 5), cross(r, 6)
+                 ~~~~~^^^^^^
+  File "T357\rf_limit_A\rf_cgmt.py", line 61, in cross
+    o = r[:, col]; i = np.where(np.sign(o[:-1]) != np.sign(o[1:]))[0]
+        ~^^^^^^^^
+IndexError: too many indices for array: array is 1-dimensional, but 2 were indexed

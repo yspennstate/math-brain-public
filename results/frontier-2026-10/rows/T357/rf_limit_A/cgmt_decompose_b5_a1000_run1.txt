@@ -1,0 +1,10 @@
+T357 (agent A, 20 Oct 2026): which 1/alpha ingredient of the rf_cgmt.py fixed point sets lam_risk.
+The fixed point has two finite-n effects: the noise term (E rho'^2/n) tr(Sig G Sig G) in equation (iii), and the prox step c in
+P = prox_{c rho}(Q) (which enters Vh = E[rho''/(1 + c rho'')] and A1 = E[Z1 rho'(P)] - mu Vh). Switching each off in turn
+(NOISE=0 drops the term; PROXC=0 sets P = Q and Vh = E rho''(Q)) and locating the risk minimum shows which one carries alpha
+lam_risk (0.0768 at beta 2, 0.0296 at beta 5 with both on; the fixed-N closed form gave 0.0518 / 0.0135).
+Same model, F and quadrature as rf_cgmt.py. argv: beta alpha psi d [seed0]
+beta 5.0 alpha 1000.0 N 1000 d 1000 seed0 100: rho 0.8705
+  NOISE 1 PROXC 1: lam_risk 2.9656e-05  alpha*lam_risk 0.02966  min excess 1.6675e-01
+  NOISE 1 PROXC 0: lam_risk 2.9567e-05  alpha*lam_risk 0.02957  min excess 1.6675e-01
+  NOISE 0 PROXC 1: lam_risk 6.4286e-06  alpha*lam_risk 0.00643  min excess 1.6625e-01  (minimum at the grid edge)
