@@ -82,6 +82,15 @@ compressible Euler equations, Orlicz spaces with the Luxemburg norm, the Allen-C
 conjecture, and log-crystalline cohomology with the Hyodo-Kato isomorphism. A new card can become a hub at once: the
 multiple-zeta card made for one island was the target for a second island the same day.
 
+Some islands were paper sources known only by their arXiv identifier, with no title to match on. The real titles were
+fetched from the arXiv export interface (355 of 355), and 20 were checked by hand against the island's own claim cards,
+all agreeing in subject. They could not be written into the nodes. A node's identifier is a digest of its content, the
+store's state digest covers it, and nodes are only ever inserted, so a changed title would be a different node. The
+fetched title, authors and year went instead into the metadata of the edges that joined each island, where they can be
+retracted by edge id like any other link. Of the 355, 242 were already in the main component and 109 named no subject
+any card covered; those titles (neural networks, gradient descent, the neural tangent kernel, in-context learning,
+Levy processes) are a list of concept cards still to write.
+
 ## Numbers
 
 | after round | nodes | touching an edge | largest component | share |
