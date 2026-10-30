@@ -15,7 +15,7 @@ cd acme_brain
 ```
 
 ```
-made /path/to/acme_brain: 19 files copied, an empty store, an empty questions.json
+made /path/to/acme_brain: 21 files copied, an empty store, an empty questions.json
 check_store.py: clean
 next: write ten records with new_record.py and ten questions in questions.json (README.md has the steps)
 ```
@@ -89,9 +89,14 @@ Now ask something the store words differently:
 ```
 python recall.py "who approves a large refund"
 WEAK MATCH: nothing here fits the question well. Reword it, or answer that the store does not have it.
+
+(score 1.1)
+== refunds_over_500_dollars_need_a_second_approver_2026_03_02  [feedback, provisional]
+...
 ```
 
-The record says "second approver" and "500 dollars", not "approves" and "large". The search counts shared words,
+The cards under a `WEAK MATCH` line are still printed. Here the right one is among them, but its score is low and
+an agent should not trust it on that alone. The record says "second approver" and "500 dollars", not "approves" and "large". The search counts shared words,
 so the fix is a second wording in the record's own terms:
 
 ```
@@ -118,9 +123,16 @@ not from the records' own sentences, or the test only measures copying. Include 
 store cannot answer, marked `"absent": true`; the right reply says so.
 
 ```
-{"id": "q01", "question": "Can support issue a 700 dollar refund alone?",
- "any_of": [["no", "second approver", "two people"]]}
+[
+ {"id": "q01", "question": "Can support issue a 700 dollar refund alone?",
+  "any_of": [["no", "second approver", "two people"]]},
+ {"id": "q20", "question": "What is our vacation policy?", "absent": true}
+]
 ```
+
+An answer passes when it contains at least one phrase from each group in `any_of`. An `absent` question may
+leave `any_of` out; it then passes when the answer says the notes do not have it ("no record", "cannot answer",
+"don't know" and similar). You can also give it an `any_of` in your own wording.
 
 Check the plumbing first with a "model" that returns its prompt. The docs arm should pass every question, since
 every record is in the prompt:

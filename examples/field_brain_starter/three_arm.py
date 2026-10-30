@@ -47,10 +47,19 @@ def docs_context(recs):
     return "All notes:\n\n" + "\n\n".join("[%s]\n%s" % (k, r["body"]) for k, r in recs.items()) + "\n\n"
 
 
+# An "absent" question with no any_of of its own passes when the answer says the notes do not have it.
+NOT_KNOWN = [["no record", "not in the notes", "notes do not", "notes don't", "does not say", "doesn't say",
+              "cannot answer", "can't answer", "not answer", "no information", "unknown", "do not know", "don't know"]]
+
+
 def passes(answer, item):
     a = answer.lower()
+    groups = item.get("any_of") or (NOT_KNOWN if item.get("absent") else None)
+    if not groups:
+        raise SystemExit("question %s has no any_of (only an \"absent\": true question may leave it out)"
+                         % item.get("id", "?"))
     return all(any(re.search(r"(?<![a-z0-9])" + re.escape(p.lower()) + r"(?![a-z0-9])", a) for p in group)
-               for group in item["any_of"])
+               for group in groups)
 
 
 def main():
