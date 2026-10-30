@@ -77,10 +77,12 @@ Once a first store exists, [brain-building/everything-to-brain-10-day-loop.md](b
 ```
 git clone <this repository>
 cd framework
-python bootstrap/install.py --project-dir <a new home> --timezone <tz>          # read the plan
-python bootstrap/install.py --project-dir <a new home> --timezone <tz> --apply
-python scripts/smoke_framework.py                                              # does the copy work
+python bootstrap/install.py --project-dir <where your agent sessions start> --timezone <tz>          # read the plan
+python bootstrap/install.py --project-dir <where your agent sessions start> --timezone <tz> --apply
+python scripts/smoke_framework.py                                                            # does the copy work
 ```
+
+The install writes into your home directory: `.claude/` (the dreaming code, the commands, the memory corpus) and two folders beside it, `brain-framework/` and `CrashGuard/`, about 660 files in all, and the plan printed without `--apply` lists every target. To try it without touching your own setup, give it an empty folder as home and a project folder inside that: `python bootstrap/install.py --home <empty folder> --project-dir <empty folder>/proj --timezone <tz> --apply`. On Windows keep that folder's path short, since the installer refuses to start when its longest path would pass the 260-character limit and prints the way to lift it.
 
 `framework/bootstrap/README.md` goes through the install step by step: the corpus layout, the hook wiring, the seed records the wake step reads, and the optional parts (the dream, the compute governor, the agent mesh). `framework/docs/ARCHITECTURE.md` describes how the parts fit, `framework/docs/MEMORY_CONVENTIONS.md` the record format, `framework/docs/METHOD.md` the working rules, and `framework/docs/PORTING.md` what was removed when the framework was taken from a working system and what you have to supply yourself. The scripts assume Windows with Python 3.13 or later unless a file says otherwise; the store code is portable Python.
 
