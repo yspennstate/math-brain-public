@@ -41,16 +41,17 @@ A brain fed everything returns everything, and the agent learns to skim past it.
 ```
 python new_record.py feedback "Refunds over 500 dollars need a second approver" \
     --why "a refund went to a closed account and could not be recovered" \
-    --apply "ask for the second approver before you issue it"
+    --apply "ask for the second approver before you issue it" --date 2026-03-02
 python new_record.py project "The Q2 pricing change ships on 1 June, not 15 May" \
-    --body "Moved after the billing migration slipped."
+    --body "Moved after the billing migration slipped." --date 2026-03-05
 python new_record.py reference "Enterprise contract template lives in the legal drive under Templates/2026" \
-    --link refunds_over_500_dollars_need_a_second_approver_2026_03_02
+    --link refunds_over_500_dollars_need_a_second_approver_2026_03_02 --date 2026-03-05
 ```
 
 Each command prints the file it wrote. The name is the description cut to a few words plus the date it was
-written (these examples were written in March, so yours will carry today's date); use that name wherever a
-command asks for another record, as `--link` does here.
+written. `--date` pins that date here so the names in this guide match the ones you get; leave it off in real
+use and the name carries today's date. Use the printed name wherever a command asks for another record, as
+`--link` does here.
 
 The `--why` line matters more than it looks. An agent that knows why the rule exists can handle the case the rule
 did not foresee, and one that only knows the rule cannot.
@@ -59,7 +60,7 @@ When a fact changes, write the new one and point it at the old:
 
 ```
 python new_record.py project "The Q2 pricing change ships on 15 June" \
-    --supersedes the_q2_pricing_change_ships_on_1_june_2026_03_05
+    --supersedes the_q2_pricing_change_ships_on_1_june_2026_03_05 --date 2026-03-09
 ```
 
 The old record stays, marked `superseded_by:`. An agent that finds the 1 June date also finds that it moved,
@@ -74,13 +75,13 @@ python recall.py "when does the pricing change ship" --or "Q2 pricing date" -n 2
 ```
 
 ```
-(score 2.3)
+(score 3.5)
 == the_q2_pricing_change_ships_on_15_june_2026_03_09  [project, provisional]
 The Q2 pricing change ships on 15 June
 
 Related: [[the_q2_pricing_change_ships_on_1_june_2026_03_05]].
 
-(score 0.8)
+(score 1.3)
 == the_q2_pricing_change_ships_on_1_june_2026_03_05  [project, provisional]  SUPERSEDED by the_q2_pricing_change_ships_on_15_june_2026_03_09
 Moved after the billing migration slipped.
 ```
