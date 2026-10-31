@@ -91,6 +91,16 @@ retracted by edge id like any other link. Of the 355, 242 were already in the ma
 any card covered; those titles (neural networks, gradient descent, the neural tangent kernel, in-context learning,
 Levy processes) are a list of concept cards still to write.
 
+Finding a target card by its title is the step these rounds repeat most, and the store itself is the slow place to
+do it. A title search straight over the store's database, about 91,000 nodes with no index on titles, did not finish
+in ten minutes on a machine whose disk other jobs were using. The same search over the prepared state that recall
+already keeps on disk answered in about two seconds: it holds every node's id, kind, title and body, and its edge list
+gives each node's degree, so islands and their likely hubs can be listed together. It has to run at normal priority.
+At low priority the same 30 MB read was starved past ten minutes, against under nine seconds in the foreground. The
+prepared state is a snapshot from its last build and can lag the store, so every target found this way was confirmed
+against the live store before an edge was landed. Round 73 used it to join the last 40 claims that touched no edge,
+with 79 edges, each picked and read by hand.
+
 ## Numbers
 
 | after round | nodes | touching an edge | largest component | share |
