@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the
-cards it links to (11 Oct 2026; leaner printout 12 Oct 2026).
+cards it links to (claude-4a88bc43, 11 Oct 2026; leaner printout claude-4a88bc43-f03, 12 Oct 2026).
 
     python ~/.claude/dreaming/math_recall.py "<words>" [--or "<other words>" ...] [--limit 8] [--chars 4000]
     python ~/.claude/dreaming/math_recall.py --id <card id> [<card id> ...]     walk: one card whole, every link
@@ -25,7 +25,7 @@ adds spreading through the links. It still leans on words: when nothing fits, as
 named result, an author, or a linked card's title - or walk from a card you already have with --id. Superseded cards
 are left out of the hits; a link to one says so.
 
-Why each hit is there (11 Oct 2026, design goal: an agent can see where the diffusion came from and why): under every
+Why each hit is there (11 Oct 2026, his ask: "they can see where the diffusion itself came from and why"): under every
 hit a "matched" line names the words that matched, and with --depth 2 each "found by spreading" line names the card
 the activation came from, the links it travelled (kind, then the card it reached) and the last link's own stated
 reason. A spreading line is a lead that an earlier card points here, not proof that this card answers the question; a
@@ -44,8 +44,8 @@ generalizes, specializes, analogous_to, bridges_to, defines), then dependencies 
 reasons ("uses the notion ...") are left out of a search (--id shows every reason). When the best score is low the
 printout says so and names the words of the query that no card contains, so the next call can reword them.
 
-Links that grow stronger with use (12 Oct 2026, design goal: edges grow stronger as similar nodes are used
-at similar times, and agents can read the strength between nodes and use it to find things). A
+Links that grow stronger with use (12 Oct 2026, his ask: "edges should get stronger as nodes that are similar are used
+at similar times ... agents should be able to see the strength between nodes and use that to find information"). A
 link line ends with [strength 0.62: used together 3 times, last 2 h ago] when agents have used the two cards together
 (opened one with --id, math_walk.py or math_note.py within 30 minutes of the other in one session); within a kind the
 strongest links are listed first; a "~ used together" line names a card with no link of its own that agents keep using
@@ -289,6 +289,26 @@ def _fast_module():
         return None
 
 
+_FAST_OFF_TOLD = set()
+
+
+def _say_fast_off(fr):
+    """One stderr line, once per reason per process, when the prepared fast path was not used. Before 31 Oct the
+    fallback was silent: a peer's in-place edit of retrieval.py turned it off for every agent and one question took
+    347 s instead of 22 s with nothing printed. MATH_RECALL_FAST=0 is a choice and says nothing."""
+    try:
+        why = str((getattr(fr, "STATUS", None) or {}).get("why") or "unknown reason")
+        if why == "MATH_RECALL_FAST=0" or why in _FAST_OFF_TOLD or os.environ.get("MATH_RECALL_QUIET_FALLBACK") == "1":
+            return
+        _FAST_OFF_TOLD.add(why)
+        sys.stderr.write("[math_recall] fast path OFF (%s): every card and link is read from the store, about 10x "
+                         "slower. If retrieval.py was edited, land it with a re-pinned fastrecall.PIN_RETRIEVAL.\n"
+                         % why)
+        sys.stderr.flush()
+    except Exception:
+        pass
+
+
 def _strength_module():
     """math_strength.py beside this file (the co-use strengths and the use log), or None."""
     try:
@@ -350,13 +370,13 @@ def strength_edges(edges, S, typed):
     return out, kinds
 
 
-# Possessive names (28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
+# Possessive names (claude-68ceaf54, 28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
 # "Janson's Inequality" indexes the term janson's, and the question "Janson inequality" (term janson) never meets it:
 # the card was not in the top 8 for that wording, while three cards about a different Janson result were. Of the
 # lexical index's 98,255 terms, 1,138 are possessives (talagrand's 64 cards, hall's 54, jensen's 116, janson's 19).
 # Each wording gets the other form of a name added: base -> base's when base's is at least 0.5 pct of base's own
 # document count and in 2 or more cards (that keeps group's, graph's, function's out), and base's -> base always.
-# Meta words are skipped. OFF by default since the 28 Oct A/B (mixed result); MATH_RECALL_POSSESSIVE=1 turns it on. Changing the two tokenizers instead would need the
+# Meta words are skipped. OFF by default since the 28 Oct A/B (brain_recall_68ceaf54/possessive/POSS_RESULT.md: mixed); MATH_RECALL_POSSESSIVE=1 turns it on. Changing the two tokenizers instead would need the
 # prefilter index and the signal cache rebuilt.
 _POSS_SKIP = {"paper", "author", "agent", "page", "image", "wikipedia", "claim", "source", "model", "campaign",
               "worker", "collector", "card", "lemma", "theorem"}
@@ -528,6 +548,13 @@ def tuple_tip(queries, hits, P, nodes, store_path):
 
 
 def main(argv=None):
+    try:  # optional resident recall server; without it every call runs in-process
+        from recall_client import try_server
+    except ImportError:
+        try_server = None
+    remote = try_server(sys.argv[1:] if argv is None else argv) if try_server else None
+    if remote is not None:
+        return remote
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     ap = argparse.ArgumentParser(
         description="One-call recall from the math store: ids, whole cards, linked ids.",
@@ -593,11 +620,19 @@ def main(argv=None):
     # query encoder's session; the search runs the same scoring from it. P None: the live path, as before.
     fr = _fast_module()
     P = enc = None
+    # one question: the claim vectors are read and hashed once for all its wordings, not twice per wording
+    # (semantic.pinned, 31 Oct); closed in the finally below, so an error never leaves a server thread pinned
+    _pin_scope = getattr(sys.modules.get("math_brain.semantic"), "pinned", None)
+    _pin_cm = _pin_scope() if _pin_scope is not None else None
+    if _pin_cm is not None:
+        _pin_cm.__enter__()
     if fr is not None:
         import math_brain.retrieval as R
         if query and fr.wants_encoder(queries, R):
             enc = fr.Encoder().start()
         P = fr.open_prepared(a.store, R, derive_tool, __file__)
+        if P is None:
+            _say_fast_off(fr)
     try:
         if P is not None:
             nodes, edges, by_id, tool = None, None, P.node_map(), P.tool
@@ -761,6 +796,8 @@ def main(argv=None):
                 print("No card contains: %s" % ", ".join(missing[:12]))
         return 0
     finally:
+        if _pin_cm is not None:
+            _pin_cm.__exit__(None, None, None)
         if enc is not None:
             enc.wait()   # the encoder thread ends before the process does
 
