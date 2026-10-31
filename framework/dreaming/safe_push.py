@@ -20,7 +20,11 @@ Usage:
     python safe_push.py --scan-only          # scan unpushed work without committing or pushing
 
 Exit codes: 0 pushed (or nothing to do), 2 scan not clean or scan errored, 3 git failure.
-Nothing is pushed unless the scan printed exactly "secret scan clean".
+Nothing is pushed unless the scan printed exactly "secret scan clean", and what is pushed is the scanned commit itself
+(pushed as SHA:refs/heads/BRANCH, then read back with ls-remote; 28 Sep, fleet02/B06 R24). The push holds the remote
+to the scanned lower bound (--force-with-lease=refs/heads/BRANCH:BASE on a fast-forward): if the remote's branch is not
+exactly BASE when git updates it - moved on, or rewound after the fetch - git refuses, because a rewind would make
+reachable again commits this scan never covered (28 Sep, fleet02/B06 r63/r64).
 """
 import argparse
 import os
@@ -57,6 +61,17 @@ def main():
         sys.stderr.write("--message is required unless --scan-only\n")
         sys.exit(3)
 
+    # A HELD SHARED INDEX (27 Oct 2026): the dream's own `git reset` kept .git/index.lock from 07:03 to
+    # past 10:30 on a stalled disk and every `git add` here died on it. push_paths.sh already pushes named files through
+    # a private index on the freshly fetched tip (scan, lease, peer-moved refusal), so hand the files to it.
+    lock = os.path.join(git("rev-parse", "--absolute-git-dir"), "index.lock")
+    if not a.scan_only and a.paths and os.path.exists(lock):
+        top = git("rev-parse", "--show-toplevel")
+        rels = [os.path.relpath(os.path.abspath(p), top).replace("\\", "/") for p in a.paths]
+        print("index.lock is held by another git process; pushing the named files with push_paths.sh")
+        return subprocess.call(["bash", os.path.join(os.path.dirname(os.path.abspath(__file__)), "push_paths.sh"),
+                                top, a.message] + rels)
+
     if not a.scan_only:
         if a.paths:
             git("add", "--", *a.paths)
@@ -68,8 +83,13 @@ def main():
         else:
             git("commit", "-q", "-m", a.message)
 
-    # resolve BOTH endpoints once, before anything else can move them
-    git("fetch", a.remote, a.branch, check=False)
+    # resolve BOTH endpoints once, before anything else can move them. The fetch must succeed: without it the lower
+    # bound is whatever the tracking ref last saw (28 Sep, fleet02/B06 R24).
+    f = subprocess.run(["git", "fetch", a.remote, a.branch], capture_output=True, text=True)
+    if f.returncode != 0:
+        sys.stderr.write("fetch of %s/%s failed - refusing to push against a stale lower bound:\n%s\n"
+                         % (a.remote, a.branch, (f.stdout + f.stderr).strip()))
+        return 3
     base = git("rev-parse", "%s/%s" % (a.remote, a.branch))
     head = git("rev-parse", "HEAD")
     if base == head:
@@ -93,12 +113,25 @@ def main():
         print("scan-only: %s..%s is clean; not pushing" % (base[:9], head[:9]))
         return 0
 
-    r = subprocess.run(["git", "push", a.remote, a.branch], capture_output=True, text=True)
+    # PUBLISH EXACTLY WHAT WAS SCANNED (28 Sep, fleet02/B06 R24, R24-B06-SAFE-PUSH-SCANS-HEAD-BUT-PUSHES-BRANCH).
+    # `git push REMOTE BRANCH` sent the local branch ref, and on a detached HEAD, another branch or a worktree that is
+    # not the commit scanned above. The push now names the scanned commit, and only a fast-forward of the scanned
+    # lower bound is allowed.
+    if subprocess.run(["git", "merge-base", "--is-ancestor", base, head]).returncode != 0:
+        sys.stderr.write("%s/%s is not an ancestor of HEAD - rebase first; nothing pushed\n" % (a.remote, a.branch))
+        return 3
+    r = subprocess.run(["git", "push", "--force-with-lease=refs/heads/%s:%s" % (a.branch, base), a.remote,
+                        "%s:refs/heads/%s" % (head, a.branch)], capture_output=True, text=True)
     sys.stdout.write(r.stdout + r.stderr)
     if r.returncode != 0:
         sys.stderr.write("push failed (rejected? re-pull and retry; never force shared history)\n")
         return 3
-    print("pushed %s..%s" % (base[:9], head[:9]))
+    remote_tip = git("ls-remote", a.remote, "refs/heads/%s" % a.branch, check=False).split("\t")[0]
+    if remote_tip != head:
+        sys.stderr.write("the remote's %s is %s after the push, not the scanned %s - look before trusting it\n"
+                         % (a.branch, remote_tip[:9] or "unreadable", head[:9]))
+        return 3
+    print("pushed %s..%s (remote verified)" % (base[:9], head[:9]))
     return 0
 
 
