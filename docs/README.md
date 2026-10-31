@@ -58,6 +58,7 @@ The pages in this folder, grouped by what you came to do.
 | [retrieval-and-consolidation.md](retrieval-and-consolidation.md) | the safety contract for recall and for the reviews consolidation proposes |
 | [nightly-pass.md](nightly-pass.md) | the store's own nightly pass: unreachable cards, claims with no evidence, proposed reviews |
 | [linking-the-store.md](linking-the-store.md) | how the store went from one card in five touching an edge to nine in ten in one walkable component: the rounds, what each rule was worth, and where a rule needed every edge read |
+| [known-result-probes-2026-10.md](known-result-probes-2026-10.md) | asking recall about well-known theorems to find what the store never held: six rounds, the cards added, the same searches before and after |
 | [adding-cards.md](adding-cards.md) | how a contributor adds definitions, lemmas, theorems and concepts: the draft bundle, the rules the integrator enforces, and reading its result |
 | [formal-verification.md](formal-verification.md) | the pinned Lean toolchain and how machine-checked claims are kept |
 | [store-findings-2026-09-13.md](store-findings-2026-09-13.md) | what a full read of the store found that the ingest checks had missed |
