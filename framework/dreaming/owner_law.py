@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """owner_law.py - one command turns an owner warning into an armed, standing law.
 
-The 07-28 finding behind this: the owner's repeated warnings ("real bid/ask only", "never
-sell options") took multiple tellings because each landed in one weak channel. The channels
+The 07-28 finding behind this: the owner's repeated warnings ("cite the source", "never
+delete raw data") took multiple tellings because each landed in one weak channel. The channels
 that measurably hold are (1) CLAUDE.md - loaded into every session of every agent at start,
 the data law held end-to-end there - and (2) dream-compiled act-site reflexes with controls.
 This arms both from one sentence: append a dated law block to CLAUDE.md, file an
@@ -11,8 +11,8 @@ agenda sampling picks up (compilation stays with the dream machinery and its pos
 negative controls - auto-compiling here would bypass the dilution guard).
 
 Usage:
-  python owner_law.py "never start a second Theta Terminal against the live MDDS server"
-  python owner_law.py --title the data vendor-single-terminal "never start a second ..."
+  python owner_law.py "never run two writers against the same database"
+  python owner_law.py --title single-writer "never run two writers ..."
   python owner_law.py --dry-run "..."        # print what would be written, write nothing
   python owner_law.py --no-broadcast "..."   # skip the live-session mailbox broadcast
 
