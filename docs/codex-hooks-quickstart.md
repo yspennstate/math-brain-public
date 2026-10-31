@@ -193,11 +193,15 @@ the ledger's path in `MATH_BRAIN_REQUESTS`. On Linux and macOS the variable can 
 That is `~/.codex/hooks.json`. For Claude Code, put the same entry in `settings.json` and drop `--codex`, since
 Claude Code takes plain stdout. On Windows, set `MATH_BRAIN_REQUESTS` (and `MATH_BRAIN_REQUESTS_RECORD`) as user
 environment variables and keep only `python -m math_brain.request_hook` in the command. To see what the model will
-get, pipe a prompt in by hand:
+get, pipe prompts in by hand. A new ledger is empty and the hook prints nothing until a request is recorded, so
+record one first and then ask something close to it:
 
 ```
-echo '{"prompt": "is every group of prime order cyclic?"}' | MATH_BRAIN_REQUESTS=requests.jsonl python3 -m math_brain.request_hook
+echo '{"prompt": "is every group of prime order cyclic?"}' | MATH_BRAIN_REQUESTS=requests.jsonl MATH_BRAIN_REQUESTS_RECORD=1 python3 -m math_brain.request_hook
+echo '{"prompt": "are groups of prime order always cyclic?"}' | MATH_BRAIN_REQUESTS=requests.jsonl python3 -m math_brain.request_hook
 ```
+
+The second command prints the first request, its match score (0.43 here) and whether it is still open.
 
 Record from one runtime only. A request is keyed by its text, so if two runtimes record into the same ledger, a
 prompt that reaches both is counted as asked twice, and the nightly pass lists it among the repeated requests.
