@@ -36,7 +36,7 @@ Price one actual dummy-data exposure or a canonical reset inside an already reta
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol files, DERIVATION, checker, intake, frozen specifications, exact outputs, source hashes, Lean noncertificate and local persistence receipts are saved under this run. STATUS has two lines and WORKLOG/LEARNED are updated. out/PERSISTENCE_RECEIPTS.json verifies field sets, actual bytes and20MB ceilings. No shared campaign tree, other agent folder, git state, trading stack or research brain record is edited; mandatory wake/checklist bookkeeping and recall-tool-managed index activity are separate from the research output. Supervisor copy, canonical adoption, remote mirror and independent acceptance of the NEW extension remain unverified.
+All four protocol files, DERIVATION, checker, intake, frozen specifications, exact outputs, source hashes, Lean noncertificate and local persistence receipts are saved under this run. STATUS has two lines and WORKLOG/LEARNED are updated. out/PERSISTENCE_RECEIPTS.json verifies field sets, actual bytes and20MB ceilings. No shared campaign tree, other agent folder, git state, external system or research brain record is edited; mandatory wake/checklist bookkeeping and recall-tool-managed index activity are separate from the research output. Supervisor copy, canonical adoption, remote mirror and independent acceptance of the NEW extension remain unverified.
 
 ## Universal bridge
 

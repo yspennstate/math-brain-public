@@ -204,7 +204,7 @@ appended once. Source and final artifact SHA256 receipts are in out/RECEIPTS.
 Supervisor copy, mirror, brain ingestion and independent acceptance remain
 unobserved. Research writes are confined to A041; the required checklist
 lifecycle and wake/voice/formal helper calls are the only external hooks.
-No git, mail, brain-store write, other-agent edit or trading-stack access.
+No git, mail, brain-store write, other-agent edit or external-system access.
 
 The wake required an owner alert: owner-model/state/dream notes are stale;
 these personal-context notes are not mathematical premises. The compute

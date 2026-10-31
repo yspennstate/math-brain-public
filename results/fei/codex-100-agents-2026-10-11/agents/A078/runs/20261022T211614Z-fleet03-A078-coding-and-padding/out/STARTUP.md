@@ -6,4 +6,4 @@ Read the complete execution protocol, current board, B16 lead notes, own STATUS/
 
 The current target is a same-original-donor extension through further private padding restrictions, retaining selector ownership, inherited debits and both full terminals. A027's positive-exit theorem excludes controller interleaving; A028's conserved boundary reserve alone does not pay the non-flat signed entropy residual. These scope limitations remain in force.
 
-All research mutations stay inside A078. No git, mail, brain write, detached job, GPU, trading-stack action, process termination or shared-index mutation has been performed. Startup and source reads have experienced substantial delays. No mathematical search has yet run.
+All research mutations stay inside A078. No git, mail, brain write, detached job, GPU, external-system action, process termination or shared-index mutation has been performed. Startup and source reads have experienced substantial delays. No mathematical search has yet run.
