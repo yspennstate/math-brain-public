@@ -224,6 +224,22 @@ def _decode_npy_bool(descr, shape, raw):
     return values
 
 
+_LIGHT_MEMBER_CAP = 64 * 1024 * 1024
+
+
+def _members_over_cap(path, cap):
+    """True when the zip at path declares uncompressed members totalling more than cap. Reads only the central
+    directory (a few KB), so the light loader can refuse an over-cap sidecar without reading and hashing all of it
+    (81 MB, 0.15-0.45 s, on every hook call since the sidecar passed the cap at about 29,850 rows). A refusal here
+    is the same refusal the full read reaches; any error returns False and the normal verified path decides."""
+    try:
+        import zipfile
+        with zipfile.ZipFile(path) as archive:
+            return sum(info.file_size for info in archive.infolist()) > cap
+    except Exception:
+        return False
+
+
 def load_verified_embeddings_lightweight(
         sidecar, authority_path, mem_dir=None, expected_model=None,
         verify_all_rows=False):
@@ -248,6 +264,8 @@ def load_verified_embeddings_lightweight(
         _utc(status.get("committed_at"))
         if expected_model and status.get("model") != expected_model:
             return None
+        if _LIGHT_MEMBER_CAP and _members_over_cap(actual_sidecar, _LIGHT_MEMBER_CAP):
+            return None
         blob, actual_sha, actual_size, _ = read_stable_bytes(actual_sidecar)
         if actual_sha != expected_sha or actual_size != expected_size:
             return None
@@ -261,7 +279,7 @@ def load_verified_embeddings_lightweight(
             names = [info.filename for info in infos]
             if len(names) != len(set(names)):
                 return None
-            if sum(info.file_size for info in infos) > 64 * 1024 * 1024:
+            if sum(info.file_size for info in infos) > _LIGHT_MEMBER_CAP:
                 return None
             member_names = {name[:-4] for name in names if name.endswith(".npy")}
             if required - member_names:
@@ -458,6 +476,79 @@ def resolve_authority_sidecar(canonical, authority_path):
     return os.path.abspath(actual), status
 
 
+class _MdStat(tuple):
+    """(st_size, st_mtime_ns) of one listed file: the two fields the loader's stat check reads."""
+    __slots__ = ()
+    st_size = property(lambda self: self[0])
+    st_mtime_ns = property(lambda self: self[1])
+
+
+_FIND = []
+
+
+def _md_stats_fast(mem_dir):
+    """{name: _MdStat} for the plain .md files in mem_dir from one FindFirstFileExW pass with FindExInfoBasic and
+    FIND_FIRST_EX_LARGE_FETCH, or None (not Windows, any API error, or a reparse point, which scandir's is_file would
+    follow): the caller then lists with os.scandir as before. Same size and mtime_ns as DirEntry.stat() (checked equal
+    on all 37,922 files, 29 Oct); about half the time of scandir on this folder (median 0.42 s against 0.80 s, 8
+    alternating rounds), more under disk load. BRAIN_EMB_FASTLIST=0 switches it off."""
+    if os.name != "nt" or os.environ.get("BRAIN_EMB_FASTLIST", "1") == "0":
+        return None
+    try:
+        if not _FIND:
+            import ctypes
+            from ctypes import wintypes
+
+            class _FT(ctypes.Structure):
+                _fields_ = [("lo", wintypes.DWORD), ("hi", wintypes.DWORD)]
+
+            class _WFD(ctypes.Structure):
+                _fields_ = [("attr", wintypes.DWORD), ("ctime", _FT), ("atime", _FT), ("mtime", _FT),
+                            ("size_hi", wintypes.DWORD), ("size_lo", wintypes.DWORD), ("r0", wintypes.DWORD),
+                            ("r1", wintypes.DWORD), ("name", ctypes.c_wchar * 260), ("alt", ctypes.c_wchar * 14),
+                            ("x0", wintypes.DWORD), ("x1", wintypes.DWORD), ("x2", wintypes.WORD)]
+
+            k32 = ctypes.WinDLL("kernel32", use_last_error=True)
+            first = k32.FindFirstFileExW
+            first.restype = wintypes.HANDLE
+            first.argtypes = [wintypes.LPCWSTR, ctypes.c_int, ctypes.POINTER(_WFD), ctypes.c_int, ctypes.c_void_p,
+                              wintypes.DWORD]
+            nxt = k32.FindNextFileW
+            nxt.restype = wintypes.BOOL
+            nxt.argtypes = [wintypes.HANDLE, ctypes.POINTER(_WFD)]
+            close = k32.FindClose
+            close.restype = wintypes.BOOL
+            close.argtypes = [wintypes.HANDLE]
+            _FIND.append((ctypes, _WFD, first, nxt, close, wintypes.HANDLE(-1).value))
+        ctypes, _WFD, first, nxt, close, invalid = _FIND[0]
+        d = _WFD()
+        h = first(os.path.join(os.fspath(mem_dir), "*"), 1, ctypes.byref(d), 0, None, 2)
+        if h is None or h == invalid:
+            return None
+        out = {}
+        try:
+            while True:
+                name = d.name
+                if name.endswith(".md"):
+                    attr = d.attr
+                    if attr & 0x400:            # reparse point: let scandir decide what it is
+                        return None
+                    if not attr & 0x10:         # not a directory
+                        out[name] = _MdStat((
+                            (d.size_hi << 32) | d.size_lo,
+                            (((d.mtime.hi << 32) | d.mtime.lo) - 116444736000000000) * 100,
+                        ))
+                if not nxt(h, ctypes.byref(d)):
+                    if ctypes.get_last_error() != 18:   # ERROR_NO_MORE_FILES
+                        return None
+                    break
+        finally:
+            close(h)
+        return out
+    except Exception:
+        return None
+
+
 def load_verified_embeddings(sidecar, authority_path, mem_dir=None, expected_model=None,
                              verify_all_rows=False):
     """Return a slug index, float32 matrix, and cosine bias, or fail closed to None.
@@ -517,15 +608,17 @@ def load_verified_embeddings(sidecar, authority_path, mem_dir=None, expected_mod
         probe = VerifiedEmbeddings(
             {slug: i for i, slug in enumerate(slugs)}, vecs, 0.0, hashes_by_slug
         )
-        try:
-            with os.scandir(mem_dir) as entries:
-                memory_stats = {
-                    entry.name: entry.stat()
-                    for entry in entries
-                    if entry.name.endswith(".md") and entry.is_file()
-                }
-        except OSError:
-            return None
+        memory_stats = _md_stats_fast(mem_dir)
+        if memory_stats is None:
+            try:
+                with os.scandir(mem_dir) as entries:
+                    memory_stats = {
+                        entry.name: entry.stat()
+                        for entry in entries
+                        if entry.name.endswith(".md") and entry.is_file()
+                    }
+            except OSError:
+                return None
         active = {}
         for i, slug in enumerate(slugs):
             fast_current = False
