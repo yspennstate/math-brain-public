@@ -22,7 +22,7 @@ Sixteen private draft entries and 18 links have been ingested in two accepted bu
 
 Operational record
 
-The live wake for this thread reported a latest dream age of30.5 hours against a30.0-hour ceiling; the degraded finding was reported. The signed-project-contract cache warning remains unresolved. Work is confined to private research artifacts; no public publication, deployment, GPU training, or trading-box work is part of this campaign.
+The live wake for this thread reported a latest dream age of30.5 hours against a30.0-hour ceiling; the degraded finding was reported. The signed-project-contract cache warning remains unresolved. Work is confined to private research artifacts; no public publication, deployment, GPU training, or remote-server work is part of this campaign.
 
 How to read each entry
 

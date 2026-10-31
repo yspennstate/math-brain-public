@@ -14,7 +14,7 @@ P0289, P0341, P0342, P0347, P0355, P0389, P0390, P0411, P0429, P0458, P0459. The
 
 38 private unverified entries and 39 edges were actually ingested. Retrieval probes and negative controls are recorded separately. Store acceptance and retrieval do not provide independent mathematical review. Prepared notes are not counted as ingested entries.
 
-The original worker reported a dream age of 30.5 hours against a 30.0-hour ceiling. The resumed thread completed its own live wake with identity intact and fresh, and no owner-alert finding. The signed-project warning remains unresolved. Private Git checkpoints are not contract recovery. This research used no GPU training, new paid service, public publication, deployment, or trading-box computation.
+The original worker reported a dream age of 30.5 hours against a 30.0-hour ceiling. The resumed thread completed its own live wake with identity intact and fresh, and no owner-alert finding. The signed-project warning remains unresolved. Private Git checkpoints are not contract recovery. This research used no GPU training, new paid service, public publication, deployment, or remote computation.
 
 # Method and status vocabulary
 
