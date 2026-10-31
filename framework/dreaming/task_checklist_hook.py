@@ -110,11 +110,14 @@ def log(msg):
 
 
 class _Lock(object):
-    """A lock file with a short wait; a lock older than 60 s is treated as abandoned."""
+    """A lock file with a short wait; a lock older than 60 s is treated as abandoned. A hook waits WAIT seconds; the
+    CLI waits 30 (set in main): once the state file grows to tens of megabytes a save holds the lock for seconds on a
+    loaded machine, and a 4 s wait then fails by-hand done/note calls."""
+    WAIT = 4.0
 
     def __enter__(self):
         os.makedirs(STORE, exist_ok=True)
-        deadline = time.time() + 4.0
+        deadline = time.time() + self.WAIT
         while True:
             try:
                 fd = os.open(LOCK, os.O_CREAT | os.O_EXCL | os.O_WRONLY)
@@ -1350,6 +1353,7 @@ def main():
     # the CLI is a person or an agent at a keyboard: say what went wrong, loudly, and exit 1 - the first version
     # swallowed a KeyError on a purged id into hook.log and exited 0, which reads as success to a script
     try:
+        _Lock.WAIT = 30.0
         return cli_main(argv)
     except KeyError as exc:
         sys.stderr.write("checklist: %s (run `%s list --all` to see the ids)\n" % (exc.args[0] if exc.args else exc, CLI))
