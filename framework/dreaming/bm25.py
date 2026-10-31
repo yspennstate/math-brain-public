@@ -990,17 +990,22 @@ def _marker_manifests(index_path=INDEX):
     return recorded
 
 
-def fresh_memories(mem_dir=MEM, index_path=INDEX):
+def fresh_memories(mem_dir=MEM, index_path=INDEX, entries=None):
     """(fresh, gone): slugs whose .md is newer than the index (new or edited) or whose attachments changed since it
     was read, and indexed slugs whose file no longer exists. One scandir + one stat per entry - ~30 ms on the live
     corpus, so recall() can afford it on every call. Returns ([], []) when the index does not exist (build() is the
-    answer then)."""
+    answer then).
+
+    entries: a scandir listing of mem_dir the caller already took (brain.recall's shared listing, R19), read
+    instead of listing the folder again. Same answer as the own scan of that moment (20 of 20 in one process,
+    29 Oct 2026, lead6_1e0a/sup_fm2); the scan was 1.3 s median of the 1.3 s this function took, 0.25 s without it."""
     if not os.path.exists(index_path):
         return [], []
     since = scan_reference(index_path)
     fresh = []
     present = set()
-    with os.scandir(mem_dir) as it:
+    import contextlib as _cl
+    with (_cl.nullcontext(iter(entries)) if entries is not None else os.scandir(mem_dir)) as it:
         for e in it:
             slug = _indexable(e.name)
             if slug is None:
@@ -1281,7 +1286,7 @@ def refresh(mem_dir=MEM, out=INDEX, quiet=False, build_if_absent=False):
             pass
 
 
-def refresh_in_memory(mem_dir=MEM, out=INDEX):
+def refresh_in_memory(mem_dir=MEM, out=INDEX, found=None):
     """The incremental merge of refresh() WITHOUT the publish: returns (payload, added, removed) where
     payload is exactly what refresh() would have written, or (None, 0, 0) when nothing is fresh, the
     generation is frozen, the index is missing, or the fresh set is large enough that refresh() would
@@ -1297,7 +1302,10 @@ def refresh_in_memory(mem_dir=MEM, out=INDEX):
     frozen, _why = freeze_state(out)
     if frozen:
         return None, 0, 0
-    fresh, gone = fresh_memories(mem_dir, out)
+    # found: the (fresh, gone) pair the caller just took from fresh_memories on this same index generation
+    # (brain.recall passes it only while the index signature is unchanged; 29 Oct 2026, RECALL-10X lead 6: the
+    # second scan cost 2.2 s of a recall)
+    fresh, gone = found if found is not None else fresh_memories(mem_dir, out)
     if not fresh and not gone:
         return None, 0, 0
     if len(fresh) > REFRESH_FULL_REBUILD_AT:
@@ -1522,10 +1530,34 @@ def spawn_detached_postings(log_path=None):
             h = ctypes.windll.kernel32.OpenProcess(0x0200, False, int(p.pid))   # PROCESS_SET_INFORMATION
             if h:
                 ctypes.windll.kernel32.SetPriorityClass(h, 0x00000020)          # NORMAL_PRIORITY_CLASS
+                _raise_io_mem_priority(h)
                 ctypes.windll.kernel32.CloseHandle(h)
         except Exception:
             pass                                                                # best effort; it still builds
         return p.pid
+    except Exception:
+        return None
+
+
+def _raise_io_mem_priority(h=None):
+    """Set I/O priority to normal (2) and memory priority to normal (5) on a process handle, or on this process.
+    Best effort, Windows only, returns (io_status, mem_ok) or None.
+
+    WHY (2026-10-30, measured): the CPU class above is not the whole inheritance. Live builders spawned from the
+    hooks read I/O priority 1 (low) and memory priority 2 (low) while their class was Normal, and their builds
+    logged 1137-6661 s against about 20 s; one lived 7.4 h for a generation that was already dead. Same build on
+    a fixed copy, alternated low/normal three times each: 68.4/30.3/38.6 s at low against 17.2/21.2/22.3 s at
+    normal, identical row digests. Under memory pressure a low-memory-priority process loses its pages first and
+    rereads them. Normal needs no privilege (only High does)."""
+    try:
+        import ctypes
+        k, nt = ctypes.windll.kernel32, ctypes.windll.ntdll
+        if h is None:
+            h = k.GetCurrentProcess()
+        hv = ctypes.c_void_p(h)
+        st = nt.NtSetInformationProcess(hv, 33, ctypes.byref(ctypes.c_ulong(2)), 4)        # ProcessIoPriority
+        ok = k.SetProcessInformation(hv, 0, ctypes.byref(ctypes.c_ulong(5)), 4)            # ProcessMemoryPriority
+        return (st & 0xFFFFFFFF, bool(ok))
     except Exception:
         return None
 
@@ -1648,7 +1680,47 @@ def _postings_note():
     return "[full]"
 
 
-def _build_postings_incremental(signature, out, z, base):
+class PostingsSuperseded(Exception):
+    """A newer generation's sidecar is already on disk, so the one being built can never be read."""
+
+
+def _postings_superseded(index_path, signature):
+    """True when the live generation is not `signature` AND its sidecar already exists.
+
+    WHY (30 Oct 2026): a builder started for one generation kept going after the index had moved on. Pid 28340 built
+    generation fb2ac05015df for 11 h (240 cpu-s at the old low I/O and memory priority) while ten newer sidecars were
+    built and published beside it. Nothing reads a dead generation's sidecar, and because _postings_base picks the
+    newest file by mtime, a dead build that finishes late becomes the base the next build copies.
+    Stopping merely because the index moved would livelock a busy hour (a publish every minute, builds of 20-100 s);
+    stopping only once the live generation's sidecar exists cannot, because something newer has already finished.
+    Two stats; cheap enough to call every few megabytes."""
+    live = _index_signature(index_path)
+    if live is None or live == signature:
+        return False
+    return os.path.exists(postings_path(index_path, live))
+
+
+def _copy_unless_superseded(base, tmp, index_path, signature, chunk=8 << 20):
+    """shutil.copyfile, checking every `chunk` bytes whether the build is still worth finishing. Leaves no partial
+    temp behind when it stops (the incremental build's own cleanup starts only after the copy)."""
+    try:
+        with io.open(base, "rb") as r, io.open(tmp, "wb") as w:
+            while True:
+                b = r.read(chunk)
+                if not b:
+                    break
+                w.write(b)
+                if _postings_superseded(index_path, signature):
+                    raise PostingsSuperseded("superseded while copying the base")
+    except BaseException:
+        try:
+            os.remove(tmp)
+        except OSError:
+            pass
+        raise
+
+
+def _build_postings_incremental(signature, out, z, base, index_path=INDEX):
     """Generation `signature`'s sidecar (payload `z`) from `base`, an older generation's sidecar: copy it, take out the
     documents that are gone or changed, put the new and changed ones in, rewrite only the postings they touch. Returns
     (terms, docs, counts), or raises and the caller does the full build.
@@ -1673,7 +1745,9 @@ def _build_postings_incremental(signature, out, z, base):
     for junk in (tmp, tmp + "-journal"):
         if os.path.exists(junk):
             os.remove(junk)
-    shutil.copyfile(base, tmp)
+    if _postings_superseded(index_path, signature):
+        raise PostingsSuperseded("superseded before the copy")
+    _copy_unless_superseded(base, tmp, index_path, signature)
     con = sqlite3.connect(tmp)
     try:
         con.execute("pragma journal_mode=off")
@@ -1718,7 +1792,9 @@ def _build_postings_incremental(signature, out, z, base):
             d = int(dl[s])
             for t, f in tfm[s].items():
                 add.setdefault(t, []).append(struct.pack("<IiI", q, int(f), d))
-        for t in set(rem) | set(add):
+        for i_t, t in enumerate(set(rem) | set(add)):
+            if i_t % 2000 == 1999 and _postings_superseded(index_path, signature):
+                raise PostingsSuperseded("superseded while rewriting postings")
             row = con.execute("select blob from p where term=?", (t,)).fetchone()
             b = zlib.decompress(row[0]) if row else b""
             if len(b) % 12:
@@ -1789,6 +1865,13 @@ def _build_postings_incremental(signature, out, z, base):
             con.close()
         except Exception:
             pass
+    if _postings_superseded(index_path, signature):
+        for junk in (tmp, tmp + "-journal"):
+            try:
+                os.remove(junk)
+            except OSError:
+                pass
+        raise PostingsSuperseded("superseded before publishing")
     os.replace(tmp, out)
     return terms, len(slugs), {"kept": kept, "dropped": len(dropped), "placed": len(tail), "chain": chain}
 
@@ -1817,9 +1900,11 @@ def build_postings(index_path=INDEX, out=None, base=None):
         base = None
     if base is not None and _POSTINGS_INCR_ON:
         try:
-            terms, docs, info = _build_postings_incremental(signature, out, z, base)
+            terms, docs, info = _build_postings_incremental(signature, out, z, base, index_path=index_path)
             POSTINGS_LAST.update(info, mode="incremental", base=os.path.basename(base))
             return terms, docs
+        except PostingsSuperseded:
+            raise
         except Exception as e:
             POSTINGS_LAST["why"] = ("%s: %s" % (type(e).__name__, e))[:200]
     slugs = list(z["tf"])                      # payload order: the tie-break order score() inherits
@@ -1833,6 +1918,15 @@ def build_postings(index_path=INDEX, out=None, base=None):
         fwd = [(pos, _doc_fp(z["tf"][s], dl[s]), _fwd_blob(z["tf"][s])) for pos, s in enumerate(slugs)]
     except (ValueError, TypeError, OverflowError):
         fwd = None                             # it answers queries; it just cannot be the base of the next build
+    if _postings_superseded(index_path, signature):
+        raise PostingsSuperseded("superseded before the full build")
+
+    def _rows():
+        for i_t, (t, lst) in enumerate(inv.items()):
+            if i_t % 20000 == 19999 and _postings_superseded(index_path, signature):
+                raise PostingsSuperseded("superseded during the full build")
+            yield t, len(lst), zlib.compress(b"".join(struct.pack("<IiI", p, f, d) for p, f, d in lst), 1)
+
     tmp = "%s.tmp.%d" % (out, os.getpid())
     if os.path.exists(tmp):
         os.remove(tmp)
@@ -1841,10 +1935,7 @@ def build_postings(index_path=INDEX, out=None, base=None):
         con.execute("pragma journal_mode=off")
         con.execute("pragma synchronous=off")
         con.execute("create table p(term text primary key, df int, blob blob) without rowid")
-        con.executemany(
-            "insert into p values (?,?,?)",
-            ((t, len(lst), zlib.compress(b"".join(struct.pack("<IiI", p, f, d) for p, f, d in lst), 1))
-             for t, lst in inv.items()))
+        con.executemany("insert into p values (?,?,?)", _rows())
         con.execute("create table d(pos integer primary key, slug text)")
         con.executemany("insert into d values (?,?)", enumerate(slugs))
         if fwd is not None:
@@ -1886,6 +1977,13 @@ def build_postings(index_path=INDEX, out=None, base=None):
             con.close()
         except Exception:
             pass
+    if _postings_superseded(index_path, signature):
+        for junk in (tmp, tmp + "-journal"):
+            try:
+                os.remove(junk)
+            except OSError:
+                pass
+        raise PostingsSuperseded("superseded before publishing the full build")
     os.replace(tmp, out)
     return len(inv), len(slugs)
 
@@ -2118,7 +2216,13 @@ def maybe_build_postings(index_path=INDEX, force=False, quiet=True):
             t0 = _time.time()
             # the base is picked here, under the build lock; the sweep above keeps it on disk (I1)
             base = _postings_base(index_path, p) if _POSTINGS_INCR_ON else None
-            terms, docs = build_postings(index_path, base=base)
+            try:
+                terms, docs = build_postings(index_path, base=base)
+            except PostingsSuperseded as e:
+                if not quiet:
+                    print("%s bm25 postings: stopped, %s (generation %s; a newer sidecar is on disk)"
+                          % (_stamp(), e, _postings_tag(signature)))
+                return "superseded"
             if not quiet:
                 print("%s bm25 postings: %d terms over %d docs in %.1f s -> %s %s"
                       % (_stamp(), terms, docs, _time.time() - t0, os.path.basename(p), _postings_note()))
@@ -2234,6 +2338,7 @@ def main():
         print("bm25 index: %d docs, %d terms -> %s" % (n, v, INDEX))
         maybe_build_postings(quiet=False)
     elif sys.argv[1:2] == ["postings"]:
+        _raise_io_mem_priority()      # whoever launched it; see the measurement in the helper
         print("bm25 postings: %s" % maybe_build_postings(force="--force" in sys.argv, quiet=False))
     elif sys.argv[1:2] == ["freeze"]:
         mins = float(sys.argv[2]) if len(sys.argv) > 2 else 30.0
@@ -2243,6 +2348,19 @@ def main():
     elif sys.argv[1:2] == ["unfreeze"]:
         print("%s bm25 unfreeze: %s" % (_stamp(), "released" if unfreeze() else "nothing was frozen"))
     elif sys.argv[1:2] == ["refresh"]:
+        # RAISE IT TO NORMAL (2026-10-30, measured). The 15-min task (wscript -> cmd -> python) starts this at class
+        # BelowNormal, I/O 1 and memory 2. On the busy box that is starvation: one refresh ran 06:06Z-09:4xZ on 10 s of
+        # CPU, its thread Ready (never scheduled) or faulting its trimmed pages back in, and no new memory was
+        # recallable for hours. Same treatment as spawn_detached_postings gives the builder.
+        try:
+            import ctypes
+            # The pseudo-handle -1 must go in as a pointer: passed as a bare int, ctypes sends 0xFFFFFFFF and the call
+            # fails with ERROR_INVALID_HANDLE (shipped that way 10:2x 30 Oct; the task's refresh stayed BelowNormal).
+            _k = ctypes.windll.kernel32
+            _k.SetPriorityClass(ctypes.c_void_p(_k.GetCurrentProcess()), 0x00000020)
+        except Exception:
+            pass
+        _raise_io_mem_priority()
         frozen, why = freeze_state()
         if frozen:
             print("%s bm25 refresh: skipped, generation FROZEN - %s" % (_stamp(), why))

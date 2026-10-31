@@ -25,7 +25,11 @@ MAX_CARDS = int(os.environ.get("MATH_RECALL_DELTA_MAX", "5000") or 5000)
 
 def _connect(store_path):
     uri = "file:%s?mode=ro" % os.path.abspath(store_path).replace("\\", "/")
-    return sqlite3.connect(uri, uri=True, timeout=30)
+    con = sqlite3.connect(uri, uri=True, timeout=30)
+    # One read transaction per reader, so the new cards, the retracted set and the new links come
+    # from one version of the store (as separate statements a write landing between them mixed two versions).
+    con.execute("BEGIN")
+    return con
 
 
 def read_delta(store_path, n_known, known_rows, upto=None):

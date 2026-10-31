@@ -136,8 +136,18 @@ def _read_store(store_path):
     with warnings.catch_warnings(record=True) as caught:
         warnings.simplefilter("always")
         with ResearchStore.open_read_only(store_path) as store:
-            nodes = list(store.iter_nodes())
-            edges = list(store.iter_edges(skip_unknown=True))
+            # One read transaction, so the cards, the retracted set and the links come from one
+            # version of the store. As separate statements a write landing between them mixed two versions.
+            con = store.connection
+            began = not con.in_transaction
+            if began:
+                con.execute("BEGIN")
+            try:
+                nodes = list(store.iter_nodes())
+                edges = list(store.iter_edges(skip_unknown=True))
+            finally:
+                if began and con.in_transaction:
+                    con.execute("COMMIT")
     return nodes, edges, caught
 
 
