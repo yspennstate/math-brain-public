@@ -1749,7 +1749,7 @@ def _query_semantic_scores(query, k=None, floor=None):
     (6 -> 2) and loses "how should the papers and readmes sound" (1 -> 2). A wash.
     AND IT DOES NOT REACH THE QUESTIONS IT WAS BUILT FOR. The worked example in the paragraph above, "which
     research box did we turn off", still misses: of its three golds the lane ranks one at 5 of its own
-    10-candidate list and the other two nowhere, and the same holds for "can i run a backtest on the trading
+    10-candidate list and the other two nowhere, and the same holds for "can i run a heavy job on the production
     box" and "the lanes archive filled box 4 disk". The justification above, that 12 of the 14 hit@5 misses
     were this shape, was true of the 09-13 population and is not true now: measured 09-14, of 13 hit@5 misses
     SIX have their gold inside the 60-item lexical pool, four sit at lexical rank 61-136, and only three are
@@ -3286,7 +3286,7 @@ def _recall_body(query, n=8):
                 bsc = bsc * 0.85
             # NAME COVERAGE (2026-09-11 evening). When the query carries most of the words in the memory's
             # NAME, the name is the match: "the cpu load of the live protected production stack" covers four of the five
-            # words of cpu_map_of_the_live_trading_stack and still ranked 8th, because BM25 saturates per
+            # words of cpu_map_of_the_live_protected_production_stack and still ranked 8th, because BM25 saturates per
             # term and long bodies carry the same words many times over. Coverage c = |query words in the
             # name| / |name words| (dates and stopwords excluded); at c >= 0.6 the bm25 score is multiplied
             # by 1 + c. Measured in the recall lab on the bm25 top-40: owner-voice bank hit@1 22 -> 26,
