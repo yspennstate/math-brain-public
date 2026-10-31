@@ -115,12 +115,16 @@ with 79 edges, each picked and read by hand.
 | 42 | 90,893 | 90,679 | 82,756 | 91.0% |
 | 80 | 91,127 | 90,952 | 85,353 | 93.7% |
 | 83 | 91,138 | 90,963 | 85,625 | 94.0% |
+| 90 | 91,157 | 90,980 | 85,849 | 94.2% |
 
 The store had 127,881 edges after round 42. The work continues one island at a time; after round 42 no island
 other than the main one had more than 35 nodes.
 
 After round 83 the store had 128,717 edges. New cards kept arriving in the meantime (245 of them between rounds 42
 and 83), and the 5,513 nodes outside the main component sat in islands of at most 58 nodes, most of them under 20.
+
+After round 90 the main component held 85,849 of 91,157 nodes. Only 177 nodes touched no edge, and the 5,308
+outside the main component sat in islands of at most 58 nodes.
 
 ## What carries over to another field
 
