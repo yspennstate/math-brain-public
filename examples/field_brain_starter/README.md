@@ -32,6 +32,7 @@ production, a lab or a support desk.
 | `hooks/scar_hook.py` | a tool hook that warns the agent, once a session, when the command it is about to run resembles a recorded mistake |
 | `hooks/write_back_hook.py` | a stop hook that asks the agent once to file a record when its turn ended on a lesson and nothing was written |
 | `hooks/request_hook.py` | a prompt hook that writes each request into the request ledger and tells the model when the same request was asked before, and whether it was answered; under Stop with `--stop` it links the records the turn wrote to that request |
+| `hooks/compaction_hook.py` | saves each context compaction summary as a project record, chained to the session's previous compaction and linked to the request it was working on; `--backfill` reads old transcripts once |
 | `hooks/print_wiring.py` | prints the hook block for `~/.claude/settings.json` or `~/.codex/hooks.json` with this folder's absolute paths, ready to paste |
 
 Everything in the records is invented. The studio, its films and its director do not exist.

@@ -28,12 +28,18 @@ HOOKS = [
     ("tool",   "scar_hook.py",       {"claude": [], "codex": []}, 30, {"claude": "Bash|Edit|Write", "codex": "Bash|apply_patch"}),
     ("stop",   "request_hook.py",    {"claude": ["--stop"], "codex": ["--stop"]}, 30, None),
     ("stop",   "write_back_hook.py", {"claude": [], "codex": []}, 60, None),
+    ("compact", "compaction_hook.py", {"claude": ["--runtime", "claude"], "codex": []}, 30,
+     {"claude": "compact", "codex": None}),
 ]
 
 # Claude Code has a SessionStart event; Codex hands the wake to the first prompt, which wake_hook.py detects.
+# Claude Code starts the session again with source "compact" after a compaction (the matcher picks that start);
+# Codex has no compaction event, so compaction_hook.py looks for a new compaction on every prompt.
 EVENTS = {
-    "claude": {"start": "SessionStart", "prompt": "UserPromptSubmit", "tool": "PreToolUse", "stop": "Stop"},
-    "codex": {"start": "UserPromptSubmit", "prompt": "UserPromptSubmit", "tool": "PreToolUse", "stop": "Stop"},
+    "claude": {"start": "SessionStart", "prompt": "UserPromptSubmit", "tool": "PreToolUse", "stop": "Stop",
+               "compact": "SessionStart"},
+    "codex": {"start": "UserPromptSubmit", "prompt": "UserPromptSubmit", "tool": "PreToolUse", "stop": "Stop",
+              "compact": "UserPromptSubmit"},
 }
 
 
@@ -52,7 +58,7 @@ def wiring(runtime, python=None, windows=None):
         if runtime == "codex" and windows:
             hook["commandWindows"] = command
         group = {"hooks": [hook]}
-        if matcher:
+        if matcher and matcher.get(runtime):
             group = {"matcher": matcher[runtime], "hooks": [hook]}
         out.setdefault(EVENTS[runtime][kind], []).append(group)
     return out

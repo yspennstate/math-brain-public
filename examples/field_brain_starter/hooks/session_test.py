@@ -1,4 +1,4 @@
-"""Run one whole session through the five hooks, the way a runtime calls them, and check what each one says.
+"""Run one whole session through the six hooks, the way a runtime calls them, and check what each one says.
 
 Each hook has its own --selftest, which calls its functions directly. This test does what Codex or Claude Code does:
 it starts every hook as a separate process, writes the event as JSON on its stdin, and reads what it prints. The
@@ -12,7 +12,8 @@ session is the ordinary one:
     record written     new_record.py    the agent files the lesson
     stop               request_hook     --stop links the new record to the request as produced
     same request       request_hook     the second ask says it was asked before and what it produced
-    wiring             print_wiring     the Claude Code and Codex blocks parse and name all five hooks
+    compaction         compaction_hook  the session's compaction summary is saved as a record, once
+    wiring             print_wiring     the Claude Code and Codex blocks parse and name all six hooks
 
 Everything runs on a scratch copy of memory/ with its own state folder and ledger, so the real store is not
 touched. Exit 0 when every step behaves, 1 otherwise.
@@ -126,6 +127,20 @@ def main():
     check("request: asked again, it says so and names what the first ask produced",
           "asked 2x" in said and "produced" in said, said)
 
+    transcript = os.path.join(work, "transcript.jsonl")
+    with open(transcript, "w", encoding="utf-8") as fh:
+        fh.write(json.dumps({"type": "user", "isCompactSummary": True, "timestamp": "2026-03-09T14:00:00Z",
+                             "message": {"content": "Summary: the festival cut is mixed in stereo; the poster is next."}})
+                 + "\n")
+    start = {"session_id": session, "transcript_path": transcript, "source": "compact",
+             "hook_event_name": "SessionStart"}
+    said = context(run("hooks/compaction_hook.py", start, "--runtime", "claude", env=env))
+    slug = said.split("saved as ", 1)[-1].split(";", 1)[0] if "saved as " in said else ""
+    check("compaction: the summary is saved as a record",
+          bool(slug) and os.path.exists(os.path.join(env["BRAIN_MEM_DIR"], slug + ".md")), said)
+    said = context(run("hooks/compaction_hook.py", start, "--runtime", "claude", env=env))
+    check("compaction: the same summary is not saved twice", said == "", said)
+
     for runtime in ("claude", "codex"):
         out = subprocess.run([sys.executable, os.path.join(HERE, "print_wiring.py"), "--runtime", runtime],
                              capture_output=True, text=True, timeout=60).stdout
@@ -133,9 +148,10 @@ def main():
             wired = json.dumps(json.loads(out)["hooks"])
         except (ValueError, KeyError):
             wired = ""
-        missing = [h for h in ("wake_hook", "recall_hook", "request_hook", "scar_hook", "write_back_hook")
+        missing = [h for h in ("wake_hook", "recall_hook", "request_hook", "scar_hook", "write_back_hook",
+                                  "compaction_hook")
                    if h + ".py" not in wired]
-        check("wiring: the %s block parses and names all five hooks" % runtime, wired and not missing,
+        check("wiring: the %s block parses and names all six hooks" % runtime, wired and not missing,
               "missing " + ", ".join(missing) if wired else out[:200])
 
     shutil.rmtree(work, ignore_errors=True)
