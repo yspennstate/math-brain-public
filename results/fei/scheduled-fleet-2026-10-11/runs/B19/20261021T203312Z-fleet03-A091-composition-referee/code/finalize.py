@@ -72,7 +72,7 @@ Price a later B point-coordinate while earlier A and shared Y remain unexposed, 
 
 ## actual persistence receipts or precise save blocker
 
-Four protocol files, analytic proof, frozen spec, code, output certificates, failed formal receipt and capture-time source receipts saved locally under A091 only. Finalizer checks exact protocol fields, identical progress/delta, statement hash, output PASS values, two-line STATUS, final Universal bridge, and file sizes. WORKLOG is appended and LEARNED extended. Supervisor copy, mirror, external acceptance, downstream adoption and publication are unverified. Session wake completed with required stale-owner-model/state warning, reported to Yitzchak; stale notes were not used as task authority. Tool startup/reads were slow; no existing work was stopped to relieve load.
+Four protocol files, analytic proof, frozen spec, code, output certificates, failed formal receipt and capture-time source receipts saved locally under A091 only. Finalizer checks exact protocol fields, identical progress/delta, statement hash, output PASS values, two-line STATUS, final Universal bridge, and file sizes. WORKLOG is appended and LEARNED extended. Supervisor copy, mirror, external acceptance, downstream adoption and publication are unverified. Session wake completed with required stale-owner-model/state warning, reported; stale notes were not used as task authority. Tool startup/reads were slow; no existing work was stopped to relieve load.
 
 ## Universal bridge
 

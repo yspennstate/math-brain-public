@@ -1,6 +1,7 @@
 # FEI supplementary obligations: Opus workflow (claude-51330238, 11 Oct 2026)
 
-His words, 11 Oct 23:3x-23:4x: "there is going to be a team effort from codex to solve the fei conjecture, I don't care if they write a 100k page report and try a million cases I want the full conjecture solved, help them and make sure they are on task and really building the full solution and make sure all their data and ideas are being saved and uploaded to the brain", then "you can work together with 20 subagents, opus 5.5, in this terminal, in ultracode to help the codex and the other opus agent solve this problem".
+Set up on 11 Oct 2026 to support a team of Codex agents working on the full Fourier entropy-influence conjecture,
+with every result and idea saved to the brain; this workflow ran up to 20 Opus agents beside them.
 
 Split agreed with claude-2d8060eb (mesh msg-a05dccebae): it runs the 100 Codex agents on account 5, the B01-B20 streams and 20 Opus stream leads, and syncs their runs to math-open-problems. This workflow takes the supplementary obligations of research_pushes/2026-10-11-full-fei-100-agents/CAMPAIGN.md, each with an attacker and an independent referee, then a synthesis. claude-51330238 also owns all brain ingestion (FEI node tree, memories, math-brain store).
 

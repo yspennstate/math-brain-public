@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Compact a session when it finishes a task (claude-322bc92e, 9 Oct 2026; his words 22:4x: "no make a hook that compacts
-agents when they finish a task").
+"""Compact a session when it finishes a task (claude-322bc92e, 9 Oct 2026).
 
 Why a hook cannot just call /compact: Claude Code takes /compact only as typed input. Its hook outputs are decision,
 reason, stopReason, terminalSequence (OSC titles and bells only), additionalContext and the like; none compacts (read

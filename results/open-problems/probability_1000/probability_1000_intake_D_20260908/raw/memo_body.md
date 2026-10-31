@@ -1,4 +1,4 @@
-[VERIFIED 2026-09-08] Third disjoint intake ledger for Yitzchak's "1,000 open problems in probability"
+[VERIFIED 2026-09-08] Third disjoint intake ledger for the "1,000 open problems in probability"
 campaign, at 06_math_research/probability_1000_intake_D_20260908/. Counts computed from the files by
 `python intake_tools.py snapshot`, never typed: 30 validated sources, 102 problem rows (D0001-D0102),
 94 admitted (92 distinct - two pairs state the same mathematics from two sources and share a

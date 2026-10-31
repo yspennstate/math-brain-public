@@ -4,7 +4,7 @@ out = {}
 def get(url, tries=3):
     for t in range(tries):
         try:
-            req = urllib.request.Request(url, headers={"User-Agent": "prob1000-e0068/0.1 (research; contact yitz)"})
+            req = urllib.request.Request(url, headers={"User-Agent": "prob1000-e0068/0.1 (research)"})
             with urllib.request.urlopen(req, timeout=60) as r:
                 return r.read().decode("utf-8", "replace")
         except Exception as e:
