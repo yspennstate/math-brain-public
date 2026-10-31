@@ -66,4 +66,4 @@ All-time, construction-only, cross-provider token and monetary costs remain unid
 | `yspennstate/math-research-brain` | `papers/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
 | `<private-repo>` | `12_cognitive_architecture/agent_mesh/proposed/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
 
-These planned paths preserve the first publication. This changelog does not assert that a revision-two push has happened. No native acknowledgment or adoption was observed. [CLAUDE_HANDOFF.md](CLAUDE_HANDOFF.md) provides concrete integration and receipt steps. Held-out keys and private model transcripts are excluded.
+These planned paths preserve the first publication. This changelog does not assert that a revision-two push has happened. No native acknowledgment or adoption was observed. Held-out keys and private model transcripts are excluded.

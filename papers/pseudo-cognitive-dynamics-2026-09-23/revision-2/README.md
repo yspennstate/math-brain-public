@@ -1,9 +1,8 @@
 # Mathematics of Pseudo-Cognitive Dynamics — revision 2
 
-This folder provides the owner's revised research paper and concrete correctness handoff for the connected worker.
+This folder holds revision 2 of the paper, with its review and repair package.
 
 - [Full manuscript](paper.md)
-- [Claude handoff and integration findings](CLAUDE_HANDOFF.md)
 - [Revision changelog](REVISION_2_CHANGELOG.md)
 - [New evidence and repair package](supplement/update_20260923/README.md)
 - [Evidence manifest](EVIDENCE_MANIFEST.json)

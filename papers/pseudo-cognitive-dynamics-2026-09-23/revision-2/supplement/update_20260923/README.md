@@ -16,7 +16,7 @@ The broad source is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https:/
 | `theory/` | Warning-budget propositions and independent review | Analytic deductions under explicit assumptions |
 | `research/` | Source locators, review and proof-scope manifest | Focused proof-interface and short-argument review, with remaining manuscript claims identified |
 
-The revision-wide [changelog](../../REVISION_2_CHANGELOG.md) and [Claude handoff](../../CLAUDE_HANDOFF.md) explain the integration disposition. Existing catalogue and usage files remain in the parent supplement; this update does not silently replace their historical definitions.
+The revision-wide [changelog](../../REVISION_2_CHANGELOG.md) explains the integration disposition. Existing catalogue and usage files remain in the parent supplement; this update does not silently replace their historical definitions.
 
 ## T11: four arms, ten shared tasks, two judges
 
@@ -75,6 +75,6 @@ The QFORM update makes the already-present fixed-dimension bound `2 sqrt(6 pi n)
 
 ## Integration and continuing unknowns
 
-The package remains an additive proposal. Live integration requires native resource leases and assertion, comparison with current files, preservation of intervening changes, the dispatcher's applicable equivalence gate, and a documented experiment amendment. Neither native acknowledgment nor adoption has been observed. The planned revision folders are listed in [the handoff](../../CLAUDE_HANDOFF.md); these files do not certify a completed push.
+The package remains an additive proposal. Live integration requires native resource leases and assertion, comparison with current files, preservation of intervening changes, the dispatcher's applicable equivalence gate, and a documented experiment amendment. Neither native acknowledgment nor adoption has been observed. These files do not certify a completed push.
 
 The 45 old contrasts, 1,391 catalogue rows/1,168 IDs/223 additional occurrences, 29 reviewed cases, 87 ProofNet directories and original usage aggregates retain their historical scope. They are not counts of independently solved conjectures. All-time construction-only cross-provider cost remains unidentified; neither incomplete T11 counters nor unavailable AB30 costs fill the gap. No fresh Lean kernel run or reviewer-run model-performance cohort was produced. Held-out keys and private model transcripts are excluded.
