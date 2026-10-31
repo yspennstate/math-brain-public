@@ -6,8 +6,8 @@ and the question is open again. `math_brain.requests` keeps the requests.
 
 ## The model
 
-Each request is a node in an append-only JSON-lines ledger (`requests.jsonl`, beside the store or wherever
-`MATH_BRAIN_REQUESTS` points). Its id is `req_` plus twelve hex digits of the SHA-1 of the normalized text, so
+Each request is a node in an append-only JSON-lines ledger: `requests.jsonl` in the working directory, unless
+`--ledger` or the `MATH_BRAIN_REQUESTS` variable names another file. A request's id is `req_` plus twelve hex digits of the SHA-1 of the normalized text, so
 the same question typed twice, with different case, spacing or punctuation, is one node with a count of two.
 
 | field | meaning |
@@ -41,6 +41,9 @@ python -m math_brain.requests backlog --days 30
 python -m math_brain.requests show req_3f0c9a1b2d4e
 ```
 
+The ids above are examples. `link`, `show` and `made` take the id that `ask` printed; an id the ledger does not
+hold stops with `no request ...`.
+
 `ask` prints the earlier requests that share most of their words with the new one. An agent should read those
 before starting work: the question may already have an answer, or someone may be working on it.
 
@@ -61,7 +64,7 @@ requests:
 python -m math_brain.requests --ledger requests.jsonl import PROMPTS.jsonl
 ```
 
-It prints what it did with each row: `added` (a new request), `again` (a request already in the ledger, asked once
+It prints one line counting what happened to the rows: `added` (a new request), `again` (a request already in the ledger, asked once
 more), `already` (an ask the ledger holds at that time, so running the import twice adds nothing), `automation`,
 `short` and `unreadable`. Rows the archive marks `origin: automation` (a loop firing the same prompt every ten
 minutes, a launcher's preamble) are left out, because they would turn one request into hundreds of asks; pass
@@ -127,7 +130,13 @@ external-reference proxy per request and one `bridges_to` edge per link, from th
 (and from a follow-up's proxy to the request it follows). The store is not written. Ids and times come from the
 ledger, so the same ledger always gives the same records and an unchanged night stays unchanged. With
 `--requests-in-graph`, the nightly pass consolidates them with the store's graph, so a card that a request
-produced is no longer reported as an orphan, and its request is one step away.
+produced is no longer reported as an orphan, and its request is one step away:
+
+```
+python -m math_brain.nightly run --store brain.sqlite --queue queue.jsonl --requests requests.jsonl --requests-in-graph
+```
+
+The digest it prints ends with the open requests by day, as `backlog` shows them.
 
 When `MATH_BRAIN_REQUESTS` is set, `agent_tools/math_recall.py --id` ends a walk with one `[request]` line for each request that asked about, produced or was answered by an opened card.
 
