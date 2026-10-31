@@ -41,6 +41,8 @@ There are two ways, and either is enough.
 
 **As a shell command.** An agent that has a shell can call `agent_tools/math_recall.py` directly. Put the commands in its instructions (section 3).
 
+Two shell limits matter in Codex. A search with three wordings prints about 3,500 tokens of cards, and a shell call capped at 2,000 output tokens cuts the answering card off, so give recall calls a cap of about 8,000 (`max_output_tokens`). On a busy machine a search can outlast the shell's first wait and come back still running; wait on it (`yield_time_ms` of about 45,000) rather than starting the same command again.
+
 **As an MCP tool.** `agent_tools/mcp_math_recall.py` serves the same search as a tool named `math_recall`, with two inputs: `wordings` (one to three) and `ids`. The agent then needs no shell at all. This is how the brain arm of the three-arm test was connected, for both Claude and Codex.
 
 For Claude Code, a `.mcp.json` in the project (or the same object passed with `--mcp-config`):
