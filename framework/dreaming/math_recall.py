@@ -441,7 +441,13 @@ def _lit_parts(text):
 
 def _lit_index(P, nodes, store_path):
     """card id -> (its tuples, the numbers outside them), for every current card with two or more tuples; cached per
-    store state beside the prepared state (about 2,000 cards of the 2026 store, most of them walk-on-a-strip counts)."""
+    store state beside the prepared state (about 2,000 cards of the 2026 store, most of them walk-on-a-strip counts).
+
+    The file (v2) also records how many cards it covers and a hash of their ids in store order. The store is append-only
+    (fastrecall_delta), so when the prepared state moves - the prebuild adds a few cards about every 30 min - the newest
+    file whose cards are a prefix of this state is extended with the new cards only. Before 31 Oct every move rebuilt
+    the same index from a GraphNode for every card (about 15 s on a loaded box, and the four files it kept were
+    byte-identical); a full build now reads the bodies straight from the prepared rows."""
     import hashlib
     import json
     fr = _fast_module()
@@ -453,24 +459,59 @@ def _lit_index(P, nodes, store_path):
     except Exception:
         key = repr(os.stat(store_path)[6:9])
     cdir = (fr.cache_dir() if fr is not None else os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache"))
-    path = os.path.join(cdir, "literal_%s.json" % hashlib.sha1((key + "|v1").encode()).hexdigest()[:16])
+    path = os.path.join(cdir, "literal_%s.json" % hashlib.sha1((key + "|v2").encode()).hexdigest()[:16])
+
+    def _v2(d):
+        return isinstance(d, dict) and d.get("v") == 2 and isinstance(d.get("idx"), dict) and isinstance(d.get("n"), int)
+
     try:
         with open(path, encoding="utf-8") as f:
-            return json.load(f)
+            d = json.load(f)
+        if _v2(d):
+            return d["idx"]
     except (OSError, ValueError):
         pass
-    if nodes is None:
+    if nodes is not None:
+        ids = [n.id for n in nodes]
+        by_id = {n.id: n for n in nodes}
+        body = lambda i: by_id[i].body
+    elif P is not None and isinstance(getattr(P, "s", None), dict) and "rows" in P.s:
+        ids = list(P.s["order"])
+        rows = P.s["rows"]
+        body = lambda i: rows[i][3]
+    else:
         nodes = P.all_nodes()
-    idx = {}
-    for n in nodes:
-        tups, nums = _lit_parts(n.body)
+        ids = [n.id for n in nodes]
+        by_id = {n.id: n for n in nodes}
+        body = lambda i: by_id[i].body
+
+    def _pre(n):
+        return hashlib.sha1("\n".join(ids[:n]).encode("utf-8")).hexdigest()
+
+    idx, start = {}, 0
+    try:
+        olds = sorted((os.path.join(cdir, f) for f in os.listdir(cdir)
+                       if f.startswith("literal_") and f.endswith(".json")), key=os.path.getmtime, reverse=True)
+    except OSError:
+        olds = []
+    for f in olds:
+        try:
+            with open(f, encoding="utf-8") as fh:
+                d = json.load(fh)
+        except (OSError, ValueError):
+            continue
+        if _v2(d) and 0 < d["n"] <= len(ids) and d.get("pre") == _pre(d["n"]):
+            idx, start = dict(d["idx"]), d["n"]
+            break
+    for i in ids[start:]:
+        tups, nums = _lit_parts(body(i))
         if len(tups) >= 2:
-            idx[n.id] = [sorted(set(tups)), sorted(nums)]
+            idx[i] = [sorted(set(tups)), sorted(nums)]
     try:
         os.makedirs(cdir, exist_ok=True)
         tmp = path + ".%d.tmp" % os.getpid()
         with open(tmp, "w", encoding="utf-8") as f:
-            json.dump(idx, f)
+            json.dump({"v": 2, "n": len(ids), "pre": _pre(len(ids)), "from": start, "idx": idx}, f)
         os.replace(tmp, path)
         # one file per store state: keep the newest four (29 had piled up by 27 Oct, about 0.47 MB each)
         old = sorted((os.path.join(cdir, f) for f in os.listdir(cdir)

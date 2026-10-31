@@ -65,15 +65,85 @@ def _read(path):
         return fh.read()
 
 
-def _code_key(R, caller):
-    """sha256 over every .py of the math_brain package in use, this file and the calling tool."""
+def _derive_key(derive, pkg):
+    """sha256 over the source of derive() and of everything it reaches in its own module: the functions it calls (and
+    theirs), their defaults, and the plain constants they read. None when any of that cannot be pinned down (no
+    source, a class, a mutable or opaque global, a function from another module outside the math_brain package) - the
+    caller then hashes its whole file, as before 31 Oct."""
+    import inspect
+    import types
+    simple = (str, bytes, int, float, bool, type(None))
+
+    def plain(v):
+        if isinstance(v, simple):
+            return repr(v)
+        if isinstance(v, (tuple, frozenset)):
+            parts = [plain(x) for x in (sorted(v, key=repr) if isinstance(v, frozenset) else v)]
+            return None if None in parts else "%s(%s)" % (type(v).__name__, ",".join(parts))
+        if isinstance(v, re.Pattern):
+            return "re(%r,%d)" % (v.pattern, v.flags)
+        return None
+
+    try:
+        if not isinstance(derive, types.FunctionType):
+            return None
+        mod = derive.__module__
+        h, seen, stack = hashlib.sha256(), set(), [derive]
+        while stack:
+            f = stack.pop()
+            if f.__qualname__ in seen:
+                continue
+            seen.add(f.__qualname__)
+            h.update(("\0fn %s\0" % f.__qualname__).encode("utf-8") + inspect.getsource(f).encode("utf-8"))
+            for d in (f.__defaults__ or ()) + tuple(sorted((f.__kwdefaults__ or {}).items())):
+                r = plain(d)
+                if r is None:
+                    return None
+                h.update(r.encode("utf-8"))
+            names, codes = set(), [f.__code__]
+            while codes:
+                c = codes.pop()
+                names.update(c.co_names)
+                codes.extend(k for k in c.co_consts if isinstance(k, types.CodeType))
+            g = f.__globals__
+            for n in sorted(names):
+                if n not in g:
+                    continue                     # a builtin, or an attribute name
+                v = g[n]
+                if isinstance(v, types.FunctionType) and v.__module__ == mod:
+                    stack.append(v)
+                    continue
+                if isinstance(v, types.ModuleType):
+                    r = "module:" + v.__name__
+                elif isinstance(v, types.FunctionType) and os.path.dirname(
+                        os.path.abspath(v.__code__.co_filename)) == pkg:
+                    r = "pkg:%s.%s" % (v.__module__, v.__qualname__)   # its file is hashed with the package
+                else:
+                    r = plain(v)
+                if r is None:
+                    return None
+                h.update(("\0%s=%s" % (n, r)).encode("utf-8"))
+        return h.hexdigest()
+    except Exception:
+        return None
+
+
+def _code_key(R, caller, derive=None):
+    """sha256 over every .py of the math_brain package in use, this file and what the build reads from the calling
+    tool: derive() and what it reaches (_derive_key), or the whole calling file when that cannot be pinned down or no
+    derive is given. Keyed on the whole file, every edit of math_recall.py - a comment, the printout, the literal
+    index - threw away the prepared state for a full rebuild (4,165 s on 31 Oct 01:56); the build reads derive() only."""
     h = hashlib.sha256()
     pkg = os.path.dirname(os.path.abspath(R.__file__))
     for name in sorted(f for f in os.listdir(pkg) if f.endswith(".py")):
         h.update(name.encode("utf-8") + b"\0")
         h.update(_read(os.path.join(pkg, name)))
-    for p in (os.path.abspath(__file__), os.path.abspath(caller)):
-        h.update(_read(p))
+    h.update(_read(os.path.abspath(__file__)))
+    dk = _derive_key(derive, pkg) if derive is not None else None
+    if dk is not None:
+        h.update(b"derive\0" + dk.encode("ascii"))
+    else:
+        h.update(_read(os.path.abspath(caller)))
     return h.hexdigest()
 
 
@@ -742,6 +812,92 @@ def _bring_up_to_date(prepared, store_path, R, derive, path, heavy_path, folder,
     return Prepared(built, key, heavy_path, store_path, R)
 
 
+def _mtime(path):
+    try:
+        return os.stat(path).st_mtime_ns
+    except OSError:
+        return None
+
+
+def _load_state(path, key, name, window):
+    """(state, its key) from the prepared file at path when it is this name's and recent enough, else (None, key)."""
+    try:
+        got = marshal.loads(_read(path))
+        if isinstance(got, dict) and got.get("format") == FORMAT and isinstance(got.get("key"), str):
+            if got["key"] == key:
+                return got, key
+            if window > 0 and got["key"].split("|", 1)[0] == name:
+                age = time.time() - float(got.get("read_at") or os.path.getmtime(path))
+                # A state past the window is still used when extend() can bring it up to date
+                if 0 <= age <= max(window, DELTA_MAX_AGE_S):
+                    STATUS["stale_s"] = int(age)
+                    STATUS["past_window"] = age > window
+                    return got, got["key"]
+    except Exception:
+        pass
+    return None, key
+
+
+_LOCK_AT = 16    # the lock is byte 0; the holder's "pid time" is written from here, where others can read it
+
+
+def _take_build_lock(folder, name):
+    """(lock, None) when this process may build the state for name; (None, (pid, seconds)) when another process holds
+    the build. The lock is an OS byte-range lock on recall_<name>.building, released by the OS when the holder exits or
+    dies. When the lock file cannot be opened at all, build as before 31 Oct ("nolock")."""
+    p = os.path.join(folder, "recall_%s.building" % name)
+    try:
+        os.makedirs(folder, exist_ok=True)
+        fh = os.fdopen(os.open(p, os.O_RDWR | os.O_CREAT | getattr(os, "O_BINARY", 0)), "r+b", buffering=0)
+    except OSError:
+        return "nolock", None
+    try:
+        fh.seek(0)
+        if os.name == "nt":
+            import msvcrt
+            msvcrt.locking(fh.fileno(), msvcrt.LK_NBLCK, 1)
+        else:
+            import fcntl
+            fcntl.lockf(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB, 1, 0)
+    except OSError:
+        fh.close()
+        holder = ("?", "?")
+        try:
+            with open(p, "rb") as r:
+                r.seek(_LOCK_AT)
+                pid, t = r.read(64).decode("ascii", "replace").split()[:2]
+                holder = (pid, int(time.time() - float(t)))
+        except Exception:
+            pass
+        return None, holder
+    try:
+        fh.seek(_LOCK_AT)
+        fh.truncate()
+        fh.write(("%d %.0f" % (os.getpid(), time.time())).encode("ascii"))
+    except OSError:
+        pass
+    return fh, None
+
+
+def _drop_build_lock(lock):
+    if lock is None or isinstance(lock, str):
+        return
+    try:
+        lock.seek(0)
+        if os.name == "nt":
+            import msvcrt
+            msvcrt.locking(lock.fileno(), msvcrt.LK_UNLCK, 1)
+        else:
+            import fcntl
+            fcntl.lockf(lock.fileno(), fcntl.LOCK_UN, 1, 0)
+    except OSError:
+        pass
+    try:
+        lock.close()
+    except OSError:
+        pass
+
+
 def open_prepared(store_path, R, derive, caller, stale_s=None):
     """The prepared state for this store, code and environment: loaded, or built and written. None when the fast path
     is off or must not be used (STATUS["why"] says why).
@@ -763,7 +919,7 @@ def open_prepared(store_path, R, derive, caller, stale_s=None):
             STATUS["why"] = "retrieval.py is not the pinned one"
             _debug("live: " + STATUS["why"])
             return None
-        name = hashlib.sha256(("%d|%s|%s|%s|%s" % (FORMAT, sys.version, _code_key(R, caller), _env_key(),
+        name = hashlib.sha256(("%d|%s|%s|%s|%s" % (FORMAT, sys.version, _code_key(R, caller, derive), _env_key(),
                                                    os.path.normcase(os.path.abspath(store_path)))).encode("utf-8")
                               ).hexdigest()[:24]
         key = "%s|%s" % (name, _store_key(store_path))
@@ -775,43 +931,41 @@ def open_prepared(store_path, R, derive, caller, stale_s=None):
         path = os.path.join(folder, "recall_%s.m" % name)
         heavy_path = os.path.join(folder, "recall_%s.heavy.m" % name)
         STATUS["path"] = path
-        state = None
-        state_key = key
-        try:
-            got = marshal.loads(_read(path))
-            if isinstance(got, dict) and got.get("format") == FORMAT and isinstance(got.get("key"), str):
-                if got["key"] == key:
-                    state = got
-                elif window > 0 and got["key"].split("|", 1)[0] == name:
-                    age = time.time() - float(got.get("read_at") or os.path.getmtime(path))
-                    # RECALL-10X lead 2: a state past the window is still used when extend() can bring it up to date
-                    if 0 <= age <= max(window, DELTA_MAX_AGE_S):
-                        state, state_key = got, got["key"]
-                        STATUS["stale_s"] = int(age)
-                        STATUS["past_window"] = age > window
-        except Exception:
-            state, state_key = None, key
+        seen = _mtime(path)
+        state, state_key = _load_state(path, key, name, window)
         if state is None:
-            t_read = time.time()
-            built, heavy = build(store_path, R, derive)
-            if built is None:
-                STATUS["why"] = heavy
-                _debug("live: " + heavy)
+            lock, holder = _take_build_lock(folder, name)
+            if lock is None:
+                STATUS["why"] = "pid %s has been building this prepared state for %s s; answering live" % holder
+                STATUS["build_held"] = True
+                _debug("live: " + STATUS["why"])
                 return None
-            if _store_key(store_path) != key.split("|", 1)[1]:
-                if window <= 0:
-                    STATUS["why"] = "the store changed while it was read"
-                    _debug("live: " + STATUS["why"])
-                    return None
-                STATUS["moved"] = True
-            built["key"] = heavy["key"] = key
-            built["read_at"] = t_read
-            os.makedirs(folder, exist_ok=True)
-            _write(heavy_path, heavy)
-            _write(path, built)
-            _prune(folder)
-            state = built
-            STATUS["built"] = True
+            try:
+                if _mtime(path) != seen:      # a builder finished between the first read and the lock
+                    state, state_key = _load_state(path, key, name, window)
+                if state is None:
+                    t_read = time.time()
+                    built, heavy = build(store_path, R, derive)
+                    if built is None:
+                        STATUS["why"] = heavy
+                        _debug("live: " + heavy)
+                        return None
+                    if _store_key(store_path) != key.split("|", 1)[1]:
+                        if window <= 0:
+                            STATUS["why"] = "the store changed while it was read"
+                            _debug("live: " + STATUS["why"])
+                            return None
+                        STATUS["moved"] = True
+                    built["key"] = heavy["key"] = key
+                    built["read_at"] = t_read
+                    os.makedirs(folder, exist_ok=True)
+                    _write(heavy_path, heavy)
+                    _write(path, built)
+                    _prune(folder)
+                    state = built
+                    STATUS["built"] = True
+            finally:
+                _drop_build_lock(lock)
         prepared = Prepared(state, state_key, heavy_path, store_path, R)
         if state_key != key and not STATUS["built"]:
             prepared = _bring_up_to_date(prepared, store_path, R, derive, path, heavy_path, folder, key, window)
