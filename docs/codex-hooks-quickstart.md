@@ -128,16 +128,20 @@ the same names and the stdin fields are the same. The output differs: for `UserP
 the model plain stdout, so the script prints its lines directly. `recall_hook.py --runtime claude` does that.
 Claude Code also cuts one hook's output at about 10,000 characters, so the ordering advice holds for both.
 
-The four starter hooks in `~/.claude/settings.json` (or `.claude/settings.json` inside one project), with your own
-absolute paths:
+The six starter hooks in `~/.claude/settings.json` (or `.claude/settings.json` inside one project), with your own
+absolute paths. `python3 hooks/print_wiring.py --runtime claude` prints this block with the paths of your copy filled
+in, and `--runtime codex` prints the one for `~/.codex/hooks.json`:
 
 ```json
 {
   "hooks": {
     "SessionStart": [
-      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/wake_hook.py --runtime claude", "timeout": 30 } ] }
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/wake_hook.py --runtime claude", "timeout": 30 } ] },
+      { "matcher": "compact",
+        "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/compaction_hook.py --runtime claude", "timeout": 30 } ] }
     ],
     "UserPromptSubmit": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/request_hook.py --runtime claude", "timeout": 30 } ] },
       { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/recall_hook.py --runtime claude", "timeout": 60 } ] }
     ],
     "PreToolUse": [
@@ -145,11 +149,19 @@ absolute paths:
         "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/scar_hook.py", "timeout": 30 } ] }
     ],
     "Stop": [
+      { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/request_hook.py --stop", "timeout": 30 } ] },
       { "hooks": [ { "type": "command", "command": "python3 /path/to/hooks/write_back_hook.py", "timeout": 60 } ] }
     ]
   }
 }
 ```
+
+`compaction_hook.py` keeps each context compaction as a record. When the context fills, the runtime replaces the
+conversation with a summary the agent wrote: what it was asked, what it finished, what it still owes. Claude Code then
+starts the session again with source `compact`, which the matcher picks; the hook reads the newest summary from the
+transcript, files it in `memory/` as a provisional project record linked to the session's previous compaction and to
+the request it was working on, and prints one line naming it. Codex has no compaction event, so there it sits under
+`UserPromptSubmit` and saves a compaction it has not seen yet. `--backfill` reads old transcripts once.
 
 The tool names differ between the runtimes (`Bash`, `Edit`, `Write` here; `Bash`, `apply_patch` in Codex), so the
 matcher does too. `scar_hook.py` and `write_back_hook.py` print JSON in both runtimes and need no flag. Under
