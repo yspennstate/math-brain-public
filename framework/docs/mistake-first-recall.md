@@ -8,9 +8,19 @@ at the front of the delivered list, not sitting just below the cut. This
 document records the severity-weighted tilt that implements that preference,
 and the two structural failures it is built to avoid.
 
+> **Where the code is in this repository.** This page describes the packaged library
+> edition (`brain/mistake_weights.py`, `brain/recall.py`, `tests/test_mistake_weights.py`),
+> which is not shipped here. In this repository the builder is
+> `dreaming/build_mistake_weights.py` and its consumer is the spreading walk in
+> `dreaming/spread_recall.py`, which reads `mistake_weights.tsv` to raise a scar's inflow,
+> relax its margin when severity is 0.8 or more, and floor its habituation, rather than
+> multiplying a blended score. The severity rules differ slightly (an `audit_` node is
+> `0.35 + 0.65 * charge`); the builder's docstring is the current contract. Both
+> versions fail open: no artifact means no change to recall.
+
 ## Design
 
-An offline builder (`brain/mistake_weights.py`) derives a severity map
+An offline builder (`build_mistake_weights.py` here) derives a severity map
 `slug -> [0, 1]` over mistake-class memories from signals the corpus already
 keeps, with no new judgment and no new metadata:
 

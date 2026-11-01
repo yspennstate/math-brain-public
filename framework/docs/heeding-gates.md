@@ -7,11 +7,20 @@ ones reach the top — while the same scar was read past three and four times in
 a single session. Detection and compliance are different muscles, and the
 second one was never instrumented.
 
+> **Where the code is in this repository.** This page was written for a packaged
+> library edition whose modules sit under `brain/` and whose tests sit under `tests/`;
+> those files are not shipped here. The same two gates are
+> `dreaming/graph_fire/ack_gate.py` (acknowledgment) and
+> `dreaming/graph_fire/heed_gate.py` (repeat), and the reflex layer they sit on is
+> `dreaming/instincts.py` with `dreaming/codex_reflex_hook.py`. Run
+> `python dreaming/graph_fire/heed_gate.py --selftest` for the repeat gate's own checks.
+> The module docstrings are the current contract where they differ from this page.
+
 Showing the warning again is the move that does not work. A signal repeated
 without consequence trains its reader to skip it, and the repetition itself
 becomes the habituation. Two gates address this from opposite ends.
 
-## The acknowledgment gate (`brain/ack_gate.py`)
+## The acknowledgment gate (`dreaming/graph_fire/ack_gate.py`)
 
 Covers the first encounter, and inverts the mechanism: rather than delivering
 more text, it asks the agent to produce the connection. When a high-charge
@@ -40,10 +49,7 @@ is not yet established here.
 Covers the other end: a scar already read past several times in one session,
 on an action linked to a recent real failure, is a case where more prose has
 demonstrably failed. There the correct intervention is a single hard stop
-rather than another line of text. That gate lives in the upstream framework
-(`upstream/brain-framework/dreaming/graph_fire/`); this repository carries the
-acknowledgment half, which is the one that composes with a shadow-mode reflex
-layer.
+rather than another line of text. That gate is `dreaming/graph_fire/heed_gate.py`.
 
 ## Status
 
@@ -51,12 +57,13 @@ layer.
 it is issued and never repeats for the same `(session, reflex)`; the
 per-session cap holds; a signature releases and is banked; a rationale below
 the minimum length does not count as one; ledger rows survive tabs and
-newlines in the command; an unreadable ledger cannot stop work. Fourteen tests
-in `tests/test_ack_gate.py` cover these against the real module.
+newlines in the command; an unreadable ledger cannot stop work. The fourteen
+tests behind these claims belong to the packaged edition and are not shipped
+here; read them as the module's contract and check them against `ack_gate.py`.
 
 **Partial.** Enforcement is opt-in per call. The default is advisory: the same
 situation is recorded and allowed, so a deployment can measure its own
-intervention rate before holding a single call. This mirrors `brain/reflexes.py`,
+intervention rate before holding a single call. This mirrors the reflex layer,
 which stays shadow-mode pending a precision eval. Whether the default should
 change is an operator decision, not a library default.
 
