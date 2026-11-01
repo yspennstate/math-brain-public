@@ -1,8 +1,8 @@
 # How the math brain works, and how to move through it
 
-The math store holds about 10,700 current cards (theorems, conjectures, techniques, attempts, sources) and 16,000
-links between them. Half the cards have one to three links, four hubs have over a hundred, and a quarter have none at
-all; those can only be found by their words. Three tools read it, all read-only:
+The public snapshot of 1 November 2026 holds 13,344 cards (theorems, conjectures, techniques, attempts, sources) and
+23,287 live links between them. Seven cards in ten have one to three links, thirteen hubs have over a hundred, and
+406 cards have none at all; those can only be found by their words. Three tools read it, all read-only:
 
     python ~/.claude/dreaming/math_recall.py "<question>" [--or "<second wording>"]   word search, eight whole cards
     python ~/.claude/dreaming/math_recall.py --id <id> [<id> ...]                    a card whole, with its links
