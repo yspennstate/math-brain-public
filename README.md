@@ -8,6 +8,28 @@ This repository contains the brain's code, a dated export of the store, the tool
 
 Nothing in the method is specific to mathematics. To build a brain for a company, a film studio, a lab or a support desk, start with [examples/field_brain_starter/](examples/field_brain_starter/): twenty example records, a search tool, a prompt hook for Claude Code and Codex, a nightly dream with a runner for Linux, macOS and Windows, and a ten-question test that measures whether the records help. [docs/brain-in-an-afternoon.md](docs/brain-in-an-afternoon.md) takes a team from an empty copy of that folder to a measured brain in a day, [docs/build-your-own-brain.md](docs/build-your-own-brain.md) covers each part in full, [docs/everything-is-a-node.md](docs/everything-is-a-node.md) says what goes into the store and how it is linked, [docs/agency.md](docs/agency.md) describes how agents should work with a brain so that better recall turns into progress on long tasks, and [docs/brain-building/everything-to-brain-10-day-loop.md](docs/brain-building/everything-to-brain-10-day-loop.md) is a prompt that has an agent keep building and testing one on a schedule for ten days. Every page in `docs/` is listed by purpose in [docs/README.md](docs/README.md).
 
+## Every test so far
+
+There isn't one test behind this brain. The table has thirteen paired agent tests, the largest asking 2,000 questions in each of three rounds, and there are more without agents on ranking, silence and speed. Some came out for the brain by a wide margin, some by a little, and three did not. They are all here because the pattern across them is the result. When the answer has to be recalled, or the agent is on a clock, the brain wins by a lot. When an agent has the files, enough time and a question it can grep for, the lead is small. And a memory an agent can't reach quickly, or doesn't call, loses: round 1 below is what that looks like.
+
+| Test | Agents | Without the brain | With the brain | On the items where they differ |
+|---|---|---|---|---|
+| 2,000 questions about files in 113 git repositories, round 3, new questions (30 Oct 2026) | Codex | git and the files: 88.6% | consulting the brain once a question: 90.2% | 97 to 70, p = 0.044, on the 1,726 both arms reached |
+| the same design, round 2, pairs that ran under one condition (29 and 30 Oct 2026) | Codex | 75.8% | 82.2% | 182 to 79, p = 1.6e-10, n = 1,607 |
+| the same design, round 1, recall starved at a machine load of about 340 (29 Oct 2026) | Codex | 46.5% | 39.9%, with 0.04 recalls a question | 210 to 342, p = 2e-8, n = 2,000 |
+| 1,000 items whose answer must be recalled (13 Sep 2026) | | 538 | 1,000 | 462 to 0, p = 1.7e-139 |
+| 988 items, 600 seconds each (23 and 24 Oct 2026) | Claude | model alone 18.9%; research repositories 82.0% | 95.4% | 146 to 13 against the repositories, p = 1.2e-29; 30.6 session-hours against 53.2 |
+| 394 of the same bank, 900 seconds each (23 to 28 Oct 2026) | Codex | model alone 21.6%; research repositories 97.0% | 94.7% | 10 to 19, p = 0.14 |
+| 100 questions on results held in the store (11 Oct 2026) | Codex | no tools 0; text search 75 | recall tool 83; hook, recall and walk 82 | 10 to 3 against text search, p = 0.09 |
+| 61 reasoning and audit items (5 and 6 Oct 2026) | Claude | tools only 41 | full package 52 | 15 to 4, p = 0.019 |
+| 60 questions whose answer exists only in the store, no tools (5 Sep 2026) | Claude | none 0; a block served for another question 0 | 48 (20 before a retrieval fix) | 48 to 0, p < 0.0001; no wrong number copied in 240 verdicts |
+| 160 proof audits with planted faults, right notes against scrambled notes (Aug 2026) | | scrambled 117 | right notes 128 | 18 to 7, p = 0.043, replicated on a second bank |
+| 80 questions about files in GitHub repositories (12 Oct 2026) | Codex | git alone 68 | git and the brain 73 | 9 to 4, p = 0.27 |
+| 20 recall items, one agent, without and then with (23 Oct 2026) | Claude | 9 | 19 | 10 to 0, p = 0.002 |
+| 13 open problems, graded blind out of a possible 39 (11 Oct 2026) | Codex | 26 | 24 | referee preferred the no-brain attempt 8 to 3, p = 0.23 |
+
+The method and the full tables for each are in [TESTS.md](TESTS.md), which starts with the 2,000-question rounds.
+
 ## Start here: the default recall workflow
 
 **Use this workflow whenever an agent needs information from the store. It is the standard operating procedure, not a list of optional search tips.** A known card ID can go straight to whole-card reading; otherwise begin with a multi-wording search.
