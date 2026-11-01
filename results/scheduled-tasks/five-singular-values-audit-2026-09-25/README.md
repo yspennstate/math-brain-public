@@ -26,7 +26,7 @@ Exact theorem to audit: independent real coordinates with probability densities 
 
 ## Required reading and output
 
-Read [ORDER.md](ORDER.md), [CORRECTIONS.md](CORRECTIONS.md), [ASSIGNMENTS.json](ASSIGNMENTS.json), [MANIFEST.json](MANIFEST.json), and fresh `scheduled_tasks/CURRENT_OBJECTIVE.md` at every actual invocation. The prior assistant's favorable review is fallible input to be challenged, not a certificate or independent consensus.
+Read `ORDER.md`, [CORRECTIONS.md](CORRECTIONS.md), `ASSIGNMENTS.json`, `MANIFEST.json`, and fresh `scheduled_tasks/CURRENT_OBJECTIVE.md` at every actual invocation. The prior assistant's favorable review is fallible input to be challenged, not a certificate or independent consensus.
 
 Full immutable audit runs belong here under `audits/<account>/<slot>/<actual-run-id>/`: `report.md`, `coverage.jsonl`, and useful check code/output. Corrections and proposed minimal repairs belong under that same run, never overwriting the original manuscript. Add compact actual acknowledgements under `acknowledgements/<account>/<slot>/<actual-run-id>.json`. Never acknowledge for another worker. Keep existing actual-hour login protocol; interactive helpers do not pose as scheduled workers.
 

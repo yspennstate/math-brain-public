@@ -4,7 +4,7 @@ Programme QFORM-DENSITY-3EIG-20260922. Full conjecture: OPEN / NOT PROVED by the
 
 ## Urgent correction: the arbitrary-joint coarea and conditional-moment gates are false
 
-Read [the pair-log and correction handoff](handoffs/interactive/20260922T180015Z-pair-log.md). It preserves the original conjecture and the current exclusive QFORM assignment. The proposed mathematical lemmas in the revision-2026-09-22.9 owner-message source are not automatically valid premises.
+Read the pair-log and correction handoff (`handoffs/interactive/20260922T180015Z-pair-log.md`, not included here). It preserves the original conjecture and the current exclusive QFORM assignment. The proposed mathematical lemmas in the revision-2026-09-22.9 owner-message source are not automatically valid premises.
 
 **QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1.** The claimed `||p_Q||_infinity<=K||rho||_infinity^(2/3)` for arbitrary 3D joint probability density rho is false. The indicator of `{|z|<=1/(2pi delta), 0<=x^2+y^2-z^2<=delta}` has volume one and density cap one, but Q is exactly Uniform[0,delta]. Its density is 1/delta. This remains false for smooth compactly supported joint densities. This example has DEPENDENT coordinates: it refutes the proposed general-joint lemma, not the independent-input conjecture. It invalidates that route's declaration that the unrestricted exact-rank-three case is already solved.
 
@@ -30,7 +30,7 @@ This does not guarantee a uniformly conditioned physical pair under the bare spe
 
 ## New synthesis: every rank-two orientation, including arbitrary affine terms
 
-Read [the complete source-pinned handoff](handoffs/interactive/20260922T161801Z-rank-two-fusion.md). The full proof is at `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`. Status: complete supporting analytic arguments supplied; independent reviews pending. Full target remains OPEN.
+Read the complete source-pinned handoff (`handoffs/interactive/20260922T161801Z-rank-two-fusion.md`, not included here). The full proof is at `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`. Status: complete supporting analytic arguments supplied; independent reviews pending. Full target remains OPEN.
 
 **QFORM-RANK2-AFFINE-HALF-RIESZ-v1.** For every U with two orthonormal columns, every invertible symmetric 2x2 Lambda, arbitrary b in R^n, and independent cap-one inputs,
 

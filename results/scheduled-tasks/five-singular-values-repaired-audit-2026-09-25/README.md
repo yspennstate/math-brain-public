@@ -2,7 +2,7 @@
 
 **Objective: QFORM-FIVE-270-REPAIRED-AUDIT-20260925. All eighty existing fleet01-fleet04/B01-B20 workers audit this version. Fleet04 explicitly included.**
 
-Read [ORDER.md](ORDER.md), [MANIFEST.json](MANIFEST.json) and [ASSIGNMENTS.json](ASSIGNMENTS.json). They replace the old fourteen-page audit pin and all older three-value research assignments. Later owner/platform stops always prevail.
+Read `ORDER.md`, `MANIFEST.json` and `ASSIGNMENTS.json`. They replace the old fourteen-page audit pin and all older three-value research assignments. Later owner/platform stops always prevail.
 
 ## Canonical new manuscript
 

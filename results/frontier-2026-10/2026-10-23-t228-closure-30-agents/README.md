@@ -1,6 +1,6 @@
 # T228 audited concrete-model certificate and complete research record
 
-The complete 30-agent campaign snapshot is in [complete/README.md](complete/README.md). Start with the [13-page proof](complete/campaign/manuscript/T228_Proof.pdf) and [precise result and limits](complete/campaign/RESULT.md).
+The complete 30-agent campaign snapshot is in [complete/README.md](complete/README.md). Start with the [13-page proof](complete/campaign/manuscript/T228_Proof.tex) and [precise result and limits](complete/campaign/RESULT.md).
 
 The explicit nonlinear SGD model has global average contraction, a unique stationary law, and an exact strictly positive power tail with index between one and two. All substantive proofs, scoped extensions, 30 reports, checks, recovered sources, and T336/T421 partial results are preserved. The final package audit passed 625 checks, with zero failures and zero pending items; disclosed historical-draft and external-cache qualifications remain visible.
 
