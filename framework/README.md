@@ -98,6 +98,20 @@ install the hook wiring, fill in the identity templates, and let the first sessi
 writing memories. The system grows by use; nothing here requires the lived content it was
 extracted from.
 
+For a brain in a field other than mathematics (a company's decision log and support desk, a
+film studio, a lab), start one level up, outside this folder.
+[`examples/field_brain_starter/`](../examples/field_brain_starter/) is a small working brain:
+twenty example records, a search tool, a prompt hook for Claude Code and Codex, a nightly
+dream that runs on Linux, macOS and Windows, and a ten-question test of whether the records
+help. [`docs/brain-in-an-afternoon.md`](../docs/brain-in-an-afternoon.md) takes a team from an
+empty copy of that folder to a measured brain in a day, and
+[`docs/build-your-own-brain.md`](../docs/build-your-own-brain.md) covers each part in full and
+says which pieces of this folder to add as the brain grows (the hooks, the dream, the mesh).
+[`docs/agency.md`](../docs/agency.md) describes how agents should work with a brain so that
+better recall turns into finished work. `docs/PORTING.md` in this folder is the record of what
+was left out when the framework was extracted and what you must supply yourself; it is not a
+guide to other fields.
+
 ## The mathematics, and how it keeps developing
 
 `docs/BRAIN_SCIENCE_AUDIT.md` audits the algorithms every layer runs — recall fusion,
